@@ -1,0 +1,72 @@
+body{
+	background-color: #232323;
+	margin: 0px;
+	font-family: "Avenir"
+}
+
+.square{
+	width: 30%;
+	background-color: purple;
+	padding-top: 30%;
+	float: left;
+	margin: 1.66%;
+	border-radius: 15%;
+	transition: all 0.6s;
+}
+
+.container{
+	max-width: 600px;
+	margin: 0 auto;  /*0 margin on top and bottom and auto margin on left and right. This allows us to center the boxes*/
+}
+
+h1{
+	color: white;
+	text-align: center;
+	margin: 0px;
+	font-weight: normal;
+	text-transform: uppercase;
+	padding: ;
+	line-height: 1.1;
+	padding: 20px 0px;
+}
+
+#myTitle{
+	font-size: 200%;
+}
+
+#message{
+	color: black;
+}
+
+#stripe{
+	height: 35px;
+	text-align: center;
+	background-color: white;
+	color: black;
+}
+
+.selected{
+	color: white;
+	background: steelblue;
+}
+
+button{
+	border: none;
+	background: none;
+	height: 100%;
+	font-weight: 700;
+	letter-spacing: 1px;
+	transition: all 0.3s;
+	outline: none;
+}
+
+#message{
+	display: inline-block;
+	width: 20%;
+}
+
+button:hover{
+	color: white;
+	background: steelblue;
+}
+
