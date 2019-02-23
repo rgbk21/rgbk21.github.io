@@ -1,0 +1,41 @@
+body{
+	padding-top: 70px;
+}
+
+.jumbotron{
+	color: black;
+	/*background: black;*/
+}
+
+.navbar-dark .navbar-brand {
+    color: red;
+}
+
+img{
+	padding-top: 10px;
+	padding-bottom: 14px;
+}
+
+#home_link:hover{
+	color: red;
+}
+
+#insta_link:hover{
+	color: red;
+}
+
+#fb_link:hover{
+	color: red;
+}
+
+#register_link:hover{
+	color: red;
+}
+
+#login_link:hover{
+	color: red;
+}
+
+
+
+
