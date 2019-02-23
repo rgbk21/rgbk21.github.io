@@ -1,0 +1,106 @@
+h1{
+	background: #2980b9;
+	color: white;
+	margin: 0px;
+	padding:10px 20px;
+	font-size: 24px;
+	font-weight: normal;
+}
+
+#container{
+	background: #f7f7f7;
+	width:30%;
+	margin: 100px auto;
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.3)
+
+/*	margin: 0px auto will take effect only once the width is reduced to lesser than the screen size. 
+	Initially width is 100%, hence auto does not ahve any effect*/
+}
+
+.fa-plus{
+	float: right;
+}
+
+ul{
+	margin: 0;
+	padding: 0;
+}
+
+span{
+	background-color: #e74c3c;
+	height: 40px;
+	margin-right: 20px;
+	color: white;
+	width:0px; /*We set the default width of the trashcan to be 0 px*/
+	display: inline-block;
+	text-align: center;
+	transition: 0.2s linear; /*This causes the animation effect. Instead of immediately appearing and disappearing on hovering over a 
+	li, this give it the transition. Linear means that the speed of the transition remains a constant.*/
+	opacity: 0; /*This will make the icon completely transparent when it is not being hovered over*/
+}
+
+/*Now when we hover over the li, we want the span to change the width from 0 to 40*/
+li:hover span{
+	width: 40px;
+	opacity: 1.0; /*This will make the opacity 100% only when we hover over the icon*/
+}
+
+
+input{
+	font-size: 18px;
+	background-color: #f7f7f7;
+	width: 100%;
+	padding: 13px 13px 13px 20px;
+	box-sizing: border-box;
+	color: #2980b9;
+	border: 3px solid white; /*Remove the irritating small gap between the left border and the text starting point. Really good...*/
+
+}
+
+/*This is a psuedo slector. What this means is that the following styles will be applied to the text box ONLY if the 
+user focussed on the text box - selected/clicked inside the text box.
+Kind of like "hover"*/
+input:focus{
+	background-color: white;
+	border:	3px solid #2980b9;
+	outline: none; /*Removes the annoying highlight that we get when we have selected on any of the element. Built in browser highlighting*/
+}
+
+.eachTodo{
+	/*VIP Link: https://developer.mozilla.org/en-US/docs/Web/CSS/overflow-wrap*/
+	/*Anotehr VIP Link: https://stackoverflow.com/questions/9537838/div-height-100-and-expands-to-fit-content*/
+
+	/*white-space: nowrap;*/
+	list-style-type: none; /*this remove the bullet points from the list*/
+	background: white;
+	/*Do not touch height!!!*/
+	/*height: 40px;*/
+	/*height: auto;*/
+	display: block;
+	overflow-wrap: break-word;
+	/*word-break: break-all;*/
+	/*overflow: auto;*/
+	line-height: 40px;
+	color: #666;
+	/*display: inline-block;	Displays everything in one line, but not what I am looking for*/
+}
+
+body{
+
+	background: #DA4453;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #89216B, #DA4453);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #89216B, #DA4453); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+li:nth-child(2n){
+	background: #f7f7f7; /*Changes the abckground of every 2nd li element*/
+}
+
+body{
+	font-family: 'Roboto';
+}
+
+.liStyling{
+	text-decoration: line-through;
+	color:grey;
+}
