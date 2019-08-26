@@ -1,0 +1,10 @@
+  /*-- change navbar dropdown color --*/
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255,255,255,1);
+ }
+
+ .textBox{
+ 	padding-top: 120px;
+ 	padding-left: 80px;
+ 	padding-right: 80px;
+ }
