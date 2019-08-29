@@ -49,38 +49,39 @@
 		</blockquote>
 		<h6>Goal:</h6> 
 		<p>
-			Given a social network graph, like twitter, identify the nodes (user accounts) that are critical to the spread of (mis)information in the network.
+			Given a social network graph, like twitter, identify the nodes (user accounts) that are critical to the spread of (mis)information in the network when the source of the (mis)information is not known.
 		</p>
 
 		<h6>Motivation:</h6> 
 		<p>
-			As of the 25th of August, there is an <a href="https://en.wikipedia.org/wiki/2019_Hong_Kong_anti-extradition_bill_protests">ongoing demonstration in Hong Kong</a> against an extradition bill that has been proposed by the government of Hong Kong. During the demonstrations, the government of China (henceforth referred to as PRC) was accused of <a href="https://www.nytimes.com/2019/08/19/technology/hong-kong-protests-china-disinformation-facebook-twitter.html">spreading misinformation</a> by creating multiple fake state backed twitter accounts that continously tweeted incorrect information about the demonstrations. Twitter later went on to release a list of 936 accounts that it detected (and later blocked) to be fake accounts created by PRC whose <a href="https://blog.twitter.com/en_us/topics/company/2019/information_operations_directed_at_Hong_Kong.html">sole purpose was to undermine the legitimacy and political positions of the protest movement on the ground</a>. Twitter also reported that they shut down approximately 20,000 other twitter accounts that were created as a result of them blocking the above 936 accounts. <br>
+			As of the 25th of August, there is an <a href="https://en.wikipedia.org/wiki/2019_Hong_Kong_anti-extradition_bill_protests">ongoing demonstration in Hong Kong</a> against an extradition bill that has been proposed by the government of Hong Kong. During the demonstrations, the government of China (henceforth referred to as PRC) was accused of <a href="https://www.nytimes.com/2019/08/19/technology/hong-kong-protests-china-disinformation-facebook-twitter.html">spreading misinformation</a> by creating multiple fake state backed twitter accounts that continously tweeted incorrect information about the demonstrations. The goal was to paint the protestors in bad light, by primarily showing them as more violent than they actually were, on the international social media platform. Twitter later went on to release a list of 936 accounts that it detected (and later blocked) to be state backed accounts created by PRC whose <a href="https://blog.twitter.com/en_us/topics/company/2019/information_operations_directed_at_Hong_Kong.html">sole purpose was to undermine the legitimacy and political positions of the protest movement on the ground</a>. Twitter also reported that they shut down a network of approximately 20,000 other spammy/fake twitter accounts that were created as a result of them blocking the above 936 accounts. <br>
 		</p>
 		<p>
 			The scale of this problem cannot be overstated. These kinds of attempts at spreading misinformation on social media have become much too common and as the pervasiveness of social media increases, the problem only promises to keep getting worse. 
 		</p>
 		<p>
 			Although Twitter did end up banning many of the fake accounts, there are 2 major problems with the approach they followed: <br>
-			1) It was not proactive. By the time the account was detected as a fake account, and subsequently blocked, the account might have already succeeded in its goal of influencing people with its tweets.<br>
-			2) Banning an account is a temporary solution. As was seen in this case, banning an account just leads to other accounts being created that serve the same purpose. It's like a dog trying to chase it's own tail. We need a better strategy to curtail the spread of (mis)information. <br>
+			1) It was not completely proactive. By the time the account was detected as a fake account, and subsequently blocked, the account might have already succeeded in its goal of influencing people with its tweets.<br>
+			2) Banning an account is a temporary solution. As was seen in this case, banning an account just leads to other accounts being created that serve the same purpose. It's like a dog trying to chase it's own tail. <br>
+
+			We need a better strategy to curtail the spread of (mis)information than to reactively ban them as and when they are deteced by the algorithms that Twitter might be running. <br>
 		</p>
 		<h6>Our Solution:</h6> 
 		<p>
 			We introduce the notion of <em>critical nodes</em>. Intuitively, <em>critical nodes</em> are the nodes that are critical/important to the spread of (mis)information in a given network. This implies that removal of these nodes from the network would lead to maximal disruption in the spread of (mis)information. So if we can inform/isolate these nodes from getting influenced by the (mis)information, we can drastically reduce the spread of (mis)information in the network.
 		</p>
 		<p>
-			Consider the following simple example:
+			Consider the following simplified example:
 		</p>
 		<p>
 			<img src="Fig1.PNG" class="float-left" alt="Example">
-			Objective 1: Identify one critical node. <br>
-			Objective 2: Once the critical node has been selected, remove all incident edges on that node, then identify one source node that influences the largest number of nodes in the resulting graph.<br><br>
-			An edge from <em>v<sub>0</sub></em> to <em>v<sub>2</sub></em> implies that <em>v<sub>2</sub></em> follows <em>v<sub>0</sub></em> on twitter. <em>p<sub>0,2</sub></em> is the probability that a tweet of <em>v<sub>0</sub></em> is retweeted by <em>v<sub>2</sub></em>. For the sake of this example, assume every probability to be 1. That is, every tweet sent out by a user is read by and retweeted by every one the user's followers.  <br>
-			In this scenario, if the objective was to influence the maximum number of users, I would select the node <em>v<sub>0</sub></em> as the source to spread the (mis)information. A natural instinct in this case would be then to select <em>v<sub>0</sub></em> as the critical node. However, note that if we selected <em>v<sub>0</sub></em> as the critical node and removed it from the graph, choosing a source node, <em>v<sub>3</sub></em> for example, would still end up influencing <em>n + 1</em> nodes (<em>u<sub>1</sub></em> to <em>u<sub>n</sub></em> + <em>v<sub>4</sub></em>). <br>
-			Now note what happens if we select <em>v<sub>4</sub></em> as the critical node. Removing this node disconnects most of the nodes from one another. The node that can now influence the largest number of nodes is <em>v<sub>0</sub></em> which is only 3 (<em>v<sub>1</sub></em>, <em>v<sub>2</sub></em>, and <em>v<sub>3</sub></em>). Compare this with when we selected <em>v<sub>0</sub></em> as the critical node. Hence choosing <em>v<sub>4</sub></em> as the critial node is the correct option over here. <br>
-			This is basically how our algorithm works.
+			Objective 1: Identify one critical node. Remove all incident edges on this critical node,<br>
+			Objective 2: Identify one source node that can reach the largest number of nodes in the resulting graph.<br><br>
+			An edge from <em>v<sub>0</sub></em> to <em>v<sub>2</sub></em> implies that <em>v<sub>2</sub></em> follows <em>v<sub>0</sub></em> on twitter. <em>p<sub>0,2</sub></em> is the probability that a tweet of <em>v<sub>0</sub></em> is retweeted by <em>v<sub>2</sub></em>. For the sake of this example, assume every probability to be 1. That is, every tweet sent out by a user is read by and retweeted by every one the user's followers.  We say that a user is <em>influenced</em> by a tweet if the user ends up retweeting/replying/quoting the original tweet.<br>
+			In this scenario, if the objective was to influence the maximum number of users, I would select the node <em>v<sub>0</sub></em> as the source to spread the (mis)information since I could reach all of the nodes in the network by selecting <em>v<sub>0</sub></em>. A natural instinct in this case would be then to select <em>v<sub>0</sub></em> as the critical node as well. However, note that if we selected <em>v<sub>0</sub></em> as the critical node and removed it from the graph, choosing a source node, <em>v<sub>3</sub></em> for example, would still end up influencing <em>n + 1</em> nodes (<em>u<sub>1</sub></em> to <em>u<sub>n</sub></em> + <em>v<sub>4</sub></em>). <br>
+			Now note what happens if we select <em>v<sub>4</sub></em> as the critical node instead. Removing this node disconnects most of the nodes from one another. The node that can now influence the largest number of nodes is <em>v<sub>0</sub></em> which is only 3 (<em>v<sub>1</sub></em>, <em>v<sub>2</sub></em>, and <em>v<sub>3</sub></em>). Compare this with when we selected <em>v<sub>0</sub></em> as the critical node. Hence choosing <em>v<sub>4</sub></em> as the critial node is the correct option over here. <br>
+			Identifiying critical nodes such as these forms the basis of our algorithm.
  		</p>
- 		<br>
  		<p>
  			 <h6>Advantages of our Solution:</h6> 
  			 <p>
@@ -90,14 +91,51 @@
 
  		</p>
  		<p>
- 			<h6>Experimental Setup</h6>
- 			For the purpose of this experiment, tweets mentioning Hong Kong were filtered using the <a href=https://tweepy.readthedocs.io/en/latest/#>tweepy library</a> written in Python and the <a href=https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/intro-to-tweet-json>Twitter API</a>. The <a href=https://github.com/rgbk21/TwitterStream>Python code for the streaming process </a> can be found here. Tweets were collected from Tue Aug 13 21:30:14 +0000 2019 to Thu Aug 15 13:08:30 +0000 2019. In all, around 1.2 million tweets were collected. <br>
- 			A graph was created from the tweets. Graph was created in the following manner: there are 3 actions that any user can take from a tweet: retweet, retweet with comment, and reply. All 3 actions are perceived as engaging with the tweet. An edge was created from a user <em>v</em> to a user <em>w</em> if <em>w</em> took any of the above stated 3 actions on <em>v</em>'s tweet. The graph created in this manner contained a total of 607307 nodes and 989061 edges. The <a href=https://github.com/rgbk21/GraphManipulations>JAVA code for the parsing of the Tweet JSON object and the subsequent creation of the graph</a> can be found here. <br>
+ 			<h6>Experimental Setup: </h6>
+ 			For the purpose of this experiment, tweets mentioning Hong Kong were filtered using the <a href=https://tweepy.readthedocs.io/en/latest/#>Tweepy library</a> written in Python and the <a href=https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/intro-to-tweet-json>Twitter API</a>. The <a href=https://github.com/rgbk21/TwitterStream>Python code for the streaming process </a> can be found here. Tweets were collected from Tue Aug 13 21:30:14 +0000 2019 to Thu Aug 15 13:08:30 +0000 2019. In all, around 1.2 million tweets were collected. <br>
+ 			A graph was created from the tweets. Graph was created in the following manner: there are 3 actions that any user can take from a tweet: retweet, retweet with comment, and reply. All 3 actions are perceived as engaging with the tweet. An edge was created from a user <em>v</em> to a user <em>w</em> if <em>w</em> took any of the above stated 3 actions on <em>v</em>'s tweet. The graph created in this manner contained a total of 607525 nodes and 994220 edges. The <a href=https://github.com/rgbk21/GraphManipulations>JAVA code for the parsing of the Tweet JSON object and the subsequent creation of the graph</a> can be found here. <br>
  			The version of our algorithm applied here does not require the knowledge of the source nodes spreading the (mis)information provided to us. The <a href=https://github.com/rgbk21/Disrupting_Diffusion_By_Finding_Critical_Nodes/tree/CodeContaining_topCrit_WithoutAnySeedSetContextGiven_Exp2>C++ code that we used for identifying the critical nodes in the network</a> can be found here. 
  		</p>
  		<p>
- 			<h6>Results and Observations</h6>
+ 			<h6>Results and Observations:</h6>
+
+ 			First, we limited our search to identify the top 20 critical nodes present in the network. <br> <br>
+
+ 			<em>Observation 1) The nodes identified as critical by the algorithm do intuitively make sense. </em><br>
+ 			Among the top 20 were political scientists, analysts, activists, and commentators fom Japan, Europe, and the United States. They also included accounts belonging to activists, correspondents, and locals - all of these people were living in Hong Kong or were reporting from there. There was a news aggregator site, Washington Examiner, also among the top 20. The critical nodes also included two major political figures - Donald Trump and Hillary Clinton. The point of this example is to demonstrate that the algorithm picks nodes whose selection intuitively makes sense - these nodes identified can in fact be considered critical to the spread of information in the network. <br>
+ 			The below table shows some of the identified nodes along with other user details <br>
+
+ 			<div class="row">
+ 				<img src="Fig2.PNG" class="center-block" alt="Example2">
+ 			</div>
+
+ 			Opinion: Note that, barring 1, all of these accounts are verified. This means that if I was Twitter and trying to minimize the spread of misinformation, I would not be too worried about these accounts tweeting out incorrect information (unless they had a vested interest in doing so - see observation 3).
+
+ 			<br><br>
+ 			<em>Observation 2) Our algorithm also identified, as critical, some other nodes that might not intuitively seem important to the information diffusion </em><br>
+ 			These are the user accounts that are unverified. It is difficult to comment on the user accounts based on their descriptions alone. It is difficult to gauge the identity or the leanings of these accounts, making them more susceptible to tweeting out (mis)information. Some screen_names have been kept hidden in accordance with Twitter's user policy. <br>
+ 			The below table shows some of the identified nodes along with other user details
  			
+
+ 			<div class="row">
+ 				<img src="Fig3.PNG" class="center-block" alt="Example3">
+ 			</div>
+
+ 			Opinion: If I were Twitter, and trying to minimize the spread of (mis)information in the network, these would be the accounts that I would be paying closer attention to. The fact that these are unverified and seem like accounts belonging to normal users, these would be the accounts that would have a greater probability of being influenced by (mis)information and hence should be isolated from the influence of (mis)information or prevented from tweeting out (mis)information when they eventually are exposed to any. These nodes are central to preventing the spread of (mis)information.
+
+			<br><br>
+ 			<em>Observation 3) Accounts that are identified as critical might belong to the party trying to spread (mis)information </em><br>
+ 			One of the nodes identified as critical was the account belonging to GlobalTimesNews. This is a state media news outlet based in China and comes <a href=https://www.cnn.com/2019/08/16/asia/china-global-times-hu-xijin-hong-kong-intl-hnk/index.html>under the umbrella of the Chinese media censorship</a>. 
+
+ 			<div class="row">
+ 				<img src="Fig4.PNG" class="center-block" alt="Example4">
+ 			</div>
+
+ 			This presents an entirely different problem. In this case we can presume that the account associated with GlobalTimesNews might tweet out (mis)information regarding the HKProtests. In that case, we can assume GlobalTimesNews to be a <em>source</em> of the misinformation. Recall that while stating our goal in the start of the article, we assumed that the source of the misinformation spread was not known. <br>
+
+ 			<em>But what if we do  know the source of the (mis)information spread? Can we then better estimate the nodes that are critical to the spread of the information? As it turns out, we can.</em> 
+ 			<br><br>
+ 			We will will be covering this in another article.
  		</p>
 
 	</div>
