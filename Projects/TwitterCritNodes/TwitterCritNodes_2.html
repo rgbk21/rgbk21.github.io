@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="TwitterCritNodes.css">
+	<title>Identifying Critical nodes on Twitter</title>
+</head>
+<body>
+
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+		
+		<div class="navbar-header">
+			<a href="../../index.html" class="navbar-brand"> rgbk21</a>
+		</div>
+
+	<!-- 	<div class="nav navbar-nav">
+
+				<li><a class="nav-link" href="#">About</a></li>
+				<li><a class="nav-link" href="#">Content</a></li>
+
+		</div> -->
+
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" ><span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="nav navbar-nav">
+				<li class="nav-item dropdown">
+			        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			          Projects
+			        </a>
+			        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+			          <a class="dropdown-item" href="../../Projects/TwitterCritNodes/TwitterCritNodes_1.html">Identifying Critical Nodes on Twitter</a>
+			          <div class="dropdown-divider"></div>
+			        </div>
+		     	</li>
+		     	<li class="nav-item dropdown">
+			        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			          HTML Projects
+			        </a>
+			        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+			          <a class="dropdown-item" href="../../ImageGallery/ImageGallery.html">Image Gallery</a>
+			          <a class="dropdown-item" href="../../RGB_Guesser_Game/RGB.html">RGB Guesser Game</a>
+			          <a class="dropdown-item" href="../../ToDoList/todo.html">To-Do List</a>
+			          <div class="dropdown-divider"></div>
+			        </div>
+		     	</li>
+		     	<li class="nav-item dropdown">
+			        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			          Notes
+			        </a>
+			        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+			          <a class="dropdown-item" href="../../COMS_631/COMS_631_index.html">COMS 631</a>
+			          <a class="dropdown-item" href="../../COMS_535/COMS_535_index.html">COMS 535</a>
+			          <div class="dropdown-divider"></div>
+			        </div>
+		     	</li>
+		     	<li class="nav-item dropdown">
+			        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			          In Another Life
+			        </a>
+			        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+			          <a class="dropdown-item" href="../../InAnotherLife/Chapter1.html">Chapter 1</a>
+			          <div class="dropdown-divider"></div>
+			        </div>
+		     	</li>
+
+			</ul>
+
+
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item active"><a class="nav-link" href="https://www.linkedin.com/in/raj-gaurav-ballabh-kumar-97002058/">LinkedIn</a></li>
+				<li class="nav-item active"><a class="nav-link" href="https://www.instagram.com/wobblyframes/">Instagram</a></li>
+				<li class="nav-item active"><a class="nav-link" href="https://www.facebook.com/SomeRandomThoughts">Facebook</a></li>
+			</ul>
+
+		</div>
+	</nav>
+
+	<div class="textBox">
+
+		<blockquote class="blockquote text-center">
+  		<p class="mb-0">Identifying Critical nodes on Twitter</p>
+  		<footer class="blockquote-footer">Work based on research conducted under Dr. Samik Basu and Dr. Pavan K. Aduri at Iowa State University</footer>
+		</blockquote>
+
+		<p>This is part 2 of a 3-part series on the study of critical nodes in a network. <br>
+		Links to: <a href=../../Projects/TwitterCritNodes/TwitterCritNodes_1.html>part 1</a> and  <a href=../../Projects/TwitterCritNodes/TwitterCritNodes_3.html>part 3</a>
+
+
+		<h6>Goal:</h6> 
+		<p>
+			Given a social network graph, like twitter, identify the nodes (user accounts) that are critical to the spread of (mis)information in the network when the source of the (mis)information is known.
+		</p>
+
+		<h6>Previously:</h6> 
+		<p>
+			Recall that in part 1 of the series we had looked at how we can identify the nodes critical to the spread of (mis)information when there was no knowledge of the source of the spread available to us. For those scenarios we treated every node as a potential source for the (mis)information spread and computed the critical nodes based on this. <br>
+			In this part we look at the case when we do have knowledge about the source of the spread of the (mis)information.
+			Since the source is given, we know that the (mis)information can reach only those nodes that are connected to the source through some path. This reduces our search space for critical nodes, allowing us to perform this computation much faster and with lesser memory requirements. <br>
+			A valid question arises in this case though - if we already know the source of the (mis)information spread, why not simply block/ban those accounts? Yes, you could do that. But consider a case where Twitter does not want to ban the account completely but keep the account active and just limit the exposure from said account. 
+
+		</p>
+
+		<h6>Our Solution when the source is known:</h6> 
+		<p>
+			The core idea of the solution remains the same as what was outlined in part 1.
+	
+		</p>
+		<p>
+			<img src="Fig1.PNG" class="float-left" alt="Example">
+			Consider the same example as the one in part 1. Suppose we knew that the node <em>v<sub>2</sub></em> was the source of the (mis)information. Now if we had a critical node to remove from the network, the choice would be pretty clear. We would be selecting <em>v<sub>4</sub></em> as the critical node and removing it. <br> <br>
+			A helpful way to think about the problem is to think of it as a game with 2 players - one player (Twitter in this case) plays the role of the defender whereas the entity trying to spread (mis)information plays the role of the attacker (PRC in this case). In part 1, when we had selected critical nodes without knowledge of the source, it was the defender who was playing the first move by selecting the critical nodes beforehand. Since the defender had no knowledge of where the attacker might select the source, the defender selected the critical nodes by looking at the <em>entire</em> graph and selected the nodes which could disconnect the maximum number of nodes from the network. However, in part 2, the attacker makes the first move and selects the source. Now it's the turn of the defender. Since the defender already knows the source, it makes the job easier for them because now the defender can select the critical nodes keeping the nodes selected by the attacker in step1 in mind. This not only makes the computation easier, but also improves the degree to which we can contain the spread of misinformation (when compared to part 1). <br>
+			As you can guess, knowing the source of the (mis)information spread before hand is not at all trivial and presents a completely different set of challenges.
+		</p>
+ 		<p>
+ 			 <h6>Advantages of this Solution over the one specified in part 1:</h6> 
+ 			 <p>
+ 			 	1) One clear advantage of this version of the algorithm over the one specified in part 1 is that this version gives a larger reduction in the spread of (mis)information in the network when compared to the algo of part 1. This makes it the better choice of algorithm when the source of the (mis)information spread is already known. <br>
+ 			 	2) It also runs in a shorter amount of time and can compute critical nodes for a larger size of the graph when compared to part 1 algo (given the same amount of memory obviously).
+ 			 </p>
+
+ 		</p>
+ 		<p>
+ 			<h6>Experimental Setup: </h6>
+ 			The only change in this part is the version of the algorithm used. The <a href=https://github.com/rgbk21/Disrupting_Diffusion_By_Finding_Critical_Nodes/tree/CodeContaining_TopCritGivenSeed>C++ code for the version of the algorithm when the seed set is known</a> is provided here. <br>
+ 			(The below text is the same as part 1. Leaving it here for the sake of completion) <br>
+ 			For the purpose of this experiment, tweets mentioning Hong Kong were filtered using the <a href=https://tweepy.readthedocs.io/en/latest/#>Tweepy library</a> written in Python and the <a href=https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/intro-to-tweet-json>Twitter API</a>. The <a href=https://github.com/rgbk21/TwitterStream>Python code for the streaming process </a> can be found here. Tweets were collected from Tue Aug 13 21:30:14 +0000 2019 to Thu Aug 15 13:08:30 +0000 2019. In all, around 1.2 million tweets were collected. <br>
+ 			A graph was created from the tweets. Graph was created in the following manner: there are 3 actions that any user can take from a tweet: retweet, retweet with comment, and reply. All 3 actions are perceived as engaging with the tweet. An edge was created from a user <em>v</em> to a user <em>w</em> if <em>w</em> took any of the above stated 3 actions on <em>v</em>'s tweet. The graph created in this manner contained a total of 607525 nodes and 994220 edges. The <a href=https://github.com/rgbk21/GraphManipulations>JAVA code for the parsing of the Tweet JSON object and the subsequent creation of the graph</a> can be found here. <br>
+ 		</p>
+ 		<p>
+
+ 			<h6>Selecting the Source:</h6>
+ 			<p>
+ 			Since this version assumes that we already know the source of the (mis)information spread, we need to select a seed that we could use as the source. As stated earlier, this problem is not trivial and is, currently, outside the scope of the discussion we are having. One of the options towards future work is to incorporate machine learning into the algorithm to see if it improves the quality of the results. <br>
+ 			For now, the selection of seed was done as follows (using a conservative approach): we looked at the user descriptions of all the 607525 accounts. If description contained the keywords "China" and "News" in it, we made the assumption that the account belonged to a news organization from China and hence could be a potential source. Some accounts were added and removed from the list based on some basic background checks done for the accounts. This finally gave us a list of 169 accounts that served as our source for this experiment. 
+			</p>
+
+ 			<h6>Results and Observations:</h6>
+
+ 			We limited our search to identify the top 20 critical nodes present in the network. Note that since the nodes selected as critical by this version of the algorithm depend heavily on the source selected, which was selected in this case based on a very broad heuristic, the nodes mentioned below might not be an accurate estimation of the "real" critical nodes in the network. To get the closest estimate, we should ideally have the entire set of accounts that are creating original tweets about the described misinformation. <br> <br>
+
+ 			But we can still make some general observations with our selected source. We have divided the critical nodes into two sections - verified and unverified accounts - to help better analyze the results. Here, unless stated otherwise, we will be comparing against the results of part 1. <br> <br>
+ 			
+ 			 <div class="row">
+ 				<img src="Fig_givenSeed_verifiedUsers.PNG" class="center-block" alt="Example2">
+ 			</div>
+
+
+ 			 <div class="row">
+ 				<img src="Fig_givenSeed_UnVerifiedUsers.PNG" class="center-block" alt="Example3">
+ 			</div>
+ 			<br>
+ 			<em>Observation 1) Most of the critical nodes identified are accounts belonging to news stations or journalists working in HongKong </em><br>
+
+ 			This makes sense if you think about it. We selected the source as the news stations in China. The general populace of HongKong will probably not be following news stations in China. But the journalists and news agencies covering stories related to HK will most probably be following the Chinese stations. So the flow of information can be pictured as follows - Chinese news stations under state control tweet out information - these are picked up by the journalists and news stations working in HK who then reply or add their own views on these news stories and then tweet that out to their followers - the followers of these news accounts then progressively retweet, reply, or comment on these tweets - and the process cascades to include more people.<br>
+ 			The important point to note here is that the first line of people who are being exposed to PRC propoganda are mostly the HK NewsStations and journalists. So it makes sense when our algorithm chooses them as critical, because if they did not tweet out information, majority of the general populace in HK would not be exposed to that information. <br>
+
+ 			<br>
+ 			<em>Observation 2) There is a small, but not a major, overlap between the critical nodes selected in part 1 and part 2 </em><br>
+ 			Among the verified nodes, there are 2 accounts that overlap among the two results: @yuenok and @joshuawongcf. The top 5 nodes selected as critical in part 1 do not appear in part 2. This can be because these 5 nodes are "far away" from our chosen source of 169 nodes. Since these 5 nodes are at a greater distance, the probability that they were exposed to the information originating from the Chinese news stations was very low, and hence their low rankings.<br> <br>
+ 			
+ 			The other observations about the relative importance of the accounts from the point of view of Twitter carry over from part 1 and can be applied as is to this scenario as well. We will not be repeating that stuff.
+
+ 			<br><br>
+ 			This concludes our study of critical nodes on Twitter. Hope this gave some insight into how we could go about finding the critical nodes in a network. Twitter was only an example. We could apply this <em>any</em> kind of social network. For eg. consider the case of a disease outbreak. If we had a graph representing the location of communities and the people in it, we could, in theory, predict which communities were most susceptible to breakout of an epidemic using the algo mentioned in part 1. If we knew where an epidemic could begin, that is we knew the source of the disease spread, we could target the critical communities and ensure that the spread is contained by using the algo described in part 2. The use of this is manifold.
+
+			<br> <br>
+ 			References: <br>
+ 			[1] <a href=https://www.cs.cornell.edu/home/kleinber/kdd03-inf.pdf>Maximizing the Spread of Influence through a Social Network </a> <br>
+ 			[2] <a href=https://arxiv.org/pdf/1404.0900.pdf> Influence Maximization: Near-Optimal Time Complexity Meets Practical Efficiency </a> <br>
+ 			[3] <a href="https://lib.dr.iastate.edu/etd/16549/">Disrupting diffusion: Critical nodes in network</a>
+
+ 			<br><br>
+
+ 			FootNote 1: One of the details that we glanced over was the probability values that are used. In the example in part 1, we assumed for simplicity purposes that if <em>v<sub>0</sub></em> sent out a tweet, then every follower of <em>v<sub>0</sub></em> acted upon that tweet (either through retweeting, replying, or quoting) with probability 1. Of course, that is not the case in the real world. For this particular study, we assumed the probability of a user <em>v</em> taking an action on every tweet to be 1/indegree(<em>v</em>). This means that if a vertex <em>v</em> has an indegree of 4, then <em>v</em> will be influenced by the information shared by each of the 4 vertices with a probability of 1/4. In the real world, this probability will vary and will not be the same for all of the users. Computing this probability exactly is way more complicated than the scope of this discussion permits, and we will hence not be going into that here.
+
+ 			<br><br>
+
+ 			FootNote 2: We have looked at ways to minimize the spread of (mis)information by playing the role of the defender. For argument's sake, what if we were trying to maximize the spread of (mis)information? Is there a way to do that?
+ 			<br><br>
+ 			<em>As it turns out, there is an algorithm for that as well.</em><br>
+ 			We will be covering this in <a href="TwitterCritNodes_3.html"> part 3.</a>
+
+ 		</p>
+
+	</div>
+
+</body>
+</html>
