@@ -75,6 +75,7 @@
 
 
 			<ul class="navbar-nav ml-auto">
+				<li class="nav-item active"><a class="nav-link" href="https://github.com/rgbk21">GitHub</a></li>
 				<li class="nav-item active"><a class="nav-link" href="https://www.linkedin.com/in/raj-gaurav-ballabh-kumar-97002058/">LinkedIn</a></li>
 				<li class="nav-item active"><a class="nav-link" href="https://www.instagram.com/wobblyframes/">Instagram</a></li>
 				<li class="nav-item active"><a class="nav-link" href="https://www.facebook.com/SomeRandomThoughts">Facebook</a></li>
@@ -169,7 +170,12 @@
  			The other observations about the relative importance of the accounts from the point of view of Twitter carry over from part 1 and can be applied as is to this scenario as well. We will not be repeating that stuff.
 
  			<br><br>
- 			This concludes our study of critical nodes on Twitter. Hope this gave some insight into how we could go about finding the critical nodes in a network. Twitter was only an example. We could apply this <em>any</em> kind of social network. For eg. consider the case of a disease outbreak. If we had a graph representing the location of communities and the people in it, we could, in theory, predict which communities were most susceptible to breakout of an epidemic using the algo mentioned in part 1. If we knew where an epidemic could begin, that is we knew the source of the disease spread, we could target the critical communities and ensure that the spread is contained by using the algo described in part 2. The use of this is manifold.
+ 			This concludes our study of critical nodes on Twitter. Hope this gave some insight into how we could go about finding the critical nodes in a network. Twitter was only an example. We could apply this to <em>any</em> kind of network. For eg. consider the case of a disease outbreak. If we had a graph representing the location of communities and the people in it, we could, in theory, predict which communities were most susceptible to breakout of an epidemic using the algo mentioned in part 1. If we knew where an epidemic could begin, that is we knew the source of the disease spread, we could target the critical communities and ensure that the spread is contained by using the algo described in part 2. The use of this is manifold. <br><br>
+
+			So now that we have looked at ways to minimize the spread of (mis)information by playing the role of the defender, what if we were trying to maximize the spread of (mis)information instead? Is there a way to do that?
+ 			<br><br>
+ 			<em>As it turns out, there is an algorithm for that as well.</em><br><br>
+ 			We will be covering this in <a href="TwitterCritNodes_3.html"> part 3.</a>
 
 			<br> <br>
  			References: <br>
@@ -180,13 +186,6 @@
  			<br><br>
 
  			FootNote 1: One of the details that we glanced over was the probability values that are used. In the example in part 1, we assumed for simplicity purposes that if <em>v<sub>0</sub></em> sent out a tweet, then every follower of <em>v<sub>0</sub></em> acted upon that tweet (either through retweeting, replying, or quoting) with probability 1. Of course, that is not the case in the real world. For this particular study, we assumed the probability of a user <em>v</em> taking an action on every tweet to be 1/indegree(<em>v</em>). This means that if a vertex <em>v</em> has an indegree of 4, then <em>v</em> will be influenced by the information shared by each of the 4 vertices with a probability of 1/4. In the real world, this probability will vary and will not be the same for all of the users. Computing this probability exactly is way more complicated than the scope of this discussion permits, and we will hence not be going into that here.
-
- 			<br><br>
-
- 			FootNote 2: We have looked at ways to minimize the spread of (mis)information by playing the role of the defender. For argument's sake, what if we were trying to maximize the spread of (mis)information? Is there a way to do that?
- 			<br><br>
- 			<em>As it turns out, there is an algorithm for that as well.</em><br>
- 			We will be covering this in <a href="TwitterCritNodes_3.html"> part 3.</a>
 
  		</p>
 
