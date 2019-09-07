@@ -1,0 +1,53 @@
+Trace Path: 
+/wiki/Eugen_Tomac
+/wiki/2019_European_Parliament_election_in_Romania
+/wiki/Parliament_of_Romania
+/wiki/Romania
+/wiki/Central_Intelligence_Agency
+/wiki/Outline_of_Singapore
+/wiki/Singapore
+/wiki/37th_G8_summit
+/wiki/Nice
+/wiki/Top_14
+wiki/Ole_Avei
+Nodes Visited: 15
+
+Trace Path: 
+/wiki/Mohamed_Amine_Aoudia
+/wiki/List_of_Zamalek_SC_players
+/wiki/Zamalek_SC
+/wiki/Confederation_of_African_Football
+/wiki/Africa
+/wiki/Islam
+/wiki/Tanzania
+/wiki/Palaeolithic
+/wiki/Liss
+wiki/Richard_Vobes
+Nodes Visited: 10
+
+Trace Path: 
+/wiki/Lil_Nas_X
+/wiki/List_of_artists_who_reached_number_one_in_the_United_States
+/wiki/Usher_(singer)
+/wiki/List_of_best-selling_music_artists
+/wiki/United_Kingdom
+/wiki/Non-resident_Indian_and_person_of_Indian_origin
+wiki/Shah_Rukh_Khan
+Nodes Visited: 14
+
+Trace Path: 
+/wiki/Michael_Jackson
+/wiki/List_of_Billboard_Hot_100_chart_achievements_and_milestones
+/wiki/Aretha_Franklin
+/wiki/Condoleezza_Rice
+/wiki/Central_Intelligence_Agency
+wiki/Dalai_Lama
+Nodes Visited: 5
+
+Trace Path: 
+/wiki/Robert_Downey_Jr.
+/wiki/List_of_Marvel_Cinematic_Universe_films
+/wiki/Marvel_Studios
+/wiki/DC_Comics
+wiki/Idris_Elba
+Nodes Visited: 5
