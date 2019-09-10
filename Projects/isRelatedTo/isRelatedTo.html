@@ -93,7 +93,7 @@
 
 		<p>
 			<h6>Motivation: </h6>
-			The core idea behind this project originated when I came upon the concept of <a href="https://en.wikipedia.org/wiki/Six_degrees_of_separation">Six Degrees of Separation</a>. It says that all people are six, or fewer, social connections away from each other. So given two people, suppose Alica and Dave, if I start doing a search from Alice, can I find out the string of events/places/people that connect her to Dave? Would the results be interesting? 
+			The core idea behind this project originated when I came upon the concept of <a href="https://en.wikipedia.org/wiki/Six_degrees_of_separation">Six Degrees of Separation</a>. It says that all people are six, or fewer, social connections away from each other. So given two people, suppose Alice and Dave, if I start doing a search from Alice, can I find out the string of events/places/people that connect her to Dave? Would the results be interesting? 
 		</p>
 
 		<h6>Goal:</h6> 
@@ -105,10 +105,11 @@
 
 		<h6>Solution:</h6> 
 		<p>
-			We turn to Wikipedia. The assumption is that if there was an person/event/place of interest in Alice's life, then Wikipedia has it documented and has a link to said event. We collect all the links in Alice's wiki page, then collect the links in all of those page and so on, until we hit our target, the wikipedia page for Dave. <br>
+			We turn to Wikipedia. The assumption is that if there was a person/event/place of interest in Alice's life, then Wikipedia has it documented and has a link to said event. We collect all the links in Alice's wiki page, then collect the links in all of those pages, and so on, until we hit our target, the wikipedia page for Dave.
 			Instead of sending GET requests to potentially thousands of pages, we instead use a heuristic to rank the pages we have seen so far, and assign them a rank. The page with the highest rank is always selected as the next page to explore. <br>
 			The heuristic itself is pretty simple. We collect all the links in Dave's page. For every page <i>p</i> that we see when we start exploring from Alice's page, we see how many of the links in <i>p</i> are common with the links in Daves's page. The greater then number of common links, the higher is <i>p</i>'s overall rank. <br>
-			Note that this is just one link between the 2 pages. It is <i>not</i> the shortest link. It is not <i>all</i> the links. It is just <i>one</i> link between the source and the target.
+			For those familiar with the algorithm, this is a direct application of the <a href="https://en.wikipedia.org/wiki/Best-first_search">Best First Search</a> used in AI.<br>
+			Note that this is just one link between the 2 pages. It is <i>not</i> the <i>shortest</i> link. It is not <i>all</i> the links. It is just <i>one</i> link between the source and the target.
 		</p>
  		<p>
  			<h6>Experimental Setup and Code: </h6>
