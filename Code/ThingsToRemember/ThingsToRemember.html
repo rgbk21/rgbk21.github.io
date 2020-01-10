@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="ThingsToRemember.css">
+	<title>ThingsToRemember</title>
+</head>
+<body>
+
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+		
+		<div class="navbar-header">
+			<a href="../../index.html" class="navbar-brand"> rgbk21</a>
+		</div>
+
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" ><span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="nav navbar-nav">
+				<li class="nav-item dropdown">
+			        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			          Projects
+			        </a>
+			        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+			          <a class="dropdown-item" href="../../Projects/TwitterCritNodes/TwitterCritNodes_1.html">Identifying Critical Nodes on Twitter</a>
+			          <a class="dropdown-item" href="../../Projects/isRelatedTo/isRelatedTo.html">isRelatedTo</a>
+			          <div class="dropdown-divider"></div>
+			        </div>
+		     	</li>
+		     	<li class="nav-item dropdown">
+			        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			          HTML Projects
+			        </a>
+			        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+			          <a class="dropdown-item" href="../../ImageGallery/ImageGallery.html">Image Gallery</a>
+			          <a class="dropdown-item" href="../../RGB_Guesser_Game/RGB.html">RGB Guesser Game</a>
+			          <a class="dropdown-item" href="../../ToDoList/todo.html">To-Do List</a>
+			          <div class="dropdown-divider"></div>
+			        </div>
+		     	</li>
+		     	<li class="nav-item dropdown">
+			        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			          Notes
+			        </a>
+			        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+			          <a class="dropdown-item" href="../../COMS_631/COMS_631_index.html">COMS 631</a>
+			          <a class="dropdown-item" href="../../COMS_535/COMS_535_index.html">COMS 535</a>
+			          <div class="dropdown-divider"></div>
+			        </div>
+		     	</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Code
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="../../Code/ThingsToRemember/ThingsToRemember.html">Things To Remember</a>
+						<div class="dropdown-divider"></div>
+					</div>
+				</li>
+		     	<li class="nav-item dropdown">
+			        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			          In Another Life
+			        </a>
+			        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+			          <a class="dropdown-item" href="../../InAnotherLife/Chapter1.html">Chapter 1</a>
+			          <div class="dropdown-divider"></div>
+			        </div>
+		     	</li>
+
+			</ul>
+
+
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item active"><a class="nav-link" href="https://github.com/rgbk21">GitHub</a></li>
+				<li class="nav-item active"><a class="nav-link" href="https://www.linkedin.com/in/raj-gaurav-ballabh-kumar-97002058/">LinkedIn</a></li>
+				<li class="nav-item active"><a class="nav-link" href="https://www.instagram.com/wobblyframes/">Instagram</a></li>
+				<li class="nav-item active"><a class="nav-link" href="https://www.facebook.com/SomeRandomThoughts">Facebook</a></li>
+			</ul>
+
+		</div>
+	</nav>
+
+	<div class="textBox">
+		<div>This page contains some of the common "gotchas" that I have come across while coding in Java. Some of these are from my own experiences.
+			Other are personal notes that I have taken from the textbook Java Puzzles – Traps, Pitfalls, and Corner Cases By Bloch and Gafter.
+		</div>
+
+		<div class="one-point">
+			1) <a href="https://stackoverflow.com/questions/8002603/why-does-the-ternary-operator-unexpectedly-cast-integers">Why does the ternary operator unexpectedly cast integers? </a>
+			<div>
+				If there is a mismatch in the types of the second and third operands in the ternary operator, one type
+				can be automatically converted to another in order to make their types equal. In the below example, for
+				instance, you have to cast both the second and third operand to char or else the result will be converted
+				to an int dataype. This is what we see in line 3.
+			</div>
+			<div class="code-snippet"><script src="https://gist.github.com/rgbk21/857230cca79f5d0333a312ec9f317154.js"></script></div>
+		</div>
+
+		<div class="one-point">
+			2) You can do this. Add the &ltT&gt after a class definition. So what is the difference between a simple class
+			definition and one that has Class&ltT&gt?
+			<div>
+				Consider the below example. Creating a class using Generics (as on line 1) allows us to create a List of
+				any data type - int, string, etc. In the second example (on line 7), we tried to see if deleting the datatype
+				helped in any way - it didn't. The code did not compile. So we added an int datatype on line 13 and dropped
+				the generic &ltT&gt in the class declaration. Sure enough, the code compiled. But now in the place of a List
+				prototype that could handle any datatype, we have a List that can only hold integers.
+				<br>
+				We can also use more than one generic type parameters (is this what this T, U, is called? Not sure) which
+				is what is done on line 19.
+				<br>
+				//TODO: Read up on Reflection
+				<br>
+				//TODO: <a href="https://stackoverflow.com/questions/2770321/what-is-a-raw-type-and-why-shouldnt-we-use-it">What is a raw type and why shouldn't we use it?</a>
+			</div>
+			<div class="code-snippet"><script src="https://gist.github.com/rgbk21/9b01ff7801d6f66c920ccebdc564982b.js"></script></div>
+		</div>
+
+		<div class="one-point">
+			3) Is there any difference between return null and return (ListNode&ltInteger&gt) null ? i.e. does casting null
+			somehow change null?
+			<div>
+				//TODO:
+			</div>
+		</div>
+
+		<div class="one-point">
+			4) <a href="https://stackoverflow.com/questions/3326112/java-best-way-to-pass-int-by-reference">What is the
+			best way to pass int by reference</a>?
+			<div>
+				You cannot pass integers by reference in Java. Wrapping an int into an Integer class also does not help
+				because Integer is immutable. What you can do is store the integer in an int[] array and then pass the array by reference.
+			</div>
+		</div>
+
+		<div class="one-point">
+			5) Why do we get one extra negative number?
+			<div>
+				When representing a number in 32 bits, the highest bit is used as a sign bit, so when representing a number
+				like 2147483647 in binary, it is 01111...111 (31 bits that are 1’s).
+				<br>
+				When we add one more to that we get:
+				<br>
+				10000...000 (31 0’s)
+				However, because of a need to avoid representing 0 twice (once as 000…0 and other time as 100…0), we wrap
+				the number, so instead of 100…0 representing -0, this represents negative 2147483648 (not negative 2147483647
+				because the positive side needed to represent 0, but as the negative side doesn't, we get one "extra"
+				negative number).
+			</div>
+		</div>
+
+		<div class="one-point">
+			6) C++ : This is compiler-specific, but if you're using gcc then you can compile with -ftrapv to issue
+			SIGABRT when signed integral overflow occurs.
+		</div>
+
+		<div class="one-point">
+			7) Java is: Strictly speaking, for references it's "pass reference by value" and for primitives it's just "pass by value" -
+			<a href="https://stackoverflow.com/questions/3330864/how-can-i-pass-an-integer-class-correctly-by-reference">Source</a>
+		</div>
+
+		<hr/>
+
+		<div class="one-point">
+			1) Consider the following computation:
+			<div>
+				<div class="code-snippet"><script src="https://gist.github.com/rgbk21/c0b81bebdc5d547025186bd84f194b87.js"></script></div>
+				Now long can store 2^63 – 1 as its largest number = 9,223,372,036,854,775,807. But still if you print
+				MICROS_PER_DAY out, you will see that it contains 500654080. This is because the entire computation will be
+				done in int arithmetic. Only after the computation completes is the result promoted to a long. By then, it’s too late.
+				So why is the computation performed in int arithmetic? Because all the factors that are multiplied together
+				are int values. When you multiply two int values, you get another int value. Java does not have target typing,
+				a language feature wherein the type of the variable in which a result is to be stored influences the type of
+				the computation.
+				<br>
+				It’s easy to fix the program by using a long literal in place of an int as the first factor in each product.
+				This forces all subsequent computations in the expression to be done with long arithmetic.
+				<div class="code-snippet"><script src="https://gist.github.com/rgbk21/51b345f2ccb87d160041a9e75d3ebf5f.js"></script></div>
+				When working with large numbers, watch out for overflow—it’s a silent killer. Just because a variable is
+				large enough to hold a result doesn’t mean that the computation leading to the result is of the correct type.
+			</div>
+		</div>
+
+		<div class="one-point">
+			2) lol
+			<div>
+				Always use a capital el (L) in long literals, never a lowercase el (l). Similarly, avoid using a lone el
+				(l) as a variable name. It is difficult to tell by looking at a code snippet whether it prints the list
+				l or the number 1.
+				<div class="code-snippet"><script src="https://gist.github.com/rgbk21/07594f07c10a337b87b8d262aef8338c.js"></script></div>
+			</div>
+		</div>
+
+		<div class="one-point">
+			3) The tale of 0xcafebabe
+			<div>
+				The true decimal value of 0xcafebabe is 3405691582 and 0xcafebabea is 54491065322. In binary, they can be
+				represented as follows:
+				<br>
+				0xcafebabe: 1100 1010 1111 1110 1011 1010 1011 1110 //32bits
+				<br>
+				0xcafebabea : 1100 1010 1111 1110 1011 1010 1011 1110 1010 //36 bits
+				<br>
+				But when we try to store it into a long, this happens:
+				<div class="code-snippet"><script src="https://gist.github.com/rgbk21/e09ebe16f053dee9b1edaea274423186.js"></script></div>
+				This is because 0xcafebabe is stored by default as an int – 32 bits. Each bit is set separately.
+				Representation of 0xcafebabe in 32 bits has its MSB set. Hence JAVA considers it as a negative integer,
+				converting it to -889275714.
+				<br>
+				The same number 0xcafebabe cannot be saved into a long variable if it is converted into its decimal representation.
+				<div class="code-snippet"><script src="https://gist.github.com/rgbk21/48ca9de2c3c8ad04b6b86fe0c56a696d.js"></script></div>
+				But if instead we do this, then the correct value is stored:
+				<div class="code-snippet"><script src="https://gist.github.com/rgbk21/b02e07b5eb58f66af925cd94a1705f47.js"></script></div>
+				This is because JAVA saves the number as a 64 bit number. The MSB is not set and hence you can represent
+				the true value of the number.
+				<br>
+				Now what happens if we try to store a 36 bit number - 0xcafebabea? The number clearly cannot fit into an int
+				and hence we now get a compile error on line 1 (unlike the previous case where 0xcafebabe could fit into 32 bits
+				and hence we did not get any kind of error). Casting the number into a long is also not going to help (as we discussed
+				in the previous point) and also seen on line 2. Hence, the correct way to store the number is to declare it as a
+				long as shown in line 3.
+				<div class="code-snippet"><script src="https://gist.github.com/rgbk21/362d9fcdd556f3fc8b72e158b69b4973.js"></script></div>
+				In conclusion:
+				To write a negative decimal constant, you use the unary negation operator (-) in combination with a decimal literal.
+				In this way, you can write any int or long value, whether positive or negative, in decimal form, and
+				negative decimal constants are clearly identifiable by the presence of a minus sign. Not so for hexadecimal
+				and octal literals. They can take on both positive and negative values. Hex and octal literals are negative
+				if their high-order bit is set.
+				<br>
+				0xcafebabe: 1100 1010 1111 1110 1011 1010 1011 1110 //32bits
+				<br>
+				So when you do this:
+				<div class="code-snippet"><script src="https://gist.github.com/rgbk21/e09ebe16f053dee9b1edaea274423186.js"></script></div>
+				Highest order bit is set. So before storing into the long x variable, as per the 2s complement, the
+				complement of the binary number is taken and then 1 is added to that number and then – is appended to it giving
+				you the final value of -889275714.
+			</div>
+		</div>
+
+		<div class="one-point">
+			4) What will be the output of the following:
+			<div>
+				<div class="code-snippet"><script src="https://gist.github.com/rgbk21/41fad3f393b332aaaf0868c35a778e9e.js"></script></div>
+
+				0xcafebabe is stored as an int. As described above,
+				<br>
+				1100 1010 1111 1110 1011 1010 1011 1110 //0xcafebabe in binary
+				<br>
+				Line 1 -
+				<br>
+				1111 1111 1111 1111 1111 1111 1111 1111 1100 1010 1111 1110 1011 1010 1011 1110 //sign extend because add to L
+				<br>
+				0001 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 //0x100000000L
+				<hr>
+				0000 1111 1111 1111 1111 1111 1111 1111 1100 1010 1111 1110 1011 1010 1011 1110 //which is = 0xcafebabe
+				<br>
+				The problem is caused due to the sign-extension of the int datatype. We declare 0xcafebabe as 0xcafebabeL (line 2)
+				and the problem is solved.
+			</div>
+		</div>
+
+		<div class="one-point">
+			5) What will this output:
+			<div>
+				<div class="code-snippet"><script src="https://gist.github.com/rgbk21/24a56a10c770d723f0e36c807c34f183.js"></script></div>
+				Two's complement representation of -1 is: 1111 1111 1111 1111 1111 1111 1111 1111 i.e. all bits are set.
+				<br>
+				Size of a byte is 8 bits. Casting int into a byte takes the 8 bits starting from the LSB. This will be a
+				narrowing operation. byte is a signed datatype.	Hence 1111 1111 still represents -1 in byte.
+				<br>
+				Next step: (char) 1111 1111. Now this is a widening operation to 16 bits. char is an unsigned datatype. For widening
+				operations we have the following rule:
+				<br>
+				The sign extension behavior when converting from narrower integral types to wider: Sign extension is performed
+				if the type of the original value is signed; zero extension if it is a char, regardless of the type to
+				which it is being converted.
+				<br>
+				byte is a narrower signed integral type that we are widening by converting to char. So sign extension will be performed.
+				<br>
+				(char) (byte) -1 // 1111 1111 1111 1111 = 2^16 – 1 = 65535 (because char is unsigned)
+				<br>
+				Next step: (int) 1111 1111 1111 1111. Now this is a widening operation. The rule we stated above tells us that
+				since we are widening from a char, we will zero extend the number. Hence the final value becomes:
+				<br>
+				0000 0000 0000 0000 1111 1111 1111 1111 //= 65535
+				<br>
+				What should you do in case you are widening from a char to an int and you want the sign extension to be performed?
+				<br>
+				Cast the char to a short, which is the same width as a char but signed.
+				<br>
+				What should you do in case you are widening from a byte value b to a char but do not want the sign extension to
+				be performed?
+				<br>
+				Use a bit mask to suppress the sign extension.
+				<div class="code-snippet"><script src="https://gist.github.com/rgbk21/38f5fb1734b3f2c6486545a6268ed316.js"></script></div>
+				b will be promoted to an int (32 bits) for the & operation. In accordance with the widening rule stated above
+				sign extension will be performed on the byte b. The & operation with 0xff will keep only the right most 8 bits,
+				changing all the other 24 bits to 0. Now when this is cast into a char it will be a narrowing operation
+				that keeps only the rightmost 16 bits and thus we have a way to convert a narrower integral signed type
+				to a wider type without sign extension.
+				<br>
+				Check <a href="https://stackoverflow.com/questions/11380062/what-does-value-0xff-do-in-java">this link</a> for additional details.
+			</div>
+		</div>
+
+		<div class="one-point">
+			6) Data types in JAVA:
+			<table class="table table-bordered">
+				<thead>
+				<tr>
+					<th scope="col">#</th>
+					<th scope="col">Datatype</th>
+					<th scope="col">Size</th>
+					<th scope="col">Description</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<th scope="row">1</th>
+					<td>boolean</td>
+					<td colspan="2">This data type represents one bit of information, but its "size" isn't something that's precisely defined.
+						<a href="https://stackoverflow.com/questions/383551/what-is-the-size-of-a-boolean-variable-in-java"> Source</a>,
+						<a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html">Source</a>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">2</th>
+					<td>byte </td>
+					<td>8 bit </td>
+					<td>(-128 to +127)</td>
+				</tr>
+				<tr>
+					<th scope="row">3</th>
+					<td>short  </td>
+					<td>16 bit </td>
+					<td>signed, (-32,768 to 32,767)</td>
+				</tr>
+				<tr>
+					<th scope="row">4</th>
+					<td>char </td>
+					<td>16 bit </td>
+					<td>unsigned, (0 to 65,535)</td>
+				</tr>
+				<tr>
+					<th scope="row">5</th>
+					<td>int </td>
+					<td>32 bit </td>
+					<td>(-2^31 to 2^31 - 1) 2^31 = 2,147,483,648</td>
+				</tr>
+				<tr>
+					<th scope="row">6</th>
+					<td>long </td>
+					<td>64 bit </td>
+					<td>(-2^63 to 2^63 - 1)</td>
+				</tr>
+				<tr>
+					<th scope="row">7</th>
+					<td>float </td>
+					<td>32 bit </td>
+					<td>(refer specs/never use where accurate calculation is required)</td>
+				</tr>
+				<tr>
+					<th scope="row">8</th>
+					<td>double </td>
+					<td>64 bit </td>
+					<td>(refer specs/never use where accurate calculation is required)</td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<div class="one-point">
+			7) Why won't this code compile:
+			<div>
+				<div class="code-snippet"><script src="https://gist.github.com/rgbk21/bf2bc715b8224a7e867196c892e9bec6.js"></script></div>
+
+				x += i is not a shorthand for x = x + i. The Java language specification says that the compound assignment
+				E1 op= E2 is equivalent to the simple assignment E1 = (T) ((E1) op (E2)), where T is the type of E1,
+				except that E1 is evaluated only once. In the above code, this would mean that x += i would evaluate to:
+				x = (char) (x + i)
+				<br>
+				x is of type short but i of type int. Hence x will be extended to 32 bits. The two numbers will be added
+				to give the result 123456, whose binary representation is:
+				<br>
+				0001 1110 0010 0100 0000.
+				The cast into short will lob off everything except the rightmost 16 bits. Hence x = 1110 0010 0100 0000
+				which in 2's complement becomes -7616.
+				<br>
+				In other words, compound assignment expressions automatically cast the result of the computation they
+				perform to the type of the variable on their left-hand side. If the type of the result is identical to
+				the type of the variable, the cast has no effect. If, however, the type of the result computed after
+				performing the operations on the right hand side is wider than
+				that of the variable, the compound assignment operator performs a silent narrowing primitive conversion
+				[JLS 5.1.3]. Attempting to perform the equivalent simple assignment would generate a compilation error,
+				with good reason.
+				<br>
+				The corresponding simple assignment on line 3 does not work because you are trying to assign an int value
+				into a short variable which is not possible without using an explicit cast.
+			</div>
+		</div>
+
+		<div class="one-point">
+			8) What will the following code output:
+			<div>
+				<div class="code-snippet"><script src="https://gist.github.com/rgbk21/0cc9afc1e88faed32a9731ff9506168a.js"></script></div>
+				The compiler evaluates the constant expression ‘H’ + ‘a’ by promoting each of the char-valued operands (‘H’ and ’a’)
+				to int values through a process known as widening primitive conversion. Widening primitive conversion of
+				a char to an int zero extends the 16-bit char value to fill the 32-bit int. In the case of ‘H’, the char
+				value is 72 and in the case of ‘a’, it is 97, so the expression ‘H’ + ‘a’ is equivalent to the int constant
+				72 + 97, or 169.
+				<br>
+				The + operator performs string concatenation if and only if at least one of its operands is of type String;
+				otherwise, it performs addition. If none of the values to be concatenated are strings, you have
+				several choices: prepend the empty string; convert the first value to a string explicitly, using String.valueOf;
+				use a string buffer; or if you are using release 5.0, use the printf facility.
+			</div>
+		</div>
+
+		<div class="one-point">
+			9) What will the following code output:
+			<div>
+				<div class="code-snippet"><script src="https://gist.github.com/rgbk21/75a9cafbc9e15fb517c095ca6b911748.js"></script></div>
+				First, understand that although char are represented as integers, many libraries treat it differently.
+				For example, when you print a char it is printed as the Unicode character and not the integer.
+				<br>
+				String conversion for object references, which include arrays, is defined as follows: If the reference is null,
+				it is converted to the string "null". Otherwise, the conversion is performed as if by an invocation of
+				the toString method of the referenced object with no arguments; but if the result of invoking the toString
+				method is null, then the string "null" is used instead. (??)
+				Arrays inherit the toString method from Object, whose specification says, “Returns a string consisting
+				of the name of the class of which the object is an instance, the at-sign character ’@’, and the
+				unsigned hexadecimal representation of the hash code of the object”
+				<br>
+				//TODO: What is the difference between numbers.hashCode() and Arrays.hashCode(numbers)? Why do they give 2 different values?
+			</div>
+		</div>
+
+		<div class="one-point">
+			10) What will the following code output:
+			<div>
+				<div class="code-snippet"><script src="https://gist.github.com/rgbk21/0a5ee4749bcc88e7f64239dbcc0af9a9.js"></script></div>
+				You should by this point probably know that pig == dog will return false. The == operator, does not test
+				whether two objects are equal; it tests whether two object references are identical. Which in this case, they are not.
+				But the output in this case is: false.	Yes. Not “Animals are equal: false”. But just “false”. Why though?
+				<br>
+				The + operator, whether used for addition or string concatenation, binds more tightly than the == operator.
+				Therefore, the parameter of the println method is evaluated like this:
+				<br>
+				System.out.println(("Animals are equal: " + pig) == dog);
+				<br>
+				The value of the boolean expression is, of course, false, and that is exactly what the program prints.
+				There is one surefire way to avoid this sort of difficulty: When using the string concatenation operator,
+				always parenthesize nontrivial operands.
+
+			</div>
+		</div>
+
+		<div class="one-point">
+			11) What is String Interning?
+			<div>
+				//TODO:
+				<br>
+				You may be aware that compile-time constants of type String are interned [JLS 15.28]. In other words,
+				any two constant expressions of type String that designate the same character sequence are represented by
+				identical object references.
+				<div class="code-snippet"><script src="https://gist.github.com/rgbk21/35f19f811f828d739d4cb031646b9cc7.js"></script></div>
+				I no longer know what is happening.
+				<br>
+				Check these links:
+				<a href="https://stackoverflow.com/questions/45165496/java-string-concatenation-and-interning">Source 1</a>,
+				<a href="https://stackoverflow.com/questions/10578984/what-is-java-string-interning">Source 2</a>,
+				<a href="https://stackoverflow.com/questions/58260592/interning-of-strings-in-java">Source 3</a>
+			</div>
+		</div>
+
+		<div class="one-point">
+			12) What does it mean to "escape" a String?
+			<div>
+				<div class="code-snippet"><script src="https://gist.github.com/rgbk21/fb73805d7fc6ca745305dda851874b39.js"></script></div>
+				The backslash is used as a marker character to tell the compiler/interpreter that the next character has some
+				special meaning. What that next character means is up to the implementation. For example C-style languages
+				use \n to mean newline and \t to mean tab. The use of the word "escape" really means to temporarily escape
+				out of parsing the text and into a another mode where the subsequent character is treated differently.
+				Any quote (") that is preceded by a slash (\") is escaped, and understood to be part of the value of the string.
+			</div>
+		</div>
+
+		<div class="one-point">
+			13) So what does it mean to escape in regex?
+			<div>
+				Many characters in regular expressions have special meanings. For instance, the dot character '.' means
+				"any one character". There are a great deal of these specially-defined characters, and sometimes, you want
+				to search for one, not use it's special meaning. (<a href="https://stackoverflow.com/questions/37064290/what-does-escape-a-string-mean-in-regex-javascript">Source</a>)
+				<br>
+				From MSDN:
+				<br>
+				The character that follows it is a special character, as shown in the table in the following section.
+				For example, \b is an anchor that indicates that a regular expression match should begin on a word boundary,
+				\t represents a tab, and \x020 represents a space.
+				A character that otherwise would be interpreted as an unescaped language construct should be interpreted literally.
+				For example, a brace ({) begins the definition of a quantifier, but a backslash followed by a brace (\{)
+				indicates that the regular expression engine should match the brace. Similarly, a single backslash marks
+				the beginning of an escaped language construct, but two backslashes (\\) indicate that the regular expression
+				engine should match the backslash.
+			</div>
+		</div>
+
+		<div class="one-point">
+			14) So, what will this code output now?
+			<div>
+				<div class="code-snippet"><script src="https://gist.github.com/rgbk21/b28966a4900536223b58bdd4c43e7f9e.js"></script></div>
+				The key to understanding this puzzle is that Java provides no special treatment for Unicode escapes within
+				string literals. The compiler translates Unicode escapes into the characters they represent before it parses
+				the program into tokens, such as strings literals [JLS 3.2]. Therefore, the first Unicode escape in the program
+				closes a one-character string literal ("a"), and the second one opens a one-character string literal ("b").
+				The program prints the value of the expression:	"a".length() + "b".length(), or 2.
+				The third example prints 16 because you are escaping the quotation with a backslash.
+				<br>
+				Unicode escapes are designed for use when a programmer needs to insert a character that can’t be represented
+				in the source file’s character set. They are used primarily to put non-ASCII characters into identifiers,
+				string literals, character literals, and comments. Occasionally, a Unicode escape adds to the clarity of
+				a program by positively identifying one of several similar-looking characters.
+			</div>
+		</div>
+
+		<div class="one-point">
+			<div>
+			15) What does this code output:
+				<div>
+					//TODO:
+					<div class="code-snippet"><script src="https://gist.github.com/rgbk21/8bf9be2e4ac97d5404910653967750d4.js"></script></div>
+					This program isn’t even guaranteed to terminate normally, much less to print any particular sequence.
+					Its behavior is completely unspecified.	The culprit here is the String(byte[]) constructor. Its specification says:
+					“Constructs a new String by decoding the specified byte array using the platform’s default charset.
+					The length of the new String is a function of the charset, and hence may not be equal to the length
+					of the byte array. The behavior of this constructor when the given bytes are not valid in the default
+					charset is unspecified”
+					<br>
+					What exactly is a charset? Technically, it is “the combination of a coded character set and a
+					character-encoding scheme” [Java-API]. In other words, a charset is a bunch of characters, the
+					numerical codes that represent them, and a way to translate back and forth between a sequence of
+					character codes and a sequence of bytes. The translation scheme differs greatly among charsets. Some
+					have a one-to-one mapping between characters and bytes; most do not.
+					<br>
+					If you want to know your JRE’s default charset and you are using release 5.0 or a later release, you
+					can find out by invoking:
+					<br>
+					System.out.println(java.nio.charset.Charset.defaultCharset()); // Prints UTF-8
+					<br>
+					When translating between char sequences and byte sequences, you can and usually should specify a charset explicitly.
+					The lesson of this puzzle is that every time you translate a byte sequence to a String, you are using
+					a charset, whether you specify it explicitly or not. If you want your program to behave predictably,
+					specify a charset each time you use one.
+				</div>
+			</div>
+		</div>
+
+		<div class="one-point">
+			16) List the bugs in this code:
+			<div>
+				<div class="code-snippet"><script src="https://gist.github.com/rgbk21/03e95dbb68896d675c36266d84e75874.js"></script></div>
+				There are 3 bugs in this code:
+				<br>
+				a) rnd.nextInt(2) generates numbers exclusive of 2. So the numbers generated are: {0,1}. Hence case2 is never triggered.
+				The specification for Random.nextInt(int) says: “Returns a pseudorandom, uniformly distributed int value
+				between 0 (inclusive) and the specified value (exclusive). Whenever you are working with lengths, ranges,
+				or moduli, be careful to determine which endpoints should be included, and make sure that your code
+				behaves accordingly.
+				<br>
+				b) There is no break after the case. So if case 1 is triggered, so will case2 and 3.
+				<br>
+				c) StringBuffer(int capacity); takes as an argument an integer that specifies the capacity of the buffer.
+				By using a character, you are implicitly converting it into an int by widening. Which as you might have noticed,
+				is not such a  great idea.
+			</div>
+		</div>
+
+		<div class="one-point">
+			17) What is the output of the following code:
+			<div>
+				<div class="code-snippet"><script src="https://gist.github.com/rgbk21/129ed77eba8adc01f30ce5e68b4147c4.js"></script></div>
+				The problem is that String.replaceAll takes a regular expression as its first parameter, not a literal sequence of characters.
+				(Regular expressions were added to the Java platform in release 1.4.) The regular expression "." matches any
+				single character, and so every character of the class name is replaced by a slash, producing the output we saw.
+				To match only the period character, the period in the regular expression must be escaped by preceding it
+				with a backslash (\). Because the backslash character has special meaning in a string literal—it begins
+				an escape sequence—the backslash itself must be escaped with a second backslash. This produces an escape
+				sequence that generates a backslash in the string literal.
+				<br>
+				System.out.println(Me.class.getName().replaceAll("\\.", "/") + ".class");
+				<br>
+				This prints: com/company/Chapter3/com/javapuzzlers/Me.class
+				<br>
+				Which is what we wanted.
+				<br>
+				Another problem with this program is that the correct behavior is platform dependent. Not all file
+				systems use the slash character to separate hierarchical filename components. To get a valid filename
+				for the platform on which you are running, you should use the correct platform-dependent separator
+				character in place of the slash.
+			</div>
+		</div>
+
+		<div class="one-point">
+			18) What is wrong with the following code:
+			<div>
+				<div class="code-snippet"><script src="https://gist.github.com/rgbk21/1db95af1102a2e15c0ab18245612fa5b.js"></script></div>
+				We already looked at what goes wrong in this case. 0x90 is, by default, stored as an integer. Not as a byte.
+				<br>
+				0x90 is: 0000 0000 0000 0000 0000 0000 1001 0000 which is equal to +144
+				<br>
+				Byte.MIN_VALUE = -128
+				<br>
+				Byte.MAX_VALUE = 127
+				<br>
+				So the if condition will never be triggered. In order for the if condition to be triggered, we need to cast the int into a byte.
+				The correct version of the code will be:
+				<div class="code-snippet"><script src="https://gist.github.com/rgbk21/c900e9a64d5f25f38ac21f8d78fc2515.js"></script></div>
+				Now, the if condition is reachable and the program prints “Joy!”
+			</div>
+		</div>
+
+		<div class="one-point">
+			19) What would this code print:
+			<div>
+				<div class="code-snippet"><script src="https://gist.github.com/rgbk21/33d0e05ca753fa8b4f84a189c2a92f9c.js"></script></div>
+				When placed after a variable, the ++ operator functions as the postfix increment operator [JLS 15.14.2]:
+				The value of the expression j++ is the original value of j before it was incremented. Therefore, the
+				preceding assignment first saves the value of j, then sets j to its value plus 1, and, finally, resets j
+				back to its original value. In other words, the assignment is equivalent to this sequence of statements:
+				<div class="code-snippet"><script src="https://gist.github.com/rgbk21/17b362989bbc45c816e1d11eab8adcf4.js"></script></div>
+			</div>
+		</div>
+
+		<div class="one-point">
+			20) What is the problem with this code:
+			<div>
+				<div class="code-snippet"><script src="https://gist.github.com/rgbk21/dae618580b52cf937c9047999a574195.js"></script></div>
+				This program will never terminate. The for loop condition uses the statement i <= END. When i = END, the value of i
+				will overflow to a negative value and i will still be lesser than END. Hence the condition will always be satisfied.
+				If you need a loop that iterates near the boundaries of the int values, you are better off using a long
+				variable as the loop index. Simply changing the type of the loop index from int to long solves the problem,
+				causing the program to print 101 as expected.
+			</div>
+		</div>
+
+		<div class="one-point">
+			21) What is the problem with this code:
+			<div>
+				<div class="code-snippet"><script src="https://gist.github.com/rgbk21/f2ac9c3447b50430a206fd68f95cae06.js"></script></div>
+				The constant -1 is the int value with all 32 bits set (0xffffffff). The left-shift operator shifts zeroes
+				in from the right to fill the low-order bits vacated by the shift, so the expression (-1 << i) has its
+				rightmost i bits set to 0 and the remaining 32 - i bits set to 1. The problem is that (-1 << 32) is equal
+				to -1 rather than 0, because shift operators use only the five low-order bits of their right operand as
+				the shift distance, or six bits if the left operand is a long [JLS 15.19].
+				<br>
+				This applies to all three shift operators: <<, >>, and >>>. The shift distance is always between 0 and 31,
+				or 0 and 63 if the left operand is a long. (This means that whatever shift count you pass, it will be
+				interpreted modulo 32. Attempting to shift by 32 on such platform will actually shift by 0, i.e.
+				not shift at all.) It is calculated mod 32, or mod 64 if the left operand is a long. Attempting to shift
+				an int value 32 bits or a long value 64 bits just returns the value itself. There is no shift distance
+				that discards all 32 bits of an int value or all 64 bits of a long value.
+				<br>
+				Another important point is that the left-shift operator with a -ve shift does not act as a right shift operator. 
+				A right shift always functions as a right shift, and a left shift always functions as a left shift. 
+				Negative shift distances are made positive by lopping off all but the five low order bits—six bits if 
+				the left operand is a long. (<a href="https://stackoverflow.com/questions/10516786/shifted-by-negative-number-in-java/34625596">Source</a>)
+				<br>
+				Take this for example:
+				<div class="code-snippet"><script src="https://gist.github.com/rgbk21/028303f104613222e41c13bd92f5cae8.js"></script></div>
+				<br>
+				s = 8 => 0000 0000 0000 0000 0000 0000 0000 ‭1000‬
+				<br>
+				-63 => ‭1111 1111 1111 1111 1111 1111 1100 0001‬
+				<br>
+				Since s is an int, we will use the rightmost 5 bits for shifting => 0 0001‬ = 1. Hence the shift s = s >> -63
+				is actually equivalent to s = s >> 1 which gives us s = 4, and which is the output in the example above.
+				<br>
+				Also remember that >> and >>> are different.
+				<div class="code-snippet"><script src="https://gist.github.com/rgbk21/3c5a522da6ca83c36d02489db97c3c2b.js"></script></div>
+				Arithmetic shift >> will keep the sign bit. Unsigned shift >>> will not keep the sign bit (thus filling 0s). (<a
+					href="https://stackoverflow.com/questions/2811319/difference-between-and">Source</a>)
+			</div>
+		</div>
+
+		<div class="one-point">
+			22) What will make these loops run indefinitely?
+			<div>
+				a) Provide a declaration for i that turns this loop into an infinite loop:
+				<div class="code-snippet"><script src="https://gist.github.com/rgbk21/a77ceda6314229003b9f90d96963ad7c.js"></script></div>
+				Java mandates the use of IEEE 754 floating-point arithmetic [IEEE-754], which lets you represent infinity
+				as a double or float. As we learned in school, infinity plus 1 is still infinity. If i is initialized to
+				infinity before the loop starts, the termination test (i == i + 1) evaluates to true, and the loop never terminates.
+				<br>
+				So, the next question is, how do you initialize something to infinity?
+				<br>
+				There are few ways:
+				<div class="code-snippet"><script src="https://gist.github.com/rgbk21/8f360539b475db073166819248f50d48.js"></script></div>
+				<br>
+				The distance between adjacent floating-point values is called an ulp, which is an acronym for unit in the last place.
+				In release 5.0, the Math.ulp method was introduced to calculate the ulp of a float or double value.
+				Floating-point operations return the floating-point value that is closest to their exact mathematical result.
+				Once the distance between adjacent floating-point values is greater than 2, adding 1 to a floating-point
+				value will have no effect, because the half-way point between values won’t be reached. For the float type,
+				the least magnitude beyond which adding 1 will have no effect is 2^25, or 33,554,432; for the double type,
+				it is 2^54, or approximately 1.8 × 10^16.
+				<br>
+				Moral of the Story: floats are weird.
+
+				<div>
+					b) Provide a declaration for i that turns this loop into an infinite loop:
+					<div class="code-snippet"><script src="https://gist.github.com/rgbk21/29ad8bc9f7936d5ce2a641987ae5e5bd.js"></script></div>
+					IEEE 754 floating-point arithmetic reserves a special value to represent a quantity that is not a number [IEEE-754].
+					This value, known as NaN (short for “Not a Number”), is the value of all floating-point computations that do
+					not have well-defined numeric values, such as 0.0 / 0.0. The specification says that NaN is not equal to
+					any floating-point value, including itself. Therefore, if i is initialized to NaN before the loop starts,
+					the termination test (i != i) evaluates to true, and the loop never terminates. Strange but true.
+					<br>
+					You can declare a NaN by using:
+					<div class="code-snippet"><script src="https://gist.github.com/rgbk21/71e1b5049cb16520d4cda4a9acc65718.js"></script></div>
+				</div>
+
+				<div>
+					c) Provide a declaration for i that turns this loop into an infinite loop:
+					<div class="code-snippet"><script src="https://gist.github.com/rgbk21/59fc29cf731a1693a960765d89572855.js"></script></div>
+					The thing to remember over here is that + is an overloaded operator. When the arguments to + are Strings,
+					the + operator ends up concatenating the strings. If one operand in the concatenation is of some type
+					other than String, that operand is converted to a string prior to concatenation.
+					<div class="code-snippet"><script src="https://gist.github.com/rgbk21/f9de4fbc0a513bceccf68003de920742.js"></script></div>
+				</div>
+
+				<div>
+					d) Provide a declaration for i that turns this loop into an infinite loop:
+					<div class="code-snippet"><script src="https://gist.github.com/rgbk21/ac7fdb5cc58921c74f2c9f93c7cd0369.js"></script></div>
+					The key to solving this puzzle is that >>>= is a compound assignment operator. Suppose that you precede the loop with the following
+					declaration:
+					<br>
+					short i = -1;
+					<br>
+					Because the initial value of i ((short)0xffff) is nonzero, the body of the
+					loop is executed. The first step in the execution of the shift operation is that the
+					value of i is promoted to an int. All arithmetic operations do this to operands of
+					type short, byte, or char. This promotion is a widening primitive conversion, so
+					no information is lost. This promotion performs sign extension, so the resulting
+					int value is 0xffffffff. This value is then shifted to the right by one bit without
+					sign extension to yield the int value 0x7fffffff. Finally, this value is stored
+					back into i. In order to store the int value into the short variable, Java performs
+					the dreaded narrowing primitive conversion, which simply lops off the high-order
+					16 bits of the value. This leaves (short)0xffff, and we are back where we
+					started. The second and successive iterations of the loop behave identically, so the
+					loop never terminates.
+					<br>
+					Similar behavior occurs if you declare i to be a short or byte variable initialized to any negative value.
+					You will not get an infinite loop if you declare i to be a
+					char, as char values are unsigned, so the widening primitive conversion that
+					occurs prior to the shift doesn’t perform sign extension.
+					<br>
+					<em>In summary, do not use compound assignment operators on short, byte, or char variables. </em>
+					<br>
+					Such expressions perform mixed-type arithmetic, which can be confusing in and of itself. Far worse, they
+					perform an implicit narrowing cast, which can discard information.
+				</div>
+				<br>
+				<div>
+					e) Provide declarations for i and j that turn this loop into an infinite loop:
+					<div class="code-snippet"><script src="https://gist.github.com/rgbk21/5bfb9d9c0cdf4eac83c2477599606137.js"></script></div>
+					Until release 5.0, Java’s numerical comparison operators (<, <=, >, and >=) required both of their
+					operands to be of a primitive numeric type (byte, char, short, int, long, float, or double) [JLS2 15.20.1].
+					In release 5.0, the specification was changed to say that the type of each operand must be convertible
+					to a primitive numeric type [JLS 15.20.1, 5.1.8].
+					<br>
+					Check <a href="https://stackoverflow.com/questions/18804599/why-does-i-j-j-i-i-j-evaluate-to-true/18804642">this link</a> for details.
+					<br>
+					The first two subexpressions (i <= j and j <= i) perform unboxing conversions [JLS 5.1.8] on i and j
+					and compare the resulting int values numerically. Both i and j represent 0, so both of these subexpressions
+					evaluate to true. The third subexpression (i != j) performs an identity comparison on the object references
+					i and j. The two variables refer to distinct objects, as each was initialized to a new Integer instance.
+					Therefore, the third subexpression also evaluates to true, and the loop spins forever.
+					The equality operators do perform numerical comparison when only one of their two operands is of a
+					boxed numeric type and the other is of a primitive type.
+					<br>
+					The <= operator is still antisymmetric on the set of primitive numeric values, but now it applies to
+					operands of boxed numeric types as well. (The boxed numeric types are Byte, Character, Short, Integer,
+					Long, Float, and Double). The <= operator is not antisymmetric on operands of these types, because Java’s
+					equality operators (== and !=) perform reference identity comparison rather than value comparison when
+					applied to object references.
+					<div class="code-snippet"><script src="https://gist.github.com/rgbk21/f33c42849dc33eb90a763bf100239f44.js"></script></div>
+					However, now this example does not work.
+					<div class="code-snippet"><script src="https://gist.github.com/rgbk21/e384986a1186d8d43137ad2530cc5401.js"></script></div>
+				</div>
+
+				<div>
+					f) Provide a declaration for i that turns this loop into an infinite loop.
+					<div class="code-snippet"><script src="https://gist.github.com/rgbk21/6b3075b7a80d846e57df94ff1290f7dd.js"></script></div>
+					In the boolean expression (i == -i && i != 0), the unary minus operator is applied to i, which implies
+					that its type must be numeric: It is illegal to apply the unary minus operator to a non-numeric operand.
+					Therefore, we are looking for a nonzero numeric value that is equal to its own negation.
+					NaN does not satisfy this property, as it is not equal to any value, so i must represent an actual number.
+					No floating-point value other than 0 is equal to itself with the sign bit flipped, so the type of i must be integral.
+					<br>
+					There is, however, a corresponding disadvantage. There exist an even number of int values—2^32 to be
+					precise—and one of these values is used to represent 0. That leaves an odd number of int values to
+					represent positive and negative integers, which means that there must be a different number of positive
+					and negative int values. This in turn implies that there is at least one int value whose negation
+					cannot be correctly represented as an int value.
+					<br>
+					In fact, there is exactly one such int value, and it is Integer.MIN_VALUE, or -2^31 = ‭-2,147,483,648‬.
+					<br>
+					‭-2,147,483,648 = ‭1000 0000 0000 0000 0000 0000 0000 0000‬
+					<br>
+					Negating this means inverting all of the bits and adding 1 to the value. Which would give the same bit
+					sequence as the answer.
+					<br>
+					In other words, Integer.MIN_VALUE is its own negation, as is Long.MIN_VALUE.
+					<br>
+					Therefore, the declaration of i as:
+					<br>
+					int i = Integer.MIN_VALUE; //or
+					<br>
+					long i = Long.MIN_VALUE;
+					<br>
+					will cause the above code to loop indefinitely.
+					<br>
+				</div>
+
+			</div>
+		</div>
+
+		<div class="one-point">
+			23) What does the following program print:
+			<div>
+				<div class="code-snippet"><script src="https://gist.github.com/rgbk21/d6dcd7b3798dcd20856ca408ca8dc08e.js"></script></div>
+				The initial value of f is close to Integer.MAX_VALUE, so it requires 31 bits to express precisely, and
+				the float type provides only 24 bits of precision. Incrementing such a large float value will not change it.
+				The problem is that the termination test fails in much the same way that the increment does. The loop runs
+				only so long as the loop index f is less than (float)(START + 50). The promotion from int to float is
+				performed automatically when comparing an int to a float. Unfortunately, this promotion is one of the
+				three widening primitive conversions that can result in loss of precision [JLS 5.1.2].
+				(The others are long to float and long to double.)
+				<br>
+				The initial value of f is so large that adding 50 to it and converting the result to a float produces
+				the same value as simply converting f to a float. In other words, (float)2000000000 == 2000000050,
+				so the expression f < START + 50 is false before the loop body has executed even once, and the loop body
+				never gets a chance to run.
+				<div class="code-snippet"><script src="https://gist.github.com/rgbk21/ce2f4117fa72f3518a93467f9cb1d79f.js"></script></div>
+				Fixing this program is as simple as changing the type of the loop variable from a float to an int.
+				<br>
+				The moral of this puzzle is simple: Do not use floating-point loop indices, because it can lead to unpredictable behavior.
+				If you need a floating-point value in the body of a loop, take the int or long loop index and convert it
+				to a float or double. You may lose precision when converting an int or long to a float or a long to a double,
+				but at least it will not affect the loop itself. When you use floating-point, use double rather than float
+				unless you are certain that float provides enough precision and you have a compelling performance need to use float.
+				<br>
+				For a variation on the above, note that although g == (g + 50), g != (g + 100). So if we changed our above program
+				to have the loop check changed to: f < START + 100, the program turns into an infinite loop. This is because
+				now f++ (increment of f by 1) leads to the same value as f.
+				<div class="code-snippet"><script src="https://gist.github.com/rgbk21/9a4e15808260b4ed7a837cdd6fd17ee5.js"></script></div>
+			</div>
+		</div>
+
+		<div class="one-point">
+			24) What does the following code print:
+			<div>
+				<div class="code-snippet"><script src="https://gist.github.com/rgbk21/e3f0eeb1d1ab5585a70796f751b1df2f.js"></script></div>
+				The problem lies in the boolean expression (ms % 60*1000 == 0). You might think that this expression is
+				equivalent to (ms % 60000 == 0), but it isn’t. The remainder and multiplication operators have the same
+				precedence [JLS 15.17], so the expression ms % 60*1000 is equivalent to (ms % 60) * 1000.
+				This expression is equal to 0 if (ms % 60) is 0, so the loop increments minutes every 60 iterations.
+				This accounts for the final result being off by a factor of a thousand.
+				<a href="https://introcs.cs.princeton.edu/java/11precedence/">This link </a>talks more about operator precedence.
+				Precedence order. When two operators share an operand the operator with the higher precedence goes first.
+				For example, 1 + 2 * 3 is treated as 1 + (2 * 3), whereas 1 * 2 + 3 is treated as (1 * 2) + 3 since multiplication
+				has a higher precedence than addition.
+				Associativity: When an expression has two operators with the same precedence, the expression is evaluated
+				according to its associativity.
+				<br>
+				For example x = y = z = 17 is treated as x = (y = (z = 17)), leaving all three variables with the value 17,
+				since the = operator has right-to-left associativity (and an assignment statement evaluates to the value on the right hand side).
+				On the other hand, 72 / 2 / 3 is treated as (72 / 2) / 3 since the / operator has left-to-right associativity.
+				Some operators are not associative: for example, the expressions (x <= y <= z) and x++-- are invalid.
+				<div class="code-snippet"><script src="https://gist.github.com/rgbk21/ef6a57ded097cef80144c5bc286f9e29.js"></script></div>
+				<em>Spacing can be deceptive, but parentheses never lie.</em>
+
+			</div>
+		</div>
+
+	</div>
+
+</body>
+</html>
