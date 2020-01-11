@@ -1,11 +1,8 @@
-  /*-- change navbar dropdown color --*/
+/*-- change navbar dropdown color --*/
 .navbar-dark .navbar-nav .nav-link {
-    color: rgba(255,255,255,1);
- }
+    color: rgba(255, 255, 255, 1);
+}
 
-.textBox {
-    padding-top: 15%;
-    padding-left: 10%;
-    padding-right: 10%;
-    padding-bottom: 10%;
+.container {
+    margin-top: 30px;
 }
