@@ -91,8 +91,9 @@
 	</nav>
 
 	<div class="container">
-		<div>This page contains some of the common "gotchas" that I have come across while coding in Java. Some of these are from my own experiences.
-			Other are personal notes that I have taken from the textbook Java Puzzles – Traps, Pitfalls, and Corner Cases By Bloch and Gafter.
+		<div>This page contains some of the common "gotchas", tips and explanations that I have come across while coding in Java. Some of these are from my own experiences.
+			Others are my personal notes from the textbook Java Puzzles – Traps, Pitfalls, and Corner Cases By Bloch and Gafter.
+			The idea is to have all coding related Java things readily available in one place for easy reference.
 		</div>
 
 		<div class="one-point">
@@ -165,15 +166,41 @@
 		</div>
 
 		<div class="one-point">
-			7) Java is: Strictly speaking, for references it's "pass reference by value" and for primitives it's just "pass by value" -
+			7) Is Java pass-by-value or pass-by-reference?
+			<br>
+			Strictly speaking, for references it's "pass reference by value" and for primitives it's just "pass by value" -
 			<a href="https://stackoverflow.com/questions/3330864/how-can-i-pass-an-integer-class-correctly-by-reference">Source</a>
 		</div>
 
 		<div class="one-point">
 			8) Difference between a simple comment and a Javadoc comment
+			<br>
 			/* is a simple comment in the code.
 			<br>
 			/** is a Javadoc comment
+		</div>
+
+		<div class="one-point">
+			9) What is the difference between Stack and Heap? Which kind of variable is stored where?
+			<div>
+				//TODO:
+				<a href="https://stackoverflow.com/questions/6801676/heap-vs-stack-vs-perm-space">Heap vs Stack vs Perm Space</a>
+				<br>
+				<a href="https://stackoverflow.com/questions/79923/what-and-where-are-the-stack-and-heap?noredirect=1&lq=1">What and where are the stack and heap?</a>
+				<br>
+				<a href="https://softwareengineering.stackexchange.com/questions/65281/stack-and-heap-memory-in-java">Stack and Heap memory in Java</a>
+			</div>
+		</div>
+
+		<div class="one-point">
+			10) What is the difference between a "class method" and an "instance method"?
+			<div>
+				Instance methods use an instance of a class, whereas a class method can be used with just the class name.
+				A class method is called a "static" method in many languages. Accessors (Getters and Setters) are instance methods
+				because they are setting and getting the state of a specific instance.
+				<br>
+				Along the same lines, you also have "class variables" and "instance variables".
+			</div>
 		</div>
 
 		<hr/>
