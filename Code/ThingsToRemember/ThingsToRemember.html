@@ -9,7 +9,7 @@
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="ThingsToRemember.css">
-	<meta name="keywords" content="Java, Floats, Overflow, Unboxing, Autoboxing, ">
+	<meta name="keywords" content="Java, Floats, Overflow, Unboxing, Autoboxing">
 	<meta name="author" content="Raj Gaurav Ballabh Kumar">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>ThingsToRemember</title>
@@ -64,6 +64,7 @@
 					</a>
 					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 						<a class="dropdown-item" href="../../Code/ThingsToRemember/ThingsToRemember.html">Things To Remember</a>
+						<a class="dropdown-item" href="../../Code/Java_Notes/JavaNotes.html">Java Notes</a>
 						<div class="dropdown-divider"></div>
 					</div>
 				</li>
@@ -167,17 +168,31 @@
 
 		<div class="one-point">
 			7) Is Java pass-by-value or pass-by-reference?
-			<br>
-			Strictly speaking, for references it's "pass reference by value" and for primitives it's just "pass by value" -
-			<a href="https://stackoverflow.com/questions/3330864/how-can-i-pass-an-integer-class-correctly-by-reference">Source</a>
+			<div>
+				Strictly speaking, for references it's "pass reference by value" and for primitives it's just "pass by value" -
+				<a href="https://stackoverflow.com/questions/3330864/how-can-i-pass-an-integer-class-correctly-by-reference">Source</a>
+				<br>
+				(From Java: The Complete Reference)
+				<br>
+				Although Java uses call-by-value to pass all arguments, the precise effect differs between whether a primitive
+				type or a reference type is passed.
+				<br>
+				When you pass a primitive type to a method, it is passed by value. Thus, a copy of the argument is made, and
+				what occurs to the parameter that receives the argument has no effect outside the method.
+				<div class="code-snippet"><script src="https://gist.github.com/rgbk21/34c8ceae9366e91b9750e57e5686f1cf.js"></script></div>
+
+
+			</div>
 		</div>
 
 		<div class="one-point">
 			8) Difference between a simple comment and a Javadoc comment
-			<br>
-			/* is a simple comment in the code.
-			<br>
-			/** is a Javadoc comment
+			<div>
+				/* */ is a simple comment in the code.
+				<br>
+				/** */ is a Javadoc comment
+			</div>
+
 		</div>
 
 		<div class="one-point">
@@ -239,8 +254,15 @@
 				</div>
 
 			</div>
-
 		</div>
+
+        <div class="one-point">
+            13) What is the difference between CLASSPATH and Build Path:
+            <div>
+                //TODO:<br>
+                <a href="https://stackoverflow.com/questions/3529459/what-is-the-difference-between-class-path-and-build-path">Look here</a>
+            </div>
+        </div>
 
 		<hr/>
 
@@ -261,6 +283,14 @@
 				<div class="code-snippet"><script src="https://gist.github.com/rgbk21/51b345f2ccb87d160041a9e75d3ebf5f.js"></script></div>
 				When working with large numbers, watch out for overflow—it’s a silent killer. Just because a variable is
 				large enough to hold a result doesn’t mean that the computation leading to the result is of the correct type.
+				<br>
+				The rules of promotion in Java are as follows:
+				<br>
+				Java defines several type promotion rules that apply to expressions. They are as follows: First, all byte,
+				short, and char values are promoted to int, as just described. Then, if one operand is a long, the whole
+				expression is promoted to long. If one operand is a float, the entire expression is promoted to float.
+				If any of the operands are double, the result is double.
+				(Ref: Schildt, Herbert. Java: The Complete Reference, Eleventh Edition (p. 54))
 			</div>
 		</div>
 
@@ -277,7 +307,7 @@
 		<div class="one-point">
 			3) The tale of 0xcafebabe
 			<div>
-				The true decimal value of 0xcafebabe is 3405691582 and 0xcafebabea is 54491065322. In binary, they can be
+				The true decimal value of 0xcafebabe is 3,405,691,582 and 0xcafebabea is 54,491,065,322. In binary, they can be
 				represented as follows:
 				<br>
 				0xcafebabe: 1100 1010 1111 1110 1011 1010 1011 1110 //32bits
@@ -300,7 +330,7 @@
 				Now what happens if we try to store a 36 bit number - 0xcafebabea? The number clearly cannot fit into an int
 				and hence we now get a compile error on line 1 (unlike the previous case where 0xcafebabe could fit into 32 bits
 				and hence we did not get any kind of error). Casting the number into a long is also not going to help (as we discussed
-				in the previous point) and also seen on line 2. Hence, the correct way to store the number is to declare it as a
+				in the previous point - already too late by this point) and also seen on line 2. Hence, the correct way to store the number is to declare it as a
 				long as shown in line 3.
 				<div class="code-snippet"><script src="https://gist.github.com/rgbk21/362d9fcdd556f3fc8b72e158b69b4973.js"></script></div>
 				In conclusion:

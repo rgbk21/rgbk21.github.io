@@ -1,0 +1,40 @@
+/*-- change navbar dropdown color --*/
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 1);
+}
+
+.container {
+    margin-top: 30px;
+    overflow-wrap: break-word;
+}
+
+.code-snippet {
+    padding-top: 10px;
+}
+
+.textual-content {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.chapter {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+
+.sub-heading {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+
+.center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.output{
+
+}
