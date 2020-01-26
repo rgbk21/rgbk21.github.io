@@ -2,318 +2,760 @@
 <html>
 <head>
 
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="JavaNotes.css">
-	<meta name="keywords" content="Java, Floats, Overflow, Unboxing, Autoboxing">
-	<meta name="author" content="Raj Gaurav Ballabh Kumar">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Java Notes</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="JavaNotes.css">
+    <meta name="keywords" content="Java, Floats, Overflow, Unboxing, Autoboxing">
+    <meta name="author" content="Raj Gaurav Ballabh Kumar">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Notes</title>
 </head>
 <body>
 
-		<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-		
-		<div class="navbar-header">
-			<a href="../../index.html" class="navbar-brand"> rgbk21</a>
-		</div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
 
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" ><span class="navbar-toggler-icon"></span>
-		</button>
+    <div class="navbar-header">
+        <a href="../../index.html" class="navbar-brand"> rgbk21</a>
+    </div>
 
-		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<ul class="nav navbar-nav">
-				<li class="nav-item dropdown">
-			        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			          Projects
-			        </a>
-			        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-			          <a class="dropdown-item" href="../../Projects/TwitterCritNodes/TwitterCritNodes_1.html">Identifying Critical Nodes on Twitter</a>
-			          <a class="dropdown-item" href="../../Projects/isRelatedTo/isRelatedTo.html">isRelatedTo</a>
-			          <div class="dropdown-divider"></div>
-			        </div>
-		     	</li>
-		     	<li class="nav-item dropdown">
-			        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			          HTML Projects
-			        </a>
-			        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-			          <a class="dropdown-item" href="../../ImageGallery/ImageGallery.html">Image Gallery</a>
-			          <a class="dropdown-item" href="../../RGB_Guesser_Game/RGB.html">RGB Guesser Game</a>
-			          <a class="dropdown-item" href="../../ToDoList/todo.html">To-Do List</a>
-			          <div class="dropdown-divider"></div>
-			        </div>
-		     	</li>
-		     	<li class="nav-item dropdown">
-			        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			          Notes
-			        </a>
-			        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-			          <a class="dropdown-item" href="../../COMS_631/COMS_631_index.html">COMS 631</a>
-			          <a class="dropdown-item" href="../../COMS_535/COMS_535_index.html">COMS 535</a>
-			          <div class="dropdown-divider"></div>
-			        </div>
-		     	</li>
-				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						Code
-					</a>
-					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<a class="dropdown-item" href="../../Code/ThingsToRemember/ThingsToRemember.html">Things To Remember</a>
-						<a class="dropdown-item" href="../../Code/Java_Notes/JavaNotes.html">Java Notes</a>
-						<div class="dropdown-divider"></div>
-					</div>
-				</li>
-		     	<li class="nav-item dropdown">
-			        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			          In Another Life
-			        </a>
-			        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-			          <a class="dropdown-item" href="../../InAnotherLife/Chapter1.html">Chapter 1</a>
-			          <div class="dropdown-divider"></div>
-			        </div>
-		     	</li>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"><span
+            class="navbar-toggler-icon"></span>
+    </button>
 
-			</ul>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="nav navbar-nav">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+                   aria-expanded="false">
+                    Projects
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="../../Projects/TwitterCritNodes/TwitterCritNodes_1.html">Identifying
+                        Critical Nodes on Twitter</a>
+                    <a class="dropdown-item" href="../../Projects/isRelatedTo/isRelatedTo.html">isRelatedTo</a>
+                    <div class="dropdown-divider"></div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+                   aria-expanded="false">
+                    HTML Projects
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="../../ImageGallery/ImageGallery.html">Image Gallery</a>
+                    <a class="dropdown-item" href="../../RGB_Guesser_Game/RGB.html">RGB Guesser Game</a>
+                    <a class="dropdown-item" href="../../ToDoList/todo.html">To-Do List</a>
+                    <div class="dropdown-divider"></div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+                   aria-expanded="false">
+                    Notes
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="../../COMS_631/COMS_631_index.html">COMS 631</a>
+                    <a class="dropdown-item" href="../../COMS_535/COMS_535_index.html">COMS 535</a>
+                    <div class="dropdown-divider"></div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+                   aria-expanded="false">
+                    Code
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="../../Code/ThingsToRemember/ThingsToRemember.html">Things To
+                        Remember</a>
+                    <a class="dropdown-item" href="../../Code/Java_Notes/JavaNotes.html">Java Notes</a>
+                    <div class="dropdown-divider"></div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+                   aria-expanded="false">
+                    In Another Life
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="../../InAnotherLife/Chapter1.html">Chapter 1</a>
+                    <div class="dropdown-divider"></div>
+                </div>
+            </li>
+
+        </ul>
 
 
-			<ul class="navbar-nav ml-auto">
-				<li class="nav-item active"><a class="nav-link" href="https://github.com/rgbk21">GitHub</a></li>
-				<li class="nav-item active"><a class="nav-link" href="https://www.linkedin.com/in/raj-gaurav-ballabh-kumar-97002058/">LinkedIn</a></li>
-				<li class="nav-item active"><a class="nav-link" href="https://www.instagram.com/wobblyframes/">Instagram</a></li>
-				<li class="nav-item active"><a class="nav-link" href="https://www.facebook.com/SomeRandomThoughts">Facebook</a></li>
-			</ul>
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active"><a class="nav-link" href="https://github.com/rgbk21">GitHub</a></li>
+            <li class="nav-item active"><a class="nav-link"
+                                           href="https://www.linkedin.com/in/raj-gaurav-ballabh-kumar-97002058/">LinkedIn</a>
+            </li>
+            <li class="nav-item active"><a class="nav-link" href="https://www.instagram.com/wobblyframes/">Instagram</a>
+            </li>
+            <li class="nav-item active"><a class="nav-link"
+                                           href="https://www.facebook.com/SomeRandomThoughts">Facebook</a></li>
+        </ul>
 
-		</div>
-	</nav>
+    </div>
+</nav>
 
-	<div class="container">
-		<div>
-			This page mainly contains my notes from Java: The Complete Reference and other sources.
-		</div>
+<div class="container">
+    <div>
+        This page mainly contains my notes from Java: The Complete Reference and other sources.
+    </div>
 
-		<div class="chapter">Chapter 8: Inheritance</div>
-		<div class="textual-content">
-			- A class that does the inheriting is called the <i>subclass</i> and the class that is inherited is called the <i>superclass</i>.
-			Therefore, a subclass is a specialized version of the superclass and adds its own unique elements.
-			<div class="sub-heading">Inheritance Basics</div>
-			- class <i>subclass-name</i> extends <i>superclass-name</i>{
+    <div class="chapter">Chapter 8: Inheritance</div>
+    <div class="textual-content">
+        - A class that does the inheriting is called the <i>subclass</i> and the class that is inherited is called the
+        <i>superclass</i>.
+        Therefore, a subclass is a specialized version of the superclass and adds its own unique elements.
+        <div class="sub-heading">Inheritance Basics</div>
+        - class <i>subclass-name</i> extends <i>superclass-name</i>{
+        <br>
+        }
+        <br>
+
+        <div class="code-snippet">
+            <script src="https://gist.github.com/rgbk21/ba79d9022d2625127daa0f40896e3ceb.js"></script>
+        </div>
+        <div class="output">
+            The output is:
+            <br>
+            Contents of superObj:
+            <br>
+            i: 10 j: 20
+            <br>
+            Contents of subObj:
+            <br>
+            i: 7 j: 8
+            <br>
+            k: 9
+            <br>
+            The sum is:
+            <br>
+            i + j + k = 24
+        </div>
+        - You can only specify one super class for any subclass that you create. Java does not support the inheritance
+        of
+        multiple superclasses into a single subclass. What you can do is create a hierarchy of inheritance in which a
+        subclass becomes a superclass of
+        another subclass.
+
+        <div class="sub-heading">Member Access and Inheritance</div>
+        - Although a subclass includes all of the members of its superclass, it cannot access those members of its
+        superclass
+        that have been declared as <b>private</b>. A member declared as <b>private</b> is ONLY accessible by other
+        members
+        of its own class. These members are not accessible by any code outside of its class, not even by its subclasses.
+
+        <div class="sub-heading">A superclass variable can reference a subclass object</div>
+        <div>
+            A reference of a superclass can be assigned a reference to any subclass derived from that superclass. It is
+            important
+            to understand that <i>it is the type of the reference variable - not the type of the object that it refers
+            to - that determines what
+            members can be accessed.</i> That is when a reference to a subclass object is assigned to a superclass
+            reference variable, you will
+            have access to only those parts of the object defined by the superclass.
+        </div>
+        <div class="code-snippet">
+            <script src="https://gist.github.com/rgbk21/8d3f3665ec70aced023563b5888d2f20.js"></script>
+        </div>
+        <div class="sub-heading">Understanding super</div>
+        <div>
+            <b>super</b> has two general forms. The first calls the superclass' constructor. The second is used to
+            access a member of
+            the superclass that has been hidden by a member of a subclass.
+        </div>
+        <div class="sub-heading">a) Using super to call superclass constructors</div>
+        <div>
+            A subclass can call a constructor defined by its superclass by usat it is the type of ing the following form
+            of <b>super</b>:
+            super(<i>arg-list</i>)
+            <br>
+            Here <i>arg-list</i> specifies any arguments needed by the constructor in the superclass. <b>super()</b>
+            must also always be the
+            first statement that is executed inside a subclass' constructor.
+            <br>
+            - Since constructors can be overloaded, <b>super()</b> can be called using abd form defined by the
+            superclass.
+            The constructor executed will be the one that matches the arguments.
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/7239243bccc65ce54f32df1b7248e120.js"></script>
+            </div>
+            Notice that <b>super()</b> is passed an object of type <b>BoxWeight</b> - not of type <b>Box</b>. This still
+            invokes the constructor <b>Box(Box obj)</b>. As mentioned earlier, a superclass variable can be used to
+            reference any object
+            derived from that class. Thus we are able to pass a <b>BoxWeight</b> object to the <b>Box</b> constructor.
+            <br>
+            - So this is the key concept behind <b>super()</b>: when a subclass calls <b>super()</b>, it is calling the
+            constructor
+            of its immediate superclass. Thus <b>super()</b> always refers to the superclass immediately above the
+            calling class.
+            Also, <b>super()</b> must always be the first statement executed inside a subclass constructor (that is
+            IF you are using a <b>super()</b>).
+            <br>
+            - Remember that if you are calling the constructor of the subclass, and that constructor does not contain a
+            <b>super()</b>,
+            the default no-args constructor of the superclass will be called. If the superclass does not have the
+            default constructor,
+            the code will not compile (recall that default constructor is present in every class, but if you are
+            creating a constructor of your
+            own then you will also have to create a default constructor).
+            <br>
+            <a href="https://stackoverflow.com/questions/34488484/why-is-super-class-constructor-always-called?lq=1">Why
+                is the superclass constructor always called</a>
+            <br>
+            - The constructors of the parent classes are called, all the way up the class hierarchy through
+            <b>Object</b>, before the child class's
+            constructor is called.
+            <br>
+            -With <b>super()</b>, the superclass no-argument constructor is called. With <b>super(parameter list)</b>,
+            the superclass
+            constructor with a matching parameter list is called. Note: If a constructor does not explicitly invoke a
+            superclass constructor, the Java compiler automatically inserts a call to the no-argument constructor of the
+            superclass. If the super class does not have a no-argument constructor, you will get a compile-time error.
+            <b>Object</b> does have such a constructor, so if <b>Object</b> is the only superclass, there is no problem.
+            If a subclass constructor invokes a constructor of its superclass, either explicitly or implicitly, you
+            might think that there will be a whole chain of constructors called, all the way back to the constructor of
+            <b>Object</b>.
+            In fact, this is the case. It is called constructor chaining, and you need to be aware of it when there is
+            a long line of class descent.
+        </div>
+        <div class="sub-heading">b) A second use of super</div>
+        <div>
+            The second form of <b>super</b> acts somewhat like <b>this</b>, except that it always refers to the
+            superclass of the subclass
+            in which it is used. The usage has the following general form: <b>super.<i>member</i></b>. Here
+            <i>member</i> can be either a
+            method or instance variable. This second form of <b>super</b> is most applicable to situations in which
+            member names of a
+            subclass hide members by the same name in the superclass.
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/b8a1eff34f8ebf8331a78eeaeca6ebe5.js"></script>
+            </div>
+        </div>
+        <div class="sub-heading">Creating a MultiLevel Hierarchy</div>
+        <div>
+            You can build hierarchies that contain as many layers of inheritance as you like. Because of inheritance,
+            Shipment can make use of the
+            previously defined classes of BoxWeight and Box, adding only the extra information that it needs for its
+            own, specific application.
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/d1fb9bc209d80caa7011327b0bf7f17b.js"></script>
+            </div>
+            This example illustrates an important point - <b>super</b> always refers to the constructor in the closest
+            superclass. The
+            <b>super()</b> in Shipment calls the constructor in BoxWeight. The <b>super()</b> in BoxWeight calls the
+            constructor in Box.
+            <br>
+            - In a class hierarchy, if a superclass constructor requires arguments, then all subclasses must pass those
+            arguments "up the line".
+            This is true whether or not a subclass needs an argument of its own.
+        </div>
+        <div class="sub-heading">When Constructors are Executed</div>
+        <div>
+            In a class heirarchy, constructors complete their execution in the order of derivation, from superclass to
+            subclass. Furthe,
+            since <b>super()</b> must be the first statement that is executed in a subclass' contructor, this order is
+            the same whether or not
+            <b>super()</b> is used. If <b>super()</b> is not used, then the default or parameterless constructor of each
+            superclass will be
+            executed.
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/93a913ea7c83ad866875433b6f3b09da.js"></script>
+            </div>
+        </div>
+        <div class="sub-heading">Method Overriding</div>
+        <div>
+            In a class hierarchy, when a method in a subclass has the same name as a method in its superclass, then the
+            method in the
+            subclass is said to <i>override</i> the method in the superclass. When an overridden method is called from
+            within its subclass,
+            it will always refer to the version of that method defined by the subclass. The version of the method
+            defined by the superclass
+            will be hidden.
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/0db84861d6a4b08c62815ce370f217df.js"></script>
+            </div>
+            Remember that method overriding occurs ONLY when the names AND the type signatures are identical. Otherwise
+            the two methods
+            are simply overloaded.
+        </div>
+        <div class="sub-heading">Dynamic Method Dispatch</div>
+        <div>
+            Method Overloading provides the basis for Java's: <i>Dynamic Method Dispatch</i>. Dynamic method dispatch is
+            the mechanism by which
+            a call to an overridden method is resolved at runtime, rather than compile time. Dynamic method dispatch is
+            important because this is how
+            Java implements run-time polymorphism. The basis for Dynamic Method Dispatch just that: a superclass
+            reference variable can refer to a
+            subclass object. Java uses this fact to resolve calls to overridden methods. This is how it is done: when an
+            overridden method
+            is called through a superclass reference, Java determines which version of that method to execute based upon
+            the type
+            of the object being referred to at the time the call occurs. Thus, this determination is amde at runtime.
+            When different types
+            of objects are referred to, different versions of an overridden method will be called.
+            <br>
+            - In other words: <i>it is the type of the object being referred to (not the type of the reference variable)
+            that determines which version of an overridden method will be executed.</i> Therefore, if a superclass
+            contains
+            a method that is overridden by a subclass, then when different types of objects are referred to through a
+            superclass
+            reference variable, different versions of the method are executed. Compare this with what we read in
+            "A superclass variable can reference a subclass object" section.
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/d1e79c337d71a4468731f182f443b4cb.js"></script>
+            </div>
+        </div>
+        <div>
+            - Another example that makes more sense is the <b>List</b> interface, and the <b>ArrayList</b> and <b>LinkedList</b>
+            classes.
+            <br>
+            <a href="https://stackoverflow.com/questions/14903145/what-is-the-difference-between-list-and-arraylist">What
+                is the difference between the following:</a>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/a237650de27c30321d3324332334b1ea.js"></script>
+            </div>
+            - There's no difference between list implementations in both of your examples. There's however a difference
+            in a way you can further use variable myList in your code.
+            When you define your list as in Line 1, you can only call methods and reference members that are defined in
+            the List interface.
+            When you define your list as in Line 2, you'll be able to invoke ArrayList-specific methods and use
+            ArrayList-specific members
+            in addition to those whose definitions are inherited from List.
+            <br>
+            - Nevertheless, when you call a method of a List interface in the first example, which was implemented in
+            ArrayList, the method
+            from ArrayList will be called (because the List interface doesn't implement any methods). That's called
+            polymorphism. You can read up on it.
+            <br>
+            - The definition in Line 2 should always be preferred. Why though?
+            <br>
+            Almost always <b>List</b> is preferred over <b>ArrayList</b> because, for instance, <b>List</b> can be
+            translated into a <b>LinkedList</b> without
+            affecting the rest of the codebase. The only change that we will have to make in the codebase is change the
+            Line1 to new LinkedList&ltSomeObject&gt().
+            When you do, in fact, have to use methods that are specific ONLY to <b>ArrayList</b>, you can convert <b>List</b>
+            to <b>ArrayList</b> very easily.
+            Most common error is to accidentally use an ArrayList method, without that being necessary. Changing
+            ArrayList to List or another List implementation is difficult.
+            Something to note is that "ArrayList specific methods" isn't limited to just methods used in ArrayList, but
+            their return types being changed as well.
+            <br>
+            - Occasionally, the application may require that you use methods in the ArrayList API that are not in the
+            List API. For example,
+            <b>ensureCapacity(int)</b>, <b>trimToSize()</b> or <b>removeRange(int, int)</b>. That is the only sound
+            reason for coding to the class
+            rather than the interface, <a
+                href="https://stackoverflow.com/questions/2279030/type-list-vs-type-arraylist-in-java">IMO</a>.
+            <br>
+            The above argument also holds for methods that operate on sets or return sets. They should specify
+            parameters of type Set:
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/d23a034039d972f802e397e8f353d313.js"></script>
+            </div>
+            //TODO: <b>You can’t write efficient code if you don’t know whether random access is efficient or not.</b>
+            <br>
+            //TODO: What is <b>RandomAccess</b>?
+            <a href="https://stackoverflow.com/questions/3383726/java-declaring-from-interface-type-instead-of-class">Another
+                SO post discussing the same thing</a>
+            <br>
+            Effective Java (Bloch): If appropriate interface types exist, then parameters, return values, and fields
+            should all be declared using interface types.
+            If you get into the habit of using interface types, your program will be much more flexible. It is entirely
+            appropriate to refer to an
+            object by a class if no appropriate interface exists.
+
+        </div>
+        <div class="sub-heading">Using Abstract Classes and Abstract Methods</div>
+        <div>
+            You can require that certain methods be overridden by subclasses by specifying the <b>abstract</b> type
+            modifier.These
+            methods are sometimes referred to as <i>subclasser responsibility</i> because these methods have no
+            implementation
+            specified in the superclass. Hence, a subclass MUST override them - it cannot simply use the version defined
+            in the superclass.
+            To declare an abstract method, use this general form:
+            <b>abstract <i>type name (parameter-list);</i> </b>
+            <br>
+            Note the closing semi-colon. No method body is present. Abstract methods CANNOT have a body. Abstract
+            classes can have
+            concrete methods along with abstract methods though.
+            <br>
+            - Any class that contains one or more abstract methods MUST also be declared abstract. There can be no
+            objects of an
+            abstract class. That is, an abstract class cannot be instantiated using a <b>new</b> operator. Also, you
+            cannot
+            declare abstract constructors, or abstract static methods. Any subclass of an abstract method must either
+            implement
+            all of the abstract methods or be declared <b>abstract</b> itself.
+            <br>
+            - Although abstract classes cannot be used to instantiate objects, they can be used to create object
+            references.
+            <br>
+            - To declare a class abstract:
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/8974236d5a5b60ecb8407a47f497e8e6.js"></script>
+            </div>
+        </div>
+        <div class="sub-heading">Using final with Inheritance</div>
+        <div>
+            The keyword <b>final</b> has 3 uses - the first is in creating a named constant. The other 2 uses of <b>final</b>
+            apply to
+            inheritance.
+            <div class="sub-heading">a) Using final to prevent Overriding</div>
+            <div>
+                - To disallow a method from being overridden, specify <b>final</b> as a modifier at the start of its
+                declaration.
+                Methods declared as <b>final</b> cannot be overridden.
+                <br>
+                - Methods declared as <b>final</b> can sometimes also provide performance enhancement by <i>inlining</i>
+                calls to them.
+                Normally, Java resolves calls to methods dynamically aat run-time. This is called <i>late-binding</i>.
+                However, since <b>final</b> methods cannot be overridden, a call to one can be resolved at compile time.
+                This is
+                called <i>early-binding</i>.
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/b3b6eb7183aa934df4e18a184fb58a3c.js"></script>
+                </div>
+            </div>
+            <div class="sub-heading">b) Using final to prevent Inheritance</div>
+            <div>
+                - Sometimes, you will want to prevent a class from being inherited. To do this, precede the class
+                declaration
+                with <b>final</b>. Declaring a class as <b>final</b> implicitly declares all of ots methods as
+                <b>final</b>
+                too.
+                <br>
+                - As you might expect, it is illegal to declare a class as both <b>abstract</b> and <b>final</b> (since
+                an abstract class
+                is incomplete by itself and relies upon its subclasses to provide complete implementations).
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/d1484bd4707a2a993929005402f93501.js"></script>
+                </div>
+            </div>
+        </div>
+        <div class="sub-heading">Local Variable Type Inference and Inheritance</div>
+        <div>
+            //TODO - keyword <b>var</b>
+        </div>
+        <div class="sub-heading">The Object Class</div>
+        <div>
+            There is one special class, <b>Object</b>, defined by Java. All other Classes are subclasses of
+            <b>Object</b>.
+            That is, <b>Object</b> is a superclass of all the other classes. This means that a reference variable of
+            type
+            <b>Object</b> can refer to an object of any other class.
+            <div class="row">
+                <img src="ObjectClass.PNG" class="center-block img-fluid" alt="Example1">
+            </div>
+            Notice two methods, <b>equals()</b> and <b>toString()</b>.
+            <br>
+            - The <b>equals()</b> method compares two objects. it returns <b>true</b> if the objects are equal,
+            and <b>false</b> otherwise. The precise definition of equality can differ depending on the types of objects
+            being compared.
+            <br>
+            - The <b>toString()</b> method returns a string that contains a description of the object on which it is
+            called.
+            Also, this method is automatically called when an object is output using <b>println()</b>. Many classes
+            override this method.
+            Doing so allows them to tailor a description specifically for the types of objects that they create.
+            <br>
+            - Notice Generics...? LOL.
+        </div>
+    </div>
+
+    <div class="chapter">Chapter 19: Collections</div>
+    <div class="textual-content">
+        Remember that all Collections can store ONLY references. Not values of primitive types.
+
+        <div class="sub-heading">1) The Array List</div>
+        <div class="main-content-after-subheading">
+            <div class="textual-content">
+                - ArrayList has 3 constructors:
+                <br>
+                a) <b>ArrayList()</b>: Builds an empty Array List
+                <br>
+                b) <b>ArrayList(Collection&lt? extends E&gt c)</b>: Builds an Array List that is initialized with the
+                elements of the Collection c
+                in the order they are returned by the collection's iterator.
+                <br>
+                c) <b>ArrayList(int capacity)</b>: Builds an array list aht has the specified initial capacity. The
+                capacity is the size of the
+                underlying array that is used to store the elements. The capacity grows automatically as elements are
+                added to the array list.
+                <br>
+                You can increase the capacity of an ArrayList object manually by calling <b>ensureCapacity()</b>
+                <br>
+            </div>
+            <div class="sub-heading">Difference between <i>capacity</i> and <i>size</i> of an Array List</div>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/2287175fc5fd7a6e5161cf6ca19558c6.js"></script>
+            </div>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/9b38de57502f5d6dc4c821c74e7f1285.js"></script>
+            </div>
+            <div class="textual-content">
+                <a href="https://stackoverflow.com/questions/7688151/java-arraylist-ensurecapacity-not-working">So what
+                    is going on?</a>
+                ensureCapacity doesn't change the logical size of an ArrayList - it changes the capacity, which is the
+                size the list can reach
+                before it next needs to copy values. You need to be very aware of the difference between a logical size
+                (i.e. all the
+                values in the range [0, size) are accessible, and adding a new element will add it at index size) and
+                the capacity
+                which is more of an implementation detail really - it's the size of the backing array used for storage.
+                <br>
+                Calling ensureCapacity should only ever make any difference in terms of performance (by avoiding
+                excessive copying) -
+                it doesn't affect the logical model of what's in the list, if you see what I mean.
+            </div>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/0f617fe981b5fba290c3187b6e801543.js"></script>
+            </div>
+            <div class="textual-content">
+                <i>void trimToSize()</i>: This will reduce the size of the array that underlies an <b>ArrayList</b>
+                object so that it is
+                precisely as large as the number of items that it is currently holding.
+                <br>
+                <a href="https://stackoverflow.com/questions/43001232/does-trimtosize-function-works-on-ensurecapacity-function-in-arraylist">
+                    So, there is another question:
+                </a>
+                what happens if you call <i>trimToSize</i> after you have called <i>ensureCapacity</i>? Yes, it will
+                trim the size of the ArrayList to
+                the size of the current number of elements in the ArrayList. It will not care about the capacity.
+                <br>
+                //TODO: Is there some way that we can check the underlying size of the array that is being used for the
+                Array List?
+            </div>
+            <div class="sub-heading">Obtaining an Array from an ArrayList</div>
+            <div class="textual-content">
+                When working with an ArrayList you will sometimes want ot obtain an actual array that contains the
+                contents of the list.
+                You can do this by calling the <b>toArray()</b>, which is defined by <b>Collection</b>. The returned
+                array will be "safe" in
+                that no references to it are maintained by this list. (In other words, this method must allocate a new
+                array).
+                The caller is thus free to modify the returned array.
+            </div>
+        </div>
+
+        <div class="sub-heading">2) The Linked List</div>
+        <div class="main-content-after-subheading">
+            <div class="textual-content">
+                The Linked List has 2 constructors:
+                <br>
+                a) LinkedList(): The first constructor builds an empty linked list.
+                <br>
+                b) LinkedList(Collection&lt? extends E&gt c): The second constructor builds a linked list that is
+                initialized
+                with the elements of the Collection c.
+            </div>
+            <div class="sub-heading">Linked List vs Array List</div>
+            <div class="textual-content">
+                From memory standpoint:
+                <br>
+                - Individual elements stored in a LinkedList takes more space than an ArrayList as LinkedList also needs
+                to store the node information.
+                To be clear, even in the worst case, ArrayList is 4x smaller than a LinkedList with the same elements.
+                In short, it's basically impossible
+                to make LinkedList win the memory comparison, and if you care about space, then calling
+                <b>trimToSize()</b> on the ArrayList will instantly
+                make ArrayList win again by a huge margin. <a href="https://stackoverflow.com/a/11564453/8742428">Seriously.
+                ArrayList wins.</a>
+                <br>
+                - For a linked list, each node occupies AT LEAST 3 times the number of entries, because each node has a
+                next and prev reference as well as the entry reference.
+                (And in fact, it is more than 3 times, because of the space used by the nodes' object headers and
+                padding. Depending on the JVM and pointer size,
+                it can be as much as 6 times.) The only situation where a linked list will use less space than an array
+                list is if
+                you badly over-estimate the array list's initial capacity. (And for very small lists ...).
+                When you think about it, the only real advantage linked lists have over array lists is when you are
+                inserting and removing elements.
+                <a href="https://stackoverflow.com/a/11564490/8742428">Even then, it depends on how you do it.</a>
+                <br>
+                - Also, as far as I can tell
+                <a href="https://stackoverflow.com/questions/41929556/is-memory-contiguous-allocated-for-arraylist/41929837#41929837">memory
+                    for an ArrayList is not allotted contiguously(?)</a>.
+                ArrayList stores "references" or "pointers" to actual storage in an internal object array elementData.
+                This array of references may well be contiguous,
+                but is JVM specific. The actual objects being added are stored on the heap, and almost certainly won't
+                be contiguous, although this is JVM specific.
+                <br>
+                From Speed Standpoint:
+                <br>
+                - Prefer ArrayList if you want O(1) random access. LinkedList give O(1) <b>Iterator.remove</b> time.
+                This is different from plain old <b>remove(int index)</b>
+                which still takes O(n) time for LinkedLists in <a href="https://stackoverflow.com/a/322742/8742428">worst-case
+                scenario.</a>
+                <br>
+                - <a href="https://stackoverflow.com/a/716645/8742428">Good comment about pre-emptively trying to
+                improve performance without understanding what is going on.</a>
+                <br>
+                - <a
+                    href="https://stackoverflow.com/questions/14200489/collection-iterator-remove-vs-collection-remove">Post
+                about difference between Collection.remove and Iterator.remove</a>
+                <br>
+            </div>
+        </div>
+
+        <div class="sub-heading">3) The HashSet Class</div>
+        <div class="main-content-after-subheading">
+			<b>HashSet</b> extends <b>AbstractSet</b> and implements the <b>Set</b> interface. It creates a collection that uses a hash table for storage.
+			<b>HashSet</b> is a generic class that has this declaration: <b>class HashSet&ltE&gt</b>.
+
+			- This class implements the <b>Set</b> interface, backed by a hash table (actually a <b>HashMap</b> instance). It makes no guarantees as to the iteration order of the set;
+			in particular, it does not guarantee that the order will remain constant over time. This class permits the null element.
+			This class offers constant time performance for the basic operations (add, remove, contains and size), assuming the hash function disperses the elements properly
+			among the buckets.
 			<br>
-			}
+			- Iterating over this set requires time proportional to the sum of the HashSet instance's size (the number of elements) plus the "capacity" of the backing
+			<b>HashMap</b> instance (the number of buckets). Thus, it's very important not to set the initial capacity too high (or the load factor too low) if iteration
+			performance is important.
 			<br>
+			The following constructors are defined:
+			<br>
+			a) <b>HashSet()</b>: Constructs a new, empty set; the backing HashMap instance has default initial capacity (16) and load factor (0.75).
+			<br>
+			b) <b>HashSet(Collection&lt? extends E&gt c)</b>: Initializes the hash set by using the elements of c.
+			<br>
+			c) <b>HashSet(int capacity)</b>: Constructs a new, empty set; the backing HashMap instance has the specified initial capacity and default load factor (0.75).
+			<br>
+			d) <b>HashSet(int capacity, float loadFactor)</b>: Constructs a new, empty set; the backing HashMap instance has the specified initial capacity and the
+			specified load factor (also called fillRatio)
+        </div>
 
-			<div class="code-snippet"><script src="https://gist.github.com/rgbk21/ba79d9022d2625127daa0f40896e3ceb.js"></script></div>
-			<div class="output">
-				The output is:
-				<br>
-				Contents of superObj:
-				<br>
-				i: 10 j: 20
-				<br>
-				Contents of subObj:
-				<br>
-				i: 7 j: 8
-				<br>
-				k: 9
-				<br>
-				The sum is:
-				<br>
-				i + j + k = 24
-			</div>
-			- You can only specify one super class for any subclass that you create. Java does not support the inheritance of
-			multiple superclasses into a single subclass. What you can do is create a hierarchy of inheritance in which a subclass becomes a superclass of
-			another subclass.
+		<div class="sub-heading"> 4) The LinkedHashSet Class</div>
+		<div class="main-content-after-subheading">
+			The <b>LinkedHashSet</b> class extends <b>HashSet</b> and adds no members of its own. It is a generic class that has this declaration:
+			<b>class LinkedHashSet&ltE&gt</b>. Here, E specifies the type of objects that the set will hold. Its constructors parallel those in HashSet. Hash table and
+			linked list implementation of the Set interface, with predictable iteration order. This implementation differs from HashSet in that it maintains a doubly-linked
+			list running through all of its entries. This linked list defines the iteration ordering, which is the order in which elements were inserted into the set (insertion-order).
+			Note that insertion order is not affected if an element is re-inserted into the set.
+			<br>
+			Like HashSet, it provides constant-time performance for the basic operations (add, contains and remove), assuming the hash function disperses elements properly
+			among the buckets. Performance is likely to be just slightly below that of HashSet, due to the added expense of maintaining the linked list, with one exception:
+			Iteration over a LinkedHashSet requires time proportional to the size of the set, regardless of its capacity. Iteration over a HashSet is
+			likely to be more expensive, requiring time proportional to its capacity. This implementation spares its clients from the unspecified, generally chaotic
+			ordering provided by HashSet, without incurring the increased cost associated with <b>TreeSet</b>.
+			<br>
+			Linked Hash Set has 4 Constructors:
+			<br>
+			a) LinkedHashSet​(): Constructs a new, empty linked hash set with the default initial capacity (16) and load factor (0.75).
+			<br>
+			b) LinkedHashSet​(int initialCapacity): Constructs a new, empty linked hash set with the specified initial capacity and the default load factor (0.75).
+			<br>
+			c) LinkedHashSet​(int initialCapacity, float loadFactor): Constructs a new, empty linked hash set with the specified initial capacity and load factor.
+			<br>
+			d) LinkedHashSet​(Collection&lt? extends E&gt c): Constructs a new linked hash set with the same elements as the specified collection.
+		</div>
 
-			<div class="sub-heading">Member Access and Inheritance</div>
-			- Although a subclass includes all of the members of its superclass, it cannot access those members of its superclass
-			that have been declared as <b>private</b>. A member declared as <b>private</b> is ONLY accessible by other members
-			of its own class. These members are not accessible by any code outside of its class, not even by its subclasses.
+		<div class="sub-heading"> 5) The TreeSet Class</div>
+		<div class="main-content-after-subheading">
+			A <b>NavigableSet</b> implementation based on a <b>TreeMap</b>. The elements are ordered using their natural ordering, or by a <b>Comparator</b> provided at
+			set creation time, depending on which constructor is used. This implementation provides guaranteed 	<i>log(n)</i> time cost for the basic operations (add, remove and contains).
+			Note that the ordering maintained by a set (whether or not an explicit comparator is provided) must be <i>consistent with equals</i> if it is to correctly implement
+			the <i>Set</i> interface. (See <b>Comparable</b> or <b>Comparator</b> for a precise definition of consistent with equals.) This is so because the <b>Set</b>
+			interface is defined in terms of the equals operation, but a <b>TreeSet</b> instance performs all element comparisons using its compareTo (or compare) method,
+			so two elements that are deemed equal by this method are, from the standpoint of the set, equal. The behavior of a set is well-defined even if its ordering is
+			inconsistent with equals; it just fails to obey the general contract of the Set interface.
+			<br>
+			<b>TreeSet</b> has the following Constructors:
+			<br>
+			a) TreeSet(): Constructs a new, empty tree set, sorted in ascending order according to the natural ordering of its elements.
+			<br>
+			b) TreeSet​(Collection&lt? extends E&gt c): Constructs a new tree set containing the elements in the specified collection, sorted according
+			to the natural ordering of its elements.
+			<br>
+			c) TreeSet​(Comparator&lt? super E&gt comparator): Constructs a new, empty tree set, sorted according to the specified comparator.
+			<br>
+			d) TreeSet​(SortedSet&ltE&gt s): Constructs a new tree set containing the same elements and using the same ordering as the specified sorted set.
+		</div>
 
-			<div class="sub-heading">A superclass variable can reference a subclass object</div>
-			<div>
-				A reference of a superclass can be assigned a reference to any subclass derived from that superclass. It is important
-				to understand that <i>it is the type of the reference variable - not the type of the object that it refers to - that determines what
-				members can be accessed.</i> That is when a reference to a subclass object is assigned to a superclass reference variable, you will
-				have access to only those parts of the object defined by the superclass.
-			</div>
-			<div class="code-snippet"><script src="https://gist.github.com/rgbk21/8d3f3665ec70aced023563b5888d2f20.js"></script></div>
-			<div class="sub-heading">Understanding super</div>
-			<div>
-				<b>super</b> has two general forms. The first calls the superclass' constructor. The second is used to access a member of
-				the superclass that has been hidden by a member of a subclass.
-			</div>
-			<div class="sub-heading">a) Using super to call superclass constructors</div>
-			<div>
-				A subclass can call a constructor defined by its superclass by usat it is the type of ing the following form of <b>super</b>:
-				super(<i>arg-list</i>)
-				<br>
-				Here <i>arg-list</i> specifies any arguments needed by the constructor in the superclass. <b>super()</b> must also always be the
-				first statement that is executed inside a subclass' constructor.
-				<br>
-				- Since constructors can be overloaded, <b>super()</b> can be called using abd form defined by the superclass.
-				The constructor executed will be the one that matches the arguments.
-				<div class="code-snippet"><script src="https://gist.github.com/rgbk21/7239243bccc65ce54f32df1b7248e120.js"></script></div>
-				Notice that <b>super()</b> is passed an object of type <b>BoxWeight</b> - not of type <b>Box</b>. This still
-				invokes the constructor <b>Box(Box obj)</b>. As mentioned earlier, a superclass variable can be used to reference any object
-				derived from that class. Thus we are able to pass a <b>BoxWeight</b> object to the <b>Box</b> constructor.
-				<br>
-				- So this is the key concept behind <b>super()</b>: when a subclass calls <b>super()</b>, it is calling the constructor
-				of its immediate superclass. Thus <b>super()</b> always refers to the superclass immediately above the calling class.
-				Also, <b>super()</b> must always be the first statement executed inside a subclass constructor (that is
-				IF you are using a <b>super()</b>).
-				<br>
-				- Remember that if you are calling the constructor of the subclass, and that constructor does not contain a <b>super()</b>,
-				the default no-args constructor of the superclass will be called. If the superclass does not have the default constructor,
-				the code will not compile (recall that default constructor is present in every class, but if you are creating a constructor of your
-				 own then you will also have to create a default constructor).
-				<br>
-				<a href="https://stackoverflow.com/questions/34488484/why-is-super-class-constructor-always-called?lq=1">Why is the superclass constructor always called</a>
-				<br>
-				- The constructors of the parent classes are called, all the way up the class hierarchy through <b>Object</b>, before the child class's
-				constructor is called.
-				<br>
-				-With <b>super()</b>, the superclass no-argument constructor is called. With <b>super(parameter list)</b>, the superclass
-				constructor with a matching parameter list is called. Note: If a constructor does not explicitly invoke a
-				superclass constructor, the Java compiler automatically inserts a call to the no-argument constructor of the
-				superclass. If the super class does not have a no-argument constructor, you will get a compile-time error.
-				<b>Object</b> does have such a constructor, so if <b>Object</b> is the only superclass, there is no problem.
-				If a subclass constructor invokes a constructor of its superclass, either explicitly or implicitly, you
-				might think that there will be a whole chain of constructors called, all the way back to the constructor of <b>Object</b>.
-				In fact, this is the case. It is called constructor chaining, and you need to be aware of it when there is
-				a long line of class descent.
-			</div>
-			<div class="sub-heading">b) A second use of super</div>
-			<div>
-				The second form of <b>super</b> acts somewhat like <b>this</b>, except that it always refers to the superclass of the subclass
-				in which it is used. The usage has the following general form: <b>super.<i>member</i></b>. Here <i>member</i> can be either a
-				method or instance variable. This second form of <b>super</b> is most applicable to situations in which member names of a
-				subclass hide members by the same name in the superclass.
-				<div class="code-snippet"><script src="https://gist.github.com/rgbk21/b8a1eff34f8ebf8331a78eeaeca6ebe5.js"></script></div>
-			</div>
-			<div class="sub-heading">Creating a MultiLevel Hierarchy</div>
-			<div>
-				You can build hierarchies that contain as many layers of inheritance as you like. Because of inheritance, Shipment can make use of the
-				previously defined classes of BoxWeight and Box, adding only the extra information that it needs for its own, specific application.
-				<div class="code-snippet"><script src="https://gist.github.com/rgbk21/d1fb9bc209d80caa7011327b0bf7f17b.js"></script></div>
-				This example illustrates an important point - <b>super</b> always refers to the constructor in the closest superclass. The
-				<b>super()</b> in Shipment calls the constructor in BoxWeight. The <b>super()</b> in BoxWeight calls the constructor in Box.
-				<br>
-				- In a class hierarchy, if a superclass constructor requires arguments, then all subclasses must pass those arguments "up the line".
-				This is true whether or not a subclass needs an argument of its own.
-			</div>
-			<div class="sub-heading">When Constructors are Executed</div>
-			<div>
-				In a class heirarchy, constructors complete their execution in the order of derivation, from superclass to subclass. Furthe,
-				since <b>super()</b> must be the first statement that is executed in a subclass' contructor, this order is the same whether or not
-				<b>super()</b> is used. If <b>super()</b> is not used, then the default or parameterless constructor of each superclass will be
-				executed.
-				<div class="code-snippet"><script src="https://gist.github.com/rgbk21/93a913ea7c83ad866875433b6f3b09da.js"></script></div>
-			</div>
-			<div class="sub-heading">Method Overriding</div>
-			<div>
-				In a class hierarchy, when a method in a subclass has the same name as a method in its superclass, then the method in the
-				subclass is said to <i>override</i> the method in the superclass. When an overridden method is called from within its subclass,
-				it will always refer to the version of that method defined by the subclass. The version of the method defined by the superclass
-				will be hidden.
-				<div class="code-snippet"><script src="https://gist.github.com/rgbk21/0db84861d6a4b08c62815ce370f217df.js"></script></div>
-				Remember that method overriding occurs ONLY when the names AND the type signatures are identical. Otherwise the two methods
-				are simply overloaded.
-			</div>
-			<div class="sub-heading">Dynamic Method Dispatch</div>
-			<div>
-				Method Overloading provides the basis for Java's: <i>Dynamic Method Dispatch</i>. Dynamic method dispatch is the mechanism by which
-				a call to an overridden method is resolved at runtime, rather than compile time. Dynamic method dispatch is important because this is how
-				Java implements run-time polymorphism. The basis for Dynamic Method Dispatch just that: a superclass reference variable can refer to a
-				subclass object. Java uses this fact to resolve calls to overridden methods. This is how it is done: when an overridden method
-				is called through a superclass reference, Java determines which version of that method  to execute based upon the type
-				of the object being referred to at the time the call occurs. Thus, this determination is amde at runtime. When different types
-				of objects are referred to, different versions of an overridden method will be called.
-				<br>
-				- In other words: <i>it is the type of the object being referred to (not the type of the reference variable)
-				that determines which version of an overridden method will be executed.</i> Therefore, if a superclass contains
-				a method that is overridden by a subclass, then when different types of objects are referred to through a superclass
-				reference variable, different versions of the method are executed. Compare this with what we read in
-				"A superclass variable can reference a subclass object" section.
-				<div class="code-snippet"><script src="https://gist.github.com/rgbk21/d1e79c337d71a4468731f182f443b4cb.js"></script></div>
-			</div>
-			<div class="sub-heading">Using Abstract Classes and Abstract Methods</div>
-			<div>
-				You can require that certain methods be overridden by subclasses by specifying the <b>abstract</b> type modifier.These
-				methods are sometimes referred to as <i>subclasser responsibility</i> because these methods have no implementation
-				specified in the superclass. Hence, a subclass MUST override them - it cannot simply use the version defined in the superclass.
-				To declare an abstract method, use this general form:
-				<b>abstract <i>type name (parameter-list);</i> </b>
-				<br>
-				Note the closing semi-colon. No method body is present. Abstract methods CANNOT have a body. Abstract classes can have
-				concrete methods along with abstract methods though.
-				<br>
-				- Any class that contains one or more abstract methods MUST also be declared abstract. There can be no objects of an
-				abstract class. That is, an abstract class cannot be instantiated using a <b>new</b> operator. Also, you cannot
-				declare abstract constructors, or abstract static methods. Any subclass of an abstract method must either implement
-				all of the abstract methods or be declared <b>abstract</b> itself.
-				<br>
-				- Although abstract classes cannot be used to instantiate objects, they can be used to create object references.
-				<br>
-				- To declare a class abstract:
-				<div class="code-snippet"><script src="https://gist.github.com/rgbk21/8974236d5a5b60ecb8407a47f497e8e6.js"></script></div>
-			</div>
-			<div class="sub-heading">Using final with Inheritance</div>
-			<div>
-				The keyword <b>final</b> has 3 uses - the first is in creating a named constant. The other 2 uses of <b>final</b> apply to
-				inheritance.
-				<div class="sub-heading">a) Using final to prevent Overriding</div>
-				<div>
-					- To disallow a method from being overridden, specify <b>final</b> as a modifier at the start of its declaration.
-					Methods declared as <b>final</b> cannot be overridden.
-					<br>
-					- Methods declared as <b>final</b> can sometimes also provide performance enhancement by <i>inlining</i> calls to them.
-					Normally, Java resolves calls to methods dynamically aat run-time. This is called <i>late-binding</i>.
-					However, since <b>final</b> methods cannot be overridden, a call to one can be resolved at compile time. This is
-					called <i>early-binding</i>.
-					<div class="code-snippet"><script src="https://gist.github.com/rgbk21/b3b6eb7183aa934df4e18a184fb58a3c.js"></script></div>
-				</div>
-				<div class="sub-heading">b) Using final to prevent Inheritance</div>
-				<div>
-					- Sometimes, you will want to prevent a class from being inherited. To do this, precede the class declaration
-					with <b>final</b>. Declaring a class as <b>final</b> implicitly declares all of ots methods as <b>final</b>
-					too.
-					<br>
-					- As you might expect, it is illegal to declare a class as both <b>abstract</b> and <b>final</b> (since an abstract class
-					is incomplete by itself and relies upon its subclasses to provide complete implementations).
-					<div class="code-snippet"><script src="https://gist.github.com/rgbk21/d1484bd4707a2a993929005402f93501.js"></script></div>
-				</div>
-			</div>
-			<div class="sub-heading">Local Variable Type Inference and Inheritance</div>
-			<div>
-				//TODO - keyword <b>var</b>
-			</div>
-			<div class="sub-heading">The Object Class</div>
-			<div>
-				There is one special class, <b>Object</b>, defined by Java. All other Classes are subclasses of <b>Object</b>.
-				That is, <b>Object</b> is a superclass of all the other classes. This means that a reference variable of type
-				<b>Object</b> can refer to an object of any other class.
-				<div class="row">
-					<img src="ObjectClass.PNG" class="center-block img-fluid" alt="Example1">
-				</div>
-				Notice two methods, <b>equals()</b> and <b>toString()</b>.
-				<br>
-				- The <b>equals()</b> method compares two objects. it returns <b>true</b> if the objects are equal,
-				and <b>false</b> otherwise. The precise definition of equality can differ depending on the types of objects being compared.
-				<br>
-				- The <b>toString()</b> method returns a string that contains a description of the object on which it is called.
-				Also, this method is automatically called when an object is output using <b>println()</b>. Many classes override this method.
-				Doing so allows them to tailor a description specifically for the types of objects that they create.
-				<br>
-				- Notice Generics...? LOL.
-			</div>
+		<div class="sub-heading"> 6) Priority Queue Class</div>
+		<div class="main-content-after-subheading">
+			//TODO
+		</div>
+
+		<div class="sub-heading"> 7) Array Deque Class</div>
+		<div class="main-content-after-subheading">
+			//TODO
+		</div>
+
+		<div class="sub-heading">Accessing a Collection via an Iterator</div>
+		<div class="main-content-after-subheading">
+			- Iterators allow you to cycle through the elements in a collection. <b>iterator</b> allows you to
+			cycle through a collection, obtaining and removing elements. <b>ListIterator</b> extends <b>Iterator</b> to allow bi-directional traversal of a list,
+			and the modification of elements.
+			<br>
+			- The <b>Iterator</b> and the <b>ListIterator</b> are generic interfaces:
+			<br>
+			<b>interface Iterator &ltE&gt</b>
+			<br>
+			<b>interface ListIterator &ltE&gt</b>
+			Here <b>E</b> specifies the type of object being iterated.
+		</div>
+		<div class="sub-heading">Using an Iterator</div>
+		<div class="main-content-after-subheading">
+			Before you can access a collection through an iterator, you must obtain one. Each of the collection classes provides an
+			<b>iterator()</b> method that returns an iterator to the start of the collection. By using this iterator object, you can access each element
+			in the collection, one element at a time. In general, to use an iterator to cycle through the contents of a collection, follow these steps:
+			<br>
+			1.   Obtain an iterator to the start of the collection by calling the collection’s <b>iterator()</b> method.
+			<br>
+			2.   Set up a loop that makes a call to <b>hasNext()</b>. Have the loop iterate as long as <b>hasNext()</b> returns true.
+			<br>
+			3.   Within the loop, obtain each element by calling <b>next()</b>.
+			<br>
+			For collections that implement List, you can also obtain an iterator by calling <b>listIterator()</b>.
+			A list iterator gives you the ability to access the collection in either the forward or backward direction and lets you modify an element.
+			Otherwise, <b>ListIterator</b> is used just like <b>Iterator</b>.
+		</div>
+
+		<div class="sub-heading">For-Each Alternative to Iterators</div>
+		<div class="main-content-after-subheading">
+			- Can only be used ot cycle through a collection in the forward direction
+			<br>
+			- You cannot modify the contents of a collection using for-each loop
+		</div>
+
+		<div class="sub-heading">The RandomAccess Interface</div>
+		<div class="main-content-after-subheading">
+			-//TODO
+		</div>
+
+		<div class="sub-heading">Working with Maps</div>
+		<div class="main-content-after-subheading">
+			- A <i>map</i> is an object that stores associations between keys and values, or <i>key/value</i> pairs. Given a key, you can find its value.
+			Both keys and values are objects. The keys must be unique, but the values may be duplicated. Some maps can accept a null key and null values, others cannot.
+			<br>
+			- There is one key point about maps that is important to mention at the outset: they don’t implement the <b>Iterable</b> interface.
+			This means that you cannot cycle through a map using a for-each style for loop. Furthermore, you can’t obtain an iterator to a map.
+			However, as you will soon see, you can obtain a collection-view of a map, which does allow the use of either the for loop or an iterator.
+
 		</div>
 
 
-	</div>
+
+
+    </div>
+
+
+</div>
 
 </body>
 </html>
