@@ -23,11 +23,18 @@
     font-weight: bold;
 }
 
+code {
+    padding: 2px 5px;
+    white-space: pre-wrap;
+    font-family: Consolas,Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace,sans-serif;
+    background-color: #eff0f1;
+    color: black;
+}
+
 .sub-heading {
     padding-top: 10px;
     padding-bottom: 10px;
     font-weight: bold;
-
 }
 
 .main-content-after-subheading{

@@ -129,119 +129,99 @@
         <div class="code-snippet">
             <script src="https://gist.github.com/rgbk21/ba79d9022d2625127daa0f40896e3ceb.js"></script>
         </div>
-        <div class="output">
-            The output is:
-            <br>
-            Contents of superObj:
-            <br>
-            i: 10 j: 20
-            <br>
-            Contents of subObj:
-            <br>
-            i: 7 j: 8
-            <br>
-            k: 9
-            <br>
-            The sum is:
-            <br>
-            i + j + k = 24
-        </div>
         - You can only specify one super class for any subclass that you create. Java does not support the inheritance
-        of
-        multiple superclasses into a single subclass. What you can do is create a hierarchy of inheritance in which a
-        subclass becomes a superclass of
-        another subclass.
+        of multiple superclasses into a single subclass. What you can do is create a hierarchy of inheritance in which a
+        subclass becomes a superclass of another subclass.
 
         <div class="sub-heading">Member Access and Inheritance</div>
         - Although a subclass includes all of the members of its superclass, it cannot access those members of its
-        superclass
-        that have been declared as <b>private</b>. A member declared as <b>private</b> is ONLY accessible by other
-        members
-        of its own class. These members are not accessible by any code outside of its class, not even by its subclasses.
+        superclass that have been declared as <code>private</code>. A member declared as <code>private</code> is ONLY
+        accessible by other members of its own class. These members are not accessible by any code outside of its class,
+        not even by its subclasses.
 
-        <div class="sub-heading">A superclass variable can reference a subclass object</div>
+        <div id="superclass_reference" class="sub-heading">A superclass variable can reference a subclass object</div>
         <div>
             A reference of a superclass can be assigned a reference to any subclass derived from that superclass. It is
-            important
-            to understand that <i>it is the type of the reference variable - not the type of the object that it refers
-            to - that determines what
-            members can be accessed.</i> That is when a reference to a subclass object is assigned to a superclass
-            reference variable, you will
-            have access to only those parts of the object defined by the superclass.
+            important to understand that <i>it is the type of the reference variable - not the type of the object that
+            it refers to - that determines what members can be accessed.</i> That is when a reference to a subclass
+            object is assigned to a superclass reference variable, you will have access to only those parts of the
+            object defined by the superclass.
         </div>
         <div class="code-snippet">
             <script src="https://gist.github.com/rgbk21/8d3f3665ec70aced023563b5888d2f20.js"></script>
         </div>
         <div class="sub-heading">Understanding super</div>
         <div>
-            <b>super</b> has two general forms. The first calls the superclass' constructor. The second is used to
-            access a member of
-            the superclass that has been hidden by a member of a subclass.
+            <code>super</code> has two general forms. The first calls the superclass' constructor. The second is used to
+            access a member of the superclass that has been hidden by a member of a subclass.
         </div>
         <div class="sub-heading">a) Using super to call superclass constructors</div>
         <div>
-            A subclass can call a constructor defined by its superclass by usat it is the type of ing the following form
-            of <b>super</b>:
-            super(<i>arg-list</i>)
+            A subclass can call a constructor defined by its superclass by use of the following form of
+            <code>super</code>:
+            <code>super(<i>arg-list</i>)</code>
             <br>
-            Here <i>arg-list</i> specifies any arguments needed by the constructor in the superclass. <b>super()</b>
-            must also always be the
-            first statement that is executed inside a subclass' constructor.
+            Here <i>arg-list</i> specifies any arguments needed by the constructor in the superclass.
+            <code>super()</code> must also always be the first statement that is executed inside a subclass'
+            constructor.
             <br>
-            - Since constructors can be overloaded, <b>super()</b> can be called using abd form defined by the
-            superclass.
-            The constructor executed will be the one that matches the arguments.
+            - Since constructors can be overloaded, <code>super()</code> can be called using any form defined by the
+            superclass. The constructor executed will be the one that matches the arguments.
             <div class="code-snippet">
                 <script src="https://gist.github.com/rgbk21/7239243bccc65ce54f32df1b7248e120.js"></script>
             </div>
-            Notice that <b>super()</b> is passed an object of type <b>BoxWeight</b> - not of type <b>Box</b>. This still
-            invokes the constructor <b>Box(Box obj)</b>. As mentioned earlier, a superclass variable can be used to
-            reference any object
-            derived from that class. Thus we are able to pass a <b>BoxWeight</b> object to the <b>Box</b> constructor.
+            Notice that <code>super()</code> is passed an object of type <code>BoxWeight</code> - not of type
+            <code>Box</code>. This still
+            invokes the constructor <code>Box(Box obj)</code>. As mentioned earlier, a superclass variable can be used
+            to
+            reference any object derived from that class. Thus we are able to pass a <code>BoxWeight</code> object to
+            the <code>Box</code> constructor.
             <br>
-            - So this is the key concept behind <b>super()</b>: when a subclass calls <b>super()</b>, it is calling the
+            - So this is the key concept behind <code>super()</code>: when a subclass calls <code>super()</code>, it is
+            calling the
             constructor
-            of its immediate superclass. Thus <b>super()</b> always refers to the superclass immediately above the
+            of its immediate superclass. Thus <code>super()</code> always refers to the superclass immediately above the
             calling class.
-            Also, <b>super()</b> must always be the first statement executed inside a subclass constructor (that is
-            IF you are using a <b>super()</b>).
+            Also, <code>super()</code> must always be the first statement executed inside a subclass constructor (that
+            is
+            IF you are using a <code>super()</code>).
             <br>
             - Remember that if you are calling the constructor of the subclass, and that constructor does not contain a
-            <b>super()</b>,
-            the default no-args constructor of the superclass will be called. If the superclass does not have the
-            default constructor,
-            the code will not compile (recall that default constructor is present in every class, but if you are
-            creating a constructor of your
-            own then you will also have to create a default constructor).
+            <code>super()</code>, the default no-args constructor of the superclass will be called. If the superclass
+            does not have the
+            default constructor, the code will not compile (recall that default constructor is present in every class,
+            but if you are
+            creating a constructor of your own then you will also have to create a default constructor).
             <br>
             <a href="https://stackoverflow.com/questions/34488484/why-is-super-class-constructor-always-called?lq=1">Why
                 is the superclass constructor always called</a>
             <br>
             - The constructors of the parent classes are called, all the way up the class hierarchy through
-            <b>Object</b>, before the child class's
-            constructor is called.
+            <code>Object</code>, before the child class's constructor is called.
             <br>
-            -With <b>super()</b>, the superclass no-argument constructor is called. With <b>super(parameter list)</b>,
-            the superclass
-            constructor with a matching parameter list is called. Note: If a constructor does not explicitly invoke a
+            -With <code>super()</code>, the superclass no-argument constructor is called.
+            With <code>super(parameter-list)</code>, the superclass constructor with a matching parameter list is
+            called.
+            Note: If a constructor does not explicitly invoke a
             superclass constructor, the Java compiler automatically inserts a call to the no-argument constructor of the
             superclass. If the super class does not have a no-argument constructor, you will get a compile-time error.
-            <b>Object</b> does have such a constructor, so if <b>Object</b> is the only superclass, there is no problem.
+            <code>Object</code> does have such a constructor, so if <code>Object</code> is the only superclass, there is
+            no problem.
             If a subclass constructor invokes a constructor of its superclass, either explicitly or implicitly, you
             might think that there will be a whole chain of constructors called, all the way back to the constructor of
-            <b>Object</b>.
-            In fact, this is the case. It is called constructor chaining, and you need to be aware of it when there is
+            <code>Object</code>. In fact, this is the case. It is called constructor chaining, and you need to be aware
+            of it when there is
             a long line of class descent.
         </div>
         <div class="sub-heading">b) A second use of super</div>
         <div>
-            The second form of <b>super</b> acts somewhat like <b>this</b>, except that it always refers to the
-            superclass of the subclass
-            in which it is used. The usage has the following general form: <b>super.<i>member</i></b>. Here
-            <i>member</i> can be either a
-            method or instance variable. This second form of <b>super</b> is most applicable to situations in which
-            member names of a
-            subclass hide members by the same name in the superclass.
+            The second form of <code>super</code> acts somewhat like <code>this</code>, except that it always refers to
+            the
+            superclass of the subclass in which it is used. The usage has the following general form: <code>super.<i>member</i></code>.
+            Here
+            <i>member</i> can be either a method or instance variable. This second form of <code>super</code> is most
+            applicable to situations in which
+            member names of a subclass hide members by the same name in the superclass.
             <div class="code-snippet">
                 <script src="https://gist.github.com/rgbk21/b8a1eff34f8ebf8331a78eeaeca6ebe5.js"></script>
             </div>
@@ -249,30 +229,25 @@
         <div class="sub-heading">Creating a MultiLevel Hierarchy</div>
         <div>
             You can build hierarchies that contain as many layers of inheritance as you like. Because of inheritance,
-            Shipment can make use of the
-            previously defined classes of BoxWeight and Box, adding only the extra information that it needs for its
-            own, specific application.
+            Shipment can make use of the previously defined classes of BoxWeight and Box, adding only the extra
+            information that it needs for its own, specific application.
             <div class="code-snippet">
                 <script src="https://gist.github.com/rgbk21/d1fb9bc209d80caa7011327b0bf7f17b.js"></script>
             </div>
-            This example illustrates an important point - <b>super</b> always refers to the constructor in the closest
-            superclass. The
-            <b>super()</b> in Shipment calls the constructor in BoxWeight. The <b>super()</b> in BoxWeight calls the
-            constructor in Box.
+            This example illustrates an important point - <code>super</code> always refers to the constructor in the
+            closest
+            superclass. The <code>super()</code> in Shipment calls the constructor in BoxWeight. The
+            <code>super()</code> in BoxWeight calls the constructor in Box.
             <br>
             - In a class hierarchy, if a superclass constructor requires arguments, then all subclasses must pass those
-            arguments "up the line".
-            This is true whether or not a subclass needs an argument of its own.
+            arguments "up the line". This is true whether or not a subclass needs an argument of its own.
         </div>
         <div class="sub-heading">When Constructors are Executed</div>
         <div>
             In a class heirarchy, constructors complete their execution in the order of derivation, from superclass to
-            subclass. Furthe,
-            since <b>super()</b> must be the first statement that is executed in a subclass' contructor, this order is
-            the same whether or not
-            <b>super()</b> is used. If <b>super()</b> is not used, then the default or parameterless constructor of each
-            superclass will be
-            executed.
+            subclass. Further, since <code>super()</code> must be the first statement that is executed in a subclass'
+            constructor, this order is the same whether or not <code>super()</code> is used. If <code>super()</code> is
+            not used, then the default or parameterless constructor of each superclass will be executed.
             <div class="code-snippet">
                 <script src="https://gist.github.com/rgbk21/93a913ea7c83ad866875433b6f3b09da.js"></script>
             </div>
@@ -280,32 +255,29 @@
         <div class="sub-heading">Method Overriding</div>
         <div>
             In a class hierarchy, when a method in a subclass has the same name as a method in its superclass, then the
-            method in the
-            subclass is said to <i>override</i> the method in the superclass. When an overridden method is called from
-            within its subclass,
-            it will always refer to the version of that method defined by the subclass. The version of the method
-            defined by the superclass
-            will be hidden.
+            method in the subclass is said to <i>override</i> the method in the superclass. When an overridden method is
+            called from
+            within its subclass, it will always refer to the version of that method defined by the subclass. The version
+            of the method
+            defined by the superclass will be hidden.
             <div class="code-snippet">
                 <script src="https://gist.github.com/rgbk21/0db84861d6a4b08c62815ce370f217df.js"></script>
             </div>
             Remember that method overriding occurs ONLY when the names AND the type signatures are identical. Otherwise
-            the two methods
-            are simply overloaded.
+            the two methods are simply overloaded.
         </div>
         <div class="sub-heading">Dynamic Method Dispatch</div>
         <div>
             Method Overloading provides the basis for Java's: <i>Dynamic Method Dispatch</i>. Dynamic method dispatch is
-            the mechanism by which
-            a call to an overridden method is resolved at runtime, rather than compile time. Dynamic method dispatch is
-            important because this is how
+            the mechanism by which a call to an overridden method is resolved at runtime, rather than compile time.
+            Dynamic method dispatch is important because this is how
             Java implements run-time polymorphism. The basis for Dynamic Method Dispatch just that: a superclass
             reference variable can refer to a
             subclass object. Java uses this fact to resolve calls to overridden methods. This is how it is done: when an
             overridden method
             is called through a superclass reference, Java determines which version of that method to execute based upon
             the type
-            of the object being referred to at the time the call occurs. Thus, this determination is amde at runtime.
+            of the object being referred to at the time the call occurs. Thus, this determination is made at runtime.
             When different types
             of objects are referred to, different versions of an overridden method will be called.
             <br>
@@ -315,14 +287,14 @@
             a method that is overridden by a subclass, then when different types of objects are referred to through a
             superclass
             reference variable, different versions of the method are executed. Compare this with what we read in
-            "A superclass variable can reference a subclass object" section.
+            <a href="#superclass_reference">A superclass variable can reference a subclass object</a>" section.
             <div class="code-snippet">
                 <script src="https://gist.github.com/rgbk21/d1e79c337d71a4468731f182f443b4cb.js"></script>
             </div>
         </div>
         <div>
-            - Another example that makes more sense is the <b>List</b> interface, and the <b>ArrayList</b> and <b>LinkedList</b>
-            classes.
+            - Another example that makes more sense is the <code>List</code> interface, and the <code>ArrayList</code>
+            and <code>LinkedList</code> classes.
             <br>
             <a href="https://stackoverflow.com/questions/14903145/what-is-the-difference-between-list-and-arraylist">What
                 is the difference between the following:</a>
@@ -342,14 +314,16 @@
             from ArrayList will be called (because the List interface doesn't implement any methods). That's called
             polymorphism. You can read up on it.
             <br>
-            - The definition in Line 2 should always be preferred. Why though?
+            - The definition in Line 1 should always be preferred. Why though?
             <br>
-            Almost always <b>List</b> is preferred over <b>ArrayList</b> because, for instance, <b>List</b> can be
-            translated into a <b>LinkedList</b> without
+            Almost always <code>List</code> is preferred over <code>ArrayList</code> because, for instance,
+            <code>List</code> can be
+            translated into a <code>LinkedList</code> without
             affecting the rest of the codebase. The only change that we will have to make in the codebase is change the
-            Line1 to new LinkedList&ltSomeObject&gt().
-            When you do, in fact, have to use methods that are specific ONLY to <b>ArrayList</b>, you can convert <b>List</b>
-            to <b>ArrayList</b> very easily.
+            Line1 to <code>new LinkedList&ltSomeObject&gt()</code>.
+            When you do, in fact, have to use methods that are specific ONLY to <code>ArrayList</code>, you can convert
+            <code>List</code>
+            to <code>ArrayList</code> very easily.
             Most common error is to accidentally use an ArrayList method, without that being necessary. Changing
             ArrayList to List or another List implementation is difficult.
             Something to note is that "ArrayList specific methods" isn't limited to just methods used in ArrayList, but
@@ -357,9 +331,8 @@
             <br>
             - Occasionally, the application may require that you use methods in the ArrayList API that are not in the
             List API. For example,
-            <b>ensureCapacity(int)</b>, <b>trimToSize()</b> or <b>removeRange(int, int)</b>. That is the only sound
-            reason for coding to the class
-            rather than the interface, <a
+            <code>ensureCapacity(int)</code>, <code>trimToSize()</code> or <code>removeRange(int, int)</code>. That is
+            the only sound reason for coding to the class rather than the interface, <a
                 href="https://stackoverflow.com/questions/2279030/type-list-vs-type-arraylist-in-java">IMO</a>.
             <br>
             The above argument also holds for methods that operate on sets or return sets. They should specify
@@ -382,26 +355,24 @@
         </div>
         <div class="sub-heading">Using Abstract Classes and Abstract Methods</div>
         <div>
-            You can require that certain methods be overridden by subclasses by specifying the <b>abstract</b> type
+            You can require that certain methods be overridden by subclasses by specifying the <code>abstract</code>
+            type
             modifier.These
             methods are sometimes referred to as <i>subclasser responsibility</i> because these methods have no
             implementation
             specified in the superclass. Hence, a subclass MUST override them - it cannot simply use the version defined
             in the superclass.
             To declare an abstract method, use this general form:
-            <b>abstract <i>type name (parameter-list);</i> </b>
+            <code>abstract <i>type name (parameter-list);</i> </code>
             <br>
             Note the closing semi-colon. No method body is present. Abstract methods CANNOT have a body. Abstract
-            classes can have
-            concrete methods along with abstract methods though.
+            classes can have concrete methods along with abstract methods though.
             <br>
             - Any class that contains one or more abstract methods MUST also be declared abstract. There can be no
-            objects of an
-            abstract class. That is, an abstract class cannot be instantiated using a <b>new</b> operator. Also, you
-            cannot
-            declare abstract constructors, or abstract static methods. Any subclass of an abstract method must either
-            implement
-            all of the abstract methods or be declared <b>abstract</b> itself.
+            objects of an abstract class. That is, an abstract class cannot be instantiated using a <code>new</code>
+            operator. Also, you cannot declare abstract constructors, or abstract static methods. Any subclass of an
+            abstract method must either implement all of the abstract methods or be declared <code>abstract</code>
+            itself.
             <br>
             - Although abstract classes cannot be used to instantiate objects, they can be used to create object
             references.
@@ -413,21 +384,20 @@
         </div>
         <div class="sub-heading">Using final with Inheritance</div>
         <div>
-            The keyword <b>final</b> has 3 uses - the first is in creating a named constant. The other 2 uses of <b>final</b>
-            apply to
-            inheritance.
+            The keyword <code>final</code> has 3 uses - the first is in creating a named constant. The other 2 uses of
+            <code>final</code> apply to inheritance.
             <div class="sub-heading">a) Using final to prevent Overriding</div>
             <div>
-                - To disallow a method from being overridden, specify <b>final</b> as a modifier at the start of its
-                declaration.
-                Methods declared as <b>final</b> cannot be overridden.
+                - To disallow a method from being overridden, specify <code>final</code> as a modifier at the start of
+                its
+                declaration. Methods declared as <code>final</code> cannot be overridden.
                 <br>
-                - Methods declared as <b>final</b> can sometimes also provide performance enhancement by <i>inlining</i>
+                - Methods declared as <code>final</code> can sometimes also provide performance enhancement by <i>inlining</i>
                 calls to them.
-                Normally, Java resolves calls to methods dynamically aat run-time. This is called <i>late-binding</i>.
-                However, since <b>final</b> methods cannot be overridden, a call to one can be resolved at compile time.
-                This is
-                called <i>early-binding</i>.
+                Normally, Java resolves calls to methods dynamically at run-time. This is called <i>late-binding</i>.
+                However, since <code>final</code> methods cannot be overridden, a call to one can be resolved at compile
+                time.
+                This is called <i>early-binding</i>.
                 <div class="code-snippet">
                     <script src="https://gist.github.com/rgbk21/b3b6eb7183aa934df4e18a184fb58a3c.js"></script>
                 </div>
@@ -435,14 +405,13 @@
             <div class="sub-heading">b) Using final to prevent Inheritance</div>
             <div>
                 - Sometimes, you will want to prevent a class from being inherited. To do this, precede the class
-                declaration
-                with <b>final</b>. Declaring a class as <b>final</b> implicitly declares all of ots methods as
-                <b>final</b>
-                too.
+                declaration with <code>final</code>. Declaring a class as <code>final</code> implicitly declares all of
+                its methods as <code>final</code> too.
                 <br>
-                - As you might expect, it is illegal to declare a class as both <b>abstract</b> and <b>final</b> (since
-                an abstract class
-                is incomplete by itself and relies upon its subclasses to provide complete implementations).
+                - As you might expect, it is illegal to declare a class as both <code>abstract</code> and
+                <code>final</code> (since
+                an abstract class is incomplete by itself and relies upon its subclasses to provide complete
+                implementations).
                 <div class="code-snippet">
                     <script src="https://gist.github.com/rgbk21/d1484bd4707a2a993929005402f93501.js"></script>
                 </div>
@@ -454,25 +423,27 @@
         </div>
         <div class="sub-heading">The Object Class</div>
         <div>
-            There is one special class, <b>Object</b>, defined by Java. All other Classes are subclasses of
-            <b>Object</b>.
-            That is, <b>Object</b> is a superclass of all the other classes. This means that a reference variable of
-            type
-            <b>Object</b> can refer to an object of any other class.
+            There is one special class, <code>Object</code>, defined by Java. All other Classes are subclasses of
+            <code>Object</code>. That is, <code>Object</code> is a superclass of all the other classes. This means that
+            a reference variable of
+            type <code>Object</code> can refer to an object of any other class.
             <div class="row">
                 <img src="ObjectClass.PNG" class="center-block img-fluid" alt="Example1">
             </div>
-            Notice two methods, <b>equals()</b> and <b>toString()</b>.
+            Notice two methods, <code>equals()</code> and <code>toString()</code>.
             <br>
-            - The <b>equals()</b> method compares two objects. it returns <b>true</b> if the objects are equal,
-            and <b>false</b> otherwise. The precise definition of equality can differ depending on the types of objects
+            - The <code>equals()</code> method compares two objects. It returns <code>true</code> if the objects are
+            equal,
+            and <code>false</code> otherwise. The precise definition of equality can differ depending on the types of
+            objects
             being compared.
             <br>
-            - The <b>toString()</b> method returns a string that contains a description of the object on which it is
-            called.
-            Also, this method is automatically called when an object is output using <b>println()</b>. Many classes
-            override this method.
-            Doing so allows them to tailor a description specifically for the types of objects that they create.
+            - The <code>toString()</code> method returns a string that contains a description of the object on which it
+            is
+            called. Also, this method is automatically called when an object is output using <code>println()</code>.
+            Many classes
+            override this method. Doing so allows them to tailor a description specifically for the types of objects
+            that they create.
             <br>
             - Notice Generics...? LOL.
         </div>
@@ -481,27 +452,38 @@
     <div class="chapter">Chapter 19: Collections</div>
     <div class="textual-content">
         Remember that all Collections can store ONLY references. Not values of primitive types.
+        <br>
+        <a id="collections-framework-api-uml"
+           href="https://www.codejava.net/java-core/collections/overview-of-java-collections-framework-api-uml-diagram">Source
+            of UML Diagram</a>
+        <div class="row">
+            <img src="collections-framework-overview.png" class="center-block img-fluid" alt="Example2">
+        </div>
 
         <div class="sub-heading">1) The Array List</div>
         <div class="main-content-after-subheading">
             <div class="textual-content">
+                <a href="#collections-framework-api-uml">UML Diagram</a>
+                <br>
                 - ArrayList has 3 constructors:
                 <br>
-                a) <b>ArrayList()</b>: Builds an empty Array List
+                a) <code>ArrayList()</code>: Builds an empty Array List
                 <br>
-                b) <b>ArrayList(Collection&lt? extends E&gt c)</b>: Builds an Array List that is initialized with the
-                elements of the Collection c
-                in the order they are returned by the collection's iterator.
+                b) <code>ArrayList(Collection&lt? extends E&gt c)</code>: Builds an Array List that is initialized with
+                the
+                elements of the Collection c in the order they are returned by the collection's iterator.
                 <br>
-                c) <b>ArrayList(int capacity)</b>: Builds an array list aht has the specified initial capacity. The
+                c) <code>ArrayList(int capacity)</code>: Builds an array list that has the specified initial capacity.
+                The
                 capacity is the size of the
                 underlying array that is used to store the elements. The capacity grows automatically as elements are
                 added to the array list.
                 <br>
-                You can increase the capacity of an ArrayList object manually by calling <b>ensureCapacity()</b>
+                You can increase the capacity of an ArrayList object manually by calling <code>ensureCapacity()</code>
                 <br>
             </div>
-            <div class="sub-heading">Difference between <i>capacity</i> and <i>size</i> of an Array List</div>
+            <div class="sub-heading">Difference between <code>capacity</code> and <code>size</code> of an Array List
+            </div>
             <div class="code-snippet">
                 <script src="https://gist.github.com/rgbk21/2287175fc5fd7a6e5161cf6ca19558c6.js"></script>
             </div>
@@ -511,15 +493,16 @@
             <div class="textual-content">
                 <a href="https://stackoverflow.com/questions/7688151/java-arraylist-ensurecapacity-not-working">So what
                     is going on?</a>
-                ensureCapacity doesn't change the logical size of an ArrayList - it changes the capacity, which is the
-                size the list can reach
+                <code>ensureCapacity</code> doesn't change the logical size of an ArrayList - it changes the <code>capacity</code>,
+                which is the size the list can reach
                 before it next needs to copy values. You need to be very aware of the difference between a logical size
                 (i.e. all the
                 values in the range [0, size) are accessible, and adding a new element will add it at index size) and
                 the capacity
                 which is more of an implementation detail really - it's the size of the backing array used for storage.
                 <br>
-                Calling ensureCapacity should only ever make any difference in terms of performance (by avoiding
+                Calling <code>ensureCapacity</code> should only ever make any difference in terms of performance (by
+                avoiding
                 excessive copying) -
                 it doesn't affect the logical model of what's in the list, if you see what I mean.
             </div>
@@ -527,14 +510,16 @@
                 <script src="https://gist.github.com/rgbk21/0f617fe981b5fba290c3187b6e801543.js"></script>
             </div>
             <div class="textual-content">
-                <i>void trimToSize()</i>: This will reduce the size of the array that underlies an <b>ArrayList</b>
+                <code>void trimToSize()</code>: This will reduce the size of the array that underlies an
+                <code>ArrayList</code>
                 object so that it is
                 precisely as large as the number of items that it is currently holding.
                 <br>
                 <a href="https://stackoverflow.com/questions/43001232/does-trimtosize-function-works-on-ensurecapacity-function-in-arraylist">
                     So, there is another question:
                 </a>
-                what happens if you call <i>trimToSize</i> after you have called <i>ensureCapacity</i>? Yes, it will
+                what happens if you call <code>trimToSize</code> after you have called <code>ensureCapacity</code>? Yes,
+                it will
                 trim the size of the ArrayList to
                 the size of the current number of elements in the ArrayList. It will not care about the capacity.
                 <br>
@@ -543,9 +528,10 @@
             </div>
             <div class="sub-heading">Obtaining an Array from an ArrayList</div>
             <div class="textual-content">
-                When working with an ArrayList you will sometimes want ot obtain an actual array that contains the
+                When working with an ArrayList you will sometimes want to obtain an actual array that contains the
                 contents of the list.
-                You can do this by calling the <b>toArray()</b>, which is defined by <b>Collection</b>. The returned
+                You can do this by calling the <code>toArray()</code>, which is defined by <code>Collection</code>. The
+                returned
                 array will be "safe" in
                 that no references to it are maintained by this list. (In other words, this method must allocate a new
                 array).
@@ -556,13 +542,14 @@
         <div class="sub-heading">2) The Linked List</div>
         <div class="main-content-after-subheading">
             <div class="textual-content">
+                <a href="#collections-framework-api-uml">UML Diagram</a>
+                <br>
                 The Linked List has 2 constructors:
                 <br>
-                a) LinkedList(): The first constructor builds an empty linked list.
+                a) <code>LinkedList()</code>: The first constructor builds an empty linked list.
                 <br>
-                b) LinkedList(Collection&lt? extends E&gt c): The second constructor builds a linked list that is
-                initialized
-                with the elements of the Collection c.
+                b) <code>LinkedList(Collection&lt? extends E&gt c)</code>: The second constructor builds a linked list
+                that is initialized with the elements of the Collection c.
             </div>
             <div class="sub-heading">Linked List vs Array List</div>
             <div class="textual-content">
@@ -573,7 +560,7 @@
                 To be clear, even in the worst case, ArrayList is 4x smaller than a LinkedList with the same elements.
                 In short, it's basically impossible
                 to make LinkedList win the memory comparison, and if you care about space, then calling
-                <b>trimToSize()</b> on the ArrayList will instantly
+                <code>trimToSize()</code> on the ArrayList will instantly
                 make ArrayList win again by a huge margin. <a href="https://stackoverflow.com/a/11564453/8742428">Seriously.
                 ArrayList wins.</a>
                 <br>
@@ -598,8 +585,9 @@
                 <br>
                 From Speed Standpoint:
                 <br>
-                - Prefer ArrayList if you want O(1) random access. LinkedList give O(1) <b>Iterator.remove</b> time.
-                This is different from plain old <b>remove(int index)</b>
+                - Prefer ArrayList if you want O(1) random access. LinkedList gives O(1) <code>Iterator.remove</code>
+                time.
+                This is different from plain old <code>remove(int index)</code>
                 which still takes O(n) time for LinkedLists in <a href="https://stackoverflow.com/a/322742/8742428">worst-case
                 scenario.</a>
                 <br>
@@ -615,142 +603,467 @@
 
         <div class="sub-heading">3) The HashSet Class</div>
         <div class="main-content-after-subheading">
-			<b>HashSet</b> extends <b>AbstractSet</b> and implements the <b>Set</b> interface. It creates a collection that uses a hash table for storage.
-			<b>HashSet</b> is a generic class that has this declaration: <b>class HashSet&ltE&gt</b>.
-
-			- This class implements the <b>Set</b> interface, backed by a hash table (actually a <b>HashMap</b> instance). It makes no guarantees as to the iteration order of the set;
-			in particular, it does not guarantee that the order will remain constant over time. This class permits the null element.
-			This class offers constant time performance for the basic operations (add, remove, contains and size), assuming the hash function disperses the elements properly
-			among the buckets.
-			<br>
-			- Iterating over this set requires time proportional to the sum of the HashSet instance's size (the number of elements) plus the "capacity" of the backing
-			<b>HashMap</b> instance (the number of buckets). Thus, it's very important not to set the initial capacity too high (or the load factor too low) if iteration
-			performance is important.
-			<br>
-			The following constructors are defined:
-			<br>
-			a) <b>HashSet()</b>: Constructs a new, empty set; the backing HashMap instance has default initial capacity (16) and load factor (0.75).
-			<br>
-			b) <b>HashSet(Collection&lt? extends E&gt c)</b>: Initializes the hash set by using the elements of c.
-			<br>
-			c) <b>HashSet(int capacity)</b>: Constructs a new, empty set; the backing HashMap instance has the specified initial capacity and default load factor (0.75).
-			<br>
-			d) <b>HashSet(int capacity, float loadFactor)</b>: Constructs a new, empty set; the backing HashMap instance has the specified initial capacity and the
-			specified load factor (also called fillRatio)
+            <a href="#collections-framework-api-uml">UML Diagram</a>
+            <br>
+            <code>HashSet</code> extends <code>AbstractSet</code> and implements the <code>Set</code> interface. It
+            creates a collection
+            that uses a hash table for storage.
+            <code>HashSet</code> is a generic class that has this declaration: <code>class HashSet&ltE&gt</code>.
+            <br>
+            - This class implements the <code>Set</code> interface, backed by a hash table (actually a
+            <code>HashMap</code>
+            instance). It makes no guarantees as to the iteration order of the set;
+            in particular, it does not guarantee that the order will remain constant over time. This class permits the
+            null element.
+            This class offers constant time performance for the basic operations (<code>add</code>, <code>remove</code>,
+            <code>contains</code> and <code>size</code>),
+            assuming the hash function disperses the elements properly
+            among the buckets.
+            <br>
+            - Iterating over this set requires time proportional to the sum of the HashSet instance's size (the number
+            of elements) plus the "capacity" of the backing
+            <code>HashMap</code> instance (the number of buckets). Thus, it's very important not to set the initial
+            capacity
+            too high (or the load factor too low) if iteration performance is important.
+            <br>
+            The following constructors are defined:
+            <br>
+            a) <code>HashSet()</code>: Constructs a new, empty set; the backing HashMap instance has default initial
+            capacity
+            (16) and load factor (0.75).
+            <br>
+            b) <code>HashSet(Collection&lt? extends E&gt c)</code>: Initializes the hash set by using the elements of c.
+            <br>
+            c) <code>HashSet(int capacity)</code>: Constructs a new, empty set; the backing HashMap instance has the
+            specified
+            initial capacity and default load factor (0.75).
+            <br>
+            d) <code>HashSet(int capacity, float loadFactor)</code>: Constructs a new, empty set; the backing HashMap
+            instance
+            has the specified initial capacity and the specified load factor (also called fillRatio)
         </div>
 
-		<div class="sub-heading"> 4) The LinkedHashSet Class</div>
-		<div class="main-content-after-subheading">
-			The <b>LinkedHashSet</b> class extends <b>HashSet</b> and adds no members of its own. It is a generic class that has this declaration:
-			<b>class LinkedHashSet&ltE&gt</b>. Here, E specifies the type of objects that the set will hold. Its constructors parallel those in HashSet. Hash table and
-			linked list implementation of the Set interface, with predictable iteration order. This implementation differs from HashSet in that it maintains a doubly-linked
-			list running through all of its entries. This linked list defines the iteration ordering, which is the order in which elements were inserted into the set (insertion-order).
-			Note that insertion order is not affected if an element is re-inserted into the set.
-			<br>
-			Like HashSet, it provides constant-time performance for the basic operations (add, contains and remove), assuming the hash function disperses elements properly
-			among the buckets. Performance is likely to be just slightly below that of HashSet, due to the added expense of maintaining the linked list, with one exception:
-			Iteration over a LinkedHashSet requires time proportional to the size of the set, regardless of its capacity. Iteration over a HashSet is
-			likely to be more expensive, requiring time proportional to its capacity. This implementation spares its clients from the unspecified, generally chaotic
-			ordering provided by HashSet, without incurring the increased cost associated with <b>TreeSet</b>.
-			<br>
-			Linked Hash Set has 4 Constructors:
-			<br>
-			a) LinkedHashSet​(): Constructs a new, empty linked hash set with the default initial capacity (16) and load factor (0.75).
-			<br>
-			b) LinkedHashSet​(int initialCapacity): Constructs a new, empty linked hash set with the specified initial capacity and the default load factor (0.75).
-			<br>
-			c) LinkedHashSet​(int initialCapacity, float loadFactor): Constructs a new, empty linked hash set with the specified initial capacity and load factor.
-			<br>
-			d) LinkedHashSet​(Collection&lt? extends E&gt c): Constructs a new linked hash set with the same elements as the specified collection.
-		</div>
+        <div class="sub-heading"> 4) The LinkedHashSet Class</div>
+        <div class="main-content-after-subheading">
+            <a href="#collections-framework-api-uml">UML Diagram</a>
+            <br>
+            The <code>LinkedHashSet</code> class extends <code>HashSet</code> and adds no members of its own. It is a
+            generic class
+            that has this declaration:
+            <code>class LinkedHashSet&ltE&gt</code>. Here, <code>E</code> specifies the type of objects that the set
+            will hold. Its
+            constructors parallel those in HashSet. Hash table and
+            linked list implementation of the Set interface, with predictable iteration order. This implementation
+            differs from HashSet in that it maintains a doubly-linked
+            list running through all of its entries. This linked list defines the iteration ordering, which is the order
+            in which elements were inserted into the set (insertion-order).
+            Note that insertion order is not affected if an element is re-inserted into the set.
+            <br>
+            (//TODO: But this should again run into the same problem that happens when we compare Linked List vs Array
+            List. Linked Lists take way more memory. So I think LinkedHashSet should also end up taking an enormous
+            chunk of memory )
+            <br>
+            Like HashSet, it provides constant-time performance for the basic operations (<code>add</code>,
+            <code>remove</code>,
+            <code>contains</code> and <code>size</code>),
+            assuming the hash function disperses elements properly
+            among the buckets.
+            <br>
+            - Performance is likely to be just slightly below that of HashSet, due to the added expense
+            of maintaining the linked list, with one exception:
+            Iteration over a LinkedHashSet requires time proportional to the <code>size</code> of the set, regardless of
+            its
+            <code>capacity</code>. Iteration over a HashSet is
+            likely to be more expensive, requiring time proportional to its capacity. This implementation spares its
+            clients from the unspecified, generally chaotic
+            ordering provided by HashSet, without incurring the increased cost associated with <code>TreeSet</code>.
+            <br>
+            Linked Hash Set has 4 Constructors:
+            <br>
+            a) <code>LinkedHashSet()</code>: Constructs a new, empty linked hash set with the default initial capacity
+            (16) and load
+            factor (0.75).
+            <br>
+            b) <code>LinkedHashSet​(int initialCapacity)</code>: Constructs a new, empty linked hash set with the
+            specified initial capacity and the default load factor (0.75).
+            <br>
+            c) <code>LinkedHashSet​(int initialCapacity, float loadFactor)</code>: Constructs a new, empty linked hash
+            set with the
+            specified initial capacity and load factor.
+            <br>
+            d) <code>LinkedHashSet​(Collection&lt? extends E&gt c)</code>: Constructs a new linked hash set with the
+            same elements as
+            the specified collection.
+        </div>
 
-		<div class="sub-heading"> 5) The TreeSet Class</div>
-		<div class="main-content-after-subheading">
-			A <b>NavigableSet</b> implementation based on a <b>TreeMap</b>. The elements are ordered using their natural ordering, or by a <b>Comparator</b> provided at
-			set creation time, depending on which constructor is used. This implementation provides guaranteed 	<i>log(n)</i> time cost for the basic operations (add, remove and contains).
-			Note that the ordering maintained by a set (whether or not an explicit comparator is provided) must be <i>consistent with equals</i> if it is to correctly implement
-			the <i>Set</i> interface. (See <b>Comparable</b> or <b>Comparator</b> for a precise definition of consistent with equals.) This is so because the <b>Set</b>
-			interface is defined in terms of the equals operation, but a <b>TreeSet</b> instance performs all element comparisons using its compareTo (or compare) method,
-			so two elements that are deemed equal by this method are, from the standpoint of the set, equal. The behavior of a set is well-defined even if its ordering is
-			inconsistent with equals; it just fails to obey the general contract of the Set interface.
-			<br>
-			<b>TreeSet</b> has the following Constructors:
-			<br>
-			a) TreeSet(): Constructs a new, empty tree set, sorted in ascending order according to the natural ordering of its elements.
-			<br>
-			b) TreeSet​(Collection&lt? extends E&gt c): Constructs a new tree set containing the elements in the specified collection, sorted according
-			to the natural ordering of its elements.
-			<br>
-			c) TreeSet​(Comparator&lt? super E&gt comparator): Constructs a new, empty tree set, sorted according to the specified comparator.
-			<br>
-			d) TreeSet​(SortedSet&ltE&gt s): Constructs a new tree set containing the same elements and using the same ordering as the specified sorted set.
-		</div>
+        <div class="sub-heading"> 5) The TreeSet Class</div>
+        <div class="main-content-after-subheading">
+            <a href="#collections-framework-api-uml">UML Diagram</a>
+            <br>
+            A <code>NavigableSet</code> implementation based on a <code>TreeMap</code>. The elements are ordered using
+            their natural
+            ordering, or by a <code>Comparator</code> provided at
+            set creation time, depending on which constructor is used. This implementation provides guaranteed
+            <i>log(n)</i> time cost for the basic operations (<code>add</code>, <code>remove</code> and
+            <code>contains</code>).
+            Note that the ordering maintained by a set (whether or not an explicit comparator is provided) must be <i>consistent
+            with equals</i> if it is to correctly implement
+            the <i>Set</i> interface. (See <code>Comparable</code> or <code>Comparator</code> for a precise definition
+            of consistent
+            with equals.) This is so because the <code>Set</code>
+            interface is defined in terms of the equals operation, but a <code>TreeSet</code> instance performs all
+            element
+            comparisons using its <code>compareTo</code> (or <code>compare</code>) method,
+            so two elements that are deemed equal by this method are, from the standpoint of the set, equal. The
+            behavior of a set is well-defined even if its ordering is
+            inconsistent with equals; it just fails to obey the general contract of the Set interface.
+            <br>
+            <code>TreeSet</code> has the following Constructors:
+            <br>
+            a) <code>TreeSet()</code>: Constructs a new, empty tree set, sorted in ascending order according to the
+            natural ordering
+            of its elements.
+            <br>
+            b) <code>TreeSet​(Collection&lt? extends E&gt c)</code>: Constructs a new tree set containing the elements
+            in the
+            specified collection, sorted according to the natural ordering of its elements.
+            <br>
+            c) <code>TreeSet​(Comparator&lt? super E&gt comparator)</code>: Constructs a new, empty tree set, sorted
+            according to the
+            specified comparator.
+            <br>
+            d) <code>TreeSet​(SortedSet&ltE&gt s)</code>: Constructs a new tree set containing the same elements and
+            using the same
+            ordering as the specified sorted set.
+        </div>
 
-		<div class="sub-heading"> 6) Priority Queue Class</div>
-		<div class="main-content-after-subheading">
-			//TODO
-		</div>
+        <div class="sub-heading"> 6) Priority Queue Class</div>
+        <div class="main-content-after-subheading">
+            <a href="#collections-framework-api-uml">UML Diagram</a>
+            <br>
+            //TODO
+        </div>
 
-		<div class="sub-heading"> 7) Array Deque Class</div>
-		<div class="main-content-after-subheading">
-			//TODO
-		</div>
+        <div class="sub-heading"> 7) Array Deque Class</div>
+        <div class="main-content-after-subheading">
+            <a href="#collections-framework-api-uml">UML Diagram</a>
+            <br>
+            //TODO
+        </div>
 
-		<div class="sub-heading">Accessing a Collection via an Iterator</div>
-		<div class="main-content-after-subheading">
-			- Iterators allow you to cycle through the elements in a collection. <b>iterator</b> allows you to
-			cycle through a collection, obtaining and removing elements. <b>ListIterator</b> extends <b>Iterator</b> to allow bi-directional traversal of a list,
-			and the modification of elements.
-			<br>
-			- The <b>Iterator</b> and the <b>ListIterator</b> are generic interfaces:
-			<br>
-			<b>interface Iterator &ltE&gt</b>
-			<br>
-			<b>interface ListIterator &ltE&gt</b>
-			Here <b>E</b> specifies the type of object being iterated.
-		</div>
-		<div class="sub-heading">Using an Iterator</div>
-		<div class="main-content-after-subheading">
-			Before you can access a collection through an iterator, you must obtain one. Each of the collection classes provides an
-			<b>iterator()</b> method that returns an iterator to the start of the collection. By using this iterator object, you can access each element
-			in the collection, one element at a time. In general, to use an iterator to cycle through the contents of a collection, follow these steps:
-			<br>
-			1.   Obtain an iterator to the start of the collection by calling the collection’s <b>iterator()</b> method.
-			<br>
-			2.   Set up a loop that makes a call to <b>hasNext()</b>. Have the loop iterate as long as <b>hasNext()</b> returns true.
-			<br>
-			3.   Within the loop, obtain each element by calling <b>next()</b>.
-			<br>
-			For collections that implement List, you can also obtain an iterator by calling <b>listIterator()</b>.
-			A list iterator gives you the ability to access the collection in either the forward or backward direction and lets you modify an element.
-			Otherwise, <b>ListIterator</b> is used just like <b>Iterator</b>.
-		</div>
+        <div class="sub-heading">Accessing a Collection via an Iterator</div>
+        <div class="main-content-after-subheading">
+            <a href="#collections-framework-api-uml">UML Diagram</a>
+            <br>
+            - Iterators allow you to cycle through the elements in a collection. <code>iterator</code> allows you to
+            cycle through a collection, obtaining and removing elements. <code>ListIterator</code> extends <code>Iterator</code>
+            to
+            allow bi-directional traversal of a list, and the modification of elements.
+            <br>
+            - The <code>Iterator</code> and the <code>ListIterator</code> are generic interfaces:
+            <br>
+            <code>interface Iterator &ltE&gt</code>
+            <br>
+            <code>interface ListIterator &ltE&gt</code>
+            <br>
+            Here <code>E</code> specifies the type of object being iterated.
+        </div>
+        <div class="sub-heading">Using an Iterator</div>
+        <div class="main-content-after-subheading">
+            Before you can access a collection through an iterator, you must obtain one. Each of the collection classes
+            provides an
+            <code>iterator()</code> method that returns an iterator to the start of the collection. By using this
+            iterator
+            object, you can access each element
+            in the collection, one element at a time. In general, to use an iterator to cycle through the contents of a
+            collection, follow these steps:
+            <br>
+            1.   Obtain an iterator to the start of the collection by calling the collection’s <code>iterator()</code>
+            method.
+            <br>
+            2.   Set up a loop that makes a call to <code>hasNext()</code>. Have the loop iterate as long as <code>hasNext()</code>
+            returns true.
+            <br>
+            3.   Within the loop, obtain each element by calling <code>next()</code>.
+            <br>
+            For collections that implement List, you can also obtain an iterator by calling <code>listIterator()</code>.
+            A list iterator gives you the ability to access the collection in either the forward or backward direction
+            and lets you modify an element.
+            Otherwise, <code>ListIterator</code> is used just like <code>Iterator</code>.
+        </div>
 
-		<div class="sub-heading">For-Each Alternative to Iterators</div>
-		<div class="main-content-after-subheading">
-			- Can only be used ot cycle through a collection in the forward direction
-			<br>
-			- You cannot modify the contents of a collection using for-each loop
-		</div>
+        <div class="sub-heading">For-Each Alternative to Iterators</div>
+        <div class="main-content-after-subheading">
+            - Can only be used ot cycle through a collection in the forward direction
+            <br>
+            - You cannot modify the contents of a collection using for-each loop
+        </div>
 
-		<div class="sub-heading">The RandomAccess Interface</div>
-		<div class="main-content-after-subheading">
-			-//TODO
-		</div>
+        <div class="sub-heading">The RandomAccess Interface</div>
+        <div class="main-content-after-subheading">
+            -//TODO
+        </div>
 
-		<div class="sub-heading">Working with Maps</div>
-		<div class="main-content-after-subheading">
-			- A <i>map</i> is an object that stores associations between keys and values, or <i>key/value</i> pairs. Given a key, you can find its value.
-			Both keys and values are objects. The keys must be unique, but the values may be duplicated. Some maps can accept a null key and null values, others cannot.
-			<br>
-			- There is one key point about maps that is important to mention at the outset: they don’t implement the <b>Iterable</b> interface.
-			This means that you cannot cycle through a map using a for-each style for loop. Furthermore, you can’t obtain an iterator to a map.
-			However, as you will soon see, you can obtain a collection-view of a map, which does allow the use of either the for loop or an iterator.
+        <div class="sub-heading">Working with Maps</div>
+        <div class="main-content-after-subheading">
+            <a href="#collections-framework-api-uml">UML Diagram</a>
+            <br>
+            - A <i>map</i> is an object that stores associations between keys and values, or <i>key/value</i> pairs.
+            Given a key, you can find its value.
+            Both keys and values are objects. The keys must be unique, but the values may be duplicated. Some maps can
+            accept a null key and null values, others cannot.
+            <br>
+            - <code>Map</code> is generic and is declared as shown here: <code>interface Map &ltK, V&gt</code>
+            <br>
+            Here <code>K</code> specifies the types of keys, and <code>V</code> specifies the types of values.
+            <br>
+            - There is one key point about maps that is important to mention at the outset: they don’t implement the
+            <code>Iterable</code>
+            interface.
+            This means that you cannot cycle through a map using a for-each style for loop. Furthermore, you can’t
+            obtain an iterator to a map.
+            However, you can obtain a collection-view of a map, which does allow the use of either the for loop or an
+            iterator.
+            <br>
+            - The Map interface provides three <i>collection</i> views:
+            <br>
+            a) <code>Set&ltMap.Entry&ltK,V&gt&gt entrySet()</code>: Returns a <code>Set</code> view of the mappings
+            contained in this
+            map. The
+            set is backed by the map, so changes to the map are reflected in the set, and vice-versa. If the map is
+            modified while an iteration over the set is in progress (except through the iterator's own remove()
+            operation,
+            or through the setValue() operation on a map entry
+            returned by the iterator) the results of the iteration are undefined. The set supports element removal,
+            which removes the corresponding mapping from the map, via the Iterator.remove, Set.remove, removeAll,
+            retainAll and clear operations. It does not support the add or addAll operations.
+            <br>
+            b) <code>Set&ltK&gt keySet()</code>: Returns a <code>Set</code> view of the keys contained in this map.
+            <br>
+            c) <code>Collection&ltV&gt values()</code>: Returns a <code>Collection</code> view of the values contained
+            in this map.
+            <br>
+            What's up with the 3 different return types?
+            <br>
+            - The <i>order</i> of a map is defined as the order in which the iterators on the map's collection views
+            return their elements.
+            Some map implementations, like the <code>TreeMap</code> class, make specific guarantees as to their order;
+            others,
+            like the <code>HashMap</code> class, do not.
+            <br>
+            - Note: great care must be exercised if mutable objects are used as map keys. The behavior of a map is not
+            specified if the value of an object is
+            changed in a manner that affects <code>equals</code> comparisons while the object is a key in the map. A
+            special
+            case of this prohibition is that it is
+            not permissible for a map to contain itself as a key. While it is permissible for a map to contain itself as
+            a value, extreme caution is advised:
+            the <code>equals</code> and <code>hashCode</code> methods are no longer well defined on such a map.
+            <br>
+            - To put a value into a map, use <code>put​(K key, V value)</code> specifying the key and the value.
+            <code>get​(Object key)</code> returns the value to which the specified key is mapped, or null if this map
+            contains
+            no mapping for the key.
+        </div>
 
-		</div>
+        <div class="sub-heading">The SortedMap Interface</div>
+        <div class="main-content-after-subheading">
+            <a href="#collections-framework-api-uml">UML Diagram</a>
+            <br>
+            - The <code>SortedMap</code> interface extends <code>Map</code>. It ensures that entries are maintained in
+            the ascending
+            order according to their keys.
+            - The map is ordered according to the natural ordering of its keys, or by a <code>Comparator</code>
+            typically
+            provided at sorted map creation time.
+            This order is reflected when iterating over the sorted map's collection views (returned by the
+            <code>entrySet()</code>, <code>keySet()</code> and <code>values()</code> methods).
+            (This interface is the map analogue of SortedSet.)
+            <br>
+            - <code>SortedMap</code> is generic and is declared here: <code>interface SortedMap&ltK, V&gt</code>. Here
+            <code>K</code> specifies the type of keys, and <code>V</code> specifies the type of values.
+            <br>
+            - All keys inserted into a sorted map must implement the <code>Comparable</code> interface (or be accepted
+            by the
+            specified comparator).
+            Furthermore, all such keys must be mutually comparable: <i>k1.compareTo(k2)</i> (or <i>comparator.compare(k1,
+            k2)</i>) must not throw a
+            <i>ClassCastException</i> for any keys k1 and k2 in the sorted map.
+            <br>
+            - Sorted maps allow very efficient manipulations of submaps (in other words, subsets of a map). To obtain a
+            submap, use
+            <code>headMap()</code>, <code>tailMap()</code>, or <code>subMap()</code>. The submap returned by these
+            methods is backed by
+            the invoking map.
+            Changing one changes the other. To get the first key in the set, call <code>firstKey()</code>. To get the
+            last
+            key, use <code>lastKey()</code>.
+            <br>
+        </div>
 
+        <div class="sub-heading">The NavigableMap Interface</div>
+        <div class="main-content-after-subheading">
+            <a href="#collections-framework-api-uml">UML Diagram</a>
+            <br>
+            The NavigableMap interface extends <code>SortedMap</code> and declares the behavior of a map that supports
+            the
+            retrieval of entries based on the closest match to a given key or keys.
+            <br>
+            - <code>NavigableMap</code> is a generic interface that has
+            this declaration: <code>interface NavigableMap&ltK,V&gt</code>. Here, <code>K</code> specifies the type of the
+            keys, and <code>V</code> specifies the type of the values associated with the keys.
+        </div>
 
+        <div class="sub-heading">The Map.Entry Interface</div>
+        <div class="main-content-after-subheading">
+            <a href="#collections-framework-api-uml">UML Diagram</a>
+            <br>
+            - The <code>Map.Entry</code> interface enables you to work with a map entry. For example, recall that the <code>entrySet()</code>
+            method declared by the <code>Map</code> interface returns a <code>Set</code> containing the map entries. Each of these
+            set elements is a <code>Map.Entry</code> object.
+            <br>
+            - <code>Map.Entry</code> is generic and is declared like this: <code>interface Map.Entry&ltK, V&gt</code>. Here <code>K</code>
+            specifies the type of keys, and <code>V</code> specifies the type of Values.
+            <br>
+            - Map.Entry is a key and its value combined into one class. This allows you to iterate over <code>Map.entrySet()</code>
+            instead of having to iterate over <code>Map.keySet()</code>, then getting the value for each key.
+            <br>
+            - Some SO posts on how to do this:
+            <br>
+            <b>How to iterate over a HashMap:</b>
+            <br>
+            <a href="https://stackoverflow.com/a/8689757/8742428">Map.Entry: How to use it?</a>
+            <br>
+            <a href="https://stackoverflow.com/a/7416296/8742428">Map.Entry interface in java</a>
+            <br>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/0ca9009ba2110c481c5f419c486c5037.js"></script>
+            </div>
+            <b>How do we remove a &ltkey, value&gt pair</b>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/67d9b1ec5083fbf411bf39f69eb2cebb.js"></script>
+            </div>
+            <b>How to create a new Entry(K, V) object</b>
+            <br>
+            <a href="https://stackoverflow.com/questions/3110547/java-how-to-create-new-entry-key-value">Java - How to
+                create new Entry (key, value)</a>
+            <br>
+            As of Java 9, if you want to create an immutable entry, you can use the <a
+                href="https://docs.oracle.com/javase/9/docs/api/java/util/Map.html#entry-K-V-">Map.entry()</a> method.
+            <br>
+            //TODO: Can you add the created entry back to a Hash Map without unpackaging the entry by using
+            <code>entry.getKey()</code> and <code>entry.getValue()</code>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/2845c1c866a6774eb7f6adfc9a962e68.js"></script>
+            </div>
+            If you want to create a mutable entry, in that case you will use <a
+                href="https://stackoverflow.com/a/54602876/8742428">AbstractMap.SimpleEntry</a>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/deddabc0bbe05cf67789f77471f34a52.js"></script>
+            </div>
+        </div>
 
+        <div class="sub-heading">The Map Classes</div>
+        <div class="main-content-after-subheading">
+            <a href="#collections-framework-api-uml">UML Diagram</a>
+            <br>
+            <code>AbstractMap</code> is a superclass for all concrete Map implementations. The concrete implementations
+            are the following
+        </div>
+
+        <div class="sub-heading">1) The HashMap Class</div>
+        <div class="main-content-after-subheading">
+            <a href="#collections-framework-api-uml">UML Diagram</a>
+            <br>
+            The <code>HashMap</code> class extends <code>AbstractMap</code> and implements the <code>Map</code>
+            interface. It uses a hash table to store the map. This allows the execution time of <code>get()</code> and
+            <code>put()</code> to remain constant even for large sets. Remember that the <code>put()</code> method
+            automatically replaces any preexisting value that is associated with the specified key with the new value.
+            <code>HashMap</code> is a generic class that has this declaration:
+            <br>
+            <code>class HashMap&ltK, V&gt</code>. Here <code>K</code> specifies the type of the key, and <code>V</code>specifies
+            the type of the Value.
+            <br>
+            The following Constructors are defined:
+            <br>
+            a) <code>HashMap</code>: Constructs a default Hash Map
+            <br>
+            b) <code>HashMap(Map &lt? extends K, ? extends V &gt m)</code>: Initializes the Hash Map by using the
+            elements of m
+            <br>
+            c) <code>HashMpa(int capacity)</code>: Initializes the capacity of the Hash map to <i>capacity</i>.
+            <br>
+            d) <code>HashMap(int capacity, float fillRatio)</code>: Initializes both the <i>capacity</i> and the <i>fillRatio</i>
+            by using the arguments.
+        </div>
+        <div class="sub-heading">2) The TreeMap Class</div>
+        <div class="main-content-after-subheading">
+            <a href="#collections-framework-api-uml">UML Diagram</a>
+            <br>
+            The <code>TreeMap</code> class extends <code>AbstractMap</code> and implements the <code>NavigableMap</code>
+            interface. It creates maps stored in a tree structure. A <code>TreeMap</code> provides an efficient means of
+            storing
+            key/value pairs in sorted order and allows rapid retrieval. You should note that, unlike a hash map, a tree
+            map guarantees that its elements will be sorted in ascending key order. <code>TreeMap</code> is a generic
+            class that has
+            this declaration: <code>class TreeMap&ltK, V&gt</code> Here, <code>K</code> specifies the type of keys, and
+            <code>V</code> specifies the type of values.
+            <br>
+            The <code>TreeMap</code> constructors are:
+            <br>
+            a) <code>TreeMap</code>: Constructs an empty tree map that will be sorted by using the natural order of its
+            keys.
+            <br>
+            b) <code>TreeMap(Comparator &lt? super K&gt comp)</code>: Constructs an empty tree-based map that will be
+            sorted by using the
+            <code>Comparator</code> comp.
+            <br>
+            c) <code>TreeMap(Map &lt? extends K, ? extends V &gt m)</code>: Initializes a tree map with the entries from
+            m, which will be sorted by using the natural order of the keys.
+            <br>
+            d) <code>TreeMap(SortedMap &ltK, ? extends V &gt sm)</code>: Initializes a tree map with the entries from
+            <i>sm</i>, which will be sorted in the same order as <i>sm</i>.
+            <br>
+            Notice that <code>TreeMap</code> sorts the keys. However, in this case, they are sorted by first name
+            instead of last name. You can alter this behavior by specifying a comparator when the map is created.
+        </div>
+
+        <div class="sub-heading">3) The LinkedHashMap Class</div>
+        <div class="main-content-after-subheading">
+            <a href="#collections-framework-api-uml">UML Diagram</a>
+            <br>
+            <code>LinkedHashMap</code> extends <code>HashMap</code>. It maintains a linked list of the entries in the
+            map, in the order in which they were inserted. This allows insertion-order iteration over the map. That is,
+            when iterating through a collection-view of a <code>LinkedHashMap</code>, the elements will be returned in
+            the order in
+            which they were inserted. You can also create a <code>LinkedHashMap</code> that returns its elements in the
+            order in
+            which they were last accessed.
+            <br>
+            <code>LinkedHashMap</code> is a generic class that has this declaration:
+            <code>class LinkedHashMap&ltK,V&gt</code>.
+            Here, <code>K</code> specifies the type of keys, and <code>V</code> specifies the type of values.
+            <br>
+            LinkedHashMap defines the following constructors:
+            <br>
+            a) <code>LinkedHashMap()</code>: Constructs a default Linked Hash Map
+            <br>
+            b) <code>LinkedHashMap(Map&lt? extends K, ? extends V&gt m)</code>: initializes the LinkedHashMap with the
+            elements from <i>m</i>.
+            <br>
+            c) <code>LinkedHashMap(int capacity)</code>: initializes the capacity.
+            <br>
+            d) <code>LinkedHashMap(int capacity, float fillRatio)</code>: initializes both capacity and fill ratio. The
+            meaning of capacity and fill ratio are the same as for HashMap. The default capacity is 16. The default
+            ratio is 0.75.
+            <br>
+            e) <code>LinkedHashMap(int capacity, float fillRatio, boolean Order)</code>: allows you to specify whether
+            the elements will be stored in the linked list by insertion order, or by order of last access. If
+            <i>Order</i> is
+            true, then access order is used. If <i>Order</i> is false, then insertion order is used.
+        </div>
+        <div class="sub-heading">Comparators</div>
+        //TODO........................
 
     </div>
 
