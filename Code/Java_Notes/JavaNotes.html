@@ -539,6 +539,14 @@
                 that no references to it are maintained by this list. (In other words, this method must allocate a new
                 array).
                 The caller is thus free to modify the returned array.
+                But <a href="https://stackoverflow.com/a/5374359/8742428"></a>be careful while using the
+                <code>toArray</code> method. it produces a <code>ClassCastException</code>.
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/176cdd58796064fe5a6aeed317e829d8.js"></script>
+                </div>
+                In fact, even if you try to do it with objects, it still produces the same Exception
+                <div class="code-snippet"><script src="https://gist.github.com/rgbk21/c7376fb06f35351f118cfe86b380deea.js"></script></div>
+
             </div>
         </div>
 
@@ -913,7 +921,8 @@
             retrieval of entries based on the closest match to a given key or keys.
             <br>
             - <code>NavigableMap</code> is a generic interface that has
-            this declaration: <code>interface NavigableMap&ltK,V&gt</code>. Here, <code>K</code> specifies the type of the
+            this declaration: <code>interface NavigableMap&ltK,V&gt</code>. Here, <code>K</code> specifies the type of
+            the
             keys, and <code>V</code> specifies the type of the values associated with the keys.
         </div>
 
@@ -921,11 +930,14 @@
         <div class="main-content-after-subheading">
             <a href="#collections-framework-api-uml">UML Diagram</a>
             <br>
-            - The <code>Map.Entry</code> interface enables you to work with a map entry. For example, recall that the <code>entrySet()</code>
-            method declared by the <code>Map</code> interface returns a <code>Set</code> containing the map entries. Each of these
+            - The <code>Map.Entry</code> interface enables you to work with a map entry. For example, recall that the
+            <code>entrySet()</code>
+            method declared by the <code>Map</code> interface returns a <code>Set</code> containing the map entries.
+            Each of these
             set elements is a <code>Map.Entry</code> object.
             <br>
-            - <code>Map.Entry</code> is generic and is declared like this: <code>interface Map.Entry&ltK, V&gt</code>. Here <code>K</code>
+            - <code>Map.Entry</code> is generic and is declared like this: <code>interface Map.Entry&ltK, V&gt</code>.
+            Here <code>K</code>
             specifies the type of keys, and <code>V</code> specifies the type of Values.
             <br>
             - Map.Entry is a key and its value combined into one class. This allows you to iterate over <code>Map.entrySet()</code>
