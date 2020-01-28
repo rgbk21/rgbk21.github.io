@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="Spring.css">
+    <meta name="keywords" content="Java, Floats, Overflow, Unboxing, Autoboxing">
+    <meta name="author" content="Raj Gaurav Ballabh Kumar">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Applying Java - Notes</title>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+
+    <div class="navbar-header">
+        <a href="../../index.html" class="navbar-brand"> rgbk21</a>
+    </div>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"><span
+            class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="nav navbar-nav">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+                   aria-expanded="false">
+                    Projects
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="../../Projects/TwitterCritNodes/TwitterCritNodes_1.html">Identifying
+                        Critical Nodes on Twitter</a>
+                    <a class="dropdown-item" href="../../Projects/isRelatedTo/isRelatedTo.html">isRelatedTo</a>
+                    <div class="dropdown-divider"></div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+                   aria-expanded="false">
+                    HTML Projects
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="../../ImageGallery/ImageGallery.html">Image Gallery</a>
+                    <a class="dropdown-item" href="../../RGB_Guesser_Game/RGB.html">RGB Guesser Game</a>
+                    <a class="dropdown-item" href="../../ToDoList/todo.html">To-Do List</a>
+                    <div class="dropdown-divider"></div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+                   aria-expanded="false">
+                    Notes
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="../../COMS_631/COMS_631_index.html">COMS 631</a>
+                    <a class="dropdown-item" href="../../COMS_535/COMS_535_index.html">COMS 535</a>
+                    <div class="dropdown-divider"></div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+                   aria-expanded="false">
+                    Code
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="../../Code/ThingsToRemember/ThingsToRemember.html">Things To
+                        Remember</a>
+                    <a class="dropdown-item" href="../../Code/Java_Notes/JavaNotes.html">Java Notes</a>
+                    <a class="dropdown-item" href="../../Code/Applying_Java_Notes/ApplyingJava_Notes.html">ApplyingJava
+                        Notes</a>
+                    <a class="dropdown-item" href="../../Code/Spring/Spring.html">Spring Notes</a>
+                    <div class="dropdown-divider"></div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+                   aria-expanded="false">
+                    In Another Life
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="../../InAnotherLife/Chapter1.html">Chapter 1</a>
+                    <div class="dropdown-divider"></div>
+                </div>
+            </li>
+        </ul>
+
+
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active"><a class="nav-link" href="https://github.com/rgbk21">GitHub</a></li>
+            <li class="nav-item active"><a class="nav-link"
+                                           href="https://www.linkedin.com/in/raj-gaurav-ballabh-kumar-97002058/">LinkedIn</a>
+            </li>
+            <li class="nav-item active"><a class="nav-link" href="https://www.instagram.com/wobblyframes/">Instagram</a>
+            </li>
+            <li class="nav-item active"><a class="nav-link"
+                                           href="https://www.facebook.com/SomeRandomThoughts">Facebook</a></li>
+        </ul>
+
+    </div>
+</nav>
+
+<div class="container">
+    <div>
+        This page mainly contains my notes from Java: The Complete Reference and other sources.
+    </div>
+
+    <div class="chapter">Spring</div>
+    <div class="textual-content">
+
+        <div class="sub-heading">What is a Java Bean</div>
+        <div class="textual-content">
+            - A <i>Java Bean</i> is a software content that has been designed to be reusable in a variety of different
+            environments. There is no restriction in the capability (in terms of complexity) of a Java Bean. A bean may
+            perform a simple function or a complicated function.
+            <br>
+            - At a basic level, <a
+                href="https://stackoverflow.com/questions/21866571/difference-between-javabean-and-spring-bean">JavaBeans
+            are simply Java classes</a> which adhere to certain coding conventions.
+            Specifically, classes that have:
+            <ul>
+                <li><code>public</code> default (no argument) constructors</li>
+                <li>allow access to their properties using accessor (getter and setter) methods</li>
+                <li>implement <code>java.io.Serializable</code></li>
+                <li>all JavaBean instance variables should be private</li>
+            </ul>
+        </div>
+        <div class="sub-heading">What is the difference between a Java Bean and a POJO</div>
+        <div class="textual-content">
+            - A JavaBean follows <a
+                href="https://stackoverflow.com/questions/1394265/what-is-the-difference-between-a-javabean-and-a-pojo">certain
+            conventions</a>. Getter/setter naming, having a public default constructor, being
+            serializable etc. See <a href="https://docstore.mik.ua/orelly/java-ent/jnut/ch06_02.htm">JavaBeans
+            Conventions</a> for more details.
+            <br>
+            - A POJO (plain-old-Java-object) isn't rigorously defined. It's a Java object that doesn't have a
+            requirement
+            to implement a particular interface or derive from a particular base class, or make use of particular
+            annotations in order to be compatible with a given framework, and can be any arbitrary (often relatively
+            simple) Java object.
+            <br>
+            - All JavaBeans are POJOs but not all POJOs are JavaBeans.
+        </div>
+        <div class="sub-heading">What is the difference between a Java Bean and a Spring Bean</div>
+        <div class="textual-content">
+            - A Spring bean is basically an object managed by Spring. More specifically, it is an object that is
+            instantiated, configured and otherwise managed by a Spring Framework container. Spring beans are defined in
+            Spring configuration files (or, more recently, with annotations), instantiated by Spring containers, and
+            then injected into applications.
+            <br>
+            - Note that Spring beans need not always be JavaBeans. Spring beans might not implement the
+            <code>java.io.Serializable</code> interface, can have arguments in their constructors, etc.
+            This is the very basic difference between JavaBeans and Spring beans.
+            <br>
+            - <a href="http://www.shaunabram.com/beans-vs-pojos/">The reason Spring managed objects are referred to as
+            beans</a> is because in the very early versions, Spring was
+            intended only for use with JavaBeans. That is no longer the case of course: Spring can manage just about any
+            object, even if it doesn’t have JavaBean type characteristics such as default constructors or mutator
+            methods (getters and setters). None the less, the term ‘Spring beans’ has stuck.
+            Can Spring beans be POJOs? Yes, and they usually are (although they don’t have to be – e.g. Spring can be
+            used with ‘heavyweight’ Java objects, such as EJBs).
+            Can Spring beans be JavaBeans? As I have said, yes and again they often are but don’t have to be.
+        </div>
+        <div class="sub-heading"><a
+                href="https://stackoverflow.com/questions/3461199/what-is-the-advantage-of-using-java-beans">Advantages
+            of a Bean</a></div>
+        <div class="textual-content">
+            A JavaBean on its own is not terribly interesting, it's just a Java class that conforms to some standards.
+            However, conformance with this standard is one of the pillars on which the Java EE
+            framework is built and it comes up in quite a few places. FYI, there are a few different types of EJB listed
+            below:
+            <ul>
+                <li><b>Entity Beans</b>:</li>
+                <div>You might want to read/write objects to/from an underlying database. You could use JDBC/SQL to do
+                    this but you could also use a persistance framework. The Java EE spec includes a spec for
+                    persistance whereby you declare your class to be an "entity bean" and have Java automatically
+                    generate database tables and logic to map between entries in your database and objects in your
+                    program. The actual implementation is provided by a lower level library such as Eclipselink,
+                    Toplink, Hibernate etc. but the Java API abstracts away any differences between them.
+                    <br>
+                    Session beans represent logic while entity beans represented persistent objects. <a
+                            href="https://stackoverflow.com/a/13501659/8742428">These days entity
+                        beans aren't used anymore in favour to JPA entities.</a>
+                </div>
+                <li><b>Stateful Session Beans</b></li>
+                <div>
+                    Imagine that you want to create an instance of a Java class which exists on separate JVM. The JVMs
+                    might be running on the same physical machine but equally, may be on separate machines communicating
+                    over a network. Using a Java EE application server, you can create a class which can be instantiated
+                    by clients of the app server. These clients can instantiate a class which will act just like a
+                    normal object but any methods that are invoked on the object get executed on the server with the
+                    results being passed back to the caller. It's basically an object oriented form of remote procedure
+                    calls.
+                </div>
+                <li><b>Stateless Session Beans</b></li>
+                <div>
+                    This is a minor variation on stateful session beans. With stateful beans, if the server has 1000
+                    clients then it will potentially have to create 1000 instances of the bean and remember which
+                    instance belongs to which client. With stateless beans, the server creates a pool of beans and
+                    doesn't bother to remember which client owns which bean. When a client invokes a method, the server
+                    picks a bean from the pool and uses it, returning it to the pool on completion. You use stateful
+                    session beans when you want the server to remember details about each client, you will use stateless
+                    beans when you don't need to remember client specific details. Note that the stateless beans may
+                    well have state, it's just that this state won't be of interest to the client.
+                </div>
+                <li><b>Singleton Beans</b></li>
+                <div>
+                    //TODO..?
+                </div>
+            </ul>
+        </div>
+        <div class="sub-heading">Introspection</div>
+        <div class="textual-content">
+            Introspection is the automatic process of analyzing a bean's design patterns to reveal the bean's
+            properties, events, and methods. This process controls the publishing and discovery of bean operations and
+            properties.
+            <br>
+            There are two ways in which the developer of a Bean can indicate which of its properties, events, and
+            methods should be exposed. With the first method, simple naming conventions are used. These allow the
+            introspection mechanisms to infer information about a Bean. In the second way, an additional class that
+            extends the <code>BeanInfo</code> interface is provided that explicitly supplies this information.
+            <br>
+            The introspection mechanism finds all of the public methods of a Bean. Protected and private methods are not
+            presented.
+        </div>
+        <div class="sub-heading">Design Pattern for Properties</div>
+        <div class="textual-content">
+            A <i>property</i> is a subset of a Bean’s state. The values assigned to the properties determine the
+            behavior and
+            appearance of that component. A property is set through a setter method. A property is obtained by a getter
+            method. <a href="https://docs.oracle.com/javase/tutorial/javabeans/writing/properties.html">There are two
+            types of properties:</a>
+            <ul>
+                <li><b>Simple</b>:
+                    A simple property has a single value. It can be identified by the following design patterns, where
+                    <code>N</code> is the name of the property and <code>T</code> is its type:
+                    <br>
+                    <code>public T getN()</code>
+                    <br>
+                    <code>public void setN(T arg)</code>
+                    <br>
+                    A read/write property has both of these methods to access its values. A read-only property has only
+                    a get method. A write-only property has only a set method.
+                </li>
+                <li><b>Indexed</b>:
+                    An indexed property consists of multiple values. It can be identified by the following design
+                    patterns, where <code>N</code> is the name of the property and <code>T</code> is its type:
+                    <br>
+                    <code>public T getN(int index);</code>
+                    <br>
+                    <code>public void setN(int index, T value);</code>
+                    <br>
+                    <code>public T[ ] getN();</code>
+                    <br>
+                    <code>public void setN(T values[]);</code>
+                    <br>
+                </li>
+            </ul>
+        </div>
+        <div class="sub-heading">Design Pattern for Events</div>
+        <div>
+            Beans use the delegation event model that was discussed earlier in this book. Beans can generate events and
+            send them to other objects. These can be identified by the following design patterns, where <code>T</code>
+            is the type of the event:
+            <br>
+            <code>public void addTListener(TListener eventListener)</code>
+            <br>
+            <code>public void addTListener(TListener eventListener) throws java.util.TooManyListenersException</code>
+            <br>
+            <code>public void removeTListener(TListener eventListener)</code>
+            <br>
+            These methods are used to add or remove a listener for the specified event. The version of
+            <code>addTListener()</code> that does not throw an exception can be used to <i>multicast</i> an event, which
+            means that more than one listener can register for the event notification. The version that throws <code>TooManyListenersException</code>
+            <i>unicasts</i> the event, which means that the number of listeners can be restricted to one. In either
+            case, <code>removeTListener()</code> is used to remove the listener.
+            <br>
+            //TODO: Example code of how to actually use a listener to listen for an event and take action based on it.
+        </div>
+
+
+    </div>
+</div>
+
+</body>
+</html>
