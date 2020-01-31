@@ -316,10 +316,27 @@
             <a href="https://stackoverflow.com/questions/3529459/what-is-the-difference-between-class-path-and-build-path">Look
                 here</a>
         </div>
+    </div>
 
-        14) <a href="https://stackoverflow.com/a/7416474/8742428">When to use static member classes/interfaces?</a>
+    14) <a href="https://stackoverflow.com/a/7416474/8742428">When to use static member classes/interfaces?</a>
+    <div>
+        //TODO
+    </div>
+
+    <div class="one-point">
+        15) What is the difference between <code>myArray[index++]</code> and <code>myArray[++index]</code>:
         <div>
-            //TODO
+            Suppose <code>index = 0</code>
+            <br>
+            <code>myArray[index++]</code>: stores element at position <code>index</code> and then increments
+            <code>index</code> (element is stored at <code>myArray[0]</code>)
+            <br>
+            <code>myArray[++index]</code>: increments <code>index</code> and then stores the element at that
+            <code>index</code>. Hence the element is stored at <code>(index + 1)</code>
+            (element is stored at <code>myArray[1]</code>)
+            <br>
+            In both cases the final value of <code>index</code> will be 1. It's <i>when</i> the changed value of 1 is
+            returned that was causing the confusion.
         </div>
     </div>
 
@@ -373,7 +390,9 @@
     </div>
 
     <div class="one-point">
-        3) The tale of 0xcafebabe
+        3) <a
+            href="https://stackoverflow.com/questions/2808646/why-are-the-first-four-bytes-of-the-java-class-file-format-cafebabe">The
+        tale of 0xcafebabe</a>
         <div>
             The true decimal value of 0xcafebabe is 3,405,691,582 and 0xcafebabea is 54,491,065,322. In binary, they can
             be
