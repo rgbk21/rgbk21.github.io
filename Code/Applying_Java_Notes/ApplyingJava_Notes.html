@@ -115,7 +115,8 @@
 
 <div class="container">
     <div>
-        This page mainly contains my notes from a) Java: The Complete Reference, and b) Head First: Servlets and JSP
+        This page mainly contains my notes from a) Java: The Complete Reference, and b) <a href="#head-first">Head
+        First: Servlets and JSP</a>
     </div>
 
     <div class="chapter">Chapter 34: Java Beans</div>
@@ -292,7 +293,7 @@
         </div>
     </div>
     <hr>
-    <div>
+    <div id="head-first">
         These are my notes from the book - Head First: Servlets and JSP
     </div>
     <div class="chapter">Chapter 1: Why use Servlets and JSPs</div>
@@ -301,7 +302,7 @@
         browser.
         <div class="row">
             <img src="./Snaps/Servers_And_Clients.PNG" class="center-block img-fluid" alt="Servers_And_Clients"
-                 height="275" width="500">
+                 width="500">
         </div>
         <br>
         Terminology:
@@ -356,7 +357,7 @@
                                 the request.
                                 <div class="row">
                                     <img src="./Snaps/GET_REQUEST.PNG" class="center-block img-fluid" alt="GET_REQUEST"
-                                         height="215" width="600">
+                                         width="600">
                                 </div>
                             </li>
                             <li><code>POST</code>: With POST, you can request something and at the same time send form
@@ -409,7 +410,7 @@
             A TCP port is a 16-bit number that uniquely identifies the software that is running
             on the hardware. They are NOT physical ports on a system. They are just numbers representing an
             applications. As per the standard, the HTTP Server Software runs on Port 80. Without port numbers, the
-            Server would have no  way of telling which application/software a Client wants to connect to.
+            Server would have no way of telling which application/software a Client wants to connect to.
             <br>
             - There are a bunch of other ports that are pre-defined to connect to specific services.
         </div>
@@ -445,6 +446,213 @@
             <br>
         </div>
     </div>
+    <div class="chapter">Chapter 2: Web App Architecture</div>
+    <div class="textual-content">
+        <div>
+            <b>What is a Container?</b>
+            <br>
+            - Servlets don't have a <code>main()</code> method. They are under the control of another Java application
+            known as the <code>Container</code>.
+            <br>
+            - Apache is you web server application. Tomcat is your Container. When your web server application gets a
+            request for a <code>Servlet</code> (as opposed to, say, a plain static HTML page) the server hands the
+            request not to the servlet itself, but to the <code>Container</code> in which the servlet is <i>deployed</i>.
+            <br>
+            - It's the Container that gives the Servlet the HTTP Request and Response, and it's the Container that calls
+            the servlet's methods like <code>doGet()</code> and <code>doPost()</code>.
+            <div class="row">
+                <img src="./Snaps/Ch2/ContainerDescription.PNG" class="center-block img-fluid"
+                     alt="ContainerDescription"
+                     width="500">
+            </div>
+        </div>
+        <div>
+            <b>What does the Container give you?</b>
+            <br>
+            <ul>
+                <li><b>Communication Support</b>: The Container(Tomcat) provides an easy way for your Servlets to talk
+                    to your Web
+                    Server. You don't have to build a ServerSocket, listen on a port, create Streams, etc. The Container
+                    knows the protocol between the Web Server and itself, so that your Servlet does not have to worry
+                    about, say, the API between the Apache Web Server and your own web application code.
+                </li>
+                <li><b>Lifecycle Management:</b> The Container controls the life and death of you servlets. It takes
+                    control of loading the classes, instantiating and initializing the servlets, invoking the servlets
+                    methods, and making servlets instances available for garbage collection. With the Container in
+                    control, you do not have to worry about the resource management.
+                </li>
+                <li>
+                    <b>Multithreading Support:</b> The COntianer automatically creates a new Java thread for every
+                    servlet request that it receives. When the Servlet's done running the HTTP <code>service()</code>
+                    method for that Client's request, the thread completes (dies). But you are still responsible for
+                    Thread safety and other synchronization issues. It's just that the work involved in creating and
+                    deleting threads is reduced.
+                </li>
+                <li>
+                    <b>Declarative Security:</b> XML Deployment Descriptors allow you to configure Security without
+                    having to hard-code it into any of your servlets or other classes.
+                </li>
+                <li><b>JSP Support: </b></li>
+                Container also takes care of translating the JSP code into real Java.
+            </ul>
+        </div>
+        <div>
+            <b>How the Container handles a request: </b>
+            <br>
+            <b>Step 1: </b> User clicks on a link that has a URL to a servlet instead of a static web page
+            <div class="row">
+                <img src="./Snaps/Ch2/Step-1.PNG" class="float-left img-fluid"
+                     alt="Step1"
+                     width="500">
+            </div>
+            <b>Step 2: </b> The Container "sees" that the request is for a Servlet, so the container creates two
+            objects:
+            <ul>
+                <li>HttpServletRequest</li>
+                <li>HttpServletResponse</li>
+            </ul>
+            <div class="row">
+                <img src="./Snaps/Ch2/Step-2.PNG" class="float-left img-fluid"
+                     alt="Step2"
+                     width="500">
+            </div>
+            <b>Step 3: </b> The Container finds the correct Servlet based on the URL in the request, creates or
+            allocates a thread for that request, and passes the request and response objects to the Servlet thread.
+            <div class="row">
+                <img src="./Snaps/Ch2/Step-3.PNG" class="float-left img-fluid"
+                     alt="Step3"
+                     width="500">
+            </div>
+            <b>Step 4: </b> The Container calls the Servlet's <code>service()</code> method. Depending on the type of
+            the request, the <code>service()</code> methods calls either the <code>doGet()</code> or
+            <code>doPost()</code> methods. For this example, we assume that the request was a HTTP GET method.
+            <div class="row">
+                <img src="./Snaps/Ch2/Step-4.PNG" class="float-left img-fluid"
+                     alt="Step4"
+                     width="500">
+            </div>
+            <b>Step 5: </b> The <code>doGet()</code> method generates the dynamic page and stuffs the page into the
+            response object. Remember that the Container still has a reference to the Response object.
+            <div class="row">
+                <img src="./Snaps/Ch2/Step-5.PNG" class="float-left img-fluid"
+                     alt="Step5"
+                     width="500">
+            </div>
+            <b>Step 6: </b> The thread completes, the container converts the response object into an HTTP Response,
+            sends it back to the client, and then deletes the request and the response object.
+            <div class="row">
+                <img src="./Snaps/Ch2/Step-6.PNG" class="float-left img-fluid"
+                     alt="Step6"
+                     width="500">
+            </div>
+        </div>
+
+        <div>
+            <b>What makes a Servlet a Servlet: </b>
+            <br>
+            Note that a Servlet class (in this case <code>Ch2Servlet</code>) does not have a <code>main()</code> method.
+            It only has a <code>doGet()</code> method.
+            <div class="row">
+                <img src="./Snaps/Ch2/AServletIsAServlet.PNG" class="float-left img-fluid"
+                     alt="Servlet?"
+                     width="600">
+            </div>
+        </div>
+
+        <div>
+            <b>When a Client clicks on a URL containing a Servlet in Step 1, how does the Container know which Servlet
+                to call?</b>
+            <br>
+            A Servlet can have 3 names:
+            <ul>
+                <li>Public URL Name: The name encoded into the HTML so that when the user clicks a link that is supposed
+                    to go to that servlet, this public URL is sent to the Server in the HTTP Request.
+                </li>
+                <li>File Path Name (XXXX.class name): This (XXXX) is the ACTUAL name of the .class file that is stored
+                    on the server.
+                </li>
+                <li>Deployment Name: It is a secret internal name (not known to the Client) that is given to the .class
+                    file. This <i>can</i> be the same as the File Path Name, but can be something completely different
+                    as well.
+                </li>
+            </ul>
+            - Thus we can <i>map</i> the Public URL to a Deployment name and have that Deployment name refer to a .class
+            file.
+            <br>
+            - Why do we do this:
+            <ul>
+                <li>Flexibility: We can change the path of the .class file without breaking the path of every file that
+                    referenced this class file
+                </li>
+                <li>Security: We do not want the Client ot know the internal directory structure of the Server.</li>
+            </ul>
+        </div>
+
+        <div>
+            <b>How do we do this mapping: Deployment Descriptors</b>
+            <br>
+            When you deploy your servlet into your web Container, you will create an XML document called the
+            <code>Deployment Descriptor</code> to tell the container how to run your Servlets and JSPs.
+            <br>
+            - We use two XML elements to map URLs to Servlets - one to map the Client-known <i>Public URL Name</i> to
+            our
+            own <i>internal deployment name</i>, and the other to map our own <i>internal deployment name</i> to the
+            fully-qualified <i>class-name</i>
+            <br>
+            - The two DD elements for URL Mappings are:
+            <ul>
+                <li><code>&ltservlet&gt</code>: maps internal name to fully-qualified class name</li>
+                <li><code>&ltservlet-mapping&gt</code>: maps internal name public URL name</li>
+            </ul>
+            - DD also helps us to customize other aspects of our web application like adding security roles, error
+            pages, tag libraries. All this can be done without changing the source code.
+            <div class="row">
+                <img src="./Snaps/Ch2/DeploymetnDescriptor.PNG" class="float-left img-fluid"
+                     alt="DeploymentDescriptor"
+                     width="650">
+            </div>
+            - Note that the <code>&ltservlet-class&gt</code> tag still contains only the class name and not the complete
+            path of the the .class file. This is because the Container has a specific place that it will look for all
+            Servlets for which you have specified a mapping in the DD.
+        </div>
+
+        <div>
+            <b>What is MVC: Media-View-Controller</b>
+            <br>
+            - The essence of MVC is that you separate the business logic from the presentation, but put something in <i>between</i>
+            them so that the business logic can stand on its own as a reusable Java class, and doesn't have to know
+            anything about the view. In other words, the business logic should never go into the Servlet. Because the
+            Servlet contains the JSP page, it means that the business logic is tied to the JSP page. We cannot re-use
+            the business logic for some other kind of view, like a GUI. The business logic should always be in a
+            standalone Java class that can be reused.
+            <br>
+            - Model-View-Controller takes the business logic out of the Servlet and puts it in a "Model" - a reusable
+            plain old Java class. The Model is a combination of the business data and the methods that operate on the
+            data.
+
+        <div class="row">
+            <img src="./Snaps/Ch2/MVC.PNG" class="float-left img-fluid"
+                 alt="MVC"
+                 width="650">
+        </div>
+        - Thus for each Servlet, there will be a new business logic class that will be the <code>Model</code>, a JSP
+        page that will be the <code>View</code>, and the original Servlet, bereft of any logic or HTML, that will form
+        the <code>Controller</code> part of the puzzle.
+        <div class="row">
+            <img src="./Snaps/Ch2/MVC-IN-Action.PNG" class="float-left img-fluid"
+                 alt="MVC"
+                 width="650">
+        </div>
+        - But now the problem is that there are a gazillion little Servlets, and all they are doing is updating the
+        Model and then displaying the View. Lot of code duplication apparently...
+        </div>
+        <div class="row">
+            <img src="./Snaps/Ch2/Table.PNG" class="center-block img-fluid"
+                 alt="Table"
+                 width="650">
+        </div>
+    </div>
+
 </div>
 
 
