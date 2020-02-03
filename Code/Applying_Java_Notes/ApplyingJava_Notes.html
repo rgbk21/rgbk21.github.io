@@ -296,7 +296,16 @@
     <div id="head-first">
         These are my notes from the book - Head First: Servlets and JSP
     </div>
-    <div class="chapter">Chapter 1: Why use Servlets and JSPs</div>
+    <div>
+        Index:
+        <br>
+        <a href="#Ch1">Chapter 1: Why use Servlets and JSPs</a>
+        <br>
+        <a href="#Ch2">Chapter 2: Web App Architecture</a>
+        <br>
+        <a href="#Ch3">Chapter 3: Mini MVC Tutorial</a>
+    </div>
+    <div id="Ch1" class="chapter">Chapter 1: Why use Servlets and JSPs</div>
     <div class="textual-content">
         - To prevent deployment problems that come with building stand alone apps, we instead deploy our apps to the
         browser.
@@ -393,60 +402,68 @@
                 <code>&lthtml&gt&lt/html&gt </code> that the client then renders as the HTML page that we finally see.
                 <br>
             </li>
+            <b>All the pieces in one page:</b>
+            <div class="row">
+                <img src="./Snaps/All-The-Pieces.PNG" class="float-left img-fluid" alt="All-The-Pieces"
+                     width="500">
+            </div>
+            <b>What is a URL</b>:
+            <div class="row">
+                <img src="./Snaps/Whta_Is_URL.PNG" class="float-left img-fluid" alt="What_Is_URL"
+                     width="500">
+            </div>
+            <div>
+                <b>What is a TCP Port</b>:
+                <br>
+                A TCP port is a 16-bit number that uniquely identifies the software that is running
+                on the hardware. They are NOT physical ports on a system. They are just numbers representing an
+                applications. As per the standard, the HTTP Server Software runs on Port 80. Without port numbers, the
+                Server would have no way of telling which application/software a Client wants to connect to.
+                <br>
+                - There are a bunch of other ports that are pre-defined to connect to specific services.
+            </div>
+            <div>
+                <b>Two things the Server won't do on its own:</b>
+                <ul>
+                    <li>Dynamic Content: The Web Server Application serves only static pages, but a spearate "helper"
+                        application that the web server can communicate with can build non-static, just-in-time web
+                        pages.
+                        Just-in-time web pages do not exist before the request comes in. Once the request comes in, the
+                        helper app "writes" the HTML and the web server sends the page back to the Client as if it were
+                        a
+                        static web page.
+                    </li>
+                    <li>Saving data on the Server: A WEb Server cannot process form data. When the web server sees a
+                        request
+                        for a helper app, it assumes that all of the parameters are emant for the Helper app and hence
+                        passes all of the parameters to it
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <b>What is a Servlet? And what is JSP?</b>
+                <br>
+                - The Helper App in Java is known as a Servlet. So a Servlet is just some Java code. But when the web
+                server
+                calls the helper Servlet, it expects HTML code in return. This is done by using using the <code>PrintWriter.println()</code>
+                method. The HTML code that is to be returned to the web server is included as a <code>String</code> type
+                argument in the <code>println()</code> method. As you can hope, stuffing properly formatted HTML tags
+                into
+                the <code>println()</code>is not a viable solution. For eg. you will have to manually escape every quote
+                character (") because Java treats them as end of string character. And HTML happens to use a ton of
+                quotes
+                to specify the attribute values and what not.
+                <br>
+                - To solve this problem, JSPs were introduced. This allows us to add Java code to HTML instead of
+                writing
+                HTML code in a Java class. The JSP page contains java variables that calls the main Java code and
+                creates
+                the completed HTML page as a JIT web page.
+                <br>
+            </div>
         </ul>
-        <b>All the pieces in one page:</b>
-        <div class="row">
-            <img src="./Snaps/All-The-Pieces.PNG" class="float-left img-fluid" alt="All-The-Pieces"
-                 width="500">
-        </div>
-        <b>What is a URL</b>:
-        <div class="row">
-            <img src="./Snaps/Whta_Is_URL.PNG" class="float-left img-fluid" alt="What_Is_URL"
-                 width="500">
-        </div>
-        <div>
-            <b>What is a TCP Port</b>:
-            <br>
-            A TCP port is a 16-bit number that uniquely identifies the software that is running
-            on the hardware. They are NOT physical ports on a system. They are just numbers representing an
-            applications. As per the standard, the HTTP Server Software runs on Port 80. Without port numbers, the
-            Server would have no way of telling which application/software a Client wants to connect to.
-            <br>
-            - There are a bunch of other ports that are pre-defined to connect to specific services.
-        </div>
-        <div>
-            <b>Two things the Server won't do on its own:</b>
-            <ul>
-                <li>Dynamic Content: The Web Server Application serves only static pages, but a spearate "helper"
-                    application that the web server can communicate with can build non-static, just-in-time web pages.
-                    Just-in-time web pages do not exist before the request comes in. Once the request comes in, the
-                    helper app "writes" the HTML and the web server sends the page back to the Client as if it were a
-                    static web page.
-                </li>
-                <li>Saving data on the Server: A WEb Server cannot process form data. When the web server sees a request
-                    for a helper app, it assumes that all of the parameters are emant for the Helper app and hence
-                    passes all of the parameters to it
-                </li>
-            </ul>
-        </div>
-        <div>
-            <b>What is a Servlet? And what is JSP?</b>
-            <br>
-            - The Helper App in Java is known as a Servlet. So a Servlet is just some Java code. But when the web server
-            calls the helper Servlet, it expects HTML code in return. This is done by using using the <code>PrintWriter.println()</code>
-            method. The HTML code that is to be returned to the web server is included as a <code>String</code> type
-            argument in the <code>println()</code> method. As you can hope, stuffing properly formatted HTML tags into
-            the <code>println()</code>is not a viable solution. For eg. you will have to manually escape every quote
-            character (") because Java treats them as end of string character. And HTML happens to use a ton of quotes
-            to specify the attribute values and what not.
-            <br>
-            - To solve this problem, JSPs were introduced. This allows us to add Java code to HTML instead of writing
-            HTML code in a Java class. The JSP page contains java variables that calls the main Java code and creates
-            the completed HTML page as a JIT web page.
-            <br>
-        </div>
     </div>
-    <div class="chapter">Chapter 2: Web App Architecture</div>
+    <div id="Ch2" class="chapter">Chapter 2: Web App Architecture</div>
     <div class="textual-content">
         <div>
             <b>What is a Container?</b>
@@ -630,29 +647,150 @@
             plain old Java class. The Model is a combination of the business data and the methods that operate on the
             data.
 
-        <div class="row">
-            <img src="./Snaps/Ch2/MVC.PNG" class="float-left img-fluid"
-                 alt="MVC"
-                 width="650">
-        </div>
-        - Thus for each Servlet, there will be a new business logic class that will be the <code>Model</code>, a JSP
-        page that will be the <code>View</code>, and the original Servlet, bereft of any logic or HTML, that will form
-        the <code>Controller</code> part of the puzzle.
-        <div class="row">
-            <img src="./Snaps/Ch2/MVC-IN-Action.PNG" class="float-left img-fluid"
-                 alt="MVC"
-                 width="650">
-        </div>
-        - But now the problem is that there are a gazillion little Servlets, and all they are doing is updating the
-        Model and then displaying the View. Lot of code duplication apparently...
+            <div class="row">
+                <img src="./Snaps/Ch2/MVC.PNG" class="float-left img-fluid"
+                     alt="MVC"
+                     width="650">
+            </div>
+            - Thus for each Servlet, there will be a new business logic class that will be the <code>Model</code>, a JSP
+            page that will be the <code>View</code>, and the original Servlet, bereft of any logic or HTML, that will
+            form
+            the <code>Controller</code> part of the puzzle.
+            <div class="row">
+                <img src="./Snaps/Ch2/MVC-IN-Action.PNG" class="float-left img-fluid"
+                     alt="MVC"
+                     width="650">
+            </div>
+            - But now the problem is that there are a gazillion little Servlets, and all they are doing is updating the
+            Model and then displaying the View. Lot of code duplication apparently...
         </div>
         <div class="row">
             <img src="./Snaps/Ch2/Table.PNG" class="center-block img-fluid"
                  alt="Table"
                  width="650">
         </div>
+        <div>
+            <b>How doe J2EE fit into all of this?</b>
+            <br>
+            The Java 2 Enterprise Edition is kind of a super-spec - it incorporates other specifications, including the
+            Servlets 2.4 Spec and the JSP 2.0 spec. That's for the Web Container. But the J2EE 1.4 spec also includes
+            the Enterprise JavaBean 2.1 specification, for the EJB Container. In other words, the web container is for
+            the <i>web</i> components (servlets and JSPs) whereas the EJB COntainer is for the <i>business</i>
+            components.
+            <br>
+            - A fully-compliant J2EE server must have <i>both</i> a web Container abd an EJB Container (plus other
+            things including a JNDI and JMS implementation). Tomcat is just a web Container!(?). It is still compliant
+            with the portions of J2EE spec that address the web container.
+        </div>
     </div>
+    <div id="Ch3" class="chapter">Chapter 3: Mini MVC Tutorial</div>
+    <div class="textual-content">
+        The process for creating a <a
+            href="https://www.jetbrains.com/help/idea/creating-and-running-your-first-java-ee-application.html#3f8fcb52">Enterprise
+        Application in IntelliJ</a> can be found here.
+        <div>
+            <p id="app_architecture">Here is the architecture of the Web App:</p>
+            <div class="row">
+                <img src="./Snaps/Ch3/MyBeerApp-Architecture.PNG" class="center-block img-fluid"
+                     alt="MyBeerApp-Architecture"
+                     width="750">
+            </div>
+        </div>
+        <div>
+            <p><b>Creating the Development Environment:</b></p>
+            <p>
+                -<code>index.jsp</code> is the file that contains the first page that the user sees when they login into
+                the <code>http://localhost:8080/BeerV2_war_exploded/</code>. Changing the name of <code>index.jsp</code>
+                to some other name causes the app to stop working for some reason.
+                <br>
+                - The <code>web.xml</code> is the Deployment Descriptor that we looked at in the previous chapter.
+            </p>
+            <div class="row">
+                <img src="./Snaps/Ch3/Development-Environment.png" class="center-block img-fluid"
+                     alt="Development-Environment"
+                     width="1000">
+            </div>
+        </div>
+        <div class="code-snippet">
+            <p>This is an example of Tomcat Log generated when the Web-App was deployed successfully. </p>
+            <script src="https://gist.github.com/rgbk21/d37b5c60853094b332ce7a976dc94161.js"></script>
+        </div>
+        <div>
+            <b>Creating the Deployment Environment:</b>
+            <div class="row">
+                <img src="./Snaps/Ch3/Deployment-Environment.png" class="center-block img-fluid"
+                     alt="Deployment-Environment"
+                     width="1100">
+            </div>
+        </div>
+        Let's finish the app now, one step at a time:
+        <br>
+        <div>
+            <a href="#app_architecture"><b>Step 1</b></a>: The Client makes a request for the form.html page
+            <br>
+            <a href="#app_architecture"><b>Step 2</b></a>: The Container retrieves the form.html page
+            <br>
+            <a href="#app_architecture"><b>Step 3</b></a>: The Container returns the page to the browser where the user
+            answers the question on the form
+            and
+            Clicks Submit
+            <div class="row">
+                <img src="./Snaps/Ch3/Form.PNG" class="float-left img-fluid"
+                     alt="Form"
+                     width="400">
+            </div>
+            <br>
+            Clicking the SUBMIT button causes the HTML form to send a <code>POST</code> request to the server. This
+            request is sent to the <code>SelectBeer.do</code> file (Line 9). Remember that there is no actual class
+            named such.
+            It's mapped to an internal Servlet name using the Deployment Descriptors.
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/455e078ee0d33fe25ef7e6e215deb3c5.js"></script>
+            </div>
+            <a href="#app_architecture"><b>Step 4</b></a>: The browser sends the request data to the Container
+            <br>
+            Now the Container has to figure out which is the actual Class to which the <code>SelectBeer.do</code> maps.
+            For this, the Container looks in the <code>web.xml</code> file (Deployment Descriptor). The Container finds
+            out that the <code>SelectBeer.do</code> file maps to the <code>Ch3 Beer</code> internal name, which in turn
+            maps to the <code>com.example.web.BeerSelect</code> Java Class. Now the Container knows which Servlet to
+            call.
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/c932fc1d0153401e578ea9037ed0b428.js"></script>
+            </div>
+            <a href="#app_architecture"><b>Step 5</b></a>: The Container finds the correct Servlet and passes the
+            request to the Servlet. This class
+            acts as the Controller, calling the Model <code>BeerExpert</code> for the business logic, and the View
+            <code>result.jsp</code> for the reponse.
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/94dbb35d88a6d04c4f1f44c75f1e8d18.js"></script>
+            </div>
+            <br>
+            <a href="#app_architecture"><b>Step 6</b></a>: The Servlet calls the BeerExpert class for help.
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/f2f3e7794dd719fc9f752776ed97e16b.js"></script>
+            </div>
+            <a href="#app_architecture"><b>Step 7</b></a>: The BeerExpert class returns an answer that the Servlet class
+            adds to the request
+            object.
+            <br>
+            The Container provides a mechanism called "Request Dispatching" that allows one container-manged component
+            to call another container-managed component. This is what we use here - the Servlet gets the info from the
+            model, saves it in the request object, then dipatches the request to the JSP.
+            <br>
+            <a href="#app_architecture"><b>Step 8</b></a>: The Servlet forwards the request to the JSP.
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/0cf2bcafb2f011b8ca5a9bbcded5d011.js"></script>
+            </div>
+            <a href="#app_architecture"><b>Step 9</b></a>: The JSP gets the answer from the request object.
+            <br>
+            <a href="#app_architecture"><b>Step 10</b></a>: The JSP generates a page for the Container.
+            <br>
+            <a href="#app_architecture"><b>Step 11</b></a>: The Container returns the page to the User.
 
+
+        </div>
+
+    </div>
 </div>
 
 
