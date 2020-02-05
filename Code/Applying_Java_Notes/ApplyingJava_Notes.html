@@ -304,6 +304,8 @@
         <a href="#Ch2">Chapter 2: Web App Architecture</a>
         <br>
         <a href="#Ch3">Chapter 3: Mini MVC Tutorial</a>
+        <br>
+        <a href="#Ch4">Chapter 4: Being a Servlet</a>
     </div>
     <div id="Ch1" class="chapter">Chapter 1: Why use Servlets and JSPs</div>
     <div class="textual-content">
@@ -744,7 +746,7 @@
             request is sent to the <code>SelectBeer.do</code> file (Line 9). Remember that there is no actual class
             named such.
             It's mapped to an internal Servlet name using the Deployment Descriptors.
-            <div class="code-snippet">
+            <div id="Step3" class="code-snippet">
                 <script src="https://gist.github.com/rgbk21/455e078ee0d33fe25ef7e6e215deb3c5.js"></script>
             </div>
             <a href="#app_architecture"><b>Step 4</b></a>: The browser sends the request data to the Container
@@ -791,6 +793,299 @@
         </div>
 
     </div>
+    <div id="Ch4" class="chapter">Chapter 4: Being a Servlet</div>
+    <div class="textual-content">
+        - In the <a href="#app_architecture">previous chapter</a> we looked at the Container's overall role in the
+        Servlet's life. In this Chapter we look at the Servlet's life in more detail.
+        <br>
+        - The servlet lifecycle is pretty simple.. There is only one main state: <code>initialized</code>. If the
+        servlet
+        isn't initialized then it is either <i>being initialized</i> (by running it's constructor or the
+        <code>init()</code> method), <i>being destroyed</i> (by running it's <code>destroy()</code>) method, or it
+        simply does not exist.
+
+        <br><br>
+        <b>What do the <code>init</code>, <code>service</code>, and <code>destroy</code> methods do?</b>
+        <br>
+        - <b><code>init()</code></b>: The method is
+        called after the servlet instance has been created (using the the default
+        no-args constructor) but before the servlet can service any client requests. You can override this method in
+        case you have to get a database connection, or you have to register yourself with other objects.
+        <br>
+        - <b><code>service()</code></b>: When the first Client request comes in, the Container starts a new thread or
+        allocates
+        a new thread from the pool and causes the servlet's <code>service()</code> method to be invoked. This method
+        looks at the request, determines the HTTP method (GET, POST, etc.) and invokes the matching <code>doGet()</code>
+        or <code>doPost()</code> methods respectively. Note that there are other methods in HTTP as well (HEAD, PUT,
+        etc) and there are corresponding <code>doXXXXX()</code> methods for almost all of them. Refer the <code>HttpServlet</code>
+        class below. You should not override the <code>service()</code> method. Your job is to override the <code>doGet()</code>
+        or the <code>doPost()</code> methods, and let the <code>service()</code> implementation from the <code>HttpServlet</code>
+        worry about calling the right one.
+        <br>
+        - <b><code>doPost()</code>/<code>doGet()</code></b>: The <code>service()</code> method invokes the
+        <code>doGet()</code>
+        or the <code>doPost()</code> based on the HTTP method (GET, POST, and so on). This is where your code begins.
+        All the stuff that your app is supposed to be doing goes in here. Always override at least one of these methods.
+        Whichever ones you override tells the Container what you support. If you do not override <code>doPost()</code>,
+        for example, then you are telling the Container that this servlet does not support the HTTP POST request.
+        <br>
+        <div class="row">
+            <img src="./Snaps/Ch4/Servlet_LifeCycle.PNG" class="float-left img-fluid"
+                 alt="Servlet_LifeCycle"
+                 width="700">
+        </div>
+
+
+        - The Servlet moves from the <i>does not exist</i> to the <i>initialized</i> state beginning with the
+        constructor. But the constructor makes only the <i>object</i>, not the <i>Servlet</i>. When an object becomes a
+        servlet,it gets all the unique privileges that come with being a servlet, like the ability to use it's <code>ServletContext</code>
+        to get information from the Container.
+
+        <br> <br>
+
+        - So overall the process proceeds like this: (refer below diagram) Suppose my servlet is the
+        <code>MyServlet</code> class. The Container
+        calls <code>MyServlet</code>'s <code>init()</code> method. But if I do not
+        override <code>init</code>, the one from <code>GenericServlet</code> runs. Then when a request comes in, the
+        Container starts or allocates a thread and calls the <code>service()</code> method, which I do not override. So
+        the <code>service</code> method from the <code>HttpServlet</code> runs. The <code>HttpServlet</code> <code>service</code>
+        method then calls my overridden <code>doGet</code> or <code>doPost</code> methods. <i>So each time my
+        <code>doGet</code> or <code>doPost</code> runs in a different thread.</i>
+        <br>
+        - The Servlet inherits the following methods:
+        <div class="row">
+            <img src="./Snaps/Ch4/Servlet_Inheritance.PNG" class="float-left img-fluid"
+                 alt="Servlet_Inheritance"
+                 width="700">
+        </div>
+        <br>
+        - Remember that each Client request runs in a separate thread. At any given time, you will have at least as many
+        runnable threads as there are client requests.
+        <br>
+        - You might hear things like "Each instance of the servlet..". This is incorrect. The Container runs multiple
+        threads to process multiple requests to a single servlet. And every Client request generates a new pair of
+        request and response object.
+        <div class="row">
+            <img src="./Snaps/Ch4/Threaded.PNG" class="float-left img-fluid"
+                 alt="Threaded"
+                 width="700">
+        </div>
+        <br>
+        <b>What is a Request or a Response object: </b>
+        <br>
+        - The implementation of these interfaces is left to the vendor. All you need to know is the methods that you can
+        call on these objects. The actual class does not matter because you are referring to the request and the
+        response objects only by the <i>interface type</i>.
+        <br>
+        - Also note that these are interfaces extending interfaces.
+        <div class="row">
+            <img src="./Snaps/Ch4/ServletRequest_And_ServletResponse.PNG" class="float-left img-fluid"
+                 alt="Servlet_Inheritance"
+                 width="700">
+        </div>
+        <br>
+        - There are 8 HTTP methods (actually 9 now). There is no mechanism in the servlet API for handling <code>doConnect</code>,
+        so it is not a part of the <code>HttpServlet</code>.
+        <br>
+        - Recall the difference between <code>GET</code> and <code>POST</code> that we studied earlier. The key
+        difference between the two was
+        that <code>POST</code> has a body, whereas in the <code>GET</code> request all of the parameters are sent in the
+        header. Remember that <code>GET</code>is ONLY supposed to be <i>getting</i> things from the server. it should
+        not make any changes to the server. <code>POST</code> on the other hand is used to send data to the server for
+        <i>update</i>.
+        <br>
+        - This makes <code>GET</code> an <i>idempotent</i> request: making the same <code>GET</code> request twice will
+        cause no negative consequences on the server.
+        <br>
+        - <code>POST</code>, on the other hand, is a <i>non-idempotent</i> request. The data sent to the server could be
+        used to update some state that cannot be reversed. Think a financial transaction that cannot be reversed.
+        Intuitive example in book.
+        Basically, you want to ensure that your app logic can handle scenario where the same request comes in more than
+        once by mistake.
+        <br>
+        - Note that there is nothing stopping you from <i>implementing</i> the <code>GET</code> method in the <code>doGet</code>
+        method as an non-idempotent method. But you would not want to do so...
+        <div class="sub-heading">What determines whether a browser sends a GET or POST request:</div>
+        <div>
+            - Remember the POST is not the default. If you do not specify a method, by default the GET method will be
+            used.
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/c4c574f87a7a6aaa46631a5a7d9559bb.js"></script>
+            </div>
+        </div>
+
+        <div class="sub-heading">How do you send multiple parameters using the POST request:</div>
+        <div>
+            - In the previous POST request that we sent in <a href="#Step3">Step 3</a>, the browser sent only one of
+            the four options (light/amber/brown/dark) as the value of the parameter <code>color1</code>. But what if we
+            wanted two or more parameters from the user. This is how we would do it:
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/6d7be68624a849802d8450ff82db8b01.js"></script>
+            </div>
+            - If in the previous case the POST request sent the values of the parameters as <code>color1=light</code>,
+            in
+            this example the parameters will be sent as <code>color1=light&theSize=heavy</code>. That is - the POST
+            request will have both the parameters but separated by an ampersand.
+            <br>
+            - The Servlet class would then use the parameters in the following manner:
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/09cd12cd78f61d4a703ff0397484e00e.js"></script>
+            </div>
+        </div>
+
+        <div class="sub-heading">How do you use multiple values for a single parameter:</div>
+        <div>
+            In the previous example, you one parameter <code>theSize</code> associated with just a single value (either
+            light, medium, or heavy). However, some form inputs like checkboxes can have more than one value. That means
+            a single parameter like <code>theSize</code> will could have more than one value depending on how many boxes
+            the user has checked off.
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/b143430a62b757498607e22deabee83f.js"></script>
+            </div>
+            And the corresponding Servlet class would look like this:
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/327108fb2c388821c78d3d711e7ff2d2.js"></script>
+            </div>
+        </div>
+
+        <div class="sub-heading">Besides the parameters, what else can I get from the Request object:</div>
+        <div>
+            - You really should look at the full API for <a
+                href="https://docs.oracle.com/javaee/7/api/javax/servlet/ServletRequest.html">javax.servlet.ServletRequest</a>
+            and <a href="https://javaee.github.io/javaee-spec/javadocs/javax/servlet/http/HttpServletRequest.html">javax.servlet.http.HttpServletRequest</a>.
+            <br>
+            - Remember that <code>HttpServletRequest</code> class extends the <code>ServletRequest</code> class.
+            <br>
+            - Note the method <code>getInputStream</code>. These streams will contain only the body of the HTTP Request
+            and not the headers.
+            <br>
+            - Note the presence of the three different methods:
+            <ul>
+                <li><code>getRemotePort</code>: In this case, since it is the server asking, it's the Client that is the
+                    Remote. So <code>getRemotePort</code> means the <i>Client's</i> remote port. In other words, the
+                    port number on the Client from which the request was sent. Remember, if you are a servlet, remote
+                    means the Client.
+                </li>
+                <li><code>getServerPort</code>: This method asks "to which port was the request <i>originally sent</i>"
+                </li>
+                <li><code>getLocalPort</code>: This method asks "on which port did the request ultimately <i>end up</i>".
+                    There is a difference between the above two methods because although the requests are <i>sent</i> to
+                    a single port (where the <i>server</i> is listening), the server turns around and finds a different
+                    local port for each thread so that the app can handle multiple clients at the same time.
+                </li>
+            </ul>
+        </div>
+        <div class="row">
+            <img src="./Snaps/Ch4/HttpSerletRequestInterface.PNG" class="float-left img-fluid"
+                 alt="Servlet_Inheritance"
+                 width="200">
+        </div>
+        <div class="sub-heading">Understanding the Response Object:</div>
+        <div>
+            - The Response is what goes back to the Client. Typically, you use the response object to get an output
+            object (usually a Writer) and you use that Stream to write the HTML (or some other type of content) that
+            goes back to the Client.
+            <br>
+            - You call two methods on the response: <code>setContentType</code> and <code>getWriter</code>. After that
+            you are simply doing I/O to write HTML (or something else) to the stream. But you can also use the
+            response to set other headers, send errors, and add cookies.
+        </div>
+        <div class="row">
+            <img src="./Snaps/Ch4/ServletResponse_Interface.PNG" class="float-left img-fluid"
+                 alt="ServletResponse_Interface"
+                 width="300">
+        </div>
+
+        //TODO: There is some stuff about reading from a file and writing to a <code>application/jar</code> type stream.
+        <div class="row">
+            <img src="./Snaps/Ch4/WritingToAStream.PNG" class="float-left img-fluid"
+                 alt="WritingToAStream"
+                 width="750">
+        </div>
+        <div class="sub-heading">What does setting the <code>setContentType</code> do:</div>
+        <div>
+            <a href="https://stackoverflow.com/questions/14291027/what-is-the-use-of-response-setcontenttypetext-html-in-servlet">Source</a>
+            <br>
+            - Content types are included in HTTP responses because the same, byte for byte sequence of values in the
+            content could be interpreted in more than one way. Remember that http can transport more than just HTML (js,
+            css and images are examples), and in some cases, the receiver will not know what type of object it's
+            going to receive. This is the same thing as setting the MIME type. Content type is an HTTP Header that must
+            be included in the HTTP Response.
+            <br>
+            - Remember to always call <code>setContentType</code> before you ahve called the method that gives you your
+            output stream (<code>getWRiter</code> or <code>getOutputStream</code>). That will guarantee you will not run
+            into conflicts between the content type and the output stream.
+            <br>
+            - Common MIME types are:
+            <ul>
+                <li>text/html</li>
+                <li>application/pdf</li>
+                <li>video/quicktime</li>
+                <li>application/java</li>
+                <li>image/jpeg</li>
+                <li>application/jar</li>
+                <li>application/octet-stream</li>
+                <li>application/x-zip</li>
+            </ul>
+        </div>
+
+        <div class="sub-heading">What is the difference between <code>ServletOutputStream</code> and
+            <code>PrintWriter</code>:
+        </div>
+        <div>
+            <code>ServletOutputStream</code>: Provides an output stream for sending binary data to the client. A
+            <code>ServletOutputStream</code> object is normally retrieved via the
+            <code>ServletResponse.getOutputStream()</code> method.(Source: <a
+                href="https://docs.oracle.com/javaee/7/api/javax/servlet/ServletOutputStream.html">Oracle Docs</a>)
+            This is an abstract class that the servlet container implements.
+            <br>
+            <code>PrintWriter</code>: Prints formatted representations of objects to a text-output stream. This class
+            implements all of the print methods found in PrintStream. It does not contain methods for writing raw bytes,
+            for which a program should use unencoded byte streams.
+            Source: <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/PrintWriter.html">Oracle
+            Docs</a>
+            <br>
+            - So: to send binary data in a MIME body response, use the ServletOutputStream returned by getOutputStream(). To
+            send character data, use the PrintWriter object returned by getWriter(). To mix binary and text data, for
+            example, to create a multipart response, use a ServletOutputStream and manage the character sections
+            manually.
+        </div>
+
+        <div class="sub-heading">What is a Redirect:</div>
+        <div class="row">
+            <img src="./Snaps/Ch4/Redirect_1.PNG" class="float-left img-fluid"
+                 alt="WritingToAStream"
+                 width="600">
+        </div>
+        <div class="row">
+            <img src="./Snaps/Ch4/Redirect_2.PNG" class="float-left img-fluid"
+                 alt="WritingToAStream"
+                 width="600">
+        </div>
+        <div class="code-snippet">
+            <script src="https://gist.github.com/rgbk21/a00ec19e6297cf42b2945be730ac29de.js"></script>
+        </div>
+
+        //TODO:
+        <div class="row">
+            <img src="./Snaps/Ch4/TODO.PNG" class="float-left img-fluid"
+                 alt="WritingToAStream"
+                 width="800">
+        </div>
+
+        <div class="sub-heading">What is a Request Dispatch:</div>
+        <div>
+            A redirect makes the Client do the work. Whereas a Request Dispatch makes something else on the server do the work.
+            <div class="row">
+                <img src="./Snaps/Ch4/RequestDispatch.PNG" class="float-left img-fluid"
+                     alt="RequestDispatch"
+                     width="600">
+            </div>
+        </div>
+
+
+    </div>
+
 </div>
 
 
