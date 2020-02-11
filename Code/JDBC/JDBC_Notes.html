@@ -15,11 +15,10 @@
             crossorigin="anonymous"></script>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="ApplyingJava_Notes.css">
-    <meta name="keywords" content="Java, Floats, Overflow, Unboxing, Autoboxing">
+    <link rel="stylesheet" type="text/css" href="JDBC_Notes.css">
     <meta name="author" content="Raj Gaurav Ballabh Kumar">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Applying Java - Notes</title>
+    <title>JDBC - Notes</title>
 </head>
 
 <body>
@@ -82,6 +81,7 @@
                     <a class="dropdown-item" href="../../Code/Java_Notes/JavaNotes.html">Java Notes</a>
                     <a class="dropdown-item" href="../../Code/Applying_Java_Notes/ApplyingJava_Notes.html">ApplyingJava
                         Notes</a>
+                    <a class="dropdown-item" href="../../Code/JDBC/JDBC_Notes.html">JDBC Notes</a>
                     <a class="dropdown-item" href="../../Code/Spring/Spring.html">Spring Notes</a>
                     <div class="dropdown-divider"></div>
                 </div>
@@ -291,258 +291,6 @@
             <br>
             //TODO: Example code of how to actually use a listener to listen for an event and take action based on it.
         </div>
-    </div>
-
-    <div class="chapter">Chapter 35: Introducing Servlets</div>
-    <div class="textual-content">
-        <div class="sub-heading">The javax.servlet Package</div>
-        <div>
-            The javax.servlet package contains a number of interfaces and classes that establish the framework in which
-            servlets operate.
-            <table class="table table-bordered table-sm">
-                <thead>
-                <tr>
-                    <th>Interface</th>
-                    <th>Description</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td>Servlet</td>
-                    <td>Declares the life cycle methods for a Servlet</td>
-                </tr>
-                <tr>
-                    <td>ServletConfig</td>
-                    <td>Allows Servlets to get intiialization parameters</td>
-                </tr>
-                <tr>
-                    <td>ServletContext</td>
-                    <td>Enables servlets to log events and access information about their environment</td>
-                </tr>
-                <tr>
-                    <td>ServletRequest</td>
-                    <td>Used to read data froma Client Request</td>
-                </tr>
-                <tr>
-                    <td>Servlet Response</td>
-                    <td>Used to write data to a Client Response</td>
-                </tr>
-                </tbody>
-            </table>
-
-            <table class="table table-bordered table-sm">
-                <thead>
-                <tr>
-                    <th>Class</th>
-                    <th>Description</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td>GenericServlet</td>
-                    <td>Implements the <code>Servlet</code> and the <code>ServletConfig</code> interfaces</td>
-                </tr>
-                <tr>
-                    <td>ServletInputStream</td>
-                    <td>Encapsulates an input stream for reading requests from a client</td>
-                </tr>
-                <tr>
-                    <td>ServletOutputStream</td>
-                    <td>Encapsulates an output stream for writing response to a Client</td>
-                </tr>
-                <tr>
-                    <td>ServletException</td>
-                    <td>Indicates a Servlet error occurred</td>
-                </tr>
-                <tr>
-                    <td>UnavailableException</td>
-                    <td>Indicates a Servlet is Unavailable</td>
-                </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <div class="sub-heading">The Servlet Interface</div>
-        <div>
-            - Defines methods that all servlets must implement.
-            <br>
-            - A servlet is a small Java program that runs within a Web server. Servlets receive and respond to requests
-            from Web clients, usually across HTTP, the HyperText Transfer Protocol.
-            <br>
-            - To implement this interface, you can write a generic servlet that extends <code>javax.servlet.GenericServlet</code>
-            or an
-            HTTP servlet that extends <code>javax.servlet.http.HttpServlet</code>.
-            <br>
-            - This interface defines methods to initialize a servlet, to service requests, and to remove a servlet from
-            the server. These are known as life-cycle methods and are called in the following sequence:
-            <br>
-            1) The servlet is constructed, then initialized with the init method.
-            <br>
-            2) Any calls from clients to the service method are handled.
-            <br>
-            3) The servlet is taken out of service, then destroyed with the destroy method, then garbage collected and
-            finalized.
-            <br>
-            - In addition to the life-cycle methods, this interface provides the <code>getServletConfig</code> method,
-            which the
-            servlet can use to get any startup information, and the <code>getServletInfo</code> method, which allows the
-            servlet to
-            return basic information about itself, such as author, version, and copyright.
-        </div>
-        <br>
-
-        <table class="table table-bordered table-sm">
-            <thead>
-            <tr>
-                <th>Method</th>
-                <th>Description</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <td>void init(ServletConfig sc) throws ServletException</td>
-                <td>Called when the Servlet is initialized. Initialization parameters for the Servlet can be obtained
-                    from the sc. A ServletExce[tion should be thrown if the Servlet cannot be intiialized
-                </td>
-            </tr>
-            <tr>
-                <td>void service(ServletRequest req, ServletResponse res) throws ServletException, IOException</td>
-                <td>Called to process a request from the Client. The request from the clint can be read from req, the
-                    response to the client can be written to res. An exception is generated if if a servlet or IO
-                    problem occurs.
-                </td>
-            </tr>
-            <tr>
-                <td>void destroy()</td>
-                <td>Called when the Servlet is unloaded from the memory</td>
-            </tr>
-            <tr>
-                <td>String getServletInfo()</td>
-                <td>Returns a String describing the Servlet</td>
-            </tr>
-            <tr>
-                <td>ServletConfig getServletConfig()</td>
-                <td>Returns a ServletConfig object that contains any initialization parameters</td>
-            </tr>
-            </tbody>
-        </table>
-
-        <div class="sub-heading">The ServletConfig Interface</div>
-        <div>
-            - A servlet configuration object used by a servlet container to pass information to a servlet during
-            initialization.
-
-        </div>
-
-        <div class="sub-heading">The ServletContext Interface</div>
-        <div>
-            - The <code>ServletContext</code> object is contained within the <code>ServletConfig</code> object, which
-            the Web server provides the servlet when the servlet is initialized.
-            <br>
-            - This interface defines a set of methods that a servlet uses to communicate with its servlet container, for
-            example, to get
-            the MIME type of a file, dispatch requests, or write to a log file.
-            <br>
-            - There is one context per "web application" per Java Virtual Machine. (A "web application" is a collection
-            of
-            servlets and content installed under a specific subset of the server's URL namespace such as /catalog and
-            possibly installed via a .war file.
-        </div>
-
-        <div class="sub-heading">The ServletRequest Interface</div>
-        <div>
-            - Defines an object to provide client request information to a servlet.
-            <br>
-            - The servlet container creates a ServletRequest object and passes it as an argument to the servlet's
-            service method.
-            <br>
-            - A ServletRequest object provides data including parameter name and values, attributes, and an input
-            stream.
-            Interfaces that extend <code>ServletRequest</code> can provide additional protocol-specific data (for
-            example, HTTP data
-            is provided by <code>HttpServletRequest</code>.
-        </div>
-
-        <div class="sub-heading">The ServletResponse Interface</div>
-        <div>
-            - Defines an object to assist a servlet in sending a response to the client.
-            <br>
-            - The servlet container creates a <code>ServletResponse</code> object and passes it as an argument to the
-            servlet's service method.
-            <br>
-            - To send binary data in a MIME body response, use the <code>ServletOutputStream</code> returned by <code>getOutputStream()</code>.
-            To send character data, use the <code>PrintWriter</code> object returned by <code>getWriter()</code>. To mix
-            binary and text data, for example, to create a multipart response, use a <code>ServletOutputStream</code>
-            and manage the character sections manually.
-        </div>
-
-        <div class="sub-heading">The GenericServlet Class</div>
-        <div>
-            - Defines a generic, protocol-independent servlet. To write an HTTP servlet for use on the Web, extend
-            <code>HttpServlet</code> instead.
-            <br>
-            - <code>GenericServlet</code> implements the <code>Servlet</code> and <code>ServletConfig</code> interfaces.
-            .
-        </div>
-
-        <div class="sub-heading">The javax.servlet.http Package</div>
-        <div>
-            - The preceding examples have used the classes and interfaces defined in javax.servlet. However, when
-            working
-            with HTTP, you will normally use the interfaces and classes in <code>javax.servlet.http</code>.
-            <br>
-            <table class="table table-bordered table-sm">
-                <thead>
-                <tr>
-                    <th>Interface</th>
-                    <th>Description</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td>HttpServletRequest</td>
-                    <td>Extends the <code>ServletRequest</code> interface to enable servlets to read data from the HTTP
-                        Request
-                    </td>
-                </tr>
-                <tr>
-                    <td>HttpServletResponse</td>
-                    <td>Extends the <code>ServletResponse</code> interface to enable servlets to write data to an HTTP
-                        response
-                    </td>
-                </tr>
-                <tr>
-                    <td>HttpSession</td>
-                    <td>Provides a way to identify a user across more than one page request or visit to a Web site and
-                        to store information about that user.
-                    </td>
-                </tr>
-                </tbody>
-            </table>
-
-            <table class="table table-bordered table-sm">
-                <thead>
-                <tr>
-                    <th>Class</th>
-                    <th>Description</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td>Cookie</td>
-                    <td>Allows state information to be stored ona Client machine
-                    </td>
-                </tr>
-                <tr>
-                    <td>HttpServlet</td>
-                    <td>Provides methods to handle HTTP requests and responses.
-                    </td>
-                </tr>
-                </tbody>
-            </table>
-
-        </div>
-
     </div>
     <hr>
     <div id="head-first">
@@ -1297,8 +1045,7 @@
             Source: <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/io/PrintWriter.html">Oracle
             Docs</a>
             <br>
-            - So: to send binary data in a MIME body response, use the ServletOutputStream returned by
-            getOutputStream(). To
+            - So: to send binary data in a MIME body response, use the ServletOutputStream returned by getOutputStream(). To
             send character data, use the PrintWriter object returned by getWriter(). To mix binary and text data, for
             example, to create a multipart response, use a ServletOutputStream and manage the character sections
             manually.
@@ -1328,8 +1075,7 @@
 
         <div class="sub-heading">What is a Request Dispatch:</div>
         <div>
-            A redirect makes the Client do the work. Whereas a Request Dispatch makes something else on the server do
-            the work.
+            A redirect makes the Client do the work. Whereas a Request Dispatch makes something else on the server do the work.
             <div class="row">
                 <img src="./Snaps/Ch4/RequestDispatch.PNG" class="float-left img-fluid"
                      alt="RequestDispatch"
