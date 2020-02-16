@@ -686,7 +686,12 @@
             <code>getAttribute()</code>, <code>getAttributeNames()</code>, and <code>removeAttribute()</code> methods of
             <code>HttpSession</code> manage these bindings. Session state is shared by all servlets that are associated
             with a client.
+        </div>
 
+        <div class="row">
+            <img src="./Snaps/Notatbility.png" class="center-block img-fluid"
+                 alt="Step1"
+                 width=100%>
         </div>
 
 
@@ -704,7 +709,10 @@
         <br>
         <a href="#Ch3">Chapter 3: Mini MVC Tutorial</a>
         <br>
-        <a href="#Ch4">Chapter 4: Being a Servlet</a>
+        <a href="#Ch4">Chapter 4: Request and Response - Being a Servlet</a>
+        <br>
+        <a href="#Ch4">Chapter 5: Attributes and Listeners - Being a Servlet</a>
+
     </div>
     <div id="Ch1" class="chapter">Chapter 1: Why use Servlets and JSPs</div>
     <div class="textual-content">
@@ -730,7 +738,7 @@
             <li><b>Web Client</b>:
                 Both the human and the browser application (Mozilla, Chrome) being used are referred to as the Web
                 Client. A
-                web browser can communicate with the web server. It can interpret the HTML code that is send as a part
+                web browser can communicate with the web server. It can interpret the HTML code that is sent as a part
                 of
                 the server's response and render that web page. Hence a Web Client (browser) lets the user request
                 something
@@ -747,7 +755,7 @@
                 </div>
             </li>
             <li><b>HTTP</b>: Most of the conversations held on the web between clients and servers are held using HTTP
-                Protocol, which allows for simple request- response type conversations. The client sends an
+                Protocol, which allows for simple request-response type conversations. The client sends an
                 <code>HTTP Request</code> and the Server responds with a <code>HTTP Response</code>.
                 <br>
                 HTTP runs on top of TCP/IP. The structure of and HTTP conversation is a simple Request/Response.
@@ -759,7 +767,8 @@
                         methods.
                         <ul>
                             <li><code>GET</code>: Gets a resource (HTML page, image, file,..) from the server and sends
-                                it back to the Client. You can also send some data with a <code>GET</code> request, but
+                                it back to the Client. You can also send some data (from the Client to the Server) with
+                                a <code>GET</code> request, but
                                 this is not recommended. Firstly, because the number of characters that are sent via a
                                 <code>GET</code> request are limited and secondly all the data sent in a
                                 <code>GET</code> request is visible in the URL. The "?" separates the path and the
@@ -803,66 +812,67 @@
                 <code>&lthtml&gt&lt/html&gt </code> that the client then renders as the HTML page that we finally see.
                 <br>
             </li>
-            <b>All the pieces in one page:</b>
-            <div class="row">
-                <img src="./Snaps/All-The-Pieces.PNG" class="float-left img-fluid" alt="All-The-Pieces"
-                     width="500">
-            </div>
-            <b>What is a URL</b>:
-            <div class="row">
-                <img src="./Snaps/Whta_Is_URL.PNG" class="float-left img-fluid" alt="What_Is_URL"
-                     width="500">
-            </div>
-            <div>
-                <b>What is a TCP Port</b>:
-                <br>
-                A TCP port is a 16-bit number that uniquely identifies the software that is running
-                on the hardware. They are NOT physical ports on a system. They are just numbers representing an
-                applications. As per the standard, the HTTP Server Software runs on Port 80. Without port numbers, the
-                Server would have no way of telling which application/software a Client wants to connect to.
-                <br>
-                - There are a bunch of other ports that are pre-defined to connect to specific services.
-            </div>
-            <div>
-                <b>Two things the Server won't do on its own:</b>
-                <ul>
-                    <li>Dynamic Content: The Web Server Application serves only static pages, but a spearate "helper"
-                        application that the web server can communicate with can build non-static, just-in-time web
-                        pages.
-                        Just-in-time web pages do not exist before the request comes in. Once the request comes in, the
-                        helper app "writes" the HTML and the web server sends the page back to the Client as if it were
-                        a
-                        static web page.
-                    </li>
-                    <li>Saving data on the Server: A WEb Server cannot process form data. When the web server sees a
-                        request
-                        for a helper app, it assumes that all of the parameters are emant for the Helper app and hence
-                        passes all of the parameters to it
-                    </li>
-                </ul>
-            </div>
-            <div>
-                <b>What is a Servlet? And what is JSP?</b>
-                <br>
-                - The Helper App in Java is known as a Servlet. So a Servlet is just some Java code. But when the web
-                server
-                calls the helper Servlet, it expects HTML code in return. This is done by using using the <code>PrintWriter.println()</code>
-                method. The HTML code that is to be returned to the web server is included as a <code>String</code> type
-                argument in the <code>println()</code> method. As you can hope, stuffing properly formatted HTML tags
-                into
-                the <code>println()</code>is not a viable solution. For eg. you will have to manually escape every quote
-                character (") because Java treats them as end of string character. And HTML happens to use a ton of
-                quotes
-                to specify the attribute values and what not.
-                <br>
-                - To solve this problem, JSPs were introduced. This allows us to add Java code to HTML instead of
-                writing
-                HTML code in a Java class. The JSP page contains java variables that calls the main Java code and
-                creates
-                the completed HTML page as a JIT web page.
-                <br>
-            </div>
         </ul>
+        <b>All the pieces in one page:</b>
+        <div class="row">
+            <img src="./Snaps/All-The-Pieces.PNG" class="float-left img-fluid" alt="All-The-Pieces"
+                 width="500">
+        </div>
+        <b>What is a URL</b>:
+        <div class="row">
+            <img src="./Snaps/Whta_Is_URL.PNG" class="float-left img-fluid" alt="What_Is_URL"
+                 width="500">
+        </div>
+        <div>
+            <b>What is a TCP Port</b>:
+            <br>
+            A TCP port is a 16-bit number that uniquely identifies the software that is running
+            on the hardware. They are NOT physical ports on a system. They are just numbers representing an
+            applications. As per the standard, the HTTP Server Software runs on Port 80. Without port numbers, the
+            Server would have no way of telling which application/software a Client wants to connect to.
+            <br>
+            - There are a bunch of other ports that are pre-defined to connect to specific services.
+        </div>
+        <div>
+            <b>Two things the Server won't do on its own:</b>
+            <ul>
+                <li>Dynamic Content: The Web Server Application serves only static pages, but a separate "helper"
+                    application that the web server can communicate with can build non-static, just-in-time web
+                    pages.
+                    Just-in-time web pages do not exist before the request comes in. Once the request comes in, the
+                    helper app "writes" the HTML and the web server sends the page back to the Client as if it were
+                    a
+                    static web page.
+                </li>
+                <li>Saving data on the Server: A Web Server cannot process form data. When the web server sees a
+                    request
+                    for a helper app, it assumes that all of the parameters are meant for the Helper app and hence
+                    passes all of the parameters to it.
+                </li>
+            </ul>
+        </div>
+        <div>
+            <b>What is a Servlet? And what is JSP?</b>
+            <br>
+            - The Helper App in Java is known as a Servlet. So a Servlet is just some Java code. But when the web
+            server
+            calls the helper Servlet, it expects HTML code in return. This is done by using using the <code>PrintWriter.println()</code>
+            method. The HTML code that is to be returned to the web server is included as a <code>String</code> type
+            argument in the <code>println()</code> method. As you can hope, stuffing properly formatted HTML tags
+            into
+            the <code>println()</code>is not a viable solution. For eg. you will have to manually escape every quote
+            character (") because Java treats them as end of string character. And HTML happens to use a ton of
+            quotes
+            to specify the attribute values and what not.
+            <br>
+            - To solve this problem, JSPs were introduced. This allows us to add Java code to HTML instead of
+            writing
+            HTML code in a Java class. The JSP page contains java variables that calls the main Java code and
+            creates
+            the completed HTML page as a JIT web page.
+            <br>
+        </div>
+
     </div>
     <div id="Ch2" class="chapter">Chapter 2: Web App Architecture</div>
     <div class="textual-content">
@@ -900,7 +910,7 @@
                     control, you do not have to worry about the resource management.
                 </li>
                 <li>
-                    <b>Multithreading Support:</b> The COntianer automatically creates a new Java thread for every
+                    <b>Multithreading Support:</b> The Container automatically creates a new Java thread for every
                     servlet request that it receives. When the Servlet's done running the HTTP <code>service()</code>
                     method for that Client's request, the thread completes (dies). But you are still responsible for
                     Thread safety and other synchronization issues. It's just that the work involved in creating and
@@ -1002,7 +1012,7 @@
                 <li>Flexibility: We can change the path of the .class file without breaking the path of every file that
                     referenced this class file
                 </li>
-                <li>Security: We do not want the Client ot know the internal directory structure of the Server.</li>
+                <li>Security: We do not want the Client to know the internal directory structure of the Server.</li>
             </ul>
         </div>
 
@@ -1017,10 +1027,12 @@
             own <i>internal deployment name</i>, and the other to map our own <i>internal deployment name</i> to the
             fully-qualified <i>class-name</i>
             <br>
+            <b>//TODO:</b> Where is the DD file stored in the IntelliJ project that we created?
+            <br>
             - The two DD elements for URL Mappings are:
             <ul>
                 <li><code>&ltservlet&gt</code>: maps internal name to fully-qualified class name</li>
-                <li><code>&ltservlet-mapping&gt</code>: maps internal name public URL name</li>
+                <li><code>&ltservlet-mapping&gt</code>: maps internal name to public URL name</li>
             </ul>
             - DD also helps us to customize other aspects of our web application like adding security roles, error
             pages, tag libraries. All this can be done without changing the source code.
@@ -1035,7 +1047,7 @@
         </div>
 
         <div>
-            <b>What is MVC: Media-View-Controller</b>
+            <b>What is MVC: Model-View-Controller</b>
             <br>
             - The essence of MVC is that you separate the business logic from the presentation, but put something in <i>between</i>
             them so that the business logic can stand on its own as a reusable Java class, and doesn't have to know
@@ -1071,15 +1083,15 @@
                  width="650">
         </div>
         <div>
-            <b>How doe J2EE fit into all of this?</b>
+            <b>How does J2EE fit into all of this</b>
             <br>
             The Java 2 Enterprise Edition is kind of a super-spec - it incorporates other specifications, including the
             Servlets 2.4 Spec and the JSP 2.0 spec. That's for the Web Container. But the J2EE 1.4 spec also includes
             the Enterprise JavaBean 2.1 specification, for the EJB Container. In other words, the web container is for
-            the <i>web</i> components (servlets and JSPs) whereas the EJB COntainer is for the <i>business</i>
+            the <i>web</i> components (servlets and JSPs) whereas the EJB Container is for the <i>business</i>
             components.
             <br>
-            - A fully-compliant J2EE server must have <i>both</i> a web Container abd an EJB Container (plus other
+            - A fully-compliant J2EE server must have <i>both</i> a web Container and an EJB Container (plus other
             things including a JNDI and JMS implementation). Tomcat is just a web Container!(?). It is still compliant
             with the portions of J2EE spec that address the web container.
         </div>
@@ -1161,8 +1173,8 @@
             <a href="#app_architecture"><b>Step 5</b></a>: The Container finds the correct Servlet and passes the
             request to the Servlet. This class
             acts as the Controller, calling the Model <code>BeerExpert</code> for the business logic, and the View
-            <code>result.jsp</code> for the reponse.
-            <div class="code-snippet">
+            <code>result.jsp</code> for the response.
+            <div id="setAttributeExample" class="code-snippet">
                 <script src="https://gist.github.com/rgbk21/94dbb35d88a6d04c4f1f44c75f1e8d18.js"></script>
             </div>
             <br>
@@ -1192,7 +1204,7 @@
         </div>
 
     </div>
-    <div id="Ch4" class="chapter">Chapter 4: Being a Servlet</div>
+    <div id="Ch4" class="chapter">Chapter 4: Request and Response - Being a Servlet</div>
     <div class="textual-content">
         - In the <a href="#app_architecture">previous chapter</a> we looked at the Container's overall role in the
         Servlet's life. In this Chapter we look at the Servlet's life in more detail.
@@ -1342,7 +1354,7 @@
                 <script src="https://gist.github.com/rgbk21/b143430a62b757498607e22deabee83f.js"></script>
             </div>
             And the corresponding Servlet class would look like this:
-            <div class="code-snippet">
+            <div id="usingSetAttribute" class="code-snippet">
                 <script src="https://gist.github.com/rgbk21/327108fb2c388821c78d3d711e7ff2d2.js"></script>
             </div>
         </div>
@@ -1486,6 +1498,392 @@
 
 
     </div>
+
+    <div id="Ch5" class="chapter">Chapter 5: Attributes and Listeners - Being a Servlet</div>
+    <div class="textual-content">
+        <div class="sub-heading">What are init-parameters</div>
+        <div>
+            - Servlets can have initialization parameters. We use the <code>&ltinit-param&gt</code> element to specify
+            the name-value pairs. Note that the <code>&ltinit-param&gt&lt/init-param&gt</code> should be inside the
+            <code>servlet</code> element that you want to initialize with the particular value.
+            <br>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/33e00eee38b895a4439b0f2b1c78c194.js"></script>
+            </div>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/064f4d606995c28bf84e00f044d46a7e.js"></script>
+            </div>
+            - When the Container initializes a Servlet, it makes a unique <code>ServletConfig</code> for the Servlet.
+            The Container reads the servlet init parameters from the DD and gives them to the <code>ServletConfig</code>,
+            and then passes the <code>ServletConfig</code> to the servlet's <code>init</code> method.
+            <br>
+            - Note that the Servlet init parameters are read only once - when the Container initializes the Servlet.
+            Once the parameters are in the <code>ServletConfig</code> they won't be read again until/unless you redeploy
+            the servlet.
+        </div>
+        <div class="sub-heading">What are the functions of a <code>ServletConfig</code></div>
+        <div>
+            - A servlet configuration object used by a servlet container to pass information to a servlet during
+            initialization.
+            <br>
+            - It has the following methods:
+            <br>
+            <table class="table table-bordered table-sm">
+                <thead>
+                <tr>
+                    <th>Method</th>
+                    <th>Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>String getInitParameter(String name)</td>
+                    <td>Gets the value of the initialization parameter with the given name.</td>
+                </tr>
+                <tr>
+                    <td>Enumeration&ltString&gt getInitParameterNames()</td>
+                    <td>Returns the names of the servlet's initialization parameters as an <code>Enumeration</code> of
+                        String objects, or an empty <code>Enumeration</code> if the servlet has no initialization
+                        parameters.
+                    </td>
+                </tr>
+                <tr>
+                    <td>ServletContext getServletContext()</td>
+                    <td>Returns a reference to the <code>ServletContext</code> in which the caller is executing. Same as
+                        running <code>this.getServletContext</code></td>
+                </tr>
+                <tr>
+                    <td>String getServletName()</td>
+                    <td>Returns the name of this servlet instance.</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="sub-heading">How can a JSP get the Servlet init parameters</div>
+        <div>
+            - One way is to store the init parameters using the <code>request.setAttribute</code> like we saw <a
+                href="#setAttributeExample">previously</a>. <code>request.setAttribute</code> was used to pass a
+            name/value pair from the Controller to the JSP, where the value could be any object.
+            <br>
+            - The problem is that setting a request attribute works but only for the JSP to which you forwarded the
+            request. The email address is something that might be used from all over the application. If you use the
+            <code>init-param</code> for this purpose, you will have to configure them in the DD for <i>every</i>
+            servlet, and
+            then have <i>every</i> servlet make them available to the JSP. And then if the email address changes, you
+            will have to make the change in the DD for <i>every</i> Servlet again.
+            <br>
+            - This can avoided by using a <code>&ltcontext-param&gt</code> instead of an <code>&ltinit-param&gt</code>.
+        </div>
+
+        <div class="sub-heading">What are <code>&ltcontext-param&gt</code></div>
+        <div>
+            - Context init parameters work just like servlet init parameters except that context parameters are
+            available
+            to the <i>entire</i> web-app, not just a single servlet. So that means <i>every</i> servlet and JSP in the
+            app automatically has access to the context init parameters. Also, this way when the value changes, we have
+            to change it in only one place.
+            <br>
+            - And that one place is in here..do note that the <code>&ltcontext-param&gt</code> is for the whole app and
+            hence it is not nested inside an individual <code>&ltservlet&gt</code> element.
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/91216f9e61e77741b1a721a63ecd56e0.js"></script>
+            </div>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/7c42c96e7b0f8a067068a96bb7c329d6.js"></script>
+            </div>
+        </div>
+
+        <div class="sub-heading">Differences between the servlet init param and context init params</div>
+        <div>
+            <div>
+                - Remember that there is only one <code>ServletConfig</code> for the entire web-app and all the other
+                parts of the web app share it.
+                <br>
+                - Each Servlet in the app, however, has its own <code>ServletConfig</code>.
+                <br>
+                - The Web Initialization proceeds as follows:
+                <ul>
+                    <li>Container reads the DD and creates a name/value String pair for each
+                        <code>&ltcontext-param&gt</code></li>
+                    <li>Container creates a new instance of the <code>ServletContext</code></li>
+                    <li>Container gives the <code>ServletContext</code> a reference to each name/value pair of the
+                        context init parameters
+                    </li>
+                    <li>The Container makes the ServletContext available to each Servlet and JSP. Hence, <i>every</i>
+                        servlet and JSP deployed as part of a single web appp has access to the same <code>ServletContext</code>
+                    </li>
+                </ul>
+                - If your app is distributed across multiple servers (probably in a clustered environment), your web app
+                really COULD have more than one <code>ServletContext</code>. A <code>ServletContext</code> is one per
+                app but only if the app is in a single JVM. In a distributed environment you will have one <code>ServletContext</code>
+                per JVM. In this case, to create a "Global" parameter, you will use a Database instead.
+                <br>
+                - A Context-Init parameter can also be given the same name as a Servlet-Init parameter. This is
+                because there is no name space conflict since you get the parameters through 2 different objects:
+                ServletConfig and ServletContext.
+                <br>
+                - If either the context-init-param or the Servlet-init-param are changed, the change will be visible
+                only after the web app is redeployed. You cannot change these values during runtime. There is no
+                setInitParameter().
+            </div>
+            <br>
+            <div class="row">
+                <img src="./Snaps/Ch5/Servlet-Context.png" class="float-left img-fluid"
+                     alt="Diff-servletInit-contextInit"
+                     width="1400">
+            </div>
+            <div>
+                There are 2 ways to get a <code>ServletContext</code> object:
+                <ul>
+                    <li><code>this.getServletConfig().getServletContext.getInitParameter(String name)</code></li>
+                    <li><code>this.getServletContext.getInitParameter(String name)</code></li>
+                </ul>
+                - A Servlet's <code>ServletConfig</code> object always holds a reference to the
+                <code>ServletContext</code> for that servlet.
+                <br>
+                - In a servlet, the only time you need to go through your <code>ServletConfig</code> to get to your
+                <code>ServletContext</code> is if you are in a Servlet class that does not extend the
+                <code>HttpServlet</code> or <code>GenericServlet</code>. For example, in a JSP the second option won't
+                work and you will have to use the first one instead.
+            </div>
+        </div>
+        <div class="sub-heading">The <code>ServletContextListener</code></div>
+        <div>
+            - Suppose you wanted to set up a connection to a database at the initialization of your web app. You could
+            store the name of the database as a <code>&ltcontext-param&gt</code> in DD. But remember that the DD can
+            store only name/value pairs, where value has to be a String. So you could store the name of the database, as
+            a name/value pair. but then how would you initialize the Connection and make it available to all of your
+            app? For this you need some code that listens to the creation of the <code>ServletContext</code> and runs
+            some code based on the lifecycle changes of the <code>ServletContext</code> class. This is what the <code>ServletContextListener</code>
+            is used for.
+            <br>
+            - We make a separate class that is neither a Servlet, nor a JSP. It listens to two key events in a <code>ServletContext</code>'s
+            lifecycle: creation and destruction.
+            <br>
+            - This separate object:
+            <ul>
+                <li>Gets notified when the Context is initialized</li>
+                <li>Gets the <code>&ltcontext-param&gt</code> from the <code>ServletContext</code></li>
+                <li>Use the init parameter lookup name to make a database connection</li>
+                <li>Store the database connection as an attribute, so that all parts of the web app can access it</li>
+                <li>Gets notified when the Context is destroyed</li>
+            </ul>
+            - The goal is to use the init-parameter to create a single object that all parts of the app will share.
+            <div class="code-snippet">
+                Step 1) Creating the Listener Class: The ServletContextEvent has just a single method - <code>getServletContext()</code>
+                that returns the <code>ServletContext</code> that changed.
+                <script src="https://gist.github.com/rgbk21/fbcfb89f17cd60e97230d672c80c2a22.js"></script>
+                Step 2) Creating the Attribute Class: This is just a POJ Class. It's job is to be the attribute value
+                that the <code>ServletContextListener</code> instantiates and sets in the <code>ServletContext</code>,
+                for the Servlet to retrieve.
+                <script src="https://gist.github.com/rgbk21/bf58d8e50b74fb68350d083738d125f4.js"></script>
+                Step 3) Create the Listener as shown in the comments. We never specified that the
+                <code>&ltlistener&gt</code> is supposed to listen for event related to the ServletContext. The Container
+                figures this out automatically by looking at the <code>BeerContextListener</code> class and seeing that
+                it implements the <code>ServletContextListener</code> interface, it knows taht the Listener is supposed
+                to listen for ServletContext events. A listener can implement more than one listener interface. There
+                are several other types of listeners.
+                <script src="https://gist.github.com/rgbk21/9381e628f1a851dd348a7cb9636a83c2.js"></script>
+                Step 4) Testing it all with our Servlet Class. Remember that <code>getAttribute()</code> returns an
+                object. hence, you need to cast the object into the appropriate type.
+                <script src="https://gist.github.com/rgbk21/a1d4227ddb59f660d3e57029635373d2.js"></script>
+            </div>
+
+            - Here is the complete picture:
+            <div class="row">
+                <img src="./Snaps/Ch5/Servlet_Initialization_FullStory.png" class="float-left img-fluid"
+                     alt=""
+                     width="1600">
+            </div>
+            - And there can be different types of listeners triggering on different types of events:
+            <div class="row">
+                <img src="./Snaps/Ch5/Listeners.PNG" class="float-left img-fluid"
+                     alt=""
+                     width="600">
+            </div>
+            <b>//TODO</b>: Something about <code>HttpSessionBindingListener</code>
+        </div>
+
+        <div class="sub-heading">What is an attribute</div>
+        <div>
+            - An attribute is an object bound into one of three other Servlet API objects: <code>ServletContext</code>,
+            <code>HttpServletRequest</code> (<code>ServletRequest</code>), or <code>HttpSession</code>
+            <br>
+            - An attribute is simply a name/value pair (where the name is a String and the value is an object) in a map
+            instance variable.
+            <br>
+            - In reality, we do not care how it is implemented - all we really care is about the <i>scope</i> in which
+            the attribute exists. In other words, <i>who</i> can see it and <i>how long</i> does it live.
+        </div>
+
+        <div class="sub-heading">What is the difference between an attribute and a parameter</div>
+        <div>
+            - An attribute is not a parameter: <a
+                href="https://stackoverflow.com/questions/5243754/difference-between-getattribute-and-getparameter">StackOverflow
+            Source</a>
+            <br>
+            - We use <code>request.getParameter()</code> to extract request parameters (i.e. data sent by posting a html
+            form). The <code>request.getParameter()</code> always returns String value and the data comes from client.
+            The exception to this is <code>ServletContext</code> and the <code>ServletConfig</code> init-parameters
+            which are string parameters that are configured in web.xml and exist on the server.
+            <div class="row">
+                <img src="./Snaps/Ch5/Diff_betn_Attribute_And_Parameter.PNG" class="float-left img-fluid"
+                     alt="Diff_betn_Attribute_And_Parameter"
+                     width="700">
+            </div>
+
+            <div class="row">
+                <img src="./Snaps/Ch5/All_Attributes.png" class="float-left img-fluid"
+                     alt="All_Attributes"
+                     width="1800">
+            </div>
+        </div>
+
+        <div class="sub-heading">What is the difference between the Context, Session, and Request Scopes</div>
+        <div>
+            - <b>Context Attributes: </b> A <code>ServletContext</code> attribute is an object bound into a context
+            through the <code>ServletContext.setAttribute()</code>
+            method and which is available to ALL Servlets (thus JSP) in that context, or to other contexts via the
+            <code>getContext()</code> method. By definition a context attribute exists locally in the VM where they were
+            defined. So, they're unavailable on distributed applications.
+            <br>
+            - <b>Session Attributes: </b>Session attributes are bound to a Session, as a means to provide state to a set
+            of related HTTP requests.
+            Session attributes are available ONLY to those Servlets which join the session. They're also unavailable to
+            different JVMs in distributed scenarios. Objects can be notified when they're bound/unbound to the Session
+            implementing the <code>HttpSessionBindingListener</code> interface.
+            <br>
+            - <b>Request Attributes: </b>Request attributes are bound to a specific request object, and they last as far
+            as the request is resolved
+            or while it keeps being dispatched from Servlet to Servlet. They're used more as communication channel
+            between Servlets via the
+            <code>RequestDispatcher</code> Interface (since you can't add Parameters...) and by the container. Request
+            attributes are very useful in web apps when you must provide setup information between information providers
+            and the information presentation layer (a JSP) that is bound to a specific request and need not be available
+            any longer, which usually happens with sessions without a rigorous control strategy.
+            <br>
+            - <a href="https://stackoverflow.com/a/15433931/8742428">StackOverflow Source</a>
+            <br>
+            - These 3 attribute scopes are handled by the <code>ServletContext</code>,
+            <code>HttpSession</code>, and <code>ServletRequest</code> interfaces. The API methods for these attributes
+            are the same in every interface:
+            <ul>
+                <li><code>Object getAttribute(String name)</code></li>
+                <li><code>void setAttribute(String name, Object value)</code></li>
+                <li><code>void removeAttribute(String name)</code></li>
+                <li><code>Enumeration&ltString&gt getAttributeNames(String name)</code></li>
+            </ul>
+            <div class="row">
+                <img src="./Snaps/Ch5/Methods_Scopes.PNG" class="float-left img-fluid"
+                     alt="All_Attributes"
+                     width="800">
+            </div>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/6ea4c632aa3c983cafffe29be386f62f.js"></script>
+            </div>
+        </div>
+
+        <div class="sub-heading">Context Scope isn't Thread-Safe. Neither is Session Scope.</div>
+        <div>
+            - Everyone in the app has access to the Context Attributes. That means multiple servlets. And multiple
+            servlets might have multiple threads, since requests are concurrently handled, each in a separate thread.
+            This happens regardless of whether the requests are coming in from the same or different Servlets.
+            <br>
+            - In order to make them thread-safe, you need an <a
+                href="https://docs.oracle.com/javase/tutorial/essential/concurrency/locksync.html">intrinsic lock</a> on
+            the ServletContext object. Every object has an intrinsic lock associated with it. By convention, a thread
+            that needs exclusive and consistent access to an object's fields has to acquire the object's intrinsic lock
+            before accessing them, and then release the intrinsic lock when it's done with them. A thread is said to own
+            the intrinsic lock between the time it has acquired the lock and released the lock. As long as a thread owns
+            an intrinsic lock, no other thread can acquire the same lock. The other thread will block when it attempts
+            to acquire the lock.
+            <br>
+            - This way everyone accessing the context has to first get the lock on the Context object. This ensures that
+            only one thread is setting and getting the context attribute. But remember that this works only if ALL of
+            the other code that manipulates the same context attribute ALSO synchronizes on the ServletContext. If even
+            part of the code doesn't ask for the lock, then that code is free to hit the context attributes.
+            <br>
+            //TODO: Why not get a lock just on the variable being changed? Instead of getting a lock on the entire
+            ServletContex?
+            <br>
+            //i.e. do: <code>synchronized (this.getServletContext().getAttribute("UserCount"))</code> ?
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/fa755cf00a8810b355a98a26697a087b.js"></script>
+            </div>
+            - Remember that Synchronization causes a lot of overhead and hurts concurrency. Make your synchronized block
+            as small as possible. Get the lock, get in, get what you need, adn get the heckin heck out so that the lock
+            can release and other threads can run that code.
+            <br>
+            - Writing Servlet code:
+            <br>
+            <a href="https://docstore.mik.ua/orelly/xml/jxslt/ch06_05.htm">Thread Safety Tips</a>
+            <br>
+            <a href="https://stackoverflow.com/questions/2551999/why-is-javax-servlet-singlethreadmodel-deprecated">Why
+                is singlethreadmodel deprecated</a>
+        </div>
+
+        <div class="sub-heading">So what even is Thread-Safe</div>
+        <div>
+            - Only Request Scoped attributes and Local variables are Thread-Safe
+            <br>
+            - Everything else is subject ot multi-threaded manipulation unless you do something about it.
+            <br>
+            - Everything else includes:
+            <ul>
+                <li>Context Scoped Attributes</li>
+                <li>Session Scoped Attributes</li>
+                <li>Instance Variables in the Servlet</li>
+                <li>Static Variables in the Servlet</li>
+            </ul>
+            - Note that instance variables are not thread-safe. If you have multiple clients making request to the same
+            servlet, that means multiple threads are running that servlet code. And all of those threads have access to
+            the servlet's instance variables. So instance variables are not thread-safe.
+            <br>
+            - Can you make instance variables thread-safe: No. You should avoid using instance variables in your code.
+            <br>
+            - Then what should you use if you need multiple instances of the Servlet to share something: It's incorrect
+            to say "multiple instances of the Servlet" because there is always just ONE instance of the servlet. One
+            instance. Many threads...
+            <br>
+            - If you want all the threads to access a value, decide which attribute state makes the most sense and store
+            the value in that attribute. Chances are you can solve the problem in one of two ways:
+            <ul>
+                <li>Declare the variable as a local variable inside the service method, rather than as an instance
+                    variable
+                </li>
+                <li>Use an attribute in the most appropriate scope</li>
+            </ul>
+        </div>
+
+        <div class="sub-heading">What is the use of Request Attributes and Request Dispatching</div>
+        <div>
+            - Request attributes make sense when you want some other component of the app to take over all or a part of
+            the request. The controller communicates with the model and gets back the data that the view needs in order
+            to build the response. There is no reason to put the data in a Session or a Context attribute, since it
+            applies <i>only</i> to this request, so we put it in the request scope.
+            <br>
+            - So how do we make another part of the component to take over the request - <code>RequestDispatcher</code>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/a942d8666eccdb9916b499157798c7ec.js"></script>
+            </div>
+            - <code>RequestDispatcher</code>'s have only two methods:
+            <ul>
+                <li><code>forward(ServletRequest request, ServletResponse response)</code></li>
+                <li><code>include(ServletRequest request, ServletResponse response)</code></li>
+            </ul>
+            - You can get a <code>RequestDispatcher</code> in two ways: from the request or from the context. Regardless
+            of where you get it, you ahve to tell it the web component ot which you are forwarding the request.
+            <div class="row">
+                <img src="./Snaps/Ch5/RequestDispatcher.PNG" class="float-left img-fluid"
+                     alt="RequestDispatcher"
+                     width="800">
+            </div>
+        </div>
+
+
+    </div>
+
 
 </div>
 
