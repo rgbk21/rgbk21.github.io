@@ -711,7 +711,10 @@
         <br>
         <a href="#Ch4">Chapter 4: Request and Response - Being a Servlet</a>
         <br>
-        <a href="#Ch4">Chapter 5: Attributes and Listeners - Being a Servlet</a>
+        <a href="#Ch5">Chapter 5: Attributes and Listeners - Being a Servlet</a>
+        <br>
+        <a href="#Ch6">Chapter 6: Session Management - Conversational State</a>
+        <br>
 
     </div>
     <div id="Ch1" class="chapter">Chapter 1: Why use Servlets and JSPs</div>
@@ -874,6 +877,7 @@
         </div>
 
     </div>
+
     <div id="Ch2" class="chapter">Chapter 2: Web App Architecture</div>
     <div class="textual-content">
         <div>
@@ -1096,6 +1100,7 @@
             with the portions of J2EE spec that address the web container.
         </div>
     </div>
+
     <div id="Ch3" class="chapter">Chapter 3: Mini MVC Tutorial</div>
     <div class="textual-content">
         The process for creating a <a
@@ -1204,6 +1209,7 @@
         </div>
 
     </div>
+
     <div id="Ch4" class="chapter">Chapter 4: Request and Response - Being a Servlet</div>
     <div class="textual-content">
         - In the <a href="#app_architecture">previous chapter</a> we looked at the Container's overall role in the
@@ -1597,7 +1603,7 @@
         <div class="sub-heading">Differences between the servlet init param and context init params</div>
         <div>
             <div>
-                - Remember that there is only one <code>ServletConfig</code> for the entire web-app and all the other
+                - Remember that there is only one <code>ServletContext</code> for the entire web-app and all the other
                 parts of the web app share it.
                 <br>
                 - Each Servlet in the app, however, has its own <code>ServletConfig</code>.
@@ -1610,7 +1616,8 @@
                     <li>Container gives the <code>ServletContext</code> a reference to each name/value pair of the
                         context init parameters
                     </li>
-                    <li>The Container makes the ServletContext available to each Servlet and JSP. Hence, <i>every</i>
+                    <li>The Container makes the <code>ServletContext</code> available to each Servlet and JSP. Hence,
+                        <i>every</i>
                         servlet and JSP deployed as part of a single web appp has access to the same <code>ServletContext</code>
                     </li>
                 </ul>
@@ -1881,6 +1888,259 @@
             </div>
         </div>
 
+
+    </div>
+
+    <div id="Ch6" class="chapter">Chapter 6: Session Management - Conversational State</div>
+    <div class="textual-content">
+        <div>
+            Web Servers have no short term memory. As soon as they send you a response, they forget who you are. The
+            next time you make a request, they do not recognize you. In other words, they do not remember what you have
+            requested in the past, and they don't remember what they've sent you in response. Nothing. Sometimes, that's
+            fine. But sometimes you need to keep conversational state with the client across <i>multiple requests</i>. A
+            shopping cart would not work if the client had to make all his choices and check out in a single request.
+        </div>
+        <div class="sub-heading">How do we track the Client's requests over multiple sessions</div>
+        <div>
+            - The objective is to store all the choices that have been made by the Client over multiple requests. There
+            are 3 ways in which this can be accomplished:
+            <ul>
+                <li><b>Use a stateful session enterprise java bean</b>: Make your servlet become a Client to a stateful
+                    session bean, and each time a request comes in we locate that Client's stateful bean. Remember that
+                    for doing this you hosting provider should have full J2EE server with an EJB Container. Tomcat is
+                    just a web container, not a full J2EE container.
+                </li>
+                <li>
+                    <b>Use a Database</b>: Have your hosting provider communicate with a database, like MySQL. Then all
+                    the client's data can be written to or read from the database. The downside is that it is extremely
+                    expensive to do this.
+                </li>
+                <li>
+                    <b>Use an <code>HttpSession</code></b>: We can use an <code>HttpSession</code> to hold the
+                    conversational state over multiple requests - i.e for the <i>entire session</i> with the user.
+                </li>
+            </ul>
+        </div>
+
+        <div class="sub-heading">How does the container know who the Client is</div>
+        <div>
+            - The HTTP Protocol is a Stateless Protocol. This means that the connection between the Client and the
+            Container exists for a <i>single</i> request/response. The Container does not recognize that the Client
+            making the second request is the same Client from a previous request. As far as the Container is concerned,
+            each request is from a new Client.
+            <br>
+            - The Container solves this problem by assigning a unique <code>SessionID</code> to each user.
+            <br>
+            - On the Client's first request, the Container generates a unique session ID and gives it back to the Client
+            with the response. The Client then sends back the session ID with each subsequent request. The Container
+            sees the ID, finds the matching session, and associates the session with the request.
+            <br>
+            - Attributes bound into a session are available to any other servlets that belong to the same <code>ServletContext</code>
+            and handles a request identified as being a part of the same session.
+            <div class="row">
+                <img src="./Snaps/Ch6/Sessions_Flowchart.png" class="float-left img-fluid"
+                     alt="Sessions_Flowchart"
+                     width="1600">
+            </div>
+        </div>
+
+        <div class="sub-heading">How do the Client and the Container exchange the SessionID info</div>
+        <div>
+            - The Container uses <code>Cookie</code>s to do this.
+            <br>
+            - All you have to do is tell the Container that you want to create or use a Session. The Container takes
+            care of the rest. The Container generates the SessionID, creates a new <code>Cookie</code> object, stuffs
+            the <code>SessionID</code> into the <code>Cookie</code> object, sets the Cookie as a part of the response.
+            On subsequent
+            requests, the Container gets the <code>SessionID</code> from the Cookie in the request, matches the <code>SessionID</code>
+            with an existing session, and associates that session with the current request.
+            <br>
+            - The <code>HttpSession session = request.getSession()</code> does the following:
+            <br>
+            <code>if(the request contains the SessionID object)</code>
+            <br>
+            <code> find the Session matching that ID</code>
+            <br>
+            <code>else if (there is no SessionID Cookie OR there is no session matching the current SessionID)</code>
+            <br>
+            <code> create a new session</code>
+
+        </div>
+
+        <div class="sub-heading">How to check if the Session already exists</div>
+        <div>
+            - The no-args <code>HttpSession session = request.getSession()</code> method returns a session regardless of
+            whether there is a
+            pre-existing session or not. You can check if it is a new session by using <code>session.isNew()</code>
+            method.
+            <br>
+            - <code>HttpSession session = request.getSession(false)</code> will return <code>null</code> if there is no
+            pre-existing session for the Client. You can use it if you have a scenario in which the servlet wants to use
+            only a previously created session.
+            <br>
+            - There are couple of points that you were confused about that need to be clarified:
+            <br>
+            - You can check the cookies that are stored in the browser on Chrome - Inspect - Application - Cookies
+            <br>
+            Here you will see the Cookies with the name <code>JSESSION ID</code>. This is the same id as the <code>sessionId</code>.
+            While testing, if you see your app behaving abnormally (session seems to be behaving weirdly), first clear
+            the cookies in your browser (Ctrl + Shift + Del) and then retry. If that does not work, go into your app and
+            by inspecting elements, manually delete the cookies.
+            <br>
+            - Note that a sessionId is assigned to you the moment you first log in into the website. In the dummy
+            example
+            that we had, the first page that the user was reaching was a index page. The <code>doGet</code> method was
+            activated only when the user clicked a button on the index page to get the form. The point is that, line 4
+            of the below code will always contain a valid session.
+            <br>
+            - Check this <a
+                href="https://stackoverflow.com/questions/19476154/confusion-with-the-httpsession-isnew-method-behavior">SO
+            Post explaining things</a>.
+            <br>
+            - So in order to kill that session, we first call <code>session.invalidate</code>. Remember that this will
+            not set the <code>session</code> to <code>null</code> as <a
+                href="https://stackoverflow.com/questions/24677949/why-session-is-not-null-after-session-invalidate-in-java">explained
+            here in SO</a>. So we get the session again, as on Line 8. This time the Container does not find any
+            existing sessions and the <code>session</code> variable is in fact null. When we run the code, now, the
+            <code>if (session == null) </code> block is executed.
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/3b7165571d0253ffe96051ce0879d268.js"></script>
+            </div>
+        </div>
+
+        <div class="sub-heading">What if the Client has disabled Cookies</div>
+        <div>
+            - If the Client does not use Cookies, you can use URL rewriting as a backup. URL rewriting
+            allows the sessionID to be added to the end of the URL (instead of being sent as a Cookie).
+            <br>
+            - URL rewriting kicks in only if cookies fail and you have explicitly encoded your URLs.
+            <br>
+            - Read up on the <code>encodeURL</code> method
+            <br>
+            - When a Container sees a call to <code>getSession</code>, and the Container does not have the SessionID
+            associated with the Client's request, the Container knows that it must attempt to set up a new session with
+            the Client. At this point the Container does not know whether the Cookies will work or not. Hence for the
+            first response back to the Client, the Container tries both, Cookies <i>and</i> URL Rewriting.
+        </div>
+
+        <div class="sub-heading">What are the key <code>HttpSession</code> methods</div>
+        <div>
+            <div class="row">
+                <img src="./Snaps/Ch6/HttpSessionMethods.PNG" class="float-left img-fluid"
+                     alt="HttpSessionMethods"
+                     width="800">
+            </div>
+        </div>
+
+
+        <div class="sub-heading">How does a Container know when it is safe to destroy Sessions</div>
+        <div>
+            - There are 3 ways that a Session can die:
+            <ul>
+                <li>It times out</li>
+                <li>You call <code>invalidate()</code> on the Session object</li>
+                <li>The application goes down or crashes</li>
+            </ul>
+            <br>
+            a) <b>Setting Session Timeout</b>: There are two ways to set the session timeout
+            <ul>
+                <li><b>Setting Session Time out for a specific session</b>: Use this if you want to change the
+                    session-timout value for a particular session instance without affecting the timeout length for any
+                    other sessions in the app.
+                    <br>
+                    <code>session.setMaxInactiveInterval(20*60)</code>
+                    <br>
+                    Only the session on which you call the method will be affected. Note that the argument to the method
+                    is in seconds.
+                </li>
+                <li><b>Configuring Session Timeout in the DD:</b> This has the same effect as calling <code>setMaxInactiveInterval()</code>
+                    on every session that is created.
+                    <div class="code-snippet">
+                        <script src="https://gist.github.com/rgbk21/9da74048e8db7b9f15708bcb3e8cce48.js"></script>
+                    </div>
+                </li>
+            </ul>
+            b) <b>Calling <code>invalidate()</code></b>: Invalidates this session then unbinds any objects bound to it.
+            Like we discussed earlier, calling this method will not set the session object to <code>null</code>.
+            <div class="row">
+                <img src="./Snaps/Ch6/invalidate_session.PNG" class="float-left img-fluid"
+                     alt="invalidate_session"
+                     width="1600">
+            </div>
+            //TODO: Why isn't the session invalidated in the second case? I can still get and print the values of the
+            attributes. Why?
+        </div>
+
+        <div class="sub-heading">Can I use the Cookie for things other than maintaining Sessions</div>
+        <div>
+            - Yes. Remember that the cookie is nothing more than a little piece of data (name/value) pair that is
+            exchanged between the Client and the server. The Server sends the Cookie to the Client and the Client
+            returns the cookie to the Server when teh Client has to make a new request to the Server.
+            <br>
+            - By default, a Cookie lives only as long as the session. Once the client quits his browser, the cookie
+            disappears. That's how the <code>JSESSION</code> cookie works. But you can tell a cookie to stay alive even
+            AFTER the browser shuts down. These types of cookies are known as <a
+                href="https://en.wikipedia.org/wiki/HTTP_cookie#Persistent_cookie">Persistent Cookies</a>.
+        </div>
+    </div>
+
+    <div class="sub-heading"> How to use Cookies with the Servlet API</div>
+    <div>
+        - This is probably a convoluted example, but stick through it. First the JSP page. Note that there is no
+        getCookie(String) method. You can only get Cookies in a Cookie array and then you have to loop over the array to
+        find the one you want.
+        <div class="code-snippet">
+            <script src="https://gist.github.com/rgbk21/56d716e43b85399023fccfe04f8b4ef7.js"></script>
+        </div>
+        And then the Servlet class:
+        <div class="code-snippet">
+            <script src="https://gist.github.com/rgbk21/b9d064f68b6281badc5c51e2d464167d.js"></script>
+        </div>
+    </div>
+
+    <div class="sub-heading">What kinds of listeners are we dealing with</div>
+    <div class="row">
+        <img src="./Snaps/Ch6/Listeners.PNG" class="float-left img-fluid"
+             alt="invalidate_session"
+             width="800">
+    </div>
+
+    <div class="sub-heading">What is Session Migration</div>
+    <div>
+        - In a clustered environment, the Container might do <i>load-balancing</i> by taking client requests and sending
+        them out JVMs. The JVMs themselves may or may not be on the same physical boxes, that is immaterial. The point
+        is that the web app is in multiple places. This means that each time the same Client makes a request, the
+        request could end up going to a <i>different</i> instance of the same servlet.
+        <br>
+        - The question is: how does the Container manage the <code>ServletConfig</code>, <code>ServletContext</code>,
+        and <code>HttpSession</code> objects in this case.
+        <br>
+        - Only <code>HttpSession</code> objects (and their attributes) move from one VM to another.
+        <br>
+        - There is one <code>ServletContext</code> <i>per</i> VM. There is one <code>ServletConfig</code> <i>per
+        Servlet, per VM</i>. But there is only one <code>HttpSession</code> object for a given <code>SessionId</code>
+        per web app, regardless of how many VM's the app is distributed across.
+        <br>
+        - The key point here is that while the other parts of the app are <i>replicated</i> on each node/VM, the session
+        objects (along with the session attributes) are <i>moved</i>.
+        <div class="row">
+            <img src="./Snaps/Ch6/DistributedSessions.PNG" class="float-left img-fluid"
+                 alt="DistributedSessions"
+                 width="800">
+        </div>
+        <div class="row">
+            <img src="./Snaps/Ch6/SessionMigration.png" class="float-left img-fluid"
+                 alt="SessionMigration"
+                 width="1600">
+        </div>
+
+        //TODO: This is followed by something related to SessionListeners.
+        <br>
+        <code>HttpSessionActivationListener</code>
+        <br>
+        <code>HttpSessionAttributeListener</code>
+        <br>
+        <code>HttpSessionAttributeListener</code>
 
     </div>
 
