@@ -1,0 +1,11 @@
+<div class="sticky-nav" style="font-size: 15px;">
+<div class="sticky-nav-image">
+</div>
+<div class="sticky-nav-holder">
+<div class="sticky-nav_item">
+<h6 class="heading-sm"> Next Post</h6>
+</div>
+<h5 class="sticky-nav_heading " style="font-size: 15px;"> <a href="https://javabeginnerstutorial.com/jsp-tutorial/more-jsp-fundamentals/" title="More JSP Fundamentals">More JSP Fundamentals</a>
+</h5>
+</div>
+</div>

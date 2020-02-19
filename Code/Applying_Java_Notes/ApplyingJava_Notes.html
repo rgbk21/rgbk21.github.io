@@ -715,6 +715,11 @@
         <br>
         <a href="#Ch6">Chapter 6: Session Management - Conversational State</a>
         <br>
+        <a href="#Ch7">Chapter 7: Using JSP - Being a JSP</a>
+        <br>
+        <a href="#Ch8">Chapter 8: Scriptless JSP - Script-free pages</a>
+        <br>
+
 
     </div>
     <div id="Ch1" class="chapter">Chapter 1: Why use Servlets and JSPs</div>
@@ -1887,8 +1892,6 @@
                      width="800">
             </div>
         </div>
-
-
     </div>
 
     <div id="Ch6" class="chapter">Chapter 6: Session Management - Conversational State</div>
@@ -2082,68 +2085,355 @@
             AFTER the browser shuts down. These types of cookies are known as <a
                 href="https://en.wikipedia.org/wiki/HTTP_cookie#Persistent_cookie">Persistent Cookies</a>.
         </div>
-    </div>
 
-    <div class="sub-heading"> How to use Cookies with the Servlet API</div>
-    <div>
-        - This is probably a convoluted example, but stick through it. First the JSP page. Note that there is no
-        getCookie(String) method. You can only get Cookies in a Cookie array and then you have to loop over the array to
-        find the one you want.
-        <div class="code-snippet">
-            <script src="https://gist.github.com/rgbk21/56d716e43b85399023fccfe04f8b4ef7.js"></script>
+
+        <div class="sub-heading"> How to use Cookies with the Servlet API</div>
+        <div>
+            - This is probably a convoluted example, but stick through it. First the JSP page. Note that there is no
+            getCookie(String) method. You can only get Cookies in a Cookie array and then you have to loop over the
+            array to
+            find the one you want.
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/56d716e43b85399023fccfe04f8b4ef7.js"></script>
+            </div>
+            And then the Servlet class:
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/b9d064f68b6281badc5c51e2d464167d.js"></script>
+            </div>
         </div>
-        And then the Servlet class:
-        <div class="code-snippet">
-            <script src="https://gist.github.com/rgbk21/b9d064f68b6281badc5c51e2d464167d.js"></script>
-        </div>
-    </div>
 
-    <div class="sub-heading">What kinds of listeners are we dealing with</div>
-    <div class="row">
-        <img src="./Snaps/Ch6/Listeners.PNG" class="float-left img-fluid"
-             alt="invalidate_session"
-             width="800">
-    </div>
-
-    <div class="sub-heading">What is Session Migration</div>
-    <div>
-        - In a clustered environment, the Container might do <i>load-balancing</i> by taking client requests and sending
-        them out JVMs. The JVMs themselves may or may not be on the same physical boxes, that is immaterial. The point
-        is that the web app is in multiple places. This means that each time the same Client makes a request, the
-        request could end up going to a <i>different</i> instance of the same servlet.
-        <br>
-        - The question is: how does the Container manage the <code>ServletConfig</code>, <code>ServletContext</code>,
-        and <code>HttpSession</code> objects in this case.
-        <br>
-        - Only <code>HttpSession</code> objects (and their attributes) move from one VM to another.
-        <br>
-        - There is one <code>ServletContext</code> <i>per</i> VM. There is one <code>ServletConfig</code> <i>per
-        Servlet, per VM</i>. But there is only one <code>HttpSession</code> object for a given <code>SessionId</code>
-        per web app, regardless of how many VM's the app is distributed across.
-        <br>
-        - The key point here is that while the other parts of the app are <i>replicated</i> on each node/VM, the session
-        objects (along with the session attributes) are <i>moved</i>.
+        <div class="sub-heading">What kinds of listeners are we dealing with</div>
         <div class="row">
-            <img src="./Snaps/Ch6/DistributedSessions.PNG" class="float-left img-fluid"
-                 alt="DistributedSessions"
+            <img src="./Snaps/Ch6/Listeners.PNG" class="float-left img-fluid"
+                 alt="invalidate_session"
                  width="800">
         </div>
-        <div class="row">
-            <img src="./Snaps/Ch6/SessionMigration.png" class="float-left img-fluid"
-                 alt="SessionMigration"
-                 width="1600">
+
+        <div class="sub-heading">What is Session Migration</div>
+        <div>
+            - In a clustered environment, the Container might do <i>load-balancing</i> by taking client requests and
+            sending
+            them out JVMs. The JVMs themselves may or may not be on the same physical boxes, that is immaterial. The
+            point
+            is that the web app is in multiple places. This means that each time the same Client makes a request, the
+            request could end up going to a <i>different</i> instance of the same servlet.
+            <br>
+            - The question is: how does the Container manage the <code>ServletConfig</code>, <code>ServletContext</code>,
+            and <code>HttpSession</code> objects in this case.
+            <br>
+            - Only <code>HttpSession</code> objects (and their attributes) move from one VM to another.
+            <br>
+            - There is one <code>ServletContext</code> <i>per</i> VM. There is one <code>ServletConfig</code> <i>per
+            Servlet, per VM</i>. But there is only one <code>HttpSession</code> object for a given
+            <code>SessionId</code>
+            per web app, regardless of how many VM's the app is distributed across.
+            <br>
+            - The key point here is that while the other parts of the app are <i>replicated</i> on each node/VM, the
+            session
+            objects (along with the session attributes) are <i>moved</i>.
+            <div class="row">
+                <img src="./Snaps/Ch6/DistributedSessions.PNG" class="float-left img-fluid"
+                     alt="DistributedSessions"
+                     width="800">
+            </div>
+            <div class="row">
+                <img src="./Snaps/Ch6/SessionMigration.png" class="float-left img-fluid"
+                     alt="SessionMigration"
+                     width="1600">
+            </div>
+
+            //TODO: This is followed by something related to SessionListeners.
+            <br>
+            <code>HttpSessionActivationListener</code>
+            <br>
+            <code>HttpSessionAttributeListener</code>
+            <br>
+            <code>HttpSessionAttributeListener</code>
+
         </div>
-
-        //TODO: This is followed by something related to SessionListeners.
-        <br>
-        <code>HttpSessionActivationListener</code>
-        <br>
-        <code>HttpSessionAttributeListener</code>
-        <br>
-        <code>HttpSessionAttributeListener</code>
-
     </div>
 
+    <div id="Ch7" class="chapter">Chapter 7: Using JSP - Being a JSP</div>
+    <div class="textual-content">
+        The most important point for this chapter is simply: what role does the JSP place in the final servlet class?
+        In other words, <i>where</i> do the elements in the JSP end up in the source code of the generated servlet?
+
+        <div class="sub-heading">In the end a JSP is just a Servlet</div>
+        <div>
+            - In the end, your JSP becomes a full-fledged servlet running in your web-app. The only difference is that
+            the servlet class is written for you by the Container. The Container takes what you have written in your
+            JSP, translates it into a servlet class source (.java) file, then compiles that into a java servlet class.
+            After that it all behaves just like a normal servlet class, i.e the Container loads the Servlet class,
+            instantiates and initializes it, makes a separate thread for each request and calls the servlet's <code>service()</code>
+            method.
+            <br>
+            - When you deploy a web app witha JSP, the whole translation and compilation step happens only once in the
+            JSP's life. Once it has been translated and compiled, it is just like any other servlet. And just like any
+            other servlet, once that servlet has been loaded and initialized, the only thing that happens at request
+            time is creation or allocation of a thread for the service method. So the above picture is only for the very
+            first request that the container has to handle.
+            <div class="row">
+                <img src="./Snaps/Ch7/CompilationOfServlet.PNG" class="float-left img-fluid"
+                     alt="CompilationOfServlet"
+                     width="1000">
+            </div>
+        </div>
+
+        <div class="sub-heading">How to import packages into JSP</div>
+        <div>
+            - A <i>directive</i> is a way for you to give special instructions to the Container at page translation
+            time.
+            <br>
+            - Directives come in three flavors:
+            <ul>
+                <li>page</li>
+                <li>include</li>
+                <li>taglib</li>
+            </ul>
+            - For importing packages into the JSP, we will use the <i>page</i> directive.
+            <br>
+            - Importing a single package can be done as follows: <code>&lt%@ page import = "java.util.List" %&gt</code>.
+            Notice that there is no semicolon at the end of the import statement.
+            <br>
+            - Importing a multiple packages can be done as follows:
+            <code>&lt%@ page import = "java.util.List,java.util.Map"%&gt</code>. Note that packages are separated by
+            comma and the quotes go around the entire list of packages.
+        </div>
+
+        <div class="sub-heading">3 JSP element types</div>
+        <div>
+            - We can now introduce 3 different JSP element types:
+            <ul>
+                <li>Scriptlet <code>&lt% %&gt</code> : Between these tags goes the java code that you want to write in
+                    the JSP page. <br>So we can write <code>&lt% out.println(Counter.getCount()); %&gt</code>.
+                </li>
+                <li>Directive <code>&lt%@ %&gt</code> : used for writing import statements, among other things, in the
+                    JSP. No semi-colon at the end.
+                </li>
+                <li>Expression <code>&lt%= &gt</code>: it automatically prints out whatever you put between the tags.
+                    This is meant as a replacement for <code>out.println</code> in JSP. So, instead of writing, say,
+                    <code>&lt% out.println(Counter.getCount()); %&gt</code>, we would just write
+                    <code>&lt%= Counter.getCount() %&gt</code>. Note that the expression does not need a semicolon at
+                    the end either. A n expression <i>cannot</i> use a method that does not have a return type, i.e has
+                    <code>void</code> as return type because then there won't be anything to print.
+                </li>
+            </ul>
+            - In case you are wondering, the object <code>out</code> in the above example is passed implicitly to your
+            JSP page, just in case you want to pass it to some other object that does not have direct access to the
+            output stream for the response.
+        </div>
+
+        <div class="sub-heading">What really happens to your JSP Code</div>
+        <div>
+            - Let's see where the different JSP elements land in the servlet's class file:
+            <div class="row">
+                <img src="./Snaps/Ch7/JSP2Scriptlet.PNG" class="float-left img-fluid"
+                     alt="CompilationOfServlet"
+                     width="1000">
+            </div>
+            - All scriptlet and expression code lands in a service method. That means that variables declared in a
+            scriptlet are ALWAYS local variables.
+            <br>
+            - Also note that the code from the JSP is placed inside the <code>_jspService</code> method that takes as
+            argument the <code>HttpServletRequest request</code> object. Hence you wan write your JSP assuming that it
+            is going to be a part of a servlet. This is also an example of "implicit" object. Something that we see in
+            the next paragraph.
+        </div>
+
+        <div class="sub-heading">How do we declare instance variables in a JSP</div>
+        <div>
+            - There is another JSP element known as a <i>declaration</i>: for example
+            <code>&lt%! int count = 0;%&gt</code>.
+            <br>
+            - Note that this requires a semicolon at the end. JSP <i>declarations</i> are for declaring members of the
+            generated servlet class. This means, both, <i>variables</i> and <i>methods</i>. In other words, anything
+            between the <code>&lt%! %&gt</code> tag is added to the class <i>outside</i> the service method. That means
+            that you can declare, both, static variables (what?) and methods.
+            <div class="row">
+                <img src="./Snaps/Ch7/JSP2Servlet_Decalrations.PNG" class="float-left img-fluid"
+                     alt="JSP2Servlet_Decalrations"
+                     width="800">
+            </div>
+        </div>
+
+        <div class="sub-heading">What implicit objects are passed to the JSP</div>
+        <div>
+            <table class="table table-bordered table-sm">
+                <thead>
+                <tr>
+                    <th>API</th>
+                    <th>Implicit Object</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>JspWriter</td>
+                    <td>out</td>
+                </tr>
+                <tr>
+                    <td>HttpServletRequest</td>
+                    <td>request</td>
+                </tr>
+                <tr>
+                    <td>HttpServletResponse</td>
+                    <td>response</td>
+                </tr>
+                <tr>
+                    <td>HttpSession</td>
+                    <td>session</td>
+                </tr>
+                <tr>
+                    <td>ServletContext</td>
+                    <td>application</td>
+                </tr>
+                <tr>
+                    <td>ServletConfig</td>
+                    <td>config</td>
+                </tr>
+                <tr>
+                    <td>Throwable</td>
+                    <td>exception</td>
+                </tr>
+                <tr>
+                    <td>PageContext</td>
+                    <td>pageContext</td>
+                </tr>
+                <tr>
+                    <td>Object</td>
+                    <td>page</td>
+                </tr>
+                </tbody>
+            </table>
+            - We were already familiar with the 3 scopes: request, session, and application. This introduces another
+            scope known as the pageContext.
+            <br>
+            - A <code>pageContext</code> encapsulates the other implicit objects. This way if you give some other helper
+            object a reference to the PageContext, the helper can use that reference to get all the OTHER implicit
+            object
+            and attributes from all the scopes.
+        </div>
+
+        <div class="sub-heading">Everything in one place</div>
+        <div>
+            <table class="table table-bordered table-sm">
+                <thead>
+                <tr>
+                    <th>JSP Element</th>
+                    <th>Usage</th>
+                    <th>What is it used for</th>
+                    <th>Usage Example</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Scriptlet</td>
+                    <td><code>&lt% ;%&gt</code></td>
+                    <td>Used to write Java Code</td>
+                    <td><code>&lt% out.println(Counter.getCount()); %&gt</code></td>
+                </tr>
+                <tr>
+                    <td>Directive</td>
+                    <td><code>&lt%@ %&gt</code></td>
+                    <td>Used for writing import statements</td>
+                    <td><code>&lt%@ page import = "java.util.List" %&gt</code></td>
+                </tr>
+                <tr>
+                    <td>Expression</td>
+                    <td><code>&lt%= %&gt</code></td>
+                    <td>Printing out stuff</td>
+                    <td><code>&lt%= Counter.getCount() %&gt</code></td>
+                </tr>
+                <tr>
+                    <td>Declaration</td>
+                    <td><code>&lt%! ;%&gt</code></td>
+                    <td>Declaring methods and instance variables in the JSP</td>
+                    <td><code>&lt%! int count = 0;%&gt</code></td>
+                </tr>
+                <tr>
+                    <td>ExpressionLanguages</td>
+                    <td><code> ${ }</code></td>
+                    <td>Invokes Java Code</td>
+                    <td><code>${applicationScope.mail}</code></td>
+                </tr>
+                <tr>
+                    <td>Actions</td>
+                    <td><code>&ltjsp: /&gt</code>, <code>&ltc: /&gt</code></td>
+                    <td>They are 2 types: <code>standarad</code> and <code>other</code></td>
+                    <td><code></code></td>
+                </tr>
+                </tbody>
+            </table>
+
+            <table class="table table-bordered table-sm">
+                <thead>
+                <tr>
+                    <th>Scope</th>
+                    <th>In a Servlet</th>
+                    <th>In a JSP (using implicit objects)</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Application/Context</td>
+                    <td><code>getServletContext.setAttribute("foo", barObject)</code></td>
+                    <td><code>application.setAttribute("foo", barObject)</code></td>
+                </tr>
+                <tr>
+                    <td>Request</td>
+                    <td><code>request.setAttribute("foo", barObject)</code></td>
+                    <td><code>request.setAttribute("foo", barObject)</code></td>
+                </tr>
+                <tr>
+                    <td>Session</td>
+                    <td><code>request.getSession().setAttribute("foo", barObject)</code></td>
+                    <td><code>session.setAttribute("foo", barObject)</code></td>
+                </tr>
+                <tr>
+                    <td>Page</td>
+                    <td><code>Does not apply</code></td>
+                    <td><code>pageContext.setAttribute("foo", barObject)</code></td>
+                </tr>
+                </tbody>
+            </table>
+
+
+            - Comments can be added either using:
+            <ul>
+                <li><code>//Your comment </code>: in a scriptlet or a declaration. However, outside of this the string
+                    "//" would just be parsed like normal HTML comment and you would see your comment printed on the
+                    page
+                </li>
+                <li><code>&lt!-- HTML Comment --&gt</code>: Use this if you want the comments to stay as a part of the
+                    HTML response to the Client
+                </li>
+                <li><code>&lt%-- JSP Comment --%&gt</code>: Comments will be hidden. They are stripped off when the JSP
+                    is converted into Java.
+                </li>
+            </ul>
+        </div>
+
+        <div class="sub-heading">Now that you know how to write java code in JSP, never do it</div>
+        <div>
+            - Java code in JSP is considered hard to change and maintain.
+            <br>
+            - Instead we make use of Expression Language or <b>EL</b>. The purpose of EL is to offer a simeple way to
+            <i>invoke</i> Java code - but the code itself belongs <i>somewhere else</i>. That means in a regular old
+            Java class that's either a JavaBean, a class with static methods, or something called a Taghandler.
+            <br>
+            - In other words you do not write method code into your JSP. You write the Java methods somewhere else and
+            call it using EL.
+            <br>
+            - You can use <code>&ltscripting-invalid&gt true &lt/scripting-invalid&gt</code> to disable scripting
+            elements for ALL JSPs. There is a specific format for this. Refer text.
+        </div>
+
+        //TODO: Complete the exercises and the Coffee Cram questions from this Chapter.
+    </div>
+
+    <div id="Ch8" class="chapter">Chapter 8: Scriptless JSP - Script-free pages</div>
+    <div class="textual-content">
+
+    </div>
 
 </div>
 

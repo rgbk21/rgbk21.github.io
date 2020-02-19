@@ -272,14 +272,16 @@
             <br>
             Along the same lines, you also have "class variables", "instance variables", and "local variables"
             <br>
-            <b>Local variable</b>: is declared inside a method/constructor or within a block (enclosed in braces) and must be
+            <b>Local variable</b>: is declared inside a method/constructor or within a block (enclosed in braces) and
+            must be
             initialized before use, otherwise it won't compile.
             <br>
             <b>Instance variable</b>: is declared inside a class. It's initialization is not compulsory. If omitted, it
             contains default value (0, 0.0, false, null, etc.). Every instance of that class (object) has it's own copy
             of that variable. Changes made to the variable don't reflect in other instances of that class.
             <br>
-            <b>Class variables</b>: These are also known as static member variables and there's only one copy of that variable
+            <b>Class variables</b>: These are also known as static member variables and there's only one copy of that
+            variable
             that is shared with all instances of that class. If changes are made to that variable, all other instances
             will see the effect of the changes.
             <a href="https://stackoverflow.com/a/2088370/8742428">On StackOverflow</a>
@@ -358,6 +360,15 @@
             <br>
             In both cases the final value of <code>index</code> will be 1. It's <i>when</i> the changed value of 1 is
             returned that was causing the confusion.
+        </div>
+    </div>
+
+    <div class="one-point">
+        16) Java does not have a problem with forward referencing. What this means is that the below happens to be
+        completely valid code in java. Note that the variable <code>count</code> id defined AFTER it is used in the
+        varcount method. Not only does the code compile, but it also gives the correct result!
+        <div class="code-snippet">
+            <script src="https://gist.github.com/rgbk21/19cb1cbda2631682108e4505661e2a24.js"></script>
         </div>
     </div>
 
