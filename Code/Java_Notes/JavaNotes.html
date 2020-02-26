@@ -122,6 +122,10 @@
     Chapter 8: <a href="#inheritance">Inheritance</a>
     <br>
     Chapter 19: <a href="#Collections">Collections</a>
+    <br>
+    Chapter 11: <a href="#MultiThreadedProg">Multithreaded Programming</a>
+    <br>
+    Chapter 28: <a href="#Concurreny">The Concurrency Utilities</a>
 
     <div id="inheritance" class="chapter">Chapter 8: Inheritance</div>
     <div class="textual-content">
@@ -550,7 +554,9 @@
                     <script src="https://gist.github.com/rgbk21/176cdd58796064fe5a6aeed317e829d8.js"></script>
                 </div>
                 In fact, even if you try to do it with objects, it still produces the same Exception
-                <div class="code-snippet"><script src="https://gist.github.com/rgbk21/c7376fb06f35351f118cfe86b380deea.js"></script></div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/c7376fb06f35351f118cfe86b380deea.js"></script>
+                </div>
 
             </div>
         </div>
@@ -1084,9 +1090,389 @@
         </div>
         <div class="sub-heading">Comparators</div>
         //TODO........................
+    </div>
+
+    <div id="MultiThreadedProg" class="chapter">Chapter 11: MultiThreaded Programming</div>
+    <div class="textual-content">
+
+        <div class="sub-heading">What are the two types of multitasking</div>
+        <div>
+            - Two types:
+            <ul>
+                <li><b>process-based</b>:
+                    <br>
+                    - A process is, in essence, a program that is executing. Thus, process-based
+                    multitasking is the feature that allows your computer to run two or more programs concurrently. For
+                    example, process-based multitasking enables you to run the Java compiler at the same time that you
+                    are using a text editor or visiting a web site. In process-based multitasking, a program is the
+                    smallest unit of code that can be dispatched by the scheduler.
+                    <br>
+                    - Processes are heavy-weight tasks that require their own separate address space.
+                    <br>
+                    - Interprocess communication is expensive and limited.
+                    <br>
+                    - Context switching from one process to another is also costly.
+                </li>
+                <li><b>thread-based</b>:
+                    <br>
+                    - It is the smallest unit of dispatchable code. This means that a single program can
+                    perform two or more tasks simultaneously. For example, a text editor can print text at the same time
+                    as the text is being formatted, so long as the two tasks are being performed by two different
+                    threads.
+                    <br>
+                    - Threads are lighter-weight and require less overhead when compared to process-based multitasking
+                    <br>
+                    - They share the same address space.
+                    <br>
+                    - Interthread communication is inexpensive, and context switching from one thread to another is
+                    lower in cost.
+                </li>
+            </ul>
+            - A multithreaded program contains two or more parts that can run concurrently. Each part of such a program
+            is called a <i>thread</i>.
+        </div>
+
+        <div class="sub-heading">The Java Thread Model</div>
+        <div>
+            - Single threaded applications use an approach called <i>event loop with polling</i>. In general, in a
+            single-threaded environment, when a thread blocks (that is, suspends execution) because it is waiting for
+            some resource, the entire program stops running.
+            <br>
+            - The benefit of Java’s multithreading is that the main loop/polling mechanism is eliminated. When a
+            thread blocks in a Java program, only the single thread that is blocked pauses. All other threads continue
+            to run.
+            <br>
+            - Threads exist in several states. A thread can be <i>running</i>. It can be <i>ready to run</i> as soon as
+            it gets CPU time. A running thread can be <i>suspended</i>, which temporarily halts its activity. A
+            suspended thread can be <i>resumed</i>, allowing it to pick up where it left off. A thread can be
+            <i>blocked</i> when waiting for a resource. At any time, a thread can be <i>terminated</i>, which halts its
+            execution immediately. Once terminated, a thread cannot be resumed.
+        </div>
+
+        <div class="sub-heading">Thread Priorities</div>
+        <div>
+            - Java assigns to each thread a priority. Thread priorities are integers that specify the relative priority
+            of one thread to another.
+            <br>
+            - A thread’s priority is used to decide when to switch from one running thread to the next. This is called a
+            <i>context switch</i>.
+            - Rules for context switch:
+            <ul>
+                <li>A thread can voluntarily relinquish control. This occurs when explicitly yielding, sleeping, or when
+                    blocked. In this scenario, all other threads are examined, and the highest-priority thread that is
+                    ready to run is given the CPU.
+                </li>
+                <li> A thread can be preempted by a higher-priority thread. In this case, a
+                    lower-priority thread that does not yield the processor is simply preempted—no matter what it is
+                    doing—by a higher-priority thread. Basically, as soon as a higher-priority thread wants to run, it
+                    does. This is called <i>preemptive multitasking</i>.
+                </li>
+            </ul>
+        </div>
+
+        <div class="sub-heading">The Thread Class and the Runnable Interface</div>
+        <div>
+            - To create a new thread, you program will extend the <code>Thread</code> class or implement the <code>Runnable</code>
+            interface.
+        </div>
+
+        <div class="sub-heading">The Main Thread</div>
+        <div>
+            - <i>main thread</i> is the thread that is executed when when your program begins. The main thread is
+            important for two reasons:
+            <ul>
+                <li>It is the thread from which other “child” threads will be spawned.</li>
+                <li>Often, it must be the last thread to finish execution because it performs various shutdown
+                    actions.
+                </li>
+            </ul>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/bef0ca6f5121e73116dd39bba993aac8.js"></script>
+            </div>
+        </div>
+
+        <div class="sub-heading">Creating a Thread</div>
+        <div>
+            - You create a thread by instantiating an object of type <code>Thread</code>. This can be done in two ways:
+            <ul>
+                <li>You can implement the <code>Runnable</code> interface</li>
+                <li>You can extend the <code>Thread</code> class itself</li>
+            </ul>
+        </div>
+
+        <div id="implementingRunnable" class="sub-heading">Implementing Runnable</div>
+        <div>
+            Passing <code>this</code> as the first argument indicates that you want the new thread to call the
+            <code>run()</code> method on this object. Inside <code>main()</code>, <code>start()</code> is called, which
+            starts the thread of execution beginning at the <code>run()</code> method. This causes the child thread’s
+            for loop to begin. Next the main thread enters its for loop. Both threads continue running, sharing the CPU
+            in single-core systems, until their loops finish.
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/c90b8b89c946731a7870dc49590e6d9b.js"></script>
+            </div>
+        </div>
+
+
+        <div class="sub-heading">Extending Thread</div>
+        <div>
+            - The second way to create a thread is to create a new class that extends <code>Thread</code>, and then to
+            create an
+            instance of that class. The extending class must override the <code>run()</code> method, which is the entry
+            point for
+            the new thread. As before, a call to <code>start()</code> begins execution of the new thread.
+            <br>
+            -
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/4ff15cd7b4c8e248397104ab1dc449a8.js"></script>
+            </div>
+            - <a
+                href="https://stackoverflow.com/questions/8579657/whats-the-difference-between-thread-start-and-runnable-run">What's
+            the difference between start() and run()</a>
+            <br>
+            - Well if you defined the <code>NewThread</code> class as: calling <code>run()</code> is literally
+            going to call the <code>run()</code> method, like a
+            literal method call. No new thread is going to be created. So in the <a href="#implementingRunnable">example
+            above</a>, if you wrote <code>newThread.thread.run()</code> on Line 32, there would be a method call to the
+            <code>run()</code> method. The <code>run()</code> method would finish executing. And only after that would
+            the execution of the loop in te Main class even start. Only if you use the <code>start()</code> method is a
+            new thread created and the code inside the <code>run()</code> method executed.
+            <br>
+            - Another difference between <code>start()</code> and <code>run()</code> in Java thread is that you can not
+            call <code>start()</code> twice. Once started, second <code>start()</code> call will throw <code>IllegalStateException</code>
+            in Java while you can call <code>run()</code> method several times since it's just an ordinary method.
+            <br>
+            <br>
+            - <a href="https://stackoverflow.com/questions/541487/implements-runnable-vs-extends-thread-in-java">When
+            should you use <code>Runnable</code> vs when should you use <code>Thread</code>?</a>.
+            <br>
+            - Almost always you will be using the <code>MyThread implements Runnable</code> interface to create a
+            new thread.
+            <br>
+            - Classes should be extended only when they are being enhanced or adapted in some way. So, if you will not
+            be overriding any of Thread’s other methods, it is probably best simply to implement <code>Runnable</code>.
+            Also, by implementing Runnable, your thread class does not need to inherit Thread, making it free to inherit
+            a
+            different class.
+            //TODO: Go through this link for description of concurrency.
+            <br>
+            <br>
+            - <a href="https://stackoverflow.com/a/34945598/8742428">Why do you need a
+            <code>MyThread extends Thread</code> way of creating threads?</a>
+            <br>
+            - Because sometimes (almost never, but sometimes) you want to be able to change the basic behaviour of
+            Thread. That's when you'll need to extend it. You can change it by overriding a method from the Thread
+            class, you can't do it by implementing one from Runnable.
+        </div>
+
+        <div class="sub-heading">Creating Multiple Threads</div>
+        <div>
+            - Your program can spawn as many threads as you need.
+            <br>
+            - In thebelow example we are createing multiple threads. In the printout, note where the Main thread is
+            exiting. It is not like Main is waiting for the
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/f698e9f65e5b5f1ecf05416c93594f8e.js"></script>
+            </div>
+        </div>
+
+        <div class="sub-heading">Using <code>isAlive()</code> and <code>join()</code></div>
+        <div>
+            - Look at the previous example. The main thread finished ealrier than the child threads. Often, you would
+            want the main thread to finish last.
+            <br>
+            - Two ways exist to determine whether a thread has finished or not. First, you can call
+            <code>isAlive()</code> on the thread which returns true if the thread is still running.
+            <br>
+            - But you should prefer the <code>join()</code> method. This method waits until the thread on which it is
+            called terminates. <code>join</code> also allows you to specify a maximum amount of time that you want to
+            wait for the specified thread to terminate.
+            <ul>
+                <li><code>void join()</code>: Waits for this thread to die.</li>
+                <li><code>void join(long millis)</code>: Waits at most millis milliseconds for this thread to die.</li>
+                <li><code>void join(long millis, int nanos)</code>: Waits at most millis milliseconds plus nanos
+                    nanoseconds for this thread to die.
+                </li>
+            </ul>
+            - In the below example, remember that the main thread that is calling <code>mt1.join</code> (and others)
+            will wait for the <code>mt1</code> to finish. The <code>mt2</code> thread is running in parallel and is not
+            affected by the <code>mt1</code> and <code>mt1.join()</code> method calls at all. <a
+                href="https://stackoverflow.com/questions/15956231/what-does-this-thread-join-code-mean">StackOverflow
+            Link</a>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/4e4cd891472b1ec62f336ba4f81f4d61.js"></script>
+            </div>
+        </div>
+
+        <div class="sub-heading">Thread Priorities</div>
+        <div>
+            - Thread priority is just a hint to OS task scheduler and is dependent on the underlying OS. OS will try to
+            allocate more resources to a high priority thread but it does not guarantee it. So if your program is
+            dependent on thread priorities than you are in-turn binding your program to underlying OS, which is bad.
+            <br>
+            - From Java Concurrency in Practice: Avoid the temptation to use thread priorities, since they increase
+            platform dependence and can cause liveness problems. Most concurrent applications can use the default
+            priority for all threads. <a href="https://stackoverflow.com/a/20333255/8742428">Link to post on SO</a>
+        </div>
+
+        <div class="sub-heading">Synchronization</div>
+        <div>
+            - When two or more threads need access to a shared resource, they need some way to ensure that the resource
+            will be used by only one thread at a time. The process by which this is achieved is called synchronization.
+            <br>
+            - Key to synchronization is the concept of the monitor. A monitor is an object that is used as a mutually
+            exclusive lock. Only one thread can own a monitor at a given time. When a thread acquires a lock, it is said
+            to have entered the monitor. All other threads attempting to enter the locked monitor will be suspended
+            until the first thread exits the monitor. These other threads are said to be waiting for the monitor. A
+            thread that owns a monitor can reenter the same monitor if it so desires.
+            <br>
+            - This is what happens when your code is NOT synchronized.
+            <script src="https://gist.github.com/rgbk21/9a6fdb4fb951d6f65f123cd7141945b2.js"></script>
+            - By calling <code>sleep()</code>, the <code>call()</code> method allows execution to switch to another
+            thread. This results in the
+            mixed-up output of the three message strings. In this program, nothing exists to stop all three threads from
+            calling the same method, on the same object, at the same time. This is known as a race condition, because
+            the three threads are racing each other to complete the method.
+            <br>
+        </div>
+
+        <div class="sub-heading">Using the <code>synchronized</code> keyword</div>
+        <div>
+            - To prevent the above, you need to <i>serialize</i> the access to the <i>method</i> <code>call()</code>.
+            That
+            is, you must restrict its access to only one thread at a time. To do this, you simply need to precede <code>call()</code>
+            ’s definition with the keyword <code>synchronized</code>.
+            <br>
+            <code>class CallMe{</code>
+            <br>
+            <code> synchronized void callMe(){...}</code>
+            <br>
+            <code>}</code>
+            <br>
+            - This prevents other threads from entering the method <code>call()</code> when another thread is already
+            using it. And after we make this change, we get the correct output:
+            <br>
+            [Hello]
+            <br>
+            [World]
+            <br>
+            [Synchronized]
+            <br>
+            Well we would have expected "Hello Synchronized World". But threads gonna thread I guess.
+            <br>
+            Any time that you have a method, or group of methods, that manipulates the internal state of an object in a
+            multithreaded situation, you should use the <code>synchronized</code> keyword to guard the state from race
+            conditions.
+            Remember, once a thread enters any synchronized method on an instance, no other thread can enter any other
+            synchronized method on the same instance. However, nonsynchronized methods on that instance will continue to
+            be callable.
+        </div>
+        <div class="sub-heading">Using the Synchronized Statement</div>
+        <div>
+            - Creating <code>synchronized</code> methods within classes might not always work.
+            <br>
+            - Imagine that you want to synchronize access to objects of a class that was not designed for multithreaded
+            access. That is, the class does not use synchronized methods. Further, this class was not created by you,
+            but by a third party, and you do not have access to the source code. Thus, you can’t add synchronized to the
+            appropriate methods within the class. How can access to an object of this class be synchronized?
+            <br>
+            - You put calls to the methods defined by the class inside a <code>synchronized</code> block.
+            <br>
+            - This is the general form of the <code>synchronized</code> statement:
+            <br>
+            <code>synchronized(objRef){</code>
+            <br>
+            <code> //Statements tp be synchronized</code>
+            <br>
+            <code>}</code>
+            <br>
+            Here <code>objRef</code> is the reference to the object being synchronized. A synchronized block ensures
+            that a call to a method that is a member of <code>objRef</code>'s class occurs only after the current thread
+            has successfully entered <code>objRef</code>'s monitor.
+            <br>
+            - The previous example can then be rewritten in the following manner:
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/c7340b98e24a0579762f5adbf97c0a57.js"></script>
+            </div>
+            - <a href="https://stackoverflow.com/questions/6910807/synchronization-of-non-final-field">Why do we get the
+            warning on line 30?</a>
+        </div>
+
+        <div class="sub-heading">Interthread Communication</div>
+        <div>
+            - //TODO: Read up on what Polling is
+            <br>
+            - In Java , you have <code>wait()</code>, <code>notify()</code>, and <code>notifyAll()</code> methods. These
+            methods are implemented as <code>final</code> methods in <code>Object</code>, so all classes have them. All
+            3 methods can be called only from within a <code>synchronized</code> context.
+            <ul>
+                <li><code>notify()</code>:
+                    <br>
+                    - Wakes up a single thread that is waiting on this object's monitor. If any
+                    threads are waiting on this object, one of them is chosen to be awakened. The choice is arbitrary
+                    and occurs at the discretion of the implementation. A thread waits on an object's monitor by calling
+                    one of the wait methods.
+                    <br>
+                    - The awakened thread will not be able to proceed until the current thread relinquishes the lock on
+                    this object. The awakened thread will compete in the usual manner with any other threads that might
+                    be actively competing to synchronize on this object; for example, the awakened thread enjoys no
+                    reliable privilege or disadvantage in being the next thread to lock this object.
+                    <br>
+                    - This method should only be called by a thread that is the owner of this object's monitor. A thread
+                    becomes the owner of the object's monitor in one of three ways:
+                    <ul>
+                        <li>By executing a synchronized instance method of that object.</li>
+                        <li>By executing the body of a synchronized statement that synchronizes on the object.</li>
+                        <li>For objects of type Class, by executing a synchronized static method of that class.</li>
+                    </ul>
+                    - Only one thread at a time can own an object's monitor.
+                </li>
+                <li><code>notifyAll</code>:
+                    <br>
+                    - Wakes up all threads that are waiting on this object's monitor. A thread
+                    waits on an object's monitor by calling one of the wait methods.
+                    The awakened threads will not be able to proceed until the current thread relinquishes the lock on
+                    this object. The awakened threads will compete in the usual manner with any other threads that might
+                    be actively competing to synchronize on this object; for example, the awakened threads enjoy no
+                    reliable privilege or disadvantage in being the next thread to lock this object.
+                    <br>
+                    - This method should only be called by a thread that is the owner of this object's monitor. See the
+                    notify method for a description of the ways in which a thread can become the owner of a monitor.
+                </li>
+                <li>
+                    <code>wait()</code>:
+                    <br>
+                    - Causes the current thread to wait until either another thread invokes the notify() method or the
+                    notifyAll() method for this object, or a specified amount of time has elapsed.
+                    The current thread must own this object's monitor.
+                    <br>
+                    - This method causes the current thread (call it T) to place itself in the wait set for this object
+                    and then to relinquish any and all synchronization claims on this object. Thread T becomes disabled
+                    for thread scheduling purposes and lies dormant until one of four things happens:
+                    <ul>
+                        <li>Some other thread invokes the notify method for this object and thread T happens to be arbitrarily
+                            chosen as the thread to be awakened.</li>
+                        <li>Some other thread invokes the notifyAll method for this object.</li>
+                        <li>Some other thread interrupts thread T.</li>
+                        <li>The specified amount of real time has elapsed, more or less. If timeout is zero, however, then real
+                            time is not taken into consideration and the thread simply waits until notified.</li>
+                    </ul>
+                    - The thread T is then removed from the wait set for this object and re-enabled for thread scheduling.
+                    It then competes in the usual manner with other threads for the right to synchronize on the object;
+                    once it has gained control of the object, all its synchronization claims on the object are restored
+                    to the status quo ante - that is, to the situation as of the time that the wait method was invoked.
+                    Thread T then returns from the invocation of the wait method. Thus, on return from the wait method,
+                    the synchronization state of the object and of thread T is exactly as it was when the wait method
+                    was invoked.
+                </li>
+            </ul>
+        </div>
 
     </div>
 
+    <div id="Concurreny">C hapter 28: The Concurrency Utilities</div>
+    <div class="textual-content">
+        
+    </div>
 
 </div>
 

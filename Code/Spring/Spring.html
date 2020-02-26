@@ -19,14 +19,14 @@
     <meta name="keywords" content="Java, Floats, Overflow, Unboxing, Autoboxing">
     <meta name="author" content="Raj Gaurav Ballabh Kumar">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Applying Java - Notes</title>
+    <title>Spring - Notes</title>
 </head>
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
 
     <div class="navbar-header">
-        <a href="../../index.html" class="navbar-brand"> rgbk21</a>
+        <a href="../../index.html" class="navbar-brand">rgbk21</a>
     </div>
 
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"><span
@@ -119,12 +119,173 @@
 
     <div class="chapter">Spring</div>
     <div class="textual-content">
+        Index:
+        <br>
+        <a href="#Ch1">Chapter 1: Introducing Spring</a>
+        <br>
+        <a href="#Ch2">Chapter 2: Getting Started</a>
+        <hr>
+        <div id="Ch1" class="sub-heading">Chapter 1: Introducing Spring</div>
+        <hr>
+        <div class="textual-content">
+            <div class="sub-heading">What is Spring</div>
+            - Spring (introduced in 2002) has become the main replacement for Java Enterprise Edition (JEE) servers. It
+            consists of many projects that can be used for building microservices, applications, classical ERPs etc. It
+            enables you to use a large variety of tools without coupling an application too closely to any particular
+            tool.
+            <br>
+            - Spring is a light-weight framework for building Java applications. You can use Spring to build any
+            application in Java (for example, stand-alone, web, or JEE applications), unlike many other frameworks (such
+            as Apache Struts, which is limited to web applications). Spring is a light-weight framework in the sense
+            that if you want out swap out one "project" with another, you can do this by rewriting very less code.
+            Another term for this is loose-coupling.
+            <br>
+            - The Spring 4.0.x architecture can be described as follows:
+            <div class="row">
+                <img src="resources/ch1_images/Spring4_Architecture.PNG" class="center-block img-fluid"
+                     alt="Spring4_Architecture"
+                     width=50%>
+            </div>
+            - Some new features introduced in this are:
+            <ul>
+                <li>Introduction of Spring Web Flow, a project that is an alternative to Spring MVC built on a reactive
+                    foundation, which means taht it is fully asynchronous and non-blocking, intended for use in
+                    event-loop execution model vs. traditionallarge thread pool with a thread-per-request execution
+                    model (built upon Project Reactor)
+                </li>
+                <li>
+                    The web and core modules were adapted to the reactive programming model.
+                </li>
+            </ul>
 
-        <div class="sub-heading">What is Spring?</div>
+            <div class="sub-heading">Inverting Control or Injecting Dependencies</div>
+            <div>
+                - The core of the Spring Framework is based on the principle of inversion of control. IoC is a technique
+                that externalizes the creation and management of component dependencies. Consider an example in which
+                class Foo depends on an instance of class Bar to perform some kind of processing. Traditionally, Foo
+                creates an instance of Bar by using the new operator or obtains one from some kind of factory class.
+                Using the IoC approach, an instance of Bar (or a subclass) is provided to Foo at runtime by some
+                external process.
+                <br>
+                - Any Spring-managed resource is referred to as a <i>bean</i>.
+                <br>
+                - Spring’s DI implementation is based on two core Java concepts: JavaBeans and interfaces. When you use
+                Spring as the DI provider, you gain the flexibility of defining dependency configuration within your
+                applications in different ways (for example, XML files, Java configuration classes, annotations within
+                your code, or the new Groovy bean definition method). JavaBeans (POJOs) provide a standard mechanism for
+                creating Java resources that are configurable in a number of ways, such as constructors and setter
+                methods.
+                <br>
+                - By using interfaces, you can get the most out of DI because your beans can utilize any interface
+                implementation (any class or subclass that implements the interface) to satisfy their dependency. The
+                use of interfaces also allows Spring to utilize JDK dynamic proxies (the Proxy pattern) to provide
+                powerful concepts such as AOP for crosscutting concerns. (<a
+                    href="https://stackoverflow.com/a/26893834/8742428">Link for SO about proxies in Java</a>)
+            </div>
+            <div class="sub-heading">Aspect-Oriented Programming with Spring</div>
+            <div>
+                - AOP provides the ability to implement crosscutting logic—that is, logic that applies to many parts of
+                your application—in a single place and to have that logic applied across your application automatically.
+                <br>
+                - Read more about it on these links:
+                <br>
+                <a href="https://stackoverflow.com/questions/242177/what-is-aspect-oriented-programming">What is Aspect
+                    Oriented programming</a>
+                <br>
+                <a href="https://stackoverflow.com/questions/232884/aspect-oriented-programming-vs-object-oriented-programming">AOP
+                    vs OOP</a>
+            </div>
+
+            <div class="sub-heading">Validation in Spring</div>
+            <div>
+                - Spring provides a built-in validation API by way of the <code>Validator</code> interface. In addition
+                to the target object, the validate method takes an <code>Errors</code> object, which is used to collect
+                any
+                validation errors that may occur. Spring also provides a handy utility class,
+                <code>ValidationUtils</code>, which provides convenience methods for invoking other validators, checking
+                for common problems such as empty strings, and reporting errors back to the provided Errors object.
+            </div>
+
+            <div class="sub-heading">Accessing Data in Spring</div>
+            <div>
+                - Spring’s data access module provides out-of-the-box support for JDBC, Hibernate, JDO, and the JPA.
+                <br>
+                - However, in the past few years, because of the explosive growth of the Internet and cloud computing,
+                besides relational databases, a lot of other “special-purpose” databases were developed. Examples
+                include databases based on key-value pairs to handle extremely large volumes of data (generally referred
+                to as NoSQL), graph databases, and document databases. To help developers support those databases and to
+                not complicate the Spring data access module, a separate project called Spring Data was created.
+            </div>
+
+            <div class="sub-heading">Object/XML in Spring</div>
+            <div>
+                - Most applications need to integrate or provide services to other applications. One common requirement
+                is to exchange data with other systems, either on a regular basis or in real time. In terms of data
+                format, XML is the most commonly used. As a result, you will often need to transform a JavaBean into XML
+                format, and vice versa.
+                <br>
+                - Spring supports many common Java-to-XML mapping frameworks and, as usual, eliminates the need
+                for directly coupling to any specific implementation. Spring provides common interfaces for marshalling
+                (transforming JavaBeans into XML) and unmarshalling (transforming XML into Java objects) for DI into any
+                Spring beans. Common libraries such as Java Architecture for XML Binding (JAXB) , Castor, XStream, JiBX,
+                and XMLBeans are supported. When we discuss remotely accessing a Spring application for business
+                data in XML format, you will see how to use Spring’s Object/XML Mapping (OXM) support in your
+                application.
+            </div>
+
+            <div class="sub-heading">MVC in the Web Tier</div>
+            <div>
+                - View support in Spring MVC is extensive. In addition to standard support for JSP and Java Standard Tag
+                Library (JSTL), which is greatly bolstered by the Spring tag libraries, you can take advantage of fully
+                integrated support for Apache Velocity, FreeMarker, Apache Tiles, Thymeleaf, and XSLT.
+                <br>
+                - You will find Spring MVC sufficient for your web application development needs. However, Spring can
+                also integrate with other popular web frameworks such as Struts, JSF, Atmosphere, Google Web Toolkit
+                (GWT), and so on.
+                <br>
+            </div>
+
+            <div class="sub-heading">WebSocket Support</div>
+            <div>
+                - WebSocket defines an API for creating a persistent connection between a client and server, typically
+                implemented in web browsers and servers. WebSocket-style development opens the door for efficient,
+                full-duplex communication enabling real-time message exchanges for highly responsive applications.
+            </div>
+
+            <div class="sub-heading">Remoting Support</div>
+            <div>
+                - Used for accessing or exposing remote components.
+                <br>
+                - Spring provides support for a variety of remote access mechanisms, including Java Remote Method
+                Invocation (RMI), JAX-WS, Caucho Hessian and Burlap, JMS, Advanced Message Queuing Protocol (AMQP), and
+                <b>REST</b>.
+                <br>
+                - By applying Spring’s dynamic proxying capabilities, you can have a proxy to a remote resource injected
+                as a dependency into one of your classes, thus removing the need to couple your application to a
+                specific remoting implementation and also reducing the amount of code you need to write for your
+                application.
+            </div>
+
+            <div class="sub-heading">Also..</div>
+            <div>
+                - Managing Transactions
+                <br>
+                - Simplifying and integrating with JEE
+                <br>
+                - Mail Support
+                <br>
+                - Job Scheduling Support
+                <br>
+                - Dynamic Scripting Support
+                <br>
+                - Simplified Exception Handling
+            </div>
+        </div>
+
+        <div id="Ch2" class="sub-heading">Chapter 2: Getting Started</div>
         <div class="textual-content">
 
         </div>
-
 
 
     </div>

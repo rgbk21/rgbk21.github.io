@@ -37,8 +37,8 @@ code {
     font-weight: bold;
 }
 
-.main-content-after-subheading{
-
+hr{
+    border-top: 1px solid rgba(0,0,0,1);
 }
 
 .center-block {
