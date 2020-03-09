@@ -24,12 +24,12 @@
 }
 
 code {
-    padding: 2px 5px;
-    white-space: pre-wrap;
-    font-family: Consolas,Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace,sans-serif;
-    background-color: #eff0f1;
-    color: black;
-}
+     padding: 2px 5px;
+     white-space: pre-wrap;
+     font-family: Consolas,Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace,sans-serif;
+     background-color: #eff0f1;
+     color: black;
+ }
 
 .sub-heading {
     padding-top: 10px;
@@ -37,8 +37,8 @@ code {
     font-weight: bold;
 }
 
-.main-content-after-subheading{
-
+hr{
+    border-top: 1px solid rgba(0,0,0,1);
 }
 
 .center-block {
