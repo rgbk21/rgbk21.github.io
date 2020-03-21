@@ -115,7 +115,7 @@
 
 <div class="container">
 
-    <div class="textual-content">
+    <a class="textual-content">
         This page contains my personal notes from the Head First SQL Book.
         <br>
         Index:
@@ -129,6 +129,11 @@
         <a href="#Ch4">Chapter 4: Smart Table Design - Need for being Normal</a>
         <br>
         <a href="#Ch5">Chapter 5: ALTER - Rewriting the Past</a>
+        <br>
+        <a href="#Ch7">Chapter 7: Multi-table Database Design - Outgrowing your table</a>
+        <br>
+        <a href="#Ch8">Chapter 8: Joins and Multi-table operations</a>
+
 
         <hr>
         <div id="Ch1" class="sub-heading">Chapter 1: Data and Tables - A Place for Everything</div>
@@ -811,6 +816,275 @@
 
         </div>
 
+        <hr>
+        <div id="Ch7" class="sub-heading">Chapter 7: Multi-table Database Design - Outgrowing your table</div>
+        <hr>
+        <div class="textual-content">
+            - Sometimes the best way to achieve atomicity in a table is to move the non-atomic columns in the table to
+            new tables.
+
+            <div class="sub-heading">What is a Database Schema</div>
+            <div>
+                - A representation of all the structures such as tables and columns in th database along with how they
+                connect is known as a <i>schema</i>
+                <br>
+                - Consider the below table for example. The interests column is not atomic. Dividing the column into
+                multiple columns won't work either because that will break the atomicitiy as well (multiple columns
+                containing the same type of data). One option is to move the interests to another table. Which is what
+                we will be doing.
+                <div id="non_atomic_table" class="row">
+                    <img src="resources/ch7_images/Non_Atomic_Table.PNG" class="center-block img-fluid"
+                         alt="ALTER_Add_Primary_Key"
+                         width=55%>
+                </div>
+                - But if we want to move interests to another table, we will have to uniquely identify which interest
+                belongs to which individual. Also this new table that we create will have to be 1NF. This is how we
+                do it:
+                <div class="row">
+                    <img src="resources/ch7_images/Foreign_Key.PNG" class="center-block img-fluid"
+                         alt="Foreign_Key"
+                         width=55%>
+                </div>
+                - Note that the new table needs to be in the 1NF. Hence each record needs to be unique. For which we
+                have the int_id (Primary Key) in the interests table. We also want to be able to uniquely identify the
+                individual to which the value in the interest column belongs to. This is done by using the contact_id
+                column.
+                <br>
+
+            </div>
+            <div class="sub-heading">What is a Foreign Key</div>
+            - The Foreign Key is a column in a table that references the Primary Key of another table.
+            <br>
+            - A Foreign Key can have a different name than the Primary Key that it comes from.
+            <br>
+            - The primary key used by a foreign key is also known as a parent key. The table where the parent key is
+            from is known as the parent table.
+            <br>
+            - The foreign key can be used to make sure that the rows in one table have corresponding rows in another
+            table.
+            <br>
+            - Foreign key values can be null, even though primary key values can't. A NULL foreign key means that there
+            is no matching primary key in the parent table. But we can make sure that a foreign key contains a
+            meaningful value, one that exists in the parent table, by using a <i>constraint</i>.
+            <br>
+            - Foreign keys do not have to be unique.
+
+            <div class="sub-heading">How do you constrain a Foreign Key</div>
+            <div>
+                - When you constrain your foreign key, you will only be able to insert values into your foreign key that
+                exist in the table that the key came from (the parent table). This is called <i>referential
+                integrity</i>. This makes sure that if you have a row in one table with a foreign key , it must
+                correspond to a row in another through the foreign key. If you try to delete the row in the a primary
+                key table or to change a primary key value, you will get an error if the primary key value is a foreign
+                key
+                constraint in another table.
+                <br>
+                - You can delete a row that has a primary key that shows up as a foreign key in some other table. But
+                for this, you have to remove the foreign key row first. This makes sense as well because, for example,
+                if you are removing the row from my_contacts, you don't need to know that person's interests anymore.
+                <br>
+                - You can use a foreign key to reference a <i>unique value</i> in the parent table. <i>It doesn't have
+                to be the Primary key of the parent table. It just has to be unique.</i>
+                <div class="row">
+                    <img src="resources/ch7_images/Foreign_Key_Ref_Int.png" class="center-block img-fluid"
+                         alt="Foreign_Key_Ref_Int"
+                         width=55%>
+                </div>
+            </div>
+
+            <div class="sub-heading">How to create a table with a Foreign Key</div>
+            <div>
+                <code>ALTER TABLE my_contacts_3 MODIFY my_id INT NOT NULL PRIMARY KEY AUTO_INCREMENT;</code><br>
+                <code>CREATE TABLE interests (</code><br>
+                <code> int_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,</code><br>
+                <code> interest VARCHAR(50) NOT NULL,</code><br>
+                <code> interest_id INT NOT NULL,</code><br>
+                <code> CONSTRAINT my_contacts_3_contact_id_fk</code><br>
+                <code> FOREIGN KEY (interest_id)</code><br>
+                <code> REFERENCES my_contacts_3 (my_id)</code><br>
+                <code>);</code><br>
+                And the resulting table that is created is as follows:
+                <div class="row">
+                    <img src="resources/ch7_images/Foreign_Key_Table.PNG" class="center-block img-fluid"
+                         alt="Foreign_Key_Table"
+                         width=45%>
+                </div>
+                - The first statement was necessary because the my_contacts_3 did not have the my_id column designated
+                as a Primary key. That was causing the following error: <br>
+                Error Code: 1822. Failed to add the foreign key constraint. Missing index for constraint
+                'my_contacts_3_contact_id_fk' in the referenced table 'my_contacts_3'
+                <br>
+                - interests is the name of the new table created. int_id is the Primary Key of this new table.
+                <br>
+                - Line 7 states that the Foreign Key will be stored in a column named interest_id. Hence we need to
+                create a column with the same name which we are doing on line 5. You can change the name of the column
+                to any name that you like.
+                <br>
+                - Line 6 is the name of the constraint that is being used. As far as I can tell., this name means
+                nothing.
+                <br>
+                - Line 8 is where the Foreign Key is actually being assigned. my_contacts_3 specifies the table from
+                which the foreign key actually comes from. The my_id is what it is actually called in the other table
+                (contact_id).
+                <br>
+                - The MUL in the figure means that multiple occurrences of the same value may be stored in this column.
+            </div>
+
+            <div class="sub-heading">Relationships between Tables</div>
+            <div>
+                - There are 3 possible relationships that are possible between tables:
+                <ul>
+                    <li>one-to-one</li>
+                    <li>one-to-many</li>
+                    <li>many-to-many</li>
+                </ul>
+            </div>
+
+            <div class="sub-heading">One-To-One Relationship</div>
+            <div>
+                - These types of tables are not that frequently used. One-to-one means that exactly one row of a parent
+                table is related to one row of a child table.
+            </div>
+            <div class="row">
+                <img src="resources/ch7_images/One_To_One_Relationship.PNG" class="center-block img-fluid"
+                     alt="One_To_One_Relationship"
+                     width=75%>
+            </div>
+
+            <div class="sub-heading">One-To-Many Relationship</div>
+            <div>
+                - One-to-many relationships means that a record in table A can match many records in table B but a
+                record in Table B can only match one record in Table A.
+
+                <a href="https://stackoverflow.com/a/8217964/8742428">SO post about One-To-Many Relationships</a>
+                <br>
+                - Consider the following table relationship:
+                <div class="row">
+                    <img src="resources/ch7_images/One_To_Many_Relationship.PNG" class="center-block img-fluid"
+                         alt="One_To_Many_Relationship"
+                         width=45%>
+                </div>
+                - Each contact in my_contacts can have only one prof_id. But one prof_id in the professions table can
+                occur
+                for multiple contacts in the my_contacts table. That is - each row in professions table can have many
+                matching rows in the my_contacts table. But each row in the my_contacts table will have only one
+                matching
+                row in the professions table.
+            </div>
+
+            <div class="sub-heading">Many-To-Many Relationship</div>
+            <div>
+                - We make the use of a junction table that which contains the primary key columns of the two tables that
+                we are trying to relate.
+                <div class="row">
+                    <img src="resources/ch7_images/Many-To-Many.PNG" class="center-block img-fluid"
+                         alt="Many_To_Many"
+                         width=55%>
+                </div>
+                - A many-to-many relationship is made up of two one-to-many relationships with a junction table in
+                between. <br>
+                - Recall that in the <a href="#non_atomic_table">table we saw earlier</a>, one person had multiple
+                interests. Also, one interest was shared by more than on person. Hence, this led to a many-to-many
+                relationship. <br>
+                - Using the concept of the junction table described above, we can break the many-to-many relationship as
+                follows. The contact_interest table in the following example serves as the junction table.
+                <div class="row">
+                    <img src="resources/ch7_images/Many-To-Many_Interests.PNG" class="center-block img-fluid"
+                         alt="Many-To-Many_Interests"
+                         width=55%>
+                </div>
+                - One advantage of doing this is that it helps preserve data integrity. If you have to delete someone
+                from the my_contacts table, you never have to touch the interests table. Just the contact_interests
+                table. Also, suppose you misspelled some hobby name. When you fix it, you will only have ot change one
+                row in the interests table.
+            </div>
+
+            <div class="sub-heading">What is a Composite Key</div>
+            <div>
+                - A composite key is a Primary Key that is composed of multiple columns thus creating a unique key. <br>
+                - //TODO: So other than when we create a junction tbale, why would we ever want to create a composite
+                key out of columns in my table? Why not just always create an id field? The answer is basically the
+                debate over creating synthetic primary keys or creating natural primary keys.
+            </div>
+
+            <div class="sub-heading">What is functional dependence between two columns</div>
+            <div>
+                - When a column's data must change when another column's data is modified, the first column id
+                functionally dependent on the second. <br>
+                - A shorthand way to define functional dependency is as follows:
+                <code>T.x ->; T.y</code>: This is read like "in the relational table called T, column y is functionally
+                dependent on the column x". Hence the statement is read from the right to the left. <br>
+                - Thus, a dependent column is one containing data that could change if another column changes.
+                Non-dependent columns stand alone. <br>
+                - A <i>partial functional dependency</i> means that a non-key column is dependent on some, but not all,
+                of the columns in a composite primary key. <br>
+                <div class="row">
+                    <img src="resources/ch7_images/Partial_Functional_Dependency.PNG" class="center-block img-fluid"
+                         alt="Many-To-Many_Interests"
+                         width=55%>
+                </div>
+                - A <i>transitive functional dependency</i> is one where changing any of the non-key columns might cause
+                any of the other columns to change. <br>
+                <div class="row">
+                    <img src="resources/ch7_images/Transitive-Functional_Dependency.PNG" class="center-block img-fluid"
+                         alt="Transitive-Functional_Dependency"
+                         width=55%>
+                </div>
+            </div>
+
+            <div class="sub-heading">What is the Second Normal Form</div>
+            <div>
+                - Check this <a href="https://stackoverflow.com/a/724032/8742428">SO link</a> for the proper answer <br>
+                - 1NF is the most basic of normal forms - each cell in a table must contain only one piece of
+                information, and there can be no duplicate rows. 2NF and 3NF are all about being dependent on the
+                primary key. Recall that a primary key can be made up of multiple columns. <br>
+                - The data depends on the key [1NF], the whole key [2NF] and nothing but the key [3NF] (so help me Codd)
+                - For example, consider the table below:
+                <div class="row">
+                    <img src="resources/ch7_images/Not_In_2NF_Form.png" class="center-block img-fluid"
+                         alt="Transitive-Functional_Dependency"
+                         width=55%>
+                </div>
+                - The toy_id and the store_id are combined to form the composite primary key. In this case, the color
+                column depends only on the toy_id and not the store id. Hence, it is a partial functional dependency.
+                Similarly, store_address depends on the store_id but not the toy_id. Again a partial dependency. <br>
+                - A 1NF table becomes a 2NF table when there are no partial functional dependencies in the table. That
+                is, every column in the table depends on every column that is used to build the entire primary key in
+                that table. This will also hold true if there is only one column that is the primary key in the table.
+            </div>
+
+            <div class="sub-heading">What is the Third Normal Form</div>
+            <div>
+                - If we are using an artificial key in our table, then achieving 2NF is easy (because that table will
+                not contain a composite key, which means that there is a single column that forms the primary key which
+                in turn means that every column will depend on the entire primary key by default). <br>
+                - So we need to get the table into 3NF. <br>
+                - For a table to be in 3 NF, we have to ensure that there are no transitive dependencies in the table.
+                Recall that a transitive dependency occurs when changing one non-key column causes other columns to
+                change.
+                <div class="row">
+                    <img src="resources/ch7_images/3_NF.PNG" class="center-block img-fluid"
+                         alt="3_NF"
+                         width=55%>
+                </div>
+            </div>
+
+            <div class="sub-heading">Bringing it all together</div>
+            <div>
+                <div class="row">
+                    <img src="resources/ch7_images/Final_Contacts_Table.PNG" class="center-block img-fluid"
+                         alt="Final_Contacts_Table"
+                         width=55%>
+                </div>
+            </div>
+
+
+
+        </div>
+
+        <hr>
+        <div id="Ch8" class="sub-heading">Chapter 8: Joins and Multi-table operations</div>
+        <hr>
 
     </div>
 </div>

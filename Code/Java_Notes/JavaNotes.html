@@ -127,6 +127,8 @@
     Chapter 11: <a href="#MultiThreadedProg">Multithreaded Programming</a>
     <br>
     Chapter 28: <a href="#Concurreny">The Concurrency Utilities</a>
+    <br>
+    Chapter 28: <a href="#Lambda">Lambda Expressions</a>
 
     <div id="inheritance" class="chapter">Chapter 8: Inheritance</div>
     <div class="textual-content">
@@ -1093,7 +1095,9 @@
         //TODO........................
     </div>
 
+    <hr>
     <div id="MultiThreadedProg" class="chapter">Chapter 11: MultiThreaded Programming</div>
+    <hr>
     <div class="textual-content">
 
         <div class="sub-heading">What are the two types of multitasking</div>
@@ -1129,6 +1133,8 @@
                     lower in cost.
                 </li>
             </ul>
+            - In <i>process</i>-based multitasking, two or more programs can run at the same time. In <i>thread</i>-based
+            multitasking, two or more tasks from the <i>same</i> program can run simultaneously.
             - A multithreaded program contains two or more parts that can run concurrently. Each part of such a program
             is called a <i>thread</i>.
         </div>
@@ -1156,7 +1162,7 @@
             of one thread to another.
             <br>
             - A thread’s priority is used to decide when to switch from one running thread to the next. This is called a
-            <i>context switch</i>.
+            <i>context switch</i>. <br>
             - Rules for context switch:
             <ul>
                 <li>A thread can voluntarily relinquish control. This occurs when explicitly yielding, sleeping, or when
@@ -1203,7 +1209,37 @@
 
         <div id="implementingRunnable" class="sub-heading">Implementing Runnable</div>
         <div>
-            Passing <code>this</code> as the first argument indicates that you want the new thread to call the
+            - The <code>Runnable</code> class should be implemented by any class whose instances are intended to be
+            executed by a thread. The class must define a method of no arguments called <code>run</code>. <br>
+            - Inside <code>run()</code> you will define the code that constitutes the new thread. After you create a
+            class that implements <code>Runnable</code>, you will instantiate an object of type <code>Thread</code> from
+            within that class. <br>
+            - The <code>Thread</code> class defines many constructors. The one we use here is:
+            <code>Thread(Runnable threadObj, String threadName)</code>. Here, <i>threadObj</i> is an instance of a class
+            that implements the <code>Runnable</code> interface. This defines where the execution of the thread will
+            begin. The name of the new thread is specified by <i>threadName</i>. <br>
+            - After the new thread is created, it will not start running unless you call its <code>start()</code>
+            method. The <code>start()</code> method actually calls the <code>run()</code> method of the class that is
+            referenced by <i>threadObj</i>. <br>
+
+            <code>class PrimeRun implements Runnable {</code><br>
+            <code> long minPrime;</code><br>
+            <code> PrimeRun(long minPrime) {</code><br>
+            <code> this.minPrime = minPrime;</code><br>
+            <code> }</code><br>
+            <code> public void run() {</code><br>
+            <code> // compute primes larger than minPrime</code><br>
+            <code> }</code><br>
+            <code>}</code><br>
+
+            The following code would then create a thread and start it running: <br>
+            <code>PrimeRun p = new PrimeRun(143);</code><br>
+            <code>new Thread(p).start();</code><br>
+            <code>//or</code><br>
+            <code>Thread t = new Thread(p);</code><br>
+            <code>t.start();</code><br>
+
+            - Passing <code>this</code> as the first argument indicates that you want the new thread to call the
             <code>run()</code> method on this object. Inside <code>main()</code>, <code>start()</code> is called, which
             starts the thread of execution beginning at the <code>run()</code> method. This causes the child thread’s
             for loop to begin. Next the main thread enters its for loop. Both threads continue running, sharing the CPU
@@ -1222,6 +1258,20 @@
             point for
             the new thread. As before, a call to <code>start()</code> begins execution of the new thread.
             <br>
+            <code>class PrimeThread extends Thread {</code><br>
+            <code> long minPrime;</code><br>
+            <code> PrimeThread(long minPrime) {</code><br>
+            <code> this.minPrime = minPrime;</code><br>
+            <code> }</code><br>
+
+            <code> public void run() {</code><br>
+            <code> // compute primes larger than minPrime</code><br>
+            <code> }</code><br>
+            <code>}</code><br>
+
+            The following code would then create a thread and start it running: <br>
+            <code>PrimeThread p = new PrimeThread(143);</code><br>
+            <code>p.start();</code>
             -
             <div class="code-snippet">
                 <script src="https://gist.github.com/rgbk21/4ff15cd7b4c8e248397104ab1dc449a8.js"></script>
@@ -1262,15 +1312,18 @@
             <br>
             - Because sometimes (almost never, but sometimes) you want to be able to change the basic behaviour of
             Thread. That's when you'll need to extend it. You can change it by overriding a method from the Thread
-            class, you can't do it by implementing one from Runnable.
+            class, you can't do it by implementing one from Runnable. <br>
+            - <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Thread.html">Oracle link explaining how you
+            would create and use a new Thread by extending Thread or by implementing Runnable</a> <br>
+
         </div>
 
         <div class="sub-heading">Creating Multiple Threads</div>
         <div>
             - Your program can spawn as many threads as you need.
             <br>
-            - In thebelow example we are createing multiple threads. In the printout, note where the Main thread is
-            exiting. It is not like Main is waiting for the
+            - In the below example we are creating multiple threads. In the printout, note where the Main thread is
+            exiting. It is not like Main is waiting for the other threads to end.
             <div class="code-snippet">
                 <script src="https://gist.github.com/rgbk21/f698e9f65e5b5f1ecf05416c93594f8e.js"></script>
             </div>
@@ -1285,7 +1338,8 @@
             <code>isAlive()</code> on the thread which returns true if the thread is still running.
             <br>
             - But you should prefer the <code>join()</code> method. This method waits until the thread on which it is
-            called terminates. <code>join</code> also allows you to specify a maximum amount of time that you want to
+            called terminates. It's name comes from the concept of the calling thread waiting until the specified thread
+            joins it. <code>join</code> also allows you to specify a maximum amount of time that you want to
             wait for the specified thread to terminate.
             <ul>
                 <li><code>void join()</code>: Waits for this thread to die.</li>
@@ -1326,6 +1380,8 @@
             until the first thread exits the monitor. These other threads are said to be waiting for the monitor. A
             thread that owns a monitor can reenter the same monitor if it so desires.
             <br>
+            - <a href="https://stackoverflow.com/a/9848796/8742428">SO Link explaining what a monitor actually is</a>
+            <br>
             - This is what happens when your code is NOT synchronized.
             <script src="https://gist.github.com/rgbk21/9a6fdb4fb951d6f65f123cd7141945b2.js"></script>
             - By calling <code>sleep()</code>, the <code>call()</code> method allows execution to switch to another
@@ -1336,12 +1392,11 @@
             <br>
         </div>
 
-        <div class="sub-heading">Using the <code>synchronized</code> keyword</div>
+        <div class="sub-heading">Using <code>synchronized</code> methods</div>
         <div>
             - To prevent the above, you need to <i>serialize</i> the access to the <i>method</i> <code>call()</code>.
-            That
-            is, you must restrict its access to only one thread at a time. To do this, you simply need to precede <code>call()</code>
-            ’s definition with the keyword <code>synchronized</code>.
+            That is, you must restrict its access to only one thread at a time. To do this, you simply need to precede
+            <code>call()</code>'s definition with the keyword <code>synchronized</code>.
             <br>
             <code>class CallMe{</code>
             <br>
@@ -1358,6 +1413,10 @@
             <br>
             [Synchronized]
             <br>
+            Example of using the synchronized statement:
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/ab92d8351023dd755f7afb0668ab2192.js"></script>
+            </div>
             Well we would have expected "Hello Synchronized World". But threads gonna thread I guess.
             <br>
             Any time that you have a method, or group of methods, that manipulates the internal state of an object in a
@@ -1367,7 +1426,7 @@
             synchronized method on the same instance. However, nonsynchronized methods on that instance will continue to
             be callable.
         </div>
-        <div class="sub-heading">Using the Synchronized Statement</div>
+        <div class="sub-heading">Using <code>synchronized</code> Statements</div>
         <div>
             - Creating <code>synchronized</code> methods within classes might not always work.
             <br>
@@ -1382,7 +1441,7 @@
             <br>
             <code>synchronized(objRef){</code>
             <br>
-            <code> //Statements tp be synchronized</code>
+            <code> //Statements to be synchronized</code>
             <br>
             <code>}</code>
             <br>
@@ -1450,14 +1509,19 @@
                     and then to relinquish any and all synchronization claims on this object. Thread T becomes disabled
                     for thread scheduling purposes and lies dormant until one of four things happens:
                     <ul>
-                        <li>Some other thread invokes the notify method for this object and thread T happens to be arbitrarily
-                            chosen as the thread to be awakened.</li>
+                        <li>Some other thread invokes the notify method for this object and thread T happens to be
+                            arbitrarily
+                            chosen as the thread to be awakened.
+                        </li>
                         <li>Some other thread invokes the notifyAll method for this object.</li>
                         <li>Some other thread interrupts thread T.</li>
-                        <li>The specified amount of real time has elapsed, more or less. If timeout is zero, however, then real
-                            time is not taken into consideration and the thread simply waits until notified.</li>
+                        <li>The specified amount of real time has elapsed, more or less. If timeout is zero, however,
+                            then real
+                            time is not taken into consideration and the thread simply waits until notified.
+                        </li>
                     </ul>
-                    - The thread T is then removed from the wait set for this object and re-enabled for thread scheduling.
+                    - The thread T is then removed from the wait set for this object and re-enabled for thread
+                    scheduling.
                     It then competes in the usual manner with other threads for the right to synchronize on the object;
                     once it has gained control of the object, all its synchronization claims on the object are restored
                     to the status quo ante - that is, to the situation as of the time that the wait method was invoked.
@@ -1466,14 +1530,154 @@
                     was invoked.
                 </li>
             </ul>
+            - Code without using any kind of inter-thread communication: <br>
+            - The problem with this code is that although the <code>put()</code> and <code>get()</code> methods on Q are
+            synchronized, nothing is stopping the producer from overrunning the consumer, nor will anything stop the
+            consumer from consuming the same queue value twice. Hence you get erroneous output.
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/3a6e64c60ef1a99f1eaaed1a3aadc585.js"></script>
+            </div>
+
+            - Code after using inter-thread communication: <br>
+            - Inside <code>get()</code>, <code>wait()</code> is called. This causes it's execution to suspend until
+            Producer notifies you that some data is ready. When this happens execution inside <code>get</code> resumes.
+            After the data has been obtained <code>get</code> calls <code>notify</code>. This tells the producer that it
+            is ok to put more data in the queue. Inside <code>put()</code>, <code>wait</code> suspends execution until
+            Consumer has removed the item from the queue. When the execution resumes, the next item of data is out in
+            the queue, and notify is called. This tells the Consumer that it should now remove it.
+
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/cb7b75b0a7b15b15cfe15bd9edd7639b.js"></script>
+            </div>
+        </div>
+
+        <div class="sub-heading">Deadlock</div>
+        <div>
+            - A special type of error that you need to avoid that relates specifically to multitasking is deadlock,
+            which occurs when two threads have a circular dependency on a pair of synchronized objects. For example,
+            suppose one thread enters the monitor on object X and another thread enters the monitor on object Y. If the
+            thread in X tries to call any synchronized method on Y, it will block as expected. However, if the thread in
+            Y, in turn, tries to call any synchronized method on X, the thread waits forever, because to access X, it
+            would have to release its own lock on Y so that the first thread could complete.
+            - Code showing how Deadlock can be created:
+            <br>
+            - The next example creates two classes, A and B, with methods foo() and bar(), respectively, which pause
+            briefly before trying to call a method in the other class. The main class, named Deadlock, creates an A and
+            a B instance, and then calls deadlockStart() to start a second thread that sets up the deadlock condition.
+            The foo() and bar() methods use sleep() as a way to force the deadlock condition to occur.
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/9cdc5afbd06dada6fdfff313626f9561.js"></script>
+            </div>
+        </div>
+
+        <div class="sub-heading">Suspending, Resuming, and Stopping Threads</div>
+        <div>
+            - A thread must be designed so that the <code>run()</code> method periodically checks to determine whether
+            that thread should suspend, resume, or stop its own execution.
+            <br>
+            - Typically, this is accomplished by establishing a flag variable that indicates the execution state of the
+            thread. As long as this flag is set to “running,” the <code>run()</code> method must continue to let the
+            thread execute. If this variable is set to “suspend,” the thread must pause. If it is set to “stop,” the
+            thread must terminate. Of course, a variety of ways exist in which to write such code, but the central theme
+            will be the same for all programs.
+            <br>
+            - Apparently this example was supposed to teach me something:
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/43202c065425da88014d5c98b307ffd8.js"></script>
+            </div>
+        </div>
+
+        <div class="sub-heading">Obtaining a Thread's State</div>
+        <div>
+            - You can obtain the current state of a thread by using: <code>getState()</code>. This returns a value of
+            type <code>Thread.State</code> that indicates the state of the Thread at the time the call was made.
+            <br>
+            - <code>State</code> is an enumeration that is defined by <code>Thread</code>. These are the values that can
+            be returned by <code>getState()</code>.
+            <table class="table table-bordered table-sm">
+                <thead>
+                <tr>
+                    <th>Value</th>
+                    <th>State</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>BLOCKED</td>
+                    <td>A thread that has suspended execution because it was waiting to acquire a lock</td>
+                </tr>
+                <tr>
+                    <td>NEW</td>
+                    <td>A thread that has not begun execution</td>
+                </tr>
+                <tr>
+                    <td>RUNNABLE</td>
+                    <td>A thread that is either currently executing or will execute when it gains access to the CPU</td>
+                </tr>
+                <tr>
+                    <td>TERMINATED</td>
+                    <td>A thread that has completed execution</td>
+                </tr>
+                <tr>
+                    <td>TIMED_WAITING</td>
+                    <td>A thread that has suspended execution for a specified period of time, such as when it has
+                        called <code>sleep()</code>. This state is also entered when a timeout version of
+                        <code>wait()</code> or <code>join()</code> is called.
+                    </td>
+                </tr>
+                <tr>
+                    <td>WAITING</td>
+                    <td>A thread that has suspended execution because it is waiting for some action to occur. For
+                        example, it is waiting because of a call to a non-timeout version of <code>wait()</code> or
+                        <code>join()</code>.
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+
+            <div class="row">
+                <img src="Thread_States.PNG" class="center-block img-fluid" alt="Thread_States" width="50%">
+            </div>
+            - This is how you can use the <code>Thread.State</code> in your code: <br>
+            <code>Thread.State ts = thrd.getState();</code><br>
+            <code>if (ts == Thread.State.RUNNABLE) {//do stuff}</code><br>
+
+
+        </div>
+
+
+    </div>
+
+    <hr>
+    <div id="Concurrency">Chapter 28: The Concurrency Utilities</div>
+    <hr>
+    <div class="textual-content">
+        <div class="sub-heading">Parallel Programming via the Join/Fork Framework</div>
+        <div>
+            - It is important to point out the distinction between traditional multithreading and parallel programming.
+            <br>
+            - In the past, most computers had a single CPU and multithreading was primarily used to take advantage of
+            idle time, such as when a program is waiting for user input. Using this approach, one thread can execute
+            while another is waiting. In other words, on a single-CPU system, multithreading is used to allow two or
+            more tasks to share the CPU. This type of multithreading is typically supported by an object of type Thread
+            (as described in Chapter 11). Although this type of multithreading will always remain quite useful, it was
+            not optimized for situations in which two or more CPUs are available (multicore computers).
+            <br>
+            - When multiple CPUs are present, a second type of multithreading capability that supports true parallel
+            execution is required. With two or more CPUs, it is possible to execute portions of a program
+            simultaneously, with each part executing on its own CPU. This can be used to significantly speed up the
+            execution of some types of operations, such as sorting, transforming, or searching a large array. In many
+            cases, these types of operations can be broken down into smaller pieces (each acting on a portion of the
+            array), and each piece can be run on its own CPU.
         </div>
 
     </div>
 
-    <div id="Concurreny">C hapter 28: The Concurrency Utilities</div>
+    <div id="Lambda">Chapter 15: Lambda Expressions</div>
     <div class="textual-content">
-        
+
     </div>
+
 
 </div>
 
