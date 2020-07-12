@@ -124,11 +124,11 @@
     <br>
     Chapter 19: <a href="#Collections">Collections</a>
     <br>
+    Chapter 15: <a href="#Lambda">Lambda Expressions</a>
+    <br>
     Chapter 11: <a href="#MultiThreadedProg">Multithreaded Programming</a>
     <br>
     Chapter 28: <a href="#Concurrency">The Concurrency Utilities</a>
-    <br>
-    Chapter 15: <a href="#Lambda">Lambda Expressions</a>
 
     <div id="inheritance" class="chapter">Chapter 8: Inheritance</div>
     <div class="textual-content">
@@ -1115,7 +1115,8 @@
     <hr>
 
     <div class="textual-content">
-
+        Notes from book: Beginning Java 8 Language Features by Kishori Sharan
+        <br>
         <div class="sub-heading">What is a Lambda Expression</div>
         <div>
             - A Lambda Expression is an unnamed block of code with a list of formal parameters and a body. An arrow
@@ -1176,8 +1177,8 @@
                 <b>What is the difference between an <i>implicit</i> and an <i>explicit</i> lambda expression</b>:
                 Lambda expression that does not declare the types of its parameters is known as an implicit lambda
                 expression. A lambda expression that declares the types of its parameters is known as an explicit lambda
-                expression. <code>(x, y) -> x + y</code> is an example of an implicit Lambda Expression. <code>(int x,
-                int y) -> x + y</code> is explicit.
+                expression. <code>(x, y) -> x + y</code> is an example of an implicit Lambda Expression.
+                <code>(int x, int y) -> x + y</code> is explicit.
             </li>
 
             <div class="row">
@@ -1213,9 +1214,10 @@
             <li>
                 <b>Poly Expressions</b>: A poly expression is an expression that has different types in different
                 contexts. All lambda expressions in Java are poly expressions. You must use it in a context to know its
-                type. For example, the expression <code>new ArrayList&lt&gt()</code> is a poly expression. In this:
+                type. For example, the expression <code>new ArrayList&lt&gt()</code> is a poly expression. <br>
+                In this:
                 <code>ArrayList&ltLong&gt idList = new ArrayList&lt&gt();</code>, its type is
-                <code>ArrayList&ltLong&gt</code>.
+                <code>ArrayList&ltLong&gt</code>. <br>
                 Whereas in <code>ArrayList&ltString&gt nameList = new ArrayList&lt&gt();</code>, its type is <code>ArrayList&ltString&gt</code>
             </li>
             - The compiler infers the type of a lambda expression. The context in which a lambda expression is used
@@ -1544,10 +1546,10 @@
         <div>
             - <br>
             - <a href="https://stackoverflow.com/questions/12825847/why-are-local-variables-thread-safe-in-java">SO link
-            explaining why Local Variables are thread safe in java</a>
+            explaining why Local Variables are thread safe in java</a> <br>
             - Why does everything have to be so confusing: <br>
             <a href="https://stackoverflow.com/questions/25055392/lambdas-local-variables-need-final-instance-variables-dont">SO
-                Link explaining why variables inside a lambda have to be final or effectively final.</a>
+                Link explaining why variables inside a lambda have to be final or effectively final.</a> <br>
             - A lambda expression can access instance and class variables of a class whether they are effectively final or not.
             If instance and class variables are not final, they can be modified inside the body of the lambda expressions. a lambda
             expression keeps a copy of the local variables used in its body. If the local variables are reference variables, a copy of the
