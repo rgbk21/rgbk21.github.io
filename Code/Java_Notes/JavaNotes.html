@@ -116,8 +116,13 @@
 
 <div class="container">
     <div>
-        This page mainly contains my notes from Java: The Complete Reference and other sources.
+        This page contains my notes from the following books: <br>
+        a) Java: The Complete Reference - Herbert Schildt <br>
+        b) Beginning Java 8 Language Features - Kishori Sharan <br>
+        c) Modern Java in Action, 2nd Edition <br>
     </div>
+
+    <br>
     Index:
     <br>
     Chapter 8: <a href="#inheritance">Inheritance</a>
@@ -355,7 +360,7 @@
             <div class="code-snippet">
                 <script src="https://gist.github.com/rgbk21/d23a034039d972f802e397e8f353d313.js"></script>
             </div>
-            //TODO: <b>You can’t write efficient code if you don’t know whether random access is efficient or not.</b>
+            //TODO: <b>You cannot write efficient code if you do not know whether random access is efficient or not.</b>
             <br>
             //TODO: What is <b>RandomAccess</b>?
             <a href="https://stackoverflow.com/questions/3383726/java-declaring-from-interface-type-instead-of-class">Another
@@ -724,14 +729,14 @@
             (16) and load
             factor (0.75).
             <br>
-            b) <code>LinkedHashSet​(int initialCapacity)</code>: Constructs a new, empty linked hash set with the
+            b) <code>LinkedHashSet(int initialCapacity)</code>: Constructs a new, empty linked hash set with the
             specified initial capacity and the default load factor (0.75).
             <br>
-            c) <code>LinkedHashSet​(int initialCapacity, float loadFactor)</code>: Constructs a new, empty linked hash
+            c) <code>LinkedHashSet(int initialCapacity, float loadFactor)</code>: Constructs a new, empty linked hash
             set with the
             specified initial capacity and load factor.
             <br>
-            d) <code>LinkedHashSet​(Collection&lt? extends E&gt c)</code>: Constructs a new linked hash set with the
+            d) <code>LinkedHashSet(Collection&lt? extends E&gt c)</code>: Constructs a new linked hash set with the
             same elements as
             the specified collection.
         </div>
@@ -764,15 +769,15 @@
             natural ordering
             of its elements.
             <br>
-            b) <code>TreeSet​(Collection&lt? extends E&gt c)</code>: Constructs a new tree set containing the elements
+            b) <code>TreeSet(Collection&lt extends E&gt c)</code> : Constructs a new tree set containing the elements
             in the
             specified collection, sorted according to the natural ordering of its elements.
             <br>
-            c) <code>TreeSet​(Comparator&lt? super E&gt comparator)</code>: Constructs a new, empty tree set, sorted
+            c) <code>TreeSet(Comparator&lt? super E&gt comparator)</code>: Constructs a new, empty tree set, sorted
             according to the
             specified comparator.
             <br>
-            d) <code>TreeSet​(SortedSet&ltE&gt s)</code>: Constructs a new tree set containing the same elements and
+            d) <code>TreeSet(SortedSet&ltE&gt s)</code>: Constructs a new tree set containing the same elements and
             using the same
             ordering as the specified sorted set.
         </div>
@@ -818,13 +823,13 @@
             in the collection, one element at a time. In general, to use an iterator to cycle through the contents of a
             collection, follow these steps:
             <br>
-            1.   Obtain an iterator to the start of the collection by calling the collection’s <code>iterator()</code>
+            1. Obtain an iterator to the start of the collection by calling the collection's <code>iterator()</code>
             method.
             <br>
-            2.   Set up a loop that makes a call to <code>hasNext()</code>. Have the loop iterate as long as <code>hasNext()</code>
+            2. Set up a loop that makes a call to <code>hasNext()</code>. Have the loop iterate as long as <code>hasNext()</code>
             returns true.
             <br>
-            3.   Within the loop, obtain each element by calling <code>next()</code>.
+            3. Within the loop, obtain each element by calling <code>next()</code>.
             <br>
             For collections that implement List, you can also obtain an iterator by calling <code>listIterator()</code>.
             A list iterator gives you the ability to access the collection in either the forward or backward direction
@@ -857,10 +862,10 @@
             <br>
             Here <code>K</code> specifies the types of keys, and <code>V</code> specifies the types of values.
             <br>
-            - There is one key point about maps that is important to mention at the outset: they don’t implement the
+            - There is one key point about maps that is important to mention at the outset: they don't implement the
             <code>Iterable</code>
             interface.
-            This means that you cannot cycle through a map using a for-each style for loop. Furthermore, you can’t
+            This means that you cannot cycle through a map using a for-each style for loop. Furthermore, you can't
             obtain an iterator to a map.
             However, you can obtain a collection-view of a map, which does allow the use of either the for loop or an
             iterator.
@@ -900,8 +905,8 @@
             a value, extreme caution is advised:
             the <code>equals</code> and <code>hashCode</code> methods are no longer well defined on such a map.
             <br>
-            - To put a value into a map, use <code>put​(K key, V value)</code> specifying the key and the value.
-            <code>get​(Object key)</code> returns the value to which the specified key is mapped, or null if this map
+            - To put a value into a map, use <code>put(K key, V value)</code> specifying the key and the value.
+            <code>get(Object key)</code> returns the value to which the specified key is mapped, or null if this map
             contains
             no mapping for the key.
         </div>
@@ -1610,7 +1615,7 @@
             single-threaded environment, when a thread blocks (that is, suspends execution) because it is waiting for
             some resource, the entire program stops running.
             <br>
-            - The benefit of Java’s multithreading is that the main loop/polling mechanism is eliminated. When a
+            - The benefit of Java's multithreading is that the main loop/polling mechanism is eliminated. When a
             thread blocks in a Java program, only the single thread that is blocked pauses. All other threads continue
             to run.
             <br>
@@ -1626,7 +1631,7 @@
             - Java assigns to each thread a priority. Thread priorities are integers that specify the relative priority
             of one thread to another.
             <br>
-            - A thread’s priority is used to decide when to switch from one running thread to the next. This is called a
+            - A thread's priority is used to decide when to switch from one running thread to the next. This is called a
             <i>context switch</i>. <br>
             - Rules for context switch:
             <ul>
@@ -1634,9 +1639,9 @@
                     blocked. In this scenario, all other threads are examined, and the highest-priority thread that is
                     ready to run is given the CPU.
                 </li>
-                <li> A thread can be preempted by a higher-priority thread. In this case, a
-                    lower-priority thread that does not yield the processor is simply preempted—no matter what it is
-                    doing—by a higher-priority thread. Basically, as soon as a higher-priority thread wants to run, it
+                <li> A thread can be preempted by a higher-priority thread. In this case, a
+                    lower-priority thread that does not yield the processor is simply preempted - no matter what it is
+                    doing - by a higher-priority thread. Basically, as soon as a higher-priority thread wants to run, it
                     does. This is called <i>preemptive multitasking</i>.
                 </li>
             </ul>
@@ -1653,7 +1658,7 @@
             - <i>main thread</i> is the thread that is executed when when your program begins. The main thread is
             important for two reasons:
             <ul>
-                <li>It is the thread from which other “child” threads will be spawned.</li>
+                <li>It is the thread from which other "child" threads will be spawned.</li>
                 <li>Often, it must be the last thread to finish execution because it performs various shutdown
                     actions.
                 </li>
@@ -1706,7 +1711,7 @@
 
             - Passing <code>this</code> as the first argument indicates that you want the new thread to call the
             <code>run()</code> method on this object. Inside <code>main()</code>, <code>start()</code> is called, which
-            starts the thread of execution beginning at the <code>run()</code> method. This causes the child thread’s
+            starts the thread of execution beginning at the <code>run()</code> method. This causes the child thread's
             for loop to begin. Next the main thread enters its for loop. Both threads continue running, sharing the CPU
             in single-core systems, until their loops finish.
             <div class="code-snippet">
@@ -1765,7 +1770,7 @@
             new thread.
             <br>
             - Classes should be extended only when they are being enhanced or adapted in some way. So, if you will not
-            be overriding any of Thread’s other methods, it is probably best simply to implement <code>Runnable</code>.
+            be overriding any of Thread's other methods, it is probably best simply to implement <code>Runnable</code>.
             Also, by implementing Runnable, your thread class does not need to inherit Thread, making it free to inherit
             a
             different class.
@@ -1897,7 +1902,7 @@
             <br>
             - Imagine that you want to synchronize access to objects of a class that was not designed for multithreaded
             access. That is, the class does not use synchronized methods. Further, this class was not created by you,
-            but by a third party, and you do not have access to the source code. Thus, you can’t add synchronized to the
+            but by a third party, and you do not have access to the source code. Thus, you can't add synchronized to the
             appropriate methods within the class. How can access to an object of this class be synchronized?
             <br>
             - You put calls to the methods defined by the class inside a <code>synchronized</code> block.
@@ -2041,8 +2046,8 @@
             that thread should suspend, resume, or stop its own execution.
             <br>
             - Typically, this is accomplished by establishing a flag variable that indicates the execution state of the
-            thread. As long as this flag is set to “running,” the <code>run()</code> method must continue to let the
-            thread execute. If this variable is set to “suspend,” the thread must pause. If it is set to “stop,” the
+            thread. As long as this flag is set to "running," the <code>run()</code> method must continue to let the
+            thread execute. If this variable is set to "suspend", the thread must pause. If it is set to "stop", the
             thread must terminate. Of course, a variety of ways exist in which to write such code, but the central theme
             will be the same for all programs.
             <br>
