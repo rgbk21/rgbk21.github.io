@@ -126,9 +126,9 @@
     <br>
     Chapter 11: <a href="#MultiThreadedProg">Multithreaded Programming</a>
     <br>
-    Chapter 28: <a href="#Concurreny">The Concurrency Utilities</a>
+    Chapter 28: <a href="#Concurrency">The Concurrency Utilities</a>
     <br>
-    Chapter 28: <a href="#Lambda">Lambda Expressions</a>
+    Chapter 15: <a href="#Lambda">Lambda Expressions</a>
 
     <div id="inheritance" class="chapter">Chapter 8: Inheritance</div>
     <div class="textual-content">
@@ -462,6 +462,21 @@
             <br>
             - Notice Generics...? LOL.
         </div>
+
+        <div class="sub-heading">Multiple Inheritance</div>
+        //TODO: <br>
+        https://stackoverflow.com/questions/21263607/can-a-normal-class-implement-multiple-interfaces <br>
+        https://stackoverflow.com/questions/13389384/multiple-inheritance-on-java-interfaces?noredirect=1&lq=1 <br>
+        https://stackoverflow.com/questions/3556652/how-do-java-interfaces-simulate-multiple-inheritance?noredirect=1&lq=1
+        <br>
+        https://stackoverflow.com/questions/21263607/can-a-normal-class-implement-multiple-interfaces?noredirect=1&lq=1
+        <br>
+        https://stackoverflow.com/questions/29758213/multiple-inheritance-ambiguity-with-interface?noredirect=1&lq=1
+        <br>
+        https://stackoverflow.com/questions/995255/why-is-multiple-inheritance-not-allowed-in-java-or-c?noredirect=1&lq=1
+        <br>
+        https://stackoverflow.com/questions/13389384/multiple-inheritance-on-java-interfaces?noredirect=1&lq=1 <br>
+
     </div>
 
     <div id="Collections" class="chapter">Chapter 19: Collections</div>
@@ -1096,6 +1111,454 @@
     </div>
 
     <hr>
+    <div id="Lambda">Chapter 15: Lambda Expressions</div>
+    <hr>
+
+    <div class="textual-content">
+
+        <div class="sub-heading">What is a Lambda Expression</div>
+        <div>
+            - A Lambda Expression is an unnamed block of code with a list of formal parameters and a body. An arrow
+            <code>-></code> is used to separate the list of the parameters and the <i>body</i> of the lambda expression.
+            <br>
+            - A Lambda Expression represents an <i>instance</i> of a <i>functional interface</i>. Every expression in
+            Java needs to have a type. This is its type. <br>
+            - When the abstract method of a functional interface is called, it is the body of the lambda expression that
+            is executed. <br>
+            - A lambda expression is evaluated to an instance of a functional interface. The body
+            of the lambda expression is not executed when the expression is evaluated. <i>The body of the lambda
+            expression is
+            executed when the method of the functional interface is invoked.</i>
+            - Consider the following lambda expression: <code>(String str) -> str.length</code>. What should be the type
+            of this Lambda Expression? We cannot say for sure, because it's type can be <i>any </i> interface that takes
+            a String as an input and returns an int. The following interface can be the type of this lambda expression:
+            <br>
+            <code>@FunctionalInterface</code> <br>
+            <code>interface StringToIntMapper{</code> <br>
+            <code> int strToInt(String s);</code> <br>
+            <code>}</code> <br>
+            In the above example, whenever the <code>strToInt</code> method of the interface will be called, the lambda
+            expression above will be executed.
+            <br>
+            - The following code snippet shows an example of everything put together:
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/4fdf743259dd45ca13ce4b4649b2814f.js"></script>
+            </div>
+            - Java is a strongly-typed language, which means that the compiler must know the type of all expressions
+            used
+            in a Java program. a lambda expression by itself does not have a type, and therefore, it cannot be used as a
+            standalone
+            expression. The type of a lambda expression is always inferred by the compiler by the context in which it is
+            used. <br>
+
+            - To jog your memory: <br>
+            <li><b>What is functional programming</b>: block of code that accepts values, known as parameters, and the
+                block of
+                code is executed to compute a result. Order of execution of functions does not matter in Functional
+                programming since, unlike object-oriented programming, there is no state of the object that is being
+                changed.
+            </li>
+            <li><b>What is a closure</b>: higher order function (anonymous function that can be treated as a data
+                object,
+                meaning - it can be stored in a variable and passed around from one context to another.) packaged with
+                its defining environment. A closure carries with it the variables in scope when it was defined, and it
+                can access those variables even when it is invoked in a context other than the context in which those
+                variables were defined.
+            </li>
+            <li>
+                <b>What does it mean to <i>capture a variable</i></b>: <a
+                    href="https://www.logicbig.com/tutorials/core-java-tutorial/java-8-enhancements/java-capturing-lambda.html">A
+                lambda expression is said to be capturing </a>if it either access instance variables of it's enclosing
+                class
+                or local variables (final or effectively final) from it's enclosing scope.
+            </li>
+            <li>
+                <b>What is the difference between an <i>implicit</i> and an <i>explicit</i> lambda expression</b>:
+                Lambda expression that does not declare the types of its parameters is known as an implicit lambda
+                expression. A lambda expression that declares the types of its parameters is known as an explicit lambda
+                expression. <code>(x, y) -> x + y</code> is an example of an implicit Lambda Expression. <code>(int x,
+                int y) -> x + y</code> is explicit.
+            </li>
+
+            <div class="row">
+                <img src="imgs/LambdaExpressions/LambdaExpressionExamples.PNG" class="center-block img-fluid"
+                     alt="LambdaExpressionExamples" width="50%">
+            </div>
+        </div>
+
+        <div class="sub-heading">Syntax for Lambda Expressions</div>
+        <div>
+            - These are some things that you can do with the parameters that are input to the Lambda Expressions.
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/8488ffcd473afaed030fe34af09c5abe.js"></script>
+            </div>
+
+            - These are some things that you can do with the body of the lambda expressions. <br>
+            - The body of a lambda expression can be a block statement or a single expression. A block statement is
+            enclosed in braces; a single expression is not enclosed in braces.
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/d8881872d1981113731b500411a8af76.js"></script>
+            </div>
+        </div>
+
+        <div class="sub-heading">Target Typing</div>
+        <div>
+            - There are two kinds of expressions in Java: <br>
+            <li>
+                <b>Standalone Expressions</b>: A standalone expression is an expression whose type can be determined by
+                the expression without knowing the context of its use. <code>new String("Hello")</code>,
+                <code>"Hello"</code>, <code>new ArrayList&ltString&gt()</code>. The types are String, String, and
+                ArrayList&ltString&gt.
+            </li>
+            <li>
+                <b>Poly Expressions</b>: A poly expression is an expression that has different types in different
+                contexts. All lambda expressions in Java are poly expressions. You must use it in a context to know its
+                type. For example, the expression <code>new ArrayList&lt&gt()</code> is a poly expression. In this:
+                <code>ArrayList&ltLong&gt idList = new ArrayList&lt&gt();</code>, its type is
+                <code>ArrayList&ltLong&gt</code>.
+                Whereas in <code>ArrayList&ltString&gt nameList = new ArrayList&lt&gt();</code>, its type is <code>ArrayList&ltString&gt</code>
+            </li>
+            - The compiler infers the type of a lambda expression. The context in which a lambda expression is used
+            expects a type, which is called the
+            <i>target type</i>. The process of inferring the type of a lambda expression from the context is known as
+            <i>target typing</i>.
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/b810f6efcb074aa197646bacf8ce00ea.js"></script>
+            </div>
+        </div>
+
+        <div class="sub-heading">Behavior Parameterization</div>
+        <div>
+            - Changing the behavior of a method through its parameters is known as behavior parameterization. This is
+            also known as passing code as data because you pass code (logic, functionality, or behavior) encapsulated in
+            lambda expressions to methods as if it is data. <br>
+            <div>
+                <script src="https://gist.github.com/rgbk21/acc99d55de825af933ecba4c61ae3140.js"></script>
+            </div>
+            - In the above example, instead of passing the lambda expression directly as a parameter, you could have
+            assigned it to a variable of the desired type (<code>AnotherJoiner</code> in this case) and passed that
+            variable as an argument instead.
+        </div>
+
+        <div class="sub-heading">Which contexts can a Lambda Expression be used</div>
+        <div>
+            - Lambda expressions can be used only in the following contexts:
+            <li>
+                <i>Assignment Context</i>: A lambda expression may appear to the right-hand side of the assignment
+                operator in an assignment statement.
+                For example: <code>ReferenceType variable1 = LambdaExpression;</code>
+            </li>
+            <li>
+                <i>Method Invocation Context</i>: A lambda expression may appear as an argument to a method or
+                constructor call.
+                For example: <code>behavParam.testJoiner(LambdaExpression);</code>
+            </li>
+            <li>
+                <i>Return Context</i>: A lambda expression may appear in a return statement inside a method, as its
+                target type is the declared return type of the method.
+                For example: <code>return LambdaExpression;</code>
+            </li>
+            <li>
+                <i>Cast Context</i>: A lambda expression may be used if it is preceded by a cast. The type specified in
+                the cast is its target type.
+                For example: <code>(Joiner) LambdaExpression;</code>
+            </li>
+        </div>
+
+        <div class="sub-heading">Functional Interfaces</div>
+        <div>
+            - A functional interface is simply an interface that has exactly one abstract method. <br>
+            - The following types of methods in an interface do not count for defining a functional interface: <br>
+            <li>
+                Default Methods: Recall
+                <a href="https://docs.oracle.com/javase/tutorial/java/IandI/defaultmethods.html">default methods</a>
+                were methods added to an interface that were not abstract. That is, a default
+                method has an implementation right there in the interface itself.
+            </li>
+            <li>Static Methods</li>
+            <li>Public methods inherited from the <code>Object</code> class</li>
+        </div>
+
+        <div class="sub-heading">Commonly used Functional Interfaces</div>
+        <div>
+            <table class="table table-bordered table-sm">
+                <thead>
+                <tr>
+                    <th style="width: 15%">Interface Name</th>
+                    <th style="width: 15%">Method</th>
+                    <th style="width: 70%">Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Function&ltT,R&gt</td>
+                    <td>R apply(T t)</td>
+                    <td>Represents a function that takes an argument of type T and returns a result of type R.</td>
+                </tr>
+                <tr>
+                    <td>BiFunction&ltT,U,R&gt</td>
+                    <td>R apply(T t, U u)</td>
+                    <td>Represents a function that takes two arguments of types T and U, and returns a result of type
+                        R.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Predicate&ltT&gt</td>
+                    <td>boolean test(T t)</td>
+                    <td>In mathematics, a predicate is a boolean-valued function that takes an argument and returns true
+                        or false. The function represents a condition that returns true or false for the specified
+                        argument.
+                    </td>
+                </tr>
+                <tr>
+                    <td>BiPredicate&ltT,U&gt</td>
+                    <td>boolean test(T t, U u)</td>
+                    <td>Represents a predicate with two arguments.</td>
+                </tr>
+                <tr>
+                    <td>Consumer&ltT&gt</td>
+                    <td>void accept(T t)</td>
+                    <td>Represents an operation that takes an argument, operates on it to produce some side effects, and
+                        returns no result.
+                    </td>
+                </tr>
+                <tr>
+                    <td>BiConsumer&ltT,U&gt</td>
+                    <td>void accept(T t, U u)</td>
+                    <td>Represents an operation that takes two arguments, operates on them to produce some side effects,
+                        and returns no result.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Supplier&ltT&gt</td>
+                    <td>T get()</td>
+                    <td>Represents a supplier that returns a value.</td>
+                </tr>
+                <tr>
+                    <td>UnaryOperator&ltT&gt</td>
+                    <td>T apply(T t)</td>
+                    <td>Inherits from <code>Function&ltT,T&gt</code>. Represents a function that takes an argument and
+                        returns a result <i>of the same type</i>.
+                    </td>
+                </tr>
+                <tr>
+                    <td>BinaryOperator&ltT&gt</td>
+                    <td>T apply(T t1, T t2)</td>
+                    <td>Inherits from <code>BiFunction&ltT,T,T&gt</code>. Represents a function that takes two arguments
+                        of the same
+                        type and returns a result of the same type.
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="sub-heading">Using the Function&ltT,R&gt Interface</div>
+        <div>
+            - There are also several specialized versions of these interfaces for frequently used
+            primitive data types. <br>
+            - <code>IntFunction&ltR&gt</code>, <code>LongFunction&ltR&gt</code>, and <code>DoubleFunction&ltR&gt</code>
+            take an int, a long, and a double as an argument, respectively, and return a value of type R. <br>
+            - <code>ToIntFunction&ltT&gt</code>, <code>ToLongFunction&ltT&gt</code>, and
+            <code>ToDoubleFunction&ltT&gt</code> take an argument of type T and return an int, a long, and a double,
+            respectively. <br>
+            - Similar specialized functions exist for other types of generic functions listed in the table.
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/d91d072b2202fb8014ad0381050b2d6f.js"></script>
+            </div>
+
+            - The <code>Function</code> interface contains the following default and static methods:
+            <li><code>default &ltV&gt Function&ltV,R&gt compose(Function&lt? super V,? extends T&gt before)</code></li>
+            <li><code>default &ltV&gt Function&ltT,V&gt andThen(Function&lt? super R,? extends V&gt after)</code></li>
+            <li><code>static &ltT&gt Function&ltT,T&gt identity()</code></li>
+            - Note that the <code>BiFunction</code> interface contains only the <code>andThen</code> method,
+            not the <code>thenCompose</code> method. <br>
+            - So how do you use these? <br>
+            - And what is the
+            <a href="https://stackoverflow.com/questions/43849066/java-8-functions-compose-and-andthen">difference
+                between</a> <code>andThen</code> and <code>compose</code>
+
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/db381b04ee62139847b146daacc9c9a1.js"></script>
+            </div>
+        </div>
+
+        <div class="sub-heading">Using the Predicate&ltT&gt Interface</div>
+        <div>
+            - A predicate represents a condition that is either true or false for a given input. <br>
+            - The Predicate interface contains the following default and static methods that let you compose a predicate
+            based on other predicates using logical NOT, AND, and OR. <br>
+            <li><code>default Predicate&ltT&gt negate()</code></li>
+            <li><code>default Predicate&ltT&gt and(Predicate&lt? super T&gt other)</code></li>
+            <li><code>default Predicate&ltT&gt or(Predicate&lt? super T&gt other)</code></li>
+            <li><code>static &ltT> Predicate&ltT&gt isEqual(Object targetRef)</code></li>
+
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/e2200052d3754d7258ce5baf5885f970.js"></script>
+            </div>
+        </div>
+
+        <div class="sub-heading">Method References</div>
+        <div>
+            - A method reference is shorthand to create a lambda expression using an existing method. <br>
+            - Using method references makes your lambda expressions more readable and concise; <i>it also lets you use
+            the existing methods</i>.
+            <br>
+            - If a lambda expression contains a body that is an expression using a method call, you can use a method
+            reference in place of that lambda expression. <br>
+            - The general syntax for a method reference is: <code>&ltQualifier&gt::&ltMethodName&gt</code>. The
+            <code>Qualifier</code> depends on the type of the method reference. The <code>MethodName</code> is the name
+            of the method. <br>
+            - The syntax for method references allows specifying only the method name. You cannot specify the parameter
+            types and return type of the method. Recall that a method reference is shorthand for a lambda expression.
+            The target type, which is always a functional interface, determines the method's details. If the method is
+            an overloaded method, the compiler will choose the most specific method based on the context. <br>
+            - A method reference does not call the method when it is declared. The method is called later when the
+            method
+            of its target type is called.
+
+            <br>
+        </div>
+
+        <div class="sub-heading">Types of Method References</div>
+
+        <div>
+            <table class="table table-bordered table-sm">
+                <thead>
+                <tr>
+                    <th style="width: 15%">Syntax</th>
+                    <th style="width: 85%">Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>TypeName::staticMethod</td>
+                    <td>A method reference to a static method of a class, an interface, or an enum.</td>
+                </tr>
+                <tr>
+                    <td>objectRef::instanceMethod</td>
+                    <td>A method reference to an instance method of the specified object</td>
+                </tr>
+                <tr>
+                    <td>ClassName::instanceMethod</td>
+                    <td>A method reference to an instance method of an arbitrary object of the specified class</td>
+                </tr>
+                <tr>
+                    <td>TypeName.super::instanceMethod</td>
+                    <td>A method reference to an instance method of the supertype of a particular object</td>
+                </tr>
+                <tr>
+                    <td>ClassName::new</td>
+                    <td>A constructor reference to the constructor of the specified class</td>
+                </tr>
+                <tr>
+                    <td>ArrayTypeName::new</td>
+                    <td>An array constructor reference to the constructor of the specified array type</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+        <div class="sub-heading">Static Method References</div>
+        <div>
+            - A static method reference is used to use a static method of a type as a lambda expression. The type could
+            be a
+            <code>class</code>, an <code>interface</code>, or an <code>enum</code>. <br>
+
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/3b947c8b5d6e62bf069e3783c95ae998.js"></script>
+            </div>
+        </div>
+
+        <div class="sub-heading">Instance Method References</div>
+        <div>
+            - An instance method is invoked on an object's reference. <br>
+            - The object reference on which an instance method is invoked is known as the <i>receiver</i> of the method
+            invocation.
+            <br>
+            - //TODO: Bound Receiver, Unbound Receiver
+        </div>
+
+        <div class="sub-heading">Supertype Instance Method References</div>
+        <div>
+            //TOOD
+        </div>
+
+        <div class="sub-heading">Constructor References</div>
+        <div>
+            - Sometimes the body of a lambda expression may be just an object creation expression. <br>
+            - The syntax for using a constructor is: <code>ClassName::new</code> or <code>ArrayTypeName::new</code>.
+            <br>
+            - The <code>ClassName</code> is the name of the class that is to be instantiated. It cannot be the name of
+            an abstract class.
+            <br>
+            - The keyword <code>new</code> refers to the constructor of the class. <br>
+            - A class may have multiple constructors. The syntax does not provide a way to refer to a specific
+            constructor. The compiler selects a specific constructor based on the context. It looks at the target type
+            and the number of arguments in the abstract method of the target type. The constructor whose number of
+            arguments matches with the number of arguments in the abstract method of the target type is chosen. <br>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/3637f03ed86b122e9bd0a9b8bbfd765f.js"></script>
+            </div>
+            - Arrays in Java do not have constructors. There is a special syntax to use constructor references for
+            arrays. Array constructors are treated to have one argument of int type that is the size of the array.
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/80cf545f0884c6271a085d030498dc1d.js"></script>
+            </div>
+            - The syntax for the constructor reference for arrays supports creating an array of multiple dimensions.
+            However, you can specify the length for only the first dimension.
+        </div>
+
+        <div class="sub-heading">Generic Method References</div>
+        <div>
+            //TODO
+        </div>
+
+        <div class="sub-heading">Lexical Scoping</div>
+        <div>
+            - A scope is the part of a Java program within which a name can be referred to without using a qualifier.
+            Classes and
+            methods define their own scope. Scopes may be nested. <br>
+            - Even though a lambda expression looks like a method declaration, it does not define a scope of its own. It
+            exists in its enclosing scope. This is known as <i>lexical scoping</i> for lambda expressions. For example,
+            when a lambda
+            expression is used inside a method, the lambda expression exists in the scope of the method. <br>
+            - The meanings of the keywords <code>this</code> and <code>super</code> are the same inside the lambda
+            expression and its enclosing
+            method. Note that this is different from the meanings of these keywords inside a local and anonymous inner
+            class in
+            which the keyword <code>this</code> refers to the current instance of the local and anonymous inner class,
+            not its enclosing class. <br>
+            - Lexical scoping of a lambda expression means that variables declared in the lambda expression, including
+            its
+            parameters, exist in the enclosing scope. Simple names in a scope must be unique. It means that a lambda
+            expression
+            cannot redefine variables with the same name that already exist in the enclosing scope.
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/dd75fbaafe9e5c1c96076d39b30dc0f1.js"></script>
+            </div>
+        </div>
+
+        <div class="sub-heading">Variable Capture</div>
+        <div>
+            - <br>
+            - <a href="https://stackoverflow.com/questions/12825847/why-are-local-variables-thread-safe-in-java">SO link
+            explaining why Local Variables are thread safe in java</a>
+            - Why does everything have to be so confusing: <br>
+            <a href="https://stackoverflow.com/questions/25055392/lambdas-local-variables-need-final-instance-variables-dont">SO
+                Link explaining why variables inside a lambda have to be final or effectively final.</a>
+            - A lambda expression can access instance and class variables of a class whether they are effectively final or not.
+            If instance and class variables are not final, they can be modified inside the body of the lambda expressions. a lambda
+            expression keeps a copy of the local variables used in its body. If the local variables are reference variables, a copy of the
+            references is kept, not a copy of the objects.
+            <div class="code-snippet"><script src="https://gist.github.com/rgbk21/f0fb4084b1bc32e926213173484ee99b.js"></script></div>
+        </div>
+
+
+    </div>
+
+    <hr>
     <div id="MultiThreadedProg" class="chapter">Chapter 11: MultiThreaded Programming</div>
     <hr>
     <div class="textual-content">
@@ -1671,10 +2134,44 @@
             array), and each piece can be run on its own CPU.
         </div>
 
-    </div>
+        <div class="sub-heading">The Main Fork/Join Classes</div>
+        <div>
+            - At the core of the Fork/Join framework are the following 4 classes:
+            <table class="table table-bordered table-sm">
+                <thead>
+                <tr>
+                    <th>Class</th>
+                    <th>Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>ForkJoinTask&ltV&gt</td>
+                    <td>An abstract class that defines a Task</td>
+                </tr>
+                <tr>
+                    <td>ForkJoinPool</td>
+                    <td>Manages the execution of <code>ForkJoinTasks</code></td>
+                </tr>
+                <tr>
+                    <td>RecursiveAction</td>
+                    <td>A subclass of <code>ForkJoinTask&ltV&gt</code> for tasks that do not return value</td>
+                </tr>
+                <tr>
+                    <td>RecursiveTask&ltV&gt</td>
+                    <td>A subclass of <code>ForkJoinTask&ltV&gt</code> for tasks that return values</td>
+                </tr>
+                </tbody>
+            </table>
 
-    <div id="Lambda">Chapter 15: Lambda Expressions</div>
-    <div class="textual-content">
+            <div class="sub-heading">1) ForkJoinTask&ltV&gt</div>
+            <div>
+                -
+            </div>
+
+
+        </div>
+
 
     </div>
 
