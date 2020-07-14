@@ -1555,11 +1555,21 @@
             - Why does everything have to be so confusing: <br>
             <a href="https://stackoverflow.com/questions/25055392/lambdas-local-variables-need-final-instance-variables-dont">SO
                 Link explaining why variables inside a lambda have to be final or effectively final.</a> <br>
-            - A lambda expression can access instance and class variables of a class whether they are effectively final or not.
-            If instance and class variables are not final, they can be modified inside the body of the lambda expressions. a lambda
-            expression keeps a copy of the local variables used in its body. If the local variables are reference variables, a copy of the
+            - A lambda expression can access instance and class variables of a class whether they are effectively final
+            or not.
+            If instance and class variables are not final, they can be modified inside the body of the lambda
+            expressions. a lambda
+            expression keeps a copy of the local variables used in its body. If the local variables are reference
+            variables, a copy of the
             references is kept, not a copy of the objects.
-            <div class="code-snippet"><script src="https://gist.github.com/rgbk21/f0fb4084b1bc32e926213173484ee99b.js"></script></div>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/f0fb4084b1bc32e926213173484ee99b.js"></script>
+            </div>
+            - The semantics of <code>this</code> is actually one of the areas where Java lambdas differ from anonymous
+            implementations of interfaces. An anonymous interface implementation can have its own instance variables
+            which are referenced via the <code>this</code> reference. However, an lambda cannot have its own instance
+            variables, so <code>this</code> always points to the enclosing object.
+            <a href="http://tutorials.jenkov.com/java/lambda-expressions.html"> Source.</a>
         </div>
 
 
