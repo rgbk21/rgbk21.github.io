@@ -135,7 +135,10 @@
 
         </div>
 
+        <hr>
         <div id="Ch2" class="sub-heading">Chapter 2: Getting to know Kafka</div>
+        <hr>
+
         <div class="textual-content">
             - <a href="https://tecadmin.net/install-apache-kafka-ubuntu/">Working link to get started with running
             Kafka</a>
@@ -150,13 +153,84 @@
             <div class="code-snippet">
                 <script src="https://gist.github.com/rgbk21/cdd53b8583e2fb0ca1b24b7a99f834ff.js"></script>
             </div>
+            - Creating <code>producer</code> and <code>consumer</code>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/fc5136fa85d9da8d168df59c14ec42bc.js"></script>
+            </div>
+
             - You will have to look into the following things as well: <br>
-            <li>CountDownLatch</li>
-            <li>ListenableFuture</li>
-            <li>
-                <a href="https://docs.spring.io/spring-kafka/api/org/springframework/kafka/core/KafkaTemplate.html">Kafka
+            CountDownLatch: ?? <br>
+            ListenableFuture:
+            <a href="https://stackoverflow.com/questions/38744943/listenablefuture-vs-completablefuture">SO Link - Comparison
+            betn ListenableFuture and CompletableFuture</a> <br>
+            Serializer: org.apache.kafka.common.serialization <br>
+
+            <a href="https://docs.spring.io/spring-kafka/api/org/springframework/kafka/core/KafkaTemplate.html">Kafka
                 Template Javadocs</a>
-            </li>
+
+
+            <div class="sub-heading">Hello World - Kafka</div>
+            <div>
+                - Messages are how your data is represented in Kafka. You will also see references to messages as
+                records as those terms are often used interchangeably. Each message consists of a Key and a
+                Value. <br>
+                - We will create a topic by running the <code>kafka-topics.sh</code> command in a shell window with the
+                <code>--create</code> option. <br>
+                - The <code>partitions</code> option is used to tell how many parts you want the topic to be split into.
+                For example, since we have three brokers, using three partitions will give us a partition per broker.
+                <br>
+                - The <code>replication-factor</code> says that for each partition, we are attempting to have 3 replicas
+                of each one. This improves reliability and fault-tolerance. <br>
+                - The <code>zookeeper</code> option is also pointed to our local instance of zookeeper which should have
+                been running before you started your brokers.
+
+                <div class="row">
+                    <img src="imgs/Chapter2/Fig1.PNG" class="center-block img-fluid" alt="Thread_States" width="75%">
+                </div>
+
+                - The numbers you see under by the leader, replicas, and isr fields are the that we set
+                <code>broker.id</code> in our configuration files. <br>
+
+
+            </div>
+
+            <div class="sub-heading">A quick tour of Kafka</div>
+            <div>
+                - The major components and their roles within the Kafka Architecture
+                <div>
+                    <table class="table table-bordered table-sm">
+                        <thead>
+                        <tr>
+                            <th style="width: 15%">Component</th>
+                            <th style="width: 85%">Role</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Producer</td>
+                            <td>Sends message to Kafka</td>
+                        </tr>
+                        <tr>
+                            <td>Consumer</td>
+                            <td>Retrieves message from kafka</td>
+                        </tr>
+                        <tr>
+                            <td>Topics</td>
+                            <td>Logical name of where the messages are stored in the broker</td>
+                        </tr>
+                        <tr>
+                            <td>ZooKeeper ensemble</td>
+                            <td>Helps maintain consensus in the cluster</td>
+                        </tr>
+                        <tr>
+                            <td>Broker</td>
+                            <td>Handles the commit log</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
 
         </div>
 
