@@ -131,6 +131,8 @@
     <br>
     Chapter 15: <a href="#Lambda">Lambda Expressions</a>
     <br>
+    Chapter 29: <a href="#Streams">Streams API</a>
+    <br>
     Chapter 11: <a href="#MultiThreadedProg">Multithreaded Programming</a>
     <br>
     Chapter 28: <a href="#Concurrency">The Concurrency Utilities</a>
@@ -1574,6 +1576,399 @@
 
 
     </div>
+
+    <hr>
+    <div id="Streams" class="chapter">Chapter 29: Streams API</div>
+    <hr>
+
+    <div class="textual-content">
+        <div class="sub-heading">What is a Stream</div>
+        <div>
+            - A stream is a sequence of data elements supporting sequential and parallel <i>aggregate</i> operations.
+            <br>
+            - So what is an <i>aggregate operation: </i> An aggregate operation computes a single value from a
+            collection of values. The result of an aggregate operation may be simply a primitive value, an object, or a
+            void. Note that an object may represent a single entity such as a person or a collection of values such as a
+            list, a set, a map, etc. <br>
+            - Computing the sum of all elements in a stream of integers, mapping all names in list to their lengths,
+            etc. are examples of aggregate operations on streams. <br>
+            - So what is the difference between a Stream and a Collection: Both are abstractions for a collection of
+            data elements. Collections focus on storage of data elements for efficient access whereas streams focus on
+            aggregate computations on data elements from a data source that is typically, but not necessarily,
+            collections. <br>
+            - Following are the points of comparison between Streams and Collections.
+
+            <li><b>Streams have no storage</b>: A collection is an in-memory data structure that stores all its
+                elements. All elements must exist in memory before they are added to the collection. A stream has no
+                storage; it does not store elements. A stream pulls elements from a data source on-demand and passes
+                them to a pipeline of operations for processing.
+            </li>
+
+            <li><b>Infinite Streams</b>: A collection stores all its elements in memory, and therefore, it is not
+                possible to have an infinite number of elements in a collection. A stream pulls its elements from a data
+                source that can be a collection, a function that generates data, an I/O channel, etc. Because a function
+                can generate an infinite number of elements and a stream can pull data from it on demand, it is possible
+                to have a stream representing a sequence of infinite data elements.
+            </li>
+
+            <li>
+                <b>Internal Iteration vs. External Iteration</b>: YOu are normally accustomed to writing for-each loops
+                for iterating over a collection. This code has to be written by you - the client. In contrast, streams
+                will internally iterate over the collection. This will become clear once you see the example. But,
+                streams also provide an
+                <code>iterator()</code> method that returns an Iterator to be used for external iteration of its
+                elements. You will "never" need to iterate elements of a stream yourself using its iterator.
+            </li>
+
+            <li>
+                <b>Imperative vs Functional</b>: The Streams API supports functional programming. Operations on a stream
+                produce a result without modifying the data source.
+            </li>
+
+            <li>
+                <b>Stream Operations</b>: A Stream supports two types of data operations - Intermediate, Terminal.
+                Intermediate operations are known as <i>lazy</i> operations whereas terminal operations are known as <i>eager</i>
+                operations. Operations are known as lazy and eager based on the way they pull the data elements from the
+                data source. A lazy operation on a stream does not process the elements of the stream until another
+                eager operation is called on the stream. <br>
+                - Streams connect though a chain of operations forming a stream pipeline. A stream is inherently lazy
+                until you call a terminal operation on it. An intermediate operation on a stream produces another
+                stream. When you call a terminal operation on a stream, the elements are pulled from the data source and
+                pass through the stream pipeline. Each intermediate operation takes elements from an input stream and
+                transforms the elements to produce an output stream. The terminal operation takes inputs from a stream
+                and produces the result.
+
+                <div class="row">
+                    <img src="imgs/Streams/StreamPipeline.PNG" class="center-block img-fluid" alt="StreamPipeline"
+                         width="50%">
+                </div>
+
+                - The above figure shows a stream pipeline with a data source, three streams, and three operations. The
+                filter and map operations are intermediate operations and the reduce operation is a terminal operation.
+                <br>
+                - In the figure, the first stream (on the left) pulls data from the data source and becomes the input
+                source for the filter operation. The filter operation produces another stream containing data for which
+                the filter condition is true. The stream produced by the filter operation becomes the input for the map
+                operation. The map operation produces another stream that contains the mapped data. The stream produced
+                by the map operation becomes the input for the reduce operation. The reduce operation is a terminal
+                operation. It computes and returns the result, and then the processing of stream is over. <br>
+                - Stream processing does not start until a terminal operation is called. If you just call intermediate
+                operations on a stream, nothing exciting happens, except that they create another stream objects in
+                memory, without reading data from the data source. This implies that you must use a terminal operation
+                on a stream for it to process the data to produce a result.
+            </li>
+
+            <li>
+                <b>Ordered Streams</b>: A data source is said to have an <i>encounter order</i> if the order in which
+                the elements are traversed by an iterator is predictable and meaningful. For example, arrays and lists
+                always have an encounter order that is from the element at index 0 to the element at the last index.
+                Streams based on data sources having an encounter order also have an encounter order for their elements.
+                <br>
+                - Sometimes a stream operation may impose an encounter order on an otherwise unordered stream. For
+                example, a HashSet does not have an encounter order for its elements. However, applying a sort operation
+                on a stream based on a HashSet imposes an encounter order so that elements are yielded in sorted order.
+            </li>
+
+            <li>
+                <b>Streams Are Not Reusable</b>: Unlike collections, streams are not reusable. If you need to perform a
+                computation on the same elements from the same data source again, you must recreate the stream pipeline.
+            </li>
+
+            <li>
+                <b>Architecture of the Streams API:</b>
+                - All stream interfaces inherit from the <code>BaseStream</code> interface, which inherits from the
+                <code>AutoCloseable</code> interface from the java.lang package. In practice, most streams use
+                collections as their data source, and collections do not need to be closed. When a stream is based on a
+                closeable data source such as a file I/O channel, you may create the instance of the stream using a
+                try-with-resources statement to get it closed automatically. <br>
+                - The <code>Stream&ltT&gt</code> interface represents a stream of the element type <code>T</code>; for
+                example, a Stream&ltPerson&gt represents a stream of Person objects. <br>
+                - Note that the <code>Stream&ltT&gt</code> interface takes a type parameter <code>T</code>, which means
+                that you can use it only to work with
+                the elements of the reference type. If you have to work with a stream of primitive type such as int,
+                long, etc. you should use specialized stream interfaces called
+                <code>IntStream</code>, <code>LongStream</code>, and <code>DoubleStream</code> to work with primitives
+                <div class="row">
+                    <img src="imgs/Streams/ClassDiagram_Streams.PNG" class="center-block img-fluid" alt="StreamPipeline"
+                         width="50%">
+                </div>
+            </li>
+
+            - Basic example using streams
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/03258a916a2f1d53fd53dc94dea31fc0.js"></script>
+            </div>
+        </div>
+
+        <div class="sub-heading">Creating Streams</div>
+        <div>
+            <li>
+                <b>Streams from Values</b>: The Stream interface contains the following two static <code>of()</code>
+                methods to create a sequential Stream from a single value
+                and multiple values: <br>
+                <code>&ltT&gt Stream&ltT&gt of(T t)</code> <br>
+                <code>&ltT&gt Stream&ltT&gt of(T... values)</code> <br>
+                - The <code>Stream.of()</code> method creates a stream whose elements are of reference type. If you want
+                to create a stream of primitive values from an array of primitive type, you need to use the
+                <code>Arrays.stream()</code> method. <br>
+
+
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/155a29eca3f80fe7741fa67d5d428206.js"></script>
+                </div>
+
+                - The Stream interface also supports creating a stream using the builder pattern using the
+                <code>Stream.Builder&ltT&gt</code> interface whose instance represents a stream builder. The <code>builder()</code>
+                static method of the Stream interface returns a stream builder. <br>
+                - This is how you get a Stream Builder:
+                <code>Stream.Builder&ltString&gt builder = Stream.builder();</code>
+                <br>
+                - You can then add elements to the stream by using either <code>add</code> or <code>accept</code>
+                methods. Why do you need two methods to add elements to a Stream, you ask? Well because,
+                <code>Stream.Builder&ltT&gt</code> interface inherits from the <code>Consumer&ltT&gt</code> interface,
+                (meaning, <code>interface Builder&ltT&gt extends Consumer&ltT&gt</code>)
+                and therefore it inherits the <code>accept</code> method from the <code>Consumer&ltT&gt</code>
+                interface. <br>
+                - The <code>add()</code> method returns the reference to the builder that makes it suitable for adding
+                multiple elements using method chaining. Once you are done adding elements, call the
+                <code>build()</code> method to create the stream. You cannot add elements to the stream after you call
+                the <code>build()</code> method; doing so results in an <code>IllegalStateException</code> runtime
+                exception.
+
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/39246feec88a2caca1a27c7de496eaf0.js"></script>
+                </div>
+
+            </li>
+
+            <li>
+                <b>Empty Streams</b>: An empty stream is a stream with no elements. The Stream interface contains an
+                <code>empty()</code> static method to create an empty sequential stream.
+
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/405c30e562e22b66df28451010daf3b9.js"></script>
+                </div>
+            </li>
+
+            <li>
+                <b>Streams from Functions</b>: The Stream interface contains the following two <code>static</code>
+                methods to generate an infinite stream:
+                <br>
+                - <code>&ltT&gt Stream&ltT&gt iterate(T seed, UnaryOperator&ltT&gt f)</code> <br>
+                - <code>&ltT&gt Stream&ltT&gt generate(Supplier&ltT&gt s)</code> <br>
+                <br>
+                a) Using the <code>Stream.iterate()</code> Method: <br>
+                - The <code>iterate()</code> method takes two arguments: a seed and a function. The first argument is a
+                seed that is the first element of the stream. The second element is generated by applying the function
+                to the first element. The third element is generated by applying the function on the second element and
+                so on. <br>
+                - Its elements are - seed, f(seed), f(f(seed)), f(f(f(seed))), and so on. <br>
+
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/1ace319f763e2b8e76c1beae18946284.js"></script>
+                </div>
+
+                b) Using the <code>Stream.generate()</code> Method: <br>
+                - The <code>generate(Supplier &ltT&gt s)</code> method uses the specified <code>Supplier</code> to
+                generate an
+                infinite sequential unordered stream. <br>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/42fd0acbd852cb7e1eb16af85c980b9e.js"></script>
+                </div>
+            </li>
+
+            <li>
+                <b>Streams from Arrays</b>: The <code>Arrays</code> class in the java.util package contains an
+                overloaded <code>stream()</code> <code>static</code> method to create sequential streams from arrays.
+                You can use it to create an <code>IntStream</code> from an <code>int</code> array, a
+                <code>LongStream</code> from a <code>long</code> array, a <code>DoubleStream</code> from a
+                <code>double</code> array, and a <code>Stream&ltT&gt</code> from an array of the reference type
+                <code>T</code>. <br>
+                - Recall when we saw in the <code>Stream.of(T... t)</code> method in the first point, we could also pass
+                in an array over there as well. So you can create a stream from a reference type array using two
+                methods: <code>Arrays.stream(T[] t)</code> and <code>Stream.of(T...t)</code> method.
+
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/f18016f2246b36bebd2ebf3c9783a3f8.js"></script>
+                </div>
+            </li>
+
+            <li>
+                <b>Streams from Collections</b>: The Collection interface contains the <code>stream()</code> and <code>parallelStream()</code>
+                methods that create sequential and parallel streams from a Collection, respectively.
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/feb9e0d23578010fe67b551675106166.js"></script>
+                </div>
+            </li>
+
+            <li>
+                <b>Streams from Files</b>: //TODO
+            </li>
+
+            <li>
+                <b>Streams from Other Sources</b>: //TODO
+            </li>
+        </div>
+
+        <div class="sub-heading">Representing an Optional Value</div>
+        <div>
+            - An <code>Optional</code> is a wrapper for a non-null value that may or may not contain a non-null value.
+            Its <code>isPresent()</code> method returns true if it contains a non-null value, false otherwise. Its
+            <code>get()</code> method returns the non-null value if it contains a non-null value, and throws a
+            <code>NoSuchElementException</code> otherwise. This implies that when a method returns an
+            <code>Optional</code>, you must, as a practice, check if it contains a non-null value before asking it for
+            the value. If you use the <code>get()</code> method before making sure it contains a non-null value, you may
+            get
+            a <code>NoSuchElementException</code> instead of getting a <code>NullPointerException</code>. <br>
+            - There are 4 methods to get the value from an optional: <br>
+            <li><code>T get()</code></li>
+            <li><code>T orElse(T defaultValue)</code></li>
+            <li><code>T orElseGet(Supplier&lt? extends T&gt defaultSupplier)</code></li>
+            <li><code>&ltX extends Throwable&gt T orElseThrow(Supplier&lt? extends X&gt exceptionSupplier)</code>
+                <code>throws X extends Throwable</code></li>
+
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/269c48fab7962716b01c7f987cf6b4fa.js"></script>
+            </div>
+        </div>
+
+        <div class="sub-heading">Applying operations on Streams</div>
+        <div>
+            <table class="table table-bordered table-sm">
+                <thead>
+                <tr>
+                    <th>Operation</th>
+                    <th>Type</th>
+                    <th>Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>distinct</td>
+                    <td>Intermediate</td>
+                    <td>
+                        Returns a stream consisting of the distinct elements of this stream. Elements e1
+                        and e2 are considered equal if <code>e1.equals(e2)</code> returns true.
+                    </td>
+                </tr>
+                <tr>
+                    <td>filter</td>
+                    <td>Intermediate</td>
+                    <td>
+                        Returns a stream consisting of the elements of this stream that match the specified predicate.
+                    </td>
+                </tr>
+                <tr>
+                    <td>flatMap</td>
+                    <td>Intermediate</td>
+                    <td>
+                        Returns a stream consisting of the results of applying the specified function to the elements of
+                        this stream. The function produces a stream for each input element and the output streams are
+                        flattened. Performs one-to-many mapping.
+                    </td>
+                </tr>
+                <tr>
+                    <td>limit</td>
+                    <td>Intermediate</td>
+                    <td>
+                        Returns a stream consisting of the elements of this stream, truncated to be no longer than the
+                        specified size.
+                    </td>
+                </tr>
+                <tr>
+                    <td>map</td>
+                    <td>Intermediate</td>
+                    <td>
+                        Returns a stream consisting of the results of applying the specified function to the elements of
+                        this stream. Performs one-to-one mapping.
+                    </td>
+                </tr>
+                <tr>
+                    <td>peek</td>
+                    <td>Intermediate</td>
+                    <td>
+                        Returns a stream whose elements consist of this stream. It applies the specified action as it
+                        consumes elements of this stream. It is mainly used for debugging purposes.
+                    </td>
+                </tr>
+                <tr>
+                    <td>skip</td>
+                    <td>Intermediate</td>
+                    <td>
+                        Discards the first n elements of the stream and returns the remaining stream. If this stream
+                        contains fewer than n elements, an empty stream is returned.
+                    </td>
+                </tr>
+                <tr>
+                    <td>sorted</td>
+                    <td>Intermediate</td>
+                    <td>Returns a stream consisting of the elements of this stream, sorted according to
+                        natural order or the specified <code>Comparator</code>. For an ordered stream, the sort is
+                        stable.
+                    </td>
+                </tr>
+                <tr>
+                    <td>allMatch</td>
+                    <td>Terminal</td>
+                    <td>Returns true if <i>all</i> elements in the stream match the specified predicate, false
+                        otherwise. Returns true if the stream is empty.
+                    </td>
+                </tr>
+                <tr>
+                    <td>anyMatch</td>
+                    <td>Terminal</td>
+                    <td>Returns true if <i>any</i> element in the stream matches the specified predicate, false
+                        otherwise. Returns false if the stream is empty.
+                    </td>
+                </tr>
+                <tr>
+                    <td>findAny</td>
+                    <td>Terminal</td>
+                    <td>Returns any element from the stream. An empty Optional object is for an empty stream</td>
+                </tr>
+                <tr>
+                    <td>findFirst</td>
+                    <td>Terminal</td>
+                    <td>
+                        Returns the first element of the stream. For an ordered stream, it returns the first
+                        element in the encounter order; for an unordered stream, it returns any element.
+                    </td>
+                </tr>
+                <tr>
+                    <td>noneMatch</td>
+                    <td>Terminal</td>
+                    <td>
+                        Returns true if no elements in the stream match the specified predicate, false
+                        otherwise. Returns true if the stream is empty.
+                    </td>
+                </tr>
+                <tr>
+                    <td>forEach</td>
+                    <td>Terminal</td>
+                    <td>
+                        Applies an action for each element in the stream.
+                    </td>
+                </tr>
+                <tr>
+                    <td>reduce</td>
+                    <td>Terminal</td>
+                    <td>
+                        Applies a reduction operation to computes a single value from the stream.
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="sub-heading">Debugging a Stream Pipeline</div>
+        <div>
+
+        </div>
+
+
+
+    </div>
+
 
     <hr>
     <div id="MultiThreadedProg" class="chapter">Chapter 11: MultiThreaded Programming</div>

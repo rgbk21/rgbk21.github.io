@@ -418,6 +418,40 @@
 
     </div>
 
+    <div class="one-point">
+        22) What is the difference between <code>fn(String… args)</code> vs <code>fn(String[] args)</code> <br>
+        - The only difference between the two is the way you call the function. With String var args you can omit the
+        array creation.
+        <br>
+        - The difference is only when invoking the method. The second form must be invoked with an array, the first form
+        can be invoked with an array (just like the second one, yes, this is valid according to Java standard) or with a
+        list of strings (multiple strings separated by comma) or with no arguments at all (the second one always must
+        have one, at least null must be passed).
+        <br>
+        - <a href="https://stackoverflow.com/a/301599/8742428">SO Link</a>
+    </div>
+
+    <div class="one-point">
+        23) What is the point of “final class” in Java? <br>
+        - In Java, items with the <code>final</code> modifier cannot be changed. This includes final classes, final
+        variables, and final methods. A final class cannot be extended by any other class. A final variable cannot be
+        reassigned another value. A final method cannot be overridden. <br>
+        - A <code>final</code> class is simply a class that can't be extended. It does not mean that all references to
+        objects of the class would act as if they were declared as <code>final</code>.
+    </div>
+
+    <div class="one-point">
+        24) What does it mean when one class is said to inherit anotehr in actual code? <br>
+        - <code>Stream.Builder&ltT&gt</code> interface inherits from the <code>Consumer&ltT&gt</code> interface,
+        (meaning, <code>interface Builder&ltT&gt extends Consumer&ltT&gt</code>)
+        - <a href="https://stackoverflow.com/questions/14021827/extends-class-and-implements-interface-in-java">Also,
+        remember </a> that <code>extends</code> should go before <code>implements</code>.
+    </div>
+
+    <div>
+
+    </div>
+
     <hr/>
 
     <div class="one-point">
