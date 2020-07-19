@@ -122,6 +122,9 @@
         The idea is to have all coding related Java things readily available in one place for easy reference.
     </div>
 
+    <a href="#bloch">Link to book notes to Bloch</a>
+
+
     <div class="one-point">
         0) Always, for every IF, write an ELSE.
     </div>
@@ -448,11 +451,49 @@
         remember </a> that <code>extends</code> should go before <code>implements</code>.
     </div>
 
-    <div>
 
+    <div class="one-point">
+        24) for-each is not applicable to String <br>
+        - So you cannot write:
+        <div class="code-snippet">
+            <script src="https://gist.github.com/rgbk21/981e256e5331a41b8dc354d9c2c27e6e.js"></script>
+        </div>
     </div>
 
+    <div class="one-point">
+        25) What is the difference between <code>putIfAbsent</code> and <code>computeIfAbsent</code> in Java 8 Map ?
+        <br>
+        - <a
+            href="https://stackoverflow.com/questions/48183999/what-is-the-difference-between-putifabsent-and-computeifabsent-in-java-8-map">SO
+        Link</a> <br>
+        - Code example using <code>putIfAbsent</code> and <code>computeIfPresent</code>
+        <div class="code-snippet">
+            <script src="https://gist.github.com/rgbk21/4f6b6b21956be466943fa2d548caef13.js"></script>
+        </div>
+    </div>
+
+    <div class="one-point">
+        26) Java 8 has a <code>merge</code> operation
+        <br>
+        - <a href="https://stackoverflow.com/a/42648785/8742428">SO Link</a> <br>
+        - Take special note of the method implementation
+        <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Map.html#merge(K,V,java.util.function.BiFunction)">here</a>:<br>
+        <code>default V merge(K key, V value, BiFunction&lt? super V, ? super V, ? extends V&gt</code><code>remapppingFunction)</code>
+        <br>
+        <code>remappingFunction.apply(oldValue, value)</code>
+        The <code>oldValue</code> is the existing value mapped to the <code>key</code> in the map. The <code>value</code> is the
+        second argument passed into the <code>merge</code> method.
+        <br>
+        - <a href="https://leetcode.com/problems/first-unique-character-in-a-string/">Solution to this problem on LC</a>
+        <div class="code-snippet">
+            <script src="https://gist.github.com/rgbk21/96141e5587ebfd96fd383e8ec4b09b3c.js"></script>
+        </div>
+    </div>
+
+
     <hr/>
+
+    <div id="bloch">Book Notes start</div>
 
     <div class="one-point">
         1) Consider the following computation:

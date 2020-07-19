@@ -1908,6 +1908,15 @@
                     </td>
                 </tr>
                 <tr>
+                    <td>mapToObj</td>
+                    <td>Intermediate</td>
+                    <td>
+                        <code>&ltU&gt Stream&ltU&gt mapToObj(IntFunction&lt? extends U&gt mapper)</code>
+                        mapToObj create from each Integer an object from type U. This method only purpose is to convert
+                        IntStream to Stream.
+                    </td>
+                </tr>
+                <tr>
                     <td>allMatch</td>
                     <td>Terminal</td>
                     <td>Returns true if <i>all</i> elements in the stream match the specified predicate, false
@@ -1962,9 +1971,114 @@
 
         <div class="sub-heading">Debugging a Stream Pipeline</div>
         <div>
+            - Sometimes you may need to look at the elements of the streams as they pass through the pipeline. You can
+            do so by using the
+            <code>peek(Consumer&lt? super T&gt action)</code> method of the <code>Stream&ltT&gt</code> interface that is
+            meant only
+            for debugging purposes. It produces a stream after applying an action on each input element.
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/455001ae7c38c7f30f0aff3e4b16a748.js"></script>
+            </div>
+        </div>
+
+        <div class="sub-heading">Applying the ForEach Operation</div>
+        <div>
+            - The <code>Stream&ltT&gt</code> interface has two methods to perform the forEach operation: <br>
+            <code>void forEach(Consumer&lt? super T&gt action)</code> <br>
+            <code>void forEachOrdered(Consumer&lt? super T&gt action)</code> <br>
+            - Why the need for 2 methods: <br>
+            Sometimes the order in which the action is
+            applied for the elements in a stream is important, and sometimes it is not. The <code>forEach()</code>
+            method does not guarantee
+            the order in which the action for each element in the stream is applied. The <code>forEachOrdered()</code>
+            method performs the
+            action in the encounter order of elements defined by the stream. Use the <code>forEachOrdered()</code>
+            method for a parallel
+            stream only when necessary because it may slow down processing.
+
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/09df3ac99f1421b12c45d9cd016c3dc7.js"></script>
+            </div>
 
         </div>
 
+        <div class="sub-heading">Applying the Map Operation</div>
+        <div>
+            - A map operation (also known as mapping) applies a function to each element of the input stream to produce
+            another stream (also called an output stream or a mapped stream). The number of elements in the input and
+            output streams is the same. The operation does not modify the elements of the input stream (at least it is
+            not supposed to). <br>
+
+            <div class="row">
+                <img src="imgs/Streams/map_operation.PNG" class="center-block img-fluid" alt="map_operation"
+                     width="40%">
+            </div>
+
+            - You can apply the map operation on a stream using one of the following methods of the Stream&ltT&gt
+            interface:
+            <li><code>&ltR&gt Stream&ltR&gt map(Function&lt? super T,? extends R&gt mapper)</code></li>
+            <li><code>DoubleStream mapToDouble(ToDoubleFunction&lt? super T&gt mapper)</code></li>
+            <li><code>IntStream mapToInt(ToIntFunction&lt? super T&gt mapper)</code></li>
+            <li><code>LongStream mapToLong(ToLongFunction&lt? super T&gt mapper)</code></li>
+
+            - We have already looked at examples of <code>map</code> in the previous examples.
+        </div>
+
+        <div class="sub-heading">Flattening Streams</div>
+        <div>
+            -So far we have seen a one-to-one mapping using the <code>map</code> operation where each element of the
+            input stream was mapped to one element of the output stream. But in addition to this, the Stream API also
+            supports one-to-many mapping. <br>
+            - This is basically to create a stream <i>of streams</i>. Think about how you can create a HashMap of
+            HashMaps. Similarly, we are creating a Stream, where each "element" is a Stream. <br>
+            - Suppose the input stream is a <code>Stream&ltT&gt</code> and the
+            mapped stream is <code>Stream&ltStream&ltR&gt&gt</code> where <code>T</code> and <code>R</code> may be the
+            same or
+            different. <br>
+            - Then it "flattens" the output stream, which is currently a Stream of Streams, to produce a single Stream.
+            So basically it converts a <code>Stream&ltStream&ltR&gt&gt</code> to <code>Stream&ltR&gt</code> <br>
+
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/4db5e7779731b92cb1c47eab0b3567c7.js"></script>
+            </div>
+
+            - Does this make sense now?
+        </div>
+
+        <div class="sub-heading">Applying the Reduce Operation</div>
+        <div>
+            - The reduce operation combines all elements of a stream to produce a single value by applying a combining
+            function
+            repeatedly. Computing the sum, maximum, average, count, etc. of elements of a stream of integers are
+            examples of the reduce operation. Collecting elements of a stream in a List, Set, or Map is also an example
+            of the reduce operation. <br>
+            - The reduce operation takes two parameters called a <i>seed</i> (also called an <i>initial value</i>) and
+            an <i>accumulator</i>. The accumulator is a function.
+
+            <div class="row">
+                <img src="imgs/Streams/reduce_operation.PNG" class="center-block img-fluid" alt="reduce_operation"
+                     width="50%">
+            </div>
+
+            - The <code>Stream&ltT&gt</code> interface contains a <code>reduce()</code> method to perform the reduce
+            operation. The method has three overloaded versions:
+            <li><code>T reduce(T identity, BinaryOperator&ltT&gt accumulator)</code></li>
+            <li>
+                <code>&ltU&gt U reduce</code>
+                <code>(U identity, BiFunction&ltU,? super T,U&gt accumulator, BinaryOperator&ltU&gt combiner)</code>
+            </li>
+            <li>
+                <code>Optional&ltT&gt reduce(BinaryOperator&ltT&gt accumulator)</code>
+            </li>
+
+        </div>
+
+
+        <div class="sub-heading">Useful Links:</div>
+
+        <a href="https://github.com/stavalfi/lectures/tree/master/Java%20Streams%20-%20Series">Github link to lectures
+            on Streams</a>
+        <br>
 
 
     </div>
