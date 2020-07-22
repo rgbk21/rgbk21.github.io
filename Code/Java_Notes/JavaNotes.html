@@ -892,6 +892,21 @@
             <br>
             What's up with the 3 different return types?
             <br>
+
+            <br>
+            You should be careful about not changing the map while you are iterating over it. Read what it means to
+            "change" the map on these SO links <a
+                href="https://stackoverflow.com/questions/17687536/is-it-safe-to-change-a-hashmap-key-value-during-iteration">here</a>
+            and <a
+                href="https://stackoverflow.com/questions/10993403/how-to-replace-hashmap-values-while-iterating-over-them-in-java#">
+            here</a>.
+            <a href="https://stackoverflow.com/a/4235787/8742428">You can never</a> change a key value in a map.
+
+
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/7f20bff598afe6a7392d6e6319186f9b.js"></script>
+            </div>
+
             - The <i>order</i> of a map is defined as the order in which the iterators on the map's collection views
             return their elements.
             Some map implementations, like the <code>TreeMap</code> class, make specific guarantees as to their order;
@@ -1136,7 +1151,7 @@
             - A lambda expression is evaluated to an instance of a functional interface. The body
             of the lambda expression is not executed when the expression is evaluated. <i>The body of the lambda
             expression is
-            executed when the method of the functional interface is invoked.</i>
+            executed when the method of the functional interface is invoked.</i> <br>
             - Consider the following lambda expression: <code>(String str) -> str.length</code>. What should be the type
             of this Lambda Expression? We cannot say for sure, because it's type can be <i>any </i> interface that takes
             a String as an input and returns an int. The following interface can be the type of this lambda expression:
@@ -1164,7 +1179,7 @@
                 block of
                 code is executed to compute a result. Order of execution of functions does not matter in Functional
                 programming since, unlike object-oriented programming, there is no state of the object that is being
-                changed.
+                changed. <a href="https://openhome.cc/eGossip/Blog/index.html">Link to some explanation about FP</a>
             </li>
             <li><b>What is a closure</b>: higher order function (anonymous function that can be treated as a data
                 object,
@@ -1269,7 +1284,7 @@
             </li>
             <li>
                 <i>Cast Context</i>: A lambda expression may be used if it is preceded by a cast. The type specified in
-                the cast is its target type.
+                the cast is its target type. <br>
                 For example: <code>(Joiner) LambdaExpression;</code>
             </li>
         </div>
@@ -1284,7 +1299,9 @@
                 were methods added to an interface that were not abstract. That is, a default
                 method has an implementation right there in the interface itself.
             </li>
-            <li>Static Methods</li>
+            <li>Static Methods (remember that a method defined as <code>static</code> in an interface also needs to be
+                implemented right there in the interface itself.)
+            </li>
             <li>Public methods inherited from the <code>Object</code> class</li>
         </div>
 
