@@ -79,10 +79,12 @@
                     <a class="dropdown-item" href="../../Code/ThingsToRemember/ThingsToRemember.html">Things To
                         Remember</a>
                     <a class="dropdown-item" href="../../Code/Java_Notes/JavaNotes.html">Java Notes</a>
+                    <a class="dropdown-item" href="../../Code/Java_Notes/JavaNotes_2.html">Java Notes 2</a>
                     <a class="dropdown-item" href="../../Code/Applying_Java_Notes/ApplyingJava_Notes.html">ApplyingJava
                         Notes</a>
                     <a class="dropdown-item" href="../../Code/SQL/SQL.html">SQL Notes</a>
                     <a class="dropdown-item" href="../../Code/Spring/Spring.html">Spring Notes</a>
+                    <a class="dropdown-item" href="../../Code/Kafka/Kafka.html">Kafka Notes</a>
                     <div class="dropdown-divider"></div>
                 </div>
             </li>
@@ -139,6 +141,14 @@
 
     <div id="inheritance" class="chapter">Chapter 8: Inheritance</div>
     <div class="textual-content">
+        - There are 4 aspects of Object-Oriented programming (OOP): <br>
+        a) Abstraction <br>
+        b) Encapsulation (data-hiding) <br>
+        c) Inheritance <br>
+        d) Polymorphism (says that - don't worry about the reference you have at hand. Go ahead and call the method and
+        we will call the right method based on the true type of the object at runtime, and not the perceived type of the
+        object at compile time) <br>
+
         - A class that does the inheriting is called the <i>subclass</i> and the class that is inherited is called the
         <i>superclass</i>.
         Therefore, a subclass is a specialized version of the superclass and adds its own unique elements.
@@ -1180,6 +1190,9 @@
                 code is executed to compute a result. Order of execution of functions does not matter in Functional
                 programming since, unlike object-oriented programming, there is no state of the object that is being
                 changed. <a href="https://openhome.cc/eGossip/Blog/index.html">Link to some explanation about FP</a>
+                <br>
+                Functional Programming = Functional Composition + Lazy Evaluation <br>
+                Refer <a href="https://www.youtube.com/watch?v=kG2SEcl1aMM">this YT Talk</a> for more details.
             </li>
             <li><b>What is a closure</b>: higher order function (anonymous function that can be treated as a data
                 object,
@@ -1591,6 +1604,12 @@
             <a href="http://tutorials.jenkov.com/java/lambda-expressions.html"> Source.</a>
         </div>
 
+        <div>How do you throw exceptions in a Lambda Expression</div>
+        <div>
+            - <a href="https://stackoverflow.com/questions/18198176/java-8-lambda-function-that-throws-exception">SO
+            Link</a>
+        </div>
+
 
     </div>
 
@@ -1825,6 +1844,18 @@
             <li>
                 <b>Streams from Other Sources</b>: //TODO
             </li>
+        </div>
+
+        <div class="sub-heading">Drawbacks of using Streams</div>
+        <div>
+            - Stream is a <a href="https://stackoverflow.com/a/27990579/8742428">single use only</a>. Using the same
+            stream again, after you have called a collector on it, is going to throw an
+            <code>IllegalStateException</code> <br>
+            - A <a href="https://stackoverflow.com/questions/19940319/can-you-split-a-stream-into-two-streams">stream
+            cannot be forked</a> to create two different streams. <br>
+            - There is <a
+                href="https://stackoverflow.com/questions/19757300/java-8-lambda-streams-filter-by-method-with-exception">no
+            easy way to catch exceptions </a>.
         </div>
 
         <div class="sub-heading">Representing an Optional Value</div>
@@ -2096,6 +2127,102 @@
         <a href="https://github.com/stavalfi/lectures/tree/master/Java%20Streams%20-%20Series">Github link to lectures
             on Streams</a>
         <br>
+    </div>
+
+    <hr>
+    <div id="" class="chapter">Chapter 15: Concepts behind CompletableFuture and Reactive Programming</div>
+    <hr>
+    <div class="textual-content">
+
+        <div class="sub-heading">What are the 4 pillars of Reactive Programming</div>
+        <div>
+            - Notes have been taken from Venkat <a href="https://www.youtube.com/watch?v=kG2SEcl1aMM">presentation</a>.
+
+            <li><b>Elasticity</b>: <br>
+                How many threads should I create? <br>
+                There are 2 scenarios - <br>
+                a) If your task is computation intensive, then the number of threads that you create should be &lt= the
+                number of cores in you system. <br>
+                b) If your task is IO intensive, then in that case your number of threads should be <br>
+                <code># of threads &lt= # of cores / (1 - blocking factor) </code> <br>
+                The point is that it is incorrect to assume that the number of threads depends on the memory. <br>
+                Ok, so what if my program is doing IO operations on multiple threads? How do I go about calculating the
+                ideal number of threads then? <br>
+
+                What is <code>blocking factor</code> supposed to be? <br>
+                - ???
+            </li>
+
+            <li>
+                <b>Message-Driven</b>: <br>
+                THe idea is that you should never share database. That is if you have multiple microservices taht want
+                to access the database, you should export the data from the database and make it available to the
+                microservice instead of having them individually access the DB instead.
+            </li>
+
+            <li>
+                <b>Responsive</b>: <br>
+                - Infinite-scrolling is an example. You can amortize the cost of fetching a page by fetching the page in
+                the background while the user is scrolling.
+            </li>
+
+            <li>
+                <b>Resilience</b>: <br>
+                - Fail task successfully. <br>
+                - Add circuit-breakers to your application/allow partial-access to the app if some data is not reachable
+                <br>
+            </li>
+
+            - Reactive programming is functionalProgramming++. It builds on functional composition and lazy evaluation
+            and takes the abstraction even further
+        </div>
+
+
+        <div class="sub-heading">Concurrency vs Parallelism</div>
+        <div>
+            - Fork/Join Frameworks and Parallel Streams are examples of Parallelism. They divide a task into multiple
+            sub-tasks and perform those sub-tasks on <i>different</i> cores, CPUs, or even machines. <br>
+            - Conversely, when you are dealing with concurrency, you are trying to perform multiple loosely-related
+            tasks on the <i>same</i> CPU. The objective being to keep the core as busy as possible to maximize the
+            throughput of your application. You want to avoid blocking a thread and wasting its computational resources
+            while waiting (potentially for quite a while) for a result from a remote service or from interrogating a
+            database. <br>
+            - Concurrency is a programming property (overlapped execution) that can occur even for a
+            single-core machine, whereas parallelism is a property of execution hardware (simultaneous execution).
+
+            <div class="row">
+                <img src="imgs/Concepts_CompletableFuture/DiffBetnParallelAndConcurrent.PNG"
+                     class="center-block img-fluid" alt="Thread_States" width="50%">
+            </div>
+        </div>
+
+        <div class="sub-heading">Evolving Java support for expressing concurrency</div>
+        <div>
+            - Terms: Java had locks (via <code>synchronized</code> classes and methods), <code>Runnable</code>s, and
+            <code>Thread</code>s. The <code>ExecutorService</code> interface extends the <code>Executor</code> interface
+            with the
+            <code>submit</code> method to run a <code>Callable</code>; the <code>Executor</code> interface merely has an
+            <code>execute</code> method for <code>Runnable</code>s. Hence, <code>ExecutorService</code> can execute both
+            <code>Runnable</code>s and <code>Callable</code>s. <code>Callable&ltT&gt</code>
+            and <code>Future&ltT&gt</code>, which produced higher-level and result-returning variants of
+            <code>Runnable</code> and <code>Thread</code> and used generics. <br>
+            - What is the difference betn <code>Callable</code> and <code>Runnable</code>? <a
+                href="https://stackoverflow.com/a/3952292/8742428">SO Link</a> <br>
+            -
+
+        </div>
+
+
+        <!--        <div class="sub-heading">Parallel and Asynchronous Programming with Streams and CompletableFuture with Venkat-->
+        <!--            Subramaniam-->
+        <!--        </div>-->
+        <!--        <div>-->
+        <!--            - <a href="https://www.youtube.com/watch?v=0hQvWIdwnw4">Link to Video</a>-->
+        <!--            - Question: What does it mean to do something in parallel vs doing something in asynchrony? <br>-->
+        <!--            - Well, the answer is not immediately clear. We think of threads when we think of parallelism and we think-->
+        <!--            of threads when we think of asynchrony as well. If both of them have threads, then what is the difference-->
+        <!--            between them?-->
+        <!--        </div>-->
 
 
     </div>
