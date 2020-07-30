@@ -494,7 +494,7 @@
     </div>
 
     <div class="one-point">
-        27) What should I normally initialize a <code>char</code> to?
+        27) What should I normally initialize a <code>char</code> to? <br>
         - <code>char temp = '\u0000';</code> <br>
         - This is just the unicode for <code>null</code>.
         <a href="https://stackoverflow.com/a/5860040/8742428">SO Link</a>
@@ -543,13 +543,30 @@
     <div class="one-point">
         32) Interconversion of types: <br>
 
-        <div class="code-snippet"><script src="https://gist.github.com/rgbk21/ad8f26756f366c7a376c4e076acf7407.js"></script></div>
+        Also, surrogate pairs for chars <a href="https://stackoverflow.com/a/54922477/8742428">on SO</a>.
+
+        <div class="code-snippet">
+            <script src="https://gist.github.com/rgbk21/ad8f26756f366c7a376c4e076acf7407.js"></script>
+        </div>
 
     </div>
 
     <div class="one-point">
         32) Reversing a String: <br>
         - <code>String a_reverse = new StringBuilder(a).reverse().toString();</code>
+
+    </div>
+
+    <div class="one-point">
+        32) What is the difference between <code>instanceof</code> and <code>getClass</code><br>
+        - Here is <a href="https://stackoverflow.com/a/4989843/8742428">SO link explaining it</a>. <br>
+        - <code>objectWeHave instanceof classTypeWeWant</code> tests whether the object on the LHS is an instance of the
+        type on the RHS <i>or some subtype</i>. <br>
+        - <code>getClass() == ...</code> on the other hand, tests whether the types are identical. <br>
+        - And of course there is <a
+            href="https://stackoverflow.com/questions/596462/any-reason-to-prefer-getclass-over-instanceof-when-generating-equals">more
+        to it</a>.
+
 
     </div>
 
