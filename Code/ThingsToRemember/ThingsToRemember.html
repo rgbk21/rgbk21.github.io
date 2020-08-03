@@ -119,7 +119,7 @@
 <div class="container">
     <div>This page contains some of the common "gotchas", tips and explanations that I have come across while coding in
         Java. Some of these are from my own experiences.
-        Others are my personal notes from the textbook Java Puzzles – Traps, Pitfalls, and Corner Cases By Bloch and
+        Others are my personal notes from the textbook Java Puzzles - Traps, Pitfalls, and Corner Cases By Bloch and
         Gafter.
         The idea is to have all coding related Java things readily available in one place for easy reference.
     </div>
@@ -192,13 +192,13 @@
         5) Why do we get one extra negative number?
         <div>
             When representing a number in 32 bits, the highest bit is used as a sign bit, so when representing a number
-            like 2147483647 in binary, it is 01111...111 (31 bits that are 1’s).
+            like 2147483647 in binary, it is 01111...111 (31 bits that are 1's).
             <br>
             When we add one more to that we get:
             <br>
-            10000...000 (31 0’s)
-            However, because of a need to avoid representing 0 twice (once as 000…0 and other time as 100…0), we wrap
-            the number, so instead of 100…0 representing -0, this represents negative 2147483648 (not negative
+            10000...000 (31 0's)
+            However, because of a need to avoid representing 0 twice (once as 00..0 and other time as 100..0), we wrap
+            the number, so instead of 100..0 representing -0, this represents negative 2147483648 (not negative
             2147483647
             because the positive side needed to represent 0, but as the negative side doesn't, we get one "extra"
             negative number).
@@ -424,7 +424,7 @@
     </div>
 
     <div class="one-point">
-        22) What is the difference between <code>fn(String… args)</code> vs <code>fn(String[] args)</code> <br>
+        22) What is the difference between <code>fn(String... args)</code> vs <code>fn(String[] args)</code> <br>
         - The only difference between the two is the way you call the function. With String var args you can omit the
         array creation.
         <br>
@@ -437,7 +437,7 @@
     </div>
 
     <div class="one-point">
-        23) What is the point of “final class” in Java? <br>
+        23) What is the point of "final class" in Java? <br>
         - In Java, items with the <code>final</code> modifier cannot be changed. This includes final classes, final
         variables, and final methods. A final class cannot be extended by any other class. A final variable cannot be
         reassigned another value. A final method cannot be overridden. <br>
@@ -446,7 +446,7 @@
     </div>
 
     <div class="one-point">
-        24) What does it mean when one class is said to inherit anotehr in actual code? <br>
+        24) What does it mean when one class is said to inherit another in actual code? <br>
         - <code>Stream.Builder&ltT&gt</code> interface inherits from the <code>Consumer&ltT&gt</code> interface,
         (meaning, <code>interface Builder&ltT&gt extends Consumer&ltT&gt</code>)
         - <a href="https://stackoverflow.com/questions/14021827/extends-class-and-implements-interface-in-java">Also,
@@ -582,6 +582,25 @@
         </div>
     </div>
 
+    <div class="one-point">
+        35) Write about the different ways you can use the <code>split</code> method in Strings <br>
+
+        <code>public String[] split(String regex, int limit)</code> <br>
+
+        The string "boo:and:foo", for example, yields the following results with these parameters: <br>
+
+        Regex	Limit	Result <br>
+        :	2	{ "boo", "and:foo" } <br>
+        :	5	{ "boo", "and", "foo" } <br>
+        :	-2	{ "boo", "and", "foo" } <br>
+        o	5	{ "b", "", ":and:f", "", "" } <br>
+        o	-2	{ "b", "", ":and:f", "", "" } <br>
+        o	0	{ "b", "", ":and:f" } <br>
+
+        <div class="code-snippet">
+        </div>
+    </div>
+
 
     <hr/>
 
@@ -593,9 +612,9 @@
             <div class="code-snippet">
                 <script src="https://gist.github.com/rgbk21/c0b81bebdc5d547025186bd84f194b87.js"></script>
             </div>
-            Now long can store 2^63 – 1 as its largest number = 9,223,372,036,854,775,807. But still if you print
+            Now long can store 2^63-1 as its largest number = 9,223,372,036,854,775,807. But still if you print
             MICROS_PER_DAY out, you will see that it contains 500654080. This is because the entire computation will be
-            done in int arithmetic. Only after the computation completes is the result promoted to a long. By then, it’s
+            done in int arithmetic. Only after the computation completes is the result promoted to a long. By then, it's
             too late.
             So why is the computation performed in int arithmetic? Because all the factors that are multiplied together
             are int values. When you multiply two int values, you get another int value. Java does not have target
@@ -603,13 +622,13 @@
             a language feature wherein the type of the variable in which a result is to be stored influences the type of
             the computation.
             <br>
-            It’s easy to fix the program by using a long literal in place of an int as the first factor in each product.
+            It's easy to fix the program by using a long literal in place of an int as the first factor in each product.
             This forces all subsequent computations in the expression to be done with long arithmetic.
             <div class="code-snippet">
                 <script src="https://gist.github.com/rgbk21/51b345f2ccb87d160041a9e75d3ebf5f.js"></script>
             </div>
-            When working with large numbers, watch out for overflow—it’s a silent killer. Just because a variable is
-            large enough to hold a result doesn’t mean that the computation leading to the result is of the correct
+            When working with large numbers, watch out for overflow - it's a silent killer. Just because a variable is
+            large enough to hold a result doesn't mean that the computation leading to the result is of the correct
             type.
             <br>
             The rules of promotion in Java are as follows:
@@ -693,7 +712,7 @@
                 <script src="https://gist.github.com/rgbk21/e09ebe16f053dee9b1edaea274423186.js"></script>
             </div>
             Highest order bit is set. So before storing into the long x variable, as per the 2s complement, the
-            complement of the binary number is taken and then 1 is added to that number and then – is appended to it
+            complement of the binary number is taken and then 1 is added to that number and then - is appended to it
             giving
             you the final value of -889275714.
         </div>
@@ -748,7 +767,7 @@
             byte is a narrower signed integral type that we are widening by converting to char. So sign extension will
             be performed.
             <br>
-            (char) (byte) -1 // 1111 1111 1111 1111 = 2^16 – 1 = 65535 (because char is unsigned)
+            (char) (byte) -1 // 1111 1111 1111 1111 = 2^16 - 1 = 65535 (because char is unsigned)
             <br>
             Next step: (int) 1111 1111 1111 1111. Now this is a widening operation. The rule we stated above tells us
             that
@@ -888,11 +907,11 @@
             <div class="code-snippet">
                 <script src="https://gist.github.com/rgbk21/0cc9afc1e88faed32a9731ff9506168a.js"></script>
             </div>
-            The compiler evaluates the constant expression ‘H’ + ‘a’ by promoting each of the char-valued operands (‘H’
-            and ’a’)
+            The compiler evaluates the constant expression 'H' + 'a' by promoting each of the char-valued operands ('H'
+            and 'a')
             to int values through a process known as widening primitive conversion. Widening primitive conversion of
-            a char to an int zero extends the 16-bit char value to fill the 32-bit int. In the case of ‘H’, the char
-            value is 72 and in the case of ‘a’, it is 97, so the expression ‘H’ + ‘a’ is equivalent to the int constant
+            a char to an int zero extends the 16-bit char value to fill the 32-bit int. In the case of 'H', the char
+            value is 72 and in the case of 'a', it is 97, so the expression 'H' + 'a' is equivalent to the int constant
             72 + 97, or 169.
             <br>
             The + operator performs string concatenation if and only if at least one of its operands is of type String;
@@ -917,9 +936,9 @@
             it is converted to the string "null". Otherwise, the conversion is performed as if by an invocation of
             the toString method of the referenced object with no arguments; but if the result of invoking the toString
             method is null, then the string "null" is used instead. (??)
-            Arrays inherit the toString method from Object, whose specification says, “Returns a string consisting
-            of the name of the class of which the object is an instance, the at-sign character ’@’, and the
-            unsigned hexadecimal representation of the hash code of the object”
+            Arrays inherit the toString method from Object, whose specification says, "Returns a string consisting
+            of the name of the class of which the object is an instance, the at-sign character '@', and the
+            unsigned hexadecimal representation of the hash code of the object"
             <br>
             //TODO: What is the difference between numbers.hashCode() and Arrays.hashCode(numbers)? Why do they give 2
             different values?
@@ -935,7 +954,7 @@
             You should by this point probably know that pig == dog will return false. The == operator, does not test
             whether two objects are equal; it tests whether two object references are identical. Which in this case,
             they are not.
-            But the output in this case is: false. Yes. Not “Animals are equal: false”. But just “false”. Why though?
+            But the output in this case is: false. Yes. Not "Animals are equal: false". But just "false". Why though?
             <br>
             The + operator, whether used for addition or string concatenation, binds more tightly than the == operator.
             Therefore, the parameter of the println method is evaluated like this:
@@ -1022,8 +1041,8 @@
             The program prints the value of the expression: "a".length() + "b".length(), or 2.
             The third example prints 16 because you are escaping the quotation with a backslash.
             <br>
-            Unicode escapes are designed for use when a programmer needs to insert a character that can’t be represented
-            in the source file’s character set. They are used primarily to put non-ASCII characters into identifiers,
+            Unicode escapes are designed for use when a programmer needs to insert a character that can't be represented
+            in the source file's character set. They are used primarily to put non-ASCII characters into identifiers,
             string literals, character literals, and comments. Occasionally, a Unicode escape adds to the clarity of
             a program by positively identifying one of several similar-looking characters.
         </div>
@@ -1037,21 +1056,21 @@
                 <div class="code-snippet">
                     <script src="https://gist.github.com/rgbk21/8bf9be2e4ac97d5404910653967750d4.js"></script>
                 </div>
-                This program isn’t even guaranteed to terminate normally, much less to print any particular sequence.
+                This program isn't even guaranteed to terminate normally, much less to print any particular sequence.
                 Its behavior is completely unspecified. The culprit here is the String(byte[]) constructor. Its
                 specification says:
-                “Constructs a new String by decoding the specified byte array using the platform’s default charset.
+                "Constructs a new String by decoding the specified byte array using the platform's default charset.
                 The length of the new String is a function of the charset, and hence may not be equal to the length
                 of the byte array. The behavior of this constructor when the given bytes are not valid in the default
-                charset is unspecified”
+                charset is unspecified"
                 <br>
-                What exactly is a charset? Technically, it is “the combination of a coded character set and a
-                character-encoding scheme” [Java-API]. In other words, a charset is a bunch of characters, the
+                What exactly is a charset? Technically, it is "the combination of a coded character set and a
+                character-encoding scheme" [Java-API]. In other words, a charset is a bunch of characters, the
                 numerical codes that represent them, and a way to translate back and forth between a sequence of
                 character codes and a sequence of bytes. The translation scheme differs greatly among charsets. Some
                 have a one-to-one mapping between characters and bytes; most do not.
                 <br>
-                If you want to know your JRE’s default charset and you are using release 5.0 or a later release, you
+                If you want to know your JRE's default charset and you are using release 5.0 or a later release, you
                 can find out by invoking:
                 <br>
                 System.out.println(java.nio.charset.Charset.defaultCharset()); // Prints UTF-8
@@ -1075,7 +1094,7 @@
             <br>
             a) rnd.nextInt(2) generates numbers exclusive of 2. So the numbers generated are: {0,1}. Hence case2 is
             never triggered.
-            The specification for Random.nextInt(int) says: “Returns a pseudorandom, uniformly distributed int value
+            The specification for Random.nextInt(int) says: "Returns a pseudorandom, uniformly distributed int value
             between 0 (inclusive) and the specified value (exclusive). Whenever you are working with lengths, ranges,
             or moduli, be careful to determine which endpoints should be included, and make sure that your code
             behaves accordingly.
@@ -1101,8 +1120,8 @@
             single character, and so every character of the class name is replaced by a slash, producing the output we
             saw.
             To match only the period character, the period in the regular expression must be escaped by preceding it
-            with a backslash (\). Because the backslash character has special meaning in a string literal—it begins
-            an escape sequence—the backslash itself must be escaped with a second backslash. This produces an escape
+            with a backslash (\). Because the backslash character has special meaning in a string literal-it begins
+            an escape sequence - the backslash itself must be escaped with a second backslash. This produces an escape
             sequence that generates a backslash in the string literal.
             <br>
             System.out.println(Me.class.getName().replaceAll("\\.", "/") + ".class");
@@ -1138,7 +1157,7 @@
             <div class="code-snippet">
                 <script src="https://gist.github.com/rgbk21/c900e9a64d5f25f38ac21f8d78fc2515.js"></script>
             </div>
-            Now, the if condition is reachable and the program prints “Joy!”
+            Now, the if condition is reachable and the program prints "Joy!"
         </div>
     </div>
 
@@ -1196,7 +1215,7 @@
             Another important point is that the left-shift operator with a -ve shift does not act as a right shift
             operator.
             A right shift always functions as a right shift, and a left shift always functions as a left shift.
-            Negative shift distances are made positive by lopping off all but the five low order bits—six bits if
+            Negative shift distances are made positive by lopping off all but the five low order bits-six bits if
             the left operand is a long. (<a
                 href="https://stackoverflow.com/questions/10516786/shifted-by-negative-number-in-java/34625596">Source</a>)
             <br>
@@ -1205,11 +1224,11 @@
                 <script src="https://gist.github.com/rgbk21/028303f104613222e41c13bd92f5cae8.js"></script>
             </div>
             <br>
-            s = 8 => 0000 0000 0000 0000 0000 0000 0000 ‭1000‬
+            s = 8 => 0000 0000 0000 0000 0000 0000 0000 1000
             <br>
-            -63 => ‭1111 1111 1111 1111 1111 1111 1100 0001‬
+            -63 => 1111 1111 1111 1111 1111 1111 1100 0001
             <br>
-            Since s is an int, we will use the rightmost 5 bits for shifting => 0 0001‬ = 1. Hence the shift s = s >>
+            Since s is an int, we will use the rightmost 5 bits for shifting => 0 0001 = 1. Hence the shift s = s >>
             -63
             is actually equivalent to s = s >> 1 which gives us s = 4, and which is the output in the example above.
             <br>
@@ -1248,7 +1267,7 @@
             Floating-point operations return the floating-point value that is closest to their exact mathematical
             result.
             Once the distance between adjacent floating-point values is greater than 2, adding 1 to a floating-point
-            value will have no effect, because the half-way point between values won’t be reached. For the float type,
+            value will have no effect, because the half-way point between values won't be reached. For the float type,
             the least magnitude beyond which adding 1 will have no effect is 2^25, or 33,554,432; for the double type,
             it is 2^54, or approximately 1.8 × 10^16.
             <br>
@@ -1261,7 +1280,7 @@
                 </div>
                 IEEE 754 floating-point arithmetic reserves a special value to represent a quantity that is not a number
                 [IEEE-754].
-                This value, known as NaN (short for “Not a Number”), is the value of all floating-point computations
+                This value, known as NaN (short for "Not a Number"), is the value of all floating-point computations
                 that do
                 not have well-defined numeric values, such as 0.0 / 0.0. The specification says that NaN is not equal to
                 any floating-point value, including itself. Therefore, if i is initialized to NaN before the loop
@@ -1316,7 +1335,7 @@
                 value.
                 You will not get an infinite loop if you declare i to be a
                 char, as char values are unsigned, so the widening primitive conversion that
-                occurs prior to the shift doesn’t perform sign extension.
+                occurs prior to the shift doesn't perform sign extension.
                 <br>
                 <em>In summary, do not use compound assignment operators on short, byte, or char variables. </em>
                 <br>
@@ -1329,7 +1348,7 @@
                 <div class="code-snippet">
                     <script src="https://gist.github.com/rgbk21/5bfb9d9c0cdf4eac83c2477599606137.js"></script>
                 </div>
-                Until release 5.0, Java’s numerical comparison operators (<, <=, >, and >=) required both of their
+                Until release 5.0, Java's numerical comparison operators (<, <=, >, and >=) required both of their
                 operands to be of a primitive numeric type (byte, char, short, int, long, float, or double) [JLS2
                 15.20.1].
                 In release 5.0, the specification was changed to say that the type of each operand must be convertible
@@ -1352,7 +1371,7 @@
                 The <= operator is still antisymmetric on the set of primitive numeric values, but now it applies to
                 operands of boxed numeric types as well. (The boxed numeric types are Byte, Character, Short, Integer,
                 Long, Float, and Double). The <= operator is not antisymmetric on operands of these types, because
-                Java’s
+                Java's
                 equality operators (== and !=) perform reference identity comparison rather than value comparison when
                 applied to object references.
                 <div class="code-snippet">
@@ -1377,15 +1396,15 @@
                 No floating-point value other than 0 is equal to itself with the sign bit flipped, so the type of i must
                 be integral.
                 <br>
-                There is, however, a corresponding disadvantage. There exist an even number of int values—2^32 to be
-                precise—and one of these values is used to represent 0. That leaves an odd number of int values to
+                There is, however, a corresponding disadvantage. There exist an even number of int values-2^32 to be
+                precise-and one of these values is used to represent 0. That leaves an odd number of int values to
                 represent positive and negative integers, which means that there must be a different number of positive
                 and negative int values. This in turn implies that there is at least one int value whose negation
                 cannot be correctly represented as an int value.
                 <br>
-                In fact, there is exactly one such int value, and it is Integer.MIN_VALUE, or -2^31 = ‭-2,147,483,648‬.
+                In fact, there is exactly one such int value, and it is Integer.MIN_VALUE, or -2^31 = -2,147,483,648.
                 <br>
-                ‭-2,147,483,648 = ‭1000 0000 0000 0000 0000 0000 0000 0000‬
+                -2,147,483,648 = 1000 0000 0000 0000 0000 0000 0000 0000
                 <br>
                 Negating this means inverting all of the bits and adding 1 to the value. Which would give the same bit
                 sequence as the answer.
@@ -1454,7 +1473,7 @@
                 <script src="https://gist.github.com/rgbk21/e3f0eeb1d1ab5585a70796f751b1df2f.js"></script>
             </div>
             The problem lies in the boolean expression (ms % 60*1000 == 0). You might think that this expression is
-            equivalent to (ms % 60000 == 0), but it isn’t. The remainder and multiplication operators have the same
+            equivalent to (ms % 60000 == 0), but it isn't. The remainder and multiplication operators have the same
             precedence [JLS 15.17], so the expression ms % 60*1000 is equivalent to (ms % 60) * 1000.
             This expression is equal to 0 if (ms % 60) is 0, so the loop increments minutes every 60 iterations.
             This accounts for the final result being off by a factor of a thousand.
