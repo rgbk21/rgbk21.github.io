@@ -145,6 +145,49 @@
         we will call the right method based on the true type of the object at runtime, and not the perceived type of the
         object at compile time) <br>
 
+        <br>
+        <a href="https://www.baeldung.com/java-composition-aggregation-association">What is Composition, Aggregation,
+            and Association?</a><br>
+
+        <li>
+            <b>Composition</b>: Think of it as a "has-a" kind of relationship, compared to inheritance which is more of
+            a "is-a" kind of relationship. For eg. a building <i>has a </i> room.
+            Composition is a strong kind of "has-a" relationship because the containing object owns it. Therefore, the
+            objects' lifecycles are tied. It means that if we destroy the owner object, its members also will be
+            destroyed with it. So if we destroyed the building, the room would also be destroyed.
+            In Java, we can model this with a non-static inner class: <br>
+            <code>class Building {</code> <br>
+            <code> class Room {}</code> <br>
+            <code>}</code>
+        </li>
+
+        <li>
+            <b>Aggregation</b>: Aggregation is also a "has-a" relationship. What distinguishes it from composition, that
+            it doesn't involve owning. As a result, the lifecycles of the objects aren't tied: every one of them can
+            exist independently of each other.
+            In Java, we can model aggregation with a plain old reference: <br>
+            <code>class Wheel {}</code> <br>
+            <code>class Car {</code> <br>
+            <code> List&ltWheel&gt wheels;</code> <br>
+            <code>}</code>
+        </li>
+
+        <li>
+            <b>Association:</b> Association is the weakest relationship between the three. It isn't a "has-a"
+            relationship, none of the objects are parts or members of another. In Java, we can model association the
+            same way as aggregation: <br>
+            <code>class Child {}</code> <br>
+            <code>class Mother {</code> <br>
+            <code>  List&ltChild&gt children;</code> <br>
+            <code>}</code>
+
+            How can we tell if a reference means aggregation or association?
+            Well, we can't. The difference is only logical: whether one of the objects is part of the other or not.
+        </li>
+
+        - And then there is <a href="https://softwareengineering.stackexchange.com/a/61446">this SO link</a>.
+
+        <br><br>
         - A class that does the inheriting is called the <i>subclass</i> and the class that is inherited is called the
         <i>superclass</i>.
         Therefore, a subclass is a specialized version of the superclass and adds its own unique elements.

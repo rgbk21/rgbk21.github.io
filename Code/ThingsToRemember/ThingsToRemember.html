@@ -553,7 +553,12 @@
 
     <div class="one-point">
         32) Reversing a String: <br>
-        - <code>String a_reverse = new StringBuilder(a).reverse().toString();</code>
+        - <code>String a_reverse = new StringBuilder(a).reverse().toString();</code> <br>
+        - Addendum: <br>
+        <code>StringBuilder result = new StringBuilder(s.charAt(i) + s.charAt(j));</code> <br>
+        This will not initialize a StringBuilder with the String formed by the concatenation of chars at location i and
+        j. Instead, it will create a StringBuilder with the specified <code>capacity</code>, i.e. it will treat the
+        chars as integers and do the arithmetic sum, not the String concatenation.
 
     </div>
 
@@ -589,14 +594,22 @@
 
         The string "boo:and:foo", for example, yields the following results with these parameters: <br>
 
-        Regex	Limit	Result <br>
-        :	2	{ "boo", "and:foo" } <br>
-        :	5	{ "boo", "and", "foo" } <br>
-        :	-2	{ "boo", "and", "foo" } <br>
-        o	5	{ "b", "", ":and:f", "", "" } <br>
-        o	-2	{ "b", "", ":and:f", "", "" } <br>
-        o	0	{ "b", "", ":and:f" } <br>
+        Regex Limit Result <br>
+        : 2 { "boo", "and:foo" } <br>
+        : 5 { "boo", "and", "foo" } <br>
+        : -2 { "boo", "and", "foo" } <br>
+        o 5 { "b", "", ":and:f", "", "" } <br>
+        o -2 { "b", "", ":and:f", "", "" } <br>
+        o 0 { "b", "", ":and:f" } <br>
 
+        <div class="code-snippet">
+        </div>
+    </div>
+
+    <div class="one-point">
+        36) Running <code>s.substring</code> method within a loop is a very slow computation. Avoid if possible. <br>
+        Check problem on <a href="https://leetcode.com/problems/longest-palindromic-substring/submissions/">leetcode</a>.
+        Replace teh StringBuilder with just substring and you should see what I am talking about.
         <div class="code-snippet">
         </div>
     </div>
