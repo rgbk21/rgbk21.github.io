@@ -244,7 +244,8 @@
     </div>
 
     <div class="one-point">
-        8) Difference between a simple comment and a Javadoc comment
+        8) What is the <a href="https://stackoverflow.com/questions/29815636/and-in-java-comments/29815698">difference
+        between a simple comment and a Javadoc comment</a>
         <div>
             /* */ is a simple comment in the code.
             <br>
@@ -407,13 +408,13 @@
         </div>
     </div>
 
-    <div class="one-point">
-        20) <code>Map&gtInteger, CartItemsToDisplay&lt currCart = cart.getItemsInCart()</code>
-    </div>
+    <!--    <div class="one-point">-->
+    <!--        20) <code>Map&gtInteger, CartItemsToDisplay&lt currCart = cart.getItemsInCart()</code>-->
+    <!--    </div>-->
 
     <div class="one-point">
         21) Set up a new Linux VM: <br>
-        - <a href="https://www.youtube.com/watch?v=ThsxqznrgCw">Step 1 - Youtube Link</a> <br>. Do not eject the CD
+        - <a href="https://www.youtube.com/watch?v=ThsxqznrgCw">Step 1 - Youtube Link</a>. <br> Do not eject the CD
         image.
         - Make VM full screen. First turn off the VM. Go to VirtualBox Manager - Settings - Display - Screen - Change
         Video memory to 128 MB. Restart the VM. Screen shoudl be full screen now. <br>
@@ -448,7 +449,7 @@
     <div class="one-point">
         24) What does it mean when one class is said to inherit another in actual code? <br>
         - <code>Stream.Builder&ltT&gt</code> interface inherits from the <code>Consumer&ltT&gt</code> interface,
-        (meaning, <code>interface Builder&ltT&gt extends Consumer&ltT&gt</code>)
+        (meaning, <code>interface Builder&ltT&gt extends Consumer&ltT&gt</code>) <br>
         - <a href="https://stackoverflow.com/questions/14021827/extends-class-and-implements-interface-in-java">Also,
         remember </a> that <code>extends</code> should go before <code>implements</code>.
     </div>
@@ -502,6 +503,8 @@
 
     <div class="one-point">
         28) Never use <code>==</code> when comparing <code>double</code>s or <code>float</code>s.
+        <a href="https://stackoverflow.com/a/1515811/8742428">Never use it to
+            compare</a> <code>Integer</code>, <code>Long</code>, <code>Double</code> either.
     </div>
 
     <div class="one-point">
@@ -615,16 +618,44 @@
     </div>
 
     <div class="one-point">
-        37) How to convert primitive array to List and vice-versa <br>
+        38) How to convert primitive array to List and vice-versa <br>
 
         <div>
             <script src="https://gist.github.com/rgbk21/650338c21a8bc4b5ed8573277b34e18c.js"></script>
         </div>
+    </div>
 
-
+    <div class="one-point">
+        39) A <code>TreeMap</code> can be sorted only on keys, not on values <br>
+        - The <code>Comparator</code> goes into the constructor of the <code>TreeMap</code>. <br>
+        - <a href="https://stackoverflow.com/questions/2864840/treemap-sort-by-value">SO Link</a> <br>
+        - And this: <a href="https://www.digizol.com/2008/07/java-sorting-comparator-vs-comparable.html">link</a>
 
     </div>
 
+    <div class="one-point">
+        40) How exactly do you sort something in the natural order vs. something in the reverse order <br>
+        - There are 2 ways in which you can change the ordering of sorting, from ascending to descending. <br>
+        - One way is you change the value returned on comparison. That is, when a > b, return -1 instead of +1 (for
+        sorting in descending). Returning +1 sorts it in ascending, returning -1 sorts it in descending. <br>
+        - Second way is you change the order in which you compare the objects. That is, if b > a, return 1. That will
+        also change the ordering from ascending to descending. <br>
+        - Both ways are shown in the below examples. <br>
+        - Also refer the difference between <code>Comparable</code> and <code>Comparator</code>.
+
+        <div class="code-snippet">
+            <script src="https://gist.github.com/rgbk21/1849debb042170ec169414310210fa6f.js"></script>
+        </div>
+    </div>
+
+    <div class="one-point">
+        41) How to store the Entries of a <code>HashMap</code> in a <code>List</code> <br>
+
+        <div class="code-snippet">
+            <script src="https://gist.github.com/rgbk21/a0d8b7f275b3c2f943730ddb120bffa0.js"></script>
+        </div>
+
+    </div>
 
 
     <hr/>
