@@ -657,6 +657,64 @@
 
     </div>
 
+    <div class="one-point">
+        42) What would be faster - comparing two String using <code>.equals</code> method or computing the hash codes of
+        two strings and comparing those hash values to see if the two strings are equal? <br>
+        - Using <code>.equals</code> will be faster. <br>
+        - <a
+            href="https://stackoverflow.com/questions/54066330/why-string-equals-doesnt-use-hashcode-equality-check-under-the-hood">SO
+        link</a>
+        <div class="code-snippet">
+        </div>
+
+    </div>
+
+
+    <div class="one-point">
+        43)How to create a Queue and a Stack? <br>
+        - Create a Queue: <code>Queue&ltInteger&gt q = new ArrayDeque&ltInteger&gt();</code>
+        <a href="https://stackoverflow.com/a/4626858/8742428">SO Link</a><br>
+        - Create a Stack: <code>Deque&ltInteger&gt stack = new ArrayDeque&ltInteger&gt();</code>
+        <a href="https://stackoverflow.com/a/35822408/8742428">SO Link</a>
+
+    </div>
+
+    <div class="one-point">
+        44) What does
+        <a href="https://stackoverflow.com/questions/55170520/package-javafx-util-does-not-exist">package-javafx-util-does-not-exist</a>
+        error mean? <br>
+
+        - Don't add a library bigger than the JDK itself, when all you need, is just a Pair type. You can use
+        <code>Map.entry(a, b)</code> instead, or <code>AbstractMap.SimpleImmutableEntry</code>, if you need support for
+        null or pre-Java 9 versions. Or any of the other 3rd party libraries providing a Pair type without the baggage
+        of a UI library/webkit engine.
+    </div>
+
+    <div class="one-point">
+        45) Checked vs Unchecked Exceptions <br>
+        - <a
+            href="https://stackoverflow.com/questions/2190161/difference-between-java-lang-runtimeexception-and-java-lang-exception">In
+        Java, there are two types of exceptions</a>: checked exceptions and un-checked exceptions. A checked exception
+        must be handled explicitly by the code, whereas, an un-checked exception does not need to be explicitly handled.
+        <br>
+        - For checked exceptions, you either have to put a try/catch block around the code that could potentially throw
+        the exception, or add a "throws" clause to the method, to indicate that the method might throw this type of
+        exception (which must be handled in the calling class or above). <br>
+        - Any exception that derives from <code>Exception</code> is a checked exception, whereas a class that derives
+        from
+        <code>RuntimeException</code> is un-checked. RuntimeExceptions do not need to be explicitly handled by the
+        calling code.
+        <br>
+        When to use Checked and when to use Unchecked exception: <br>
+        - <a href="https://stackoverflow.com/questions/4639432/checked-vs-unchecked-exception">SO Link 1</a> <br>
+        - <a href="https://stackoverflow.com/questions/1656376/why-are-runtime-exceptions-unchecked-in-java">SO Link
+        2</a><br>
+        - <a
+            href="https://stackoverflow.com/questions/499437/in-java-when-should-i-create-a-checked-exception-and-when-should-it-be-a-runti">SO
+        Link 3</a>
+
+    </div>
+
 
     <hr/>
 

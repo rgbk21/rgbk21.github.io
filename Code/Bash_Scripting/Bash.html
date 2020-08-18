@@ -134,7 +134,7 @@
     <div class="textual-content">
         <div class="sub-heading">Lecture 11</div>
         <div>
-            How do you initialize a new VM using vagrant? <br>
+            <li>How do you initialize a new VM using vagrant?</li>
             <code>mkdir localusers</code> //This will create a new directory <br>
             <code>cd localusers</code> //Change you current location to that newly created directory <br>
             <code>vagrant init jasonc/centos7</code> //Use the custom box you downloaded earlier to create the VM <br>
@@ -151,13 +151,15 @@
             <br>
             <br>
 
-            What does
-            <code_op>-rwxrwxrwx 1 vagrant vagrant 71 Aug 11 18:24 luser-demo01.sh</code_op>
-            stand for? <br>
-            - In the next example we are creating a shell script. When we run the following: <br>
+            <li>What does
+                <code_op>-rwxrwxrwx 1 vagrant vagrant 71 Aug 11 18:24 luser-demo01.sh</code_op>
+                stand for?</li>
+            - A bit further down the text, we will be creating a shell script named <code>luser-demo01.sh</code>. When
+            you look at the permissions of the file by running: <br>
             <code>ls -l</code> //we get.. <br>
             <code_op>-rwxrwxrwx 1 vagrant vagrant 71 Aug 11 18:24 luser-demo01.sh</code_op>
             <br>
+            - What do these mean? <br>
             - Every Unix file has a set of <i>permissions</i> that determine whether you can read,
             write, or run the file. Running <code>ls -l</code> displays the permissions. <br>
             - Consider the following:
@@ -197,7 +199,7 @@
             <br>
             <br>
 
-            How do you change the permissions on a file? <br>
+            <li>How do you change the permissions on a file?</li>
             - <code>chmod 755 luser-demo01.sh</code> <br>
             - The <code>-rwxrwxrwx</code> bits specify the permissions on the file "luser-demo01.sh". <br>
             - But changing the user permissions is not going to change the permissions. It would still be <code>-rwxrwxrwx</code>
