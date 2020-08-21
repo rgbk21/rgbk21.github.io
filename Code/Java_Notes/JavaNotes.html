@@ -178,8 +178,8 @@
             same way as aggregation: <br>
             <code>class Child {}</code> <br>
             <code>class Mother {</code> <br>
-            <code>  List&ltChild&gt children;</code> <br>
-            <code>}</code>
+            <code> List&ltChild&gt children;</code> <br>
+            <code>}</code> <br>
 
             How can we tell if a reference means aggregation or association?
             Well, we can't. The difference is only logical: whether one of the objects is part of the other or not.
@@ -311,11 +311,18 @@
             <code>super()</code> in BoxWeight calls the constructor in Box.
             <br>
             - In a class hierarchy, if a superclass constructor requires arguments, then all subclasses must pass those
-            arguments "up the line". This is true whether or not a subclass needs an argument of its own.
+            arguments "up the line". This is true whether or not a subclass needs an argument of its own. <br>
+            - This is another example: the question was - given an abstract class Car, with one abstract method
+            getMileage, create 2 classes that extend the class.
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/bac0718d410aa1255b9f7212577b581b.js"></script>
+            </div>
         </div>
+
+
         <div class="sub-heading">When Constructors are Executed</div>
         <div>
-            In a class heirarchy, constructors complete their execution in the order of derivation, from superclass to
+            In a class hierarchy, constructors complete their execution in the order of derivation, from superclass to
             subclass. Further, since <code>super()</code> must be the first statement that is executed in a subclass'
             constructor, this order is the same whether or not <code>super()</code> is used. If <code>super()</code> is
             not used, then the default or parameterless constructor of each superclass will be executed.

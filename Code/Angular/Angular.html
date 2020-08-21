@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="Angular.css">
+    <meta name="author" content="Raj Gaurav Ballabh Kumar">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angular Notes</title>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+
+    <div class="navbar-header">
+        <a href="../../index.html" class="navbar-brand"> rgbk21</a>
+    </div>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"><span
+            class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="nav navbar-nav">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+                   aria-expanded="false">
+                    Projects
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="../../Projects/TwitterCritNodes/TwitterCritNodes_1.html">Identifying
+                        Critical Nodes on Twitter</a>
+                    <a class="dropdown-item" href="../../Projects/isRelatedTo/isRelatedTo.html">isRelatedTo</a>
+                    <div class="dropdown-divider"></div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+                   aria-expanded="false">
+                    HTML Projects
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="../../ImageGallery/ImageGallery.html">Image Gallery</a>
+                    <a class="dropdown-item" href="../../RGB_Guesser_Game/RGB.html">RGB Guesser Game</a>
+                    <a class="dropdown-item" href="../../ToDoList/todo.html">To-Do List</a>
+                    <div class="dropdown-divider"></div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+                   aria-expanded="false">
+                    Notes
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="../../COMS_631/COMS_631_index.html">COMS 631</a>
+                    <a class="dropdown-item" href="../../COMS_535/COMS_535_index.html">COMS 535</a>
+                    <div class="dropdown-divider"></div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+                   aria-expanded="false">
+                    Code
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="../../Code/ThingsToRemember/ThingsToRemember.html">Things To
+                        Remember</a>
+                    <a class="dropdown-item" href="../../Code/Java_Notes/JavaNotes.html">Java Notes</a>
+                    <a class="dropdown-item" href="../../Code/Java_Notes/JavaNotes_2.html">Java Notes 2</a>
+                    <a class="dropdown-item" href="../../Code/Applying_Java_Notes/ApplyingJava_Notes.html">ApplyingJava
+                        Notes</a>
+                    <a class="dropdown-item" href="../../Code/SQL/SQL.html">SQL Notes</a>
+                    <a class="dropdown-item" href="../../Code/Spring/Spring.html">Spring Notes</a>
+                    <a class="dropdown-item" href="../../Code/Kafka/Kafka.html">Kafka Notes</a>
+                    <div class="dropdown-divider"></div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+                   aria-expanded="false">
+                    In Another Life
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="../../InAnotherLife/Chapter1.html">Chapter 1</a>
+                    <div class="dropdown-divider"></div>
+                </div>
+            </li>
+
+        </ul>
+
+
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active"><a class="nav-link" href="https://github.com/rgbk21">GitHub</a></li>
+            <li class="nav-item active"><a class="nav-link"
+                                           href="https://www.linkedin.com/in/raj-gaurav-ballabh-kumar-97002058/">LinkedIn</a>
+            </li>
+            <li class="nav-item active"><a class="nav-link" href="https://www.instagram.com/wobblyframes/">Instagram</a>
+            </li>
+            <li class="nav-item active"><a class="nav-link"
+                                           href="https://www.facebook.com/SomeRandomThoughts">Facebook</a></li>
+        </ul>
+
+    </div>
+</nav>
+
+<div class="container">
+    <div>
+        This page contains my notes from the following books: <br>
+        a) Angular in Action<br>
+    </div>
+
+    <br>
+    Index:
+    <br>
+    Chapter 1: <a href="#Ch1_Angular">Angular: A Modern Web Platform</a>
+    <br>
+    Chapter 2: <a href="#Ch2_BldngAngularApp">Building your first Angular App</a>
+    <br>
+    Chapter 2: <a href="#Ch3_AppEssntls">App Essentials</a>
+    <br>
+
+
+
+    <hr>
+    <div id="Ch1_Angular" class="chapter">Chapter 1: Angular - A Modern Web Platform</div>
+    <hr>
+    <div class="textual-content">
+
+        <div class="sub-heading">Why should Angular be viewed as a <i>platform</i>, and not a <i>framework</i>?</div>
+        <div>
+            - A <i>framework</i> is usually just the code library used to build an application, whereas a
+            <i>platform</i> is
+            more holistic and includes tooling and support beyond a framework. AngularJS was
+            focused solely on building web applications in the browser and was clearly a framework.
+            Angular, on the other hand, provides many other features such as: <br>
+            <li>
+                <b>Dedicated CLI for application development, testing, and deployment</b>:
+                You can install the CLI using npm: <code>npm install -g @angular/cli</code>
+                To see the full list of features, you can run <code>ng help</code> to output the current help
+                documentation.
+            </li>
+            <li>
+                <b>Offline rendering capabilities on many back-end server platforms</b>:
+                Compiling output in Angular is decoupled from the browser in a way that allows Angular applications to
+                be rendered in different environments, such as a server or desktop app. The compiler in Angular is
+                responsible for
+                resolving data bindings, registering event handlers, and rendering out the resulting HTML for
+                components. The term <i>server rendering</i> is about the notion that it shouldn't matter where you run
+                the JavaScript engine that executes Angular code. It should be possible to run Angular universally, such
+                as with browser JavaScript engines, NodeJS, or even less common
+                engines like Java's Nashorn engine. This greatly increases the ways in which Angular
+                can be used. Server rendering allows for faster loading on mobile devices and improves the
+                performance/reponsiveness of the app in the browser.
+            </li>
+            <li>
+                <b>Desktop-, mobile-, and browser-based application execution environments</b>:
+                Angular's rendering design makes it possible to support rendering out to different native platforms.
+                This means you can share a lot of code between your Angular applications, even if some are designed to
+                build mobile apps and others are web applications.
+            </li>
+            <li>
+                <b>Comprehensive UI component libraries, such as Material Design</b>:
+                Rather than having to build your own charts or tabs components, you can use one of the many prebuilt
+                options.
+            </li>
+
+            ..hence classifying it as a platform rather than just a framework.
+        </div>
+
+        <div class="sub-heading">What is a Component?</div>
+        <div>
+            - Component is a way to create custom HTML elements in your application. <br>
+            - When we build components, the following are the tenets we should consider when
+            designing the best components possible.
+            <li>Encapsulation - Keeping component logic in a single place</li>
+            <li>Isolation - Keeping component internals hidden from external actors</li>
+            <li>Reusability - Allowing component reuse with minimal effort</li>
+            <li>Evented - Emitting events during the lifecycle of the component</li>
+            <li>Customizable - Making it possible to style and extend the component</li>
+            <li>Declarative - Using a component with simple declarative markup</li>
+
+            <br>
+            - The following 4 ideas are central to the definition of Components: <br>
+            <li>
+                <b>Custom elements (encapsulation, declarative, reusability, evented)</b>:
+                <i>Custom elements</i> means being able to extend HTML with our own additional elements. You can read
+                more <a href="https://github.com/w3c/webcomponents/">here</a>. Custom elements have a lot of the stuff
+                necessary for building components. It gives us a <i>declarative</i> way to create
+                a <i>reusable</i> component, which <i>encapsulates</i> the internal mechanics of the component away
+                from the rest of the application, but can emit <i>events</i> to enable other components to hook
+                into the lifecycle. Angular uses these concepts in its implementation of components. Every Angular
+                component is a custom element and fulfills the four
+                tenets (and more) that we expect to get from a custom element.
+            </li>
+
+            <li>
+                <b>Shadow DOM</b>: The Shadow DOM is an isolated Document Object Model (DOM) tree that's detached from
+                the typical CSS inheritance, allowing you to create a barrier between markup inside and outside of the
+                Shadow DOM. For example, if you have a button inside of a Shadow DOM
+                and a button outside, any CSS for the button written outside the Shadow DOM won't
+                affect the button inside it. This is important for Angular because it allows us to have
+                better control over how CSS affects the way the components display.
+            </li>
+
+            <li>
+                <b>Templates</b>: Templates allow us to create isolated fragments of the DOM to use in our components.
+                Read more about it <a href="https://html.spec.whatwg.org/multipage/scripting.html#the-template-element">here</a>.
+                Templates are often used with the Shadow DOM because it allows you to define the
+                template and then inject it into the shadow root. Without templates, the Shadow DOM
+                APIs would require us to inject content node by node. They're also used by Angular as
+                part of the lifecycle of components and the compilation process, allowing Angular to
+                keep isolated, inert copies of the template as data changes and needs to be recompiled.
+            </li>
+
+            <li>
+                <b>JavaScript modules</b>: Modules are an isolated
+                piece of JavaScript that can be used to generate a component, create a reusable service,
+                or do anything else JavaScript can do. They're fundamentally a way to encapsulate application code and
+                choose what's available for the other parts of the application to use. In JavaScript, a module is any
+                file of JavaScript code that contains the <code>export</code> keyword. Modules export values that they
+                want to expose to the application and can keep other parts of the internal logic private. Then, in order
+                to use an exported value, you have to first import it from another module. Executing an Angular
+                application is fundamentally loading a module that contains the application bootstrapping logic, which
+                in turn starts to load and trigger additional modules.
+            </li>
+        </div>
+
+
+    </div>
+
+
+
+    <hr>
+    <div id="Ch2_BldngAngularApp" class="chapter">Chapter 2: Building your first Angular App</div>
+    <hr>
+    <div class="textual-content">
+
+        <div class="sub-heading">Setting up the project</div>
+        <div>
+            - In the terminal, start from a directory that you want to generate a new project folder inside. Then you
+            can run the following command to generate a new project, and then start the development server: <br>
+            <code>ng new stocks</code> <br>
+            <code>cd stocks</code> <br>
+            <code>ng serve</code> <br>
+            - Once done, you can point your browser to <code>http://localhost:4200</code> to see the landing page. <br>
+        </div>
+
+        <div class="sub-heading">Top-level contents of the project generated by the CLI and their roles</div>
+        <div>
+            <table class="table table-bordered table-sm">
+                <thead>
+                <tr>
+                    <th style="width: 15%">Asset</th>
+                    <th style="width: 85%">Role</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>e2e</td>
+                    <td>End-to-end testing folder, contains a basic stub test</td>
+                </tr>
+                <tr>
+                    <td>node_modules</td>
+                    <td>Standard NPM modules directory, no code should be placed here</td>
+                </tr>
+                <tr>
+                    <td>src</td>
+                    <td>Source directory for the application. All your application code goes here.</td>
+                </tr>
+                <tr>
+                    <td>.editorconfig</td>
+                    <td>Editor configuration defaults</td>
+                </tr>
+                <tr>
+                    <td>.angular-cli.json</td>
+                    <td>Configuration file for the CLI about this project. angular-cli.json file has been
+                        renamed/replaced with angular.json in version 6 of Angular. <a
+                                href="https://stackoverflow.com/a/50184006/8742428">SO Link</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>karma.conf.js</td>
+                    <td>Karma configuration file for unit test runner. Unit tests are run using karma.</td>
+                </tr>
+                <tr>
+                    <td>package.json</td>
+                    <td>Standard NPM package manifest file. <a
+                            href="https://michaelsoolee.com/npm-package-tilde-caret/">Difference between</a> <code>"^1.4.0"</code>
+                        and <code>"~2.0.1"</code> version numbers.
+                    </td>
+                </tr>
+                <tr>
+                    <td>package-lock.json</td>
+                    <td>It stores an exact, versioned dependency tree rather than
+                        using starred versioning like package.json itself (e.g. 1.0.*). This means you can guarantee the
+                        dependencies for other developers or prod releases, etc.
+                    </td>
+                </tr>
+                <tr>
+                    <td>protractor.conf.js</td>
+                    <td>Protractor configuration file for e2e test runner. This is now under the e2e folder. End-to-end
+                        testing is done using protractor.
+                    </td>
+                </tr>
+                <tr>
+                    <td>README.md</td>
+                    <td>Standard readme file, contains starter information</td>
+                </tr>
+                <tr>
+                    <td>tsconfig.app.json</td>
+                    <td>TypeScript compiler configuration for apps</td>
+                </tr>
+                <tr>
+                    <td>tsconfig.json</td>
+                    <td>Default configuration file for TypeScript compiler</td>
+                </tr>
+                <tr>
+                    <td>tsconfig.spec.json</td>
+                    <td>TypeScript compiler configuration for unit tests</td>
+                </tr>
+                <tr>
+                    <td>tslint.json</td>
+                    <td>TSLint configuration file for TypeScript linting rules</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="sub-heading">Contents of the src directory and their roles</div>
+        <div>
+            <table class="table table-bordered table-sm">
+                <thead>
+                <tr>
+                    <th style="width: 15%">Asset</th>
+                    <th style="width: 85%">Role</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>app</td>
+                    <td>Contains the primary App component and module</td>
+                </tr>
+                <tr>
+                    <td>assets</td>
+                    <td>Empty directory to store static assets like images</td>
+                </tr>
+                <tr>
+                    <td>environments</td>
+                    <td>
+                        Environment configurations to allow you to build for different targets, like dev or production
+                    </td>
+                </tr>
+                <tr>
+                    <td>favicon.ico</td>
+                    <td>Image displayed as browser favorite icon</td>
+                </tr>
+                <tr>
+                    <td>index.html</td>
+                    <td>Root HTML file for the application</td>
+                </tr>
+                <tr>
+                    <td>main.ts</td>
+                    <td>Entry point for the web application code</td>
+                </tr>
+                <tr>
+                    <td>polyfills.ts</td>
+                    <td>Imports some common polyfills required to run Angular properly on some browsers. What are <a
+                            href="https://stackoverflow.com/questions/48368818/what-is-the-use-of-polyfills-ts-file-in-angular">polyfills</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>styles.css</td>
+                    <td>Global stylesheet</td>
+                </tr>
+                <tr>
+                    <td>test.ts</td>
+                    <td>Unit test entry point, not part of application</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="sub-heading">How Angular renders the base application</div>
+        <div>
+            - Angular requires at least one component and one module. A <i>component</i> is the basic
+            building block of Angular applications and acts much like any other HTML element. A
+            <i>module</i> is a way for Angular to organize different parts of the application into a single
+            unit that Angular can understand. Components are for functionality and structure, whereas
+            modules are for packaging and distribution. You might think of components as LEGO bricks,
+            which can be many different shapes, sizes, and colors, and modules would be the packaging the LEGOs come in.
+        </div>
+
+        <br>
+
+        <li>
+            <b>App Component</b>: <br>
+            - Look at <code>src/app/app.component.ts</code> in the project. <br>
+            -The <code>@Component</code> annotation declares that this class is a component by accepting an
+            object. <br>
+            - It has a <code>selector</code> property that declares the HTML selector of the component.
+            That means the component is used in the template by adding an HTML tag
+            <code>&ltapp-root&gt&lt/app-root&gt</code>. <br>
+            - The <code>templateUrl</code> property declares a link to a template containing an HTML template. <br>
+            - The <code>styleUrls</code> property contains an array of links to any CSS files that
+            should be loaded for this component. <br>
+            - The AppComponent class has a single property called <code>title</code>. The
+            value is what you should see rendered in the browser, so this is the source of the value
+            that ultimately appears.
+
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/22531cd0ea803b59fd577ca92558ac80.js"></script>
+            </div>
+
+            - Now look at <code>src/app/app.component.html</code> in the project. <br>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/f00cb1cbd089f479ba3e29ca6a011476.js"></script>
+            </div>
+            - This is just a simple header tag, but there's the title property defined
+            between double curly braces. This is a common convention for how to bind a value into a template. It means
+            Angular
+            will replace <code>{{title}}</code> with the value of the title property from the component.
+            This is called <i>interpolation</i> and is frequently used to display data in a template.
+        </li>
+
+        <br>
+
+        <li>
+            <b>App Module</b>: <br>
+            - The App module is the packaging that helps tell Angular what's available to render. It also describes the
+            various dependencies that are needed to render the module.
+            There's at least one module in an application, but it's possible to create multiple modules for different
+            reasons<br>
+            - The CLI generated the module for us, so we can look at it in <code>src/app/app.module.ts</code> <br>
+
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/c71f0473dd8024737c3f5b5ee5af6d5a.js"></script>
+            </div>
+
+            - Just like a component, a module is an object with a decorator. The object here is
+            called <code>AppModule</code>, and <code>NgModule</code> is the decorator. <br>
+            - The first block is to import any Angular dependencies that are common to most apps and the App component.
+            <br>
+            - The <code>NgModule</code> decorator takes an object with a few different properties. The
+            <code>declarations</code> property is to provide a list of any components and directives to make available
+            to the entire application. <br>
+            - The <code>imports</code> property is an array of other modules upon which this module depends - in this
+            case, the <code>BrowserModule</code>
+            (a collection of required capabilities). If you ever include other modules, such as third-party modules or
+            ones you've created, they also need to be listed here. <br>
+            - The next property is the <code>providers</code> property, which is empty by default. Any services
+            that are created are to be listed here. <br>
+            - The <code>bootstrap</code> property defines which components to bootstrap at runtime. Typically, this will
+            be the same
+            App component, and the CLI already set it up for us.
+        </li>
+
+        <br>
+
+        <li>
+            <b>Bootstrapping the app</b>: <br>
+            - The application must be bootstrapped at runtime to start the process of rendering. <br>
+            - Look at <code>angular.json</code> file. One of the properties is the <code>main</code> property. By
+            default, it points to the <code>src/app/main.ts</code> file. <br>
+            - This means that when the application gets built, it will automatically call the contents of
+            the <code>main.ts</code> file as the first set of instructions. <br>
+            - The role of main.ts is to bootstrap the Angular application. It is located in:
+            <code>src/app/main.ts</code>
+
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/b3bb160cdcd82cd9bc167fd07e62dd71.js"></script>
+            </div>
+
+            - The <code>platformBrowserDynamic</code> object is used to tell Angular which module is being loading, and
+            in this case that's the <code>AppModule</code>. It is important to understand that this is the point where
+            the code begins to execute. <br>
+            - You should see the following in the <code>src/index.html</code> file:
+
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/6b8dda863e460873ebce15d73b3ef8ad.js"></script>
+            </div>
+
+            - Once the app is bootstrapped by the main.ts code, Angular will look for
+            the <code>app-root</code> element and replace it with the rendered component. <br>
+            - And thus the sequence of loading the app is complete. The process can be understood as follows: <br>
+            - When the application gets built, it automatically calls the contents of <code>main.ts</code>. <code>main.ts</code>
+            bootstraps the <code>AppModule</code>. The control passes to the <code>app.module.ts</code> where it sees
+            the field <code>bootstrap</code> and figures out which component to use as the first in order to bootstrap
+            the application. Control then goes to the <code>app.component.ts</code> class where it sees the <code>templateUrl</code>
+            that it has to serve along with the <code>selector</code> <code>app-root</code>.
+
+        </li>
+
+        <div class="sub-heading">Building Services</div>
+        <div>
+            - <a href="https://stackoverflow.com/a/16709882/8742428">SO Link</a> for when to use Services. Services come
+            in handy in the following scenarios: <br>
+            a) When you want to share information between two or more controllers - One may use <code>$rootScope</code>
+            to also communicate between controllers, but it should be avoided as much as possible since it is a global
+            scope. <br>
+            b) When a functionality is to be used multiple times. <br>
+            - <a href="https://stackoverflow.com/a/36199007/8742428">SO link</a> for how to create a Singleton Service.
+            <br>
+            - Services are objects that abstract some common logic that you plan to reuse in multiple places. Think of
+            services is as sharable objects that any part of your app can import as needed. They can do about anything
+            you need them to do, because they're objects. Using ES2015 modules, these classes are exported, and so any
+            component can import them as necessary. They could also have functions or even static values, like a string
+            or number, as a way to share data between various parts of your application. <br>
+            - To generate a Service you run the following: <code>ng generate service services/stocks</code>.
+            The CLI will generate the files in the <code>src/app/services</code> directory. <br>
+            - Add the following code to the auto-generated class.
+
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/0b460a32144e8fa69e77b6ee4af7d034.js"></script>
+            </div>
+
+            - The <code>StocksService</code> class is exported and is decorated by the <code>Injectable</code>
+            decorator. The decorator is used to set up the proper wiring for Angular to know how to use it elsewhere, so
+            if you forget to include the decorator, the class might not be injectable into your application. <br>
+            - In the constructor method, the <code>HttpClient</code> service is injected using the TypeScript
+            technique of declaring a private variable called <code>http</code> and then giving it a type of <code>HttpClient</code>.
+            <br>
+            - The <code>load()</code> method makes a call to the <code>HttpClient</code> service to load the data for
+            current stock price values. The <code>HttpClient</code> service is called and returns an observable, which
+            is a construct for handling asynchronous events, such as data from an API call. <br>
+            - The <code>this.http.get&ltArray&ltStockInterface&gt&gt</code> is the <i>type variable</i>. This is a
+            feature of TypeScript that tells it what kind of object it should expect. In this case it will expect
+            to get an array of objects that conform to the <code>StockInterface</code>. <br>
+            - There is one last thing that we have to do - in the <code>src/app/app.module.ts</code> file
+
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/b4f0023fac33831f9ae61231d22e544c.js"></script>
+            </div>
+        </div>
+
+        <div class="sub-heading">Creating your first Component</div>
+        <div>
+            - Generate a new component by running the following: <code>ng generate component components/summary</code>
+            <br>
+            - The CLI will generate a new component inside the <code>src/app/components/summary</code> directory. <br>
+            - The generated component contains an empty CSS file, basic HTML template, test stub, and empty class
+            already initialized with the component annotation.
+
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/138d4356d6c544e24367ff12f3c6719a.js"></script>
+            </div>
+
+            - Line 1,2 <code>[ngClass]="{increase:isPositive(), decrease: isNegative()}</code> is a special kind of
+            attribute known as a <i>Directive</i>. Directives allow you to modify the behavior and display of DOM
+            elements in a template. <br>
+            - The NgClass directive is able to add or remove CSS classes to and from the element. It's assigned a value,
+            which is an object that contains properties that are the CSS class names, and those properties map to a
+            method on the controller (to be written). If the method returns true, it will add the class; if false, it
+            will be removed. In this snippet, the card will get the <code>increase</code> CSS class when it's positive,
+            or the <code>decrease</code> CSS class when it's negative.
+            <br>
+            <br>
+            - Let's move to <code>{{stock?.symbol?.toUpperCase()}}</code>. The double curly braces syntax is the way to
+            display some value in the page (interpolation). The content between the braces is called an <i>Angular
+            expression</i> and is evaluated against the controller (like the directive), meaning that it will try to
+            find a property on the controller to display. If it fails, normally it will throw an error, but the safe
+            navigation operator <code>?.</code> will silently fail and not display anything if the property is missing.
+            <br>
+            <br>
+            - <code>{{stock?.lastTradePriceOnly | currency:'USD':'symbol':'.2'}}</code> shows another feature of Angular
+            called <i>pipes</i>, which are added directly into the expression to format the output. The interpolation
+            expression is extended with a pipe symbol, <code> | </code>, and then a pipe is named and optionally
+            configured with values separated with the colon <code> : </code> symbol. Pipes only modify the data before
+            it is displayed, and do not change the value in the controller. The double curly braces indicate that you
+            want to bind the data stored in the <code>stock.lastTradePriceOnly</code> property to display it. The data
+            is piped through the Currency pipe, which converts the value into a financial figure based on a USD figure,
+            and rounds to two decimal points.
+            <br>
+            <br>
+            - <code>{{stock?.change | currency:'USD':'symbol':'.2'}} ({{stock?.changeInPercent | percent:'.2'}})</code>
+            has two different interpolation bindings with a currency or a Percentage pipe. The first will convert to the
+            same currency format, but the second will take a percentage as a decimal, such as 0.06, and turn it into 6%.
+            Note that the round brackets in the second interpolation are not the part of any syntax, they are just there
+            because the UI needs that value to be in round brackets.
+
+            <br>
+            <br>
+            - The <code>summary.component.html</code> template needs a controller to wire up the data and the methods.
+            Make the following changes to the <code>src/app/components/summary/summary.component.ts</code> file. <br>
+
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/e6b68f792de74885c59302cc18ca5e34.js"></script>
+            </div>
+
+            - <a href="https://stackoverflow.com/questions/35763730/difference-between-constructor-and-ngoninit">SO
+            Link</a> explaining why we need to use <code>ngOnInit</code> if we already have a <code>constructor</code>?
+            <br>
+            - The summary controller class starts with a property called <code>stock</code>, which is preceded
+            with the <code>Input</code> annotation. This indicates that this property is to be provided to the
+            component by a parent component passing it to the summary.
+
+            <br>
+            <br>
+            - We also want to apply certain styling to the summary.
+            Open the <code>src/app/components/summary/summary.component.css</code> file. <br>
+            - The <code>:host</code> selector is used because we want components to be as self-contained as possible.
+            This relies on the Shadow DOM concepts discussed earlier. When Angular renders this component,
+            it will modify the output to ensure that the CSS selector is unique and doesn't accidentally interfere with
+            other elements on the page. <br>
+            - The host selector is a way to specify that you want the styles to apply to the element
+            that hosts the element, so in this case it will look at the Summary component element
+            itself rather than the contents inside it.
+
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/169556a4dab7e3f45af12ef35c0409e5.js"></script>
+            </div>
+
+            <br>
+            - Look at the <code>src/app/app.module.ts</code> file and you'll see that the CLI already modified
+            the module to include the Summary component in the App module. <br>
+            - Now update the contents of the <code>src/app/app.component.ts</code> file.
+            - We store the loaded stock data onto a property called stocks. We also provide some typing information,
+            which is imported from our Stocks service, so that TypeScript knows what kind of value to expect. Finally,
+            instead of logging the data to the console, we store it on the stocks property.
+
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/8031c83dded48742f24ccdd3c30fffe9.js"></script>
+            </div>
+
+            <br>
+            - Now we need to change the <code>src/app/app.component.html</code> file to use the Summary Component. <br>
+            - The first line added <code>*ngIf="stocks"</code>, which is a directive that will only render the contents
+            inside the element when the expression is true. In this case, it won't render the Summary component until
+            the stock data has been loaded. <br>
+            - The middle line shows the instantiation of a single Summary component, and the first value of the stocks
+            array is bound into the stock property. The data returns as an array, so we're directly accessing the first
+            value. Recall the input value we declared in the Summary component, which is also named stock. <br>
+
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/c207e2cfee4c2da13801740d41f6f5f5.js"></script>
+            </div>
+
+            - If everything was set up correctly, you should now see your first Component that displays a Summary card
+            for the current stock value of AAPL!!!!
+
+        </div>
+
+        <div class="sub-heading">Components that use Components and Services</div>
+        <div>
+            - Generate another Component: <code>ng generate component components/dashboard</code>. This will output new
+            files into the src/app/components/dashboard directory for the HTML, CSS, controller, and unit test. It also
+            adds the component to the App module (app.module.ts) to be immediately consumable. <br>
+            - Make the following changes to <code> src/app/components/dashboard/dashboard.component.ts</code>
+
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/b844691d2db52f978909cdf8dc2c7a0a.js"></script>
+            </div>
+
+            - The <code>DashboardComponent</code> class is the component controller, and it declares that it
+            must implement the requirements of <code>OnInit</code>. If it doesn't, TypeScript will fail to compile the
+            code and throw an error. It then has two properties: an array of stocks and an
+            array of strings that represent the stock symbols to display. Initially they're empty arrays,
+            so we'll need to get them loaded for the component to render. <br>
+            - The <code>constructor</code> method runs as soon as the component is created. It will import
+            the Stocks service onto the <code>service</code> property and then request the current list of stock
+            symbols from it. This works because this is a synchronous action that loads a value directly from memory.
+            <br>
+            - But we don't load data from the service in the constructor for a number of reasons. The constructor fires
+            early in the rendering of a component, which means that often, values are not yet ready to be consumed.
+            Components expose a number of lifecycle hooks that allow you to execute commands at various stages of
+            rendering, giving you greater control over when things occur. <br>
+            - In our code, we use the <code>ngOnInit</code> lifecycle hook to call the service to load the stock
+            data. It uses the list of stock symbols that was loaded in the constructor. We then <code>subscribe</code>
+            to wait for the results to return and store them in the stocks property. This uses the observable approach
+            to handling asynchronous requests. We are using obervables because the <code>HttpClient</code> returns an
+            observable for us to receive the response. This is exposed as a stream of data, even though it is
+            a single event.
+            <br>
+            <br>
+            - The last step is to change the <code>src/app/components/dashboard/dashboard.component.html</code> file.
+            <br>
+
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/1c7c13475c871df7faa086512766d12e.js"></script>
+            </div>
+
+            - We see another element that has a new directive, NgFor. Like NgIf, it starts with
+            an <code> * </code> <br>
+            - <code>NgFor</code> will then create an instance of the Summary component for each of the stock
+            items. It binds the stock data into the component. Each copy of the Summary component is distinct from the
+            others, and they don't directly share data.
+
+        </div>
+
+        <div class="sub-heading">Components with forms and events</div>
+        <div>
+            - Forms are essential in applications, and Angular comes with built-in support for building complex forms
+            with many features. Forms in Angular are comprised of any number of <code>controls</code>, which are the
+            various types of inputs and fields the form may contain (such as a text input, a checkbox, or some custom
+            lement). <br>
+            - First, create a new component using <code>ng generate component components/manage</code>. Now update the
+            <code>src/app/app.component.html</code> so that it is the <code>app-manage</code> component that is beign
+            served. <br>
+            - We also need to add the <code>FormsModule</code> to our application, because we are going to use
+            the form features that aren't automatically included by Angular. Open up the
+            <code>src/app/app.module.ts</code> file and add a new import:
+            <code>import { FormsModule } from '@angular/forms';</code> <br>
+            - Open <code>src/app/components/manage/manage.component.ts</code> and add the following: <br>
+
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/3fb32efac06faef8811d822865c561db.js"></script>
+            </div>
+
+            - The constructor uses the service to get the array of stock symbols and store it on the
+            symbols property. This doesn't require the <code>OnInit</code> lifecycle hook, because it's a synchronous
+            request to get data that exists in memory.
+
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/33b47bc2e7bb7cd65fc4f38353f08228.js"></script>
+            </div>
+
+            - The <code>(submit)="add()"</code> attribute is a way to add an event listener, known
+            as an <code>event binding</code>. When the form is submitted (which is done by pressing Enter), it
+            will call the <code>add</code> method. Any attribute that's surrounded by parentheses is an event
+            binding, and the name of the event should match the event without the <code> on </code>
+            (<code>onsubmit</code>
+            is <code>submit</code>). <br>
+            - The <code>[(ngModel)]="stock"</code> attribute is a <i>two-way binding</i> that will sync the value of the
+            input and the value of the property in the controller anytime it changes from either
+            location. This way, as the user types into the text field, the value will be immediately
+            available for the controller to consume. When the user hits Enter, the <code>submit</code> event
+            fires and will use the value of the stock property when adding the new symbol. <br>
+            - The next section loops over the list of symbols using NgFor. For each <code>symbol</code>, it will create
+            a local variable called <code>symbol</code>, create a new table row that binds the value, and a button
+            that's for removing the item. <br>
+            - The <code>remove</code> button contains another event binding, this one to handle the click
+            event. The <code>(click)="remove(symbol)"</code> attribute adds an event listener to the click
+            event and will call the <code>remove</code> method in the controller, passing along the symbol.
+            Because there are multiple instances of the button, each one passes along the local variable to know which
+            symbol to remove.
+
+        </div>
+
+        <div class="sub-heading">Application Routing</div>
+        <div>
+            - <i>Routing</i> configures the different pages that the application can render. Angular has a router that
+            works well with the Angular architecture by mapping components to routes. <br>
+            - Create a new file at <code>src/app/app.routes.ts</code> <br>
+
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/ace5de14640001570352a6f5ff09bc5f.js"></script>
+            </div>
+
+            - The <code>RouterModule</code> is used to activate the router and accepts the routes configuration when
+            it's initialized. We also import the two routable components, the Dashboard and Manage components, so we
+            can reference them properly in our routes configuration. <br>
+            - The routes are defined as an array of objects that have at least one property - in this case two, for a
+            URL path and a component. For the first route, there's no path, so it acts as the application index (which
+            will be http://localhost:4200) and links to the Dashboard component. The second route provides a URL path of
+            manage (which will be http://localhost:4200/manage) and links to the Manage component. <br>
+            - Finally, we create a new value <code>AppRoutes</code>, which is assigned to the result of
+            <code>RouterModule.forRoot(routes)</code>. It's a way to pass configuration to the module. In this case,
+            we're passing the array of routes. We export this so we can import it into our App module and register it.
+
+            <br>
+            <br>
+
+            - In <code>src/app/app.module.ts</code> add <code>import { AppRoutes } from './app.routes';</code> and
+            update the <code>imports</code> array to contain <code>AppRoutes</code>.
+
+            <br>
+            <br>
+
+            - In the <code>src/app/app.component.html</code> file, make the following changes:
+
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/a80d7f8853c79ce4ff6536492af48aff.js"></script>
+            </div>
+            - This declares the specific location in the application that the router should render the
+            component. It's the same place that we've put our components while building them, so
+            it should make sense that this is the best place. <br>
+            - Then we need to update the links to use a new directive that will set up the navigation
+            between routes. The RouterLink directive binds to an array of paths that are used to
+            build a URL. The directive parses the array and tries to match to a known route. Once it matches a
+            route, it will add an href to the anchor tag that correctly links to that route.
+        </div>
+
+    </div>
+
+
+    <hr>
+    <div id="Ch3_AppEssntls" class="chapter">Chapter 3: App Essentials</div>
+    <hr>
+
+
+</div>
+
+</body>
+</html>
