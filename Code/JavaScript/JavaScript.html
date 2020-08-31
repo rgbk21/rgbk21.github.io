@@ -85,6 +85,7 @@
                     <a class="dropdown-item" href="../../Code/Spring/Spring.html">Spring Notes</a>
                     <a class="dropdown-item" href="../../Code/Kafka/Kafka.html">Kafka Notes</a>
                     <a class="dropdown-item" href="../../Code/Angular/Angular.html">Angular</a>
+                    <a class="dropdown-item" href="../../Code/Hibernate/Hibernate.html">Hibernate</a>
                     <div class="dropdown-divider"></div>
                 </div>
             </li>
@@ -127,15 +128,172 @@
     <br>
     Chapter 1: <a href="#Values">Values, Types, and Operators</a>
 
+    <br>
+    Chapter 13: <a href="#Chapter13">JavaScript and the Browser</a>
+    <br>
+    Chapter 13: <a href="#Chapter14">The Document Object Model</a>
+    <br>
+
 
     <div id="Values" class="chapter">Chapter 1: Values, Types, and Operators</div>
     <div class="textual-content">
         -
+    </div>
 
+    <div id="Chapter13" class="chapter">Chapter 13: JavaScript and the Browser</div>
+    <div class="textual-content">
+
+        <li><b>HTML</b></li>
+        <div>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/968356973962cf08e0f2f2c18362d15e.js"></script>
+            </div>
+
+            - A HTML page contains text and <i>tags</i>. Tags give structure to the text, describing things such as
+            links,
+            paragraphs, and headings. <br>
+            - The <i>tags</i> are wrapped in <code>&lt;</code> <code>&gt;</code>. <br>
+            - The document starts with <code>&lt;!doctype html &gt;</code> , which tells the browser to interpret the
+            page
+            as modern HTML, as opposed to various dialects that were in use in the past. <br>
+            - An <i>HTML Element</i> is started by an opening tag like <code>&lt;p&gt;</code> and ended by a closing tag
+            like
+            <code>&lt;/p&gt;</code>. <br>
+            - Some opening tags, such as the one for the link (<code>&lt;a&gt;</code>), contain extra information in the
+            form of
+            name="value" pairs. These are called <i>attributes</i>. <br>
+            - Some kinds of tags do not enclose anything and thus do not need to be closed. The metadata tag
+            <code>&lt;meta charset="utf-8"&gt;</code> is an example of this. <br>
+            - <a
+                href="https://stackoverflow.com/questions/8937384/what-is-the-difference-between-html-tags-and-elements">This
+            SO Link</a> goes into the differences between tags, elements, and attributes. <br>
+        </div>
+
+        <br>
+
+        <li><b>HTML and JavaScript</b></li>
+        <div>
+            - The <code>&lt;script&gt;</code> tag allows us to include a piece of JavaScript in the document.
+
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/0e789c4fbf549605dfbc222ab3a0b761.js"></script>
+            </div>
+
+            - Such a script will run as soon as its <code>&lt;script&gt;</code> tag is encountered while the browser
+            reads the HTML. <br>
+            - The <code>&lt;script&gt;</code> tag can be given an <code>src</code> attribute to fetch a script file (a
+            text file containing a JavaScript program) from a URL.
+
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/7f2b8663a4ec0d140287489d7903f0f2.js"></script>
+            </div>
+
+            - A script tag must always be closed with <code>&lt;script&gt;</code>, even if it refers to a script file
+            and doesn't contain any code. If you forget this, the rest of the page will be interpreted as part of the
+            script. <br>
+            - Some attributes can also contain a JavaScript program. The <code>&lt;button&gt;</code> tag (which shows up
+            as a button) has an <code>onclick</code> attribute. The attribute's value will be run whenever the button is
+            clicked.
+
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/573a1e434a90b447af846adff9625568.js"></script>
+            </div>
+
+        </div>
 
 
     </div>
 
+
+    <div id="Chapter14" class="chapter">Chapter 14: The Document Object Model</div>
+    <div class="textual-content">
+
+        <li><b>What is the DOM</b></li>
+        <div>
+            <div class="row">
+                <img src="imgs/Ch14/DOM.png" class="center-block img-fluid" alt="Example1">
+            </div>
+            - The data structure the browser uses to represent the document follows the above shape. For each box, there
+            is
+            an object, which we can interact with to find out things such as what HTML tag it represents and which boxes
+            and
+            text it contains. This representation is called the Document Object Model. <br>
+            - The global binding (other name for <i>variable</i>) <code>document</code> gives us access to these
+            objects. Its <code>documentElement</code> property refers to the object representing the
+            <code>&lt;html&gt;</code> tag.<br>
+            - You can think of the DOM as a tree datastructure with the <code>document.documentElement</code> serving as
+            the root of the tree. Just like a normal tree, the root is a node. A node can have children nodes
+            or can have leaves. <br>
+            - Each DOM node object has a <code>nodeType</code> property, which contains a code (number) that identifies
+            the type of node. Elements have code 1, which is also defined as the constant property
+            <code>Node.ELEMENT_NODE</code>. Text nodes, representing a section of text in the document, get code 3
+            (<code>Node.TEXT_NODE</code>). Comments have code 8 (<code>Node.COMMENT_NODE</code>). <br>
+            - What is the difference between Node object and Element object?
+            <a href="https://stackoverflow.com/questions/9979172/difference-between-node-object-and-element-object">This
+                SO Link explains</a>. <code>Element</code> inherits from <code>Node</code>, in the same way that Dog
+            inherits from Animal.
+            An <code>Element</code> object "is-a" <code>Node</code> object, in the same way that a Dog object "is-a"
+            Animal object.<br>
+            - Every node has a <code>parentNode</code> property that points to the node it is part of, if any. Likewise,
+            every element node (node type 1) has a <code>childNodes</code> property that points to an array-like object
+            holding its children. <br>
+            - The <code>firstChild</code> and <code>lastChild</code> properties point to the first and last child
+            elements or have the value <code>null</code> for nodes without children. <br>
+            - Similarly, <code>previousSibling</code> and <code>nextSibling</code> point to adjacent nodes, which are
+            nodes with the same parent that appear immediately before or after the node itself. For a first child,
+            <code>previousSibling</code> will be null, and for a last child, <code>nextSibling</code> will be null. <br>
+            - There's also the <code>children</code> property, which is like <code>childNodes</code> but contains
+            only element (type 1) children, not other types of child nodes. This can be useful when you aren't
+            interested in text nodes. <br>
+            - The <code>nodeValue</code> property of a text node holds the string of text that it represents. <br>
+        </div>
+
+        <br>
+        <li><b>Finding Elements in the DOM</b></li>
+        <div>
+            - If we want the <code>href</code> attribute of the link in that document, we can say:
+
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/f490eb65be0a2eaf4ebd0e89079cd237.js"></script>
+            </div>
+
+            - All element nodes have a <code>getElementsByTagName</code> method, which collects all elements with the
+            given tag name that are descendants (direct or indirect children) of that node and returns them as an
+            array-like object. <br>
+            - To find a specific single node, you can give it an <code>id</code> attribute and use
+            <code>document.getElementById</code> instead. <br>
+            - A third, similar method is <code>getElementsByClassName</code>, which, like
+            <code>getElementsByTagName</code>, searches through the contents of an element node and retrieves all
+            elements that have the given string in their class attribute. <br>
+        </div>
+
+        <br>
+        <li><b>Changing the Document</b></li>
+        <div>
+            - Almost everything about the DOM data structure can be changed. The shape of the document tree can be
+            modified by changing parent-child relationships. Nodes have a <code>remove</code> method to remove them from
+            their current parent node. To add a child node to an element node, we can use <code>appendChild</code>,
+            which puts it at the end of the list of children, or <code>insertBefore</code>, which inserts the node
+            given as the first argument before the node given as the second argument. <br>
+            - Consider the following:
+
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/9fcb46cdd39aca71e26586fae4f603f1.js"></script>
+            </div>
+
+            - A node can exist in the document in only one place. Thus, inserting paragraph Three in front of paragraph
+            One will first remove it from the end of the document and then insert it at the front, resulting in
+            Three/One/Two. All operations that insert a node somewhere will, as a side effect, cause it to be removed
+            from its current position (if it has one). <br>
+            - The <code>replaceChild</code> method is used to replace a child node with another one. It takes as
+            arguments two nodes: a new node and the node to be replaced. The replaced node must be a child of the
+            element the method is called on. Note that both <code>replaceChild</code> and <code>insertBefore</code>
+            expect the new node as their first argument.
+
+        </div>
+
+
+    </div>
 
 
 </div>

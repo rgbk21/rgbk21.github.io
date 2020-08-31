@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="Hibernate.css">
+    <meta name="author" content="Raj Gaurav Ballabh Kumar">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hibernate - Notes</title>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+
+    <div class="navbar-header">
+        <a href="../../index.html" class="navbar-brand">rgbk21</a>
+    </div>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"><span
+            class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="nav navbar-nav">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+                   aria-expanded="false">
+                    Projects
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="../../Projects/TwitterCritNodes/TwitterCritNodes_1.html">Identifying
+                        Critical Nodes on Twitter</a>
+                    <a class="dropdown-item" href="../../Projects/isRelatedTo/isRelatedTo.html">isRelatedTo</a>
+                    <div class="dropdown-divider"></div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+                   aria-expanded="false">
+                    HTML Projects
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="../../ImageGallery/ImageGallery.html">Image Gallery</a>
+                    <a class="dropdown-item" href="../../RGB_Guesser_Game/RGB.html">RGB Guesser Game</a>
+                    <a class="dropdown-item" href="../../ToDoList/todo.html">To-Do List</a>
+                    <div class="dropdown-divider"></div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+                   aria-expanded="false">
+                    Notes
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="../../COMS_631/COMS_631_index.html">COMS 631</a>
+                    <a class="dropdown-item" href="../../COMS_535/COMS_535_index.html">COMS 535</a>
+                    <div class="dropdown-divider"></div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+                   aria-expanded="false">
+                    Code
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="../../Code/ThingsToRemember/ThingsToRemember.html">Things To
+                        Remember</a>
+                    <a class="dropdown-item" href="../../Code/Java_Notes/JavaNotes.html">Java Notes</a>
+                    <a class="dropdown-item" href="../../Code/Java_Notes/JavaNotes_2.html">Java Notes 2</a>
+                    <a class="dropdown-item" href="../../Code/Applying_Java_Notes/ApplyingJava_Notes.html">ApplyingJava
+                        Notes</a>
+                    <a class="dropdown-item" href="../../Code/SQL/SQL.html">SQL Notes</a>
+                    <a class="dropdown-item" href="../../Code/Spring/Spring.html">Spring Notes</a>
+                    <a class="dropdown-item" href="../../Code/Kafka/Kafka.html">Kafka Notes</a>
+                    <a class="dropdown-item" href="../../Code/Angular/Angular.html">Angular</a>
+                    <a class="dropdown-item" href="../../Code/Hibernate/Hibernate.html">Hibernate</a>
+                    <div class="dropdown-divider"></div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+                   aria-expanded="false">
+                    In Another Life
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="../../InAnotherLife/Chapter1.html">Chapter 1</a>
+                    <div class="dropdown-divider"></div>
+                </div>
+            </li>
+        </ul>
+
+
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active"><a class="nav-link" href="https://github.com/rgbk21">GitHub</a></li>
+            <li class="nav-item active"><a class="nav-link"
+                                           href="https://www.linkedin.com/in/raj-gaurav-ballabh-kumar-97002058/">LinkedIn</a>
+            </li>
+            <li class="nav-item active"><a class="nav-link" href="https://www.instagram.com/wobblyframes/">Instagram</a>
+            </li>
+            <li class="nav-item active"><a class="nav-link"
+                                           href="https://www.facebook.com/SomeRandomThoughts">Facebook</a></li>
+        </ul>
+
+    </div>
+</nav>
+
+<div class="container">
+
+    <div>
+        This page contains my notes from the following books: <br>
+        a) Hibernate in Action <br>
+        b) High-Performance Java Persistence <br>
+    </div>
+
+    <br>
+
+    Index:
+    <br>
+    Chapter 0: <a href="#GettingStarted">Getting Started - Dummy Project</a>
+
+    <div id="GettingStarted" class="chapter">Chapter 0: Getting Started - Dummy Project</div>
+
+    <div class="textual-content">
+        - Refer <a href="https://spring.io/guides/gs/accessing-data-mysql/">this Spring guide</a> for details. <br>
+        - Hibernate User Guide can be found <a
+            href="https://docs.jboss.org/hibernate/orm/5.4/userguide/html_single/Hibernate_User_Guide.html#configurations-hbmddl">here</a>.
+        - Entire code can be found on GitHub <a href="https://github.com/rgbk21/MySQL-CRUD">here</a>.
+        - On <a href="https://start.spring.io/">Initializr</a> create a new Gradle project with the following
+        dependencies: Spring Data JPA, MySQL Driver, Spring Web. <br>
+        - Remove the <code>sourceCompatibility = '11'</code> from <code>build.gradle</code> file if giving build errors.
+        <br>
+        - Spring Boot gives you defaults on all things. For example, the default database is H2. Consequently, when you
+        want to use any other database, you must define the connection attributes in the
+        <code>application.properties</code> file. <br>
+        - For this, we would first have to separately create a new database in MySQL. We are also creating a new table.
+        Alternatively, you can just create the database and have Hibernate create the table for you. We will see how to
+        do it.
+
+        <div class="code-snippet">
+            <script src="https://gist.github.com/rgbk21/0c9688b5f56b4a23216911b09ac54a8c.js"></script>
+        </div>
+
+        - Optional, but you can add the database that you just created as a datasource to IntelliJ itself so that you
+        can run SQL queries from the IDE and not have to go to WorkBench everytime. <br>
+
+        <br>
+        Step 1: Select the Database tab on the right and add a datasource by clicking the plus symbol.
+
+        <img src="imgs/Ch0/AddingDataSource.PNG" class="center-block img-fluid"
+             alt="AddingDataSource">
+
+        <br>
+        Step 2: Add User, Password, Database. For your user/password combination of database, go to your MySQL
+        WorkBench. Go to home, there you will see the MySQL connections. One of the existing connections is your
+        user/password combination for this that you will enter in your IDE.
+        Click on Test Connection. If everything was set-up correctly, you should
+        see a similar message as below. Note the URL, we will be making use of it.
+
+        <div class="row">
+            <img src="imgs/Ch0/AddingDrivers.PNG" class="center-block img-fluid"
+                 alt="AddingDrivers">
+        </div>
+
+        <br>
+        Step 3: Now you can run SQL commands directly in the IDE and see the output in the window below.
+        <img src="imgs/Ch0/AfterAdding.PNG" class="center-block img-fluid"
+             alt="AfterAdding">
+
+        <br>
+        - Moving on, we now need to add the following to the <code>application.properties</code> file
+
+        <div class="code-snippet">
+            <script src="https://gist.github.com/rgbk21/7723f262e9214ddb74526e9706b3bb5c.js"></script>
+        </div>
+        Note the <code>spring.jpa.hibernate.ddl-auto=none</code> property above. <br>
+        a) <code>none</code>: The default for MySQL. No change is made to the database structure. <br>
+        b) <code>update</code>: Hibernate changes the database according to the given entity structures. <br>
+        c) <code>create</code>: Creates the database every time but does not drop it on close. <br>
+        d) <code>create-drop</code>: Creates the database and drops it when <code>SessionFactory</code> closes. <br>
+        You must begin with either <code>create</code> or <code>update</code>, because you do not yet have the database
+        structure. After the first run, you can switch it to <code>update</code> or <code>none</code>, according to
+        program requirements. Use <code>update</code> when you want to make some change to the database structure.
+        The default for H2 and other embedded databases is <code>create-drop</code>. For other databases, such as MySQL,
+        the default is <code>none</code>. Since we have already created the table, we leave this as <code>none</code>.
+        <br>
+        - Next we create the Entity model. <br>
+        - Note how we are generating the Primary Key. It's different from the way described in the docs. <a
+            href="https://stackoverflow.com/a/58749481/8742428">This SO Link </a> goes into why we are using it this
+        way.
+        <div class="code-snippet">
+            <script src="https://gist.github.com/rgbk21/ad962c0e5d0bdafab3ba556aac1bfd98.js"></script>
+        </div>
+        - Next we create the <code>StudentRepository</code>
+        <div class="code-snippet">
+            <script src="https://gist.github.com/rgbk21/ab593c70880ddc54d5f32fa14e0022a4.js"></script>
+        </div>
+        - Lastly we need to create a Controller to handle HTTP requests to our application.
+
+        <div class="code-snippet">
+            <script src="https://gist.github.com/rgbk21/245fa30a1b3805913019d05acc6a1cf0.js"></script>
+        </div>
+
+        <br>
+        <br>
+        <li><b>What is REST</b></li>
+        <div>
+            - <a href="https://www.springboottutorial.com/spring-boot-crud-rest-service-with-jpa-hibernate">Source</a>
+            to in 28 mins from where the text is taken <br>
+            - <a href="https://spring.io/guides/tutorials/rest/">Source to Spring REST Tutorial Doc</a> that contains
+            the code for creating a REST-ful API <br>
+            - First of all, REST does not define a standard message exchange format. You can build REST services with
+            both XML and JSON. However, JSON is a more popular format with REST. So, if it does not define a standard
+            message exchange format, what is REST then? REST stands for REpresentational State Transfer. Key abstraction
+            in REST is a Resource. There is no restriction on what can be a resource. A todo is a resource. A person on
+            facebook is a resource. <br>
+            - A resource has an URI (Uniform Resource Identifier): <br>
+            /user/Ranga/todos/1 <br>
+            /person/Ranga <br>
+            - A resource will have representations: XML, HTML, JSON. <br>
+            - A resource will have state. The representation of a resource should capture its current state. When a
+            resource is requested, we provide the representation of the resource.
+        </div>
+
+        <br>
+        <li><b>REST and HTTP</b></li>
+        <div>
+            - REST builds on top of HTTP (Hypertext Transfer Protocol). HTTP is the language of the web.
+            - HTTP has a few important verbs: <br>
+            <ul>
+                <li><code>POST</code> - Create a new resource</li>
+                <li><code>GET</code> - Read a resource</li>
+                <li><code>PUT</code> - Update an existing resource</li>
+                <li><code>DELETE</code> - Delete a resource</li>
+            </ul>
+
+            - HTTP also defines some standard response codes: <br>
+            <ul>
+                <li>200 - SUCESS </li>
+                <li>404 - RESOURCE NOT FOUND </li>
+                <li>400 - BAD REQUEST </li>
+                <li>201 - CREATED </li>
+                <li>401 - UNAUTHORIZED </li>
+                <li>415 - UNSUPPORTED TYPE - Representation not supported for the resource </li>
+                <li>500 - SERVER ERROR </li>
+            </ul>
+
+        </div>
+
+        <br>
+        <li><b>Restful Service Constraints</b></li>
+        <div>
+            a) Client - Server : There should be a service producer and a service consumer. <br>
+            b) The interface (URL) is uniform and exposing resources. Interface uses nouns (not actions) <br>
+            c) The service is stateless. Even if the service is called 10 times, the result must be the same. <br>
+            d) The service result should be Cacheable. HTTP cache, for example. <br>
+            e) Service should assume a Layered architecture. Client should not assume direct connection to server - it
+            might be getting info from a middle layer - cache.
+        </div>
+
+        <br>
+        <li><b>Designing RESTful APIs</b></li>
+        <div>
+            - Following are the important things to consider when designing RESTful API's: <br>
+            a) In Rest, we think Nouns (resources) and NOT Verbs (NOT actions). So, URI's should represent resources.
+            URI's should be hierarchical and as self descriptive as possible. Prefer plurals. <br>
+            b) Always use HTTP Methods. <br>
+            c) <code>GET</code> : Should not update anything. Should be idempotent (same result in multiple calls).
+            Possible Return Codes 200 (OK) + 404 (NOT FOUND) + 400 (BAD REQUEST) <br>
+            d) <code>POST</code> : Should create new resource. Ideally return JSON with link to newly created resource.
+            Same return codes as get possible. In addition : Return code 201 (CREATED) is possible. <br>
+            e) <code>PUT</code> : Update a known resource. ex: update client details. Possible Return Codes : 200(OK)
+            <br>
+            f) <code>DELETE</code> : Used to delete a resource. <br>
+        </div>
+
+
+        <br>
+        <li><b>What is <code>ResponseEntity</code> and what is it used for</b></li>
+        <div>
+            -
+        </div>
+
+
+    </div>
+
+
+</div>
+
+</body>
+</html>

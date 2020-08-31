@@ -85,6 +85,7 @@
                     <a class="dropdown-item" href="../../Code/Spring/Spring.html">Spring Notes</a>
                     <a class="dropdown-item" href="../../Code/Kafka/Kafka.html">Kafka Notes</a>
                     <a class="dropdown-item" href="../../Code/Angular/Angular.html">Angular</a>
+                    <a class="dropdown-item" href="../../Code/Hibernate/Hibernate.html">Hibernate</a>
                     <div class="dropdown-divider"></div>
                 </div>
             </li>
@@ -129,7 +130,11 @@
     <br>
     Chapter 2: <a href="#Ch2_BldngAngularApp">Building your first Angular App</a>
     <br>
-    Chapter 2: <a href="#Ch3_AppEssntls">App Essentials</a>
+    Chapter 3: <a href="#Ch3_AppEssntls">App Essentials</a>
+    <br>
+    Chapter 4: <a href="#Ch3_AppEssntls">Component Basics</a>
+    <br>
+    Chapter 0: <a href="#FAQs">FAQs</a>
     <br>
 
 
@@ -240,7 +245,6 @@
 
 
     </div>
-
 
 
     <hr>
@@ -453,8 +457,9 @@
             called <code>AppModule</code>, and <code>NgModule</code> is the decorator. <br>
             - The first block is to import any Angular dependencies that are common to most apps and the App component.
             <br>
-            - The <code>NgModule</code> decorator takes an object with a few different properties. The
-            <code>declarations</code> property is to provide a list of any components and directives to make available
+            - The <code>NgModule</code> decorator takes an object with a few different properties. <br>
+            - The <code>declarations</code> property is to provide a list of any components and directives to make
+            available
             to the entire application. <br>
             - The <code>imports</code> property is an array of other modules upon which this module depends - in this
             case, the <code>BrowserModule</code>
@@ -463,8 +468,12 @@
             - The next property is the <code>providers</code> property, which is empty by default. Any services
             that are created are to be listed here. <br>
             - The <code>bootstrap</code> property defines which components to bootstrap at runtime. Typically, this will
-            be the same
-            App component, and the CLI already set it up for us.
+            be the same App component, and the CLI already set it up for us. <br>
+            - <a href="https://stackoverflow.com/questions/44316561/why-angular-export-empty-class-in-app-modules-ts">Why
+            export an empty class</a> <code>AppModule</code>: The body of the class is indeed empty. But that decorator
+            above the class (<code>@NgModule</code>) is giving that class its functionality. So really, that class isn't
+            empty. It just doesn't require any extra logic after the decorator is applied to it.
+            <code>bootstrapModule</code> takes a class as input and assumes that that class is decorated with <code>@NgModule</code>
         </li>
 
         <br>
@@ -486,6 +495,12 @@
             - The <code>platformBrowserDynamic</code> object is used to tell Angular which module is being loading, and
             in this case that's the <code>AppModule</code>. It is important to understand that this is the point where
             the code begins to execute. <br>
+            - <a href="https://stackoverflow.com/questions/38407604/what-is-angular-platform-browser">This SO Link </a>explains
+            why we need the <code>platformBrowserDynamic</code>. Your Angular application can start off in many ways,
+            but when you run on the browser you have a specific way of bootstrapping the application and that is defined
+            in <code>@angular/platform-browser-dynamic</code>. In short these packages contain angular features which
+            make getting an Angular app up and running possible in the browser. Bootstrapping is essential and one of
+            those features.<br>
             - You should see the following in the <code>src/index.html</code> file:
 
             <div class="code-snippet">
@@ -507,7 +522,8 @@
         <div>
             - <a href="https://stackoverflow.com/a/16709882/8742428">SO Link</a> for when to use Services. Services come
             in handy in the following scenarios: <br>
-            a) When you want to share information between two or more controllers - One may use <code>$rootScope</code>
+            a) When you want to share information between two or more controllers: <br>
+            - One may use <code>$rootScope</code>
             to also communicate between controllers, but it should be avoided as much as possible since it is a global
             scope. <br>
             b) When a functionality is to be used multiple times. <br>
@@ -518,6 +534,9 @@
             you need them to do, because they're objects. Using ES2015 modules, these classes are exported, and so any
             component can import them as necessary. They could also have functions or even static values, like a string
             or number, as a way to share data between various parts of your application. <br>
+            - In the app, you'll want to have a list of the stocks for both the dashboard and manage
+            pages to use. This is a perfect scenario of when to use a service to help manage the data
+            and share it across different components. <br>
             - To generate a Service you run the following: <code>ng generate service services/stocks</code>.
             The CLI will generate the files in the <code>src/app/services</code> directory. <br>
             - Add the following code to the auto-generated class.
@@ -526,8 +545,13 @@
                 <script src="https://gist.github.com/rgbk21/0b460a32144e8fa69e77b6ee4af7d034.js"></script>
             </div>
 
+            - The <code>StockInterface</code> interface is defined and exported for other components to use. This
+            provides a TypeScript definition of what a stock object should contain, which is used by TypeScript to
+            ensure the use of the data remains consistent. <br>
             - The <code>StocksService</code> class is exported and is decorated by the <code>Injectable</code>
-            decorator. The decorator is used to set up the proper wiring for Angular to know how to use it elsewhere, so
+            decorator. The <code>@Injectable()</code> decorator marks it as a service that can be injected. The
+            decorator
+            is used to set up the proper wiring for Angular to know how to use it elsewhere, so
             if you forget to include the decorator, the class might not be injectable into your application. <br>
             - In the constructor method, the <code>HttpClient</code> service is injected using the TypeScript
             technique of declaring a private variable called <code>http</code> and then giving it a type of <code>HttpClient</code>.
@@ -543,6 +567,32 @@
             <div class="code-snippet">
                 <script src="https://gist.github.com/rgbk21/b4f0023fac33831f9ae61231d22e544c.js"></script>
             </div>
+
+            Side note about how Dependency Injection works in Angular: <br>
+            - There are a few key pieces to the DI system. <br>
+            - The first is the <i>injector</i>. This is the service that
+            Angular provides for requesting and registering dependencies. You'll invoke the injector by declaring a type
+            annotation on the property. This is what we are doing on line 22 of <code>stocks.service.ts</code> file
+            above: <code>constructor(private http: HttpClient){ }</code>. Because we declare the type as
+            <code>HttpClient</code> (which is a known service in Angular), the application will use the <i>injector</i>
+            to ensure that the <code>http</code> property contains an instance of the <code>HttpClient</code> service.
+            <br>
+            - The second part of DI is <i>providers</i>. Providers are responsible for creating the instance of the
+            object requested. The injector knows the list of available providers, and based on the name (which above is
+            <code>HttpClient</code>), it calls a factory function from the provider and returns the requested object.
+            <br>
+            - Anything that has been registered with an <code>NgModule</code>'s <code>providers</code> array is
+            available
+            to be injected in your application code (hence we add <code>StocksService</code> above in <code>app.module_v2.ts</code>
+            to the <code>providers</code> array).
+
+
+            <br>
+            - Now we know how to: <br>
+            a) Create a service, make it injectable by using the <code>@Injectable</code> decorator <br>
+            b) Import an external Module that your app depends on into your app <br>
+            c) Register the service you created with the app so that other components can use it <br>
+            Examples of both of these are present in the gist app.module_v2.ts
         </div>
 
         <div class="sub-heading">Creating your first Component</div>
@@ -559,18 +609,21 @@
 
             - Line 1,2 <code>[ngClass]="{increase:isPositive(), decrease: isNegative()}</code> is a special kind of
             attribute known as a <i>Directive</i>. Directives allow you to modify the behavior and display of DOM
-            elements in a template. <br>
-            - The NgClass directive is able to add or remove CSS classes to and from the element. It's assigned a value,
-            which is an object that contains properties that are the CSS class names, and those properties map to a
-            method on the controller (to be written). If the method returns true, it will add the class; if false, it
+            elements in a template. <code>NgClass</code> directive, for example, allows you to change the list of
+            classes that are attached.<br>
+            - The <code>NgClass</code> directive is able to add or remove CSS classes to and from the element. It's
+            assigned a value, which is an object that contains properties that are the CSS class names (if you go into
+            summary.component.css you will see that there are CSS classes with names "increase" and "decrease"), and
+            those properties map to a method on the controller (to be written). If the method returns true, it will add
+            the class; if false, it
             will be removed. In this snippet, the card will get the <code>increase</code> CSS class when it's positive,
             or the <code>decrease</code> CSS class when it's negative.
             <br>
             <br>
             - Let's move to <code>{{stock?.symbol?.toUpperCase()}}</code>. The double curly braces syntax is the way to
             display some value in the page (interpolation). The content between the braces is called an <i>Angular
-            expression</i> and is evaluated against the controller (like the directive), meaning that it will try to
-            find a property on the controller to display. If it fails, normally it will throw an error, but the safe
+            expression</i> and is evaluated against the controller (like the directive), meaning that <i>it will try to
+            find a property on the controller to display</i>. If it fails, normally it will throw an error, but the safe
             navigation operator <code>?.</code> will silently fail and not display anything if the property is missing.
             <br>
             <br>
@@ -604,7 +657,17 @@
             <br>
             - The summary controller class starts with a property called <code>stock</code>, which is preceded
             with the <code>Input</code> annotation. This indicates that this property is to be provided to the
-            component by a parent component passing it to the summary.
+            component by a parent component passing it to the summary. Properties are bound to
+            an element using an attribute, as you can see here - this (hypothetical) example will set the value of
+            stockData of the parent component in the stock property of the Summary component:<br>
+            <code>&lt;summary [stock]="stockData"&gt;&lt;/summary&gt;</code> <br>
+            Because input is passed through a binding attribute, it will evaluate the expression and
+            pass it into the <code>stock</code> <code>@Input</code> property for the Summary component to consume. <br>
+            - Basically, this is all you need to remember: Angular expressions behave the same anytime there's a
+            binding.
+            They try to find a corresponding value in the controller to bind to the property. <br>
+            - <a href="https://stackoverflow.com/questions/45749533/what-is-input-used-for">This SO Link</a> goes into
+            why we need the <code>@Input</code> decorator.
 
             <br>
             <br>
@@ -625,7 +688,7 @@
             <br>
             - Look at the <code>src/app/app.module.ts</code> file and you'll see that the CLI already modified
             the module to include the Summary component in the App module. <br>
-            - Now update the contents of the <code>src/app/app.component.ts</code> file.
+            - Now update the contents of the <code>src/app/app.component.ts</code> file. <br>
             - We store the loaded stock data onto a property called stocks. We also provide some typing information,
             which is imported from our Stocks service, so that TypeScript knows what kind of value to expect. Finally,
             instead of logging the data to the console, we store it on the stocks property.
@@ -679,9 +742,10 @@
             - In our code, we use the <code>ngOnInit</code> lifecycle hook to call the service to load the stock
             data. It uses the list of stock symbols that was loaded in the constructor. We then <code>subscribe</code>
             to wait for the results to return and store them in the stocks property. This uses the observable approach
-            to handling asynchronous requests. We are using obervables because the <code>HttpClient</code> returns an
+            to handling asynchronous requests. We are using observables because the <code>HttpClient</code> returns an
             observable for us to receive the response. This is exposed as a stream of data, even though it is
             a single event.
+
             <br>
             <br>
             - The last step is to change the <code>src/app/components/dashboard/dashboard.component.html</code> file.
@@ -696,6 +760,18 @@
             - <code>NgFor</code> will then create an instance of the Summary component for each of the stock
             items. It binds the stock data into the component. Each copy of the Summary component is distinct from the
             others, and they don't directly share data.
+
+            <br>
+            <br>
+
+            - So now we know how to: <br>
+            a) Add a service to a component - inject it into the constructor of the controller class of the
+            component<br>
+            b) Nest components within other components - in the html file of the parent component, use the
+            <code>selector</code> of the child component<br>
+            c) Pass data from a parent component to a child component - use attribute binding of type
+            <code>[nameOfDataFieldUsedInChildComponent]="nameOfDataFieldUsedInParentComponent"</code>. Remember to
+            annotate the nameOfDataFieldUsedInChildComponent in the child component with <code>@Input</code>
 
         </div>
 
@@ -758,6 +834,10 @@
                 <script src="https://gist.github.com/rgbk21/ace5de14640001570352a6f5ff09bc5f.js"></script>
             </div>
 
+            - The router works by declaring an outlet in the template, which is the place in the
+            template that the final rendered component will be displayed. Think of the outlet as
+            the default placeholder for the content, and until the content is ready to be displayed,
+            it will be empty. <br>
             - The <code>RouterModule</code> is used to activate the router and accepts the routes configuration when
             it's initialized. We also import the two routable components, the Dashboard and Manage components, so we
             can reference them properly in our routes configuration. <br>
@@ -768,12 +848,16 @@
             - Finally, we create a new value <code>AppRoutes</code>, which is assigned to the result of
             <code>RouterModule.forRoot(routes)</code>. It's a way to pass configuration to the module. In this case,
             we're passing the array of routes. We export this so we can import it into our App module and register it.
-
             <br>
-            <br>
+            - In <code>src/app/app.module.ts</code>:
 
-            - In <code>src/app/app.module.ts</code> add <code>import { AppRoutes } from './app.routes';</code> and
-            update the <code>imports</code> array to contain <code>AppRoutes</code>.
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/9d9cd4ce9b63faa9a2f2403dc277486f.js"></script>
+            </div>
+
+            - So now we know how to: <br>
+            a) Add routing to our app so that when a particular link is clicked, the corresponding
+            intended component is rendered.
 
             <br>
             <br>
@@ -798,6 +882,80 @@
     <hr>
     <div id="Ch3_AppEssntls" class="chapter">Chapter 3: App Essentials</div>
     <hr>
+
+    <div class="textual-content">
+        <li><b>Links to read for understanding binding</b></li>
+        <div>
+            - <a href="https://stackoverflow.com/questions/46368382/angular-property-binding">Angular Property
+            Binding</a>
+            <br>
+            - <a
+                href="https://stackoverflow.com/questions/36862723/difference-between-and-for-binding-state-to-property">Difference
+            between [] and {{}} for binding state to property?</a> <br>
+            - <a href="https://stackoverflow.com/questions/31548311/angular-html-binding">Angular HTML Binding</a> <br>
+            - <a href="https://stackoverflow.com/questions/35945001/binding-select-element-to-object-in-angular">Binding
+            select element to object in Angular</a>
+        </div>
+    </div>
+
+
+    <hr>
+    <div id="Ch4_CompBasics" class="chapter">Chapter 4: Component Basics</div>
+    <hr>
+
+    <div class="textual-content">
+
+    </div>
+
+
+
+
+    <hr>
+    <div id="FAQs" class="chapter">FAQs</div>
+    <hr>
+
+    <div class="textual-content">
+        <li><b>How to upgrade Angular CLI to the latest version</b></li>
+        <div>
+            - <code>npm install -g @angular/cli@latest</code> <br>
+            - <a href="https://stackoverflow.com/questions/43931986/how-to-upgrade-angular-cli-to-the-latest-version">SO
+            Link</a>
+        </div>
+
+        <br>
+
+        <li><b>How to check the current installed version of Angular</b></li>
+        <div>
+            - <code>ng version</code> <br>
+            <div class="row">
+                <img src="imgs/Ch5/Angular_Version.png" class="center-block img-fluid" alt="Example1">
+            </div>
+            - <a href="https://stackoverflow.com/questions/46332383/how-to-check-the-angular-version/52510475">SO
+            Link</a>
+        </div>
+
+        <li><b>How to install ng-bootstrap in your project</b></li>
+        <div>
+            - First update your Angular CLI <br>
+            - Run: <code>ng add @ng-bootstrap/ng-bootstrap</code> <br>
+            - It will take care of importing the <code>NgbModule</code> into the <code>app.module.ts</code> and adding
+            the <code>bootstrap.min.css</code> to the <code>styles</code> in <code>angular.json</code> file. <br>
+            - <a href="https://www.npmjs.com/package/@ng-bootstrap/ng-bootstrap#installation">GitHub Link</a>
+        </div>
+
+        <li><b>How to create a new Angular project</b></li>
+        <div>
+            - <code>ng new MyProjectName</code> <br>
+            - <code>cd MyProjectName</code> <br>
+            - <code>ng serve</code> <br>
+            - <code>ng generate service services/stocks</code> // Will create a new service in the src/app/services
+            folder <br>
+            - <code>ng generate component components/summary</code> // Will create a new component in the
+            src/app/component/summary folder <br>
+        </div>
+
+
+    </div>
 
 
 </div>
