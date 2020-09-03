@@ -126,6 +126,8 @@
     <br>
     Index:
     <br>
+    Chapter 0: <a href="#Ch0_TypeScript">TypeScript</a>
+    <br>
     Chapter 1: <a href="#Ch1_Angular">Angular: A Modern Web Platform</a>
     <br>
     Chapter 2: <a href="#Ch2_BldngAngularApp">Building your first Angular App</a>
@@ -138,6 +140,173 @@
     <br>
 
 
+    <hr>
+    <div id="Ch0_TypeScript" class="chapter">Chapter 0: TypeScript</div>
+    <hr>
+
+    <div class="textual-content">
+        - <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide">Mozilla JavaScript Guide</a> <br>
+        - <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects">Mozilla JavaScript Object-Oriented
+        Guide</a> <br>
+        - <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain">Read
+            more at MDN</a> about what inheritance is all about. <br>
+        - ES5 is short for "ECMAScript 5", otherwise known as "regular JavaScript". ES5 is the normal JavaScript we all
+        know. It runs in more-or-less every browser. ES6 is the next version of JavaScript. The TypeScript transpiler
+        takes our TypeScript code as input and outputs ES5 code that nearly all browsers understand. If we wanted to
+        convert ES6 code (not TypeScript) to ES5 there are two major ES6-to-ES5 transpilers: <code>traceur</code> by
+        Google and <code>babel</code> created by the JavaScript community. <br>
+        - You can install TypeScript using: <code>npm install -g typescript</code><br>
+
+        <div class="sub-heading">What do we get with TypeScript</div>
+        <div>
+            - There are 5 big differences that TypeScript brings in over ES5: <br>
+            <ul>
+                <li>types</li>
+                <li>classes</li>
+                <li>decorators</li>
+                <li>imports</li>
+                <li>language utilities (eg. Destructuring)</li>
+            </ul>
+        </div>
+
+
+        <div class="sub-heading">Types</div>
+        <div>
+            - Consider the following example:
+
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/492d8825b85fa91f9fb0dd200b4d292b.js"></script>
+            </div>
+
+            - In the above example we are defining a new function called <code>greetText</code> which takes one argument
+            called <code>name</code>. The syntax <code>name: string</code> represents that the function expects <code>name</code>
+            to be a <code>string</code>. Our code will not compile if we call this function with anything other than a
+            <code>string</code>. <br>
+            - <code>greetText</code> also has a syntax after the parentheses <code> : string { //code }</code>. The
+            colon specifies that we will specify a return type for this function - which in this case is a
+            <code>string</code>. You you try returning a <code>number</code> instead, it will throw an error.
+        </div>
+
+        <div class="sub-heading">Built-in types</div>
+        <div>
+            - Some examples of built in types are as follows:
+
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/c5a6582d1dd3d575982e43de0fe70966.js"></script>
+            </div>
+        </div>
+
+        <div class="sub-heading">Classes</div>
+        <div>
+            - In JavaScript ES5 object oriented programming was accomplished by using prototype-based objects. This
+            model doesn't use classes, but instead relies on <i>prototypes</i>. In ES6 we finally have built-in classes
+            in JavaScript. <br>
+            - To define a <code>class</code>, we do this:
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/486bc29f92e4bc99856374fbc0e847c0.js"></script>
+            </div>
+
+            - A class can have <i>properties</i>, <i>methods</i>, and <code>constructors</code>. <br>
+            - To instantiate a class, we use the <code>new</code> keyword. Use new Person() to create
+            a new instance of the Person class, for example.
+            <br><br>
+            <li>
+                <b>Properties</b>: <br>
+                - Properties define data attached to an instance of a class. For example, a class named
+                Person might have properties like first_name, last_name and age. <br>
+                - Each property in a class can optionally have a type. For example, we could say that the
+                first_name and last_name properties are strings and the age property is a number. <br>
+                - The declaration for a Person class that looks like this:
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/f1f6a057d70dc4f9a859ab2ab638c6a2.js"></script>
+                </div>
+
+            </li>
+
+            <br>
+
+            <li>
+                <b>Methods</b>: <br>
+                - Methods are functions that run in context of an object. To call a method on an object, we first have
+                to have an instance of that object. <br>
+                - When methods don't declare an explicit returning type and return a value, it's assumed they can return
+                anything (<code>any</code> type). Note that a <code>void</code> value is also a valid <code>any</code>
+                value. <br>
+                - Consider the Person class declared above again:
+
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/e8823dd9de31f5057b5fcbd3ca05fde4.js"></script>
+                </div>
+            </li>
+
+            <br>
+
+            <li>
+                <b>Constructors</b>: <br>
+                - Constructor methods must be named <code>constructor</code>. They can optionally take parameters but
+                they can't return any values, since they are called when the class is being instantiated (i.e. an
+                instance of the class is being created, no other value can be returned). <br>
+                - When a class has no constructor defined explicitly one will be created automatically. <br>
+                - In TypeScript you can have only one constructor per class. That is a departure from ES6 which allows
+                one class to have more than one constructor as long as they have a different number of parameters. <br>
+                - Adding a constructor to our Person class, we get: <br>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/137e25a720e2db724905cafdaaf65c51.js"></script>
+                </div>
+            </li>
+
+            <li>
+                <b>Inheritance</b>: <br>
+                - <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain">Read
+                more at MDN</a> about what inheritance is all about. <br>
+                - Inheritance is a way to indicate that a class receives behavior from a parent class. Then we can
+                override, modify or augment those behaviors on the new class. <br>
+                - Inheritance is achieved through the <code>extends</code> keyword. <br>
+                - Consider the following example: <br>
+
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/6592a956d71235f245d29a284f1059ef.js"></script>
+                </div>
+            </li>
+        </div>
+
+
+        <div class="sub-heading">Fat Arrow Functions</div>
+        <div>
+            - Fat arrow <code>=></code> functions are a shorthand notation for writing functions. <br>
+            - Consider the run() function we wrote above and let us see how we can re-write it as an arrow function<br>
+
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/c20df3b3e115f92f8aafb4eecc427f41.js"></script>
+            </div>
+
+            - They also make writing higher-order functions easier.
+
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/0b7f8d7b7827bd429401877b266b1aae.js"></script>
+            </div>
+
+        </div>
+
+        <div class="sub-heading">Template Strings</div>
+        <div>
+            - You can add variables directly in your Strings by using template strings. <br>
+            - You can also wrote multi-line strings by using these without having to use the concatenation (+) operator
+
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/8d63d4566f1b32b44117897de7cc33d9.js"></script>
+            </div>
+
+        </div>
+
+        <div class="sub-heading">Difference between functions and methods in JS</div>
+        <div>
+            - <a href="https://stackoverflow.com/a/54961371/8742428">SO Source</a><br>
+            - Something, something.. good luck
+        </div>
+
+
+    </div>
 
     <hr>
     <div id="Ch1_Angular" class="chapter">Chapter 1: Angular - A Modern Web Platform</div>
@@ -290,7 +459,7 @@
                 </tr>
                 <tr>
                     <td>.angular-cli.json</td>
-                    <td>Configuration file for the CLI about this project. angular-cli.json file has been
+                    <td>Configuration file for the <code>angular-cli</code>. angular-cli.json file has been
                         renamed/replaced with angular.json in version 6 of Angular. <a
                                 href="https://stackoverflow.com/a/50184006/8742428">SO Link</a>
                     </td>
@@ -416,7 +585,11 @@
             object. <br>
             - It has a <code>selector</code> property that declares the HTML selector of the component.
             That means the component is used in the template by adding an HTML tag
-            <code>&ltapp-root&gt&lt/app-root&gt</code>. <br>
+            <code>&ltapp-root&gt&lt/app-root&gt</code>. Know that with this selector we're defining a new
+            HTML <code>tag</code> that we can use in our markup. The <code>selector</code> here indicates <i>which DOM
+            element </i> this component is going to use. In this case, any <code>&ltapp-root&gt&lt/app-root&gt</code>
+            tags that appear within a template will be compiled using the <code>AppComponent</code> class and get any
+            attached functionality. <br>
             - The <code>templateUrl</code> property declares a link to a template containing an HTML template. <br>
             - The <code>styleUrls</code> property contains an array of links to any CSS files that
             should be loaded for this component. <br>
@@ -465,8 +638,10 @@
             case, the <code>BrowserModule</code>
             (a collection of required capabilities). If you ever include other modules, such as third-party modules or
             ones you've created, they also need to be listed here. <br>
-            - The next property is the <code>providers</code> property, which is empty by default. Any services
-            that are created are to be listed here. <br>
+            - The <code>providers</code> property, is empty by default. Any services that are created are to be listed
+            here.
+            <code>providers</code> is used for dependency injection. So to make a service available to be
+            injected throughout our application, we will add it here.<br>
             - The <code>bootstrap</code> property defines which components to bootstrap at runtime. Typically, this will
             be the same App component, and the CLI already set it up for us. <br>
             - <a href="https://stackoverflow.com/questions/44316561/why-angular-export-empty-class-in-app-modules-ts">Why
@@ -474,6 +649,10 @@
             above the class (<code>@NgModule</code>) is giving that class its functionality. So really, that class isn't
             empty. It just doesn't require any extra logic after the decorator is applied to it.
             <code>bootstrapModule</code> takes a class as input and assumes that that class is decorated with <code>@NgModule</code>
+            <br>
+            - What is the difference between using <code>import</code> to import a class at the top of the file vs using
+            <code>imports</code> to add a module: You put something in your <code>NgModule</code> 's imports if you're
+            going to be using it in your templates or with dependency injection.
         </li>
 
         <br>
@@ -906,8 +1085,6 @@
     <div class="textual-content">
 
     </div>
-
-
 
 
     <hr>
