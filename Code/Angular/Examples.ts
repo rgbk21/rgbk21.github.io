@@ -97,6 +97,26 @@ let p: Person = new Person('Alice', 'Doe', 21);
 p.greet(); // prints: Hello, Alice
 console.log(p.ageOfPersonAfter(10)); // Prints: 31
 
+// A shorthand way to define a class
+class ShortPerson {
+
+    //Constructor - the public/private keywords in this context will generate the boiler plate code for the property
+    // and the initialization in the constructor.
+    constructor(public firstName: string, public lastName: string, public age: number) {
+
+    }
+
+    // We are still able to refer to firstName using this
+    greet() {
+        console.log("Hello, " + this.firstName);
+    }
+
+    ageOfPersonAfter(numOfYears: number): number {
+        return (this.age + numOfYears);
+    }
+}
+
+let person2: ShortPerson = new ShortPerson('Alice', 'Doe', 21);
 
 class Report {
 

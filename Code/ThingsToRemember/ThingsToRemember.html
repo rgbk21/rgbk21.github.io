@@ -123,7 +123,6 @@
         Java. Some of these are from my own experiences.
         Others are my personal notes from the textbook Java Puzzles - Traps, Pitfalls, and Corner Cases By Bloch and
         Gafter.
-        The idea is to have all coding related Java things readily available in one place for easy reference.
     </div>
 
     <a href="#bloch">Link to book notes to Bloch</a>
@@ -715,6 +714,21 @@
             href="https://stackoverflow.com/questions/499437/in-java-when-should-i-create-a-checked-exception-and-when-should-it-be-a-runti">SO
         Link 3</a>
 
+    </div>
+
+    <div class="one-point">
+        46) Why am I seeing weird "String not found" errors in IntelliJ when I change the JDK from 8 to 11? <br>
+        - Step 1, install JDK 11 by following <a href="https://stackoverflow.com/a/56327324/8742428">this SO Link</a>.
+        <br>
+        - When prompted by the installer, also choose the third option to change the <code>JAVA_HOME</code> variable
+        value to JDK 11. Once the installation is complete, you can check the installed cersion by running
+        <code>java -version</code> in your cmd. You can check the updated value by running <code>echo JAVA_HOME</code>.
+        <br>
+        - Next, we need to tell IntelliJ that we have a new JDK for it. <br>
+        - Step 2: File -&gt; Project Structure -&gt; PLatform Settings -&gt SDK -&gt; Click on the + symbol and add the
+        JDK. Point to the path where the JDK is installed. Should be:
+        <code>C:\Program Files\AdoptOpenJDK\jdk-11.0.8.10-hotspot</code> <br>
+        - The previously empty CLASSPATH should now be filled with new files. <br>
     </div>
 
 

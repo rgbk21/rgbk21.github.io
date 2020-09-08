@@ -141,11 +141,13 @@
     <div class="textual-content">
         - There are 4 aspects of Object-Oriented programming (OOP): <br>
         a) Abstraction <br>
-        b) Encapsulation (data-hiding) <br>
+        b) Encapsulation (data-hiding using <code>private</code> members to access state of a class) <br>
         c) Inheritance <br>
         d) Polymorphism (says that - don't worry about the reference you have at hand. Go ahead and call the method and
         we will call the right method based on the true type of the object at runtime, and not the perceived type of the
         object at compile time) <br>
+        - <a href="https://stackoverflow.com/questions/8960918/encapsulation-vs-abstraction?">SO Link </a> that explains
+        the difference betn Abstraction and Encapsulation. <br>
 
         <br>
         <a href="https://www.baeldung.com/java-composition-aggregation-association">What is Composition, Aggregation,
@@ -187,7 +189,22 @@
             Well, we can't. The difference is only logical: whether one of the objects is part of the other or not.
         </li>
 
-        - And then there is <a href="https://softwareengineering.stackexchange.com/a/61446">this SO link</a>.
+        - And then there is <a href="https://softwareengineering.stackexchange.com/a/61446">this SO link</a>. <br>
+
+        <br>
+
+        What is the <a href="https://en.wikipedia.org/wiki/SOLID">SOLID</a> principle? <br>
+        - Single-responsibility principle: A class should only have a single responsibility, that is, only changes to
+        one part of the software's specification should be able to affect the specification of the class. <br>
+        - Open-closed principle: Software entities ... should be open for extension, but closed for modification. <br>
+        - Liskov substitution principle: Objects in a program should be replaceable with instances of their subtypes
+        without altering the correctness of that program.
+        <a href="https://stackoverflow.com/questions/56860/what-is-an-example-of-the-liskov-substitution-principle">This
+            SO Link</a> explains using examples what this actually means. <br>
+        - Interface segregation principle: Many client-specific interfaces are better than one general-purpose
+        interface.
+        <br>
+        - Dependency inversion principle: One should depend upon abstractions, [not] concretions. <br>
 
         <br><br>
         - A class that does the inheriting is called the <i>subclass</i> and the class that is inherited is called the
