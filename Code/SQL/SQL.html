@@ -139,6 +139,9 @@
         <a href="#Ch8">Chapter 8: Joins and Multi-table operations</a>
         <br>
         <a href="#HIA_Ch1">Chapter 1: Understanding Object/Relational Persistence</a>
+        <br>
+        Udemy Oracle Lecture Series: <br>
+        <a href="#Section1">Section 1: Database Concepts</a>
 
 
         <hr>
@@ -1085,7 +1088,6 @@
             </div>
 
 
-
         </div>
 
         <hr>
@@ -1112,6 +1114,153 @@
         https://stackoverflow.com/questions/47056384/jpa-entity-not-creating-table <br>
         https://www.baeldung.com/spring-boot-h2-database <br>
         https://stackoverflow.com/questions/970573/hibernate-error-cannot-resolve-table <br>
+
+        <hr>
+        <div id="Section1" class="sub-heading">Section1: Database Concepts</div>
+        <hr>
+
+        <div class="textual-content">
+
+            <div>
+                <li><b>What is a Relational DBMS</b></li>
+                <div class="row">
+                    <img src="resources/section1_images/Table.PNG" class="center-block img-fluid" alt="Empty">
+                </div>
+                - Consider the above "Relational" Database structure. Just by specifying an Employee with a
+                "DEPARTMENT_ID",
+                we have also managed to assign the Employee a unique "DEPARTMENT_NAME", "MANAGER_ID", and "LOCATION_ID".
+                <br>
+                - Tables are considered as Entities and the logical relationships among different tables using keys is
+                known
+                as Entity-Relationships. You can depict these relationships in the form of a Entity-Relationship diagram
+                (ER
+                Diagram). Link to ER Diagram explanation <a href="http://www.cs.bsu.edu/~pvgestwicki/misc/uml/">here</a>.
+                <br>
+            </div>
+
+
+            <div>
+                <li><b>What is a Pluggable Database</b></li>
+                - Starting from 12c, Oracle has introduced Pluggable/Multitenant architecture for its databases.
+                <div class="row">
+                    <img src="resources/section1_images/ContainerDB.PNG" class="center-block img-fluid" alt="Empty"
+                         width="60%">
+                </div>
+                - There is one big database which is called the Container Database, and inside of the Container DB,
+                there are Pluggable DBs. There must be atleast one pluggable DB inside a Container DB. Each PDB is a
+                full-fledged DB with it's own set of Users, Objects, Tables etc. But the Container DB contains only
+                metadata such as configuration, files, etc.
+            </div>
+
+            <div>
+                <li><b>What are Database Objects</b></li>
+                - Oracle DB has many database objects that are primarily characterized under two types: Schema objects
+                and Non-schema objects. <br>
+                - Schema Objects are logical structures created by the Users. Following are some types of Schema
+                Objects.
+
+                <table class="table table-bordered table-sm">
+                    <thead>
+                    <tr>
+                        <th>Value</th>
+                        <th>State</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Table</td>
+                        <td>A table is the base unit of the DB used to store data, formatted with columns and rows</td>
+                    </tr>
+                    <tr>
+                        <td>View</td>
+                        <td>A view is a virtual table that provides access to a subset of columns or some restricted
+                            rows from one or more tables. A view does not physically store any data in a new table. It
+                            is just a way to assign a name to a Stored SQL Query.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Constraints</td>
+                        <td>Rules for restricting invalid data entry into tables</td>
+                    </tr>
+                    <tr>
+                        <td>Index</td>
+                        <td>Indexes are used for improving speed of data retrieval from tables. Indexes know physical
+                            addresses of data in disks and goes to these blocks directly. This improves the speed of
+                            data retrieval
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Sequence</td>
+                        <td>Database objects that generate unique integers</td>
+                    </tr>
+                    <tr>
+                        <td>Synonym</td>
+                        <td>Alias for a database object</td>
+                    </tr>
+                    <tr>
+                        <td>Materialized View</td>
+                        <td>A materialized view has a real table filled by an SQL query unlike the Views</td>
+                    </tr>
+                    <tr>
+                        <td>Functions and Procedures</td>
+                        <td>Functions return some values, procedures return nothing</td>
+                    </tr>
+                    <tr>
+                        <td>Triggers</td>
+                        <td>Triggers are compiled program units stored in the DB and executed with a specific event
+                            (event like INSERT, UPDATE...)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Packages</td>
+                        <td>Packages are Schema Objects that are compiled and stored in the DB. They consist of PL/SQL
+                            code.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Database Links</td>
+                        <td>Connections between two physical DB Servers</td>
+                    </tr>
+                    </tbody>
+                </table>
+
+                - Objects that are not stored in the Schema are known as non-schema objects.
+            </div>
+
+
+            <div>
+                <li><b>What is a Schema</b></li>
+                - Schemas are the collection of Objects for each User in an Oracle Database. All the objects of a single
+                user are collected under a logical set called as a Schema. Every user has objects under their schemas
+                and a user does not have anything other than what their schema has. A user can have only one schema.
+                <br>
+                - <a href="https://stackoverflow.com/questions/880230/difference-between-a-user-and-a-schema-in-oracle">SO
+                Link</a> explaining the difference between a Schema and a User. This
+                <a href="https://www.youtube.com/watch?v=bBY2aDDpGlU">YT video</a> also explains. <br>
+                - HR Schema is a default schema that has been provided by Oracle for practice. This is what the HR
+                Schema looks like. Refer <a href="http://www.cs.bsu.edu/~pvgestwicki/misc/uml/">this</a> ER diagram link
+                to understand what is going on here. <a
+                    href="http://www.agiledata.org/essays/mappingObjects.html#MappingRecursiveAssociations">This
+                link</a> explains what the recursive mapping on the Employees table means. The Crow's foot ER diagram
+                representation is explained <a href="http://www2.cs.uregina.ca/~bernatja/crowsfoot.html">here</a>. <br>
+                - Look at the schema from the book: Beginning Oracle SQL for Oracle Database 12c. It contains
+                explanation of a different ER Diagram that is also important. Course offerings without registrations are
+                allowed. This is indicated in this type of diagram with a dotted line at the optional side of the
+                relationship. The diagram shows two types of one-to-many relationships: three relationships are
+                completely optional (indicated by all dashed lines) and the remaining ones are mandatory in one
+                direction (indicated by the solid part of the line).
+
+                <div class="row">
+                    <img src="resources/section1_images/Schema.PNG"
+                         class="center-block img-fluid"
+                         alt="Empty"
+                         width="40%">
+                </div>
+
+            </div>
+
+
+        </div>
 
     </div>
 </div>

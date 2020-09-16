@@ -672,11 +672,14 @@
 
 
     <div class="one-point">
-        43)How to create a Queue and a Stack? <br>
+        43)How to create a Queue, Stack, PriorityQueue? <br>
         - Create a Queue: <code>Queue&ltInteger&gt q = new ArrayDeque&ltInteger&gt();</code>
         <a href="https://stackoverflow.com/a/4626858/8742428">SO Link</a><br>
         - Create a Stack: <code>Deque&ltInteger&gt stack = new ArrayDeque&ltInteger&gt();</code>
-        <a href="https://stackoverflow.com/a/35822408/8742428">SO Link</a>
+        <a href="https://stackoverflow.com/a/35822408/8742428">SO Link</a> <br>
+        - Create a PriorityQueue:
+        <code>PriorityQueue&ltString&gt pq = new PriorityQueue&lt&gt(initialCapacity, customComparator);</code>
+        <a href="https://stackoverflow.com/questions/683041/how-do-i-use-a-priorityqueue">SO Link</a>
 
     </div>
 
@@ -725,10 +728,23 @@
         <code>java -version</code> in your cmd. You can check the updated value by running <code>echo JAVA_HOME</code>.
         <br>
         - Next, we need to tell IntelliJ that we have a new JDK for it. <br>
-        - Step 2: File -&gt; Project Structure -&gt; PLatform Settings -&gt SDK -&gt; Click on the + symbol and add the
+        - Step 2: File -&gt; Project Structure -&gt; Platform Settings -&gt SDK -&gt; Click on the + symbol and add the
         JDK. Point to the path where the JDK is installed. Should be:
         <code>C:\Program Files\AdoptOpenJDK\jdk-11.0.8.10-hotspot</code> <br>
         - The previously empty CLASSPATH should now be filled with new files. <br>
+    </div>
+
+    <div class="one-point">
+        47) How to create an in-memory/embedded database using Spring Boot + H2 that auto creates tables every time that
+        the application is run. <br>
+        - The application.properties file should look like this:
+
+        <div class="code-snippet">
+            <script src="https://gist.github.com/rgbk21/ece723b5407e4c431413d7cc04164920.js"></script>
+        </div>
+        - The database can be viewed at the foll URL: <code>http://localhost:8080/h2-console</code> <br>
+        - Make sure that the JDBC URL in the window maps to the correct URL: <code>jdbc:h2:mem:testdb</code>
+
     </div>
 
 
