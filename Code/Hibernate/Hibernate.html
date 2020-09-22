@@ -122,13 +122,16 @@
         This page contains my notes from the following books: <br>
         a) Hibernate in Action <br>
         b) High-Performance Java Persistence <br>
+        c) Beginning Java 8 APIs, Extensions and Libraries - Kishori Sharan
     </div>
 
     <br>
 
     Index:
     <br>
-    Chapter 0: <a href="#GettingStarted">Getting Started - Dummy Project</a>
+    Chapter 0: <a href="#GettingStarted">Getting Started - Dummy Project</a> <br>
+    Chapter 6: <a href="#Java8_JDBC">JDBC API</a> <br>
+    Chapter 4: <a href="#HIA_CH4">Mapping Persistent Classes</a>
 
     <div id="GettingStarted" class="chapter">Chapter 0: Getting Started - Dummy Project</div>
 
@@ -197,12 +200,17 @@
         the default is <code>none</code>. Since we have already created the table, we leave this as <code>none</code>.
         <br>
         - Next we create the Entity model. <br>
-        - Note how we are generating the Primary Key. It's different from the way described in the docs. <a
-            href="https://stackoverflow.com/a/58749481/8742428">This SO Link </a> goes into why we are using it this
-        way.
+        - Note how we are generating the Primary Key. It's different from the way described in the docs. <code>GenerationType.SEQUENCE</code>
+        is the preferred way of generating IDs in Hibernate. But MySQL does
+        not support sequences. Hence we are doing it this way.
+        <a href="https://stackoverflow.com/a/58749481/8742428">This SO Link </a> goes into why we are using it this
+        way. Also this <a href="https://thorben-janssen.com/5-things-you-need-to-know-when-using-hibernate-with-mysql/">
+        Thorben </a> link explains in more details why we are using the native generator instead.
+
         <div class="code-snippet">
             <script src="https://gist.github.com/rgbk21/ad962c0e5d0bdafab3ba556aac1bfd98.js"></script>
         </div>
+
         - Next we create the <code>StudentRepository</code>
         <div class="code-snippet">
             <script src="https://gist.github.com/rgbk21/ab593c70880ddc54d5f32fa14e0022a4.js"></script>
@@ -248,13 +256,13 @@
 
             - HTTP also defines some standard response codes: <br>
             <ul>
-                <li>200 - SUCESS </li>
-                <li>404 - RESOURCE NOT FOUND </li>
-                <li>400 - BAD REQUEST </li>
-                <li>201 - CREATED </li>
-                <li>401 - UNAUTHORIZED </li>
-                <li>415 - UNSUPPORTED TYPE - Representation not supported for the resource </li>
-                <li>500 - SERVER ERROR </li>
+                <li>200 - SUCESS</li>
+                <li>404 - RESOURCE NOT FOUND</li>
+                <li>400 - BAD REQUEST</li>
+                <li>201 - CREATED</li>
+                <li>401 - UNAUTHORIZED</li>
+                <li>415 - UNSUPPORTED TYPE - Representation not supported for the resource</li>
+                <li>500 - SERVER ERROR</li>
             </ul>
 
         </div>
@@ -293,6 +301,433 @@
             -
         </div>
 
+
+    </div>
+
+    <hr>
+    <div id="Java8_JDBC" class="chapter">Chapter 4: JDBC API</div>
+    <hr>
+
+    <div class="textual-content">
+
+        <div class="sub-heading">What is the JDBC API?</div>
+        <div>
+            - The JDBC API provides a standard database-independent interface to interact with any tabular data
+            source. Goal is to interact with databases using a Java program where the Java program does not need to know
+            what kind of database is installed/the program has to talk to. <br>
+            - Using the JDBC API to access data in a database hides the implementation differences that exist in
+            different types of databases. It achieves database transparency by defining most of its API using interfaces
+            and letting the database vendors (or any third-party vendors) provide the implementations for those
+            interfaces. The collection of the implementation classes that is supplied by a vendor to interact with a
+            specific database is called a <i>JDBC Driver</i> <br>
+            - Some JDBC drivers are written in pure Java. For purely Java-implemented JDBC drivers, you just need to
+            include the vendor-supplied classes in your application CLASSPATH. Some JDBC drivers need a proprietary
+            software installation on the client machine to interact with a database. <br>
+            - There are different kinds of JDBC Drivers:
+
+            <img src="imgs/Java8_JDBC_Imgs/JDBCDrivers.PNG" class="center-block img-fluid"
+                 alt="JDBCDrivers"
+                 width="50%">
+
+            - We are going to only use JDBC Drivers. The JDBC driver is also known as a direct-to-database pure Java
+            driver. It is written in pure Java. It converts the JDBC calls into DBMS-specific calls and sends the calls
+            directly to the database. It is the best suitable driver type to be used in apps. All you need to do is
+            to include the driver JAR/ZIP files with your application. All major DBMS vendors supply this type
+            of JDBC driver.
+        </div>
+
+
+        <div class="sub-heading">Connecting to a DB</div>
+        <div>
+            - Dummy project for setting up project is present <a href="https://github.com/rgbk21/JDBC_Setup">here on my
+            GitHub</a>. <br>
+            - Once you have obtained the JDBC Driver from the Oracle/Maven repository, you need to register the JDBC
+            Driver with your application. A JDBC Driver is a class that implements the <code>java.sql.Driver</code>
+            interface. DBMS vendors supply the JDBC driver class along with any other classes it uses. <br>
+            - You need to register this JDBC Driver with the <code>java.sql.DriverManager</code> class. (Refer pg 396 of
+            book if confused). You can register multiple JDBC Drivers with the DriverManager. <br>
+            - When you need to establish a connection to a database, you must pass a connection URL to the <code>DriverManager</code>.
+            The <code>DriverManager</code> passes the
+            connection URL to all registered drivers one by one, and asks them to connect to the database using
+            information
+            that you supply in the connection URL. If a driver recognizes the connection URL, it connects to the
+            database and
+            returns the connection to the <code>DriverManager</code>. An object of the <code>java.sql.Connection</code>
+            interface represents a database
+            connection in a Java program. If none of the registered drivers recognize a connection URL, the <code>DriverManager</code>
+            will
+            throw a <code>SQLException</code> stating that it could not find a suitable driver <br>
+            - There are 3 ways to register a JDBC Driver with the <code>DriverManger</code> class: <br>
+            a) By setting the <code>jdbc.drivers</code> system property <br>
+            b) By loading the driver class into the JVM <br>
+            c) By using the <code>registerDriver()</code> method of the DriverManager class <br>
+
+        </div>
+
+
+        <div class="sub-heading">Constructing a Connection URL</div>
+        <div>
+            - A database connection is established using a connection URL. The format of a connection URL is dependent
+            upon the DBMS and a JDBC driver. <br>
+            - The syntax to define the Connection URL is:
+            <code>&lt;protocol&gt;:&lt;sub-protocol&gt;:&lt;data-source-details&gt;</code>, The
+            <code>&lt;protocol&gt</code> part is always set to jdbc. The <code>&lt;sub-protocol&gt;</code> part is
+            vendor-specific. The &lt;data-source-details&gt; part is DBMS specific that is used to locate the database.
+            In some cases, you can also specify some connection properties in this last part of the URL. <br>
+            - For OracleDB it is: <code>jdbc:oracle:thin:hr/hr@//localhost:1521/orclpdb</code>. The protocol part is
+            jdbc. The sub-protocol part is oracle:thin, which identifies the Oracle Corporation as the vendor, and the
+            type of the driver it will use, which is thin. The data source details part is @localhost:1521/orclpdb. It
+            has three subparts. The @localhost identifies the server name. You could use an IP address or a machine name
+            of your Oracle database server instead. Then, it contains the port number at which Oracle's Transport
+            Network Substrate (TNS) listener is running. The last part is an Oracle's instance name, which is
+            orclpdb in this example. Note that the above example uses a Service Name to connect to the DB instead of a
+            SID. Hence the Connection URL is formatted differently. Refer
+            <a href="https://stackoverflow.com/questions/4832056/java-jdbc-how-to-connect-to-oracle-using-service-name-instead-of-sid">this
+                SO Link </a>
+            to read what is different and how it is formatted.
+        </div>
+
+
+        <div class="sub-heading">Establishing the DB Connection</div>
+        <div>
+            - You need to use the <code>getConnection()</code> static method of the <code>DriverManager</code> class
+            to establish a connection to a database. It returns an object of the <code>java.sql.Connection</code>
+            interface, which represents the database connection. The <code>getConnection()</code> method takes a
+            connection URL, a user id, a password, and any number of name-value pairs using a
+            <code>java.util.Properties</code> object. The <code>getConnection()</code> method is overloaded. <br>
+            - The Connection interface inherits from the <code>java.lang.AutoCloseable</code> interface. That means you
+            can also use a try-with-resources block to obtain a <code>Connection</code> that will be automatically
+            closed when the control exits the try block. <br>
+            - When you are done with a database connection, you need to close it by using the <code>close()</code>
+            method of the <code>Connection</code> object.
+            <br>
+            - View the entire code <a
+                href="https://github.com/rgbk21/JDBC_Setup/blob/master/src/main/java/JDBCUtil.java">here</a>.
+
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/9f360ec68860a1352c1f175cb3b95a05.js"></script>
+            </div>
+        </div>
+
+
+        <div class="sub-heading">Setting the Auto-Commit Mode</div>
+        <div>
+            - When you connect to a database, the auto-commit property for the <code>Connection()</code> object is set
+            to true by default. If a connection is in an auto-commit mode, a SQL statement is committed automatically
+            after its successful execution. If a connection is not in an auto-commit mode, you must call the <code>commit()</code>
+            or <code>rollback()</code> method of the <code>Connection()</code> object to commit or rollback a
+            transaction. Typically, you disable the auto-commit mode for a connection in a JDBC application, so your
+            application logic controls the final outcome of the transaction. To disable the auto-commit mode,
+            you need to call the <code>setAutoCommit(false)</code> on the <code>Connection()</code> object after
+            connection has been established (like we have done above). <br>
+            - If you have enabled the auto-commit mode for your connection, you cannot use its <code>commit()</code> and
+            <code>rollback()</code> methods. Calling the <code>commit()</code> and <code>rollback()</code> methods on a
+            <code>Connection</code> object, which has enabled the auto-commit mode, throws an exception. JDBC also lets
+            you use save points in a transaction, so that you can apply a partial rollback to a transaction. <br>
+        </div>
+
+
+        <div class="sub-heading">Transaction Isolation Level</div>
+        <div>
+            - In a multi-user database, you will often come across the following two terms: <br>
+            a) Data concurrency: Data concurrency refers to the ability of multiple users to use the same data
+            concurrently. <br>
+            b) Data consistency: Data consistency refers to the accuracy of the data that is maintained when multiple
+            users are manipulating the data concurrently. <br>
+            - As the data concurrency increases (i.e. more users work on the same data), care must be taken to maintain
+            a desired level of data consistency. A database maintains data consistency using locks and by isolating one
+            transaction from another. How much a transaction is isolated from another transaction depends on the desired
+            level of data consistency. <br>
+            - There are three phenomena where data consistency may be compromised in a multi-user environment where
+            multiple concurrent transactions are supported: <br><br>
+
+            a) <b>Dirty Read</b>: In a dirty read, a transaction reads uncommitted data from another transaction.
+            Consider the
+            following sequence of steps, which results in inconsistent data because of a dirty read:
+            <li>Transaction A inserts a new row in a table and it has not committed it yet.</li>
+            <li>Transaction B reads the uncommitted row inserted by the transaction A.</li>
+            <li>Transaction A rollbacks the changes.</li>
+            <li>At this point, transaction B is left with data for a row that does not exist.</li>
+
+            <br>
+
+            b) <b>Non-Repeatable Read</b>: In a non-repeatable read, when a transaction re-reads the data, it finds that
+            the
+            data has been modified by another transaction that has been already committed. Consider the following
+            sequence of steps, which results in inconsistent data because of a non-repeatable read:
+            <li>Transaction A reads a row.</li>
+            <li>Transaction B modifies or deletes the same row and commits the changes.</li>
+            <li>Transaction A re-reads the same row and finds that the row has been modified or deleted.</li>
+
+            <br>
+
+            c) <b>Phantom Read</b>: In a phantom read, when a transaction re-executes the same query, it finds more data
+            that
+            satisfies the query. Consider the following sequence of steps, which results in inconsistent data, because
+            of a phantom read:
+            <li>Transaction A executes a query (say Q) and finds X number of rows matching the query</li>
+            <li>Transaction B inserts some rows that satisfy the query Q criteria and commits.</li>
+            <li>Transaction A re-executes the same query (Q) and finds Y number of rows (Y > X) matching the query.</li>
+
+            <br>
+
+            - The ANSI SQL-92 standard defines four transaction isolation levels in terms of the above-described three
+            situations for data consistency. Each isolation level defines what kinds of data inconsistencies are
+            allowed, or not allowed. The four transaction isolation levels and their corresponding constants in Java are
+            as follows:
+            <li>Read Uncommitted (<code>TRANSACTION_READ_UNCOMMITTED</code>)</li>
+            <li>Read Committed (<code>TRANSACTION_READ_COMMITTED</code>)</li>
+            <li>Repeatable Read (<code>TRANSACTION_REPEATABLE_READ</code>)</li>
+            <li>Serializable (<code>TRANSACTION_SERIALIZABLE</code>)</li>
+
+            <br>
+
+            - The below table shows the four isolation levels and the three permitted situations. It is up to a DBMS to
+            decide how they implement these isolation levels.
+
+            <table class="table table-bordered table-sm">
+                <thead>
+                <tr>
+                    <th>Isolation Level</th>
+                    <th>Dirty Read</th>
+                    <th>Non-Repeatable Read</th>
+                    <th>Phantom Read</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Read Uncommitted</td>
+                    <td>Permitted</td>
+                    <td>Permitted</td>
+                    <td>Permitted</td>
+                </tr>
+                <tr>
+                    <td>Read Committed</td>
+                    <td>Not Permitted</td>
+                    <td>Permitted</td>
+                    <td>Permitted</td>
+                </tr>
+                <tr>
+                    <td>Repeatable Read</td>
+                    <td>Not Permitted</td>
+                    <td>Not Permitted</td>
+                    <td>Permitted</td>
+                </tr>
+                <tr>
+                    <td>Serializable</td>
+                    <td>Not Permitted</td>
+                    <td>Not Permitted</td>
+                    <td>Not Permitted</td>
+                </tr>
+                </tbody>
+            </table>
+
+            - Even if the SQL standard mandates the use of the <code>TRANSACTION_SERIALIZABLE</code> isolation level,
+            most database management systems use a different default level. Oracle, for example, has a default isolation
+            level of <code>TRANSACTION_READ_COMMITTED</code> <a
+                href="https://vladmihalcea.com/a-beginners-guide-to-acid-and-database-transactions/">(Source)</a>. <br>
+            - <a href="https://vladmihalcea.com/a-beginners-guide-to-acid-and-database-transactions/">This link</a> from
+            Vlad's blog explains the isolation levels. <a
+                href="https://stackoverflow.com/questions/4034976/difference-between-read-commited-and-repeatable-read">This
+            SO Link</a> explains the difference between <code>TRANSACTION_READ_COMMITTED</code> and <code>TRANSACTION_REPEATABLE_READ</code>.
+        </div>
+
+
+        <div class="sub-heading">JDBC-Types-to-Java-Types Mapping</div>
+        <div>
+            - The JDBC API allows you to access and manipulate data stored in a database in a Java environment. The
+            database uses its own data types, whereas Java uses its own. We use three sets of methods while
+            working with data in JDBC programs: getXxx(), setXxx(), and updateXxx(), where Xxx indicates a data type
+            such as int, String, Date, etc. These methods are found in many interfaces such as PreparedStatement,
+            ResultSet. <br>
+            - A getXxx() method is used to read data from a JDBC environment to a Java program. A setXxx() method is
+            used to set a value in a Java program that will finally be passed to a JDBC environment. An updateXxx()
+            method is used to update a data element that was retrieved from a JDBC environment and the updated value
+            will be passed again to a JDBC environment. <br>
+        </div>
+
+
+        <div class="sub-heading">Executing SQL Statements</div>
+        <div>
+            - Based on the type of work that a SQL statement performs in a DBMS, it can be categorized as follows: <br>
+            a) Data Definition Language (DDL) Statement: Examples are <code>CREATE TABLE</code>,
+            <code>ALTER TABLE</code>. <br>
+            b) Data Manipulation Language (DML) Statement: <code>SELECT</code>, <code>INSERT</code>, <code>UPDATE</code>,
+            <code>DELETE</code> <br>
+            c) Data Control Language (DCL) Statement: <code>GRANT</code>, <code>REVOKE</code> <br>
+            d) Transaction Control Language (TCL) Statement: <code>COMMIT</code>, <code>ROLLBACK</code>,
+            <code>SAVEPOINT</code> <br>
+
+            <br>
+            - An instance of the <code>STATEMENT</code> interface represents a SQL Statement in a Java program. Java
+            uses three different interfaces to represent SQL statements in different formats: <br>
+            a) <code><b>Statement</b></code>: If you have a SQL statement in the form of a string, you can use a
+            <code>Statement</code> object to execute it. The SQL statement may or may not return a result set.
+            Typically, a <code>SELECT</code> statement returns a result set with zero or more records. The SQL
+            statements in the string format are compiled each time they are executed. <br>
+            b) <code><b>PreparedStatement</b></code>: You can use a <code>PreparedStatement</code>, if you want to
+            precompile a
+            SQL statement once and execute it multiple times. It lets you specify a SQL statement in the form of a
+            string that uses placeholders. You need to supply the values of the placeholders before you execute the
+            statement. Using a <code>PreparedStatement</code> object is preferred over using a <code>Statement</code>
+            object. Refer page 414 of book for the reasons why.<br>
+            c) <code><b>CallableStatement</b></code>: You can use a <code>CallableStatement</code> object to execute a
+            database-stored procedure or function in a database. The stored procedure may return result sets. <br>
+            - The <code>PreparedStatement</code> inherits from the <code>Statement</code> interface and the <code>CallableStatement</code>
+            inherits from the <code>PreparedStatement</code>
+        </div>
+
+
+        <div class="sub-heading">Results of executing an SQL Statement</div>
+        <div>
+            - When you execute a SQL statement, the DBMS may return zero or more results. The results may include update
+            counts (number of records affected in the database) or result sets (a group of records). <br>
+            - When you execute a SELECT statement, it returns a result set. When you execute an UPDATE or DELETE
+            statement, it returns an update count, which is the number of records affected in the database by the SQL.
+            When you execute a stored procedure, it may return multiple update counts as well as multiple result sets. A
+            JDBC driver will let you get to the results in the order they were returned from the database.
+            <br>
+        </div>
+
+
+        <div class="sub-heading">Using the Statement interface</div>
+        <div>
+            - You can use a <code>Statement</code> to execute any kind of SQL statement. You use one of its three
+            methods called <code>execute()</code>, <code>executeUpdate()</code>, and <code>executeQuery()</code> to
+            execute a SQL statement. <br>
+            - The <code><b>execute()</b></code> method in the Statement interface is a general-purpose method that you
+            can use
+            to execute any types of SQL statements. Typically, it is used to execute a SQL statement that does not
+            return a result set, such as a DDL statement like <code>CREATE TABLE</code>. The returned value from the
+            <code>execute()</code> method indicates the status of the returned result set. If the first result is a
+            <code>ResultSet</code> object, it returns true. It returns false if the first result is an update count or
+            no result is returned from the DBMS. <br>
+            - The <code><b>executeUpdate()</b></code> method is used to execute a SQL statement that updates the data in
+            the
+            database such as <code>INSERT</code>, <code>UPDATE</code> and <code>DELETE</code> statements. It returns the
+            number of rows affected in the database by the execution of the statement. You may use this method to
+            execute other kinds of SQL statements, such as a <code>CREATE TABLE</code> statement which do not return
+            anything. The method returns zero when the SQL statement does not return anything.
+            You should NOT use this method to execute a <code>SELECT</code> statement. Java 8 has added a <code>executeLargeUpdate()</code>
+            method that works the same as the <code>executeUpdate()</code> method, except that it returns a long instead
+            of an int. Use this method when you expect the update count to exceed <code>Integer.MAX_VALUE</code>.<br>
+            - The <code><b>executeQuery()</b></code> method is especially designed to execute a SQL statement that
+            produces one
+            and only one result set. It is best suited for executing a <code>SELECT</code> statement. Although you can
+            execute a stored procedure (which produces a result set) using this method of the <code>Statement</code>
+            interface, you should instead use the specially designed <code>CallableStatement</code> interface's
+            <code>execute()</code> method to execute a stored procedure.
+        </div>
+
+
+        <div class="sub-heading">Steps to execute a SQL Statement using a Statement object</div>
+        <div>
+            - <a href="https://github.com/rgbk21/JDBC_Setup/tree/master/src/main/java/com/example/demo/Statement">Github
+            repo for the code</a> using <code>Statement</code> interface. <br>
+            1) Get a <code>Connection</code> object: <br>
+            <code>Connection conn = JDBCUtil.getConnection();</code> <br>
+
+            2) Create a <code>Statement</code> object using the <code>createStatement()</code> method of the <code>Connection</code>
+            object. <br>
+            <code>Statement stmt = conn.createStatement();</code> <br>
+
+            3) Execute one or more SQL statements by calling one of the three methods of the <code>Statement</code>
+            object. <br>
+            <code>// Increase everyone's income by 10%</code> <br>
+            <code>String sql = "update person set income = income * 1.1";</code> <br>
+            <code>int rowsUpdated = stmt.executeUpdate(sql);</code> <br>
+            <code>// Execute other SQL statements using stmt</code> <br>
+
+            4) Close the <code>Statement</code> object to release the resources. <br>
+            <code>stmt.close();</code> <br>
+
+            5) Commit the transaction. <br>
+            <code>conn.commit()</code> <br>
+        </div>
+
+
+        <div class="sub-heading">Using the PreparedStatement Interface</div>
+        <div>
+            - The <code>PreparedStatement</code> interface inherits from the <code>Statement</code> interface. It is
+            preferred over the <code>Statement</code> interface to execute a SQL statement. It precompiles the SQL
+            statement. It reuses the precompiled SQL statement if the statement is executed multiple times. It lets you
+            prepare a SQL statement, which is in a string format, using placeholders for input parameters. <br>
+            - A question mark in a SQL string is a placeholder for an input parameter whose value will be supplied
+            before the statement is executed. Each placeholder has an index. The first placeholder in a SQL string is
+            given an index of 1, the second placeholder an index of 2, and so on. Note that the index of the placeholder
+            starts at 1, not 0. <br>
+        </div>
+
+
+        <div class="sub-heading">Steps to execute a SQL Statement using a PreparedStatement object</div>
+        <div>
+            - <a
+                href="https://github.com/rgbk21/JDBC_Setup/tree/master/src/main/java/com/example/demo/PreparedStatement">Github
+            repo</a> for the code using <code>PreparedStatement</code> interface. <br>
+
+            0) Create a SQL statement: <br>
+            <code>String sqlQuery = "INSERT INTO person " +</code> <br>
+            <code> "(person_id, first_name, last_name, gender, dob, income) " +</code> <br>
+            <code> "VALUES " +</code> <br>
+            <code> "(?, ?, ?, ?, ?, ?)";</code> <br>
+
+            1) Get a <code>Connection</code> object: <br>
+            <code>Connection conn = JDBCUtil.getConnection();</code> <br>
+
+            2) Obtain a PreparedStatement for the sql. <br>
+            <code>PreparedStatement pStmnt = conn.prepareStatement(sqlQuery);</code> <br>
+
+            3) Set the values for the placeholders <br>
+            <code>pStmnt.setInt(1, 3);</code> <br>
+            <code>pStmnt.setString(2, "Charlie");</code> <br>
+            <code>pStmnt.setString(3, "Doe");</code> <br>
+            <code>pStmnt.setString(4, "M");</code> <br>
+            <code>java.sql.Date dob = java.sql.Date.valueOf("1990-01-03");</code> <br>
+            <code>pStmnt.setDate(5, dob);</code> <br>
+            <code>pStmnt.setDouble(6, 50000);</code>
+
+            4) Now it is time to send the SQL statement with the values for the placeholders to the database. You
+            execute a SQL statement in a <code>PreparedStatement</code> using one of its <code>execute()</code>, <code>executeUpdate()</code>,
+            and <code>executeQuery()</code> methods. These methods take no arguments. Recall that the
+            <code>Statement</code> interface has the same methods, which take SQL strings as their arguments. The <code>PreparedStatement</code>
+            interface has added three methods with the same name, which take no arguments, because it gets its SQL
+            string when it is created. <br>
+
+            //Execute the INSERT statement in pStmnt
+            <code>pstmt.executeUpdate();</code>
+
+            5) Close the <code>PreparedStatement</code> object to release the resources. <br>
+            <code>pstmt.close();</code> <br>
+
+            6) Commit the transaction. <br>
+            <code>conn.commit()</code> <br>
+        </div>
+
+
+        <div class="sub-heading">How do you reuse a PreparedStatement?</div>
+        <div>
+            - Repopulate the placeholder values and call one of its <code>execute()</code> methods again. When you
+            invoke the setXxx() method on a <code>PreparedStatement</code> object again, its previously set value
+            for the specified placeholder is overwritten with the new value. A <code>PreparedStatement</code> keeps
+            holding the set values for its placeholder even after it is executed. Therefore, if you want to set the same
+            value for a placeholder for multiple executions, you need to set the value for that placeholder only once.
+            <br>
+            - If you want to clear the values of all placeholders, you can use the <code>clearParameters()</code> method
+            of the <code>PreparedStatement</code> interface.
+        </div>
+
+
+    </div>
+
+
+    <div id="HIA_CH4" class="chapter">Chapter 4: Mapping Persistent Classes</div>
+
+    <div class="textual-content">
+
+        <div class="sub-heading">Understanding entities and value types</div>
+        <div>
+            - Fine-grained domain models means more classes than tables.
+        </div>
 
     </div>
 
