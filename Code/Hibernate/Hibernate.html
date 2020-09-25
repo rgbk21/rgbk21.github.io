@@ -310,6 +310,8 @@
 
     <div class="textual-content">
 
+        - <a href="https://docs.oracle.com/cd/B28359_01/java.111/b31224/preface.htm">Oracle JDBC Reference link</a> <br>
+
         <div class="sub-heading">What is the JDBC API?</div>
         <div>
             - The JDBC API provides a standard database-independent interface to interact with any tabular data
@@ -684,7 +686,7 @@
             <code>pStmnt.setString(4, "M");</code> <br>
             <code>java.sql.Date dob = java.sql.Date.valueOf("1990-01-03");</code> <br>
             <code>pStmnt.setDate(5, dob);</code> <br>
-            <code>pStmnt.setDouble(6, 50000);</code>
+            <code>pStmnt.setDouble(6, 50000);</code> <br>
 
             4) Now it is time to send the SQL statement with the values for the placeholders to the database. You
             execute a SQL statement in a <code>PreparedStatement</code> using one of its <code>execute()</code>, <code>executeUpdate()</code>,
@@ -693,8 +695,8 @@
             interface has added three methods with the same name, which take no arguments, because it gets its SQL
             string when it is created. <br>
 
-            //Execute the INSERT statement in pStmnt
-            <code>pstmt.executeUpdate();</code>
+            //Execute the INSERT statement in pStmnt <br>
+            <code>pstmt.executeUpdate();</code> <br>
 
             5) Close the <code>PreparedStatement</code> object to release the resources. <br>
             <code>pstmt.close();</code> <br>
@@ -715,6 +717,415 @@
             - If you want to clear the values of all placeholders, you can use the <code>clearParameters()</code> method
             of the <code>PreparedStatement</code> interface.
         </div>
+
+        <div class="sub-heading">CallableStatement interface</div>
+        <div>
+            - TODO
+        </div>
+
+
+        <div class="sub-heading">What is a <code>ResultSet</code></div>
+        <div>
+            - When you execute a query (a <code>SELECT</code> statement) in a database, it returns the matching records
+            in the form of a result set. You can consider a result set as a data arranged in rows and columns. The
+            returned data obviously depends upon the <code>SELECT</code> statement that you send to the DB. <br>
+            - The <code>Statement</code> (or <code>PreparedStatement</code> or <code>CallableStatement</code>) object
+            returns the result of a query as a <code>ResultSet</code> object. The "Result Set" is an instance of a class
+            that implements the <code>ResultSet</code> interface that lets you access and manipulate the returned data.
+            A <code>ResultSet</code> object also contains information about the properties of the columns in the result
+            set such as the data types of the columns, names of the columns, etc. <br>
+            - A <code>ResultSet</code> object maintains a <i>cursor</i>, which points to a row in the result set. The
+            cursor can point to only one row at a time. The row to which it points at a particular point in time is
+            called the <i>current row</i>.
+        </div>
+
+        <div class="sub-heading">Properties of a <code>ResultSet</code></div>
+        <div>
+            <li><b>Scrollability</b>: Scrollability determines the ability of the ResultSet to scroll through the rows.
+                By default, a <code>ResultSet</code> is scrollable only in the forward direction. When you have a
+                forward-only scrollable <code>ResultSet</code>, you can move the cursor starting from the first row to
+                the last row. Once you move to the last row, you cannot reuse the <code>ResultSet</code> object
+                because you cannot scroll back in a forward-only scrollable <code>ResultSet</code>. <br>
+                - You can also create
+                a <code>ResultSet</code> that can scroll in the forward as well as the backward direction.
+                This <code>ResultSet</code> is called a <i>bidirectional scrollable</i> <code>ResultSet</code>.
+                A bidirectional scrollable <code>ResultSet</code> has another property called <i>update sensitivity</i>.
+                It determines whether the changes in the underlying database will be reflected in the result set while
+                you are scrolling through its rows. A scroll sensitive <code>ResultSet</code> shows you changes made in
+                the database, whereas a scroll insensitive one would not show you the changes made in the database after
+                you have opened the <code>ResultSet</code>. <br>
+
+                - The following three constants in the ResultSet interface are used to specify the scrollability of a
+                ResultSet: <br>
+                a) <code>TYPE_FORWARD_ONLY</code>: Allows a <code>ResultSet</code> object to move only in the forward
+                direction. <br>
+                b) <code>TYPE_SCROLL_SENSITIVE</code>: Allows a <code>ResultSet</code> object to move in the forward and
+                backward directions. It makes the changes in the underlying database made by other transactions or
+                statements in the same transaction visible to the <code>ResultSet</code> object. This type of <code>ResultSet</code>
+                is aware of the changes made to its data by other means. <br>
+                c) <code>TYPE_SCROLL_INSENSITIVE</code>: Allows a <code>ResultSet</code> object to move in the forward
+                and backward directions. It DOES NOT make the changes in the underlying database made by other
+                transactions or statements in the same transaction visible to the <code>ResultSet</code> object while
+                scrolling. This type of <code>ResultSet</code> determines its data set when it is open and the data set
+                does not change if it is updated through any other means EXCEPT through this <code>ResultSet</code>
+                object itself. If you want to get up-to-date data, you must re-execute the query.
+            </li>
+            <br>
+            <li><b>Concurrency</b>: Concurrency refers to its ability of the <code>ResultSet</code> to update data. By
+                default, a <code>ResultSet</code> is read-only and it does not let you update its data. If you want to
+                update data in a database through a <code>ResultSet</code>, you need to request an updatable result set
+                from the JDBC driver. <br>
+                - The following two constants in the ResultSet interface are used to specify the concurrency of a
+                ResultSet: <br>
+                a) <code>CONCUR_READ_ONLY</code>: Makes a result set read-only. <br>
+                b) <code>CONCUR_UPDATABLE</code>: Makes a result set updatable.
+            </li>
+            <br>
+            <li><b>Holdability</b>: Holdability refers to the state of the <code>ResultSet</code> after a transaction
+                that it is associated with has been committed.
+                A <code>ResultSet</code> may be closed or kept open when the transaction is committed. The default value
+                of the holdability of a <code>ResultSet</code> is dependent on the JDBC driver. <br>
+                - The holdability of a <code>ResultSet</code> is specified using one of the following two constants
+                defined in the <code>ResultSet</code> interface: <br>
+                a) <code>HOLD_CURSORS_OVER_COMMIT</code>: Keeps the <code>ResultSet</code> open after the transaction is
+                committed. <br>
+                b) <code>CLOSE_CURSORS_AT_COMMIT</code>: Closes the <code>ResultSet</code> after the transaction is
+                committed.
+            </li>
+
+            <br>
+
+            - For an OracleDB, you can check these values by running <a
+                href="https://github.com/rgbk21/JDBC_Setup/blob/master/src/main/java/com/example/demo/ResultSet/SupportedResultSetProperties.java">this
+            code</a>. The own****AreVisible shows whether inserts/updates/deletes using the same ResultSet are visible
+            within that ResultSet itself. Read more at <a href="https://stackoverflow.com/a/16959086/8742428">this SO
+            Link</a>.
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/b548900f48ce185a42b196591b686670.js"></script>
+            </div>
+        </div>
+
+
+        <div class="sub-heading">Getting a <code>ResultSet</code></div>
+        <div>
+            - Example code on Github <a
+                href="https://github.com/rgbk21/JDBC_Setup/blob/master/src/main/java/com/example/demo/ResultSet/QueryPersonTest.java">here</a>.
+            <br>
+            - You can get a result set from a database using a <code>Statement</code>, a <code>PreparedStatement</code>,
+            or a <code>CallableStatement</code>. In simple cases, you call <code>executeQuery()</code> method of a
+            <code>Statement</code> object or a <code>PreparedStatement</code> object with a <code>SELECT</code>
+            statement that will return a <code>ResultSet</code>. <br>
+            - In the beginning, the cursor points before the first row in the result set. This row is an imaginary row.
+            You must move the cursor to a valid row before you can access the column's values for that row. Calling the
+            <code>next()</code> method moves the cursor to the next row. Hence, the first time that you get a <code>ResultSet</code>
+            objet, you have to call it's <code>next()</code> method in order to read the first row of the result set.
+            <br>
+            - Also, important to note that the <code>next()</code> method returns a <code>boolean</code> value. It
+            returns true if the cursor is positioned to a valid row. Otherwise, it returns false. If you call the
+            <code>next()</code> method on an empty <code>ResultSet</code> object for the first time, it will return
+            false, because there is no valid row to move to. If the current row is the last row in the result set,
+            calling the <code>next()</code> method will position the cursor after the last row and it will return false.
+            <br>
+            - When a cursor is positioned after the last row in a forward-only scrollable <code>ResultSet</code> object,
+            you cannot do anything with it, except close it using its <code>close()</code> method. You cannot reopen a
+            <code>ResultSet</code> either. To iterate through the result set data again, you must re-execute the query
+            and obtain a new <code>ResultSet</code>. A bidirectional scrollable <code>ResultSet</code> on the other hand
+            allows you to iterate through the rows as many times as you want. <br>
+            - When you do not create the <code>ResultSet</code>, you must know the cursor position correctly in order to
+            process the rows in a specific order. The following four methods of the <code>ResultSet</code> interface let
+            you know if the cursor is before the first row, on the first row, on the last row, or after the last row:
+            <br>
+            <code>isBeforeFirst()</code>, <code>isFirst()</code>, <code>isLast()</code>, <code>isAfterLast()</code> <br>
+        </div>
+
+        <div class="sub-heading">Reading values from a <code>ResultSet</code></div>
+        <div>
+            - A <code>ResultSet</code> object lets you read the value of a column from its current row using one of its
+            getXxx() method, where Xxx is the data type of the column. <br>
+            - You must specify the index or name of the column in the getXxx() method whose value you want to read. The
+            getXxx() methods are overloaded. One version accepts an int parameter, which lets you use the column index
+            and another version accepts a String parameter, which lets you use the column label. If the column label is
+            not specified in the query, you can specify the column name. <br>
+            - Example: <code>SELECT person_id AS "Person ID", first_name, last_name FROM person</code> <br>
+            - In the <code>ResultSet</code>, the <code>person_id</code> column has a column index of 1, the <code>first_name</code>
+            column has a column index of 2, and the <code>last_name</code> column has a column index of 3. You have
+            specified <code>Person ID</code> as the column label for the <code>person_id</code> column. You have not
+            specified the column labels for the <code>first_name</code> and <code>last_name</code> columns. To get the
+            value of the <code>person_id</code> column, you need to use either <code>getInt(1)</code> or
+            <code>getInt("PERSON ID")</code>. To get the value of the <code>first_name</code> column, you need to use
+            either <code>getString(2)</code> or <code>getString("first_name")</code>.
+        </div>
+
+
+        <div class="sub-heading">Handling <code>null</code> values in a <code>ResultSet</code></div>
+        <div>
+            - Example code present <a
+                href="https://github.com/rgbk21/JDBC_Setup/blob/master/src/main/java/com/example/demo/ResultSet/QueryPersonTest.java#L79-L81">here</a>.
+            <br>
+            - In a <code>ResultSet</code>, when a column has a null value, the getXxx() method returns the default value
+            for the Xxx data type. For example, for numeric data types (int, double, byte, etc.), the getXxx() method
+            returns zero when the column has a null value. A getXxx() method returns false for the boolean data type
+            when the column has null value. The getXxx() returns <code>null</code> if Xxx is a reference type. <br>
+            - If you want to know whether the column value, which you read using a getXxx() method, is null, you need to
+            call the <code>wasNull()</code> method immediately after calling the getXxx() method. If the
+            <code>wasNull()</code> method returns true, the column value is null in the result set. If the <code>wasNull()</code>
+            method returns false, the column value is not null in the result set. Note that the <code>wasNull()</code>
+            method does not accept any parameter and it returns null value status of the last read column using a
+            getXxx() method.
+        </div>
+
+
+        <div class="sub-heading">Getting the number of Rows in a <code>ResultSet</code></div>
+        <div>
+            - There is no method in the <code>ResultSet</code> interface that returns the number of rows in the result
+            set. The <code>ResultSet</code> interface contains a <code>getRow()</code> method that returns the current
+            row number in the <code>ResultSet</code>. It returns zero if there is no current row, such as when the
+            cursor is before the first row or after the last row. <br>
+            - If you want to know the number of rows in a forward-only scrollable <code>ResultSet</code> BEFORE you
+            start iterating over the <code>ResultSet</code>, the only way to do this is to get the
+            <code>ResultSet</code> twice. But, between the time when you get the first result set and when you get the
+            second result set, the data in the database might change, which will make the row
+            count from the first execution invalid. <br>
+            - Another way is to execute a separate SQL query - <code>SELECT COUNT(*) FROM person WHERE ...</code> once
+            you are done running your <code>SELECT</code> statement. But you again run into the same issue of another
+            transaction possibly changing the DB between the first and the second query. <br>
+            - The solution is to use a Bidirectional Scrollable ResultSet.
+        </div>
+
+        <div class="sub-heading">Using a Bidirectional Scrollable ResultSet</div>
+        <div>
+            - Code present <a
+                href="https://github.com/rgbk21/JDBC_Setup/blob/master/src/main/java/com/example/demo/ResultSet/BidirectionalScrollableResultSet.java">here
+            on Github</a>. <br>
+            - After you get the <code>ResultSet</code>, call its <code>last()</code> method to move its cursor to the
+            last row in the result set. Call the <code>getRow()</code> method when the cursor is at the last row.
+            The <code>getRow()</code> method will return the row number of the last row, which will be the number of
+            rows in the result set. <br>
+            - If you want to process the result set after getting the number of rows, you can call its <code>beforeFirst()</code>
+            method to scroll the cursor before the first row and start a while-loop to process the rows in the result
+            set again. <br>
+            - After getting a <code>ResultSet</code> object, it is very important to check if it
+            supports bidirectional scrolling before you call the <code>last()</code> method on it. A forward-only <code>ResultSet</code>
+            object will throw a <code>SQLException</code> if you call the <code>last()</code> method. You can get the
+            scrollable property of a <code>ResultSet</code> object by calling its <code>getType()</code> method.
+        </div>
+
+
+        <div class="sub-heading">Bidirectional Scrollable ResultSet</div>
+        <div>
+            - <a
+                href="https://github.com/rgbk21/JDBC_Setup/blob/master/src/main/java/com/example/demo/ResultSet/BidirectionalScrollableResultSet.java#L20-L32">Code</a>
+            on how to create <code>Statement</code> with Bi-directional result set. <br>
+            - There are overloaded methods of the <code>createStatement</code>, <code>prepareStatement</code>, and
+            <code>prepareCall</code> that let you specify the scrollability, concurrency, and holdability of the
+            <code>ResultSet</code>. <br>
+            - The default <code>createStatement()</code> and <code>prepareStatement()</code> (<a
+                href="https://docs.oracle.com/javase/7/docs/api/java/sql/Connection.html#createStatement()">link to Java
+            Docs for the method</a> )that do not accept any arguments set up the following kind of
+            <code>ResultSet</code>: Result sets created using the returned <code>Statement</code> object will by default
+            be type <code>TYPE_FORWARD_ONLY</code> and have a concurrency level of <code>CONCUR_READ_ONLY</code>. The
+            holdability of the created result sets can be determined by calling <code>getHoldability()</code>. <br>
+            - The JDBC driver determines the default value for the holdability of a ResultSet. Different JDBC drivers
+            have different default values for this property.
+        </div>
+
+        <div class="sub-heading">ResultSet and Fetch Size</div>
+        <div>
+            - Note that a <code>ResultSet</code> does not retrieve all rows for a query at once. The number of rows a
+            ResultSet will retrieve from the database is JDBC driver-dependent. <br>
+            - You can give a hint to the JDBC driver using the <code>setFetchSize(int fetchSize)</code> method of the
+            <code>ResultSet</code> object to fetch a specified number of rows from the database whenever more rows are
+            needed. Read the Java Docs for the <code>setFetchSize</code> <a
+                href="https://docs.oracle.com/javase/7/docs/api/java/sql/ResultSet.html#setFetchSize(int)">here</a>.
+            Read about how the <code>setFetchSize</code> method works on SO <a
+                href="https://stackoverflow.com/questions/1318354/what-does-statement-setfetchsizensize-method-really-do-in-sql-server-jdbc-driv">here</a>
+            and
+            <a href="https://stackoverflow.com/a/42379544/8742428">here</a>.
+            The difference between the <code>setFetchSize()</code> method on <code>ResultSet</code> and
+            <code>Statement</code> can be read on <a
+                href="https://stackoverflow.com/questions/37394440/difference-between-setting-a-fetch-size-on-statement-vs-resultset">this
+            SO Link</a> (The only place the fetch size really matters is on the ResultSet. When a ResultSet is created,
+            it gets its fetch size from the Statement that was used to create it, but it can be changed later.
+            Think of the Statement's fetch size as a default that will be passed to all the ResultSets it creates. If
+            you don't want to use this default, you can override it.).
+            <br>
+            - Oracle specific documentation can be read <a
+                href="https://docs.oracle.com/cd/E18283_01/java.112/e16548/resltset.htm#i1023619">here</a>. This says:
+            When the statement object run a query, the fetch size of the statement object is passed to the result set
+            object produced by the query. However, you can also set the fetch size in the result set object to override
+            the statement fetch size that was passed to it. Note: Changes made to the fetch size of a statement object
+            after a result set is produced will have no affect on that result set. By default, when Oracle JDBC runs a
+            query, it retrieves a result set of 10 rows at a time from the database cursor. This is the default Oracle
+            row fetch size value. You can change the number of rows retrieved with each trip to the database cursor by
+            changing the row fetch size value.<br>
+            - Note that there is a <code>setFetchSize</code> method on all <code>Statement</code>,
+            <code>PreparedStatement</code>, <code>CallableStatement</code>, and <code>ResultSet</code> objects. <br>
+            - When does a <code>ResultSet</code> need to fetch more rows from the database?
+            A <code>ResultSet</code> needs to fetch more rows if you position its cursor to a row that is not in its
+            cache. For example, calling the <code>next()</code> method of a <code>ResultSet</code> may trigger a fetch
+            from the database. Suppose a <code>ResultSet</code> fetches 10 records at a time. If you call the <code>next()</code>
+            method the first time, it will fetch and cache 10 records and, for nine subsequent calls to its
+            <code>next()</code> method, it will give you rows from its cache. Fetching and caching rows for a <code>ResultSet</code>
+            is dependent on a JDBC driver and the underlying DBMS. <br>
+            - Question: So loading the entire ResultSet into the memory is to be avoided. So suppose if we set the
+            setFetchSize to 25, and then fetch the next 25 rows, ie. 26-50, are the rows from 1-25 removed from the
+            memory? If I am using a bi-directional ResultSet, and decide to go back to row 1 for example, will this
+            cause
+            another trip to the OracleDB?
+        </div>
+
+
+        <div class="sub-heading">Scrolling Through Rows of a ResultSet</div>
+        <div>
+            - There are two sets of rows that a cursor may point to. One set of rows consists of two imaginary rows -
+            one before the first row and one after the last row. Another set of rows consists of the rows that match the
+            query. <br>
+            - You can use the <code>getRow()</code> method of the <code>ResultSet</code> interface to get the row number
+            of the row at which the cursor is currently positioned. If the cursor is positioned before the first row or
+            after the last row, the <code>getRow()</code> method returns zero.
+            <img src="imgs/Java8_JDBC_Imgs/ResultSet.PNG" class="center-block img-fluid"
+                 alt="ResultSet"
+                 width="75%">
+            - If you have a <code>ResultSet</code> object that has its scrollability set to forward-only, you can only
+            use its <code>next()</code> method to move the cursor, which moves its cursor one row in the forward
+            direction. <br>
+            - If a <code>ResultSet</code> has a bidirectional scrollability, you have many methods to change its cursor
+            position. <br>
+            - A cursor movement can either be an absolute movement or a relative movement. <br>
+            - Refer page 455 of book for description about all the methods that can be used to scroll through the <code>ResultSet</code>
+            <br>
+            - Use the <code>last()</code> method with caution. This method call will force the JDBC driver to retrieve
+            all rows from the database. If a DBMS does not support a bidirectional scrollable cursor, a JDBC
+            driver will have to cache all rows on the client. For a very large result set, it may affect the performance
+            of the application adversely.
+        </div>
+
+
+        <div class="sub-heading">Closing a ResultSet</div>
+        <div>
+            - You can close a ResultSet object by calling its <code>close()</code> method. <br>
+            - A ResultSet object can also be closed implicitly in the following situations: <br>
+            a) When the Statement object that produces the ResultSet object is closed, it automatically
+            closes the ResultSet object. <br>
+            b) When a Statement object is re-executed, its previously opened ResultSet object is closed. <br>
+            c) If a Statement object produces multiple result sets, retrieving the next result set closes the
+            previously retrieved ResultSet. <br>
+            d) If it is a forward-only scrollable ResultSet, a JDBC driver may choose to close it when its
+            next() method returns false as the part of optimization. Once the next() method returns
+            false for a forward-only scrollable ResultSet, you cannot do anything with that ResultSet
+            anyway.
+        </div>
+
+        <div class="sub-heading">Making changes to a ResultSet</div>
+        <div>
+            - You can use a <code>ResultSet</code> to perform insert, update, and delete operations on database tables.
+            The concurrency for the <code>ResultSet</code> object must be <code>ResultSet.CONCUR_UPDATABLE</code> in
+            order to perform updates on the <code>ResultSet</code>.
+        </div>
+
+
+        <div class="sub-heading">Inserting a Row using a ResultSet</div>
+        <div>
+            - Code to insert a row <a
+                href="https://github.com/rgbk21/JDBC_Setup/blob/master/src/main/java/com/example/demo/ResultSet/ResultSetInsert.java">here</a>
+            on github. <br>
+            - In addition to the two imaginary rows that we saw earlier, <code>ResultSet</code> has a third imaginary
+            row that is called the <i>insert row</i>. You can think of this row as an empty new row, which acts as a
+            staging area for a new row that you want to insert.<br>
+            - You can position the cursor to the insert row using the <code>ResultSet</code> object's <code>moveToInsertRow()</code>
+            method. When the cursor moves to the insert row, it remembers its previous position. You can call the <code>moveToCurrentRow()</code>
+            method to move the cursor from the insert row back to the previously current row. <br>
+            - So the steps that you follow in order to insert a new row are as follows: <br>
+            a) Move the cursor to an insert row to add a new row: <br>
+            <code>resultSet.moveToInsertRow();</code> <br>
+            b) Set the values for all the columns (at least for non-nullable columns) using one of the updateXxx()
+            methods of the ResultSet interface. <br>
+            c) Send changes to the database: <br>
+            <code>resultSet.insertRow()</code> <br>
+            The call to the <code>insertRow()</code> method may or may not make the inserted row a permanent row in the
+            database. If the auto-commit mode is enabled for the <code>Connection</code>, the <code>insertRow()</code>
+            call will also commit your transaction. In that case, the new row becomes part of the database permanently.
+            If the auto-commit mode is disabled for the <code>Connection</code>, you can make the insert permanent by
+            committing the transaction, or cancel the insert by rolling back the transaction. <br>
+            d) After inserting your row, you can move back to your previous current row: <br>
+            <code>resultSet.moveToCurrentRow();</code> <br>
+            Note that moving to another row before calling the <code>insertRow()</code> method after calling the
+            <code>moveToInsertRow()</code> method discards the new row. <br>
+
+            <br>
+            - Question: why can't I see the values that I insert in the same ResultSet even though my ResultSet is set
+            to <code>TYPE_SCROLL_SENSITIVE</code>? This <a href="https://stackoverflow.com/a/16959086/8742428">SO Link
+            explains</a> why (You might also want to check <code>DatabaseMetaData.ownInsertsAreVisible(int)</code> and
+            related methods for your specific database and driver.) You can check these values for the OracleDB by
+            running
+            <a href="https://github.com/rgbk21/JDBC_Setup/blob/master/src/main/java/com/example/demo/ResultSet/SupportedResultSetProperties.java#L40">this
+                code here</a>. <br>
+            Question: Why does using <code>SELECT * FROM people;</code> generate a read only ResultSet. Read at <a
+                href="https://stackoverflow.com/a/26672027/8742428">this SO Link</a>. (To produce a scroll-sensitive
+            result set a query cannot use "SELECT * ".) <br>
+
+        </div>
+
+
+        <div class="sub-heading">Updating a Row using a ResultSet</div>
+        <div>
+            - Code to update the row <a
+                href="https://github.com/rgbk21/JDBC_Setup/blob/master/src/main/java/com/example/demo/ResultSet/ResultSetUpdate.java">here</a>.
+            Question asked on SO regarding behavior <a
+                href="https://stackoverflow.com/questions/64069368/ownupdatesarevisible-for-type-forward-only-oracledb-prints-false">here</a>.
+            - Steps involved in updating an existing row in a ResultSet object: <br>
+            1) Move the cursor to a valid row in the result set. Note that you can update data only for an
+            existing row. It is obvious that the cursor should not be positioned before the first row or
+            after the last row if you want to update the data in a row. <br>
+            2) Call an updateXxx() method for a column to update the column's value. <br>
+            3) If you do not want to go ahead with the changes made using updateXxx() method calls,
+            you need to call the <code>cancelRowUpdates()</code> method of the <code>ResultSet</code> to cancel the
+            changes. <br>
+            4) When you are done updating all the column's values for the current row, call the
+            <code>updateRow()</code> method to send the changes to the database. If the auto-commit mode is
+            enabled for the <code>Connection</code>, changes will be committed. Otherwise, you need to commit
+            the changes to the database. <br>
+            5) If you move the cursor to a different row before calling the <code>updateRow()</code>, all your changes
+            made using the updateXxx() method calls will be discarded. <br>
+            6) There is another way to lose your updates to columns in a row. If you call the
+            <code>refreshRow()</code> method after calling updateXxx(), but before calling <code>updateRow()</code>,
+            your changes will be lost because the JDBC driver will refresh the row's data from the database.
+
+            <br><br>
+
+            - Note that you do not have to set the scrollability of the <code>ResultSet</code> to <code>TYPE_SCROLL_SENSITIVE</code>
+            in order to see your changes in the DB. Because as is specified in it's definition, "<code>TYPE_SCROLL_SENSITIVE</code>
+            makes the changes in the underlying database made by OTHER transactions or statements in the same
+            transaction visible to the ResultSet object." So the changes made by your transaction would still be visible
+            if you just left it to <code>TYPE_FORWARD_ONLY</code>. <br>
+            - What does it mean for changes to be "visible"?
+            <a href="https://docs.oracle.com/en/database/oracle/oracle-database/19/jjdbc/resultset.html#JJDBC-GUID-71728FB5-5112-4204-B563-A40D8C5FD783">Source</a>
+        </div>
+
+
+        <div class="sub-heading">Deleting a Row using a ResultSet</div>
+        <div>
+            - Code <a
+                href="https://github.com/rgbk21/JDBC_Setup/blob/master/src/main/java/com/example/demo/ResultSet/ResultSetDelete.java">here</a>.
+            <br>
+            - Unlike UPDATE and INSERT operations in a result set, which require a separate step to propagate the
+            changes to the database, a DELETE operation in a result set is immediately run in the corresponding row in
+            the database as well. Once you call deleteRow method, the changes are made permanent with the next
+            transaction COMMIT operation.
+            Remember also that by default, the auto-commit flag is set to true. Therefore, unless you override this
+            default, any deleteRow method operation is run and committed immediately.
+            <a href="https://docs.oracle.com/cd/B28359_01/java.111/b31224/resltset.htm#sthref982">Oracle JDBC Docs</a>
+            Source. <br>
+        </div>
+
+
+        <div class="sub-heading">Using RowSets</div>
+        <div>
+            -
+        </div>
+
+
+
 
 
     </div>

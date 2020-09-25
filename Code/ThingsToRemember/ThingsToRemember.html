@@ -147,29 +147,29 @@
         </div>
     </div>
 
-    <div class="one-point">
-        2) You can do this. Add the &ltT&gt after a class definition. So what is the difference between a simple class
-        definition and one that has Class&ltT&gt?
-        <div>
-            Consider the below example. Creating a class using Generics (as on line 1) allows us to create a List of
-            any data type - int, string, etc. In the second example (on line 7), we tried to see if deleting the
-            datatype
-            helped in any way - it didn't. The code did not compile. So we added an int datatype on line 13 and dropped
-            the generic &ltT&gt in the class declaration. Sure enough, the code compiled. But now in the place of a List
-            prototype that could handle any datatype, we have a List that can only hold integers.
-            <br>
-            We can also use more than one generic type parameters (is this what this T, U, is called? Not sure) which
-            is what is done on line 19.
-            <br>
-            //TODO: Read up on Reflection
-            <br>
-            //TODO: <a href="https://stackoverflow.com/questions/2770321/what-is-a-raw-type-and-why-shouldnt-we-use-it">What
-            is a raw type and why shouldn't we use it?</a>
-        </div>
-        <div class="code-snippet">
-            <script src="https://gist.github.com/rgbk21/9b01ff7801d6f66c920ccebdc564982b.js"></script>
-        </div>
-    </div>
+<!--    <div class="one-point">-->
+<!--        2) You can do this. Add the &ltT&gt after a class definition. So what is the difference between a simple class-->
+<!--        definition and one that has Class&ltT&gt?-->
+<!--        <div>-->
+<!--            Consider the below example. Creating a class using Generics (as on line 1) allows us to create a List of-->
+<!--            any data type - int, string, etc. In the second example (on line 7), we tried to see if deleting the-->
+<!--            datatype-->
+<!--            helped in any way - it didn't. The code did not compile. So we added an int datatype on line 13 and dropped-->
+<!--            the generic &ltT&gt in the class declaration. Sure enough, the code compiled. But now in the place of a List-->
+<!--            prototype that could handle any datatype, we have a List that can only hold integers.-->
+<!--            <br>-->
+<!--            We can also use more than one generic type parameters (is this what this T, U, is called? Not sure) which-->
+<!--            is what is done on line 19.-->
+<!--            <br>-->
+<!--            //TODO: Read up on Reflection-->
+<!--            <br>-->
+<!--            //TODO: <a href="https://stackoverflow.com/questions/2770321/what-is-a-raw-type-and-why-shouldnt-we-use-it">What-->
+<!--            is a raw type and why shouldn't we use it?</a>-->
+<!--        </div>-->
+<!--        <div class="code-snippet">-->
+<!--            <script src="https://gist.github.com/rgbk21/9b01ff7801d6f66c920ccebdc564982b.js"></script>-->
+<!--        </div>-->
+<!--    </div>-->
 
     <div class="one-point">
         3) Is there any difference between return null and return (ListNode&ltInteger&gt) null ? i.e. does casting null
