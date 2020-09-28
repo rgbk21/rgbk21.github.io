@@ -147,29 +147,29 @@
         </div>
     </div>
 
-<!--    <div class="one-point">-->
-<!--        2) You can do this. Add the &ltT&gt after a class definition. So what is the difference between a simple class-->
-<!--        definition and one that has Class&ltT&gt?-->
-<!--        <div>-->
-<!--            Consider the below example. Creating a class using Generics (as on line 1) allows us to create a List of-->
-<!--            any data type - int, string, etc. In the second example (on line 7), we tried to see if deleting the-->
-<!--            datatype-->
-<!--            helped in any way - it didn't. The code did not compile. So we added an int datatype on line 13 and dropped-->
-<!--            the generic &ltT&gt in the class declaration. Sure enough, the code compiled. But now in the place of a List-->
-<!--            prototype that could handle any datatype, we have a List that can only hold integers.-->
-<!--            <br>-->
-<!--            We can also use more than one generic type parameters (is this what this T, U, is called? Not sure) which-->
-<!--            is what is done on line 19.-->
-<!--            <br>-->
-<!--            //TODO: Read up on Reflection-->
-<!--            <br>-->
-<!--            //TODO: <a href="https://stackoverflow.com/questions/2770321/what-is-a-raw-type-and-why-shouldnt-we-use-it">What-->
-<!--            is a raw type and why shouldn't we use it?</a>-->
-<!--        </div>-->
-<!--        <div class="code-snippet">-->
-<!--            <script src="https://gist.github.com/rgbk21/9b01ff7801d6f66c920ccebdc564982b.js"></script>-->
-<!--        </div>-->
-<!--    </div>-->
+    <!--    <div class="one-point">-->
+    <!--        2) You can do this. Add the &ltT&gt after a class definition. So what is the difference between a simple class-->
+    <!--        definition and one that has Class&ltT&gt?-->
+    <!--        <div>-->
+    <!--            Consider the below example. Creating a class using Generics (as on line 1) allows us to create a List of-->
+    <!--            any data type - int, string, etc. In the second example (on line 7), we tried to see if deleting the-->
+    <!--            datatype-->
+    <!--            helped in any way - it didn't. The code did not compile. So we added an int datatype on line 13 and dropped-->
+    <!--            the generic &ltT&gt in the class declaration. Sure enough, the code compiled. But now in the place of a List-->
+    <!--            prototype that could handle any datatype, we have a List that can only hold integers.-->
+    <!--            <br>-->
+    <!--            We can also use more than one generic type parameters (is this what this T, U, is called? Not sure) which-->
+    <!--            is what is done on line 19.-->
+    <!--            <br>-->
+    <!--            //TODO: Read up on Reflection-->
+    <!--            <br>-->
+    <!--            //TODO: <a href="https://stackoverflow.com/questions/2770321/what-is-a-raw-type-and-why-shouldnt-we-use-it">What-->
+    <!--            is a raw type and why shouldn't we use it?</a>-->
+    <!--        </div>-->
+    <!--        <div class="code-snippet">-->
+    <!--            <script src="https://gist.github.com/rgbk21/9b01ff7801d6f66c920ccebdc564982b.js"></script>-->
+    <!--        </div>-->
+    <!--    </div>-->
 
     <div class="one-point">
         3) Is there any difference between return null and return (ListNode&ltInteger&gt) null ? i.e. does casting null
@@ -728,7 +728,7 @@
         <code>java -version</code> in your cmd. You can check the updated value by running <code>echo JAVA_HOME</code>.
         <br>
         - Next, we need to tell IntelliJ that we have a new JDK for it. <br>
-        - Step 2: File -&gt; Project Structure -&gt; Platform Settings -&gt SDK -&gt; Click on the + symbol and add the
+        - Step 2: File -&gt; Project Structure -&gt; Platform Settings -&gt; SDK -&gt; Click on the + symbol and add the
         JDK. Point to the path where the JDK is installed. Should be:
         <code>C:\Program Files\AdoptOpenJDK\jdk-11.0.8.10-hotspot</code> <br>
         - The previously empty CLASSPATH should now be filled with new files. <br>
@@ -744,7 +744,13 @@
         </div>
         - The database can be viewed at the foll URL: <code>http://localhost:8080/h2-console</code> <br>
         - Make sure that the JDBC URL in the window maps to the correct URL: <code>jdbc:h2:mem:testdb</code>
+    </div>
 
+    <div class="one-point">
+        48) What does it mean to <code>catch</code> and <code>Exception</code> vs <code>throws</code> an
+        <code>Exception</code>? <br>
+        - Precisely what is going on over <a
+            href="https://github.com/rgbk21/JDBC_Setup/blob/master/src/main/java/com/example/demo/RowSetUtil.java#L38-L44">here</a>.
     </div>
 
 

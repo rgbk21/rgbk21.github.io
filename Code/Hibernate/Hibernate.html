@@ -130,7 +130,8 @@
     Index:
     <br>
     Chapter 0: <a href="#GettingStarted">Getting Started - Dummy Project</a> <br>
-    Chapter 6: <a href="#Java8_JDBC">JDBC API</a> <br>
+    Chapter 6: <a href="#Java8_JDBC">JDBC API</a> (Kishori Sharan)<br>
+    Chapter 1: <a href="#Ch1_Vlad">JDBC and DB Essentials: Performance and Scaling</a> (Vlad Mihalcea)<br>
     Chapter 4: <a href="#HIA_CH4">Mapping Persistent Classes</a>
 
     <div id="GettingStarted" class="chapter">Chapter 0: Getting Started - Dummy Project</div>
@@ -311,6 +312,10 @@
     <div class="textual-content">
 
         - <a href="https://docs.oracle.com/cd/B28359_01/java.111/b31224/preface.htm">Oracle JDBC Reference link</a> <br>
+        - <a href="https://balusc.omnifaces.org/2008/07/dao-tutorial-data-layer.html">Check this Balus C link as
+        well</a>
+        <br>
+        -
 
         <div class="sub-heading">What is the JDBC API?</div>
         <div>
@@ -967,11 +972,14 @@
             method the first time, it will fetch and cache 10 records and, for nine subsequent calls to its
             <code>next()</code> method, it will give you rows from its cache. Fetching and caching rows for a <code>ResultSet</code>
             is dependent on a JDBC driver and the underlying DBMS. <br>
+            - There is also a <code>setMaxRows</code> method on the <code>RowSet</code> interface as shown <a
+                href="https://docs.oracle.com/javase/7/docs/api/javax/sql/RowSet.html#setMaxRows(int)">here</a>. This is
+            different from the <code>setFetchSize</code> as explained on <a
+                href="https://stackoverflow.com/a/32399694/8742428">this SO Link</a>. <br>
             - Question: So loading the entire ResultSet into the memory is to be avoided. So suppose if we set the
             setFetchSize to 25, and then fetch the next 25 rows, ie. 26-50, are the rows from 1-25 removed from the
             memory? If I am using a bi-directional ResultSet, and decide to go back to row 1 for example, will this
-            cause
-            another trip to the OracleDB?
+            cause another trip to the OracleDB?
         </div>
 
 
@@ -1073,6 +1081,7 @@
                 href="https://github.com/rgbk21/JDBC_Setup/blob/master/src/main/java/com/example/demo/ResultSet/ResultSetUpdate.java">here</a>.
             Question asked on SO regarding behavior <a
                 href="https://stackoverflow.com/questions/64069368/ownupdatesarevisible-for-type-forward-only-oracledb-prints-false">here</a>.
+            <br>
             - Steps involved in updating an existing row in a ResultSet object: <br>
             1) Move the cursor to a valid row in the result set. Note that you can update data only for an
             existing row. It is obvious that the cursor should not be positioned before the first row or
@@ -1121,14 +1130,225 @@
 
         <div class="sub-heading">Using RowSets</div>
         <div>
-            -
+            - An instance of the <code>RowSet</code> interface is a wrapper for a result set. The <code>RowSet</code>
+            interface inherits from the <code>ResultSet</code> interface.
+        </div>
+
+        <div class="sub-heading">Advantages of using RowSets</div>
+        <div>
+            - When you use a <code>ResultSet</code> object, you must deal with the <code>Connection</code> and <code>Statement</code>
+            objects at the same time. A <code>RowSet</code> hides the complexities of using the <code>Connection</code>
+            and
+            <code>Statement</code> objects from the developers. <br>
+            - A <code>ResultSet</code> is not <code>Serializable</code> and therefore, it cannot be sent over the
+            network or saved to the disk for later use. A <code>RowSet</code> is <code>Serializable</code>. It can be
+            sent over the network or saved to a disk for later use. <br>
+            - A <code>ResultSet</code> is always connected to a data source. A <code>RowSet</code> object does not need
+            to be connected to its data source all the time. It can connect to the database when needed such as
+            to retrieve/update data in the data source. <br>
+            - A <code>RowSet</code> is by default scrollable and updatable. <br>
+            - The two properties of a <code>RowSet</code>, serialization and connectionlessness, makes it very useful in
+            a thin client environment such as a mobile device or a web application. A thin client does not
+            need to have a JDBC driver. <br>
+            - A <code>RowSet</code> also supports filtering of data after the data has been retrieved. Filtering of data
+            is not possible in a <code>ResultSet</code>. You must use a <code>WHERE</code> clause in a query to filter
+            data in the database itself if you use a <code>ResultSet</code>. <br>
+            - A <code>RowSet</code> makes it possible to join two or more data sets based on their column’s values
+            after they have been retrieved from their data sources.
         </div>
 
 
+        <div class="sub-heading">Disadvantages of using RowSets</div>
+        <div>
+            - A specific <code>RowSet</code> implementation may cache data in memory. You need to be careful when
+            using such type of RowSets. You should not fetch large volumes of data using these RowSets.
+            Otherwise, it may slow down the application. <br>
+            - With cached data in a <code>RowSet</code>, there are more possibilities of data inconsistency between the
+            data in the <code>RowSet</code> and data in the data source, when changes are applied to the data source.
+        </div>
+
+        <div class="sub-heading">Creating a RowSet</div>
+        <div>
+            - Code to set up a Util Class for creating <code>RowSet</code> <a
+                href="https://github.com/rgbk21/JDBC_Setup/blob/master/src/main/java/com/example/demo/RowSetUtil.java">here</a>.
+            <br>
+            - The following interfaces in the <code>javax.sql.rowset</code> package define five types of rowsets: <br>
+            a) JdbcRowSet <br>
+            b) CachedRowSet <br>
+            c) WebRowSet <br>
+            d) FilteredRowSet <br>
+            e) JoinRowSet <br>
+            - Each type of rowset has features that are suitable for specific needs. All these rowset interfaces
+            inherit, directly or indirectly, from the <code>RowSet</code> interface. The <code>RowSet</code> interface
+            is inherited from the <code>ResultSet</code> interface. Therefore,
+            all methods in the <code>ResultSet</code> interface are also available in all types of rowsets.
+
+            <img src="imgs/Java8_JDBC_Imgs/RowSet_ClassDiagram.PNG" class="center-block img-fluid"
+                 alt="RowSet_ClassDiagram"
+                 width="37.5%">
+        </div>
 
 
+        <div class="sub-heading">JDBCRowSet</div>
+        <div>
+            - Refer how to create JDBCRowSet code to read from a table and update a table<a
+                href="https://github.com/rgbk21/JDBC_Setup/blob/master/src/main/java/com/example/demo/RowSet/JDBCRowSetTest.java">here</a>.
+            <br>
+            - A <code>JdbcRowSet</code> is also called a <i>connected rowset</i> because it always maintains a database
+            connection. <br>
+            - You can think of a <code>JdbcRowSet</code> as a thin wrapper for a <code>ResultSet</code>. As a <code>ResultSet</code>
+            always maintains a database connection, so does a <code>JdbcRowSet</code>. It adds some methods that let you
+            configure the connection behaviors. <br>
+            - Updating data using a <code>JdbcRowSet</code> is similar to updating data using a <code>ResultSet</code>.
+            Make sure that you set the auto-commit mode for the rowset appropriately. <br>
+            - Note that you must call the <code>updateRow()</code> method of the <code>JdbcRowSet</code> after updating
+            the column's value and before you scroll to another row. Otherwise, your changes will be lost as it is lost
+            in the case of updating data in a <code>ResultSet</code>. In case of <code>JdbcRowSet</code>, you do not
+            have a direct access to the <code>Connection</code> object. You need to use <code>JdbcRowSet</code> object's
+            <code>commit()</code> and <code>rollback()</code> methods to commit and rollback changes to the database.
+        </div>
 
+
+        <div class="sub-heading">CachedRowSet</div>
+        <div>
+            - A <code>CachedRowSet</code> is also called a <i>disconnected rowset</i> because it is disconnected
+            from a database when it does not need a database connection. It keeps the database connection open only for
+            the duration it needs to interact with the database. Once it is done with the connection, it disconnects.
+            For example, it connects to a database when it needs to retrieve or update data. <br>
+            - It retrieves all data generated by the command and caches the data in memory. Care should be taken not to
+            retrieve a large volume of data in a <code>CachedRowSet</code>. Otherwise, it may degrade the performance of
+            the application. It provides a new feature called <i>paging</i>, which lets you deal with large volume of
+            data in chunks. <br>
+            - A <code>CachedRowSet</code> is always serializable, scrollable, and updatable. <br>
+            - You can use the following 4 methods to populate data in a <code>CachedRowSet</code>: <br>
+            a) <code>void execute() throws SQLException</code> <br>
+            b) <code>void execute(Connection conn) throws SQLException</code> <br>
+            c) <code>void populate(ResultSet data) throws SQLException</code> <br>
+            d) <code>void populate(ResultSet rs, int startRow) throws SQLException</code> <br>
+            - What is the actual documentation supposed to be? Is it <a
+                href="https://docs.oracle.com/cd/B28359_01/java.111/b31224/jcrowset.htm">this</a> or <a
+                href="https://docs.oracle.com/javase/7/docs/api/javax/sql/rowset/CachedRowSet.html">this</a>????? <br>
+            - <a href="https://docs.oracle.com/javase/7/docs/api/javax/sql/rowset/CachedRowSet.html">This Java Doc
+            link</a> explains how paging works in <code>CachedRowSet</code>. <br>
+
+            <br>
+
+            - A <code>CachedRowSet</code> provides an additional feature called <i>paging</i> to let you retrieve rows
+            generated by a command in chunks. The chunk of rows that is retrieved at one time is called a <i>page</i>.
+            You can think of a page as a set of rows, where you decide the number of rows in the set. The maximum number
+            of rows in a page is called the <i>page size</i>. <br>
+            - Suppose a command for a <code>CachedRowSet</code> generates 500 rows. By calling its
+            <code>setPageSize(90)</code>, it will retrieve a maximum of 90 rows at a time. When you call its
+            <code>execute()</code> method, it will retrieve the first 90 rows. To retrieve the next 90 rows, you need to
+            call its
+            <code>nextPage()</code> method. When it has retrieved five pages (450 rows), calling the
+            <code>nextPage()</code> will retrieve the remaining 50 rows. <br>
+            - It also provides a <code>previousPage()</code> method to retrieve the previous page. You can use the
+            <code>nextPage()</code> and <code>previousPage()</code> methods of a <code>CachedRowSet</code> to retrieve
+            and process a large result set in chunks. <br>
+            - Check the code for how to use paging in <code>CachedRowSet</code> <a
+                href="https://github.com/rgbk21/JDBC_Setup/blob/master/src/main/java/com/example/demo/RowSet/CachedRowSetTest.java#L19">here</a>.
+
+            <br>
+            <br>
+            - Code <a
+                href="https://github.com/rgbk21/JDBC_Setup/blob/3f74e3cd944fd23b4a2956eb105bf89e8b3b3a71/src/main/java/com/example/demo/RowSet/CachedRowSetTest.java#L25">here</a>.
+            Good luck.
+            - You can update the data in a <code>CachedRowSet</code> and save the changes back to the database. The
+            process of saving changes to the database for a <code>CachedRowSet</code> is different from that of a <code>JdbcRowSet</code>.
+            There are two main reasons to keep the save process a little different for a <code>CachedRowSet</code>.
+            First, it is disconnected and you do not want to connect to the database often. Second, the updated data may
+            have conflicts with the data stored in the database. <br>
+            - The process of inserting, updating, and deleting rows in a <code>CachedRowSet</code> is the same as in a
+            <code>JdbcRowSet</code>. But note that these methods do not send changes to the database when used with a
+            <code>CachedRowSet</code>. <br>
+            - After you make changes to a <code>CachedRowSet</code>, you can send changes to the database by calling its
+            <code>acceptChanges()</code> method that may commit the changes if you have set the <code>commit-on-accept-change</code>
+            value to true. You need to refer to the implementation details of the <code>CachedRowSet</code> on how it
+            lets you set the <code>commit-on-accept-change</code> value. If it is set to false, you need to use the
+            <code>commit()</code> or <code>rollback()</code> method of the <code>CachedRowSet</code> interface to commit
+            or rollback changes. <br>
+            - What??? <br>
+            - A <code>CachedRowSet</code> has to deal with conflicts that may exist between the data in it and the data
+            in the database. For example, you might have retrieved a row from the database, changed the data, and kept
+            the changes in the <code>CachedRowSet</code> for a long time. When you are ready to save your changes,
+            another user might have changed the values for the same rows before you. A <code>CachedRowSet</code> uses a
+            synchronization provider object to synchronize the changes with the database. It uses another object, a
+            synchronization resolver, to resolve any conflicts that it detects during
+            the synchronization process. When conflicts are detected during the <code>acceptChanges()</code> method
+            call, it throws a <code>SyncProviderException</code>. You can get the synchronization resolver object that
+            is an instance of the <code>SyncResolver</code> interface, using the <code>getSyncResolver()</code> method
+            of the <code>SyncProviderException</code> object.
+            A <code>SyncResolver</code> object lets you navigate through all conflicts and change the values in the rows
+            with conflicts to new resolved values. You need to use the <code>setResolvedValue()</code> method of a
+            <code>SyncResolver</code> object to set the resolved value when a conflict is detected. <br>
+        </div>
+
+
+        <div class="sub-heading">WebRowSet</div>
+        <div>
+            - TODO: Code Examples <br>
+            - The <code>WebRowSet</code> interface inherits from the <code>CachedRowSet</code> interface. It adds two
+            more features to the <code>CachedRowSet</code>:
+            reading data and metadata from an XML document, and exporting data and metadata to an XML document. The
+            two methods that it adds to provide XML support are <code>readXML()</code> and <code>writeXML()</code>.
+        </div>
+
+        <div class="sub-heading">FilteredRowSet</div>
+        <div>
+            - TODO: Code Examples <br>
+            - The <code>FilteredRowSet</code> interface inherits from the <code>WebRowSet</code> interface. It provides
+            filtering capability to a rowset at the client side. <br>
+            - You can apply a filter to the rowset by using a where clause in its SQL command, which is
+            executed in a database. But a <code>FilteredRowSet</code> lets you filter the rows of a rowset after it has
+            retrieved the data from a database. <br>
+            - Setting a filter to a rowset does not delete the rows from the rowset. Rather, it lets you access only
+            those rows that meet the filter criteria. The filter also applies to inserting, updating, and deleting the
+            rows in the rowset. You can only read, insert, update, and delete rows that meet the filter criteria. You
+            can reset the filter any time you want to view all rows of a rowset. A filter is an object of a class that
+            implements the <code>javax.sql.rowset.Predicate</code> interface.
+        </div>
+
+
+        <div class="sub-heading">JoinRowSet</div>
+        <div>
+            - TODO: Code Examples <br>
+            - The JoinRowSet interface inherits from the WebRowSet interface. It provides the ability to combine (or
+            join) two or
+            more disconnected rowsets into one rowset. Rows from two or more tables are joined in a query using a SQL
+            JOIN.
+            A JoinRowSet lets you have a SQL JOIN between two or more rowsets without using a SQL JOIN in a query. <br>
+            - There are 5 standard types of Joins: <br>
+            a) Inner Join <br>
+            b) Left Outer Join <br>
+            c) Right Outer Join <br>
+            d) Full Join <br>
+            e) Cross Join
+        </div>
+
+        <div class="sub-heading">BatchUpdates</div>
+        <div>
+            - You saw examples of using the <code>Statement</code>, <code>PreparedStatement</code>, and <code>CallableStatement</code>
+            interfaces that let you send one SQL command (or stored procedure call) at a time to the database. The JDBC
+            API includes a batch update feature that lets you send multiple update commands to a database in a batch (in
+            one bundle) for execution. A batch update greatly improves performance. <br>
+            - The update commands that you can use in a batch update are SQL INSERT, UPDATE,
+            DELETE, and stored procedures. A command in a batch should not produce a result set. Otherwise, the JDBC
+            driver will throw a <code>SQLException</code>. A command should generate an update count that will indicate
+            the number of rows affected in the database by the execution of that command.
+        </div>
     </div>
+
+
+    <hr>
+    <div id="Ch1_Vlad" class="chapter">Chapter 1: JDBC and DB Essentials: Performance and Scaling</div>
+    <hr>
+
+    <div>
+        - Github repo for Vlad <a href="https://github.com/vladmihalcea/high-performance-java-persistence">here</a>.
+    </div>
+
+    <div class="sub-heading">Understanding entities and value types</div>
 
 
     <div id="HIA_CH4" class="chapter">Chapter 4: Mapping Persistent Classes</div>
