@@ -172,7 +172,7 @@
             In Java, we can model aggregation with a plain old reference: <br>
             <code>class Wheel {}</code> <br>
             <code>class Car {</code> <br>
-            <code> List&ltWheel&gt wheels;</code> <br>
+            <code> List&lt;Wheel&gt wheels;</code> <br>
             <code>}</code>
         </li>
 
@@ -182,7 +182,7 @@
             same way as aggregation: <br>
             <code>class Child {}</code> <br>
             <code>class Mother {</code> <br>
-            <code> List&ltChild&gt children;</code> <br>
+            <code> List&lt;Child&gt children;</code> <br>
             <code>}</code> <br>
 
             How can we tell if a reference means aggregation or association?
@@ -268,13 +268,9 @@
             the <code>Box</code> constructor.
             <br>
             - So this is the key concept behind <code>super()</code>: when a subclass calls <code>super()</code>, it is
-            calling the
-            constructor
-            of its immediate superclass. Thus <code>super()</code> always refers to the superclass immediately above the
-            calling class.
-            Also, <code>super()</code> must always be the first statement executed inside a subclass constructor (that
-            is
-            IF you are using a <code>super()</code>).
+            calling the constructor of its immediate superclass. Thus <code>super()</code> always refers to the
+            superclass immediately above the calling class. Also, <code>super()</code> must always be the first
+            statement executed inside a subclass constructor (that is IF you are using a <code>super()</code>).
             <br>
             - Remember that if you are calling the constructor of the subclass, and that constructor does not contain a
             <code>super()</code>, the default no-args constructor of the superclass will be called. If the superclass
@@ -417,7 +413,7 @@
             <code>List</code> can be
             translated into a <code>LinkedList</code> without
             affecting the rest of the codebase. The only change that we will have to make in the codebase is change the
-            Line1 to <code>new LinkedList&ltSomeObject&gt()</code>.
+            Line1 to <code>new LinkedList&lt;SomeObject&gt()</code>.
             When you do, in fact, have to use methods that are specific ONLY to <code>ArrayList</code>, you can convert
             <code>List</code>
             to <code>ArrayList</code> very easily.
@@ -581,7 +577,7 @@
                 <br>
                 a) <code>ArrayList()</code>: Builds an empty Array List
                 <br>
-                b) <code>ArrayList(Collection&lt? extends E&gt c)</code>: Builds an Array List that is initialized with
+                b) <code>ArrayList(Collection&lt;? extends E&gt c)</code>: Builds an Array List that is initialized with
                 the
                 elements of the Collection c in the order they are returned by the collection's iterator.
                 <br>
@@ -670,7 +666,7 @@
                 <br>
                 a) <code>LinkedList()</code>: The first constructor builds an empty linked list.
                 <br>
-                b) <code>LinkedList(Collection&lt? extends E&gt c)</code>: The second constructor builds a linked list
+                b) <code>LinkedList(Collection&lt;? extends E&gt c)</code>: The second constructor builds a linked list
                 that is initialized with the elements of the Collection c.
             </div>
             <div class="sub-heading">Linked List vs Array List</div>
@@ -730,7 +726,7 @@
             <code>HashSet</code> extends <code>AbstractSet</code> and implements the <code>Set</code> interface. It
             creates a collection
             that uses a hash table for storage.
-            <code>HashSet</code> is a generic class that has this declaration: <code>class HashSet&ltE&gt</code>.
+            <code>HashSet</code> is a generic class that has this declaration: <code>class HashSet&lt;E&gt</code>.
             <br>
             - This class implements the <code>Set</code> interface, backed by a hash table (actually a
             <code>HashMap</code>
@@ -754,7 +750,7 @@
             capacity
             (16) and load factor (0.75).
             <br>
-            b) <code>HashSet(Collection&lt? extends E&gt c)</code>: Initializes the hash set by using the elements of c.
+            b) <code>HashSet(Collection&lt;? extends E&gt c)</code>: Initializes the hash set by using the elements of c.
             <br>
             c) <code>HashSet(int capacity)</code>: Constructs a new, empty set; the backing HashMap instance has the
             specified
@@ -772,7 +768,7 @@
             The <code>LinkedHashSet</code> class extends <code>HashSet</code> and adds no members of its own. It is a
             generic class
             that has this declaration:
-            <code>class LinkedHashSet&ltE&gt</code>. Here, <code>E</code> specifies the type of objects that the set
+            <code>class LinkedHashSet&lt;E&gt</code>. Here, <code>E</code> specifies the type of objects that the set
             will hold. Its
             constructors parallel those in HashSet. Hash table and
             linked list implementation of the Set interface, with predictable iteration order. This implementation
@@ -813,7 +809,7 @@
             set with the
             specified initial capacity and load factor.
             <br>
-            d) <code>LinkedHashSet(Collection&lt? extends E&gt c)</code>: Constructs a new linked hash set with the
+            d) <code>LinkedHashSet(Collection&lt;? extends E&gt c)</code>: Constructs a new linked hash set with the
             same elements as
             the specified collection.
         </div>
@@ -846,15 +842,15 @@
             natural ordering
             of its elements.
             <br>
-            b) <code>TreeSet(Collection&lt extends E&gt c)</code> : Constructs a new tree set containing the elements
+            b) <code>TreeSet(Collection&lt; extends E&gt c)</code> : Constructs a new tree set containing the elements
             in the
             specified collection, sorted according to the natural ordering of its elements.
             <br>
-            c) <code>TreeSet(Comparator&lt? super E&gt comparator)</code>: Constructs a new, empty tree set, sorted
+            c) <code>TreeSet(Comparator&lt;? super E&gt comparator)</code>: Constructs a new, empty tree set, sorted
             according to the
             specified comparator.
             <br>
-            d) <code>TreeSet(SortedSet&ltE&gt s)</code>: Constructs a new tree set containing the same elements and
+            d) <code>TreeSet(SortedSet&lt;E&gt s)</code>: Constructs a new tree set containing the same elements and
             using the same
             ordering as the specified sorted set.
         </div>
@@ -884,9 +880,9 @@
             <br>
             - The <code>Iterator</code> and the <code>ListIterator</code> are generic interfaces:
             <br>
-            <code>interface Iterator &ltE&gt</code>
+            <code>interface Iterator &lt;E&gt</code>
             <br>
-            <code>interface ListIterator &ltE&gt</code>
+            <code>interface ListIterator &lt;E&gt</code>
             <br>
             Here <code>E</code> specifies the type of object being iterated.
         </div>
@@ -935,7 +931,7 @@
             Both keys and values are objects. The keys must be unique, but the values may be duplicated. Some maps can
             accept a null key and null values, others cannot.
             <br>
-            - <code>Map</code> is generic and is declared as shown here: <code>interface Map &ltK, V&gt</code>
+            - <code>Map</code> is generic and is declared as shown here: <code>interface Map &lt;K, V&gt</code>
             <br>
             Here <code>K</code> specifies the types of keys, and <code>V</code> specifies the types of values.
             <br>
@@ -949,7 +945,7 @@
             <br>
             - The Map interface provides three <i>collection</i> views:
             <br>
-            a) <code>Set&ltMap.Entry&ltK,V&gt&gt entrySet()</code>: Returns a <code>Set</code> view of the mappings
+            a) <code>Set&lt;Map.Entry&lt;K,V&gt&gt entrySet()</code>: Returns a <code>Set</code> view of the mappings
             contained in this
             map. The
             set is backed by the map, so changes to the map are reflected in the set, and vice-versa. If the map is
@@ -960,9 +956,9 @@
             which removes the corresponding mapping from the map, via the Iterator.remove, Set.remove, removeAll,
             retainAll and clear operations. It does not support the add or addAll operations.
             <br>
-            b) <code>Set&ltK&gt keySet()</code>: Returns a <code>Set</code> view of the keys contained in this map.
+            b) <code>Set&lt;K&gt keySet()</code>: Returns a <code>Set</code> view of the keys contained in this map.
             <br>
-            c) <code>Collection&ltV&gt values()</code>: Returns a <code>Collection</code> view of the values contained
+            c) <code>Collection&lt;V&gt values()</code>: Returns a <code>Collection</code> view of the values contained
             in this map.
             <br>
             What's up with the 3 different return types?
@@ -1017,7 +1013,7 @@
             <code>entrySet()</code>, <code>keySet()</code> and <code>values()</code> methods).
             (This interface is the map analogue of SortedSet.)
             <br>
-            - <code>SortedMap</code> is generic and is declared here: <code>interface SortedMap&ltK, V&gt</code>. Here
+            - <code>SortedMap</code> is generic and is declared here: <code>interface SortedMap&lt;K, V&gt</code>. Here
             <code>K</code> specifies the type of keys, and <code>V</code> specifies the type of values.
             <br>
             - All keys inserted into a sorted map must implement the <code>Comparable</code> interface (or be accepted
@@ -1047,7 +1043,7 @@
             retrieval of entries based on the closest match to a given key or keys.
             <br>
             - <code>NavigableMap</code> is a generic interface that has
-            this declaration: <code>interface NavigableMap&ltK,V&gt</code>. Here, <code>K</code> specifies the type of
+            this declaration: <code>interface NavigableMap&lt;K,V&gt</code>. Here, <code>K</code> specifies the type of
             the
             keys, and <code>V</code> specifies the type of the values associated with the keys.
         </div>
@@ -1062,7 +1058,7 @@
             Each of these
             set elements is a <code>Map.Entry</code> object.
             <br>
-            - <code>Map.Entry</code> is generic and is declared like this: <code>interface Map.Entry&ltK, V&gt</code>.
+            - <code>Map.Entry</code> is generic and is declared like this: <code>interface Map.Entry&lt;K, V&gt</code>.
             Here <code>K</code>
             specifies the type of keys, and <code>V</code> specifies the type of Values.
             <br>
@@ -1080,7 +1076,7 @@
             <div class="code-snippet">
                 <script src="https://gist.github.com/rgbk21/0ca9009ba2110c481c5f419c486c5037.js"></script>
             </div>
-            <b>How do we remove a &ltkey, value&gt pair</b>
+            <b>How do we remove a &lt;key, value&gt pair</b>
             <div class="code-snippet">
                 <script src="https://gist.github.com/rgbk21/67d9b1ec5083fbf411bf39f69eb2cebb.js"></script>
             </div>
@@ -1122,14 +1118,14 @@
             automatically replaces any preexisting value that is associated with the specified key with the new value.
             <code>HashMap</code> is a generic class that has this declaration:
             <br>
-            <code>class HashMap&ltK, V&gt</code>. Here <code>K</code> specifies the type of the key, and <code>V</code>specifies
+            <code>class HashMap&lt;K, V&gt</code>. Here <code>K</code> specifies the type of the key, and <code>V</code>specifies
             the type of the Value.
             <br>
             The following Constructors are defined:
             <br>
             a) <code>HashMap</code>: Constructs a default Hash Map
             <br>
-            b) <code>HashMap(Map &lt? extends K, ? extends V &gt m)</code>: Initializes the Hash Map by using the
+            b) <code>HashMap(Map &lt;? extends K, ? extends V &gt m)</code>: Initializes the Hash Map by using the
             elements of m
             <br>
             c) <code>HashMpa(int capacity)</code>: Initializes the capacity of the Hash map to <i>capacity</i>.
@@ -1147,7 +1143,7 @@
             key/value pairs in sorted order and allows rapid retrieval. You should note that, unlike a hash map, a tree
             map guarantees that its elements will be sorted in ascending key order. <code>TreeMap</code> is a generic
             class that has
-            this declaration: <code>class TreeMap&ltK, V&gt</code> Here, <code>K</code> specifies the type of keys, and
+            this declaration: <code>class TreeMap&lt;K, V&gt</code> Here, <code>K</code> specifies the type of keys, and
             <code>V</code> specifies the type of values.
             <br>
             The <code>TreeMap</code> constructors are:
@@ -1155,11 +1151,11 @@
             a) <code>TreeMap</code>: Constructs an empty tree map that will be sorted by using the natural order of its
             keys.
             <br>
-            b) <code>TreeMap(Comparator &lt? super K&gt comp)</code>: Constructs an empty tree-based map that will be
+            b) <code>TreeMap(Comparator &lt;? super K&gt comp)</code>: Constructs an empty tree-based map that will be
             sorted by using the
             <code>Comparator</code> comp.
             <br>
-            c) <code>TreeMap(Map &lt? extends K, ? extends V &gt m)</code>: Initializes a tree map with the entries from
+            c) <code>TreeMap(Map &lt;? extends K, ? extends V &gt m)</code>: Initializes a tree map with the entries from
             m, which will be sorted by using the natural order of the keys.
             <br>
             d) <code>TreeMap(SortedMap &ltK, ? extends V &gt sm)</code>: Initializes a tree map with the entries from
@@ -1285,6 +1281,11 @@
                 <img src="imgs/LambdaExpressions/LambdaExpressionExamples.PNG" class="center-block img-fluid"
                      alt="LambdaExpressionExamples" width="50%">
             </div>
+        </div>
+
+        <div class="sub-heading">Use case for a Lambda Expression</div>
+        <div>
+            - <a href="https://youtu.be/wOks4LW6I24?t=317">Link to</a> Java 8 best practices by Stephen Colebourne talk.
         </div>
 
         <div class="sub-heading">Syntax for Lambda Expressions</div>
@@ -1457,7 +1458,7 @@
             </table>
         </div>
 
-        <div class="sub-heading">Using the Function&ltT,R&gt Interface</div>
+        <div class="sub-heading">Using the Function&lt;T,R&gt; Interface</div>
         <div>
             - There are also several specialized versions of these interfaces for frequently used
             primitive data types. <br>

@@ -140,8 +140,13 @@
         <br>
         <a href="#HIA_Ch1">Chapter 1: Understanding Object/Relational Persistence</a>
         <br>
+        <br>
         Udemy Oracle Lecture Series: <br>
-        <a href="#Section1">Section 1: Database Concepts</a>
+        <a href="#Section1">Section 1: Database Concepts</a> <br>
+        <a href="#Section2">Section 2: Software Download and Installation</a> <br>
+        <a href="#Section3">Section 3: Retrieving Data</a> <br>
+        <a href="#Section4">Section 4: Restricting Data</a> <br>
+        <a href="#Section5">Section 5: Sorting Data</a> <br>
 
 
         <hr>
@@ -1256,11 +1261,473 @@
                          alt="Empty"
                          width="40%">
                 </div>
+            </div>
+        </div>
+
+
+        <hr>
+        <div id="Section2" class="sub-heading">Section 2: Software Download and Installation</div>
+        <hr>
+
+        <div class="textual-content">
+
+            <div class="sub-heading">SQL statements used</div>
+            - There are 4 types of SQL statements that are used: <br>
+            a) Data Manipulation Statements (DML): SELECT, INSERT, UPDATE, DELETE, MERGE<br>
+            b) Data Definition Language (DDL): CREATE, ALTER, DROP, RENAME, TRUNCATE <br>
+            c) Data Control Language (DCL): GRANT, REVOKE<br>
+            d) Transaction Control Language (TCL): COMMIT, ROLLBACK, SAVEPOINT
+
+        </div>
+
+        <hr>
+        <div id="Section3" class="sub-heading">Section 3: Retrieving Data</div>
+        <hr>
+        <div class="textual-content">
+            <div class="sub-heading">Oracle Datatypes</div>
+            <div>
+                - Read about datatypes <a
+                    href="https://www.oracletutorial.com/oracle-basics/oracle-data-types/">here</a>.
+                <br>
+
+                <table class="table table-bordered table-sm">
+                    <thead>
+                    <tr>
+                        <th>Data Type</th>
+                        <th>Description</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>VARCHAR2(size)</td>
+                        <td>
+                            Stores variable length character data. <i>size</i> specifies the maximum length of the
+                            string
+                            that can be stored in this datatype. So if you have declared a column as VARCHAR(100), and
+                            then
+                            stored a string that contains only 10 characters, then only 10 bytes will be occupied in the
+                            DB.
+                            You can also specify the size as <code>VARCHAR2(11 BYTE)</code>. The difference between the
+                            two
+                            kinds of definitions is explained <a
+                                href="https://stackoverflow.com/questions/81448/difference-between-byte-and-char-in-column-datatypes">here</a>.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>CHAR(size)</td>
+                        <td>
+                            Fixed-length character data. So if you declare a column as CHAR(100), and then store a
+                            string
+                            that contains only 10 characters, it will still occupy 100 bytes in the DB. Note that 1 char
+                            occupies 1 byte. Unlike Java, where 1 char has a size of 2 bytes.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>NUMBER(p, s)</td>
+                        <td>
+                            Variable-length numeric data. <i>p</i> means precision, <i>s</i> means scale.
+                            <code>NUMBER(6,3)</code> accepts 6 digits at all with 3 being after the decimal period.
+                            This gives us only 3 digits possible before the period, and, hence, maximal value possible
+                            to
+                            store is 999.999 <a
+                                href="https://stackoverflow.com/questions/2116257/oracle-number-data-type">SO
+                            Source</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>DATE</td>
+                        <td>
+                            Date and Time values
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>LONG</td>
+                        <td>Variable length Character data. <a
+                                href="https://docs.oracle.com/cd/E11882_01/appdev.112/e18294/adlob_intro.htm#ADLOB45117">This
+                            link</a> explains why you should use *LOB datatype instead of Long. Also read <a
+                                href="https://stackoverflow.com/questions/28136647/why-there-are-so-much-restriction-on-long-datatype-in-oracle">here</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>RAW and LONG RAW</td>
+                        <td>Raw Binary Data. This is also not recommended. Use BLOB or BFILE instead</td>
+                    </tr>
+                    <tr>
+                        <td>BLOB</td>
+                        <td>
+                            BLOB stands for binary large object. You use the BLOB data type to store binary objects with
+                            the
+                            maximum size of (4 gigabytes - 1) * (database block size). Typically used for multimedia
+                            data
+                            such as images, audio, and video.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>CLOB</td>
+                        <td>
+                            CLOB stands for character large object. You use CLOB to store single-byte or multibyte
+                            characters with the maximum size is (4 gigabytes - 1) * (database block size). Used for
+                            large
+                            strings or documents that use the database character set exclusively.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>BFILE</td>
+                        <td>
+                            External Binary File. A binary file stored outside of the database in the host operating
+                            system
+                            file system, but
+                            accessible from database tables. BFILEs can be accessed from your application on a read-only
+                            basis. Use BFILEs to store static data, such as image data, that is not manipulated in
+                            applications. BFILE stores a pointer to the actual file somewhere in the operating system.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>ROWID</td>
+                        <td>
+                            A Base64 number representing the unique address of the row in a table. The ROWID uniquely
+                            identifies every row in the table. But the ROWID for a given record can change over the
+                            lifetime
+                            of a system, for instance through a table rebuild. Also if one record is deleted a new
+                            record
+                            could be given that ROWID. Consequently ROWIDs are not suitable for use as UIDs in the long
+                            term. But they are good enough for use within a transaction.
+                            <a href="https://stackoverflow.com/questions/2701782/rowid-oracle-any-use-for-it">Source</a>.
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
 
             </div>
 
 
+            <div class="sub-heading">What is a NULL Value</div>
+            <div>
+                - Null means unknown or non-existent <br>
+                - Represented by <code>(null)</code> on Oracle DBs. <br>
+                - NULL values are different than normal values in DBs. For instance, null values do not take up any
+                space in
+                the DB, unlike say an empty string, spaces, or a value of 0. If you are counting rows in a DB, the DB
+                does
+                not
+                count the rows in which the value is NULL, because it does not consider that value to exist. <br>
+
+            </div>
+
+
+            <div class="sub-heading">How to get information about the table</div>
+            <div>
+                - <code>DESCRIBE <i>tableName</i></code> <br>
+                - <code>DESC <i>tableName</i></code> <br>
+                - You can get more details by highlighting the table name in the SQLDeveloper tool and then pressing
+                <code>Shift + F4</code> <br>
+                - <code>INFORMATION <i>tableName</i></code> <br>
+                - <code>INFO <i>tableName</i></code> <br>
+                - The <code>INFO</code> command can print out useful information like Foreign Key constraints in the
+                table,
+                indexes, stored procedures, views etc used in the table. <br>
+                - <code>INFO+ <i>tableName</i></code>
+            </div>
+
+
+            <div class="sub-heading">SQL Statements Basics</div>
+            <div>
+                - SQL statements are not case-sensitive <br>
+                - SQL Commands can be terminated using a <code>;</code> or a <code>/</code>. If terminating using a
+                <code>/</code>, the <code>/</code> character should be on a new line. <br>
+            </div>
+
+            <div class="sub-heading">How to connect to SQLPlus</div>
+            <div>
+                - In CommandPrompt, type: <code>sqlplus hr/hr@//localhost:1521/orclpdb</code> <br>
+                - <code>hr/hr</code> is the username/password combo of your connection <br>
+                - In SQLPlus, you have to terminate each statement with a mandatory <code>;</code> or a <code>/</code>
+            </div>
+
+            <div class="sub-heading">Using Column Aliases</div>
+            <div>
+                - You can rename a column heading using column aliases:
+                <code>SELECT first_name name, last_name surname FROM employees;</code> <br>
+                - Add the <code>AS</code> keyword to increase readability:
+                <code>SELECT first_name AS name, last_name AS surname FROM employees;</code> <br>
+                - It can also be used to change names for computations. So instead of doing this: <br>
+                <code>SELECT employee_id, salary + NVL(salary * commission_pct, 0), salary, commission_pct </code>
+                <code>FROM employees;</code> you can do this: <br>
+                <code>SELECT employee_id, salary + NVL(salary * commission_pct, 0)</code>
+                <code>AS modified_salary, salary, commission_pct FROM employees;</code> <br>
+                - Aliases are used with double quotation marks if our alias name contains spaces, special characters, or
+                it
+                is used for handling case-sensitivity. <br>
+                <code>SELECT employee_id, salary + NVL(salary * commission_pct, 0) </code>
+                <code>AS "New Salary", salary, commission_pct FROM employees;</code>
+            </div>
+
+
+            <div class="sub-heading">Using Quote Operator</div>
+            <div>
+                - If you want to use the <code>'</code> character in your column names, you need to use the Quote
+                operator
+                <br>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/e87b7c070b88743f52728b2ae768954e.js"></script>
+                </div>
+            </div>
+
+            <div class="sub-heading">DISTINCT and UNIQUE Operators</div>
+            <div>
+                - Used to count the number of rows that contains unique data. <br>
+                - DISTINCT and UNIUE are the same. DISTINCT is the new version of UNIQUE. Prefer DISTINCT. <br>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/531fa12cb45f4b192447417301e2bd1c.js"></script>
+                </div>
+            </div>
+
+            <div class="sub-heading">Concatenation Operators</div>
+            <div>
+                - Used to concatenate two or more strings or columns and returns them as a single column output value
+                <br>
+                - Concatenate 2 or more strings by using <code> || </code> operator <br>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/fa3e1bae14925f0d89d8d71d63097b19.js"></script>
+                </div>
+            </div>
+
+
+            <div class="sub-heading">Arithmetic Operators</div>
+            <div>
+                - Arithmetic operations performed with <code>NULL</code> values returns <code>NULL</code>. <br>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/756d98c90f5e8d3de0fdec13ede56f18.js"></script>
+                </div>
+            </div>
         </div>
+
+
+        <hr>
+        <div id="Section4" class="sub-heading">Section 4: Restricting Data</div>
+        <hr>
+
+        <div class="textual-content">
+            <div class="sub-heading">Using WHERE clause</div>
+            <div>
+                - <code>WHERE</code> clause is used with: <br>
+                a) Comparison operators like (=, <, >, <=, >=, <>, !=) <br>
+                b) <code>BETWEEN ... AND</code>, <code>IN</code>, <code>LIKE</code>, and <code>IS NULL</code> <br>
+                c) Logical operators: <code>AND</code>, <code>OR</code>, <code>NOT</code>
+            </div>
+
+
+            <div class="sub-heading">Using Comparison Operators</div>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/ba90ef9d1639b1d9230e68f0371c79ea.js"></script>
+            </div>
+
+            <div class="sub-heading">BETWEEN ... AND Operator</div>
+            <div>
+                - Retrieves data between the specified upper limit and lower limit. The lower and the upper limits are
+                included. <br>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/6a4b88ded76b4ebfcb01e5ce1684fcdf.js"></script>
+                </div>
+            </div>
+
+            <div class="sub-heading">IN Operator</div>
+            <div>
+                - The <code>IN</code> operator is used to retrieve the restricted values in the specified list. <br>
+                - Just like the <code>BETWEEN ... AND</code> operators, data types like the NUMBER, CHARACTER, DATE can
+                be used in the <code>IN</code> clause. <br>
+                - The <code>IN</code> operator performs a sort on the column before returning the rows if the column has
+                an Index on it. <br>
+                <div>
+                    <script src="https://gist.github.com/rgbk21/594c53041e99f65d3de7df8f4ff738ac.js"></script>
+                </div>
+            </div>
+
+            <div class="sub-heading">LIKE Operator</div>
+            <div>
+                - The <code>LIKE</code> operator is used to perform wildcard searchesan retrieve rows matching a certain
+                character pattern: <br>
+                a) <code> % </code>(Percentage): matches any number of characters. So "SA%" would match SA, SAD, SADE,
+                SADER, and so on <br>
+                b) <code> _ </code>(Underscore): matches exactly one character. So "SA_" would match exactly SAD only.
+                <br>
+
+                <div>
+                    <script src="https://gist.github.com/rgbk21/bfd3f6a1a9817e8f5b31e153f2c4eb09.js"></script>
+                </div>
+            </div>
+
+
+            <div class="sub-heading">IS NULL Operator</div>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/4fa5db4513730571b762d0a11952483c.js"></script>
+            </div>
+
+            <div class="sub-heading">Logical operators: AND, OR, NOT</div>
+            <div>
+                - AND Operator's truth table:
+                <table class="table table-bordered table-sm">
+                    <thead>
+                    <tr>
+                        <th>AND</th>
+                        <th>TRUE</th>
+                        <th>FALSE</th>
+                        <th>NULL</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><b>TRUE</b></td>
+                        <td>TRUE</td>
+                        <td>FALSE</td>
+                        <td>NULL</td>
+                    </tr>
+
+                    <tr>
+                        <td><b>FALSE</b></td>
+                        <td>FALSE</td>
+                        <td>FALSE</td>
+                        <td>FALSE</td>
+                    </tr>
+
+                    <tr>
+                        <td><b>NULL</b></td>
+                        <td>NULL</td>
+                        <td>FALSE</td>
+                        <td>NULL</td>
+                    </tr>
+                    </tbody>
+                </table>
+                - In <code>AND</code> operator, if one side is FALSE, it will not return the related row. <br>
+
+                - OR Operator's truth table:
+                <table class="table table-bordered table-sm">
+                    <thead>
+                    <tr>
+                        <th>OR</th>
+                        <th>TRUE</th>
+                        <th>FALSE</th>
+                        <th>NULL</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><b>TRUE</b></td>
+                        <td>TRUE</td>
+                        <td>TRUE</td>
+                        <td>TRUE</td>
+                    </tr>
+
+                    <tr>
+                        <td><b>FALSE</b></td>
+                        <td>TRUE</td>
+                        <td>FALSE</td>
+                        <td>NULL</td>
+                    </tr>
+
+                    <tr>
+                        <td><b>NULL</b></td>
+                        <td>TRUE</td>
+                        <td>NULL</td>
+                        <td>NULL</td>
+                    </tr>
+                    </tbody>
+                </table>
+
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/a99403ee08f5e5f10808263e13b539b9.js"></script>
+                </div>
+            </div>
+
+
+            <div class="sub-heading">Rules of precedence</div>
+            <div>
+                - the order of preference for SQL operators is as follows: <br>
+                <img src="resources/section4_images/orderOfPreference.PNG" class="center-block img-fluid"
+                     alt="Atomic_Data_Rules"
+                     width=50%>
+            </div>
+        </div>
+
+
+        <hr>
+        <div id="Section5" class="sub-heading">Section 5: Sorting Data</div>
+        <hr>
+
+        <div class="textual-content">
+
+            <div class="sub-heading">ORDER BY Clause</div>
+            <div>
+                - The default ordering is ascending. <br>
+                - <code>ORDER BY</code> is always the last clause in a query.
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/5aba9a70bb2d39f4ad68086bf7186b9b.js"></script>
+                </div>
+            </div>
+
+
+            <div class="sub-heading">ASC and DESC Operators</div>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/13a0a45600521333e31d909b8b02426e.js"></script>
+            </div>
+
+            <div class="sub-heading">NULLS FIRST and NULLS LAST Operators</div>
+            <div class="code-snippet">
+                - The <code>NULLS FIRST</code> or <code>NULLS LAST</code> operators are used for changing the order of
+                the <code>NULL</code> values. <br>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/ecac5366c6508031c4b29870a07fe547.js"></script>
+                </div>
+            </div>
+
+
+            <div class="sub-heading">ROWNUM and ROWID</div>
+            <div>
+                - <code>ROWID</code> is the unique identifier that contains the physical address of the row. Oracle
+                automatically generates the <code>ROWID</code> at the time of insertion of the row. Hence a
+                <code>ROWID</code> uniquely identifies where the ROW resides on the disk. It contains information
+                identifying the Disc Number, Cylinder, Block Number and Block Offset. No idea what any of this means.
+                The fastest way to access a ROW is using it's <code>ROWID</code>. Modification of a row does not change
+                it's <code>ROWID</code>. But if you delete the row and then add it back again, even if it has the same
+                data as previous, it might be assigned a new <code>ROWID</code>. <a
+                    href="https://stackoverflow.com/questions/2701782/rowid-oracle-any-use-for-it">Read here</a> for
+                more info. Read more about <code>ROWID</code> <a
+                    href="https://docs.oracle.com/en/database/oracle/oracle-database/19/sqlrf/ROWID-Pseudocolumn.html#GUID-F6E0FBD2-983C-495D-9856-5E113A17FAF1">here</a>
+                on Oracle Docs.
+                <br>
+                - <code>ROWNUM</code> is the consecutive logical sequence number given to the rows fetched from the
+                table. To limit the returning rows in a table, you can use the <code>ROWNUM</code> pseudo column. <br>
+                - Read ROWNUM docs on Oracle <a
+                    href="https://docs.oracle.com/en/database/oracle/oracle-database/19/sqlrf/ROWNUM-Pseudocolumn.html#GUID-2E40EC12-3FCF-4A4F-B5F2-6BC669021726">here</a>.
+                It contains important information. <br>
+                - Conditions testing for ROWNUM values greater than a positive integer are always false. <br>
+                - <a
+                    href="https://stackoverflow.com/questions/470542/how-do-i-limit-the-number-of-rows-returned-by-an-oracle-query-after-ordering">This
+                SO Post</a> talks about how to do pagination in Oracle. <br>
+
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/efb59af67a528d52a298227234be5574.js"></script>
+                </div>
+
+            </div>
+
+            <div class="sub-heading">FETCH Clause</div>
+            <div>
+                - The <code>FETCH</code> clause is used along with the <code>SELECT</code> and <code>ORDER BY</code>
+                clause to limit the number of rows and retrieve a portion of the returning rows. <br>
+
+                <img src="resources/section4_images/FETCH.PNG" class="center-block img-fluid"
+                     alt="FETCH"
+                     width=75%>
+
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/a61c918fd32a328be039724b1064f175.js"></script>
+                </div>
+            </div>
+
+
+        </div>
+
 
     </div>
 </div>

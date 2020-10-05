@@ -379,7 +379,8 @@
             - The syntax to define the Connection URL is:
             <code>&lt;protocol&gt;:&lt;sub-protocol&gt;:&lt;data-source-details&gt;</code>, The
             <code>&lt;protocol&gt</code> part is always set to jdbc. The <code>&lt;sub-protocol&gt;</code> part is
-            vendor-specific. The &lt;data-source-details&gt; part is DBMS specific that is used to locate the database.
+            vendor-specific. The <code>&lt;data-source-details&gt;</code> part is DBMS specific that is used to locate
+            the database.
             In some cases, you can also specify some connection properties in this last part of the URL. <br>
             - For OracleDB it is: <code>jdbc:oracle:thin:hr/hr@//localhost:1521/orclpdb</code>. The protocol part is
             jdbc. The sub-protocol part is oracle:thin, which identifies the Oracle Corporation as the vendor, and the
@@ -478,9 +479,17 @@
 
             <br>
 
+            - <a
+                href="https://stackoverflow.com/questions/11043712/what-is-the-difference-between-non-repeatable-read-and-phantom-read">SO
+            Link </a> explaining the difference between Non-Repeatable Read and Phantom Read. (Basically: A
+            non-repeatable read occurs, when during the course of a transaction, a row is retrieved twice and the values
+            within the row differ between reads. A phantom read occurs when, in the course of a transaction, two
+            identical queries are executed, and the collection of rows returned by the second query is different from
+            the first. So, while the Non-Repeatable Read applies to a single row, the Phantom Read is about a range of
+            records which satisfy a given query filtering criteria.) <br>
             - The ANSI SQL-92 standard defines four transaction isolation levels in terms of the above-described three
             situations for data consistency. Each isolation level defines what kinds of data inconsistencies are
-            allowed, or not allowed. The four transaction isolation levels and their corresponding constants in Java are
+            allowed, or not allowed. The four transaction isolation levels and their correspondiYou can check the updated value by runningng constants in Java are
             as follows:
             <li>Read Uncommitted (<code>TRANSACTION_READ_UNCOMMITTED</code>)</li>
             <li>Read Committed (<code>TRANSACTION_READ_COMMITTED</code>)</li>

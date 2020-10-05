@@ -725,7 +725,7 @@
         <br>
         - When prompted by the installer, also choose the third option to change the <code>JAVA_HOME</code> variable
         value to JDK 11. Once the installation is complete, you can check the installed cersion by running
-        <code>java -version</code> in your cmd. You can check the updated value by running <code>echo JAVA_HOME</code>.
+        <code>java -version</code> in your cmd. You can check the updated value by running <code>echo %JAVA_HOME%</code>.
         <br>
         - Next, we need to tell IntelliJ that we have a new JDK for it. <br>
         - Step 2: File -&gt; Project Structure -&gt; Platform Settings -&gt; SDK -&gt; Click on the + symbol and add the
@@ -752,6 +752,69 @@
         - Precisely what is going on over <a
             href="https://github.com/rgbk21/JDBC_Setup/blob/master/src/main/java/com/example/demo/RowSetUtil.java#L38-L44">here</a>.
     </div>
+
+    <div class="one-point">
+        49) What is the meaning of <code>this</code> when used in constructors? <br>
+        - Check <a href="https://stackoverflow.com/a/9967491/8742428">this</a> SO Link for explanation. <br>
+        - <a href="https://stackoverflow.com/a/3728188/8742428">This SO Link</a> shows the different ways in which the
+        <code>this</code> keyword can be used. <br>
+        - From within a constructor, you can also use the <code>this</code> keyword to call another constructor in the
+        same class. Doing so is called an explicit constructor invocation. (<a
+            href="https://docs.oracle.com/javase/tutorial/java/javaOO/thiskey.html">Java Doc Source</a>)
+        <div class="code-snippet">
+            <script src="https://gist.github.com/rgbk21/c0abc19e11043f767718913546be0d75.js"></script>
+        </div>
+
+    </div>
+
+    <div class="one-point">
+        50) Why can't <code>this()</code> and <code>super()</code> be used together in the same constructor? <br>
+        - There is a difference between <code>super()</code> and <code>this()</code>. <br>
+        <code>super</code>: calls the base class constructor. If no super() is explicitly written,the compiler will add
+        one implicitly. <br>
+        <code>this</code>: calls current class constructor<br>
+        - Both <code>this()</code> and <code>super()</code> are constructor calls. Constructor call must always be the
+        first statement. So you either have <code>super()</code> or <code>this()</code> as first statement. <br>
+        - In places where you have to use both <code>this()</code> and <code>super()</code>, make sure that last
+        constructor to be called is the <code>super()</code> constructor. <a
+            href="https://stackoverflow.com/questions/6965561/how-to-call-both-super-and-this-in-case-of-overloaded-constructors">SO
+        Link Source</a>.
+
+    </div>
+
+    <div class="one-point">
+        51) How does <code>reduce</code> in <code>Stream</code> actually work?
+
+    </div>
+
+    <div class="one-point">
+        52) When is the <code>finalize()</code> method called in Java? <br>
+        - <a href="https://stackoverflow.com/questions/2506488/when-is-the-finalize-method-called-in-java">Read here</a>,
+        <a href="https://stackoverflow.com/questions/20829228/shutdown-hook-vs-finalizer-method">here</a>, <a
+            href="https://stackoverflow.com/questions/47762986/replacing-finalize-in-java">here</a>.
+        <br>
+        - TODO
+    </div>
+
+
+    <div class="one-point">
+        52) How to package programs as jar files? <br>
+        - <a href="https://docs.oracle.com/javase/tutorial/deployment/jar/index.html">Read here</a>
+        <br>
+        - TODO
+    </div>
+
+
+    <div class="one-point">
+        53) How to package programs as jar files? <br>
+        - <a href="https://docs.oracle.com/javase/tutorial/deployment/jar/index.html">Read here</a>
+        <br>
+        - TODO
+    </div>
+
+    
+
+
 
 
     <hr/>
