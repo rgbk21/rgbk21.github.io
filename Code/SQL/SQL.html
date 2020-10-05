@@ -147,6 +147,8 @@
         <a href="#Section3">Section 3: Retrieving Data</a> <br>
         <a href="#Section4">Section 4: Restricting Data</a> <br>
         <a href="#Section5">Section 5: Sorting Data</a> <br>
+        <a href="#Section6">Section 6: Using Substitution Variables</a> <br>
+        <a href="#Section7">Section 7: Single-Row Functions</a> <br>
 
 
         <hr>
@@ -1650,6 +1652,7 @@
         </div>
 
 
+
         <hr>
         <div id="Section5" class="sub-heading">Section 5: Sorting Data</div>
         <hr>
@@ -1727,6 +1730,60 @@
 
 
         </div>
+
+
+        <hr>
+        <div id="Section6" class="sub-heading">Section 6: Using Substitution Variables</div>
+        <hr>
+
+        <div class="textual-content">
+
+            <div class="sub-heading">What is a Substitution Variable</div>
+            <div>
+                - The substitution variables are placeholders in an SQL script where you want to substitute some values
+                at runtime. <br>
+                - Note that substitution variables are not a feature of the SQL language itself, but rather a feature of
+                the SQL Developer and the SQLPlus tools. <br>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/f9606977c21fa294bf6800cdde8da290.js"></script>
+                </div>
+            </div>
+
+            <div class="sub-heading">Double Ampersand (&&), DEFINE, and UNDEFINE Commands</div>
+            <div>
+                - Using <code> & </code> does not store the value of the substitution variable <br>
+                - Using <code> && </code> stores the value of the substitution variable. The value associated with that
+                particular substitution variable will be stored for the entire duration of the connection. <br>
+                - So how do we change the values once they have been assigned? <br>
+                - <code>DEFINE</code> and <code>UNDEFINE</code> variables allow us to do it. These commands can be
+                abbreviated as <code>DEF</code> and <code>UNDEF</code> respectively. <br>
+
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/1f4372761f0fd38a1f6ee03790232a9e.js"></script>
+                </div>
+            </div>
+
+            <div class="sub-heading">ACCEPT and PROMPT Commands</div>
+            <div>
+                - Used to get input from the user <br>
+                - //TODO
+            </div>
+
+            <div class="sub-heading">SET VERIFY ON / SET VERIFY OFF Commands</div>
+            <div>
+                - The <code>VERIFY</code> command displays the status of the substitution variable before and after the
+                substitution.
+                - <code>DEFINE</code> variable was also discussed.
+                - //TODO
+            </div>
+
+        </div>
+
+
+
+        <hr>
+        <div id="Section7" class="sub-heading">Section 7: Single-Row Functions</div>
+        <hr>
 
 
     </div>
