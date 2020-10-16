@@ -118,184 +118,272 @@
 </nav>
 
 <div class="container">
+
     <div>
-
+        This page contains my notes from the following books: <br>
+        a) Pro Spring Textbook <br>
+        b) Baeldung REST API Spring Course <br>
     </div>
 
-    <div class="chapter">Spring</div>
+    <br>
+    Index: <br>
+    Module 0: <a href="#SpringAnnotations">Annotations</a>
+    <br>
+    Module 1: <a href="#Rest-Module1"> The Basics of REST with Spring</a>
+    <br>
+    Module 2: <a href="#Rest-Module2"> REST and HTTP Semantics</a>
+    <br>
+
+    <hr>
+    <div id="Rest-Module1" class="chapter">Module 1: The Basics of REST with Spring</div>
+    <hr>
+
     <div class="textual-content">
-        This page contains my personal notes from the Pro Spring Textbook for easy reference.
-        <br>
-        Index:
-        <br>
-        <a href="#Ch1">Chapter 1: Introducing Spring</a>
-        <br>
-        <a href="#Ch2">Chapter 2: Getting Started</a>
-        <hr>
-        <div id="Ch1" class="sub-heading">Chapter 1: Introducing Spring</div>
-        <hr>
-        <div class="textual-content">
-            <div class="sub-heading">What is Spring</div>
-            - Spring (introduced in 2002) has become the main replacement for Java Enterprise Edition (JEE) servers. It
-            consists of many projects that can be used for building microservices, applications, classical ERPs etc. It
-            enables you to use a large variety of tools without coupling an application too closely to any particular
-            tool.
+
+        <div class="sub-heading">Lesson 4: Properties and Project Settings</div>
+        <div>
+            -Relevant code can be found <a
+                href="https://github.com/rgbk21/MySQL-CRUD/blob/master/src/main/java/com/example/demo/service/StartupLoggingComponent.java">here</a>.
             <br>
-            - Spring is a light-weight framework for building Java applications. You can use Spring to build any
-            application in Java (for example, stand-alone, web, or JEE applications), unlike many other frameworks (such
-            as Apache Struts, which is limited to web applications). Spring is a light-weight framework in the sense
-            that if you want out swap out one "project" with another, you can do this by rewriting very less code.
-            Another term for this is loose-coupling.
+            - How do you split up your properties file, so that the app reads different property files depending upon
+            the environment that it is in (dev, local, prod). See <a
+                href="https://github.com/rgbk21/MySQL-CRUD/blob/master/src/main/java/com/example/demo/spring/PersistenceJPAConfig.java#L11">here</a>.
             <br>
-            - The Spring 4.0.x architecture can be described as follows:
-            <div class="row">
-                <img src="resources/ch1_images/Spring4_Architecture.PNG" class="center-block img-fluid"
-                     alt="Spring4_Architecture"
-                     width=50%>
-            </div>
-            - Some new features introduced in this are:
-            <ul>
-                <li>Introduction of Spring Web Flow, a project that is an alternative to Spring MVC built on a reactive
-                    foundation, which means taht it is fully asynchronous and non-blocking, intended for use in
-                    event-loop execution model vs. traditionallarge thread pool with a thread-per-request execution
-                    model (built upon Project Reactor)
-                </li>
-                <li>
-                    The web and core modules were adapted to the reactive programming model.
-                </li>
-            </ul>
+            - What is the <code>InitializingBean</code>? It can be used to read property values that are specified in
+            the classpath files in: <code>src/main/resources</code> <br>
+            - What is the <code>Environment</code> and what is it used for? Read "Spring Configuration Tips" - Talk by
+            Josh Long <a
+                href="https://spring.io/blog/2020/04/23/spring-tips-configuration">here</a>.<br>
 
-            <div class="sub-heading">Inverting Control or Injecting Dependencies</div>
-            <div>
-                - The core of the Spring Framework is based on the principle of inversion of control. IoC is a technique
-                that externalizes the creation and management of component dependencies. Consider an example in which
-                class Foo depends on an instance of class Bar to perform some kind of processing. Traditionally, Foo
-                creates an instance of Bar by using the new operator or obtains one from some kind of factory class.
-                Using the IoC approach, an instance of Bar (or a subclass) is provided to Foo at runtime by some
-                external process.
-                <br>
-                - Any Spring-managed resource is referred to as a <i>bean</i>.
-                <br>
-                - Spring’s DI implementation is based on two core Java concepts: JavaBeans and interfaces. When you use
-                Spring as the DI provider, you gain the flexibility of defining dependency configuration within your
-                applications in different ways (for example, XML files, Java configuration classes, annotations within
-                your code, or the new Groovy bean definition method). JavaBeans (POJOs) provide a standard mechanism for
-                creating Java resources that are configurable in a number of ways, such as constructors and setter
-                methods.
-                <br>
-                - By using interfaces, you can get the most out of DI because your beans can utilize any interface
-                implementation (any class or subclass that implements the interface) to satisfy their dependency. The
-                use of interfaces also allows Spring to utilize JDK dynamic proxies (the Proxy pattern) to provide
-                powerful concepts such as AOP for crosscutting concerns. (<a
-                    href="https://stackoverflow.com/a/26893834/8742428">Link for SO about proxies in Java</a>)
-            </div>
-            <div class="sub-heading">Aspect-Oriented Programming with Spring</div>
-            <div>
-                - AOP provides the ability to implement crosscutting logic—that is, logic that applies to many parts of
-                your application—in a single place and to have that logic applied across your application automatically.
-                <br>
-                - Read more about it on these links:
-                <br>
-                <a href="https://stackoverflow.com/questions/242177/what-is-aspect-oriented-programming">What is Aspect
-                    Oriented programming</a>
-                <br>
-                <a href="https://stackoverflow.com/questions/232884/aspect-oriented-programming-vs-object-oriented-programming">AOP
-                    vs OOP</a>
-            </div>
-
-            <div class="sub-heading">Validation in Spring</div>
-            <div>
-                - Spring provides a built-in validation API by way of the <code>Validator</code> interface. In addition
-                to the target object, the validate method takes an <code>Errors</code> object, which is used to collect
-                any
-                validation errors that may occur. Spring also provides a handy utility class,
-                <code>ValidationUtils</code>, which provides convenience methods for invoking other validators, checking
-                for common problems such as empty strings, and reporting errors back to the provided Errors object.
-            </div>
-
-            <div class="sub-heading">Accessing Data in Spring</div>
-            <div>
-                - Spring’s data access module provides out-of-the-box support for JDBC, Hibernate, JDO, and the JPA.
-                <br>
-                - However, in the past few years, because of the explosive growth of the Internet and cloud computing,
-                besides relational databases, a lot of other “special-purpose” databases were developed. Examples
-                include databases based on key-value pairs to handle extremely large volumes of data (generally referred
-                to as NoSQL), graph databases, and document databases. To help developers support those databases and to
-                not complicate the Spring data access module, a separate project called Spring Data was created.
-            </div>
-
-            <div class="sub-heading">Object/XML in Spring</div>
-            <div>
-                - Most applications need to integrate or provide services to other applications. One common requirement
-                is to exchange data with other systems, either on a regular basis or in real time. In terms of data
-                format, XML is the most commonly used. As a result, you will often need to transform a JavaBean into XML
-                format, and vice versa.
-                <br>
-                - Spring supports many common Java-to-XML mapping frameworks and, as usual, eliminates the need
-                for directly coupling to any specific implementation. Spring provides common interfaces for marshalling
-                (transforming JavaBeans into XML) and unmarshalling (transforming XML into Java objects) for DI into any
-                Spring beans. Common libraries such as Java Architecture for XML Binding (JAXB) , Castor, XStream, JiBX,
-                and XMLBeans are supported. When we discuss remotely accessing a Spring application for business
-                data in XML format, you will see how to use Spring’s Object/XML Mapping (OXM) support in your
-                application.
-            </div>
-
-            <div class="sub-heading">MVC in the Web Tier</div>
-            <div>
-                - View support in Spring MVC is extensive. In addition to standard support for JSP and Java Standard Tag
-                Library (JSTL), which is greatly bolstered by the Spring tag libraries, you can take advantage of fully
-                integrated support for Apache Velocity, FreeMarker, Apache Tiles, Thymeleaf, and XSLT.
-                <br>
-                - You will find Spring MVC sufficient for your web application development needs. However, Spring can
-                also integrate with other popular web frameworks such as Struts, JSF, Atmosphere, Google Web Toolkit
-                (GWT), and so on.
-                <br>
-            </div>
-
-            <div class="sub-heading">WebSocket Support</div>
-            <div>
-                - WebSocket defines an API for creating a persistent connection between a client and server, typically
-                implemented in web browsers and servers. WebSocket-style development opens the door for efficient,
-                full-duplex communication enabling real-time message exchanges for highly responsive applications.
-            </div>
-
-            <div class="sub-heading">Remoting Support</div>
-            <div>
-                - Used for accessing or exposing remote components.
-                <br>
-                - Spring provides support for a variety of remote access mechanisms, including Java Remote Method
-                Invocation (RMI), JAX-WS, Caucho Hessian and Burlap, JMS, Advanced Message Queuing Protocol (AMQP), and
-                <b>REST</b>.
-                <br>
-                - By applying Spring’s dynamic proxying capabilities, you can have a proxy to a remote resource injected
-                as a dependency into one of your classes, thus removing the need to couple your application to a
-                specific remoting implementation and also reducing the amount of code you need to write for your
-                application.
-            </div>
-
-            <div class="sub-heading">Also..</div>
-            <div>
-                - Managing Transactions
-                <br>
-                - Simplifying and integrating with JEE
-                <br>
-                - Mail Support
-                <br>
-                - Job Scheduling Support
-                <br>
-                - Dynamic Scripting Support
-                <br>
-                - Simplified Exception Handling
-            </div>
         </div>
 
-        <div id="Ch2" class="sub-heading">Chapter 2: Getting Started</div>
-        <div class="textual-content">
+        <div class="sub-heading">Lesson 5: The Web Configuration</div>
+        <div>
+            - Relevant code <a
+                href="https://github.com/rgbk21/MySQL-CRUD/blob/master/src/main/java/com/example/demo/spring/WebConfig.java">here</a>.
+            <br>
+            - Consider a Client sending a HTTP request to the server. In the HTTP Headers of the request, the <code>Content-Type</code>
+            specifies the type of the content in the body of the HTTP request. The <code>Accept</code> headers specifies
+            the type of content that the Client accepts. The <code>Accept</code> header specified by the Client will be
+            used to choose the appropriate Http Converter to marshall the entity. Read about how HTTP Converters work <a
+                href="https://www.baeldung.com/spring-httpmessageconverter-rest">here on Baeldung</a>. <br>
+            - Using HATEOAS changes the content-type returned by the server from <code>application/json</code> to <code>application/hal-json</code>.
+            <br>
+            - You can implement the <code>WebMvcConfigurer</code> class to do the following: <br>
+            - You can enable <code>SerializationFeature.INDENT_OUTPUT</code> to indent the RAW JSON returned from your
+            REST API.
+            <br>
+            - You can enable <code>DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES</code> to enable your API to not
+            accept any fields that are not present on the Peristence objects.
+        </div>
 
+    </div>
+
+
+    <hr>
+    <div id="Rest-Module2" class="chapter">Module 2: REST and HTTP Semantics</div>
+    <hr>
+
+    <div class="textual-content">
+
+        <div class="sub-heading">Lesson 1: Exception Handling and Sane HTTP Status Codes</div>
+        <div>
+            - Starting with Boot 2.3, we also need to explicitly add the spring-boot-starter-validation dependency (<a
+                href="https://www.baeldung.com/spring-boot-bean-validation">Source</a>). <br>
+            - If you use a constraint like <code>@NotNull</code> in your entity, then you need to also follow that up
+            with <code>@Validated</code> or <code>@Valid</code> when you are passing in that object to a POST request.
+            Only then will you get the 400 Bad Request error if the constraint is invalidated. Otherwise you will get a
+            500 Internal Server Error. Check this <a
+                href="https://stackoverflow.com/questions/58614373/how-to-convert-constraintviolationexception-500-error-to-400-bad-request">SO
+            Link</a>. <br>
+            - A global exception handler is created by extending the <code>ResponseEntityExceptionHandler</code> class.
+            Also, you don't need to extend <code>ResponseEntityExceptionHandler</code> if you don't need all the
+            exception mappings it provides (<a
+                href="https://stackoverflow.com/questions/24338734/responseentityexceptionhandler-is-not-getting-called-when-exception-occurs">SO
+            Source</a>) <br>
+            - Handling exceptions is explained with diagrams <a
+                href="https://jaxenter.com/guide-to-spring-boot-rest-api-error-handling-136631.html">here</a>.
+        </div>
+
+
+        <div class="sub-heading">Lesson 1: Exception Handling and Sane HTTP Status Codes pt2</div>
+        <div>
+            - <code>Throwables.getRootCause</code> from the Guava library can be used to get at the root cause of the
+            <code>Exception</code>
+            <br>
+            - <code>findOne</code> vs <code>findById</code> vs <code>getOne</code> <a
+                href="https://stackoverflow.com/questions/24482117/when-use-getone-and-findone-methods-spring-data-jpa">here
+            on SO</a>.
+            <br>
+            - In order to mark a field as "Not Null" in the <code>@Entity</code> object, there are 2 ways that you can
+            accomplish this - <br>
+            a) Annotate it with <code>@NotNull</code> <br>
+            b) Annotate it with <code>@Column(nullable = false)</code> <br>
+            Remember to add the <code>@Valid</code> in front of the object when you are reading it as an argument as
+            shown here in <a
+                href="https://stackoverflow.com/questions/58614373/how-to-convert-constraintviolationexception-500-error-to-400-bad-request">this
+            question</a>. <br>
+            - Usage of <code>@ExceptionHandler</code> to catch and throw exceptions was discussed. Very useful
+            discussion.<br>
+            - Note how we are using <code>@ExceptionHandler</code>, with the class of the Exception types that we want
+            the
+            method to handle, being passed in as arguments to the annotation. We can do that because we have specified
+            the <code>handleBadRequest</code> method as having an argument of type <code>RuntimeException</code>, hence
+            both <code>DataIntegrityViolationException</code> and <code>MyBadRequestException</code> work as well. You
+            can refer the code <a
+                href="https://github.com/rgbk21/MySQL-CRUD/blob/master/src/main/java/com/example/demo/web/controller/exceptions/RestResponseEntityExceptionHandler.java#L33-L36">here</a>.
+            <br>
+        </div>
+
+
+        <div class="sub-heading">Lesson 2: The Basics of Input Validation</div>
+        <div>
+            - <a href="https://courses.baeldung.com/courses/32653/lectures/5958204">Lecture Notes</a> <br>
+            - Code available <a
+                href="https://github.com/rgbk21/MySQL-CRUD/blob/master/src/main/java/com/example/demo/model/Student.java">here</a>.
+            <br>
+            - JSR-303 and JSR-349 are the standards of the validation. Apart from these, Hibernate also provides some
+            other validations that are not a part of the standard but are very helpful. <br>
+            - In Spring Boot, starting from version 2.3, the validation artifact has been moved from the web starter
+            into a separate one: search for <code>spring-boot-starter-validation</code> on maven repo and add that to
+            your project. <br>
+            - Question: What should we do in the case of partial update? Which method should we use? <br>
+            - <a
+                href="https://stackoverflow.com/questions/2443324/best-practice-for-partial-updates-in-a-restful-service">Best
+            practice for partial updates in a RESTful service</a>
+            <br>
+            - <a
+                href="https://stackoverflow.com/questions/19732423/why-isnt-http-put-allowed-to-do-partial-updates-in-a-rest-api">Why
+            isn't HTTP PUT allowed to do partial updates in a REST API?</a>
+            <br>
+            - <a
+                href="https://softwareengineering.stackexchange.com/questions/191596/is-it-ok-to-partially-change-a-collection-with-put-or-delete/266705">Is
+            it OK to partially change a collection with PUT or DELETE?</a> <br>
+        </div>
+
+
+        <div class="sub-heading">Lesson 3: Good URI Practices</div>
+        <div>
+            - Check <a href="https://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api">this</a> link
+            explaining best practices for REST
+            <br>
+            - Lecture notes <a href="https://courses.baeldung.com/courses/32653/lectures/5958206">here</a>. <br>
+            - Nouns vs Verbs. Always prefer nouns <br>
+            - Plural vs Singular. Either works. But be consistent. <br>
+            - IDs vs UUIDs. Eh.
+        </div>
+
+
+        <div class="sub-heading">Lesson 4: Leverage HTTP Verbs and Semantics</div>
+        <div>
+            - Lecture notes <a href="https://courses.baeldung.com/courses/32653/lectures/5958209">here</a>. <br>
+            - Relevant code <a
+                href="https://github.com/rgbk21/MySQL-CRUD/blob/master/src/main/java/com/example/demo/web/controller/StudentController.java#L47">here</a>.
+            <a href="https://github.com/rgbk21/MySQL-CRUD/blob/master/src/main/java/com/example/demo/web/controller/StudentController.java#L47">This</a>
+            is how the request for the pagination is handled.
+            - What is <code>@Transactional</code> used for? <a
+                href="https://www.marcobehler.com/guides/spring-transaction-management-transactional-in-depth">This
+            link</a> goes into the details. <br>
+        </div>
+
+
+        <div class="sub-heading">Lesson 5: Support both XML and JSON</div>
+        <div>
+            - Lecture notes <a href="https://courses.baeldung.com/courses/32653/lectures/5958210">here</a>. <br>
+            - Earlier there was the Xtream library. But now we can use the <code>jackson-dataformat-xml</code> library
+            which is an extension of the existing Jackson JSON library. <code>woodstox-core-asl</code> is another
+            library that we need. Woodstox is a high-performance XML processor that implements Stax (JSR-173) and SAX2
+            APIs. Both SAX and StAX are stream / event oriented XML parsers. SAX uses a "push" model, and StAX uses a
+            "pull" model. <br>
+            - All you have to do is specify the above 2 dependencies in your Gradel file, and boom. Now the return type
+            becomes XML. (The Content-type header is <code>"Content-Type":"application/xml;charset=UTF-8"</code>)
+            <br>
+            - <code>HeaderContentNegotiationStrategy</code> checks the "Accept" header of the HTTP Request.
         </div>
 
 
     </div>
+
+
+    <hr>
+    <div id="SpringAnnotations" class="chapter">Module 0: Annotations</div>
+    <hr>
+
+    <div class="textual-content">
+
+        <div class="one-point">
+            1) @Component
+        </div>
+
+        <div class="one-point">
+            2) @Autowired
+        </div>
+
+        <div class="one-point">
+            3) @Configuration
+        </div>
+
+        <div class="one-point">
+            4) @ComponentScan
+        </div>
+
+        <div class="one-point">
+            5) @EnableWebMVC
+        </div>
+
+        <div class="one-point">
+            6) @ControllerAdvice
+        </div>
+
+        <div class="one-point">
+            7) @RestControllerAdvice
+        </div>
+
+        <div class="one-point">
+            8) @NotNull, @NotEmpty, @NotBlank <br>
+            - Source on <a href="https://www.baeldung.com/java-bean-validation-not-null-empty-blank">baeldung</a>. <br>
+            - @NotNull: a constrained CharSequence, Collection, Map, or Array is valid as long as it's not null, but it
+            can be empty <br>
+            - @NotEmpty: a constrained CharSequence, Collection, Map, or Array is valid as long as it's not null and its
+            size/length is greater than zero <br>
+            - @NotBlank: a constrained String is valid as long as it's not null and the trimmed length is greater than
+            zero <br>
+        </div>
+
+        <div class="one-point">
+            9) @Valid, @Validated <br>
+            - <a
+                href="https://stackoverflow.com/questions/36173332/difference-between-valid-and-validated-in-spring">Source</a>
+            <br>
+            - <code>@Valid</code> is the standard validation available. <code>@Validated</code> is a Spring-specific
+            validation that gives us some other functionality on top of <code>@Valid</code>, like Validation Groups. But
+            <code>@Valid</code> should satisfy our needs for now.
+
+        </div>
+
+        <div class="one-point">
+            10) @ExceptionHandler <br>
+            -
+
+        </div>
+
+        <div class="one-point">
+            11) Validation Related: <br>
+            - @NotNull, @Size(min = 2, max = 32), @Min(2), @Max(100), @Email <br>
+            - Note that @Min, @Max combo allow null values to be passed as valid values. <a
+                href="https://stackoverflow.com/questions/46493670/java-validation-min-max-annotion-for-null-values">SO
+            Source</a>
+
+        </div>
+
+        <div class="one-point">
+            12) @Transactional, @Cacheable, @EnableCaching <br>
+            -
+
+        </div>
+    </div>
+
+
 </div>
 
 </body>
