@@ -121,18 +121,26 @@
 
     <div>
         This page contains my notes from the following books: <br>
-        a) Pro Spring Textbook <br>
-        b) Baeldung REST API Spring Course <br>
+        a) Baeldung REST API Spring Course <br>
+        b) Baeldung Spring Course <br>
     </div>
 
     <br>
     Index: <br>
+    REST API Spring Course: <br>
     Module 0: <a href="#SpringAnnotations">Annotations</a>
     <br>
     Module 1: <a href="#Rest-Module1"> The Basics of REST with Spring</a>
     <br>
     Module 2: <a href="#Rest-Module2"> REST and HTTP Semantics</a>
+
     <br>
+    <br>
+
+    Spring Course: <br>
+    Module 2: <a href="#Spring-Module1">Dependency Injection and the Spring Context</a>
+    <br>
+
 
     <hr>
     <div id="Rest-Module1" class="chapter">Module 1: The Basics of REST with Spring</div>
@@ -304,7 +312,6 @@
 
     </div>
 
-
     <hr>
     <div id="SpringAnnotations" class="chapter">Module 0: Annotations</div>
     <hr>
@@ -312,15 +319,55 @@
     <div class="textual-content">
 
         <div class="one-point">
-            1) @Component
+            1) <code>@Component</code>: <br>
+            - Check <a href="#Spring-M2-L3">here</a> <br>
+            - Used to add beans to the Spring Context <br>
+            - @Component vs @Repository vs @Service vs @Controller <a
+                href="https://stackoverflow.com/a/6897038/8742428">on SO here</a>.
         </div>
 
         <div class="one-point">
-            2) @Autowired
+            1.1) <code>@ComponentScan</code>: <br>
+            - By default, it scans every package under the package where this annotation is used. The scan is done to
+            see if there are any annotations present which Spring can use to add beans to the Context.<br>
+            - This annotation is included in the <code>@SpringBootApplication</code> annotation by default. Hence every
+            Spring Boot Application has component scanning enabled by default. Right from the root package itself. <br>
+            - Sometimes you might not want EVERY package under the root scanned - as you might want fine-grained
+            control. In that case, you can change packages to scan if you want. Check <a
+                href="https://stackoverflow.com/a/37130521/8742428">this SO link here</a>.
         </div>
 
         <div class="one-point">
-            3) @Configuration
+            1.2) <code>@Repository</code>: <br>
+            - Check <a href="#Spring-M2-L3">here</a> <br>
+            - Internally it's still using <code>@Component</code>. Just additional semantics have been added on top of
+            it.
+        </div>
+
+        <div class="one-point">
+            1.3) <code>@Service</code>: <br>
+            - Check <a href="#Spring-M2-L3">here</a> <br>
+            - Internally it's still using <code>@Component</code>. Just additional semantics have been added on top of
+            it.
+        </div>
+
+        <div class="one-point">
+            2) @Autowired: <br>
+            - Autowired members must be defined in valid Spring bean (@Component|@Service|...) <br>
+        </div>
+
+        <div class="one-point">
+            3) @Configuration: <br>
+            - This annotation indicates to Spring that this class needs to be processed by the container because the
+            class will contribute bean definitions to it. If the annotation is not included then Spring will just ignore
+            the class.
+        </div>
+
+        <div class="one-point">
+            3.1) @Bean: <br>
+            - The @Bean annotation is one such actual bean definition. The name of the bean is the name of the method
+            that is used to create the bean. By default, Spring Boot loads all classes annotated with @Bean, @Component,
+            @Configuration etc that are located in the same package as the main class or in all sub-packages of this.
         </div>
 
         <div class="one-point">
@@ -381,6 +428,141 @@
             -
 
         </div>
+
+        <div class="one-point">
+            13) @PostConstruct, @PreDestroy <br>
+            -
+
+        </div>
+
+        <div class="one-point">
+            12) @Qualifier, @Primary <br>
+            - When there are more than one bean and you want to explicitly specify which type of bean to use. <br>
+            - When to use which and why and where <a href="https://stackoverflow.com/a/48447910/8742428">here on SO</a>.
+
+        </div>
+
+
+    </div>
+
+
+    <hr>
+    <div id="Spring-Module1" class="chapter">Module 2: Dependency Injection and the Spring Context</div>
+    <hr>
+
+    <div class="textual-content">
+        <div class="sub-heading" id="Spring-M2-L1">Lesson 1: What Is DI and How Does It Work in Spring?</div>
+        <div>
+            -
+        </div>
+
+
+        <div class="sub-heading" id="Spring-M2-L2">Lesson 2: The Basics of Java Configuration and the Spring Context
+        </div>
+        <div>
+            -
+        </div>
+
+
+        <div class="sub-heading" id="Spring-M2-L3">Lesson 3: Defining Beans, Component Scanning and Bean Annotations
+        </div>
+        <div>
+            - One way to add beans that you have created yourself to Spring's Application Context is by using the <code>@Configuration</code>
+            and <code>@Bean</code> combo:
+            <br>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/daf5067c50dec59ac2ea7357770af621.js"></script>
+            </div>
+
+            - Another way is to just annotate the class with the <code>@Component</code> annotation. When the Spring
+            Context boots up, it will call the constructor below to create an instance of the class and add it to the
+            context as a Bean.<br>
+
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/0fb0777d3245bfd8a1b46e412255b1b4.js"></script>
+            </div>
+
+            - There are other annotations that build on top of the <code>@Component</code> annotation by just adding an
+            extra layer of Semantics on top of it. <br>
+            - For instance, take the <code>@Repository</code> annotation. We use this on top of the class exposing the
+            Repository layer of the application.
+
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/fbd373e732d47b544f67af819c357728.js"></script>
+            </div>
+
+            - Similarly we have the <code>@Service</code> annotation.
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/0a0b2256dd93f1a13aeb8fa23d65a686.js"></script>
+            </div>
+        </div>
+
+
+        <div class="sub-heading" id="Spring-M2-L4">Lesson 4: Lifecycle of a Bean - Init and Destroy Hooks</div>
+        <div>
+            - Lecture notes <a href="https://courses.baeldung.com/courses/487981/lectures/10286758">here</a>. <br>
+            - The lifecycle can be divided into 3 main stages: <br>
+            a) initialization phase <br>
+            b) use phase <br>
+            c) destroy phase <br>
+            - Consider 3 beans being created as follows: <br>
+
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/90718c00c23bfb2a0b53e992c105690f.js"></script>
+            </div>
+
+            - We can hook into the lifecycle stages of the three beans as follows: <br>
+
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/92f4c388bc3a6b2bf164b2112a54f7dc.js"></script>
+            </div>
+
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/baf6599c7e04ed4adbbc9255b385463a.js"></script>
+            </div>
+
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/87e7b5fe98b3d7d0d7d88247955424a3.js"></script>
+            </div>
+
+            - The output on running the application will be as follows. Note the order of execution of the methods. <br>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/538659f9215b53bb8dcffc8c7846f314.js"></script>
+            </div>
+        </div>
+
+
+        <div class="sub-heading" id="Spring-M2-L5">Lesson 5: Simple Wiring and Injection</div>
+        <div>
+            - There are primarily three ways to define or inject dependencies: <br>
+            a) Constructor Injection <br>
+            b) Setter Injection <br>
+            c) Field Injection <br>
+            - Injection is done using interface names <br>
+            - The reason we are using <code>@Qualifier</code> is because we are assuming a scenario when there are more
+            than one classes that are implementing the interface field that is being injected. <br>
+            - Note that we're using the bean name: "projectRepositoryImpl2" even though we haven't defined this name
+            explicitly. This is because Spring will generate a default name for each bean, based on the class name, if
+            we don't define one. This name is simply the name of the class, starting with a lowercase. For example, for
+            our ProjectRepositoryImpl2 class, the container will create a bean called “projectRepositoryImpl2”. <br>
+            - Constructor Injection is done as follows: <br>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/beb4737bb37e46d24e99b17ce41d12db.js"></script>
+            </div>
+
+            - Setter Injection is done as follows: <br>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/3029372e7b2e4fbd21ab2a6451dd48a5.js"></script>
+            </div>
+
+            - Field Injection is done as follows (this is not recommended): <br>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/2a6bd18ec765a9da0d91b17d9ed5cb57.js"></script>
+            </div>
+
+
+        </div>
+
     </div>
 
 
