@@ -371,10 +371,6 @@
         </div>
 
         <div class="one-point">
-            4) @ComponentScan
-        </div>
-
-        <div class="one-point">
             5) @EnableWebMVC
         </div>
 
@@ -544,7 +540,7 @@
             - Note that we're using the bean name: "projectRepositoryImpl2" even though we haven't defined this name
             explicitly. This is because Spring will generate a default name for each bean, based on the class name, if
             we don't define one. This name is simply the name of the class, starting with a lowercase. For example, for
-            our ProjectRepositoryImpl2 class, the container will create a bean called “projectRepositoryImpl2”. <br>
+            our ProjectRepositoryImpl2 class, the container will create a bean called "projectRepositoryImpl2". <br>
             - Constructor Injection is done as follows: <br>
             <div class="code-snippet">
                 <script src="https://gist.github.com/rgbk21/beb4737bb37e46d24e99b17ce41d12db.js"></script>
@@ -559,9 +555,132 @@
             <div class="code-snippet">
                 <script src="https://gist.github.com/rgbk21/2a6bd18ec765a9da0d91b17d9ed5cb57.js"></script>
             </div>
+        </div>
 
+
+        <div class="sub-heading" id="Spring-M2-L6">Lesson 6: Exploring the Scopes of Spring Beans</div>
+        <div>
+            - There are six types of bean scopes in Spring: <br>
+            a) Singleton - with this scope, the container creates a single instance of a bean. All requests for such a
+            bean will return the same object, which is cached. This is the default scope if no other scope is specified.
+            <br>
+            b) Prototype - with this scope, the container will create a new instance every time it's requested. <br>
+            c) Request, Session, Application, Websocket - these scopes are available only in a web-aware application
+            context and are less often used in practice. <br>
+
+            - Consider the following code. <br>
+            - First we create a class called SingletonBean whose scope we specify as Singleton (which btw is the default
+            scope if scope is not explicitly specified).
+
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/d00ab07ab7b6cf6efa9c714d8d3c834c.js"></script>
+            </div>
+
+            - Then we create a class called PrototypeBean whose scope we specify as Prototype. <br>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/f50d2ccc30073e7037a279ca7ce58bcb.js"></script>
+            </div>
+
+            - And then we inject the beans as follows into the Application Context as follows: <br>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/4e1770326ce924e5a1d868048181cde7.js"></script>
+            </div>
+
+            - And the output we get shows that only one instance of the Singleton bean is being created, but there are
+            two
+            separate instances of the Prototype bean being created. <br>
+
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/018650ba32aa01ce43e4b25b9e2c2836.js"></script>
+            </div>
+            - Refer these links for further info: <br>
+            - Spring scopes basics explained <a href="http://codeflex.co/java-spring-scopes-explained/">here on
+            codeflex</a>
+            <br>
+            - Just because the bean injected into the controller is prototype-scoped doesn't mean the controller is!
+            <code>@Controller</code> is a singleton object, and if you inject a prototype bean into a singleton class,
+            it will make the prototype bean also as singleton unless you specify using lookup-method property which
+            actually create a new instance of prototype bean for every call you make. Source on <a
+                href="https://stackoverflow.com/questions/7621920/scopeprototype-bean-scope-not-creating-new-bean">SO
+            Here</a>. <br>
+            - By default the scope of spring beans is singleton that means one instance per container. But that doesn't
+            mean that the same instance is used by all requests.It works like this: <br>
+            Client A requests for bean A, the container will look for the instance of that bean A, if the instance is
+            not available it will create an instance and then will give it to client A. But if bean A is being used by
+            another Client B then Client A has to wait till Client B releases the bean A. The singleton object is locked
+            till it is use in a Client B, this can easily create a bottleneck for the application. That is why only the
+            stateless beans are defined as spring beans. For example beans that easily qualify to be singleton are DAO,
+            Service , Controller - these beans don't have their own states instead we leverage these beans in our
+            application to perform certain operations. Choosing a Singleton bean that needs to maintain it's state is a
+            bad design pattern. <a href="https://stackoverflow.com/a/15745353/8742428">Source on SO</a>. <br>
 
         </div>
+
+
+        <div class="sub-heading" id="Spring-M2-L7">Lesson 7: The BeanPostProcessor and the BeanFactoryPostProcessor
+        </div>
+        <div>
+            - <code>BeanPostProcessor</code> allows us to modify a bean or execute custom code after the bean is
+            instantiated by the container. The container invokes the <code>BeanPostProcessor</code> for each and every
+            bean. <br>
+            - You can use the <code>BeanPostProcessor</code> as follows:
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/971c44ec37aa23e5393b2e0b374c73d3.js"></script>
+            </div>
+            - This is a small snip from the log that was generated on using <code>BeanPostProcessor</code>. Note the
+            order in which the methods are called. The lifecycle hooks defined on BeanA.. are present <a
+                href="#Spring-M2-L4">here</a>.
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/bf74f6a43f7cc6f59091cfd8b7a70eff.js"></script>
+            </div>
+            - Where would you use something like the <code>BeanPostProcessor</code>? The typical example for a bean post
+            processor is when you want to wrap the original bean in a proxy instance, e.g. when using the <code>@Transactional</code>
+            annotation.
+            The bean post processor will be handed the original instance of the bean, it may call any methods on the
+            target, but it also gets to return the actual bean instance that should be bound in the application context,
+            which means that it can actually return any object it wants. The typical scenario when this is useful is
+            when the bean post processor wraps the target in a proxy instance. All invocations on the bean bound in
+            application context will pass through the proxy, and the proxy then gets to perform some magic before and/or
+            after invocations on the target bean, e.g. AOP or transaction management. <a
+                href="https://stackoverflow.com/a/29745225/8742428">Source on SO</a>. <br>
+
+            - <code>BeanFactoryPostProcessor</code> allows us to read the configuration metadata of a bean and
+            potentially modify it before the container has actually instantiated any of the beans. <br>
+            - BeanPostProcessor vs BeanFactoryPostProcessor: <a href="https://stackoverflow.com/a/54807031/8742428">There
+            is always a diagram</a>. <br>
+
+            - We create a new Class called BeanD: <br>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/a835a082a71357e8651717cf8814ddc5.js"></script>
+            </div>
+
+            - And expose it as a Bean using the following: <br>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/5c252799561fe6b6fab645ec2fda5697.js"></script>
+            </div>
+
+            - Then we use the <code>BeanFactoryPostProcessor</code> to set the property value of the <code>foo</code>
+            property on the <code>BeanD</code> class as this: <br>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/2344e831126c82f85e6a141de030422a.js"></script>
+            </div>
+
+            - Note the order in which the methods are executed. <br>
+            - Note how early the <code>BeanFactoryPostProcessor</code> is called, which is later followed by the <code>BeanPostProcessor</code>.
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/536b4cd0fa96a90e0a1acdf53cba2455.js"></script>
+            </div>
+
+            // TODO: We can also implement multiple BeanPostProcessors and control their execution order by implementing
+            the Ordered interface in each BeanPostProcessor.
+        </div>
+
+
+        <div class="sub-heading" id="Spring-M2-L8">Lesson 8: The Spring Application Context</div>
+        <div>
+            -
+        </div>
+
 
     </div>
 
