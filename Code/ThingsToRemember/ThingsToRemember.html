@@ -854,6 +854,57 @@
         -
     </div>
 
+    <div class="one-point">
+        58) Difference between Abstract classes and interface in java 8 <br>
+        - Java Doc Source <a href="https://docs.oracle.com/javase/tutorial/java/IandI/abstract.html">here</a>. <br>
+        - An abstract class is a class that is declared abstract - it may or may not include abstract methods. Abstract
+        classes cannot be instantiated, but they can be subclassed. <br>
+        - An abstract method is a method that is declared without an implementation (without braces, and followed by a
+        semicolon), like this: <br>
+        <code>abstract void moveTo(double deltaX, double deltaY);</code> <br>
+        - If a class includes abstract methods, then the class itself <i>must</i> be declared abstract. <br>
+        - When an abstract class is subclassed, the subclass usually provides implementations for all of the abstract
+        methods in its parent class. However, if it does not, then the subclass must also be declared abstract. <br>
+        - Methods in an interface that are not declared as default or static are implicitly
+        abstract, so the abstract modifier is not used with interface methods. (It can be used, but it is unnecessary.)
+        <br>
+        <br>
+        - Abstract Classes Compared to Interfaces: <br>
+        - All methods in an interface are implicitly <code>public</code> and <code>abstract</code> (but not
+        <code>final</code>). All fields in an interface are implicitly <code>public</code>, <code>static</code> and
+        <code>final</code>. <br>
+
+
+    </div>
+
+    <div class="one-point">
+        59) Why are methods declared <code>final</code>? <br>
+        - You can declare some or all of a class's methods <code>final</code>. You use the <code>final</code> keyword in
+        a method declaration to indicate that the method cannot be overridden by subclasses. <br>
+        - You might wish to make a method <code>final</code> if it has an implementation that should not be changed and
+        it is critical to the consistent state of the object. <br>
+        - Methods called from constructors should generally be declared <code>final</code>. If a constructor calls a
+        non-final method, a subclass may redefine that method with surprising or undesirable results. <br>
+        - Note that you can also declare an entire class <code>final</code>. A class that is declared <code>final</code>
+        cannot be subclassed. This is particularly useful, for example, when creating an immutable class like the String
+        class. <br>
+        - Source on Oracle Java Docs <a href="https://docs.oracle.com/javase/tutorial/java/IandI/final.html">here</a>.
+    </div>
+
+
+    <div class="one-point">
+        60) Oh boy.. What are interfaces in Java? <br>
+        - In the Java programming language, an interface is a reference type, similar to a class, that can contain only
+        constants, method signatures, default methods, static methods, and nested types. Method bodies exist only for
+        default methods and static methods. Interfaces cannot be instantiated - they can only be implemented by classes
+        or extended by other interfaces (<a
+            href="https://docs.oracle.com/javase/tutorial/java/IandI/createinterface.html">Source on Java Docs</a>).
+        <br>
+        -
+
+
+    </div>
+
 
     <hr/>
 
