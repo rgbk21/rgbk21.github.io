@@ -138,9 +138,10 @@
     <br>
 
     Spring Course: <br>
-    Module 2: <a href="#Spring-Module1">Dependency Injection and the Spring Context</a>
+    Module 2: <a href="#Spring-Module2">Dependency Injection and the Spring Context</a>
     <br>
-
+    Module 3: <a href="#Spring-Module3">Project Configuration</a>
+    <br>
 
     <hr>
     <div id="Rest-Module1" class="chapter">Module 1: The Basics of REST with Spring</div>
@@ -443,7 +444,7 @@
 
 
     <hr>
-    <div id="Spring-Module1" class="chapter">Module 2: Dependency Injection and the Spring Context</div>
+    <div id="Spring-Module2" class="chapter">Module 2: Dependency Injection and the Spring Context</div>
     <hr>
 
     <div class="textual-content">
@@ -501,6 +502,7 @@
             a) initialization phase <br>
             b) use phase <br>
             c) destroy phase <br>
+            - Lifecycle method annotation requires a no-arg method. <br>
             - Consider 3 beans being created as follows: <br>
 
             <div class="code-snippet">
@@ -678,10 +680,210 @@
 
         <div class="sub-heading" id="Spring-M2-L8">Lesson 8: The Spring Application Context</div>
         <div>
-            -
+            - Lecture notes <a href="https://courses.baeldung.com/courses/487981/lectures/21856929">here</a>. <br>
+            - What is the Application Context: The Application Context is a core part of the Spring Framework. It
+            represents the IoC container and is responsible for instantiating, configuring and assembling beans.
+            The container gets instructions on what objects to instantiate, configure and assemble by reading
+            configuration metadata, which can be represented using XML or Java code. <br>
+            - How do you obtain a reference to the context? There are two ways: <br>
+            a) You can Autowire the ApplicationContext, either as a field or a method as shown <a
+                href="https://stackoverflow.com/a/34089279/8742428">here on SO</a>. <br>
+            b) You can implement the <code>ApplicationContextAware</code> interface as explained <a
+                href="https://stackoverflow.com/a/38274721/8742428">here on SO</a>. <br>
+            - TODO: <br>
+            - Creating a new Context: Spring provides us with various implementations of the ApplicationContext
+            interface, which we can use to create Application Contexts depending on the configuration method we use.
+            <br>
+            - Adding and Retrieving Beans from the Context: To retrieve beans from the context we can use the <code>getBean()</code>
+            method, which is defined in the <code>AbstractApplicationContext</code> interface.
         </div>
 
 
+    </div>
+
+
+    <hr>
+    <div id="Spring-Module3" class="chapter">Module 3: Project Configuration</div>
+    <hr>
+
+    <div class="sub-heading" id="Spring-M3-L1">Lesson 1: Working with Properties</div>
+    <div>
+        - The reason of using property files is because we want to <i>externalize</i> configuration, ie. we do not want
+        to hard-code configuration at compile time. We instead want them to be used during runtime. The reason is ot
+        keep a clear separation between the code and the configuration. <br>
+        - Note that other formats like yaml files, environment variables and command lines arguments can also be used to
+        configure our app. <br>
+        - We can inject different types of properties, such as: String, boolean, int, float, Date, Collections, Map.
+        <br>
+        - Properties are defined in the <code>src/main/resources/application.properties</code> file as key-value pairs:
+        <div class="code-snippet">
+            <script src="https://gist.github.com/rgbk21/0cbff9dce0d0f7083755de5a2e10073e.js"></script>
+        </div>
+
+        - These key-value pairs can then be accessed as follows: <br>
+        <div class="code-snippet">
+            <script src="https://gist.github.com/rgbk21/9962eae7ef719cd730a932aefde7525d.js"></script>
+        </div>
+
+        - Remember: by default, Spring Boot loads the properties from file application.properties. If we're creating a
+        pure Spring application, we would have to explicitly indicate the file from which the properties should be
+        loaded. We can do this by adding the following annotation:
+
+        <code>@PropertySource("classpath:application.properties")</code>
+
+        to any file subject to the component scan. <br>
+        - The <code>Environment</code> interface represents “the environment in which the current application is
+        running”.
+        It contains information about the application’s properties and profiles.
+        We can use the Environment API to search properties that are available in the application’s environment: <br>
+        <div class="code-snippet">
+            <script src="https://gist.github.com/rgbk21/290b532f2b89e31f989d2aabed091246.js"></script>
+        </div>
+        - Spring Boot uses a very particular PropertySource order that is designed to allow sensible overriding of
+        values. Read <a
+            href="https://docs.spring.io/spring-boot/docs/current/reference/html/spring-boot-features.html#boot-features-external-config">here
+        on the official Spring Docs</a>.
+    </div>
+
+
+    <div class="sub-heading" id="Spring-M3-L2">Lesson 2: Working with Profiles in Spring</div>
+    <div>
+        - Any bean can be restricted to a specific profile by annotating the class with <code>@Profile</code> annotation
+        and specifying the profile name. <br>
+        - A profile can be specified as follows. Here we are trying to specify different Repository layers, depending on
+        whether the "dev" or the "prod" profile is active. <br>
+        - if a bean is not annotated with <code>@Profile</code>, it will be enabled with all profiles.
+        <div class="code-snippet">
+            <script src="https://gist.github.com/rgbk21/8249d43f36d5bbba90bface9b8eeb797.js"></script>
+        </div>
+
+        <div class="code-snippet">
+            <script src="https://gist.github.com/rgbk21/7b4e6e7def0e94d283b157d172e8fe70.js"></script>
+        </div>
+        - And we select which profile we have to activate by passing in the value in the application.properties file:
+        <div class="code-snippet">
+            <script src="https://gist.github.com/rgbk21/cc6353495a8d67140d0405d616679bd4.js"></script>
+        </div>
+        - If there are no profiles set through the application.properties as shown above, then you will see the
+        following line in the logs on app boot: <br>
+        <code>No active profile set, falling back to default profiles: default</code>. This "default" is the profile
+        that is activated by default. <br>
+        - Once the profile is active, you will see the following message in the app boot logs:
+        <code>The following profiles are active: dev</code> <br>
+        - The <code>Environment</code> interface is an abstraction integrated in the container, which can be used to get
+        the application’s properties and the profile information.
+
+        <div class="code-snippet">
+            <script src="https://gist.github.com/rgbk21/75db2712de72414a9c25c88f01b9a897.js"></script>
+        </div>
+    </div>
+
+
+    <div class="sub-heading" id="Spring-M3-L3">Lesson 3: Logging in a Spring Boot Project</div>
+    <div>
+        - The default logging level is <code>INFO</code>. <br>
+        - The logging levels are: TRACE, DEBUG, INFO, WARN, ERROR. In increasing order. The default logging level is
+        INFO or above. Hence if you log something at the DEBUG level, for example, it is not going to show up in the
+        log. <br>
+
+        <div class="code-snippet">
+            <script src="https://gist.github.com/rgbk21/da2f8941b78fcb1e6b69a549f20ed225.js"></script>
+        </div>
+    </div>
+
+
+    <div class="sub-heading" id="Spring-M3-L5">Lesson 5: The Spring Testing Framework</div>
+    <div>
+        - Read lecture note for this one <a
+            href="https://courses.baeldung.com/courses/487981/lectures/10530059">here</a>.
+        <br>
+        - Note that we're using the JUnit 5 version, so make sure to import the <code>@Test</code> annotation from the
+        <code>org.junit.jupiter.api</code> package instead of <code>org.junit</code>. <br>
+        - A core aspect of the test framework is managing the application context. Bootstrapping a full context is quite
+        an expensive operation. Because of this, we're trying to avoid doing that in each and every test. The framework
+        helps cache the context by default and then provides higher-level control over that. <br>
+        - <code>@DirtiesContext</code> is used to notify the framework to close and recreate the context for later
+        tests. <br>
+        - <code>@ActiveProfiles </code> is used to specify the active profiles during the execution of the tests. <br>
+        - We can also write Unit Tests using Mockito. <br>
+    </div>
+
+
+    <div class="sub-heading" id="Spring-M3-L6">Lesson 6: Working with @PropertySource</div>
+    <div>
+        - Lecture notes <a href="https://courses.baeldung.com/courses/487981/lectures/12005527">here</a>. <br>
+        - Some useful links found during troubleshooting the issue - the gradel build was not recognising the
+        <code>application-test.properties</code> file to be present in the <code>classpath</code> even though it was
+        (actually it wasn't, the folder structure was incorrect) <br>
+        - <a href="https://stackoverflow.com/a/49035998/8742428"><code>@SpringBootApplication</code> should NOT be added
+        to your Test Class</a>. <br>
+        - <a href="https://stackoverflow.com/a/53648833/8742428">What does <code>@ExtendWith</code> do</a>? <br>
+        - <a href="https://stackoverflow.com/questions/17353327/populating-spring-value-during-unit-test">Populating
+        Spring @Value during Unit Test</a> <br>
+        - <a href="https://www.baeldung.com/spring-tests-override-properties">Baeldung: Override Properties in Spring’s
+        Tests</a> <br>
+        - <code>@SpringBootTest</code> is fairly heavy-weight, and for all intents and purpose will load your entire
+        application. Depending on what you are trying to test you may want to look into slice tests.
+        <a href="https://stackoverflow.com/a/44789237/8742428">Source on SO</a>. <br>
+        - What is <code>@RunWith</code> supposed to do? <a href="https://stackoverflow.com/a/44788429/8742428">Source on
+        SO</a>. And <a href="https://stackoverflow.com/a/45659326/8742428">here</a>. <a
+            href="https://stackoverflow.com/a/42397645/8742428">And here</a>.
+        <br>
+        - You can also specify the absolute path of the properties file as shown <a
+            href="https://stackoverflow.com/a/28307313/8742428">here on SO</a>. <br>
+        - Make sure the application.properties file is in your classpath. If you use maven, it should be in
+        src/main/resources directory. <a
+            href="https://stackoverflow.com/questions/55687518/caused-by-java-io-filenotfoundexception-class-path-resource-application-prope/56578279">Source
+        on SO</a>. <br>
+        - You can mark your folders as different types in IntelliJ as shown <a
+            href="https://www.jetbrains.com/help/idea/content-roots.html#folder-categories">here</a>. Sources Root,
+        Generated Sources Root, Test Sources Root, Generated Test Sources Root, Resources Root, Test Resources Root,
+        Excluded. In the Project Explorer, you can right-click on the folder name and select one of the several options
+        as shown
+        <a href="https://intellij-support.jetbrains.com/hc/en-us/community/posts/206183859/comments/115000483404">here</a>.
+        <a href="https://stackoverflow.com/a/39255116/8742428">This SO Link</a> explains the meanings of these options.
+        <br>
+        - You can pass in more than one application.properties file names in the <code>@TestPropertySource</code> as
+        shown
+        <a href="https://stackoverflow.com/a/52824608/8742428">here on SO</a>. <br>
+        - What you put directly under src/main/java is in the default package, at the root of the classpath. It's the
+        same for resources put under src/main/resources: they end up at the root of the classpath.
+        <a href="https://stackoverflow.com/a/42863455/8742428">Source on SO</a>. <br>
+        - Spring Boot app: Not picking up application.properties? Read <a
+            href="https://stackoverflow.com/questions/33022827/spring-boot-app-not-picking-up-application-properties">here
+        on SO</a>.
+        <br>
+        - Override default Spring-Boot application.properties settings in Junit Test - <a
+            href="https://stackoverflow.com/questions/29669393/override-default-spring-boot-application-properties-settings-in-junit-test">Source
+        on SO</a>.
+        <br>
+        - Why my gradle projects creates separated modules for main and test in Intellij Idea - <a
+            href="https://stackoverflow.com/questions/37018567/why-my-gradle-projects-creates-separated-modules-for-main-and-test-in-intellij-i">SO</a>.
+        <br>
+        - <a href="https://stackoverflow.com/a/49893867/8742428">On SO</a> Intellij can't find classpath test resource.
+        <br>
+        - How to mark a directory as a generated-test-source root in IntelliJ? - <a
+            href="https://stackoverflow.com/questions/854264/how-to-add-directory-to-classpath-in-an-application-run-profile-in-intellij-idea">On
+        SO</a>.
+        <br>
+        <br>
+        - Notes start here: <br>
+        - Note how we are passing in the classes that should be scanned by using a <code>TestConfig</code> class and
+        then specifying the packages to be scanned using <code>@ComponentScan</code>
+
+        <div class="code-snippet">
+            <script src="https://gist.github.com/rgbk21/3fa76b1407527aa8305bdc7ba8708d6c.js"></script>
+        </div>
+        - And we are using the <code>@SpringJUnitConfig</code>here. Note how we are using the
+        <code>@TestPropertySource</code> to specify the location of the property files.
+        <div class="code-snippet">
+            <script src="https://gist.github.com/rgbk21/f697463abe750c648b3ccdcc1f31b226.js"></script>
+        </div>
+
+        - Precedence of the property files also comes into play here. Since we're using the @SpringJUnitConfig
+        annotation, we can access properties defined in main property sources.
+        But, if a property is redefined in test resources, then this value will have higher priority than the value
+        specified in the main source.
     </div>
 
 
