@@ -995,7 +995,6 @@
     </div>
 
 
-
     <hr>
     <div id="Spring-Module5" class="chapter">Module 5: Persistence and Data Access</div>
     <hr>
@@ -1004,10 +1003,165 @@
 
         <div class="sub-heading" id="Spring-M5-L1">Lesson 1: Project Persistence with Spring Data JPA</div>
         <div>
+            - Caused by:
+            org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Failed to
+            determine a suitable driver class
+            <br>
+            - @PostConstruct on JPA entity not called in Spring Boot: <a
+                href="https://stackoverflow.com/questions/42194647/postconstruct-on-jpa-entity-not-called-in-spring-boot">Source</a>.
+            JPA Entities are not spring managed beans, so Spring will never call @PostConstruct. Entities have their own
+            Entity listener annotations, but there is nothing with the semantics of @PostConstruct (@PrePersiste and
+            @PostLoad are probably the closest). Entities need to have a default constructor, because all JPA
+            implementations use Class.newInstance() as the default instantiation policy. A good JPA provider will allow
+            you to customize the instantiation policy, so it is possible to write you own interception of @PostConstruct
+            and invoke it, it is also possible to @Autowire spring beans into entities if you want. However you should
+            never register JPA entities as Spring beans.
+            <br>
+            - You cannot use annotations like <code>@PostConstruct</code> in <code>@Entity</code> objects either.
+            Because lifecycle of @Entity objects are managed by JPA/Hibernate whereas lifecycle of @Bean, @Component,
+            @Service, @Repository etc. are managed by Spring. Source on SO <a
+                href="https://stackoverflow.com/questions/54014047/can-we-use-autowired-on-an-entity-object-in-spring">here</a>.
+            You can only autowire those beans whose life-cycle are managed by Spring IoC container.
+            These beans are defined in xml form with &lt;/bean&gt; tag, or with some special annotations like @Bean,
+            @Component, @Service, @Repository etc. I would warn you not to mix Spring Bean and JPA entities in one
+            class/usecase because: a) Spring Beans are instantiated and managed by Spring, b) Entities are managed by
+            JPA provider. <br>
+
+            <br>
+            Notes start here: <br>
+
+            - We are adding Oracle DB as the DB in this case. <br>
+            - Also we created a new branch: "AddingPersistence" to do these changes. <br>
+            - For doing this, there are two changes that you need to do: <br>
+            a) add spring-boot-starter-data-jpa as the starter dependency to gradle file <br>
+            b) add ojdbc8 as the connection provider to the gradle file <br>
+            c) Connect to the Oracle DB by adding the following to the application.properties file:
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/8b7b44270a62636ee096db3e00de1ff2.js"></script>
+            </div>
+            d) You can also add the same information in IntelliJ in-case you want to run SQL statements through the IDE.
+            For some reason the IDE is nto showing the state of the database, by that I mean when I run the SELECT *
+            statement, the result differs in the IDE from what I get from running the same statement in the DB. <br>
+            - In order to persist and entity, it needs a Primary key. Oracle uses GenerationType.SEQUENCE (<a
+                href="https://stackoverflow.com/q/30731627/8742428">Source on SO</a>). Using apache commons library
+            instead to generate a random Long and using that as a Primary Key. <br>
+            - The <code>DataAccessException</code> Hierarchy: <br>
+            Spring translates technology-specific exceptions like SQLException to its own exception class hierarchy with
+            DataAccessException as the root. These exceptions wrap the original exception, so no information is lost.
+            <br>
+            a) NonTransientDataAccessException - retry of the operation will fail unless the cause of the Exception is
+            fixed
+            <br>
+            b) TransientDataAccessException - retry may succeed without any action from the application side <br>
+            c) RecoverableDataAccessException - retry may succeed if the application performs some recovery steps <br>
+            d) ScriptException - related to processing of SQL scripts <br>
+
+            - An <code>@Entity</code> class can look like following. <br>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/7bc79bcad9b6264545d67ac77c54281c.js"></script>
+            </div>
+            - Note how we are using the Enum type in the Entity. The Enum is defined as follows:
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/db3da4a55f66b9cb3f8149b04a0ab09a.js"></script>
+            </div>
+            - THe <code>@Enumerated(EnumType.STRING)</code> makes sure that when the projectStatus is persisted in the
+            database, it's persisted as a String and not as the int value of the Enum. Advantage of this is the data is
+            more readable in the DB. On the other hand, you can use
+            <code>@Enumerated(EnumType.ORDINAL)</code> to make sure it is the int that is persisted. Makes the page
+            faster in the DB.
+
 
         </div>
 
 
+        <div class="sub-heading" id="Spring-M5-L2">Lesson 2: Beyond the Default Repository</div>
+        <div>
+            - Lecture notes <a href="https://courses.baeldung.com/courses/487981/lectures/10228260">here</a>. <br>
+            - Spring Data provides a very powerful API where you can just list the query that you want to run in the
+            format that is dictated by Spring Data, and Spring Data wil automatically provide the implementations for
+            the query and generate the underlying SQL query and take care of everything for you!!! <br>
+            - For example, we are using the following:
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/728783a1755b3c9ab683707c8596dfc1.js"></script>
+            </div>
+            - Start typing in te file and Intellij will automatically provide recommendations on what kind of query to
+            write. And that's all you need to do. <br>
+            - Check <a
+                href="https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#jpa.query-methods.query-creation">this
+            JPA Official docs link</a> for the kind of queries that you can generate. <br>
+            - As long as we follow the Spring Data naming conventions, it will be able to resolve and provide the
+            implementations automatically. <br>
+            - So the above is basically the format for READ. What about the other CRUD operations? <br>
+
+            <br>
+            <li><b>How to add P6Spy:</b></li>
+
+            - Set up P6Spy over here as well. Read the official docs <a
+                href="https://readthedocs.org/projects/p6spy/downloads/pdf/latest/">here</a>. <br>
+            - There were some issues with ClassNotFoundException that were solved by following <a
+                href="https://stackoverflow.com/a/36869058/8742428">this SO Link</a>. <br>
+            - Note that the application.properties file had to be changed as well: <br>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/8df92d94c9fa7ba5c8dd757656f9d827.js"></script>
+            </div>
+
+            <br>
+            <li><b>How to use batch processing in JPA:</b></li>
+
+            - We also enabled batch processing. Read <a href="https://stackoverflow.com/a/34273360/8742428">this SO
+            post</a> to understand how to read the logs. <br>
+            - Check Item 4 on <a
+                href="https://dzone.com/articles/50-best-performance-practices-for-hibernate-5-amp">this JavaDzone</a>
+            link to understand how <code>saveAll</code> can be used to batch inserts in JPA. Read Chapter 4 in Spring
+            Boot Persistence Best Practices book to understand how to do batching in Spring Boot.<br>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/f19073bb6c98794c3a70ed5d46891d58.js"></script>
+            </div>
+            - Using a batch size of 5 and saving 13 items using the <code>saveAll</code> method generates the following
+            logs:
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/2f3e0463c00ca165636c5fb5a917a34c.js"></script>
+            </div>
+            - You can also use a custom SQL Query if you want to as shown <a
+                href="https://www.baeldung.com/spring-data-jpa-query">here on Baeldung</a>. <br>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/9665f67a792b0b6cb2c89cc25590e114.js"></script>
+            </div>
+
+            <br>
+            <li><b>How to use One-To-Many mappings in JPA:</b></li>
+
+            - To use a One-To-Many mapping, you do the following: <br>
+            - Vlad lecture about using One-To-Many Relations <a
+                href="https://vladmihalcea.teachable.com/courses/931584/lectures/17209594">here</a>. Vlad's blog on his
+            site about using One-To-Many assocaitions
+            <a href="https://vladmihalcea.com/the-best-way-to-map-a-onetomany-association-with-jpa-and-hibernate/">here</a>.
+            <br>
+            - We use the <code>@OneToMany</code> annotation on the Parent side, whereas we use the
+            <code>@ManyToOne</code> annotation on the child side. <br>
+            - Relationships can be unidirectional or bi-directional. <br>
+            - We normally prefer bi-directional relationships <br>
+            - For Bi-directional relationships, the Project class will look something like this:
+
+
+            For example, a Project can have many Tasks.
+
+            - This generates a log that looks like this: <br>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/6370eeb98ec6c7c98e31ed9f9ac88660.js"></script>
+            </div>
+            - https://stackoverflow.com/questions/23723025/spring-data-delete-by-is-supported <br>
+            - https://stackoverflow.com/questions/1079114/where-does-the-transactional-annotation-belong <br>
+            - https://stackoverflow.com/questions/4396284/does-spring-transactional-attribute-work-on-a-private-method
+            <br>
+            - https://www.baeldung.com/spring-data-jpa-delete <br>
+            - https://www.baeldung.com/spring-data-jpa-deleteby <br>
+            - Persisting and deleting objects in JPA requires a transaction, that's why we should use a @Transactional
+            annotation when using these derived delete queries, to make sure a transaction is running. This is explained
+            in detail in the ORM with Spring documentation <a
+                href="https://docs.spring.io/spring-framework/docs/current/reference/html/data-access.html#orm">here</a>.
+            <br>
+        </div>
 
 
     </div>
