@@ -149,6 +149,8 @@
         <a href="#Section5">Section 5: Sorting Data</a> <br>
         <a href="#Section6">Section 6: Using Substitution Variables</a> <br>
         <a href="#Section7">Section 7: Single-Row Functions</a> <br>
+        <a href="#Section8">Section 8: Conversion Functions</a> <br>
+        <a href="#Section9">Section 9: Conditional Expressions</a> <br>
 
 
         <hr>
@@ -1652,7 +1654,6 @@
         </div>
 
 
-
         <hr>
         <div id="Section5" class="sub-heading">Section 5: Sorting Data</div>
         <hr>
@@ -1780,7 +1781,6 @@
         </div>
 
 
-
         <hr>
         <div id="Section7" class="sub-heading">Section 7: Single-Row Functions</div>
         <hr>
@@ -1789,10 +1789,314 @@
 
             <div class="sub-heading">Single-Row Functions</div>
             <div>
+                - When you create a function it is compiled and stored in the database, hence functions are also
+                referred to as "Stored Functions". <br>
+                - In Oracle DB there are 2 types of functions: <br>
+                a) Single-Row Functions: takes a single row as an input and returns a single result (row)<br>
+                b) Multi-Row Functions: takes multiple rows as input and outputs single row. They are also sometimes
+                referred to as Group Functions. <br>
+
+                <div class="row">
+                    <img src="resources/section7_images/Types_Of_Functions.PNG" class="center-block img-fluid"
+                         alt="Atomic_Data_Rules"
+                         width=50%>
+                </div>
+
+                - If we use a Single-row function for querying the whole table, the function will be called for each row
+                of the table and return a single value for each row. <br>
+                - Single-row functions can be nested. <br>
+                - We can use the Single-row functions in <code>SELECT</code>, <code>WHERE</code>, and
+                <code>ORDER BY</code> clauses.
+            </div>
+
+            <div class="sub-heading">Character Functions</div>
+            <div>
+                - SQL functions get their names from the type of the arguments that they accept. <br>
+                - Character functions are of two types: <br>
+                a) Case Conversion Functions: <br>
+                1) <code>UPPER</code>: converts all input characters to lower case <br>
+                2) <code>LOWER</code>: converts all input characters to upper case<br>
+                3) <code>INITCAP</code>: converts the first letter of each word to upper case and the remaining letters
+                to lower case <br>
+
+                - Example of using case-conversion functions:
+                <div class="row">
+                    <img src="resources/section7_images/CharacterFunctions.PNG" class="center-block img-fluid"
+                         alt="Atomic_Data_Rules"
+                         width=40%>
+                </div>
+
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/91611a6e7b6d0144c55d246edeaf3766.js"></script>
+                </div>
 
             </div>
 
+            <div class="sub-heading">Character Manipulation Functions</div>
+            <div>
+                - Note that index positions start from 1 and not 0 in Oracle. <br>
+                - Spaces are also counted as valid characters <br>
+
+                - Character Manipulation Functions are: <br>
+                1) <code>SUBSTR</code>: if the <i>length</i> parameter is not specified, the function returns the
+                substring from the start <i>position</i> righ up till the end of the string.<br>
+                2) <code>LENGTH</code> <br>
+                3) <code>CONCAT</code> <br>
+                4) <code>INSTR</code>: <i>position</i> is a non-zero integer value that specifies from which position
+                the
+                function should start the search. If <i>position</i> is positive, the INSTR function starts counting
+                from the start of the string, and if the <i>position</i> is negative, it starts counting from the end of
+                the string. The <i>occurrence</i> specifies which occurence of the substring it should consider. <br>
+                5) <code>TRIM</code>: Note that the <code>TRIM</code> functions takes in a <i>trim_character</i> as
+                args, that means you cannot pass in a string. <br>
+                6) <code>LTRIM</code>, <code>RTRIM</code>: On the other hand, these take in <i>trim_string</i> as
+                arguments, hence you can pass in Strings as args. <br>
+                6) <code>REPLACE</code> <br>
+                7) <code>LPAD</code>, <code>RPAD</code> <br>
+                -
+                <div class="row">
+                    <img src="resources/section7_images/CharacterManipulation.PNG" class="center-block img-fluid"
+                         alt="Atomic_Data_Rules"
+                         width=75%>
+                </div>
+
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/2dae8db38bdf8310ed53de92a7e6f6ac.js"></script>
+                </div>
+            </div>
+
+
+            <div class="sub-heading">Numeric Functions</div>
+            <div>
+                - They take in numeric values as input, and return numeric values as output. <br>
+                - Some examples are: <code>ROUND</code>, <code>TRUNC</code>, <code>CEIL</code>, <code>FLOOR</code>,
+                <code>MOD</code>
+                <br>
+                <div class="row">
+                    <img src="resources/section7_images/NumericFunctions.PNG" class="center-block img-fluid"
+                         alt="Atomic_Data_Rules"
+                         width=50%>
+                </div>
+
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/a700796b42928e84992c48fb76ca009d.js"></script>
+                </div>
+            </div>
+
+            <div class="sub-heading">Date values and Date Formats</div>
+            <div>
+                - OracleDB stores date values in an internal numeric format. it stores a 7-byte number that contains the
+                century, year, month, day, hour, minute, and second. <br>
+
+                <div class="row">
+                    <img src="resources/section7_images/Date-Format.PNG" class="center-block img-fluid"
+                         alt="Atomic_Data_Rules"
+                         width=50%>
+                </div>
+                - You can change the default way in which Oracle shows dates by going to: Tools -&gt; Preference -&gt;
+                Database -&gt; NLS <br>
+                - The default setting is: <code>DD-MON-RR</code> in the DB. <br>
+                - Refer <a
+                    href="https://www.udemy.com/course/oracle-sql-12c-become-an-sql-developer-with-subtitle/learn/lecture/3242760?start=320#notes">this
+                point</a> in Udemy lecture to see how dates work. <br>
+                - Something about representation differences between DD-MON-RR and DD-MM-YY:
+                <div class="row">
+                    <img src="resources/section7_images/DateFormat.PNG" class="center-block img-fluid"
+                         alt="Atomic_Data_Rules"
+                         width=75%>
+                </div>
+                - The data types used to store date in Oracle are: <br>
+                a) <code>DATE</code>: stores year, month, day, hour, minute, seconds <br>
+                b) <code>TIMESTAMP</code>: stores year, month, day, hour, minute, seconds, and <i>fractional seconds</i>
+                <br>
+                c) <code>TIMESTAMP WITH TIME ZONE</code>: stores <code>TIMESTAMP</code> along with the timezone (+2:00,
+                -3:00, etc.) Note that the timezone that is stored is the time zone location where your database is, and
+                not where you are running the command<br>
+                d) <code>TIMESTAMP WITH LOCAL TIME ZONE</code>: the timezone information if from where the user
+                executes the query, and not where the database is.
+            </div>
+
+            <div class="sub-heading">Date Functions and Arithmetic Functions on dates</div>
+            <div>
+                - <code>SYSDATE</code>: returns the current date and time of the OS where the DB is installed <br>
+                - <code>CURRENT_DATE</code>: returns the current date and time of the place where the user's session is
+                logged in from <br>
+                - <code>SESSIONTIMEZONE</code>: returns the time zone of the user's session <br>
+                - <code>SYSTIMESTAMP</code>: returns the date and time of the DB <br>
+                - <code>CURRENT_TIMESTAMP</code>: returns current date and time from the user's session <br>
+                - We can add or subtract a number from a date, and the result of this operation will also be a date. For
+                eg. if you add 2 to a <code>sysdate</code>, the output would be two <i>days</i> after the sysdate. <br>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/1ad8becd4634c8ac6b50459524e587d8.js"></script>
+                </div>
+
+                - Apart from this, Oracle also provides some standard functions to perform arithmetic operations on
+                dates.
+                <div class="row">
+                    <img src="resources/section7_images/DateFunctions.PNG" class="center-block img-fluid"
+                         alt="Atomic_Data_Rules"
+                         width=50%>
+                </div>
+
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/1409d4539bd2a3c17ccb71a2b3c71483.js"></script>
+                </div>
+
+
+            </div>
+
+
             https://stackoverflow.com/questions/6027961/ora-00904-invalid-identifier
+
+        </div>
+
+
+        <hr>
+        <div id="Section8" class="sub-heading">Section 8: Conversion Functions</div>
+        <hr>
+
+        <div class="textual-content">
+
+            <div class="sub-heading">Conversion Functions</div>
+            <div>
+                - Oracle conversion functions convert one data type into another. There are two types of conversion:
+                <br>
+                a) Implicit Conversion: not recommended <br>
+                b) Explicit Conversion <br>
+                - <a
+                    href="https://www.udemy.com/course/oracle-sql-12c-become-an-sql-developer-with-subtitle/learn/lecture/3242764?start=96#notes">This
+                point in udemy lecture</a> explains how implicit conversion works in Oracle DB. <br>
+                - Following data types can be implicitly converted in Oracle:
+
+                <div class="row">
+                    <img src="resources/section8_images/Implicit_Data_Conversion.PNG" class="center-block img-fluid"
+                         alt="Atomic_Data_Rules"
+                         width=40%>
+                </div>
+
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/4f16faecba6d6b556665044e25103904.js"></script>
+                </div>
+
+                - There are 3 functions for explicit data type conversion:
+
+                <div class="row">
+                    <img src="resources/section8_images/Explicit_Data_Conversion.PNG"
+                         class="center-block img-fluid"
+                         alt="Atomic_Data_Rules"
+                         width=40%>
+                </div>
+            </div>
+
+
+            <div class="sub-heading">TO_CHAR, TO_DATE, TO_NUMBER</div>
+            <div>
+                a) <code>TO_CHAR</code> function: <br>
+                - <code>TO_CHAR</code> can convert <code>CHARACTER</code> type to <code>DATE</code> type. The below
+                examples show the different ways in which you can format them. <br>
+                - <b>First</b>: Converting a <code>DATE</code> type to <code>VARCHAR2</code> datatype in the
+                specified format model. <br>
+
+                - There are a number of ways in which you can format a DATE type in Oracle. This table specifies the
+                different formats that the input value can be converted into. <br>
+                - The examples for the below can be seen <a
+                    href="https://www.udemy.com/course/oracle-sql-12c-become-an-sql-developer-with-subtitle/learn/lecture/3242774?start=275#notes">here
+                on Udemy</a>. <br>
+                <div class="row">
+                    <img src="resources/section8_images/DateFormat.PNG"
+                         class="center-block img-fluid"
+                         alt="Atomic_Data_Rules"
+                         width=60%>
+                </div>
+                - Some example are shown as follows:
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/5cb6827841473f83a9e8e7168a7bb53f.js"></script>
+                </div>
+
+                - <b>Second</b>: Converting a <code>NUMBER</code> type to <code>VARCHAR2</code> datatype in the
+                specified format model. <br>
+                - These are the ways that you can format the <code>NUMBER</code> datatype:
+                <div class="row">
+                    <img src="resources/section8_images/NumberFormat.PNG"
+                         class="center-block img-fluid"
+                         alt="Atomic_Data_Rules"
+                         width=50%>
+                </div>
+                - Below are some examples on how to use the <code>TO_CHAR</code> function to format numbers.
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/77c93a30df06ed51d8267a983b76d7df.js"></script>
+                </div>
+
+                <br>
+                <br>
+
+                b) <code>TO_NUMBER</code> function: <br>
+                - This is used to convert a text to a number value. You can think of it as the reverse of the <code>TO_CHAR</code>
+                function. <br>
+                - The same formatting rules that apply to conversion from <code>NUMBER</code> to <code>VARCHAR2</code>
+                also apply to the vice-versa conversion. <br>
+                - Some exmaples of using the <code>TO_NUMBER</code>:
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/27573131dc09e0ec8d72ffe2d95f5298.js"></script>
+                </div>
+
+                <br>
+                <br>
+
+                c) <code>TO_DATE</code> function: <br>
+                - This converts <code>VARCHAR2</code> type to a <code>DATE</code> format. <br>
+                - Here is one example:
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/40ea7263bc05e2d5aec62f2c0fd39978.js"></script>
+                </div>
+            </div>
+
+
+            <div class="sub-heading">Null-Related (NVL, NVL2, NULLIF, COALESCE) Functions</div>
+            <div>
+                - The <code>NVL</code> function allows us to replace a NULL value with a meaningful alternative. <br>
+                - The syntax of using the function is: <code>NVL(expression1, expression2)</code>. If the
+                <i>expression1</i> evaluates to NULL, it returns the <i>expression2</i>. Else it returns the <i>expression1</i>.
+                Both, <i>expression1</i> and <i>expression2</i> must have the same datatype. <br>
+                - The <code>NVL2</code> function builds up on the functionality of <code>NVL</code>. <br>
+                - It's syntax is: <code>NVL2(expression1, expression2, expression3)</code>. If the <i>expression1</i> is
+                NOT NULL, then it returns <i>expression2</i>. If the <i>expression1</i> IS NULL, then it returns <i>expression3</i>.
+                The <i>expression1</i> does not have to be the same datatype as <i>expression2</i> and
+                <i>expression3</i>. BUT the datatypes of <i>expression2</i> and <i>expression3</i> must be the same.
+                <br>
+                - The syntax of the <code>NULLIF</code> function is <code>NULLIF(expression1, expression2)</code>. If
+                the <i>expression1</i> and <i>expression2</i> are equal, then the function returns NULL. BUT if they are
+                NOT equal, then it returns the <i>expression1</i>. The <i>expression1</i> and <i>expression2</i> must be
+                the same datatype. <br>
+                - The <code>COALESCE</code> function accepts a list of arguments and returns the first one that
+                evaluates to a non-null value. <br>
+                - The syntax of using the function is <code>COALESCE(expression1, ..., expressionN)</code>. It accepts
+                at least 2 parameters. Starting form the leftmost arg, it will return the first Non-Null value that it
+                finds. If all the expressions are null, it will return NULL. To prevent that, you can always write a
+                static non-null value as the last argument though. And all the expressions should be in the same
+                datatype.
+
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/ff0fda0333ffe561a79f88f463cec5fc.js"></script>
+                </div>
+            </div>
+
+
+        </div>
+
+
+        <hr>
+        <div id="Section9" class="sub-heading">Section 9: Conditional Expressions</div>
+        <hr>
+
+        <div class="textual-content">
+
+            <div class="sub-heading">CASE Expressions</div>
+            <div>
+                -
+            </div>
+
+
 
         </div>
 
