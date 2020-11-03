@@ -857,3 +857,94 @@ SELECT city, state_province, COALESCE(state_province, city)
 FROM locations;
 
 
+
+
+-- *****************************************************************************
+-- SECTION 9: Conditional Expressions
+-- *****************************************************************************
+
+-- Lecture 71
+-- CASE Expressions
+
+SELECT * FROM employees;
+
+-- This is a Simple Case Expression
+-- This is an example of using the CASE expression in a SELECT clause
+SELECT first_name, last_name, job_id, salary,
+    CASE job_id
+        WHEN 'ST_CLERK' THEN salary * 1.2
+        WHEN 'SA_REP' THEN salary * 1.3
+        WHEN 'IT_PROG' THEN salary * 1.4
+        ELSE salary
+    END AS updated_salary
+FROM employees;
+    
+
+-- This is a Searched Case Expression
+-- This is an example of using the CASE expression in a SELECT clause
+SELECT first_name, last_name, job_id, salary,
+    CASE 
+        WHEN job_id = 'ST_CLERK' THEN salary * 1.2
+        WHEN job_id = 'SA_REP' THEN salary * 1.3
+        WHEN job_id = 'IT_PROG' THEN salary * 1.4
+        ELSE salary
+    END AS updated_salary
+FROM employees;
+        
+
+-- In a Searched Case Expression
+-- we can compare based on different columns
+-- This is an example of using the CASE expression in a SELECT clause
+SELECT first_name, last_name, job_id, salary,
+    CASE 
+        WHEN job_id = 'ST_CLERK' THEN salary * 1.2
+        WHEN job_id = 'SA_REP' THEN salary * 1.3
+        WHEN job_id = 'IT_PROG' THEN salary * 1.4
+        WHEN last_name = 'King' THEN salary * 2
+        ELSE salary
+    END AS updated_salary
+FROM employees;
+
+-- We can also use a CASE expression in a WHERE clause
+SELECT first_name, last_name, job_id, salary
+FROM employees
+WHERE ( CASE
+            WHEN job_id = 'IT_PROG' AND salary > 5000 THEN 1
+            WHEN job_id = 'SA_MAN' AND salary > 10000 THEN 1
+            ELSE 0
+        END ) = 1;
+            
+-- We can use the DECODE function to accomplish the same
+SELECT first_name, last_name, job_id, salary,
+    DECODE(job_id,  'ST_CLERK', salary * 1.2,
+                    'SA_REP', salary * 1.3,
+                    'IT_PROG', salary * 1.4,
+                    salary) AS updated_salary
+FROM employees;
+
+
+
+
+
+
+-- *****************************************************************************
+-- SECTION 10: Group Functions
+-- *****************************************************************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

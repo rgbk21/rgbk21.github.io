@@ -151,6 +151,7 @@
         <a href="#Section7">Section 7: Single-Row Functions</a> <br>
         <a href="#Section8">Section 8: Conversion Functions</a> <br>
         <a href="#Section9">Section 9: Conditional Expressions</a> <br>
+        <a href="#Section9">Section 10: Group Functions</a> <br>
 
 
         <hr>
@@ -2093,13 +2094,66 @@
 
             <div class="sub-heading">CASE Expressions</div>
             <div>
+                - <code>CASE ... WHEN</code> expressions allow us to specify IF-THEN-ELSE logic in SQL code. <br>
+                - The syntax of the expression looks like this:
+
+                <div class="row">
+                    <img src="resources/section9_images/CASE_Expression.PNG" class="center-block img-fluid"
+                         alt="Atomic_Data_Rules"
+                         width=40%>
+                </div>
+
+                - The <i>expression</i> and <i>comparison_expression</i> should have the same datatype. The datatype of
+                the <i>result</i> can be different than the datatype of the expression/comparison_expression. But all
+                the <i>result</i> should have the same datatype. <br>
+                - The <code>CASE ... WHEN</code> expressions can be used in two ways: Simple Case Expression and
+                Searched Case Expression <br>
+
+                <div class="row">
+                    <img src="resources/section9_images/CASE_Expression_Types.PNG" class="center-block img-fluid"
+                         alt="Atomic_Data_Rules"
+                         width=60%>
+                </div>
+
+                - Note that in the case of the Searched Case Expression, we can make use of different conditions in the
+                <code>WHEN</code> block - basically we can use ANY expression that returns a boolean value. <br>
+                - Also note that <code>CASE ... WHEN</code> expressions can be used either in the <code>SELECT</code>
+                clause, or in the <code>WHERE</code> clause.
+
+
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/76a54a65ca7a225795c104ed71fc5770.js"></script>
+                </div>
+
+            </div>
+
+
+            <div class="sub-heading">DECODE Function</div>
+            <div>
+                - <code>DECODE</code> is specific to OracleDBs and is an alternative to <code>CASE</code> expressions.
+                Also note that <code>CASE</code> is an expression whereas <code>DECODE</code> is a function. <br>
+
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/308731f6b125499d5fea779bdf5760ef.js"></script>
+                </div>
+
+            </div>
+        </div>
+
+
+        <hr>
+        <div id="Section10" class="sub-heading">Section 10: Group Functions</div>
+        <hr>
+
+        <div class="textual-content">
+
+            <div class="sub-heading">Group Functions</div>
+            <div>
                 -
             </div>
 
 
-
         </div>
-
 
     </div>
 </div>
