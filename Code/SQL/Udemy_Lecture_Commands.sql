@@ -931,20 +931,72 @@ FROM employees;
 -- SECTION 10: Group Functions
 -- *****************************************************************************
 
+-- This shows that, by default, the keyword ALL is present in all group functions
+-- Output: 6461.831 6461.831    7067.379
+SELECT AVG(salary), AVG(ALL salary), AVG(DISTINCT salary) FROM employees;
+
+-- This shows that NULL values are not considered in Group Functions
+-- Alternatively, you could use functions that manipulate NULL values to make them count
+-- by converting NULLs to zero or something.
+-- Outputs: 0.222	0.072
+SELECT AVG(commission_pct), AVG(NVL(commission_pct, 0)) FROM employees;
+
+-- The Group functions just work on the returned value of the query. 
+-- If we restrict the returning result set, our function will work only on the
+-- result of the query
+-- Outputs: 5760	5760	6000
+SELECT AVG(salary), AVG(ALL salary), AVG(DISTINCT salary) FROM employees
+WHERE job_id = 'IT_PROG';
+
+-- This produces an error. All columns should be within group functions
+--  not a single-group group function
+-- If you use one or more Group functions in a SELECT statement, you cannot 
+-- write any column name in the SELECT statement without using a GROUP BY clause
+SELECT AVG(salary), AVG(ALL salary), AVG(DISTINCT salary), salary FROM employees;
+
+-- Lecture 75
+-- COUNT Function
+
+-- COUNT(*): counts all the rows, including null values in the table
+-- COUNT(commission_pct): does not count NULL, but counts the duplicate values as separate values
+-- COUNT(DISTINCT commission_pct): does not count NULL, does not count duplicates as separate values
+-- COUNT(NVL(commission_pct, 0)): since NULL values are being replaced by 0, counts NULLs as valid values
+-- COUNT(DISTINCT NVL(commission_pct, 0)): because 0 is now counted as a distinct value, hence we get one extra row
+SELECT  COUNT(*), 
+        COUNT(commission_pct),
+        COUNT(DISTINCT commission_pct),
+        COUNT(NVL(commission_pct, 0)),
+        COUNT(DISTINCT NVL(commission_pct, 0))
+FROM employees;
 
 
+-- Lecture 76
+-- MAX Function
+SELECT MAX(salary) FROM employees;
+-- When it comes to DATE, maximum means the most recent DATE
+SELECT MAX(hire_date) FROM employees;
+-- When it comes to VARCHAR2 type, maximum means the character with the largest ASCII value
+SELECT MAX(first_name) FROM employees;
+
+-- Similarly you can use the MIN function
+SELECT MIN(salary) FROM employees;
+SELECT MIN(hire_date) FROM employees;
+SELECT MIN(first_name) FROM employees;
+
+-- This is to clear any confusion about which is MIN and which is MAX
+-- Outputs: 13-JAN-01	21-APR-08	Adam	Winston
+SELECT MIN(hire_date), MAX(hire_date), MIN(first_name), MAX(first_name) FROM employees;
+
+-- Reminder, Group Functions ignore NULL
+-- Hence this will output: 0.1	0
+SELECT MIN(commission_pct), MIN(NVL(commission_pct, 0)) FROM employees;
 
 
+-- Lecture 78
+-- SUM Function
 
-
-
-
-
-
-
-
-
-
+-- Output: 691416	691416	409908
+SELECT SUM(salary), SUM(ALL salary), SUM(DISTINCT salary) FROM employees;
 
 
 

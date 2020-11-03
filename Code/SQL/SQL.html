@@ -151,7 +151,8 @@
         <a href="#Section7">Section 7: Single-Row Functions</a> <br>
         <a href="#Section8">Section 8: Conversion Functions</a> <br>
         <a href="#Section9">Section 9: Conditional Expressions</a> <br>
-        <a href="#Section9">Section 10: Group Functions</a> <br>
+        <a href="#Section10">Section 10: Group Functions</a> <br>
+        <a href="#Section11">Section 11: Grouping Data</a> <br>
 
 
         <hr>
@@ -2149,11 +2150,77 @@
 
             <div class="sub-heading">Group Functions</div>
             <div>
-                -
+                - Recall from the previous section that there are two types of functions in Oracle SQL: Single-row and
+                Multiple-row functions. Group functions allows us to get one result from multiple rows of data. <br>
+                - Remember that Group functions ignore the NULL values. <br>
+                - The <code>DISTINCT</code> and <code>ALL</code> keywords are used with the group functions to consider
+                or ignore the duplicate values. The default is <code>ALL</code>.
             </div>
 
 
+            <div class="sub-heading">AVG Function</div>
+            <div>
+                - Used for getting the average value of the columns or expressions. <br>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/3b986328c7fedb948dd301961dd45e61.js"></script>
+                </div>
+            </div>
+
+
+            <div class="sub-heading">COUNT Function</div>
+            <div>
+                - Returns the number of rows returned by a query. <br>
+                - We can use the <code>DISTINCT</code> keyword to count the distinct values of the expression, or <code>ALL</code>
+                keyword to count all the rows. <br>
+                - You can use <code>COUNT(*)</code> to count all the rows including the duplicates and the NULL values.
+                <br>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/07386a51f5677f5ad1feb5b67fd0c134.js"></script>
+                </div>
+            </div>
+
+            <div class="sub-heading">MAX and MIN Function</div>
+            <div>
+                - Returns the maximum value of the column or expression that it is provided with. <br>
+                - This can be used with <code>NUMERIC</code>, <code>DATE</code>, and <code>VARCHAR2</code> datatypes.
+                <br>
+                - It makes no sense to use <code>DISTINCT</code> or <code>ALL</code> keywords when using these Group Functions.
+                <br>
+            </div>
+
+
+            <div class="sub-heading">SUM Function</div>
+            <div>
+                - Used for getting the sum of the column or expression. <br>
+                - The <code>ALL</code> and <code>DISTINCT</code> keywords can be used to handle duplicate values. <br>
+
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/91abe49ebbff530f1f6fe4fe5cbd2d87.js"></script>
+                </div>
+            </div>
+
+
+            <div class="sub-heading">LISTAGG Function</div>
+            <div>
+                - TODO
+            </div>
         </div>
+
+
+
+        <hr>
+        <div id="Section11" class="sub-heading">Section 11: Grouping Data</div>
+        <hr>
+
+        <div class="textual-content">
+
+            <div class="sub-heading">GROUP BY Clause</div>
+            <div>
+
+            </div>
+
+        </div>
+
 
     </div>
 </div>
