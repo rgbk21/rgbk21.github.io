@@ -1000,3 +1000,156 @@ SELECT SUM(salary), SUM(ALL salary), SUM(DISTINCT salary) FROM employees;
 
 
 
+
+-- *****************************************************************************
+-- SECTION 11: Grouping Data
+-- *****************************************************************************
+
+
+-- Lecture 82
+-- GROUP BY
+
+-- Using a GROUP BY clause
+SELECT job_id, AVG(salary)
+FROM employees
+GROUP BY job_id;
+
+-- Ordering the output by DESC
+SELECT job_id, AVG(salary)
+FROM employees
+GROUP BY job_id
+ORDER BY AVG(salary) DESC;
+
+-- We can also group the rows by multiple columns
+-- Grouping by multiple columns means that all rows that have the same values for 
+-- job_id, manager_id, department_id will be grouped together
+SELECT job_id, manager_id, department_id, TRUNC(AVG(salary), 2)
+FROM employees
+GROUP BY job_id, manager_id, department_id
+ORDER BY AVG(salary) DESC;
+
+
+SELECT * FROM employees
+ORDER BY job_id, manager_id, department_id;
+
+
+-- For example if you count the number of rows in each of the groups
+-- by looking at the above query, you will see that there are exactly 
+-- 2 people with the tuple values <job_id, manager_id, department_id>
+-- as <AD_VP, 100, 90> and hence the output of the COUNT(*) in the below query
+-- is 2 for the respective rows.
+SELECT job_id, manager_id, department_id, TRUNC(AVG(salary), 2), COUNT(*)
+FROM employees
+GROUP BY job_id, manager_id, department_id
+ORDER BY AVG(salary) DESC;
+
+-- All columns in hte SELECT clause should be also present in the GROUP BY clause
+-- For eg. this will throw an error
+SELECT job_id, manager_id
+FROM employees
+GROUP BY job_id
+ORDER BY AVG(salary) DESC;
+
+-- HOwever, not all columns present in the GROUP BY clause need to be present in the 
+-- SELECT clause
+-- In the output, you can see the SA_REP being split into 5 different COUNTs
+-- becasue there are 5 different managers within the SA_REP job_id column
+SELECT job_id, COUNT(*)
+FROM employees
+GROUP BY job_id, manager_id
+ORDER BY AVG(salary) DESC;
+
+-- Column aliases cannot be used with a GROUP BY clause
+-- but they can be used with the ORDER BY clause
+SELECT job_id AS jobs, COUNT(*)
+FROM employees
+GROUP BY jobs, manager_id
+ORDER BY AVG(salary) DESC;
+
+-- But we can use it with a ORDER BY clause
+SELECT job_id AS jobs, COUNT(*)
+FROM employees
+GROUP BY job_id, manager_id
+ORDER BY jobs DESC;
+
+-- We can also use the WHERE clause to filter the rows on which the GROUP BY is executed
+SELECT job_id, COUNT(*)
+FROM employees
+WHERE job_id IN ('IT_PROG', 'ST_MAN', 'AC_ACCOUNT')
+GROUP BY job_id, manager_id
+ORDER BY job_id DESC;
+
+
+
+-- Lecture 84
+-- HAVING clause
+
+-- Suppose if we want ot get the departments whose average salaries are greater than 10,000
+-- First you have to understand that this would be incorrect:
+SELECT job_id, AVG(salary) 
+FROM employees
+WHERE AVG(salary) > 10000;
+
+-- We could do this:
+-- But this is incorrect. Because we cannot use Group Functions with the WHERE clause.
+-- This is because if you look at the order of execution diagram, the WHERE clasuse is executed before the
+-- GROUP BY clause. Hence once the WHERE BY clause has been executed, SQL cannot go back to 
+-- re-execute the WHERE clause.
+SELECT job_id, AVG(salary) 
+FROM employees
+WHERE AVG(salary) > 10000
+GROUP BY job_id;
+
+-- We use the HAVING clause instead
+SELECT job_id, AVG(salary) 
+FROM employees
+GROUP BY job_id
+HAVING AVG(salary) > 10000;
+
+-- The WHERE clause and the HAIVNG clause can also be used together
+-- As stated, this is because the WHERE clause filters rows whereas the
+-- HAVING clause filters the group of rows
+SELECT job_id, AVG(salary) 
+FROM employees
+WHERE job_id = 'IT_PROG'
+GROUP BY job_id
+HAVING AVG(salary) > 5000;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

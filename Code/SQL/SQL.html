@@ -2184,7 +2184,8 @@
                 - Returns the maximum value of the column or expression that it is provided with. <br>
                 - This can be used with <code>NUMERIC</code>, <code>DATE</code>, and <code>VARCHAR2</code> datatypes.
                 <br>
-                - It makes no sense to use <code>DISTINCT</code> or <code>ALL</code> keywords when using these Group Functions.
+                - It makes no sense to use <code>DISTINCT</code> or <code>ALL</code> keywords when using these Group
+                Functions.
                 <br>
             </div>
 
@@ -2207,7 +2208,6 @@
         </div>
 
 
-
         <hr>
         <div id="Section11" class="sub-heading">Section 11: Grouping Data</div>
         <hr>
@@ -2216,10 +2216,95 @@
 
             <div class="sub-heading">GROUP BY Clause</div>
             <div>
+                - As we have discussed previously, Group functions return values for a group of data. But until now, the
+                whole result set was considered as a single group. So the aggregate functions returned one row for the
+                <i>entire</i> set of rows. <br>
 
+                <div class="row">
+                    <img src="resources/section11_images/Group_By_Entire.PNG" class="center-block img-fluid"
+                         alt="Atomic_Data_Rules"
+                         width=50%>
+                </div>
+
+                - Adding the <code>GROUP BY</code> clause splits the results into smaller groups and the aggregate
+                functions are applied to each group individually.
+
+                <div class="row">
+                    <img src="resources/section11_images/Group_By_by_Group.PNG" class="center-block img-fluid"
+                         alt="Atomic_Data_Rules"
+                         width=50%>
+                </div>
+
+                - The syntax of the <code>GROUP BY</code> clause looks something like this:
+
+                <div class="row">
+                    <img src="resources/section11_images/GROUP_BY_Syntax.PNG" class="center-block img-fluid"
+                         alt="Atomic_Data_Rules"
+                         width=50%>
+                </div>
+
+                - <i>aggregate_function</i> is any function like <code>SUM</code>, <code>AVG</code>, <code>COUNT</code>,
+                etc. <br>
+                - The <code>GROUP BY</code> clause comes after the <code>FROM</code> clause. If there is a
+                <code>WHERE</code> clause, then the <code>GROUP BY</code> clause comes after the <code>WHERE</code>
+                clause as well. <br>
+                - Note that the columns or expressions that are not encapsulated within an <i>aggregate_function</i>
+                must be written in the <code>GROUP BY</code> clause. <br>
+                - The <code>SELECT</code> clause cannot have any other individual columns than what is used by the
+                <code>GROUP BY</code> clause. But we do not need to use all the columns used in the
+                <code>GROUP BY</code> clause to be present in the <code>SELECT</code> statement. This is because
+                grouping the results, and deciding to show those results are different things. <br>
+                - The <code>ORDER BY</code> clause cannot have any other individual columns than the
+                <code>GROUP BY</code> clause has. <br>
+                - Why can't column aliases be used in GROUP BY clause but can be used in the ORDER BY clause?
+                The order of execution of the SQL statements is as follows: <br>
+
+                <div class="row">
+                    <img src="resources/section11_images/OrderOfExecution.PNG" class="center-block img-fluid"
+                         alt="Atomic_Data_Rules"
+                         width=50%>
+                </div>
+
+                - As the above diagram shows, the aliases are created at step 5, hence they are unavailable at step 3,
+                but are available at step 6. <br>
+                - Also, since the <code>WHERE</code> clause is executed before the <code>GROUP BY</code> is executed,
+                you can filter the rows using the <code>WHERE</code> clause and make the <code>GROUP BY</code> run on a
+                filtered set of rows instead of the entire rows. <br>
+
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/441878908ff943572bdec9071a65e4b4.js"></script>
+                </div>
             </div>
 
+            <div class="sub-heading">HAVING Clause</div>
+            <div>
+                - We cannot use Group Functions with the <code>WHERE</code> clause. This is because if you look at the
+                order of execution diagram, the <code>WHERE</code> clause is executed before the
+                <code>GROUP BY</code> clause. Hence once the <code>GROUP BY</code> clause has been executed, SQL cannot
+                go back to re-execute the <code>WHERE</code> clause. <br>
+                - Instead we make use of the <code>HAVING</code> clause to filter data after it has been grouped. <br>
+                - The <code>HAVING</code> clause is different from the <code>WHERE</code> clause in the sense that the
+                <code>WHERE</code> clause filters row, whereas the <code>HAVING</code> clause filters grouped data. <br>
+                - The <code>HAVING</code> clause comes immediately after the <code>GROUP BY</code> clause and before the
+                <code>ORDER BY</code> clause. <br>
+                -
+            </div>
+
+
         </div>
+
+
+        <hr>
+        <div id="Section12" class="sub-heading">Section 12: Joining Multiple Tables</div>
+        <hr>
+
+        <div class="textual-content">
+
+            <div>SQL Join Types</div>
+
+        </div>
+
+
 
 
     </div>
