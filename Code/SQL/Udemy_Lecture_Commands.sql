@@ -1050,7 +1050,7 @@ FROM employees
 GROUP BY job_id
 ORDER BY AVG(salary) DESC;
 
--- HOwever, not all columns present in the GROUP BY clause need to be present in the 
+-- However, not all columns present in the GROUP BY clause need to be present in the 
 -- SELECT clause
 -- In the output, you can see the SA_REP being split into 5 different COUNTs
 -- becasue there are 5 different managers within the SA_REP job_id column
@@ -1118,11 +1118,224 @@ HAVING AVG(salary) > 5000;
 
 
 
+-- *****************************************************************************
+-- SECTION 12: Joining Multiple Tables
+-- *****************************************************************************
+
+
+-- Lecture 86
+-- Oracle SQL Join Types
+
+DESC employees;
+DESC departments;
+
+-- When you run the above two commands, you can see that the 2 tables have two different columns in common
+-- By 'in common' means the columns should have the same name and the same datatype
+-- MANAGER_ID and DEPARTMENT_ID
+
+-- Hence a NATURAL JOIN would join the two tables based on BOTH the columns
+-- Rows are matached and joined ONLY if the values in BOTH the columns - MANAGER_ID and DEPARTMENT_ID match
+
+SELECT * FROM employees NATURAL JOIN departments;
+
+-- As usual, you can restrict the number of columns that are returned in the result set
+SELECT first_name, last_name, department_name FROM employees NATURAL JOIN departments;
+
+
+-- Lecture 87
+-- JOIN with the USING clause
+
+
+-- In the previous example, we saw that the employees and the departments table have two common columns.
+-- But what if we wanted to join the two tables using just one specfic column? In that case
+-- we use the USING clause.
+-- The column on which we want to join is specified in parentheses
+SELECT * FROM employees JOIN departments USING (department_id);
+
+-- But do note that in the above case, the manager_id columns are returned TWICE. 
+-- And the values in the two columns do not match either!
 
 
 
+-- Multiple columns can be specified
+SELECT * FROM employees JOIN departments USING (department_id, manager_id);
 
 
+-- Lecture 90
+-- Handling ambiguous column names
+
+-- Running the below query is going to give a 'column ambiguously defined' error
+-- because SQL engine finds the manager_id column in both the tables and
+-- it doesn't know which table's column you are referring to
+SELECT first_name, last_name, manager_id 
+FROM employees 
+JOIN departments 
+USING (department_id);
+
+-- We solve this problemm by using aliases
+SELECT e.first_name, e.last_name, d.manager_id AS d_manager_id , e.manager_id AS e_manager_id
+FROM employees e
+JOIN departments d
+USING (department_id);
+
+-- Note that we do not use aliases in the USING clause
+-- Error: 'column part of USING clause cannot have qualifier'
+SELECT e.first_name, e.last_name, d.manager_id
+FROM employees e
+JOIN departments d
+USING (manager_id);
+
+-- This is the way
+SELECT e.first_name, e.last_name, manager_id
+FROM employees e
+JOIN departments d
+USING (manager_id);
+
+
+-- Lecture 91
+-- Inner join and join with the ON clause
+
+SELECT e.first_name, e.last_name, d.manager_id, e.manager_id
+FROM employees e JOIN departments d
+ON (e.department_id = d.department_id AND e.manager_id = d.manager_id);
+
+-- You can also add the INNER clause, but it doesn't matter
+SELECT e.first_name, e.last_name, d.manager_id, e.manager_id
+FROM employees e INNER JOIN departments d
+ON (e.department_id = d.department_id AND e.manager_id = d.manager_id);
+
+-- The same statement using the USING clause would be written as follows
+-- Remember that the aliases will have to be removed
+SELECT e.first_name, e.last_name, manager_id, manager_id
+FROM employees e JOIN departments d
+USING (department_id , manager_id);
+
+
+-- Lecture 92
+-- Multiple Join Operations
+
+SELECT * FROM employees;
+SELECT * FROM departments;
+SELECT * FROM locations;
+SELECT * FROM countries;
+
+SELECT e.first_name, e.last_name, d.department_name, l.city
+FROM employees e JOIN departments d
+ON (e.department_id = d.department_id)
+JOIN locations l
+ON (d.location_id = l.location_id);
+
+-- You can do the same thing using the USING clause
+-- But for some reason this outputs 2,650 rows!!!!
+-- Avoid using NATURAL JOIN..
+SELECT e.first_name, e.last_name, d.department_name, l.city
+FROM employees e JOIN departments d
+ON (e.department_id = d.department_id)
+JOIN locations l
+USING (location_id)
+NATURAL JOIN countries;
+
+--..always use USING or ON clause to join tables
+-- This output 106 rows as expected
+SELECT e.first_name, e.last_name, d.department_name, l.city, c.country_name
+FROM employees e JOIN departments d
+ON (e.department_id = d.department_id)
+JOIN locations l
+USING (location_id)
+JOIN countries c
+USING (country_id);
+
+-- Also note that the JOIN order is important
+-- Consider the following query
+SELECT e.first_name, e.last_name, d.department_name, l.city, c.country_name
+FROM employees e JOIN departments d
+ON (e.department_id = d.department_id)
+JOIN locations l
+ON (d.location_id = l.location_id)
+JOIN countries c
+ON (c.country_id = l.country_id);
+
+-- Now let's change the query to
+-- This won't work because once employees and departments tables are joined,
+-- there is no country_id in the result set to join it with the the country_id
+-- column in countries table
+SELECT e.first_name, e.last_name, d.department_name, l.city, c.country_name
+FROM employees e JOIN departments d
+ON (e.department_id = d.department_id)
+JOIN countries c
+ON (c.country_id = l.country_id)
+JOIN locations l
+ON (d.location_id = l.location_id);
+
+
+
+-- Lecture 93
+-- Restricting Joins
+
+-- You can restrict the rows returned by using the WHERE clause or the AND clause
+SELECT e.first_name, e.last_name, e.job_id, d.department_name, l.city, c.country_name
+FROM employees e JOIN departments d
+ON (e.department_id = d.department_id)
+JOIN locations l
+ON (d.location_id = l.location_id)
+JOIN countries c
+ON (c.country_id = l.country_id)
+WHERE e.job_id = 'IT_PROG';
+
+-- ..using the AND clause instead
+SELECT e.first_name, e.last_name, e.job_id, d.department_name, l.city, c.country_name
+FROM employees e JOIN departments d
+ON (e.department_id = d.department_id)
+JOIN locations l
+ON (d.location_id = l.location_id)
+JOIN countries c
+ON (c.country_id = l.country_id)
+AND e.job_id = 'IT_PROG';
+
+-- Multiple AND clauses can be joined together like this
+-- You can use any other operator like LIKE, EQUALS, NOT EQUALS 
+-- (any operator that you normally use with a WHERE clause will work)
+SELECT e.first_name, e.last_name, e.job_id, d.department_name, l.city, c.country_name
+FROM employees e JOIN departments d
+ON (e.department_id = d.department_id)
+JOIN locations l
+ON (d.location_id = l.location_id)
+JOIN countries c
+ON (c.country_id = l.country_id)
+AND e.job_id = 'IT_PROG'
+AND e.first_name = 'David';
+
+-- You can do the same thing using a WHERE clause as well
+SELECT e.first_name, e.last_name, e.job_id, d.department_name, l.city, c.country_name
+FROM employees e JOIN departments d
+ON (e.department_id = d.department_id)
+JOIN locations l
+ON (d.location_id = l.location_id)
+JOIN countries c
+ON (c.country_id = l.country_id)
+WHERE e.job_id = 'IT_PROG' AND e.first_name = 'David';
+
+
+-- Lecture 94
+-- Self Joins
+
+SELECT worker.first_name, worker.last_name, worker.employee_id, worker.manager_id, 
+        manager.first_name, manager.last_name, manager.employee_id
+FROM employees worker
+JOIN employees manager
+ON (worker.manager_id = manager.employee_id);
+
+-- For some reason, adding the As keyword causes the query to fail:
+SELECT worker.first_name, worker.last_name, worker.employee_id, worker.manager_id, 
+        manager.first_name, manager.last_name, manager.employee_id
+FROM employees AS worker
+JOIN employees AS manager
+ON (worker.manager_id = manager.employee_id);
+
+-- Lecture 94
+-- Non-Equijoins
+
+SELECT * FROM jobs;
 
 
 

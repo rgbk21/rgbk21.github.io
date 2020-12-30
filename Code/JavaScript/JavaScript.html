@@ -119,28 +119,28 @@
 
 <div class="container">
     <div>
-        This page contains my notes from the following books: <br>
-        a) Eloquent JavaScript by Marijn Haverbeke<br>
+        This page contains my notes from the following books and lectures: <br>
+        a) Eloquent JavaScript by Marijn Haverbeke <br>
+        b) Udemy course on JavaScript <br>
     </div>
 
     <br>
-    Index:
-    <br>
-    Chapter 1: <a href="#Values">Values, Types, and Operators</a>
-
-    <br>
+    Index for Book: <br>
     Chapter 13: <a href="#Chapter13">JavaScript and the Browser</a>
     <br>
-    Chapter 13: <a href="#Chapter14">The Document Object Model</a>
+    Chapter 14: <a href="#Chapter14">The Document Object Model</a>
+    <br>
     <br>
 
+    Index for Udemy Course: <br>
+    <a href="#Module2_Udemy">Module 2 - JavaScript Fundamentals Part 1</a> <br>
+    <a href="#Module3_Udemy">Module 3 - JavaScript Fundamentals Part 2</a> <br>
+    <a href="#Module5_Udemy">Module 5 - Developer Skills and Editor Setup</a> <br>
+    <a href="#Module6_Udemy">Module 6 - HTML and CSS Crash Course</a> <br>
 
-    <div id="Values" class="chapter">Chapter 1: Values, Types, and Operators</div>
-    <div class="textual-content">
-        -
-    </div>
-
+    <hr>
     <div id="Chapter13" class="chapter">Chapter 13: JavaScript and the Browser</div>
+    <hr>
     <div class="textual-content">
 
         <li><b>HTML</b></li>
@@ -204,8 +204,10 @@
 
     </div>
 
-
+    <hr>
     <div id="Chapter14" class="chapter">Chapter 14: The Document Object Model</div>
+    <hr>
+
     <div class="textual-content">
 
         <li><b>What is the DOM</b></li>
@@ -293,6 +295,183 @@
         </div>
 
 
+    </div>
+
+
+    <hr>
+    <div id="Module2_Udemy" class="chapter">Module 2 - JavaScript Fundamentals Part 1</div>
+    <hr>
+
+    <div class="textual-content">
+
+        <div class="sub-heading">Section 2: JavaScript Fundamentals, Part 1</div>
+        <div>
+            - JS can be included in your HTML code in 2 ways - either inline or by pointing to an external js file. <br>
+            - Inline js is when it is included in the .html page itself within <code>&lt;script&gt;</code> tags like:
+            <code>&lt;script&gt;alert("Hello World")&lt;/script&gt;</code> tags. Pointing to an external js is done as
+            follows:
+            <code>&lt;script src = "script.js"&gt;&lt;script&gt;</code> i.e. specify the location of the js file. Here
+            it means that the script.js file is in the same folder as the html file. <br>
+            - In the below image we have moved the js to an external file. Now when we load the index.html page, the
+            values from the js file are logged into the console. The console also shows the corresponding file and line
+            number that corresponds to the line that is logging the values. The variables that are present in the js
+            file, are also in-scope in the console window in the browser. So you can access variables such as <i>js</i>
+            and <i>firstName</i> in the console and change their values as required.
+
+            <div class="row">
+                <img src="imgs/UdemyCourse/Module2/Image1.PNG" class="center-block img-fluid" alt="Example1">
+            </div>
+
+            <br>
+            - Errors that are present in your js file will appear on the console as follows:
+
+            <div class="row">
+                <img src="imgs/UdemyCourse/Module2/Image2.PNG" class="center-block img-fluid" alt="Example1">
+            </div>
+
+            - Javascript has dynamic typing. Hence we do not have to manually define the datatype of the value stored in
+            the variable. The data types are determined automatically by javascript. This distinction is important - a
+            <i>variable</i> simply holds a <i>value</i> and it is the <i>value</i> that determines the <i>type</i>. This
+            also means that you can assign a different data type to the same variable in your code. <br>
+            - The <code>typeof</code> operator is used to find out the type of the variable. <br>
+            - You can check the operator precedence on MDN website <a
+                href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence#Table">here</a>.
+            21 is the highest value of precedence. <br>
+            - In JS, we have <i>Type Conversion</i> and <i>Type Coercion</i>. Type <i>conversion</i> is when we manually
+            convert variables from one type to another. Type <i>coercion</i> is when JS automatically converts the types
+            for us, ie. it is an <i>implicit</i> conversion that is hidden from us. <br>
+            - In 2009, ES5 (ECMA Script 5) was released. In 2015, ES6/ES2015 (ECMAScript 2015) was released. In 2015,
+            the release cycle changed to an annual release cycle. So a anew version of JS is released every year. <br>
+            - You can check the entire compatibility of various JS versions <a
+                href="https://kangax.github.io/compat-table/es6/">here in this table</a>. <br>
+            - ES5 is full supported in all browsers, right down to IE9 from 2011. ES6+ is supported in all modern
+            browsers. ES6+ includes all JS version from 2015-2020. Future releases of JS are known as ESNext. These are
+            from 2021 onwards.
+
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/93d5ed36237175fb52a42698d97d949f.js"></script>
+            </div>
+        </div>
+    </div>
+
+
+    <hr>
+    <div id="Module3_Udemy" class="chapter">Module 3 - JavaScript Fundamentals Part 2</div>
+    <hr>
+
+    <div class="textual-content">
+
+        <div class="sub-heading">Lecture 32: Activating Strict Mode</div>
+        <div>
+            - Add <code>'use strict'</code> at the top of the js file in order to activate strict mode. This stops JS
+            from failing silently, and instead generates errors in the console when certain errors occur.
+        </div>
+
+        <div class="sub-heading">Lecture 34: Function Declarations vs Expressions</div>
+        <div>
+            - There are 3 types of ways in which you can declare functions: <br>
+            a) Function Declaration <br>
+            b) Function Expression <br>
+            c) Arrow Function <br>
+
+            <div class="row">
+                <img src="imgs/UdemyCourse/Module3/FunctionDeclaration.PNG"
+                     width="50%"
+                     class="center-block img-fluid"
+                     alt="Example1">
+            </div>
+            - Remember that the arrow function does not have the <code>this</code> scope. More on this later.
+
+        </div>
+
+        <div class="code-snippet">
+            <script src="https://gist.github.com/rgbk21/600dc0df29b3ad2b98f21dd00d88e0ec.js"></script>
+        </div>
+
+    </div>
+
+
+    <hr>
+    <div id="Module5_Udemy" class="chapter">Module 5 - Developer Skills and Editor Setup</div>
+    <hr>
+
+    <div class="textual-content">
+
+        <div class="sub-heading">Lecture 56: Installing Node.js and setting up a dev env</div>
+        <div>
+            - Check if npm is already installed in your IDE using: <code>npm -v</code> <br>
+            - Install live-server by running <code>npm install live-server -g</code> <br>
+            - Launch the web page by running <code>live-server</code>. Now you will not have to reload the page every
+            time you make changes to see if the changes took effect or not. <br>
+        </div>
+
+        <div class="sub-heading">Lecture 61: Debugging with the Chrome Console and Break Points</div>
+        <div>
+            - In Chrome, you can go to the Sources tab and view the debugger. You can set breakpoints, check the values
+            of the variables, everything that you want. <br>
+            - Alternatively, you could also write down <code>debugger;</code> anywhere in your js code, and then the
+            code would automatically switch over to the debugger when that particular line is reached. <br>
+        </div>
+    </div>
+
+    <hr>
+    <div id="Module6_Udemy" class="chapter">Module 6 - HTML and CSS Crash Course</div>
+    <hr>
+
+    <div class="textual-content">
+        <div class="sub-heading">Lecture 64: Basic HTML Structure and Elements</div>
+        <div>
+            - Elements, Tags, Attributes, Classes, IDs <br>
+            - In HTML, some <i>Element</i>s can have <i>attribute</i>s. These <i>attribute</i>s describe <i>element</i>s.
+            <br>
+            - For example, consider the following anchor element.
+            <code>&lt;a href="https://github.com/rgbk21"&gt;My Github&lt;/a&gt;</code>. Here <code>href</code> is an
+            <i>attribute</i> of the <code>&lt;a&gt;</code> <i>tag</i> because it defines the link to which the anchor
+            element should point to. <br>
+            - An <code>&lt;a&gt;</code> is also known as an <i>inline element</i> because the text contained within the
+            <code>&lt;a&gt;</code> tags are displayed in-line. Contrast this with something like the &lt;p&gt; tag where
+            the text is displayed on a different line. Such an element is known as a <i>Block Element</i>. <br>
+            - Similarly you have the <code>&lt;img src="https://github.com/rgbk21"&lt;/&gt;</code> element. An
+            <i>img</i> element does not have a closing <i>tag</i>. <br>
+            - There are two <i>attribute</i>s that we can use on ALL <i>element</i>s. These are <i>class</i> and
+            <i>id</i>. These attributes are used to name the HTML <i>element</i>s so that we can style them using CSS.
+            We also use them to select <i>elements</i> from JS when we are doing DOM Manipulation. <br>
+            - The difference between <i>class</i>es and <i>id</i>s is that <i>id</i>s are supposed to be unique. That
+            is, you can only use an <i>id</i> ONCE, on a page. <br>
+            - A <code>&lt;div&gt;</code> element is used to draw a box on the HTML page. <br>
+            - A <code>&lt;form&gt;</code> element is used to accept input from the user. <code>&lt;form&gt;</code> is
+            just a <code>&lt;div&gt;</code> that has been given some semantic meaning to explain to HTML that we intend
+            to take an input from the user. <br>
+        </div>
+
+        <div class="sub-heading">Lecture 66: Basic Styling with CSS</div>
+        <div>
+            - We use the <code>&lt;link&gt;</code> tag to link an HTML file to a CSS file. This line is supposed to go
+            in the <code>&lt;head&gt;</code> of the HTML page. <br>
+            - <code>&lt;link href="styles.css" rel="stylesheet"&gt;</code>. This code assumes that the CSS file is in the
+            same folder as the HTML file. <br>
+            - Consider the following HTML File and the CSS associated with it:
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/781a3e26df4056cd6d47edd544c39cb7.js"></script>
+            </div>
+        </div>
+
+        <div class="sub-heading">Lecture 67: Introduction to the CSS Box Model</div>
+        <div>
+            - According to the box model in CSS, each and every element on a web page can be seen as a rectangular box.
+
+            <div class="row">
+                <img src="imgs/UdemyCourse/Module6/BoxModel.PNG"
+                     width="75%"
+                     class="center-block img-fluid"
+                     alt="Example1">
+            </div>
+            - The CSS file corresponding to the HTML in the section above:
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/e1df98c9cf3a5f361fad24dce8538085.js"></script>
+            </div>
+
+        </div>
     </div>
 
 

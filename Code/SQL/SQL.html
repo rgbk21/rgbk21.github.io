@@ -2287,7 +2287,11 @@
                 <code>WHERE</code> clause filters row, whereas the <code>HAVING</code> clause filters grouped data. <br>
                 - The <code>HAVING</code> clause comes immediately after the <code>GROUP BY</code> clause and before the
                 <code>ORDER BY</code> clause. <br>
-                -
+
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/cd58cdb667547c09f408738899272f08.js"></script>
+                </div>
+
             </div>
 
 
@@ -2300,11 +2304,124 @@
 
         <div class="textual-content">
 
-            <div>SQL Join Types</div>
+            <div class="sub-heading">SQL Join Types</div>
+            <div>
+                - There are several join types:
+
+                <div class="row">
+                    <img src="resources/section12_images/JoinTypes.PNG" class="center-block img-fluid"
+                         alt="Atomic_Data_Rules"
+                         width=50%>
+                </div>
+            </div>
+
+
+            <div class="sub-heading">Natural Joins</div>
+            <div>
+                - We define a <i>source_table</i> and <i>target_table</i> as follows:
+                <code>SELECT * FROM source_table NATURAL JOIN target_table</code> <br>
+                - The <code>NATURAL JOIN</code> joins two tables implicitly based on common columns that have the same
+                name and the same data type. <br>
+                - If the column names are the same but the datatypes are different, it will result in an error. <br>
+                - You do not need to specify the names of the columns on which you want to join the two tables because
+                they are automatically assocaited with each other. <br>
+                - In <code>NATURAL JOIN</code> first the common columns are displayed. Then the rest of the columns of
+                the <i>source_table</i> are displayed, and then the remaining rows of the <i>target_table</i> are
+                displayed.
+
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/39bac07bf71cb7a72d3f2d286767b633.js"></script>
+                </div>
+            </div>
+
+            <div class="sub-heading">JOIN with the USING clause</div>
+            <div>
+                - When joining two tables if there are more than one columns that have the same names then we can use
+                the <code>USING</code> clause to specify which column needs to be selected as the join column in the
+                join operation. <br>
+                - These types of joins are known as EQUIJOINS. Because the rows are joined together only if the values
+                in the columns in the two tables are equal. There are other types of joins which can join based on
+                whether the values in the two columns are less than, greater than, or not equal. <br>
+
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/30a8b2802f2127ff48845ecd3e212cd6.js"></script>
+                </div>
+            </div>
+
+
+            <div class="sub-heading">Handling ambiguous column names</div>
+            <div>
+                - Always use table aliases. You get a speedup because the SQL engine already knows which table to refer
+                to for a particular column. You also future-proof your queries because in case in the future if the
+                table changes and new columns are added that have the same column names, you avoid the 'column
+                ambiguously defined' errors. <br>
+
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/8b010f095e1e9715f9eaa58df1a008a0.js"></script>
+                </div>
+            </div>
+
+
+            <div class="sub-heading">Inner join and join with the ON clause</div>
+            <div>
+                - The following is the syntax for the <code>INNER JOIN</code>. Note how the <code>ON</code> clause uses
+                the <i>join_condition</i> whereas the <code>USING</code> clause uses the <i>column_name</i>. <br>
+                - For using the <code>USING</code> clause, both the columns on which the two tables are being joined
+                should have the same names. <br>
+                - However, with the <code>ON</code> clause, we can write one or more join conditions even if they have
+                different names. Only the rows that satisfy these join conditions are included in the result set. <br>
+
+                <div class="row">
+                    <img src="resources/section12_images/Inner_Join.PNG" class="center-block img-fluid"
+                         alt="Atomic_Data_Rules"
+                         width=50%>
+                </div>
+
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/af126e327ada7a9577e027ee4d1068c5.js"></script>
+                </div>
+            </div>
+
+
+            <div class="sub-heading">Multiple Join Operations</div>
+            <div>
+                - Examples are present here: <br>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/395f1ea221933e4b449938cc7b280f8c.js"></script>
+                </div>
+            </div>
+
+
+            <div class="sub-heading">Restricting Joins</div>
+            <div>
+                - You can restrict the rows returned from a join query by using either the <code>WHERE</code> or the
+                <code>AND</code> operator. <br>
+
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/36e97c253c3bda31a557660fce74599e.js"></script>
+                </div>
+            </div>
+
+            <div class="sub-heading">Self Join</div>
+            <div>
+                - Joining a table with itself is called as Self Join. <br>
+                - When/Why would you need to use Self joins? Take the <i>employees</i> table for example. Every employee
+                has a manager, and every manager is also an employee. So if you wanted to find the manager of some
+                employee, you would look at the <i>manager_id</i> of the employee, and that <i>manager_id</i> would be
+                the same as some employee's <i>employer_id</i> in the same table.
+
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/df34abdb917b6fbfa8a41ca12fa47ba9.js"></script>
+                </div>
+            </div>
+
+            <div class="sub-heading">Non-EquiJoins (Joining Unequal Tables)</div>
+            <div>
+                -
+            </div>
+
 
         </div>
-
-
 
 
     </div>

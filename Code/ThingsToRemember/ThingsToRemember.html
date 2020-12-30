@@ -737,6 +737,8 @@
         JDK. Point to the path where the JDK is installed. Should be:
         <code>C:\Program Files\AdoptOpenJDK\jdk-11.0.8.10-hotspot</code> <br>
         - The previously empty CLASSPATH should now be filled with new files. <br>
+        - How to print environment variables to the console in PowerShell <a
+            href="https://stackoverflow.com/questions/50861082/how-to-print-environment-variables-to-the-console-in-powershell">here</a>.
     </div>
 
     <div class="one-point">
@@ -900,10 +902,18 @@
     </div>
 
     <div class="one-point">
-        60) 'Optional.get()' without 'isPresent()' check  <br>
+        60) 'Optional.get()' without 'isPresent()' check <br>
         <div class="code-snippet">
             <script src="https://gist.github.com/rgbk21/63702d1e52ee4140f92ebc392f27f243.js"></script>
         </div>
+    </div>
+
+    <div class="one-point">
+        61) Why can final object be modified? <br>
+        - If a final variable holds a reference to an object, then the state of the object may be changed by operations
+        on the object, but the variable will always refer to the same object. <code>final</code> simply makes the object
+        <i>reference</i> unchangeable. The object it points to is not immutable by doing this. <a
+            href="https://stackoverflow.com/questions/2435163/why-can-final-object-be-modified">Source on SO</a>.
     </div>
 
     <div>
