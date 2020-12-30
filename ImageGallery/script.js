@@ -10,6 +10,7 @@ const openFullImageOverlay = function () {
     overlay.classList.remove('hidden');
     modal.classList.remove('hidden');
     fullImage.classList.remove('hidden');
+    // Note how we are using 'this' to access the img element that has been clicked
     fullImage.src = this.src;
     console.log(fullImage.src);
 };
