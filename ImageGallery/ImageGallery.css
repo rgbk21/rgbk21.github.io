@@ -19,19 +19,28 @@
 .my-modal {
 	position: fixed;
 	/*align-self: center;*/
-	top: 10%;
+	top: 2.5%;
 	left: 12.5%;
 	/*right: 5%;*/
 	/*transform: translate(-50%, -50%);*/
 	width: 75%;
 	/*background-color: white;*/
-	padding-bottom: 10%;
+	padding-bottom: 2.5%;
 	/*border-radius: 5px;*/
 	/*box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);*/
 	z-index: 1040;
 	/* To add the scrollbar to images in y-axis*/
 	max-height: 100%;
 	overflow-y:auto;
+	outline: 0;
+}
+
+.my-modal-fade{
+	/*transition: -webkit-transform 0.3s ease-out;*/
+	/*transition: transform 0.3s ease-out;*/
+	/*transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;*/
+	/*-webkit-transform: translate(0, -15%);*/
+	/*transform: translate(0%, 0%);*/
 }
 
 #full-image {
