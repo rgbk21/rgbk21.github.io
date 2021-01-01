@@ -55,6 +55,11 @@ document.addEventListener('keydown', function (event) {
         closeFullImageOverlay();
     }
 
+    // Alternatively, we can also use. This method adds the class to the classlist if it is not present
+    // and removes the class from the classlist if it is present
+    // overlay.classList.toggle('hidden');
+
+
     //Just for reference:
     console.log(event);
 });
