@@ -87,6 +87,8 @@ document.querySelector('.btn--hold').addEventListener('click', function () {
         if (currPlayer === 0) {
             overallScorePlayer0 += playerScore;
             if (overallScorePlayer0 >= targetWinValue) {
+                overallPlayer0ScoreElmnt.textContent = overallScorePlayer0;
+                currScorePlayer0Elmnt.textContent = '0';
                 declareVictory();
             } else {
                 // Pass turn over to Player 1
@@ -100,6 +102,8 @@ document.querySelector('.btn--hold').addEventListener('click', function () {
         } else {
             overallScorePlayer1 += playerScore;
             if (overallScorePlayer1 >= targetWinValue) {
+                overallPlayer1ScoreElmnt.textContent = overallScorePlayer1;
+                currScorePlayer1Elmnt.textContent = '0';
                 declareVictory();
             } else {
                 // Pass turn over to Player 0
