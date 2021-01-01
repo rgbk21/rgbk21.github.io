@@ -17,10 +17,10 @@ const player1Elmnt = document.querySelector('.player--1');
 const diceElmnt = document.querySelector('.dice');
 
 const resetPage = function () {
-    overallPlayer0ScoreElmnt.textContent = 0;
-    overallPlayer1ScoreElmnt.textContent = 0;
-    currScorePlayer0Elmnt.textContent = 0;
-    currScorePlayer1Elmnt.textContent = 0;
+    overallPlayer0ScoreElmnt.textContent = '0';
+    overallPlayer1ScoreElmnt.textContent = '0';
+    currScorePlayer0Elmnt.textContent = '0';
+    currScorePlayer1Elmnt.textContent = '0';
     diceElmnt.classList.add('hidden');
     player0Elmnt.classList.remove('player--winner');
     player0Elmnt.classList.add('player--active');
