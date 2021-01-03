@@ -37,6 +37,7 @@ resetPage();
 
 document.querySelector('.btn--roll').addEventListener('click', function () {
 
+    // gameInProgress amkes sure that once the user has won, all the buttons on the page have been disabled
     if (gameInProgress) {
 
         // Generate a dice roll
@@ -118,6 +119,7 @@ document.querySelector('.btn--hold').addEventListener('click', function () {
     }
 });
 
+// Start a new game
 document.querySelector('.btn--new').addEventListener('click', function () {
     resetPage();
 });
@@ -133,7 +135,3 @@ const declareVictory = function () {
         player1Elmnt.classList.add('player--winner');
     }
 };
-
-
-
-
