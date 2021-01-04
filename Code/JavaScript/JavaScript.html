@@ -53,6 +53,7 @@
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="../../ImageGallery/ImageGallery.html">Image Gallery</a>
+                    <a class="dropdown-item" href="../../Pig_Game/index.html">Pig Game</a>
                     <a class="dropdown-item" href="../../RGB_Guesser_Game/RGB.html">RGB Guesser Game</a>
                     <a class="dropdown-item" href="../../ToDoList/todo.html">To-Do List</a>
                     <div class="dropdown-divider"></div>
@@ -64,8 +65,8 @@
                     Notes
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="../../COMS_631/COMS_631_index.html">COMS 631</a>
-                    <a class="dropdown-item" href="../../COMS_535/COMS_535_index.html">COMS 535</a>
+                    <a class="dropdown-item" href="../../Lectures/COMS_631/COMS_631_index.html">COMS 631</a>
+                    <a class="dropdown-item" href="../../Lectures/COMS_535/COMS_535_index.html">COMS 535</a>
                     <div class="dropdown-divider"></div>
                 </div>
             </li>
@@ -81,6 +82,7 @@
                     <a class="dropdown-item" href="../../Code/Java_Notes/JavaNotes_2.html">Java Notes 2</a>
                     <a class="dropdown-item" href="../../Code/Applying_Java_Notes/ApplyingJava_Notes.html">ApplyingJava
                         Notes</a>
+                    <a class="dropdown-item" href="../../Code/JavaScript/JavaScript.html">JavaScript Notes</a>
                     <a class="dropdown-item" href="../../Code/SQL/SQL.html">SQL Notes</a>
                     <a class="dropdown-item" href="../../Code/Spring/Spring.html">Spring Notes</a>
                     <a class="dropdown-item" href="../../Code/Kafka/Kafka.html">Kafka Notes</a>
@@ -517,7 +519,79 @@
     <div class="textual-content">
         <div class="sub-heading">Lecture 89: A High-Level overview of JS</div>
         <div>
+            - JS is: <br>
+            - High Level Language: In languages like C, you have to manage the memory yourself. High-level languages
+            abstract away the memory management (apart from doing other things). <br>
+            - Garbage Collected: One of the tools that takes memory management away from developers is automatic garbage
+            collection. <br>
+            - Interpreted or Just-In-Time (JIT) Compiled: <br>
+            - Multi Paradigm: Paradigm refers to a style of writing code. This can be imperative or declarative. JS can
+            support multiple styles of writing code, such as, Procedural (organizing code in a
+            very linear way so that the code runs top-to-bottom with functions in between), Object-Oriented,
+            Functional <br>
+            - Prototype-based Object-Oriented: <br>
+            - First-Class functions: functions are treated as regular variables, i.e., we can pass them into other
+            functions, and return them from functions. This is what enables functional programming in JS.
 
+            <div class="row">
+                <img src="imgs/UdemyCourse/Module8/Image1.PNG"
+                     width="50%"
+                     class="center-block img-fluid"
+                     alt="Example1">
+            </div>
+            - Dynamically typed: In JS we do not assign datatypes to variables. The dataytpes are known only once JS
+            engine executes our code. Also the type of variables can easily be changed by reassigning variables. <br>
+            - Single-Threaded: JS runs in one single thread. <br>
+            - Non-Blocking Event-Loop: Long running tasks are executed by the event loop in the "background" and then
+            put back in the main thread once their execution is complete.
+        </div>
+
+        <div class="sub-heading">Lecture 90: JS Engine and RunTime</div>
+        <div>
+            - JS Engine is, simply put, the code that executes the JS code. Every browser has it's own JS engine. The
+            most well-known JS engine is Google's V8. The V8 engine powers Google Chrome, but also nodeJS. Other
+            browsers have their own JS engines. <br>
+            - A JS engine contains a call stack and a heap. The Call Stack is where our JS code is executed using
+            something known as the Execution Context. The heap is an unstructured memory pool that stores all the
+            objects that our application needs. <br>
+            <div class="row">
+                <img src="imgs/UdemyCourse/Module8/Image2.PNG"
+                     width="35%"
+                     class="center-block img-fluid"
+                     alt="Example1">
+            </div>
+            - <a
+                href="https://stackoverflow.com/questions/3265357/compiled-vs-interpreted-languages">What is the
+            difference between Compiled language vs an Interpreted Language</a> on SO. <br>
+            - Before the code can be run by the target system (think your laptop CPU), it needs to be converted to
+            machine code (sequence of 0s and 1s). So your JS code has to be converted to machine code. Now how is this
+            going to happen? Compilation is the process by which the entire source code (your code) is converted into
+            machine code at once, and written to a binary file that can be executed on any computer. Any application
+            that you run your machine has been already previously compiled into a binary executable.
+            <div class="row">
+                <img src="imgs/UdemyCourse/Module8/Image3.PNG"
+                     width="50%"
+                     class="center-block img-fluid"
+                     alt="Example1">
+            </div>
+            An interpreted language, on the other hand, consists of an interpreter that runs through the source code and
+            executes it line-by-line. So, basically, the code is read and executed at the same time. JS used to be an
+            interpreted language, but modern JS isn't. This is primarily because interpreted languages are slow, and JS
+            couldn't keep up with the development of the browser.
+            <div class="row">
+                <img src="imgs/UdemyCourse/Module8/Image4.PNG"
+                     width="50%"
+                     class="center-block img-fluid"
+                     alt="Example1">
+            </div>
+            - Modern JS uses a combination of Compilation and Interpretation, which is known as Just-In-Time (JIT)
+            compilation.
+            <div class="row">
+                <img src="imgs/UdemyCourse/Module8/JIT-Compilation-Flow-Diagram.PNG"
+                     width="50%"
+                     class="center-block img-fluid"
+                     alt="Example1">
+            </div>
         </div>
 
 
