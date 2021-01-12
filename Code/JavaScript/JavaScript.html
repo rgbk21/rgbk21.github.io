@@ -592,6 +592,310 @@
                      class="center-block img-fluid"
                      alt="Example1">
             </div>
+            - TODO: I still don't understand what is actually happening with the JIT Compilation. <br>
+            - The first step is parsing the code that reads the JS code and converts it into a datastructure known as
+            the AST (Abstract Syntax Tree). The compilation process takes the generated AST and converts it into machine
+            code. This machine code is executed right away because of the JIT compilation of JS. The machine code that
+            is generated initially is a very un-optimised version of the code just so that the execution can begin as
+            soon as possible. In the background, the machine code is taken and recompiled while the program is already
+            executing. During each iteration of the optimisation, the unoptimised code is swapped for the optimised code
+            - all while the program is already executing!!
+            <div class="row">
+                <img src="imgs/UdemyCourse/Module8/JS-Engine-Compilation-Flow.PNG"
+                     width="100%"
+                     class="center-block img-fluid"
+                     alt="Example1">
+            </div>
+            - A JS Runtime is something that is required to run JS in the browser. It is a combination of JS Engine
+            (discussed above), the Web APIs, and the Callback Queue. The Callback Queue is a datastructure that contains
+            all the callback functions that are ready to be executed. What are callback functions? The functions that
+            you attached to the event listeners are known as callback functions. So when an event happens - like a click
+            - the corresponding callback function will be called.
+            <div class="row">
+                <img src="imgs/UdemyCourse/Module8/JS_Runtime_In_The_Browser.PNG"
+                     width="100%"
+                     class="center-block img-fluid"
+                     alt="Example1">
+            </div>
+            - This is how it happens - when a user clicks on a
+            button, the callback function is added to the callback queue. Then, once the call stack is <i>empty</i>, the
+            callback function is passed to the call stack so that it can be executed. This happens by something known as
+            the Event Loop. The event loop picks up functions from the callback queue and places them in the call stack
+            so that they can be executed. The event loop is basically how javascript's non-blocking concurrency model is
+            implemented.
+            <div class="row">
+                <img src="imgs/UdemyCourse/Module8/JS_Runtime_In_The_Browser_2.PNG"
+                     width="100%"
+                     class="center-block img-fluid"
+                     alt="Example1">
+            </div>
+            - Remember that JS can also exist outside of browsers (nodeJS). In that case, the JS runtime will not
+            contain the Web APIs, because the Web APIs are provided by the browser. In this case, the WebAPIs are
+            replaced by C++ bindings and the thread pool.
+        </div>
+
+
+        <div class="sub-heading">Lecture 91: Execution Contexts and the Call Stack</div>
+        <div>
+            - Once the code is code is compiled and ready to be executed, a <i>Global Execution Context</i> is created
+            for the top level code. Top-level code here means any code that is not inside any function. <br>
+            - For example, the <i>name</i> variable is a part of the top-level code. Hence it will be executed in the
+            Global execution Context. Then we have two functions - one expression and one declaration. These functions
+            will be declared so that they can be called later. The point is that - the code inside the function will be
+            executed only when the function is called. <br>
+            - An <i>Execution Context</i> is defined as an environment in which a piece of JS code is executed. The
+            context stores all the necessary information that is required by a code to be executed - such as local
+            variables or arguments passed to a function. <br>
+            - In every JS project, there is <i>only</i> one global execution context and this global execution context
+            is where the top level code executes.
+            <div class="row">
+                <img src="imgs/UdemyCourse/Module8/Execution_Context.PNG"
+                     width="100%"
+                     class="center-block img-fluid"
+                     alt="Example1">
+            </div>
+            - Now that we have a top-level execution context, we can begin execution of the code. For each function in
+            the code, a <i>new</i> execution context is created that contains all the necessary information that that
+            particular function requires to run. The same also goes for <i>methods</i> because they are just functions
+            attached to objects. All these execution contexts together make up the call stack. Once all the functions
+            have been executed, the JS Engine will wait for the callback function to arrive so that it can begin
+            executing those.
+            <div class="row">
+                <img src="imgs/UdemyCourse/Module8/Execution_Context_2.PNG"
+                     width="100%"
+                     class="center-block img-fluid"
+                     alt="Example1">
+            </div>
+
+            <br>
+
+            - What is inside an Execution Context:
+            <li><b>Variable Environment</b>: This environment stores all the variables and the function declarations.
+                Apart
+                from this, it also stores a special object called the <code>arguments</code> object. This object
+                contains all the arguments that were passed into the function that the current Execution Context belongs
+                to. Remember that each function gets its own execution context as soon as the function is called.
+            </li>
+            <li>
+                <b>Scope Chain</b>: Apart from the local variables defined inside the function, the Execution Context
+                can also
+                access variables that are defined outside the function. The scope chain consists of <i>references</i> to
+                variables that are outside the current function.
+            </li>
+            <li><code>this</code> <b>keyword</b> : One important sidenote is that Execution Contexts belonging to the
+                arrow
+                functions do not get their own <code>this</code> keyword or <code>arguments</code> object. Instead, they
+                use the <code>this</code> and <code>arguments</code> of their nearest normal function parent.
+            </li>
+            - An example explaining all of this can be found <a
+                href="https://www.udemy.com/course/the-complete-javascript-course/learn/lecture/22648479?start=488">here
+            on Udemy Lecture</a>. <br>
+            - Recall, as we discussed earlier, the Call Stack with the Memory Heap forms the JS Engine. The Call Stack
+            is the place where the Execution Contexts get stacked on top of each other to keep track of where we are in
+            the execution. The Execution Context on the top of the stack is the one that is currently running. <a
+                href="https://www.udemy.com/course/the-complete-javascript-course/learn/lecture/22648479?start=488#notes">This
+            Udemy Lecture</a> explains using a code example how JS makes use of the Call Stack and the Execution Context
+            to execute the code. <br>
+            <div class="row">
+                <img src="imgs/UdemyCourse/Module8/Execution_Context_Stored_In_Call_Stack.PNG"
+                     width="50%"
+                     class="center-block img-fluid"
+                     alt="Example1">
+            </div>
+        </div>
+
+        <div class="sub-heading">Lecture 92: Scope and the Scope Chain</div>
+        <div>
+            - <i>Scope</i> controls where you can access a particular variable and where you can't access them. <br>
+            - JS uses <i>Lexical Scoping</i>, which means that scoping is controlled by the physical placement of
+            functions and blocks in the code. <br>
+            - In JS, we have 3 types of scope: <i>global</i> scope, <i>function</i> scope, and <i>block</i> scope. <br>
+            - Note that only variables declared with <code>let</code> or <code>const</code> are restricted to the block
+            in which they are created. That means that a variable that is declared using a <code>var</code> would be
+            scoped to the parent function, or else the global scope. Hence, we say that <code>let</code> and
+            <code>const</code> are <i>block scoped</i> whereas <code>var</code> is <code>function scoped</code>. IN ES5
+            and earlier versions, we only had global scope and function scope.
+            <div class="row">
+                <img src="imgs/UdemyCourse/Module8/Scopes_In_JS.PNG"
+                     width="100%"
+                     class="center-block img-fluid"
+                     alt="Example1">
+            </div>
+
+            <br>
+            - What is the Scope Chain? <br>
+            - Each function creates it's own scope. Hence, <i>first()</i> and <i>second()</i> get their own scopes. <br>
+            - Every scope has access to all of the variables from all of its outer/parent scopes. All of this also
+            applies to function <code>arguments</code>. So this is basically how the Scope Chain works - if one scope
+            needs to use a variable but is unable to find it in the current scope, it will look up it's scope chain and
+            see if it can find the variable in one of it's parent scopes. If it can, then it will use that variable. If
+            it can't, then you get an error. This process is also called <i>variable lookup in scope chain</i>. Note
+            that a scope cannot look for variables in it's children scopes. <br>
+            - Note that starting from ES6, the if-block is also able to create it's own scope. But this scope will only
+            work for the ES6 variable types - <code>let</code> and <code>const</code>.
+            - Take note of the <i>millenial</i> variable in the below figure. The variable is declared with the <code>var</code>
+            keyword. Hence, it is not scoped to the block, but rather scoped to the parent function, which in this case
+            is <i>first()</i>. Hence, unlike the <i>decade</i> variable, we see the <i>millenial</i> variable in the
+            scope of the <i>first()</i> function.
+            <div class="row">
+                <img src="imgs/UdemyCourse/Module8/Scope_Chain.PNG"
+                     width="100%"
+                     class="center-block img-fluid"
+                     alt="Example1">
+            </div>
+
+            <br>
+            - What is the difference between the Scope Chain and the Call Stack? <br>
+            - The scope of a function is the same as the Variable Environment in the function's Execution Context. Apart
+            from this, the scope also inherits the scope from all of it's parent scopes because of the scope chain that
+            we discussed above. <br>
+            - The order of function calls has no effect on the scope chain. What I mean by this is, consider the
+            following:
+            <div class="row">
+                <img src="imgs/UdemyCourse/Module8/ScopeChain_vs_CallStack.PNG"
+                     width="100%"
+                     class="center-block img-fluid"
+                     alt="Example1">
+            </div>
+
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/6a34e25a9bf832104b12d8394f0ed62b.js"></script>
+            </div>
+
+        </div>
+
+
+        <div class="sub-heading">Lecture 94: Variable Environment - Hoisting and the TDZ</div>
+        <div>
+            - Hoisting: makes some types of variables accessible/usable in the code before they are actually declared.
+            In other words, variables are "lifted" to the top of their scope. Behind the scenes, what actually happens
+            is that, before execution, the code is scanned for variable declarations and for each variable a new
+            property is created in the <i>variable environment object</i><br>
+            - The practical implementations of hoisting is that you can use a variable in the code <i>BEFORE</i> it is
+            actually declared! The value associated with the hoisted variables also varies - refer the table below. <br>
+
+            <div class="row">
+                <img src="imgs/UdemyCourse/Module8/Hoisting_In_JS.PNG"
+                     width="100%"
+                     class="center-block img-fluid"
+                     alt="Example1">
+            </div>
+
+            - function declarations are hoisted - this means that these types of functions can be used/called before
+            they are declared. <br>
+            - Variables declared with <code>var</code> are also hoisted, but the hoisting works differently when
+            compared to functions in the sense that the variables are hoisted, but their value is <code>undefined</code>
+            and not the value that they are declared with. <br>
+            - <code>let</code> and <code>const</code> variables are not hoisted. Hence these variables cannot be used
+            before they are declared. TDZ stands for the Temporal Dead Zone, which is indicating the region in the code
+            where the variable is in-scope but cannot be used because it has not been declared yet. <br>
+            - For function expressions and arrow functions, the hoisting depends on whether they were created using
+            <code>var</code>, <code>const</code>, or <code>let</code>. What this means is that function expressions and
+            arrow functions declared with a <code>var</code> is hoisted, but to <code>undefined</code>. But if they have
+            been declared using <code>let</code> or <code>const</code>, the functions are not usable before they have
+            been declared in the code - because of the TDZ. <br>
+            - There is one another difference between variables declared with a <code>var</code> and <code>let</code>/
+            <code>const</code> - the variables declared with <code>var</code> are added as properties to the global
+            <code>window</code> object in JS, whereas the variables declared with <code>let</code>/<code>const</code>
+            are not.
+
+            <div class="row">
+                <img src="imgs/UdemyCourse/Module8/Temporal_Dead_Zone.PNG"
+                     width="75%"
+                     class="center-block img-fluid"
+                     alt="Example1">
+            </div>
+
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/1ded5c8802726b0ffc24b833b43db03a.js"></script>
+            </div>
+
+        </div>
+
+        <div class="sub-heading">Lecture 96: The <code>this</code> keyword</div>
+        <div>
+            - The <code>this</code> keyword is a special variable that is created for every Execution Context (i.e. for
+            each function). We saw earlier that the <code>this</code> keyword is one of the three things that are a part
+            of the Execution Context that is created for every function. In general terms, the <code>this</code> keyword
+            takes the value of the "owner" of the function in which the <code>this</code> keyword is used. <br>
+            - The value of <code>this</code> is not static and varies depending on the way that the function is called.
+            <br>
+            - A function can be called in multiple ways. <br>
+            - A function can be a method - i.e. a function that is present on a object. When we use the
+            <code>this</code> keyword in a method, the <code>this</code> keyword points to the object calling the
+            method.
+            <br>
+            - A function can be called separately - like a usual stand-alone function call. In that case, the
+            <code>this</code> keyword is <code>undefined</code>. But this is only in the case when we are using the
+            "strict" mode. If we are not using the strict mode, tehn in that case the <code>this</code> keyword is going
+            to point at the global object, which in this case is the <code>window</code> object. <br>
+            - Arrow functions are not a way to call functions but they still need to be considered. Arrow functions do
+            not get their own <code>this</code> keyword. Instead, if you use the <code>this</code> keyword in an arrow
+            function, it is just going to be the <code>this</code> keyword of the surrounding/parent function. <br>
+            - If the function is called as an event listener, then the <code>this</code> keyword will point to the DOM
+            Element that the handler function is attached to.
+            <div class="row">
+                <img src="imgs/UdemyCourse/Module8/This_Keyword.PNG"
+                     width="75%"
+                     class="center-block img-fluid"
+                     alt="Example1">
+            </div>
+
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/1075e71931a10ff75cac8cafe650bf2f.js"></script>
+            </div>
+        </div>
+
+        <div class="sub-heading">Lecture 98: Regular Functions vs Arrow Functions</div>
+        <div>
+            - One important point is that arrow functions should never be used as methods on an object. You should
+            always use function expressions. This is to do with the fact that arrow functions do not get their own
+            <code>this</code> keyword, instead they inherit the <code>this</code> keyword from their parent scope. This
+            can be a source of bugs.
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/b120065c26c5f385cb358511a96c452f.js"></script>
+            </div>
+            - Another important point is when we have to use functions inside methods. <br>
+            - Consider the following function inside a method. Why does line 11 print undefined? If you look closely,
+            you can see that the <i>isMillennial</i> function is being called as a simple function call. So, even though
+            the function is within a method, it is still a regular function call. And the rule says that inside a normal
+            function call, the <code>this</code> keyword is <code>undefined</code>.
+
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/cf44fdeb08397867de8fca65158cd325.js"></script>
+            </div>
+
+            - One way to get around this problem in solutions prior to ES6 was as follows:
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/2c0586d4b5a32d6eddf2d7b8ecc6f561.js"></script>
+            </div>
+
+            - However, starting form ES6, we can use the arrow function to get around this problem. Recall that the
+            arrow function does not have the <code>this</code> keyword of its own and instead inherits the
+            <code>this</code> keyword of its parent scope. So, we can do this: <br>
+            - TODO: but we are still calling the <i>isMillennial()</i> functio as a normal function inside the
+            <i>gina3</i> object. Then shouldn't the <code>this</code> keyword be <code>undefined</code>?
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/852bbc7db7c68857321afbb595a3e164.js"></script>
+            </div>
+
+            - Another thing is the <code>arguments</code> variable that we discussed earlier:
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/e265919bb7124a2e8adbe86df14d2829.js"></script>
+            </div>
+        </div>
+
+
+        <div class="sub-heading">Lecture 99: Primitives vs Reference Types</div>
+        <div>
+            - Refer the Udemy Lecture <a
+                href="https://www.udemy.com/course/the-complete-javascript-course/learn/lecture/22648509?start=33">here</a>.
+            <div class="row">
+                <img src="imgs/UdemyCourse/Module8/PrimitivesTypes_vs_ReferenceTypes.PNG"
+                     width="100%"
+                     class="center-block img-fluid"
+                     alt="Example1">
+            </div>
         </div>
 
 
