@@ -141,7 +141,8 @@
     Module 6 - <a href="#Module6_Udemy">HTML and CSS Crash Course</a> <br>
     Module 7 - <a href="#Module7_Udemy">JS in the Browser: DOM and Event Fundamentals</a> <br>
     Module 8 - <a href="#Module8_Udemy">How JS works behind the scenes</a> <br>
-    Module 9 - <a href="#Module8_Udemy">Data Structures, Modern Operators, and Strings</a> <br>
+    Module 9 - <a href="#Module9_Udemy">Data Structures, Modern Operators, and Strings</a> <br>
+    Module 10 - <a href="#Module10_Udemy">A closer look at functions</a> <br>
 
     <hr>
     <div id="Chapter13" class="chapter">Chapter 13: JavaScript and the Browser</div>
@@ -906,8 +907,159 @@
 
     <div class="textual-content">
 
+        <div class="sub-heading">Lecture 103: Destructuring Arrays</div>
+        <div>
+            - Destructuring is a way of unpacking data from an array or an object into separate variables. <br>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/73e27f470e1a6a298107df5f0b945502.js"></script>
+            </div>
+        </div>
+
+        <div class="sub-heading">Lecture 104: Destructuring Objects</div>
+        <div>
+            - Similar to destructuring arrays, we can also destructure objects.
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/4d577dabd285d5d6c000c1506be709fb.js"></script>
+            </div>
+        </div>
+
+        <div class="sub-heading">Lecture 105: The Spread Operator</div>
+        <div>
+            - We can use the spread operator to unpack an entire array or objects at once.
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/89485d51c64cad83c862c9329bbc0a78.js"></script>
+            </div>
+        </div>
+
+        <div class="sub-heading">Lecture 106: Rest pattern and Rest Parameters</div>
+        <div>
+            - The Rest pattern is, in a way, the 'opposite' of the spread operator. It uses the same operator, but to
+            condense multiple values into an array.
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/84d0ba724b18a2e29b7c6fc99c3287fe.js"></script>
+            </div>
+        </div>
+
+        <div class="sub-heading">Lecture 107: Short Circuiting</div>
+        <div>
+            - The <code>&&</code> and <code>||</code> operators work very differently in JS when compared to Java. <br>
+            - Boolean operators can use any datatype as its operands, they can return any datatype, and they do
+            short-circuiting. <br>
+            - The OR operator (<code>||</code>) will return the <i>first</i> 'truthy' value among all of its operands or
+            the <i>last</i> value if all of them are 'falsy'. <br>
+            - The AND operator (<code>&&</code>) will return the <i>first</i> 'falsy' value among all of it's operands
+            or return the <i>last</i> value if all of them are 'truthy'. <br>
+            - We can use the OR operator to set default values. <br>
+            - We can use the AND operator to execute code in the second operand if the first operand is true.
+
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/0150e05c10addb33bd575fe9e44dd45a.js"></script>
+            </div>
+        </div>
 
 
+        <div class="sub-heading">Lecture 110: Looping Arrays - The for-of loop</div>
+        <div>
+            - This is how we can use the new for-of loop in JS.
+            <div>
+                <script src="https://gist.github.com/rgbk21/312144f0a21ce803dd4c13e2e1755617.js"></script>
+            </div>
+        </div>
+
+
+        <div class="sub-heading">Lecture 111: Enhanced Object Literals</div>
+        <div>
+            - An object literal is when you create a new object by using the <code>{}</code> operator. ES6 introduced 3
+            new ways in which we can make writing object literals easier.
+
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/69c0c227203e4276105968a5357587ba.js"></script>
+            </div>
+        </div>
+
+        <div class="sub-heading">Lecture 112: Optional Chaining</div>
+        <div>
+            - The Optional Chaining operator <code> ?. </code> is used to check if variable <i>immediately</i> preceding
+            the operator exists or not. By 'exists' we mean the nullish concept and not the truthy/false concept. A
+            value is nullish only if it is either <code>null</code> or <code>undefined</code>. If the variable preceding
+            the operator is nullish, then the execution of the statement will immediately return with the value of
+            <code>undefined</code>. Else, the execution will proceed as normal.
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/ea13745f2c6eba965ce0a4503f66db96.js"></script>
+            </div>
+        </div>
+
+
+        <div class="sub-heading">Lecture 113: Looping Objects - Object Keys, Values, and Entries</div>
+        <div>
+            - We can use the for-of operator to loop through either the keys, values, or both keys and values of an
+            object.
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/d1d4fd172b649aa2fcfdfff4f23cc017.js"></script>
+            </div>
+        </div>
+
+
+        <div class="sub-heading">Lecture 115: Sets</div>
+        <div>
+            - In ES6, two new datastructures were added to JS - Sets and Maps. <br>
+            - A set is a collection of unique values - there can be no duplicate elements in a set. Hence, sets are
+            often used to remove duplicate elements from an array. <br>
+            - A set can hold mixed datatypes. <br>
+            - In the args for the constructor of the set, we can pass in any kind of iterable. Since an array is an
+            iterable, it works. Similarly, if you pass in a single string, that would work as well. The resulting set
+            that would be created would contain the unique characters that are present in the string.
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/65587d15322490f3ebe2ffe9cff9fbf9.js"></script>
+            </div>
+        </div>
+
+
+        <div class="sub-heading">Lecture 116: Maps</div>
+        <div>
+            - Just like an object, the data in a map is stored as key-value pairs. The difference between the two is
+            that in the case of maps, the keys can have <i>any</i> type, whereas in the case of objects, the keys <i>have
+            to </i> be strings. So maps can have an object, an array, or even another map as a key. <br>
+            - Note that the insertion order is maintained in maps in JS as mentioned <a
+                href="https://stackoverflow.com/a/50862944/8742428">here on SO</a>.
+
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/c4c09f447e140cf2d3aaad4ab46a49b8.js"></script>
+            </div>
+        </div>
+
+
+        <div class="sub-heading">Lecture 117: Maps - Iteration</div>
+        <div>
+            - Instead of using the <code>set</code> method to add elements to a map, you can just add the elements all
+            at once by passing in an array as shown in the example below. This allows us to easily create maps from
+            existing objects.<br>
+            - Similarly, we can use existing maps to convert them into arrays by using the spread operator. <br>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/294654f452f088c2c502f926e21d5e91.js"></script>
+            </div>
+        </div>
+
+        <div class="sub-heading">Lecture 118: Working with Strings</div>
+        <div>
+            - Here are some examples of working with strings
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/5d3084887c277e4d24fe885258c4dd8f.js"></script>
+            </div>
+        </div>
+
+    </div>
+
+
+    <hr>
+    <div id="Module10_Udemy" class="chapter">Module 10 - A closer look at functions</div>
+    <hr>
+
+    <div class="textual-content">
+        <div class="sub-heading">Lecture 126: Default Parameters</div>
+        <div>
+
+        </div>
 
 
     </div>
