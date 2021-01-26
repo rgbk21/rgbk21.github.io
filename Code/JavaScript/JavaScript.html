@@ -143,6 +143,7 @@
     Module 8 - <a href="#Module8_Udemy">How JS works behind the scenes</a> <br>
     Module 9 - <a href="#Module9_Udemy">Data Structures, Modern Operators, and Strings</a> <br>
     Module 10 - <a href="#Module10_Udemy">A closer look at functions</a> <br>
+    Module 11 - <a href="#Module11_Udemy">Working with Arrays</a> <br>
 
     <hr>
     <div id="Chapter13" class="chapter">Chapter 13: JavaScript and the Browser</div>
@@ -1058,11 +1059,167 @@
     <div class="textual-content">
         <div class="sub-heading">Lecture 126: Default Parameters</div>
         <div>
+            - ES6 introduced Default Parameters
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/15e7292ed8484578398b34ed3c9231f3.js"></script>
+            </div>
+        </div>
 
+        <div class="sub-heading">Lecture 127: How passing arguments works - Value vs. Reference</div>
+        <div>
+            - In JS, Primitives are passed by value, and Objects are passed by "copy of a reference". <br>
+            - <a href="https://stackoverflow.com/questions/13104494/does-javascript-pass-by-reference">Source on SO
+            here</a>.
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/23eb0e3896d997e8b41dd55b0f26d28b.js"></script>
+            </div>
+        </div>
+
+
+        <div class="sub-heading">Lecture 128: First-Class and Higher-Order Functions</div>
+        <div>
+            - JS has First-Class functions that enables us to write Higher-Order functions. But what does this mean?
+            <br>
+            - What does JS having 'First-Class Functions' mean? <br>
+            - It just means that functions are a different 'type' of
+            object in JS. Since objects are values, functions are values too. And since functions are values, they can
+            be stored in variables or even object properties (keys in an object). We have already been doing this so
+            far. <br>
+            - We can also pass functions as args to other functions. We already did that with
+            <code>addEvenListener</code> where we passed in the callback function as an argument . <br>
+            - We can also return a function from another function. <br>
+            - Finally, since functions are objects, and objects can have methods on them, there can also be function
+            methods. <code>bind</code> method is an example of that. <br> <br>
+            - What is a Higher-Order Function then? <br>
+            - A Higher-Order function is either a function that receives a function as an argument, or returns a new
+            function, or both. <br>
+            - <code>addEventListener</code> is an example of a higher-order function because it accepts another function
+            as an arg. <br>
+            - Similarly we can have functions that return other functions.
+            <div class="row">
+                <img src="imgs/UdemyCourse/Module10/HigherOrderFunctions.PNG"
+                     width="100%"
+                     class="center-block img-fluid"
+                     alt="Example1">
+            </div>
+        </div>
+
+        <div class="sub-heading">Lecture 129: Functions accepting Callback Functions</div>
+        <div>
+            - Higher-Order Function examples and how they are used in JS:
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/b7de4bb972c8b324900585261e4adce0.js"></script>
+            </div>
+        </div>
+
+        <div class="sub-heading">Lecture 130: Functions accepting Callback Functions</div>
+        <div>
+            - Refer the <a
+                href="https://www.udemy.com/course/the-complete-javascript-course/learn/lecture/22648657?start=9#notes">Udemy
+            Lecture here</a>. <br>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/89eb3d329c64744aea916f449e234777.js"></script>
+            </div>
+        </div>
+
+        <div class="sub-heading">Lecture 131: The <code>call</code> and <code>apply</code> methods</div>
+        <div>
+            - We can set the <code>this</code> keyword manually in JS as well.
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/fab9fde4875ce1a53aac56d837e87880.js"></script>
+            </div>
+        </div>
+
+        <div class="sub-heading">Lecture 132: The <code>bind</code> method</div>
+        <div>
+            - Just like the <code>call</code> and the <code>apply</code> method, the <code>bind</code> method allows us
+            to set the <code>this</code> keyword for any function call. <br>
+            - The difference is that, unlike the <code>call</code> and <code>apply</code> methods, <code>bind</code>
+            does not immediately call the function. Instead it returns a NEW function where the <code>this</code>
+            keyword is already bound. <br>
+            - This is especially useful when we have to manually assign the <code>this</code>
+            keyword in the case of event listeners. Recall for event listeners the callback function should be a
+            function, and it should not be immediately called. <code>call</code> and <code>apply</code> immediately call
+            the function. Hence we use the <code>bind</code> method instead.<br>
+            - Lecture on <a
+                href="https://www.udemy.com/course/the-complete-javascript-course/learn/lecture/22648667?start=5#notes">Udemy
+            here refer</a>.
+
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/a786c0acb8e3a0008d28673cf769b083.js"></script>
+            </div>
+        </div>
+
+        <div class="sub-heading">Lecture 134: Immediately Invoked Function Expressions</div>
+        <div>
+            - Sometimes in JS, we need a function that is only executed once, and never executed again. We need this to
+            implement something known as aync await.
+
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/3372bfdecde87074ef2d51ad91bced33.js"></script>
+            </div>
+        </div>
+
+        <div class="sub-heading">Lecture 135: Closures</div>
+        <div>
+            - Refer <a
+                href="https://www.udemy.com/course/the-complete-javascript-course/learn/lecture/22648683?start=50#notes">Udemy
+            Lecture here</a>.
+            <br>
+
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/58ebd4cff976b168ea0d5ac492357ddb.js"></script>
+            </div>
+            - Read about closures <a
+                href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures#closure">on MDN here</a>. <br>
+            - A <i>closure</i> is the combination of a function and the lexical environment within which that function
+            was declared. This environment consists of any local variables that were in-scope at the time the closure
+            was created. <br>
+            - Any function always has access to the variable environment of the execution context in which the function
+            was created, even after that execution context is gone.
+
+            <div class="row">
+                <img src="imgs/UdemyCourse/Module10/Closures.png"
+                     width="100%"
+                     class="center-block img-fluid"
+                     alt="Example1">
+            </div>
+            - We can access the closure of a variable by doing:
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/cdbadf3a12400fe44365e707b7514321.js"></script>
+            </div>
+
+            - And now if look into the console, you will see something like this. Note that when the name of a property
+            is enclosed in <code>[[ ]]</code>, as shown below, it means that the property is an internal property that
+            cannot be accessed by us through the code.
+            <div class="row">
+                <img src="imgs/UdemyCourse/Module10/Closures_Logged.PNG"
+                     width="100%"
+                     class="center-block img-fluid"
+                     alt="Example1">
+            </div>
+            - Examples of Closure in use:
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/433962db00646e8e2c8444eb2a3a28ec.js"></script>
+            </div>
         </div>
 
 
     </div>
+
+
+    <hr>
+    <div id="Module11_Udemy" class="chapter">Module 11 - Working with Arrays</div>
+    <hr>
+
+    <div class="textual-content">
+        <div class="sub-heading">Lecture 140: Simple Array Methods</div>
+        <div>
+
+        </div>
+
+    </div>
+
 
 </div>
 
