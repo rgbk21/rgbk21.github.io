@@ -144,6 +144,7 @@
     Module 9 - <a href="#Module9_Udemy">Data Structures, Modern Operators, and Strings</a> <br>
     Module 10 - <a href="#Module10_Udemy">A closer look at functions</a> <br>
     Module 11 - <a href="#Module11_Udemy">Working with Arrays</a> <br>
+    Module 13 - <a href="#Module11_Udemy">Advanced DOM and Events</a> <br>
 
     <hr>
     <div id="Chapter13" class="chapter">Chapter 13: JavaScript and the Browser</div>
@@ -207,8 +208,6 @@
             </div>
 
         </div>
-
-
     </div>
 
     <hr>
@@ -300,8 +299,6 @@
             expect the new node as their first argument.
 
         </div>
-
-
     </div>
 
 
@@ -1203,8 +1200,6 @@
                 <script src="https://gist.github.com/rgbk21/433962db00646e8e2c8444eb2a3a28ec.js"></script>
             </div>
         </div>
-
-
     </div>
 
 
@@ -1213,12 +1208,200 @@
     <hr>
 
     <div class="textual-content">
-        <div class="sub-heading">Lecture 140: Simple Array Methods</div>
+        <div class="sub-heading">Lecture 141: Simple Array Methods</div>
         <div>
+            - Arrays are objects, and as we have seen, objects can have functions of their own that are called methods.
+            There are several methods that are defined on the array object.
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/da81bbe5e04ef4ca05e9acc3c4ece3a2.js"></script>
+            </div>
+        </div>
+
+        <div class="sub-heading">Lecture 142: Looping Arrays using <code>forEach</code></div>
+        <div>
+            - We can loop over arrays using either the <code>for-of</code> loop that we looked at earlier. Or we can use
+            the <code>forEach</code> loop. <br>
+            - The difference between the two is that you can use keywords like <code>break</code> and
+            <code>continue</code> to break out of a
+            <code>for-of</code> loop, but you cannot do that with a <code>forEach</code> loop. The <code>forEach</code>
+            loop will be executed for each element in the collection by default.
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/f5c1cd8d8b07df3a696af2ec3e39de31.js"></script>
+            </div>
+        </div>
+
+        <div class="sub-heading">Lecture 143: <code>forEach</code> with Maps and Sets</div>
+        <div>
+            - Similar to arrays, <code>forEach</code> can also work with maps and sets. <br>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/9d26a3e61ad2c84031d22097491ac49b.js"></script>
+            </div>
+        </div>
+
+        <div class="sub-heading">Lecture 145: Creating DOM Elements</div>
+        <div>
+            - There are multiple ways in which we can create and add elements to the DOM. <br>
+            - Using <code>insertAdjacentHTML</code> method is one such way. We will look at other ways later in the
+            course.
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/b81b1359cd55017155f68f1401342e43.js"></script>
+            </div>
+        </div>
+
+
+        <div class="sub-heading">Lecture 147: Data Transformations - map, filter, reduce</div>
+        <div>
+            - This image shows what each of these methods do on a high level:
+            <img src="imgs/UdemyCourse/Module11/Map_Filter_Reduce.PNG"
+                 width="100%"
+                 class="center-block img-fluid"
+                 alt="Example1">
+        </div>
+
+
+        <div class="sub-heading">Lecture 148: The <code>map</code> method</div>
+        <div>
+            - The <code>map</code> method returns a new array. It does not mutate the original array. <br>
+            - For every element in the original array, the callback function passed into the map method is executed on
+            that element. The result is stored in a new array, and that array is returned as the result. <br>
+            - A rule of thumb is that the <code>forEach</code> method is used in case you want to produce side-effects.
+            Use the <code>map</code> method when you want to follow a functional paradigm where you return a new array
+            and do nto mutate the state of any existing objects.
+
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/796949de10914488fe9eaf7b6e581082.js"></script>
+            </div>
+        </div>
+
+
+        <div class="sub-heading">Lecture 150: The <code>filter</code> method</div>
+        <div>
+            - The <code>filter</code> method is used to return a new array that contains only those elements from the
+            original array that have passed a specific condition. <br>
+            - Just like the <code>map</code> method, the <code>filter</code> method also accepts a callback function,
+            and just like the callback function in the <code>map</code> method, the callback function in the <code>filter</code>
+            method also accepts three args, namely - currentElement, index, entire array. <br>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/de770f6beb2e7a943bd8dd696960a003.js"></script>
+            </div>
+        </div>
+
+        <div class="sub-heading">Lecture 151: The <code>reduce</code> method</div>
+        <div>
+            - The <code>reduce</code> method is used to compute a single value using all the values in the original
+            array.
+            <br>
+            - The callback function that is passed into the <code>reduce</code> method is different compared to the ones
+            passed nto <code>map</code> or <code>forEach</code>. In the callback for the <code>reduce</code> method, the
+            first parameter is the <i>accumulator</i>. This accumulator stores the value that will be finally returned
+            from the <code>reduce</code> function. So, for example, if we are using the <code>reduce</code> method to
+            calculate the sum of all the elements in an array, then the <i>accumulator</i> would simply return the final
+            sum. <br>
+            - The <code>reduce</code> method also accepts a second argument which t=is the starting value of the <i>accumulator</i>.
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/f589e7a31aac32a3ca4667abeb32cc96.js"></script>
+            </div>
+        </div>
+
+        <div class="sub-heading">Lecture 152: The magic of chaining</div>
+        <div>
+            - How do we debug code that is in the pipeline:
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/12f81fbaab35873bd5689fb17fd9af3d.js"></script>
+            </div>
+        </div>
+
+
+        <div class="sub-heading">Lecture 155: The <code>find</code> method</div>
+        <div>
+            - The <code>find</code> method returns the <i>element</i> based on the condition that is specified in the
+            callback function. Note that if multiple elements of the array satisfy the given condition, then in that
+            case the <code>find</code> method will return the <i>first</i> element that satisfies the condition.
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/4642b3b595240aee694ce15b0f1ea3fc.js"></script>
+            </div>
+        </div>
+
+        <div class="sub-heading">Lecture 158: The <code>findIndex</code> method</div>
+        <div>
+            - Returns the index of the first element in the array where predicate is true, and -1 otherwise. <br>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/51246edf1568a1036d7194984262498c.js"></script>
+            </div>
+        </div>
+
+        <div class="sub-heading">Lecture 159: <code>some</code> and <code>every</code> method</div>
+        <div>
+            - <code>some</code> Determines whether the specified callback function returns true for any element of an
+            array. <br>
+            - <code>every</code> Determines whether all the members of an array satisfy the specified test. <br>
+
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/e6b213424238bc5e50dd7e0f64fc9bf8.js"></script>
+            </div>
+        </div>
+
+        <div class="sub-heading">Lecture 160: <code>flat</code> and <code>flatMap</code> method</div>
+        <div>
+            - <code>flat</code> Returns a new array with all sub-array elements concatenated into it recursively up to
+            the specified depth. <br>
+            - <code>flatMap</code> Calls a defined callback function on each element of an array. Then, flattens the
+            result into a new array. This is identical to a <code>map</code> followed by <code>flat</code> with depth 1.
+            The <code>flatMap</code> method calls the callback function one time for each element in the array.
+
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/a9736831d35db39b40991e49eaaab69c.js"></script>
+            </div>
 
         </div>
 
+        <div class="sub-heading">Lecture 161: Sorting Arrays</div>
+        <div>
+            - Note that the <code>sort</code> method by default converts everything to strings implicitly. Hence using
+            the <code>sort</code> method to sort arrays of number swill lead to wrong results. Hence be sure to pass in
+            a custom comparator when sorting numbers.
+
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/17f5fdf389bdc0376e25860e0fbb8b60.js"></script>
+            </div>
+        </div>
+
+
+        <div class="sub-heading">Lecture 162: More ways of creating and filling arrays</div>
+        <div>
+            - Here you go:
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/95a1f8d7cc1f61b275608c6bb0fef6cb.js"></script>
+            </div>
+        </div>
+
+        <div class="sub-heading">Lecture 163: Which array method to use</div>
+        <div>
+            <img src="imgs/UdemyCourse/Module11/WhichArrayMethodToUse.PNG"
+                 width="100%"
+                 class="center-block img-fluid"
+                 alt="Example1">
+
+            <script src="https://gist.github.com/rgbk21/d49fcf43999696da411873b830cf8024.js"></script>
+        </div>
     </div>
+
+
+    <hr>
+    <div id="Module13_Udemy" class="chapter">Module 13 - Advanced DOM and Events</div>
+    <hr>
+
+    <div class="textual-content">
+
+        <div class="sub-heading">Lecture 182: How DOM really works</div>
+        <div>
+            -
+        </div>
+
+    </div>
+
+
+</div>
 
 
 </div>
