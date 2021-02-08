@@ -63,6 +63,10 @@
 	background: none;
 }
 
+/*.opt-img {*/
+/*	filter: blur(1px);*/
+/*}*/
+
 body{
 	padding-top: 70px;
 }
