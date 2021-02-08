@@ -20,9 +20,11 @@ const openFullImageOverlay = function () {
     modal.classList.remove('hidden');
     fullImage.classList.remove('hidden');
     // Note how we are using 'this' to access the img element that has been clicked
-    fullImage.src = this.src;
+    console.log(this.src);
+    let optimizedImgSrc = this.src;
+    console.log(`Optimized img: ${optimizedImgSrc}`);
+    fullImage.src = optimizedImgSrc.replace('Optimized_I', 'i');;
     console.log(fullImage.src);
-
     // When it comes to removing or adding classes, we can add/removing multiple classes at the same time
     // The list of classes is passed comma separated. Eg.
     //     modal.classList.remove('hidden', 'class1', 'class2');
