@@ -19,6 +19,10 @@ const openFullImageOverlay = function () {
     overlay.classList.remove('hidden');
     modal.classList.remove('hidden');
     fullImage.classList.remove('hidden');
+
+    // Prevent scrolling of the background when modal is open
+    document.body.style.overflowY = 'hidden';
+
     // Note how we are using 'this' to access the img element that has been clicked
     // console.log(this.src);
     let optimizedImgSrc = this.src;
@@ -34,6 +38,8 @@ const closeFullImageOverlay = function () {
     overlay.classList.add('hidden');
     modal.classList.add('hidden');
     fullImage.classList.add('hidden');
+    // Remove the overflow class added to modal earlier to enable scrolling again
+    document.body.style.overflowY = '';
 };
 
 for (let i = 0; i < imgs.length; i++) {
