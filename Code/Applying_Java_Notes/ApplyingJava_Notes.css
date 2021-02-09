@@ -10,6 +10,7 @@
 
 .code-snippet {
     padding-top: 10px;
+    display: none;
 }
 
 .textual-content {
