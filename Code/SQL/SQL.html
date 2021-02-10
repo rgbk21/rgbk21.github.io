@@ -122,8 +122,12 @@
 <div class="container">
 
     <div class="textual-content">
-        This page contains my personal notes from the Head First SQL Book.
+
+        <button id='load-all-gists' type="button" class="btn btn-outline-primary">Show all Gists!</button>
+
         <br>
+        This page contains my personal notes from the Head First SQL Book. <br>
+        
         Index:
         <br>
         <a href="#Ch1">Chapter 1: Data and Tables: A Place for Everything</a>
@@ -1546,7 +1550,7 @@
                 be used in the <code>IN</code> clause. <br>
                 - The <code>IN</code> operator performs a sort on the column before returning the rows if the column has
                 an Index on it. <br>
-                <div>
+                <div class="code-snippet">
                     <script src="https://gist.github.com/rgbk21/594c53041e99f65d3de7df8f4ff738ac.js"></script>
                 </div>
             </div>
@@ -1560,7 +1564,7 @@
                 b) <code> _ </code>(Underscore): matches exactly one character. So "SA_" would match exactly SAD only.
                 <br>
 
-                <div>
+                <div class="code-snippet">
                     <script src="https://gist.github.com/rgbk21/bfd3f6a1a9817e8f5b31e153f2c4eb09.js"></script>
                 </div>
             </div>
@@ -2428,6 +2432,6 @@
 
     </div>
 </div>
-
+<script src="script.js"></script>
 </body>
 </html>

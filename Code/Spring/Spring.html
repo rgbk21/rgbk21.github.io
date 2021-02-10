@@ -121,6 +121,8 @@
 
 <div class="container">
 
+    <button id='load-all-gists' type="button" class="btn btn-outline-primary">Show all Gists!</button>
+
     <div>
         This page contains my notes from the following books: <br>
         a) Baeldung REST API Spring Course <br>
@@ -755,10 +757,10 @@
             <code>@PropertySource("classpath:application.properties")</code>
 
             to any file subject to the component scan. <br>
-            - The <code>Environment</code> interface represents “the environment in which the current application is
-            running”.
-            It contains information about the application’s properties and profiles.
-            We can use the Environment API to search properties that are available in the application’s environment:
+            - The <code>Environment</code> interface represents "the environment in which the current application is
+            running".
+            It contains information about the application's properties and profiles.
+            We can use the Environment API to search properties that are available in the application's environment:
             <br>
             <div class="code-snippet">
                 <script src="https://gist.github.com/rgbk21/290b532f2b89e31f989d2aabed091246.js"></script>
@@ -798,8 +800,7 @@
             - Once the profile is active, you will see the following message in the app boot logs:
             <code>The following profiles are active: dev</code> <br>
             - The <code>Environment</code> interface is an abstraction integrated in the container, which can be used to
-            get
-            the application’s properties and the profile information.
+            get the application's properties and the profile information.
 
             <div class="code-snippet">
                 <script src="https://gist.github.com/rgbk21/75db2712de72414a9c25c88f01b9a897.js"></script>
@@ -854,7 +855,7 @@
             - <a href="https://stackoverflow.com/questions/17353327/populating-spring-value-during-unit-test">Populating
             Spring @Value during Unit Test</a> <br>
             - <a href="https://www.baeldung.com/spring-tests-override-properties">Baeldung: Override Properties in
-            Spring’s
+            Spring's
             Tests</a> <br>
             - <code>@SpringBootTest</code> is fairly heavy-weight, and for all intents and purpose will load your entire
             application. Depending on what you are trying to test you may want to look into slice tests.
@@ -1169,6 +1170,6 @@
     </div>
 
 </div>
-
+<script src="script.js"></script>
 </body>
 </html>
