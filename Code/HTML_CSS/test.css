@@ -1,5 +1,9 @@
-/* Instead of changing the font family on each individual element, we can instead define this property on the body element instead */
-/* Then all the elements that are inside the body element will inherit the property */
+* {
+    /* This selector will select all the elements on the page */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
     font-family: Arial, serif;
@@ -11,21 +15,21 @@ h1, h2 {
 }
 
 h1 {
-    /* Overriding the inherited font-size property */
     font-size: 40px;
+    /*  Adding margins  */
+    margin-bottom: 20px;
 }
 
 h2 {
-    /* Overriding the inherited font-size property */
     font-size: 20px;
+    margin-bottom: 10px;
 }
 
-/* This is how we select classes */
 .main-text {
     text-align: justify;
+    margin-bottom: 20px;
 }
 
-/* This is how we select id's */
 #author-name {
     font-size: 20px;
 }
