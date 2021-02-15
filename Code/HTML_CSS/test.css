@@ -1,0 +1,21 @@
+/* Instead of changing the font family on each individual element, we can instead define this property on the body element instead */
+/* Then all the elements that are inside the body element will inherit the property */
+
+body {
+    font-family: Arial, serif;
+    font-size: 18px;
+}
+
+h1, h2 {
+    color: green;
+}
+
+h1 {
+    /* Overriding the inherited font-size property */
+    font-size: 40px;
+}
+
+h2 {
+    /* Overriding the inherited font-size property */
+    font-size: 20px;
+}
