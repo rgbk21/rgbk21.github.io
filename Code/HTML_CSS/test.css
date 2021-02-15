@@ -19,3 +19,13 @@ h2 {
     /* Overriding the inherited font-size property */
     font-size: 20px;
 }
+
+/* This is how we select classes */
+.main-text {
+    text-align: justify;
+}
+
+/* This is how we select id's */
+#author-name {
+    font-size: 20px;
+}

@@ -191,6 +191,65 @@
                 <script src="https://gist.github.com/rgbk21/d06929924737be25b4af5c7ed6120f33.js"></script>
             </div>
         </div>
+
+
+        <div class="sub-heading">Lecture 13: Colors</div>
+        <div>
+            - Colors are represented in CSS using the RGB Model. <br>
+            - Colors are represented using <code>#000000</code>. The
+            first two 00 stand for the Red Channel, next two 00 for the green channel, and last two 00 for the blue
+            channel. All colors are a combination of these three channels. <br>
+            - If all the siz letters in the hex code are the same, for eg. <code>#555555</code>, we can write it in
+            shorthand as <code>#555</code>. <br>
+            - In addition to this, colors in CSS can also have transparencies. If we want to include the transparency
+            value, then we cannot use the hex notation to represent colors. Instead we use
+            <code>rgba(29, 167, 23, 0.75)</code>. 0.75 is the transparency value. A value of 0 means the color is
+            transparent, and a value of 1 means the color is completely solid.
+            <img src="imgs/Udemy_Lecture_HTML_CSS/Module3/RGB_Model.PNG"
+                 width="50%"
+                 class="center-block img-fluid"
+                 alt="RGB Model">
+        </div>
+
+
+        <div class="sub-heading">Lecture 14: Classes and ID's</div>
+        <div>
+            - We prefer classes over id's in html because id's can be used only once in the entire page.
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/b8767ff4d660a019a68f2d4ffcc5e265.js"></script>
+            </div>
+        </div>
+
+        <div class="sub-heading">Lecture 15: The CSS Box Model</div>
+        <div>
+            - The <i>content</i> is where the text and images appear. <code>padding</code>, <code>margin</code>, and
+            <code>border</code> are properties in CSS and can specified either for the entire box, or for the individual
+            sides - <i>top</i>, <i>right</i>, <i>bottom</i>, <i>left</i>. <br>
+            - The box model also allows us to set the height and width of an element. The annoying thing about the
+            standard box model is that you can set the height and the width only of the <i>content</i>, not of the
+            entire box itself. What this means is that the <code>padding</code>, <code>margin</code>, and
+            <code>border</code> are added to the height and width that we specify. This is not ideal.
+            <img src="imgs/Udemy_Lecture_HTML_CSS/Module3/CSS_Box_Model.PNG"
+                 width="50%"
+                 class="center-block img-fluid"
+                 alt="CSS Box Model">
+            - In order to get around this, we use a CSS property called <code>box-sizing</code> and set it to
+            <code>box-sizing: border-box;</code>.
+            <img src="imgs/Udemy_Lecture_HTML_CSS/Module3/CSS_Box_Model_Border_Box.PNG"
+                 width="50%"
+                 class="center-block img-fluid"
+                 alt="CSS Box Model after setting the box-sizing property">
+            - In HTML, there are <i>block elements</i> and <i>inline elements</i>. Block elements use the entire width
+            of the browser and force line breaks. Eg. heading, paragraph elements. Inline elements do nto do anything of
+            this sort. <a href="https://www.samanthaming.com/pictorials/css-inline-vs-inlineblock-vs-block/#a-inline">Inline
+            elements do NOT start on a new line</a> and only takes up as much width as its content. So, if
+            you try to set any width and height, it will have NO effects. <code>span</code>, <code>img</code>,
+            <code>a</code> tags are some examples of inline elements. <br>
+            - If you do not specify any margins in your stylesheet, all browsers, by default, add some margins to your
+            elements. You can override these margins by using the universal selector <code> * </code>.
+        </div>
+
+
     </div>
 
 

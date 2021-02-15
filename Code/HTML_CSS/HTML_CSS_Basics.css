@@ -16,7 +16,7 @@ html {
 
 .code-snippet {
     padding-top: 10px;
-    display: none;
+    display: block;
 }
 
 .textual-content {
