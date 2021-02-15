@@ -10,6 +10,48 @@ body {
     font-size: 18px;
 }
 
+.my-container {
+    width: 1140px;
+    /* To Center the div*/
+    /*margin-left: auto;*/
+    /*margin-right: auto;*/
+
+    /* The margin settings can be consolidated into a single property*/
+    /* margin: top right bottom left */
+    margin: 20px auto 0 auto;
+}
+
+.clearfix {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.blog-posts {
+    background-color: lightblue;
+    width: 70%;
+    float: left;
+    padding-right: 30px;
+}
+
+.linked-posts {
+    background-color: lightcoral;
+    width: 30%;
+    float: left;
+}
+
+.other {
+    margin-bottom: 40px;
+}
+
+.author-details {
+    background-color: lightgreen;
+}
+
+.author-details a {
+    color: violet;
+}
+
 h1, h2 {
     color: green;
 }
@@ -32,4 +74,11 @@ h2 {
 
 #author-name {
     font-size: 20px;
+}
+
+/* If you were resizing images, make sure you change either only the height or only the width
+   property so that the aspect ratio of the image is preserved. */
+img {
+    height: 100px;
+    width: auto;
 }

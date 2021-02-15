@@ -254,6 +254,43 @@
         </div>
 
 
+        <div class="sub-heading">Lecture 16: The CSS Box Model</div>
+        <div>
+            - This is the expected final setup of the page that we want:
+            <img src="imgs/Udemy_Lecture_HTML_CSS/Module3/Expected_Output.PNG"
+                 width="50%"
+                 class="center-block img-fluid"
+                 alt="Expected final setup of the page">
+            - Go to the Udemy Lecture here. <br>
+            - Enclose the entire content of the page inside a div <code>my-container</code> <br>
+            - Establish a width for <code>my-container</code> using <code>width: 1140px;</code>
+            - Center the <code>my-container</code> by using <code>margin-left: auto;</code> and <code>margin-right:
+            auto;</code> properties. <br>
+            - Divide the <code>my-container</code> div into the three boxes by using <code>div</code>. Because div
+            elements are block elements, the three divs will be placed one below another right now. <br>
+            - The <i>blog-posts</i> should occupy 70% of the width of the container and the <i>linked-posts</i> should
+            occupy the remaining 30%. <br>
+            - To put the <i>linked-posts</i> to the right of <i>blog-posts</i>, we need to use a new property called
+            <code>float</code>. <code>float</code> allows us to push elements to the left or to the right, allowing
+            other elements to wrap around it. So we put <code>float: left;</code> to both the <i>linked-posts</i> and
+            the <i>blog-posts</i>. <br>
+            - But now the <i>author-details</i> div also floats to the right. So we need a <i>clearfix</i> class to
+            rectify this. Add the <i>clearfix</i> class to the CSS, and add a empty div before the <i>author-details</i>
+            that uses the <i>clearfix</i> class. <br>
+            - Add some padding to the right side of the <i>blog-posts</i> box using <code>padding-right: 30px;</code>.
+            Remember that padding is within the box. Hence the background will remain colored in this case. Had you used
+            margin, the background would have been white. <br>
+            - Add some spacing from the top of the container using <code>margin-top</code>. <br>
+            - Change the color of the hyper links only in the <i>author-details</i>. Use <code>.author-details a</code>
+            selector to select only the anchor tags that are in the <i>author-details</i> class. <br>
+            - If you were resizing images, make sure you change either only the <code>height</code> or only the <code>width</code>
+            property so that the aspect ratio of the image is preserved. <br>
+            -
+
+
+        </div>
+
+
     </div>
 
 
