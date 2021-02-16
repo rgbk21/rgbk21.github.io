@@ -34,6 +34,10 @@ body {
     padding-right: 30px;
 }
 
+.blog-post {
+    position: relative;
+}
+
 .linked-posts {
     background-color: lightcoral;
     width: 30%;
@@ -74,6 +78,12 @@ h2 {
 
 #author-name {
     font-size: 20px;
+}
+
+.date {
+    position: absolute;
+    top: 0; /* it is right at the top, with 0px between the top of the parent container and the element */
+    right: 0; /* there is no distance between the right side of the parent container and this element */
 }
 
 /* If you were resizing images, make sure you change either only the height or only the width
