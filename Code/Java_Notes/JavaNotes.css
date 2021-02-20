@@ -2,6 +2,7 @@
 /* Text disappearing behind nav-bar on clicking anchor elements */
 html {
     scroll-padding-top: 75px; /* height of sticky header */
+    font-size: 14px;
 }
 
 /*-- change navbar dropdown color --*/
@@ -27,7 +28,8 @@ html {
 .chapter {
     padding-top: 10px;
     padding-bottom: 10px;
-    font-weight: bold;
+    font-size: 18px;
+    font-weight: 500;
 }
 
 code {
@@ -40,8 +42,9 @@ code {
 
 .sub-heading {
     padding-top: 10px;
-    padding-bottom: 10px;
-    font-weight: bold;
+    font-size: 16px;
+    font-weight: 500;
+    border-bottom: 1px solid;
 }
 
 hr{

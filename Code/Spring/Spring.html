@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
@@ -15,7 +15,7 @@
             crossorigin="anonymous"></script>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="Spring.css">
+    <link rel="stylesheet" type="text/css" href="../../globalStyles.css">
     <meta name="keywords" content="Java, Floats, Overflow, Unboxing, Autoboxing">
     <meta name="author" content="Raj Gaurav Ballabh Kumar">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -132,8 +132,11 @@
     <br>
     Index: <br>
     REST API Spring Course: <br>
-    Module 0: <a href="#SpringAnnotations">Annotations</a>
+    Module 0.1: <a href="#SpringAnnotations">Annotations</a>
     <br>
+    Module 0.2: <a href="#SpringQuestions">Questions</a>
+    <br>
+
     Module 1: <a href="#Rest-Module1"> The Basics of REST with Spring</a>
     <br>
     Module 2: <a href="#Rest-Module2"> REST and HTTP Semantics</a>
@@ -322,7 +325,7 @@
     </div>
 
     <hr>
-    <div id="SpringAnnotations" class="chapter">Module 0: Annotations</div>
+    <div id="SpringAnnotations" class="chapter">Module 0.1: Annotations</div>
     <hr>
 
     <div class="textual-content">
@@ -456,6 +459,171 @@
             <code>@ComponentScan</code> and <code>@Configuration</code> thus it simplifies development by reducing the
             number of annotations needed to bootstrap the context.
             You should only choose and add one of these two annotations to your primary @Configuration class.
+        </div>
+
+    </div>
+
+
+    <hr>
+    <div id="SpringQuestions" class="chapter">Module 0.2: Questions</div>
+    <hr>
+
+    <div class="textual-content">
+        <div class="one-point">
+            1) What is the difference between <code>/**</code> and <code>/*</code> in Spring with reference to path
+            mapping? <br>
+            - <a href="https://stackoverflow.com/questions/12569308/spring-difference-of-and-with-regards-to-paths">SO
+            Source here</a> and <a href="https://stackoverflow.com/a/61784601/8742428">here</a>. <br>
+            - This is mapping Ant-Style path patterns. Read <a
+                href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/util/AntPathMatcher.html">here
+            on the Spring 5 docs page.</a>.
+            <br>
+            - Examples:
+            <ul>
+                <li>
+                    <code>com/t?st.jsp</code> - matches <code>com/test.jsp</code> but also <code>com/tast.jsp</code> or
+                    <code>com/txst.jsp</code></li>
+                <li>
+                    <code>com/*.jsp</code> - matches all <code>.jsp</code> files in the <code>com</code> directory
+                </li>
+                <li>
+                    <code>com/**/test.jsp</code> - matches all <code>test.jsp</code> files underneath the
+                    <code>com</code> path
+                </li>
+                <li>
+                    <code>org/springframework/**/*.jsp</code> - matches all <code>.jsp</code> files underneath the
+                    <code>org/springframework</code> path
+                </li>
+                <li>
+                    <code>org/**/servlet/bla.jsp</code> - matches <code>org/springframework/servlet/bla.jsp</code> but
+                    also <code>org/springframework/testing/servlet/bla.jsp</code> and <code>org/servlet/bla.jsp</code>
+                </li>
+                <li>
+                    <code>com/{filename:\\w+}.jsp</code> will match <code>com/test.jsp</code> and assign the value
+                    <code>test</code> to the <code>filename</code> variable
+                </li>
+            </ul>
+        </div>
+
+
+        <div class="one-point">
+            2) What is the <code>HandlerInterceptor</code> and how does it work? <br>
+            - Check <a href="https://programmer.ink/think/spring-boot-practice-creation-of-three-interceptors.html">this
+            link</a> which shows an example of creation of three interceptors. <br>
+            - Check <a href="https://www.youtube.com/watch?v=7_sE_TH1umw">this video tutorial </a>on how to create a
+            webapp using a Maven archetype, Spring, and JSP in IntelliJ and use Tomcat to deploy. <br>
+
+            <br>
+            - The following has been sourced from <a
+                href="https://visionjava1.appspot.com/content/spring-mvc-step-by-step-example-tutorial-using-annotations-spring-3.html">this
+            link</a>. <br>
+            - The project is available on GitHub <a href="https://github.com/rgbk21/Spring-Maven-WebApp.git">here</a>.
+            <br>
+            - Following steps summarize the process for creating a Spring MVC Project: <br>
+            a) Update POM file to get dependencies for Spring Web MVC <br>
+            b) Add declaration for Spring <code>DispatcherServlet</code> servlet in <code>web.xml</code>. <br>
+            c) Create Web Application Context file. <br>
+            d) Create Controller <br>
+            e) Create JSP Page <br>
+
+            <br>
+
+            Step 1: Update POM file to get dependencies for Spring Web MVC <br>
+            - In <code>pom.xml</code>, add the following dependency:
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/dbdcd0ace73a2181f71859124946adc1.js"></script>
+            </div>
+
+            Step 2: Add declaration for Spring <code>DispatcherServlet</code> servlet in <code>web.xml</code> <br>
+            - <code>&lt;servlet-mapping&gt;</code> for Employee forwards all the requested URLs on the /employee path to
+            the servlet named <i>Employee</i>. <code>&lt;servlet&gt;</code> declaration for Employee is defined as
+            Spring <code>DispatcherServlet</code>. Upon initialization of a <code>DispatcherServlet</code>, Spring MVC
+            looks for a file named <i>${servlet-name}-servlet.xml</i> in the <i>WEB-INF</i> directory of your web
+            application and creates teh bean defined there, overriding the definition of any beans defined with the same
+            name in the global scope (?).
+            <br>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/e364a01e6719f7f15df224340d2ed073.js"></script>
+            </div>
+            - If you want to name the context file with a name different than the <i>${servlet-name}-servlet.xml</i>,
+            you can use the following to define the location and the file name.
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/1a0afaab8e33491934ff53baa27bb6be.js"></script>
+            </div>
+
+            Step 3: Create Web Application Context file <br>
+            - <code>&lt;context:annotation-config/&gt;</code> is used to activate annotations in beans already
+            registered in the application context. Eg. <code>@Autowired</code>, <code>@Resource</code>,
+            <code>@Required</code>, <code>@PostConstruct</code>. <br>
+            - <code>&lt;context:component-scan base-package="com.company"/&gt;</code> scans the defined packages and
+            registers the beans with application context (like controller, bean). <br>
+            - <code>&lt;mvc:annotation-driven/&gt;</code> declares explicit support for new Spring MVC features like
+            <code>@Valid</code>, <code>@RequestBody</code>, <code>@RequestResponse</code> etc. <br>
+            - <code>&lt;bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver"&gt;</code>
+            provides access to controller for the jsp pages under WEB-INF folder. It's a good practice to put all the
+            jsp pages under WEB-INF folder to avoid giving direct access.
+            - Take note of the namespace that is used in the XML. Take attention: when you use <code>context</code>
+            namespace, you should update in XML head 2 attributes: <code>xmlns:context</code> and <code>xsi:schemaLocation</code>.
+            Beginners used to add only <code>xmlns:context</code> and forget about 2 new entries to <code>xsi:schemaLocation</code>.
+            <a href="https://stackoverflow.com/a/35120928/8742428">Source on SO here</a>.
+
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/90f8972d3da25a9dfe9da9a7c2aa406c.js"></script>
+            </div>
+
+            Step 4: Create Controller <br>
+            - <code>@Controller</code> declares the class as Spring Controller type class. <br>
+            - <code>@RequestMapping("/employee")</code> Annotation for mapping web requests onto specific handler
+            classes and/or handler methods.In our case the homepage request is handled by this controller.
+            The return value is resolved by the view resolver which appends the location and suffix for the string.
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/ce562c495063437d9e92cb34dd94eef1.js"></script>
+            </div>
+
+            Step 5: Create JSP
+
+            And we are done. The final project structure should look like this:
+            <img src="resources/random_images/ProjectStructureForMavenWebApp.PNG"
+                 width="25%"
+                 class="center-block img-fluid"
+                 alt="Final project structure in IntelliJ">
+
+        </div>
+
+        <div class="one-point">
+            3) I included spring-mvc as the single dependency in my pom. Why do I not find the
+            <code>HtttpServletRequest</code> in the downloaded jars? <br>
+            - SO Source: <a href="https://stackoverflow.com/questions/860022/wheres-javax-servlet">Where's
+            javax.servlet??</a> <code>javax.servlet</code> is a package that's part of Java EE (Java Enterprise
+            Edition). You've got the JDK for Java SE (Java Standard Edition).
+            <br>
+            - Because spring-webmvc does not pull <code>javax</code> library. To pull in that dependency, you need to
+            include <code>javax.servlet</code>. Now <code>spring-boot-starter-web</code> automatically pulls in tomcat
+            which in turn pulls in javax.servlet. If you are not using Boot, you will probably have to do this manually.<br>
+            <img
+                    src="resources/random_images/Spring-Boot-Starter-Files.PNG"
+                    width="50%"
+                    class="center-block img-fluid"
+                    alt="Spring Boot Starter Dependency Tree">
+
+            <img src="resources/random_images/Tomcat-Embed-Core.PNG"
+                 width="70%"
+                 class="center-block img-fluid"
+                 alt="Spring Boot Starter Dependency Tree">
+        </div>
+
+
+        <div class="one-point">
+            4) How do I map multiple paths to the same interceptor? <br>
+            - Check SO Source <a href="https://stackoverflow.com/a/7402861/8742428">here</a>. <br>
+            - Go through the tutorial <a href="https://www.youtube.com/watch?v=eqj5wSXOCLs">here</a>. <br>
+            - Source Code <a href="https://github.com/rgbk21/Spring-Maven-WebApp.git">here</a>.
+        </div>
+
+        <div class="one-point">
+            5) Which interceptor will be called when there are multiple interceptors for the same path? <br>
+            - All of the interceptors will be called in the path that is specified. Look at this tutorial <a
+                href="https://www.youtube.com/watch?v=eqj5wSXOCLs">here</a>. <br>
         </div>
 
 

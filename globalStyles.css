@@ -12,11 +12,11 @@ html {
 
 .container {
     margin-top: 30px;
-    overflow-wrap: break-word;
 }
 
 .code-snippet {
     padding-top: 10px;
+    display: none;
 }
 
 .textual-content {
@@ -27,21 +27,24 @@ html {
 .chapter {
     padding-top: 10px;
     padding-bottom: 10px;
-    font-weight: bold;
+    font-size: 18px;
+    font-weight: 500;
+    /*border: 1px solid black;*/
 }
 
 code {
-     padding: 2px 5px;
-     white-space: pre-wrap;
-     font-family: Consolas,Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace,sans-serif;
-     background-color: #eff0f1;
-     color: black;
- }
+    padding: 2px 5px;
+    white-space: pre-wrap;
+    font-family: Consolas,Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace,sans-serif;
+    background-color: #eff0f1;
+    color: black;
+}
 
 .sub-heading {
     padding-top: 10px;
-    padding-bottom: 10px;
-    font-weight: bold;
+    font-size: 16px;
+    font-weight: 500;
+    border-bottom: 1px solid black;
 }
 
 hr{
@@ -56,4 +59,9 @@ hr{
 
 .output{
 
+}
+
+.one-point {
+    padding-top: 10px;
+    padding-bottom: 10px;
 }

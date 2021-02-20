@@ -2,6 +2,7 @@
 /* Text disappearing behind nav-bar on clicking anchor elements */
 html {
     scroll-padding-top: 75px; /* height of sticky header */
+    font-size: 14px;
 }
 
 /*-- change navbar dropdown color --*/
@@ -56,4 +57,20 @@ hr{
 
 .output{
 
+}
+
+.parent-float-class {
+
+}
+
+.float-class {
+    width: auto;
+    float: left;
+    padding: 5px 10px 10px 0;
+}
+
+.clearfix {
+    content: "";
+    display: table;
+    clear: both;
 }
