@@ -1,3 +1,6 @@
+/* ******************************************************************************************************************  */
+/* BASIC SETUP */
+/* ******************************************************************************************************************  */
 * {
     margin: 0;
     padding: 0;
@@ -26,6 +29,11 @@ html {
     margin: 0 auto;
 }
 
+/* ******************************************************************************************************************  */
+/* HEADER */
+/* ******************************************************************************************************************  */
+
+
 header {
     /* Use a background image for the header element*/
     /* Make the background image darker by adding a black gradient on top of the image */
@@ -43,6 +51,11 @@ header {
     transform: translate(-50%, -50%);
 }
 
+/* ******************************************************************************************************************  */
+/* HEADINGS */
+/* ******************************************************************************************************************  */
+
+
 /* normalize.css introduces a margin for the h2 element. Removing that margin. */
 h1 {
     margin-top: 0;
@@ -54,6 +67,49 @@ h1 {
     letter-spacing: 1px;
     word-spacing: 4px;
 }
+
+.logo {
+    height: 100px;
+    width: auto;
+    /* Because we want the log to be on the left side */
+    float: left;
+    margin-top: 20px;
+}
+
+.main-nav {
+    float: right;
+    /* Get rid of the bullet points that precede li elements*/
+    list-style: none;
+    margin-top: 30px;
+}
+
+.main-nav li {
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 80%;
+    font-weight: 300;
+    padding-bottom: 5px;
+    /* There should be a border, even if it's transparent,
+    for a border to transition properly on hover */
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.5s;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+    border-bottom: 2px solid #e67e22;
+}
+
+/* ******************************************************************************************************************  */
+/* BUTTONS */
+/* ******************************************************************************************************************  */
 
 .btn:link,
 .btn:visited {

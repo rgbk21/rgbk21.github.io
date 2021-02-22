@@ -476,9 +476,33 @@
             <code>background-color</code> that we are changing. We are also changing the
             <code>border</code> and <code>color</code> as well. We can apply a single transition for all of them:
             <code>transition: background-color 0.5s, color 0.5s, border 0.5s;</code>. <br>
+            - Now we want to add the <code>nav</code> element. The logo of the page is intended to go here. <br>
+            - The nav links are present in the <code>nav</code> element as an <code>ul</code>. Test within the
+            <code>ul</code> assigned bullets by default. We can override this default behavior by using:
+            <code>list-style: none;</code>. <br>
+            - <code>li</code> elements are block elements by default. Hence each of them introduce a line break. We want
+            all the <code>li</code> elements to appear in a single line. Hence we change the <code>li</code> elements to
+            <code>display: inline-block;</code>. <br>
+            - Below each of the <code>li</code> elements in the <code>nav</code>bar, we want the element to be
+            underlined once we hover over that element. But note that just defining this is not going to work properly:
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/fb3a62ff816b30a685071d9f40fd296f.js"></script>
+            </div>
+            - What we need to do is define a transparent border on the <code>link/visited</code> itself. So the correct
+            code should look like this:
+
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/da18e6eb2586a0607a77e03b7f19c86f.js"></script>
+            </div>
+
+            - Complete CSS at the end of this looks like this:
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/75545185b2abf76375e65ad18d4ccb7f.js"></script>
+            </div>
+
+
 
         </div>
-
 
 
     </div>
