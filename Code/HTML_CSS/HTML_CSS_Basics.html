@@ -418,8 +418,67 @@
             elements like <code>nav</code>, <code>main</code> for the main body, and <code>footer</code>. Using these
             elements attaches semantics that are helpful for search engines. They know that this div is a header and not
             just another div with a random class applied to it. <br>
-            -
+            - Add a background image to the div using <code>background-image: url("imgs/hero.jpg");</code>. <br>
+            - But now you
+            see a problem. The background image only fills the part of the header that has some content. We want the
+            image to fill the entire viewport instead. We do that using <code>height: 100vh</code>. <br>
+            - The image is too zoomed in right now. We want the image to fill the view:
+            <code>background-size: cover;</code> <br>
+            - When we resize the window now, the image cuts off. We want the aspect ratio of the image to changne on
+            window resize such that the entire image is visible irrespective of the window size:
+            <code>background-position: center;</code> <br>
+            - Now we want to center the <code>div</code> both horizontally and vertically. We will have to use the
+            <code>absolute</code> positioning in this case. In order to center the div, we first
+            <code>position: absolute; top: 50%; left: 50%;</code>. But this means that the <i>starting</i> point of the
+            div is now position center. We now need to offset it such that the div is centered:
+            <code>transform: translate(-50%, -50%);</code>. This will translate the element half of it's width to the
+            left, and half of it's height to the top. <br>
+            - The next thing is we need to make the background image darker so that we can see the text that is present
+            on the top of it. We do this by adding a image on top of the existing background image:
+            <code>background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("imgs/hero.jpg");</code> <br>
+            - Next we want to change the font-size of the header element. But we do not want to specify the font-size in
+            pixels. We have specified the base font-size in our html element as 20px. Relative to that, we do this in
+            the h1 element: <code>font-size: 200%</code>. When we increase the font-size, we try to decrease the
+            font-weight. We also want to change the heading to uppercase: <code>text-transform: uppercase;</code> <br>
+            - We can increase the letter-spacing and the word-spacing as well.
+            <code>letter-spacing: 1px; word-spacing: 4px;</code> <br>
+            - We want to create button for the links. <br>
+            - A button is by default an inline elements. We can change that to be a inline-block element. An
+            inline-block element is a hybrid between a block and an inline element. An inline-block element does not
+            force a line break, but you can add properties on it like padding and margin, unlike a normal inline
+            element. We can change this by doing <code>display: inline-block;</code>. And now we can add some padding
+            and margin to this element. <code>a</code> tags also have an underline by default. We can remove this by
+            doing <code>text-decoration: none;</code> <br>
+            - Right now the button is square. We can make the edges round: <code>border-radius: 200px;</code> <br>
+            - Add a border to the button: <code>border: 1px solid #e67e22;</code>. <br>
+            - Buttons can have 4 different states: <br>
+            a) link: how the link looks like in the normal state <br>
+            b) visited: how the link looks like after it has been visited (some links appear grey after having being
+            clicked) <br>
+            c) hover: when we put our mouse over the button <br>
+            d) active: when we click on the button <br>
+            - We want the behavior of the buttons in the normal state and after being visited to remain the same. Hence,
+            we write the following. We are doing this by soecifying the same styles for
+            <code>.btn:link, .btn:visited</code>. <code>link</code> and <code>visited</code> are examples of pseudo
+            classes.
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/673bffb28a7e5c6ab2c99e8ee51d99e0.js"></script>
+            </div>
+            - When we hover over or click a button, we want the behavior to be a bit different. We want the background
+            to get a bit darker. Hence we can do this:
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/6df51e2507ba5414d7f9f57b8b3ba7f3.js"></script>
+            </div>
+            - The transition of the background color from the lighter shade to the darker shade on hover is
+            instantaneous. We want there to be a slight delay. To give the impression of an animation. We write:
+            <code>transition: background-color 0.2s;</code>. We mean that when there is a transition in the
+            <code>background-color</code> property, there should be a delay of 0.2s. But remember it's not just the
+            <code>background-color</code> that we are changing. We are also changing the
+            <code>border</code> and <code>color</code> as well. We can apply a single transition for all of them:
+            <code>transition: background-color 0.5s, color 0.5s, border 0.5s;</code>. <br>
+
         </div>
+
 
 
     </div>

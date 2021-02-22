@@ -26,4 +26,74 @@ html {
     margin: 0 auto;
 }
 
+header {
+    /* Use a background image for the header element*/
+    /* Make the background image darker by adding a black gradient on top of the image */
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("imgs/hero.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
 
+/* Center the div */
+.hero-text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* normalize.css introduces a margin for the h2 element. Removing that margin. */
+h1 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #ffffff;
+    font-size: 200%;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    word-spacing: 4px;
+}
+
+.btn:link,
+.btn:visited {
+    display: inline-block;
+    /* Shorthand for padding: 10px 30px 10px 30px*/
+    padding: 10px 30px;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 200px;
+    border: 1px solid #e67e22;
+    transition: background-color 0.5s, color 0.5s, border 0.5s;
+}
+
+.btn-full:link,
+.btn-full:visited {
+    color: #ffffff;
+    background-color: #e67e22;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited {
+    color: #e67e22;
+}
+
+/* NOTE: If we move this style declaration before the btn-full decalration,
+ the change does nto take effect */
+.btn:hover,
+.btn:active {
+    background-color: #b05d14;
+    border: 1px solid #b05d14;
+}
+
+/* Not only should the background color change,
+but the border color should change as well*/
+.btn-full:hover,
+.btn-full:active {
+
+}
+
+.btn-ghost:hover,
+.btn-ghost:active {
+    color: #ffffff;
+}
