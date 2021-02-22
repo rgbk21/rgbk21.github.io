@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    /* Set background color of the page to white*/
+    background-color: #ffffff;
+    /* Set text-color of the entire page*/
+    color: #555;
+    /* Set the font of the page to the font that we downloaded */
+    /* If Roboto is not found on the client, Arial will be used, if Arial is not found,
+    we use the default sans-serif that is found */
+    font-family: 'Roboto', 'Arial', sans-serif;
+    /* We have included family=Roboto:400,500,700 fontweights in our header*/
+    /* Hence we can use one of the weights as our default fontweight*/
+    font-weight: 500;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+}
+
+.row {
+    width: 1140px;
+    /* Shorthand for margin: 0 auto 0 auto*/
+    margin: 0 auto;
+}
+
+

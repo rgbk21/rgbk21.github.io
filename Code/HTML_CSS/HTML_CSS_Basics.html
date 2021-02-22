@@ -133,6 +133,8 @@
     Index for Udemy Course: <br>
     Module 2 - <a id="Module2_Link" href="#Module2_Udemy">Dive into HTML</a> <br>
     Module 3 - <a id="Module3_Link" href="#Module3_Udemy">Formatting with CSS</a> <br>
+    Module 4 - <a id="Module4_Link" href="#Module4_Udemy">Web Design Basics</a> <br>
+    Module 5 - <a id="Module5_Link" href="#Module5_Udemy">Website Project</a> <br>
 
     <br>
 
@@ -298,7 +300,8 @@
             element. In this case the parent of the <i>date</i> element is the <i>blog-post</i> element. Hence we need
             to edit the CSS of <i>blog-post</i> element to say <code>position: relative</code>. <br>
             - Then we change the CSS of the <i>date</i> element to say <code>position: absolute</code> and specify the
-            exact location where we want the element to be placed. <br>
+            exact location where we want the element to be placed. We need to explicitly say that the parent has
+            position: relative, otherwise the browser would not know where to position the absolute element.<br>
             - The entire CSS so far looks like this:
             <div class="code-snippet">
                 <script src="https://gist.github.com/rgbk21/b3e40fece2837954be00f8a1210f0d29.js"></script>
@@ -313,7 +316,6 @@
     <div class="textual-content">
         <div class="sub-heading">Lecture 30: The Cheat Sheet</div>
         <div class="parent-float-class">
-
 
 
             <div class="float-class">
@@ -373,6 +375,54 @@
         </div>
     </div>
 
+    <hr>
+    <div id="Module5_Udemy" class="chapter">Module 5 - WebSite Project</div>
+    <hr>
+
+    <div class="textual-content">
+
+        <div class="sub-heading">Lecture 36: First Development Steps</div>
+        <div>
+            - Get the project structure set up with the correct folder formats. <br>
+            - Pick out a font that you want to use. Include it in the header of the html page. <br>
+            - Reset the CSS for the entire page:
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/60020ec655b5dd4beda8545a3f2fa04c.js"></script>
+            </div>
+            - Add the following CSS:
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/3017208fb286c444fc46c943fe9a7ab3.js"></script>
+            </div>
+
+        </div>
+
+        <div class="sub-heading">Lecture 37: Setting up fluid grid for responsive web design</div>
+        <div>
+            - Following are the points to keep in mind to create responsive web design: <br>
+            a) Fluid Grid: all layout elements are sized in relative units, such as percentages, instead of absolute A
+            <code>header</code> element works like a normal <code>div</code>
+            units, such as pixels. <br>
+            b) Flexible images: are also sized in relative units <br>
+            c) Media Queries: allow us to specify different CSS style rules for different browser widths. <br>
+            - Add <code>grid.css</code> to the <code>vendors/css</code> folder. <br>
+            - All of our data will be contained within rows. So we create a new class called <code>row</code> and assign
+            it the following styles:
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/fd3a73d161110cb7a544fa679288f63b.js"></script>
+            </div>
+        </div>
+
+        <div class="sub-heading">Lecture 38: Building the header</div>
+        <div>
+            - A <code>header</code> element works like a normal <code>div</code> element. There are other similar
+            elements like <code>nav</code>, <code>main</code> for the main body, and <code>footer</code>. Using these
+            elements attaches semantics that are helpful for search engines. They know that this div is a header and not
+            just another div with a random class applied to it. <br>
+            -
+        </div>
+
+
+    </div>
 
 
 </div>

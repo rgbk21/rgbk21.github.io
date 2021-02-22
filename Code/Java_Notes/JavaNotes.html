@@ -144,6 +144,13 @@
     <br>
     Chapter 29: <a href="#Streams">Streams API</a>
 
+    <br>
+    <br>
+    Udemy - Learn Complete Java: Core java, JSP, and Servlets <br>
+    Index: <br>
+    Section 1: <a href="#Udemy_Java_Section1">Introduction</a>
+
+
     <hr>
     <div id="inheritance" class="chapter">Chapter 8: Inheritance</div>
     <hr>
@@ -389,7 +396,11 @@
             a method that is overridden by a subclass, then when different types of objects are referred to through a
             superclass
             reference variable, different versions of the method are executed. Compare this with what we read in
-            <a href="#superclass_reference">A superclass variable can reference a subclass object</a>" section.
+            <a href="#superclass_reference">A superclass variable can reference a subclass object</a>" section: A
+            reference of a superclass can be assigned a reference to any subclass derived from that superclass. It is
+            important to understand that <i>it is the type of the reference variable - not the type of the object that
+            it
+            refers to - that determines what members can be accessed</i>.
             <div class="code-snippet">
                 <script src="https://gist.github.com/rgbk21/d1e79c337d71a4468731f182f443b4cb.js"></script>
             </div>
@@ -2399,6 +2410,58 @@
         <a href="https://github.com/stavalfi/lectures/tree/master/Java%20Streams%20-%20Series">Github link to lectures
             on Streams</a>
         <br>
+    </div>
+
+    <hr>
+    <div id="Udemy_Java_Section1" class="chapter">Section 1: Introductiom</div>
+    <hr>
+
+    <div class="textual-content">
+
+        <div class="sub-heading">Lecture 5: JDK, JRE and JVM</div>
+        <div>
+            - Source on SO <a href="https://stackoverflow.com/a/11580321/8742428">here</a>. <br>
+            - JVM: The Java Virtual Machine (JVM) is the virtual machine that runs the Java bytecodes. The JVM doesn't
+            understand Java source code; that's why you need to compile your <code>*.java</code> files to obtain
+            <code>*.class</code> files that contain the bytecodes understood by the JVM. This compilation is done by
+            using the <code>javac</code> command. After compilation, as many <code>.class</code> files will be generated
+            as the number of classes in java program (eh.. not really) <br>
+            - Note that inner classes do not get .class files of their own.
+            Instead they are present in the .class files of their parent classes itself.
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/878a9e08965337f0a142bb47faede1bf.js"></script>
+            </div>
+            - On the other hand, classes that are defined as below get their own .class files.
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/8c6c943be7e7c8793b8e9d62b484cff7.js"></script>
+            </div>
+
+            - The generated .class files are also the entity that
+            allows Java to be a "portable language" (write once, run anywhere). Indeed, there are specific
+            implementations of the JVM for different systems (Windows, Linux, macOS, see the Wikipedia list), the aim is
+            that with the same bytecodes they all give the same results. <br>
+            - JRE: The Java Runtime Environment (JRE) provides the libraries, the Java Virtual Machine, and other
+            components to run applets and applications written in the Java programming language. (The point is that, you
+            need only the JRE if your sole goal is to only run a Java program.)
+            In addition, two key
+            deployment technologies are part of the JRE: Java Plug-in, which enables applets to run in popular browsers;
+            and Java Web Start, which deploys standalone applications over a network. It is also the foundation for the
+            technologies in the Java 2 Platform, Enterprise Edition (J2EE) for enterprise software development and
+            deployment. The JRE does not contain tools and utilities such as compilers or debuggers for developing
+            applets and applications. <br>
+            - JDK: The JDK is a superset of the JRE, and contains everything that is in the JRE, plus tools such as the
+            compilers and debuggers necessary for developing applets and applications. <br>
+            - Different parts of the Oracle Java SE lineup can be seen <a
+                href="https://docs.oracle.com/javase/8/docs/index.html">here</a>. <br>
+        </div>
+
+        <div class="sub-heading">Lecture 19: Trick to prevent the skipping of String input value</div>
+        <div>
+            - <a
+                href="https://stackoverflow.com/questions/13102045/scanner-is-skipping-nextline-after-using-next-or-nextfoo">SO
+            Source here</a>. <br>
+        </div>
+
     </div>
 
 

@@ -832,7 +832,7 @@
         - Read <a href="https://stackoverflow.com/questions/12462079/possible-heap-pollution-via-varargs-parameter">here
         on SO</a>.
     </div>
-
+s
     <div class="one-point">
         55) What is a Class Loader in Java? <br>
         - <a href="https://stackoverflow.com/questions/2424604/what-is-a-java-classloader">SO here</a>.
@@ -852,6 +852,9 @@
         - Maven build vs Maven install <a href="https://stackoverflow.com/a/38000567/8742428">on SO here</a>. <br>
         - Running <code>mvn clean install</code> will also show the location where the resulting jar has been packaged
         and placed. You can check it out by manually navigation to the specified directory. <br>
+        - <a href="https://stackoverflow.com/questions/45293176/javax-servlet-in-springboot-application">The provided
+        scope means that you intend that library to be provided by the environment in which you deploy your code. Why
+        would you do such a thing?</a> <br>
 
     </div>
 
@@ -931,6 +934,207 @@
     <div class="one-point">
         63) What is meant by DAO Layer, Service Layer/Business Layer, Web layer?
         - Pivotal Certified Spring Web Application Developer page 17
+    </div>
+
+    <div class="one-point">
+        64) Java: compiled or interpreted? Compiler vs Interpreter? JIT Compiled vs Interpreted? Traditional interpreter
+        vs
+        Traditional Compiler vs JIT Compiler vs AOT Compiler? <br>
+        - The main thing to keep in mind: JVM has, both, an interpreter as well as a compiler. With JVM, both
+        interpreter
+        and compiler (the JVM compiler and not the source-code compiler like javac) produce native code (aka Machine
+        language code for the underlying physical CPU like x86)
+        from byte code. <a href="https://stackoverflow.com/a/40876067/8742428">Source on SO</a>. So when people talk
+        about compiling java code, there are two different compilers in picture - one is the <code>javac</code> compiler
+        converting the .java files to .class files and then there is the compiler in the JVM itself that is converting
+        <i>parts</i> of the bytecode to native instructions that can be run on the CPU/machine code (This is the
+        JIT-Compilation that people refer to). <br>
+        - <a href="https://stackoverflow.com/a/36394113/8742428">Source of image on SO</a>.
+
+        <img src="imgs/Java_Environment.png"
+             width="50%"
+             class="center-block img-fluid"
+             alt="Java environment overview">
+
+        <br>
+        <br>
+
+        <li><u>Java: compiled or interpreted</u></li>
+        - First of all, <a
+            href="https://stackoverflow.com/questions/3440297/there-is-no-such-thing-as-a-compiled-language-or-interpreted-language">there
+        is no such thing as a "compiled language" or an "interpreted language"</a>. <br>
+        - Generally, both interpreters and compilers first need to parse the source code and turn it into a
+        representation, called AST (abstract syntax tree). A compiler then turns the AST into executable code (through
+        various transformations), while an interpreter might just directly 'interpret' the AST or sometimes compile and
+        execute it (just-in-time compilation).
+        The statement that there is nothing like a "compiled language" or an "interpreted language" is correct in that
+        this has nothing to do with the language: in theory, you can write an
+        interpreter and compiler for any language. Which one to use really depends on the use-case, scenario and
+        environment.
+        A compiler has the advantage that it only needs to do it's job once, regardless of how often you then execute
+        the program. An interpreter needs to parse the source every time (or do some caching), thus you have an overhead
+        for each execution which might take way longer than the actual execution time of the final program. On the other
+        hand, an interpreter is more flexible (it can take into amount the current environment and thus do optimizations
+        a compiler is not allowed to do). But the differences don't stop here, these are just two obvious points. <a
+            href="https://stackoverflow.com/a/3440413/8742428">Source on SO</a>.
+
+        <br>
+        <br>
+
+        <li><u>Compiler vs Interpreter</u></li>
+        - So we first need to understand what is the difference between a compiler and an interpreter. Check <a
+            href="https://softwareengineering.stackexchange.com/a/269878">Source on SO here</a>. <br>
+        - To convert source code into machine code, we use either a compiler or an interpreter. Both compilers and
+        interpreters are used to convert a program written in a high-level language into machine code understood by
+        computers. However, there are differences between how an interpreter and a compiler works. Look at the
+        interpreter vs compiler table at
+        <a href="https://www.programiz.com/article/difference-compiler-interpreter">this link</a> and <a
+            href="https://stackoverflow.com/a/30669166/8742428">this SO answer</a>. <br>
+        - On a higher level, the difference really comes down to <a href="https://stackoverflow.com/a/475286/8742428">'prepare
+        the code for later execution' (compilation) or 'execute the code right now' (interpretation)</a>. Some
+        interpreters (e.g. Unix shells) read the description one small piece at a time and act on each piece as they see
+        it; some (e.g. Perl, Python) read the entire description, internally convert it to a simpler form and then act
+        on that. Some interpreters (e.g. Java's JVM, or a Pentium 4 chip) only understand a very simple description
+        language that is too tedious for humans to work with directly, so humans use compilers to convert their
+        high-level descriptions to this language. <a href="https://stackoverflow.com/a/475461/8742428">Compilers never
+        do the work. Interpreters always do the work</a>. <br>
+        - A compiled language is one where the program, once compiled,
+        is expressed in the instructions of the target machine. For example, an addition "+" operation in your source
+        code could be translated directly to the "ADD" instruction in machine code.
+        An interpreted language is one where the instructions are not directly executed by the target machine, but
+        instead read and executed by some other program (which normally is written in the language of the native
+        machine). For example, the same "+" operation would be recognised by the interpreter at <i>run-time</i>, which
+        would
+        then call its own "add(a,b)" function with the appropriate arguments, which would then <i>execute</i> the
+        machine code
+        "ADD" instruction. (Note that, in the case of interpreted languages, all of this is happening during run-time.)
+        <br>
+        - Advantages of compiled languages: <br>
+        a) Faster performance by directly using the native code of the target machine. It takes large amount of time to
+        analyze the source code but the overall execution time is comparatively faster. <br>
+        b) Opportunity to apply quite powerful optimisations during the compile stage <br>
+        - Disadvantages of compiled languages: <br>
+        a) Generates intermediate object code which further requires linking, hence requires more memory. <br>
+        b) It generates the error message only after scanning the whole program. Hence debugging is comparatively hard.
+        <br>
+        - Advantages/disadvantages of interpreted languages: <br>
+        a) Easier to implement (writing good compilers is very hard!!) <br>
+        b) No need to run a compilation stage: can execute code directly "on the fly". It takes less amount of time to
+        analyze the source code and <i>start</i> running it, but the overall execution time is slower. <br>
+        c) Can be more convenient for dynamic languages <br>
+        d) No intermediate object code is generated, hence are memory efficient. <br>
+        e) Continues translating the program until the first error is met, in which case it stops. Hence debugging is
+        easy. <br>
+        Note that modern techniques such as bytecode compilation add some extra complexity - what happens here is that
+        the compiler targets a "virtual machine" which is not the same as the underlying hardware. These virtual machine
+        instructions can then be compiled again at a later stage to get native code (e.g. as done by the Java JVM JIT
+        compiler). <a href="https://stackoverflow.com/a/3265602/8742428">Source on SO here</a>. <br>
+        - You can now see the problem with a purely interpreted language. A traditional compiler is translating all the
+        source code to machine code <i>before</i> the execution of the program. Hence at runtime, all the CPU has to do
+        is run the machine code instructions (for eg. ADD). On the other hand, for a purely interpreted language, the
+        source code needs to
+        be translated to the machine code for every instruction - <i>at runtime</i>. If an instruction is present in a
+        loop, the interpreter might end up translating the same source code to machine code millions of time. This is a
+        huge overhead.
+
+        <br>
+        <br>
+
+        <li><u>JIT Compilers</u></li>
+        So that brings us to the solution - that is : Just-In-Time (JIT) Compilation. <br>
+        - Source on <a href="https://stackoverflow.com/a/40876067/8742428">SO here</a>. <br>
+        - An interpreter pretty much converts each byte-code instruction to corresponding native instruction by looking
+        up
+        a predefined JVM-instruction to machine instruction mapping (see below pic). Interestingly, a further speedup in
+        execution can be achieved, if we take a section of byte-code and convert it into machine code - because
+        considering a whole logical section often provides rooms for optimization as opposed to converting
+        (interpreting) each line in isolation (to machine instruction). This very act of converting a section of
+        byte-code into (presumably optimized) machine instruction is called compiling (in the current context). When the
+        compilation is done at run-time, the compiler is called JIT compiler.
+        <img src="imgs/ByteCode_To_MachineCode.png"
+             width="35%"
+             class="center-block img-fluid"
+             alt="Instructions showing conversion of Byte Code to Machine Code">
+        Since Java designer went for (hardware & OS) portability, they had chosen interpreter architecture (as opposed
+        to c style compiling, assembling, and linking). However, in order to achieve more speed up, a compiler is also
+        optionally added to a JVM. Nonetheless, as a program goes on being interpreted (and executed in physical CPU)
+        "hotspot"s are detected by JVM and statistics are generated. Consequently, using statistics from interpreter,
+        those sections become candidate for compilation (optimized native code). It is in fact done on-the-fly (thus JIT
+        compiler) and the compiled machine instructions are used subsequently (rather than being interpreted). In a
+        natural way, JVM also caches such compiled pieces of code.
+
+        <br>
+        <br>
+
+        <li><u>Bringing it all together with a Java JIT Compiler</u></li>
+        - <a
+            href="https://stackoverflow.com/a/1326084/8742428">Source
+        on SO</a>.
+        <br>
+        - Java implementations typically use a two-step compilation process. Java source code is compiled down to
+        bytecode by the Java compiler. The bytecode is executed by a Java Virtual Machine (JVM). Modern JVMs use a
+        technique called <i>Just-in-Time (JIT)</i> compilation to compile the bytecode to native instructions understood
+        by
+        hardware CPU on the fly at runtime. Some implementations of JVM may choose to <i>interpret</i> the bytecode
+        instead of
+        JIT compiling it to machine code, and running it directly. While this is still considered an "interpreter," it's
+        quite different from interpreters that read and execute the high level source code (i.e. in this case, Java
+        source code is not interpreted directly, the bytecode, output of Java compiler, is). It is technically possible
+        to compile Java down to native code ahead-of-time and run the resulting binary. It is also possible to interpret
+        the Java code directly. <br>
+        - To summarize, depending on the execution environment, bytecode can be: <br>
+        a) compiled ahead of time and executed as native code (similar to most C++ compilers) <br>
+        b) compiled just-in-time and executed <br>
+        c) interpreted <br>
+        d) directly executed by a supported processor (bytecode is the native instruction set of some CPUs) <br>
+
+        <img src="imgs/JDK_JVM_JRE.png"
+             width="75%"
+             class="center-block img-fluid"
+             alt="How JDK, JVM, JRE combine to output code">
+
+        <li><u>JIT Compilers vs AOT Compilers</u></li>
+        - <a href="https://softwareengineering.stackexchange.com/a/269878">Source on SO here</a>. <br>
+
+        <br>
+        References: <br>
+        1) <a
+            href="https://stackoverflow.com/questions/1326071/is-java-a-compiled-or-an-interpreted-programming-language">Is
+        Java a Compiled or an Interpreted programming language ?</a> <br>
+        2) <a href="https://stackoverflow.com/questions/2377273/how-does-an-interpreter-compiler-work">How does an
+        interpreter/compiler work</a> <br>
+        3) <a href="https://stackoverflow.com/questions/3265357/compiled-vs-interpreted-languages">Compiled vs.
+        Interpreted Languages</a>
+        <br>
+        4) <a href="https://stackoverflow.com/questions/3718024/jit-vs-interpreters">JIT vs Interpreters</a> <br>
+        5) <a
+            href="https://softwareengineering.stackexchange.com/questions/246094/understanding-the-differences-traditional-interpreter-jit-compiler-jit-interp">Understanding
+        the differences: traditional interpreter, JIT compiler, JIT interpreter and AOT compiler</a> <br>
+        6) <a
+            href="https://softwareengineering.stackexchange.com/questions/111449/what-is-the-industry-definition-of-an-interpreter-as-opposed-to-a-compiler">What
+        is the industry definition of an interpreter (as opposed to a compiler)?</a> <br>
+        7) <a href="https://cs.stackexchange.com/questions/84970/the-difference-between-compiler-and-interpreter">The
+        difference between compiler and interpreter</a> <br>
+        8) <a href="https://stackoverflow.com/questions/3650919/exact-difference-between-compiler-and-interpreter">Exact
+        difference between Compiler and Interpreter?</a> <br>
+        9) <a
+            href="https://stackoverflow.com/questions/3440297/there-is-no-such-thing-as-a-compiled-language-or-interpreted-language">There
+        is no such thing as a "compiled language" or "interpreted language"</a> <br>
+        10) <a
+            href="https://stackoverflow.com/questions/475223/what-is-the-difference-between-implementing-a-compiler-and-an-interpreter">What
+        is the difference between implementing a compiler and an interpreter?</a> <br
+    </div>
+
+    <div class="one-point">
+        63) Why do we have to add the suffix <code>f</code> after we declare a variable of type <code>float</code>? <br>
+        - <a href="https://stackoverflow.com/a/16369857/8742428">Source on SO</a>.
+        <div class="code-snippet">
+            <script src="https://gist.github.com/rgbk21/83f533f60be7addf1fdb24430e3731ca.js"></script>
+        </div>
+    </div>
+
+    <div class="one-point">
+        64)
     </div>
 
 
