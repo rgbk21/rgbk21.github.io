@@ -18,10 +18,15 @@ html {
     font-family: 'Roboto', 'Arial', sans-serif;
     /* We have included family=Roboto:400,500,700 fontweights in our header*/
     /* Hence we can use one of the weights as our default fontweight*/
-    font-weight: 500;
+    font-weight: 300;
     font-size: 20px;
     text-rendering: optimizeLegibility;
 }
+
+
+/* ******************************************************************************************************************  */
+/* REUSABLE COMPONENTS */
+/* ******************************************************************************************************************  */
 
 .row {
     width: 1140px;
@@ -29,6 +34,30 @@ html {
     margin: 0 auto;
 }
 
+section {
+    padding: 80px 0;
+}
+
+.box {
+    padding: 1%;
+}
+
+/* ******************************************************************************************************************  */
+/* PARAGRAPHS */
+/* ******************************************************************************************************************  */
+
+.long-copy {
+    line-height: 145%;
+    /* This is another way to center a div */
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.box p {
+    line-height: 145%;
+    font-size: 90%;
+}
 /* ******************************************************************************************************************  */
 /* HEADER */
 /* ******************************************************************************************************************  */
@@ -37,7 +66,7 @@ html {
 header {
     /* Use a background image for the header element*/
     /* Make the background image darker by adding a black gradient on top of the image */
-    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("imgs/hero.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("imgs/hero.jpg");
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -55,17 +84,55 @@ header {
 /* HEADINGS */
 /* ******************************************************************************************************************  */
 
-
 /* normalize.css introduces a margin for the h2 element. Removing that margin. */
+
+/* Remember, common properties for both h1 and h2 go here */
+h1,
+h2,
+h3 {
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+/* These properties will be applied ONLY to h1 */
 h1 {
     margin-top: 0;
     margin-bottom: 20px;
     color: #ffffff;
     font-size: 200%;
-    font-weight: 300;
-    text-transform: uppercase;
-    letter-spacing: 1px;
     word-spacing: 4px;
+    letter-spacing: 1px;
+}
+
+/* These properties will be applied ONLY to h2 */
+h2 {
+    font-size: 180%;
+    word-spacing: 2px;
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+/* Using a pseudo element to add text after an element */
+h2:after {
+    display: block;
+    /* Height of the liner */
+    height: 2px;
+    /* Color of the liner */
+    background-color: #e67e22;
+    /* There should be no content. This is a required property *
+    Irrespective of whether or not you are adding text content to the pseudo element */
+    content: "";
+    /* Horizontal width of the line */
+    width: 100px;
+    /* And we want to add some space between the line and the surrounding elements */
+    /* And we want to center the line as well */
+    margin: 30px auto 0 auto;
+}
+
+h3 {
+    font-size: 110%;
+    margin-bottom: 15px;
 }
 
 .logo {
