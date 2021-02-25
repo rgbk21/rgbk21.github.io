@@ -87,7 +87,6 @@ header {
 
 .section-meals {
     padding: 0;
-    background-color: #000000;
 }
 
 .meals-showcase {
@@ -95,13 +94,15 @@ header {
     width: 100%;
     /* To prevent the images from overflowing the parent container when we set the scale of the images to 115%*/
     overflow: hidden;
-    opacity: 0.7;
+    background-color: #000000;
 }
 
 .meals-showcase li {
     display: block;
     float: left;
     width: 25%;
+    /* BOOM! Just like that! The weird overlap error vanishes */
+    overflow: hidden;
 }
 
 .meal-photo {
@@ -109,6 +110,7 @@ header {
     margin: 0;
     /* We are increasing the size of the image. We want the image to be 115% */
     transform: scale(1.15);
+    opacity: 0.7;
     transition: transform 0.5s, opacity 0.5s;
 }
 
