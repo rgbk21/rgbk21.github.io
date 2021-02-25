@@ -523,6 +523,71 @@
         </div>
 
 
+        <div class="sub-heading">Lecture 43: Building the favorite meals section</div>
+        <div>
+            - In this lecture we are going to build a grid of images that span the entire width of the screen. The
+            images will be dark at first, but when you hover over them, the images will get lighter and their size will
+            increase. <br>
+            - For the images, we want a total of 8 images, 4 in each row with each row spanning the entire width of the
+            screen. The way to implement this is to have each image as an <code>li</code> item in <code>ul</code>. Hence
+            2 <code>ul</code>s, with each <code>ul</code> having 4 <code>li</code> items. Each <code>li</code> in turn
+            is going to contain one image. Remember that <code>li</code> items can contain anything - text, images, etc.
+            <br>
+            - Let's start applying the relevant CSS now. <br>
+            - Remove the default bullets from the ul elements: <code>list-style: none;</code> <br>
+            - Have the ul occupy the entire width of the webpage: <code>width: 100%;</code> <br>
+            - Start styling the li elements within the ul <br>
+            - Each image should display as a block: <code>display: block;</code> <br>
+            - Instead of each image occurring one below the other, we want the images to be next to each other:
+            <code>float: left;</code>
+            - We have 4 images to display within a width of 100%. Hence for each image: <code>width: 25%;</code> <br>
+            - Take note of how the widths of the elements are stacked. The <code>ul</code> element takes the entire
+            available width of the webpage. Each <code>li</code> element within the <code>ul</code> takes a width of
+            25% of it's parent container - the parent in this case being <code>ul</code>. Hence width of each
+            <code>li</code> is also computed as 25%. Each <code>img</code> within the <code>li</code> takes a width of
+            100% of it's parent container - the parent container in this case being the <code>li</code>. Hence the image
+            still occupies only 25% of the screen width. Even after you resize the screen, you can see the entire image
+            being visible. <br>
+
+            <img src="imgs/Udemy_Lecture_HTML_CSS/Module5/Image_Widths.PNG"
+                 width="100%"
+                 class="center-block img-fluid"
+                 alt="Image widths">
+
+
+            - We are increasing the size of the image. We want the image to be 115%:
+            <code>transform: scale(1.15);</code>. You can see in the browser that this means the images will no longer
+            fir in the width of the browser and we now see the horizontal scrollbar appear to accommodate the images.
+            <br>
+            - The reason this happens is that the images are 'overflowing' from their parent container, which as you can
+            see in the html, is the <code>meals-showcase</code> class. Hence we need to tell CSS to hide any overflow,
+            which we do by adding <code>overflow: hidden;</code> to the <code>meals-showcase</code> class. <br>
+            - Next, when we hover over the image, we want the image to return back to it's original size:
+            <code>transform: scale(1.05);</code>. Scaling to 1.05 instead of 1 because scaling to 1 causes a white gap
+            to appear between the images. <br>
+            - Next we want to do is animate this transformation in size on hover
+            <code>transition: transform 0.5s;</code> <br>
+            - The next effect that we want to create is we want all of the images to be darker initially. Then when we
+            hover over the image that we want, that image becomes darker. All the images in the
+            <code>meals-showcase</code>can be made darker by following these two steps: <br>
+            a) Change the opacity of the <code>meals-showcase</code> container to 0.7 (important that you change the
+            opacity here. Else you get weird overlap errors). But now the image becomes lighter, and this is because the
+            background of the image is white. Hence the next step is to make the background color of the image container
+            as black. <br>
+
+            b) The <code>meals-showcase</code> has the opacity set to 0.7. Hence we change the background-color of it's
+            parent color to black. <br>
+
+            - The last thing we want to do is, on hover, change the opacity back to 1 with some animation.
+
+            <img src="imgs/Udemy_Lecture_HTML_CSS/Module5/Image_Background.PNG"
+                 width="100%"
+                 class="center-block img-fluid"
+                 alt="Image widths">
+
+        </div>
+
+
     </div>
 
 

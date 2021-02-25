@@ -80,6 +80,43 @@ header {
     transform: translate(-50%, -50%);
 }
 
+
+/* ******************************************************************************************************************  */
+/* MEALS IMAGES SHOWCASE */
+/* ******************************************************************************************************************  */
+
+.section-meals {
+    padding: 0;
+    background-color: #000000;
+}
+
+.meals-showcase {
+    list-style: none;
+    width: 100%;
+    /* To prevent the images from overflowing the parent container when we set the scale of the images to 115%*/
+    overflow: hidden;
+    opacity: 0.7;
+}
+
+.meals-showcase li {
+    display: block;
+    float: left;
+    width: 25%;
+}
+
+.meal-photo {
+    width: 100%;
+    margin: 0;
+    /* We are increasing the size of the image. We want the image to be 115% */
+    transform: scale(1.15);
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+.meal-photo:hover {
+    transform: scale(1.05);
+    opacity: 1;
+}
+
 /* ******************************************************************************************************************  */
 /* HEADINGS */
 /* ******************************************************************************************************************  */
