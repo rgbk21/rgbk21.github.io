@@ -833,7 +833,7 @@
         - Read <a href="https://stackoverflow.com/questions/12462079/possible-heap-pollution-via-varargs-parameter">here
         on SO</a>.
     </div>
-s
+    s
     <div class="one-point">
         55) What is a Class Loader in Java? <br>
         - <a href="https://stackoverflow.com/questions/2424604/what-is-a-java-classloader">SO here</a>.
@@ -1135,7 +1135,20 @@ s
     </div>
 
     <div class="one-point">
-        64)
+        64) Will browser download image twice if it's used in both an image's src as well as a div's background-image?
+        <br>
+        - <a href="https://stackoverflow.com/a/11751115/8742428">Source on SO</a>. <br>
+        - Browsers are pretty smart when it comes to caching. It should only ask for it once.
+        Additionally when it asks the server for an image, it usually sends with the request for the image, a couple of
+        headers that tell the server.. Hey, I want this image, but I got one already that has these attributes that you
+        told me about it last time you sent it to me.
+        The server can then respond with a <code>200</code> meaning it's different content <code>304</code> meaning the
+        one you have is the same, so I won't send it again, use the one you got.
+    </div>
+
+    <div class="one-point">
+        65) Alternative to clearfix hack in HTML? <br>
+        - <code>display: flow-root</code>
     </div>
 
 

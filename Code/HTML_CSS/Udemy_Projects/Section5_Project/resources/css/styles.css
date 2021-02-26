@@ -23,6 +23,17 @@ html {
     text-rendering: optimizeLegibility;
 }
 
+.clearfix {
+    zoom: 1;
+}
+
+.clearfix:after {
+    content: ".";
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
 
 /* ******************************************************************************************************************  */
 /* REUSABLE COMPONENTS */
@@ -40,6 +51,20 @@ section {
 
 .box {
     padding: 1%;
+}
+
+.icon-small {
+    display: inline-block;
+    width: 30px;
+    text-align: center;
+    color: #e67e22;
+    font-size: 120%;
+    margin-right: 10px;
+
+    /*secrets to align text and icons*/
+    line-height: 120%;
+    vertical-align: middle;
+    margin-top: -5px;
 }
 
 /* ******************************************************************************************************************  */
@@ -259,3 +284,96 @@ but the border color should change as well*/
 .btn-ghost:active {
     color: #ffffff;
 }
+
+
+/* ******************************************************************************************************************  */
+/* STEPS TO SIGN UP FOR OUR APP Section */
+/* ******************************************************************************************************************  */
+
+.section-steps {
+    background-color: #EBEBEB;
+}
+
+.steps-box:first-child {
+    text-align: right;
+    padding-right: 5%;
+    margin-top: 30px;
+}
+
+.steps-box:last-child {
+    padding-left: 5%;
+    margin-top: 70px;
+}
+
+.app-screen {
+    width: 40%;
+}
+
+.works-step {
+    margin-bottom: 50px;
+}
+
+.works-step:last-of-type {
+    margin-bottom: 80px;
+}
+
+.works-step div {
+    color: #e67e22;
+    /* We want to make the border of the number round */
+    border: 2px solid #e67e22;
+    border-radius: 50%;
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    font-size: 150%;
+    padding: 5px;
+    float: left;
+    margin-right: 10px;
+}
+
+.btn-app img {
+    height: 50px;
+    width: auto;
+}
+
+
+/* ******************************************************************************************************************  */
+/* WE ARE IN THESE CITIES SECTION */
+/* ******************************************************************************************************************  */
+
+.box img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.city-feature {
+    margin-bottom: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
