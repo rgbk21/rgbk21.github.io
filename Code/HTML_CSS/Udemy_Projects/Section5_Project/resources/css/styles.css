@@ -492,7 +492,7 @@ textarea {
     border: 1px solid #cccccc;
 }
 
-/* Add osme margin to the checkbox */
+/* Add some margin to the checkbox */
 input[type=checkbox] {
     margin: 10px 5px 10px 0;
 }
@@ -501,6 +501,73 @@ input[type=checkbox] {
 *:focus {
     outline: none;
 }
+
+
+/* ******************************************************************************************************************  */
+/* FOOTER */
+/* ******************************************************************************************************************  */
+
+footer {
+    background-color: #333333;
+    padding: 20px;
+}
+
+.footer-nav {
+    list-style: none;
+    float: left;
+}
+
+.social-links {
+    list-style: none;
+    float: right;
+}
+
+.footer-nav li,
+.social-links li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+/* We do not want any margin to the right after the last element */
+.footer-nav li:last-child,
+.social-links li:last-child {
+    margin-right: 0;
+}
+
+.footer-nav li a:link,
+.footer-nav li a:visited,
+.social-links li a:link,
+.social-links li a:visited {
+    text-decoration: none;
+    border: 0;
+    color: #888888;
+    transition: color 0.2s;
+}
+
+.social-links li a:link,
+.social-links li a:visited {
+    font-size: 150%;
+
+}
+
+.footer-nav li a:hover,
+.footer-nav li a:active,
+.social-links li a:hover,
+.social-links li a:active {
+    color: #eeeeee;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
