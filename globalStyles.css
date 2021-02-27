@@ -5,9 +5,35 @@ html {
     font-size: 14px;
 }
 
+.navbar-header .navbar-brand {
+    color: #ffffff;
+}
+
 /*-- change navbar dropdown color --*/
-.navbar-dark .navbar-nav .nav-link {
-    color: rgba(255, 255, 255, 1);
+.navbar-dark .navbar-nav .nav-link:link,
+.navbar-dark .navbar-nav .nav-link:visited {
+    color: #d4d4d4;
+    transition: color 0.5s;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link:active {
+    color: #ffffff;
+}
+
+.social-links {
+    /*font-size: 130%;*/
+}
+
+#navbarSupportedContent .social-links a:link,
+#navbarSupportedContent .social-links a:visited {
+    color: #c1c1c1;
+    transition: color 0.5s;
+}
+
+#navbarSupportedContent .social-links a:hover,
+#navbarSupportedContent .social-links a:active {
+    color: #ffffff;
 }
 
 .container {
@@ -55,10 +81,6 @@ hr{
     display: block;
     margin-left: auto;
     margin-right: auto;
-}
-
-.output{
-
 }
 
 .one-point {

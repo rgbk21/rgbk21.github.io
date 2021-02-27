@@ -22,12 +22,12 @@ body{
 h1{
 	color: white;
 	text-align: center;
-	margin: 0px;
+	margin: 0;
 	font-weight: normal;
 	text-transform: uppercase;
-	padding: ;
+	/*padding: ;*/
 	line-height: 1.1;
-	padding: 20px 0px;
+	padding: 20px 0;
 }
 
 #myTitle{
