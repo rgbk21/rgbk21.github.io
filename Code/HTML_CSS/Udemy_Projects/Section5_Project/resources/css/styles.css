@@ -83,6 +83,7 @@ section {
     line-height: 145%;
     font-size: 90%;
 }
+
 /* ******************************************************************************************************************  */
 /* HEADER */
 /* ******************************************************************************************************************  */
@@ -93,6 +94,7 @@ header {
     /* Make the background image darker by adding a black gradient on top of the image */
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("imgs/hero.jpg");
     background-size: cover;
+    background-attachment: fixed;
     background-position: center;
     height: 100vh;
 }
@@ -352,10 +354,113 @@ but the border color should change as well*/
     margin-bottom: 5px;
 }
 
+/* ******************************************************************************************************************  */
+/* TESTIMONIALS SECTION */
+/* ******************************************************************************************************************  */
 
+.section-testimonials {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("imgs/back-customers.jpg");
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    background-attachment: fixed;
+}
 
+blockquote {
+    padding: 2%;
+    font-size: 80%;
+    font-style: italic;
+    line-height: 145%;
+    position: relative;
+}
 
+blockquote:before {
+    /* Content to be added goes here */
+    font-size: 400%;
+    content: "\201C";
+    display: block;
+    position: absolute;
+    top: 0;
+    /* Pixels can be assigned -ve numbers as well.
+    This just means it will move in the opposite direction. */
+    left: -10px;
+}
 
+cite {
+    margin-top: 25px;
+    /* Because we want to introduce a line break beofre the image */
+    display: block;
+}
+
+cite img {
+    height: 50px;
+    /* Makes the image round */
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+/* ******************************************************************************************************************  */
+/* PRICING PLANS SECTION */
+/* ******************************************************************************************************************  */
+
+.section-plans {
+    background-color: #EBEBEB;
+}
+
+.plan-box {
+    /* Give it a different background color than the parent element */
+    background-color: #ffffff;
+    /* Give it some rounded corners */
+    border-radius: 5px;
+    width: 90%;
+    /* Center the div because 5% is half of the remaining 10% after 90% div */
+    margin-left: 5%;
+    /* Adding box-shadow*/
+    box-shadow: 0 2px 2px #e3e3e3;
+}
+
+.plan-box div {
+    padding: 15px;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.plan-price {
+    font-size: 200%;
+    margin-bottom: 10px;
+    font-weight: 100;
+    color: #e67e22;
+}
+
+.plan-price span {
+    /* Consider a base font-size of 20px */
+    /* In this case, the fontsize will not be the base size of 20px
+    But instead will be 100% of  the font size of it's parent element
+    which is 200% and hence the font-size over here will be 40px as well. */
+    /* Hence we use 50%, because now the font-size will be 50% of the parent's
+    40px which is back to 20% */
+    font-size: 50%;
+    /* And we want to set the font-weight back to it's original value as well since
+    we are now decreasing the font-size*/
+    font-weight: 300;
+}
+
+.plan-price-meal {
+    font-size: 80%;
+}
+
+.plan-box ul {
+    /* Remove the dots in the list */
+    list-style: none;
+}
+
+.plan-box ul li {
+    padding: 5px 0;
+}
+
+/* Horizontally Center the SignUp button within the div */
+.plan-box div:last-child {
+    text-align: center;
+}
 
 
 

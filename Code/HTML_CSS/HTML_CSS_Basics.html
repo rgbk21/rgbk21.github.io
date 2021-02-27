@@ -14,7 +14,9 @@
             integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
             crossorigin="anonymous"></script>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,300&display=swap"
+          rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../../globalStyles.css">
     <meta name="author" content="Raj Gaurav Ballabh Kumar">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -592,7 +594,7 @@
                 href="https://www.udemy.com/course/design-and-develop-a-killer-website-with-html5-and-css3/learn/lecture/2619788?start=7">Udemy
             Lecture here</a>. Too much is going on over here to write it all down. And also I am lazy... <br>
             - How do we add a clickable image that serves as a button:
-            <code><a href="link-you-want-to-go-to"><img src="your-image.png"></a></code> <br>
+            <code>&lt;a href="link-you-want-to-go-to"&gt;&lt;img src="your-image.png"&gt;&lt;/a&gt;</code> <br>
             - We have two useful pseudo selectors:
             <code>.steps-box:first-child</code> and <code>.steps-box:last-child</code>. These will select the first and
             the last elements which have the <code>steps-box</code> class applied to it. <br>
@@ -627,9 +629,45 @@
 
         <div class="sub-heading">Lecture 49: Building the Customer Testimonials Section</div>
         <div>
-
+            - We want to include testimonials from our customers, which is basically comments provided by our customers
+            on our services. HTML has a <code>blockquote</code> element that indicates that the enclosed text is an
+            extended quotation. Usually, this is rendered visually by indentation. <br>
+            - Add a background image to the testimonials section:
+            <code>background-image: url("imgs/back-customers.jpg");</code> <br>
+            - Have the image fill the entire background:
+            <code>background-size: cover;</code> <br>
+            - Make the background image darker by overlaying a dark gradient on top of the image <br>
+            <code>background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),</code>
+            <code>url("imgs/back-customers.jpg");</code> <br>
+            - Make the text white: <code>color: #ffffff;</code> <br>
+            - Make the background image static so that when the page is scrolled, the position of the image remains
+            fixed: <code>background-attachment: fixed;</code> <br>
+            - Whenever you want to include italic text in your webpage, you have to make sure that you have included
+            italic fonts as well in your page, like you have done in the header element of this page. <br>
+            - The <code>vertical-align</code> CSS property sets vertical alignment of an inline, inline-block or
+            table-cell box. Set <code>vertical-align: middle;</code> for the name of the person to appear vertically
+            center aligned to the image. <br>
+            - We want to add a quotation mark before the text of the testimonial starts. Recall that content can be
+            added to the webpage just through CSS only. We will define the position of the blockquote as
+            <code>absolute</code>. Recall that for an element to be positioned as <code>absolute</code>, we need the
+            parent element to be positioned as <code>relative</code> or else the changes are not going to take effect.
         </div>
 
+        <div class="sub-heading">Lecture 51: Building the Sign-Up Section</div>
+        <div>
+            - We use the <code>span</code> element in order to style some text in a <code>p</code>, or some other
+            enclosing element, in a way that is different from the styling that has eben applied to the parent element.
+            <br>
+            - Remember that certain CSS properties are inherited. For example, consider the following CSS for a <code>span</code>
+            element that is within the <code>plan-price</code> class.
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/68c16e73dfa78c7dd6efdfa3942ab79c.js"></script>
+            </div>
+            - There is a special character that you can add for space in HTML: <code>&amp;nbsp;</code>.
+            <a href="https://stackoverflow.com/questions/7861978/how-can-i-escape-the-nbsp-nbsp-in-message-board">Source on SO</a>.
+            <br>
+            - Adding <code>box-shadow: 0 2px 2px #e3e3e3;</code>
+        </div>
 
 
     </div>
