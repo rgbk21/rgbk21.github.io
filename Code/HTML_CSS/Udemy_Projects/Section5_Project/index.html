@@ -292,7 +292,80 @@
     </div>
 </section>
 
+<section class="section-form">
+    <div class="row">
+        <h2>We're happy to hear from you!</h2>
+    </div>
+    <div class="row">
+        <form method="post" action="#" class="contact-form">
 
+            <!-- User Name Field -->
+            <div class="row">
+                <div class="col span-1-of-3">
+                    <label for="input_name">Name</label>
+                </div>
+                <div class="col span-2-of-3">
+                    <input type="text" name="userName" id="input_name" placeholder="Your Name" required>
+                </div>
+            </div>
+
+            <!-- User Email Field -->
+            <div class="row">
+                <div class="col span-1-of-3">
+                    <label for="input_email">Email ID</label>
+                </div>
+                <div class="col span-2-of-3">
+                    <input type="email" name="userEmail" id="input_email" placeholder="Your Email ID" required>
+                </div>
+            </div>
+
+            <!-- Dropdown Box -->
+            <div class="row">
+                <div class="col span-1-of-3">
+                    <label for="find_us">How did you find us?</label>
+                </div>
+                <div class="col span-2-of-3">
+                    <select name="where-did-you-find-us" id="find_us">
+                        <option value="friends">Friends</option>
+                        <option value="social_media" selected>Social Media</option>
+                        <option value="ad">Advertisement</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Checkbox -->
+            <div class="row">
+                <div class="col span-1-of-3">
+                    <label for="input_newsletter">NewsLetter</label>
+                </div>
+                <div class="col span-2-of-3">
+                    <input type="checkbox" name="user-newsletter" id="input_newsletter" checked> Yes, please
+                </div>
+            </div>
+
+            <!-- Bigger Text box for a bigger message-->
+            <div class="row">
+                <div class="col span-1-of-3">
+                    <label for="input_message">Send us a message</label>
+                </div>
+                <div class="col span-2-of-3">
+                    <textarea name="message" id="input_message" cols="30" rows="5" placeholder="Your message"></textarea>
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="row">
+                <div class="col span-1-of-3">
+                    <label for="button_submit">&nbsp;</label>
+                </div>
+                <div class="col span-2-of-3">
+                    <input type="submit" id="button_submit" value="Submit!">
+                </div>
+            </div>
+        </form>
+    </div>
+</section>
 
 
 </body>

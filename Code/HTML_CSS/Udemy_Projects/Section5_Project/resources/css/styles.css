@@ -40,7 +40,7 @@ html {
 /* ******************************************************************************************************************  */
 
 .row {
-    width: 1140px;
+    max-width: 1140px;
     /* Shorthand for margin: 0 auto 0 auto*/
     margin: 0 auto;
 }
@@ -245,7 +245,8 @@ h3 {
 /* ******************************************************************************************************************  */
 
 .btn:link,
-.btn:visited {
+.btn:visited,
+input[type=submit] {
     display: inline-block;
     /* Shorthand for padding: 10px 30px 10px 30px*/
     padding: 10px 30px;
@@ -257,7 +258,8 @@ h3 {
 }
 
 .btn-full:link,
-.btn-full:visited {
+.btn-full:visited,
+input[type=submit] {
     color: #ffffff;
     background-color: #e67e22;
 }
@@ -270,7 +272,9 @@ h3 {
 /* NOTE: If we move this style declaration before the btn-full decalration,
  the change does nto take effect */
 .btn:hover,
-.btn:active {
+.btn:active,
+input[type=submit]:hover,
+input[type=submit]:active {
     background-color: #b05d14;
     border: 1px solid #b05d14;
 }
@@ -462,9 +466,41 @@ cite img {
     text-align: center;
 }
 
+/* ******************************************************************************************************************  */
+/* Contact Form */
+/* ******************************************************************************************************************  */
 
+.section-form {
+    /*width: 60%;*/
+    /*margin: 0 auto;*/
+}
 
+/* Make the form centered*/
+.contact-form {
+    width: 60%;
+    margin: 0 auto;
+}
 
+/* Select the form elements using their html element names */
+input[type=text],
+input[type=email],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #cccccc;
+}
+
+/* Add osme margin to the checkbox */
+input[type=checkbox] {
+    margin: 10px 5px 10px 0;
+}
+
+/* Remove the blue margin that appears when we click on the form fields that contain the name, emailId, etc.*/
+*:focus {
+    outline: none;
+}
 
 
 
