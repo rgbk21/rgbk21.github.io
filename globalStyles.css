@@ -9,7 +9,14 @@ html {
 /* Header */
 /*****************************************************************************************/
 
-.navbar-header .navbar-brand {
+.navbar-header .navbar-brand:link,
+.navbar-header .navbar-brand:visited {
+    color: #4d90fe;
+    transition: color 0.5s;
+}
+
+.navbar-header .navbar-brand:hover,
+.navbar-header .navbar-brand:active {
     color: #ffffff;
 }
 
