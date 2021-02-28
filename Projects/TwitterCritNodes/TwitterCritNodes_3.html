@@ -14,7 +14,8 @@
             integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
             crossorigin="anonymous"></script>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../../globalStyles.css">
     <meta name="keywords"
           content="Twitter, Misinformation, Fake, Accounts, Project, Iowa State, Gaurav, rgbk21, Raj Gaurav">
@@ -141,18 +142,18 @@
         Links to: <a href=../../Projects/TwitterCritNodes/TwitterCritNodes_1.html>part 1</a> and <a
                 href=../../Projects/TwitterCritNodes/TwitterCritNodes_2.html>part 2</a>
 
-    <h6>Goal:</h6>
+    <div class="sub-heading">Goal:</div>
     <p>
         Given a social network graph, like twitter, and an integer <em>k</em>, identify <em>k</em> nodes (user accounts)
         that when selected as the source will generate the maximum spread of (mis)information in the network.
     </p>
 
-    <h6>Solution:</h6>
+    <div class="sub-heading">Solution:</div>
     <p>
         This is a direct implementation of the algorithm described in [1].
     </p>
     <p>
-    <h6>Experimental Setup: </h6>
+    <div class="sub-heading">Experimental Setup: </div>
     We use the same graph that we used in the previous 2 cases. For this experiment, we set the value of <em>k</em> to
     be 20. That is, we want to compute the 20 nodes that when tweet out (mis)information, the number of the nodes that
     will be influenced by that information is maximised.
@@ -175,9 +176,8 @@
     The <a href=https://github.com/rgbk21/GraphManipulations>JAVA code for the parsing of the Tweet JSON object and the
     subsequent creation of the graph</a> can be found here. <br>
 
-    </p>
     <p>
-    <h6>Results and Observations:</h6>
+    <div class="sub-heading">Results and Observations</div>
 
     Below are the top 20 user accounts as selected by algorithm.<br> <br>
 
@@ -186,10 +186,9 @@
         <img src="Fig_MaxSeedSet.PNG" class="center-block img-fluid" alt="Example2">
     </div>
 
-    </p>
 
     <br> <br>
-    References: <br>
+    <div class="sub-heading">References</div>
     [1] <a href=https://www.cs.cornell.edu/home/kleinber/kdd03-inf.pdf>Maximizing the Spread of Influence through a
     Social Network </a> <br>
     [2] <a href=https://arxiv.org/pdf/1404.0900.pdf> Influence Maximization: Near-Optimal Time Complexity Meets

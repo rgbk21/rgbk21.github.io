@@ -2,175 +2,223 @@
 <html lang="en">
 <head>
 
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="../../globalStyles.css">
-	<meta name="keywords" content="Wikipedia, Project, Iowa State, Gaurav, rgbk21">
-	<meta name="author" content="Raj Gaurav Ballabh Kumar">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>IsRelatedTo</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../globalStyles.css">
+    <meta name="keywords" content="Wikipedia, Project, Iowa State, Gaurav, rgbk21">
+    <meta name="author" content="Raj Gaurav Ballabh Kumar">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IsRelatedTo</title>
 </head>
 <body>
 
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-		
-		<div class="navbar-header">
-			<a href="../../index.html" class="navbar-brand"> rgbk21</a>
-		</div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
 
-	<!-- 	<div class="nav navbar-nav">
+    <div class="navbar-header">
+        <a href="../../index.html" class="navbar-brand"> rgbk21</a>
+    </div>
 
-				<li><a class="nav-link" href="#">About</a></li>
-				<li><a class="nav-link" href="#">Content</a></li>
+    <!-- 	<div class="nav navbar-nav">
 
-		</div> -->
+                <li><a class="nav-link" href="#">About</a></li>
+                <li><a class="nav-link" href="#">Content</a></li>
 
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" ><span class="navbar-toggler-icon"></span>
-		</button>
+        </div> -->
 
-		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<ul class="nav navbar-nav">
-				<li class="nav-item dropdown">
-			        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			          Projects
-			        </a>
-			        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-			          <a class="dropdown-item" href="../../Projects/TwitterCritNodes/TwitterCritNodes_1.html">Identifying Critical Nodes on Twitter</a>
-			          <a class="dropdown-item" href="../../Projects/isRelatedTo/isRelatedTo.html">isRelatedTo</a>
-			          <div class="dropdown-divider"></div>
-			        </div>
-		     	</li>
-		     	<li class="nav-item dropdown">
-			        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			          HTML Projects
-			        </a>
-			        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-			          <a class="dropdown-item" href="../../ImageGallery/ImageGallery.html">Image Gallery</a>
-						<a class="dropdown-item" href="../../Pig_Game/index.html">Pig Game</a>
-			          <a class="dropdown-item" href="../../RGB_Guesser_Game/RGB.html">RGB Guesser Game</a>
-			          <a class="dropdown-item" href="../../ToDoList/todo.html">To-Do List</a>
-			          <div class="dropdown-divider"></div>
-			        </div>
-		     	</li>
-		     	<li class="nav-item dropdown">
-			        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			          Notes
-			        </a>
-			        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-			          <a class="dropdown-item" href="../../Lectures/COMS_631/COMS_631_index.html">COMS 631</a>
-			          <a class="dropdown-item" href="../../Lectures/COMS_535/COMS_535_index.html">COMS 535</a>
-			          <div class="dropdown-divider"></div>
-			        </div>
-		     	</li>
-				<li class="nav-item dropdown">
-					<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-						Code
-					</a>
-					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-						<a class="dropdown-item" href="../../Code/ThingsToRemember/ThingsToRemember.html">Things To Remember</a>
-						<a class="dropdown-item" href="../../Code/Java_Notes/JavaNotes.html">Java Notes</a>
-						<a class="dropdown-item" href="../../Code/Java_Notes/JavaNotes_2.html">Java Notes 2</a>
-						<a class="dropdown-item" href="../../Code/Applying_Java_Notes/ApplyingJava_Notes.html">ApplyingJava
-							Notes</a>
-						<a class="dropdown-item" href="../../Code/JavaScript/JavaScript.html">JavaScript Notes</a>
-						<a class="dropdown-item" href="../../Code/HTML_CSS/HTML_CSS_Basics.html">HTML & CSS Notes</a>
-						<a class="dropdown-item" href="../../Code/SQL/SQL.html">SQL Notes</a>
-						<a class="dropdown-item" href="../../Code/Spring/Spring.html">Spring Notes</a>
-						<a class="dropdown-item" href="../../Code/Kafka/Kafka.html">Kafka Notes</a>
-						<a class="dropdown-item" href="../../Code/Angular/Angular.html">Angular</a>
-						<a class="dropdown-item" href="../../Code/Hibernate/Hibernate.html">Hibernate</a>
-						<div class="dropdown-divider"></div>
-					</div>
-				</li>
-		     	<li class="nav-item dropdown">
-			        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-			          In Another Life
-			        </a>
-			        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-			          <a class="dropdown-item" href="../../InAnotherLife/Chapter1.html">Chapter 1</a>
-			          <div class="dropdown-divider"></div>
-			        </div>
-		     	</li>
-			</ul>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"><span
+            class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="nav navbar-nav">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+                   aria-expanded="false">
+                    Projects
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="../../Projects/TwitterCritNodes/TwitterCritNodes_1.html">Identifying
+                        Critical Nodes on Twitter</a>
+                    <a class="dropdown-item" href="../../Projects/isRelatedTo/isRelatedTo.html">isRelatedTo</a>
+                    <div class="dropdown-divider"></div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+                   aria-expanded="false">
+                    HTML Projects
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="../../ImageGallery/ImageGallery.html">Image Gallery</a>
+                    <a class="dropdown-item" href="../../Pig_Game/index.html">Pig Game</a>
+                    <a class="dropdown-item" href="../../RGB_Guesser_Game/RGB.html">RGB Guesser Game</a>
+                    <a class="dropdown-item" href="../../ToDoList/todo.html">To-Do List</a>
+                    <div class="dropdown-divider"></div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+                   aria-expanded="false">
+                    Notes
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="../../Lectures/COMS_631/COMS_631_index.html">COMS 631</a>
+                    <a class="dropdown-item" href="../../Lectures/COMS_535/COMS_535_index.html">COMS 535</a>
+                    <div class="dropdown-divider"></div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+                   aria-expanded="false">
+                    Code
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="../../Code/ThingsToRemember/ThingsToRemember.html">Things To
+                        Remember</a>
+                    <a class="dropdown-item" href="../../Code/Java_Notes/JavaNotes.html">Java Notes</a>
+                    <a class="dropdown-item" href="../../Code/Java_Notes/JavaNotes_2.html">Java Notes 2</a>
+                    <a class="dropdown-item" href="../../Code/Applying_Java_Notes/ApplyingJava_Notes.html">ApplyingJava
+                        Notes</a>
+                    <a class="dropdown-item" href="../../Code/JavaScript/JavaScript.html">JavaScript Notes</a>
+                    <a class="dropdown-item" href="../../Code/HTML_CSS/HTML_CSS_Basics.html">HTML & CSS Notes</a>
+                    <a class="dropdown-item" href="../../Code/SQL/SQL.html">SQL Notes</a>
+                    <a class="dropdown-item" href="../../Code/Spring/Spring.html">Spring Notes</a>
+                    <a class="dropdown-item" href="../../Code/Kafka/Kafka.html">Kafka Notes</a>
+                    <a class="dropdown-item" href="../../Code/Angular/Angular.html">Angular</a>
+                    <a class="dropdown-item" href="../../Code/Hibernate/Hibernate.html">Hibernate</a>
+                    <div class="dropdown-divider"></div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+                   aria-expanded="false">
+                    In Another Life
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="../../InAnotherLife/Chapter1.html">Chapter 1</a>
+                    <div class="dropdown-divider"></div>
+                </div>
+            </li>
+        </ul>
 
 
-			<ul class="navbar-nav ml-auto">
-				<li class="nav-item active"><a class="nav-link" href="https://github.com/rgbk21">GitHub</a></li>
-				<li class="nav-item active"><a class="nav-link" href="https://www.linkedin.com/in/raj-gaurav-ballabh-kumar-97002058/">LinkedIn</a></li>
-				<li class="nav-item active"><a class="nav-link" href="https://www.instagram.com/wobblyframes/">Instagram</a></li>
-				<li class="nav-item active"><a class="nav-link" href="https://www.facebook.com/SomeRandomThoughts">Facebook</a></li>
-			</ul>
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active"><a class="nav-link" href="https://github.com/rgbk21">GitHub</a></li>
+            <li class="nav-item active"><a class="nav-link"
+                                           href="https://www.linkedin.com/in/raj-gaurav-ballabh-kumar-97002058/">LinkedIn</a>
+            </li>
+            <li class="nav-item active"><a class="nav-link" href="https://www.instagram.com/wobblyframes/">Instagram</a>
+            </li>
+            <li class="nav-item active"><a class="nav-link"
+                                           href="https://www.facebook.com/SomeRandomThoughts">Facebook</a></li>
+        </ul>
 
-		</div>
-	</nav>
+    </div>
+</nav>
 
-	<div class="container">
+<div class="container">
 
-		<blockquote class="blockquote text-center">
-  		<p class="mb-0">isRelatedTo</p>
-		</blockquote>
+    <blockquote class="blockquote text-center">
+        <p class="mb-0">isRelatedTo</p>
+    </blockquote>
 
-		<p>
-			<h6>Motivation: </h6>
-			The core idea behind this project originated when I came upon the concept of <a href="https://en.wikipedia.org/wiki/Six_degrees_of_separation">Six Degrees of Separation</a>. It says that all people are six, or fewer, social connections away from each other. So given two people, suppose Alice and Bob, if I start doing a search from Alice, can I find out the string of events/places/people that connect her to Bob? Would the results be interesting? 
-		</p>
+    <p>
+    <div class="sub-heading">Motivation: </div>
+    The core idea behind this project originated when I came upon the concept of <a
+        href="https://en.wikipedia.org/wiki/Six_degrees_of_separation">Six Degrees of Separation</a>. It says that all
+    people are six, or fewer, social connections away from each other. So given two people, suppose Alice and Bob, if I
+    start doing a search from Alice, can I find out the string of events/places/people that connect her to Bob? Would
+    the results be interesting?
 
-		<h6>Goal:</h6> 
-		<p>
-			Input: Graph G = (V, E) like Wikipedia, source node <i>u</i>, target node <i>v</i> <br>
-			Output: Some directed path connecting <i>u</i> to <i>v</i> <br>
-			The path is directed. This means that the path from <i>v</i> to <i>u</i> would be different.
-		</p>
 
-		<h6>Solution:</h6> 
-		<p>
-			We turn to Wikipedia. The assumption is that if there was a person/event/place of interest in Alice's life, then Wikipedia has it documented and has a link to said event. We collect all the links in Alice's wiki page, then collect the links in all of those pages, and so on, until we hit our target, the wikipedia page for Bob.
-			Instead of sending GET requests to potentially thousands of pages, we instead use a heuristic to rank the pages we have seen so far, and assign them a rank. The page with the highest rank is always selected as the next page to explore. <br>
-			The heuristic itself is pretty simple. We collect all the links in Bob's page. For every page <i>p</i> that we see when we start exploring from Alice's page, we see how many of the links in <i>p</i> are common with the links in Bob's page. The greater then number of common links, the higher is <i>p</i>'s overall rank. <br>
-			For those familiar with the algorithm, this is a direct application of the <a href="https://en.wikipedia.org/wiki/Best-first_search">Best First Search</a> used in AI.<br>
-			Note that this is just one link between the 2 pages. It is <i>not</i> the <i>shortest</i> link. It is not <i>all</i> the links. It is just <i>one</i> link between the source and the target.
-		</p>
- 		<p>
- 			<h6>Experimental Setup and Code: </h6>
- 			The code is written entirely in JAVA by me. I did not use any libraries because I wanted to also see what writing a text parser for a website looked like. The <a href="https://github.com/rgbk21/isRelatedTo/tree/master/src/com/company">JAVA code can be found here</a>. <br>
- 			To run the code, make the following changes:<br>
- 			1) In the file <a href="https://github.com/rgbk21/isRelatedTo/blob/master/src/com/company/WWWE.java">WWWE.java</a>, change the SEED_URL = "wiki/Greg_Mitchell" to your source wiki page link. This will be treated as the source vertex, <i>u</i> <br>
- 			2) In the same file, change the targetSearchQuery = "/wiki/Karin_Thürig" to your target wiki page link. This will be treated as the target vertex, <i>v</i>. <br>
- 			3) That's it. Go to <a href="https://github.com/rgbk21/isRelatedTo/blob/master/src/com/company/Main.java">Main.java</a> and run the code. <br>
- 			Do note that the SEED_URL does not have the forward slash in front while the targetSearchQuery does.
- 		
- 		</p>
- 		<p>
- 			<h6>Results and Observations:</h6>
+    <div class="sub-heading">Goal:</div>
+    <p>
+        Input: Graph G = (V, E) like Wikipedia, source node <i>u</i>, target node <i>v</i> <br>
+        Output: Some directed path connecting <i>u</i> to <i>v</i> <br>
+        The path is directed. This means that the path from <i>v</i> to <i>u</i> would be different.
+    </p>
 
- 			1) Let's start with some links that we do know the relation between. Consider <a href="https://en.wikipedia.org/wiki/Idris_Elba">Idris Elba</a> and <a href="https://en.wikipedia.org/wiki/Robert_Downey_Jr.">Robert Downey Jr</a>. Both of them have been a part of MCU. So we could expect some link between them from there. <br>
- 			This is what we get: <br>
- 			Trace Path: <br>
-			/wiki/Robert_Downey_Jr.<br>
-			/wiki/List_of_Marvel_Cinematic_Universe_films<br>
-			/wiki/Marvel_Studios<br>
-			/wiki/DC_Comics<br>
-			wiki/Idris_Elba<br>
-			As it turns out, Idris Elba played the character of Roque in a movie adaptation of DC Comic book named "The Losers". DC Comics wiki page has to contain Marvel. <br><br>
+    <div class="sub-heading">Solution:</div>
+    <p>
+        We turn to Wikipedia. The assumption is that if there was a person/event/place of interest in Alice's life, then
+        Wikipedia has it documented and has a link to said event. We collect all the links in Alice's wiki page, then
+        collect the links in all of those pages, and so on, until we hit our target, the wikipedia page for Bob.
+        Instead of sending GET requests to potentially thousands of pages, we instead use a heuristic to rank the pages
+        we have seen so far, and assign them a rank. The page with the highest rank is always selected as the next page
+        to explore. <br>
+        The heuristic itself is pretty simple. We collect all the links in Bob's page. For every page <i>p</i> that we
+        see when we start exploring from Alice's page, we see how many of the links in <i>p</i> are common with the
+        links in Bob's page. The greater then number of common links, the higher is <i>p</i>'s overall rank. <br>
+        For those familiar with the algorithm, this is a direct application of the <a
+            href="https://en.wikipedia.org/wiki/Best-first_search">Best First Search</a> used in AI.<br>
+        Note that this is just one link between the 2 pages. It is <i>not</i> the <i>shortest</i> link. It is not
+        <i>all</i> the links. It is just <i>one</i> link between the source and the target.
+    </p>
+    <p>
+    <div class="sub-heading">Experimental Setup and Code: </div>
+    The code is written entirely in JAVA by me. I did not use any libraries because I wanted to also see what writing a
+    text parser for a website looked like. The <a
+        href="https://github.com/rgbk21/isRelatedTo/tree/master/src/com/company">JAVA code can be found here</a>. <br>
+    To run the code, make the following changes:<br>
+    1) In the file <a href="https://github.com/rgbk21/isRelatedTo/blob/master/src/com/company/WWWE.java">WWWE.java</a>,
+    change the SEED_URL = "wiki/Greg_Mitchell" to your source wiki page link. This will be treated as the source vertex,
+    <i>u</i> <br>
+    2) In the same file, change the targetSearchQuery = "/wiki/Karin_Thürig" to your target wiki page link. This will be
+    treated as the target vertex, <i>v</i>. <br>
+    3) That's it. Go to <a
+        href="https://github.com/rgbk21/isRelatedTo/blob/master/src/com/company/Main.java">Main.java</a> and run the
+    code. <br>
+    Do note that the SEED_URL does not have the forward slash in front while the targetSearchQuery does.
 
-			2) Now let's consider 2 links that may not be that obvious. What about the <a href="https://en.wikipedia.org/wiki/Dalai_Lama">Dalai Lama</a> and <a href="https://en.wikipedia.org/wiki/Michael_Jackson">Michael Jackson</a>. <br>
- 			
-			Trace Path: <br>
-			/wiki/Michael_Jackson <br>
-			/wiki/List_of_Billboard_Hot_100_chart_achievements_and_milestones <br>
-			/wiki/Aretha_Franklin <br>
-			/wiki/Condoleezza_Rice <br>
-			/wiki/Central_Intelligence_Agency <br>
-			wiki/Dalai_Lama <br>
- 			Turns out CIA had a <a href="https://en.wikipedia.org/wiki/CIA_Tibetan_program">program</a> "to keep the political concept of an autonomous Tibet alive within Tibet and among several foreign nations". <a href="https://en.wikipedia.org/wiki/Condoleezza_Rice">Condoleezza Rice</a> worked with the CIA and also was a piano player. She performed with <a href="https://en.wikipedia.org/wiki/Aretha_Franklin">Aretha Franklin</a>. 
- 			Aretha was ranked 19th among the <a href="https://en.wikipedia.org/wiki/List_of_Billboard_Hot_100_chart_achievements_and_milestones">Billboard Hot 100 All-Time top artists</a>, which also contained Michael Jackson. 
- 			
- 		</p>
-	</div>
+    <p>
+    <div class="sub-heading">Results and Observations:</div>
+
+    1) Let's start with some links that we do know the relation between. Consider <a
+        href="https://en.wikipedia.org/wiki/Idris_Elba">Idris Elba</a> and <a
+        href="https://en.wikipedia.org/wiki/Robert_Downey_Jr.">Robert Downey Jr</a>. Both of them have been a part of
+    MCU. So we could expect some link between them from there. <br>
+    This is what we get: <br>
+    Trace Path: <br>
+    /wiki/Robert_Downey_Jr.<br>
+    /wiki/List_of_Marvel_Cinematic_Universe_films<br>
+    /wiki/Marvel_Studios<br>
+    /wiki/DC_Comics<br>
+    wiki/Idris_Elba<br>
+    As it turns out, Idris Elba played the character of Roque in a movie adaptation of DC Comic book named "The Losers".
+    DC Comics wiki page has to contain Marvel. <br><br>
+
+    2) Now let's consider 2 links that may not be that obvious. What about the <a
+        href="https://en.wikipedia.org/wiki/Dalai_Lama">Dalai Lama</a> and <a
+        href="https://en.wikipedia.org/wiki/Michael_Jackson">Michael Jackson</a>. <br>
+
+    Trace Path: <br>
+    /wiki/Michael_Jackson <br>
+    /wiki/List_of_Billboard_Hot_100_chart_achievements_and_milestones <br>
+    /wiki/Aretha_Franklin <br>
+    /wiki/Condoleezza_Rice <br>
+    /wiki/Central_Intelligence_Agency <br>
+    wiki/Dalai_Lama <br>
+    Turns out CIA had a <a href="https://en.wikipedia.org/wiki/CIA_Tibetan_program">program</a> "to keep the political
+    concept of an autonomous Tibet alive within Tibet and among several foreign nations". <a
+        href="https://en.wikipedia.org/wiki/Condoleezza_Rice">Condoleezza Rice</a> worked with the CIA and also was a
+    piano player. She performed with <a href="https://en.wikipedia.org/wiki/Aretha_Franklin">Aretha Franklin</a>.
+    Aretha was ranked 19th among the <a
+        href="https://en.wikipedia.org/wiki/List_of_Billboard_Hot_100_chart_achievements_and_milestones">Billboard Hot
+    100 All-Time top artists</a>, which also contained Michael Jackson.
+
+</div>
 
 </body>
 </html>

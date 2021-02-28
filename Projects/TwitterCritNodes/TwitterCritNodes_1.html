@@ -14,7 +14,8 @@
             integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
             crossorigin="anonymous"></script>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../../globalStyles.css">
     <meta name="keywords"
           content="Twitter, Misinformation, Fake, Accounts, Project, Iowa State, Gaurav, rgbk21, Raj Gaurav">
@@ -144,14 +145,14 @@
         <br>
 		<a href="https://lib.dr.iastate.edu/etd/17723/">Direct download link of the Thesis</a>
 
-    <h6>Goal:</h6>
+    <div class="sub-heading">Goal</div>
     <p>
         Given a social network graph, like twitter, and an integer <em>k</em>, identify <em>k</em> nodes (user accounts)
         that are most critical to the spread of (mis)information in the network when the source of the (mis)information
         is not known.
     </p>
 
-    <h6>Motivation:</h6>
+    <div class="sub-heading">Motivation</div>
     <p>
         <i>
             Suppose someone gave you the information that there might be certain nodes in a network that could try to
@@ -189,7 +190,7 @@
         We need a better strategy to curtail the spread of (mis)information than to reactively ban them as and when they
         are deteced by the algorithms that Twitter might be running. <br>
     </p>
-    <h6>Our Solution:</h6>
+    <div class="sub-heading">Our Solution</div>
     <p>
         We introduce the notion of <em>critical nodes</em>. Intuitively, <em>critical nodes</em> are the nodes that are
         critical/important to the spread of (mis)information in a given network. This implies that removal of these
@@ -223,8 +224,9 @@
         choosing <em>v<sub>4</sub></em> as the critial node is the correct option over here. <br>
         Identifiying critical nodes such as these forms the basis of our algorithm.
     </p>
+
     <p>
-    <h6>Advantages of our Solution:</h6>
+    <div class="sub-heading">Advantages of our Solution</div>
     <p>
         1) The version of the algorithm described above is completely independent of the source of the (mis)information.
         This means that the computation of the critical nodes in any network can be done <em>before</em> the spread of
@@ -235,10 +237,8 @@
         isolated, we can then run other algorithms to detect which accounts are acting as the source of the
         (mis)information.
     </p>
-
-    </p>
+    <div class="sub-heading">Experimental Setup</div>
     <p>
-    <h6>Experimental Setup: </h6>
     For the purpose of this experiment, tweets mentioning Hong Kong were filtered using the <a
         href=https://tweepy.readthedocs.io/en/latest/#>Tweepy library</a> written in Python and the <a
         href=https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/intro-to-tweet-json>Twitter API</a>.
@@ -257,7 +257,7 @@
     code that we used for identifying the critical nodes in the network</a> can be found here.
     </p>
     <p>
-    <h6>Results and Observations:</h6>
+    <div class="sub-heading">Results and Observations</div>
 
     First, we limited our search to identify the top 20 critical nodes present in the network. <br> <br>
 
@@ -321,14 +321,13 @@
     <br><br>
     We will will be covering this in <a href="TwitterCritNodes_2.html"> part 2.</a>
 
-    <br> <br>
-    References: <br>
+    <br>
+    <div class="sub-heading">References</div>
     [1] <a href=https://www.cs.cornell.edu/home/kleinber/kdd03-inf.pdf>Maximizing the Spread of Influence through a
     Social Network </a> <br>
     [2] <a href=https://arxiv.org/pdf/1404.0900.pdf> Influence Maximization: Near-Optimal Time Complexity Meets
     Practical Efficiency </a> <br>
     [3] <a href="https://lib.dr.iastate.edu/etd/16549/">Disrupting diffusion: Critical nodes in network</a>
-    </p>
 
 </div>
 
