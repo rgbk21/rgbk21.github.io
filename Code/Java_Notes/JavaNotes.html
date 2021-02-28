@@ -15,7 +15,8 @@
             crossorigin="anonymous"></script>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,400&display=swap"
+          rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../../globalStyles.css">
     <meta name="keywords" content="Java, Floats, Overflow, Unboxing, Autoboxing">
     <meta name="author" content="Raj Gaurav Ballabh Kumar">
@@ -219,6 +220,25 @@
         without altering the correctness of that program.
         <a href="https://stackoverflow.com/questions/56860/what-is-an-example-of-the-liskov-substitution-principle">This
             SO Link</a> explains using examples what this actually means. <br>
+        Check <a href="https://www.baeldung.com/java-method-overload-override#1-type-substitutability">this on
+        Baeldung for a much clearer explanation</a>. It says: <br>
+        It's valid to make an overridden method to accept arguments of different types and return a different type as
+        well, but with full adherence to these rules: <br>
+        a) If a method in the base class takes argument(s) of a given type, the overridden method should take the same
+        type or a <i>supertype</i> (NOTE: It's supertype, NOT subtype) (a.k.a. <i>contravariant</i> method arguments).
+        Refer
+        <a href="../ThingsToRemember/ThingsToRemember.html#66.2">66.2</a> and <a
+            href="../ThingsToRemember/ThingsToRemember.html#66.3">66.3</a>. <br>
+        b) If a method in the base class returns <code>void</code>, the overridden method should return
+        <code>void</code> <br>
+        c) If a method in the base class returns a primitive, the overridden method should return the same primitive
+        <br>
+        d) If a method in the base class returns a certain type, the overridden method should return the same type or a
+        <i>subtype</i> (NOTE: It's subtype, NOT supertype) (a.k.a. <i>covariant</i> return type). Refer <a
+            href="../ThingsToRemember/ThingsToRemember.html#66.1">66.1</a>. <br>
+        e) If a method in the base class throws an exception, the overridden method must throw the same exception or a
+        subtype of the base class exception <br>
+
         - Interface segregation principle: Many client-specific interfaces are better than one general-purpose
         interface.
         <br>
@@ -2463,6 +2483,40 @@
                 href="https://stackoverflow.com/questions/13102045/scanner-is-skipping-nextline-after-using-next-or-nextfoo">SO
             Source here</a>. <br>
         </div>
+
+        <div class="sub-heading">Lecture 27: Method Overloading</div>
+        <div>
+            - <a href="https://www.baeldung.com/java-method-overload-override#method-overloading">Source on Baeldung</a>
+            <br>
+            - Method Overloading can be implemented in two different ways: <br>
+            a) implementing two or more methods that have the <i>same name but different number of arguments</i> <br>
+            b) implementing two or more methods that have the <i>same name but take arguments of different types</i>
+            <br>
+            However, do note that it's not possible to have two method implementations that differ only in their return
+            types. In this case, the code simply wouldn't compile because of the method call ambiguity - the compiler
+            wouldn't know which implementation of multiply() to call.
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/648a0653a065eb3dcd990f4a05e42cf2.js"></script>
+            </div>
+        </div>
+
+        <div class="sub-heading">Lecture 37: <code>static</code> class members</div>
+        <div>
+            - <a
+                href="https://stackoverflow.com/a/62241666/8742428">Why can't we have static constructors</a>. The
+            bottom line is that this is the way that Java was designed...back in the 1990's...and so far they have
+            not seen the need to change this. <br>
+            - A constructor cannot be defined <code>static</code> <br>
+            - A constructor can access both <code>static</code> and non-static class members <br>
+            - You can only access <code>static</code> members from a <code>static</code> method <br>
+            - You cannot access instance members from a static method <br>
+            - <a href="https://docs.oracle.com/javase/tutorial/java/javaOO/classvars.html">Link to Oracle documentation
+            explaining static class members</a> <br>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/153dccd3fbdb295377ccb722c0cf827c.js"></script>
+            </div>
+        </div>
+
 
     </div>
 

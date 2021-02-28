@@ -15,7 +15,8 @@
             crossorigin="anonymous"></script>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,400&display=swap"
+          rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../../globalStyles.css">
     <link rel="stylesheet" type="text/css" href="ThingsToRemember.css">
     <meta name="keywords" content="Java, Floats, Overflow, Unboxing, Autoboxing">
@@ -191,9 +192,10 @@
         4) <a href="https://stackoverflow.com/questions/3326112/java-best-way-to-pass-int-by-reference">What is the
         best way to pass int by reference</a>?
         <div>
-            You cannot pass integers by reference in Java. Wrapping an int into an Integer class also does not help
-            because Integer is immutable. What you can do is store the integer in an int[] array and then pass the array
-            by reference.
+            You cannot pass <code>int</code> by reference in Java. Wrapping an <code>int</code> into an
+            <code>Integer</code> class also does not help
+            because <code>Integer</code> is immutable. What you can do is store the integer in an <code>int[]</code>
+            array and then pass the array by reference.
         </div>
     </div>
 
@@ -1151,6 +1153,86 @@
     <div class="one-point">
         65) Alternative to clearfix hack in HTML? <br>
         - <code>display: flow-root</code>
+    </div>
+
+    <div class="one-point" id="66.1">
+        66.1) Can overridden methods return different types? <br>
+        - <a href="https://stackoverflow.com/a/14694885/8742428">Source on SO</a>. <br>
+        - Yes it may differ but there are some limitations.
+        Before Java 5.0, when you override a method, both parameters and return type must match exactly. Java 5.0 it
+        introduces a new facility called covariant return type. You can override a method with the same signature but
+        return a subclass of the object returned.
+        In another words, a method in a subclass can return an object whose type is a subclass of the type returned by
+        the method with the same signature in the superclass.
+    </div>
+
+    <div class="one-point" id="66.2">
+        66.2) Can we override a method by passing subclass of the parameter used in super class method? <br>
+        - No, we cannot. <a
+            href="https://stackoverflow.com/questions/31820828/in-java-can-we-override-a-method-by-passing-subclass-of-the-parameter-used-in-s">Source
+        on SO</a>.
+        <br>
+        - In the below example, you can see that we are trying to override the <i>eat</i> method in the <i>Dog</i> class
+        by passing in a subclass of the <i>Food</i> class, <i>Flesh</i>. But the method is NOT overridden. You can test
+        this by adding a <code>@Override</code> annotation on top of the <i>eat()</i> method in the <i>Dog</i> class,
+        and the compiler will throw an error saying that "Method does not override method from its superclass". <br>
+        - So we set out to <i>override</i> methods, but we ended up <i>overloading</i> methods. <br>
+        - And hence we get the behavior that we are now showing in the below snippet.
+
+        <div class="code-snippet">
+            <script src="https://gist.github.com/rgbk21/824671ec6345f51b183e0449f67a9483.js"></script>
+        </div>
+    </div>
+
+    <div class="one-point" id="66.3">
+        66.3) How can we trigger different method selection based on the parameter's real type? <br>
+        - <a
+            href="https://stackoverflow.com/questions/1572322/overloaded-method-selection-based-on-the-parameters-real-type">Source
+        on SO</a>. Excellent answers. Go through all of them. <br>
+        - In the following code snippet, I expect the method selection to take into consideration the real (not the
+        declared) parameter type. Hence the expectation is that following code would have printed <i>foo(Object o)</i>,
+        <i>foo("foobar")</i>, <i>foo(12)</i>. But instead it prints <i>foo(Object o)</i> three times. What am I missing?
+        <br>
+
+        <div class="code-snippet">
+            <script src="https://gist.github.com/rgbk21/1c8c87fdaddfb2c6c91464e1287f7103.js"></script>
+        </div>
+        - Your expectation is wrong. In Java, dynamic method dispatch happens only for the
+        object the method is called on, not for the parameter types of overloaded methods. <br>
+        - Citing the Java Language Specification: When a method is invoked (S15.12), the number of actual arguments (and
+        any explicit type arguments) and <i>the compile-time types of the arguments</i> are used, at compile time, to
+        determine the signature of the method that will be invoked (S15.12.2). If the method that is to be invoked is an
+        instance method, the actual method to be invoked will be determined at run time, using dynamic method lookup
+        (S15.12.4). <br>
+        - The last statement is a bit confusing. Can you clarify it further. <br>
+        - Sure. The compile time type <i>of the method parameters</i> is used to determine the signature of the method
+        to be called, in this case <i>foo(Object)</i>. At runtime, <i>the class of the object the method is called
+        on</i> determines which implementation of that method is called, taking into account that it may be an instance
+        of a subclass of the declared type that overrides the method. <br>
+        - Rewriting the above code showing this in action:
+        <div class="code-snippet">
+            <script src="https://gist.github.com/rgbk21/04c517e914338a24ce4e5c80483db361.js"></script>
+        </div>
+        - Ability to dispatch a call to a method based on types of arguments is called multiple dispatch. In Java this
+        is done with Visitor pattern. However, since you're dealing with Integers and Strings, you cannot easily
+        incorporate this pattern (you just cannot modify these classes).
+        <a href="https://stackoverflow.com/a/1572350/8742428">Source on SO</a>. <br>
+        - The key to understanding this is that the test for which method or constructor is most specific does
+        not use the actual parameters: the parameters appearing in the invocation. They are used only to determine which
+        overloadings are applicable. Once the compiler determines which overloadings are applicable and accessible, it
+        selects the most specific overloading, using only the formal parameters: the parameters appearing in the
+        declaration. <a href="https://stackoverflow.com/a/1572499/8742428">Source on SO</a>.
+    </div>
+
+    <div class="one-point">
+        67) You can create overloaded methods and constructors just by changing the order of the parameters in the
+        method/constructor declaration <br>
+        - <a href="https://stackoverflow.com/questions/1182153/constructor-overloading-in-java-best-practice">Constructor
+        overloading best practice on SO</a>. <br>
+        - Yes, this is valid code somehow.
+        <div class="code-snippet">
+            <script src="https://gist.github.com/rgbk21/a7823b40b5d95d2a5d6f515a10dcc4fa.js"></script>
+        </div>
     </div>
 
 
