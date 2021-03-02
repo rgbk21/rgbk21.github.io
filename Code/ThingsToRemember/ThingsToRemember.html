@@ -1221,7 +1221,9 @@
         not use the actual parameters: the parameters appearing in the invocation. They are used only to determine which
         overloadings are applicable. Once the compiler determines which overloadings are applicable and accessible, it
         selects the most specific overloading, using only the formal parameters: the parameters appearing in the
-        declaration. <a href="https://stackoverflow.com/a/1572499/8742428">Source on SO</a>.
+        declaration. <a href="https://stackoverflow.com/a/1572499/8742428">Source on SO</a>. <br>
+        - We can also use Generics to solve this problem as shown in <a
+            href="https://softwareengineering.stackexchange.com/a/267329">this SO answer</a>.
     </div>
 
     <div class="one-point">
@@ -1233,6 +1235,23 @@
         <div class="code-snippet">
             <script src="https://gist.github.com/rgbk21/a7823b40b5d95d2a5d6f515a10dcc4fa.js"></script>
         </div>
+    </div>
+
+    <div class="one-point">
+        67) Can an <code>abstract</code> class have a constructor? And if yes, what purpose does it satisfy? <br>
+        - Yes, when we define a class to be an Abstract Class it cannot be instantiated but that does not mean an
+        Abstract class cannot have a constructor. Each abstract class must have a concrete subclass which will implement
+        the abstract methods of that abstract class. <br>
+        - When we create an object of any subclass all the constructors in the corresponding inheritance tree are
+        invoked in the top to bottom approach. The same case applies to abstract classes. Though we cannot create an
+        object of an abstract class, when we create an object of a class which is concrete and subclass of the abstract
+        class, the constructor of the abstract class is automatically invoked. Hence we can have a constructor in
+        abstract classes.
+    </div>
+
+    <div class="one-point">
+        68) What is an <code>EnumSet</code> and what is it used for? <br>
+        -
     </div>
 
 
@@ -1247,27 +1266,34 @@
                 <script src="https://gist.github.com/rgbk21/c0b81bebdc5d547025186bd84f194b87.js"></script>
             </div>
             Now long can store 2^63-1 as its largest number = 9,223,372,036,854,775,807. But still if you print
-            MICROS_PER_DAY out, you will see that it contains 500654080. This is because the entire computation will be
-            done in int arithmetic. Only after the computation completes is the result promoted to a long. By then, it's
+            MICROS_PER_DAY out, you will see that it contains 500654080. This is because the entire computation will
+            be
+            done in int arithmetic. Only after the computation completes is the result promoted to a long. By then,
+            it's
             too late.
-            So why is the computation performed in int arithmetic? Because all the factors that are multiplied together
+            So why is the computation performed in int arithmetic? Because all the factors that are multiplied
+            together
             are int values. When you multiply two int values, you get another int value. Java does not have target
             typing,
-            a language feature wherein the type of the variable in which a result is to be stored influences the type of
+            a language feature wherein the type of the variable in which a result is to be stored influences the
+            type of
             the computation.
             <br>
-            It's easy to fix the program by using a long literal in place of an int as the first factor in each product.
+            It's easy to fix the program by using a long literal in place of an int as the first factor in each
+            product.
             This forces all subsequent computations in the expression to be done with long arithmetic.
             <div class="code-snippet">
                 <script src="https://gist.github.com/rgbk21/51b345f2ccb87d160041a9e75d3ebf5f.js"></script>
             </div>
-            When working with large numbers, watch out for overflow - it's a silent killer. Just because a variable is
+            When working with large numbers, watch out for overflow - it's a silent killer. Just because a variable
+            is
             large enough to hold a result doesn't mean that the computation leading to the result is of the correct
             type.
             <br>
             The rules of promotion in Java are as follows:
             <br>
-            Java defines several type promotion rules that apply to expressions. They are as follows: First, all byte,
+            Java defines several type promotion rules that apply to expressions. They are as follows: First, all
+            byte,
             short, and char values are promoted to int, as just described. Then, if one operand is a long, the whole
             expression is promoted to long. If one operand is a float, the entire expression is promoted to float.
             If any of the operands are double, the result is double.
@@ -1292,7 +1318,8 @@
             href="https://stackoverflow.com/questions/2808646/why-are-the-first-four-bytes-of-the-java-class-file-format-cafebabe">The
         tale of 0xcafebabe</a>
         <div>
-            The true decimal value of 0xcafebabe is 3,405,691,582 and 0xcafebabea is 54,491,065,322. In binary, they can
+            The true decimal value of 0xcafebabe is 3,405,691,582 and 0xcafebabea is 54,491,065,322. In binary, they
+            can
             be
             represented as follows:
             <br>
@@ -1320,23 +1347,30 @@
             This is because JAVA saves the number as a 64 bit number. The MSB is not set and hence you can represent
             the true value of the number.
             <br>
-            Now what happens if we try to store a 36 bit number - 0xcafebabea? The number clearly cannot fit into an int
-            and hence we now get a compile error on line 1 (unlike the previous case where 0xcafebabe could fit into 32
+            Now what happens if we try to store a 36 bit number - 0xcafebabea? The number clearly cannot fit into an
+            int
+            and hence we now get a compile error on line 1 (unlike the previous case where 0xcafebabe could fit into
+            32
             bits
-            and hence we did not get any kind of error). Casting the number into a long is also not going to help (as we
+            and hence we did not get any kind of error). Casting the number into a long is also not going to help
+            (as we
             discussed
-            in the previous point - already too late by this point) and also seen on line 2. Hence, the correct way to
+            in the previous point - already too late by this point) and also seen on line 2. Hence, the correct way
+            to
             store the number is to declare it as a
             long as shown in line 3.
             <div class="code-snippet">
                 <script src="https://gist.github.com/rgbk21/362d9fcdd556f3fc8b72e158b69b4973.js"></script>
             </div>
             In conclusion:
-            To write a negative decimal constant, you use the unary negation operator (-) in combination with a decimal
+            To write a negative decimal constant, you use the unary negation operator (-) in combination with a
+            decimal
             literal.
             In this way, you can write any int or long value, whether positive or negative, in decimal form, and
-            negative decimal constants are clearly identifiable by the presence of a minus sign. Not so for hexadecimal
-            and octal literals. They can take on both positive and negative values. Hex and octal literals are negative
+            negative decimal constants are clearly identifiable by the presence of a minus sign. Not so for
+            hexadecimal
+            and octal literals. They can take on both positive and negative values. Hex and octal literals are
+            negative
             if their high-order bit is set.
             <br>
             0xcafebabe: 1100 1010 1111 1110 1011 1010 1011 1110 //32bits
@@ -1365,14 +1399,16 @@
             <br>
             Line 1 -
             <br>
-            1111 1111 1111 1111 1111 1111 1111 1111 1100 1010 1111 1110 1011 1010 1011 1110 //sign extend because add to
+            1111 1111 1111 1111 1111 1111 1111 1111 1100 1010 1111 1110 1011 1010 1011 1110 //sign extend because
+            add to
             L
             <br>
             0001 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 0000 //0x100000000L
             <hr>
             0000 1111 1111 1111 1111 1111 1111 1111 1100 1010 1111 1110 1011 1010 1011 1110 //which is = 0xcafebabe
             <br>
-            The problem is caused due to the sign-extension of the int datatype. We declare 0xcafebabe as 0xcafebabeL
+            The problem is caused due to the sign-extension of the int datatype. We declare 0xcafebabe as
+            0xcafebabeL
             (line 2)
             and the problem is solved.
         </div>
@@ -1389,7 +1425,8 @@
             Size of a byte is 8 bits. Casting int into a byte takes the 8 bits starting from the LSB. This will be a
             narrowing operation. byte is a signed datatype. Hence 1111 1111 still represents -1 in byte.
             <br>
-            Next step: (char) 1111 1111. Now this is a widening operation to 16 bits. char is an unsigned datatype. For
+            Next step: (char) 1111 1111. Now this is a widening operation to 16 bits. char is an unsigned datatype.
+            For
             widening
             operations we have the following rule:
             <br>
@@ -1398,12 +1435,14 @@
             if the type of the original value is signed; zero extension if it is a char, regardless of the type to
             which it is being converted.
             <br>
-            byte is a narrower signed integral type that we are widening by converting to char. So sign extension will
+            byte is a narrower signed integral type that we are widening by converting to char. So sign extension
+            will
             be performed.
             <br>
             (char) (byte) -1 // 1111 1111 1111 1111 = 2^16 - 1 = 65535 (because char is unsigned)
             <br>
-            Next step: (int) 1111 1111 1111 1111. Now this is a widening operation. The rule we stated above tells us
+            Next step: (int) 1111 1111 1111 1111. Now this is a widening operation. The rule we stated above tells
+            us
             that
             since we are widening from a char, we will zero extend the number. Hence the final value becomes:
             <br>
@@ -1414,7 +1453,8 @@
             <br>
             Cast the char to a short, which is the same width as a char but signed.
             <br>
-            What should you do in case you are widening from a byte value b to a char but do not want the sign extension
+            What should you do in case you are widening from a byte value b to a char but do not want the sign
+            extension
             to
             be performed?
             <br>
@@ -1424,13 +1464,15 @@
             </div>
             b will be promoted to an int (32 bits) for the & operation. In accordance with the widening rule stated
             above
-            sign extension will be performed on the byte b. The & operation with 0xff will keep only the right most 8
+            sign extension will be performed on the byte b. The & operation with 0xff will keep only the right most
+            8
             bits,
             changing all the other 24 bits to 0. Now when this is cast into a char it will be a narrowing operation
             that keeps only the rightmost 16 bits and thus we have a way to convert a narrower integral signed type
             to a wider type without sign extension.
             <br>
-            Check <a href="https://stackoverflow.com/questions/11380062/what-does-value-0xff-do-in-java">this link</a>
+            Check <a href="https://stackoverflow.com/questions/11380062/what-does-value-0xff-do-in-java">this
+            link</a>
             for additional details.
         </div>
     </div>
@@ -1450,7 +1492,8 @@
             <tr>
                 <th scope="row">1</th>
                 <td>boolean</td>
-                <td colspan="2">This data type represents one bit of information, but its "size" isn't something that's
+                <td colspan="2">This data type represents one bit of information, but its "size" isn't something
+                    that's
                     precisely defined.
                     <a href="https://stackoverflow.com/questions/383551/what-is-the-size-of-a-boolean-variable-in-java">
                         Source</a>,
@@ -1510,7 +1553,8 @@
                 <script src="https://gist.github.com/rgbk21/bf2bc715b8224a7e867196c892e9bec6.js"></script>
             </div>
 
-            x += i is not a shorthand for x = x + i. The Java language specification says that the compound assignment
+            x += i is not a shorthand for x = x + i. The Java language specification says that the compound
+            assignment
             E1 op= E2 is equivalent to the simple assignment E1 = (T) ((E1) op (E2)), where T is the type of E1,
             except that E1 is evaluated only once. In the above code, this would mean that x += i would evaluate to:
             x = (char) (x + i)
@@ -1530,7 +1574,8 @@
             [JLS 5.1.3]. Attempting to perform the equivalent simple assignment would generate a compilation error,
             with good reason.
             <br>
-            The corresponding simple assignment on line 3 does not work because you are trying to assign an int value
+            The corresponding simple assignment on line 3 does not work because you are trying to assign an int
+            value
             into a short variable which is not possible without using an explicit cast.
         </div>
     </div>
@@ -1541,14 +1586,17 @@
             <div class="code-snippet">
                 <script src="https://gist.github.com/rgbk21/0cc9afc1e88faed32a9731ff9506168a.js"></script>
             </div>
-            The compiler evaluates the constant expression 'H' + 'a' by promoting each of the char-valued operands ('H'
+            The compiler evaluates the constant expression 'H' + 'a' by promoting each of the char-valued operands
+            ('H'
             and 'a')
             to int values through a process known as widening primitive conversion. Widening primitive conversion of
             a char to an int zero extends the 16-bit char value to fill the 32-bit int. In the case of 'H', the char
-            value is 72 and in the case of 'a', it is 97, so the expression 'H' + 'a' is equivalent to the int constant
+            value is 72 and in the case of 'a', it is 97, so the expression 'H' + 'a' is equivalent to the int
+            constant
             72 + 97, or 169.
             <br>
-            The + operator performs string concatenation if and only if at least one of its operands is of type String;
+            The + operator performs string concatenation if and only if at least one of its operands is of type
+            String;
             otherwise, it performs addition. If none of the values to be concatenated are strings, you have
             several choices: prepend the empty string; convert the first value to a string explicitly, using
             String.valueOf;
@@ -1565,16 +1613,19 @@
             First, understand that although char are represented as integers, many libraries treat it differently.
             For example, when you print a char it is printed as the Unicode character and not the integer.
             <br>
-            String conversion for object references, which include arrays, is defined as follows: If the reference is
+            String conversion for object references, which include arrays, is defined as follows: If the reference
+            is
             null,
             it is converted to the string "null". Otherwise, the conversion is performed as if by an invocation of
-            the toString method of the referenced object with no arguments; but if the result of invoking the toString
+            the toString method of the referenced object with no arguments; but if the result of invoking the
+            toString
             method is null, then the string "null" is used instead. (??)
             Arrays inherit the toString method from Object, whose specification says, "Returns a string consisting
             of the name of the class of which the object is an instance, the at-sign character '@', and the
             unsigned hexadecimal representation of the hash code of the object"
             <br>
-            //TODO: What is the difference between numbers.hashCode() and Arrays.hashCode(numbers)? Why do they give 2
+            //TODO: What is the difference between numbers.hashCode() and Arrays.hashCode(numbers)? Why do they give
+            2
             different values?
         </div>
     </div>
@@ -1588,15 +1639,18 @@
             You should by this point probably know that pig == dog will return false. The == operator, does not test
             whether two objects are equal; it tests whether two object references are identical. Which in this case,
             they are not.
-            But the output in this case is: false. Yes. Not "Animals are equal: false". But just "false". Why though?
+            But the output in this case is: false. Yes. Not "Animals are equal: false". But just "false". Why
+            though?
             <br>
-            The + operator, whether used for addition or string concatenation, binds more tightly than the == operator.
+            The + operator, whether used for addition or string concatenation, binds more tightly than the ==
+            operator.
             Therefore, the parameter of the println method is evaluated like this:
             <br>
             System.out.println(("Animals are equal: " + pig) == dog);
             <br>
             The value of the boolean expression is, of course, false, and that is exactly what the program prints.
-            There is one surefire way to avoid this sort of difficulty: When using the string concatenation operator,
+            There is one surefire way to avoid this sort of difficulty: When using the string concatenation
+            operator,
             always parenthesize nontrivial operands.
 
         </div>
@@ -1608,7 +1662,8 @@
             //TODO:
             <br>
             You may be aware that compile-time constants of type String are interned [JLS 15.28]. In other words,
-            any two constant expressions of type String that designate the same character sequence are represented by
+            any two constant expressions of type String that designate the same character sequence are represented
+            by
             identical object references.
             <div class="code-snippet">
                 <script src="https://gist.github.com/rgbk21/35f19f811f828d739d4cb031646b9cc7.js"></script>
@@ -1616,7 +1671,8 @@
             I no longer know what is happening.
             <br>
             Check these links:
-            <a href="https://stackoverflow.com/questions/45165496/java-string-concatenation-and-interning">Source 1</a>,
+            <a href="https://stackoverflow.com/questions/45165496/java-string-concatenation-and-interning">Source
+                1</a>,
             <a href="https://stackoverflow.com/questions/10578984/what-is-java-string-interning">Source 2</a>,
             <a href="https://stackoverflow.com/questions/58260592/interning-of-strings-in-java">Source 3</a>
         </div>
@@ -1630,8 +1686,10 @@
             </div>
             The backslash is used as a marker character to tell the compiler/interpreter that the next character has
             some
-            special meaning. What that next character means is up to the implementation. For example C-style languages
-            use \n to mean newline and \t to mean tab. The use of the word "escape" really means to temporarily escape
+            special meaning. What that next character means is up to the implementation. For example C-style
+            languages
+            use \n to mean newline and \t to mean tab. The use of the word "escape" really means to temporarily
+            escape
             out of parsing the text and into a another mode where the subsequent character is treated differently.
             Any quote (") that is preceded by a slash (\") is escaped, and understood to be part of the value of the
             string.
@@ -1642,14 +1700,16 @@
         13) So what does it mean to escape in regex?
         <div>
             Many characters in regular expressions have special meanings. For instance, the dot character '.' means
-            "any one character". There are a great deal of these specially-defined characters, and sometimes, you want
+            "any one character". There are a great deal of these specially-defined characters, and sometimes, you
+            want
             to search for one, not use it's special meaning. (<a
                 href="https://stackoverflow.com/questions/37064290/what-does-escape-a-string-mean-in-regex-javascript">Source</a>)
             <br>
             From MSDN:
             <br>
             The character that follows it is a special character, as shown in the table in the following section.
-            For example, \b is an anchor that indicates that a regular expression match should begin on a word boundary,
+            For example, \b is an anchor that indicates that a regular expression match should begin on a word
+            boundary,
             \t represents a tab, and \x020 represents a space.
             A character that otherwise would be interpreted as an unescaped language construct should be interpreted
             literally.
@@ -1667,16 +1727,21 @@
             <div class="code-snippet">
                 <script src="https://gist.github.com/rgbk21/b28966a4900536223b58bdd4c43e7f9e.js"></script>
             </div>
-            The key to understanding this puzzle is that Java provides no special treatment for Unicode escapes within
-            string literals. The compiler translates Unicode escapes into the characters they represent before it parses
+            The key to understanding this puzzle is that Java provides no special treatment for Unicode escapes
+            within
+            string literals. The compiler translates Unicode escapes into the characters they represent before it
+            parses
             the program into tokens, such as strings literals [JLS 3.2]. Therefore, the first Unicode escape in the
             program
-            closes a one-character string literal ("a"), and the second one opens a one-character string literal ("b").
+            closes a one-character string literal ("a"), and the second one opens a one-character string literal
+            ("b").
             The program prints the value of the expression: "a".length() + "b".length(), or 2.
             The third example prints 16 because you are escaping the quotation with a backslash.
             <br>
-            Unicode escapes are designed for use when a programmer needs to insert a character that can't be represented
-            in the source file's character set. They are used primarily to put non-ASCII characters into identifiers,
+            Unicode escapes are designed for use when a programmer needs to insert a character that can't be
+            represented
+            in the source file's character set. They are used primarily to put non-ASCII characters into
+            identifiers,
             string literals, character literals, and comments. Occasionally, a Unicode escape adds to the clarity of
             a program by positively identifying one of several similar-looking characters.
         </div>
@@ -1690,12 +1755,14 @@
                 <div class="code-snippet">
                     <script src="https://gist.github.com/rgbk21/8bf9be2e4ac97d5404910653967750d4.js"></script>
                 </div>
-                This program isn't even guaranteed to terminate normally, much less to print any particular sequence.
+                This program isn't even guaranteed to terminate normally, much less to print any particular
+                sequence.
                 Its behavior is completely unspecified. The culprit here is the String(byte[]) constructor. Its
                 specification says:
                 "Constructs a new String by decoding the specified byte array using the platform's default charset.
                 The length of the new String is a function of the charset, and hence may not be equal to the length
-                of the byte array. The behavior of this constructor when the given bytes are not valid in the default
+                of the byte array. The behavior of this constructor when the given bytes are not valid in the
+                default
                 charset is unspecified"
                 <br>
                 What exactly is a charset? Technically, it is "the combination of a coded character set and a
@@ -1709,9 +1776,11 @@
                 <br>
                 System.out.println(java.nio.charset.Charset.defaultCharset()); // Prints UTF-8
                 <br>
-                When translating between char sequences and byte sequences, you can and usually should specify a charset
+                When translating between char sequences and byte sequences, you can and usually should specify a
+                charset
                 explicitly.
-                The lesson of this puzzle is that every time you translate a byte sequence to a String, you are using
+                The lesson of this puzzle is that every time you translate a byte sequence to a String, you are
+                using
                 a charset, whether you specify it explicitly or not. If you want your program to behave predictably,
                 specify a charset each time you use one.
             </div>
@@ -1729,13 +1798,15 @@
             a) rnd.nextInt(2) generates numbers exclusive of 2. So the numbers generated are: {0,1}. Hence case2 is
             never triggered.
             The specification for Random.nextInt(int) says: "Returns a pseudorandom, uniformly distributed int value
-            between 0 (inclusive) and the specified value (exclusive). Whenever you are working with lengths, ranges,
+            between 0 (inclusive) and the specified value (exclusive). Whenever you are working with lengths,
+            ranges,
             or moduli, be careful to determine which endpoints should be included, and make sure that your code
             behaves accordingly.
             <br>
             b) There is no break after the case. So if case 1 is triggered, so will case2 and 3.
             <br>
-            c) StringBuffer(int capacity); takes as an argument an integer that specifies the capacity of the buffer.
+            c) StringBuffer(int capacity); takes as an argument an integer that specifies the capacity of the
+            buffer.
             By using a character, you are implicitly converting it into an int by widening. Which as you might have
             noticed,
             is not such a great idea.
@@ -1750,12 +1821,15 @@
             </div>
             The problem is that String.replaceAll takes a regular expression as its first parameter, not a literal
             sequence of characters.
-            (Regular expressions were added to the Java platform in release 1.4.) The regular expression "." matches any
-            single character, and so every character of the class name is replaced by a slash, producing the output we
+            (Regular expressions were added to the Java platform in release 1.4.) The regular expression "." matches
+            any
+            single character, and so every character of the class name is replaced by a slash, producing the output
+            we
             saw.
             To match only the period character, the period in the regular expression must be escaped by preceding it
             with a backslash (\). Because the backslash character has special meaning in a string literal-it begins
-            an escape sequence - the backslash itself must be escaped with a second backslash. This produces an escape
+            an escape sequence - the backslash itself must be escaped with a second backslash. This produces an
+            escape
             sequence that generates a backslash in the string literal.
             <br>
             System.out.println(Me.class.getName().replaceAll("\\.", "/") + ".class");
@@ -1777,7 +1851,8 @@
             <div class="code-snippet">
                 <script src="https://gist.github.com/rgbk21/1db95af1102a2e15c0ab18245612fa5b.js"></script>
             </div>
-            We already looked at what goes wrong in this case. 0x90 is, by default, stored as an integer. Not as a byte.
+            We already looked at what goes wrong in this case. 0x90 is, by default, stored as an integer. Not as a
+            byte.
             <br>
             0x90 is: 0000 0000 0000 0000 0000 0000 1001 0000 which is equal to +144
             <br>
@@ -1785,7 +1860,8 @@
             <br>
             Byte.MAX_VALUE = 127
             <br>
-            So the if condition will never be triggered. In order for the if condition to be triggered, we need to cast
+            So the if condition will never be triggered. In order for the if condition to be triggered, we need to
+            cast
             the int into a byte.
             The correct version of the code will be:
             <div class="code-snippet">
@@ -1819,10 +1895,12 @@
             </div>
             This program will never terminate. The for loop condition uses the statement i <= END. When i = END, the
             value of i
-            will overflow to a negative value and i will still be lesser than END. Hence the condition will always be
+            will overflow to a negative value and i will still be lesser than END. Hence the condition will always
+            be
             satisfied.
             If you need a loop that iterates near the boundaries of the int values, you are better off using a long
-            variable as the loop index. Simply changing the type of the loop index from int to long solves the problem,
+            variable as the loop index. Simply changing the type of the loop index from int to long solves the
+            problem,
             causing the program to print 101 as expected.
         </div>
     </div>
@@ -1833,13 +1911,16 @@
             <div class="code-snippet">
                 <script src="https://gist.github.com/rgbk21/f2ac9c3447b50430a206fd68f95cae06.js"></script>
             </div>
-            The constant -1 is the int value with all 32 bits set (0xffffffff). The left-shift operator shifts zeroes
+            The constant -1 is the int value with all 32 bits set (0xffffffff). The left-shift operator shifts
+            zeroes
             in from the right to fill the low-order bits vacated by the shift, so the expression (-1 << i) has its
-            rightmost i bits set to 0 and the remaining 32 - i bits set to 1. The problem is that (-1 << 32) is equal
+            rightmost i bits set to 0 and the remaining 32 - i bits set to 1. The problem is that (-1 << 32) is
+            equal
             to -1 rather than 0, because shift operators use only the five low-order bits of their right operand as
             the shift distance, or six bits if the left operand is a long [JLS 15.19].
             <br>
-            This applies to all three shift operators: <<, >>, and >>>. The shift distance is always between 0 and 31,
+            This applies to all three shift operators: <<, >>, and >>>. The shift distance is always between 0 and
+            31,
             or 0 and 63 if the left operand is a long. (This means that whatever shift count you pass, it will be
             interpreted modulo 32. Attempting to shift by 32 on such platform will actually shift by 0, i.e.
             not shift at all.) It is calculated mod 32, or mod 64 if the left operand is a long. Attempting to shift
@@ -1870,7 +1951,8 @@
             <div class="code-snippet">
                 <script src="https://gist.github.com/rgbk21/3c5a522da6ca83c36d02489db97c3c2b.js"></script>
             </div>
-            Arithmetic shift >> will keep the sign bit. Unsigned shift >>> will not keep the sign bit (thus filling 0s).
+            Arithmetic shift >> will keep the sign bit. Unsigned shift >>> will not keep the sign bit (thus filling
+            0s).
             (<a
                 href="https://stackoverflow.com/questions/2811319/difference-between-and">Source</a>)
         </div>
@@ -1883,7 +1965,8 @@
             <div class="code-snippet">
                 <script src="https://gist.github.com/rgbk21/a77ceda6314229003b9f90d96963ad7c.js"></script>
             </div>
-            Java mandates the use of IEEE 754 floating-point arithmetic [IEEE-754], which lets you represent infinity
+            Java mandates the use of IEEE 754 floating-point arithmetic [IEEE-754], which lets you represent
+            infinity
             as a double or float. As we learned in school, infinity plus 1 is still infinity. If i is initialized to
             infinity before the loop starts, the termination test (i == i + 1) evaluates to true, and the loop never
             terminates.
@@ -1895,14 +1978,17 @@
                 <script src="https://gist.github.com/rgbk21/8f360539b475db073166819248f50d48.js"></script>
             </div>
             <br>
-            The distance between adjacent floating-point values is called an ulp, which is an acronym for unit in the
+            The distance between adjacent floating-point values is called an ulp, which is an acronym for unit in
+            the
             last place.
             In release 5.0, the Math.ulp method was introduced to calculate the ulp of a float or double value.
             Floating-point operations return the floating-point value that is closest to their exact mathematical
             result.
             Once the distance between adjacent floating-point values is greater than 2, adding 1 to a floating-point
-            value will have no effect, because the half-way point between values won't be reached. For the float type,
-            the least magnitude beyond which adding 1 will have no effect is 2^25, or 33,554,432; for the double type,
+            value will have no effect, because the half-way point between values won't be reached. For the float
+            type,
+            the least magnitude beyond which adding 1 will have no effect is 2^25, or 33,554,432; for the double
+            type,
             it is 2^54, or approximately 1.8 × 10^16.
             <br>
             Moral of the Story: floats are weird.
@@ -1912,11 +1998,13 @@
                 <div class="code-snippet">
                     <script src="https://gist.github.com/rgbk21/29ad8bc9f7936d5ce2a641987ae5e5bd.js"></script>
                 </div>
-                IEEE 754 floating-point arithmetic reserves a special value to represent a quantity that is not a number
+                IEEE 754 floating-point arithmetic reserves a special value to represent a quantity that is not a
+                number
                 [IEEE-754].
                 This value, known as NaN (short for "Not a Number"), is the value of all floating-point computations
                 that do
-                not have well-defined numeric values, such as 0.0 / 0.0. The specification says that NaN is not equal to
+                not have well-defined numeric values, such as 0.0 / 0.0. The specification says that NaN is not
+                equal to
                 any floating-point value, including itself. Therefore, if i is initialized to NaN before the loop
                 starts,
                 the termination test (i != i) evaluates to true, and the loop never terminates. Strange but true.
@@ -1934,7 +2022,8 @@
                 </div>
                 The thing to remember over here is that + is an overloaded operator. When the arguments to + are
                 Strings,
-                the + operator ends up concatenating the strings. If one operand in the concatenation is of some type
+                the + operator ends up concatenating the strings. If one operand in the concatenation is of some
+                type
                 other than String, that operand is converted to a string prior to concatenation.
                 <div class="code-snippet">
                     <script src="https://gist.github.com/rgbk21/f9de4fbc0a513bceccf68003de920742.js"></script>
@@ -1946,7 +2035,8 @@
                 <div class="code-snippet">
                     <script src="https://gist.github.com/rgbk21/ac7fdb5cc58921c74f2c9f93c7cd0369.js"></script>
                 </div>
-                The key to solving this puzzle is that >>>= is a compound assignment operator. Suppose that you precede
+                The key to solving this puzzle is that >>>= is a compound assignment operator. Suppose that you
+                precede
                 the loop with the following
                 declaration:
                 <br>
@@ -1973,7 +2063,8 @@
                 <br>
                 <em>In summary, do not use compound assignment operators on short, byte, or char variables. </em>
                 <br>
-                Such expressions perform mixed-type arithmetic, which can be confusing in and of itself. Far worse, they
+                Such expressions perform mixed-type arithmetic, which can be confusing in and of itself. Far worse,
+                they
                 perform an implicit narrowing cast, which can discard information.
             </div>
             <br>
@@ -1985,7 +2076,8 @@
                 Until release 5.0, Java's numerical comparison operators (<, <=, >, and >=) required both of their
                 operands to be of a primitive numeric type (byte, char, short, int, long, float, or double) [JLS2
                 15.20.1].
-                In release 5.0, the specification was changed to say that the type of each operand must be convertible
+                In release 5.0, the specification was changed to say that the type of each operand must be
+                convertible
                 to a primitive numeric type [JLS 15.20.1, 5.1.8].
                 <br>
                 Check <a
@@ -1997,16 +2089,19 @@
                 subexpressions
                 evaluate to true. The third subexpression (i != j) performs an identity comparison on the object
                 references
-                i and j. The two variables refer to distinct objects, as each was initialized to a new Integer instance.
+                i and j. The two variables refer to distinct objects, as each was initialized to a new Integer
+                instance.
                 Therefore, the third subexpression also evaluates to true, and the loop spins forever.
                 The equality operators do perform numerical comparison when only one of their two operands is of a
                 boxed numeric type and the other is of a primitive type.
                 <br>
                 The <= operator is still antisymmetric on the set of primitive numeric values, but now it applies to
-                operands of boxed numeric types as well. (The boxed numeric types are Byte, Character, Short, Integer,
+                operands of boxed numeric types as well. (The boxed numeric types are Byte, Character, Short,
+                Integer,
                 Long, Float, and Double). The <= operator is not antisymmetric on operands of these types, because
                 Java's
-                equality operators (== and !=) perform reference identity comparison rather than value comparison when
+                equality operators (== and !=) perform reference identity comparison rather than value comparison
+                when
                 applied to object references.
                 <div class="code-snippet">
                     <script src="https://gist.github.com/rgbk21/f33c42849dc33eb90a763bf100239f44.js"></script>
@@ -2022,25 +2117,31 @@
                 <div class="code-snippet">
                     <script src="https://gist.github.com/rgbk21/6b3075b7a80d846e57df94ff1290f7dd.js"></script>
                 </div>
-                In the boolean expression (i == -i && i != 0), the unary minus operator is applied to i, which implies
-                that its type must be numeric: It is illegal to apply the unary minus operator to a non-numeric operand.
+                In the boolean expression (i == -i && i != 0), the unary minus operator is applied to i, which
+                implies
+                that its type must be numeric: It is illegal to apply the unary minus operator to a non-numeric
+                operand.
                 Therefore, we are looking for a nonzero numeric value that is equal to its own negation.
                 NaN does not satisfy this property, as it is not equal to any value, so i must represent an actual
                 number.
-                No floating-point value other than 0 is equal to itself with the sign bit flipped, so the type of i must
+                No floating-point value other than 0 is equal to itself with the sign bit flipped, so the type of i
+                must
                 be integral.
                 <br>
                 There is, however, a corresponding disadvantage. There exist an even number of int values-2^32 to be
                 precise-and one of these values is used to represent 0. That leaves an odd number of int values to
-                represent positive and negative integers, which means that there must be a different number of positive
+                represent positive and negative integers, which means that there must be a different number of
+                positive
                 and negative int values. This in turn implies that there is at least one int value whose negation
                 cannot be correctly represented as an int value.
                 <br>
-                In fact, there is exactly one such int value, and it is Integer.MIN_VALUE, or -2^31 = -2,147,483,648.
+                In fact, there is exactly one such int value, and it is Integer.MIN_VALUE, or -2^31 =
+                -2,147,483,648.
                 <br>
                 -2,147,483,648 = 1000 0000 0000 0000 0000 0000 0000 0000
                 <br>
-                Negating this means inverting all of the bits and adding 1 to the value. Which would give the same bit
+                Negating this means inverting all of the bits and adding 1 to the value. Which would give the same
+                bit
                 sequence as the answer.
                 <br>
                 In other words, Integer.MIN_VALUE is its own negation, as is Long.MIN_VALUE.
@@ -2065,8 +2166,10 @@
                 <script src="https://gist.github.com/rgbk21/d6dcd7b3798dcd20856ca408ca8dc08e.js"></script>
             </div>
             The initial value of f is close to Integer.MAX_VALUE, so it requires 31 bits to express precisely, and
-            the float type provides only 24 bits of precision. Incrementing such a large float value will not change it.
-            The problem is that the termination test fails in much the same way that the increment does. The loop runs
+            the float type provides only 24 bits of precision. Incrementing such a large float value will not change
+            it.
+            The problem is that the termination test fails in much the same way that the increment does. The loop
+            runs
             only so long as the loop index f is less than (float)(START + 50). The promotion from int to float is
             performed automatically when comparing an int to a float. Unfortunately, this promotion is one of the
             three widening primitive conversions that can result in loss of precision [JLS 5.1.2].
@@ -2086,13 +2189,17 @@
             If you need a floating-point value in the body of a loop, take the int or long loop index and convert it
             to a float or double. You may lose precision when converting an int or long to a float or a long to a
             double,
-            but at least it will not affect the loop itself. When you use floating-point, use double rather than float
-            unless you are certain that float provides enough precision and you have a compelling performance need to
+            but at least it will not affect the loop itself. When you use floating-point, use double rather than
+            float
+            unless you are certain that float provides enough precision and you have a compelling performance need
+            to
             use float.
             <br>
-            For a variation on the above, note that although g == (g + 50), g != (g + 100). So if we changed our above
+            For a variation on the above, note that although g == (g + 50), g != (g + 100). So if we changed our
+            above
             program
-            to have the loop check changed to: f < START + 100, the program turns into an infinite loop. This is because
+            to have the loop check changed to: f < START + 100, the program turns into an infinite loop. This is
+            because
             now f++ (increment of f by 1) leads to the same value as f.
             <div class="code-snippet">
                 <script src="https://gist.github.com/rgbk21/9a4e15808260b4ed7a837cdd6fd17ee5.js"></script>
@@ -2113,15 +2220,19 @@
             This accounts for the final result being off by a factor of a thousand.
             <a href="https://introcs.cs.princeton.edu/java/11precedence/">This link </a>talks more about operator
             precedence.
-            Precedence order. When two operators share an operand the operator with the higher precedence goes first.
+            Precedence order. When two operators share an operand the operator with the higher precedence goes
+            first.
             For example, 1 + 2 * 3 is treated as 1 + (2 * 3), whereas 1 * 2 + 3 is treated as (1 * 2) + 3 since
             multiplication
             has a higher precedence than addition.
-            Associativity: When an expression has two operators with the same precedence, the expression is evaluated
+            Associativity: When an expression has two operators with the same precedence, the expression is
+            evaluated
             according to its associativity.
             <br>
-            For example x = y = z = 17 is treated as x = (y = (z = 17)), leaving all three variables with the value 17,
-            since the = operator has right-to-left associativity (and an assignment statement evaluates to the value on
+            For example x = y = z = 17 is treated as x = (y = (z = 17)), leaving all three variables with the value
+            17,
+            since the = operator has right-to-left associativity (and an assignment statement evaluates to the value
+            on
             the right hand side).
             On the other hand, 72 / 2 / 3 is treated as (72 / 2) / 3 since the / operator has left-to-right
             associativity.
