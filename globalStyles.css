@@ -39,7 +39,7 @@ html {
 #navbarSupportedContent .social-links a:link,
 #navbarSupportedContent .social-links a:visited {
     color: #c1c1c1;
-    transition: color 0.5s;
+    transition: color 0.2s;
 }
 
 #navbarSupportedContent .social-links a:hover,

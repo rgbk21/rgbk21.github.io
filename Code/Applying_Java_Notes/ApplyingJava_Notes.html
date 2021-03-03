@@ -17,14 +17,19 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-9QJ5D3X353"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
         gtag('js', new Date());
 
         gtag('config', 'G-9QJ5D3X353');
     </script>
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,400&display=swap"
+          rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../../globalStyles.css">
     <meta name="keywords" content="Java, Floats, Overflow, Unboxing, Autoboxing">
     <meta name="author" content="Raj Gaurav Ballabh Kumar">
@@ -139,6 +144,26 @@
         This page mainly contains my notes from: <br>
         a) Java: The Complete Reference <br>
         b) <a href="#head-first">HeadFirst: Servlets and JSP</a>
+        <div>
+            Index:
+            <br>
+            <a href="#Ch1">Chapter 1: Why use Servlets and JSPs</a>
+            <br>
+            <a href="#Ch2">Chapter 2: Web App Architecture</a>
+            <br>
+            <a href="#Ch3">Chapter 3: Mini MVC Tutorial</a>
+            <br>
+            <a href="#Ch4">Chapter 4: Request and Response - Being a Servlet</a>
+            <br>
+            <a href="#Ch5">Chapter 5: Attributes and Listeners - Being a Servlet</a>
+            <br>
+            <a href="#Ch6">Chapter 6: Session Management - Conversational State</a>
+            <br>
+            <a href="#Ch7">Chapter 7: Using JSP - Being a JSP</a>
+            <br>
+            <a href="#Ch8">Chapter 8: Scriptless JSP - Script-free pages</a>
+            <br>
+        </div>
     </div>
 
     <hr>
@@ -727,28 +752,7 @@
     <div id="head-first">
         These are my notes from the book - Head First: Servlets and JSP
     </div>
-    <div>
-        Index:
-        <br>
-        <a href="#Ch1">Chapter 1: Why use Servlets and JSPs</a>
-        <br>
-        <a href="#Ch2">Chapter 2: Web App Architecture</a>
-        <br>
-        <a href="#Ch3">Chapter 3: Mini MVC Tutorial</a>
-        <br>
-        <a href="#Ch4">Chapter 4: Request and Response - Being a Servlet</a>
-        <br>
-        <a href="#Ch5">Chapter 5: Attributes and Listeners - Being a Servlet</a>
-        <br>
-        <a href="#Ch6">Chapter 6: Session Management - Conversational State</a>
-        <br>
-        <a href="#Ch7">Chapter 7: Using JSP - Being a JSP</a>
-        <br>
-        <a href="#Ch8">Chapter 8: Scriptless JSP - Script-free pages</a>
-        <br>
 
-
-    </div>
     <hr>
     <div id="Ch1" class="chapter">Chapter 1: Why use Servlets and JSPs</div>
     <hr>
@@ -760,137 +764,137 @@
                  width="500">
         </div>
         <br>
-        Terminology:
-        <ul>
-            <li><b>Web Server</b>:
-                A web browser lets a user request a resource. The web server receives the request, finds the resource,
-                and
-                then sends it back to the user. A resource can be anything - HTML page, image, PDF File. If the
-                requested
-                resource is not found, the server replies with a <code>404-Not Found</code> error code.
-                <br>
-                - A web server can refer to either the physical machine (hardware) or the web server application
-                (software).
-            </li>
-            <li><b>Web Client</b>:
-                Both the human and the browser application (Mozilla, Chrome) being used are referred to as the Web
-                Client. A
-                web browser can communicate with the web server. It can interpret the HTML code that is sent as a part
-                of
-                the server's response and render that web page. Hence a Web Client (browser) lets the user request
-                something
-                from the server and shows the user the result of that request.
-            </li>
-            <li><b>HTML</b>: When a server answers a request, the server usually sends some type of content for the
-                browser to
-                display. This content is written in HTML.
-                <br>
-                - Two important tags in HTML are:
-                <code>form</code> and <code>input</code>
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/7ccd6f864eb2faf71f645955dfe6c4d2.js"></script>
-                </div>
-            </li>
-            <li><b>HTTP</b>: Most of the conversations held on the web between clients and servers are held using HTTP
-                Protocol, which allows for simple request-response type conversations. The client sends an
-                <code>HTTP Request</code> and the Server responds with a <code>HTTP Response</code>.
-                <br>
-                HTTP runs on top of TCP/IP. The structure of and HTTP conversation is a simple Request/Response.
-                <br><b>Key elements of the request stream are:</b>
-                <ul>
-                    <li>HTTP Method Name(the action to be performed): The method name tells the server the kind of
-                        request that is being made, and how the rest of the message will be formatted. The
-                        <code>HTTP</code> protocol has several methods, but we mostly use <code>GET</code> and <code>POST</code>
-                        methods.
-                        <ul>
-                            <li><code>GET</code>: Gets a resource (HTML page, image, file,..) from the server and sends
-                                it back to the Client. You can also send some data (from the Client to the Server) with
-                                a <code>GET</code> request, but
-                                this is not recommended. Firstly, because the number of characters that are sent via a
-                                <code>GET</code> request are limited and secondly all the data sent in a
-                                <code>GET</code> request is visible in the URL. The "?" separates the path and the
-                                parameters. Together, the entire String is the request that is the URL that is sent with
-                                the request.
-                                <div class="row">
-                                    <img src="./Snaps/GET_REQUEST.PNG" class="center-block img-fluid" alt="GET_REQUEST"
-                                         width="600">
-                                </div>
-                            </li>
-                            <li><code>POST</code>: With POST, you can request something and at the same time send form
-                                data to the server. For eg., if the user has completed a long form, you want this data
-                                to be stored into a database. In this case you would use a <code>POST</code> method. The
-                                data to be sent back to the server is known as the "payload" or the "message body".
-                                <div class="row">
-                                    <img src="./Snaps/POST_REQUEST.PNG" class="center-block img-fluid"
-                                         alt="POST_REQUEST"
-                                         width="600">
-                                </div>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>The page to access (a URL)</li>
-                    <li>Form parameters (like arguments to a method). These are sometimes also called "query strings"
-                    </li>
-                </ul>
+
+        <div class="sub-heading">Terminology</div>
+
+        <li><b>Web Server</b>:
+            A web browser lets a user request a resource. The web server receives the request, finds the resource,
+            and
+            then sends it back to the user. A resource can be anything - HTML page, image, PDF File. If the
+            requested
+            resource is not found, the server replies with a <code>404-Not Found</code> error code.
+            <br>
+            - A web server can refer to either the physical machine (hardware) or the web server application
+            (software).
+        </li>
+        <li><b>Web Client</b>:
+            Both the human and the browser application (Mozilla, Chrome) being used are referred to as the Web
+            Client. A
+            web browser can communicate with the web server. It can interpret the HTML code that is sent as a part
+            of
+            the server's response and render that web page. Hence a Web Client (browser) lets the user request
+            something
+            from the server and shows the user the result of that request.
+        </li>
+        <li><b>HTML</b>: When a server answers a request, the server usually sends some type of content for the
+            browser to display. This content is written in HTML. Two important tags in HTML are:
+            <code>form</code> and <code>input</code>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/7ccd6f864eb2faf71f645955dfe6c4d2.js"></script>
+            </div>
+        </li>
+        <li><b>HTTP</b>: Most of the conversations held on the web between clients and servers are held using HTTP
+            Protocol, which allows for simple request-response type conversations. The client sends an
+            <code>HTTP Request</code> and the Server responds with a <code>HTTP Response</code>.
+            HTTP runs on top of TCP/IP. The structure of and HTTP conversation is a simple Request/Response.
+            <br>
+        </li>
 
 
-                <b>Key elements of the response are:</b>
-                <ul>
-                    <li>A status code (for whether the request was successful)</li>
-                    <li>Content-type (text, picture, HTML). Also known as MIME type</li>
-                    <li>The actual content</li>
-                </ul>
-                <div>
-                    <img src="./Snaps/HTTP_RESPONSE.PNG" class="center-block img-fluid" alt="HTTP_RESPONSE"
-                         width="600">
-                </div>
-                - An HTTP response can contain HTML. HTTP adds a Header to the response generated by the server. This
-                Header information helps the client process the response. Inside this response can be a
-                <code>&lthtml&gt&lt/html&gt </code> that the client then renders as the HTML page that we finally see.
-                <br>
-            </li>
-        </ul>
-        <b>All the pieces in one page:</b>
-        <div class="row">
-            <img src="./Snaps/All-The-Pieces.PNG" class="float-left img-fluid" alt="All-The-Pieces"
-                 width="500">
-        </div>
-        <b>What is a URL</b>:
-        <div class="row">
-            <img src="./Snaps/Whta_Is_URL.PNG" class="float-left img-fluid" alt="What_Is_URL"
-                 width="500">
-        </div>
-        <div>
-            <b>What is a TCP Port</b>:
-            <br>
-            A TCP port is a 16-bit number that uniquely identifies the software that is running
-            on the hardware. They are NOT physical ports on a system. They are just numbers representing an
-            applications. As per the standard, the HTTP Server Software runs on Port 80. Without port numbers, the
-            Server would have no way of telling which application/software a Client wants to connect to.
-            <br>
-            - There are a bunch of other ports that are pre-defined to connect to specific services.
-        </div>
-        <div>
-            <b>Two things the Server won't do on its own:</b>
+        <div class="sub-heading">Key elements of the request stream</div>
+        <li>HTTP Method Name(the action to be performed): The method name tells the server the kind of
+            request that is being made, and how the rest of the message will be formatted. The
+            <code>HTTP</code> protocol has several methods, but we mostly use <code>GET</code> and
+            <code>POST</code>
+            methods.
             <ul>
-                <li>Dynamic Content: The Web Server Application serves only static pages, but a separate "helper"
-                    application that the web server can communicate with can build non-static, just-in-time web
-                    pages.
-                    Just-in-time web pages do not exist before the request comes in. Once the request comes in, the
-                    helper app "writes" the HTML and the web server sends the page back to the Client as if it were
-                    a
-                    static web page.
+                <li><code>GET</code>: Gets a resource (HTML page, image, file,..) from the server and sends
+                    it back to the Client. You can also send some data (from the Client to the Server) with
+                    a <code>GET</code> request, but
+                    this is not recommended. Firstly, because the number of characters that are sent via a
+                    <code>GET</code> request are limited and secondly all the data sent in a
+                    <code>GET</code> request is visible in the URL. The "?" separates the path and the
+                    parameters. Together, the entire String is the request that is the URL that is sent with
+                    the request.
+                    <div class="row">
+                        <img src="./Snaps/GET_REQUEST.PNG" class="center-block img-fluid" alt="GET_REQUEST"
+                             width="600">
+                    </div>
                 </li>
-                <li>Saving data on the Server: A Web Server cannot process form data. When the web server sees a
-                    request
-                    for a helper app, it assumes that all of the parameters are meant for the Helper app and hence
-                    passes all of the parameters to it.
+                <li><code>POST</code>: With POST, you can request something and at the same time send form
+                    data to the server. For eg., if the user has completed a long form, you want this data
+                    to be stored into a database. In this case you would use a <code>POST</code> method. The
+                    data to be sent back to the server is known as the "payload" or the "message body".
+                    <div class="row">
+                        <img src="./Snaps/POST_REQUEST.PNG" class="center-block img-fluid"
+                             alt="POST_REQUEST"
+                             width="600">
+                    </div>
                 </li>
             </ul>
-        </div>
+        </li>
+        <li>The page to access (a URL)</li>
+        <li>Form parameters (like arguments to a method). These are sometimes also called "query strings"
+        </li>
+
+
+        <div class="sub-heading">Key elements of the response</div>
+        <li>A status code (for whether the request was successful)</li>
+        <li>Content-type (text, picture, HTML). Also known as MIME type</li>
+        <li>The actual content</li>
         <div>
-            <b>What is a Servlet? And what is JSP?</b>
-            <br>
+            <img src="./Snaps/HTTP_RESPONSE.PNG" class="center-block img-fluid" alt="HTTP_RESPONSE"
+                 width="600">
+        </div>
+        - An HTTP response can contain HTML. HTTP adds a Header to the response generated by the server. This
+        Header information helps the client process the response. Inside this response can be a
+        <code>&lt;html&gt;&lt;/html&gt;</code> that the client then renders as the HTML page that we finally see.
+        <br>
+
+        <div class="sub-heading">All the pieces in one page</div>
+        <div class="row">
+            <img src="./Snaps/All-The-Pieces.PNG" class="center-block img-fluid" alt="All-The-Pieces"
+                 width="500">
+        </div>
+
+
+        <div class="sub-heading">What is a URL</div>
+        <div class="row">
+            <img src="./Snaps/Whta_Is_URL.PNG" class="center-block img-fluid" alt="What_Is_URL"
+                 width="600">
+        </div>
+
+        <div class="sub-heading">What is a TCP Port</div>
+        <div>
+            - A TCP port is a 16-bit number that uniquely identifies the software that is running
+            on the server hardware. They are NOT physical ports on a system. They are just numbers representing an
+            applications. As per the standard, the HTTP Server Software runs on Port 80. Without port numbers, the
+            Server would have no way of telling which application/software a Client wants to connect to. <br>
+            - Think of a port as a logical connection to a particular piece of software that is running on the server
+            hardware. <br>
+            - There are a bunch of other ports that are pre-defined to connect to specific services. The TCP ports from
+            0 to 1023 are reserved for well-known services. Don't use these ports for your own custom programs.
+        </div>
+
+        <div class="sub-heading">Two things the Server won't do on its own</div>
+        <div>
+            <li>Dynamic Content: The Web Server Application serves only static pages, but a separate "helper"
+                application that the web server can communicate with can build non-static, just-in-time web
+                pages.
+                Just-in-time web pages do not exist before the request comes in. Once the request comes in, the
+                helper app "writes" the HTML and the web server sends the page back to the Client as if it were
+                a static web page.
+            </li>
+            <li>Saving data on the Server: A Web Server cannot process form data. To process that form data, either to
+                save it to a file or database or even just to use it to generate the response page, you need another
+                app. When the web server sees a
+                request for a helper app, it assumes that all of the parameters are meant for the Helper app. Hence the
+                web server hands over the parameters and gives the app a way to generate a response to the client.
+            </li>
+        </div>
+
+        <div class="sub-heading">What is a Servlet? And what is JSP?</div>
+        <div>
             - The Helper App in Java is known as a Servlet. So a Servlet is just some Java code. But when the web
             server
             calls the helper Servlet, it expects HTML code in return. This is done by using using the <code>PrintWriter.println()</code>
@@ -903,10 +907,15 @@
             to specify the attribute values and what not.
             <br>
             - To solve this problem, JSPs were introduced. This allows us to add Java code to HTML instead of
-            writing
-            HTML code in a Java class. The JSP page contains java variables that calls the main Java code and
-            creates
-            the completed HTML page as a JIT web page.
+            writing HTML code in a Java class. The JSP page contains java variables that calls the main Java code and
+            creates the completed HTML page as a JIT web page. <br>
+            - Read more about <a href="https://stackoverflow.com/questions/7213541/what-is-java-servlet">what a servlet
+            is on SO here</a>. A servlet is simply a class which responds to a particular type of network request - most
+            commonly an HTTP request. Basically servlets are usually used to implement web applications - but there are
+            also various frameworks which operate on top of servlets (e.g. Struts) to give a higher-level abstraction
+            than the "here's an HTTP request, write to this HTTP response" level which servlets provide.
+            Servlets run in a servlet container which handles the networking side (e.g. parsing an HTTP request,
+            connection handling etc). One of the best-known open source servlet containers is Tomcat.
             <br>
         </div>
 
