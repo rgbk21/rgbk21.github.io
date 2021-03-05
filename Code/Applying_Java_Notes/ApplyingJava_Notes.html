@@ -859,7 +859,10 @@
 
 
         <div class="sub-heading">What is a URL</div>
-        <div class="row">
+        <div>
+            - Note the part labeled as <i>Resource</i>. Resource is the name of the content being requested. This could
+            be an HTML page, a servlet, an image, pdf, or anything else. <i>If this optional part of the URL is left
+            out, most web servers will look for <code>index.html</code> by default.</i>
             <img src="./Snaps/Whta_Is_URL.PNG" class="center-block img-fluid" alt="What_Is_URL"
                  width="600">
         </div>
@@ -1123,7 +1126,7 @@
             - DD also helps us to customize other aspects of our web application like adding security roles, error
             pages, tag libraries. All this can be done without changing the source code.
             <div class="row">
-                <img src="./Snaps/Ch2/DeploymetnDescriptor.PNG" class="float-left img-fluid"
+                <img src="./Snaps/Ch2/DeploymetnDescriptor.PNG" class="center-block img-fluid"
                      alt="DeploymentDescriptor"
                      width="650">
             </div>
@@ -1157,7 +1160,7 @@
             data.
 
             <div class="row">
-                <img src="./Snaps/Ch2/MVC.PNG" class="float-left img-fluid"
+                <img src="./Snaps/Ch2/MVC.PNG" class="center-block img-fluid"
                      alt="MVC"
                      width="650">
             </div>
@@ -1166,17 +1169,19 @@
             form
             the <code>Controller</code> part of the puzzle.
             <div class="row">
-                <img src="./Snaps/Ch2/MVC-IN-Action.PNG" class="float-left img-fluid"
+                <img src="./Snaps/Ch2/MVC-IN-Action.PNG" class="center-block img-fluid"
                      alt="MVC"
                      width="650">
             </div>
             - But now the problem is that there are a gazillion little Servlets, and all they are doing is updating the
             Model and then displaying the View. Lot of code duplication apparently...
-            <div class="row">
-                <img src="./Snaps/Ch2/Table.PNG" class="center-block img-fluid"
-                     alt="Table"
-                     width="650">
-            </div>
+        </div>
+
+        <div class="sub-heading">Overview of separation of concerns</div>
+        <div class="row">
+            <img src="./Snaps/Ch2/Table.PNG" class="center-block img-fluid"
+                 alt="Table"
+                 width="650">
         </div>
 
 
@@ -1193,36 +1198,42 @@
             with the portions of J2EE spec that address the web container. Tomcat is a web container, not a full J2EE
             application server, because Tomcat does not have an EJB Container. <br>
             - As shown in the below figure, a J2EE application server consists of both a web container and an EJB
-            Container. Tomcat is a web Container bu not a full J2EE Application server.
+            Container. Tomcat is a web Container but not a full J2EE Application server.
             <img src="./Snaps/Ch2/J2EE_Application_Server.PNG" class="center-block img-fluid"
                  alt="J2EE Application Server"
                  width="650">
         </div>
     </div>
 
+
     <hr>
     <div id="Ch3" class="chapter">Chapter 3: Mini MVC Tutorial</div>
     <hr>
+
     <div class="textual-content">
-        The process for creating a <a
+        - The process for creating a <a
             href="https://www.jetbrains.com/help/idea/creating-and-running-your-first-java-ee-application.html#3f8fcb52">Enterprise
-        Application in IntelliJ</a> can be found here.
+        Application in IntelliJ can be found here</a>.
+
+        <div class="sub-heading" id="app_architecture">Architecture of the Web App</div>
         <div>
-            <p id="app_architecture">Here is the architecture of the Web App:</p>
             <div class="row">
                 <img src="./Snaps/Ch3/MyBeerApp-Architecture.PNG" class="center-block img-fluid"
                      alt="MyBeerApp-Architecture"
                      width="750">
             </div>
         </div>
+
+        <div class="sub-heading">Creating the Development Environment</div>
         <div>
-            <p><b>Creating the Development Environment:</b></p>
             <p>
                 -<code>index.jsp</code> is the file that contains the first page that the user sees when they login into
                 the <code>http://localhost:8080/BeerV2_war_exploded/</code>. Changing the name of <code>index.jsp</code>
                 to some other name causes the app to stop working for some reason.
                 <br>
-                - The <code>web.xml</code> is the Deployment Descriptor that we looked at in the previous chapter.
+                - The <code>web.xml</code> is the Deployment Descriptor that we looked at in the previous chapter. br
+                - When it's time to deploy our app, we will copy a portion of this into wherever our particular
+                Container wants the pieces to go.
             </p>
             <div class="row">
                 <img src="./Snaps/Ch3/Development-Environment.png" class="center-block img-fluid"
@@ -1230,52 +1241,94 @@
                      width="1000">
             </div>
         </div>
-        <div class="code-snippet">
-            <p>This is an example of Tomcat Log generated when the Web-App was deployed successfully. </p>
-            <script src="https://gist.github.com/rgbk21/d37b5c60853094b332ce7a976dc94161.js"></script>
-        </div>
+
+        <div class="sub-heading">Tomcat log when app was deployed successfully</div>
         <div>
-            <b>Creating the Deployment Environment:</b>
+            - This is an example of Tomcat Log generated when the Web-App was deployed successfully.
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/d37b5c60853094b332ce7a976dc94161.js"></script>
+            </div>
+        </div>
+
+        <div class="sub-heading">Creating the Deployment Environment:</div>
+        <div>
+            - Deploying an app requires both container-specific rules and requirements of the Servlets and JSP
+            Specifications. Everything below the <i>Beer-v1</i> directory is the same regardless of your container. Only
+            the folder structure above that that is marked as <i>Tomcat-specific</i> will differ. <br>
+            - Note that the <i>Beer-v1</i> directory represents the <i>context root</i> which Tomcat uses when resolving
+            URLs.
             <div class="row">
                 <img src="./Snaps/Ch3/Deployment-Environment.png" class="center-block img-fluid"
                      alt="Deployment-Environment"
                      width="1100">
             </div>
         </div>
-        Let's finish the app now, one step at a time:
-        <br>
+
+        <div class="sub-heading">Building the App</div>
         <div>
+
             <a href="#app_architecture"><b>Step 1</b></a>: The Client makes a request for the form.html page
             <br>
+
+
             <a href="#app_architecture"><b>Step 2</b></a>: The Container retrieves the form.html page
             <br>
+
+
             <a href="#app_architecture"><b>Step 3</b></a>: The Container returns the page to the browser where the user
-            answers the question on the form
-            and
-            Clicks Submit
+            answers the question on the form and Clicks Submit
             <div class="row">
-                <img src="./Snaps/Ch3/Form.PNG" class="float-left img-fluid"
+                <img src="./Snaps/Ch3/Form.PNG" class="center-block img-fluid"
                      alt="Form"
                      width="400">
             </div>
-            <br>
-            Clicking the SUBMIT button causes the HTML form to send a <code>POST</code> request to the server. This
-            request is sent to the <code>SelectBeer.do</code> file (Line 9). Remember that there is no actual class
-            named such.
-            It's mapped to an internal Servlet name using the Deployment Descriptors.
+            - Clicking the SUBMIT button causes the HTML form to send a <code>POST</code> request to the server. This
+            request is sent to the <code>SelectBeer.do</code> file (Line 20). Remember that there is no actual class
+            named such. It's mapped to an internal Servlet name using the Deployment Descriptors.
             <div id="Step3" class="code-snippet">
                 <script src="https://gist.github.com/rgbk21/455e078ee0d33fe25ef7e6e215deb3c5.js"></script>
             </div>
-            <a href="#app_architecture"><b>Step 4</b></a>: The browser sends the request data to the Container
-            <br>
+            - Note the URL to which the POST request is being sent to
+            <code>POST /BeerRecommender_war_exploded/SelectBeer.do</code>. In the HTML, the <code>/BeerRecommender_war_exploded/</code>
+            isn't part of the path in the HTML, it just says:
+            <code>&lt;form method="POST" action="SelectBeer.do"&gt;</code>
+            But the browser prepends the <code>/BeerRecommender_war_exploded/</code> on to the request because that's
+            where the client request is coming from. In other words, the <code>SelectBeer.do</code> is relative to the
+            root of the web app <code>/BeerRecommender_war_exploded</code>
+            <div class="row">
+                <img src="./Snaps/Ch3/Request_URL.png" class="center-block img-fluid"
+                     alt="Request URL"
+                     width="50%">
+            </div>
+            <div class="row">
+                <img src="./Snaps/Ch3/POST_Request_Headers.PNG" class="center-block img-fluid"
+                     alt="Form"
+                     width="100%">
+            </div>
+
+            <a href="#app_architecture"><b>Step 4</b></a>: The browser sends the request data to the Container.
             Now the Container has to figure out which is the actual Class to which the <code>SelectBeer.do</code> maps.
-            For this, the Container looks in the <code>web.xml</code> file (Deployment Descriptor). The Container finds
-            out that the <code>SelectBeer.do</code> file maps to the <code>Ch3 Beer</code> internal name, which in turn
-            maps to the <code>com.example.web.BeerSelect</code> Java Class. Now the Container knows which Servlet to
-            call.
+            <br>
+            - For this, the Container looks in the <code>web.xml</code> file (Deployment Descriptor). The container
+            searches the DD and finds a <code>&lt;servlet-mapping&gt;</code> with a <code>&lt;url-pattern&gt;</code>
+            that matches <code>/SelectBeer.do</code> where the <code> / </code> represents the context root of the web
+            app, and <code>SelectBeer.do</code> is the logical name of the resource. <br>
+            - The container sees that the <code>&lt;servlet-name&gt;</code> for this <code>&lt;url-pattern&gt;</code> is
+            'Ch3 Beer'. But that isn't the name of the actual servlet class file. To a container a servlet is something
+            that is named in the DD under the <code>&lt;servlet&gt;</code> tag. The 'name' of the servlet is simply
+            the name used in the DD so that other parts of the DD can map to it. <br>
+            - So now the container looks inside the <code>&lt;servlet&gt;</code> tags for something with the
+            <code>&lt;servlet-name&gt;</code> 'Ch3 Beer'. <br>
+            - The Container uses the <code>&lt;servlet-class&gt;</code> in the <code>&lt;servlet&gt;</code> tag to know
+            which servlet class is responsible for handling this request. If the servlet has not been initialised, the
+            class is laoded and the servlet is initialized. <br>
+            - The Container then starts a new thread to handle the request, and passes the request to the thread
+            (to the servlet's <code>service()</code> method).
             <div class="code-snippet">
                 <script src="https://gist.github.com/rgbk21/c932fc1d0153401e578ea9037ed0b428.js"></script>
             </div>
+
+
             <a href="#app_architecture"><b>Step 5</b></a>: The Container finds the correct Servlet and passes the
             request to the Servlet. This class
             acts as the Controller, calling the Model <code>BeerExpert</code> for the business logic, and the View
