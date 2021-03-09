@@ -100,6 +100,13 @@ code {
     border-bottom: 1px solid black;
 }
 
+.inline-heading {
+    font-size: 14px;
+    font-weight: 500;
+    display: inline-block;
+    margin-bottom: 0;
+}
+
 hr{
     border-top: 1px solid rgba(0,0,0,1);
 }

@@ -17,7 +17,11 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-9QJ5D3X353"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
         gtag('js', new Date());
 
         gtag('config', 'G-9QJ5D3X353');
@@ -1261,6 +1265,29 @@
     <div class="one-point">
         68) What is an <code>EnumSet</code> and what is it used for? <br>
         -
+    </div>
+
+    <div class="one-point">
+        68) What is bfcache<br>
+        - Freakin' awesome: <a href="https://web.dev/bfcache/">read here</a>.
+    </div>
+
+    <div class="one-point">
+        69) Can I spawn new Threads in JSP? <br>
+        - <a href="https://stackoverflow.com/a/8328113/8742428">Source on SO</a>. <br>
+        - It is absolutely not a good idea to manually spawn unmanaged threads in a JSP/Servlet web application. For
+        sure not when done in the JSP side as it does not fit JSP's responsibilities in any way. <br>
+        - Also there are now Concurrency Utils that enable you to achieve this so that you do not have to do this
+        manually.
+        <a href="https://stackoverflow.com/questions/533783/why-is-spawning-threads-in-java-ee-container-discouraged">Source
+            on SO</a>.
+    </div>
+
+    <div class="one-point">
+        70) Where to place and how to read configuration resource files in servlet based application? <br>
+        - <a
+            href="https://stackoverflow.com/questions/2161054/where-to-place-and-how-to-read-configuration-resource-files-in-servlet-based-app">Answer
+        by BalusC explaining different ways that you can access a file from your code</a>. Do you understand what a 'classpath' actually means now?
     </div>
 
 

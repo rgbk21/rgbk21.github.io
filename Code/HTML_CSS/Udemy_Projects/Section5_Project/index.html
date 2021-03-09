@@ -297,6 +297,8 @@
         <h2>We're happy to hear from you!</h2>
     </div>
     <div class="row">
+        <!-- action will contain the name of the servlet to which this form should be submitted -->
+        <!-- In this case we are leaving it empty, because we have no backend set up right now -->
         <form method="post" action="#" class="contact-form">
 
             <!-- User Name Field -->
@@ -337,10 +339,45 @@
             <!-- Checkbox -->
             <div class="row">
                 <div class="col span-1-of-3">
-                    <label for="input_newsletter">NewsLetter</label>
+                    NewsLetter
                 </div>
                 <div class="col span-2-of-3">
-                    <input type="checkbox" name="user-newsletter" id="input_newsletter" checked> Yes, please
+                    <input type="checkbox" id="input_newsletter" name="user-newsletter" value="subscribed" checked>
+                    <label for="input_newsletter">Subscribe me!</label>
+                </div>
+            </div>
+
+            <!-- Radio Buttons -->
+            <div class="row">
+                <div class="col span-1-of-3">
+                    &nbsp;
+                </div>
+                <div class="col span-2-of-3">
+                    <input type="radio" id="daily" name="update-freq" value="daily-updates">
+                    <label for="daily">Daily</label> <br>
+
+                    <input type="radio" id="weekly" name="update-freq" value="weekly-updates">
+                    <label for="weekly">Weekly</label> <br>
+
+                    <input type="radio" id="monthly" name="update-freq" value="monthly-updates">
+                    <label for="monthly">Monthly</label> <br>
+                </div>
+            </div>
+
+            <!-- Multiple Checkboxes -->
+            <div class="row">
+                <div class="col span-1-of-3">
+                    Update me about
+                </div>
+                <div class="col span-2-of-3">
+                    <input type="checkbox" id="discount" name="user-newsletter" value="discount-coupons">
+                    <label for="discount">Discount Coupons</label> <br>
+
+                    <input type="checkbox" id="delivery" name="user-newsletter" value="free-delivery">
+                    <label for="delivery">Free delivery options</label> <br>
+
+                    <input type="checkbox" id="stores" name="user-newsletter" value="new-stores">
+                    <label for="stores">When new stores are added</label>
                 </div>
             </div>
 
