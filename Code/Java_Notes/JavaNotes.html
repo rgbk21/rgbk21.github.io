@@ -17,7 +17,11 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-9QJ5D3X353"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
         gtag('js', new Date());
 
         gtag('config', 'G-9QJ5D3X353');
@@ -158,7 +162,7 @@
 
     <br>
     <br>
-    Udemy - Learn Complete Java: Core java, JSP, and Servlets <br>
+    Udemy - Learn Core Java Programming by Abdul Bari <br>
     Index: <br>
     Section 1: <a href="#Udemy_Java_Section1">Introduction</a>
 
@@ -2444,7 +2448,7 @@
     </div>
 
     <hr>
-    <div id="Udemy_Java_Section1" class="chapter">Section 1: Introductiom</div>
+    <div id="Udemy_Java_Section1" class="chapter">Section 1: Introduction</div>
     <hr>
 
     <div class="textual-content">
@@ -2486,6 +2490,57 @@
                 href="https://docs.oracle.com/javase/8/docs/index.html">here</a>. <br>
         </div>
 
+        <div class="sub-heading">Lecture 6: Exploring First Skeleton Program</div>
+        <div>
+            - It is not necessary that the name of the file should always match the name of the class that is defined
+            inside it. If a class is not explicitly defined as <code>public</code>, then the name of the class and the
+            name of file within which the class is defined may differ. <a
+                href="https://stackoverflow.com/questions/1841847/can-i-compile-a-java-file-with-a-different-name-than-the-class">Source
+            on SO</a>.
+            <br>
+            - Consider the following scenarios: <br>
+            a) File name is same as class name. Class is defined <code>public</code>. Everything works as expected.
+            <div class="row">
+                <img src="imgs/Udemy_Java/Section1/FileNames_1.PNG" class="center-block img-fluid"
+                     alt="File name is same as class name"
+                     width="1000">
+            </div>
+
+            b) File name is same as class name. Class is not defined <code>public</code>. Hence the default access is
+            applied. Default access in java is <code>package-private</code>. Everything still works as expected.
+            <img src="imgs/Udemy_Java/Section1/FileNames_2.PNG" class="center-block img-fluid"
+                 alt="File name is same as class name. NOt public class."
+                 width="1000">
+
+            c) File name is different from the class name. Class is not defined <code>public</code>. Note that in this
+            case, the <code>class</code> file that is generated has the name as <i>HelloWorldNew</i>. So we run
+            <code>java HelloWorldNew</code> in order to run the code in the jvm.
+            <img src="imgs/Udemy_Java/Section1/FileNames_3.PNG" class="center-block img-fluid"
+                 alt="File name is different from class name. Not public class."
+                 width="1000">
+
+            d) File name is different from the class name. Class is defined <code>public</code>. Note that now the code
+            does not even compile. This means that, in order to have the class name different from the file name work,
+            you cannot define the class to be <code>public</code>.
+            <img src="imgs/Udemy_Java/Section1/FileNames_4.PNG" class="center-block img-fluid"
+                 alt="File name is different from class name. Not public class."
+                 width="1000">
+
+        </div>
+
+        <div class="sub-heading">Lecture 13: Rules for Variable Names</div>
+        <div>
+            - <a href="https://stackoverflow.com/questions/342152/why-cant-variable-names-start-with-numbers">Why can't
+            variable names start with numbers</a> on SO. <br>
+            - Any value without a decimal point is an <code>int</code> whereas any value with a decimal point is a
+            <code>double</code>.
+
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/672f2439d45245190da659a57c7c4e00.js"></script>
+            </div>
+
+        </div>
+
         <div class="sub-heading">Lecture 19: Trick to prevent the skipping of String input value</div>
         <div>
             - <a
@@ -2525,10 +2580,28 @@
                 <script src="https://gist.github.com/rgbk21/153dccd3fbdb295377ccb722c0cf827c.js"></script>
             </div>
         </div>
-
-
     </div>
 
+
+    <hr>
+    <div id="Udemy_Java_Section4" class="chapter">Section 4: Features and Architecture</div>
+    <hr>
+
+    <div class="textual-content">
+
+        <div class="sub-heading">Lecture 26: JVM Architecture</div>
+        <div>
+            - <a href="https://stackoverflow.com/a/2424659/8742428">What is a Classloader in Java</a> on SO. <br>
+            - <a href="https://www.baeldung.com/java-stack-heap">Stack vs Heap</a> explained here on Baeldung. <br>
+            - SO LInks to look at:
+            a) <a href="https://stackoverflow.com/questions/79923/what-and-where-are-the-stack-and-heap">What and where
+            are the stack and heap</a> <br>
+            b) <a href="https://stackoverflow.com/questions/41120129/java-stack-and-heap-memory-management">Where is the
+            memory allocated fro the different parts of a java program</a> <br>
+            c) <a href="https://stackoverflow.com/questions/6801676/heap-vs-stack-vs-perm-space">Heap vs Stack vs Perm
+            Space</a>
+        </div>
+    </div>
 
 </div>
 

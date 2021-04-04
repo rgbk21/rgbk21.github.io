@@ -762,6 +762,13 @@
         - The previously empty CLASSPATH should now be filled with new files. <br>
         - How to print environment variables to the console in PowerShell <a
             href="https://stackoverflow.com/questions/50861082/how-to-print-environment-variables-to-the-console-in-powershell">here</a>.
+        <br>
+        - How to prepend a path to the <i>path</i> variable:
+        <code>set path = C:\Program Files\Java\jdk1.8.0_281\bin;%path%;</code> <br>
+        - <code>java -version</code> prints the version of JVM. <code>javac -version</code> prints the version of java compiler.
+        <br>
+        - If there are multiple versions of java present on your machine, the version which is the highest in the list
+        is going to be picked first.
     </div>
 
     <div class="one-point">
@@ -850,7 +857,7 @@
         - Read <a href="https://stackoverflow.com/questions/12462079/possible-heap-pollution-via-varargs-parameter">here
         on SO</a>.
     </div>
-    s
+
     <div class="one-point">
         55) What is a Class Loader in Java? <br>
         - <a href="https://stackoverflow.com/questions/2424604/what-is-a-java-classloader">SO here</a>.
@@ -1287,7 +1294,43 @@
         70) Where to place and how to read configuration resource files in servlet based application? <br>
         - <a
             href="https://stackoverflow.com/questions/2161054/where-to-place-and-how-to-read-configuration-resource-files-in-servlet-based-app">Answer
-        by BalusC explaining different ways that you can access a file from your code</a>. Do you understand what a 'classpath' actually means now?
+        by BalusC explaining different ways that you can access a file from your code</a>. Do you understand what a
+        'classpath' actually means now?
+    </div>
+
+    <div class="one-point">
+        71) How to make sure that the response/data is not cached in case of a <code>HttpServletResponse</code><br>
+        - <a
+            href="https://stackoverflow.com/questions/49547/how-do-we-control-web-page-caching-across-all-browsers/2068407#2068407">Read
+        this SO Answer</a>. <br>
+        - What does this even mean:
+        <div class="code-snippet">
+            <script src="https://gist.github.com/rgbk21/91c347633df47fc025cced807625c995.js"></script>
+        </div>
+    </div>
+
+    <div class="one-point">
+        72) Suppose we use <code>System.setProperty</code> to store a property. Where is the property stored? But then
+        you also say that once you have saved a property using <code>setproperty</code>, you can access that property
+        <i>anywhere</i> in the <i>entire</i> java application. How is that fucking possible? <br>
+        - <a href="https://stackoverflow.com/questions/21204334/system-setproperty-and-system-getproperty">Source on
+        SO</a>. <br>
+        - <code>System</code> class has a <code>static</code> member variable named <code>props</code> which is of the
+        type <code>Properties</code>. <code>Properties</code> extends <code>HashTable</code>. The <code>HashTable</code>
+        is defined as <code>Hashtable&lt;Object,Object&gt;</code>. But note that each key and it's corresponding value
+        in the property list is a String. So this should answer the first part of your question about <i>where</i> the
+        property is saved, like literally. It is stored in a <code>HashTable</code><br>
+        - But <i>where</i> is the property stored. You haven't understood how java programs work. When you run a Java
+        program, you are actually starting a JVM instance. That instance will have its own System properties. That is
+        where you put your property. When you run another program, that will have its own System properties.
+        So, you cannot expect a property which you set in one JVM instance to be accessible from another JVM instance!
+        <br>
+        - When you start a Java process a separate JVM instance is created that runs your process. Also since props is a
+        Class variable(not an instance variable) just one copy of it will be present in the corresponding Class instance
+        which will be set when that class is loaded. Now this is under the assumption that you do not have any of your
+        custom class loaders in which case behavior might be different. But for simplistic scenario you
+        System.setProperty() and System.getProperty() will set system properties that you can access via any class
+        running as a part of that java process(JVM).
     </div>
 
 

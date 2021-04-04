@@ -1396,7 +1396,7 @@
         - The servlet lifecycle is pretty simple.. There is only one main state: <code>initialized</code>. If the
         servlet isn't initialized then it is either <i>being initialized</i> (by running it's constructor or the
         <code>init()</code> method), <i>being destroyed</i> (by running it's <code>destroy()</code>) method, or it
-        smply does not exist. <br>
+        simply does not exist. <br>
         - A state diagram for the servlet would look something like this:
         <div class="row">
             <img src="./Snaps/Ch4/Servlet_State_Diagram.PNG" class="center-block img-fluid"
@@ -1958,18 +1958,14 @@
     <div id="Ch5" class="chapter">Chapter 5: Attributes and Listeners - Being a Servlet</div>
     <hr>
     <div class="textual-content">
-        <div class="sub-heading">What are init-parameters</div>
+        <div class="sub-heading">How to pass init params to specific servlets? What are <code>init-param</code>s in the
+            <code>ServletConfig</code>?
+        </div>
         <div>
             - Servlets can have initialization parameters. We use the <code>&ltinit-param&gt</code> element to specify
             the name-value pairs. Note that the <code>&ltinit-param&gt&lt/init-param&gt</code> should be inside the
             <code>servlet</code> element that you want to initialize with the particular value.
             <br>
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/33e00eee38b895a4439b0f2b1c78c194.js"></script>
-            </div>
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/064f4d606995c28bf84e00f044d46a7e.js"></script>
-            </div>
             - When the Container initializes a Servlet, it makes a unique <code>ServletConfig</code> for the Servlet.
             The Container reads the servlet init parameters from the DD and gives them to the <code>ServletConfig</code>,
             and then passes the <code>ServletConfig</code> to the servlet's <code>init</code> method.
@@ -1977,10 +1973,75 @@
             - Note that the Servlet init parameters are read only once - when the Container initializes the Servlet.
             Once the parameters are in the <code>ServletConfig</code> they won't be read again until/unless you redeploy
             the servlet.
+            <!--            <div class="code-snippet">-->
+            <!--                <script src="https://gist.github.com/rgbk21/33e00eee38b895a4439b0f2b1c78c194.js"></script>-->
+            <!--            </div>-->
+            <!--            <div class="code-snippet">-->
+            <!--                <script src="https://gist.github.com/rgbk21/064f4d606995c28bf84e00f044d46a7e.js"></script>-->
+            <!--            </div>-->
+
+
+            <div class="row">
+                <img src="./Snaps/Ch5/HighLevelExplanationOfInitParams.PNG" class="center-block img-fluid"
+                     alt="Servlet state diagram"
+                     width="700">
+            </div>
+
+            <div class="row">
+                <img src="./Snaps/Ch5/init-params-code.PNG" class="center-block img-fluid"
+                     alt="Servlet state diagram"
+                     width="100%">
+            </div>
+            - The problem with the above approach is that, if now suppose we have to use the same <i>emailId</i>
+            parameter in another servlet, we will have to copy the same value to the another servlet as well. Hence we
+            also need to define a way in which we can access the same parameter across all servlets.
         </div>
-        <div class="sub-heading">What are the functions of a <code>ServletConfig</code></div>
+
+
+        <div class="sub-heading">How to make parameters available to entire web app including JSPs? What are <code>context-param</code>s
+            in <code>ServletContext</code>?
+        </div>
         <div>
-            - A servlet configuration object used by a servlet container to pass information to a servlet during
+            - <i>Context</i> init params work just like <i>servlet</i> init parameters, except that context parameters
+            are available to the entire web app, and not just a single servlet. That means any servlet or JSP can
+            automatically access the context init parameters. <br>
+            <div class="row">
+                <img src="./Snaps/Ch5/Context-Init-Params.PNG" class="center-block img-fluid"
+                     alt="Servlet state diagram"
+                     width="100%">
+            </div>
+        </div>
+
+
+        <div class="sub-heading">Difference between the Servlet-Init parameters and the Context-Init parameters</div>
+        <div>
+            - Both of them make use of the same method to access the parameters, but the methods are called on different
+            objects. <br>
+            - For accessing servlet-init/ServletConfig params :
+            <code>getServletConfig().getInitParameter("emailId");</code> <br>
+            - For accessing context-init/ServletContext params: <code>getServletContext().getInitParameter("adminEmailId"))</code>
+            <br>
+            - Both of these methods are from the <code>GenericServlet</code> class that is inherited by the <code>HttpServlet</code>
+            which in turn is inherited by your Servlet class. <br>
+            - <code>ServletConfig</code> is one per <i>servlet</i>, whereas <code>ServletContext</code> is one per <i>webapp</i>.
+            i.e. every servlet and JSP deployed as part of a single webapp has access to that same
+            <code>ServletContext</code>. But <i>every</i> servlet has <i>it's own</i> <code>ServletConfig</code>. <br>
+            - A servlet-init parameter and a context-init parameter can have the same name. Remember, they are being
+            read from completely different objects. Hence there is no issue of shadowing/name space conflict.
+
+            <div class="row">
+                <img src="./Snaps/Ch5/Servlet-Context.png" class="center-block img-fluid"
+                     alt="Diff-servletInit-contextInit"
+                     width="1400">
+            </div>
+
+        </div>
+
+
+        <div class="sub-heading">What are the methods in the <code>ServletConfig</code> class</div>
+        <div>
+            - <a href="https://javaee.github.io/javaee-spec/javadocs/javax/servlet/ServletConfig.html"><code>ServletConfig</code></a>
+            is a servlet configuration object used by a servlet container to pass information to a servlet during
             initialization.
             <br>
             - It has the following methods:
@@ -2017,150 +2078,53 @@
             </table>
         </div>
 
-        <div class="sub-heading">How can a JSP get the Servlet init parameters</div>
-        <div>
-            - One way is to store the init parameters using the <code>request.setAttribute</code> like we saw <a
-                href="#setAttributeExample">previously</a>. <code>request.setAttribute</code> was used to pass a
-            name/value pair from the Controller to the JSP, where the value could be any object.
-            <br>
-            - The problem is that setting a request attribute works but only for the JSP to which you forwarded the
-            request. The email address is something that might be used from all over the application. If you use the
-            <code>init-param</code> for this purpose, you will have to configure them in the DD for <i>every</i>
-            servlet, and
-            then have <i>every</i> servlet make them available to the JSP. And then if the email address changes, you
-            will have to make the change in the DD for <i>every</i> Servlet again.
-            <br>
-            - This can avoided by using a <code>&ltcontext-param&gt</code> instead of an <code>&ltinit-param&gt</code>.
-        </div>
 
-        <div class="sub-heading">What are <code>&ltcontext-param&gt</code></div>
-        <div>
-            - Context init parameters work just like servlet init parameters except that context parameters are
-            available
-            to the <i>entire</i> web-app, not just a single servlet. So that means <i>every</i> servlet and JSP in the
-            app automatically has access to the context init parameters. Also, this way when the value changes, we have
-            to change it in only one place.
-            <br>
-            - And that one place is in here..do note that the <code>&ltcontext-param&gt</code> is for the whole app and
-            hence it is not nested inside an individual <code>&ltservlet&gt</code> element.
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/91216f9e61e77741b1a721a63ecd56e0.js"></script>
-            </div>
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/7c42c96e7b0f8a067068a96bb7c329d6.js"></script>
-            </div>
+        <div class="sub-heading">How can I use a Listener to read values from the web.xml and use it to add
+            objects into the ServletContext for the entire webapp to read?
         </div>
-
-        <div class="sub-heading">Differences between the servlet init param and context init params</div>
         <div>
-            <div>
-                - Remember that there is only one <code>ServletContext</code> for the entire web-app and all the other
-                parts of the web app share it.
-                <br>
-                - Each Servlet in the app, however, has its own <code>ServletConfig</code>.
-                <br>
-                - The Web Initialization proceeds as follows:
-                <ul>
-                    <li>Container reads the DD and creates a name/value String pair for each
-                        <code>&ltcontext-param&gt</code></li>
-                    <li>Container creates a new instance of the <code>ServletContext</code></li>
-                    <li>Container gives the <code>ServletContext</code> a reference to each name/value pair of the
-                        context init parameters
-                    </li>
-                    <li>The Container makes the <code>ServletContext</code> available to each Servlet and JSP. Hence,
-                        <i>every</i>
-                        servlet and JSP deployed as part of a single web appp has access to the same <code>ServletContext</code>
-                    </li>
-                </ul>
-                - If your app is distributed across multiple servers (probably in a clustered environment), your web app
-                really COULD have more than one <code>ServletContext</code>. A <code>ServletContext</code> is one per
-                app but only if the app is in a single JVM. In a distributed environment you will have one <code>ServletContext</code>
-                per JVM. In this case, to create a "Global" parameter, you will use a Database instead.
-                <br>
-                - A Context-Init parameter can also be given the same name as a Servlet-Init parameter. This is
-                because there is no name space conflict since you get the parameters through 2 different objects:
-                ServletConfig and ServletContext.
-                <br>
-                - If either the context-init-param or the Servlet-init-param are changed, the change will be visible
-                only after the web app is redeployed. You cannot change these values during runtime. There is no
-                setInitParameter().
-            </div>
+            - <a href="https://javaee.github.io/javaee-spec/javadocs/javax/servlet/ServletContextListener.html">ServletContextListener
+            docs</a>.
             <br>
+            - The problem with using the context-init parameters is that you are only allowed values that are of type
+            String. What if you wanted to do something more involved - like adding an object to your webapp that any
+            servlet/JSP could access? Here we make use of a Listener that reads the value of the context init param from
+            the DD, and using that string value, creates a new object and adds it to the <code>ServletContext</code>
+            using <code>setAttribute</code> that is then passed to your web app. Any servlet/jsp can then get that
+            <i>attribute</i> from the <code>ServletContext</code> object using <code>getAttribute</code>. <br>
+            - This is what you came up with:
             <div class="row">
-                <img src="./Snaps/Ch5/Servlet-Context.png" class="float-left img-fluid"
-                     alt="Diff-servletInit-contextInit"
-                     width="1400">
+                <img src="./Snaps/Ch5/Listener-Code-Snippet.png" class="center-block img-fluid"
+                     alt="Listener Code Snippet"
+                     width="100%">
             </div>
-            <div>
-                There are 2 ways to get a <code>ServletContext</code> object:
-                <ul>
-                    <li><code>this.getServletConfig().getServletContext.getInitParameter(String name)</code></li>
-                    <li><code>this.getServletContext.getInitParameter(String name)</code></li>
-                </ul>
-                - A Servlet's <code>ServletConfig</code> object always holds a reference to the
-                <code>ServletContext</code> for that servlet.
-                <br>
-                - In a servlet, the only time you need to go through your <code>ServletConfig</code> to get to your
-                <code>ServletContext</code> is if you are in a Servlet class that does not extend the
-                <code>HttpServlet</code> or <code>GenericServlet</code>. For example, in a JSP the second option won't
-                work and you will have to use the first one instead.
-            </div>
-        </div>
-        <div class="sub-heading">The <code>ServletContextListener</code></div>
-        <div>
-            - Suppose you wanted to set up a connection to a database at the initialization of your web app. You could
-            store the name of the database as a <code>&ltcontext-param&gt</code> in DD. But remember that the DD can
-            store only name/value pairs, where value has to be a String. So you could store the name of the database, as
-            a name/value pair. but then how would you initialize the Connection and make it available to all of your
-            app? For this you need some code that listens to the creation of the <code>ServletContext</code> and runs
-            some code based on the lifecycle changes of the <code>ServletContext</code> class. This is what the <code>ServletContextListener</code>
-            is used for.
-            <br>
-            - We make a separate class that is neither a Servlet, nor a JSP. It listens to two key events in a <code>ServletContext</code>'s
-            lifecycle: creation and destruction.
-            <br>
-            - This separate object:
-            <ul>
-                <li>Gets notified when the Context is initialized</li>
-                <li>Gets the <code>&ltcontext-param&gt</code> from the <code>ServletContext</code></li>
-                <li>Use the init parameter lookup name to make a database connection</li>
-                <li>Store the database connection as an attribute, so that all parts of the web app can access it</li>
-                <li>Gets notified when the Context is destroyed</li>
-            </ul>
-            - The goal is to use the init-parameter to create a single object that all parts of the app will share.
-            <div class="code-snippet">
-                Step 1) Creating the Listener Class: The ServletContextEvent has just a single method - <code>getServletContext()</code>
-                that returns the <code>ServletContext</code> that changed.
-                <script src="https://gist.github.com/rgbk21/fbcfb89f17cd60e97230d672c80c2a22.js"></script>
-                Step 2) Creating the Attribute Class: This is just a POJ Class. It's job is to be the attribute value
-                that the <code>ServletContextListener</code> instantiates and sets in the <code>ServletContext</code>,
-                for the Servlet to retrieve.
-                <script src="https://gist.github.com/rgbk21/bf58d8e50b74fb68350d083738d125f4.js"></script>
-                Step 3) Create the Listener as shown in the comments. We never specified that the
-                <code>&ltlistener&gt</code> is supposed to listen for event related to the ServletContext. The Container
-                figures this out automatically by looking at the <code>BeerContextListener</code> class and seeing that
-                it implements the <code>ServletContextListener</code> interface, it knows taht the Listener is supposed
-                to listen for ServletContext events. A listener can implement more than one listener interface. There
-                are several other types of listeners.
-                <script src="https://gist.github.com/rgbk21/9381e628f1a851dd348a7cb9636a83c2.js"></script>
-                Step 4) Testing it all with our Servlet Class. Remember that <code>getAttribute()</code> returns an
-                object. hence, you need to cast the object into the appropriate type.
-                <script src="https://gist.github.com/rgbk21/a1d4227ddb59f660d3e57029635373d2.js"></script>
-            </div>
-
             - Here is the complete picture:
             <div class="row">
-                <img src="./Snaps/Ch5/Servlet_Initialization_FullStory.png" class="float-left img-fluid"
+                <img src="./Snaps/Ch5/Servlet_Initialization_FullStory.png" class="center-block img-fluid"
                      alt=""
                      width="1600">
             </div>
-            - And there can be different types of listeners triggering on different types of events:
+            - Note that THE code is mainly using the <code>ServletContextListener</code>. Both
+            <code>contextInitialized</code> and <code>contextDestroyed</code> methods are overridden. I think it is
+            mainly being used for logging purposes, to kind of try and understand what kind of branch the code is taking
+            (I guess!). Nothing is being read from the <code>ServletContextEvent</code>.
+        </div>
+
+        <div class="sub-heading">The <code>HttpSessionListener</code> interface</div>
+        <div>
+            - This is the only other EventListener being used in THE code. <br>
+            - <a href="https://javaee.github.io/javaee-spec/javadocs/javax/servlet/http/HttpSessionListener.html">HttpSessionListener docs</a>.
+            <br>
+        </div>
+
+        <div class="sub-heading">Different types of Listeners</div>
+        <div>
+            - There can be different types of listeners triggering on different types of events:
             <div class="row">
                 <img src="./Snaps/Ch5/Listeners.PNG" class="float-left img-fluid"
                      alt=""
                      width="600">
             </div>
-            <b>//TODO</b>: Something about <code>HttpSessionBindingListener</code>
         </div>
 
         <div class="sub-heading">What is an attribute</div>
