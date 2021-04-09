@@ -1363,6 +1363,25 @@
     </div>
 
 
+    <div class="one-point" id="point76">
+        76) What is String Interning? <br>
+        - <a href="https://stackoverflow.com/a/45165693/8742428">Read this SO answer to understand how interning works</a> <br>
+        - <a href="https://www.baeldung.com/java-string-pool">Java String Pool on Baeldung</a>. <br>
+        <div class="code-snippet">
+            <script src="https://gist.github.com/rgbk21/079ab32242e831424b4dd4a9bc0ba281.js"></script>
+        </div>
+    </div>
+
+
+    <div class="one-point">
+        77) What is the difference between [ab] and (a|b) in regex? <br>
+        - Check <a href="https://stackoverflow.com/questions/6639820/difference-b-w-ab-and-ab-in-regex-match">here on SO</a> and <a
+            href="https://stackoverflow.com/questions/3789417/whats-the-difference-between-and-in-regular-expression-patterns">here</a>. <br>
+        - <code>[ab]</code> matches one character (a or b) and doesn't capture the group. <code>(a|b)</code> captures a or b, and matches it. In this case, no big difference, but
+        in more complex cases <code>[]</code> can only contain characters and character classes, while <code>(|)</code> can contain arbitrarily complex regex's on either side of
+        the pipe.
+    </div>
+
 
     <hr>
     <div id="bloch" class="chapter">Book Notes</div>
@@ -1772,8 +1791,7 @@
             <br>
             You may be aware that compile-time constants of type String are interned [JLS 15.28]. In other words,
             any two constant expressions of type String that designate the same character sequence are represented
-            by
-            identical object references.
+            by identical object references.
             <div class="code-snippet">
                 <script src="https://gist.github.com/rgbk21/35f19f811f828d739d4cb031646b9cc7.js"></script>
             </div>

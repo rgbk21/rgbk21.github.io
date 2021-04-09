@@ -167,7 +167,7 @@
     Section 1: <a href="#Udemy_Java_Section1">Introduction</a> <br>
     Section 4: <a href="#Udemy_Java_Section4">JVM Architecture</a> <br>
     Section 5: <a href="#Udemy_Java_Section5">Operators and Expressions</a> <br>
-    Section 6: <a href="#Udemy_Java_Section6">String class and printing</a> <br>
+    Section 6: <a href="#Udemy_Java_Section6">String class and Regex</a> <br>
 
 
     <hr>
@@ -2616,8 +2616,8 @@
         <div>
             - There are seven types of bitwise operations that can be performed:
             AND <code> & </code> , OR <code> | </code>, NOT <code> ~ </code>, XOR <code> ^ </code>,
-            Arithmetic Right Shift <code> >> </code> (right-shift with sign-extension), Logical Right Shift <code>
-            >>> </code> (right-shift with zero-extension), Left Shift <code> << </code> <br>
+            Arithmetic Right Shift <code> >> </code> (right-shift with sign-extension), Logical Right Shift <code> >>> </code> (right-shift with zero-extension), Left Shift
+            <code> << </code> <br>
             - Left shift a number by <i>n</i> is equivalent to multiplying the number by 2<sup>n</sup>. Similarly, right
             shift number by <i>n</i> is equivalent to dividing the number by 2<sup>n</sup>. <br>
             - Difference between <code> << </code> and <code> <<< </code> <a
@@ -2629,22 +2629,173 @@
     </div>
 
     <hr>
-    <div id="Udemy_Java_Section6" class="chapter">Section 6: String class and printing</div>
+    <div id="Udemy_Java_Section6" class="chapter">Section 6: String class, and Regex</div>
     <hr>
 
     <div class="textual-content">
-        <div class="sub-heading">Lecture 42: Printing using System.out.println</div>
+        <div class="sub-heading">Lecture 53: Regular Expressions - Matching Expressions</div>
         <div>
+            - Matching expressions match the contents of the string with either a single character or a sequence of characters. <br>
+            <div>
+                <table class="table table-bordered table-sm">
+                    <thead>
+                    <tr>
+                        <th style="width: 15%">Regular Expression</th>
+                        <th style="width: 85%">Description</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td> .</td>
+                        <td>Will match any character. But it should be a single character.</td>
+                    </tr>
+                    <tr>
+                        <td>[abc]</td>
+                        <td>Exactly the given letters. String should be a single character string. The character can either be <i>a</i>, <i>b</i>, or <i>c</i></td>
+                    </tr>
+                    <tr>
+                        <td>[abc][vz]</td>
+                        <td>The string should be exactly two characters. The first character should either be <i>a</i>, <i>b</i>, or <i>c</i>. The second character should be
+                            either <i>v</i> or a <i>z</i>.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>[^abc]</td>
+                        <td>String should be a single character. Can be anything except the characters <i>a</i>, <i>b</i>, <i>c</i></td>
+                    </tr>
+                    <tr>
+                        <td>[a-z1-7]</td>
+                        <td>Single character that is between <i>a</i> and <i>z</i>, or between <i>1</i> and <i>7</i></td>
+                    </tr>
+                    <tr>
+                        <td>A|B</td>
+                        <td>Single character. Either <i>A</i> or <i>B</i></td>
+                    </tr>
+                    <tr>
+                        <td>XZ</td>
+                        <td>String should be exactly equal to <i>XZ</i></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/10fd9d69c14b2d716491b6bf6532779b.js"></script>
+            </div>
+        </div>
 
+        <div class="sub-heading">Lecture 53: Regular Expressions - Meta Characters</div>
+        <div>
+            - Meta characters are also used for defining single characters.
+
+            <div>
+                <table class="table table-bordered table-sm">
+                    <thead>
+                    <tr>
+                        <th style="width: 15%">Regular Expression</th>
+                        <th style="width: 85%">Description</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>\d</td>
+                        <td>Will match a single digit.</td>
+                    </tr>
+                    <tr>
+                        <td>\D</td>
+                        <td>Will match every character except a single digit</td>
+                    </tr>
+                    <tr>
+                        <td>\s</td>
+                        <td>Will match a single space</td>
+                    </tr>
+                    <tr>
+                        <td>\S</td>
+                        <td>Will match every character except a space</td>
+                    </tr>
+                    <tr>
+                        <td>\w</td>
+                        <td>Will match a single alphabet or a digit</td>
+                    </tr>
+                    <tr>
+                        <td>\W</td>
+                        <td>Will match everything except an alphabet or a digit</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/f84ef4515086cf8d89a8c41eb93c4903.js"></script>
+            </div>
+        </div>
+
+        <div class="sub-heading">Lecture 54: Regular Expressions - Quantifiers</div>
+        <div>
+            - Quantifiers are used for specifying how many symbols we want. <br>
+
+            <div>
+                <table class="table table-bordered table-sm">
+                    <thead>
+                    <tr>
+                        <th style="width: 15%">Regular Expression</th>
+                        <th style="width: 85%">Description</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>*</td>
+                        <td>Any character 0 or more times</td>
+                    </tr>
+                    <tr>
+                        <td>+</td>
+                        <td>Any character 1 or more times</td>
+                    </tr>
+                    <tr>
+                        <td>?</td>
+                        <td>0 or 1 time</td>
+                    </tr>
+                    <tr>
+                        <td>{X}</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>{X,Y}</td>
+                        <td>Used for specifying range. Between X and Y times.</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/d53bed506f20f53bd5882494b3d1ec7a.js"></script>
+            </div>
+        </div>
+
+        <div class="sub-heading">Lecture 56 - Regular Expressions - Practice</div>
+        <div>
+            - We can combine regular expressions and string methods to replace characters from strings. <br>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/481d7763686c24466d04bbf74ae60bd9.js"></script>
+            </div>
         </div>
 
 
     </div>
 
+    <hr>
+    <div id="Udemy_Java_Section7" class="chapter">Section 7: Conditional Statements</div>
+    <hr>
 
-</div>
+    <div class="textual-content">
 
-<script src="script.js"></script>
+        <div class="sub-heading">Lecture 53: Regular Expressions - Matching Expressions</div>
+        <div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
 
 </body>
 </html>
