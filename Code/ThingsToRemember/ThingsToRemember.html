@@ -1382,6 +1382,18 @@
         the pipe.
     </div>
 
+    <div class="one-point">
+        78) Is a <code>switch</code> statement faster than an if-else block in java? <br>
+        - Yes, there could be performance gains of using a <code>switch</code> instead of an if-else block. <br>
+        - Read <a href="https://stackoverflow.com/a/2086619/8742428">this answer on SO</a>. Also, a bit below this is written: <i>javac</i> implements <code>switch</code> several
+        different ways, some more efficient than others. In general, the efficiency will be no worse than a straight-forward "if ladder", but there are enough variations
+        (especially with the JITC) that it's hard to be much more precise than that. <br>
+        - <a href="https://stackoverflow.com/questions/10287700/difference-between-jvms-lookupswitch-and-tableswitch">This SO answer</a> explains the difference between
+        lookupswitch and tableswitch. The linked answers on that page also contains some good answers. <br>
+        - <code>switch</code> in the case of <code>String</code> was added only in Java 7. Using strings for switches requires calculating the hash value of the string. Hence,
+        using switch for string might not always be the fastest way. Check <a href="https://stackoverflow.com/a/338230/8742428">this SO answer for details</a>.
+    </div>
+
 
     <hr>
     <div id="bloch" class="chapter">Book Notes</div>
