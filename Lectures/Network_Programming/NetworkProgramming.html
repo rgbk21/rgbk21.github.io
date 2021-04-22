@@ -163,16 +163,80 @@
             of information between processes running on different computers on a network. <br>
             - <p class="inline-heading">internet:</p> (note the lower case i) When two or more networks are connected
             using routers/gateways. <br>
-            - <p class="inline-heading">Internet:</p> (note the upper case i) The global <i>internet</i> which encompasses all networks in the
+            - <p class="inline-heading">Internet:</p> (note the upper case I) The global <i>internet</i> which encompasses all networks in the
             world connected together. <br>
+        </div>
 
+        <div class="sub-heading">Network Protocol Suite</div>
+        <div>
+            - Modern networks are called packet switching networks because they transmit data in chunks called packets. Each packet is transmitted independent of other packets.
+            This makes it easy to transmit the packets from the same computer to the same destination using different routes. However, it may become a problem if a computer sends
+            two packets to a remote computer and the second packet arrives before the first one. For this reason, each packet also has a packet number along with its destination
+            address. There are rules to rearrange the out-of-order arrival of the packets at the destination computer. <br>
+            - The Internet Reference Model or the TCP/IP Layering Model is an example of a layered protocol suite.
             <div class="row">
-                <img src="imgs/UdemyCourse/Module6/BoxModel.PNG"
-                     width="75%"
+                <img src="imgs/KishoriSharan/Internet_Protocol_Suite.PNG"
+                     width="1400"
                      class="center-block img-fluid"
                      alt="Example1">
             </div>
+            - <i>Packet</i> is a generic term that is used to mean an independent chunk of data in network programming. Each layer of protocol also uses a specific term to mean the
+            packet it deals with. For example, a packet is called a <i>segment</i> in the TCP layer; it is called a <i>datagram</i> in the IP layer; it is called a <i>frame</i> in
+            the network interface and physical layers. Each layer adds a header (sometimes also a trailer) to the packet it receives from the layer before it, while preparing the
+            packet to be transmitted over the network. Each layer performs the reverse action when it receives a packet from the layer below it. It removes the header from the
+            packet; performs some actions, if needed; and hands over the packet to the layer above it. <br><br>
+            <p class="inline-heading">Application Layer</p>: A user application such as a Java program uses the application layer to communicate to a remote application. The user
+            application has to specify the protocol that it wants to use to communicate with the remote application. A protocol in an application layer defines the rules for
+            formatting messages and associating the meaning to the information contained in the messages such as the message type, describing whether it is a request or a response,
+            etc. After the application layer formats the message, it hands over the message to the transport layer. The examples of protocols in an application layer are Hypertext
+            Transfer Protocol (HTTP), File Transfer Protocol (FTP), Gopher, Telecommunication Network (Telnet), Simple Mail Transfer Protocol (SMTP), and Network News Transfer
+            Protocol (NNTP). <br><br>
+
+            <p class="inline-heading">Transport Layer Protocol</p>: The transport layer protocol handles the ways messages are transported from one application on one computer to
+            another application on the remote computer. It controls the data flow, error handling during data transmission, and connections between two applications. For example, a
+            user application may hand over a very large chunk of data to the transport layer to transmit to a remote application. The remote computer may not be able to handle that
+            large amount of data at once. It is the responsibility of the transport layer to pass a suitable amount of data at a time to the remote computer, so the remote
+            application can handle the data according to its capacity. The data passed to the remote computer over a network may be lost on its way due to various reasons. It is
+            the responsibility of the transport layer to retransmit the lost data. Note that the application layer passes data to be transmitted to the transport layer only once.
+            It is the transport layer (not the application layer) that keeps track of the delivered and the lost data during a transmission. There may be multiple applications
+            running, all of which use different protocols and exchange information with different remote applications. It is the responsibility of the transport layer to hand over
+            messages sent to a remote application correctly. For example, you may be browsing the Internet using the HTTP protocol from one remote web server and downloading a file
+            using the FTP protocol from another FTP server. Your computer is receiving messages from two remote computers and they are meant for two different applications running
+            on your computer - one web browser to receive HTTP data and one FTP application to receive FTP data. It is the responsibility of the transport layer to pass the
+            incoming data to the appropriate application. You can see how different layers of the protocol suite play different roles in data transmission over the network.
+            Depending on the transport layer protocol being used, the transport layer adds relevant information to the message and passes it to the next layer, which is the
+            internet layer. The examples of protocols used in the transport layer are Transmission Control Protocol (TCP), User Datagram Protocol (UDP), and Stream Control
+            Transmission Protocol (SCTP). <br><br>
+
+            <p class="inline-heading">Internet Layer</p>: The internet layer accepts the messages from the transport layer and prepares a packet suitable for sending over the
+            internet. It includes the Internet Protocol (IP). The packet prepared by the IP is also known as an IP datagram. It consists of a header and a data area, apart from
+            other pieces of information. The header contains the sender’s IP address, destination IP address, time to live (TTL, which an integer), a header checksum, and many
+            other pieces of information specified in the protocol. The IP prepares the message into datagrams, which are ready to be transmitted over the internet. The TTL in the
+            IP datagram header specifies how long, in terms of the number of routers, an IP datagram can keep traveling before it needs to be discarded. Its size is one byte and
+            its value could be between 1 and 255. When an IP datagram reaches a router in its route to the destination, the router decrements the TTL value by 1. If the decremented
+            value is zero, the router discards the datagram and sends an error message back to the sender using Internet Control Message Protocol (ICMP). If the TTL value is still
+            a positive number, the router forwards the datagram to the next router. The IP uses an address scheme, which assigns a unique address to each computer. The address is
+            called an IP address. The internet layer hands over the IP datagram to the next layer, which is the network interface layer. The examples of protocols in an internet
+            layer are Internet Protocol (IP), Internet Control Message Protocol (ICMP), Internet Group Management Protocol (IGMP), and Internet Protocol Security (IPsec). <br><br>
+
+            <p class="inline-heading">Network Interface Layer</p>: The network interface layer prepares a packet to be transmitted on the network. The packet is called a
+            <i>frame</i>. The network interface layer sits just on top of the physical layer, which involves the hardware. Note that the IP layer uses the IP address to identify
+            the destination on a network. An IP address is a virtual address, which is completely maintained in software. The hardware is unaware of the IP address and it does not
+            know how to transmit a frame using an IP address. The hardware must be given the hardware address, also called <i>Media Access Control (MAC)</i> address, of the
+            destination that it needs to transmit the frame to. This layer resolves the destination hardware address from the IP address and places it in the frame header. It hands
+            over the frame to the physical layer. The examples of protocols in a network interface layer are Open Shortest Path First (OSPF), Point-to-Point Protocol (PPP),
+            Point-to-Point Tunneling Protocol (PPTP), and Layer 2 Tunneling Protocol (L2TP). <br><br>
+
+            <p class="inline-heading">Physical Layer</p>: The physical layer consists of the hardware. It is responsible for converting the bits of information into signals
+            and transmitting the signal over the wire.
         </div>
+
+        <div class="sub-heading">Network Protocol Suite</div>
+        <div>
+            -
+        </div>
+
+
     </div>
 
 
