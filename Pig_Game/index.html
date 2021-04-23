@@ -8,6 +8,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.4.0/sockjs.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
     <!--    end libs for stomp and sockjs-->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <link rel="stylesheet" href="style.css" />
     <title>Pig Game</title>
   </head>
@@ -31,10 +32,27 @@
       </section>
 
       <img src="dice-5.png" alt="Playing dice" class="dice" />
-      <button class="btn btn--new">🔄 New game</button>
-      <button class="btn btn--roll">🎲 Roll dice</button>
-      <button class="btn btn--hold">📥 Hold</button>
+      <button onclick="createGame()" class="btn btn--new">Create New Game</button>
+      <button onclick="listAllOpenGames()" class="btn btn--openGames">Show Open Games</button>
+      <button class="btn btn--roll">Roll dice</button>
+      <button class="btn btn--hold">Hold</button>
+
+      <div id="overlay">
+        <div class="text">
+          <form id="select-open-games-form">
+            <p>Choose one of the available open games currently:</p>
+            <div id="open-games-container">
+              <!-- Content added dynamically -->
+            </div>
+            <div>
+              <button class="btn btn--connectToGame" type="submit">Connect to game!</button>
+            </div>
+          </form>
+
+        </div>
+      </div>
     </main>
-    <script src="script.js"></script>
+    <script src="multiplayer.js"></script>
+    <script src="socketSetup.js"></script>
   </body>
 </html>

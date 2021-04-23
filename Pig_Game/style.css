@@ -109,7 +109,7 @@ main {
   border: none;
   font-family: inherit;
   font-size: 1.8rem;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
   cursor: pointer;
   font-weight: 400;
   transition: all 0.2s;
@@ -123,14 +123,20 @@ main {
   box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
 }
 
-.btn::first-letter {
-  font-size: 2.4rem;
-  display: inline-block;
-  margin-right: 0.7rem;
-}
+/*.btn::first-letter {*/
+/*  font-size: 2.4rem;*/
+/*  display: inline-block;*/
+/*  margin-right: 0.7rem;*/
+/*}*/
 
 .btn--new {
   top: 4rem;
+}
+.btn--openGames {
+  top: 10rem;
+}
+.btn--connectToGame {
+
 }
 .btn--roll {
   top: 39.3rem;
@@ -168,4 +174,29 @@ main {
 
 .hidden {
   display: none;
+}
+
+/******************* OVERLAY STYLES START *****************************/
+#overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.75);
+  z-index: 2;
+  cursor: pointer;
+}
+
+.text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 1.8rem;
+  color: white;
+  transform: translate(-50%,-50%);
+  /*-ms-transform: translate(-50%,-50%);*/
 }

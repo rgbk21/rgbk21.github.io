@@ -1400,6 +1400,35 @@
         - <a href="https://docs.oracle.com/javase/tutorial/datetime/TOC.html">This is a link to Oracle Java Tutorials on Date and Time</a>.
     </div>
 
+    <div class="one-point">
+        80) TF is CORS?<br>
+        - <a href="https://stackoverflow.com/a/61476567/8742428">Add the following below your </a><code>@RestController</code> annotation:
+        <code>@CrossOrigin(origins = "*", allowedHeaders = "*")</code> <br>
+        - <a href="https://stackoverflow.com/questions/22644392/chrome-websockets-cors-policy">Chrome Websockets CORS policy</a> says: the server enforces an Origin. The Origin
+        HTTP header is set by the browser to the origin of the HTML page containing the JavaScript that is opening the WebSocket connection. A server MAY check that header and
+        deny. But since you say other browsers are working (which?), this is unlikely. <br>
+        - Enabling CORS for a RESTful webservice. <a href="https://spring.io/guides/gs/rest-service-cors/">Docs on Spring site</a> <br>
+        - <a href="https://www.baeldung.com/spring-cors">CORS in Spring on Baeldung</a> <br>
+        - <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS">CORS on Mozilla</a> <br>
+        - <a href="https://stackoverflow.com/questions/10143093/origin-is-not-allowed-by-access-control-allow-origin">Origin is not allowed by Access-Control-Allow-Origin</a> on
+        SO. <br>
+        - <a href="https://stackoverflow.com/questions/20035101/why-does-my-javascript-code-receive-a-no-access-control-allow-origin-header-i">Why does my JavaScript code receive a
+        “No 'Access-Control-Allow-Origin' header is present on the requested resource” error, while Postman does not? </a> <br>
+        - <a href="https://stackoverflow.com/questions/38065756/javascript-cors-no-access-control-allow-origin-header-is-present">Question with useful snapshots on SO</a> <br>
+        - But apparently, <a href="https://stackoverflow.com/questions/23674199/why-is-there-no-same-origin-policy-for-websockets-why-can-i-connect-to-ws-loc">there is no
+        same-origin policy for websockets?</a>
+
+
+    </div>
+
+    <div class="one-point">
+        81) Why does sockJS add a '/info' to a given websocket url path?<br>
+        - Because it is in the official docs, as shown <a href="https://stackoverflow.com/questions/35052020/why-does-sockjs-add-a-info-to-a-given-websocket-url-path">here on
+        SO</a>. <br>
+        - YT tutorials on WebSockets: <a href="https://www.youtube.com/watch?v=nxakp15CACY">From Zero to Hero with Spring WebSocket</a>, <a
+            href="https://www.youtube.com/watch?v=oCAC2yow8xk">Deep dive into Spring WebSockets</a>
+    </div>
+
 
     <hr>
     <div id="bloch" class="chapter">Book Notes</div>
