@@ -31,11 +31,11 @@
         </div>
       </section>
 
-      <img src="dice-5.png" alt="Playing dice" class="dice" />
+      <img src="dice-FIVE.png" alt="Playing dice" class="dice" />
       <button onclick="createGame()" class="btn btn--new">Create New Game</button>
       <button onclick="listAllOpenGames()" class="btn btn--openGames">Show Open Games</button>
-      <button class="btn btn--roll">Roll dice</button>
-      <button class="btn btn--hold">Hold</button>
+      <button onclick="rollDice()" class="btn btn--roll">Roll dice</button>
+      <button onclick="hold()" class="btn btn--hold">Hold</button>
 
       <div id="overlay">
         <div class="text">
@@ -48,11 +48,11 @@
               <button class="btn btn--connectToGame" type="submit">Connect to game!</button>
             </div>
           </form>
-
         </div>
       </div>
     </main>
-    <script src="multiplayer.js"></script>
     <script src="socketSetup.js"></script>
+    <script src="gameplay.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>

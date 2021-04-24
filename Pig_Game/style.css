@@ -128,7 +128,10 @@ main {
 /*  display: inline-block;*/
 /*  margin-right: 0.7rem;*/
 /*}*/
-
+.select-game-btn {
+  position: relative;
+  float: left;
+}
 .btn--new {
   top: 4rem;
 }
@@ -137,6 +140,8 @@ main {
 }
 .btn--connectToGame {
 
+}
+.btn--closeOverlay {
 }
 .btn--roll {
   top: 39.3rem;

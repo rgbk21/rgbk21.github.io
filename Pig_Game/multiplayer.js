@@ -35,6 +35,7 @@ const resetPage = function () {
 // Reset the page to remove garbage values when the page is first loaded
 resetPage();
 
+/*
 document.querySelector('.btn--roll').addEventListener('click', function () {
 
     // gameInProgress amkes sure that once the user has won, all the buttons on the page have been disabled
@@ -135,3 +136,5 @@ const declareVictory = function () {
         player1Elmnt.classList.add('player--winner');
     }
 };
+
+*/
