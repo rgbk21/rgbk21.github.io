@@ -34,6 +34,7 @@ const resetPage = function () {
 
 // Reset the page to remove garbage values when the page is first loaded
 resetPage();
+alert('Page under construction :(');
 
 /*
 document.querySelector('.btn--roll').addEventListener('click', function () {
