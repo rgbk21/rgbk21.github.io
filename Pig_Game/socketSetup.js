@@ -150,6 +150,9 @@ function rollDice() {
         type: 'POST',
         dataType: 'JSON',
         contentType: 'application/json',
+        xhrFields: {
+            withCredentials: true
+        },
         data: JSON.stringify(gamePlay),
         success: function (data) {
             console.log(`Dice roll produced: ${data.diceRoll}`);
@@ -168,6 +171,9 @@ function hold() {
         type: 'POST',
         dataType: 'JSON',
         contentType: 'application/json',
+        xhrFields: {
+            withCredentials: true
+        },
         data: JSON.stringify(gamePlay),
         success: function (data) {
             console.log(`Hold requested. Is it player 1's turn >> ${data.pl1Turn}`);
