@@ -3,7 +3,8 @@
 const openGamesContainer = document.getElementById('open-games-container');
 const gameSelectForm = document.querySelector('#select-open-games-form');
 
-const url = "http://localhost:8080"
+// const url = "http://localhost:8080"
+const url = "http://piggame-env.eba-tnktqadg.us-east-2.elasticbeanstalk.com/";
 let stompClient;
 let gameId;
 let userSelectedGameId;
