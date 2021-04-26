@@ -3,8 +3,8 @@
 const openGamesContainer = document.getElementById('open-games-container');
 const gameSelectForm = document.querySelector('#select-open-games-form');
 
-// const url = "http://localhost:8080"
-const url = "http://piggame-env.eba-tnktqadg.us-east-2.elasticbeanstalk.com";
+const url = "http://localhost:8080"
+// const url = "http://rgbk.us-east-2.elasticbeanstalk.com";
 let stompClient;
 let gameId;
 let userSelectedGameId;
@@ -61,6 +61,9 @@ function createGame() {
         type: 'POST',
         dataType: 'JSON',
         contentType: 'application/json',
+        xhrFields: {
+            withCredentials: true
+        },
         data: JSON.stringify({
             "player": {
                 "userName": p1userName
@@ -89,6 +92,9 @@ function listAllOpenGames() {
         type: 'POST',
         dataType: 'JSON',
         contentType: 'application/json',
+        xhrFields: {
+            withCredentials: true
+        },
         data: JSON.stringify({
                 "userName": p2userName
         }),
@@ -123,6 +129,9 @@ function connectToGameWithId({gameId, player: {userName}}) {
         type: 'POST',
         dataType: 'JSON',
         contentType: 'application/json',
+        xhrFields: {
+            withCredentials: true
+        },
         data: JSON.stringify({
             "player" : {
                 "userName" : userName
@@ -217,6 +226,11 @@ function updateUI(data) {
 function declareVictory(data) {
     winner = data.winner?.userName;
     diceElmnt.classList.add('hidden');
+
+    currScorePlayer1Elmnt.textContent = data.p1PartialScore;
+    currScorePlayer2Elmnt.textContent = data.p2PartialScore;
+    overallPlayer1ScoreElmnt.textContent = data.p1TotalScore;
+    overallPlayer2ScoreElmnt.textContent = data.p2TotalScore;
 
     if (winner === data.p1UserName) {
         player1Elmnt.classList.add('player--winner');

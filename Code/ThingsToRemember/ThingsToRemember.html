@@ -1413,7 +1413,7 @@
         - <a href="https://stackoverflow.com/questions/10143093/origin-is-not-allowed-by-access-control-allow-origin">Origin is not allowed by Access-Control-Allow-Origin</a> on
         SO. <br>
         - <a href="https://stackoverflow.com/questions/20035101/why-does-my-javascript-code-receive-a-no-access-control-allow-origin-header-i">Why does my JavaScript code receive a
-        “No 'Access-Control-Allow-Origin' header is present on the requested resource” error, while Postman does not? </a> <br>
+        "No 'Access-Control-Allow-Origin' header is present on the requested resource" error, while Postman does not? </a> <br>
         - <a href="https://www.youtube.com/watch?v=baQh1X3LN5s">YT video explanation about how CORS works using AWS</a> <br>
         - <a href="https://www.youtube.com/watch?v=Ly79YDERpas">CORS Setup in a Spring Boot application</a> <br>
         - <a href="https://spring.io/guides/gs/rest-service-cors/">Spring Boot tutorial on how to use CORS in your Spring application</a> <br>
@@ -1431,6 +1431,40 @@
         SO</a>. <br>
         - YT tutorials on WebSockets: <a href="https://www.youtube.com/watch?v=nxakp15CACY">From Zero to Hero with Spring WebSocket</a>, <a
             href="https://www.youtube.com/watch?v=oCAC2yow8xk">Deep dive into Spring WebSockets</a>
+    </div>
+
+    <div class="one-point">
+        82) What is mixed content in a browser? <br>
+        - <a href="https://developer.mozilla.org/en-US/docs/Web/Security/Mixed_content">Explained on MDN</a>. <br>
+        - When you visit a secure web page (that is, using HTTPS), your connection is encrypted with SSL. If the HTTPS page also includes content retrieved through a regular HTTP
+        connection, the connection is only partially encrypted. This is called a web page with mixed content. By default, mixed content is blocked in all major browsers. (<a
+            href="https://kb.iu.edu/d/bdny">Source</a>) <br>
+        - I have not found a way that can display mixed content in browsers. Is it even possible?<br>
+        - I still have to try this though: <a href="https://stackoverflow.com/questions/18321032/how-to-get-chrome-to-allow-mixed-content">How to get Chrome to allow mixed
+        content?</a> <br>
+        - Since your application is serving the content over HTTPS, its a must to access other resources also through HTTPS to solve the mixed content issue. The best way to
+        approach is to use a proxy. For that you can either setup a proxy manually using EC2 or using a managed service like <a
+            href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Introduction.html">AWS CloudFront</a> or <a href="https://aws.amazon.com/api-gateway/">AWS API
+        Gateway</a> depending on the nature of the resources you access. If its a REST API use API Gateway and if its more of content (JS, CSS, HTML and other files & etc.) use
+        CloudFront (<a href="https://stackoverflow.com/a/45808924/8742428">Source</a>) <br>
+        - <a href="https://stackoverflow.com/questions/4032104/http-ajax-request-via-https-page">A secure page (HTTPS) cannot get any data from an insecure page/request (HTTP) </a>
+        without a server-side solution. <br>
+        - <a href="https://stackoverflow.com/a/15375957/8742428">You cannot make an AJAX request to an https page if you are currently in http because of the Same Origin Policy</a>.
+        The host, port and scheme (protocol) must be the same in order for the AJAX request to work. You can either make sure that the originating page is on the same host and
+        scheme or implement CORS (cross-origin resource sharing) on the target domain to permit this particular request. (But then you are going to run into the mixed content
+        problem again). <br>
+        - Alternatively to this, you can add this to your header: <code>&lt;meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"&gt;</code>
+        <a href="https://stackoverflow.com/a/52133425/8742428">Source</a>. <br>
+        - Same thing about adding the meta tag explained <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-Policy/upgrade-insecure-requests"> on
+        MDN</a>. The HTTP Content-Security-Policy (CSP) upgrade-insecure-requests directive instructs user agents to treat all of a site's insecure URLs (those served over HTTP) as
+        though they have been replaced with secure URLs (those served over HTTPS). This directive is intended for web sites with large numbers of insecure legacy URLs that need to
+        be rewritten. <br>
+        - Tried installing the nightly build of firefox because it has <code>security.mixed_content.upgrade_display_content</code> enabled which apparently allows FF to display
+        mixed content as shown <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Experimental_features#upgrading_mixed_display_content">here on MDN site</a>. <br>
+        - Can I use HTTPS on localhost? <br>
+        -
+
+
     </div>
 
 
