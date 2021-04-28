@@ -149,6 +149,9 @@ main {
 .btn--hold {
   top: 46.1rem;
 }
+.btn--hold {
+  top: 50rem;
+}
 
 .btn:active {
   transform: translate(-50%, 3px);

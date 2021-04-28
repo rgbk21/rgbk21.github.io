@@ -1,0 +1,60 @@
+/*-- change navbar dropdown color --*/
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 1);
+}
+
+.container {
+    margin-top: 30px;
+    overflow-wrap: break-word;
+}
+
+.code-snippet {
+    padding-top: 10px;
+}
+
+.textual-content {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.chapter {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+
+code {
+    padding: 2px 5px;
+    white-space: pre-wrap;
+    font-family: Consolas,Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace,sans-serif;
+    background-color: #eff0f1;
+    color: black;
+}
+
+code_op {
+    padding: 2px 5px;
+    white-space: pre-wrap;
+    font-family: Consolas,Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace,sans-serif;
+    background-color: #b5d57361;
+    color: black;
+}
+
+.sub-heading {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+
+hr{
+    border-top: 1px solid rgba(0,0,0,1);
+}
+
+.center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.output{
+
+}

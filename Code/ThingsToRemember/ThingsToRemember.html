@@ -1403,7 +1403,8 @@
     <div class="one-point">
         80) TF is CORS?<br>
         - <a href="https://stackoverflow.com/a/61476567/8742428">Add the following below your </a><code>@RestController</code> annotation:
-        <code>@CrossOrigin(origins = "*", allowedHeaders = "*")</code> <br>
+        <code>@CrossOrigin(origins = "*", allowedHeaders = "*")</code> (but you should not be using wildcard characters while specifying <code>origins</code> because that might
+        cause browsers to ignore the annotation altogether. Instead specify the exact domain.) <br>
         - <a href="https://stackoverflow.com/questions/22644392/chrome-websockets-cors-policy">Chrome Websockets CORS policy</a> says: the server enforces an Origin. The Origin
         HTTP header is set by the browser to the origin of the HTML page containing the JavaScript that is opening the WebSocket connection. A server MAY check that header and
         deny. But since you say other browsers are working (which?), this is unlikely. <br>
@@ -1414,13 +1415,45 @@
         SO. <br>
         - <a href="https://stackoverflow.com/questions/20035101/why-does-my-javascript-code-receive-a-no-access-control-allow-origin-header-i">Why does my JavaScript code receive a
         "No 'Access-Control-Allow-Origin' header is present on the requested resource" error, while Postman does not? </a> <br>
+        - <a href="https://www.youtube.com/watch?v=34wC1C61lg0">Excellent video by Steve Griffith on YT explaining how CORS works</a> <br>
         - <a href="https://www.youtube.com/watch?v=baQh1X3LN5s">YT video explanation about how CORS works using AWS</a> <br>
         - <a href="https://www.youtube.com/watch?v=Ly79YDERpas">CORS Setup in a Spring Boot application</a> <br>
         - <a href="https://spring.io/guides/gs/rest-service-cors/">Spring Boot tutorial on how to use CORS in your Spring application</a> <br>
         - <a href="https://enable-cors.org/resources.html">And of course there is an entire book on it</a> <br>
         - <a href="https://stackoverflow.com/questions/38065756/javascript-cors-no-access-control-allow-origin-header-is-present">Question with useful snapshots on SO</a> <br>
         - But apparently, <a href="https://stackoverflow.com/questions/23674199/why-is-there-no-same-origin-policy-for-websockets-why-can-i-connect-to-ws-loc">there is no
-        same-origin policy for websockets?</a>
+        same-origin policy for websockets?</a> <br><br>
+
+        - Good link on <a href="https://stackoverflow.com/questions/46288437/set-cookies-for-cross-origin-requests">how to set cookies for cross-origin requests</a> on SO. <br>
+        - Note the following: You cannot set or read cookies on CORS requests through JavaScript. Although CORS allows cross-origin requests, the cookies are still subject to the
+        browser's same-origin policy, which means only pages from the same origin can read/write the cookie. <code>withCredentials</code> only means that any cookies set by the
+        remote host are sent to that remote host. You will have to set the cookie from the remote server by using the <code>Set-Cookie</code> header. <br>
+        - How can I setup my server and frontend in order for cookies to be shared across domains: <a href="https://stackoverflow.com/a/63728389/8742428">answer, including the
+        basics like difference between site and domain, on SO</a> <br>
+
+        <br>
+        - Personal Local Env testing: What all is mandatory for a CORS cookie to work (atleast in localhost for now)? <br>
+        - Having a CORS cookie as <code>HttpOnly</code> is not mandatory for CORS. <br>
+        - Setting <code>SameSite=Lax</code> also works on localhost. But it should not work on actual servers. Also note that: If no SameSite attribute is set then the cookie is
+        treated as Lax. <br>
+        -
+
+
+        <br><br>
+
+        - From the FrontEnd, this is how we are initialising the process:
+        <div class="code-snippet">
+            <script src="https://gist.github.com/rgbk21/34660df23d4a626521b6bcd03bdf46bc.js"></script>
+        </div>
+        - This is what the backend code looks like so that we can handle the request correctly: <br>
+        - Controller:
+        <div class="code-snippet">
+            <script src="https://gist.github.com/rgbk21/67be1c553c12df2255eb8c579ce322e0.js"></script>
+        </div>
+        - Adding cookie to the response:
+        <div class="code-snippet">
+            <script src="https://gist.github.com/rgbk21/e927eb7c5bd79fa3a9637feb4422361b.js"></script>
+        </div>
 
 
     </div>

@@ -61,6 +61,9 @@ function createGame() {
         type: 'POST',
         dataType: 'JSON',
         contentType: 'application/json',
+        // Passing xhrFields argument is mandatory if you want to share cookies across different domains
+        // If you do not pass this, cookies will be sent in the response from the backend to the frontend
+        // but the cookies will never be stored in the 'Application > Session > Cookies' of the browser
         xhrFields: {
             withCredentials: true
         },
@@ -191,6 +194,25 @@ function hold() {
             if (data.gameStatus === 'FINISHED' && data.winner?.userName !== null) {
                 declareVictory(data);
             }
+        },
+        error: function (error) {
+            console.log(`Error fetching available open games: ${error}`);
+        }
+    })
+}
+
+function testOnly() {
+    $.ajax({
+        url: url + '/game/gameInfo',
+        type: 'GET',
+        dataType: 'JSON',
+        contentType: 'application/json',
+        xhrFields: {
+            withCredentials: true
+        },
+        data: JSON.stringify(gamePlay),
+        success: function (data) {
+            console.log(data);
         },
         error: function (error) {
             console.log(`Error fetching available open games: ${error}`);
