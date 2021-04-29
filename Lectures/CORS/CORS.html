@@ -134,6 +134,9 @@
 </nav>
 
 <div class="container">
+
+    <button id='load-all-gists' type="button" class="btn btn-outline-primary">Show all Gists!</button>
+
     <div>
         This page contains my notes from CORS in Action book by Monsur Hossain <br>
     </div>
@@ -143,6 +146,7 @@
     <br>
     Chapter 1: <a href="#Chapter1">The Core of CORS</a> <br>
     Chapter 2: <a href="#Chapter2">Making CORS Requests</a> <br>
+    Chapter 3: <a href="#Chapter3">Handling CORS Requests</a> <br>
 
     <hr>
     <div id="Chapter1" class="chapter">Chapter 1: The Core of CORS</div>
@@ -191,7 +195,7 @@
         <div class="sub-heading">Why use CORS</div>
         <div>
             - CORS gives servers the flexibility to configure cross-origin access in a variety of ways. The server can specify various features: <br>
-            a) which domains are allowed to make requests <br>
+            a) Which domains are allowed to make requests <br>
             b) Which HTTP methods are allowed to make requests (eg. <code>GET/PUT/POST/DELETE</code>) <br>
             c) Which headers are allowed on the HTTP request <br>
             d) Whether or not requests may include cookie data <br>
@@ -208,13 +212,134 @@
         request to the server. The server responds to the request by setting CORS-specific headers to indicate that the cross-origin request is allowed. Without both the client's
         and the server's participation, the CORS request will fail.
 
-        <div class="sub-heading">What is CORS</div>
+        <div class="sub-heading">How to process a cross-origin request</div>
         <div>
+            - There are 3 parts to making a HTTP request: <br>
+            a) <p class="inline-heading">Set up the request parameters</p>: <br>
+            - It starts by defining the HTTP method to use and the URL to which the request has to be sent to. In case of a cross-origin request, the full URL of the resource needs
+            to be specified. There is no other special information required to delineate the request as a cross-origin request. The browser does the work of parsing the URL and
+            determining if the request is a same-origin or a cross-origin request. <br>
+            - If the browser supports CORS, then it's <code>XMLHttpRequest</code> is going to have a field named: <code>withCredentials</code>. You can check this on the browser by
+            running <code>let xhr = new XMLHttpRequest(); xhr.withCredentials</code>. This should not print <code>undefined</code>. Ideally, it should be <code>false</code>, as
+            specified in the documentation on MDN <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/withCredentials">here</a>. If you were going to make a
+            CORS request, you would have to set it to <code>true</code> before sending the request. <br>
+            - The <code>setRequestHeader</code> method lets you add HTTP headers to the request. This method includes the header request and the header value, and includes the
+            header on the request. For example, this is how you would add a header named <i>X-Requested-With</i> to the request:
+            <code>xhr.setRequestHeader('X-Requested-With', 'CORS In Action)</code> <br>
+            - <p class="inline-heading">NOTE</p>: there are some headers that are set by the browser, that can't be set by the user. The browser sets a header named <i>Origin</i>
+            on the cross-origin requests.
+            If you try to override this header in your code, the browser will ignore your value. This is a security measure that helps prevent the user code from overriding trusted
+            header values. The server can trust these values because it knows that the user hasn't accidentally (or maliciously) tainted the values of these headers. (If you could
+            change the value of this header you could pretend to be from a domain that might not be allowed access to a certain API). <br>
+            - There are several headers that cannot be set by a <code>setRequestHeader</code> method: Accept-Charset, Accept-Encoding, Access-Control-Request-Headers,
+            Access-ControlRequest-Method, Connection, Content-Length, Cookie, Cookie2, Date, DNT, Expect, Host, Keep-Alive, Origin, Referer, TE, Trailer, Transfer-Encoding,
+            Upgrade, User-Agent, Via, and any headers starting with 'Proxy-' or 'Sec-'. These headers have special meaning and can only be set by the browser. There is no
+            error if the code tries to set the header. The value is just ignored. <br>
+            - <p class="inline-heading">NOTE</p>: The server has to give its permission for the client to include custom request headers in a cross-origin request. This behavior is
+            unique to a cross-origin
+            request. Same-origin requests can include any custom headers in the request. But for a cross-origin request, if the server doesn't whitelist the request headers, the
+            request WILL fail. <br>
+            - Even after the request has been sent, there are a couple of ways to cancel the request. You can either call the <code>abort</code> method which will cause the
+            currently executing request to be immediately cancelled. Another option is to set the <code>timeout</code> value in the request. This specifies the number of
+            milliseconds a request can take before being forced to terminate. The default value is 0, which means there is no timeout. The request will continue till the server
+            responds. <br>
+            - The XHR request that is sent is an asynchronous request by default. <br>
+            - This is a sample jQuery request that we are using:
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/2a18485409506d33ef2453d5901aa3ac.js"></script>
+            </div>
+            b) <p class="inline-heading">Send the request</p>: Nothing special to do here. When you call <code>$.ajax()</code>, it both initializes and sends the HTTP request. <br>
+            c) <p class="inline-heading">Process the response</p>: The <code>getResponseHeader</code> and <code>getAllResponseHeaders</code> methods can be used to read the HTTP
+            headers on the response.
+            <code>getResponseHeader</code> returns the value of a given response header whereas <code>getAllResponseHeaders</code> returns all response headers as a single string.
+            <br>
+            - <p class="inline-heading">NOTE:</p>There is one caveat to reading response headers on a cross-origin request. By default, CORS only allows the client code to read the
+            following response headers: Cache-Control, Content-Language, Content-Type, Expires, Last-Modified, Pragma <br>
+            - If the <i>server</i> sets any additional response headers that are not in this list, the client won't be able to see them. But the server can also override this
+            behavior by specifically indicating that these additional response headers should be visible to the client code. <br>
+        </div>
 
+
+        <div class="sub-heading">When will the <code>success</code> block be triggered vs when will the <code>error</code> block be triggered</div>
+        <div>
+            - HTTP responses have an associated status code. A successful response usually has a status code of 200, although any status code in the 200 range signals a success.
+            Status codes in the 300 range signal that the request is being redirected, while status codes of 400 or above signal an error (the 400 range is reserved for client
+            errors while the 500 range is reserved for server errors). <br>
+            - Regardless of the underlying response status code, if the response makes it back to the browser, the onload event handler will fire. So although a request may fail
+            due to a file not found (status code 404) or an internal server error (status code 500), the onload event handler will still fire. The below figure shows the
+            relationship between the response and the response status code. <br>
+            - If the request fails for some other reason, the onerror event handler will fire. These are errors where the server doesn't send a valid response to the browser, or
+            the server doesn't support CORS.
+
+            <img src="images/Ch2/HTTP_Error_Codes.PNG"
+                 width="750"
+                 class="center-block img-fluid"
+                 alt="Http Error Codes">
+            - But note that in jQuery the errors are set up differently. Anything other than a 2XX response code causes the <code>error</code> block to be executed.
+
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/e8e6f0a159cd113c7cd75ae7ea7e8916.js"></script>
+            </div>
+            - And the errors that are logged on the console and the Network tab are as follows:
+
+            <img src="images/Ch2/jQueryErrorCodes.png"
+                 width="1500"
+                 class="center-block img-fluid"
+                 alt="jQuery Error Codes">
+        </div>
+
+        <div class="sub-heading">How can I include cookies on cross-origin requests</div>
+        <div>
+            - Websites can identify users through user credentials, a general term for any bit of information that can identify a user. The most popular form of user credentials is
+            the cookie. Servers will use cookies to store a unique ID that identifies the user. The browser then includes this cookie on every request to the server. <br>
+            - <p class="inline-heading">NOTE</p>: Same-origin HTTP requests will always contain the cookie in the request. In contrast, cross-origin requests don't include cookies
+            by default. <br>
+            - Cookies can be included on cross-origin requests by setting the <code>XMLHttpRequest</code>'s <code>withCredentials</code> property to true. Setting the <code>withCredentials</code>
+            property to true indicates that user credentials such as cookies, basic authentication information, or clientside Secure Sockets Layer (SSL) certificates should be
+            included on cross-origin requests. <br>
+            - However, just setting the <code>withCredentials</code> property to true is not enough to complete the request. The server also has to indicate that it allows cookies
+            for the request to succeed.
+        </div>
+
+        <div class="sub-heading">jQuery does not include the <code>X-Requested-With</code> header in the cross-origin requests</div>
+        <div>
+            - jQuery doesn't set the X-Requested-With request header on cross-origin requests. JQuery traditionally sets the X-Requested-With header on HTTP requests. <br>
+            - This header is used by clients to indicate that a request is coming from an <code>XMLHttpRequest</code> object. The server receiving the request can look for the
+            <code>XMLHttpRequest</code> header to determine where the request is coming from. JQuery always sets this header when making same-origin requests, but removes it from
+            cross-origin requests. The reason is that setting custom request headers requires an additional server configuration step. Rather than force developers to make changes
+            to their server, jQuery chose to drop this header. <br>
+            - You can set this header manually in jQuery as follows:
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/8365c38ee1b25a7c3368da86b0b9a08d.js"></script>
+            </div>
+            - And you can see the header being sent in the request below. Note that on the server-side we are allowing ALL headers, and that is why we can see the new header here.
+            <img src="images/Ch2/Additional_Headers.PNG"
+                 width="1500"
+                 class="center-block img-fluid"
+                 alt="Additional Headers">
         </div>
     </div>
 
+
+    <hr>
+    <div id="Chapter3" class="chapter">Chapter 3: Handling CORS Requests</div>
+    <hr>
+
+    <div class="textual-content">
+
+        <div class="sub-heading">How to process a cross-origin request</div>
+        <div>
+
+        </div>
+
+
+
+
+    </div>
+
+
 </div>
 
+<script src="script.js"></script>
 </body>
 </html>

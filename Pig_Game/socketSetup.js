@@ -159,18 +159,41 @@ function connectToGameWithId({gameId, player: {userName}}) {
 function rollDice() {
     console.log(`Roll Dice clicked for game id: ${gameId}`);
     $.ajax({
+
+        // The URL of the server-side resource to which the request is sent
+        // If an empty string is passed, the request is sent to the current URL at the time the method is invoked.
         url: url + '/game/gameplay/roll',
+
+        // The HTTP method to use. Usually either POST or GET. If omitted, the default is GET.
         type: 'POST',
+
+        // (String) In its basic form, it’s a keyword that identifies the type of data that’s expected to be returned by the response.
+        // This value determines what, if any, postprocessing occurs upon the data before being passed to callback functions.
+        // valid values are: xml/html/json/jsonp/script/text
         dataType: 'JSON',
+
+        // (String) The content type to be specified on the request. If omitted, the default is 'application/x-www-form-urlencoded; charset=UTF-8',
+        // the same type used as the default for form submissions.
         contentType: 'application/json',
+
+        // (Object) An object of name-value pairs to set on the native XHR object. By default, the object is empty.
         xhrFields: {
             withCredentials: true
         },
+
+        // (String|Object|Array) Defines the values that will be sent to the server.
+        // If the request is a GET, the values are passed as the query string.
+        // If a POST, the values are passed as the request body.
         data: JSON.stringify(gamePlay),
+
+        // (Function|Array) A function or an array of functions invoked if the response to the request indicates a success status code.
+        // The response body is returned as the first parameter to this function and evaluated according to the specification of the dataType property.
         success: function (data) {
             console.log(`Dice roll produced: ${data.diceRoll}`);
             updateUI(data);
         },
+
+        // (Function|Array) A function or an array of functions invoked if the response to the request returns an error status code.
         error: function (error) {
             console.log(`Error fetching available open games: ${error}`);
         }
@@ -207,15 +230,18 @@ function testOnly() {
         type: 'GET',
         dataType: 'JSON',
         contentType: 'application/json',
+        headers: {'X-Requested-With': 'XMLHttpRequest'},
         xhrFields: {
             withCredentials: true
         },
         data: JSON.stringify(gamePlay),
         success: function (data) {
-            console.log(data);
+            console.log(`Success: ${data}`);
         },
-        error: function (error) {
-            console.log(`Error fetching available open games: ${error}`);
+        error: function (jqXHR, textStatus, errorThrown) {
+            console.log(`jqXHR.status: ${jqXHR.status}`);
+            console.log(`textStatus: ${textStatus}`);
+            console.log(`errorThrown: ${errorThrown}`);
         }
     })
 }
