@@ -147,6 +147,7 @@
     Chapter 1: <a href="#Chapter1">The Core of CORS</a> <br>
     Chapter 2: <a href="#Chapter2">Making CORS Requests</a> <br>
     Chapter 3: <a href="#Chapter3">Handling CORS Requests</a> <br>
+    Chapter 4: <a href="#Chapter4">Handling PreFlight Requests</a> <br>
 
     <hr>
     <div id="Chapter1" class="chapter">Chapter 1: The Core of CORS</div>
@@ -312,7 +313,8 @@
             <div class="code-snippet">
                 <script src="https://gist.github.com/rgbk21/8365c38ee1b25a7c3368da86b0b9a08d.js"></script>
             </div>
-            - And you can see the header being sent in the request below. Note that on the server-side we are allowing ALL headers, and that is why we can see the new header here.
+            - And you can see the header being sent in the request below. Note that on the server-side we are allowing ALL headers, and that is why we can see the CORS request
+            being successful.
             <img src="images/Ch2/Additional_Headers.PNG"
                  width="1500"
                  class="center-block img-fluid"
@@ -327,15 +329,120 @@
 
     <div class="textual-content">
 
-        <div class="sub-heading">How to process a cross-origin request</div>
+        - We will be starting from scratch. Commented out the <code>@CrossOrigin</code> annotation on the Controller.
+
+        <div class="sub-heading">What error do we get when CORS is completely disabled on the server, and by disabled I just mean not enabled</div>
+        <div>
+            - When we try to send a cross-origin request, this is what we see in the console and the network tab:
+
+            <img src="images/Ch3/No_CORS_Enabled.png"
+                 width="1800"
+                 class="center-block img-fluid"
+                 alt="CORS is disabled">
+
+            - Note that on the server side we do not see any error when the log level is set to <code>info</code>.
+        </div>
+
+        <div class="sub-heading">Key players in a CORS request</div>
+        <div>
+            - The key players in the CORS request are the client, the browser, and the server. The client wants some piece of data from the server, such as JSON API response or the
+            contents of a web page. The browser acts as the trusted intermediary to verify that the client can access the data from the server. We will be looking at each of them
+            one-by-one<br>
+            - <p class="inline-heading">Client</p>: The client is a snippet of JS code running on a website that is responsible for initiating the CORS request. It's served from a
+            particular domain and usually consists of an <code>XMLHttpRequest</code> to a remote server. <br>
+            - <p class="inline-heading">Browser</p>: The client code runs inside a web browser. The browser acts as the trusted intermediary in this communication flow. It does two
+            things: <br>
+            a) The browser adds additional information to the request so that the server can identify the client <br>
+            b) The browser interprets the server's response and decides whether to send the response to the client or to return an error. <br>
+            If the browser didn't do these things, a client could send ANY request to the server, and the protection offered by the browser's same-origin policy could be broken. So
+            the browser ensures that both the client and the server play by the rules of CORS. <br>
+            - <p class="inline-heading">Server</p>: The server is the destination of the CORS request. It has the final say as to whether the CORS request is allowed or not.
+        </div>
+
+        <div class="sub-heading">Lifecycle of a CORS Request</div>
+        <div>
+            - An end-to-end CORS request looks something like this (note that the client code runs inside the browser, but we are separating that here in order to make the flow
+            more obvious)
+            <img src="images/Ch3/Lifecycle_Of_A_CORS_Request.PNG"
+                 width="800"
+                 class="center-block img-fluid"
+                 alt="CORS is disabled">
+            - The browser and the server talk to each other through HTTP headers. CORS includes many headers, but the two that are the most important are: <br>
+            a) The <code>Origin</code> request header: This header is silently added to the request by the browser. You do not need to explicitly set it in the JS code. <br>
+            b) The <code>Access-Control-Allow-Origin</code> response header <br>
+            - Both these headers are mandatory on a successful CORS request.
+        </div>
+
+        <div class="sub-heading">What is an 'Origin'</div>
+        <div>
+            - The origin is everything in the URL up until the path. In more formal terms, the Origin is the <i>scheme</i>, <i>host</i>, and the <i>port</i> of the URL. <br>
+            <img src="images/Ch3/Origin_Values_For_Example_URLS.PNG"
+                 width="650"
+                 class="center-block img-fluid"
+                 alt="CORS is disabled">
+            - The string <code>null</code> can also be a valid value for the origin, even though it doesn't follow the scheme/host/port pattern. Browsers use the value
+            <code>null</code> when the origin of the client can't be determined. An example of this is opening an HTML file directly in your browser. <br>
+            - Origin has nothing to do with HTTP requests/responses. It's only a property of a URL. Any URL can have an origin. When an origin refers to the client making the
+            request, we call it the <i>client origin</i>. When an origin refers to the URL receiving the request, we call it the <i>server origin</i>. <br>
+            - Servers use the origin to determine where a request is coming from. Browsers use the origin to define whether a request is same-origin or cross-origin, and exhibits
+            different behavior for each. <br>
+        </div>
+
+
+        <div class="sub-heading">Same-Origin vs Cross-Origin Requests</div>
+        <div>
+            - A request is a same-origin request when the client origin and the server origin are exactly the same. Otherwise the request is a cross-origin request. <br>
+            - When the client initiates the request, the browser extracts the server origin from the URL of the request. It then compares the server origin against the client
+            origin to determine if the request is same-origin or cross-origin. Browsers allow clients to make same-origin requests without any restrictions. But if the request is
+            cross-origin, the browser uses CORS to determine how to handle the request.
+            <img src="images/Ch3/SameOrigin_vs_CrossOrigin_requests.PNG"
+                 width="650"
+                 class="center-block img-fluid"
+                 alt="SameOrigin vs CrossOrigin Requests">
+            - Note the last example carefully: the origin comparison only compares the string values of the scheme, host, and port, and knows nothing about what host an IP address
+            maps to. In this example, "localhost" and "127.0.0.1" are different strings, and therefore the request isn't a same-origin request.
+        </div>
+
+        <div class="sub-heading">Sending the Cross-Origin request from Client: who sets the 'Origin' header</div>
+        <div>
+            - The browser is solely responsible for setting the Origin header. The Origin header is always present on cross-origin requests, and the client has no way of setting or
+            overriding the value. <br>
+            - Same-origin requests may sometimes have an Origin header as well. Chrome and Safari include an Origin header on same-origin non-GET requests. In these cases, the
+            Origin header has the same value as the server's origin value. This is important to keep in mind. When identifying CORS requests, it's not enough to check that the
+            Origin header exists. You should also check that the origin value is different from your server's origin value. <br>
+        </div>
+
+        <div class="sub-heading">Sending the Cross-Origin response from Server: setting the 'Access-Control-Allow-Origin' header</div>
+        <div>
+            - The server uses the Access-Control-Allow-Origin response header to approve the request. This header must be present on every successful CORS response. <br>
+            - The value of the Access-Control-Allow-Origin header can be either a wildcard or an origin value. The wildcard value says that clients from any origin can access the
+            resource, while the origin value only gives access to a specific client. <br>
+            - The Access-Control-Allow-Origin header can have only a single origin value. You cannot specify multiple origins in the same header. If your server supports clients
+            from different origins, the Access-Control-Allow-Origin header will have to contain only the origin for the specific client making the request. <br>
+            - Access-Control-Allow-Origin doesn't allow Regular expressions either. <br>
+            - But you can work around this by first getting the value of the Origin header from the
+            request, then do a regex check with the value of the request Origin. If the request's origin passes the check with the allowed regex expression, then you can simply set
+            the value of Access-Control-Allow-Origin to the value of the request's Origin. In this way, you aren't violating the rule of the access control being a strict url, but
+            also allowing the server to accept multiple different allowed origins (<a href="https://stackoverflow.com/questions/18439340/using-a-regular-expression-with-cors">Source
+            on SO</a>). <br>
+            - <a href="https://stackoverflow.com/questions/14003332/access-control-allow-origin-wildcard-subdomains-ports-and-protocols">SO Link that contains many other linked
+            questions</a>
+        </div>
+    </div>
+
+    <hr>
+    <div id="Chapter4" class="chapter">Chapter 4: Handling PreFlight Requests</div>
+    <hr>
+
+    <div class="chapter">
+
+        <div class="sub-heading">What is a preflight request</div>
         <div>
 
         </div>
 
-
-
-
     </div>
+
 
 
 </div>
