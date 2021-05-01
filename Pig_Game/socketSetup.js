@@ -3,8 +3,8 @@
 const openGamesContainer = document.getElementById('open-games-container');
 const gameSelectForm = document.querySelector('#select-open-games-form');
 
-const url = "http://localhost:8080"
-// const url = "http://rgbk.us-east-2.elasticbeanstalk.com";
+// const url = "http://localhost:8080"
+const url = "https://pig-game-rgbk21.herokuapp.com";
 let stompClient;
 let gameId;
 let userSelectedGameId;
@@ -230,11 +230,11 @@ function testOnly() {
         type: 'GET',
         dataType: 'JSON',
         contentType: 'application/json',
-        headers: {'X-Requested-With': 'XMLHttpRequest'},
+        // headers: {'X-Requested-With': 'XMLHttpRequest'},
         xhrFields: {
             withCredentials: true
         },
-        data: JSON.stringify(gamePlay),
+        // data: JSON.stringify(gamePlay),
         success: function (data) {
             console.log(`Success: ${data}`);
         },

@@ -434,15 +434,74 @@
     <div id="Chapter4" class="chapter">Chapter 4: Handling PreFlight Requests</div>
     <hr>
 
-    <div class="chapter">
+    <div class="textual-content">
 
         <div class="sub-heading">What is a preflight request</div>
         <div>
-
+            - Certain types of requests, such as DELETE or PUT (if they are cross-origin), need to ask for the server's permission before actually making the cross-origin request.
+            <br>
+            - The browser asks for permissions by using what is called a <i>preflight request</i>. A preflight request is a small request that is sent by the browser before the
+            actual request. It contains information like which HTTP method is used, as well as if any custom HTTP headers are present. The preflight gives the server a chance to
+            examine what the actual request will look like before it's made. The server can then indicate whether the browser should send the actual request, or return an error to
+            the client without sending the request. <br>
+            - Hence the preflight isn't the request itself. Instead, it contains metadata about the request. The server inspects this metadata to decide whether the browser is
+            allowed to send the request. Depending on that, the server sends it's response back to the browser. <br>
+            - The browser uses the server's response to the preflight to determine if the request can be made. If the server grants the right permissions on the preflight response,
+            the browser sends the actual request to the server. The server can also decide not to approve the preflight request, in which case the browser will return an error to
+            the client, and the actual request will never be sent.
+            <img src="images/Ch4/Lifecycle_of_a_CORS_request.PNG"
+                 width="900"
+                 class="center-block img-fluid"
+                 alt="Lifecycle of a CORS request">
         </div>
 
-    </div>
+        <div class="sub-heading">Why does the preflight request exist</div>
+        <div>
+            - The concept of a preflight was introduced to allow cross-origin requests to be made without breaking existing servers that depend on the browser’s same-origin policy.
+            If the preflight hits a server that is CORS-enabled, the server knows what a preflight request is and can respond appropriately. But if the preflight hits a server that
+            doesn't know or doesn't care about CORS, the server won't send the correct preflight response, and the actual request will never be sent. The preflight protects
+            unsuspecting servers from receiving cross-origin requests they may not want. <br>
+            - <a href="https://stackoverflow.com/questions/15381105/what-is-the-motivation-behind-the-introduction-of-preflight-cors-requests">Motivation behind introduction of
+            preflight for CORS</a> on SO. <a href="https://stackoverflow.com/a/37040608/8742428">This answer</a> on the page is probably the one that explains it the best. <br>
+            - The story is: There are probably APIs out there which rely on the browser's same-origin policy to protect their resources. They should have additional security, but
+            they rely on the same-origin policy instead. Without the preflight, a user on a different domain could now issue a request to the API. The API would assume the request
+            is valid (since it knows nothing of CORS) and execute the request. The browser could block the response from reaching the user, but at this point, the damage may
+            already be done. If the request was a PUT/DELETE, the resource may have been updated or deleted.
+        </div>
 
+        <div class="sub-heading">When is a preflight request sent</div>
+        <div>
+            - The browser can make these kinds of cross-domain requests without having to use CORS: <br>
+            a) A web page can easily make GET requests to another origin. Every <code>&lt;script&gt;</code> tag or <code>&lt;img&gt;</code> tag issues a GET request.
+            <code>&lt;img src="http://example.com/image.jpg"&gt;</code> is an example of using HTML to make a GET request for an image. <br>
+            b) A web page can make POST requests via the <code>&lt;form&gt;</code> tag. The <code>&lt;form&gt;</code> tag also allows the <code>Content-Type</code> header to be set
+            to
+            application/x-www-form-urlencoded, multipart/form-data, or text/plain. The below is an example of using HTML to make POST request with a Content-Type header<br>
+            <code>&lt;form enctype="text/plain" method="post" action="http://example.com/form_submit" id="myform"&gt;</code> <br>
+            <code>&lt;input type="submit" value="Submit" /&gt;</code> <br>
+            <code>&lt;/form&gt;</code> <br>
+            - Both of the above are cross-domain requests that are not blocked by the browser. Since the browser can already make these kinds of requests without CORS the preflight
+            doesn't provide any additional value. For example, if there were a preflight on a GET request, the client could always use a script tag to get around the preflight. The
+            browser skips the preflight in cases where the client can already make the cross-origin request through other means. <br>
+            - Sidenote: You cannot open local resource (an image file that is on your local system) in chrome. For example, you cannot do this:
+            <code>&lt;img src="file://C:\\MY_BACKUP\\YjRMt83.jpg" alt=""&gt;</code> (<a href="https://stackoverflow.com/a/49351590/8742428">Source on SO</a>) <br>
+            - The question still remains: when IS a preflight used? A preflight is used when a request meets any of the following criteria: (<a
+                href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS#simple_requests">Read on MDN</a>)<br>
+            a) It uses an HTTP method other than GET, POST, or HEAD <br>
+            b) It sets the Content-Type request header with values other than: 'application/x-www-form-urlencoded', 'multipart/form-data', 'text/plain' <br>
+            c) It sets additional request headers that are not: 'Accept', 'Accept-Language', 'Content-Language' <br>
+            d) The <code>XMLHttpRequest</code> contains upload events <br>
+            - The CORS spec collectively refers to these HTTP methods as <i>simple methods</i>, and the HTTP headers as <i>simple headers</i>. <br>
+        </div>
+
+
+        <div class="sub-heading">How do you identify that a request is a preflight request</div>
+        <div>
+            -
+        </div>
+
+
+    </div>
 
 
 </div>
