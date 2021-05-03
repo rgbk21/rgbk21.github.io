@@ -31,14 +31,95 @@ body {
 }
 
 .game-container{
+    /* Which rows does this div occupy relative to its parent div */
     grid-row: 2/3;
     grid-column: 2/3;
 
+    /* Styling of the div */
     background-color: rgba(255, 255, 255, 0.35);
     backdrop-filter: blur(200px);
     filter: blur();
     box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
     border-radius: 9px;
 
+    /* How should the child divs of this div be styled */
     display: grid;
+    grid-template-rows: 2fr 2fr 4fr 2fr;
+    grid-template-columns: 1fr 3fr 1fr 1fr 3fr 1fr;
+}
+
+/*************** PLAYER 1 DETAILS ***************/
+.player1--name{
+    grid-row: 1/2;
+    grid-column: 2/3;
+}
+.player1--score{
+    grid-row: 2/3;
+    grid-column: 2/3;
+}
+.player1--buttons{
+    grid-row: 3/4;
+    grid-column: 2/3;
+
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+.player1--btn--rollDice{
+    grid-row: 1/2;
+}
+.player1--btn--hold{
+    grid-row: 2/3;
+}
+.player1--current{
+    grid-row: 4/5;
+    grid-column: 2/3;
+}
+
+
+/*************** PLAYER 2 DETAILS ***************/
+.player2--name{
+    grid-row: 1/2;
+    grid-column: 5/6;
+}
+.player2--score{
+    grid-row: 2/3;
+    grid-column: 5/6;
+}
+.player2--buttons{
+    grid-row: 3/4;
+    grid-column: 5/6;
+
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+.player2--btn--rollDice{
+    grid-row: 1/2;
+}
+.player2--btn--hold{
+    grid-row: 2/3;
+}
+.player2--current{
+    grid-row: 4/5;
+    grid-column: 5/6;
+}
+
+/*************** COMMON BUTTONS DETAILS ***************/
+.btn--createGame{
+    grid-row: 1/2;
+    grid-column: 3/5;
+}
+.btn--showOpenGames{
+    grid-row: 2/3;
+    grid-column: 3/5;
+}
+
+/*************** DICE DETAILS ***************/
+.dice{
+    grid-row: 3/4;
+    grid-column: 3/5;
+    /*Stop the image from overflowing the width of the grid container*/
+    /*https://stackoverflow.com/questions/46090760/controlling-the-size-of-an-image-within-a-css-grid-layout*/
+    object-fit: cover;
+    width: 100%;
+    max-height: 100%;
 }
