@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -77,13 +79,14 @@ body {
 
     display: grid;
     grid-template-rows: 1fr 1fr;
-    align-items: center;
-    justify-items: center;
+    align-self: stretch;
 }
 .player1--btn--rollDice{
     grid-row: 1/2;
+    margin: auto;
 }
 .player1--btn--hold{
+    margin: auto;
     grid-row: 2/3;
 }
 .player1--current{
@@ -129,14 +132,15 @@ body {
 
     display: grid;
     grid-template-rows: 1fr 1fr;
-    align-items: center;
-    justify-items: center;
+    align-self: stretch;
 }
 .player2--btn--rollDice{
     grid-row: 1/2;
+    margin: auto;
 }
 .player2--btn--hold{
     grid-row: 2/3;
+    margin: auto;
 }
 .player2--current{
     grid-row: 4/5;
@@ -157,10 +161,12 @@ body {
 .btn--createGame{
     grid-row: 1/2;
     grid-column: 3/5;
+    margin: auto;
 }
 .btn--showOpenGames{
     grid-row: 2/3;
     grid-column: 3/5;
+    margin: auto;
 }
 
 /*************** DICE DETAILS ***************/
@@ -172,7 +178,13 @@ body {
     object-fit: cover;
     width: 100%;
     max-height: 100%;
+    align-self: center;
+    box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
+    /*Remove the white border at the bottom of the image when using box-shadow*/
+    /* https://stackoverflow.com/a/7002035/8742428 */
+    display: block;
 }
+
 /*************** COMMON ELEMENTS DETAILS ***************/
 .btn {
     color: #444;
@@ -183,15 +195,22 @@ body {
     /*text-transform: uppercase;*/
     cursor: pointer;
     font-weight: 400;
-    transition: all 0.2s;
+    transition: all 0.4s;
 
     background-color: white;
     background-color: rgba(255, 255, 255, 0.6);
     backdrop-filter: blur(10px);
 
-    padding: 2rem 2rem;
-    border-radius: 50rem;
+    padding: 0.75rem 3rem;
+    border-radius: 75rem;
     box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
+}
+.btn:active {
+    transform: translate(2%, 3px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+}
+.btn:focus {
+    outline: none;
 }
 .name {
     font-size: 3rem;
@@ -206,8 +225,58 @@ body {
     color: #c7365f;
     margin-bottom: auto;
 }
-
-
 .player--active {
     background-color: rgba(255, 255, 255, 0.4);
+}
+.player--active .name {
+    font-weight: 700;
+}
+.player--active .score {
+    font-weight: 400;
+}
+.player--active .current {
+    opacity: 1;
+}
+.current {
+    background-color: #c7365f;
+    opacity: 0.8;
+    border-radius: 9px;
+    color: #fff;
+    width: 65%;
+    padding: 2rem;
+    text-align: center;
+    font-size: 1.75rem;
+    transition: all 0.75s;
+}
+.player--winner {
+    background-color: #2f2f2f;
+}
+.player--winner .name {
+    font-weight: 700;
+    color: #c7365f;
+}
+
+/*!******************* OVERLAY STYLES *****************************!*/
+#overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.75);
+    z-index: 2;
+    cursor: pointer;
+}
+
+.text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 1.8rem;
+    color: white;
+    transform: translate(-50%,-50%);
+    /*-ms-transform: translate(-50%,-50%);*/
 }

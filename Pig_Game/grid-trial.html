@@ -23,13 +23,13 @@
     <div class="score player1--score">0</div>
     <div class="player1--buttons">
       <div class="player1--btn--rollDice">
-        <button onclick="rollDice()" class="btn btn--roll">Roll dice</button>
+        <button onclick="rollDice()" class="btn btn--roll">Roll Dice</button>
       </div>
       <div class="player1--btn--hold">
         <button onclick="hold()" class="btn btn--hold">Hold</button>
       </div>
     </div>
-    <div class="player1--current">
+    <div class="current player1--current">
       <p class="current-label-1">Current</p>
       <p class="current-score-1" id="current--1">0</p>
     </div>
@@ -41,13 +41,13 @@
     <div class="score player2--score">0</div>
     <div class="player2--buttons">
       <div class="player2--btn--rollDice">
-        <button onclick="rollDice()" class="btn btn--roll">Roll dice</button>
+        <button onclick="rollDice()" class="btn btn--roll">Roll Dice</button>
       </div>
       <div class="player2--btn--hold">
         <button onclick="hold()" class="btn btn--hold">Hold</button>
       </div>
     </div>
-    <div class="player2--current">
+    <div class="current player2--current">
       <p class="current-label-2">Current</p>
       <p class="current-score-2" id="current--2">0</p>
     </div>
@@ -65,6 +65,22 @@
   <!-- DICE -->
   <div class="dice">
     <img src="dice-FIVE.png" alt="Playing dice" class="dice"/>
+  </div>
+
+
+  <!-- Overlay -->
+  <div id="overlay">
+    <div class="text">
+      <form id="select-open-games-form">
+        <p>Choose one of the available open games to join as Player 2:</p>
+        <div id="open-games-container">
+          <!-- Content added dynamically -->
+        </div>
+        <div>
+          <button class="btn btn--connectToGame" type="submit">Connect to game!</button>
+        </div>
+      </form>
+    </div>
   </div>
 
 
