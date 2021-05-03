@@ -95,14 +95,18 @@ body {
 
     display: grid;
     grid-template-rows: 1fr 1fr;
-    align-items: center;
-    justify-items: center;
+    /*align-self: stretch;*/
+    /*align-items: center;*/
+    /*justify-items: center;*/
 }
 .current-label-1{
     grid-row: 1/2;
+    align-self: end;
+    /*margin: auto;*/
 }
 .current-score-1{
     grid-row: 2/3;
+    align-self: start;
 }
 
 /*************** PLAYER 2 DETAILS ***************/
@@ -148,10 +152,11 @@ body {
 
     display: grid;
     grid-template-rows: 1fr 1fr;
-    align-items: center;
-    justify-items: center;
+    /*align-items: center;*/
+    /*justify-items: center;*/
 }
 .current-label-2{
+    align-self: end;
     grid-row: 1/2;
 }
 .current-score-2{
@@ -212,6 +217,7 @@ body {
 .btn:focus {
     outline: none;
 }
+
 .name {
     font-size: 3rem;
     letter-spacing: 1px;
@@ -225,6 +231,16 @@ body {
     color: #c7365f;
     margin-bottom: auto;
 }
+
+.current-label {
+    text-transform: uppercase;
+    color: #ddd;
+}
+
+.current-score {
+    font-size: 3rem;
+}
+
 .player--active {
     background-color: rgba(255, 255, 255, 0.4);
 }
@@ -243,7 +259,7 @@ body {
     border-radius: 9px;
     color: #fff;
     width: 65%;
-    padding: 2rem;
+    padding-bottom: 0.5rem;
     text-align: center;
     font-size: 1.75rem;
     transition: all 0.75s;
