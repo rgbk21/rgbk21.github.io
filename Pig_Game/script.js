@@ -8,12 +8,13 @@ let targetWinValue = 20;
 let gameInProgress = true;
 
 // Selecting the elements as that we do not have to select the elements separately every time
-const overallPlayer1ScoreElmnt = document.querySelector('#score--0');
-const overallPlayer2ScoreElmnt = document.querySelector('#score--1');
-const currScorePlayer1Elmnt = document.querySelector('#current--0');
-const currScorePlayer2Elmnt = document.querySelector('#current--1');
-const player1Elmnt = document.querySelector('.player--0');
-const player2Elmnt = document.querySelector('.player--1');
+const overallPlayer1ScoreElmnt = document.querySelector('.player1--score');
+const overallPlayer2ScoreElmnt = document.querySelector('.player2--score');
+const currScorePlayer1Elmnt = document.querySelector('#current--1');
+const currScorePlayer2Elmnt = document.querySelector('#current--2');
+const player1Elmnt = document.querySelector('.player1--container');
+const player2Elmnt = document.querySelector('.player2--container');
+const diceContainer = document.querySelector('.dice-container');
 const diceElmnt = document.querySelector('.dice');
 
 const resetPage = function () {
@@ -21,7 +22,7 @@ const resetPage = function () {
     overallPlayer2ScoreElmnt.textContent = '0';
     currScorePlayer1Elmnt.textContent = '0';
     currScorePlayer2Elmnt.textContent = '0';
-    diceElmnt.classList.add('hidden');
+    diceContainer.classList.add('hidden');
     player1Elmnt.classList.remove('player--winner');
     player1Elmnt.classList.add('player--active');
     player2Elmnt.classList.remove('player--winner', 'player--active');
@@ -34,8 +35,6 @@ const resetPage = function () {
 
 // Reset the page to remove garbage values when the page is first loaded
 resetPage();
-// TODO: Uncomment before pushing
-// alert('Page under construction :(');
 
 /*
 document.querySelector('.btn--roll').addEventListener('click', function () {

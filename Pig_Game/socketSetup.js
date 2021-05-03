@@ -248,8 +248,8 @@ function testOnly() {
 
 function updateUI(data) {
     if (data.diceRoll !== null && data.gameStatus === 'IN_PROGRESS') {
-        if (diceElmnt.classList.contains('hidden')) {
-            diceElmnt.classList.remove('hidden');
+        if (diceContainer.classList.contains('hidden')) {
+            diceContainer.classList.remove('hidden');
         }
         diceElmnt.src = `dice-${data.diceRoll}.png`;
         console.log(`Image loaded: dice-${data.diceRoll}.png`);

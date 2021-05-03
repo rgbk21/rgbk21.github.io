@@ -18,7 +18,7 @@
 <div class="game-container">
 
   <!-- PLAYER 1 DETAILS -->
-  <div class="player1--container player--active">
+  <div class="player player1--container player--active">
     <div class="name player1--name">PLAYER 1</div>
     <div class="score player1--score">0</div>
     <div class="player1--buttons">
@@ -36,7 +36,7 @@
   </div>
 
   <!-- PLAYER 2 DETAILS -->
-  <div class="player2--container">
+  <div class="player player2--container">
     <div class="name player2--name">PLAYER 2</div>
     <div class="score player2--score">0</div>
     <div class="player2--buttons">
@@ -63,8 +63,8 @@
   </div>
 
   <!-- DICE -->
-  <div class="dice">
-    <img src="dice-FIVE.png" alt="Playing dice" class="dice"/>
+  <div class="dice-container">
+    <img class="dice" src="dice-FIVE.png" alt="Playing dice" />
   </div>
 
 
@@ -86,6 +86,9 @@
 
 
 </div>
+
+<script src="socketSetup.js"></script>
+<script src="script.js"></script>
 
 </body>
 </html>

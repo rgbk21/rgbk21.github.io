@@ -175,17 +175,21 @@ body {
 }
 
 /*************** DICE DETAILS ***************/
-.dice{
+.dice-container{
     grid-row: 3/4;
     grid-column: 3/5;
-    /*Stop the image from overflowing the width of the grid container*/
-    /*https://stackoverflow.com/questions/46090760/controlling-the-size-of-an-image-within-a-css-grid-layout*/
-    object-fit: cover;
-    width: 100%;
-    max-height: 100%;
+
     align-self: center;
     box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
-    /*Remove the white border at the bottom of the image when using box-shadow*/
+    transition: all 0.75s;
+}
+.dice{
+    /* Stop the image from overflowing the width of the grid container */
+    /* https://stackoverflow.com/questions/46090760/controlling-the-size-of-an-image-within-a-css-grid-layout */
+    object-fit: contain;
+    width: 100%;
+    max-height: 100%;
+    /* Remove the white border at the bottom of the image when using box-shadow */
     /* https://stackoverflow.com/a/7002035/8742428 */
     display: block;
 }
@@ -241,6 +245,9 @@ body {
     font-size: 3rem;
 }
 
+.player {
+    transition: all 0.75s;
+}
 .player--active {
     background-color: rgba(255, 255, 255, 0.4);
 }
@@ -295,4 +302,9 @@ body {
     color: white;
     transform: translate(-50%,-50%);
     /*-ms-transform: translate(-50%,-50%);*/
+}
+
+/*!******************* HIDDEN CLASS *****************************!*/
+.hidden {
+    display: none;
 }
