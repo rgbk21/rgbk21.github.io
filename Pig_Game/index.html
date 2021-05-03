@@ -14,24 +14,27 @@
     <title>Pig Game</title>
   </head>
   <body>
-    <main>
+
       <div class="game-container">
+
         <div class="player0-container">
           <div class="player player--0 player--active">
             <div>
-              <h2 class="name" id="name--0">Player 1</h2>
+              <h2 class="player0--name" id="name--0">Player 1</h2>
             </div>
             <div>
-              <p class="score" id="score--0">43</p>
+              <p class="player0--score" id="score--0">43</p>
             </div>
-            <div>
-              <button onclick="rollDice()" class="btn btn--roll">Roll dice</button>
-            </div>
-            <div>
-              <button onclick="hold()" class="btn btn--hold">Hold</button>
+            <div class="player0--btns">
+              <div class="player0--btns-rollDice">
+                <button onclick="rollDice()" class="btn btn--roll">Roll dice</button>
+              </div>
+              <div class="player0--btns-hold">
+                <button onclick="hold()" class="btn btn--hold">Hold</button>
+              </div>
             </div>
 
-            <div class="current">
+            <div class="player0--current">
               <p class="current-label">Current</p>
               <p class="current-score" id="current--0">0</p>
             </div>
@@ -39,21 +42,23 @@
         </div>
 
         <div class="player1-container">
-          <div class="player player--1">
+          <div class="player player--1 player--active">
             <div>
-              <h2 class="name" id="name--1">Player 2</h2>
+              <h2 class="player1--name" id="name--1">Player 1</h2>
             </div>
             <div>
-              <p class="score" id="score--1">24</p>
+              <p class="player1--score" id="score--1">43</p>
             </div>
-            <div>
-              <button onclick="rollDice()" class="btn btn--roll">Roll dice</button>
-            </div>
-            <div>
-              <button onclick="hold()" class="btn btn--hold">Hold</button>
+            <div class="player1--btns">
+              <div class="player1--btns-rollDice">
+                <button onclick="rollDice()" class="btn btn--roll">Roll dice</button>
+              </div>
+              <div class="player1--btns-hold">
+                <button onclick="hold()" class="btn btn--hold">Hold</button>
+              </div>
             </div>
 
-            <div class="current">
+            <div class="player1--current">
               <p class="current-label">Current</p>
               <p class="current-score" id="current--1">0</p>
             </div>
@@ -86,9 +91,8 @@
             </form>
           </div>
         </div>
-
       </div>
-    </main>
+
     <script src="socketSetup.js"></script>
     <script src="script.js"></script>
   </body>

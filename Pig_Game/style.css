@@ -14,9 +14,12 @@ html {
 body {
   font-family: 'Nunito', sans-serif;
   font-weight: 400;
-  height: 100vh;
   color: #333;
   background-image: linear-gradient(to top left, #753682 0%, #bf2e34 100%);
+  width: 90%;
+  /*height: 90%;*/
+  /* Center the container*/
+  margin: 5% auto 0 auto;
   /*display: grid;*/
   /*width: 90%;*/
   /*display: flex;*/
@@ -25,11 +28,7 @@ body {
 }
 
 .game-container {
-  width: 90%;
-  /*height: 90%;*/
-  /* Center the container*/
-  margin: 10% auto;
-
+  height: 80vh;
   background-color: rgba(255, 255, 255, 0.35);
   backdrop-filter: blur(200px);
   filter: blur();
@@ -45,11 +44,12 @@ body {
 }
 
 .player0-container {
+  grid-row: 1/5;
+  grid-column: 1/4;
+
   display: grid;
-  grid-row-start: 1;
-  grid-row-end: 5;
-  grid-column-start: 1;
-  grid-column-end: 4;
+  grid-template-rows: 15% 15% 60% 10%;
+  grid-template-columns: 1fr 3fr 1fr;
 }
 
 .player--0 {
@@ -57,21 +57,80 @@ body {
   grid-row-end: 5;
   grid-column-start: 2;
   grid-column-end: 3;
+
+  display: grid;
+  grid-template-rows: 15% 15% 60% 10%;
+  grid-template-columns: 1fr;
+}
+
+.player0--name {
+  grid-row: 1/2;
+}
+
+.player0--score {
+  grid-row: 2/3;
+}
+
+.player0--btns {
+  grid-row: 3/4;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+.player0--btns-rollDice{
+  grid-row: 1;
+}
+
+.player0--btns-hold{
+  grid-row: 2;
+}
+
+.player0--current {
+  grid-row: 4/5;
 }
 
 .player1-container {
+  grid-row: 1/5;
+  grid-column: 4/7;
+
   display: grid;
-  grid-row-start: 1;
-  grid-row-end: 5;
-  grid-column-start: 4;
-  grid-column-end: 7;
+  grid-template-rows: 15% 15% 60% 10%;
+  grid-template-columns: 1fr 3fr 1fr;
 }
 
 .player--1 {
-  grid-row-start: 1;
-  grid-row-end: 5;
-  grid-column-start: 5;
-  grid-column-end: 6;
+  grid-row: 1/5;
+  grid-column: 2/3;
+
+  display: grid;
+  grid-template-rows: 15% 15% 60% 10%;
+  grid-template-columns: 1fr;
+}
+
+.player1--name {
+  grid-row: 1/2;
+}
+
+.player1--score {
+  grid-row: 2/3;
+}
+
+.player1--btns {
+  grid-row: 3/4;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+.player1--btns-rollDice{
+  grid-row: 1;
+}
+
+.player1--btns-hold{
+  grid-row: 2;
+}
+
+.player1--current {
+  grid-row: 4/5;
 }
 
 .btn--createGame {
