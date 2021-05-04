@@ -18,6 +18,7 @@ const player2BtnsElmnt = document.querySelector('.player2--buttons');
 const player2Elmnt = document.querySelector('.player2--container');
 const diceContainer = document.querySelector('.dice-container');
 const diceElmnt = document.querySelector('.dice');
+const alertElmnt = document.querySelector('.alert--container');
 
 const resetPage = function () {
     overallPlayer1ScoreElmnt.textContent = '0';

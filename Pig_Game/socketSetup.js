@@ -77,7 +77,10 @@ function createGame() {
             gameId = data.gameId;
             gameStatus = data.gameStatus;
             connectToSocket(gameId);
-            console.log('Your created game id is: ' + data.gameId);
+            showAlertWithText(`Game created with ID: ${data.gameId.split('-')[4]} <br> 
+                            Tell player 2 to click on 'Show Open Games' and then select the above gameID`
+            );
+            console.log('Game created with ID: ' + data.gameId);
         },
         error: function (error) {
             console.log(`Error connecting to new game for player 1: ${error}`);
@@ -148,7 +151,9 @@ function connectToGameWithId({gameId, player: {userName}}) {
             if (data.gameStatus === 'IN_PROGRESS') {
                 connectToSocket(gameId);
                 gameStatus = data.gameStatus;
-                alert(`You are now playing with: ${data.p1UserName}`);
+                // alert(`You are now playing with: ${data.p1UserName}`);
+                showAlertWithText(`You are now playing with: ${data.p1UserName} <br>
+                                    Target score to win is: ${data.targetScore}`);
             }
         },
         error: function (error) {
@@ -257,7 +262,7 @@ function updateUI(data) {
     if (gameStatus === 'NEW' && data.gameStatus === 'IN_PROGRESS') {
         initializePlayer1Turn(data);
         gameStatus = data.gameStatus;
-        alert("Player 2 has entered the game: " + data.p2UserName);
+        showAlertWithText("Player 2 has entered the game: " + data.p2UserName);
     }
 
     if (data.diceRoll !== null && data.gameStatus === 'IN_PROGRESS') {
@@ -283,12 +288,15 @@ function updateUI(data) {
             player2Elmnt.classList.add('player--active');
             player2BtnsElmnt.classList.remove("hidden");
         }
-    } else if (data.gameStatus === 'FINISHED') {
+    }
+    // In case the message received from the websocket is that the game is over
+    else if (data.gameStatus === 'FINISHED') {
         declareVictory(data);
     }
 }
 
 function declareVictory(data) {
+
     winner = data.winner?.userName;
     diceContainer.classList.add('hidden');
 
@@ -303,6 +311,10 @@ function declareVictory(data) {
         player2Elmnt.classList.add('player--winner');
     }
     hideBothPlayerButtons();
+    if (gameStatus === 'IN_PROGRESS') {
+        showAlertWithText(`${winner} has won!`);
+        gameStatus = 'FINISHED';
+    }
     console.log(`Player with username ${winner} has won!`);
 }
 //////////////////////// Utils
@@ -313,4 +325,14 @@ function showOverlay() {
 
 function hideOverlay() {
     document.getElementById("overlay").style.display = "none";
+}
+
+function showAlertWithText(alertText) {
+    const html = `<div class="alert alert-success alert-dismissible fade show" role="alert">
+                    ${alertText}
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>`;
+    alertElmnt.insertAdjacentHTML("afterbegin", html);
 }
