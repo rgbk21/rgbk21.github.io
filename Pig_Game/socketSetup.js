@@ -3,8 +3,8 @@
 const openGamesContainer = document.getElementById('open-games-container');
 const gameSelectForm = document.querySelector('#select-open-games-form');
 
-// const url = "http://localhost:8080";
-const url = "https://pig-game-rgbk21.herokuapp.com";
+const url = "http://localhost:8080";
+// const url = "https://pig-game-rgbk21.herokuapp.com";
 
 let stompClient;
 let gameId;
@@ -49,7 +49,8 @@ function connectToSocket(gId) {
 }
 
 //////////////////////// Game Setup
-function createGame() {
+function createGame(event) {
+
     p1userName = document.getElementById("player1Name")?.value;
     if (p1userName == null || p1userName === '') {
         p1userName = 'player1';
@@ -78,18 +79,21 @@ function createGame() {
             gameId = data.gameId;
             gameStatus = data.gameStatus;
             connectToSocket(gameId);
-            showAlertWithText(`Game created with ID: ${data.gameId.split('-')[4]} <br> 
-                            Tell player 2 to click on 'Show Open Games' and then select the above gameID`
+            showAlertWithText(`Game created with ID: <strong>${data.gameId.split('-')[4]}</strong> <br> 
+                            In their own browser, tell player 2 to click on 'Show Open Games' and then select the above gameID`
             );
             console.log('Game created with ID: ' + data.gameId);
         },
         error: function (error) {
             console.log(`Error connecting to new game for player 1: ${error}`);
         }
-    })
+    });
+
+    createNewGameBtn.blur();
 }
 
-function listAllOpenGames() {
+function listAllOpenGames(event) {
+
     let openGames;
     p2userName = document.getElementById("player2Name")?.value;
     if (p2userName == null || p2userName === '') {
@@ -127,7 +131,9 @@ function listAllOpenGames() {
         error: function (error) {
             console.log(`Error fetching available open games: ${error}`);
         }
-    })
+    });
+
+    showOpenGamesBtn.blur();
 }
 
 function connectToGameWithId({gameId, player: {userName}}) {
@@ -164,7 +170,8 @@ function connectToGameWithId({gameId, player: {userName}}) {
 }
 
 //////////////////////// Game Play
-function rollDice() {
+function rollDice(event) {
+
     console.log(`Roll Dice clicked for game id: ${gameId}`);
     $.ajax({
 
@@ -198,18 +205,30 @@ function rollDice() {
         // The response body is returned as the first parameter to this function and evaluated according to the specification of the dataType property.
         success: function (data) {
             console.log(`Dice roll produced: ${data.diceRoll}`);
-            updateUI(data);
+            // We don't need to call updateUI here. This method is already being called by the connectToSocket method
+            // that we have open at the top of this file. Calling the updateUI method here as well causes the method to execute twice.
+            // The data flows as follows:
+            // POST request is made to the backend which returns the gamePlay object
+            // The open socket connection at the top also receives the same gamePlay object and that triggers the updateUI method
+            // Hence no need to call updateUI method here. The connectToSocket method will do that for us.
+
+            // updateUI(data);
         },
 
         // (Function|Array) A function or an array of functions invoked if the response to the request returns an error status code.
         error: function (error) {
             console.log(`Error fetching available open games: ${error}`);
         }
-    })
+    });
+
+    player1RollDiceBtn.blur();
+    player2RollDiceBtn.blur();
 }
 
-function hold() {
+function hold(event) {
+
     console.log(`Hold clicked for game id: ${gameId}`);
+
     $.ajax({
         url: url + '/game/gameplay/hold',
         type: 'POST',
@@ -223,13 +242,23 @@ function hold() {
             console.log(`Hold requested. Is it player 1's turn >> ${data.pl1Turn}`);
             console.log(`Hold requested: Is it player 2's turn >> ${data.pl2Turn}`);
             if (data.gameStatus === 'FINISHED' && data.winner?.userName !== null) {
-                declareVictory(data);
+                // We don't need to declareVictory here. This method is already being called by the updateUI method, which is called by the connectToSocket method
+                // that we have open at the top of this file. Calling the declareVictory method here as well causes the method to execute twice.
+                // The data flows as follows:
+                // POST request is made to the backend which returns the gamePlay object
+                // The open socket connection at the top also receives the same gamePlay object and that triggers the updateUI method
+                // Hence no need to call declareVictory method here. The updateUI method will do that for us.
+
+                // declareVictory(data);
             }
         },
         error: function (error) {
             console.log(`Error fetching available open games: ${error}`);
         }
-    })
+    });
+
+    player1HoldBtn.blur();
+    player2HoldBtn.blur();
 }
 
 function testOnly() {

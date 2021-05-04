@@ -13,9 +13,16 @@ const overallPlayer2ScoreElmnt = document.querySelector('.player2--score');
 const currScorePlayer1Elmnt = document.querySelector('#current--1');
 const currScorePlayer2Elmnt = document.querySelector('#current--2');
 const player1Elmnt = document.querySelector('.player1--container');
+const player2Elmnt = document.querySelector('.player2--container');
 const player1BtnsElmnt = document.querySelector('.player1--buttons');
 const player2BtnsElmnt = document.querySelector('.player2--buttons');
-const player2Elmnt = document.querySelector('.player2--container');
+const player1RollDiceBtn = document.querySelector('.player1--btn--rollDice .btn--roll');
+const player2RollDiceBtn = document.querySelector('.player2--btn--rollDice .btn--roll');
+const player1HoldBtn = document.querySelector('.player1--btn--hold .btn--hold');
+const player2HoldBtn = document.querySelector('.player2--btn--hold .btn--hold');
+const createNewGameBtn = document.querySelector('.btn--new');
+const showOpenGamesBtn = document.querySelector('.btn--openGames');
+
 const diceContainer = document.querySelector('.dice-container');
 const diceElmnt = document.querySelector('.dice');
 const alertElmnt = document.querySelector('.alert--container');
@@ -57,6 +64,13 @@ function hideBothPlayerButtons() {
     player2BtnsElmnt.classList.add("hidden");
     player1BtnsElmnt.classList.add("hidden");
 }
+
+player1RollDiceBtn.addEventListener('click', rollDice);
+player2RollDiceBtn.addEventListener('click', rollDice);
+player1HoldBtn.addEventListener('click', hold);
+player2HoldBtn.addEventListener('click', hold);
+createNewGameBtn.addEventListener('click', createGame, false);
+showOpenGamesBtn.addEventListener('click', listAllOpenGames);
 
 /*
 document.querySelector('.btn--roll').addEventListener('click', function () {
