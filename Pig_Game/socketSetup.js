@@ -292,7 +292,8 @@ function updateUI(data) {
     if (gameStatus === 'NEW' && data.gameStatus === 'IN_PROGRESS') {
         initializePlayer1Turn(data);
         gameStatus = data.gameStatus;
-        showAlertWithText("Player 2 has entered the game: " + data.p2UserName);
+        showAlertWithText(`Player 2 has entered the game:  + ${data.p2UserName} <br>
+                            Target score to win is: ${data.targetScore}`);
     }
 
     if (data.diceRoll !== null && data.gameStatus === 'IN_PROGRESS') {
