@@ -75,6 +75,7 @@ function createGame() {
         }),
         success: function (data) {
             gameId = data.gameId;
+            gameStatus = data.gameStatus;
             connectToSocket(gameId);
             console.log('Your created game id is: ' + data.gameId);
         },
@@ -145,8 +146,9 @@ function connectToGameWithId({gameId, player: {userName}}) {
             console.log(`Connected to game with ID: ${data.gameId}`);
             resetPage();
             if (data.gameStatus === 'IN_PROGRESS') {
-                alert(`You are now playing with: ${data.p1UserName}`);
                 connectToSocket(gameId);
+                gameStatus = data.gameStatus;
+                alert(`You are now playing with: ${data.p1UserName}`);
             }
         },
         error: function (error) {
@@ -247,6 +249,17 @@ function testOnly() {
 }
 
 function updateUI(data) {
+
+    // If game status in the received data object is 'IN_PROGRESS' and the game status in the
+    // local memory is 'NEW'
+    // It means that player 2 has joined the game
+    // in which case we can remove the hidden class from the Player 1's display
+    if (gameStatus === 'NEW' && data.gameStatus === 'IN_PROGRESS') {
+        initializePlayer1Turn(data);
+        gameStatus = data.gameStatus;
+        alert("Player 2 has entered the game: " + data.p2UserName);
+    }
+
     if (data.diceRoll !== null && data.gameStatus === 'IN_PROGRESS') {
         if (diceContainer.classList.contains('hidden')) {
             diceContainer.classList.remove('hidden');
@@ -261,10 +274,14 @@ function updateUI(data) {
 
         if (data.pl1Turn) {
             player1Elmnt.classList.add('player--active');
+            player1BtnsElmnt.classList.remove("hidden");
             player2Elmnt.classList.remove('player--active');
+            player2BtnsElmnt.classList.add("hidden");
         } else if (data.pl2Turn) {
-            player2Elmnt.classList.add('player--active');
             player1Elmnt.classList.remove('player--active');
+            player1BtnsElmnt.classList.add("hidden");
+            player2Elmnt.classList.add('player--active');
+            player2BtnsElmnt.classList.remove("hidden");
         }
     } else if (data.gameStatus === 'FINISHED') {
         declareVictory(data);
@@ -273,7 +290,7 @@ function updateUI(data) {
 
 function declareVictory(data) {
     winner = data.winner?.userName;
-    diceElmnt.classList.add('hidden');
+    diceContainer.classList.add('hidden');
 
     currScorePlayer1Elmnt.textContent = data.p1PartialScore;
     currScorePlayer2Elmnt.textContent = data.p2PartialScore;
@@ -285,6 +302,7 @@ function declareVictory(data) {
     } else if (winner === data.p2UserName) {
         player2Elmnt.classList.add('player--winner');
     }
+    hideBothPlayerButtons();
     console.log(`Player with username ${winner} has won!`);
 }
 //////////////////////// Utils
