@@ -155,7 +155,7 @@ function connectToGameWithId({gameId, player: {userName}}) {
             "gameId" : gameId
         }),
         success: function (data) {
-            if (data.errorInfoList.size === 0) {
+            if (data.errorInfoList.length === 0) {
                 console.log(`Connected to game with ID: ${data.gameId}`);
                 resetPage();
                 if (data.gameStatus === 'IN_PROGRESS') {
