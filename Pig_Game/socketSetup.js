@@ -35,14 +35,11 @@ gameSelectForm.addEventListener("submit", function (event) {
 //////////////////////// Socket Setup
 function connectToSocket(gId) {
     let socket = new SockJS(url + '/gameplay');
-    console.log(`socket is: ${socket}`);
     stompClient = Stomp.over(socket);
-    console.log(`stompClient is: ${stompClient}`);
     stompClient.connect({}, function (frame) {
-        console.log("Connected to the frame: " + frame);
         stompClient.subscribe("/topic/game-progress/" + gId, function (response) {
             gamePlay = JSON.parse(response.body);
-            console.log(gamePlay);
+            console.log(`Received payload from socket. Triggering UI refresh`);
             updateUI(gamePlay);
         });
     })
@@ -114,6 +111,7 @@ function listAllOpenGames(event) {
             openGames = data.openGames;
             console.log('List of available open games: ' + openGames);
             if (openGames.length > 0) {
+                openGamesContainer.innerHTML = '';
                 openGames.forEach(
                     function (gameId, idx) {
                         const html = `<div>
@@ -125,7 +123,6 @@ function listAllOpenGames(event) {
                 )
                 showOverlay();
             } else {
-                console.log("No available games error message:" + data.errorInfoList[0].code);
                 showAlertWithText(data.errorInfoList[0].messageText);
                 // TODO: How are you going to handle the case where no active games are returned from the server
             }
@@ -139,7 +136,7 @@ function listAllOpenGames(event) {
 }
 
 function connectToGameWithId({gameId, player: {userName}}) {
-    console.log(`GameId: ${gameId}, UserName: ${userName}`);
+    console.log(`Sending request to connect to GameId: ${gameId}, UserName: ${userName}`);
     $.ajax({
         url: url + '/game/connect',
         type: 'POST',
@@ -178,7 +175,8 @@ function connectToGameWithId({gameId, player: {userName}}) {
 //////////////////////// Game Play
 function rollDice(event) {
 
-    console.log(`Roll Dice clicked for game id: ${gameId}`);
+    console.log(`New dice roll requested`);
+
     $.ajax({
 
         // The URL of the server-side resource to which the request is sent
@@ -233,7 +231,7 @@ function rollDice(event) {
 
 function hold(event) {
 
-    console.log(`Hold clicked for game id: ${gameId}`);
+    console.log(`Hold requested`);
 
     $.ajax({
         url: url + '/game/gameplay/hold',
@@ -245,8 +243,6 @@ function hold(event) {
         },
         data: JSON.stringify(gamePlay),
         success: function (data) {
-            console.log(`Hold requested. Is it player 1's turn >> ${data.pl1Turn}`);
-            console.log(`Hold requested: Is it player 2's turn >> ${data.pl2Turn}`);
             if (data.gameStatus === 'FINISHED' && data.winner?.userName !== null) {
                 // We don't need to declareVictory here. This method is already being called by the updateUI method, which is called by the connectToSocket method
                 // that we have open at the top of this file. Calling the declareVictory method here as well causes the method to execute twice.
@@ -307,7 +303,6 @@ function updateUI(data) {
             diceContainer.classList.remove('hidden');
         }
         diceElmnt.src = `dice-${data.diceRoll}.png`;
-        console.log(`Image loaded: dice-${data.diceRoll}.png`);
 
         currScorePlayer1Elmnt.textContent = data.p1PartialScore;
         currScorePlayer2Elmnt.textContent = data.p2PartialScore;
