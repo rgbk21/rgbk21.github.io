@@ -3,8 +3,8 @@
 const openGamesContainer = document.getElementById('open-games-container');
 const gameSelectForm = document.querySelector('#select-open-games-form');
 
-// const url = "http://localhost:8080";
-const url = "https://pig-game-rgbk21.herokuapp.com";
+const url = "http://localhost:8080";
+// const url = "https://pig-game-rgbk21.herokuapp.com";
 
 let stompClient;
 let gameId;
@@ -111,7 +111,7 @@ function listAllOpenGames(event) {
                 "userName": p2userName
         }),
         success: function (data) {
-            openGames = data;
+            openGames = data.openGames;
             console.log('List of available open games: ' + openGames);
             if (openGames.length > 0) {
                 openGames.forEach(
@@ -123,10 +123,12 @@ function listAllOpenGames(event) {
                         openGamesContainer.insertAdjacentHTML("afterbegin", html);
                     }
                 )
+                showOverlay();
             } else {
+                console.log("No available games error message:" + data.errorInfoList[0].code);
+                showAlertWithText(data.errorInfoList[0].messageText);
                 // TODO: How are you going to handle the case where no active games are returned from the server
             }
-            showOverlay();
         },
         error: function (error) {
             console.log(`Error fetching available open games: ${error}`);
@@ -153,14 +155,18 @@ function connectToGameWithId({gameId, player: {userName}}) {
             "gameId" : gameId
         }),
         success: function (data) {
-            console.log(`Connected to game with ID: ${data.gameId}`);
-            resetPage();
-            if (data.gameStatus === 'IN_PROGRESS') {
-                connectToSocket(gameId);
-                gameStatus = data.gameStatus;
-                // alert(`You are now playing with: ${data.p1UserName}`);
-                showAlertWithText(`You are now playing with: ${data.p1UserName} <br>
+            if (data.errorInfoList.size === 0) {
+                console.log(`Connected to game with ID: ${data.gameId}`);
+                resetPage();
+                if (data.gameStatus === 'IN_PROGRESS') {
+                    connectToSocket(gameId);
+                    gameStatus = data.gameStatus;
+                    // alert(`You are now playing with: ${data.p1UserName}`);
+                    showAlertWithText(`You are now playing with: ${data.p1UserName} <br>
                                     Target score to win is: ${data.targetScore}`);
+                }
+            } else {
+                showAlertWithText(data.errorInfoList[0].messageText);
             }
         },
         error: function (error) {
@@ -292,7 +298,7 @@ function updateUI(data) {
     if (gameStatus === 'NEW' && data.gameStatus === 'IN_PROGRESS') {
         initializePlayer1Turn(data);
         gameStatus = data.gameStatus;
-        showAlertWithText(`Player 2 has entered the game:  + ${data.p2UserName} <br>
+        showAlertWithText(`Player 2 has entered the game: ${data.p2UserName} <br>
                             Target score to win is: ${data.targetScore}`);
     }
 
