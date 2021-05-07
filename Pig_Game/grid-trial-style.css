@@ -42,7 +42,7 @@ body {
     backdrop-filter: blur(200px);
     filter: blur();
     box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
-    border-radius: 9px;
+    /*border-radius: 9px;*/
 
     /* How should the child divs of this div be styled */
     display: grid;
@@ -211,7 +211,7 @@ body {
     backdrop-filter: blur(10px);
 
     padding: 0.75rem 3rem;
-    border-radius: 75rem;
+    /*border-radius: 75rem;*/
     box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
 }
 .btn:active {
@@ -263,7 +263,7 @@ body {
 .current {
     background-color: #c7365f;
     opacity: 0.8;
-    border-radius: 9px;
+    border-radius: 5px;
     color: #fff;
     width: 65%;
     padding-bottom: 0.5rem;
@@ -296,7 +296,7 @@ body {
     grid-column: 1/4;
 
     display: grid;
-    grid-template-rows: 75px min-content 1fr;
+    grid-template-rows: minmax(75px,auto) min-content 1fr;
     grid-template-columns: 1fr 8fr 1fr;
 }
 .open-games-text{
