@@ -2,7 +2,10 @@
 
 const openGamesContainer = document.getElementById('open-games-container');
 const gameSelectForm = document.querySelector('#select-open-games-form');
-const closeOverlayBtn = document.querySelector('.open-games-close-overlay');
+const closeOpenGamesOverlayBtn = document.querySelector('.open-games-close-overlay-btn');
+const settingsBtn = document.querySelector('.btn-settings');
+const closeSettingsOverlayBtn = document.querySelector('.settings-close-overlay-btn');
+const targetScoreForm = document.querySelector('#select-target-score-form');
 
 const url = "http://localhost:8080";
 // const url = "https://pig-game-rgbk21.herokuapp.com";
@@ -33,10 +36,25 @@ gameSelectForm.addEventListener("submit", function (event) {
     hideOverlay();
 }, false);
 
-closeOverlayBtn.addEventListener('click', function (event){
+targetScoreForm.addEventListener("submit", function (event) {
+    let formData = new FormData(targetScoreForm);
+    for (const entry of formData) {
+        targetWinValue = entry[1];
+    }
+    event.preventDefault();
+    hideSettingsOverlay();
+}, false);
+
+closeOpenGamesOverlayBtn.addEventListener('click', function (event){
     hideOverlay();
 })
 
+settingsBtn.addEventListener('click', function (event){
+    showSettingsOverlay();
+})
+closeSettingsOverlayBtn.addEventListener('click', function (event){
+    hideSettingsOverlay();
+})
 //////////////////////// Socket Setup
 function connectToSocket(gId) {
     let socket = new SockJS(url + '/gameplay');
@@ -75,13 +93,13 @@ function createGame(event) {
             "player": {
                 "userName": p1userName
             },
-            "targetScore": 20
+            "targetScore": targetWinValue
         }),
         success: function (data) {
             gameId = data.gameId;
             gameStatus = data.gameStatus;
             connectToSocket(gameId);
-            showAlertWithText(`Game created with ID: <strong>${data.gameId.split('-')[4]}</strong> <br> 
+            showAlertWithText(`Game created with gameID: <strong>${data.gameId.split('-')[4]}</strong>, target score: <strong>${data.targetScore}</strong> <br> 
                             In their own browser, tell player 2 to click on 'Show Open Games' and then select the above gameID`
             );
             console.log('Game created with ID: ' + data.gameId);
@@ -360,9 +378,15 @@ function showOverlay() {
     document.querySelector(".overlay").classList.remove("hidden");
     // document.getElementById("overlay").style.display = "grid";
 }
-
 function hideOverlay() {
     document.querySelector(".overlay").classList.add("hidden");
+}
+
+function showSettingsOverlay() {
+    document.querySelector(".settings").classList.remove("hidden");
+}
+function hideSettingsOverlay() {
+    document.querySelector(".settings").classList.add("hidden");
 }
 
 function showAlertWithText(alertText) {
