@@ -1,107 +1,107 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8"/>-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>-->
+<!--    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>-->
 
-    <!-- Bootstrap libs   -->
+<!--    &lt;!&ndash; Bootstrap libs   &ndash;&gt;-->
 
-    <!-- If you’re using our compiled JavaScript, don’t forget to include CDN versions of jQuery and Popper.js before it. -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <!-- End Bootstrap libs   -->
+<!--    &lt;!&ndash; If you’re using our compiled JavaScript, don’t forget to include CDN versions of jQuery and Popper.js before it. &ndash;&gt;-->
+<!--    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>-->
+<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>-->
+<!--    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">-->
+<!--    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>-->
+<!--    &lt;!&ndash; End Bootstrap libs   &ndash;&gt;-->
 
-    <!--    libs for stomp and sockjs-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.4.0/sockjs.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
-    <!--    end libs for stomp and sockjs-->
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"/>
-    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-    <link rel="stylesheet" href="grid-trial-style.css"/>
-    <title>GridTrial</title>
-</head>
-<body>
+<!--    &lt;!&ndash;    libs for stomp and sockjs&ndash;&gt;-->
+<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.4.0/sockjs.js"></script>-->
+<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>-->
+<!--    &lt;!&ndash;    end libs for stomp and sockjs&ndash;&gt;-->
+<!--    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"/>-->
+<!--    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>-->
+<!--    <link rel="stylesheet" href="grid-trial-style.css"/>-->
+<!--    <title>GridTrial</title>-->
+<!--</head>-->
+<!--<body>-->
 
-<div class="alert--container">
-    <!-- Alert Content added dynamically -->
-</div>
+<!--<div class="alert&#45;&#45;container">-->
+<!--    &lt;!&ndash; Alert Content added dynamically &ndash;&gt;-->
+<!--</div>-->
 
-<div class="game-container">
+<!--<div class="game-container">-->
 
-    <!-- PLAYER 1 DETAILS -->
-    <div class="player player1--container player--active">
-        <div class="name player1--name">PLAYER 1</div>
-        <div class="score player1--score">0</div>
-        <div class="player1--buttons">
-            <div class="player1--btn--rollDice">
-                <button onclick="rollDice()" class="btn btn--roll">Roll Dice</button>
-            </div>
-            <div class="player1--btn--hold">
-                <button onclick="hold()" class="btn btn--hold">Hold</button>
-            </div>
-        </div>
-        <div class="current player1--current">
-            <p class="current-label current-label-1">Current</p>
-            <p class="current-score current-score-1" id="current--1">0</p>
-        </div>
-    </div>
+<!--    &lt;!&ndash; PLAYER 1 DETAILS &ndash;&gt;-->
+<!--    <div class="player player1&#45;&#45;container player&#45;&#45;active">-->
+<!--        <div class="name player1&#45;&#45;name">PLAYER 1</div>-->
+<!--        <div class="score player1&#45;&#45;score">0</div>-->
+<!--        <div class="player1&#45;&#45;buttons">-->
+<!--            <div class="player1&#45;&#45;btn&#45;&#45;rollDice">-->
+<!--                <button onclick="rollDice()" class="btn btn&#45;&#45;roll">Roll Dice</button>-->
+<!--            </div>-->
+<!--            <div class="player1&#45;&#45;btn&#45;&#45;hold">-->
+<!--                <button onclick="hold()" class="btn btn&#45;&#45;hold">Hold</button>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="current player1&#45;&#45;current">-->
+<!--            <p class="current-label current-label-1">Current</p>-->
+<!--            <p class="current-score current-score-1" id="current&#45;&#45;1">0</p>-->
+<!--        </div>-->
+<!--    </div>-->
 
-    <!-- PLAYER 2 DETAILS -->
-    <div class="player player2--container">
-        <div class="name player2--name">PLAYER 2</div>
-        <div class="score player2--score">0</div>
-        <div class="player2--buttons">
-            <div class="player2--btn--rollDice">
-                <button onclick="rollDice()" class="btn btn--roll">Roll Dice</button>
-            </div>
-            <div class="player2--btn--hold">
-                <button onclick="hold()" class="btn btn--hold">Hold</button>
-            </div>
-        </div>
-        <div class="current player2--current">
-            <p class="current-label current-label-2">Current</p>
-            <p class="current-score current-score-2" id="current--2">0</p>
-        </div>
-    </div>
+<!--    &lt;!&ndash; PLAYER 2 DETAILS &ndash;&gt;-->
+<!--    <div class="player player2&#45;&#45;container">-->
+<!--        <div class="name player2&#45;&#45;name">PLAYER 2</div>-->
+<!--        <div class="score player2&#45;&#45;score">0</div>-->
+<!--        <div class="player2&#45;&#45;buttons">-->
+<!--            <div class="player2&#45;&#45;btn&#45;&#45;rollDice">-->
+<!--                <button onclick="rollDice()" class="btn btn&#45;&#45;roll">Roll Dice</button>-->
+<!--            </div>-->
+<!--            <div class="player2&#45;&#45;btn&#45;&#45;hold">-->
+<!--                <button onclick="hold()" class="btn btn&#45;&#45;hold">Hold</button>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="current player2&#45;&#45;current">-->
+<!--            <p class="current-label current-label-2">Current</p>-->
+<!--            <p class="current-score current-score-2" id="current&#45;&#45;2">0</p>-->
+<!--        </div>-->
+<!--    </div>-->
 
-    <!-- COMMON BUTTONS DETAILS -->
-    <div class="btn--createGame">
-        <button onclick="createGame()" class="btn btn--new">Create New Game</button>
-    </div>
+<!--    &lt;!&ndash; COMMON BUTTONS DETAILS &ndash;&gt;-->
+<!--    <div class="btn&#45;&#45;createGame">-->
+<!--        <button onclick="createGame()" class="btn btn&#45;&#45;new">Create New Game</button>-->
+<!--    </div>-->
 
-    <div class="btn--showOpenGames">
-        <button onclick="listAllOpenGames()" class="btn btn--openGames">Show Open Games</button>
-    </div>
+<!--    <div class="btn&#45;&#45;showOpenGames">-->
+<!--        <button onclick="listAllOpenGames()" class="btn btn&#45;&#45;openGames">Show Open Games</button>-->
+<!--    </div>-->
 
-    <!-- DICE -->
-    <div class="dice-container">
-        <img class="dice" src="dice-FIVE.png" alt="Playing dice"/>
-    </div>
-
-
-    <!-- Overlay -->
-    <div id="overlay">
-        <div class="text">
-            <form id="select-open-games-form">
-                <p>Choose one of the available open games to join as Player 2:</p>
-                <div id="open-games-container">
-                    <!-- Content added dynamically -->
-                </div>
-                <div>
-                    <button class="btn btn--connectToGame" type="submit">Connect to game!</button>
-                </div>
-            </form>
-        </div>
-    </div>
+<!--    &lt;!&ndash; DICE &ndash;&gt;-->
+<!--    <div class="dice-container">-->
+<!--        <img class="dice" src="dice-FIVE.png" alt="Playing dice"/>-->
+<!--    </div>-->
 
 
-</div>
+<!--    &lt;!&ndash; Overlay &ndash;&gt;-->
+<!--    <div id="overlay">-->
+<!--        <div class="text">-->
+<!--            <form id="select-open-games-form">-->
+<!--                <p>Choose one of the available open games to join as Player 2:</p>-->
+<!--                <div id="open-games-container">-->
+<!--                    &lt;!&ndash; Content added dynamically &ndash;&gt;-->
+<!--                </div>-->
+<!--                <div>-->
+<!--                    <button class="btn btn&#45;&#45;connectToGame" type="submit">Connect to game!</button>-->
+<!--                </div>-->
+<!--            </form>-->
+<!--        </div>-->
+<!--    </div>-->
 
-<script src="socketSetup.js"></script>
-<script src="script.js"></script>
 
-</body>
-</html>
+<!--</div>-->
+
+<!--<script src="socketSetup.js"></script>-->
+<!--<script src="script.js"></script>-->
+
+<!--</body>-->
+<!--</html>-->

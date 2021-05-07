@@ -32,8 +32,8 @@
     <!-- Alert Content added dynamically -->
     <div class="alert alert-success alert-dismissible fade show" role="alert">
         <strong>PLEASE NOTE:</strong>
-        This is a free-tier heroku-hosted app. If the dyno (remote server) has received no traffic in the last 30 mins, it will put the dyno to sleep. Hence when you send the very
-        first request to the backend, it might take around 15-20 seconds for the server to respond. Please be patient and do not repeatedly click the buttons just because the
+        This is a free-tier heroku-hosted app. If the dyno (remote server) has received no traffic in the last 30 mins, it will put the dyno to sleep. Hence when you click the very
+        first button, it might take around 15-20 seconds for the server to respond. Please be patient and do not repeatedly click the buttons just because the
         buttons seem to be not doing anything. Thanks for your time!
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">&times;</span>
@@ -95,18 +95,21 @@
 
 
     <!-- Overlay -->
-    <div id="overlay">
-        <div class="text">
-            <form id="select-open-games-form">
+    <div class="overlay hidden">
+        <form id="select-open-games-form">
+            <div class="open-games-text">
                 <p>Choose one of the available open games to join as Player 2:</p>
-                <div id="open-games-container">
-                    <!-- Content added dynamically -->
-                </div>
-                <div>
-                    <button class="btn btn--connectToGame" type="submit">Connect to game!</button>
-                </div>
-            </form>
-        </div>
+            </div>
+            <button type="button" class="close open-games-close-overlay" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <div id="open-games-container">
+                <!-- Content added dynamically -->
+            </div>
+            <div class="open-games-submit-button">
+                <button class="btn btn--connectToGame" type="submit">Connect to game!</button>
+            </div>
+        </form>
     </div>
 
 

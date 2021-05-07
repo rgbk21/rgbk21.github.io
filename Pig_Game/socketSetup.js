@@ -2,9 +2,10 @@
 
 const openGamesContainer = document.getElementById('open-games-container');
 const gameSelectForm = document.querySelector('#select-open-games-form');
+const closeOverlayBtn = document.querySelector('.open-games-close-overlay');
 
-// const url = "http://localhost:8080";
-const url = "https://pig-game-rgbk21.herokuapp.com";
+const url = "http://localhost:8080";
+// const url = "https://pig-game-rgbk21.herokuapp.com";
 
 let stompClient;
 let gameId;
@@ -31,6 +32,10 @@ gameSelectForm.addEventListener("submit", function (event) {
     });
     hideOverlay();
 }, false);
+
+closeOverlayBtn.addEventListener('click', function (event){
+    hideOverlay();
+})
 
 //////////////////////// Socket Setup
 function connectToSocket(gId) {
@@ -352,11 +357,12 @@ function declareVictory(data) {
 //////////////////////// Utils
 
 function showOverlay() {
-    document.getElementById("overlay").style.display = "block";
+    document.querySelector(".overlay").classList.remove("hidden");
+    // document.getElementById("overlay").style.display = "grid";
 }
 
 function hideOverlay() {
-    document.getElementById("overlay").style.display = "none";
+    document.querySelector(".overlay").classList.add("hidden");
 }
 
 function showAlertWithText(alertText) {
