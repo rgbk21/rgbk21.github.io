@@ -104,8 +104,10 @@ function createGame(event) {
             );
             console.log('Game created with ID: ' + data.gameId);
         },
-        error: function (error) {
-            console.log(`Error connecting to new game for player 1: ${error}`);
+        error: function (jqXHR, textStatus, errorThrown) {
+            console.log(`jqXHR: ${jqXHR}`);
+            console.log(`textStatus: ${textStatus}`);
+            console.log(`errorThrown: ${errorThrown}`);
         }
     });
 
@@ -317,7 +319,7 @@ function updateUI(data) {
     if (gameStatus === 'NEW' && data.gameStatus === 'IN_PROGRESS') {
         initializePlayer1Turn(data);
         gameStatus = data.gameStatus;
-        showAlertWithText(`Player 2 has entered the game: ${data.p2UserName} <br>
+        showAlertWithText(`Player 2 has entered the game as: ${data.p2UserName} <br>
                             Target score to win is: ${data.targetScore}`);
     }
 
