@@ -392,7 +392,7 @@
 
         <div class="sub-heading">When Constructors are Executed</div>
         <div>
-            In a class hierarchy, constructors complete their execution in the order of derivation, from superclass to
+            -In a class hierarchy, constructors complete their execution in the order of derivation, from superclass to
             subclass. Further, since <code>super()</code> must be the first statement that is executed in a subclass'
             constructor, this order is the same whether or not <code>super()</code> is used. If <code>super()</code> is
             not used, then the default or parameterless constructor of each superclass will be executed.
@@ -400,6 +400,26 @@
                 <script src="https://gist.github.com/rgbk21/93a913ea7c83ad866875433b6f3b09da.js"></script>
             </div>
         </div>
+
+        <div class="sub-heading">Behavior in the case of parameterized constructors</div>
+        <div>
+            - Note the example below. The <i>Child</i> class is inheriting from the <i>Parent</i> class. <br>
+            - We have already seen that in the case of inheritance, the constructor of the parent class is called first. <br>
+            - Hence, in the first case, the call to the non-parameterized constructor of the <i>Child</i> class first calls the non-parameterized constructor of the <i>Parent</i>
+            class. That is the expected behavior. <br>
+            - Note the second case carefully: the call to the parameterized constructor of the <i>Child</i> class calls the non-parameterized constructor of the <i>Parent</i>
+            class. This would not change even if you changed the code to include the call to <code>super</code> in the constructor for the <i>Child</i> class. <br>
+            - In order to call the parameterized constructor of the child class, you would have to explicitly call the parameterized version of the <code>super</code> method, as
+            shown in the third constructor. Ignore the difference of the two args that are being passed, that is only because we cannot create two constructors with the same set of
+            args.
+
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/dbab6ec7ddbf20b2772a53f6b07b780d.js"></script>
+            </div>
+
+        </div>
+
+
         <div class="sub-heading">Method Overriding</div>
         <div>
             In a class hierarchy, when a method in a subclass has the same name as a method in its superclass, then the
@@ -416,7 +436,7 @@
         </div>
         <div class="sub-heading">Dynamic Method Dispatch</div>
         <div>
-            Method Overloading provides the basis for Java's: <i>Dynamic Method Dispatch</i>. Dynamic method dispatch is
+            Method Overriding provides the basis for Java's: <i>Dynamic Method Dispatch</i>. Dynamic method dispatch is
             the mechanism by which a call to an overridden method is resolved at runtime, rather than compile time.
             Dynamic method dispatch is important because this is how
             Java implements run-time polymorphism. The basis for Dynamic Method Dispatch just that: a superclass
@@ -505,6 +525,22 @@
             object by a class if no appropriate interface exists.
 
         </div>
+
+        <div class="sub-heading">When will overriding methods not work</div>
+        <div>
+            - The methods that are overriding each other MUST have the same return type. If the return type is different, then the two methods neither override nor overload each
+            other. <br>
+            - However, the overriding method of the subclass CAN return an object that is the subclass of the object that is being returned from the superclass method that is being
+            overridden. Doesn't make sense? Look at the below example:
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/974d88b9a0c80a4178b46ebfea69e5e8.js"></script>
+            </div>
+            - Second, when overriding a method, we can increase access but we can never decrease access. Java specifies that the access specifier for an overriding method can allow
+            more, but not less, access than the overridden method. For example, a protected instance method in the superclass can be made public, but not private, in the subclass.
+            <a href="https://stackoverflow.com/questions/6851612/when-overriding-a-method-why-can-i-increase-access-but-not-decrease-it">Source on SO</a>
+        </div>
+
+
         <div class="sub-heading">Using Abstract Classes and Abstract Methods</div>
         <div>
             You can require that certain methods be overridden by subclasses by specifying the <code>abstract</code>
@@ -2793,6 +2829,6 @@
     </div>
 
     <script src="script.js"></script>
-
+</div>
 </body>
 </html>

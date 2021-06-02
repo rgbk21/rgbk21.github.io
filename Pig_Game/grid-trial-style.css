@@ -35,7 +35,7 @@ body {
 .game-container{
     /* Which rows does this div occupy relative to its parent div */
     grid-row: 2/3;
-    grid-column: 2/3;
+    grid-column: 1/4;
 
     /* Styling of the div */
     background-color: rgba(255, 255, 255, 0.35);
@@ -98,6 +98,8 @@ body {
     /*align-self: stretch;*/
     /*align-items: center;*/
     /*justify-items: center;*/
+    align-self: stretch;
+    justify-self: stretch;
 }
 .current-label-1{
     grid-row: 1/2;
@@ -210,7 +212,7 @@ body {
     background-color: rgba(255, 255, 255, 0.6);
     backdrop-filter: blur(10px);
 
-    padding: 0.75rem 3rem;
+    padding: 0.75rem 0.75rem;
     /*border-radius: 75rem;*/
     box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
 }
@@ -223,7 +225,7 @@ body {
 }
 
 .name {
-    font-size: 3rem;
+    font-size: 2rem;
     letter-spacing: 1px;
     word-spacing: 2px;
     font-weight: 300;
