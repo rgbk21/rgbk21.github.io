@@ -17,7 +17,11 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-9QJ5D3X353"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
         gtag('js', new Date());
 
         gtag('config', 'G-9QJ5D3X353');
@@ -63,8 +67,8 @@
                     HTML Projects
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="../../ImageGallery/ImageGallery.html">Image Gallery</a>
                     <a class="dropdown-item" href="../../Pig_Game/index.html">Pig Game</a>
+                    <a class="dropdown-item" href="../../ImageGallery/ImageGallery.html">Image Gallery</a>
                     <a class="dropdown-item" href="../../RGB_Guesser_Game/RGB.html">RGB Guesser Game</a>
                     <a class="dropdown-item" href="../../ToDoList/todo.html">To-Do List</a>
                     <div class="dropdown-divider"></div>
@@ -137,24 +141,26 @@
         <button id='load-all-gists' type="button" class="btn btn-outline-primary">Show all Gists!</button>
 
         <br>
-        This page contains my personal notes from the Head First SQL Book. <br>
-        
-        Index:
-        <br>
-        <a href="#Ch1">Chapter 1: Data and Tables: A Place for Everything</a>
-        <br>
-        <a href="#Ch2">Chapter 2: The SELECT Statement - Data Retrieval</a>
-        <br>
-        <a href="#Ch3">Chapter 3: DELETE and UPDATE - Changes are good</a>
-        <br>
-        <a href="#Ch4">Chapter 4: Smart Table Design - Need for being Normal</a>
-        <br>
-        <a href="#Ch5">Chapter 5: ALTER - Rewriting the Past</a>
-        <br>
-        <a href="#Ch7">Chapter 7: Multi-table Database Design - Outgrowing your table</a>
-        <br>
-        <a href="#Ch8">Chapter 8: Joins and Multi-table operations</a>
-        <br>
+
+
+        <!--        This page contains my personal notes from the Head First SQL Book. <br>-->
+        <!--        -->
+        <!--        Index:-->
+        <!--        <br>-->
+        <!--        <a href="#Ch1">Chapter 1: Data and Tables: A Place for Everything</a>-->
+        <!--        <br>-->
+        <!--        <a href="#Ch2">Chapter 2: The SELECT Statement - Data Retrieval</a>-->
+        <!--        <br>-->
+        <!--        <a href="#Ch3">Chapter 3: DELETE and UPDATE - Changes are good</a>-->
+        <!--        <br>-->
+        <!--        <a href="#Ch4">Chapter 4: Smart Table Design - Need for being Normal</a>-->
+        <!--        <br>-->
+        <!--        <a href="#Ch5">Chapter 5: ALTER - Rewriting the Past</a>-->
+        <!--        <br>-->
+        <!--        <a href="#Ch7">Chapter 7: Multi-table Database Design - Outgrowing your table</a>-->
+        <!--        <br>-->
+        <!--        <a href="#Ch8">Chapter 8: Joins and Multi-table operations</a>-->
+        <!--        <br>-->
         <br>
         Index for Hibernate in Action book: <br>
         <a href="#HIA_Ch1">Chapter 1: Understanding Object/Relational Persistence</a>
@@ -173,956 +179,958 @@
         <a href="#Section10">Section 10: Group Functions</a> <br>
         <a href="#Section11">Section 11: Grouping Data</a> <br>
 
+        <!--
+                <hr>
+                <div id="Ch1" class="chapter">Chapter 1: Data and Tables - A Place for Everything</div>
+                <hr>
+                <div class="textual-content">
+                    - If you have a bunch of data that you want ot organize into a table, the first thing that you need to do is
+                    identify the common bits of data and then assign that common bit a column name.
+                    <br>
+                    <div class="sub-heading">What is a Database</div>
+                    <div>
+                        - A database is a structure that holds tables and other SQL structures related to those tables. A table
+                        is the structure inside your database that contains data, organized in columns and rows. Each category
+                        that you identified earlier becomes a <i>column</i>. All the information about one object in your table
+                        becomes a <i>row</i>. You will often see the word <i>field</i> used instead of a column. They mean the
+                        same thing. Also, row and <i>record</i> are used interchangeably.
+                        <br>
+                        - Databases contain connected data - meaning - all of the tables in a database should be connected in
+                        some way.
+                        <br>
+                        - The SQL language requires all tables to be inside a database. SO even if you have a single table, you
+                        need to place it inside a database. One of the features of SQL is to control access to your tables by
+                        multiple users. Being able to grant or deny access to an entire database is sometime simpler than having
+                        to control the permissions on each one of the multiple tables.
+                        <br>
+                        - SQL does not allow you ot recreate an existing TABLE or DATABASE. If you try to create a new table
+                        that has the same name as an existing table, it will give you a "Table already exists Exception". (Even
+                        if the new table taht you are creating is different from the existing table). Hence to create a new
+                        table that has the same name as an existing table, you will have to first delete the existing table.
+                    </div>
 
-        <hr>
-        <div id="Ch1" class="chapter">Chapter 1: Data and Tables - A Place for Everything</div>
-        <hr>
-        <div class="textual-content">
-            - If you have a bunch of data that you want ot organize into a table, the first thing that you need to do is
-            identify the common bits of data and then assign that common bit a column name.
-            <br>
-            <div class="sub-heading">What is a Database</div>
-            <div>
-                - A database is a structure that holds tables and other SQL structures related to those tables. A table
-                is the structure inside your database that contains data, organized in columns and rows. Each category
-                that you identified earlier becomes a <i>column</i>. All the information about one object in your table
-                becomes a <i>row</i>. You will often see the word <i>field</i> used instead of a column. They mean the
-                same thing. Also, row and <i>record</i> are used interchangeably.
-                <br>
-                - Databases contain connected data - meaning - all of the tables in a database should be connected in
-                some way.
-                <br>
-                - The SQL language requires all tables to be inside a database. SO even if you have a single table, you
-                need to place it inside a database. One of the features of SQL is to control access to your tables by
-                multiple users. Being able to grant or deny access to an entire database is sometime simpler than having
-                to control the permissions on each one of the multiple tables.
-                <br>
-                - SQL does not allow you ot recreate an existing TABLE or DATABASE. If you try to create a new table
-                that has the same name as an existing table, it will give you a "Table already exists Exception". (Even
-                if the new table taht you are creating is different from the existing table). Hence to create a new
-                table that has the same name as an existing table, you will have to first delete the existing table.
-            </div>
+                    <div class="sub-heading">Creating a Database</div>
+                    <div>
+                        <code>CREATE DATABASE gregs_list;</code><br>
+                        This will create the database. Spaces are not allowed in the name of the database. Command must end
+                        with a semi-colon.
 
-            <div class="sub-heading">Creating a Database</div>
-            <div>
-                <code>CREATE DATABASE gregs_list;</code><br>
-                This will create the database. Spaces are not allowed in the name of the database. Command must end
-                with a semi-colon.
+                        <br><br>
+                        <code>USE gregs_list;</code>
+                        <br>
+                        This will tell your RDBMS to actually use the database that we just created. Now everything we do will
+                        happen only inside the gregs_list database.
 
-                <br><br>
-                <code>USE gregs_list;</code>
-                <br>
-                This will tell your RDBMS to actually use the database that we just created. Now everything we do will
-                happen only inside the gregs_list database.
-
-                <br><br>
-                <code>CREATE TABLE my_contacts</code><br>
-                <code>(</code><br>
-                <code> first_name VARCHAR(30) NOT NULL,</code><br>
-                <code> last_name VARCHAR(30) NOT NULL,</code><br>
-                <code> email VARCHAR(30),</code><br>
-                <code> gender CHAR(1),</code><br>
-                <code> birthday DATE,</code><br>
-                <code> numOfPets INT NOT NULL DEFAULT 0</code><br>
-                <code>);</code><br>
-                - The comma separates the columns being created. first_name and last_name.. are the names of the
-                columns. VARCHAR(30) specifies the datatype. It is used to hold information stored as a text. The (30)
-                means that the text it holds can be up to 30 characters long.
-                <br>
-                - If there are certain columns in your table that should always have values, you can set up your table
-                to not accept <code>NULL</code> values for those columns. For example, in the above table, you MUST
-                provide a value for the first_name, last_name and numOfPets columns in the INSERT statement.
-                <br>
-                - The value that follows the DEFAULT keyword is automatically added if no other value is specified. The
-                default value has to be of the same type of value as the column. This means that the numOfPets can not
-                only be NOT NULL, but if no value is specified for the column, the value of 0 will be automatically
-                inserted into the table, thus satisfying the requirement of the NOT NULL.
-                <br>
-                - So the question is: which columns should be assigned to be NOT NULL? Any columns that you might use
-                later to search with, or any unique columns should be NOT NULL. Ideally you want the data in your table
-                to be complete. However, if you know a column that will be filled in later, you can leave it as NULL.
-                <br>
-                - Remember that a column with a <code>NULL</code> value <code>IS NULL</code> but does not
-                <code>EQUAL NULL</code>.
-
-
-                <br><br>
-                <code>DESC my_contacts;</code><br>
-                This will show what your table looks like. Note that this will show ONLY the <i>structure</i> of your
-                table. Not the information inside of it.
-
-                <br><br>
-                <code>SHOW CREATE TABLE my_contacts;</code><br>
-                This will return the CREATE TABLE statement that can exactly recreate our table. The output from this
-                command is also going to contain bacticks and what not. You can paste the output directly into the
-                console and recreate the table. The bacticks and data settings don't really affect it.
-                <br> The output would look something like this: <br>
-                <code>CREATE TABLE `my_contacts2` (</code><br>
-                <code>`first_name` varchar(30) NOT NULL,</code><br>
-                <code>`last_name` varchar(30) NOT NULL,</code><br>
-                <code>`email` varchar(30) DEFAULT NULL,</code><br>
-                <code>`gender` char(1) DEFAULT NULL,</code><br>
-                <code>`birthday` date DEFAULT NULL,</code><br>
-                <code>`numOfPets` int NOT NULL DEFAULT 0</code><br>
-                <code>) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci</code><br>
-                - Note first_name, last_name, and numOfPets are NOT NULL. email, gender, birthday on the other hand are
-                DEFAULT NULL. Unless we tell the SSQL software differently, it assumes that all values are NULL by
-                default.
-
-                <br><br>
-                <code>SHOW COLUMNS FROM table_name;</code><br>
-                This command will display all the columns in your table, and their data type, along with any column
-                specific details.
-
-                <br><br>
-                <code>SHOW CREATE DATABASE database_name;</code><br>
-                Just like the SHOW CREATE table, this will return the command that would exactly recreate the specified
-                database.
-
-                <br><br>
-                <code>SHOW INDEX FROM table_name;</code><br>
-
-                <br><br>
-                <code>SHOW WARNINGS;</code>
+                        <br><br>
+                        <code>CREATE TABLE my_contacts</code><br>
+                        <code>(</code><br>
+                        <code> first_name VARCHAR(30) NOT NULL,</code><br>
+                        <code> last_name VARCHAR(30) NOT NULL,</code><br>
+                        <code> email VARCHAR(30),</code><br>
+                        <code> gender CHAR(1),</code><br>
+                        <code> birthday DATE,</code><br>
+                        <code> numOfPets INT NOT NULL DEFAULT 0</code><br>
+                        <code>);</code><br>
+                        - The comma separates the columns being created. first_name and last_name.. are the names of the
+                        columns. VARCHAR(30) specifies the datatype. It is used to hold information stored as a text. The (30)
+                        means that the text it holds can be up to 30 characters long.
+                        <br>
+                        - If there are certain columns in your table that should always have values, you can set up your table
+                        to not accept <code>NULL</code> values for those columns. For example, in the above table, you MUST
+                        provide a value for the first_name, last_name and numOfPets columns in the INSERT statement.
+                        <br>
+                        - The value that follows the DEFAULT keyword is automatically added if no other value is specified. The
+                        default value has to be of the same type of value as the column. This means that the numOfPets can not
+                        only be NOT NULL, but if no value is specified for the column, the value of 0 will be automatically
+                        inserted into the table, thus satisfying the requirement of the NOT NULL.
+                        <br>
+                        - So the question is: which columns should be assigned to be NOT NULL? Any columns that you might use
+                        later to search with, or any unique columns should be NOT NULL. Ideally you want the data in your table
+                        to be complete. However, if you know a column that will be filled in later, you can leave it as NULL.
+                        <br>
+                        - Remember that a column with a <code>NULL</code> value <code>IS NULL</code> but does not
+                        <code>EQUAL NULL</code>.
 
 
-                <br><br>
-                <code>INSERT INTO my_contacts</code><br>
-                <code>(last_name, first_name, email, gender, birthday, numOfPets)</code><br>
-                <code>VALUES</code><br>
-                <code>('Doe', 'John', 'jdoe@gmail.com', 'M', '1980-09-08', 1);</code><br>
-                - The values in the second set of parentheses should be in the same order as the first set of
-                parentheses. This order can be different from the order in which the columns exist in the actual
-                database. The important thing is that the order on lines 2 and 4 match exactly.
-                <br>
-                - You CAN completely omit the column names on line 2. But then the values must ALL be there, and in the
-                SAME order that you originally added the columns in.
-                <br>
-                - You can also leave some columns out. But then the columns that you have left out will contain <code>NULL</code>.
-                That is, the record will be incomplete.
-                <br>
-                - Any value that goes into a VARCHAR, CHAR, DATE or BLOB column has single quotes around it.
-                Numeric values like DEC and INT do not need quotes (for eg. numOfPets).
+                        <br><br>
+                        <code>DESC my_contacts;</code><br>
+                        This will show what your table looks like. Note that this will show ONLY the <i>structure</i> of your
+                        table. Not the information inside of it.
 
-                <br><br>
-                <code>SELECT * FROM my_contacts</code><br>
-                This will selct and print everything from the my_contacts table.
+                        <br><br>
+                        <code>SHOW CREATE TABLE my_contacts;</code><br>
+                        This will return the CREATE TABLE statement that can exactly recreate our table. The output from this
+                        command is also going to contain bacticks and what not. You can paste the output directly into the
+                        console and recreate the table. The bacticks and data settings don't really affect it.
+                        <br> The output would look something like this: <br>
+                        <code>CREATE TABLE `my_contacts2` (</code><br>
+                        <code>`first_name` varchar(30) NOT NULL,</code><br>
+                        <code>`last_name` varchar(30) NOT NULL,</code><br>
+                        <code>`email` varchar(30) DEFAULT NULL,</code><br>
+                        <code>`gender` char(1) DEFAULT NULL,</code><br>
+                        <code>`birthday` date DEFAULT NULL,</code><br>
+                        <code>`numOfPets` int NOT NULL DEFAULT 0</code><br>
+                        <code>) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci</code><br>
+                        - Note first_name, last_name, and numOfPets are NOT NULL. email, gender, birthday on the other hand are
+                        DEFAULT NULL. Unless we tell the SSQL software differently, it assumes that all values are NULL by
+                        default.
 
-                <br><br>
-                <code>DROP TABLE my_contacts;</code><br>
-                This will delete the doughnut_list table. REMEMBER: DROP TABLE works whether or not there is data in
-                your table. Once your table is dropped, ALL of the data in the table is gone as well. Hence use this
-                command with EXTREME caution.
+                        <br><br>
+                        <code>SHOW COLUMNS FROM table_name;</code><br>
+                        This command will display all the columns in your table, and their data type, along with any column
+                        specific details.
 
+                        <br><br>
+                        <code>SHOW CREATE DATABASE database_name;</code><br>
+                        Just like the SHOW CREATE table, this will return the command that would exactly recreate the specified
+                        database.
 
-            </div>
-            <div class="sub-heading">Datatypes in SQL</div>
-            <div>
-                - <a href="https://www.w3schools.com/sql/sql_datatypes.asp">Read more at the W3Schools link</a>
-                <br>
-                <code>VARCHAR(size)</code>: A VARIABLE length string (can contain letters, numbers, and special
-                characters). The size parameter specifies the maximum column length in characters - can be from 0 to
-                65535
-                <br>
-                <code>CHAR(size)</code>: A FIXED length string (can contain letters, numbers, and special characters).
-                The size parameter specifies the column length in characters - can be from 0 to 255. Default is 1.
-                <br>
-                <code>BLOB(size)</code>: For BLOBs (Binary Large OBjects). Holds up to 65,535 bytes of data
-                <br>
-                <code>INT(size)</code>: A medium integer. Signed range is from -2147483648 to 2147483647. Unsigned
-                range is from 0 to 4294967295. The size parameter specifies the maximum display width (which is 255)
-                <br>
-                <code>DECIMAL(size, d)</code>: An exact fixed-point number. The total number of digits is specified in
-                size. The number of digits after the decimal point is specified in the d parameter. The maximum number
-                for size is 65. The maximum number for d is 30. The default value for size is 10. The default value for
-                d is 0.
-                <br>
-                <code>DATE</code>: A date. Format: YYYY-MM-DD. The supported range is from '1000-01-01' to
-                '9999-12-31'
-                <br>
-                <code>DATETIME(fsp)</code>: A date and time combination. Format: YYYY-MM-DD hh:mm:ss. The supported
-                range is from '1000-01-01 00:00:00' to '9999-12-31 23:59:59'.
-                <br>
-                <code>TIMESTAMP(fsp)</code>: A timestamp. TIMESTAMP values are stored as the number of seconds since the
-                Unix epoch ('1970-01-01 00:00:00' UTC). Format: YYYY-MM-DD hh:mm:ss. The supported range is from
-                '1970-01-01 00:00:01' UTC to '2038-01-09 03:14:07' UTC. TIMESTAMP is usually used to capture te current
-                time. DATETIME is is best used to store a future event.
-            </div>
+                        <br><br>
+                        <code>SHOW INDEX FROM table_name;</code><br>
+
+                        <br><br>
+                        <code>SHOW WARNINGS;</code>
 
 
-        </div>
+                        <br><br>
+                        <code>INSERT INTO my_contacts</code><br>
+                        <code>(last_name, first_name, email, gender, birthday, numOfPets)</code><br>
+                        <code>VALUES</code><br>
+                        <code>('Doe', 'John', 'jdoe@gmail.com', 'M', '1980-09-08', 1);</code><br>
+                        - The values in the second set of parentheses should be in the same order as the first set of
+                        parentheses. This order can be different from the order in which the columns exist in the actual
+                        database. The important thing is that the order on lines 2 and 4 match exactly.
+                        <br>
+                        - You CAN completely omit the column names on line 2. But then the values must ALL be there, and in the
+                        SAME order that you originally added the columns in.
+                        <br>
+                        - You can also leave some columns out. But then the columns that you have left out will contain <code>NULL</code>.
+                        That is, the record will be incomplete.
+                        <br>
+                        - Any value that goes into a VARCHAR, CHAR, DATE or BLOB column has single quotes around it.
+                        Numeric values like DEC and INT do not need quotes (for eg. numOfPets).
 
-        <hr>
-        <div id="Ch2" class="chapter">Chapter 2: The SELECT Statement - Data Retrieval</div>
-        <hr>
-        <div class="textual-content">
-            - Instead of using the SELECT statement to return all the entries in the database, we can use it with the
-            WHERE clause to fine-tune our query.
-            <br><br>
-            <code>SELECT * FROM my_contacts</code><br>
-            <code>WHERE first_name = 'Anne';</code><br>
-            - Putting first_name with the WHERE clause tells SQL that you want to look in only the column called
-            first_name. So what this query is saying is: return all the columns of the record r from my_contacts table
-            where r.first_name = 'Anne'. Whenever you see *, as in SELECT *, think of it like asking your SQL software
-            to SELECT ALL THE COLUMNS.
-            <br>
-            - Notice that a query on VARCHAR column datatype should always be inside quotes ''. Hence it's 'Anne' and
-            not Anne. If the datatype is an INTEGER or a DECIMAL, then you do not need quotes. Only the numeric types -
-            INTEGER and DECIMAL do not need quotes. The VARCHAR, CHAR, BLOB, DATE, and TIME datatypes all require
-            quotes.
-            <br>
-            - You need to escape the single quote - use the \ (backslash) to escape the quote. for eg.
-            <code>WHERE first_name = 'D\'Antonio'</code>.
-            <br>
-            - Do not use double quotes to specify a VARCHAR in your SQL code. You use " in the programming language to
-            say "this is where the SQL statement is". That way, single quotes are recognized as being part of the SQL
-            syntax and not the programming language.
-            <br><br>
+                        <br><br>
+                        <code>SELECT * FROM my_contacts</code><br>
+                        This will selct and print everything from the my_contacts table.
 
-            <code>SELECT email, last_name FROM my_contacts</code><br>
-            <code>WHERE first_name = 'Anne';</code><br>
-            - Instead of using SELECT * that returned all the columns from the table, here we are specifying the columns
-            that we want to be returned - namely - email and last_name. Note that different column names are spearated
-            by a comma. This returns your queries faster.
-            <br>
-            Similarly you could have also used <code>WHERE first_name &lt&gt 'Anne';</code><br>. This would return all
-            reuslts where the first name is NOT EQUAL to 'Anne'.
+                        <br><br>
+                        <code>DROP TABLE my_contacts;</code><br>
+                        This will delete the doughnut_list table. REMEMBER: DROP TABLE works whether or not there is data in
+                        your table. Once your table is dropped, ALL of the data in the table is gone as well. Hence use this
+                        command with EXTREME caution.
 
-            <br><br>
-            <code>SELECT email, last_name FROM my_contacts</code><br>
-            <code>WHERE first_name = 'Anne'</code><br>
-            <code>AND numOfPets = 1;</code><br>
-            This is using the AND keyword to combine two WHERE clauses. Note the absence of qotes in numOfPets. And that
-            comparison is done using just a single <code>=</code> sign. Not <code>==</code>.
-            Similarly, you can replace the equals comparison with greater than <code>AND numOfPets &gt 0</code> or NOT
-            EQUAL as in <code>AND numOfPets &lt&gt 0</code>.
 
-            <br><br>
-            <code>SELECT email, last_name FROM my_contacts</code><br>
-            <code>WHERE first_name =&gt 'A'</code><br>
-            <code>AND first_name &lt 'B';</code><br>
-            This query will return contacts whose first letter is A or later, but whose first letters come earlier than
-            the alphabet B.
+                    </div>
+                    <div class="sub-heading">Datatypes in SQL</div>
+                    <div>
+                        - <a href="https://www.w3schools.com/sql/sql_datatypes.asp">Read more at the W3Schools link</a>
+                        <br>
+                        <code>VARCHAR(size)</code>: A VARIABLE length string (can contain letters, numbers, and special
+                        characters). The size parameter specifies the maximum column length in characters - can be from 0 to
+                        65535
+                        <br>
+                        <code>CHAR(size)</code>: A FIXED length string (can contain letters, numbers, and special characters).
+                        The size parameter specifies the column length in characters - can be from 0 to 255. Default is 1.
+                        <br>
+                        <code>BLOB(size)</code>: For BLOBs (Binary Large OBjects). Holds up to 65,535 bytes of data
+                        <br>
+                        <code>INT(size)</code>: A medium integer. Signed range is from -2147483648 to 2147483647. Unsigned
+                        range is from 0 to 4294967295. The size parameter specifies the maximum display width (which is 255)
+                        <br>
+                        <code>DECIMAL(size, d)</code>: An exact fixed-point number. The total number of digits is specified in
+                        size. The number of digits after the decimal point is specified in the d parameter. The maximum number
+                        for size is 65. The maximum number for d is 30. The default value for size is 10. The default value for
+                        d is 0.
+                        <br>
+                        <code>DATE</code>: A date. Format: YYYY-MM-DD. The supported range is from '1000-01-01' to
+                        '9999-12-31'
+                        <br>
+                        <code>DATETIME(fsp)</code>: A date and time combination. Format: YYYY-MM-DD hh:mm:ss. The supported
+                        range is from '1000-01-01 00:00:00' to '9999-12-31 23:59:59'.
+                        <br>
+                        <code>TIMESTAMP(fsp)</code>: A timestamp. TIMESTAMP values are stored as the number of seconds since the
+                        Unix epoch ('1970-01-01 00:00:00' UTC). Format: YYYY-MM-DD hh:mm:ss. The supported range is from
+                        '1970-01-01 00:00:01' UTC to '2038-01-09 03:14:07' UTC. TIMESTAMP is usually used to capture te current
+                        time. DATETIME is is best used to store a future event.
+                    </div>
 
-            <br><br>
-            <code>SELECT email, last_name FROM my_contacts</code><br>
-            <code>WHERE first_name = 'Anne'</code><br>
-            <code>OR numOfPets = 1;</code><br>
-            Similar to AND, you can also combine 2 queries using OR.
 
-            <br><br>
-            <code>SELECT email, last_name FROM my_contacts</code><br>
-            <code>WHERE email IS NULL</code><br>
-            This is the ONLY way to select a NULL value. By uisng the keyword <code>IS NULL</code>. DO not use things
-            like <code>WHERE email = NULL</code> or <code>WHERE email = 'NULL'</code>. These are all wrong.
-
-            <br><br>
-            <code>SELECT email, last_name FROM my_contacts</code><br>
-            <code>WHERE location LIKE '%CA';</code><br>
-            A <code>%</code> sign within single quotes tells SQL that we are looking for all values in the location
-            column that END with 'CA'. The % sign is a stand-in for any number of unknown characters. Another wildcard
-            is <code>_</code>. It's a standin for just ONE unknown character. So <code>WHERE location LIKE '_CA'</code>
-            would have returned rows containing locations like Aca, Bca, Cca...
-            <br>
-            You could also have something like <code>WHERE location LIKE 'I%';</code>. This would have returned all
-            locations starting with the letter I. You could also have <code>WHERE location LIKE '_e%';</code> which
-            would have returned locations like Texas, Delhi, etc.
-            <br>
-            Remember that if your column contains complicated information, LIKE may not be specific enough to target
-            precise data.
-
-            <br><br>
-            <code>SELECT email, last_name FROM my_contacts</code><br>
-            <code>WHERE numOfPets BETWEEN 1 AND 3;</code><br>
-            BETWEEN is equivalent to using the &lt= and the &gt= symbols, but not the &gt and &lt symbols. You can also
-            use the BETWEEN keyword for text data. SO you can write <code>WHERE first_name BETWEEN A AND B</code>. This
-            will return the names of all the contacts that have the first character as A, or B, and everything in
-            between.
-            <br>
-            - The order matters in the BETWEEN keyword. So the smaller value should always be on the left and the larger
-            value on the right. So this would be a wrong query: <code>WHERE numOfPets BETWEEN 3 AND 1;</code>
-
-            <br><br>
-            <code>SELECT email, last_name FROM my_contacts</code><br>
-            <code>WHERE first_name IN ('Anne', 'Bianca', 'Charlize');</code><br>
-            - Instead of using
-            <code>WHERE first_name = 'Anne' OR first_name = 'Bianca' OR first_name = 'Charlize'</code> we can simplify
-            it by using the IN keyword. Use IN with a set of values in parentheses. When the value in the column matches
-            the value in the set, the entire row or the specified columns are returned.
-            <br>
-            - Similarly, you can use the NOT IN operator
-            <code>WHERE first_name NOT IN ('Anne', 'Bianca', 'Charlize');</code>.
-
-            <br><br>
-            <code>SELECT * FROM my_contacts</code><br>
-            <code>WHERE numOfPets NOT BETWEEN 2 AND 4;</code><br>
-            - This would return the rows where the numOfPets &lt 2 OR numOfPets &gt 4. Notice the lack of the equals
-            sign.
-
-            <br><br>
-            <code>SELECT * FROM my_contacts</code><br>
-            <code>WHERE NOT first_name LIKE 'A%'</code><br>
-            <code>AND NOT gender LIKE 'M';</code><br>
-            - This wll return the contacts where the first_name does not start with an A and the gender is not M.
-
-            <br><br>
-            <code>SELECT * FROM my_contacts</code><br>
-            <code>WHERE email IS NOT NULL;</code><br>
-            - This wll return the contacts from the table where email is not NULL.
-        </div>
-
-        <hr>
-        <div id="Ch3" class="chapter">Chapter 3: DELETE and UPDATE - Changes are good</div>
-        <hr>
-        <div class="textual-content">
-            - Information in a table is not stored chronologically. So it's not like the record that occurs at the
-            bottom of the table is the record tha twas added the last. You should not rely on the rows in the table
-            being in chronological order.
-            <br>
-            - We use the <code>DELETE</code> keyword to remove an entire record from the table. Note that in order to
-            DELETE rows from the table, you will have to turn off the "Safe Updates" by going to Edit - Preferences -
-            SQL Editor - Uncheck the checkbox for safe updates.
-            <br><br>
-            <code>DELETE from my_contacts</code><br>
-            <code>WHERE gender = 'M';</code><br>
-            - Couple of points to note. Unlike the SELECT statement, we do not have to tell it what to delete. It will
-            automatically delete the entire row. Also, make sure that you do not forget the WHERE clause or else it will
-            delete all of the rows in your table. So never run something like <code>DELETE FROM my_contacts;</code>.
-            <br>
-            - The WHERE clause is the exact same as you used in the SELECT statements. Just like the previous scenarios,
-            you can combine it with LIKE, IN, BETWEEN to tell the RDBMS what rows to exactly delete.
-
-            <br><br>
-            <code>DELETE FROM my_contacts</code><br>
-            <code>WHERE email IS NULL;</code><br>
-            <code>INSERT INTO my_contacts</code><br>
-            <code>(first_name, last_name, email, gender)</code><br>
-            <code>VALUES</code><br>
-            <code>('Eva', 'Doe', 'edoe@gmail.com', 'F');</code><br>
-            - You can use the INSERT-DELETE combo, as shown above, to update the table. First DELETE the row and then
-            INSERT a new row that has the updated details.
-            <br>
-            - DELETE carefully. Make sure you include a precise WHERE clause to target the exact rows you really want to
-            delete. Unless you are absolutely certain that your WHERE clause will delete the rows you want it to, you
-            should use a SELECT first to make sure. Since DELETE and SELECT can make the same use of the same WHERE
-            clause, the rows that the SELECT returns will echo the rows that the you'll DELETE with that WHERE clause.
-
-            <br><br>
-            <code>UPDATE my_contacts</code><br>
-            <code>SET </code><br>
-            <code>first_name = 'Evelyin',</code><br>
-            <code>email = 'evedoe@gmail.com'</code><br>
-            <code>WHERE first_name = 'Eva';</code><br>
-            - Instead of inserting a new row and deleting the old one, you can reuse an existing row, changing only the
-            column values that you want to change. This is the UPDATE statement. The SET keyword tells the RDBMS that it
-            needs to change the column before the equal sign to contain the value after the equal sign. The WHERE clause
-            tells RDBMS on which columns the changes should be applied.
-            <br>
-            - You can change multiple rows in one go by using commas to separate the SET clauses. Also note how we are
-            searching using the first_name in the WHERE clause and updating the same first_name in the SET clause.
-            <br>
-            - Just like before, if you leave out the WHERE clause, you will end up changing the first_name of EVERY
-            record to Evelyin. So don't do that.
-
-            <br><br>
-            <code>UPDATE my_contacts</code><br>
-            <code>SET </code><br>
-            <code>numOfPets = numOfPets + 1</code><br>
-            <code>WHERE first_name = 'Evelyin';</code><br>
-            - In SQL, we can perform basic math operation on number columns. We are incrementing the numOfPets by 1 in
-            the above example.
-        </div>
-
-        <hr>
-        <div id="Ch4" class="chapter">Chapter 4: Smart Table Design - Need for being Normal</div>
-        <hr>
-        <div class="textual-content">
-            How you are going to use your data will define how you set up your table. For example, if a column
-            containing address is present, you can choose to either keep the entire address as a single column, or
-            divide the columns into separate Street Number, Unit Number, and so on. What you should not do is keep both
-            - one column containing th entire address and the other containing the address split into its constituents.
-            Because if you then have to perform an update operation on hte address, you will have to update both of
-            them. So, should you split your address or not? Well, depends on how you are going to be using your data.
-            <br>
-            - Remember that SQL is a relational database. This means that to design a table, you need to consider how
-            the columns relate to each other to describe a thing.
-            <br>
-            - Broad steps that you can follow when defining a table:
-            <ul>
-                <li>Pick the <i>one thing</i> you want your table to describe</li>
-                <li>Make a <i>list of the information</i> you need to know about your one thing when you are using the
-                    table
-                </li>
-                <li>Using the list, <i>break down the information</i> about your thing <i>into pieces</i> you can use
-                    for orgainizing your tables.
-                </li>
-            </ul>
-            <div class="sub-heading">What is atomic data</div>
-            <div>
-                - When a data in a table is atomic, it means that the data has been broken into the smallest piece of
-                data that <i>can't or shouldn't be divided</i>. These are some question you can ask to help you figure
-                out what you need to put in your tables:
-                <ul>
-                    <li>What is the one thing your table describes</li>
-                    <li>How will you use the table to get that one thing</li>
-                    <li>Do your columns contain atomic data to make your queries short and tho the point</li>
-                </ul>
-                - Note that making your data atomic means breaking it down into the smallest pieces that you need to
-                create an efficient table; not just the smallest pieces you possibly can. Atomic data alos helps you to
-                ensure that the data in your table is accurate. For example, if you have a separatae column for street
-                numbers, you can ensure that only numbers end up in that column. This also makes the computation of the
-                queries faster.
-                <br>
-                - There are two official rules of atomic data:
-                <ul>
-                    <li>A column with atomic data cannot have several values of the same type of data in that column
-                    </li>
-                    <li>A table with atomic data can't have multiple columns with the same type of data</li>
-                </ul>
-                <div class="row">
-                    <img src="resources/ch4_images/Atomic_Data_Rules.png" class="center-block img-fluid"
-                         alt="Atomic_Data_Rules"
-                         width=85%>
                 </div>
-            </div>
 
-            <div class="sub-heading">What is FIRST NORMAL FORM or 1NF</div>
-            <div>
-                - To be 1NF, a table must follow these rules:
-                <ul>
-                    <li>Each row of data must contain atomic values</li>
-                    <li>Each row of data must have a unique identifier, known as a Primary Key</li>
-                </ul>
-                - Just like First Normal Form, there is also a Second and Third Normal form. Each of those adhere to
-                increasingly strict sets of rules.
-            </div>
+                <hr>
+                <div id="Ch2" class="chapter">Chapter 2: The SELECT Statement - Data Retrieval</div>
+                <hr>
+                <div class="textual-content">
+                    - Instead of using the SELECT statement to return all the entries in the database, we can use it with the
+                    WHERE clause to fine-tune our query.
+                    <br><br>
+                    <code>SELECT * FROM my_contacts</code><br>
+                    <code>WHERE first_name = 'Anne';</code><br>
+                    - Putting first_name with the WHERE clause tells SQL that you want to look in only the column called
+                    first_name. So what this query is saying is: return all the columns of the record r from my_contacts table
+                    where r.first_name = 'Anne'. Whenever you see *, as in SELECT *, think of it like asking your SQL software
+                    to SELECT ALL THE COLUMNS.
+                    <br>
+                    - Notice that a query on VARCHAR column datatype should always be inside quotes ''. Hence it's 'Anne' and
+                    not Anne. If the datatype is an INTEGER or a DECIMAL, then you do not need quotes. Only the numeric types -
+                    INTEGER and DECIMAL do not need quotes. The VARCHAR, CHAR, BLOB, DATE, and TIME datatypes all require
+                    quotes.
+                    <br>
+                    - You need to escape the single quote - use the \ (backslash) to escape the quote. for eg.
+                    <code>WHERE first_name = 'D\'Antonio'</code>.
+                    <br>
+                    - Do not use double quotes to specify a VARCHAR in your SQL code. You use " in the programming language to
+                    say "this is where the SQL statement is". That way, single quotes are recognized as being part of the SQL
+                    syntax and not the programming language.
+                    <br><br>
 
-            <div class="sub-heading">What is a Primary Key</div>
-            <div>
-                - The column that will be your Primary Key has to be designated as such when you create the table.
-                <br>
-                - A Primary Key is a column in your table that makes <i>each record unique</i>. Thus the primary key can
-                be used to uniquely identify each record. Which, in other words, means that <i>the data in the Primary
-                Key CANNOT be repeated</i>. So, for example, you would choose something like the SSN as your primary key
-                (since every person has a unique SSN).
-                <br>
-                - For the same reasons, a Primary Key cannot be NULL either. Because other records can also be NULL. And
-                that is not allowed.
-                <br>
-                - A Primary Key must be given a value when the record is inserted. If you insert a record without a
-                Primary Key, you run the risk of ending up with a NULL primary key and duplicate rows in your table.
-                This violates 1NF.
-                <br>
-                - The Primary Key must be compact. It should contain only as much information as it requires to be u
-                nique. Nothing extra.
-                <br>
-                - The Primary Key values cannot be changed. If you could change the value of the Primary Key, you'd risk
-                the chance of accidentally setting it to a value you have already used.
-                <br>
-                - Given all of these restrictions, often the best Primary Key is a new Primary key. Meaning, create a
-                new column that contains a unique number. There is a debate in the SQL world about using
-                <i>synthetic</i>, or made-up primary keys (like the ID column in the below example) versus using <i>natural</i>
-                keys - data that is already in the table (like a VIN number on a car or the SSN number)
-                <div class="row">
-                    <img src="resources/ch4_images/Primary_Key.PNG" class="center-block img-fluid"
-                         alt="Primary_Key"
-                         width=85%>
+                    <code>SELECT email, last_name FROM my_contacts</code><br>
+                    <code>WHERE first_name = 'Anne';</code><br>
+                    - Instead of using SELECT * that returned all the columns from the table, here we are specifying the columns
+                    that we want to be returned - namely - email and last_name. Note that different column names are spearated
+                    by a comma. This returns your queries faster.
+                    <br>
+                    Similarly you could have also used <code>WHERE first_name &lt&gt 'Anne';</code><br>. This would return all
+                    reuslts where the first name is NOT EQUAL to 'Anne'.
+
+                    <br><br>
+                    <code>SELECT email, last_name FROM my_contacts</code><br>
+                    <code>WHERE first_name = 'Anne'</code><br>
+                    <code>AND numOfPets = 1;</code><br>
+                    This is using the AND keyword to combine two WHERE clauses. Note the absence of qotes in numOfPets. And that
+                    comparison is done using just a single <code>=</code> sign. Not <code>==</code>.
+                    Similarly, you can replace the equals comparison with greater than <code>AND numOfPets &gt 0</code> or NOT
+                    EQUAL as in <code>AND numOfPets &lt&gt 0</code>.
+
+                    <br><br>
+                    <code>SELECT email, last_name FROM my_contacts</code><br>
+                    <code>WHERE first_name =&gt 'A'</code><br>
+                    <code>AND first_name &lt 'B';</code><br>
+                    This query will return contacts whose first letter is A or later, but whose first letters come earlier than
+                    the alphabet B.
+
+                    <br><br>
+                    <code>SELECT email, last_name FROM my_contacts</code><br>
+                    <code>WHERE first_name = 'Anne'</code><br>
+                    <code>OR numOfPets = 1;</code><br>
+                    Similar to AND, you can also combine 2 queries using OR.
+
+                    <br><br>
+                    <code>SELECT email, last_name FROM my_contacts</code><br>
+                    <code>WHERE email IS NULL</code><br>
+                    This is the ONLY way to select a NULL value. By uisng the keyword <code>IS NULL</code>. DO not use things
+                    like <code>WHERE email = NULL</code> or <code>WHERE email = 'NULL'</code>. These are all wrong.
+
+                    <br><br>
+                    <code>SELECT email, last_name FROM my_contacts</code><br>
+                    <code>WHERE location LIKE '%CA';</code><br>
+                    A <code>%</code> sign within single quotes tells SQL that we are looking for all values in the location
+                    column that END with 'CA'. The % sign is a stand-in for any number of unknown characters. Another wildcard
+                    is <code>_</code>. It's a standin for just ONE unknown character. So <code>WHERE location LIKE '_CA'</code>
+                    would have returned rows containing locations like Aca, Bca, Cca...
+                    <br>
+                    You could also have something like <code>WHERE location LIKE 'I%';</code>. This would have returned all
+                    locations starting with the letter I. You could also have <code>WHERE location LIKE '_e%';</code> which
+                    would have returned locations like Texas, Delhi, etc.
+                    <br>
+                    Remember that if your column contains complicated information, LIKE may not be specific enough to target
+                    precise data.
+
+                    <br><br>
+                    <code>SELECT email, last_name FROM my_contacts</code><br>
+                    <code>WHERE numOfPets BETWEEN 1 AND 3;</code><br>
+                    BETWEEN is equivalent to using the &lt= and the &gt= symbols, but not the &gt and &lt symbols. You can also
+                    use the BETWEEN keyword for text data. SO you can write <code>WHERE first_name BETWEEN A AND B</code>. This
+                    will return the names of all the contacts that have the first character as A, or B, and everything in
+                    between.
+                    <br>
+                    - The order matters in the BETWEEN keyword. So the smaller value should always be on the left and the larger
+                    value on the right. So this would be a wrong query: <code>WHERE numOfPets BETWEEN 3 AND 1;</code>
+
+                    <br><br>
+                    <code>SELECT email, last_name FROM my_contacts</code><br>
+                    <code>WHERE first_name IN ('Anne', 'Bianca', 'Charlize');</code><br>
+                    - Instead of using
+                    <code>WHERE first_name = 'Anne' OR first_name = 'Bianca' OR first_name = 'Charlize'</code> we can simplify
+                    it by using the IN keyword. Use IN with a set of values in parentheses. When the value in the column matches
+                    the value in the set, the entire row or the specified columns are returned.
+                    <br>
+                    - Similarly, you can use the NOT IN operator
+                    <code>WHERE first_name NOT IN ('Anne', 'Bianca', 'Charlize');</code>.
+
+                    <br><br>
+                    <code>SELECT * FROM my_contacts</code><br>
+                    <code>WHERE numOfPets NOT BETWEEN 2 AND 4;</code><br>
+                    - This would return the rows where the numOfPets &lt 2 OR numOfPets &gt 4. Notice the lack of the equals
+                    sign.
+
+                    <br><br>
+                    <code>SELECT * FROM my_contacts</code><br>
+                    <code>WHERE NOT first_name LIKE 'A%'</code><br>
+                    <code>AND NOT gender LIKE 'M';</code><br>
+                    - This wll return the contacts where the first_name does not start with an A and the gender is not M.
+
+                    <br><br>
+                    <code>SELECT * FROM my_contacts</code><br>
+                    <code>WHERE email IS NOT NULL;</code><br>
+                    - This wll return the contacts from the table where email is not NULL.
                 </div>
-            </div>
 
-            <div class="sub-heading">How to create a Primary Key</div>
+                <hr>
+                <div id="Ch3" class="chapter">Chapter 3: DELETE and UPDATE - Changes are good</div>
+                <hr>
+                <div class="textual-content">
+                    - Information in a table is not stored chronologically. So it's not like the record that occurs at the
+                    bottom of the table is the record tha twas added the last. You should not rely on the rows in the table
+                    being in chronological order.
+                    <br>
+                    - We use the <code>DELETE</code> keyword to remove an entire record from the table. Note that in order to
+                    DELETE rows from the table, you will have to turn off the "Safe Updates" by going to Edit - Preferences -
+                    SQL Editor - Uncheck the checkbox for safe updates.
+                    <br><br>
+                    <code>DELETE from my_contacts</code><br>
+                    <code>WHERE gender = 'M';</code><br>
+                    - Couple of points to note. Unlike the SELECT statement, we do not have to tell it what to delete. It will
+                    automatically delete the entire row. Also, make sure that you do not forget the WHERE clause or else it will
+                    delete all of the rows in your table. So never run something like <code>DELETE FROM my_contacts;</code>.
+                    <br>
+                    - The WHERE clause is the exact same as you used in the SELECT statements. Just like the previous scenarios,
+                    you can combine it with LIKE, IN, BETWEEN to tell the RDBMS what rows to exactly delete.
 
-            <code>CREATE TABLE my_contacts (</code><br>
-            <code> contact_id INT NOT NULL AUTO_INCREMENT,</code><br>
-            <code> first_name varchar(30) NOT NULL,</code><br>
-            <code> last_name varchar(30) NOT NULL,</code><br>
-            <code> email varchar(30) DEFAULT NULL,</code><br>
-            <code> gender char(1) DEFAULT NULL,</code><br>
-            <code> birthday date DEFAULT NULL,</code><br>
-            <code> numOfPets int NOT NULL DEFAULT 0</code><br>
-            <code> PRIMARY KEY (contact_id)</code><br>
-            <code>) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;</code><br>
-            - We have created a new column called contact_id that will hold an integer value that will be the primary
-            key for our table. Each value in this column will be unique and make our table atomic. The contact_id is NOT
-            NULL because if the primary key contains a value of NULL, you can't guarantee that it will uniquely identify
-            each row of the table. The last line specifies that the contact_id is in fact the Primary Key of the table.
-            <br>
-            - Adding the keyword AUTO_INCREMENT to our contact_id allows our SQL SW to automatically fill that column
-            with a value starting at 1 and incrementing in steps of 1.
-            <br>
+                    <br><br>
+                    <code>DELETE FROM my_contacts</code><br>
+                    <code>WHERE email IS NULL;</code><br>
+                    <code>INSERT INTO my_contacts</code><br>
+                    <code>(first_name, last_name, email, gender)</code><br>
+                    <code>VALUES</code><br>
+                    <code>('Eva', 'Doe', 'edoe@gmail.com', 'F');</code><br>
+                    - You can use the INSERT-DELETE combo, as shown above, to update the table. First DELETE the row and then
+                    INSERT a new row that has the updated details.
+                    <br>
+                    - DELETE carefully. Make sure you include a precise WHERE clause to target the exact rows you really want to
+                    delete. Unless you are absolutely certain that your WHERE clause will delete the rows you want it to, you
+                    should use a SELECT first to make sure. Since DELETE and SELECT can make the same use of the same WHERE
+                    clause, the rows that the SELECT returns will echo the rows that the you'll DELETE with that WHERE clause.
 
-            <div class="sub-heading">Notes about AUTO_INCREMENT</div>
-            <code>USE my_contacts;</code><br>
-            <code>INSERT INTO my_contacts</code><br>
-            <code>(first_name, last_name, email, gender)</code><br>
-            <code>VALUES ('Alice','Doe','adoe@gmail.com','F');</code><br>
-            Note that the contact_id is not specified in the INSERT statement. SQL will automatically auto increment and
-            generate a primary key for the entry and add it ot the record. As shown in th figure a.
+                    <br><br>
+                    <code>UPDATE my_contacts</code><br>
+                    <code>SET </code><br>
+                    <code>first_name = 'Evelyin',</code><br>
+                    <code>email = 'evedoe@gmail.com'</code><br>
+                    <code>WHERE first_name = 'Eva';</code><br>
+                    - Instead of inserting a new row and deleting the old one, you can reuse an existing row, changing only the
+                    column values that you want to change. This is the UPDATE statement. The SET keyword tells the RDBMS that it
+                    needs to change the column before the equal sign to contain the value after the equal sign. The WHERE clause
+                    tells RDBMS on which columns the changes should be applied.
+                    <br>
+                    - You can change multiple rows in one go by using commas to separate the SET clauses. Also note how we are
+                    searching using the first_name in the WHERE clause and updating the same first_name in the SET clause.
+                    <br>
+                    - Just like before, if you leave out the WHERE clause, you will end up changing the first_name of EVERY
+                    record to Evelyin. So don't do that.
 
-            <br><br>
-            <code>USE my_contacts;</code><br>
-            <code>INSERT INTO my_contacts</code><br>
-            <code>(contact_id, first_name, last_name, email, gender)</code><br>
-            <code>VALUES (10, 'Alice','Doe','adoe@gmail.com','F');</code><br>
-            You can also specify your own id. In this case the new record will be added with the id 10. As shown in
-            figure b.
-
-            <br><br>
-            <code>USE my_contacts;</code><br>
-            <code>INSERT INTO my_contacts</code><br>
-            <code>(first_name, last_name, email, gender)</code><br>
-            <code>VALUES ('Alice','Doe','adoe@gmail.com','F');</code><br>
-            But note that the next element that is added using AUTO_INCREMENT. In this case the contact_id assigned to
-            the record would be 11. As shown in figure c.
-
-            <div class="row">
-                <img src="resources/ch4_images/Auto_Increment.png" class="center-block img-fluid"
-                     alt="Auto_Increment"
-                     width=85%>
-            </div>
-
-
-        </div>
-
-
-        <hr>
-        <div id="Ch5" class="chapter">Chapter 5: ALTER - Rewriting the Past</div>
-        <hr>
-        <div class="textual-content">
-            - We said earlier that you cannot create a table with the same name as an already existing table. So suppose
-            you want to make changes to an existing tbale, like adding a new column, and you want to do it without
-            deleting and then recreating a new table with the same data and a new column. How do you do it? You can use
-            the ALTER keyword for this purpose.
-
-            <div class="sub-heading">What does the ALTER command allow you to change</div>
-            <div>
-                The ALTER command allows you to make the following changes to your table:
-                <ul>
-                    <li>CHANGE: both the name and datatype of an existing column*</li>
-                    <li>MODIFY: the datatype or position of an existing column*</li>
-                    <li>ADD: a column to your table - you pick the datatype</li>
-                    <li>DROP: a columns from your table</li>
-                </ul>
-                The * represents that a possible loss of data may occur.
-            </div>
-
-            <br>
-            <code>ALTER TABLE my_contacts2_withoutpkey</code><br>
-            <code>ADD COLUMN contact_id INT NOT NULL AUTO_INCREMENT FIRST,</code><br>
-            <code>ADD PRIMARY KEY (contact_id);</code><br>
-            - This command will add a column to the table that will be the Primary Key of the column. The command will
-            also autopopulate the column with the appropriate numbers. The FIRST keyword means that the column will be
-            inserted into the first column position.
-
-            <div class="row">
-                <img src="resources/ch5_images/ALTER_Add_Primary_Key.png" class="center-block img-fluid"
-                     alt="ALTER_Add_Primary_Key"
-                     width=85%>
-            </div>
-
-            <br><br>
-            <code>ALTER TABLE my_contacts2_withoutpkey</code><br>
-            <code>ADD COLUMN phone_number VARCHAR(10) AFTER email;</code><br>
-            The AFTER keyword tells SQL to insert the column after the email column. The AFTER keyword is optional. If
-            you do not use it the column is added to the end of the table. Similarly, you can also use BEFORE, LAST,
-            SECOND, THIRD, and so on.
-            <div class="row">
-                <img src="resources/ch5_images/ALTER_AFTER.PNG" class="center-block img-fluid"
-                     alt="ALTER_AFTER"
-                     width=85%>
-            </div>
-
-            <br>
-            <code>ALTER TABLE my_contacts2_withoutpkey</code><br>
-            <code>RENAME TO my_contacts_2; </code><br>
-            This will rename the TABLE.
-
-            <br><br>
-            <code>ALTER TABLE my_contacts_3</code><br>
-            <code>CHANGE COLUMN contact_id my_id INT NOT NULL AUTO_INCREMENT,</code><br>
-            <code>ADD PRIMARY KEY (my_id);</code><br>
-            - We are using the CHANGE COLUMN command. This means that we have to change, both, the name and the datatype
-            of the column. The previous name of the column was contact_id that is now being changed to my_id. At the
-            same time, we are also setting it to be the Primary key of the table. Line 3 of the command hence contains
-            the new name of the column that we are saving - my_id.
-            <br>
-            - Remember that when you are using CHANGE COLUMN you HAVE to change both the name and the datatype of the
-            COLUMN. Else SQL will complain about a syntax error.
-
-            <br><br>
-            <code>ALTER TABLE my_contacts_3</code><br>
-            <code>CHANGE COLUMN first_name f_name VARCHAR(100),</code><br>
-            <code>CHANGE COLUMN last_name l_name VARCHAR(100);</code><br>
-            You can also change two columns in one statement. Here, the earlier name of the column id first_name that is
-            being changed to f_name.
-            <br>
-            - Remember that if you change the datatype, you might lose data. For example, going from VARCHAR(10) to
-            VARCHAR(1) would cause "Bonzo" to change to just "B".
-
-            <br><br>
-            <code>ALTER TABLE my_contacts_3</code><br>
-            <code>MODIFY COLUMN f_name VARCHAR(120);</code><br>
-            - This will change only the datatype of the column, and leave the name unchanged. Here f_name is the name of
-            the column that we are modifying. Take care to ensure that the new datatype does not cause any truncation of
-            data.
-            <br>
-            - There is no direct command to change the order of the columns in the table. But remember that if you want
-            to fetch the data in a specific order, you can use that order in the SELECT statement that you will write
-            and the data will automatically be returned to you in the specified order.
-
-            <br><br>
-            <code>ALTER TABLE my_contacts_3</code><br>
-            <code>DROP COLUMN birthday;</code><br>
-            - This will delete the birthday column and all of the data in it as well. So use this carefully.
-
-            <br>
-            You can combine all of what we have seen so far to create a SQL script. Take notice of where the commas have
-            been included, and where they have been left off. There is a single Semicolon at the very end.
-            <div class="row">
-                <img src="resources/ch5_images/SQL_Script.PNG" class="center-block img-fluid"
-                     alt="SQL_Script"
-                     width=45%>
-            </div>
-
-            <div class="sub-heading">How to remove the Primary key from a table</div>
-            <div>
-                - Check <a href="https://stackoverflow.com/a/2111324/8742428">this SO Post</a>.
-                <br>
-                - Without an index, maintaining an autoincrement column becomes too expensive, that's why MySQL requires
-                an autoincrement column to be a leftmost part of an index. Hence, you will not be able to drop the
-                Primary Key without removing the AUTO_INCREMENT first.
-                <br>
-                <code>ALTER TABLE my_contacts_3 MODIFY my_id INT NOT NULL;</code><br>
-                <code>ALTER TABLE my_contacts_3 DROP PRIMARY KEY;</code><br>
-                The 3 snapshots of the database before ans after executing the above 2 statements are shown in the
-                figures below. Notice in fig b that the my_id is still the Primary Key, but the auto_increment has been
-                removed. Then in fig. c, we ahve removed the Primary Key altogether.
-                <br>
-
-            </div>
-
-            <div class="row">
-                <img src="resources/ch5_images/Dropping_Primary_Key.png" class="center-block img-fluid"
-                     alt="Dropping_Primary_Key"
-                     width=85%>
-            </div>
-
-            If instead of removing the AUTO_INCREMENT from a Column, you wanted to add it to a Column instead, you
-            could do it using the following:
-            <br>
-            <code>ALTER TABLE my_contacts_3 MODIFY my_id INT NOT NULL AUTO_INCREMENT</code><br>
-            Error Code: 1075. Incorrect table definition; there can be only one auto column and it must be defined
-            as a key
-
-            <div class="sub-heading">How to deal with Strings</div>
-            <div>
-                - String functions allow you to select a specified number of characters from a column. None of these
-                String functions change the actual data stored in the table. They simply return the altered string as a
-                result of the query.
-                <code>SELECT RIGHT(email, 3) FROM my_contacts_3;</code><br>
-                <div class="row">
-                    <img src="resources/ch5_images/SELECT_RIGHT.PNG" class="img-fluid"
-                         alt="SELECT_RIGHT"
-                         width=45%>
+                    <br><br>
+                    <code>UPDATE my_contacts</code><br>
+                    <code>SET </code><br>
+                    <code>numOfPets = numOfPets + 1</code><br>
+                    <code>WHERE first_name = 'Evelyin';</code><br>
+                    - In SQL, we can perform basic math operation on number columns. We are incrementing the numOfPets by 1 in
+                    the above example.
                 </div>
-                <br><br>
-                <code>SELECT SUBSTRING_INDEX(email, '@', 1) FROM my_contacts_3;</code><br>
-                This will select everything that comes to the left of the first @ character.
-                <div class="row">
-                    <img src="resources/ch5_images/SELECT_SUBSTRING.PNG" class="img-fluid"
-                         alt="SELECT_SUBSTRING"
-                         width=65%>
+
+                <hr>
+                <div id="Ch4" class="chapter">Chapter 4: Smart Table Design - Need for being Normal</div>
+                <hr>
+                <div class="textual-content">
+                    How you are going to use your data will define how you set up your table. For example, if a column
+                    containing address is present, you can choose to either keep the entire address as a single column, or
+                    divide the columns into separate Street Number, Unit Number, and so on. What you should not do is keep both
+                    - one column containing th entire address and the other containing the address split into its constituents.
+                    Because if you then have to perform an update operation on hte address, you will have to update both of
+                    them. So, should you split your address or not? Well, depends on how you are going to be using your data.
+                    <br>
+                    - Remember that SQL is a relational database. This means that to design a table, you need to consider how
+                    the columns relate to each other to describe a thing.
+                    <br>
+                    - Broad steps that you can follow when defining a table:
+                    <ul>
+                        <li>Pick the <i>one thing</i> you want your table to describe</li>
+                        <li>Make a <i>list of the information</i> you need to know about your one thing when you are using the
+                            table
+                        </li>
+                        <li>Using the list, <i>break down the information</i> about your thing <i>into pieces</i> you can use
+                            for orgainizing your tables.
+                        </li>
+                    </ul>
+                    <div class="sub-heading">What is atomic data</div>
+                    <div>
+                        - When a data in a table is atomic, it means that the data has been broken into the smallest piece of
+                        data that <i>can't or shouldn't be divided</i>. These are some question you can ask to help you figure
+                        out what you need to put in your tables:
+                        <ul>
+                            <li>What is the one thing your table describes</li>
+                            <li>How will you use the table to get that one thing</li>
+                            <li>Do your columns contain atomic data to make your queries short and tho the point</li>
+                        </ul>
+                        - Note that making your data atomic means breaking it down into the smallest pieces that you need to
+                        create an efficient table; not just the smallest pieces you possibly can. Atomic data alos helps you to
+                        ensure that the data in your table is accurate. For example, if you have a separatae column for street
+                        numbers, you can ensure that only numbers end up in that column. This also makes the computation of the
+                        queries faster.
+                        <br>
+                        - There are two official rules of atomic data:
+                        <ul>
+                            <li>A column with atomic data cannot have several values of the same type of data in that column
+                            </li>
+                            <li>A table with atomic data can't have multiple columns with the same type of data</li>
+                        </ul>
+                        <div class="row">
+                            <img src="resources/ch4_images/Atomic_Data_Rules.png" class="center-block img-fluid"
+                                 alt="Atomic_Data_Rules"
+                                 width=85%>
+                        </div>
+                    </div>
+
+                    <div class="sub-heading">What is FIRST NORMAL FORM or 1NF</div>
+                    <div>
+                        - To be 1NF, a table must follow these rules:
+                        <ul>
+                            <li>Each row of data must contain atomic values</li>
+                            <li>Each row of data must have a unique identifier, known as a Primary Key</li>
+                        </ul>
+                        - Just like First Normal Form, there is also a Second and Third Normal form. Each of those adhere to
+                        increasingly strict sets of rules.
+                    </div>
+
+                    <div class="sub-heading">What is a Primary Key</div>
+                    <div>
+                        - The column that will be your Primary Key has to be designated as such when you create the table.
+                        <br>
+                        - A Primary Key is a column in your table that makes <i>each record unique</i>. Thus the primary key can
+                        be used to uniquely identify each record. Which, in other words, means that <i>the data in the Primary
+                        Key CANNOT be repeated</i>. So, for example, you would choose something like the SSN as your primary key
+                        (since every person has a unique SSN).
+                        <br>
+                        - For the same reasons, a Primary Key cannot be NULL either. Because other records can also be NULL. And
+                        that is not allowed.
+                        <br>
+                        - A Primary Key must be given a value when the record is inserted. If you insert a record without a
+                        Primary Key, you run the risk of ending up with a NULL primary key and duplicate rows in your table.
+                        This violates 1NF.
+                        <br>
+                        - The Primary Key must be compact. It should contain only as much information as it requires to be u
+                        nique. Nothing extra.
+                        <br>
+                        - The Primary Key values cannot be changed. If you could change the value of the Primary Key, you'd risk
+                        the chance of accidentally setting it to a value you have already used.
+                        <br>
+                        - Given all of these restrictions, often the best Primary Key is a new Primary key. Meaning, create a
+                        new column that contains a unique number. There is a debate in the SQL world about using
+                        <i>synthetic</i>, or made-up primary keys (like the ID column in the below example) versus using <i>natural</i>
+                        keys - data that is already in the table (like a VIN number on a car or the SSN number)
+                        <div class="row">
+                            <img src="resources/ch4_images/Primary_Key.PNG" class="center-block img-fluid"
+                                 alt="Primary_Key"
+                                 width=85%>
+                        </div>
+                    </div>
+
+                    <div class="sub-heading">How to create a Primary Key</div>
+
+                    <code>CREATE TABLE my_contacts (</code><br>
+                    <code> contact_id INT NOT NULL AUTO_INCREMENT,</code><br>
+                    <code> first_name varchar(30) NOT NULL,</code><br>
+                    <code> last_name varchar(30) NOT NULL,</code><br>
+                    <code> email varchar(30) DEFAULT NULL,</code><br>
+                    <code> gender char(1) DEFAULT NULL,</code><br>
+                    <code> birthday date DEFAULT NULL,</code><br>
+                    <code> numOfPets int NOT NULL DEFAULT 0</code><br>
+                    <code> PRIMARY KEY (contact_id)</code><br>
+                    <code>) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;</code><br>
+                    - We have created a new column called contact_id that will hold an integer value that will be the primary
+                    key for our table. Each value in this column will be unique and make our table atomic. The contact_id is NOT
+                    NULL because if the primary key contains a value of NULL, you can't guarantee that it will uniquely identify
+                    each row of the table. The last line specifies that the contact_id is in fact the Primary Key of the table.
+                    <br>
+                    - Adding the keyword AUTO_INCREMENT to our contact_id allows our SQL SW to automatically fill that column
+                    with a value starting at 1 and incrementing in steps of 1.
+                    <br>
+
+                    <div class="sub-heading">Notes about AUTO_INCREMENT</div>
+                    <code>USE my_contacts;</code><br>
+                    <code>INSERT INTO my_contacts</code><br>
+                    <code>(first_name, last_name, email, gender)</code><br>
+                    <code>VALUES ('Alice','Doe','adoe@gmail.com','F');</code><br>
+                    Note that the contact_id is not specified in the INSERT statement. SQL will automatically auto increment and
+                    generate a primary key for the entry and add it ot the record. As shown in th figure a.
+
+                    <br><br>
+                    <code>USE my_contacts;</code><br>
+                    <code>INSERT INTO my_contacts</code><br>
+                    <code>(contact_id, first_name, last_name, email, gender)</code><br>
+                    <code>VALUES (10, 'Alice','Doe','adoe@gmail.com','F');</code><br>
+                    You can also specify your own id. In this case the new record will be added with the id 10. As shown in
+                    figure b.
+
+                    <br><br>
+                    <code>USE my_contacts;</code><br>
+                    <code>INSERT INTO my_contacts</code><br>
+                    <code>(first_name, last_name, email, gender)</code><br>
+                    <code>VALUES ('Alice','Doe','adoe@gmail.com','F');</code><br>
+                    But note that the next element that is added using AUTO_INCREMENT. In this case the contact_id assigned to
+                    the record would be 11. As shown in figure c.
+
+                    <div class="row">
+                        <img src="resources/ch4_images/Auto_Increment.png" class="center-block img-fluid"
+                             alt="Auto_Increment"
+                             width=85%>
+                    </div>
+
+
                 </div>
-                <div class="row">
-                    <img src="resources/ch5_images/SELECT_SUBSTRING_result.PNG" class="img-fluid"
-                         alt="SELECT_SUBSTRING_result"
-                         width=85%>
+
+
+                <hr>
+                <div id="Ch5" class="chapter">Chapter 5: ALTER - Rewriting the Past</div>
+                <hr>
+                <div class="textual-content">
+                    - We said earlier that you cannot create a table with the same name as an already existing table. So suppose
+                    you want to make changes to an existing tbale, like adding a new column, and you want to do it without
+                    deleting and then recreating a new table with the same data and a new column. How do you do it? You can use
+                    the ALTER keyword for this purpose.
+
+                    <div class="sub-heading">What does the ALTER command allow you to change</div>
+                    <div>
+                        The ALTER command allows you to make the following changes to your table:
+                        <ul>
+                            <li>CHANGE: both the name and datatype of an existing column*</li>
+                            <li>MODIFY: the datatype or position of an existing column*</li>
+                            <li>ADD: a column to your table - you pick the datatype</li>
+                            <li>DROP: a columns from your table</li>
+                        </ul>
+                        The * represents that a possible loss of data may occur.
+                    </div>
+
+                    <br>
+                    <code>ALTER TABLE my_contacts2_withoutpkey</code><br>
+                    <code>ADD COLUMN contact_id INT NOT NULL AUTO_INCREMENT FIRST,</code><br>
+                    <code>ADD PRIMARY KEY (contact_id);</code><br>
+                    - This command will add a column to the table that will be the Primary Key of the column. The command will
+                    also autopopulate the column with the appropriate numbers. The FIRST keyword means that the column will be
+                    inserted into the first column position.
+
+                    <div class="row">
+                        <img src="resources/ch5_images/ALTER_Add_Primary_Key.png" class="center-block img-fluid"
+                             alt="ALTER_Add_Primary_Key"
+                             width=85%>
+                    </div>
+
+                    <br><br>
+                    <code>ALTER TABLE my_contacts2_withoutpkey</code><br>
+                    <code>ADD COLUMN phone_number VARCHAR(10) AFTER email;</code><br>
+                    The AFTER keyword tells SQL to insert the column after the email column. The AFTER keyword is optional. If
+                    you do not use it the column is added to the end of the table. Similarly, you can also use BEFORE, LAST,
+                    SECOND, THIRD, and so on.
+                    <div class="row">
+                        <img src="resources/ch5_images/ALTER_AFTER.PNG" class="center-block img-fluid"
+                             alt="ALTER_AFTER"
+                             width=85%>
+                    </div>
+
+                    <br>
+                    <code>ALTER TABLE my_contacts2_withoutpkey</code><br>
+                    <code>RENAME TO my_contacts_2; </code><br>
+                    This will rename the TABLE.
+
+                    <br><br>
+                    <code>ALTER TABLE my_contacts_3</code><br>
+                    <code>CHANGE COLUMN contact_id my_id INT NOT NULL AUTO_INCREMENT,</code><br>
+                    <code>ADD PRIMARY KEY (my_id);</code><br>
+                    - We are using the CHANGE COLUMN command. This means that we have to change, both, the name and the datatype
+                    of the column. The previous name of the column was contact_id that is now being changed to my_id. At the
+                    same time, we are also setting it to be the Primary key of the table. Line 3 of the command hence contains
+                    the new name of the column that we are saving - my_id.
+                    <br>
+                    - Remember that when you are using CHANGE COLUMN you HAVE to change both the name and the datatype of the
+                    COLUMN. Else SQL will complain about a syntax error.
+
+                    <br><br>
+                    <code>ALTER TABLE my_contacts_3</code><br>
+                    <code>CHANGE COLUMN first_name f_name VARCHAR(100),</code><br>
+                    <code>CHANGE COLUMN last_name l_name VARCHAR(100);</code><br>
+                    You can also change two columns in one statement. Here, the earlier name of the column id first_name that is
+                    being changed to f_name.
+                    <br>
+                    - Remember that if you change the datatype, you might lose data. For example, going from VARCHAR(10) to
+                    VARCHAR(1) would cause "Bonzo" to change to just "B".
+
+                    <br><br>
+                    <code>ALTER TABLE my_contacts_3</code><br>
+                    <code>MODIFY COLUMN f_name VARCHAR(120);</code><br>
+                    - This will change only the datatype of the column, and leave the name unchanged. Here f_name is the name of
+                    the column that we are modifying. Take care to ensure that the new datatype does not cause any truncation of
+                    data.
+                    <br>
+                    - There is no direct command to change the order of the columns in the table. But remember that if you want
+                    to fetch the data in a specific order, you can use that order in the SELECT statement that you will write
+                    and the data will automatically be returned to you in the specified order.
+
+                    <br><br>
+                    <code>ALTER TABLE my_contacts_3</code><br>
+                    <code>DROP COLUMN birthday;</code><br>
+                    - This will delete the birthday column and all of the data in it as well. So use this carefully.
+
+                    <br>
+                    You can combine all of what we have seen so far to create a SQL script. Take notice of where the commas have
+                    been included, and where they have been left off. There is a single Semicolon at the very end.
+                    <div class="row">
+                        <img src="resources/ch5_images/SQL_Script.PNG" class="center-block img-fluid"
+                             alt="SQL_Script"
+                             width=45%>
+                    </div>
+
+                    <div class="sub-heading">How to remove the Primary key from a table</div>
+                    <div>
+                        - Check <a href="https://stackoverflow.com/a/2111324/8742428">this SO Post</a>.
+                        <br>
+                        - Without an index, maintaining an autoincrement column becomes too expensive, that's why MySQL requires
+                        an autoincrement column to be a leftmost part of an index. Hence, you will not be able to drop the
+                        Primary Key without removing the AUTO_INCREMENT first.
+                        <br>
+                        <code>ALTER TABLE my_contacts_3 MODIFY my_id INT NOT NULL;</code><br>
+                        <code>ALTER TABLE my_contacts_3 DROP PRIMARY KEY;</code><br>
+                        The 3 snapshots of the database before ans after executing the above 2 statements are shown in the
+                        figures below. Notice in fig b that the my_id is still the Primary Key, but the auto_increment has been
+                        removed. Then in fig. c, we ahve removed the Primary Key altogether.
+                        <br>
+
+                    </div>
+
+                    <div class="row">
+                        <img src="resources/ch5_images/Dropping_Primary_Key.png" class="center-block img-fluid"
+                             alt="Dropping_Primary_Key"
+                             width=85%>
+                    </div>
+
+                    If instead of removing the AUTO_INCREMENT from a Column, you wanted to add it to a Column instead, you
+                    could do it using the following:
+                    <br>
+                    <code>ALTER TABLE my_contacts_3 MODIFY my_id INT NOT NULL AUTO_INCREMENT</code><br>
+                    Error Code: 1075. Incorrect table definition; there can be only one auto column and it must be defined
+                    as a key
+
+                    <div class="sub-heading">How to deal with Strings</div>
+                    <div>
+                        - String functions allow you to select a specified number of characters from a column. None of these
+                        String functions change the actual data stored in the table. They simply return the altered string as a
+                        result of the query.
+                        <code>SELECT RIGHT(email, 3) FROM my_contacts_3;</code><br>
+                        <div class="row">
+                            <img src="resources/ch5_images/SELECT_RIGHT.PNG" class="img-fluid"
+                                 alt="SELECT_RIGHT"
+                                 width=45%>
+                        </div>
+                        <br><br>
+                        <code>SELECT SUBSTRING_INDEX(email, '@', 1) FROM my_contacts_3;</code><br>
+                        This will select everything that comes to the left of the first @ character.
+                        <div class="row">
+                            <img src="resources/ch5_images/SELECT_SUBSTRING.PNG" class="img-fluid"
+                                 alt="SELECT_SUBSTRING"
+                                 width=65%>
+                        </div>
+                        <div class="row">
+                            <img src="resources/ch5_images/SELECT_SUBSTRING_result.PNG" class="img-fluid"
+                                 alt="SELECT_SUBSTRING_result"
+                                 width=85%>
+                        </div>
+                        <br><br>
+                        <code>ALTER TABLE my_contacts_3 </code><br>
+                        <code>ADD COLUMN user_email VARCHAR(30);</code><br>
+                        <code>UPDATE my_contacts_3</code><br>
+                        <code>SET user_email = SUBSTRING_INDEX(email, '@', 1);</code><br>
+                        Notice how we are creating a new column, user_email, and then using the existing data in the email
+                        column to fill the new column (lines 3 and 4).
+                        <div class="row">
+                            <img src="resources/ch5_images/UPDATE_COLUMN.PNG" class="img-fluid"
+                                 alt="UPDATE_COLUMN"
+                                 width=45%>
+                        </div>
+                    </div>
+
+
                 </div>
-                <br><br>
-                <code>ALTER TABLE my_contacts_3 </code><br>
-                <code>ADD COLUMN user_email VARCHAR(30);</code><br>
-                <code>UPDATE my_contacts_3</code><br>
-                <code>SET user_email = SUBSTRING_INDEX(email, '@', 1);</code><br>
-                Notice how we are creating a new column, user_email, and then using the existing data in the email
-                column to fill the new column (lines 3 and 4).
-                <div class="row">
-                    <img src="resources/ch5_images/UPDATE_COLUMN.PNG" class="img-fluid"
-                         alt="UPDATE_COLUMN"
-                         width=45%>
+
+                <hr>
+                <div id="Ch7" class="chapter">Chapter 7: Multi-table Database Design - Outgrowing your table</div>
+                <hr>
+                <div class="textual-content">
+                    - Sometimes the best way to achieve atomicity in a table is to move the non-atomic columns in the table to
+                    new tables.
+
+                    <div class="sub-heading">What is a Database Schema</div>
+                    <div>
+                        - A representation of all the structures such as tables and columns in th database along with how they
+                        connect is known as a <i>schema</i>
+                        <br>
+                        - Consider the below table for example. The interests column is not atomic. Dividing the column into
+                        multiple columns won't work either because that will break the atomicitiy as well (multiple columns
+                        containing the same type of data). One option is to move the interests to another table. Which is what
+                        we will be doing.
+                        <div id="non_atomic_table" class="row">
+                            <img src="resources/ch7_images/Non_Atomic_Table.PNG" class="center-block img-fluid"
+                                 alt="ALTER_Add_Primary_Key"
+                                 width=55%>
+                        </div>
+                        - But if we want to move interests to another table, we will have to uniquely identify which interest
+                        belongs to which individual. Also this new table that we create will have to be 1NF. This is how we
+                        do it:
+                        <div class="row">
+                            <img src="resources/ch7_images/Foreign_Key.PNG" class="center-block img-fluid"
+                                 alt="Foreign_Key"
+                                 width=55%>
+                        </div>
+                        - Note that the new table needs to be in the 1NF. Hence each record needs to be unique. For which we
+                        have the int_id (Primary Key) in the interests table. We also want to be able to uniquely identify the
+                        individual to which the value in the interest column belongs to. This is done by using the contact_id
+                        column.
+                        <br>
+
+                    </div>
+                    <div class="sub-heading">What is a Foreign Key</div>
+                    - The Foreign Key is a column in a table that references the Primary Key of another table.
+                    <br>
+                    - A Foreign Key can have a different name than the Primary Key that it comes from.
+                    <br>
+                    - The primary key used by a foreign key is also known as a parent key. The table where the parent key is
+                    from is known as the parent table.
+                    <br>
+                    - The foreign key can be used to make sure that the rows in one table have corresponding rows in another
+                    table.
+                    <br>
+                    - Foreign key values can be null, even though primary key values can't. A NULL foreign key means that there
+                    is no matching primary key in the parent table. But we can make sure that a foreign key contains a
+                    meaningful value, one that exists in the parent table, by using a <i>constraint</i>.
+                    <br>
+                    - Foreign keys do not have to be unique.
+
+                    <div class="sub-heading">How do you constrain a Foreign Key</div>
+                    <div>
+                        - When you constrain your foreign key, you will only be able to insert values into your foreign key that
+                        exist in the table that the key came from (the parent table). This is called <i>referential
+                        integrity</i>. This makes sure that if you have a row in one table with a foreign key , it must
+                        correspond to a row in another through the foreign key. If you try to delete the row in the a primary
+                        key table or to change a primary key value, you will get an error if the primary key value is a foreign
+                        key
+                        constraint in another table.
+                        <br>
+                        - You can delete a row that has a primary key that shows up as a foreign key in some other table. But
+                        for this, you have to remove the foreign key row first. This makes sense as well because, for example,
+                        if you are removing the row from my_contacts, you don't need to know that person's interests anymore.
+                        <br>
+                        - You can use a foreign key to reference a <i>unique value</i> in the parent table. <i>It doesn't have
+                        to be the Primary key of the parent table. It just has to be unique.</i>
+                        <div class="row">
+                            <img src="resources/ch7_images/Foreign_Key_Ref_Int.png" class="center-block img-fluid"
+                                 alt="Foreign_Key_Ref_Int"
+                                 width=55%>
+                        </div>
+                    </div>
+
+                    <div class="sub-heading">How to create a table with a Foreign Key</div>
+                    <div>
+                        <code>ALTER TABLE my_contacts_3 MODIFY my_id INT NOT NULL PRIMARY KEY AUTO_INCREMENT;</code><br>
+                        <code>CREATE TABLE interests (</code><br>
+                        <code> int_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,</code><br>
+                        <code> interest VARCHAR(50) NOT NULL,</code><br>
+                        <code> interest_id INT NOT NULL,</code><br>
+                        <code> CONSTRAINT my_contacts_3_contact_id_fk</code><br>
+                        <code> FOREIGN KEY (interest_id)</code><br>
+                        <code> REFERENCES my_contacts_3 (my_id)</code><br>
+                        <code>);</code><br>
+                        And the resulting table that is created is as follows:
+                        <div class="row">
+                            <img src="resources/ch7_images/Foreign_Key_Table.PNG" class="center-block img-fluid"
+                                 alt="Foreign_Key_Table"
+                                 width=45%>
+                        </div>
+                        - The first statement was necessary because the my_contacts_3 did not have the my_id column designated
+                        as a Primary key. That was causing the following error: <br>
+                        Error Code: 1822. Failed to add the foreign key constraint. Missing index for constraint
+                        'my_contacts_3_contact_id_fk' in the referenced table 'my_contacts_3'
+                        <br>
+                        - interests is the name of the new table created. int_id is the Primary Key of this new table.
+                        <br>
+                        - Line 7 states that the Foreign Key will be stored in a column named interest_id. Hence we need to
+                        create a column with the same name which we are doing on line 5. You can change the name of the column
+                        to any name that you like.
+                        <br>
+                        - Line 6 is the name of the constraint that is being used. As far as I can tell., this name means
+                        nothing.
+                        <br>
+                        - Line 8 is where the Foreign Key is actually being assigned. my_contacts_3 specifies the table from
+                        which the foreign key actually comes from. The my_id is what it is actually called in the other table
+                        (contact_id).
+                        <br>
+                        - The MUL in the figure means that multiple occurrences of the same value may be stored in this column.
+                    </div>
+
+                    <div class="sub-heading">Relationships between Tables</div>
+                    <div>
+                        - There are 3 possible relationships that are possible between tables:
+                        <ul>
+                            <li>one-to-one</li>
+                            <li>one-to-many</li>
+                            <li>many-to-many</li>
+                        </ul>
+                    </div>
+
+                    <div class="sub-heading">One-To-One Relationship</div>
+                    <div>
+                        - These types of tables are not that frequently used. One-to-one means that exactly one row of a parent
+                        table is related to one row of a child table.
+                    </div>
+                    <div class="row">
+                        <img src="resources/ch7_images/One_To_One_Relationship.PNG" class="center-block img-fluid"
+                             alt="One_To_One_Relationship"
+                             width=75%>
+                    </div>
+
+                    <div class="sub-heading">One-To-Many Relationship</div>
+                    <div>
+                        - One-to-many relationships means that a record in table A can match many records in table B but a
+                        record in Table B can only match one record in Table A.
+
+                        <a href="https://stackoverflow.com/a/8217964/8742428">SO post about One-To-Many Relationships</a>
+                        <br>
+                        - Consider the following table relationship:
+                        <div class="row">
+                            <img src="resources/ch7_images/One_To_Many_Relationship.PNG" class="center-block img-fluid"
+                                 alt="One_To_Many_Relationship"
+                                 width=45%>
+                        </div>
+                        - Each contact in my_contacts can have only one prof_id. But one prof_id in the professions table can
+                        occur
+                        for multiple contacts in the my_contacts table. That is - each row in professions table can have many
+                        matching rows in the my_contacts table. But each row in the my_contacts table will have only one
+                        matching
+                        row in the professions table.
+                    </div>
+
+                    <div class="sub-heading">Many-To-Many Relationship</div>
+                    <div>
+                        - We make the use of a junction table that which contains the primary key columns of the two tables that
+                        we are trying to relate.
+                        <div class="row">
+                            <img src="resources/ch7_images/Many-To-Many.PNG" class="center-block img-fluid"
+                                 alt="Many_To_Many"
+                                 width=55%>
+                        </div>
+                        - A many-to-many relationship is made up of two one-to-many relationships with a junction table in
+                        between. <br>
+                        - Recall that in the <a href="#non_atomic_table">table we saw earlier</a>, one person had multiple
+                        interests. Also, one interest was shared by more than on person. Hence, this led to a many-to-many
+                        relationship. <br>
+                        - Using the concept of the junction table described above, we can break the many-to-many relationship as
+                        follows. The contact_interest table in the following example serves as the junction table.
+                        <div class="row">
+                            <img src="resources/ch7_images/Many-To-Many_Interests.PNG" class="center-block img-fluid"
+                                 alt="Many-To-Many_Interests"
+                                 width=55%>
+                        </div>
+                        - One advantage of doing this is that it helps preserve data integrity. If you have to delete someone
+                        from the my_contacts table, you never have to touch the interests table. Just the contact_interests
+                        table. Also, suppose you misspelled some hobby name. When you fix it, you will only have ot change one
+                        row in the interests table.
+                    </div>
+
+                    <div class="sub-heading">What is a Composite Key</div>
+                    <div>
+                        - A composite key is a Primary Key that is composed of multiple columns thus creating a unique key. <br>
+                        - //TODO: So other than when we create a junction tbale, why would we ever want to create a composite
+                        key out of columns in my table? Why not just always create an id field? The answer is basically the
+                        debate over creating synthetic primary keys or creating natural primary keys.
+                    </div>
+
+                    <div class="sub-heading">What is functional dependence between two columns</div>
+                    <div>
+                        - When a column's data must change when another column's data is modified, the first column id
+                        functionally dependent on the second. <br>
+                        - A shorthand way to define functional dependency is as follows:
+                        <code>T.x ->; T.y</code>: This is read like "in the relational table called T, column y is functionally
+                        dependent on the column x". Hence the statement is read from the right to the left. <br>
+                        - Thus, a dependent column is one containing data that could change if another column changes.
+                        Non-dependent columns stand alone. <br>
+                        - A <i>partial functional dependency</i> means that a non-key column is dependent on some, but not all,
+                        of the columns in a composite primary key. <br>
+                        <div class="row">
+                            <img src="resources/ch7_images/Partial_Functional_Dependency.PNG" class="center-block img-fluid"
+                                 alt="Many-To-Many_Interests"
+                                 width=55%>
+                        </div>
+                        - A <i>transitive functional dependency</i> is one where changing any of the non-key columns might cause
+                        any of the other columns to change. <br>
+                        <div class="row">
+                            <img src="resources/ch7_images/Transitive-Functional_Dependency.PNG" class="center-block img-fluid"
+                                 alt="Transitive-Functional_Dependency"
+                                 width=55%>
+                        </div>
+                    </div>
+
+                    <div class="sub-heading">What is the Second Normal Form</div>
+                    <div>
+                        - Check this <a href="https://stackoverflow.com/a/724032/8742428">SO link</a> for the proper answer <br>
+                        - 1NF is the most basic of normal forms - each cell in a table must contain only one piece of
+                        information, and there can be no duplicate rows. 2NF and 3NF are all about being dependent on the
+                        primary key. Recall that a primary key can be made up of multiple columns. <br>
+                        - The data depends on the key [1NF], the whole key [2NF] and nothing but the key [3NF] (so help me Codd)
+                        - For example, consider the table below:
+                        <div class="row">
+                            <img src="resources/ch7_images/Not_In_2NF_Form.png" class="center-block img-fluid"
+                                 alt="Transitive-Functional_Dependency"
+                                 width=55%>
+                        </div>
+                        - The toy_id and the store_id are combined to form the composite primary key. In this case, the color
+                        column depends only on the toy_id and not the store id. Hence, it is a partial functional dependency.
+                        Similarly, store_address depends on the store_id but not the toy_id. Again a partial dependency. <br>
+                        - A 1NF table becomes a 2NF table when there are no partial functional dependencies in the table. That
+                        is, every column in the table depends on every column that is used to build the entire primary key in
+                        that table. This will also hold true if there is only one column that is the primary key in the table.
+                    </div>
+
+                    <div class="sub-heading">What is the Third Normal Form</div>
+                    <div>
+                        - If we are using an artificial key in our table, then achieving 2NF is easy (because that table will
+                        not contain a composite key, which means that there is a single column that forms the primary key which
+                        in turn means that every column will depend on the entire primary key by default). <br>
+                        - So we need to get the table into 3NF. <br>
+                        - For a table to be in 3 NF, we have to ensure that there are no transitive dependencies in the table.
+                        Recall that a transitive dependency occurs when changing one non-key column causes other columns to
+                        change.
+                        <div class="row">
+                            <img src="resources/ch7_images/3_NF.PNG" class="center-block img-fluid"
+                                 alt="3_NF"
+                                 width=55%>
+                        </div>
+                    </div>
+
+                    <div class="sub-heading">Bringing it all together</div>
+                    <div>
+                        <div class="row">
+                            <img src="resources/ch7_images/Final_Contacts_Table.PNG" class="center-block img-fluid"
+                                 alt="Final_Contacts_Table"
+                                 width=55%>
+                        </div>
+                    </div>
+
+
                 </div>
-            </div>
 
+                <hr>
+                <div id="Ch8" class="chapter">Chapter 8: Joins and Multi-table operations</div>
+                <hr>
 
-        </div>
-
-        <hr>
-        <div id="Ch7" class="chapter">Chapter 7: Multi-table Database Design - Outgrowing your table</div>
-        <hr>
-        <div class="textual-content">
-            - Sometimes the best way to achieve atomicity in a table is to move the non-atomic columns in the table to
-            new tables.
-
-            <div class="sub-heading">What is a Database Schema</div>
-            <div>
-                - A representation of all the structures such as tables and columns in th database along with how they
-                connect is known as a <i>schema</i>
-                <br>
-                - Consider the below table for example. The interests column is not atomic. Dividing the column into
-                multiple columns won't work either because that will break the atomicitiy as well (multiple columns
-                containing the same type of data). One option is to move the interests to another table. Which is what
-                we will be doing.
-                <div id="non_atomic_table" class="row">
-                    <img src="resources/ch7_images/Non_Atomic_Table.PNG" class="center-block img-fluid"
-                         alt="ALTER_Add_Primary_Key"
-                         width=55%>
-                </div>
-                - But if we want to move interests to another table, we will have to uniquely identify which interest
-                belongs to which individual. Also this new table that we create will have to be 1NF. This is how we
-                do it:
-                <div class="row">
-                    <img src="resources/ch7_images/Foreign_Key.PNG" class="center-block img-fluid"
-                         alt="Foreign_Key"
-                         width=55%>
-                </div>
-                - Note that the new table needs to be in the 1NF. Hence each record needs to be unique. For which we
-                have the int_id (Primary Key) in the interests table. We also want to be able to uniquely identify the
-                individual to which the value in the interest column belongs to. This is done by using the contact_id
-                column.
-                <br>
-
-            </div>
-            <div class="sub-heading">What is a Foreign Key</div>
-            - The Foreign Key is a column in a table that references the Primary Key of another table.
-            <br>
-            - A Foreign Key can have a different name than the Primary Key that it comes from.
-            <br>
-            - The primary key used by a foreign key is also known as a parent key. The table where the parent key is
-            from is known as the parent table.
-            <br>
-            - The foreign key can be used to make sure that the rows in one table have corresponding rows in another
-            table.
-            <br>
-            - Foreign key values can be null, even though primary key values can't. A NULL foreign key means that there
-            is no matching primary key in the parent table. But we can make sure that a foreign key contains a
-            meaningful value, one that exists in the parent table, by using a <i>constraint</i>.
-            <br>
-            - Foreign keys do not have to be unique.
-
-            <div class="sub-heading">How do you constrain a Foreign Key</div>
-            <div>
-                - When you constrain your foreign key, you will only be able to insert values into your foreign key that
-                exist in the table that the key came from (the parent table). This is called <i>referential
-                integrity</i>. This makes sure that if you have a row in one table with a foreign key , it must
-                correspond to a row in another through the foreign key. If you try to delete the row in the a primary
-                key table or to change a primary key value, you will get an error if the primary key value is a foreign
-                key
-                constraint in another table.
-                <br>
-                - You can delete a row that has a primary key that shows up as a foreign key in some other table. But
-                for this, you have to remove the foreign key row first. This makes sense as well because, for example,
-                if you are removing the row from my_contacts, you don't need to know that person's interests anymore.
-                <br>
-                - You can use a foreign key to reference a <i>unique value</i> in the parent table. <i>It doesn't have
-                to be the Primary key of the parent table. It just has to be unique.</i>
-                <div class="row">
-                    <img src="resources/ch7_images/Foreign_Key_Ref_Int.png" class="center-block img-fluid"
-                         alt="Foreign_Key_Ref_Int"
-                         width=55%>
-                </div>
-            </div>
-
-            <div class="sub-heading">How to create a table with a Foreign Key</div>
-            <div>
-                <code>ALTER TABLE my_contacts_3 MODIFY my_id INT NOT NULL PRIMARY KEY AUTO_INCREMENT;</code><br>
-                <code>CREATE TABLE interests (</code><br>
-                <code> int_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,</code><br>
-                <code> interest VARCHAR(50) NOT NULL,</code><br>
-                <code> interest_id INT NOT NULL,</code><br>
-                <code> CONSTRAINT my_contacts_3_contact_id_fk</code><br>
-                <code> FOREIGN KEY (interest_id)</code><br>
-                <code> REFERENCES my_contacts_3 (my_id)</code><br>
-                <code>);</code><br>
-                And the resulting table that is created is as follows:
-                <div class="row">
-                    <img src="resources/ch7_images/Foreign_Key_Table.PNG" class="center-block img-fluid"
-                         alt="Foreign_Key_Table"
-                         width=45%>
-                </div>
-                - The first statement was necessary because the my_contacts_3 did not have the my_id column designated
-                as a Primary key. That was causing the following error: <br>
-                Error Code: 1822. Failed to add the foreign key constraint. Missing index for constraint
-                'my_contacts_3_contact_id_fk' in the referenced table 'my_contacts_3'
-                <br>
-                - interests is the name of the new table created. int_id is the Primary Key of this new table.
-                <br>
-                - Line 7 states that the Foreign Key will be stored in a column named interest_id. Hence we need to
-                create a column with the same name which we are doing on line 5. You can change the name of the column
-                to any name that you like.
-                <br>
-                - Line 6 is the name of the constraint that is being used. As far as I can tell., this name means
-                nothing.
-                <br>
-                - Line 8 is where the Foreign Key is actually being assigned. my_contacts_3 specifies the table from
-                which the foreign key actually comes from. The my_id is what it is actually called in the other table
-                (contact_id).
-                <br>
-                - The MUL in the figure means that multiple occurrences of the same value may be stored in this column.
-            </div>
-
-            <div class="sub-heading">Relationships between Tables</div>
-            <div>
-                - There are 3 possible relationships that are possible between tables:
-                <ul>
-                    <li>one-to-one</li>
-                    <li>one-to-many</li>
-                    <li>many-to-many</li>
-                </ul>
-            </div>
-
-            <div class="sub-heading">One-To-One Relationship</div>
-            <div>
-                - These types of tables are not that frequently used. One-to-one means that exactly one row of a parent
-                table is related to one row of a child table.
-            </div>
-            <div class="row">
-                <img src="resources/ch7_images/One_To_One_Relationship.PNG" class="center-block img-fluid"
-                     alt="One_To_One_Relationship"
-                     width=75%>
-            </div>
-
-            <div class="sub-heading">One-To-Many Relationship</div>
-            <div>
-                - One-to-many relationships means that a record in table A can match many records in table B but a
-                record in Table B can only match one record in Table A.
-
-                <a href="https://stackoverflow.com/a/8217964/8742428">SO post about One-To-Many Relationships</a>
-                <br>
-                - Consider the following table relationship:
-                <div class="row">
-                    <img src="resources/ch7_images/One_To_Many_Relationship.PNG" class="center-block img-fluid"
-                         alt="One_To_Many_Relationship"
-                         width=45%>
-                </div>
-                - Each contact in my_contacts can have only one prof_id. But one prof_id in the professions table can
-                occur
-                for multiple contacts in the my_contacts table. That is - each row in professions table can have many
-                matching rows in the my_contacts table. But each row in the my_contacts table will have only one
-                matching
-                row in the professions table.
-            </div>
-
-            <div class="sub-heading">Many-To-Many Relationship</div>
-            <div>
-                - We make the use of a junction table that which contains the primary key columns of the two tables that
-                we are trying to relate.
-                <div class="row">
-                    <img src="resources/ch7_images/Many-To-Many.PNG" class="center-block img-fluid"
-                         alt="Many_To_Many"
-                         width=55%>
-                </div>
-                - A many-to-many relationship is made up of two one-to-many relationships with a junction table in
-                between. <br>
-                - Recall that in the <a href="#non_atomic_table">table we saw earlier</a>, one person had multiple
-                interests. Also, one interest was shared by more than on person. Hence, this led to a many-to-many
-                relationship. <br>
-                - Using the concept of the junction table described above, we can break the many-to-many relationship as
-                follows. The contact_interest table in the following example serves as the junction table.
-                <div class="row">
-                    <img src="resources/ch7_images/Many-To-Many_Interests.PNG" class="center-block img-fluid"
-                         alt="Many-To-Many_Interests"
-                         width=55%>
-                </div>
-                - One advantage of doing this is that it helps preserve data integrity. If you have to delete someone
-                from the my_contacts table, you never have to touch the interests table. Just the contact_interests
-                table. Also, suppose you misspelled some hobby name. When you fix it, you will only have ot change one
-                row in the interests table.
-            </div>
-
-            <div class="sub-heading">What is a Composite Key</div>
-            <div>
-                - A composite key is a Primary Key that is composed of multiple columns thus creating a unique key. <br>
-                - //TODO: So other than when we create a junction tbale, why would we ever want to create a composite
-                key out of columns in my table? Why not just always create an id field? The answer is basically the
-                debate over creating synthetic primary keys or creating natural primary keys.
-            </div>
-
-            <div class="sub-heading">What is functional dependence between two columns</div>
-            <div>
-                - When a column's data must change when another column's data is modified, the first column id
-                functionally dependent on the second. <br>
-                - A shorthand way to define functional dependency is as follows:
-                <code>T.x ->; T.y</code>: This is read like "in the relational table called T, column y is functionally
-                dependent on the column x". Hence the statement is read from the right to the left. <br>
-                - Thus, a dependent column is one containing data that could change if another column changes.
-                Non-dependent columns stand alone. <br>
-                - A <i>partial functional dependency</i> means that a non-key column is dependent on some, but not all,
-                of the columns in a composite primary key. <br>
-                <div class="row">
-                    <img src="resources/ch7_images/Partial_Functional_Dependency.PNG" class="center-block img-fluid"
-                         alt="Many-To-Many_Interests"
-                         width=55%>
-                </div>
-                - A <i>transitive functional dependency</i> is one where changing any of the non-key columns might cause
-                any of the other columns to change. <br>
-                <div class="row">
-                    <img src="resources/ch7_images/Transitive-Functional_Dependency.PNG" class="center-block img-fluid"
-                         alt="Transitive-Functional_Dependency"
-                         width=55%>
-                </div>
-            </div>
-
-            <div class="sub-heading">What is the Second Normal Form</div>
-            <div>
-                - Check this <a href="https://stackoverflow.com/a/724032/8742428">SO link</a> for the proper answer <br>
-                - 1NF is the most basic of normal forms - each cell in a table must contain only one piece of
-                information, and there can be no duplicate rows. 2NF and 3NF are all about being dependent on the
-                primary key. Recall that a primary key can be made up of multiple columns. <br>
-                - The data depends on the key [1NF], the whole key [2NF] and nothing but the key [3NF] (so help me Codd)
-                - For example, consider the table below:
-                <div class="row">
-                    <img src="resources/ch7_images/Not_In_2NF_Form.png" class="center-block img-fluid"
-                         alt="Transitive-Functional_Dependency"
-                         width=55%>
-                </div>
-                - The toy_id and the store_id are combined to form the composite primary key. In this case, the color
-                column depends only on the toy_id and not the store id. Hence, it is a partial functional dependency.
-                Similarly, store_address depends on the store_id but not the toy_id. Again a partial dependency. <br>
-                - A 1NF table becomes a 2NF table when there are no partial functional dependencies in the table. That
-                is, every column in the table depends on every column that is used to build the entire primary key in
-                that table. This will also hold true if there is only one column that is the primary key in the table.
-            </div>
-
-            <div class="sub-heading">What is the Third Normal Form</div>
-            <div>
-                - If we are using an artificial key in our table, then achieving 2NF is easy (because that table will
-                not contain a composite key, which means that there is a single column that forms the primary key which
-                in turn means that every column will depend on the entire primary key by default). <br>
-                - So we need to get the table into 3NF. <br>
-                - For a table to be in 3 NF, we have to ensure that there are no transitive dependencies in the table.
-                Recall that a transitive dependency occurs when changing one non-key column causes other columns to
-                change.
-                <div class="row">
-                    <img src="resources/ch7_images/3_NF.PNG" class="center-block img-fluid"
-                         alt="3_NF"
-                         width=55%>
-                </div>
-            </div>
-
-            <div class="sub-heading">Bringing it all together</div>
-            <div>
-                <div class="row">
-                    <img src="resources/ch7_images/Final_Contacts_Table.PNG" class="center-block img-fluid"
-                         alt="Final_Contacts_Table"
-                         width=55%>
-                </div>
-            </div>
-
-
-        </div>
-
-        <hr>
-        <div id="Ch8" class="chapter">Chapter 8: Joins and Multi-table operations</div>
-        <hr>
+                -->
 
         <hr>
         <div id="HIA_Ch1" class="chapter">Chapter 1: Understanding Object/Relational Persistence</div>
