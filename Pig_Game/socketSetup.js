@@ -7,8 +7,8 @@ const settingsBtn = document.querySelector('.btn-settings');
 const closeSettingsOverlayBtn = document.querySelector('.settings-close-overlay-btn');
 const targetScoreForm = document.querySelector('#select-target-score-form');
 
-// const url = "http://localhost:8080";
-const url = "https://pig-game-rgbk21.herokuapp.com";
+const url = "http://localhost:8080";
+// const url = "https://pig-game-rgbk21.herokuapp.com";
 
 let stompClient;
 let gameId;

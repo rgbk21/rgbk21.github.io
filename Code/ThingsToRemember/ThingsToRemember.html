@@ -1501,8 +1501,36 @@
         mixed content as shown <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Firefox/Experimental_features#upgrading_mixed_display_content">here on MDN site</a>. <br>
         - Can I use HTTPS on localhost? <br>
         -
+    </div>
 
+    <div class="one-point">
+        83) An inner class can either extend a single class or implement a single interface. Remember that you <code>extend</code> an abstract class and can either
+        <code>extend</code> or <code>implement</code> an interface. You do not <code>implement</code> a <code>abstract</code> class.
+    </div>
 
+    <div class="one-point">
+        84) Why would you want to use <code>static</code> variables in a class? <br>
+        - Think of <code>static</code> variables as metadata, i.e., data about data. What this means is that if you want to store information about the class itself, in that case
+        you would be better off using <code>static</code> variables. <br>
+        - Consider the following example: you have a brand of a car, say Ferrari CX. There is a base price associated with the car. This base price is going to be constant across
+        all instantiations of the same car. In that case, you would want to declare the base price as a <code>static</code> variable. <br>
+        - (<a href="https://www.cis.upenn.edu/~matuszek/General/JavaSyntax/static.html">Source</a>) The general rule is: Avoid static. However: <br>
+        a) The main method must be static. When the program first starts, there are no instances (objects) yet to talk to, so you cannot start from an instance method. However, the
+        classes themselves have been created, so static methods can be used. <br>
+        b) When you want to have a variable that describes something about the class itself, not the individual objects of that class, make it static. <br>
+        c) When you want to have a variable that always has the same value for every object of the class, forever and ever, make it static. <br>
+        d) If you have a method that does not use any instance variables or instance methods, you should probably make it static. <br>
+        - <a href="https://www.baeldung.com/java-static#3-key-points-to-remember-1">Source</a> Key points to remember when using a <code>static</code> variable: <br>
+        - static methods in Java are resolved at compile time. Since method overriding is part of Runtime Polymorphism, so static methods can't be overridden <br>
+        - abstract methods can't be static <br>
+        - static methods cannot use this or super keywords <br>
+        - The following combinations of the instance, class methods and variables are valid: <br>
+        a) Instance methods can directly access both instance methods and instance variables <br>
+        b) Instance methods can also access static variables and static methods directly <br>
+        c) static methods can access all static variables and other static methods <br>
+        d) static methods cannot access instance variables and instance methods directly; they need some object reference to do so <br>
+        - Question: when you use the <code>new</code> keyword to create an object, that object is created on the heap. Where are <code>static</code> variables stored then? Does it
+        matter?
     </div>
 
 

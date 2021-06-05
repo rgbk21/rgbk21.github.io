@@ -389,6 +389,8 @@ body {
 .btn-settings{
     padding: 0.75rem 0.75rem;
 }
+
+/*!******************* MEDIA QUERIES *****************************!*/
 @media (max-width: 600px) {
     .game-container{
         grid-column: 1/4;

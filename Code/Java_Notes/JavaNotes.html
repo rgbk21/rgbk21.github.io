@@ -291,15 +291,18 @@
             it refers to - that determines what members can be accessed.</i> That is when a reference to a subclass
             object is assigned to a superclass reference variable, you will have access to only those parts of the
             object defined by the superclass.
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/8d3f3665ec70aced023563b5888d2f20.js"></script>
+            </div>
         </div>
-        <div class="code-snippet">
-            <script src="https://gist.github.com/rgbk21/8d3f3665ec70aced023563b5888d2f20.js"></script>
-        </div>
+
+
         <div class="sub-heading">Understanding super</div>
         <div>
             <code>super</code> has two general forms. The first calls the superclass' constructor. The second is used to
             access a member of the superclass that has been hidden by a member of a subclass.
         </div>
+
         <div class="sub-heading">a) Using super to call superclass constructors</div>
         <div>
             A subclass can call a constructor defined by its superclass by use of the following form of
@@ -354,6 +357,7 @@
             of it when there is
             a long line of class descent.
         </div>
+
         <div class="sub-heading">b) A second use of super</div>
         <div>
             The second form of <code>super</code> acts somewhat like <code>this</code>, except that it always refers to
@@ -367,6 +371,7 @@
                 <script src="https://gist.github.com/rgbk21/b8a1eff34f8ebf8331a78eeaeca6ebe5.js"></script>
             </div>
         </div>
+
         <div class="sub-heading">Creating a MultiLevel Hierarchy</div>
         <div>
             You can build hierarchies that contain as many layers of inheritance as you like. Because of inheritance,
@@ -416,7 +421,6 @@
             <div class="code-snippet">
                 <script src="https://gist.github.com/rgbk21/dbab6ec7ddbf20b2772a53f6b07b780d.js"></script>
             </div>
-
         </div>
 
 
@@ -434,6 +438,7 @@
             Remember that method overriding occurs ONLY when the names AND the type signatures are identical. Otherwise
             the two methods are simply overloaded.
         </div>
+
         <div class="sub-heading">Dynamic Method Dispatch</div>
         <div>
             Method Overriding provides the basis for Java's: <i>Dynamic Method Dispatch</i>. Dynamic method dispatch is
@@ -464,6 +469,7 @@
                 <script src="https://gist.github.com/rgbk21/d1e79c337d71a4468731f182f443b4cb.js"></script>
             </div>
         </div>
+
         <div>
             - Another example that makes more sense is the <code>List</code> interface, and the <code>ArrayList</code>
             and <code>LinkedList</code> classes.
@@ -523,7 +529,6 @@
             If you get into the habit of using interface types, your program will be much more flexible. It is entirely
             appropriate to refer to an
             object by a class if no appropriate interface exists.
-
         </div>
 
         <div class="sub-heading">When will overriding methods not work</div>
@@ -536,60 +541,48 @@
                 <script src="https://gist.github.com/rgbk21/974d88b9a0c80a4178b46ebfea69e5e8.js"></script>
             </div>
             - Second, when overriding a method, we can increase access but we can never decrease access. Java specifies that the access specifier for an overriding method can allow
-            more, but not less, access than the overridden method. For example, a protected instance method in the superclass can be made public, but not private, in the subclass.
-            <a href="https://stackoverflow.com/questions/6851612/when-overriding-a-method-why-can-i-increase-access-but-not-decrease-it">Source on SO</a>
+            more, but not less, access than the overridden method. For example, a <code>protected</code> instance method in the superclass can be made <code>public</code>, but not
+            <code>private</code>, in the subclass.
+            <a href="https://stackoverflow.com/questions/6851612/when-overriding-a-method-why-can-i-increase-access-but-not-decrease-it">Source on SO</a>.
         </div>
 
 
         <div class="sub-heading">Using Abstract Classes and Abstract Methods</div>
         <div>
-            You can require that certain methods be overridden by subclasses by specifying the <code>abstract</code>
-            type
-            modifier.These
-            methods are sometimes referred to as <i>subclasser responsibility</i> because these methods have no
-            implementation
-            specified in the superclass. Hence, a subclass MUST override them - it cannot simply use the version defined
-            in the superclass.
-            To declare an abstract method, use this general form:
-            <code>abstract <i>type name (parameter-list);</i> </code>
+            - You can require that certain methods be overridden by subclasses by specifying the <code>abstract</code> type modifier.These methods are sometimes referred to as
+            <i>subclasser responsibility</i> because these methods have no implementation specified in the superclass. Hence, a subclass MUST override them - it cannot simply use
+            the version defined in the superclass. To declare an abstract method, use this general form: <code>abstract <i>type name (parameter-list);</i> </code>
             <br>
-            Note the closing semi-colon. No method body is present. Abstract methods CANNOT have a body. Abstract
-            classes can have concrete methods along with abstract methods though.
+            Note the closing semi-colon. No method body is present. Abstract methods CANNOT have a body. Abstract classes can have concrete methods along with abstract methods
+            though.
             <br>
-            - Any class that contains one or more abstract methods MUST also be declared abstract. There can be no
-            objects of an abstract class. That is, an abstract class cannot be instantiated using a <code>new</code>
-            operator. Also, you cannot declare abstract constructors, or abstract static methods. Any subclass of an
-            abstract method must either implement all of the abstract methods or be declared <code>abstract</code>
-            itself.
-            <br>
-            - Although abstract classes cannot be used to instantiate objects, they can be used to create object
-            references.
-            <br>
-            - To declare a class abstract:
+            - Any class that contains one or more abstract methods MUST also be declared abstract. There can be no objects of an abstract class. That is, an abstract class cannot
+            be instantiated using a <code>new</code> operator. Also, you cannot declare abstract constructors, or abstract static methods. Any subclass of an abstract method must
+            either implement all of the abstract methods or be declared <code>abstract</code> itself. <br>
+            - Abstract classes/methods cannot be declared <code>final</code>. Abstract classes/methods cannot be declared <code>static</code> <br>
+            - Although abstract classes cannot be used to instantiate objects, they can be used to create object references. <br>
+            - To declare a class abstract, we use the <code>extends</code> keyword. Note that abstract classes are <i>extended</i> whereas interfaces are <i>implemented</i>.
             <div class="code-snippet">
                 <script src="https://gist.github.com/rgbk21/8974236d5a5b60ecb8407a47f497e8e6.js"></script>
             </div>
         </div>
+
         <div class="sub-heading">Using final with Inheritance</div>
         <div>
-            The keyword <code>final</code> has 3 uses - the first is in creating a named constant. The other 2 uses of
-            <code>final</code> apply to inheritance.
+            - The keyword <code>final</code> has 3 uses - the first is in creating a named constant. The other 2 uses of <code>final</code> apply to inheritance.
+
             <div class="sub-heading">a) Using final to prevent Overriding</div>
             <div>
-                - To disallow a method from being overridden, specify <code>final</code> as a modifier at the start of
-                its
-                declaration. Methods declared as <code>final</code> cannot be overridden.
-                <br>
-                - Methods declared as <code>final</code> can sometimes also provide performance enhancement by <i>inlining</i>
-                calls to them.
-                Normally, Java resolves calls to methods dynamically at run-time. This is called <i>late-binding</i>.
-                However, since <code>final</code> methods cannot be overridden, a call to one can be resolved at compile
-                time.
-                This is called <i>early-binding</i>.
+                - To disallow a method from being overridden, specify <code>final</code> as a modifier at the start of its declaration. Methods declared as <code>final</code>
+                cannot be overridden. <br>
+                - Methods declared as <code>final</code> can sometimes also provide performance enhancement by <i>inlining</i> calls to them. Normally, Java resolves calls to
+                methods dynamically at run-time. This is called <i>late-binding</i>. However, since <code>final</code> methods cannot be overridden, a call to one can be resolved
+                at compile time. This is called <i>early-binding</i>.
                 <div class="code-snippet">
                     <script src="https://gist.github.com/rgbk21/b3b6eb7183aa934df4e18a184fb58a3c.js"></script>
                 </div>
             </div>
+
             <div class="sub-heading">b) Using final to prevent Inheritance</div>
             <div>
                 - Sometimes, you will want to prevent a class from being inherited. To do this, precede the class
@@ -611,7 +604,7 @@
         </div>
         <div class="sub-heading">The Object Class</div>
         <div>
-            There is one special class, <code>Object</code>, defined by Java. All other Classes are subclasses of
+            - There is one special class, <code>Object</code>, defined by Java. All other Classes are subclasses of
             <code>Object</code>. That is, <code>Object</code> is a superclass of all the other classes. This means that
             a reference variable of
             type <code>Object</code> can refer to an object of any other class.
@@ -652,15 +645,14 @@
         https://stackoverflow.com/questions/995255/why-is-multiple-inheritance-not-allowed-in-java-or-c?noredirect=1&lq=1
         <br>
         https://stackoverflow.com/questions/13389384/multiple-inheritance-on-java-interfaces?noredirect=1&lq=1 <br>
-
     </div>
+
 
     <hr>
     <div id="interfaces" class="chapter">Chapter 9: Interfaces</div>
     <hr>
 
     <div class="textual-content">
-
         - Interfaces are syntactically similar to classes, but they lack instance variables. In practice, this means
         that you can define interfaces that don't make assumptions about how they are implemented. Once it is defined,
         any number of classes can implement an interface. Also, one class can implement any number of interfaces. <br>
@@ -2499,8 +2491,13 @@
             <code>*.class</code> files that contain the bytecodes understood by the JVM. This compilation is done by
             using the <code>javac</code> command. After compilation, as many <code>.class</code> files will be generated
             as the number of classes in java program (eh.. not really) <br>
-            - Note that inner classes do not get .class files of their own.
-            Instead they are present in the .class files of their parent classes itself.
+            - This is the wrong understanding: Note that inner classes do not get .class files of their own.
+            Instead they are present in the .class files of their parent classes itself. [This was because when you look at the file in IntelliJ it shows that, both, the outer
+            class and the inner class are in the same file. But, if you go into file explorer in your system and see, you will see that the outer and the inner classes are actually
+            in separate files.] <br>
+            - The outer class, in this case, is <i>ShadowTest2</i>. This is present in the class file called <i>ShadowTest2.class</i>. The inner class is called <i>FirstLevel2</i>.
+            And this is present in the class called <i>ShadowTest2$FirstLevel2.class</i>. This is the format, the parent class name, then the '$' symbol followed by the inner class
+            name.
             <div class="code-snippet">
                 <script src="https://gist.github.com/rgbk21/878a9e08965337f0a142bb47faede1bf.js"></script>
             </div>
