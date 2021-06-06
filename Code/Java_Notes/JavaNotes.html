@@ -168,8 +168,9 @@
     Section 4: <a href="#Udemy_Java_Section4">JVM Architecture</a> <br>
     Section 5: <a href="#Udemy_Java_Section5">Operators and Expressions</a> <br>
     Section 6: <a href="#Udemy_Java_Section6">String class and Regex</a> <br>
-    Section 8: <a href="#Udemy_Java_Section9">Arrays</a> <br>
-
+    Section 16: <a href="#Udemy_Java_Section16">Static and final</a> <br>
+    Section 17: <a href="#Udemy_Java_Section17">Packages</a> <br>
+    Section 18: <a href="#Udemy_Java_Section18">Exceptions</a> <br>
 
     <hr>
     <div id="inheritance" class="chapter">Chapter 8: Inheritance</div>
@@ -608,12 +609,14 @@
             <code>Object</code>. That is, <code>Object</code> is a superclass of all the other classes. This means that
             a reference variable of
             type <code>Object</code> can refer to an object of any other class.
+            `
             <div class="row">
                 <img src="ObjectClass.PNG"
                      width="50%"
                      class="center-block img-fluid"
                      alt="Example1">
             </div>
+            `
             Notice two methods, <code>equals()</code> and <code>toString()</code>.
             <br>
             - The <code>equals()</code> method compares two objects. It returns <code>true</code> if the objects are
@@ -2813,17 +2816,162 @@
     </div>
 
     <hr>
-    <div id="Udemy_Java_Section9" class="chapter">Section 9: Arrays</div>
+    <div id="Udemy_Java_Section16" class="chapter">Section 16: <code>static</code> and <code>final</code></div>
     <hr>
 
     <div class="textual-content">
 
-        <div class="sub-heading">Lecture 53: Regular Expressions - Matching Expressions</div>
+        <div class="sub-heading">Lecture 153: Static Members</div>
         <div>
-
+            - You can declare the following types of <code>static</code> entities in your code: <br>
+            a) Static Variables <br>
+            b) Static Methods <br>
+            c) Static Nested Class <br>
+            d) Static Blocks <br>
+            - Remember that from a <code>static</code> method, you can only access other <code>static</code> members. You cannot access instance variables from a method that has
+            been declared <code>static</code>. You also cannot use the keywords <code>this</code> and <code>super</code> inside a <code>static</code> method because these keywords
+            refer to an instance of the class. Only inner classes can be declared as <code>static class <i>className</i> { }</code>. You can overload static methods but you cannot
+            override static methods. <br>
+            - <code>static</code> members of a class are created inside something known as method area. JVM memory management was changed in JDK8. No idea what this refers to now.
+            Supposedly, this method area is created when the class is first loaded. That is why we can access <code>static</code> members directly from the class without having to
+            create an object of the class. <br>
+            - If you have a bunch of static methods, then you can group them all together in a <code>static</code> block. <br>
+            - <a href="https://www.baeldung.com/java-static#3-key-points-to-remember-1">Source</a> Key points to remember when using a <code>static</code> variable: <br>
+            - static methods in Java are resolved at compile time. Since method overriding is part of Runtime Polymorphism, so static methods can't be overridden <br>
+            - abstract methods can't be static <br>
+            - static methods cannot use this or super keywords <br>
+            - The following combinations of the instance, class methods and variables are valid: <br>
+            a) Instance methods can directly access both instance methods and instance variables <br>
+            b) Instance methods can also access static variables and static methods directly <br>
+            c) static methods can access all static variables and other static methods <br>
+            d) static methods cannot access instance variables and instance methods directly; they need some object reference to do so <br>
         </div>
 
+        <div class="sub-heading">Lecture 155: Static Blocks</div>
+        <div>
+            - We can write down a set of statements in a block and declare the block as <code>static</code>. This <code>static</code> block will be executed when the class is
+            loaded, i.e. before the creation of any object of the class. <br>
+
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/55814b7c3b6a3573e7707f6fa2a57c5d.js"></script>
+            </div>
+        </div>
+
+        <div class="sub-heading">Lecture 157: <code>final</code> Members</div>
+        <div>
+            - The <code>final</code> keyword can be used in various ways: <br>
+            a) final variables <br>
+            b) final methods <br>
+            c) final class <br>
+            - There are 3 methods of initialising <code>final</code> variables: <br>
+            a) Initialize them when you have declared them <br>
+            b) Initialize within a <code>static</code> block <br>
+            c) Initialize them inside the constructor of the class. If the class has multiple constructors, then the variable must be initialized withing all of the constructors
+            <br>
+            - If a method is declared as <code>final</code> then that method cannot be overridden. Similarly, if a class is declared as <code>final</code>, the class cannot be
+            extended.
+
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/dcf42f5d6ae600c6c7fcd3cf5689fb26.js"></script>
+            </div>
+        </div>
+
+
+        <div class="sub-heading">Lecture 159: The Singleton Class</div>
+        <div>
+            - This design pattern is used when we want to create a single instance of a class and make sure that no oter instances of the class has been created. <br>
+            - Note that this technique is not thread-safe. Refer <a
+                href="https://stackoverflow.com/questions/70689/what-is-an-efficient-way-to-implement-a-singleton-pattern-in-java">this SO answer to see the correct way to create a
+            singleton class</a>.
+
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/1861097b7055be9b0c874b08116704c8.js"></script>
+            </div>
+        </div>
     </div>
+
+    <hr>
+    <div id="Udemy_Java_Section17" class="chapter">Section 17: Packages</div>
+    <hr>
+
+    <div class="textual-content">
+
+        <div class="sub-heading">Lecture 162: Creating a Package</div>
+        <div>
+            - <code>C:\Program Files\Java\jdk1.8.0_281\src.zip</code> contains the sourcce files in the case of java versions that are 8 and below.
+            <code>C:\Program Files\Java\jdk-11.0.10\lib\src.zip</code> contains the source files for java in later versions. <br>
+            - Consider the following program. We are creating a <i>Demo.java</i> file that is placed in a package called <i>mypackage</i>. When we compile the .java file using the
+            standard <code>javac</code> command, the expectation would be that the file <i>Demo.class</i> is placed within a folder named <i>mypackage</i>. But as we can see, that
+            the .class file is placed in the <i>same</i> folder as the .java file. This is what the <i>ls</i> command is showing. Also note that executing the .class file now
+            returns an error. No error is produced if we comment out the package name and then compile and re-run the program. <br>
+            - <a href="https://stackoverflow.com/questions/18093928/what-does-could-not-find-or-load-main-class-mean">On SO</a>, What does “Could not find or load main class” mean?
+            The self answer by Stephen that explains how you launch a program from the CLI using the java command.
+            <div class="row">
+                <img src="imgs/Udemy_Java/Section17/WrongPackage.png"
+                     width="100%"
+                     class="center-block img-fluid"
+                     alt="Example1">
+            </div>
+
+            - So how do we make sure that the .class file is placed within the right package? For that we have to compile the program with a different command. <br>
+            - We use <code>java -d . Demo.java</code> to compile the program. The -d args stands for <i>directory</i>. The <code> . </code> means that the root of the folder of the
+            generated class files should be the current folder. <br>
+            - The -d args sets the destination directory (or class output directory)
+            for class files. If a class is part of a package, then javac puts the class file in a subdirectory that reflects the module name (if appropriate) and package name. The
+            directory, and any necessary subdirectories, will be created if they do not already exist.
+            If the -d option is not specified, then javac puts each class file in the same directory as the source file from which it was generated.
+            <a href="https://docs.oracle.com/en/java/javase/13/docs/specs/man/javac.html">Source on Oracle website</a>.
+            <div class="row">
+                <img src="imgs/Udemy_Java/Section17/RightPackage.PNG"
+                     width="100%"
+                     class="center-block img-fluid"
+                     alt="Example1">
+            </div>
+            - Two things need to be written down: one was how we compile a program from the command line so that the individual .class files actually end up in packages. <br>
+
+            - Second was understanding the difference between the different types of access that are present in java: public, protected, default, private.
+        </div>
+
+        <div class="sub-heading">Lecture 163: Access Modifiers</div>
+        <div>
+            - There are four levels of access modifiers: public, default, protected, private <br>
+            - A class can have three types of members: variables, methods, inner class. An access modifier can be used on any of these types of members. The exception to this rule
+            is the outermost class. The outer class can only be either <code>public</code> or <code>default</code>. <br>
+            - A class can be used in two ways: either by creating an object of the class, or by extending the class. Both these methods give us a different kind of relationship
+            between the two classes.
+            <img src="imgs/Udemy_Java/Section17/ClassRelationship.PNG"
+                 width="688"
+                 class="center-block img-fluid"
+                 alt="Example1">
+            - <code>default</code> members cannot be accessed outside the package. <code>protected</code> members can be accessed outside the package only if the class that is
+            accessing the protected member is a subclass of the class in which the member is defined. <br>
+            - Here is an image if it helps clear anything:
+            <img src="imgs/Udemy_Java/Section17/AccessModifiers.PNG"
+                 width="703"
+                 class="center-block img-fluid"
+                 alt="Example1">
+        </div>
+    </div>
+
+    <hr>
+    <div id="Udemy_Java_Section18" class="chapter">Section 18: Exceptions</div>
+    <hr>
+
+    <div class="textual-content">
+
+        <div class="sub-heading">Lecture 167: How to handle Exceptions</div>
+        <div>
+            - A <code>try</code> block can have multiple <code>catch</code> blocks. Make sure that there are no super classes of the same exception present in the multiple
+            <code>catch</code> blocks. <br>
+            - A <code>try-catch</code> block can also have a <code>finally</code> block. The code in the finally block is executed irrespective of whether
+            there was an exception during the execution of the program. Even if the program executed properly, the <code>finally</code> block would still be executed. <br>
+            - It is not necessary that a <code>try</code> should have a <code>catch</code>. A <code>try</code> can just have a <code>finally</code> and that is still fine. The code
+            would still compile.
+        </div>
+
+
+    </div>
+
 
     <script src="script.js"></script>
 </div>
