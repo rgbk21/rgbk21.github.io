@@ -2961,12 +2961,21 @@
 
         <div class="sub-heading">Lecture 167: How to handle Exceptions</div>
         <div>
-            - A <code>try</code> block can have multiple <code>catch</code> blocks. Make sure that there are no super classes of the same exception present in the multiple
-            <code>catch</code> blocks. <br>
+            - A <code>try</code> block can have multiple <code>catch</code> blocks. But take a note of the hierarchy in which you are catching the exceptions. The subclass should
+            be the one that is present higher up and the superclass should be present below.
             - A <code>try-catch</code> block can also have a <code>finally</code> block. The code in the finally block is executed irrespective of whether
             there was an exception during the execution of the program. Even if the program executed properly, the <code>finally</code> block would still be executed. <br>
             - It is not necessary that a <code>try</code> should have a <code>catch</code>. A <code>try</code> can just have a <code>finally</code> and that is still fine. The code
-            would still compile.
+            would still compile. <br>
+            - Every developer-defined exception must extend the <code>Exception</code> class. You can override the <code>toString</code> or the <code>getMessage</code> methods of
+            the <code>Exception</code> class to create your own custom message that should be displayed on exception.<br>
+            <img src="imgs/Udemy_Java/Section18/Exceptions.PNG"
+                 width="633"
+                 class="center-block img-fluid"
+                 alt="Example1">
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/2fe471bcecd48191e92d0ef953357264.js"></script>
+            </div>
         </div>
 
 

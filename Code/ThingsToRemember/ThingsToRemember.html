@@ -159,13 +159,19 @@
             href="https://stackoverflow.com/questions/8002603/why-does-the-ternary-operator-unexpectedly-cast-integers">Why
         does the ternary operator unexpectedly cast integers? </a>
         <div>
-            If there is a mismatch in the types of the second and third operands in the ternary operator, one type
+            - If there is a mismatch in the types of the second and third operands in the ternary operator, one type
             can be automatically converted to another in order to make their types equal. In the below example, for
             instance, you have to cast both the second and third operand to char or else the result will be converted
-            to an int dataype. This is what we see in line 3.
+            to an int datatype. This is what we see in line 3.
         </div>
-        <div class="code-snippet">
-            <script src="https://gist.github.com/rgbk21/857230cca79f5d0333a312ec9f317154.js"></script>
+
+        <div class="code-block">
+            <div class="expand-code-snip-btn border border-primary rounded">
+                <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+            </div>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/857230cca79f5d0333a312ec9f317154.js"></script>
+            </div>
         </div>
     </div>
 
@@ -249,17 +255,28 @@
             <br>
             When you pass a primitive type to a method, it is passed by value. Thus, a copy of the argument is made, and
             what occurs to the parameter that receives the argument has no effect outside the method.
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/34c8ceae9366e91b9750e57e5686f1cf.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/34c8ceae9366e91b9750e57e5686f1cf.js"></script>
+                </div>
             </div>
+
             When you pass an object to a method, the situation changes dramatically, because objects are passed by what
             is effectively call-by-reference. Keep in mind that when you create a variable of a class type, you are only
             creating a reference to an object. Thus, when you pass this reference to a method, the parameter that
             receives it will refer to the same object as that referred to by the argument. This effectively means that
             objects act as if they are passed to methods by use of call-by-reference. Changes to the object inside the
             method do affect the object used as an argument.
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/4c82cbaabf73d58cdef8153a356bdfe8.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/4c82cbaabf73d58cdef8153a356bdfe8.js"></script>
+                </div>
             </div>
             Remember: When an object reference is passed to a method, the reference itself is passed by use of
             call-by-value. However, since the value being passed refers to an object, the copy of that value will still
@@ -321,8 +338,13 @@
             <a href="https://stackoverflow.com/a/2088370/8742428">On StackOverflow</a>
             <br>
             <a href="https://softwareengineering.stackexchange.com/a/293480">On StackExchange</a>
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/b00645984cfc98f7613b66d511aa6753.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/b00645984cfc98f7613b66d511aa6753.js"></script>
+                </div>
             </div>
             - <a href="http://www.fredosaurus.com/notes-java/data/variables/45local-inst-class.html">Local Variables vs
             Instance/Member/Field Variables vas Class/Static Variables</a>
@@ -403,8 +425,13 @@
         16) Java does not have a problem with forward referencing. What this means is that the below happens to be
         completely valid code in java. Note that the variable <code>count</code> id defined AFTER it is used in the
         varcount method. Not only does the code compile, but it also gives the correct result!
-        <div class="code-snippet">
-            <script src="https://gist.github.com/rgbk21/19cb1cbda2631682108e4505661e2a24.js"></script>
+        <div class="code-block">
+            <div class="expand-code-snip-btn border border-primary rounded">
+                <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+            </div>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/19cb1cbda2631682108e4505661e2a24.js"></script>
+            </div>
         </div>
     </div>
 
@@ -413,8 +440,13 @@
         - <a href="https://stackoverflow.com/questions/3158730/java-3-dots-in-parameters">What are they</a>
         <br>
         - <a href="https://stackoverflow.com/a/11640566/8742428">How an where they are used</a>
-        <div class="code-snippet">
-            <script src="https://gist.github.com/rgbk21/1eccce3251962a87759a685b453ef281.js"></script>
+        <div class="code-block">
+            <div class="expand-code-snip-btn border border-primary rounded">
+                <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+            </div>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/1eccce3251962a87759a685b453ef281.js"></script>
+            </div>
         </div>
     </div>
 
@@ -489,8 +521,13 @@
     <div class="one-point">
         24) for-each is not applicable to String <br>
         - So you cannot write:
-        <div class="code-snippet">
-            <script src="https://gist.github.com/rgbk21/981e256e5331a41b8dc354d9c2c27e6e.js"></script>
+        <div class="code-block">
+            <div class="expand-code-snip-btn border border-primary rounded">
+                <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+            </div>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/981e256e5331a41b8dc354d9c2c27e6e.js"></script>
+            </div>
         </div>
     </div>
 
@@ -501,8 +538,13 @@
             href="https://stackoverflow.com/questions/48183999/what-is-the-difference-between-putifabsent-and-computeifabsent-in-java-8-map">SO
         Link</a> <br>
         - Code example using <code>putIfAbsent</code> and <code>computeIfPresent</code>
-        <div class="code-snippet">
-            <script src="https://gist.github.com/rgbk21/4f6b6b21956be466943fa2d548caef13.js"></script>
+        <div class="code-block">
+            <div class="expand-code-snip-btn border border-primary rounded">
+                <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+            </div>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/4f6b6b21956be466943fa2d548caef13.js"></script>
+            </div>
         </div>
     </div>
 
@@ -520,8 +562,13 @@
         second argument passed into the <code>merge</code> method.
         <br>
         - <a href="https://leetcode.com/problems/first-unique-character-in-a-string/">Solution to this problem on LC</a>
-        <div class="code-snippet">
-            <script src="https://gist.github.com/rgbk21/96141e5587ebfd96fd383e8ec4b09b3c.js"></script>
+        <div class="code-block">
+            <div class="expand-code-snip-btn border border-primary rounded">
+                <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+            </div>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/96141e5587ebfd96fd383e8ec4b09b3c.js"></script>
+            </div>
         </div>
     </div>
 
@@ -568,9 +615,13 @@
 
     <div class="one-point">
         32) Printing out an array: <br>
-
-        <div class="code-snippet">
-            <script src="https://gist.github.com/rgbk21/b196cbe75c67fa70eac47a9e4869d850.js"></script>
+        <div class="code-block">
+            <div class="expand-code-snip-btn border border-primary rounded">
+                <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+            </div>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/b196cbe75c67fa70eac47a9e4869d850.js"></script>
+            </div>
         </div>
     </div>
 
@@ -578,11 +629,14 @@
         32) Interconversion of types: <br>
 
         Also, surrogate pairs for chars <a href="https://stackoverflow.com/a/54922477/8742428">on SO</a>.
-
-        <div class="code-snippet">
-            <script src="https://gist.github.com/rgbk21/ad8f26756f366c7a376c4e076acf7407.js"></script>
+        <div class="code-block">
+            <div class="expand-code-snip-btn border border-primary rounded">
+                <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+            </div>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/ad8f26756f366c7a376c4e076acf7407.js"></script>
+            </div>
         </div>
-
     </div>
 
     <div class="one-point">
@@ -615,9 +669,13 @@
         34) If you sort an array of strings using <code>Arrays.sort(myArray)</code>, are they sorted lexicographically,
         or are they sorted by their lengths? <br>
         - They are sorted lexicographically.
-
-        <div class="code-snippet">
-            <script src="https://gist.github.com/rgbk21/685510e2f7606da228cfb0c303efac83.js"></script>
+        <div class="code-block">
+            <div class="expand-code-snip-btn border border-primary rounded">
+                <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+            </div>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/685510e2f7606da228cfb0c303efac83.js"></script>
+            </div>
         </div>
     </div>
 
@@ -636,23 +694,23 @@
         o -2 { "b", "", ":and:f", "", "" } <br>
         o 0 { "b", "", ":and:f" } <br>
 
-        <div class="code-snippet">
-        </div>
     </div>
 
     <div class="one-point">
         36) Running <code>s.substring</code> method within a loop is a very slow computation. Avoid if possible. <br>
         Check problem on <a href="https://leetcode.com/problems/longest-palindromic-substring/submissions/">leetcode</a>.
         Replace teh StringBuilder with just substring and you should see what I am talking about.
-        <div class="code-snippet">
-        </div>
     </div>
 
     <div class="one-point">
         38) How to convert primitive array to List and vice-versa <br>
-
-        <div class="code-snippet">
-            <script src="https://gist.github.com/rgbk21/650338c21a8bc4b5ed8573277b34e18c.js"></script>
+        <div class="code-block">
+            <div class="expand-code-snip-btn border border-primary rounded">
+                <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+            </div>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/650338c21a8bc4b5ed8573277b34e18c.js"></script>
+            </div>
         </div>
     </div>
 
@@ -661,7 +719,6 @@
         - The <code>Comparator</code> goes into the constructor of the <code>TreeMap</code>. <br>
         - <a href="https://stackoverflow.com/questions/2864840/treemap-sort-by-value">SO Link</a> <br>
         - And this: <a href="https://www.digizol.com/2008/07/java-sorting-comparator-vs-comparable.html">link</a>
-
     </div>
 
     <div class="one-point">
@@ -673,19 +730,26 @@
         also change the ordering from ascending to descending. <br>
         - Both ways are shown in the below examples. <br>
         - Also refer the difference between <code>Comparable</code> and <code>Comparator</code>.
-
-        <div class="code-snippet">
-            <script src="https://gist.github.com/rgbk21/1849debb042170ec169414310210fa6f.js"></script>
+        <div class="code-block">
+            <div class="expand-code-snip-btn border border-primary rounded">
+                <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+            </div>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/1849debb042170ec169414310210fa6f.js"></script>
+            </div>
         </div>
     </div>
 
     <div class="one-point">
         41) How to store the Entries of a <code>HashMap</code> in a <code>List</code> <br>
-
-        <div class="code-snippet">
-            <script src="https://gist.github.com/rgbk21/a0d8b7f275b3c2f943730ddb120bffa0.js"></script>
+        <div class="code-block">
+            <div class="expand-code-snip-btn border border-primary rounded">
+                <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+            </div>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/a0d8b7f275b3c2f943730ddb120bffa0.js"></script>
+            </div>
         </div>
-
     </div>
 
     <div class="one-point">
@@ -695,9 +759,6 @@
         - <a
             href="https://stackoverflow.com/questions/54066330/why-string-equals-doesnt-use-hashcode-equality-check-under-the-hood">SO
         link</a>
-        <div class="code-snippet">
-        </div>
-
     </div>
 
 
@@ -710,7 +771,6 @@
         - Create a PriorityQueue:
         <code>PriorityQueue&ltString&gt pq = new PriorityQueue&lt&gt(initialCapacity, customComparator);</code>
         <a href="https://stackoverflow.com/questions/683041/how-do-i-use-a-priorityqueue">SO Link</a>
-
     </div>
 
     <div class="one-point">
@@ -746,7 +806,6 @@
         - <a
             href="https://stackoverflow.com/questions/499437/in-java-when-should-i-create-a-checked-exception-and-when-should-it-be-a-runti">SO
         Link 3</a>
-
     </div>
 
     <div class="one-point">
@@ -777,9 +836,13 @@
         47) How to create an in-memory/embedded database using Spring Boot + H2 that auto creates tables every time that
         the application is run. <br>
         - The application.properties file should look like this:
-
-        <div class="code-snippet">
-            <script src="https://gist.github.com/rgbk21/ece723b5407e4c431413d7cc04164920.js"></script>
+        <div class="code-block">
+            <div class="expand-code-snip-btn border border-primary rounded">
+                <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+            </div>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/ece723b5407e4c431413d7cc04164920.js"></script>
+            </div>
         </div>
         - The database can be viewed at the foll URL: <code>http://localhost:8080/h2-console</code> <br>
         - Make sure that the JDBC URL in the window maps to the correct URL: <code>jdbc:h2:mem:testdb</code>
@@ -800,10 +863,14 @@
         - From within a constructor, you can also use the <code>this</code> keyword to call another constructor in the
         same class. Doing so is called an explicit constructor invocation. (<a
             href="https://docs.oracle.com/javase/tutorial/java/javaOO/thiskey.html">Java Doc Source</a>)
-        <div class="code-snippet">
-            <script src="https://gist.github.com/rgbk21/c0abc19e11043f767718913546be0d75.js"></script>
+        <div class="code-block">
+            <div class="expand-code-snip-btn border border-primary rounded">
+                <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+            </div>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/c0abc19e11043f767718913546be0d75.js"></script>
+            </div>
         </div>
-
     </div>
 
     <div class="one-point">
@@ -847,17 +914,14 @@
         53) How are IP Addresses mapped to MAC Addresses? <br>
         - Kishori Sharan in Java 8 chapter on Network programming says: "This (Network Interface) layer resolves the
         destination hardware address from the IP address and places it in the frame header". How does it do that?
-        - <a
-            href="https://networkengineering.stackexchange.com/questions/9612/how-are-ip-addresses-mapped-to-mac-addresses">Read
-        Link here</a>.
+        - <a href="https://networkengineering.stackexchange.com/questions/9612/how-are-ip-addresses-mapped-to-mac-addresses">Read Link here</a>.
         <br>
         - TODO
     </div>
 
     <div class="one-point">
         54) What is Heap-Pollution? <br>
-        - Read <a href="https://stackoverflow.com/questions/12462079/possible-heap-pollution-via-varargs-parameter">here
-        on SO</a>.
+        - Read <a href="https://stackoverflow.com/questions/12462079/possible-heap-pollution-via-varargs-parameter">here on SO</a>.
     </div>
 
     <div class="one-point">
@@ -911,8 +975,6 @@
         - All methods in an interface are implicitly <code>public</code> and <code>abstract</code> (but not
         <code>final</code>). All fields in an interface are implicitly <code>public</code>, <code>static</code> and
         <code>final</code>. <br>
-
-
     </div>
 
     <div class="one-point">
@@ -932,16 +994,19 @@
 
     <div class="one-point">
         60) Oh boy.. What are interfaces in Java? <br>
-        - (<a
-            href="https://docs.oracle.com/javase/tutorial/java/IandI/createinterface.html">Source on Java Docs</a>).
-        <br>
+        - (<a href="https://docs.oracle.com/javase/tutorial/java/IandI/createinterface.html">Source on Java Docs</a>). <br>
         - <a href="https://rgbk21.github.io/Code/Java_Notes/JavaNotes.html#interfaces">My notes on Interfaces</a>
     </div>
 
     <div class="one-point">
         60) 'Optional.get()' without 'isPresent()' check <br>
-        <div class="code-snippet">
-            <script src="https://gist.github.com/rgbk21/63702d1e52ee4140f92ebc392f27f243.js"></script>
+        <div class="code-block">
+            <div class="expand-code-snip-btn border border-primary rounded">
+                <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+            </div>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/63702d1e52ee4140f92ebc392f27f243.js"></script>
+            </div>
         </div>
     </div>
 
@@ -951,8 +1016,13 @@
         on the object, but the variable will always refer to the same object. <code>final</code> simply makes the object
         <i>reference</i> unchangeable. The object it points to is not immutable by doing this. <a
             href="https://stackoverflow.com/questions/2435163/why-can-final-object-be-modified">Source on SO</a>.
-        <div class="code-snippet">
-            <script src="https://gist.github.com/rgbk21/75bcf378f0c89fb4fd3e8207e8f1ce9e.js"></script>
+        <div class="code-block">
+            <div class="expand-code-snip-btn border border-primary rounded">
+                <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+            </div>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/75bcf378f0c89fb4fd3e8207e8f1ce9e.js"></script>
+            </div>
         </div>
     </div>
 
@@ -967,11 +1037,9 @@
     </div>
 
     <div class="one-point">
-        64) Java: compiled or interpreted? Compiler vs Interpreter? JIT Compiled vs Interpreted? Traditional interpreter
-        vs
-        Traditional Compiler vs JIT Compiler vs AOT Compiler? <br>
-        - The main thing to keep in mind: JVM has, both, an interpreter as well as a compiler. With JVM, both
-        interpreter
+        64) Java: compiled or interpreted? Compiler vs Interpreter? JIT Compiled vs Interpreted? Traditional interpreter vs Traditional Compiler vs JIT Compiler vs AOT Compiler?
+        <br>
+        - The main thing to keep in mind: JVM has, both, an interpreter as well as a compiler. With JVM, both interpreter
         and compiler (the JVM compiler and not the source-code compiler like javac) produce native code (aka Machine
         language code for the underlying physical CPU like x86)
         from byte code. <a href="https://stackoverflow.com/a/40876067/8742428">Source on SO</a>. So when people talk
@@ -1158,8 +1226,13 @@
     <div class="one-point">
         63) Why do we have to add the suffix <code>f</code> after we declare a variable of type <code>float</code>? <br>
         - <a href="https://stackoverflow.com/a/16369857/8742428">Source on SO</a>.
-        <div class="code-snippet">
-            <script src="https://gist.github.com/rgbk21/83f533f60be7addf1fdb24430e3731ca.js"></script>
+        <div class="code-block">
+            <div class="expand-code-snip-btn border border-primary rounded">
+                <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+            </div>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/83f533f60be7addf1fdb24430e3731ca.js"></script>
+            </div>
         </div>
     </div>
 
@@ -1204,8 +1277,14 @@
         - So we set out to <i>override</i> methods, but we ended up <i>overloading</i> methods. <br>
         - And hence we get the behavior that we are now showing in the below snippet.
 
-        <div class="code-snippet">
-            <script src="https://gist.github.com/rgbk21/824671ec6345f51b183e0449f67a9483.js"></script>
+        <div class="code-block">
+            <div class="expand-code-snip-btn border border-primary rounded">
+                <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+            </div>
+            <div class="code-snippet">
+
+                <script src="https://gist.github.com/rgbk21/824671ec6345f51b183e0449f67a9483.js"></script>
+            </div>
         </div>
     </div>
 
@@ -1218,9 +1297,13 @@
         declared) parameter type. Hence the expectation is that following code would have printed <i>foo(Object o)</i>,
         <i>foo("foobar")</i>, <i>foo(12)</i>. But instead it prints <i>foo(Object o)</i> three times. What am I missing?
         <br>
-
-        <div class="code-snippet">
-            <script src="https://gist.github.com/rgbk21/1c8c87fdaddfb2c6c91464e1287f7103.js"></script>
+        <div class="code-block">
+            <div class="expand-code-snip-btn border border-primary rounded">
+                <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+            </div>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/1c8c87fdaddfb2c6c91464e1287f7103.js"></script>
+            </div>
         </div>
         - Your expectation is wrong. In Java, dynamic method dispatch happens only for the
         object the method is called on, not for the parameter types of overloaded methods. <br>
@@ -1235,8 +1318,13 @@
         on</i> determines which implementation of that method is called, taking into account that it may be an instance
         of a subclass of the declared type that overrides the method. <br>
         - Rewriting the above code showing this in action:
-        <div class="code-snippet">
-            <script src="https://gist.github.com/rgbk21/04c517e914338a24ce4e5c80483db361.js"></script>
+        <div class="code-block">
+            <div class="expand-code-snip-btn border border-primary rounded">
+                <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+            </div>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/04c517e914338a24ce4e5c80483db361.js"></script>
+            </div>
         </div>
         - Ability to dispatch a call to a method based on types of arguments is called multiple dispatch. In Java this
         is done with Visitor pattern. However, since you're dealing with Integers and Strings, you cannot easily
@@ -1257,8 +1345,13 @@
         - <a href="https://stackoverflow.com/questions/1182153/constructor-overloading-in-java-best-practice">Constructor
         overloading best practice on SO</a>. <br>
         - Yes, this is valid code somehow.
-        <div class="code-snippet">
-            <script src="https://gist.github.com/rgbk21/a7823b40b5d95d2a5d6f515a10dcc4fa.js"></script>
+        <div class="code-block">
+            <div class="expand-code-snip-btn border border-primary rounded">
+                <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+            </div>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/a7823b40b5d95d2a5d6f515a10dcc4fa.js"></script>
+            </div>
         </div>
     </div>
 
@@ -1291,26 +1384,28 @@
         sure not when done in the JSP side as it does not fit JSP's responsibilities in any way. <br>
         - Also there are now Concurrency Utils that enable you to achieve this so that you do not have to do this
         manually.
-        <a href="https://stackoverflow.com/questions/533783/why-is-spawning-threads-in-java-ee-container-discouraged">Source
-            on SO</a>.
+        <a href="https://stackoverflow.com/questions/533783/why-is-spawning-threads-in-java-ee-container-discouraged">Source on SO</a>.
     </div>
 
     <div class="one-point">
         70) Where to place and how to read configuration resource files in servlet based application? <br>
-        - <a
-            href="https://stackoverflow.com/questions/2161054/where-to-place-and-how-to-read-configuration-resource-files-in-servlet-based-app">Answer
+        - <a href="https://stackoverflow.com/questions/2161054/where-to-place-and-how-to-read-configuration-resource-files-in-servlet-based-app">Answer
         by BalusC explaining different ways that you can access a file from your code</a>. Do you understand what a
         'classpath' actually means now?
     </div>
 
     <div class="one-point">
         71) How to make sure that the response/data is not cached in case of a <code>HttpServletResponse</code><br>
-        - <a
-            href="https://stackoverflow.com/questions/49547/how-do-we-control-web-page-caching-across-all-browsers/2068407#2068407">Read
+        - <a href="https://stackoverflow.com/questions/49547/how-do-we-control-web-page-caching-across-all-browsers/2068407#2068407">Read
         this SO Answer</a>. <br>
         - What does this even mean:
-        <div class="code-snippet">
-            <script src="https://gist.github.com/rgbk21/91c347633df47fc025cced807625c995.js"></script>
+        <div class="code-block">
+            <div class="expand-code-snip-btn border border-primary rounded">
+                <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+            </div>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/91c347633df47fc025cced807625c995.js"></script>
+            </div>
         </div>
     </div>
 
@@ -1343,16 +1438,26 @@
         - Read on SO <a
             href="https://stackoverflow.com/questions/45713897/java-why-does-this-byte-cause-no-exception">here</a>.
         <br>
-        <div class="code-snippet">
-            <script src="https://gist.github.com/rgbk21/37ef0972f8ddc5b3c7dca55287fa1b15.js"></script>
+        <div class="code-block">
+            <div class="expand-code-snip-btn border border-primary rounded">
+                <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+            </div>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/37ef0972f8ddc5b3c7dca55287fa1b15.js"></script>
+            </div>
         </div>
     </div>
 
     <div class="one-point">
         74) What happens when you left shift a -ve number? Can it become +ve?<br>
         - Yes, with the correct bits, a -ve number will become +ve
-        <div class="code-snippet">
-            <script src="https://gist.github.com/rgbk21/7c9f567742f79957a33e676ce67bdc43.js"></script>
+        <div class="code-block">
+            <div class="expand-code-snip-btn border border-primary rounded">
+                <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+            </div>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/7c9f567742f79957a33e676ce67bdc43.js"></script>
+            </div>
         </div>
     </div>
 
@@ -1362,8 +1467,13 @@
         - <code> >>> </code> stands for right-shift with zero-extension <br>
         - Difference between <code> >> </code> and <code> >>> </code> <a
             href="https://stackoverflow.com/a/2811399/8742428">here on SO</a>. <br>
-        <div class="code-snippet">
-            <script src="https://gist.github.com/rgbk21/66ff65b5eee92cf1d49ff2b9a7497770.js"></script>
+        <div class="code-block">
+            <div class="expand-code-snip-btn border border-primary rounded">
+                <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+            </div>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/66ff65b5eee92cf1d49ff2b9a7497770.js"></script>
+            </div>
         </div>
     </div>
 
@@ -1372,8 +1482,13 @@
         76) What is String Interning? <br>
         - <a href="https://stackoverflow.com/a/45165693/8742428">Read this SO answer to understand how interning works</a> <br>
         - <a href="https://www.baeldung.com/java-string-pool">Java String Pool on Baeldung</a>. <br>
-        <div class="code-snippet">
-            <script src="https://gist.github.com/rgbk21/079ab32242e831424b4dd4a9bc0ba281.js"></script>
+        <div class="code-block">
+            <div class="expand-code-snip-btn border border-primary rounded">
+                <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+            </div>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/079ab32242e831424b4dd4a9bc0ba281.js"></script>
+            </div>
         </div>
     </div>
 
@@ -1447,20 +1562,33 @@
         <br><br>
 
         - From the FrontEnd, this is how we are initialising the process:
-        <div class="code-snippet">
-            <script src="https://gist.github.com/rgbk21/34660df23d4a626521b6bcd03bdf46bc.js"></script>
+        <div class="code-block">
+            <div class="expand-code-snip-btn border border-primary rounded">
+                <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+            </div>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/34660df23d4a626521b6bcd03bdf46bc.js"></script>
+            </div>
         </div>
         - This is what the backend code looks like so that we can handle the request correctly: <br>
         - Controller:
-        <div class="code-snippet">
-            <script src="https://gist.github.com/rgbk21/67be1c553c12df2255eb8c579ce322e0.js"></script>
+        <div class="code-block">
+            <div class="expand-code-snip-btn border border-primary rounded">
+                <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+            </div>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/67be1c553c12df2255eb8c579ce322e0.js"></script>
+            </div>
         </div>
         - Adding cookie to the response:
-        <div class="code-snippet">
-            <script src="https://gist.github.com/rgbk21/e927eb7c5bd79fa3a9637feb4422361b.js"></script>
+        <div class="code-block">
+            <div class="expand-code-snip-btn border border-primary rounded">
+                <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+            </div>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/e927eb7c5bd79fa3a9637feb4422361b.js"></script>
+            </div>
         </div>
-
-
     </div>
 
     <div class="one-point">
@@ -1541,16 +1669,17 @@
     <div class="one-point">
         1) Consider the following computation:
         <div>
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/c0b81bebdc5d547025186bd84f194b87.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/c0b81bebdc5d547025186bd84f194b87.js"></script>
+                </div>
             </div>
-            Now long can store 2^63-1 as its largest number = 9,223,372,036,854,775,807. But still if you print
-            MICROS_PER_DAY out, you will see that it contains 500654080. This is because the entire computation will
-            be
-            done in int arithmetic. Only after the computation completes is the result promoted to a long. By then,
-            it's
-            too late.
-            So why is the computation performed in int arithmetic? Because all the factors that are multiplied
+            Now long can store 2^63-1 as its largest number = 9,223,372,036,854,775,807. But still if you print MICROS_PER_DAY out, you will see that it contains 500654080. This is
+            because the entire computation will be done in int arithmetic. Only after the computation completes is the result promoted to a long. By then, it's
+            too late. So why is the computation performed in int arithmetic? Because all the factors that are multiplied
             together
             are int values. When you multiply two int values, you get another int value. Java does not have target
             typing,
@@ -1561,8 +1690,13 @@
             It's easy to fix the program by using a long literal in place of an int as the first factor in each
             product.
             This forces all subsequent computations in the expression to be done with long arithmetic.
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/51b345f2ccb87d160041a9e75d3ebf5f.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/51b345f2ccb87d160041a9e75d3ebf5f.js"></script>
+                </div>
             </div>
             When working with large numbers, watch out for overflow - it's a silent killer. Just because a variable
             is
@@ -1583,11 +1717,16 @@
     <div class="one-point">
         2) lol
         <div>
-            Always use a capital el (L) in long literals, never a lowercase el (l). Similarly, avoid using a lone el
+            - Always use a capital el (L) in long literals, never a lowercase el (l). Similarly, avoid using a lone el
             (l) as a variable name. It is difficult to tell by looking at a code snippet whether it prints the list
             l or the number 1.
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/07594f07c10a337b87b8d262aef8338c.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/07594f07c10a337b87b8d262aef8338c.js"></script>
+                </div>
             </div>
         </div>
     </div>
@@ -1607,8 +1746,13 @@
             0xcafebabea : 1100 1010 1111 1110 1011 1010 1011 1110 1010 //36 bits
             <br>
             But when we try to store it into a long, this happens:
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/e09ebe16f053dee9b1edaea274423186.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/e09ebe16f053dee9b1edaea274423186.js"></script>
+                </div>
             </div>
             This is because 0xcafebabe is stored by default as an int, i.e., 32 bits. Each bit is set separately.
             Representation of 0xcafebabe in 32 bits has its MSB set. Hence JAVA considers it as a negative integer,
@@ -1616,12 +1760,22 @@
             <br>
             The same number 0xcafebabe cannot be saved into a long variable if it is converted into its decimal
             representation.
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/48ca9de2c3c8ad04b6b86fe0c56a696d.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/48ca9de2c3c8ad04b6b86fe0c56a696d.js"></script>
+                </div>
             </div>
             But if instead we do this, then the correct value is stored:
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/b02e07b5eb58f66af925cd94a1705f47.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/b02e07b5eb58f66af925cd94a1705f47.js"></script>
+                </div>
             </div>
             This is because JAVA saves the number as a 64 bit number. The MSB is not set and hence you can represent
             the true value of the number.
@@ -1638,8 +1792,13 @@
             to
             store the number is to declare it as a
             long as shown in line 3.
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/362d9fcdd556f3fc8b72e158b69b4973.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/362d9fcdd556f3fc8b72e158b69b4973.js"></script>
+                </div>
             </div>
             In conclusion:
             To write a negative decimal constant, you use the unary negation operator (-) in combination with a
@@ -1655,8 +1814,13 @@
             0xcafebabe: 1100 1010 1111 1110 1011 1010 1011 1110 //32bits
             <br>
             So when you do this:
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/e09ebe16f053dee9b1edaea274423186.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/e09ebe16f053dee9b1edaea274423186.js"></script>
+                </div>
             </div>
             Highest order bit is set. So before storing into the long x variable, as per the 2s complement, the
             complement of the binary number is taken and then 1 is added to that number and then - is appended to it
@@ -1668,8 +1832,13 @@
     <div class="one-point">
         4) What will be the output of the following:
         <div>
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/41fad3f393b332aaaf0868c35a778e9e.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/41fad3f393b332aaaf0868c35a778e9e.js"></script>
+                </div>
             </div>
 
             0xcafebabe is stored as an int. As described above,
@@ -1696,8 +1865,13 @@
     <div class="one-point">
         5) What will this output:
         <div>
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/24a56a10c770d723f0e36c807c34f183.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/24a56a10c770d723f0e36c807c34f183.js"></script>
+                </div>
             </div>
             Two's complement representation of -1 is: 1111 1111 1111 1111 1111 1111 1111 1111 i.e. all bits are set.
             <br>
@@ -1738,8 +1912,13 @@
             be performed?
             <br>
             Use a bit mask to suppress the sign extension.
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/38f5fb1734b3f2c6486545a6268ed316.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/38f5fb1734b3f2c6486545a6268ed316.js"></script>
+                </div>
             </div>
             b will be promoted to an int (32 bits) for the & operation. In accordance with the widening rule stated
             above
@@ -1828,8 +2007,13 @@
     <div class="one-point">
         7) Why won't this code compile:
         <div>
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/bf2bc715b8224a7e867196c892e9bec6.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/bf2bc715b8224a7e867196c892e9bec6.js"></script>
+                </div>
             </div>
 
             x += i is not a shorthand for x = x + i. The Java language specification says that the compound
@@ -1862,8 +2046,13 @@
     <div class="one-point">
         8) What will the following code output:
         <div>
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/0cc9afc1e88faed32a9731ff9506168a.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/0cc9afc1e88faed32a9731ff9506168a.js"></script>
+                </div>
             </div>
             The compiler evaluates the constant expression 'H' + 'a' by promoting each of the char-valued operands
             ('H'
@@ -1886,8 +2075,13 @@
     <div class="one-point">
         9) What will the following code output:
         <div>
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/75a9cafbc9e15fb517c095ca6b911748.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/75a9cafbc9e15fb517c095ca6b911748.js"></script>
+                </div>
             </div>
             First, understand that although char are represented as integers, many libraries treat it differently.
             For example, when you print a char it is printed as the Unicode character and not the integer.
@@ -1912,8 +2106,13 @@
     <div class="one-point">
         10) What will the following code output:
         <div>
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/0a5ee4749bcc88e7f64239dbcc0af9a9.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/0a5ee4749bcc88e7f64239dbcc0af9a9.js"></script>
+                </div>
             </div>
             You should by this point probably know that pig == dog will return false. The == operator, does not test
             whether two objects are equal; it tests whether two object references are identical. Which in this case,
@@ -1931,7 +2130,6 @@
             There is one surefire way to avoid this sort of difficulty: When using the string concatenation
             operator,
             always parenthesize nontrivial operands.
-
         </div>
     </div>
 
@@ -1943,8 +2141,13 @@
             You may be aware that compile-time constants of type String are interned [JLS 15.28]. In other words,
             any two constant expressions of type String that designate the same character sequence are represented
             by identical object references.
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/35f19f811f828d739d4cb031646b9cc7.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/35f19f811f828d739d4cb031646b9cc7.js"></script>
+                </div>
             </div>
             I no longer know what is happening.
             <br>
@@ -1959,8 +2162,13 @@
     <div class="one-point">
         12) What does it mean to "escape" a String?
         <div>
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/fb73805d7fc6ca745305dda851874b39.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/fb73805d7fc6ca745305dda851874b39.js"></script>
+                </div>
             </div>
             The backslash is used as a marker character to tell the compiler/interpreter that the next character has
             some
@@ -2002,15 +2210,17 @@
     <div class="one-point">
         14) So, what will this code output now?
         <div>
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/b28966a4900536223b58bdd4c43e7f9e.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/b28966a4900536223b58bdd4c43e7f9e.js"></script>
+                </div>
             </div>
             The key to understanding this puzzle is that Java provides no special treatment for Unicode escapes
-            within
-            string literals. The compiler translates Unicode escapes into the characters they represent before it
-            parses
-            the program into tokens, such as strings literals [JLS 3.2]. Therefore, the first Unicode escape in the
-            program
+            within string literals. The compiler translates Unicode escapes into the characters they represent before it parses the program into tokens, such as strings literals
+            [JLS 3.2]. Therefore, the first Unicode escape in the program
             closes a one-character string literal ("a"), and the second one opens a one-character string literal
             ("b").
             The program prints the value of the expression: "a".length() + "b".length(), or 2.
@@ -2030,8 +2240,13 @@
             15) What does this code output:
             <div>
                 //TODO:
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/8bf9be2e4ac97d5404910653967750d4.js"></script>
+                <div class="code-block">
+                    <div class="expand-code-snip-btn border border-primary rounded">
+                        <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                    </div>
+                    <div class="code-snippet">
+                        <script src="https://gist.github.com/rgbk21/8bf9be2e4ac97d5404910653967750d4.js"></script>
+                    </div>
                 </div>
                 This program isn't even guaranteed to terminate normally, much less to print any particular
                 sequence.
@@ -2068,8 +2283,13 @@
     <div class="one-point">
         16) List the bugs in this code:
         <div>
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/03e95dbb68896d675c36266d84e75874.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/03e95dbb68896d675c36266d84e75874.js"></script>
+                </div>
             </div>
             There are 3 bugs in this code:
             <br>
@@ -2094,8 +2314,13 @@
     <div class="one-point">
         17) What is the output of the following code:
         <div>
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/129ed77eba8adc01f30ce5e68b4147c4.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/129ed77eba8adc01f30ce5e68b4147c4.js"></script>
+                </div>
             </div>
             The problem is that String.replaceAll takes a regular expression as its first parameter, not a literal
             sequence of characters.
@@ -2126,8 +2351,13 @@
     <div class="one-point">
         18) What is wrong with the following code:
         <div>
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/1db95af1102a2e15c0ab18245612fa5b.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/1db95af1102a2e15c0ab18245612fa5b.js"></script>
+                </div>
             </div>
             We already looked at what goes wrong in this case. 0x90 is, by default, stored as an integer. Not as a
             byte.
@@ -2142,8 +2372,13 @@
             cast
             the int into a byte.
             The correct version of the code will be:
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/c900e9a64d5f25f38ac21f8d78fc2515.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/c900e9a64d5f25f38ac21f8d78fc2515.js"></script>
+                </div>
             </div>
             Now, the if condition is reachable and the program prints "Joy!"
         </div>
@@ -2152,15 +2387,25 @@
     <div class="one-point">
         19) What would this code print:
         <div>
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/33d0e05ca753fa8b4f84a189c2a92f9c.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/33d0e05ca753fa8b4f84a189c2a92f9c.js"></script>
+                </div>
             </div>
             When placed after a variable, the ++ operator functions as the postfix increment operator [JLS 15.14.2]:
             The value of the expression j++ is the original value of j before it was incremented. Therefore, the
             preceding assignment first saves the value of j, then sets j to its value plus 1, and, finally, resets j
             back to its original value. In other words, the assignment is equivalent to this sequence of statements:
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/17b362989bbc45c816e1d11eab8adcf4.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/17b362989bbc45c816e1d11eab8adcf4.js"></script>
+                </div>
             </div>
         </div>
     </div>
@@ -2168,8 +2413,13 @@
     <div class="one-point">
         20) What is the problem with this code:
         <div>
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/dae618580b52cf937c9047999a574195.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/dae618580b52cf937c9047999a574195.js"></script>
+                </div>
             </div>
             This program will never terminate. The for loop condition uses the statement i <= END. When i = END, the
             value of i
@@ -2186,8 +2436,13 @@
     <div class="one-point">
         21) What is the problem with this code:
         <div>
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/f2ac9c3447b50430a206fd68f95cae06.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/f2ac9c3447b50430a206fd68f95cae06.js"></script>
+                </div>
             </div>
             The constant -1 is the int value with all 32 bits set (0xffffffff). The left-shift operator shifts
             zeroes
@@ -2213,8 +2468,13 @@
                 href="https://stackoverflow.com/questions/10516786/shifted-by-negative-number-in-java/34625596">Source</a>)
             <br>
             Take this for example:
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/028303f104613222e41c13bd92f5cae8.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/028303f104613222e41c13bd92f5cae8.js"></script>
+                </div>
             </div>
             <br>
             s = 8 => 0000 0000 0000 0000 0000 0000 0000 1000
@@ -2226,13 +2486,17 @@
             is actually equivalent to s = s >> 1 which gives us s = 4, and which is the output in the example above.
             <br>
             Also remember that >> and >>> are different.
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/3c5a522da6ca83c36d02489db97c3c2b.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/3c5a522da6ca83c36d02489db97c3c2b.js"></script>
+                </div>
             </div>
             Arithmetic shift >> will keep the sign bit. Unsigned shift >>> will not keep the sign bit (thus filling
             0s).
-            (<a
-                href="https://stackoverflow.com/questions/2811319/difference-between-and">Source</a>)
+            (<a href="https://stackoverflow.com/questions/2811319/difference-between-and">Source</a>)
         </div>
     </div>
 
@@ -2240,8 +2504,13 @@
         22) What will make these loops run indefinitely?
         <div>
             a) Provide a declaration for i that turns this loop into an infinite loop:
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/a77ceda6314229003b9f90d96963ad7c.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/a77ceda6314229003b9f90d96963ad7c.js"></script>
+                </div>
             </div>
             Java mandates the use of IEEE 754 floating-point arithmetic [IEEE-754], which lets you represent
             infinity
@@ -2252,8 +2521,13 @@
             So, the next question is, how do you initialize something to infinity?
             <br>
             There are few ways:
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/8f360539b475db073166819248f50d48.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/8f360539b475db073166819248f50d48.js"></script>
+                </div>
             </div>
             <br>
             The distance between adjacent floating-point values is called an ulp, which is an acronym for unit in
@@ -2273,8 +2547,13 @@
 
             <div>
                 b) Provide a declaration for i that turns this loop into an infinite loop:
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/29ad8bc9f7936d5ce2a641987ae5e5bd.js"></script>
+                <div class="code-block">
+                    <div class="expand-code-snip-btn border border-primary rounded">
+                        <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                    </div>
+                    <div class="code-snippet">
+                        <script src="https://gist.github.com/rgbk21/29ad8bc9f7936d5ce2a641987ae5e5bd.js"></script>
+                    </div>
                 </div>
                 IEEE 754 floating-point arithmetic reserves a special value to represent a quantity that is not a
                 number
@@ -2288,30 +2567,50 @@
                 the termination test (i != i) evaluates to true, and the loop never terminates. Strange but true.
                 <br>
                 You can declare a NaN by using:
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/71e1b5049cb16520d4cda4a9acc65718.js"></script>
+                <div class="code-block">
+                    <div class="expand-code-snip-btn border border-primary rounded">
+                        <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                    </div>
+                    <div class="code-snippet">
+                        <script src="https://gist.github.com/rgbk21/71e1b5049cb16520d4cda4a9acc65718.js"></script>
+                    </div>
                 </div>
             </div>
 
             <div>
                 c) Provide a declaration for i that turns this loop into an infinite loop:
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/59fc29cf731a1693a960765d89572855.js"></script>
+                <div class="code-block">
+                    <div class="expand-code-snip-btn border border-primary rounded">
+                        <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                    </div>
+                    <div class="code-snippet">
+                        <script src="https://gist.github.com/rgbk21/59fc29cf731a1693a960765d89572855.js"></script>
+                    </div>
                 </div>
                 The thing to remember over here is that + is an overloaded operator. When the arguments to + are
                 Strings,
                 the + operator ends up concatenating the strings. If one operand in the concatenation is of some
                 type
                 other than String, that operand is converted to a string prior to concatenation.
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/f9de4fbc0a513bceccf68003de920742.js"></script>
+                <div class="code-block">
+                    <div class="expand-code-snip-btn border border-primary rounded">
+                        <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                    </div>
+                    <div class="code-snippet">
+                        <script src="https://gist.github.com/rgbk21/f9de4fbc0a513bceccf68003de920742.js"></script>
+                    </div>
                 </div>
             </div>
 
             <div>
                 d) Provide a declaration for i that turns this loop into an infinite loop:
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/ac7fdb5cc58921c74f2c9f93c7cd0369.js"></script>
+                <div class="code-block">
+                    <div class="expand-code-snip-btn border border-primary rounded">
+                        <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                    </div>
+                    <div class="code-snippet">
+                        <script src="https://gist.github.com/rgbk21/ac7fdb5cc58921c74f2c9f93c7cd0369.js"></script>
+                    </div>
                 </div>
                 The key to solving this puzzle is that >>>= is a compound assignment operator. Suppose that you
                 precede
@@ -2348,8 +2647,13 @@
             <br>
             <div>
                 e) Provide declarations for i and j that turn this loop into an infinite loop:
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/5bfb9d9c0cdf4eac83c2477599606137.js"></script>
+                <div class="code-block">
+                    <div class="expand-code-snip-btn border border-primary rounded">
+                        <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                    </div>
+                    <div class="code-snippet">
+                        <script src="https://gist.github.com/rgbk21/5bfb9d9c0cdf4eac83c2477599606137.js"></script>
+                    </div>
                 </div>
                 Until release 5.0, Java's numerical comparison operators (<, <=, >, and >=) required both of their
                 operands to be of a primitive numeric type (byte, char, short, int, long, float, or double) [JLS2
@@ -2381,19 +2685,34 @@
                 equality operators (== and !=) perform reference identity comparison rather than value comparison
                 when
                 applied to object references.
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/f33c42849dc33eb90a763bf100239f44.js"></script>
+                <div class="code-block">
+                    <div class="expand-code-snip-btn border border-primary rounded">
+                        <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                    </div>
+                    <div class="code-snippet">
+                        <script src="https://gist.github.com/rgbk21/f33c42849dc33eb90a763bf100239f44.js"></script>
+                    </div>
                 </div>
                 However, now this example does not work.
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/e384986a1186d8d43137ad2530cc5401.js"></script>
+                <div class="code-block">
+                    <div class="expand-code-snip-btn border border-primary rounded">
+                        <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                    </div>
+                    <div class="code-snippet">
+                        <script src="https://gist.github.com/rgbk21/e384986a1186d8d43137ad2530cc5401.js"></script>
+                    </div>
                 </div>
             </div>
 
             <div>
                 f) Provide a declaration for i that turns this loop into an infinite loop.
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/6b3075b7a80d846e57df94ff1290f7dd.js"></script>
+                <div class="code-block">
+                    <div class="expand-code-snip-btn border border-primary rounded">
+                        <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                    </div>
+                    <div class="code-snippet">
+                        <script src="https://gist.github.com/rgbk21/6b3075b7a80d846e57df94ff1290f7dd.js"></script>
+                    </div>
                 </div>
                 In the boolean expression (i == -i && i != 0), the unary minus operator is applied to i, which
                 implies
@@ -2440,8 +2759,13 @@
     <div class="one-point">
         23) What does the following program print:
         <div>
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/d6dcd7b3798dcd20856ca408ca8dc08e.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/d6dcd7b3798dcd20856ca408ca8dc08e.js"></script>
+                </div>
             </div>
             The initial value of f is close to Integer.MAX_VALUE, so it requires 31 bits to express precisely, and
             the float type provides only 24 bits of precision. Incrementing such a large float value will not change
@@ -2457,8 +2781,13 @@
             the same value as simply converting f to a float. In other words, (float)2000000000 == 2000000050,
             so the expression f < START + 50 is false before the loop body has executed even once, and the loop body
             never gets a chance to run.
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/ce2f4117fa72f3518a93467f9cb1d79f.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/ce2f4117fa72f3518a93467f9cb1d79f.js"></script>
+                </div>
             </div>
             Fixing this program is as simple as changing the type of the loop variable from a float to an int.
             <br>
@@ -2479,8 +2808,13 @@
             to have the loop check changed to: f < START + 100, the program turns into an infinite loop. This is
             because
             now f++ (increment of f by 1) leads to the same value as f.
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/9a4e15808260b4ed7a837cdd6fd17ee5.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/9a4e15808260b4ed7a837cdd6fd17ee5.js"></script>
+                </div>
             </div>
         </div>
     </div>
@@ -2488,8 +2822,13 @@
     <div class="one-point">
         24) What does the following code print:
         <div>
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/e3f0eeb1d1ab5585a70796f751b1df2f.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/e3f0eeb1d1ab5585a70796f751b1df2f.js"></script>
+                </div>
             </div>
             The problem lies in the boolean expression (ms % 60*1000 == 0). You might think that this expression is
             equivalent to (ms % 60000 == 0), but it isn't. The remainder and multiplication operators have the same
@@ -2515,20 +2854,17 @@
             On the other hand, 72 / 2 / 3 is treated as (72 / 2) / 3 since the / operator has left-to-right
             associativity.
             Some operators are not associative: for example, the expressions (x <= y <= z) and x++-- are invalid.
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/ef6a57ded097cef80144c5bc286f9e29.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/ef6a57ded097cef80144c5bc286f9e29.js"></script>
+                </div>
             </div>
             <em>Spacing can be deceptive, but parentheses never lie.</em>
-
         </div>
     </div>
-
-    <div class="one-point">
-        <div>
-
-        </div>
-    </div>
-
 </div>
 
 <script src="script.js"></script>

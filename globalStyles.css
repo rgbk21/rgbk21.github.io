@@ -53,6 +53,11 @@ html {
 #load-all-gists {
     margin-bottom: 15px;
 }
+.expand-code-snip-btn{
+}
+.code-block{
+    padding: 0.5rem 0;
+}
 
 /*****************************************************************************************/
 /* Container */
