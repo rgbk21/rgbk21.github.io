@@ -167,9 +167,13 @@
         - For this, we would first have to separately create a new database in MySQL. We are also creating a new table.
         Alternatively, you can just create the database and have Hibernate create the table for you. We will see how to
         do it.
-
-        <div class="code-snippet">
-            <script src="https://gist.github.com/rgbk21/0c9688b5f56b4a23216911b09ac54a8c.js"></script>
+        <div class="code-block">
+            <div class="expand-code-snip-btn border border-primary rounded">
+                <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+            </div>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/0c9688b5f56b4a23216911b09ac54a8c.js"></script>
+            </div>
         </div>
 
         - Optional, but you can add the database that you just created as a datasource to IntelliJ itself so that you
@@ -181,7 +185,7 @@
         <img src="imgs/Ch0/AddingDataSource.PNG"
              class="center-block img-fluid"
              alt="AddingDataSource"
-             width="35%">
+             width="300">
 
         <br>
         Step 2: Add User, Password, Database. For your user/password combination of database, go to your MySQL
@@ -194,7 +198,7 @@
             <img src="imgs/Ch0/AddingDrivers.PNG"
                  class="center-block img-fluid"
                  alt="AddingDrivers"
-            width="50%">
+            width="500">
         </div>
 
         <br>
@@ -205,9 +209,15 @@
         <br>
         - Moving on, we now need to add the following to the <code>application.properties</code> file
 
-        <div class="code-snippet">
-            <script src="https://gist.github.com/rgbk21/7723f262e9214ddb74526e9706b3bb5c.js"></script>
+        <div class="code-block">
+            <div class="expand-code-snip-btn border border-primary rounded">
+                <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+            </div>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/7723f262e9214ddb74526e9706b3bb5c.js"></script>
+            </div>
         </div>
+
         Note the <code>spring.jpa.hibernate.ddl-auto=none</code> property above. <br>
         a) <code>none</code>: The default for MySQL. No change is made to the database structure. <br>
         b) <code>update</code>: Hibernate changes the database according to the given entity structures. <br>
@@ -227,18 +237,33 @@
         way. Also this <a href="https://thorben-janssen.com/5-things-you-need-to-know-when-using-hibernate-with-mysql/">
         Thorben </a> link explains in more details why we are using the native generator instead.
 
-        <div class="code-snippet">
-            <script src="https://gist.github.com/rgbk21/ad962c0e5d0bdafab3ba556aac1bfd98.js"></script>
+        <div class="code-block">
+            <div class="expand-code-snip-btn border border-primary rounded">
+                <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+            </div>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/ad962c0e5d0bdafab3ba556aac1bfd98.js"></script>
+            </div>
         </div>
 
         - Next we create the <code>StudentRepository</code>
-        <div class="code-snippet">
-            <script src="https://gist.github.com/rgbk21/ab593c70880ddc54d5f32fa14e0022a4.js"></script>
+        <div class="code-block">
+            <div class="expand-code-snip-btn border border-primary rounded">
+                <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+            </div>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/ab593c70880ddc54d5f32fa14e0022a4.js"></script>
+            </div>
         </div>
         - Lastly we need to create a Controller to handle HTTP requests to our application.
 
-        <div class="code-snippet">
-            <script src="https://gist.github.com/rgbk21/245fa30a1b3805913019d05acc6a1cf0.js"></script>
+        <div class="code-block">
+            <div class="expand-code-snip-btn border border-primary rounded">
+                <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+            </div>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/245fa30a1b3805913019d05acc6a1cf0.js"></script>
+            </div>
         </div>
 
         <br>
@@ -320,8 +345,6 @@
         <div>
             -
         </div>
-
-
     </div>
 
     <hr>
@@ -353,7 +376,7 @@
 
             <img src="imgs/Java8_JDBC_Imgs/JDBCDrivers.PNG" class="center-block img-fluid"
                  alt="JDBCDrivers"
-                 width="50%">
+                 width="400">
 
             - We are going to only use JDBC Drivers. The JDBC driver is also known as a direct-to-database pure Java
             driver. It is written in pure Java. It converts the JDBC calls into DBMS-specific calls and sends the calls
@@ -431,8 +454,13 @@
             - View the entire code <a
                 href="https://github.com/rgbk21/JDBC_Setup/blob/master/src/main/java/JDBCUtil.java">here</a>.
 
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/9f360ec68860a1352c1f175cb3b95a05.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/9f360ec68860a1352c1f175cb3b95a05.js"></script>
+                </div>
             </div>
         </div>
 
@@ -834,8 +862,13 @@
             code</a>. The own****AreVisible shows whether inserts/updates/deletes using the same ResultSet are visible
             within that ResultSet itself. Read more at <a href="https://stackoverflow.com/a/16959086/8742428">this SO
             Link</a>.
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/b548900f48ce185a42b196591b686670.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/b548900f48ce185a42b196591b686670.js"></script>
+                </div>
             </div>
         </div>
 
@@ -1022,7 +1055,7 @@
             after the last row, the <code>getRow()</code> method returns zero.
             <img src="imgs/Java8_JDBC_Imgs/ResultSet.PNG" class="center-block img-fluid"
                  alt="ResultSet"
-                 width="75%">
+                 width="800">
             - If you have a <code>ResultSet</code> object that has its scrollability set to forward-only, you can only
             use its <code>next()</code> method to move the cursor, which moves its cursor one row in the forward
             direction. <br>
@@ -1214,7 +1247,7 @@
 
             <img src="imgs/Java8_JDBC_Imgs/RowSet_ClassDiagram.PNG" class="center-block img-fluid"
                  alt="RowSet_ClassDiagram"
-                 width="37.5%">
+                 width="300">
         </div>
 
 
@@ -1393,6 +1426,6 @@
 
 
 </div>
-<script src="script.js"></script>
+<script src="../../script.js"></script>
 </body>
 </html>

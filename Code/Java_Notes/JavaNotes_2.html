@@ -17,7 +17,11 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-9QJ5D3X353"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
         gtag('js', new Date());
 
         gtag('config', 'G-9QJ5D3X353');
@@ -26,7 +30,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../../globalStyles.css">
-    <meta name="keywords" content="Java, Floats, Overflow, Unboxing, Autoboxing">
     <meta name="author" content="Raj Gaurav Ballabh Kumar">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Java Notes</title>
@@ -132,6 +135,9 @@
 </nav>
 
 <div class="container">
+
+    <button id='load-all-gists' type="button" class="btn btn-outline-primary">Show all Gists!</button>
+
     <div>
         This page contains my notes from the following books: <br>
         a) Java: The Complete Reference - Herbert Schildt <br>
@@ -216,7 +222,7 @@
 
             <div class="row">
                 <img src="imgs/Concepts_CompletableFuture/DiffBetnParallelAndConcurrent.PNG"
-                     class="center-block img-fluid" alt="Thread_States" width="50%">
+                     class="center-block img-fluid" alt="Thread_States" width="375">
             </div>
         </div>
 
@@ -420,8 +426,13 @@
                     actions.
                 </li>
             </ul>
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/bef0ca6f5121e73116dd39bba993aac8.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/bef0ca6f5121e73116dd39bba993aac8.js"></script>
+                </div>
             </div>
         </div>
 
@@ -471,8 +482,13 @@
             starts the thread of execution beginning at the <code>run()</code> method. This causes the child thread's
             for loop to begin. Next the main thread enters its for loop. Both threads continue running, sharing the CPU
             in single-core systems, until their loops finish.
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/c90b8b89c946731a7870dc49590e6d9b.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/c90b8b89c946731a7870dc49590e6d9b.js"></script>
+                </div>
             </div>
         </div>
 
@@ -500,8 +516,13 @@
             <code>PrimeThread p = new PrimeThread(143);</code><br>
             <code>p.start();</code>
             -
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/4ff15cd7b4c8e248397104ab1dc449a8.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/4ff15cd7b4c8e248397104ab1dc449a8.js"></script>
+                </div>
             </div>
             - <a
                 href="https://stackoverflow.com/questions/8579657/whats-the-difference-between-thread-start-and-runnable-run">What's
@@ -542,7 +563,6 @@
             class, you can't do it by implementing one from Runnable. <br>
             - <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Thread.html">Oracle link explaining how you
             would create and use a new Thread by extending Thread or by implementing Runnable</a> <br>
-
         </div>
 
         <div class="sub-heading">Creating Multiple Threads</div>
@@ -551,8 +571,13 @@
             <br>
             - In the below example we are creating multiple threads. In the printout, note where the Main thread is
             exiting. It is not like Main is waiting for the other threads to end.
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/f698e9f65e5b5f1ecf05416c93594f8e.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/f698e9f65e5b5f1ecf05416c93594f8e.js"></script>
+                </div>
             </div>
         </div>
 
@@ -580,8 +605,13 @@
             affected by the <code>mt1</code> and <code>mt1.join()</code> method calls at all. <a
                 href="https://stackoverflow.com/questions/15956231/what-does-this-thread-join-code-mean">StackOverflow
             Link</a>
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/4e4cd891472b1ec62f336ba4f81f4d61.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/4e4cd891472b1ec62f336ba4f81f4d61.js"></script>
+                </div>
             </div>
         </div>
 
@@ -610,7 +640,14 @@
             - <a href="https://stackoverflow.com/a/9848796/8742428">SO Link explaining what a monitor actually is</a>
             <br>
             - This is what happens when your code is NOT synchronized.
-            <script src="https://gist.github.com/rgbk21/9a6fdb4fb951d6f65f123cd7141945b2.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/9a6fdb4fb951d6f65f123cd7141945b2.js"></script>
+                </div>
+            </div>
             - By calling <code>sleep()</code>, the <code>call()</code> method allows execution to switch to another
             thread. This results in the
             mixed-up output of the three message strings. In this program, nothing exists to stop all three threads from
@@ -641,8 +678,13 @@
             [Synchronized]
             <br>
             Example of using the synchronized statement:
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/ab92d8351023dd755f7afb0668ab2192.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/ab92d8351023dd755f7afb0668ab2192.js"></script>
+                </div>
             </div>
             Well we would have expected "Hello Synchronized World". But threads gonna thread I guess.
             <br>
@@ -677,8 +719,13 @@
             has successfully entered <code>objRef</code>'s monitor.
             <br>
             - The previous example can then be rewritten in the following manner:
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/c7340b98e24a0579762f5adbf97c0a57.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/c7340b98e24a0579762f5adbf97c0a57.js"></script>
+                </div>
             </div>
             - <a href="https://stackoverflow.com/questions/6910807/synchronization-of-non-final-field">Why do we get the
             warning on line 30?</a>
@@ -761,8 +808,13 @@
             - The problem with this code is that although the <code>put()</code> and <code>get()</code> methods on Q are
             synchronized, nothing is stopping the producer from overrunning the consumer, nor will anything stop the
             consumer from consuming the same queue value twice. Hence you get erroneous output.
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/3a6e64c60ef1a99f1eaaed1a3aadc585.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/3a6e64c60ef1a99f1eaaed1a3aadc585.js"></script>
+                </div>
             </div>
 
             - Code after using inter-thread communication: <br>
@@ -773,8 +825,13 @@
             Consumer has removed the item from the queue. When the execution resumes, the next item of data is out in
             the queue, and notify is called. This tells the Consumer that it should now remove it.
 
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/cb7b75b0a7b15b15cfe15bd9edd7639b.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/cb7b75b0a7b15b15cfe15bd9edd7639b.js"></script>
+                </div>
             </div>
         </div>
 
@@ -792,8 +849,13 @@
             briefly before trying to call a method in the other class. The main class, named Deadlock, creates an A and
             a B instance, and then calls deadlockStart() to start a second thread that sets up the deadlock condition.
             The foo() and bar() methods use sleep() as a way to force the deadlock condition to occur.
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/9cdc5afbd06dada6fdfff313626f9561.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/9cdc5afbd06dada6fdfff313626f9561.js"></script>
+                </div>
             </div>
         </div>
 
@@ -809,8 +871,13 @@
             will be the same for all programs.
             <br>
             - Apparently this example was supposed to teach me something:
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/43202c065425da88014d5c98b307ffd8.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/43202c065425da88014d5c98b307ffd8.js"></script>
+                </div>
             </div>
         </div>
 
@@ -863,16 +930,12 @@
             </table>
 
             <div class="row">
-                <img src="Thread_States.PNG" class="center-block img-fluid" alt="Thread_States" width="50%">
+                <img src="Thread_States.PNG" class="center-block img-fluid" alt="Thread_States" width="370">
             </div>
             - This is how you can use the <code>Thread.State</code> in your code: <br>
             <code>Thread.State ts = thrd.getState();</code><br>
             <code>if (ts == Thread.State.RUNNABLE) {//do stuff}</code><br>
-
-
         </div>
-
-
     </div>
 
     <hr>
@@ -1004,15 +1067,9 @@
             <div>
                 -
             </div>
-
-
         </div>
-
-
     </div>
-
-
 </div>
-
+<script src="../../script.js"></script>
 </body>
 </html>

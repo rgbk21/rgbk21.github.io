@@ -743,7 +743,7 @@
         <div class="row">
             <img src="./Snaps/Notatbility.png" class="center-block img-fluid"
                  alt="Step1"
-                 width=100%>
+                 width=1811>
         </div>
 
 
@@ -787,8 +787,13 @@
         content for the
         browser to display. This content is written in HTML. Two important tags in HTML are:
         <code>form</code> and <code>input</code> <br>
-        <div class="code-snippet">
-            <script src="https://gist.github.com/rgbk21/7ccd6f864eb2faf71f645955dfe6c4d2.js"></script>
+        <div class="code-block">
+            <div class="expand-code-snip-btn border border-primary rounded">
+                <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+            </div>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/7ccd6f864eb2faf71f645955dfe6c4d2.js"></script>
+            </div>
         </div>
         <p class="inline-heading">HTTP</p>: Most of the conversations held on the web between clients and servers are
         held using HTTP
@@ -1253,8 +1258,13 @@
         <div class="sub-heading">Tomcat log when app was deployed successfully</div>
         <div>
             - This is an example of Tomcat Log generated when the Web-App was deployed successfully.
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/d37b5c60853094b332ce7a976dc94161.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/d37b5c60853094b332ce7a976dc94161.js"></script>
+                </div>
             </div>
         </div>
 
@@ -1296,8 +1306,13 @@
             - Clicking the SUBMIT button causes the HTML form to send a <code>POST</code> request to the server. This
             request is sent to the <code>SelectBeer.do</code> file (Line 20). Remember that there is no actual class
             named such. It's mapped to an internal Servlet name using the Deployment Descriptors.
-            <div id="Step3" class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/455e078ee0d33fe25ef7e6e215deb3c5.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div id="Step3" class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/455e078ee0d33fe25ef7e6e215deb3c5.js"></script>
+                </div>
             </div>
             - Note the URL to which the POST request is being sent to
             <code>POST /BeerRecommender_war_exploded/SelectBeer.do</code>. In the HTML, the <code>/BeerRecommender_war_exploded/</code>
@@ -1309,12 +1324,12 @@
             <div class="row">
                 <img src="./Snaps/Ch3/Request_URL.png" class="center-block img-fluid"
                      alt="Request URL"
-                     width="50%">
+                     width="500">
             </div>
             <div class="row">
                 <img src="./Snaps/Ch3/POST_Request_Headers.PNG" class="center-block img-fluid"
                      alt="Form"
-                     width="100%">
+                     width="1690">
             </div>
 
             <a href="#app_architecture"><p class="inline-heading">Step 4</p></a>: The browser sends the request data to
@@ -1336,25 +1351,42 @@
             class is laoded and the servlet is initialized. <br>
             - The Container then starts a new thread to handle the request, and passes the request to the thread
             (to the servlet's <code>service()</code> method).
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/c932fc1d0153401e578ea9037ed0b428.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/c932fc1d0153401e578ea9037ed0b428.js"></script>
+                </div>
             </div>
-
 
             <a href="#app_architecture"><p class="inline-heading">Step 5</p></a>: The Container finds the correct
             Servlet and passes the
             request to the Servlet. This class
             acts as the Controller, calling the Model <code>BeerExpert</code> for the business logic, and the View
             <code>result.jsp</code> for the response.
-            <div id="setAttributeExample" class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/94dbb35d88a6d04c4f1f44c75f1e8d18.js"></script>
+
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div id="setAttributeExample" class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/94dbb35d88a6d04c4f1f44c75f1e8d18.js"></script>
+                </div>
             </div>
+
             <br>
             <a href="#app_architecture"><p class="inline-heading">Step 6</p></a>: The Servlet calls the BeerExpert class
             for help.
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/f2f3e7794dd719fc9f752776ed97e16b.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/f2f3e7794dd719fc9f752776ed97e16b.js"></script>
+                </div>
             </div>
+
             <a href="#app_architecture"><p class="inline-heading">Step 7</p></a>: The BeerExpert class returns an answer
             that the Servlet class
             adds to the request
@@ -1366,8 +1398,13 @@
             <br>
             <a href="#app_architecture"><p class="inline-heading">Step 8</p></a>: The Servlet forwards the request to
             the JSP.
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/0cf2bcafb2f011b8ca5a9bbcded5d011.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/0cf2bcafb2f011b8ca5a9bbcded5d011.js"></script>
+                </div>
             </div>
             <a href="#app_architecture"><p class="inline-heading">Step 9</p></a>: The JSP gets the answer from the
             request object.
@@ -1401,7 +1438,7 @@
         <div class="row">
             <img src="./Snaps/Ch4/Servlet_State_Diagram.PNG" class="center-block img-fluid"
                  alt="Servlet state diagram"
-                 width="15%">
+                 width="30">
         </div>
 
         <div class="sub-heading">What do the <code>init</code>, <code>service</code>, and <code>destroy</code> methods
@@ -1591,8 +1628,13 @@
         <div>
             - Remember the POST is not the default. If you do not specify a method, by default the GET method will be
             used.
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/c4c574f87a7a6aaa46631a5a7d9559bb.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/c4c574f87a7a6aaa46631a5a7d9559bb.js"></script>
+                </div>
             </div>
         </div>
 
@@ -1601,8 +1643,13 @@
             - In the previous POST request that we sent in <a href="#Step3">Step 3</a>, the browser sent only one of
             the four options (light/amber/brown/dark) as the value of the parameter <code>color1</code>. But what if we
             wanted two or more parameters from the user. This is how we would do it:
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/6d7be68624a849802d8450ff82db8b01.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/6d7be68624a849802d8450ff82db8b01.js"></script>
+                </div>
             </div>
             - If in the previous case the POST request sent the values of the parameters as <code>color1=light</code>,
             in
@@ -1610,8 +1657,13 @@
             request will have both the parameters but separated by an ampersand.
             <br>
             - The Servlet class would then use the parameters in the following manner:
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/09cd12cd78f61d4a703ff0397484e00e.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/09cd12cd78f61d4a703ff0397484e00e.js"></script>
+                </div>
             </div>
         </div>
 
@@ -1630,12 +1682,23 @@
                  alt="Multiple values for Checkbox"
                  width="300">
 
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/b143430a62b757498607e22deabee83f.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/b143430a62b757498607e22deabee83f.js"></script>
+                </div>
             </div>
+
             And the corresponding Servlet class would look like this:
-            <div id="usingSetAttribute" class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/327108fb2c388821c78d3d711e7ff2d2.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div id="usingSetAttribute" class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/327108fb2c388821c78d3d711e7ff2d2.js"></script>
+                </div>
             </div>
             - The form data in the POST request will look like this when multiple checkboxes are selected: <br>
             <code>userName=&userEmailId=&beer_color_user_likes=light&user-newsletter=on&user-beer-sizes=12&user-beer-sizes=14</code>
@@ -1653,8 +1716,13 @@
                 href="https://docs.oracle.com/javaee/7/api/javax/servlet/ServletRequest.html">javax.servlet.ServletRequest</a>
             and <a href="https://javaee.github.io/javaee-spec/javadocs/javax/servlet/http/HttpServletRequest.html">javax.servlet.http.HttpServletRequest</a>.
 
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/2d8523049c4e793411f03e21311db7fe.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/2d8523049c4e793411f03e21311db7fe.js"></script>
+                </div>
             </div>
 
             <br>
@@ -1728,8 +1796,13 @@
                      width="1500">
             </div>
             - This is what the servlet code looks like.
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/c17828336b9b97a71b135d0b7662835c.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/c17828336b9b97a71b135d0b7662835c.js"></script>
+                </div>
             </div>
 
             - We added a new mapping in the web.xml. And linked the servlet in the JSP file like this. <br>
@@ -1778,9 +1851,13 @@
                 href="https://javaee.github.io/javaee-spec/javadocs/javax/servlet/ServletResponse.html#getWriter--"><code>getWriter()</code></a>
             or you can use the <a
                 href="https://javaee.github.io/javaee-spec/javadocs/javax/servlet/ServletResponse.html#getOutputStream--"><code>getOutputStream()</code></a>
-
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/292ac100f60064eb83bcd954594a01d4.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/292ac100f60064eb83bcd954594a01d4.js"></script>
+                </div>
             </div>
 
             - So: to send binary data in a MIME body response, use the ServletOutputStream returned by
@@ -1854,8 +1931,13 @@
             <i>myApp</i> webapp in the previous case. Hence, in this case, the forward slash at the beginning means
             "relative to the root of this web container". <br>
 
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/9f67157174f03634676c9d9ad718a8d2.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/9f67157174f03634676c9d9ad718a8d2.js"></script>
+                </div>
             </div>
         </div>
 
@@ -1892,8 +1974,14 @@
         <div>
             - Refer <a href="https://stackoverflow.com/a/9034285/8742428">this answer on SO</a>. <br>
             - Remember that you can set the headers manually as well. This is how we are achieving this.
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/c517804ddc506ef464d8b87c23bc73e2.js"></script>
+
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/c517804ddc506ef464d8b87c23bc73e2.js"></script>
+                </div>
             </div>
         </div>
 
@@ -1920,7 +2008,6 @@
             - So how do we do this? <a href="https://stackoverflow.com/a/20771190/8742428">Read this SO answer here</a>.
             The left image is currently the scenario 1 in the answer. We want it to change to scenario 3. <br>
         </div>
-
 
         <div class="sub-heading">Why do I have to prepend the path in JSPs with
             <code>${pageContext.request.contextPath}</code></div>
@@ -1990,7 +2077,7 @@
             <div class="row">
                 <img src="./Snaps/Ch5/init-params-code.PNG" class="center-block img-fluid"
                      alt="Servlet state diagram"
-                     width="100%">
+                     width="1843">
             </div>
             - The problem with the above approach is that, if now suppose we have to use the same <i>emailId</i>
             parameter in another servlet, we will have to copy the same value to the another servlet as well. Hence we
@@ -2008,7 +2095,7 @@
             <div class="row">
                 <img src="./Snaps/Ch5/Context-Init-Params.PNG" class="center-block img-fluid"
                      alt="Servlet state diagram"
-                     width="100%">
+                     width="1843">
             </div>
         </div>
 
@@ -2096,7 +2183,7 @@
             <div class="row">
                 <img src="./Snaps/Ch5/Listener-Code-Snippet.png" class="center-block img-fluid"
                      alt="Listener Code Snippet"
-                     width="100%">
+                     width="1426">
             </div>
             - Here is the complete picture:
             <div class="row">
@@ -2201,8 +2288,13 @@
                      alt="All_Attributes"
                      width="800">
             </div>
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/6ea4c632aa3c983cafffe29be386f62f.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/6ea4c632aa3c983cafffe29be386f62f.js"></script>
+                </div>
             </div>
         </div>
 
@@ -2230,8 +2322,13 @@
             ServletContex?
             <br>
             //i.e. do: <code>synchronized (this.getServletContext().getAttribute("UserCount"))</code> ?
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/fa755cf00a8810b355a98a26697a087b.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/fa755cf00a8810b355a98a26697a087b.js"></script>
+                </div>
             </div>
             - Remember that Synchronization causes a lot of overhead and hurts concurrency. Make your synchronized block
             as small as possible. Get the lock, get in, get what you need, adn get the heckin heck out so that the lock
@@ -2286,8 +2383,13 @@
             applies <i>only</i> to this request, so we put it in the request scope.
             <br>
             - So how do we make another part of the component to take over the request - <code>RequestDispatcher</code>
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/a942d8666eccdb9916b499157798c7ec.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/a942d8666eccdb9916b499157798c7ec.js"></script>
+                </div>
             </div>
             - <code>RequestDispatcher</code>'s have only two methods:
             <ul>
@@ -2418,8 +2520,13 @@
             here in SO</a>. So we get the session again, as on Line 8. This time the Container does not find any
             existing sessions and the <code>session</code> variable is in fact null. When we run the code, now, the
             <code>if (session == null) </code> block is executed.
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/3b7165571d0253ffe96051ce0879d268.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/3b7165571d0253ffe96051ce0879d268.js"></script>
+                </div>
             </div>
         </div>
 
@@ -2470,8 +2577,13 @@
                 </li>
                 <li><b>Configuring Session Timeout in the DD:</b> This has the same effect as calling <code>setMaxInactiveInterval()</code>
                     on every session that is created.
-                    <div class="code-snippet">
-                        <script src="https://gist.github.com/rgbk21/9da74048e8db7b9f15708bcb3e8cce48.js"></script>
+                    <div class="code-block">
+                        <div class="expand-code-snip-btn border border-primary rounded">
+                            <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                        </div>
+                        <div class="code-snippet">
+                            <script src="https://gist.github.com/rgbk21/9da74048e8db7b9f15708bcb3e8cce48.js"></script>
+                        </div>
                     </div>
                 </li>
             </ul>
@@ -2505,12 +2617,22 @@
             getCookie(String) method. You can only get Cookies in a Cookie array and then you have to loop over the
             array to
             find the one you want.
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/56d716e43b85399023fccfe04f8b4ef7.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/56d716e43b85399023fccfe04f8b4ef7.js"></script>
+                </div>
             </div>
             And then the Servlet class:
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/b9d064f68b6281badc5c51e2d464167d.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/b9d064f68b6281badc5c51e2d464167d.js"></script>
+                </div>
             </div>
         </div>
 
@@ -2853,6 +2975,6 @@
 
 </div>
 
-<script src="script.js"></script>
+<script src="../../script.js"></script>
 </body>
 </html>

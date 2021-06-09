@@ -17,7 +17,11 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-9QJ5D3X353"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
         gtag('js', new Date());
 
         gtag('config', 'G-9QJ5D3X353');
@@ -541,8 +545,13 @@
 
             Step 1: Update POM file to get dependencies for Spring Web MVC <br>
             - In <code>pom.xml</code>, add the following dependency:
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/dbdcd0ace73a2181f71859124946adc1.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/dbdcd0ace73a2181f71859124946adc1.js"></script>
+                </div>
             </div>
 
             Step 2: Add declaration for Spring <code>DispatcherServlet</code> servlet in <code>web.xml</code> <br>
@@ -552,14 +561,25 @@
             looks for a file named <i>${servlet-name}-servlet.xml</i> in the <i>WEB-INF</i> directory of your web
             application and creates teh bean defined there, overriding the definition of any beans defined with the same
             name in the global scope (?).
-            <br>
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/e364a01e6719f7f15df224340d2ed073.js"></script>
+
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/e364a01e6719f7f15df224340d2ed073.js"></script>
+                </div>
             </div>
+
             - If you want to name the context file with a name different than the <i>${servlet-name}-servlet.xml</i>,
             you can use the following to define the location and the file name.
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/1a0afaab8e33491934ff53baa27bb6be.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/1a0afaab8e33491934ff53baa27bb6be.js"></script>
+                </div>
             </div>
 
             Step 3: Create Web Application Context file <br>
@@ -578,8 +598,13 @@
             Beginners used to add only <code>xmlns:context</code> and forget about 2 new entries to <code>xsi:schemaLocation</code>.
             <a href="https://stackoverflow.com/a/35120928/8742428">Source on SO here</a>.
 
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/90f8972d3da25a9dfe9da9a7c2aa406c.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/90f8972d3da25a9dfe9da9a7c2aa406c.js"></script>
+                </div>
             </div>
 
             Step 4: Create Controller <br>
@@ -587,15 +612,21 @@
             - <code>@RequestMapping("/employee")</code> Annotation for mapping web requests onto specific handler
             classes and/or handler methods.In our case the homepage request is handled by this controller.
             The return value is resolved by the view resolver which appends the location and suffix for the string.
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/ce562c495063437d9e92cb34dd94eef1.js"></script>
+
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/ce562c495063437d9e92cb34dd94eef1.js"></script>
+                </div>
             </div>
 
             Step 5: Create JSP
 
             And we are done. The final project structure should look like this:
             <img src="resources/random_images/ProjectStructureForMavenWebApp.PNG"
-                 width="25%"
+                 width="374"
                  class="center-block img-fluid"
                  alt="Final project structure in IntelliJ">
 
@@ -613,12 +644,12 @@
             which in turn pulls in javax.servlet. If you are not using Boot, you will probably have to do this manually.<br>
             <img
                     src="resources/random_images/Spring-Boot-Starter-Files.PNG"
-                    width="50%"
+                    width="600"
                     class="center-block img-fluid"
                     alt="Spring Boot Starter Dependency Tree">
 
             <img src="resources/random_images/Tomcat-Embed-Core.PNG"
-                 width="70%"
+                 width="850"
                  class="center-block img-fluid"
                  alt="Spring Boot Starter Dependency Tree">
         </div>
@@ -686,17 +717,25 @@
         <div>
             - One way to add beans that you have created yourself to Spring's Application Context is by using the <code>@Configuration</code>
             and <code>@Bean</code> combo:
-            <br>
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/daf5067c50dec59ac2ea7357770af621.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/daf5067c50dec59ac2ea7357770af621.js"></script>
+                </div>
             </div>
 
             - Another way is to just annotate the class with the <code>@Component</code> annotation. When the Spring
             Context boots up, it will call the constructor below to create an instance of the class and add it to the
-            context as a Bean.<br>
-
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/0fb0777d3245bfd8a1b46e412255b1b4.js"></script>
+            context as a Bean.
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/0fb0777d3245bfd8a1b46e412255b1b4.js"></script>
+                </div>
             </div>
 
             - There are other annotations that build on top of the <code>@Component</code> annotation by just adding an
@@ -704,13 +743,23 @@
             - For instance, take the <code>@Repository</code> annotation. We use this on top of the class exposing the
             Repository layer of the application.
 
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/fbd373e732d47b544f67af819c357728.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/fbd373e732d47b544f67af819c357728.js"></script>
+                </div>
             </div>
 
             - Similarly we have the <code>@Service</code> annotation.
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/0a0b2256dd93f1a13aeb8fa23d65a686.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/0a0b2256dd93f1a13aeb8fa23d65a686.js"></script>
+                </div>
             </div>
         </div>
 
@@ -725,27 +774,52 @@
             - Lifecycle method annotation requires a no-arg method. <br>
             - Consider 3 beans being created as follows: <br>
 
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/90718c00c23bfb2a0b53e992c105690f.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/90718c00c23bfb2a0b53e992c105690f.js"></script>
+                </div>
             </div>
 
             - We can hook into the lifecycle stages of the three beans as follows: <br>
 
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/92f4c388bc3a6b2bf164b2112a54f7dc.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/92f4c388bc3a6b2bf164b2112a54f7dc.js"></script>
+                </div>
             </div>
 
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/baf6599c7e04ed4adbbc9255b385463a.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/baf6599c7e04ed4adbbc9255b385463a.js"></script>
+                </div>
             </div>
 
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/87e7b5fe98b3d7d0d7d88247955424a3.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/87e7b5fe98b3d7d0d7d88247955424a3.js"></script>
+                </div>
             </div>
 
-            - The output on running the application will be as follows. Note the order of execution of the methods. <br>
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/538659f9215b53bb8dcffc8c7846f314.js"></script>
+            - The output on running the application will be as follows. Note the order of execution of the methods.
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/538659f9215b53bb8dcffc8c7846f314.js"></script>
+                </div>
             </div>
         </div>
 
@@ -763,19 +837,34 @@
             explicitly. This is because Spring will generate a default name for each bean, based on the class name, if
             we don't define one. This name is simply the name of the class, starting with a lowercase. For example, for
             our ProjectRepositoryImpl2 class, the container will create a bean called "projectRepositoryImpl2". <br>
-            - Constructor Injection is done as follows: <br>
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/beb4737bb37e46d24e99b17ce41d12db.js"></script>
+            - Constructor Injection is done as follows:
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/beb4737bb37e46d24e99b17ce41d12db.js"></script>
+                </div>
             </div>
 
-            - Setter Injection is done as follows: <br>
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/3029372e7b2e4fbd21ab2a6451dd48a5.js"></script>
+            - Setter Injection is done as follows:
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/3029372e7b2e4fbd21ab2a6451dd48a5.js"></script>
+                </div>
             </div>
 
-            - Field Injection is done as follows (this is not recommended): <br>
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/2a6bd18ec765a9da0d91b17d9ed5cb57.js"></script>
+            - Field Injection is done as follows (this is not recommended):
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/2a6bd18ec765a9da0d91b17d9ed5cb57.js"></script>
+                </div>
             </div>
         </div>
 
@@ -794,31 +883,50 @@
             - First we create a class called SingletonBean whose scope we specify as Singleton (which btw is the default
             scope if scope is not explicitly specified).
 
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/d00ab07ab7b6cf6efa9c714d8d3c834c.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/d00ab07ab7b6cf6efa9c714d8d3c834c.js"></script>
+                </div>
             </div>
 
-            - Then we create a class called PrototypeBean whose scope we specify as Prototype. <br>
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/f50d2ccc30073e7037a279ca7ce58bcb.js"></script>
+            - Then we create a class called PrototypeBean whose scope we specify as Prototype.
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/f50d2ccc30073e7037a279ca7ce58bcb.js"></script>
+                </div>
             </div>
 
-            - And then we inject the beans as follows into the Application Context as follows: <br>
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/4e1770326ce924e5a1d868048181cde7.js"></script>
+            - And then we inject the beans as follows into the Application Context as follows:
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/4e1770326ce924e5a1d868048181cde7.js"></script>
+                </div>
             </div>
 
             - And the output we get shows that only one instance of the Singleton bean is being created, but there are
-            two
-            separate instances of the Prototype bean being created. <br>
+            two separate instances of the Prototype bean being created. <br>
 
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/018650ba32aa01ce43e4b25b9e2c2836.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/018650ba32aa01ce43e4b25b9e2c2836.js"></script>
+                </div>
             </div>
+
             - Refer these links for further info: <br>
             - Spring scopes basics explained <a href="http://codeflex.co/java-spring-scopes-explained/">here on
-            codeflex</a>
-            <br>
+            codeflex</a> <br>
             - Just because the bean injected into the controller is prototype-scoped doesn't mean the controller is!
             <code>@Controller</code> is a singleton object, and if you inject a prototype bean into a singleton class,
             it will make the prototype bean also as singleton unless you specify using lookup-method property which
@@ -835,7 +943,6 @@
             Service , Controller - these beans don't have their own states instead we leverage these beans in our
             application to perform certain operations. Choosing a Singleton bean that needs to maintain it's state is a
             bad design pattern. <a href="https://stackoverflow.com/a/15745353/8742428">Source on SO</a>. <br>
-
         </div>
 
 
@@ -846,15 +953,25 @@
             instantiated by the container. The container invokes the <code>BeanPostProcessor</code> for each and every
             bean. <br>
             - You can use the <code>BeanPostProcessor</code> as follows:
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/971c44ec37aa23e5393b2e0b374c73d3.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/971c44ec37aa23e5393b2e0b374c73d3.js"></script>
+                </div>
             </div>
             - This is a small snip from the log that was generated on using <code>BeanPostProcessor</code>. Note the
-            order in which the methods are called. The lifecycle hooks defined on BeanA.. are present <a
-                href="#Spring-M2-L4">here</a>.
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/bf74f6a43f7cc6f59091cfd8b7a70eff.js"></script>
+            order in which the methods are called. The lifecycle hooks defined on BeanA.. are present <a href="#Spring-M2-L4">here</a>.
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/bf74f6a43f7cc6f59091cfd8b7a70eff.js"></script>
+                </div>
             </div>
+
             - Where would you use something like the <code>BeanPostProcessor</code>? The typical example for a bean post
             processor is when you want to wrap the original bean in a proxy instance, e.g. when using the <code>@Transactional</code>
             annotation.
@@ -871,26 +988,46 @@
             - BeanPostProcessor vs BeanFactoryPostProcessor: <a href="https://stackoverflow.com/a/54807031/8742428">There
             is always a diagram</a>. <br>
 
-            - We create a new Class called BeanD: <br>
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/a835a082a71357e8651717cf8814ddc5.js"></script>
+            - We create a new Class called BeanD:
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/a835a082a71357e8651717cf8814ddc5.js"></script>
+                </div>
             </div>
 
-            - And expose it as a Bean using the following: <br>
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/5c252799561fe6b6fab645ec2fda5697.js"></script>
+            - And expose it as a Bean using the following:
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/5c252799561fe6b6fab645ec2fda5697.js"></script>
+                </div>
             </div>
 
             - Then we use the <code>BeanFactoryPostProcessor</code> to set the property value of the <code>foo</code>
-            property on the <code>BeanD</code> class as this: <br>
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/2344e831126c82f85e6a141de030422a.js"></script>
+            property on the <code>BeanD</code> class as this:
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/2344e831126c82f85e6a141de030422a.js"></script>
+                </div>
             </div>
 
             - Note the order in which the methods are executed. <br>
             - Note how early the <code>BeanFactoryPostProcessor</code> is called, which is later followed by the <code>BeanPostProcessor</code>.
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/536b4cd0fa96a90e0a1acdf53cba2455.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/536b4cd0fa96a90e0a1acdf53cba2455.js"></script>
+                </div>
             </div>
 
             // TODO: We can also implement multiple BeanPostProcessors and control their execution order by implementing
@@ -917,8 +1054,6 @@
             - Adding and Retrieving Beans from the Context: To retrieve beans from the context we can use the <code>getBean()</code>
             method, which is defined in the <code>AbstractApplicationContext</code> interface.
         </div>
-
-
     </div>
 
 
@@ -941,30 +1076,38 @@
             <br>
             - Properties are defined in the <code>src/main/resources/application.properties</code> file as key-value
             pairs:
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/0cbff9dce0d0f7083755de5a2e10073e.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/0cbff9dce0d0f7083755de5a2e10073e.js"></script>
+                </div>
             </div>
 
-            - These key-value pairs can then be accessed as follows: <br>
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/9962eae7ef719cd730a932aefde7525d.js"></script>
+            - These key-value pairs can then be accessed as follows:
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/9962eae7ef719cd730a932aefde7525d.js"></script>
+                </div>
             </div>
 
-            - Remember: by default, Spring Boot loads the properties from file application.properties. If we're creating
-            a
-            pure Spring application, we would have to explicitly indicate the file from which the properties should be
-            loaded. We can do this by adding the following annotation:
-
-            <code>@PropertySource("classpath:application.properties")</code>
-
-            to any file subject to the component scan. <br>
-            - The <code>Environment</code> interface represents "the environment in which the current application is
-            running".
+            - Remember: by default, Spring Boot loads the properties from file application.properties. If we're creating a pure Spring application, we would have to explicitly
+            indicate the file from which the properties should be loaded. We can do this by adding the following annotation:
+            <code>@PropertySource("classpath:application.properties")</code> to any file subject to the component scan. <br>
+            - The <code>Environment</code> interface represents "the environment in which the current application is running".
             It contains information about the application's properties and profiles.
             We can use the Environment API to search properties that are available in the application's environment:
-            <br>
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/290b532f2b89e31f989d2aabed091246.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/290b532f2b89e31f989d2aabed091246.js"></script>
+                </div>
             </div>
             - Spring Boot uses a very particular PropertySource order that is designed to allow sensible overriding of
             values. Read <a
@@ -982,17 +1125,32 @@
             depending on
             whether the "dev" or the "prod" profile is active. <br>
             - if a bean is not annotated with <code>@Profile</code>, it will be enabled with all profiles.
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/8249d43f36d5bbba90bface9b8eeb797.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/8249d43f36d5bbba90bface9b8eeb797.js"></script>
+                </div>
             </div>
 
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/7b4e6e7def0e94d283b157d172e8fe70.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/7b4e6e7def0e94d283b157d172e8fe70.js"></script>
+                </div>
             </div>
             - And we select which profile we have to activate by passing in the value in the application.properties
             file:
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/cc6353495a8d67140d0405d616679bd4.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/cc6353495a8d67140d0405d616679bd4.js"></script>
+                </div>
             </div>
             - If there are no profiles set through the application.properties as shown above, then you will see the
             following line in the logs on app boot: <br>
@@ -1003,8 +1161,13 @@
             - The <code>Environment</code> interface is an abstraction integrated in the container, which can be used to
             get the application's properties and the profile information.
 
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/75db2712de72414a9c25c88f01b9a897.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/75db2712de72414a9c25c88f01b9a897.js"></script>
+                </div>
             </div>
         </div>
 
@@ -1014,27 +1177,27 @@
             - The default logging level is <code>INFO</code>. <br>
             - The logging levels are: TRACE, DEBUG, INFO, WARN, ERROR. In increasing order. The default logging level is
             INFO or above. Hence if you log something at the DEBUG level, for example, it is not going to show up in the
-            log. <br>
+            log.
 
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/da2f8941b78fcb1e6b69a549f20ed225.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/da2f8941b78fcb1e6b69a549f20ed225.js"></script>
+                </div>
             </div>
         </div>
 
 
         <div class="sub-heading" id="Spring-M3-L5">Lesson 5: The Spring Testing Framework</div>
         <div>
-            - Read lecture note for this one <a
-                href="https://courses.baeldung.com/courses/487981/lectures/10530059">here</a>.
-            <br>
-            - Note that we're using the JUnit 5 version, so make sure to import the <code>@Test</code> annotation from
-            the
+            - Read lecture note for this one <a href="https://courses.baeldung.com/courses/487981/lectures/10530059">here</a>. <br>
+            - Note that we're using the JUnit 5 version, so make sure to import the <code>@Test</code> annotation from the
             <code>org.junit.jupiter.api</code> package instead of <code>org.junit</code>. <br>
             - A core aspect of the test framework is managing the application context. Bootstrapping a full context is
-            quite
-            an expensive operation. Because of this, we're trying to avoid doing that in each and every test. The
-            framework
-            helps cache the context by default and then provides higher-level control over that. <br>
+            quite an expensive operation. Because of this, we're trying to avoid doing that in each and every test. The
+            framework helps cache the context by default and then provides higher-level control over that. <br>
             - <code>@DirtiesContext</code> is used to notify the framework to close and recreate the context for later
             tests. <br>
             - <code>@ActiveProfiles </code> is used to specify the active profiles during the execution of the tests.
@@ -1049,23 +1212,15 @@
             - Some useful links found during troubleshooting the issue - the gradel build was not recognising the
             <code>application-test.properties</code> file to be present in the <code>classpath</code> even though it was
             (actually it wasn't, the folder structure was incorrect) <br>
-            - <a href="https://stackoverflow.com/a/49035998/8742428"><code>@SpringBootApplication</code> should NOT be
-            added
-            to your Test Class</a>. <br>
+            - <a href="https://stackoverflow.com/a/49035998/8742428"><code>@SpringBootApplication</code> should NOT be added to your Test Class</a>. <br>
             - <a href="https://stackoverflow.com/a/53648833/8742428">What does <code>@ExtendWith</code> do</a>? <br>
-            - <a href="https://stackoverflow.com/questions/17353327/populating-spring-value-during-unit-test">Populating
-            Spring @Value during Unit Test</a> <br>
-            - <a href="https://www.baeldung.com/spring-tests-override-properties">Baeldung: Override Properties in
-            Spring's
-            Tests</a> <br>
-            - <code>@SpringBootTest</code> is fairly heavy-weight, and for all intents and purpose will load your entire
-            application. Depending on what you are trying to test you may want to look into slice tests.
+            - <a href="https://stackoverflow.com/questions/17353327/populating-spring-value-during-unit-test">Populating Spring @Value during Unit Test</a> <br>
+            - <a href="https://www.baeldung.com/spring-tests-override-properties">Baeldung: Override Properties in Spring's Tests</a> <br>
+            - <code>@SpringBootTest</code> is fairly heavy-weight, and for all intents and purpose will load your entire application. Depending on what you are trying to test you
+            may want to look into slice tests.
             <a href="https://stackoverflow.com/a/44789237/8742428">Source on SO</a>. <br>
-            - What is <code>@RunWith</code> supposed to do? <a href="https://stackoverflow.com/a/44788429/8742428">Source
-            on
-            SO</a>. And <a href="https://stackoverflow.com/a/45659326/8742428">here</a>. <a
-                href="https://stackoverflow.com/a/42397645/8742428">And here</a>.
-            <br>
+            - What is <code>@RunWith</code> supposed to do? <a href="https://stackoverflow.com/a/44788429/8742428">Source on SO</a>. And <a
+                href="https://stackoverflow.com/a/45659326/8742428">here</a>. <a href="https://stackoverflow.com/a/42397645/8742428">And here</a>. <br>
             - You can also specify the absolute path of the properties file as shown <a
                 href="https://stackoverflow.com/a/28307313/8742428">here on SO</a>. <br>
             - Make sure the application.properties file is in your classpath. If you use maven, it should be in
@@ -1079,46 +1234,42 @@
             options
             as shown
             <a href="https://intellij-support.jetbrains.com/hc/en-us/community/posts/206183859/comments/115000483404">here</a>.
-            <a href="https://stackoverflow.com/a/39255116/8742428">This SO Link</a> explains the meanings of these
-            options.
-            <br>
-            - You can pass in more than one application.properties file names in the <code>@TestPropertySource</code> as
-            shown
+            <a href="https://stackoverflow.com/a/39255116/8742428">This SO Link</a> explains the meanings of these options. <br>
+            - You can pass in more than one application.properties file names in the <code>@TestPropertySource</code> as shown
             <a href="https://stackoverflow.com/a/52824608/8742428">here on SO</a>. <br>
-            - What you put directly under src/main/java is in the default package, at the root of the classpath. It's
-            the
-            same for resources put under src/main/resources: they end up at the root of the classpath.
-            <a href="https://stackoverflow.com/a/42863455/8742428">Source on SO</a>. <br>
+            - What you put directly under src/main/java is in the default package, at the root of the classpath. It's the same for resources put under src/main/resources: they end
+            up at the root of the classpath. <a href="https://stackoverflow.com/a/42863455/8742428">Source on SO</a>. <br>
             - Spring Boot app: Not picking up application.properties? Read <a
-                href="https://stackoverflow.com/questions/33022827/spring-boot-app-not-picking-up-application-properties">here
-            on SO</a>.
-            <br>
+                href="https://stackoverflow.com/questions/33022827/spring-boot-app-not-picking-up-application-properties">here on SO</a>. <br>
             - Override default Spring-Boot application.properties settings in Junit Test - <a
                 href="https://stackoverflow.com/questions/29669393/override-default-spring-boot-application-properties-settings-in-junit-test">Source
-            on SO</a>.
-            <br>
+            on SO</a>. <br>
             - Why my gradle projects creates separated modules for main and test in Intellij Idea - <a
-                href="https://stackoverflow.com/questions/37018567/why-my-gradle-projects-creates-separated-modules-for-main-and-test-in-intellij-i">SO</a>.
-            <br>
-            - <a href="https://stackoverflow.com/a/49893867/8742428">On SO</a> Intellij can't find classpath test
-            resource.
-            <br>
+                href="https://stackoverflow.com/questions/37018567/why-my-gradle-projects-creates-separated-modules-for-main-and-test-in-intellij-i">SO</a>. <br>
+            - <a href="https://stackoverflow.com/a/49893867/8742428">On SO</a> Intellij can't find classpath test resource. <br>
             - How to mark a directory as a generated-test-source root in IntelliJ? - <a
-                href="https://stackoverflow.com/questions/854264/how-to-add-directory-to-classpath-in-an-application-run-profile-in-intellij-idea">On
-            SO</a>.
-            <br>
+                href="https://stackoverflow.com/questions/854264/how-to-add-directory-to-classpath-in-an-application-run-profile-in-intellij-idea">On SO</a>. <br>
             <br>
             - Notes start here: <br>
             - Note how we are passing in the classes that should be scanned by using a <code>TestConfig</code> class and
             then specifying the packages to be scanned using <code>@ComponentScan</code>
 
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/3fa76b1407527aa8305bdc7ba8708d6c.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/3fa76b1407527aa8305bdc7ba8708d6c.js"></script>
+                </div>
             </div>
-            - And we are using the <code>@SpringJUnitConfig</code>here. Note how we are using the
-            <code>@TestPropertySource</code> to specify the location of the property files.
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/f697463abe750c648b3ccdcc1f31b226.js"></script>
+            - And we are using the <code>@SpringJUnitConfig</code>here. Note how we are using the <code>@TestPropertySource</code> to specify the location of the property files.
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/f697463abe750c648b3ccdcc1f31b226.js"></script>
+                </div>
             </div>
 
             - Precedence of the property files also comes into play here. Since we're using the @SpringJUnitConfig
@@ -1147,8 +1298,13 @@
             d) @ConditionalOnMissingBean <br>
             - We can change the logging info through the <code>boot.autoconfigure.logging package</code>:
 
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/0209a2f1a2c5a045d3d73c93a971da63.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/0209a2f1a2c5a045d3d73c93a971da63.js"></script>
+                </div>
             </div>
             - The auto-configuration logging report will contain information on: <br>
 
@@ -1160,8 +1316,13 @@
             <br>
             - You can use a <code>CommandLineRunner</code> as follows to execute or test your app: <br>
 
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/3eff15e68d5c463495bf33705c4c13e2.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/3eff15e68d5c463495bf33705c4c13e2.js"></script>
+                </div>
             </div>
         </div>
 
@@ -1182,8 +1343,13 @@
             <code>{"configuredLevel": "DEBUG"}</code>. Now our app will start logging at debug level. This can be very
             useful when troubleshooting issues without having to restart our app.<br>
 
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/2324bb59bf0babd336f4a56c76f3bf67.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/2324bb59bf0babd336f4a56c76f3bf67.js"></script>
+                </div>
             </div>
         </div>
 
@@ -1240,8 +1406,13 @@
             a) add spring-boot-starter-data-jpa as the starter dependency to gradle file <br>
             b) add ojdbc8 as the connection provider to the gradle file <br>
             c) Connect to the Oracle DB by adding the following to the application.properties file:
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/8b7b44270a62636ee096db3e00de1ff2.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/8b7b44270a62636ee096db3e00de1ff2.js"></script>
+                </div>
             </div>
             d) You can also add the same information in IntelliJ in-case you want to run SQL statements through the IDE.
             For some reason the IDE is nto showing the state of the database, by that I mean when I run the SELECT *
@@ -1260,21 +1431,29 @@
             c) RecoverableDataAccessException - retry may succeed if the application performs some recovery steps <br>
             d) ScriptException - related to processing of SQL scripts <br>
 
-            - An <code>@Entity</code> class can look like following. <br>
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/7bc79bcad9b6264545d67ac77c54281c.js"></script>
+            - An <code>@Entity</code> class can look like following.
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/7bc79bcad9b6264545d67ac77c54281c.js"></script>
+                </div>
             </div>
             - Note how we are using the Enum type in the Entity. The Enum is defined as follows:
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/db3da4a55f66b9cb3f8149b04a0ab09a.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/db3da4a55f66b9cb3f8149b04a0ab09a.js"></script>
+                </div>
             </div>
-            - THe <code>@Enumerated(EnumType.STRING)</code> makes sure that when the projectStatus is persisted in the
+            - The <code>@Enumerated(EnumType.STRING)</code> makes sure that when the projectStatus is persisted in the
             database, it's persisted as a String and not as the int value of the Enum. Advantage of this is the data is
             more readable in the DB. On the other hand, you can use
             <code>@Enumerated(EnumType.ORDINAL)</code> to make sure it is the int that is persisted. Makes the page
             faster in the DB.
-
-
         </div>
 
 
@@ -1285,9 +1464,15 @@
             format that is dictated by Spring Data, and Spring Data wil automatically provide the implementations for
             the query and generate the underlying SQL query and take care of everything for you!!! <br>
             - For example, we are using the following:
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/728783a1755b3c9ab683707c8596dfc1.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/728783a1755b3c9ab683707c8596dfc1.js"></script>
+                </div>
             </div>
+
             - Start typing in te file and Intellij will automatically provide recommendations on what kind of query to
             write. And that's all you need to do. <br>
             - Check <a
@@ -1305,8 +1490,13 @@
             - There were some issues with ClassNotFoundException that were solved by following <a
                 href="https://stackoverflow.com/a/36869058/8742428">this SO Link</a>. <br>
             - Note that the application.properties file had to be changed as well: <br>
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/8df92d94c9fa7ba5c8dd757656f9d827.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/8df92d94c9fa7ba5c8dd757656f9d827.js"></script>
+                </div>
             </div>
 
             <br>
@@ -1318,23 +1508,36 @@
                 href="https://dzone.com/articles/50-best-performance-practices-for-hibernate-5-amp">this JavaDzone</a>
             link to understand how <code>saveAll</code> can be used to batch inserts in JPA. Read Chapter 4 in Spring
             Boot Persistence Best Practices book to understand how to do batching in Spring Boot.<br>
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/f19073bb6c98794c3a70ed5d46891d58.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/f19073bb6c98794c3a70ed5d46891d58.js"></script>
+                </div>
             </div>
             - Using a batch size of 5 and saving 13 items using the <code>saveAll</code> method generates the following
             logs:
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/2f3e0463c00ca165636c5fb5a917a34c.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/2f3e0463c00ca165636c5fb5a917a34c.js"></script>
+                </div>
             </div>
-            - You can also use a custom SQL Query if you want to as shown <a
-                href="https://www.baeldung.com/spring-data-jpa-query">here on Baeldung</a>. <br>
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/9665f67a792b0b6cb2c89cc25590e114.js"></script>
+            - You can also use a custom SQL Query if you want to as shown <a href="https://www.baeldung.com/spring-data-jpa-query">here on Baeldung</a>.
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/9665f67a792b0b6cb2c89cc25590e114.js"></script>
+                </div>
             </div>
 
             <br>
             <li><b>How to use One-To-Many mappings in JPA:</b></li>
-
             - To use a One-To-Many mapping, you do the following: <br>
             - Vlad lecture about using One-To-Many Relations <a
                 href="https://vladmihalcea.teachable.com/courses/931584/lectures/17209594">here</a>. Vlad's blog on his
@@ -1346,13 +1549,15 @@
             - Relationships can be unidirectional or bi-directional. <br>
             - We normally prefer bi-directional relationships <br>
             - For Bi-directional relationships, the Project class will look something like this:
-
-
             For example, a Project can have many Tasks.
-
-            - This generates a log that looks like this: <br>
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/6370eeb98ec6c7c98e31ed9f9ac88660.js"></script>
+            - This generates a log that looks like this:
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/6370eeb98ec6c7c98e31ed9f9ac88660.js"></script>
+                </div>
             </div>
             - https://stackoverflow.com/questions/23723025/spring-data-delete-by-is-supported <br>
             - https://stackoverflow.com/questions/1079114/where-does-the-transactional-annotation-belong <br>
@@ -1366,11 +1571,10 @@
                 href="https://docs.spring.io/spring-framework/docs/current/reference/html/data-access.html#orm">here</a>.
             <br>
         </div>
-
-
     </div>
 
 </div>
-<script src="script.js"></script>
+
+<script src="../../script.js"></script>
 </body>
 </html>

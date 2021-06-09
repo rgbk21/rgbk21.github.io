@@ -31,7 +31,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,400&display=swap"
           rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../../globalStyles.css">
-    <meta name="keywords" content="Java, Floats, Overflow, Unboxing, Autoboxing">
     <meta name="author" content="Raj Gaurav Ballabh Kumar">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Java Notes</title>
@@ -271,9 +270,13 @@
         <br>
         }
         <br>
-
-        <div class="code-snippet">
-            <script src="https://gist.github.com/rgbk21/ba79d9022d2625127daa0f40896e3ceb.js"></script>
+        <div class="code-block">
+            <div class="expand-code-snip-btn border border-primary rounded">
+                <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+            </div>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/ba79d9022d2625127daa0f40896e3ceb.js"></script>
+            </div>
         </div>
         - You can only specify one super class for any subclass that you create. Java does not support the inheritance
         of multiple superclasses into a single subclass. What you can do is create a hierarchy of inheritance in which a
@@ -292,8 +295,13 @@
             it refers to - that determines what members can be accessed.</i> That is when a reference to a subclass
             object is assigned to a superclass reference variable, you will have access to only those parts of the
             object defined by the superclass.
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/8d3f3665ec70aced023563b5888d2f20.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/8d3f3665ec70aced023563b5888d2f20.js"></script>
+                </div>
             </div>
         </div>
 
@@ -316,8 +324,13 @@
             <br>
             - Since constructors can be overloaded, <code>super()</code> can be called using any form defined by the
             superclass. The constructor executed will be the one that matches the arguments.
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/7239243bccc65ce54f32df1b7248e120.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/7239243bccc65ce54f32df1b7248e120.js"></script>
+                </div>
             </div>
             Notice that <code>super()</code> is passed an object of type <code>BoxWeight</code> - not of type
             <code>Box</code>. This still
@@ -368,8 +381,13 @@
             <i>member</i> can be either a method or instance variable. This second form of <code>super</code> is most
             applicable to situations in which
             member names of a subclass hide members by the same name in the superclass.
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/b8a1eff34f8ebf8331a78eeaeca6ebe5.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/b8a1eff34f8ebf8331a78eeaeca6ebe5.js"></script>
+                </div>
             </div>
         </div>
 
@@ -378,8 +396,13 @@
             You can build hierarchies that contain as many layers of inheritance as you like. Because of inheritance,
             Shipment can make use of the previously defined classes of BoxWeight and Box, adding only the extra
             information that it needs for its own, specific application.
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/d1fb9bc209d80caa7011327b0bf7f17b.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/d1fb9bc209d80caa7011327b0bf7f17b.js"></script>
+                </div>
             </div>
             This example illustrates an important point - <code>super</code> always refers to the constructor in the
             closest
@@ -390,8 +413,13 @@
             arguments "up the line". This is true whether or not a subclass needs an argument of its own. <br>
             - This is another example: the question was - given an abstract class Car, with one abstract method
             getMileage, create 2 classes that extend the class.
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/bac0718d410aa1255b9f7212577b581b.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/bac0718d410aa1255b9f7212577b581b.js"></script>
+                </div>
             </div>
         </div>
 
@@ -402,8 +430,13 @@
             subclass. Further, since <code>super()</code> must be the first statement that is executed in a subclass'
             constructor, this order is the same whether or not <code>super()</code> is used. If <code>super()</code> is
             not used, then the default or parameterless constructor of each superclass will be executed.
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/93a913ea7c83ad866875433b6f3b09da.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/93a913ea7c83ad866875433b6f3b09da.js"></script>
+                </div>
             </div>
         </div>
 
@@ -418,9 +451,13 @@
             - In order to call the parameterized constructor of the child class, you would have to explicitly call the parameterized version of the <code>super</code> method, as
             shown in the third constructor. Ignore the difference of the two args that are being passed, that is only because we cannot create two constructors with the same set of
             args.
-
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/dbab6ec7ddbf20b2772a53f6b07b780d.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/dbab6ec7ddbf20b2772a53f6b07b780d.js"></script>
+                </div>
             </div>
         </div>
 
@@ -433,8 +470,13 @@
             within its subclass, it will always refer to the version of that method defined by the subclass. The version
             of the method
             defined by the superclass will be hidden.
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/0db84861d6a4b08c62815ce370f217df.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/0db84861d6a4b08c62815ce370f217df.js"></script>
+                </div>
             </div>
             Remember that method overriding occurs ONLY when the names AND the type signatures are identical. Otherwise
             the two methods are simply overloaded.
@@ -466,8 +508,13 @@
             important to understand that <i>it is the type of the reference variable - not the type of the object that
             it
             refers to - that determines what members can be accessed</i>.
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/d1e79c337d71a4468731f182f443b4cb.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/d1e79c337d71a4468731f182f443b4cb.js"></script>
+                </div>
             </div>
         </div>
 
@@ -477,8 +524,13 @@
             <br>
             <a href="https://stackoverflow.com/questions/14903145/what-is-the-difference-between-list-and-arraylist">What
                 is the difference between the following:</a>
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/a237650de27c30321d3324332334b1ea.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/a237650de27c30321d3324332334b1ea.js"></script>
+                </div>
             </div>
             - There's no difference between list implementations in both of your examples. There's however a difference
             in a way you can further use variable myList in your code.
@@ -516,10 +568,15 @@
             <br>
             The above argument also holds for methods that operate on sets or return sets. They should specify
             parameters of type Set:
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/d23a034039d972f802e397e8f353d313.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/d23a034039d972f802e397e8f353d313.js"></script>
+                </div>
             </div>
-            //TODO: <b>You cannot write efficient code if you do not know whether random access is efficient or not.</b>
+            //TODO: You cannot write efficient code if you do not know whether random access is efficient or not.
             <br>
             //TODO: What is <b>RandomAccess</b>?
             <a href="https://stackoverflow.com/questions/3383726/java-declaring-from-interface-type-instead-of-class">Another
@@ -538,8 +595,13 @@
             other. <br>
             - However, the overriding method of the subclass CAN return an object that is the subclass of the object that is being returned from the superclass method that is being
             overridden. Doesn't make sense? Look at the below example:
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/974d88b9a0c80a4178b46ebfea69e5e8.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/974d88b9a0c80a4178b46ebfea69e5e8.js"></script>
+                </div>
             </div>
             - Second, when overriding a method, we can increase access but we can never decrease access. Java specifies that the access specifier for an overriding method can allow
             more, but not less, access than the overridden method. For example, a <code>protected</code> instance method in the superclass can be made <code>public</code>, but not
@@ -563,8 +625,13 @@
             - Abstract classes/methods cannot be declared <code>final</code>. Abstract classes/methods cannot be declared <code>static</code> <br>
             - Although abstract classes cannot be used to instantiate objects, they can be used to create object references. <br>
             - To declare a class abstract, we use the <code>extends</code> keyword. Note that abstract classes are <i>extended</i> whereas interfaces are <i>implemented</i>.
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/8974236d5a5b60ecb8407a47f497e8e6.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/8974236d5a5b60ecb8407a47f497e8e6.js"></script>
+                </div>
             </div>
         </div>
 
@@ -579,8 +646,13 @@
                 - Methods declared as <code>final</code> can sometimes also provide performance enhancement by <i>inlining</i> calls to them. Normally, Java resolves calls to
                 methods dynamically at run-time. This is called <i>late-binding</i>. However, since <code>final</code> methods cannot be overridden, a call to one can be resolved
                 at compile time. This is called <i>early-binding</i>.
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/b3b6eb7183aa934df4e18a184fb58a3c.js"></script>
+                <div class="code-block">
+                    <div class="expand-code-snip-btn border border-primary rounded">
+                        <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                    </div>
+                    <div class="code-snippet">
+                        <script src="https://gist.github.com/rgbk21/b3b6eb7183aa934df4e18a184fb58a3c.js"></script>
+                    </div>
                 </div>
             </div>
 
@@ -594,8 +666,13 @@
                 <code>final</code> (since
                 an abstract class is incomplete by itself and relies upon its subclasses to provide complete
                 implementations).
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/d1484bd4707a2a993929005402f93501.js"></script>
+                <div class="code-block">
+                    <div class="expand-code-snip-btn border border-primary rounded">
+                        <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                    </div>
+                    <div class="code-snippet">
+                        <script src="https://gist.github.com/rgbk21/d1484bd4707a2a993929005402f93501.js"></script>
+                    </div>
                 </div>
             </div>
         </div>
@@ -612,7 +689,7 @@
             `
             <div class="row">
                 <img src="ObjectClass.PNG"
-                     width="50%"
+                     width="425"
                      class="center-block img-fluid"
                      alt="Example1">
             </div>
@@ -675,9 +752,13 @@
             - Variables can be declared inside interface declarations. They are implicitly <code>final</code> and <code>static</code>,
             meaning they cannot be changed by the implementing class. They must also be initialized. All methods and
             variables are implicitly <code>public</code>.
-
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/90194e752fe075066d8fefa19a1c6890.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/90194e752fe075066d8fefa19a1c6890.js"></script>
+                </div>
             </div>
         </div>
 
@@ -700,8 +781,13 @@
             - The methods that implement an interface must be declared public. Also, the type signature of the
             implementing method must match exactly the type signature specified in the interface definition. <br>
 
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/81db928204fd2950e86886bd4547d060.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/81db928204fd2950e86886bd4547d060.js"></script>
+                </div>
             </div>
         </div>
 
@@ -709,14 +795,23 @@
         <div class="sub-heading">Accessing implementations through Interface references</div>
         <div>
             - Consider a Teacher class that implements the IPerson interface. <br>
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/decb62c60c0ef9b6b02c77b994bc5703.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/decb62c60c0ef9b6b02c77b994bc5703.js"></script>
+                </div>
             </div>
 
             - Then the typical polymorphic properties work with interfaces as well:
-
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/b3c93068ad88db2b7eec1017b2ccdea1.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/b3c93068ad88db2b7eec1017b2ccdea1.js"></script>
+                </div>
             </div>
             - If a class implements an interface but does not fully implement the methods required by that interface,
             then
@@ -735,8 +830,13 @@
             scope, it must be qualified by the name of the class or interface of which it is a member. Thus, outside of
             the class or interface in which a nested interface is declared, its name must be fully qualified. <br>
 
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/f25d17a11921eedba6449e14d90d126e.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/f25d17a11921eedba6449e14d90d126e.js"></script>
+                </div>
             </div>
         </div>
 
@@ -751,8 +851,13 @@
             space as final variables. <br>
             - But usage of constants in interfaces is controversial. Oh my! <a
                 href="https://stackoverflow.com/questions/2659593/what-is-the-use-of-interface-constants">Here on SO</a>.
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/258cf35137ea3307a1c52bc356cc801c.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/258cf35137ea3307a1c52bc356cc801c.js"></script>
+                </div>
             </div>
 
         </div>
@@ -763,8 +868,13 @@
             classes. When a class implements an interface that inherits another interface, it must provide
             implementations for all methods required by the interface inheritance chain.
 
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/b17a5347d66147567a8fe7377e30af32.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/b17a5347d66147567a8fe7377e30af32.js"></script>
+                </div>
             </div>
         </div>
 
@@ -779,8 +889,13 @@
             interface can define default methods, the interface must still be implemented by a class if an instance is
             to be created. <br>
 
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/179654c3e0db7c1ca24e94122063b45d.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/179654c3e0db7c1ca24e94122063b45d.js"></script>
+                </div>
             </div>
         </div>
 
@@ -807,10 +922,14 @@
             - It is possible to explicitly refer to a default implementation in an inherited interface by using this
             form of <code>super</code>. Its general form is shown here: <code>InterfaceName.super.methodName() </code>.
 
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/cf86eb7513b317e11259873aa731edd2.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/cf86eb7513b317e11259873aa731edd2.js"></script>
+                </div>
             </div>
-
         </div>
 
 
@@ -833,7 +952,6 @@
             subinterface. <br>
             - The key benefit of a private interface method is that it lets two or more default methods use a common
             piece of code, thus avoiding code duplication.
-
         </div>
     </div>
 
@@ -873,15 +991,27 @@
                 You can increase the capacity of an ArrayList object manually by calling <code>ensureCapacity()</code>
                 <br>
             </div>
-            <div class="sub-heading">Difference between <code>capacity</code> and <code>size</code> of an Array List
-            </div>
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/2287175fc5fd7a6e5161cf6ca19558c6.js"></script>
-            </div>
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/9b38de57502f5d6dc4c821c74e7f1285.js"></script>
-            </div>
+
+            <div class="sub-heading">Difference between <code>capacity</code> and <code>size</code> of an Array List</div>
             <div class="textual-content">
+
+                <div class="code-block">
+                    <div class="expand-code-snip-btn border border-primary rounded">
+                        <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                    </div>
+                    <div class="code-snippet">
+                        <script src="https://gist.github.com/rgbk21/2287175fc5fd7a6e5161cf6ca19558c6.js"></script>
+                    </div>
+                </div>
+                <div class="code-block">
+                    <div class="expand-code-snip-btn border border-primary rounded">
+                        <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                    </div>
+                    <div class="code-snippet">
+                        <script src="https://gist.github.com/rgbk21/9b38de57502f5d6dc4c821c74e7f1285.js"></script>
+                    </div>
+                </div>
+
                 <a href="https://stackoverflow.com/questions/7688151/java-arraylist-ensurecapacity-not-working">So what
                     is going on?</a>
                 <code>ensureCapacity</code> doesn't change the logical size of an ArrayList - it changes the <code>capacity</code>,
@@ -897,9 +1027,16 @@
                 excessive copying) -
                 it doesn't affect the logical model of what's in the list, if you see what I mean.
             </div>
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/0f617fe981b5fba290c3187b6e801543.js"></script>
+
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/0f617fe981b5fba290c3187b6e801543.js"></script>
+                </div>
             </div>
+
             <div class="textual-content">
                 <code>void trimToSize()</code>: This will reduce the size of the array that underlies an
                 <code>ArrayList</code>
@@ -929,12 +1066,22 @@
                 The caller is thus free to modify the returned array.
                 But <a href="https://stackoverflow.com/a/5374359/8742428"></a>be careful while using the
                 <code>toArray</code> method. it produces a <code>ClassCastException</code>.
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/176cdd58796064fe5a6aeed317e829d8.js"></script>
+                <div class="code-block">
+                    <div class="expand-code-snip-btn border border-primary rounded">
+                        <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                    </div>
+                    <div class="code-snippet">
+                        <script src="https://gist.github.com/rgbk21/176cdd58796064fe5a6aeed317e829d8.js"></script>
+                    </div>
                 </div>
                 In fact, even if you try to do it with objects, it still produces the same Exception
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/c7376fb06f35351f118cfe86b380deea.js"></script>
+                <div class="code-block">
+                    <div class="expand-code-snip-btn border border-primary rounded">
+                        <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                    </div>
+                    <div class="code-snippet">
+                        <script src="https://gist.github.com/rgbk21/c7376fb06f35351f118cfe86b380deea.js"></script>
+                    </div>
                 </div>
 
             </div>
@@ -1258,8 +1405,13 @@
             <a href="https://stackoverflow.com/a/4235787/8742428">You can never</a> change a key value in a map.
 
 
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/7f20bff598afe6a7392d6e6319186f9b.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/7f20bff598afe6a7392d6e6319186f9b.js"></script>
+                </div>
             </div>
 
             - The <i>order</i> of a map is defined as the order in which the iterators on the map's collection views
@@ -1357,13 +1509,25 @@
             <br>
             <a href="https://stackoverflow.com/a/7416296/8742428">Map.Entry interface in java</a>
             <br>
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/0ca9009ba2110c481c5f419c486c5037.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/0ca9009ba2110c481c5f419c486c5037.js"></script>
+                </div>
             </div>
+
             <b>How do we remove a &lt;key, value&gt pair</b>
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/67d9b1ec5083fbf411bf39f69eb2cebb.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/67d9b1ec5083fbf411bf39f69eb2cebb.js"></script>
+                </div>
             </div>
+
             <b>How to create a new Entry(K, V) object</b>
             <br>
             <a href="https://stackoverflow.com/questions/3110547/java-how-to-create-new-entry-key-value">Java - How to
@@ -1374,13 +1538,24 @@
             <br>
             //TODO: Can you add the created entry back to a Hash Map without unpackaging the entry by using
             <code>entry.getKey()</code> and <code>entry.getValue()</code>
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/2845c1c866a6774eb7f6adfc9a962e68.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/2845c1c866a6774eb7f6adfc9a962e68.js"></script>
+                </div>
             </div>
+
             If you want to create a mutable entry, in that case you will use <a
                 href="https://stackoverflow.com/a/54602876/8742428">AbstractMap.SimpleEntry</a>
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/deddabc0bbe05cf67789f77471f34a52.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/deddabc0bbe05cf67789f77471f34a52.js"></script>
+                </div>
             </div>
         </div>
 
@@ -1520,8 +1695,13 @@
             expression above will be executed.
             <br>
             - The following code snippet shows an example of everything put together:
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/4fdf743259dd45ca13ce4b4649b2814f.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/4fdf743259dd45ca13ce4b4649b2814f.js"></script>
+                </div>
             </div>
             - Java is a strongly-typed language, which means that the compiler must know the type of all expressions
             used
@@ -1564,7 +1744,7 @@
 
             <div class="row">
                 <img src="imgs/LambdaExpressions/LambdaExpressionExamples.PNG" class="center-block img-fluid"
-                     alt="LambdaExpressionExamples" width="50%">
+                     alt="LambdaExpressionExamples" width="450">
             </div>
         </div>
 
@@ -1576,15 +1756,25 @@
         <div class="sub-heading">Syntax for Lambda Expressions</div>
         <div>
             - These are some things that you can do with the parameters that are input to the Lambda Expressions.
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/8488ffcd473afaed030fe34af09c5abe.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/8488ffcd473afaed030fe34af09c5abe.js"></script>
+                </div>
             </div>
 
             - These are some things that you can do with the body of the lambda expressions. <br>
             - The body of a lambda expression can be a block statement or a single expression. A block statement is
             enclosed in braces; a single expression is not enclosed in braces.
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/d8881872d1981113731b500411a8af76.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/d8881872d1981113731b500411a8af76.js"></script>
+                </div>
             </div>
         </div>
 
@@ -1610,8 +1800,13 @@
             expects a type, which is called the
             <i>target type</i>. The process of inferring the type of a lambda expression from the context is known as
             <i>target typing</i>.
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/b810f6efcb074aa197646bacf8ce00ea.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/b810f6efcb074aa197646bacf8ce00ea.js"></script>
+                </div>
             </div>
         </div>
 
@@ -1620,8 +1815,13 @@
             - Changing the behavior of a method through its parameters is known as behavior parameterization. This is
             also known as passing code as data because you pass code (logic, functionality, or behavior) encapsulated in
             lambda expressions to methods as if it is data. <br>
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/acc99d55de825af933ecba4c61ae3140.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/acc99d55de825af933ecba4c61ae3140.js"></script>
+                </div>
             </div>
             - In the above example, instead of passing the lambda expression directly as a parameter, you could have
             assigned it to a variable of the desired type (<code>AnotherJoiner</code> in this case) and passed that
@@ -1753,8 +1953,13 @@
             <code>ToDoubleFunction&ltT&gt</code> take an argument of type T and return an int, a long, and a double,
             respectively. <br>
             - Similar specialized functions exist for other types of generic functions listed in the table.
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/d91d072b2202fb8014ad0381050b2d6f.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/d91d072b2202fb8014ad0381050b2d6f.js"></script>
+                </div>
             </div>
 
             - The <code>Function</code> interface contains the following default and static methods:
@@ -1768,8 +1973,13 @@
             <a href="https://stackoverflow.com/questions/43849066/java-8-functions-compose-and-andthen">difference
                 between</a> <code>andThen</code> and <code>compose</code>
 
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/db381b04ee62139847b146daacc9c9a1.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/db381b04ee62139847b146daacc9c9a1.js"></script>
+                </div>
             </div>
         </div>
 
@@ -1782,9 +1992,13 @@
             <li><code>default Predicate&ltT&gt and(Predicate&lt? super T&gt other)</code></li>
             <li><code>default Predicate&ltT&gt or(Predicate&lt? super T&gt other)</code></li>
             <li><code>static &ltT> Predicate&ltT&gt isEqual(Object targetRef)</code></li>
-
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/e2200052d3754d7258ce5baf5885f970.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/e2200052d3754d7258ce5baf5885f970.js"></script>
+                </div>
             </div>
         </div>
 
@@ -1856,8 +2070,13 @@
             be a
             <code>class</code>, an <code>interface</code>, or an <code>enum</code>. <br>
 
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/3b947c8b5d6e62bf069e3783c95ae998.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/3b947c8b5d6e62bf069e3783c95ae998.js"></script>
+                </div>
             </div>
         </div>
 
@@ -1888,13 +2107,23 @@
             constructor. The compiler selects a specific constructor based on the context. It looks at the target type
             and the number of arguments in the abstract method of the target type. The constructor whose number of
             arguments matches with the number of arguments in the abstract method of the target type is chosen. <br>
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/3637f03ed86b122e9bd0a9b8bbfd765f.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/3637f03ed86b122e9bd0a9b8bbfd765f.js"></script>
+                </div>
             </div>
             - Arrays in Java do not have constructors. There is a special syntax to use constructor references for
             arrays. Array constructors are treated to have one argument of int type that is the size of the array.
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/80cf545f0884c6271a085d030498dc1d.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/80cf545f0884c6271a085d030498dc1d.js"></script>
+                </div>
             </div>
             - The syntax for the constructor reference for arrays supports creating an array of multiple dimensions.
             However, you can specify the length for only the first dimension.
@@ -1925,8 +2154,13 @@
             parameters, exist in the enclosing scope. Simple names in a scope must be unique. It means that a lambda
             expression
             cannot redefine variables with the same name that already exist in the enclosing scope.
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/dd75fbaafe9e5c1c96076d39b30dc0f1.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/dd75fbaafe9e5c1c96076d39b30dc0f1.js"></script>
+                </div>
             </div>
         </div>
 
@@ -1945,8 +2179,13 @@
             expression keeps a copy of the local variables used in its body. If the local variables are reference
             variables, a copy of the
             references is kept, not a copy of the objects.
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/f0fb4084b1bc32e926213173484ee99b.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/f0fb4084b1bc32e926213173484ee99b.js"></script>
+                </div>
             </div>
             - The semantics of <code>this</code> is actually one of the areas where Java lambdas differ from anonymous
             implementations of interfaces. An anonymous interface implementation can have its own instance variables
@@ -1960,8 +2199,6 @@
             - <a href="https://stackoverflow.com/questions/18198176/java-8-lambda-function-that-throws-exception">SO
             Link</a>
         </div>
-
-
     </div>
 
     <hr>
@@ -2027,7 +2264,7 @@
 
                 <div class="row">
                     <img src="imgs/Streams/StreamPipeline.PNG" class="center-block img-fluid" alt="StreamPipeline"
-                         width="50%">
+                         width="350">
                 </div>
 
                 - The above figure shows a stream pipeline with a data source, three streams, and three operations. The
@@ -2077,13 +2314,18 @@
                 <code>IntStream</code>, <code>LongStream</code>, and <code>DoubleStream</code> to work with primitives
                 <div class="row">
                     <img src="imgs/Streams/ClassDiagram_Streams.PNG" class="center-block img-fluid" alt="StreamPipeline"
-                         width="50%">
+                         width="450">
                 </div>
             </li>
 
             - Basic example using streams
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/03258a916a2f1d53fd53dc94dea31fc0.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/03258a916a2f1d53fd53dc94dea31fc0.js"></script>
+                </div>
             </div>
         </div>
 
@@ -2099,9 +2341,13 @@
                 to create a stream of primitive values from an array of primitive type, you need to use the
                 <code>Arrays.stream()</code> method. <br>
 
-
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/155a29eca3f80fe7741fa67d5d428206.js"></script>
+                <div class="code-block">
+                    <div class="expand-code-snip-btn border border-primary rounded">
+                        <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                    </div>
+                    <div class="code-snippet">
+                        <script src="https://gist.github.com/rgbk21/155a29eca3f80fe7741fa67d5d428206.js"></script>
+                    </div>
                 </div>
 
                 - The Stream interface also supports creating a stream using the builder pattern using the
@@ -2122,8 +2368,13 @@
                 the <code>build()</code> method; doing so results in an <code>IllegalStateException</code> runtime
                 exception.
 
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/39246feec88a2caca1a27c7de496eaf0.js"></script>
+                <div class="code-block">
+                    <div class="expand-code-snip-btn border border-primary rounded">
+                        <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                    </div>
+                    <div class="code-snippet">
+                        <script src="https://gist.github.com/rgbk21/39246feec88a2caca1a27c7de496eaf0.js"></script>
+                    </div>
                 </div>
 
             </li>
@@ -2131,9 +2382,13 @@
             <li>
                 <b>Empty Streams</b>: An empty stream is a stream with no elements. The Stream interface contains an
                 <code>empty()</code> static method to create an empty sequential stream.
-
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/405c30e562e22b66df28451010daf3b9.js"></script>
+                <div class="code-block">
+                    <div class="expand-code-snip-btn border border-primary rounded">
+                        <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                    </div>
+                    <div class="code-snippet">
+                        <script src="https://gist.github.com/rgbk21/405c30e562e22b66df28451010daf3b9.js"></script>
+                    </div>
                 </div>
             </li>
 
@@ -2151,16 +2406,26 @@
                 so on. <br>
                 - Its elements are - seed, f(seed), f(f(seed)), f(f(f(seed))), and so on. <br>
 
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/1ace319f763e2b8e76c1beae18946284.js"></script>
+                <div class="code-block">
+                    <div class="expand-code-snip-btn border border-primary rounded">
+                        <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                    </div>
+                    <div class="code-snippet">
+                        <script src="https://gist.github.com/rgbk21/1ace319f763e2b8e76c1beae18946284.js"></script>
+                    </div>
                 </div>
 
                 b) Using the <code>Stream.generate()</code> Method: <br>
                 - The <code>generate(Supplier &ltT&gt s)</code> method uses the specified <code>Supplier</code> to
                 generate an
                 infinite sequential unordered stream. <br>
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/42fd0acbd852cb7e1eb16af85c980b9e.js"></script>
+                <div class="code-block">
+                    <div class="expand-code-snip-btn border border-primary rounded">
+                        <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                    </div>
+                    <div class="code-snippet">
+                        <script src="https://gist.github.com/rgbk21/42fd0acbd852cb7e1eb16af85c980b9e.js"></script>
+                    </div>
                 </div>
             </li>
 
@@ -2175,16 +2440,26 @@
                 in an array over there as well. So you can create a stream from a reference type array using two
                 methods: <code>Arrays.stream(T[] t)</code> and <code>Stream.of(T...t)</code> method.
 
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/f18016f2246b36bebd2ebf3c9783a3f8.js"></script>
+                <div class="code-block">
+                    <div class="expand-code-snip-btn border border-primary rounded">
+                        <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                    </div>
+                    <div class="code-snippet">
+                        <script src="https://gist.github.com/rgbk21/f18016f2246b36bebd2ebf3c9783a3f8.js"></script>
+                    </div>
                 </div>
             </li>
 
             <li>
                 <b>Streams from Collections</b>: The Collection interface contains the <code>stream()</code> and <code>parallelStream()</code>
                 methods that create sequential and parallel streams from a Collection, respectively.
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/feb9e0d23578010fe67b551675106166.js"></script>
+                <div class="code-block">
+                    <div class="expand-code-snip-btn border border-primary rounded">
+                        <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                    </div>
+                    <div class="code-snippet">
+                        <script src="https://gist.github.com/rgbk21/feb9e0d23578010fe67b551675106166.js"></script>
+                    </div>
                 </div>
             </li>
 
@@ -2226,8 +2501,13 @@
             <li><code>&ltX extends Throwable&gt T orElseThrow(Supplier&lt? extends X&gt exceptionSupplier)</code>
                 <code>throws X extends Throwable</code></li>
 
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/269c48fab7962716b01c7f987cf6b4fa.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/269c48fab7962716b01c7f987cf6b4fa.js"></script>
+                </div>
             </div>
         </div>
 
@@ -2375,8 +2655,13 @@
             <code>peek(Consumer&lt? super T&gt action)</code> method of the <code>Stream&ltT&gt</code> interface that is
             meant only
             for debugging purposes. It produces a stream after applying an action on each input element.
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/455001ae7c38c7f30f0aff3e4b16a748.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/455001ae7c38c7f30f0aff3e4b16a748.js"></script>
+                </div>
             </div>
         </div>
 
@@ -2395,8 +2680,13 @@
             method for a parallel
             stream only when necessary because it may slow down processing.
 
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/09df3ac99f1421b12c45d9cd016c3dc7.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/09df3ac99f1421b12c45d9cd016c3dc7.js"></script>
+                </div>
             </div>
 
         </div>
@@ -2410,7 +2700,7 @@
 
             <div class="row">
                 <img src="imgs/Streams/map_operation.PNG" class="center-block img-fluid" alt="map_operation"
-                     width="40%">
+                     width="250">
             </div>
 
             - You can apply the map operation on a stream using one of the following methods of the Stream&ltT&gt
@@ -2436,9 +2726,13 @@
             different. <br>
             - Then it "flattens" the output stream, which is currently a Stream of Streams, to produce a single Stream.
             So basically it converts a <code>Stream&ltStream&ltR&gt&gt</code> to <code>Stream&ltR&gt</code> <br>
-
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/4db5e7779731b92cb1c47eab0b3567c7.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/4db5e7779731b92cb1c47eab0b3567c7.js"></script>
+                </div>
             </div>
 
             - Does this make sense now?
@@ -2456,7 +2750,7 @@
 
             <div class="row">
                 <img src="imgs/Streams/reduce_operation.PNG" class="center-block img-fluid" alt="reduce_operation"
-                     width="50%">
+                     width="320">
             </div>
 
             - The <code>Stream&ltT&gt</code> interface contains a <code>reduce()</code> method to perform the reduce
@@ -2501,12 +2795,22 @@
             - The outer class, in this case, is <i>ShadowTest2</i>. This is present in the class file called <i>ShadowTest2.class</i>. The inner class is called <i>FirstLevel2</i>.
             And this is present in the class called <i>ShadowTest2$FirstLevel2.class</i>. This is the format, the parent class name, then the '$' symbol followed by the inner class
             name.
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/878a9e08965337f0a142bb47faede1bf.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/878a9e08965337f0a142bb47faede1bf.js"></script>
+                </div>
             </div>
             - On the other hand, classes that are defined as below get their own .class files.
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/8c6c943be7e7c8793b8e9d62b484cff7.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/8c6c943be7e7c8793b8e9d62b484cff7.js"></script>
+                </div>
             </div>
 
             - The generated .class files are also the entity that
@@ -2573,17 +2877,19 @@
             - Any value without a decimal point is an <code>int</code> whereas any value with a decimal point is a
             <code>double</code>.
 
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/672f2439d45245190da659a57c7c4e00.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/672f2439d45245190da659a57c7c4e00.js"></script>
+                </div>
             </div>
-
         </div>
 
         <div class="sub-heading">Lecture 19: Trick to prevent the skipping of String input value</div>
         <div>
-            - <a
-                href="https://stackoverflow.com/questions/13102045/scanner-is-skipping-nextline-after-using-next-or-nextfoo">SO
-            Source here</a>. <br>
+            - <a href="https://stackoverflow.com/questions/13102045/scanner-is-skipping-nextline-after-using-next-or-nextfoo">SO Source here</a>. <br>
         </div>
 
         <div class="sub-heading">Lecture 27: Method Overloading</div>
@@ -2597,8 +2903,13 @@
             However, do note that it's not possible to have two method implementations that differ only in their return
             types. In this case, the code simply wouldn't compile because of the method call ambiguity - the compiler
             wouldn't know which implementation of multiply() to call.
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/648a0653a065eb3dcd990f4a05e42cf2.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/648a0653a065eb3dcd990f4a05e42cf2.js"></script>
+                </div>
             </div>
         </div>
 
@@ -2614,8 +2925,13 @@
             - You cannot access instance members from a static method <br>
             - <a href="https://docs.oracle.com/javase/tutorial/java/javaOO/classvars.html">Link to Oracle documentation
             explaining static class members</a> <br>
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/153dccd3fbdb295377ccb722c0cf827c.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/153dccd3fbdb295377ccb722c0cf827c.js"></script>
+                </div>
             </div>
         </div>
     </div>
@@ -2657,8 +2973,13 @@
             shift number by <i>n</i> is equivalent to dividing the number by 2<sup>n</sup>. <br>
             - Difference between <code> << </code> and <code> <<< </code> <a
                 href="https://stackoverflow.com/a/2811399/8742428">here on SO</a>. <br>
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/0a05b1c9bde2489905fb13bd2c5a72c2.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/0a05b1c9bde2489905fb13bd2c5a72c2.js"></script>
+                </div>
             </div>
         </div>
     </div>
@@ -2713,8 +3034,13 @@
                     </tbody>
                 </table>
             </div>
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/10fd9d69c14b2d716491b6bf6532779b.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/10fd9d69c14b2d716491b6bf6532779b.js"></script>
+                </div>
             </div>
         </div>
 
@@ -2759,8 +3085,13 @@
                 </table>
             </div>
 
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/f84ef4515086cf8d89a8c41eb93c4903.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/f84ef4515086cf8d89a8c41eb93c4903.js"></script>
+                </div>
             </div>
         </div>
 
@@ -2801,16 +3132,26 @@
                 </table>
             </div>
 
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/d53bed506f20f53bd5882494b3d1ec7a.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/d53bed506f20f53bd5882494b3d1ec7a.js"></script>
+                </div>
             </div>
         </div>
 
         <div class="sub-heading">Lecture 56 - Regular Expressions - Practice</div>
         <div>
             - We can combine regular expressions and string methods to replace characters from strings. <br>
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/481d7763686c24466d04bbf74ae60bd9.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/481d7763686c24466d04bbf74ae60bd9.js"></script>
+                </div>
             </div>
         </div>
     </div>
@@ -2852,8 +3193,13 @@
             - We can write down a set of statements in a block and declare the block as <code>static</code>. This <code>static</code> block will be executed when the class is
             loaded, i.e. before the creation of any object of the class. <br>
 
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/55814b7c3b6a3573e7707f6fa2a57c5d.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/55814b7c3b6a3573e7707f6fa2a57c5d.js"></script>
+                </div>
             </div>
         </div>
 
@@ -2870,9 +3216,13 @@
             <br>
             - If a method is declared as <code>final</code> then that method cannot be overridden. Similarly, if a class is declared as <code>final</code>, the class cannot be
             extended.
-
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/dcf42f5d6ae600c6c7fcd3cf5689fb26.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/dcf42f5d6ae600c6c7fcd3cf5689fb26.js"></script>
+                </div>
             </div>
         </div>
 
@@ -2883,9 +3233,13 @@
             - Note that this technique is not thread-safe. Refer <a
                 href="https://stackoverflow.com/questions/70689/what-is-an-efficient-way-to-implement-a-singleton-pattern-in-java">this SO answer to see the correct way to create a
             singleton class</a>.
-
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/1861097b7055be9b0c874b08116704c8.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/1861097b7055be9b0c874b08116704c8.js"></script>
+                </div>
             </div>
         </div>
     </div>
@@ -2908,7 +3262,7 @@
             The self answer by Stephen that explains how you launch a program from the CLI using the java command.
             <div class="row">
                 <img src="imgs/Udemy_Java/Section17/WrongPackage.png"
-                     width="100%"
+                     width="1220"
                      class="center-block img-fluid"
                      alt="Example1">
             </div>
@@ -2923,7 +3277,7 @@
             <a href="https://docs.oracle.com/en/java/javase/13/docs/specs/man/javac.html">Source on Oracle website</a>.
             <div class="row">
                 <img src="imgs/Udemy_Java/Section17/RightPackage.PNG"
-                     width="100%"
+                     width="1352"
                      class="center-block img-fluid"
                      alt="Example1">
             </div>
@@ -2973,16 +3327,19 @@
                  width="633"
                  class="center-block img-fluid"
                  alt="Example1">
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/2fe471bcecd48191e92d0ef953357264.js"></script>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/2fe471bcecd48191e92d0ef953357264.js"></script>
+                </div>
             </div>
         </div>
-
-
     </div>
 
 
-    <script src="script.js"></script>
+    <script src="../../script.js"></script>
 </div>
 </body>
 </html>
