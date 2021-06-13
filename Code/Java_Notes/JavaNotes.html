@@ -170,6 +170,8 @@
     Section 16: <a href="#Udemy_Java_Section16">Static and final</a> <br>
     Section 17: <a href="#Udemy_Java_Section17">Packages</a> <br>
     Section 18: <a href="#Udemy_Java_Section18">Exceptions</a> <br>
+    Section 19: <a href="#Udemy_Java_Section19">MultiThreading</a> <br>
+    Section 20: <a href="#Udemy_Java_Section20">java.lang package</a> <br>
 
     <hr>
     <div id="inheritance" class="chapter">Chapter 8: Inheritance</div>
@@ -269,7 +271,6 @@
         - class <i>subclass-name</i> extends <i>superclass-name</i>{
         <br>
         }
-        <br>
         <div class="code-block">
             <div class="expand-code-snip-btn border border-primary rounded">
                 <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
@@ -3316,7 +3317,7 @@
         <div class="sub-heading">Lecture 167: How to handle Exceptions</div>
         <div>
             - A <code>try</code> block can have multiple <code>catch</code> blocks. But take a note of the hierarchy in which you are catching the exceptions. The subclass should
-            be the one that is present higher up and the superclass should be present below.
+            be the one that is present higher up and the superclass should be present below. <br>
             - A <code>try-catch</code> block can also have a <code>finally</code> block. The code in the finally block is executed irrespective of whether
             there was an exception during the execution of the program. Even if the program executed properly, the <code>finally</code> block would still be executed. <br>
             - It is not necessary that a <code>try</code> should have a <code>catch</code>. A <code>try</code> can just have a <code>finally</code> and that is still fine. The code
@@ -3333,6 +3334,82 @@
                 </div>
                 <div class="code-snippet">
                     <script src="https://gist.github.com/rgbk21/2fe471bcecd48191e92d0ef953357264.js"></script>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+    <div id="Udemy_Java_Section19" class="chapter">Section 19: MultiThreading</div>
+    <hr>
+
+    <div>
+        - //TODO
+    </div>
+
+    <hr>
+    <div id="Udemy_Java_Section20" class="chapter">Section 20: java.lang package</div>
+    <hr>
+
+    <div class="textual-content">
+        <div class="sub-heading">Lecture 204: enum</div>
+        <div>
+            - All enums that you declare in your code implicitly inherit from the <a href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Enum.html"><code>Enum</code></a>
+            <br>
+            - Variables defined in an <code>enum</code> are implicitly <code>public</code>, <code>static</code>, and <code>final</code>. <br>
+            - The <code>ordinal</code> method returns the index of the enum. The index is just the order in which the enums are declared. <br>
+            - You can use the <code>values()</code> method to see the values that are present within the enum. <br>
+
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/3a4f826e607784b7462ae328fcd50e8e.js"></script>
+                </div>
+            </div>
+
+            - enums can also have constructors defined within them, but the constructors have to be <code>private</code> or <code>default</code>. They cannot be <code>public</code>
+            or <code>protected</code>.
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/7a5f526a3f6226afad24ad6a613a4b26.js"></script>
+                </div>
+            </div>
+
+            - You can also add data and behavior to an enum by adding your own constructors and methods to the enum.
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/38dd69a016238c5d1009e717e6fd65c4.js"></script>
+                </div>
+            </div>
+
+            - Question is: when is the constructor of the enum called.
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/80c50b2aa706a0bbf5e9c53b83d1eda3.js"></script>
+                </div>
+            </div>
+        </div>
+
+        <div class="sub-heading">Lecture 205: Introduction to Reflection Package</div>
+        <div>
+            - Basic intro to how to use the different methods of the reflect package
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/b9109bed43cbc29b779ae342a9518eb5.js"></script>
                 </div>
             </div>
         </div>
