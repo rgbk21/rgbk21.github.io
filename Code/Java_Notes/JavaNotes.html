@@ -3415,6 +3415,66 @@
         </div>
     </div>
 
+    <hr>
+    <div id="Udemy_Java_Section21" class="chapter">Section 21: Annotations and JavaDoc</div>
+    <hr>
+
+    <div class="textual-content">
+        <div class="sub-heading">Lecture 206: java documentation and java doc</div>
+        <div>
+            - Java Doc tags for classes: <code>@author</code>, <code>@version</code>, <code>@since</code> <br>
+            - Java Doc tags for methods: <code>@param</code>, <code>@return</code>, <code>@throws</code>, <code>@exception</code>, <code>@deprecated</code>, <code>@code</code> <br>
+            - Java doc tags are defined by declaring the comments in <code>/** **/</code> blocks. When you generate the java doc, the generated html files will be stored inside
+            your project folder: <code>dist/javadoc</code>
+        </div>
+
+        <div class="sub-heading">Lecture 208: Creating your own annotations</div>
+        <div>
+            - Any annotation that you create automatically inherits from the <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/annotation/Annotation.html"><code>Annotation</code></a>
+            class. Annotations can be applied on the class level, on the method level, with arguments, or on the field level. <br>
+            - We create an annotation as follows:
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/1fdfa0b31d0a68748c6d6af81af0d406.js"></script>
+                </div>
+            </div>
+
+            - The above annotation does not have any elements that are defined within the annotation. We can add elements to the annotation just like we add abstract methods to
+            interfaces. Note that the methods that are added to the annotation cannot throw exceptions or accept arguments. Once the elements have been added to the
+            annotations, we have to pass in the values for those elements whenever we are using that.
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/192f3f1e3d422372af09afca2cb5963f.js"></script>
+                </div>
+            </div>
+
+            - You can also specify a default value for some of the elements. Then you do not have to specify that element when you use the annotation because there is already a
+            default value that is present for it.
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/0fcd3eb7afe12f15daa3fb6f64ee2d98.js"></script>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="sub-heading">Lecture 209: Built-In annotations</div>
+        <div>
+            - There are certain annotations that are built into java that are used when you are creating annotations of your own. These are also referred to as <a
+                href="https://www.baeldung.com/java-default-annotations#meta-annotations">Meta Annotations</a>. (Source on Baeldung) <br>
+            - Some examples of meta annotations are: <code>@Target</code>, <code>@Retention</code>, <code>@Inherited</code>, <code>@Documented</code>, <code>@Repeatable</code> <br>
+        </div>
+    </div>
+
 
     <script src="../../script.js"></script>
 </div>
