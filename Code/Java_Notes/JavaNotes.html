@@ -172,6 +172,7 @@
     Section 18: <a href="#Udemy_Java_Section18">Exceptions</a> <br>
     Section 19: <a href="#Udemy_Java_Section19">MultiThreading</a> <br>
     Section 20: <a href="#Udemy_Java_Section20">java.lang package</a> <br>
+    Section 21: <a href="#Udemy_Java_Section21">Annotations and JavaDoc</a> <br>
 
     <hr>
     <div id="inheritance" class="chapter">Chapter 8: Inheritance</div>
@@ -1712,7 +1713,7 @@
             used. <br>
 
             - To jog your memory: <br>
-            <li><b>What is functional programming</b>: block of code that accepts values, known as parameters, and the
+            <li><p class="inline-heading">What is functional programming</p>: block of code that accepts values, known as parameters, and the
                 block of
                 code is executed to compute a result. Order of execution of functions does not matter in Functional
                 programming since, unlike object-oriented programming, there is no state of the object that is being
@@ -1721,7 +1722,7 @@
                 Functional Programming = Functional Composition + Lazy Evaluation <br>
                 Refer <a href="https://www.youtube.com/watch?v=kG2SEcl1aMM">this YT Talk</a> for more details.
             </li>
-            <li><b>What is a closure</b>: higher order function (anonymous function that can be treated as a data
+            <li><p class="inline-heading">What is a closure</p>: higher order function (anonymous function that can be treated as a data
                 object,
                 meaning - it can be stored in a variable and passed around from one context to another.) packaged with
                 its defining environment. A closure carries with it the variables in scope when it was defined, and it
@@ -1729,14 +1730,14 @@
                 variables were defined.
             </li>
             <li>
-                <b>What does it mean to <i>capture a variable</i></b>: <a
+                <p class="inline-heading">What does it mean to <i>capture a variable</i></p>: <a
                     href="https://www.logicbig.com/tutorials/core-java-tutorial/java-8-enhancements/java-capturing-lambda.html">A
                 lambda expression is said to be capturing </a>if it either access instance variables of it's enclosing
                 class
                 or local variables (final or effectively final) from it's enclosing scope.
             </li>
             <li>
-                <b>What is the difference between an <i>implicit</i> and an <i>explicit</i> lambda expression</b>:
+                <p class="inline-heading">What is the difference between an <i>implicit</i> and an <i>explicit</i> lambda expression</p>:
                 Lambda expression that does not declare the types of its parameters is known as an implicit lambda
                 expression. A lambda expression that declares the types of its parameters is known as an explicit lambda
                 expression. <code>(x, y) -> x + y</code> is an example of an implicit Lambda Expression.
@@ -2173,19 +2174,24 @@
             - Why does everything have to be so confusing: <br>
             <a href="https://stackoverflow.com/questions/25055392/lambdas-local-variables-need-final-instance-variables-dont">SO
                 Link explaining why variables inside a lambda have to be final or effectively final.</a> <br>
-            - A lambda expression can access instance and class variables of a class whether they are effectively final
-            or not.
-            If instance and class variables are not final, they can be modified inside the body of the lambda
-            expressions. a lambda
-            expression keeps a copy of the local variables used in its body. If the local variables are reference
-            variables, a copy of the
-            references is kept, not a copy of the objects.
+            - A lambda expression can access instance and class variables of a class whether they are effectively final or not. If instance and class variables are not final, they
+            can be modified inside the body of the lambda expressions. A lambda expression keeps a copy of the local variables used in its body. If the local variables are
+            reference variables, a copy of the references is kept, not a copy of the objects.
             <div class="code-block">
                 <div class="expand-code-snip-btn border border-primary rounded">
                     <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
                 </div>
                 <div class="code-snippet">
                     <script src="https://gist.github.com/rgbk21/f0fb4084b1bc32e926213173484ee99b.js"></script>
+                </div>
+            </div>
+            - And as described above, the instance variables can be used as well as modified within the lambda expression
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/624424af96108699a5d4fd6b408407b5.js"></script>
                 </div>
             </div>
             - The semantics of <code>this</code> is actually one of the areas where Java lambdas differ from anonymous
