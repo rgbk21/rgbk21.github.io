@@ -16,7 +16,11 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-9QJ5D3X353"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
         gtag('js', new Date());
 
         gtag('config', 'G-9QJ5D3X353');
@@ -135,11 +139,13 @@
     <div>
         This page contains my notes from the following books: <br>
         a) Angular in Action<br>
+        b) ng-Book - The complete book on Angular <br>
     </div>
 
     <br>
     Index:
     <br>
+    a) Angular in Action <br>
     Chapter 0: <a href="#Ch0_TypeScript">TypeScript</a>
     <br>
     Chapter 1: <a href="#Ch1_Angular">Angular: A Modern Web Platform</a>
@@ -151,7 +157,11 @@
     Chapter 4: <a href="#Ch3_AppEssntls">Component Basics</a>
     <br>
     Chapter 0: <a href="#FAQs">FAQs</a>
-    <br>
+    <br><br>
+
+    b) ng-Book - The complete book on Angular <br>
+    Chapter 1: <a href="#nl_Ch1_Angular">Writing your first Angular Web Application</a>
+    Chapter 2: <a href="#nl_Ch2_Angular">TypeScript</a>
 
 
     <hr>
@@ -465,8 +475,6 @@
                 in turn starts to load and trigger additional modules.
             </li>
         </div>
-
-
     </div>
 
 
@@ -1198,7 +1206,6 @@
             build a URL. The directive parses the array and tries to match to a known route. Once it matches a
             route, it will add an href to the anchor tag that correctly links to that route.
         </div>
-
     </div>
 
 
@@ -1275,7 +1282,191 @@
             src/app/component/summary folder <br>
         </div>
     </div>
+
+    <hr>
+    <div id="nl_Ch1_Angular" class="chapter">Chapter 1: Writing your first Angular Web Application</div>
+    <hr>
+
+    <div class="textual-content">
+        <div class="sub-heading">Setting up the env</div>
+        <div>
+            - The Node Package Manager (npm for short) is installed as a part of Node.js. To check if npm is available as a part of our development environment, we can open a
+            terminal window and type: <code>npm -v</code> <br>
+            - Install Typescript: <code>npm install -g typescript</code> <br>
+            - Install Angular CLI: <code>npm install -g @angular/cli</code> <br>
+            - All the things that the Angular CLI can do: <code>ng help</code>
+        </div>
+
+        <div class="sub-heading">Example Project</div>
+        <div>
+            - Create a new project from scratch: <code>ng new angular-hello-world</code> <br>
+            - This will generate a bunch of files. If you go into the <code>src/index.html</code>, you will see the <code>&lt;app-root&gt;&lt;/app-root&gt;</code> tag. The app-root
+            tag is where our application will be rendered. app-root is a component that is defined by our Angular application. In Angular we can define our own HTML tags and give
+            them custom functionality. The app-root tag will be the “entry point” for our application on the page. <br>
+            - Launch your application using: <code>ng serve</code> <br>
+        </div>
+
+        <div class="sub-heading">Making a Component</div>
+        <div>
+            - The browser already knows how to display tags such as <code>&lt;select&gt;</code>, <code>&lt;form&gt;</code>, <code>&lt;video&gt;</code>. But what if we wanted to
+            teach the browser some new tags, like <code>&lt;login&gt;</code> to display a login bar. This is the basic idea behind components. We are creating components that are
+            basically custom tags and teaching the browser how to display them. In the below example, we will be creating our own custom tag:
+            <code>app-hello-world</code> <br>
+            - We generate a new component by running <code>ng generate component hello-world</code>. This is what the generated component looks like:
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/e7d7330b8205adc76b36b9fc1c02c330.js"></script>
+                </div>
+            </div>
+        </div>
+
+        <div class="sub-heading">Passing values from a Parent Component to a Child Component</div>
+        <div>
+            - Any property that is defined in a class, can be accessed by the template of the class. Question is, how do we pass the value of that property to a Child component.
+            <br>
+            - Consider the below code snippet. The property <i>names</i> is declared as an array of strings.
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/8ff706635a3a7d04d23a7a8afdf232f8.js"></script>
+                </div>
+            </div>
+            - We want the child component to use the array of strings. First we tell Angular that we want to pass the data to the child component by doing the below.
+            <i>app-user-item</i> is the child component to which we are passing the data. Note that in the assignment operation, <i>name</i> is in quotes. Why are we assigning the
+            value to <i>userName</i>? It's because we have defined a property named <i>userName</i> in the <i>app-user-item</i> class.
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/833a3525116a2c8f174d2eea692aa888.js"></script>
+                </div>
+            </div>
+            - We have defined a property named <i>userName</i> in the <i>app-user-item</i> class. And we are annotating the property with an <code>@Input</code> decorator.
+            <code>@Input()</code> allows a parent component to update data in the child component.
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/364c61a012cd5cd2e2c55530f9d29f49.js"></script>
+                </div>
+            </div>
+            - Any property that is defined in the typescript file can be used in the template using <code>{{ }}</code>. For example, take note of the <i>userName</i> property
+            below. The <i>userName</i> property was defined in the file above as a property, and hence we are able to use it below in the template file for the class.
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/d89d7ba1a37138e4cc1fa99d3a191a0e.js"></script>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="sub-heading">How is an Angular app bootstrapped</div>
+        <div>
+            - When you hit <code>ng serve</code>, angular will look for the <code>angular.json</code> file to find the entry point to the app. At a high level, the entire process
+            looks like this: <br>
+            a) <code>angular.json</code> specifies a <code>main</code> file, which in this case is the <code>main.ts</code> file. <br>
+            b) <code>main.ts</code> is the entry point for the application and bootstraps the entire application <br>
+            c) The bootstrap process boots an Angular module <br>
+            d) The app then goes into <code>src/app/app.module.ts</code> where it find the <code>AppModule</code> <br>
+            e) <code>AppModule</code> specifies which component to use as the top-level component. In this case it is <code>AppComponent</code> (src/app/app.component.ts) <br>
+            f) <code>AppComponent</code>, in its <i>templateUrl</i> then defines the <code>app.component.html</code> which finally contains our <i>app-user-list</i> component <br>
+            - Angular has the concept of <i>modules</i>. When you boot an Angular app, you’re not booting a component directly, but instead you create an <code>NgModule</code>
+            which points to the component you want to load.
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/fd796ae6454e2c34f79051b322d3e549.js"></script>
+                </div>
+            </div>
+            - You can see the class annotated with <code>@NgModule</code>. The @NgModule defines four keys that are used. We will look at the keys one-by-one. <br>
+            <p class="inline-heading">declarations</p>: specifies the components that are defined in this <i>module</i>. You have to declare components in a NgModule before you can
+            use them in your templates. When we use the <code>ng generate</code> to generate a new component, the CLI automatically adds the component to the list of <i>declarations</i>.
+            <br>
+            <p class="inline-heading">imports</p>: describes which dependencies this module has. Since we are creating a browser app, we have added the dependency as <code>BrowserModule</code>.
+            Note that there are two similar keywords: <code>import</code> and <code>imports</code>. We put something in our NgModule's imports if we're going to be using it in our
+            templates or with dependency injection. <br>
+            <p class="inline-heading">providers</p>: providers is used for dependency injection. So to make a service available to be injected throughout our application, we will
+            add it here. <br>
+            <p class="inline-heading">bootstrap</p>: tells Angular that when this module is used to bootstrap an app, we need to load the <code>AppComponent</code> as the
+            top-level component.
+        </div>
+
+        <div class="sub-heading">Building forms in Angular</div>
+        <div>
+            - Ideally, a form should be it's own component, but that will make passing data a bit complicated. So instead we are going with a simpler example. <br>
+            - This is some version of a form that we will be using:
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/0f7d3eb0c09c576c8afc734de6edec09.js"></script>
+                </div>
+            </div>
+            - We tell Angular we want to respond to an event by enclosing the event name in parentheses. For instance, to add a function call to the <code>&lt;button/&gt;</code>
+            <code>onClick</code> event, we do the above. When the button is clicked, it will call the <i>addArticle</i> method. The <i>addArticle</i> method will be defined in the
+            same class in which the <code>templateUrl</code> is set as <i>app.component.html</i>. The <i>addArticle</i> function is defined as follows:
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/37fa9b235818866792fb469228f0b11d.js"></script>
+                </div>
+            </div>
+            - Note that the <i>addArticle</i> method accepts two args. In the html, we need to pass in these values to the <i>addArticle</i> method that is called on the
+            <i>onClick</i> event. We do this by using a <i>template variable</i>. Notice that in the input tags we used the # (hash) to tell Angular to assign those tags
+            to a local variable. By adding the <i>#newtitle</i> and <i>#newlink</i> to the appropriate <code>&lt;input/&gt;</code> elements, we can pass them as variables into the
+            <i>addArticle()</i> function on the button. <br>
+            - <code>&lt;input name="title" id="title" #newtitle&gt;</code> this markup tells Angular to <i>bind</i> this <code>input</code> HTML element to the variable <i>#newtitle</i>.
+            The <i>#newtitle</i> syntax is called a <i>resolve</i>. <i>newtitle</i> is now an object that represents this input DOM element (specifically, the type is <code>HTMLInputElement</code>).
+            Because <i>newtitle</i> is an object, that means we get the value of the input tag using <i>newtitle.value</i>. Similarly we add <i>#newlink</i> to the other <code>input</code>
+            tag, so that we'll be able to extract the value from it as well. The objects that are returned from the <i>resolve</i> that we used on the input elements are then
+            passed into the function <i>addArticle</i>. <br>
+            - However, clicking on the 'Submit Link' button will cause the page to reload. JavaScript, by default, propagates the click event to all the parent components. Because
+            the click event is propagated to parents, our browser is trying to follow the empty link, which tells the browser to reload (don't know what this means). To fix that,
+            we need to make the click event handler to return false. This will ensure the browser won’t try to refresh the page. <br>
+            - Hence we update our function which handles the submit functionality to return false when the form is submitted. This tells the browser <i>not</i> to propogate the
+            event upwards. Whenever you are using the (click) event, you will have to use the return false if you want to prevent the browser reload. <br>
+            - This completes the form. Now when you click on submit, you will be able to see the message logged to the console. <br>
+            - We also have something to do with <code>@HostBinding</code> that I do not understand
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/997c8a04dfc29c9de83b78bd37a90ebd.js"></script>
+                </div>
+            </div>
+            - The below is just to highlight typescript related changes that have been done recently:
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/c320c221f0747fb5dfad6d16b93e4e3d.js"></script>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+    <div id="nl_Ch2_Angular" class="chapter">Chapter 2: TypeScript</div>
+    <hr>
 </div>
+
 <script src="../../script.js"></script>
 </body>
 </html>
