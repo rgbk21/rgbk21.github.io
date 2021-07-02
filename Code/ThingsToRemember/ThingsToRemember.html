@@ -614,6 +614,16 @@
     </div>
 
     <div class="one-point">
+        31.1) Recursion Questions: <br>
+        - Refer <a href="https://www.reddit.com/r/AskComputerScience/comments/obn214/how_do_you_reason_about_recursive_algorithmic/">this post</a> for an explanation of how
+        recursion works on a high level. <br>
+        - <a href="https://leetcode.com/problems/same-tree/">Same Tree</a> <br>
+        - <a href="https://leetcode.com/problems/symmetric-tree/">Symmetric Tree</a> <br>
+        - <a href="https://leetcode.com/problems/subtree-of-another-tree/">Subtree of Another Tree </a> <br>
+
+    </div>
+
+    <div class="one-point">
         32) Printing out an array: <br>
         <div class="code-block">
             <div class="expand-code-snip-btn border border-primary rounded">
@@ -642,6 +652,16 @@
     <div class="one-point">
         32) Reversing a String: <br>
         - <code>String a_reverse = new StringBuilder(a).reverse().toString();</code> <br>
+        - When the problem is to reverse a number, you can also do the same thing. Refer <a href="https://leetcode.com/problems/reverse-integer/">this leetcode question </a> and
+        look at the comments for the below code snippet.
+        <div class="code-block">
+            <div class="expand-code-snip-btn border border-primary rounded">
+                <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+            </div>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/9b842a4aef9149bd82f23e7e911573b4.js"></script>
+            </div>
+        </div>
         - Addendum: <br>
         <code>StringBuilder result = new StringBuilder(s.charAt(i) + s.charAt(j));</code> <br>
         This will not initialize a StringBuilder with the String formed by the concatenation of chars at location i and
@@ -681,18 +701,20 @@
 
     <div class="one-point">
         35) Write about the different ways you can use the <code>split</code> method in Strings <br>
-
-        <code>public String[] split(String regex, int limit)</code> <br>
-
+        - The <i>limit</i> parameter controls the number of times the pattern is applied and therefore affects the length of the resulting array. If the <i>limit</i> is positive
+        then the pattern will be applied at most <i>limit-1</i> times, the array's length will be no greater than <i>limit</i>, and the array's last entry will contain all input
+        beyond the last matched delimiter.
+        - The method signature is as follows: <code>public String[] split(String regex, int limit)</code> <br>
         The string "boo:and:foo", for example, yields the following results with these parameters: <br>
 
-        Regex Limit Result <br>
-        : 2 { "boo", "and:foo" } <br>
-        : 5 { "boo", "and", "foo" } <br>
-        : -2 { "boo", "and", "foo" } <br>
-        o 5 { "b", "", ":and:f", "", "" } <br>
-        o -2 { "b", "", ":and:f", "", "" } <br>
-        o 0 { "b", "", ":and:f" } <br>
+        Regex Limit Result with separator as ":" <br>
+        2 (Limit args passed in){ "boo", "and:foo" } <br>
+        5 (Limit args passed in){ "boo", "and", "foo" } <br>
+        -2 (Limit args passed in) { "boo", "and", "foo" } <br>
+        Regex Limit Result with separator as "o" <br>
+        5 (Limit args passed in) { "b", "", ":and:f", "", "" } <br>
+        -2 (Limit args passed in) { "b", "", ":and:f", "", "" } <br>
+        0 (Limit args passed in) { "b", "", ":and:f" } <br>
 
     </div>
 
@@ -712,6 +734,24 @@
                 <script src="https://gist.github.com/rgbk21/650338c21a8bc4b5ed8573277b34e18c.js"></script>
             </div>
         </div>
+    </div>
+
+    <div class="one-point">
+        38.1) Interconversions between List and String
+        <div class="code-block">
+            <div class="expand-code-snip-btn border border-primary rounded">
+                <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+            </div>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/b8fd26226127443657f9280894906068.js"></script>
+            </div>
+        </div>
+    </div>
+
+    <div class="one-point">
+        38.2) Why can't you cast <code>Object[]</code> to <code>String[]</code>? <br>
+        - Read <a href="https://stackoverflow.com/a/17909134/8742428">here on SO</a>. <br>
+
     </div>
 
     <div class="one-point">
@@ -753,6 +793,22 @@
     </div>
 
     <div class="one-point">
+        41.1) <code>Map.Entry</code> returns an unmodifiable entry. You can edit the entry's value only if the entry is backed by a map. <br>
+        - Refer the following example to see. Also note that the key of the entry cannot be changed once the entry has been created. This is irrespective of whether there is a
+        backing map or not. So the question now is, how do you use a tuple in java if this is not going to work? <br>
+        - Also in the example, note the way that we are creating an Entry. It is being done using <code>Entry.new(key, value)</code>
+        <div class="code-block">
+            <div class="expand-code-snip-btn border border-primary rounded">
+                <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+            </div>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/bcbefc258cd1534e15bfb433df33bc3e.js"></script>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="one-point">
         42) What would be faster - comparing two String using <code>.equals</code> method or computing the hash codes of
         two strings and comparing those hash values to see if the two strings are equal? <br>
         - Using <code>.equals</code> will be faster. <br>
@@ -763,7 +819,8 @@
 
 
     <div class="one-point">
-        43)How to create a Queue, Stack, PriorityQueue? <br>
+        43) How to create a Queue, Stack, PriorityQueue? <br>
+        - Why use a deque instead of a Stack <a href="https://www.baeldung.com/java-deque-vs-stack">explained here on Baeldung</a>. <br>
         - Create a Queue: <code>Queue&ltInteger&gt q = new ArrayDeque&ltInteger&gt();</code>
         <a href="https://stackoverflow.com/a/4626858/8742428">SO Link</a><br>
         - Create a Stack: <code>Deque&ltInteger&gt stack = new ArrayDeque&ltInteger&gt();</code>
@@ -771,6 +828,29 @@
         - Create a PriorityQueue:
         <code>PriorityQueue&ltString&gt pq = new PriorityQueue&lt&gt(initialCapacity, customComparator);</code>
         <a href="https://stackoverflow.com/questions/683041/how-do-i-use-a-priorityqueue">SO Link</a>
+        <div class="code-block">
+            <div class="expand-code-snip-btn border border-primary rounded">
+                <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+            </div>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/e32aeb152f31f9a43eead435e1866e45.js"></script>
+            </div>
+        </div>
+    </div>
+
+    <div class="one-point">
+        43.1) How does the Deque implementation differ between LinkedList and ArrayDeque? <br>
+        - The difference lies between how each of the DS implementations handle null values. When the <code>Deque</code> interface uses the <code>LinkedList</code> implementation,
+        you are allowed to add null values to the <code>Deque</code>. But if you use a <code>ArrayDeque</code> implementation, adding null values to the <code>Deque</code> is going
+        to throw a <code>NullPointerException</code>
+        <div class="code-block">
+            <div class="expand-code-snip-btn border border-primary rounded">
+                <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+            </div>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/3f2678bc17ce3132ee3ba94d7a52b499.js"></script>
+            </div>
+        </div>
     </div>
 
     <div class="one-point">

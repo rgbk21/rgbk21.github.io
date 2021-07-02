@@ -250,7 +250,7 @@
             a new instance of the Person class, for example.
             <br><br>
             <li>
-                <b>Properties</b>: <br>
+                <p class="inline-heading">Properties</p>: <br>
                 - Properties define data attached to an instance of a class. For example, a class named
                 Person might have properties like first_name, last_name and age. <br>
                 - Each property in a class can optionally have a type. For example, we could say that the
@@ -269,7 +269,7 @@
             <br>
 
             <li>
-                <b>Methods</b>: <br>
+                <p class="inline-heading">Methods</p>: <br>
                 - Methods are functions that run in context of an object. To call a method on an object, we first have
                 to have an instance of that object. <br>
                 - When methods don't declare an explicit returning type and return a value, it's assumed they can return
@@ -289,7 +289,7 @@
             <br>
 
             <li>
-                <b>Constructors</b>: <br>
+                <p class="inline-heading">Constructors</p>: <br>
                 - Constructor methods must be named <code>constructor</code>. They can optionally take parameters but
                 they can't return any values, since they are called when the class is being instantiated (i.e. an
                 instance of the class is being created, no other value can be returned). <br>
@@ -310,7 +310,7 @@
             </li>
 
             <li>
-                <b>Inheritance</b>: <br>
+                <p class="inline-heading">Inheritance</p>: <br>
                 - <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain">Read
                 more at MDN</a> about what inheritance is all about. <br>
                 - Inheritance is a way to indicate that a class receives behavior from a parent class. Then we can
@@ -1469,10 +1469,85 @@
     <hr>
 
     <div class="textual-content">
-        <div class="sub-heading">Setting up the env</div>
+        <div class="sub-heading">Taking a closer look at Components</div>
         <div>
-            -
+            - Each Component is composed of three parts: <br>
+            a) The Component <code>@Decorator</code> <br>
+            b) A <i>View</i> that can be the <code>templateUrl</code> or <code>template</code> <br>
+            c) A Controller <br>
+            - We looked at this earlier, but repeating it anyways. <br>
+            - The <code>@Component</code> is called the Decorator that adds metadata to the class that follows it, which in this case is <code>AppComponent</code>. The
+            <code>@Component</code> annotation also specifies the <code>selector</code> which tells Angular which element to match. By saying selector: <i>app-root</i>, we're
+            saying that in our HTML we want to match the <i>app-root</i> tag, that is, we’re defining a new tag that has new functionality whenever we use it. E.g. when we put this
+            in our HTML: <code>&lt;app-root&gt;</code>, Angular will use the <i>AppComponent</i> component to implement the functionality. <br>
+            and specifies <code>template</code> which
+            defines the view to render. <br>
+            - The Controller is defined by the <code>AppComponent</code> class.
+
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/9e0dd7282633f2f1b8b71e5f0080b9d2.js"></script>
+                </div>
+            </div>
+
+            - Using the <code>{{ }}</code> syntax is called <i>template binding</i>. It tells the view we want to use the value of the expression inside the brackets at this
+            location in our template. Note that the code inside the brackets is an <i>expression</i>. What it means is that we can do things like this:
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/e4fe10857b6942267fb3349d8d0d1793.js"></script>
+                </div>
+            </div>
         </div>
+
+        <div class="sub-heading">Handling Inputs and Outputs in Angular</div>
+        <div>
+            - Consider the following code:
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/7ca357bc9d61a882afe0da774b60165b.js"></script>
+                </div>
+            </div>
+            - The [squareBrackets] pass inputs and the (parentheses) handle outputs. Data flows in to your component via input bindings and events flow out of your component
+            through output bindings. <br>
+            - <code>[productList]="products"</code> Here we are saying that we want to read the value of the expression 'products' from the AppComponent and store that into the
+            productList variable that is defined in the ProductsList component. <i>productList</i> is being referred to in the text as 'attribute key' and <i>products</i> as
+            'instance property'. <br>
+            - <code>(onProductSelected)="productWasSelected($event)"</code> We're saying that we want to listen to the <i>onProductSelected</i> output from the <i>ProductsList</i>
+            component. (onProductSelected), the left-hand side is the name of the output we want to "listen" on. "productWasSelected", the right-hand side is the function we want
+            to call when something new is sent to this output. <i>$event</i> is a special variable here that represents the thing emitted on (i.e. sent to) the output. <br>
+            - While passing inputs to a child component, we can use different names. i.e. the attribute keys can be different from the instance property names. For example, this is
+            how we can pass in the value from the parent component:
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/954cef570dad4e681f4725abaca9334e.js"></script>
+                </div>
+            </div>
+            - And this is how we can read the values of the input in the Component:
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/86da907af74e12a7a6e74d0be174fa0c.js"></script>
+                </div>
+            </div>
+            -
+
+
+        </div>
+
 
     </div>
 
