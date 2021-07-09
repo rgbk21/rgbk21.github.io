@@ -323,15 +323,15 @@
             <br>
             Along the same lines, you also have "class variables", "instance variables", and "local variables"
             <br>
-            <b>Local variable</b>: is declared inside a method/constructor or within a block (enclosed in braces) and
+            <p class="inline-heading">Local variable</p>: is declared inside a method/constructor or within a block (enclosed in braces) and
             must be
             initialized before use, otherwise it won't compile.
             <br>
-            <b>Instance variable</b>: is declared inside a class. It's initialization is not compulsory. If omitted, it
+            <p class="inline-heading">Instance variable</p>: is declared inside a class. It's initialization is not compulsory. If omitted, it
             contains default value (0, 0.0, false, null, etc.). Every instance of that class (object) has it's own copy
             of that variable. Changes made to the variable don't reflect in other instances of that class.
             <br>
-            <b>Class variables</b>: These are also known as static member variables and there's only one copy of that
+            <p class="inline-heading">Class variables</p>: These are also known as static member variables and there's only one copy of that
             variable
             that is shared with all instances of that class. If changes are made to that variable, all other instances
             will see the effect of the changes.
@@ -585,14 +585,18 @@
             compare</a> <code>Integer</code>, <code>Long</code>, <code>Double</code> either.
     </div>
 
+
     <div class="one-point">
-        29) Array transformation problems: <br>
+        29.1) LeetCode Medium Top Interview Questions: <a href="https://leetcode.com/explore/interview/card/top-interview-questions-medium/">link here</a><br>
+    </div>
+
+    <div class="one-point">
+        29.1) Array transformation problems: <br>
         - <a href="https://leetcode.com/problems/move-zeroes/submissions/">move-zeroes</a> <br>
         - <a href="https://leetcode.com/problems/remove-element/">remove-element</a> <br>
         - <a href="https://leetcode.com/problems/remove-duplicates-from-sorted-array/">remove-duplicates-from-sorted-array</a>
         <br>
         - <a href="https://leetcode.com/problems/3sum/">3sum</a>
-
     </div>
 
     <div class="one-point">
@@ -620,8 +624,51 @@
         - <a href="https://leetcode.com/problems/same-tree/">Same Tree</a> <br>
         - <a href="https://leetcode.com/problems/symmetric-tree/">Symmetric Tree</a> <br>
         - <a href="https://leetcode.com/problems/subtree-of-another-tree/">Subtree of Another Tree </a> <br>
-
+        - <a href="https://leetcode.com/problems/invert-binary-tree/">Invert Binary Tree</a> <br>
+        - <a href="https://leetcode.com/problems/binary-tree-maximum-path-sum/">Binary Tree Maximum Path Sum</a> with explanation. <br>
     </div>
+
+    <div class="one-point">
+        31.2) Traversing a Binary Tree: <br>
+        - <a href="https://stackoverflow.com/a/42477229/8742428">When to use Preorder, Postorder, and Inorder Binary Search Tree Traversal strategies</a> <br>
+        - There are two general techniques to traversing a tree: <a href="https://leetcode.com/problems/binary-tree-preorder-traversal/solution/">LC Solution</a><br>
+        a) BFS: We scan through the tree level by level, following the order of height, from top to bottom. The nodes on higher level would be visited before the ones with lower
+        levels. <br>
+        b) DFS: In this strategy, we adopt the depth as the priority, so that one would start from a root and reach all the way down to certain leaf, and then back to root to reach
+        another branch. The DFS strategy can further be distinguished as preorder, inorder, and postorder depending on the relative order among the root node, left node and right
+        node. <br>
+        - <a href="https://leetcode.com/problems/binary-tree-preorder-traversal/solution/">Binary Tree Pre Order Traversal</a>. (From LeetCode solutions) Taking pre-order traversal
+        as an example, in each iteration, we pop one node from the stack and visit this node. Then if this node has a right child, push its right child into the stack. If this node
+        has a left child, push its left child into the stack. It is noteworthy that we push the right child first so that we can visit the left child first since the nature of the
+        stack is LIFO(last in first out). After that, we can continue to the next iteration until the stack is empty. <br>
+        - <a href="https://leetcode.com/problems/binary-tree-inorder-traversal/">Binary Tree In Order Traversal</a> (Traversal using iterative approach)<br>
+        - <a href="https://leetcode.com/problems/binary-tree-postorder-traversal/">Binary Tree Post Order Traversal</a>. Lot of confusion on this one in the comment section about
+        reversing the order or something. Refer <a
+            href="https://leetcode.com/problems/binary-tree-postorder-traversal/discuss/45582/A-real-Postorder-Traversal-.without-reverse-or-insert-4ms">this solution</a> to see a
+        way to do it without having to reverse the list. The explanation of what is going on is present in the comments: The algorithm is that we push each node twice onto the
+        stack. Each time we pop a node out, if we see that there is a same node on the stack, we know that we have not done traversing yet, and need to keep pushing the current
+        node's children onto the stack. However, if the stack is empty, or the top element is not the same as the current element, we know that we're done searching with this node,
+        thus we can add this node to the result. <br>
+        - <a href="https://leetcode.com/problems/validate-binary-search-tree/">Validate Binary Search Tree</a>: good example of how to use iterative traversal to solve problem.
+        Inorder traversal of a Binary Search Tree prints the nodes of the tree in the ascending order if the tree is a valid BST. <br>
+        -
+    </div>
+
+    <div class="one-point">
+        31.3) Graph Traversal: <br>
+        - <a href="https://leetcode.com/problems/binary-tree-level-order-traversal/">Binary Tree Level Order Traversal</a> (Doing BFS using layers. Think Kleinberg-Tardos algo)
+        <br>
+        - Find all paths between two nodes (idiot this is an NP Hard problem)<br>
+        - Find the shortest path between two nodes. Remember that the shortest path between two nodes is just the BFS iteration of the graph <br>
+        - Find all the shortest paths between two nodes <br>
+    </div>
+
+    <div class="one-point">
+        31.4) BackTracking <br>
+        - <a href="https://leetcode.com/explore/learn/card/recursion-ii/472/backtracking/">Card on LeetCode</a> <br>
+        -
+    </div>
+
 
     <div class="one-point">
         32) Printing out an array: <br>
@@ -664,9 +711,9 @@
         </div>
         - Addendum: <br>
         <code>StringBuilder result = new StringBuilder(s.charAt(i) + s.charAt(j));</code> <br>
-        This will not initialize a StringBuilder with the String formed by the concatenation of chars at location i and
-        j. Instead, it will create a StringBuilder with the specified <code>capacity</code>, i.e. it will treat the
-        chars as integers and do the arithmetic sum, not the String concatenation.
+        This will not initialize a StringBuilder with the String formed by the concatenation of chars at location i and j. Instead, it will create a StringBuilder with the
+        specified <code>capacity</code>, i.e. it will treat the chars as integers and do the arithmetic sum, not the String concatenation. <br>
+        - The <code>append</code> method of StringBuilder class will append the specified string to the <i>end of the string</i>. <br>
 
     </div>
 
@@ -749,7 +796,45 @@
     </div>
 
     <div class="one-point">
-        38.2) Why can't you cast <code>Object[]</code> to <code>String[]</code>? <br>
+        38.2) Adding and removing from a list while iterating over the same list <br>
+        - <a href="https://stackoverflow.com/a/55141359/8742428">Explanation of ConcurrentModificationException</a> on SO. <br>
+        - You are able to add and remove elements from a list while you are iterating over the same list if you are using a for-i type loop. <br>
+        <div class="code-block">
+            <div class="expand-code-snip-btn border border-primary rounded">
+                <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+            </div>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/a5ae4826c5144039b8d06950f70bb1e9.js"></script>
+            </div>
+        </div>
+        - But if you are using a for-each style loop, adding and removing elements while you are iterating over them will throw a ConcurrentModificationException.
+        <div class="code-block">
+            <div class="expand-code-snip-btn border border-primary rounded">
+                <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+            </div>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/9f902fc195d948b4ced7492a61390f62.js"></script>
+            </div>
+        </div>
+    </div>
+
+    <div class="one-point">
+        38.2) Adding and removing from a Map while iterating over the same map <br>
+        - You cannot add or remove elements from a map while iterating over it
+
+        <div class="code-block">
+            <div class="expand-code-snip-btn border border-primary rounded">
+                <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+            </div>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/829c7a22943f256a8b4103c69f6b12c4.js"></script>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="one-point">
+        38.3) Why can't you cast <code>Object[]</code> to <code>String[]</code>? <br>
         - Read <a href="https://stackoverflow.com/a/17909134/8742428">here on SO</a>. <br>
 
     </div>
@@ -821,7 +906,7 @@
     <div class="one-point">
         43) How to create a Queue, Stack, PriorityQueue? <br>
         - Why use a deque instead of a Stack <a href="https://www.baeldung.com/java-deque-vs-stack">explained here on Baeldung</a>. <br>
-        - Create a Queue: <code>Queue&ltInteger&gt q = new ArrayDeque&ltInteger&gt();</code>
+        - Create a Queue: <code>Deque&ltInteger&gt queue = new ArrayDeque&ltInteger&gt();</code>
         <a href="https://stackoverflow.com/a/4626858/8742428">SO Link</a><br>
         - Create a Stack: <code>Deque&ltInteger&gt stack = new ArrayDeque&ltInteger&gt();</code>
         <a href="https://stackoverflow.com/a/35822408/8742428">SO Link</a> <br>
@@ -842,7 +927,14 @@
         43.1) How does the Deque implementation differ between LinkedList and ArrayDeque? <br>
         - The difference lies between how each of the DS implementations handle null values. When the <code>Deque</code> interface uses the <code>LinkedList</code> implementation,
         you are allowed to add null values to the <code>Deque</code>. But if you use a <code>ArrayDeque</code> implementation, adding null values to the <code>Deque</code> is going
-        to throw a <code>NullPointerException</code>
+        to throw a <code>NullPointerException</code> <br>
+        - There was also the confusion that if you are using the <code>ArrayDeque</code> as a stack, and doing a <code>push</code> operation on it, does it shift the remaining
+        element in the stack to the right? So would that mean that using a <code>LinkedList</code> implementation in this case be better then? No. As mentioned in the
+        <a href="https://docs.oracle.com/javase/9/docs/api/java/util/ArrayDeque.html">javadoc here</a>, most ArrayDeque operations run in amortized constant time. Exceptions
+        include remove, removeFirstOccurrence, removeLastOccurrence, contains, iterator.remove(), and the bulk operations, all of which run in linear time. So you should continue
+        to use <code>ArrayDeque</code> implementations when using it as a stack as well (<a
+            href="https://stackoverflow.com/questions/53504893/time-complexity-to-get-element-from-arraydeque">source on SO</a>).
+
         <div class="code-block">
             <div class="expand-code-snip-btn border border-primary rounded">
                 <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
