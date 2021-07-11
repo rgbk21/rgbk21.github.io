@@ -96,10 +96,9 @@
                     <a class="dropdown-item" href="../../Code/ThingsToRemember/ThingsToRemember.html">Things To
                         Remember</a>
                     <a class="dropdown-item" href="../../Code/Java_Notes/JavaNotes.html">Java Notes</a>
-                    <a class="dropdown-item" href="../../Code/LeetCode/LeetCode.html">LeetCode Notes</a>
                     <a class="dropdown-item" href="../../Code/Java_Notes/JavaNotes_2.html">Java Notes 2</a>
-                    <a class="dropdown-item" href="../../Code/Applying_Java_Notes/ApplyingJava_Notes.html">ApplyingJava
-                        Notes</a>
+                    <a class="dropdown-item" href="../../Code/LeetCode/LeetCode.html">LeetCode Notes</a>
+                    <a class="dropdown-item" href="../../Code/Applying_Java_Notes/ApplyingJava_Notes.html">ApplyingJava Notes</a>
                     <a class="dropdown-item" href="../../Code/JavaScript/JavaScript.html">JavaScript Notes</a>
                     <a class="dropdown-item" href="../../Code/HTML_CSS/HTML_CSS_Basics.html">HTML & CSS Notes</a>
                     <a class="dropdown-item" href="../../Code/SQL/SQL.html">SQL Notes</a>
@@ -145,18 +144,31 @@
 
     Index:
     <br>
-    Chapter 0: <a href="#GettingStarted">Random Stuff</a> <br>
+    Chapter 1: <a href="#BinarySearch">Binary Search</a> <br>
 
     <hr>
-    <div id="GettingStarted" class="chapter">Random Stuff for now</div>
+    <div id="BinarySearch" class="chapter">Binary Search</div>
     <hr>
 
     <div class="textual-content">
-        <div class="sub-heading">Binary Search</div>
+        <div class="sub-heading">Binary Search problems from LeetCode</div>
         <div>
-            - <a href="https://leetcode.com/explore/learn/card/binary-search/">Binary Search card on LC</a> <br>
-            - Vanilla Binary Search:
-
+            - Input array should be sorted. Input array may or may not contain duplicate elements. <br>
+            - <a href="https://leetcode.com/explore/learn/card/binary-search/">Binary Search card on LC</a>. <br>
+            - Read <a href="https://en.wikipedia.org/wiki/Binary_search_algorithm#Duplicate_elements">here on wikipedia for what happens with binary search in the case that the
+            input array contains duplicate elements. </a> Basically, The procedure may return any index whose element is equal to the target value, even if there are duplicate
+            elements in the array. For example, if the array to be searched was [1,2,3,4,4,5,6,7]and the target was 4, then it would be correct for the algorithm to either return
+            the 4th (index 3) or 5th (index 4) element. The regular procedure would return the 4th element (index 3) in this case. It does not always return the first duplicate
+            (consider [1,2,4,4,4,5,6,7] which still returns the 4th element). However, it is sometimes necessary to find the leftmost element or the rightmost element for a target
+            value that is duplicated in the array. In the above example, the 4th element is the leftmost element of the value 4, while the 5th element is the rightmost element of
+            the value 4. <br>
+            <p class="inline-heading">Binary Search using Template 1</p>: The key thing to understand in this template is that - Template #1 is used to search for an element or
+            condition which can be determined by <i>accessing a single index</i> in the array. The search condition can be determined without having to look at the neighboring
+            elements. No post-processing required because at each step, you are checking to see if the element has been found. If you reach the end, then you know the element is
+            not found. <br>
+            - Take note of the looping condition in the while loop and the changing of the <i>left</i> and the <i>right</i> variables in each loop iteration. Since we are using
+            <code> &lt;= </code> in the while loop, we have to change <i>left</i> and <i>right</i> accordingly. Contrast this with the way that we are doing the same thing in the
+            case of Template #3 code below.
             <div class="code-block">
                 <div class="expand-code-snip-btn border border-primary rounded">
                     <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
@@ -165,11 +177,34 @@
                     <script src="https://gist.github.com/rgbk21/d5434284cd4ea63b22244709e0cd00a8.js"></script>
                 </div>
             </div>
-            - <a href="https://ai.googleblog.com/2006/06/extra-extra-read-all-about-it-nearly.html">Explanation for why we are using l+(r - l)/2 instead of (l+r)/2</a>. <br>
-            - In binary search we find out the mid point and decide to either search on the left or right depending on some condition. Figure out the condition, and you should be
-            good. <br>
-            - <a href="https://leetcode.com/problems/first-bad-version/">First Bad Version</a> <br>
-            - <a href="https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/">Find minimum in rotated sorted array</a>
+            - <p class="inline-heading">Binary Search using Template 3</p>: This is used to search for an element or condition which requires accessing the current index and its
+            immediate left and right neighbor's index in the array. Loop/Recursion ends when you have 2 elements left. Need to assess if the remaining elements meet the condition.
+            Again, take note of the looping condition in the while loop. At the point of termination of the while loop, <code>left + 1 == right</code>. Also note that in this
+            version of Binary Search, <i>left</i> and <i>right</i> are set to <i>mid</i>. Compare the same with the Template #1 being used above.
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/fd73df0e75eb0ceae81393deaf296cec.js"></script>
+                </div>
+            </div>
+            - Comparison of the three templates is <a href="https://leetcode.com/explore/learn/card/binary-search/136/template-analysis/935/">present here on LC</a>. <br>
+            - Explanation for <a href="https://ai.googleblog.com/2006/06/extra-extra-read-all-about-it-nearly.html">why we are using l+(r-l)/2 instead of (l+r)/2</a>. <br>
+            - In binary search we find out the mid point and decide to either search on the left or right depending on some <i>condition</i>. Figure out the <i>condition</i>, and
+            you should be good. <br>
+            - <a href="https://leetcode.com/problems/guess-number-higher-or-lower/">Guess Number Higher or Lower</a> to get you started.
+            - <a href="https://leetcode.com/problems/first-bad-version/">First Bad Version</a>. Note how the solution of this problem is different from the above problem. You are
+            kind of doing the same thing. In the above guessing number problem you are using Template#1, but in this problem you have to use Template#3. <br>
+            - <a href="https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/">Find minimum in rotated sorted array</a> <br>
+            - <a href="https://leetcode.com/problems/search-in-rotated-sorted-array/">Search in Rotated Sorted Array</a>. Good practice problem. Both templates, Template#1 and
+            Template#3 are used in the code. <br>
+            - <a href="https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/">Find First and Last Position of Element in Sorted Array</a>. Good
+            problem to show how to handle duplicate elements in the case of binary search. If duplicate elements are present in the array, find the leftmost and the rightmost
+            occurrences of the element. <br>
+            - <a href="https://leetcode.com/problems/find-k-closest-elements/">Find K Closest Elements</a>. Good question. Hence you have decided not to do it?<br>
+            - <a href="https://leetcode.com/problems/closest-binary-search-tree-value/">Closest Binary Search Tree Value</a>. You are given a Binary Search Tree now, and you have
+            to recursively iterate through the tree in order to find the element that you are looking for. <br>
         </div>
     </div>
 
