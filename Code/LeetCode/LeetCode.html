@@ -145,6 +145,8 @@
     Index:
     <br>
     Chapter 1: <a href="#BinarySearch">Binary Search</a> <br>
+    Chapter 2: <a href="#Arrays">Arrays</a> <br>
+    Chapter 3: <a href="#Arrays&Strings">Arrays and Strings</a> <br>
 
     <hr>
     <div id="BinarySearch" class="chapter">Binary Search</div>
@@ -157,7 +159,7 @@
             - <a href="https://leetcode.com/explore/learn/card/binary-search/">Binary Search card on LC</a>. <br>
             - Read <a href="https://en.wikipedia.org/wiki/Binary_search_algorithm#Duplicate_elements">here on wikipedia for what happens with binary search in the case that the
             input array contains duplicate elements. </a> Basically, The procedure may return any index whose element is equal to the target value, even if there are duplicate
-            elements in the array. For example, if the array to be searched was [1,2,3,4,4,5,6,7]and the target was 4, then it would be correct for the algorithm to either return
+            elements in the array. For example, if the array to be searched was [1,2,3,4,4,5,6,7] and the target was 4, then it would be correct for the algorithm to either return
             the 4th (index 3) or 5th (index 4) element. The regular procedure would return the 4th element (index 3) in this case. It does not always return the first duplicate
             (consider [1,2,4,4,4,5,6,7] which still returns the 4th element). However, it is sometimes necessary to find the leftmost element or the rightmost element for a target
             value that is duplicated in the array. In the above example, the 4th element is the leftmost element of the value 4, while the 5th element is the rightmost element of
@@ -193,7 +195,7 @@
             - Explanation for <a href="https://ai.googleblog.com/2006/06/extra-extra-read-all-about-it-nearly.html">why we are using l+(r-l)/2 instead of (l+r)/2</a>. <br>
             - In binary search we find out the mid point and decide to either search on the left or right depending on some <i>condition</i>. Figure out the <i>condition</i>, and
             you should be good. <br>
-            - <a href="https://leetcode.com/problems/guess-number-higher-or-lower/">Guess Number Higher or Lower</a> to get you started.
+            - <a href="https://leetcode.com/problems/guess-number-higher-or-lower/">Guess Number Higher or Lower</a> to get you started. <br>
             - <a href="https://leetcode.com/problems/first-bad-version/">First Bad Version</a>. Note how the solution of this problem is different from the above problem. You are
             kind of doing the same thing. In the above guessing number problem you are using Template#1, but in this problem you have to use Template#3. <br>
             - <a href="https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/">Find minimum in rotated sorted array</a> <br>
@@ -205,7 +207,103 @@
             - <a href="https://leetcode.com/problems/find-k-closest-elements/">Find K Closest Elements</a>. Good question. Hence you have decided not to do it?<br>
             - <a href="https://leetcode.com/problems/closest-binary-search-tree-value/">Closest Binary Search Tree Value</a>. You are given a Binary Search Tree now, and you have
             to recursively iterate through the tree in order to find the element that you are looking for. <br>
+            - <a href="https://leetcode.com/problems/search-in-a-sorted-array-of-unknown-size/">Search in a Sorted Array of Unknown Size</a>. How do you do a binary search in a
+            sorted array whose size you do not know? <br>
+            - <a href="https://leetcode.com/problems/find-peak-element/">Find Peak Element</a>. Did not do this either. <br>
         </div>
+    </div>
+
+    <hr>
+    <div id="Arrays" class="chapter">Arrays</div>
+    <hr>
+
+    <div class="textual-content">
+        <div class="sub-heading">Array problems from LeetCode</div>
+        <div>
+            - <a href="https://leetcode.com/explore/learn/card/fun-with-arrays/">Card on LeetCode is present here</a>. <br>
+            - General Tips to keep in mind: <br>
+            a) If iterating from the front of the array is not immediately giving an algo, try iterating from the end of the array instead. <br>
+            b) If the algo is becoming too complicated when you are trying to do everything in one pass of the array, try splitting the tasks into multiple passes of the array. Use
+            2 or 3 for-loops to make multiple passes over the array and see if it simplifies the solution. <br>
+            c) Two-Pointer technique can be very useful. Think of the two-pointer technique as a <i>readIdx</i> and a <i>writeIdx</i>. You generally increment the <i>readIdx</i>
+            every loop because you would want to evaluate the next element of the array. If the current element being read satisfies certain conditions, then in that case you will
+            copy the element and put it at the <i>writeIdx</i>, and increment both <i>writeIdx</i> and <i>readIdx</i> after that. At no point will the <i>writeIdx</i> ever become
+            greater than the <i>readIdx</i> and hence we will never overwrite any elements that we have not read yet. Refer it <a
+                href="https://leetcode.com/explore/learn/card/fun-with-arrays/511/in-place-operations/3255/">here on LC</a>.<br>
+            d) General questions to consider: Can it contain duplicate values? Can it contain negative values? <br>
+            - Java always initializes empty Array slots to null if the Array contains <i>objects</i>, or to default values if it contains <i>primitive types</i>. For example, the
+            array <code>int[]</code> would contain the default value of 0 for each element, <code>float[]</code> would contain default values of 0.0, and <code>boolean[]</code>
+            would contain default values of false. <br>
+            - <a href="https://leetcode.com/problems/max-consecutive-ones/">Max Consecutive Ones</a>. Note when you are counting the maximum value of max ones in an array, you
+            might have been given an array like this: [0,1,1,1,1]. In this case, you would end up never updating the <i>overallMaxNumOfOnes</i> variable. Hence, do not forget to
+            return the Max of the two numbers.
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/107e4fa8a0aedd7c65ed51c073bb9df5.js"></script>
+                </div>
+            </div>
+            - <a href="https://leetcode.com/problems/find-numbers-with-even-number-of-digits/">Find Numbers with Even Number of Digits</a>. Note how we can count the number of
+            digits in a number using log to the base 10 in Approach 2. Also note how we are counting the number of digits by extracting each digit in approach 1.
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/f3b37408daedb86acf18cc10fefef152.js"></script>
+                </div>
+            </div>
+        </div>
+        - <a href="https://leetcode.com/problems/squares-of-a-sorted-array/">Squares of a Sorted Array</a>. <br>
+        - Inserting an element at the start of the array (index 0) <a href="https://leetcode.com/explore/learn/card/fun-with-arrays/525/inserting-items-into-an-array/3244/">takes
+        O(n) time</a> since each of the elements need to be shifted to the right by 1 position. <br>
+        - <a href="https://leetcode.com/problems/duplicate-zeros/">Duplicate Zeros</a>. <br>
+        - <a href="https://leetcode.com/problems/merge-sorted-array/">Merge Sorted Array</a>. Good problem to show the advantages of iterating from the end of the array. <br>
+        - <a href="https://leetcode.com/problems/remove-element/">Remove Element</a>. <br>
+        - <a href="https://leetcode.com/problems/remove-duplicates-from-sorted-array/">Remove Duplicates from Sorted Array</a>. Go over this. If you are running a loop on the array
+        using two-pointer technique, and then you are running another loop within that loop that is making use of the pointers, then you need to make sure that the inner loop
+        traversal bounds are satisfied and do not throw out of bounds exception.
+        <div class="code-block">
+            <div class="expand-code-snip-btn border border-primary rounded">
+                <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+            </div>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/778356cd51ece9313ccdec5f3578d5f3.js"></script>
+            </div>
+        </div>
+        - <a href="https://leetcode.com/problems/check-if-n-and-its-double-exist/">Check If N and Its Double Exist</a> <br>
+        - <a href="https://leetcode.com/problems/valid-mountain-array/">Valid Mountain Array</a>
+        <div class="code-block">
+            <div class="expand-code-snip-btn border border-primary rounded">
+                <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+            </div>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/a127f75389c00492b5863422968788e8.js"></script>
+            </div>
+        </div>
+        - <a href="https://leetcode.com/problems/replace-elements-with-greatest-element-on-right-side/">Replace Elements with Greatest Element on Right Side</a> <br>
+        - <a href="https://leetcode.com/problems/height-checker/">Height Checker</a>. Uses Counting Sort. Counting Sort explained <a href="https://youtu.be/Nz1KZXbghj8?t=1923">here
+        on MIT OCW lecture</a>. <br>
+        - <a href="https://leetcode.com/problems/max-consecutive-ones-ii/">Max Consecutive Ones II</a>. Still to do. <br>
+        - <a href="https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/">Find All Numbers Disappeared in an Array</a>. Uses a good technique of making in-place
+        changes to an array. <br>
+    </div>
+
+    <hr>
+    <div id="Arrays&Strings" class="chapter">Arrays and Strings</div>
+    <hr>
+
+    <div class="textual-content">
+        <div class="sub-heading">Problems from LeetCode</div>
+        <div>
+            - <a href="https://leetcode.com/explore/learn/card/array-and-string/">Card on LC here</a> <br>
+            - You can sort arrays using <code>Arrays.sort(arrayName)</code>. You can also pass in a custom <code>Comparator</code> as a second args to sort it by something other
+            than the natural order. Refer <a href="../ThingsToRemember/ThingsToRemember.html#num34">here</a>. <br>
+        </div>
+
+
     </div>
 
 
