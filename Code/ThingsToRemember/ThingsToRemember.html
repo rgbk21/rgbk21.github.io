@@ -150,7 +150,8 @@
 
 
     <div class="one-point">
-        0) Always, for every IF, write an ELSE. Whenever you are calculating squares/multiplying, be very careful about overflow.
+        0) Always, for every IF, write an ELSE. Whenever you are calculating squares/multiplying, be very careful about overflow. arrays have <code>length</code>, strings have
+        <code>length()</code>, collections have <code>size()</code>.
     </div>
 
     <div class="one-point">
@@ -391,11 +392,11 @@
     </div>
 
     <div class="one-point">
-        13) What is the difference between CLASSPATH and Build Path:
+        13) What is the difference between CLASSPATH and Build Path: <br>
         - //TODO:<br>
         <a href="https://stackoverflow.com/questions/3529459/what-is-the-difference-between-class-path-and-build-path">Look
             here</a>
-        - <a href="https://stackoverflow.com/questions/18093928/what-does-could-not-find-or-load-main-class-mean">On SO</a>, What does “Could not find or load main class” mean?
+        - <a href="https://stackoverflow.com/questions/18093928/what-does-could-not-find-or-load-main-class-mean">On SO</a>, What does "Could not find or load main class" mean?
         Explanation about what CLASSPATH actually is on SO.
     </div>
 
@@ -951,14 +952,38 @@
     </div>
 
     <div class="one-point">
-        43.2) <code>TreeSet</code> vs <code>PriorityQueue</code>? Find k maximum elements in a collection. <br>
+        43.2) <code>TreeSet</code> vs <code>PriorityQueue</code>? Finding k maximum elements in a collection. <br>
         - <a href="https://leetcode.com/problems/top-k-frequent-words/">Top K Frequent Words</a> problem on LC. <br>
-        - <a href="https://stackoverflow.com/questions/1846225/java-priorityqueue-with-fixed-size">Java PriorityQueue with fixed size</a> <br>
+        - <a href="https://stackoverflow.com/questions/1846225/java-priorityqueue-with-fixed-size">Java PriorityQueue with fixed size SO Link</a> <br>
         - <a href="https://stackoverflow.com/questions/7878026/is-there-a-priorityqueue-implementation-with-fixed-capacity-and-custom-comparato">Is there a PriorityQueue
-        implementation with fixed capacity and custom comparator?</a> <br>
+        implementation with fixed capacity and custom comparator? SO Link</a> <br>
         - <a href="https://stackoverflow.com/questions/3524862/when-should-i-use-a-treemap-over-a-priorityqueue-and-vice-versa">When should I use a TreeMap over a PriorityQueue and
-        vice versa?</a> <br>
-        -
+        vice versa? SO Link</a> <br>
+        - The <code>PriorityQueue</code> docs on <a href="https://docs.oracle.com/javase/7/docs/api/java/util/PriorityQueue.html">Oracle Java here</a> states the runtime of the
+        <code>PriorityQueue</code> operations as follows: <br>
+        a) this implementation provides O(log(n)) time for the enqueing and dequeing methods (offer, poll, remove() and add()); linear time for the remove(Object) and
+        contains(Object) methods; and constant time for the retrieval methods (peek(), element(), and size()). <br>
+        - [element() is just another version of peek(). A collection designed
+        for holding elements prior to processing. Besides basic Collection operations, queues provide additional insertion, extraction, and inspection operations. Each of these
+        methods exists in two forms: one throws an exception if the operation fails, the other returns a special value (either null or false, depending on the operation). <a
+            href="https://docs.oracle.com/javase/7/docs/api/java/util/Queue.html">Source on Queue docs on Oracle Java</a>] <br>
+        - Note that the <code>TreeSet</code> interface that is an implementation of the <code>Set</code> interface has additional methods that are not present in the
+        <code>Set</code> interface and that are useful. <br>
+        - Time Complexity of the <code>TreeSet</code> methods are mentioned in <a href="https://stackoverflow.com/a/14379571/8742428">this SO Post</a>. <br>
+        a) Operations which work on a single element are all O(ln n) comparisons except first and last which are O(1) comparisons or O(ln N) node search time. <br>
+        b) comparator(), iterator(), clear(), first(), isEMpty(), size(), last(), pollFirst(), pollLast() are O(1) <br>
+        c) add(), ceiling(), contains(), floor(), headSet(), higher(), lower(), remove(), subSet(), tailSet() are O(ln N) <br>
+        d) clone(), equals(), hashCode(), toArray() and toString() are O(n) <br>
+        - From Oracle Java Docs: <code>TreeSet</code> implementation provides guaranteed log(n) time cost for the basic operations (add, remove and contains). (<a
+            href="https://docs.oracle.com/javase/7/docs/api/java/util/TreeSet.html">Source on Oracle Java Docs</a>).
+        <div class="code-block">
+            <div class="expand-code-snip-btn border border-primary rounded">
+                <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+            </div>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/8eca3f5ec8e046803cc4f346bc79280e.js"></script>
+            </div>
+        </div>
 
     </div>
 
