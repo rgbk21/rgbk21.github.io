@@ -151,7 +151,8 @@
 
     <div class="one-point">
         0) Always, for every IF, write an ELSE. Whenever you are calculating squares/multiplying, be very careful about overflow. arrays have <code>length</code>, strings have
-        <code>length()</code>, collections have <code>size()</code>.
+        <code>length()</code>, collections have <code>size()</code>. You lexicographically compare two strings using the <code>compareTo</code> method, whereas in the
+        <code>Comparator</code> class you have to override the <code>compare</code> method.
     </div>
 
     <div class="one-point">
@@ -852,7 +853,7 @@
         - And this: <a href="https://www.digizol.com/2008/07/java-sorting-comparator-vs-comparable.html">link</a>
     </div>
 
-    <div class="one-point">
+    <div id="num40" class="one-point">
         40) How exactly do you sort something in the natural order vs. something in the reverse order <br>
         - There are 2 ways in which you can change the ordering of sorting, from ascending to descending. <br>
         - One way is you change the value returned on comparison. That is, when a > b, return -1 instead of +1 (for
