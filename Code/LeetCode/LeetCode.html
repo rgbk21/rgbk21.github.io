@@ -146,7 +146,7 @@
     <br>
     Chapter 1: <a href="#BinarySearch">Binary Search</a> <br>
     Chapter 2: <a href="#Arrays">Arrays</a> <br>
-    Chapter 3: <a href="#Arrays&Strings">Arrays and Strings</a> <br>
+    Chapter 3: <a href="#Arrays&Strings">Arrays, Lists, and Strings</a> <br>
     Chapter 4: <a href="#Hashing">Hash Tables</a> <br>
 
     <hr>
@@ -157,6 +157,9 @@
         <div class="sub-heading">Binary Search problems from LeetCode</div>
         <div>
             - Input array should be sorted. Input array may or may not contain duplicate elements. <br>
+            - Note that in the case of a sorted array, finding an element is going to take O(log n) time. But update operations like inserting an element or deleting an element are
+            going to take O(n) time, because you would need to shift the remaining elements. If you want to perform both find and update in O(log n) time, then you are going to
+            have to use a balanced binary search tree. <br>
             - <a href="https://leetcode.com/explore/learn/card/binary-search/">Binary Search card on LC</a>. <br>
             - Read <a href="https://en.wikipedia.org/wiki/Binary_search_algorithm#Duplicate_elements">here on wikipedia for what happens with binary search in the case that the
             input array contains duplicate elements. </a> Basically, The procedure may return any index whose element is equal to the target value, even if there are duplicate
@@ -293,14 +296,28 @@
     </div>
 
     <hr>
-    <div id="Arrays&Strings" class="chapter">Arrays and Strings</div>
+    <div id="Arrays&Strings" class="chapter">Arrays, Lists, and Strings</div>
     <hr>
 
     <div class="textual-content">
-        <div class="sub-heading">Problems from LeetCode</div>
+        - <a href="https://leetcode.com/explore/learn/card/array-and-string/">Card on LC here</a> <br>
+        <div class="sub-heading">List Basic Operations</div>
         <div>
-            - <a href="https://leetcode.com/explore/learn/card/array-and-string/">Card on LC here</a> <br>
-            - List Basics. Refer how to use a <code>Comparator</code> <a href="../ThingsToRemember/ThingsToRemember.html#num40">here</a>.
+            - Refer how to use a <code>Comparator</code> <a href="../ThingsToRemember/ThingsToRemember.html#num40">here</a>. Also keep in
+            mind everything we went over regarding removing/modifying elements in a list while iterating over the same list like <a
+                href="../ThingsToRemember/ThingsToRemember.html#num38.2">we discussed over here</a>. <br>
+            - <a href="https://stackoverflow.com/questions/1075656/simple-way-to-find-if-two-different-lists-contain-exactly-the-same-elements">How to check if two lists have the
+            same elements</a> on SO. <br>
+            - <a href="https://stackoverflow.com/questions/5283047/intersection-and-union-of-arraylists-in-java">Calculating the intersection and union of array lists</a> on SO.
+            Traditionally, unions and intersections defined only for sets, not lists. So it's not exactly clear what you mean by union of two lists for example. For instance, what
+            happens if there are duplicate elements in one of the list? Are both of the elements included in the union. What if duplicate elements in intersection. All of these are
+            things that you will have to think about before you try performing set operations on lists. <br>
+            - Note that a <code>List</code> does not allow inserting an element at any arbitrary index by using the <code>add(int index, E element)</code> method. if the List is
+            empty, you can use only 0 as the index to add the first element to the list. if you have five elements in a <code>List</code>, you must use indexes between 0 and 5 to
+            add a new element to the <code>List</code>. the index from 0 to 4 will insert an element between existing elements. the index of 5 will append the element to the end of
+            the <code>List</code>. This implies that a <code>List</code> must grow sequentially. You cannot have a sparse <code>List</code> such as a <code>List</code> with first
+            element and tenth element, leaving second to ninth elements non-populated. This is the reason that a <code>List</code> is also known as a sequence. <br>
+            - There is a <code>subList</code> method present in the List interface as well. Write about that.
             <div class="code-block">
                 <div class="expand-code-snip-btn border border-primary rounded">
                     <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
@@ -309,8 +326,13 @@
                     <script src="https://gist.github.com/rgbk21/32a581ced1091397afbc9cb61a71332a.js"></script>
                 </div>
             </div>
+        </div>
 
-            - String basics:
+
+        <div class="sub-heading">String Basic Operations</div>
+        <div>
+            - You can sort arrays using <code>Arrays.sort(arrayName)</code>. You can also pass in a custom <code>Comparator</code> as a second args to sort it by something other
+            than the natural order. Refer <a href="../ThingsToRemember/ThingsToRemember.html#num34">here</a>.
             <div class="code-block">
                 <div class="expand-code-snip-btn border border-primary rounded">
                     <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
@@ -319,8 +341,7 @@
                     <script src="https://gist.github.com/rgbk21/28948ec64dca2abf8b73e4e9c513a80e.js"></script>
                 </div>
             </div>
-            - You can sort arrays using <code>Arrays.sort(arrayName)</code>. You can also pass in a custom <code>Comparator</code> as a second args to sort it by something other
-            than the natural order. Refer <a href="../ThingsToRemember/ThingsToRemember.html#num34">here</a>. <br>
+
             - <a href="https://leetcode.com/problems/find-pivot-index/">Find Pivot Index</a> <br>
             - <a href="https://leetcode.com/problems/plus-one/">Plus One</a> <br>
         </div>
@@ -405,9 +426,103 @@
     <hr>
 
     <div class="textual-content">
+        - <a href="https://leetcode.com/explore/learn/card/hash-table/">Card on LeetCode here</a>. <br>
         <div class="sub-heading">Introduction</div>
         <div>
-            -
+            - There are two different kinds of hash datastructures: hash set and hash map. The <code>HashSet</code> is one implementation of the <code>Set</code> datastructure that
+            does not allow duplicated values. The <code>HashMap</code> is an implementation of the <code>Map</code> datastructure that stores elements in the form of
+            <code>&lt;key, value&gt;</code>. <br>
+            - <a href="https://leetcode.com/problems/design-hashset/">Design HashSet</a>. Good solution with write-up about the different ways that collision can be handled. <a
+                href="https://en.wikipedia.org/wiki/Hash_table#Separate_chaining">Separate Chaining</a>, <a href="https://en.wikipedia.org/wiki/Hash_table#Open_addressing">Open
+            Addressing</a>, and <a href="https://en.wikipedia.org/wiki/2-choice_hashing">2 choice hashing</a>. <br>
+            - <a href="https://leetcode.com/problems/design-hashmap/">Design HashMap</a>. Note that in the case when there are two or more elements that have the same hash value,
+            both the elements will be mapped to the same bucket. Suppose the elements mapped to the same bucket are stored in a list. In this case, if you want to delete one of the
+            elements (and suppose you have a reference to the element that you want to delete), once you have deleted the element, you will have to move all of the elements, to the
+            right of the deleted element, one space to the left. You can get around this by first swapping the element that you want to delete with the last element of the list and
+            then deleting the last element instead. Now no need of shifting any elements once the required element has been deleted. <br>
+            - You have not done the above two problems but just copied the solution in order to see the hidden stuff. <br>
+            - <a href="https://stackoverflow.com/questions/1516549/bad-idea-to-use-string-key-in-hashmap">Good answer on SO</a> explaining how Hash Map works. <br>
+            - Note that if you are using <code>String</code>s as keys for your Set/Map, then the complexity of checking whether a <code>String</code> exists in the set/map or not
+            is going to be O(m), where <i>m</i> is the number of characters in the string. <a
+                href="https://stackoverflow.com/questions/68422044/time-complexity-of-checking-whether-a-string-is-present-in-a-hashset-java">Explained on SO here</a>.
+        </div>
+
+        <div class="sub-heading">Hash Set</div>
+        <div>
+            - Basic operations in a HashSet <br>
+            - Also recall the discussion we had about modifying a hashset while iterating over the same HashSet. It is going to throw a <code>ConcurrentModificationException</code>.
+            Like we <a href="../ThingsToRemember/ThingsToRemember.html#num38.3">discussed here</a>. <br>
+            - Tree Set behavior explained <a href="https://stackoverflow.com/q/12830320/8742428">here on SO</a>.
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/9d036cc98a8054b3954b7036b338bb14.js"></script>
+                </div>
+            </div>
+            - <a href="https://leetcode.com/problems/contains-duplicate/">Contains Duplicate</a>. Given an integer array nums, return true if any value appears at least twice in
+            the array, and return false if every element is distinct. Note that you can use the return value of the <code>add()</code> method to check if the element being added to
+            the set already existed in the Set or not. Point being, you do not need to separately use <code>contains</code> to check.
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/5946c329fa1bd8467c8497e6a2791191.js"></script>
+                </div>
+            </div>
+            - <a href="https://leetcode.com/problems/single-number/">Single Number</a>. Given a non-empty array of integers nums, every element appears twice except for one. Find
+            that element that occurs only once.
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/c7d52089442dd7a62d2dc8f09eae760b.js"></script>
+                </div>
+            </div>
+            - <a href="https://leetcode.com/problems/happy-number/">Happy Number</a>.
+        </div>
+
+        <div class="sub-heading">Hash Map</div>
+        <div>
+            - Basic Operations involving a Hash Map.
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/82f26a5bb4d5dc920f22465d035281fb.js"></script>
+                </div>
+            </div>
+            - <a href="https://leetcode.com/problems/isomorphic-strings/">Isomorphic Strings</a>. Note the below solution. It uses the technique of associating each key with a
+            <code>Collection</code>, like a <code>List</code>. Basically we are trying to store all the positions that a character appears in a String. Can be used as a general
+            template for these kinds of questions.
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/bb2e8672c25c1ee23b89bfe690a8fbcb.js"></script>
+                </div>
+            </div>
+            - <a href="https://leetcode.com/problems/first-unique-character-in-a-string/">First Unique Character in a String</a>. This is what I wanted to explain to you. Instead
+            of using a datastructure like a <code>LinkedHashMap</code> to store the order of iteration over the string (and then iterating over the map to get the required answer),
+            use the given string to iterate and get the values from the HashSet to see if the condition is satisfied.
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/df64c27dc809cd71b74d46c737464248.js"></script>
+                </div>
+            </div>
+        </div>
+
+        <div class="sub-heading">Design the Key</div>
+        <div>
+            - TODO.
         </div>
     </div>
 

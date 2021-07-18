@@ -362,8 +362,9 @@
     </div>
 
     <div class="one-point">
-        12) Creating a test directory in Intellij and running tests in it:
-        <br>
+        12) Creating a test directory in Intellij and running tests in it: <br>
+        - <a href="https://www.youtube.com/watch?v=we3zJE3hlWE">IntelliJ IDEA. Writing Tests with JUnit 5</a> <br>
+        - Use Alt + Insert to "Add a Maven Artifact Dependency"
         <!--        <div>-->
         <!--            Right Click on RoughWork -> New -> Directory -> Name it "test"-->
         <!--            <br>-->
@@ -795,14 +796,7 @@
         </div>
     </div>
 
-    <div class="one-point">
-        38.1) List things in one place <br>
-        -
-
-    </div>
-
-
-    <div class="one-point">
+    <div id="num38.2" class="one-point">
         38.2) Adding and removing from a list while iterating over the same list <br>
         - <a href="https://stackoverflow.com/a/55141359/8742428">Explanation of ConcurrentModificationException</a> on SO. <br>
         - You are able to add and remove elements from a list while you are iterating over the same list if you are using a for-i type loop. <br>
@@ -814,7 +808,7 @@
                 <script src="https://gist.github.com/rgbk21/a5ae4826c5144039b8d06950f70bb1e9.js"></script>
             </div>
         </div>
-        - But if you are using a for-each style loop, adding and removing elements while you are iterating over them will throw a ConcurrentModificationException.
+        - But if you are using a for-each style loop, adding and removing elements while you are iterating over them will throw a <code>ConcurrentModificationException</code>.
         <div class="code-block">
             <div class="expand-code-snip-btn border border-primary rounded">
                 <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
@@ -823,12 +817,37 @@
                 <script src="https://gist.github.com/rgbk21/9f902fc195d948b4ced7492a61390f62.js"></script>
             </div>
         </div>
+        - A <code>ConcurrentModificationException</code> is thrown when you try to modify a <code>Collection</code> while iterating over it and without using the method
+        <code>remove</code> of the iterator. When you use the syntax <code>for (Integer i : list2)</code>, an iterator is created for you. If you like to delete items from your
+        code you explicitly needs to iterate over an iterator or you need to loop using the old style for loop. Or you can use an <code>Iterator</code>. But remember that by using
+        an iterator, you can only remove elements from the list while you are iterating over the same list. You cannot add elements to the list. <a
+            href="https://stackoverflow.com/a/34827336/8742428">Source on SO</a>. <br>
+        - But the question is, do you <i>really</i> want to modify the list while you are also iterating over it? Consider the following scenario.
+        <a href="https://stackoverflow.com/a/2397367/8742428">Source on SO</a>.
+        <div class="code-block">
+            <div class="expand-code-snip-btn border border-primary rounded">
+                <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+            </div>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/2eafecc5c5a589b79ce98a3fcf84bf92.js"></script>
+            </div>
+        </div>
+        - So, back to our original question, how do you remove an element from a list while iterating over the same list? Use the <a
+            href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html#removeIf-java.util.function.Predicate-"><code>removeIf</code></a> method introduced in Java 8.
+        <div class="code-block">
+            <div class="expand-code-snip-btn border border-primary rounded">
+                <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+            </div>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/5244facb9f33c70580dab2ad45db17fd.js"></script>
+            </div>
+        </div>
+
     </div>
 
-    <div class="one-point">
-        38.2) Adding and removing from a Map while iterating over the same map <br>
-        - You cannot add or remove elements from a map while iterating over it
-
+    <div id="num38.3" class="one-point">
+        38.3) Adding and removing from a <code>Set</code>/<code>Map</code> while iterating over the same set/map <br>
+        - You cannot add or remove elements from a Set/Map while iterating over it using the enhanced for loop.
         <div class="code-block">
             <div class="expand-code-snip-btn border border-primary rounded">
                 <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
@@ -837,13 +856,87 @@
                 <script src="https://gist.github.com/rgbk21/829c7a22943f256a8b4103c69f6b12c4.js"></script>
             </div>
         </div>
+
+        - In order to remove elements from a <code>Set</code>/<code>Map</code>, similar to the case of <code>List</code>, you can use the <code>removeIf</code> method. <br>
+        - Note in the below example that the way that the <code>removeIf</code> method is being called on a <code>Set</code> is different from the way that it is being called on
+        the <code>Map</code>. Also note the way that you iterate over a <code>Map</code> using the <code>forEach</code> method. You are doing
+        <code>map.forEach((key, value) -> {System.out.println(key + ", " + value)})</code> and not
+        <code>map.forEach(entry -> {System.out.println(entry.getKey() + ", " + entry.getValue())})</code>
+        <div class="code-block">
+            <div class="expand-code-snip-btn border border-primary rounded">
+                <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+            </div>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/ac07d69c95c25a0d8223a4f7dee917b1.js"></script>
+            </div>
+        </div>
+
+        - Note: there are a total of three ways that you can use the <code>removeIf</code> method to remove elements from a <code>Map</code>. <a
+            href="https://lankydan.dev/2019/03/03/removing-elements-from-a-map-in-java">Source</a>. <code>removeIf</code> is a method available to <code>Collections</code>. A
+        <code>Map</code> itself is not a <code>Collection</code> and does not have access to <code>removeIf</code> itself. But, by using: <code>values</code>, <code>keySet</code>
+        or <code>entrySet</code>, a view of the Map‘s contents is returned. This view implements Collection allowing removeIf to be called on it. The Collection returned by values
+        is backed by the Map and that changing either the Collection or the Map will alter the other. keySet and entrySet are also both backed by the Map‘s contents.<br>
+        <div class="code-block">
+            <div class="expand-code-snip-btn border border-primary rounded">
+                <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+            </div>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/11a695ecff149f7c0e2b206f35b77f38.js"></script>
+            </div>
+        </div>
+
+
+        - Note the following usage of <code>forEach</code> method. <code>forEach</code> is a <code>BiConsumer</code>, which means that it accepts two values and does not return
+        anything. If you try to return anything, the code will not compile.
+        <div class="code-block">
+            <div class="expand-code-snip-btn border border-primary rounded">
+                <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+            </div>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/d9617d6a985de58a76fb91d130e4429d.js"></script>
+            </div>
+        </div>
     </div>
 
+    <div class="one-point">
+        38.5) Using the <code>forEach()</code> method vs using the for-each loop. Which should we prefer and why? <br>
+        - Read <a href="https://stackoverflow.com/a/20177092/8742428">here on SO</a>. <br>
+        - Also the <a href="https://stackoverflow.com/a/22502206/8742428">counter arg answer</a> for the above one. Note that the <code>forEach()</code> method IS NOT meant to be
+        the replacement of the for-each loop. So dont mix the two. Continue using the for-each loop for iterating over the Set or HashMap for now. <br>
+        - Interesting discussion in the answers and the comments.
+    </div>
 
     <div class="one-point">
-        38.3) Why can't you cast <code>Object[]</code> to <code>String[]</code>? <br>
+        38.6) Why can't you cast <code>Object[]</code> to <code>String[]</code>? <br>
         - Read <a href="https://stackoverflow.com/a/17909134/8742428">here on SO</a>. <br>
+    </div>
 
+    <div class="one-point">
+        41) How to store the Entries of a <code>HashMap</code> in a <code>List</code> <br>
+        - Changing order to make Map related stuff appear together. Normal order continues below.
+        <div class="code-block">
+            <div class="expand-code-snip-btn border border-primary rounded">
+                <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+            </div>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/a0d8b7f275b3c2f943730ddb120bffa0.js"></script>
+            </div>
+        </div>
+    </div>
+
+    <div class="one-point">
+        41.1) <code>Map.Entry</code> returns an unmodifiable entry. You can edit the entry's value only if the entry is backed by a map. <br>
+        - Refer the following example to see. Also note that the key of the entry cannot be changed once the entry has been created. This is irrespective of whether there is a
+        backing map or not. So the question now is, how do you use a tuple in java if this is not going to work? <br>
+        - Also in the example, note the way that we are creating an Entry. It is being done using <code>Entry.new(key, value)</code>
+        <div class="code-block">
+            <div class="expand-code-snip-btn border border-primary rounded">
+                <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+            </div>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/bcbefc258cd1534e15bfb433df33bc3e.js"></script>
+            </div>
+        </div>
     </div>
 
     <div class="one-point">
@@ -871,34 +964,6 @@
             </div>
         </div>
     </div>
-
-    <div class="one-point">
-        41) How to store the Entries of a <code>HashMap</code> in a <code>List</code> <br>
-        <div class="code-block">
-            <div class="expand-code-snip-btn border border-primary rounded">
-                <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-            </div>
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/a0d8b7f275b3c2f943730ddb120bffa0.js"></script>
-            </div>
-        </div>
-    </div>
-
-    <div class="one-point">
-        41.1) <code>Map.Entry</code> returns an unmodifiable entry. You can edit the entry's value only if the entry is backed by a map. <br>
-        - Refer the following example to see. Also note that the key of the entry cannot be changed once the entry has been created. This is irrespective of whether there is a
-        backing map or not. So the question now is, how do you use a tuple in java if this is not going to work? <br>
-        - Also in the example, note the way that we are creating an Entry. It is being done using <code>Entry.new(key, value)</code>
-        <div class="code-block">
-            <div class="expand-code-snip-btn border border-primary rounded">
-                <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-            </div>
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/bcbefc258cd1534e15bfb433df33bc3e.js"></script>
-            </div>
-        </div>
-    </div>
-
 
     <div class="one-point">
         42) What would be faster - comparing two String using <code>.equals</code> method or computing the hash codes of
