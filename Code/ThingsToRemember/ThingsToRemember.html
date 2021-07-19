@@ -874,8 +874,9 @@
         - Note: there are a total of three ways that you can use the <code>removeIf</code> method to remove elements from a <code>Map</code>. <a
             href="https://lankydan.dev/2019/03/03/removing-elements-from-a-map-in-java">Source</a>. <code>removeIf</code> is a method available to <code>Collections</code>. A
         <code>Map</code> itself is not a <code>Collection</code> and does not have access to <code>removeIf</code> itself. But, by using: <code>values</code>, <code>keySet</code>
-        or <code>entrySet</code>, a view of the Map‘s contents is returned. This view implements Collection allowing removeIf to be called on it. The Collection returned by values
-        is backed by the Map and that changing either the Collection or the Map will alter the other. keySet and entrySet are also both backed by the Map‘s contents.<br>
+        or <code>entrySet</code>, a view of the Map's contents is returned. This view implements <code>Collection</code> allowing <code>removeIf</code> to be called on it. The
+        <code>Collection</code> returned by <i>values</i> is backed by the <code>Map</code> and that changing either the <code>Collection</code> or the <code>Map</code> will alter
+        the other. <code>keySet</code> and <code>entrySet</code> are also both backed by the Map's contents.<br>
         <div class="code-block">
             <div class="expand-code-snip-btn border border-primary rounded">
                 <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>

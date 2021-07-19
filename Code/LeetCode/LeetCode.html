@@ -162,7 +162,7 @@
             have to use a balanced binary search tree. <br>
             - <a href="https://leetcode.com/explore/learn/card/binary-search/">Binary Search card on LC</a>. <br>
             - Read <a href="https://en.wikipedia.org/wiki/Binary_search_algorithm#Duplicate_elements">here on wikipedia for what happens with binary search in the case that the
-            input array contains duplicate elements. </a> Basically, The procedure may return any index whose element is equal to the target value, even if there are duplicate
+            input array contains duplicate elements. </a> Basically, the procedure may return any index whose element is equal to the target value, even if there are duplicate
             elements in the array. For example, if the array to be searched was [1,2,3,4,4,5,6,7] and the target was 4, then it would be correct for the algorithm to either return
             the 4th (index 3) or 5th (index 4) element. The regular procedure would return the 4th element (index 3) in this case. It does not always return the first duplicate
             (consider [1,2,4,4,4,5,6,7] which still returns the 4th element). However, it is sometimes necessary to find the leftmost element or the rightmost element for a target
@@ -260,7 +260,8 @@
                 </div>
             </div>
         </div>
-        - <a href="https://leetcode.com/problems/squares-of-a-sorted-array/">Squares of a Sorted Array</a>. <br>
+        - <a href="https://leetcode.com/problems/squares-of-a-sorted-array/">Squares of a Sorted Array</a>. Uses two pointer technique - going inside-out. Once you hit either the
+        left or right end of the array, you need to copy the remaining elements on the other side to the target array. <br>
         - Inserting an element at the start of the array (index 0) <a href="https://leetcode.com/explore/learn/card/fun-with-arrays/525/inserting-items-into-an-array/3244/">takes
         O(n) time</a> since each of the elements need to be shifted to the right by 1 position. <br>
         - <a href="https://leetcode.com/problems/duplicate-zeros/">Duplicate Zeros</a>. <br>
@@ -312,11 +313,14 @@
             Traditionally, unions and intersections defined only for sets, not lists. So it's not exactly clear what you mean by union of two lists for example. For instance, what
             happens if there are duplicate elements in one of the list? Are both of the elements included in the union. What if duplicate elements in intersection. All of these are
             things that you will have to think about before you try performing set operations on lists. <br>
-            - Note that a <code>List</code> does not allow inserting an element at any arbitrary index by using the <code>add(int index, E element)</code> method. if the List is
-            empty, you can use only 0 as the index to add the first element to the list. if you have five elements in a <code>List</code>, you must use indexes between 0 and 5 to
-            add a new element to the <code>List</code>. the index from 0 to 4 will insert an element between existing elements. the index of 5 will append the element to the end of
+            - Note that a <code>List</code> does not allow inserting an element at any arbitrary index by using the <code>add(int index, E element)</code> method. If the List is
+            empty, you can use only 0 as the index to add the first element to the list. If you have five elements in a <code>List</code>, you must use indexes between 0 and 5 to
+            add a new element to the <code>List</code>. The index from 0 to 4 will insert an element between existing elements. The index of 5 will append the element to the end of
             the <code>List</code>. This implies that a <code>List</code> must grow sequentially. You cannot have a sparse <code>List</code> such as a <code>List</code> with first
             element and tenth element, leaving second to ninth elements non-populated. This is the reason that a <code>List</code> is also known as a sequence. <br>
+            - The size, isEmpty, get, set, iterator, and listIterator operations run in constant time. The add operation runs in amortized constant time, that is, adding n elements
+            requires O(n) time. All of the other operations run in linear time (roughly speaking). The constant factor is low compared to that for the LinkedList implementation.
+            <a href="https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html">Source Oracle Java Docs</a>. <br>
             - There is a <code>subList</code> method present in the List interface as well. Write about that.
             <div class="code-block">
                 <div class="expand-code-snip-btn border border-primary rounded">
@@ -487,6 +491,14 @@
 
         <div class="sub-heading">Hash Map</div>
         <div>
+            - Map does not allow any duplicate keys. Each key is mapped to exactly one value. In other words, each key in a Map has exactly one value. Values do not have to be
+            unique. That is, two keys may map to the same value. <br>
+            - The view operations category contains three methods. Each returns a different view of a <code>Map</code>. You can view all <i>keys</i> in a <code>Map</code> as a
+            <code>Set</code>, all <i>values</i> as a <code>Collection</code>, and all <i>&lt;key, value&gt;</i> pairs as a <code>Set</code>. Note that all <i>keys</i> and all
+            <i>&lt;key, value&gt;</i> pairs are always unique in a <code>Map</code> and that is the reason why you get their <code>Set</code> views. Since a <code>Map</code> may
+            contain duplicate <i>values</i>, you get a <code>Collection</code> view of its <i>values</i>. <br>
+            - Make sure to read the different ways that we can remove elements from a <code>Map</code> while iterating over the same <code>Map</code> using the
+            <code>removeIf</code> method <a href="../ThingsToRemember/ThingsToRemember.html#num38.3">here on this page</a>. <br>
             - Basic Operations involving a Hash Map.
             <div class="code-block">
                 <div class="expand-code-snip-btn border border-primary rounded">
