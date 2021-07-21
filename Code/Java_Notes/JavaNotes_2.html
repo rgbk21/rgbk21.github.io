@@ -147,19 +147,237 @@
     <br>
     Index:
     <br>
-    Chapter 15: <a href="#CompletableFutures">Concepts behind CompletableFuture and Reactive Programming</a>
-    <br>
-    Chapter 11: <a href="#MultiThreadedProg">Multithreaded Programming</a>
-    <br>
-    Chapter 6: <a href="#Threads">Threads</a>
-    <br>
+    Chapter 4: <a href="#Generics">Generics</a> <br>
+    Chapter 15: <a href="#CompletableFutures">Concepts behind CompletableFuture and Reactive Programming</a><br>
+    Chapter 11: <a href="#MultiThreadedProg">Multithreaded Programming</a><br>
+    Chapter 6: <a href="#Threads">Threads</a><br>
+    Chapter 28: <a href="#Concurrency">The Concurrency Utilities</a> <br>
 
-    Chapter 28: <a href="#Concurrency">The Concurrency Utilities</a>
 
     <hr>
-    <div id="CompletableFutures" class="chapter">Chapter 15: Concepts behind CompletableFuture and Reactive
-        Programming
+    <div id="Generics" class="chapter">Chapter 4: Generics</div>
+    <hr>
+    <div class="textual-content">
+
+        <div class="sub-heading">What is the Problem that we are trying to solve?</div>
+        <div>
+            - Consider the following:
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/d5ada1e8ea67a8662a5d5bd586d31f28.js"></script>
+                </div>
+            </div>
+
+            - We want to avoid this problem. We want Java to 'know' that we intend to use the instance of <code>ObjectWrapper</code> with String, and want Java to pre-emptively
+            warn us
+            when we try to use it with <code>Integer</code> type. <br>
+            - Generics lets you specify a <i>type parameter</i> with a type (class or interface). Such a type is called a generic type (more specifically generic class or generic
+            interface).
+            The <i>type parameter value</i> could be specified when you declare a variable of the generic type and create an object of your generic type. If you have difficulty
+            visualizing it, just replace the <code>&lt;T&gt;</code> with <code>String</code> instead.
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/aaf442d3fef787b7b98304bd5b82481c.js"></script>
+                </div>
+            </div>
+            - The parameter that is specified in the type declaration is called a <i>formal type parameter</i>; for example, <code> T </code> is a formal type parameter in the
+            <i>Wrapper&lt;T&gt;</i> class declaration. When you replace the formal type parameter with the actual type (e.g. in Wrapper&lt;String&gt; you replace the formal type
+            parameter <code> T </code> with <code>String</code>), it is called a <i>parameterized type</i>. A reference type in Java, which accepts one or more type parameters, is
+            called a generic type. <br>
+            - A generic type is mostly implemented in the compiler. The JVM has no knowledge of a generic type. All actual type parameters are erased during compile time using a
+            process known as <i>erasure</i>. Compile-time type-safety is the benefit that you get when you use a parameterized generic type in your code without the need to use
+            casts.
+        </div>
+
+        <div class="sub-heading">Supertype-Subtype Relationship</div>
+        <div>
+            - Note that <code>Wrapper&lt;String&gt;</code> is not assignment compatible to <code>Wrapper&lt;Object&gt;</code>. <br>
+            - In the below example, if you were able to assign as reference of <i>strWrapper</i> to <i>objWrapper</i>, the compiler would not be able to make sure that the
+            <i>strWrapper</i> will store only a reference of a String type. <br>
+            - Remember that a <code>String</code> is an <code>Object</code> because <code>String</code> is a subclass of <code>Object</code>. However,
+            <code>Wrapper&lt;String&gt;</code> is not a <code>Wrapper&lt;Object&gt;</code>. The normal supertype/subtype rules do not apply with parameterized types.
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/d5c6fa393bc16051d90d7c04ef406d8f.js"></script>
+                </div>
+            </div>
+        </div>
+
+        <div class="sub-heading">Raw Type</div>
+        <div>
+            - The code may use (though it is not recommended) a non-generic version of a generic class by just omitting references to the generic type parameters. The non-generic
+            version of a generic type is called a <i>raw type</i>. Using raw types is discouraged. If you use raw types in your code, the compiler will generate unchecked warnings.
+            <br>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/86c0daf8029fa27865efd2e99019e166.js"></script>
+                </div>
+            </div>
+        </div>
+
+        <div class="sub-heading">Unbounded Wildcards</div>
+        <div>
+            - Suppose we want to print the details of the <i>Wrapper</i> class for which we create a method. What should be the args that should be input into the method. This is
+            the first version of the solution. Since the <i>printDetails()</i> method is supposed to print details about a <i>Wrapper</i> of any type, <code>Object</code> as
+            parameter type seemed to be more suitable. (Not using <code> T </code> as a parameter type right now. Probably come back to that later.)
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/7472943bd7214753ed7101f064c3c47d.js"></script>
+                </div>
+            </div>
+            - As you can see the above code generates a compile-time error. We already looked at why this error is generated, it's because <code>Wrapper&lt;String&gt;</code> and
+            <code>Wrapper&lt;Object&gt;</code> are not assignment compatible. <br>
+            - This is the problem that wildcards allows us to solve. <br>
+            - A wildcard type is denoted by a question mark, as in <code> &lt;?&gt; </code>. Think about how you can assign a reference of any type to a reference of an
+            <code>Object</code> type. In the same way, you can assign generic of any type to a generic of a wildcard type. <br>
+            - The question mark in a wildcard generic type (e.g., &lt;?&gt;) denotes an <i>unknown type</i>. When you declare a parameterized type using a wildcard (means unknown)
+            as a parameter type, it means that it does not know about its type. <br>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/9181cc0af907c6e99d00f462ed3f3944.js"></script>
+                </div>
+            </div>
+            - There is a complicated list of rules as to what a wildcard generic type reference can do with the object. However, there is a simple rule of thumb to remember. The
+            purpose of using generics is to have compile-time type-safety in Java programs. As long as the compiler is satisfied that the operation will not produce any surprising
+            results at runtime, it will allow the operation on the wildcard generic type reference. <br>
+            - I think what you basically have to wrap your head around is this: The class <i>Wrapper</i> is defined as <i>Wrapper&lt;T&gt;</i>. Whenever you will instantiate the
+            <i>Wrapper</i> class, you will do it like this for example: <i>Wrapper&lt;String&gt;</i>. So the compiler will know that you intend to use this class with a <code>String</code>
+            type. The <i>getRef</i> and the <i>setRef</i> methods in the class make use of the <code> T </code> parameter either as argument to a function, or as a return type.
+            Once you have made it clear that <code> T </code> is in fact <code>String</code> the compiler can then kick-in and perform all the necessary checks it needs to do to
+            make sure that there are no surprises during run-time. <br>
+            - But then, you can also instantiate the class as <i>Wrapper&lt;?&gt;</i>. Now you are telling the compiler that you <i>don't</i> know what the type of argument or the
+            return type of the methods in this class are going to be. So if you use something like <code>String str = unknownWrapper.getRef();</code>, the compiler is going to
+            complain and say: <br>
+            - Hey you never said that the <i>getRef</i> method is supposed to return just <code>String</code>. What if you created a wrapper class with something like this:
+            <code>Wrapper<?> unknownWrapper = new Wrapper<>(1234);</code>. Then what am I supposed to do at this line of code: <code>String str = unknownWrapper.getRef();</code> I
+            am going to show you a compile error so that you know that is not right. If you do this <code>String str = (String) unknownWrapper.getRef();</code>, I will no longer
+            show you the compile error, but you are still going to get a <code>ClassCastException</code> at runtime. All I know is that the <i>getRef</i> is going to return an
+            unknown type, and that unknown type is going to be an <code>Object</code>. So the best you can do is write <code>Object obj = unknownWrapper.getRef();</code>. <br>
+            - Now why do I show compile errors when you are trying to use <i>setRef</i>? <br>
+            - Why does the <i>setRef(new Object())</i> method generate a compile-error as well? Field&lt;?&gt; means Field&lt;? extends Object&gt; and when you have
+            <i>? extends Something</i> you can only <i>get</i> values out of it, you can't <i>set</i> values in it except <code>null</code> (<a
+                href="https://dzone.com/articles/java-generics-wildcard-capture-useful-thing-to-know">Source on DZone</a>). <br>
+            - <a href="https://stackoverflow.com/questions/3716920/cant-add-value-to-the-java-collection-with-wildcard-generic-type">Can't add value to the Java collection with
+            wildcard generic type</a> <br>
+            - <a href="https://stackoverflow.com/questions/27736943/java-generics-wildcard-confusion">Java Generics Wildcard confusion [duplicate]</a> <br>
+            - <a href="http://tutorials.jenkov.com/java-generics/index.html">Java Generics Tutorial</a>
+        </div>
+
+        <div class="sub-heading">Upper-Bounded Wildcards</div>
+        <div>
+            - The upper bound of a wildcard is expressed as <code>&lt;? extends T&gt;</code>. Here <code>T</code> is a type. <code>&lt;? extends T&gt;</code> means anything that
+            is of type <code>T</code> or its subclass is acceptable. For example <code>Number</code> is a type, and <code>Integer</code>, <code>Double</code> are its subclasses.
+            Hence if we want the args to be only of type <code>Number</code> or one of its subclasses, we write <code>Wrapper&lt;? extends Number&gt;</code> <br>
+            - Suppose the problem was to add two numbers. The first solution that you could come up with could look like this:
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/dcba3a96f32c727431ccfffbd1cfdece.js"></script>
+                </div>
+            </div>
+
+            - Finding the sum of an <code>Integer</code> and a <code>String</code> obviously does not make any sense. But the code still compiles, and will generate errors only
+            during runtime. Hence we want to restrict both of the args to be a <code>Number</code> or a subclass of a <code>Number</code>. Hence we know the <i>upper-bound</i> of
+            the type of the actual parameter that the <i>Wrapper</i> object should have. (It's <i>upper-bound</i> because recall that in the inheritance tree, the super class is
+            higher and the subclass is lower in the tree with the subclass having a directed arrow <i>to</i> the superclass. Hence <code>Number</code> is an upper bound). <br>
+            - Hence we rewrite the code as:
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/f4fde684d88bee367b6dcc58783bd503.js"></script>
+                </div>
+            </div>
+
+            - Note the following code snippet:
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/5ae69aa32d9b8ddbbdb50868359b3561.js"></script>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="sub-heading">Lower-Bounded Wildcards</div>
+        <div>
+            - The lower bound of a wildcard is expressed as <code>&lt;? super T&gt;</code>. This means "anything that is of type <code>T</code> or is a supertype of <code>T</code>
+            is acceptable". <br>
+            - Let us first take a look at the wrong way of doing it. The below code will generate a compile-time error because the copy() method requires the source and the dest
+            arguments be of the same type. See how one version of the <i>copy_v1()</i> method compiles properly while the other one doesn't? Asked a question about it <a
+                href="https://stackoverflow.com/questions/68463043/generics-in-java-does-not-compile">here on SO.</a>.
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/ef5d5913e471b12d45b27baa2ef8dee0.js"></script>
+                </div>
+            </div>
+            - So what does the right way look like? For all practical purposes a String is always an Object. Here, you need to use a lower-bounded wildcard.
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/2bfe7ea81b2cabfa2b864f748b19cc8a.js"></script>
+                </div>
+            </div>
+        </div>
+
+        <div class="sub-heading">Generic Methods and Constructors</div>
+        <div>
+            - You can define type parameters in a method declaration. They are specified in angle brackets before the return type of the method. The type that contains the generic
+            method declaration does not have to be a generic type.
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/997bb74598087e2bcdfded3be001f8ad.js"></script>
+                </div>
+            </div>
+            - You can use the type parameter specified for the generic type inside the non-static method declaration. The new type parameter <code>V</code> forces the first and the
+            second arguments of method m1() to be of the same type. The third argument must be of the same type <code>T</code>, which is the type of the class instantiation.
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/277c96d818b08622f03004dfba5d2996.js"></script>
+                </div>
+            </div>
+        </div>
+
+
     </div>
+
+
+    <hr>
+    <div id="CompletableFutures" class="chapter">Chapter 15: Concepts behind CompletableFuture and Reactive Programming</div>
     <hr>
     <div class="textual-content">
 
