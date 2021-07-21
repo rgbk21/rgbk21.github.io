@@ -260,8 +260,10 @@
             results at runtime, it will allow the operation on the wildcard generic type reference. <br>
             - I think what you basically have to wrap your head around is this: The class <i>Wrapper</i> is defined as <i>Wrapper&lt;T&gt;</i>. Whenever you will instantiate the
             <i>Wrapper</i> class, you will do it like this for example: <i>Wrapper&lt;String&gt;</i>. So the compiler will know that you intend to use this class with a <code>String</code>
-            type. The <i>getRef</i> and the <i>setRef</i> methods in the class make use of the <code> T </code> parameter either as argument to a function, or as a return type.
-            Once you have made it clear that <code> T </code> is in fact <code>String</code> the compiler can then kick-in and perform all the necessary checks it needs to do to
+            type. The <i>getRef</i> and the <i>setRef</i> methods in the class make use of the <code>T</code> parameter either as argument to a function, or as a return type.
+            Once you have made it clear that <code>T</code> is in fact <code>String</code> (by instantiating the <i>Wrapper</i> class with <i>Wrapper&lt;String&gt;</i>, you are
+            essentially telling the compiler that you intend to use the <i>Wrapper&lt;T&gt;</i> class as a <i>Wrapper&lt;String&gt;</i> class. Hence the compiler can go ahead and
+            replace all occurrences of <code>T</code> with <code>String</code>) the compiler can then kick-in and perform all the necessary checks it needs to do to
             make sure that there are no surprises during run-time. <br>
             - But then, you can also instantiate the class as <i>Wrapper&lt;?&gt;</i>. Now you are telling the compiler that you <i>don't</i> know what the type of argument or the
             return type of the methods in this class are going to be. So if you use something like <code>String str = unknownWrapper.getRef();</code>, the compiler is going to
@@ -270,7 +272,7 @@
             <code>Wrapper<?> unknownWrapper = new Wrapper<>(1234);</code>. Then what am I supposed to do at this line of code: <code>String str = unknownWrapper.getRef();</code> I
             am going to show you a compile error so that you know that is not right. If you do this <code>String str = (String) unknownWrapper.getRef();</code>, I will no longer
             show you the compile error, but you are still going to get a <code>ClassCastException</code> at runtime. All I know is that the <i>getRef</i> is going to return an
-            unknown type, and that unknown type is going to be an <code>Object</code>. So the best you can do is write <code>Object obj = unknownWrapper.getRef();</code>. <br>
+            unknown type, and that unknown type is going to be atleast an <code>Object</code>. So the best you can do is write <code>Object obj = unknownWrapper.getRef();</code>. <br>
             - Now why do I show compile errors when you are trying to use <i>setRef</i>? <br>
             - Why does the <i>setRef(new Object())</i> method generate a compile-error as well? Field&lt;?&gt; means Field&lt;? extends Object&gt; and when you have
             <i>? extends Something</i> you can only <i>get</i> values out of it, you can't <i>set</i> values in it except <code>null</code> (<a
@@ -372,6 +374,18 @@
             </div>
         </div>
 
+        <div class="sub-heading">Sample Question and Code</div>
+        <div>
+            - Implement class that will merge two inputs, remove duplicates and return values one by one. It should have a method to return values one by one and has next() method.
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/8e26fa78c90506b6455196452b0e325a.js"></script>
+                </div>
+            </div>
+        </div>
 
     </div>
 

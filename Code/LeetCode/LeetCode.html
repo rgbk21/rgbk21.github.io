@@ -302,6 +302,29 @@
 
     <div class="textual-content">
         - <a href="https://leetcode.com/explore/learn/card/array-and-string/">Card on LC here</a> <br>
+
+        <div class="sub-heading">Arrays Basic Operations</div>
+        <div>
+            - <a href="https://stackoverflow.com/questions/11596884/on-java-7s-equals-and-deepequals">Difference between <code>equals</code> and <code>deepEquals</code></a> on SO.
+            <br>
+            - <a href="https://stackoverflow.com/questions/8777257/equals-vs-arrays-equals-in-java">Difference between <code>equals</code> and <code>Arrays.equals</code></a> on SO.
+            Note that <code>array1.equals(array2)</code> is the same as <code>array1 == array2</code>, i.e. is it the same array. <code>Arrays.equals(array1, array2)</code>
+            compares the contents of the arrays. Note that <code>Arrays.equals()</code> does not work as expected for multidimensional arrays, it only compares items of the 1st
+            dimension for reference equality. That's why we have <code>Arrays.deepEquals(Object[], Object[])</code>. <code>Arrays.deepEquals(Object[], Object[])</code> is a
+            recursive call. Two arrays are equal if they contain the same elements in the same order. Two arrays are also equal if both of them are <code>null</code>.
+            <br>
+            - Remember that <code>Objects.equals(arg1, arg2)</code> internally simply calls <code>arg1.equals(arg2)</code> method of <i>arg1</i> (the first argument passed into the
+            Objects.equals method). Keep that in mind when you see the behavior of <code>equals</code> and <code>Objects.equals</code> in the case of arrays.
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/b465605ba187d4ebf42a7a8286b165b1.js"></script>
+                </div>
+            </div>
+        </div>
+
         <div class="sub-heading">List Basic Operations</div>
         <div>
             - Refer how to use a <code>Comparator</code> <a href="../ThingsToRemember/ThingsToRemember.html#num40">here</a>. Also keep in
