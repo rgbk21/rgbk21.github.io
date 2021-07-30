@@ -150,9 +150,9 @@
 
 
     <div class="one-point">
-        0) Always, for every IF, write an ELSE. Whenever you are calculating squares/multiplying, be very careful about overflow. arrays have <code>length</code>, strings have
-        <code>length()</code>, collections have <code>size()</code>. You lexicographically compare two strings using the <code>compareTo</code> method, whereas in the
-        <code>Comparator</code> class you have to override the <code>compare</code> method.
+        0) Always, for every IF, write an ELSE. In a while loop, make sure to increment the index. Whenever you are calculating squares/multiplying, be very careful about overflow.
+        arrays have <code>length</code>, strings have <code>length()</code>, collections have <code>size()</code>. You lexicographically compare two strings using the <code>compareTo</code>
+        method, whereas in the <code>Comparator</code> class you have to override the <code>compare</code> method.
     </div>
 
     <div class="one-point">
@@ -834,6 +834,9 @@
         </div>
         - So, back to our original question, how do you remove an element from a list while iterating over the same list? Use the <a
             href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html#removeIf-java.util.function.Predicate-"><code>removeIf</code></a> method introduced in Java 8.
+        <br>
+        - Alternatively, you can use the for-i loop and traverse the list backwards to remove the required element as shown <a
+            href="https://stackoverflow.com/a/60859469/8742428">here in this SO answer.</a>
         <div class="code-block">
             <div class="expand-code-snip-btn border border-primary rounded">
                 <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
@@ -1238,24 +1241,21 @@
     <div class="one-point">
         58) Difference between Abstract classes and interface in java 8 <br>
         - Java Doc Source <a href="https://docs.oracle.com/javase/tutorial/java/IandI/abstract.html">here</a>. <br>
-        - An abstract class is a class that is declared abstract - it may or may not include abstract methods. Abstract
-        classes cannot be instantiated, but they can be subclassed. <br>
-        - An abstract method is a method that is declared without an implementation (without braces, and followed by a
-        semicolon), like this: <br>
+        - An abstract class is a class that is declared abstract - it may or may not include abstract methods. Abstract classes cannot be instantiated, but they can be subclassed.
+        <br>
+        - An abstract method is a method that is declared without an implementation (without braces, and followed by a semicolon), like this: <br>
         <code>abstract void moveTo(double deltaX, double deltaY);</code> <br>
         - If a class includes abstract methods, then the class itself <i>must</i> be declared abstract. <br>
-        - When an abstract class is subclassed, the subclass usually provides implementations for all of the abstract
-        methods in its parent class. However, if it does not, then the subclass must also be declared abstract. <br>
-        - Methods in an interface that are not declared as default or static are implicitly
-        abstract, so the abstract modifier is not used with interface methods. (It can be used, but it is unnecessary.)
-        <br>
-        - You <code>extends</code> a abstract class. You do not <code>implements</code> an abstract class.
-        <br>
+        - When an abstract class is subclassed, the subclass usually provides implementations for all of the abstract methods in its parent class. However, if it does not, then the
+        subclass must also be declared abstract. <br>
+        - Methods in an interface that are not declared as default or static are implicitly abstract, so the abstract modifier is not used with interface methods. (It can be used,
+        but it is unnecessary.) <br>
+        - You <code>extends</code> a abstract class. You do not <code>implements</code> an abstract class. <br>
         <br>
         - Abstract Classes Compared to Interfaces: <br>
-        - All methods in an interface are implicitly <code>public</code> and <code>abstract</code> (but not
-        <code>final</code>). All fields in an interface are implicitly <code>public</code>, <code>static</code> and
-        <code>final</code>. <br>
+        - <a href="https://stackoverflow.com/a/62458290/8742428">Read differences here on SO</a>. <br>
+        - All methods in an interface are implicitly <code>public</code> and <code>abstract</code> (but not <code>final</code>). All fields in an interface are implicitly <code>public</code>,
+        <code>static</code> and <code>final</code>. Whereas in Abstract classes you can define <code>private</code> variables. <br>
     </div>
 
     <div class="one-point">
@@ -1940,6 +1940,16 @@
         d) static methods cannot access instance variables and instance methods directly; they need some object reference to do so <br>
         - Question: when you use the <code>new</code> keyword to create an object, that object is created on the heap. Where are <code>static</code> variables stored then? Does it
         matter?
+    </div>
+
+    <div class="one-point">
+        85) What are <code>native</code> methods in Java? How can I see the implementations of them? <br>
+        - The <code>native</code> keyword is applied to a method to indicate that the method is implemented in native code using JNI (Java Native Interface). The actual
+        implementation doesn't have to use JNI. () Certain JRE methods are handled intrinsically by the JVM. In fact, it's not even mandatory that the implementation is actually
+        native code. It’s just <a href="https://docs.oracle.com/javase/specs/jvms/se11/html/jvms-4.html#jvms-4.6-200-A.1">"implemented in a language other than the Java programming
+        language"</a>. <a href="https://stackoverflow.com/questions/6101311/what-is-the-native-keyword-in-java-for/30635871">Source on SO</a>. <br>
+        - You can look at the source code for <a href="http://openjdk.java.net/">OpenJDK</a> (licensed under GPLv2 with Classpath Exception). Probably the best way to study the JDK
+        implementation internals.
     </div>
 
 

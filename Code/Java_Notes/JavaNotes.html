@@ -148,18 +148,16 @@
     <br>
     Index:
     <br>
-    Chapter 8: <a href="#inheritance">Inheritance</a>
-    <br>
-    Chapter 9: <a href="#interfaces">Interfaces</a>
-    <br>
-    Chapter 19: <a href="#Collections">Collections</a>
-    <br>
-    Chapter 15: <a href="#Lambda">Lambda Expressions</a>
-    <br>
+    Chapter 8: <a href="#inheritance">Inheritance</a> <br>
+    Chapter 9: <a href="#interfaces">Interfaces</a> <br>
+    Chapter 19: <a href="#Collections">Collections</a> <br>
+    Chapter 12: <a href="#CollectionsJava8">Collections - Java 8</a> (Kishori Sharan) <br>
+    Chapter 15: <a href="#Lambda">Lambda Expressions</a> <br>
     Chapter 29: <a href="#Streams">Streams API</a>
 
     <br>
     <br>
+
     Udemy - Learn Core Java Programming by Abdul Bari <br>
     Index: <br>
     Section 1: <a href="#Udemy_Java_Section1">Introduction</a> <br>
@@ -172,6 +170,7 @@
     Section 19: <a href="#Udemy_Java_Section19">MultiThreading</a> <br>
     Section 20: <a href="#Udemy_Java_Section20">java.lang package</a> <br>
     Section 21: <a href="#Udemy_Java_Section21">Annotations and JavaDoc</a> <br>
+    Section 24: <a href="#Udemy_Java_Section24">Generics</a> <br>
 
     <hr>
     <div id="inheritance" class="chapter">Chapter 8: Inheritance</div>
@@ -1665,6 +1664,196 @@
     </div>
 
     <hr>
+    <div id="CollectionsJava8" class="chapter">Chapter 12: Collections - Java 8</div>
+    <hr>
+
+    <div class="textual-content">
+        - Collections are designed to work only with objects. To work with collections of primitive types, either you wrap and unwrap your primitive values in wrapper objects or
+        you can take advantage of the built-in autoboxing features in Java that will wrap and unwrap the primitive values as needed. <br>
+        - All collection classes in Java are declared generic. That is, you can specify the type of elements that your collection deals with as the type parameter. <br>
+        - Class diagram for most of the interfaces in the Collections FrameWork <br>
+
+        <img src="imgs/Collections_Java8/UML_Diagram.PNG"
+             class="center-block img-fluid"
+             alt="UML Collections Diagram"
+             width="750">
+
+        <div class="sub-heading">The <code>Collection</code> Interface</div>
+        <div>
+            - The Collection interface is the root of the collection interface hierarchy. It defines a generic collection. The Collections Framework does not provide an
+            implementation for the Collection interface. <br>
+            - This is the most generic type of collection. You can use it as an argument type in methods, where you do not care about the collection type of the argument, provided
+            it isn’t a map. <br>
+            - Note the <code>add()</code> and the <code>remove()</code> methods in the <code>Collection</code> interface. Both of them return true if calling them on the collection
+            ended up changing the collection. Otherwise they return false. For eg, in the case of a <code>Set</code> trying to add an element that already exists in the set is
+            going to return false. Similarly, trying to remove an element from a collection that does not exist returns false. <br>
+            - We need a way to bridge the gap between array and Collections. We need a way to easily convert <i>Foo[]</i> to <i>Collection&lt;Foo&gt;</i>. There are two ways to
+            accomplish this, as shown in <a href="https://stackoverflow.com/a/51545469/8742428">this answer on SO</a>. <br>
+            <code>Foo[] foos = fooCollection.toArray(new Foo[0]); // before JDK 11</code> <br>
+            <code>Foo[] updatedFoos = fooCollection.toArray(Foo[]::new); // after JDK 11</code> <br>
+        </div>
+
+
+        <div class="sub-heading">Traversing Collections</div>
+        <div>
+            - The <code>Iterator</code> is the fundamental (and a little cumbersome) way of iterating over elements of a collection. It has existed since the beginning. All other
+            ways, such as the for-each loop, the <code>forEach()</code> method, and the <code>forEachRemaining()</code> method, are syntactic sugar for the <code>Iterator</code>.
+            Internally, they all use an <code>Iterator</code>. <br>
+
+            <br>
+            <p class="inline-heading">a) Using an <code>Iterator</code></p>: <br>
+            - A collection provides an iterator to iterate over all its elements. Sometimes an iterator is also known as a <i>generator</i> or a <i>cursor</i>. <br>
+            - An iterator lets you perform the following three operations on a collection: <br>
+            i) Check if there are elements that have not been yet accessed using this iterator. <br>
+            ii) Access the next element in the collection. <br>
+            iii) Remove the last accessed element of the collection. <br>
+            - Note that you cannot add elements to a collection using the <code>Iterator</code> interface, only remove elements. If you want to add elements as well, you can do it
+            with a <code>ListIterator</code> interface (obviously, this will work only with lists). <br>
+            - The meaning of the term "next element" of a collection depends on the collection type. The iterator itself does not impose any ordering in which it returns the
+            elements from a collection. However, if the collection imposes ordering on its elements, the iterator will maintain the same ordering. In general, the "next element"
+            means any element in the collection that has not been returned by this iterator yet. <br>
+            - The <code>remove()</code> method removes the element of the collection that was returned last time by calling the <code>next()</code> method of the iterator. The
+            <code>remove()</code> method can be called only once per call to the <code>next()</code> method. If the <code>remove()</code> method is called more than once per <code>next()</code>
+            method call or before the first call to the <code>next()</code> method, it throws an <code>IllegalStateException</code>. The support for the <code>remove()</code>
+            method is optional. Calling the <code>remove()</code> method of an iterator may throw an <code>UnsupportedOperationException</code> if the iterator does not support the
+            remove operation. <br>
+            - The Collections Framework supports fast-fail concurrent iterators. You can obtain multiple iterators for a collection and all of them can be used to iterate over the
+            same collection concurrently. If the collection is modified by any means, except using the <code>remove()</code> method of the same iterator after the iterator is
+            obtained, the attempt to access the next element using the iterator will throw a <code>ConcurrentModificationException</code>. It means that you can have multiple
+            iterators for a collection; however, all iterators must be accessing (reading) elements of the collection. If any of the iterators modify the collection using its
+            <code>remove()</code> method, the iterator that modifies the collection will be fine and all other iterators will fail. If the collection is modified outside of all
+            iterators, all iterators will fail.
+
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/18c602d0acbbac06acdb5181bd99c047.js"></script>
+                </div>
+            </div>
+
+            <br>
+            <p class="inline-heading">b) Using a <code>for-each</code> loop</p>: <br>
+            - The for-each loop is not a replacement for using an iterator. <br>
+            - The for-each loop has several limitations. You cannot use the for-each loop to remove elements from the collection. Another limitation of the for-each loop is that
+            you
+            must traverse from the first element to the last element of the collection. It provides no way to start from middle of the collection. The for-each loop provides no way
+            to
+            visit the previously visited elements, which is allowed by the iterator of some collection types such as lists.<br>
+
+            <br>
+            <p class="inline-heading">c) Using a <code>forEach()</code> method</p>: <br>
+            - The forEach() method is available in all collection types that inherit from the Collection interface. <br>
+            - Remember that the args of the <code>forEach</code> requires a <code>Consumer</code>.
+        </div>
+
+
+        <div class="sub-heading">Working with Sets</div>
+        <div>
+            - Java allows at most one <code>null</code> element in a Set because one null element is still distinguishable from all other non-null elements and thus, it is unique.
+            <br>
+            - Go through the basics of <code>Set</code> <a href="../LeetCode/LeetCode.html#LC_HashSet">explained here on the other page</a>. <br>
+            - Sometimes when you pass your Set to another method as an args, you may not want that method to modify your set in any way. In this case you can do the following:
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/438a6292f89946a4d9115dcc7dfae895.js"></script>
+                </div>
+            </div>
+        </div>
+
+        <div class="sub-heading">Using the <code>SortedSet</code> interface</div>
+        <div>
+            - A sorted set is a set that imposes ordering on its elements. An instance of the SortedSet interface represents a sorted set. <br>
+            - The elements in a <code>SortedSet</code> can be sorted in a natural order or using a <code>Comparator</code>. A <code>SortedSet</code> must know how to sort its
+            elements as they are added. The sorted set relies on two things to sort its elements: <br>
+            a) If its elements implement the <code>Comparable</code> interface, it will use the <code>compareTo()</code> method of elements to sort them. This is called sorting in
+            natural order. <br>
+            b) You can supply a <code>Comparator</code> object to use a custom sorting. The implementation class for <code>SortedSet</code> is recommended to provide a constructor
+            that will accept a <code>Comparator</code> object to use a custom sorting. If a <code>Comparator</code> is specified, the <code>Comparator</code> is used for sorting
+            irrespective of the elements implementing the <code>Comparable</code> interface. <br>
+            - What would happen if the class of the elements of a <code>SortedSet</code> does not implement the <code>Comparable</code> interface and you don't supply a <code>Comparator</code>
+            object? The answer is that, in such cases, you cannot add any elements to a <code>SortedSet</code>. Attempting to add an element results in a
+            <code>ClassCastException</code>. <br>
+            - The <code>TreeSet</code> class is one of the predefined implementation classes for the <code>SortedSet</code> interface in the Collections Framework. <br>
+            - Read through the behavior of the <code>TreeSet</code> when we try to store <code>String</code>s into it and also pass in a custom <code>Comparator</code> of our own
+            <a href="../LeetCode/LeetCode.html#LC_HashSet">here on the other page</a>. <br>
+
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/9fd9b16324db9dbf0c1e413c8219634b.js"></script>
+                </div>
+            </div>
+
+            - How is a <code>null</code> element stored in a <code>SortedSet</code>? If a <code>SortedSet</code> uses natural order (uses the <code>Comparable</code> interface’s
+            <code>compareTo()</code> method), adding a <code>null</code> element will throw a <code>NullPointerException</code>. If you use a <code>Comparator</code> object to
+            apply the ordering, it is up to you to allow a null element in the <code>SortedSet</code>. If you allow a null element in the <code>SortedSet</code>, you can decide
+            whether the null element will be placed in the beginning or at the end of the Set. <br>
+            - There is a separate method in the <code>Comparator</code> interface that can place nulls at the start or end as per your requirement:
+            <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Comparator.html#nullsFirst-java.util.Comparator-"><code>nullsFirst</code></a> or
+            <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Comparator.html#nullsLast-java.util.Comparator-"><code>nullsLast</code></a>. Usage shown in above code
+            example.
+        </div>
+
+
+        <div class="sub-heading">Using the <code>NavigableSet</code> interface</div>
+        <div>
+            - A navigable set is a specialized type sorted set that lets you work with its subsets in a variety of ways. (emphasize again that this will also sort the contents like
+            a <code>SortedSet</code> does). <br>
+            - The <code>NavigableSet</code> interface inherits from the <code>SortedSet</code> interface and defines some additional methods to extend the functionality provided by
+            the <code>SortedSet</code>. It extends <code>SortedSet</code> in four ways: <br>
+            a) It lets you navigate the set in reverse order. The reverse order is the opposite order in which your <code>SortedSet</code> would be sorted normally. Its
+            <code>descendingSet()</code> method returns a <code>NavigableSet</code> object, which is another view of the same <code>NavigableSet</code> in the reverse order. If you
+            modify the original <code>NavigableSet</code> or the one returned from the <code>descendingSet()</code> method, the modifications will be reflected in both sets. <br>
+            b) It adds another version of the three methods <code>headSet()</code>, <code>tailSet()</code>, and <code>subSet()</code> in <code>SortedSet</code>, which accept a
+            boolean flag to include the element at the beginning or the end of the subset boundary. <br>
+            c) It provides four methods, <code>lower()</code>, <code>floor()</code>, <code>higher()</code>, and <code>ceiling()</code>, that are used to search for an element based
+            on search criteria. The <code>lower()</code> method returns the greatest element in the <code>NavigableSet</code> that is less than the specified element. The <code>floor()</code>
+            method is similar to the <code>lower()</code> method that returns the greatest element in the <code>NavigableSet</code> that is less than or equal to the specified
+            element. The <code>higher()</code> method returns the least element in the <code>NavigableSet</code> that is greater than the specified element. The
+            <code>ceiling()</code> method is similar to the <code>higher()</code> method that returns the least element in the <code>NavigableSet</code> that is greater than or
+            equal to a specified element. <br>
+            d) It provides two methods, <code>pollFirst()</code> and <code>pollLast()</code>, that retrieve and remove the first and the last element of the
+            <code>NavigableSet</code>, respectively. If the <code>NavigableSet</code> is empty, they return null. <br>
+            - The <code>TreeSet</code> class is one of the implementation classes for the <code>NavigableSet</code> interface. Since a <code>NavigableSet</code> is also a
+            <code>SortedSet</code> and a <code>SortedSet</code> is also a <code>Set</code>, you can use an object of <code>TreeSet</code> as a set, a sorted set, and a navigable
+            set.
+
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/bcfa28bf28e18fb91a68a1dbc48a81f8.js"></script>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="sub-heading">Working with Lists</div>
+        <div>
+            - Read the basics of operations that can be performed on a list <a href="../LeetCode/LeetCode.html#LC_Lists">here on the other page</a>. <br>
+            - A <code>List</code> lets you iterate over its elements using a specialized iterator represented by an instance of the <code>ListIterator</code> interface. The
+            <code>ListIterator</code> interface inherits the <code>Iterator</code> interface; it adds a few more methods to give you access to elements in the list from the current
+            position in the backward direction.
+        </div>
+
+        <div class="sub-heading">Working with Queues</div>
+        <div>
+            -
+        </div>
+
+
+    </div>
+
+
+    <hr>
     <div id="Lambda" class="chapter">Chapter 15: Lambda Expressions</div>
     <hr>
 
@@ -2775,9 +2964,7 @@
 
         <div class="sub-heading">Useful Links:</div>
 
-        <a href="https://github.com/stavalfi/lectures/tree/master/Java%20Streams%20-%20Series">Github link to lectures
-            on Streams</a>
-        <br>
+        <a href="https://github.com/stavalfi/lectures/tree/master/Java%20Streams%20-%20Series">Github link to lectures on Streams</a> <br>
     </div>
 
     <hr>
@@ -3480,6 +3667,94 @@
                 href="https://www.baeldung.com/java-default-annotations#meta-annotations">Meta Annotations</a>. (Source on Baeldung) <br>
             - Some examples of meta annotations are: <code>@Target</code>, <code>@Retention</code>, <code>@Inherited</code>, <code>@Documented</code>, <code>@Repeatable</code> <br>
         </div>
+    </div>
+
+    <hr>
+    <div id="Udemy_Java_Section24" class="chapter">Section 24: Generics</div>
+    <hr>
+
+    <div class="textual-content">
+        - There is a book on Generics in your library that you have to read. <br>
+        - First read <a href="JavaNotes_2.html#Generics">Generics on the other page here</a>.
+
+        <div class="sub-heading">Lecture 234: Bounds on Generics</div>
+        <div>
+            <p class="inline-heading">What happens if we do not specify the type parameter:</p> <br>
+            - Consider the following code:
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/dc196b3efc6f57ada1746a37463896f3.js"></script>
+                </div>
+            </div>
+
+            <p class="inline-heading">What happens in case we extend a generic class</p>: <br>
+            - Depends on the way that you extend the generic class. Note the below examples.
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/f350f791591ce5f74589aa8a1ec2ef0b.js"></script>
+                </div>
+            </div>
+
+            <p class="inline-heading">How do you use Bounded Types with Generics</p>: <br>
+            - You can use the <code>extends</code> keyword to make sure that the type that is going to be used for your class is going to be <i>upper-bounded</i> by some class. For
+            example, all classes such as <code>Integer</code>, <code>Double</code>, <code>Float</code> inherit from the <code>Number</code> class. Hence if we want our class to
+            store only <code>Number</code> references, we can use the <code>extends</code> keyword as follows:
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/426082228e2690db011f2abb1625cb02.js"></script>
+                </div>
+            </div>
+        </div>
+
+        <div class="sub-heading">Lecture 235: Generic Methods</div>
+        <div>
+            - We can use Generic Types with methods as well. Note that the generic type should come before the return type. <br>
+            - Similar to how we could upper-bound types that are accepted in Classes, we can upper-bound types that are accepted as method arguments as well.
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/ba592becd3181fc9d47c44556111d442.js"></script>
+                </div>
+            </div>
+
+            - Why doesn't this compile: Read <a href="https://stackoverflow.com/a/45155467/8742428">why here on SO</a>. Very interesting answer.
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/76f4dbd42f5806cc6eb8a403116fda7c.js"></script>
+                </div>
+            </div>
+
+            - <p class="inline-heading">How do we make use of the unbounded generic type <code>&lt;?&gt;</code></p>: <br>
+            - Note that the understanding that <code>MyArray&lt;?&gt;</code> and <code>MyArray&lt;Object&gt;</code> are the same, is incorrect. Refer the <a
+                href="https://www.baeldung.com/java-generics-vs-extends-object">following article on Baeldung</a> for details. (Actually, they are kind of the same? I mean it
+            basically depends on the context that you are trying to use them in I guess?) Basically, the difference lies in the following code:
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/4f3cf5d2b740c684d9b1ba4f7ecc6331.js"></script>
+                </div>
+            </div>
+
+            - Why is <code>class MyClass&lt;T extends Number&gt;</code> valid code, but <code>class MyClass&lt;T super Number&gt;</code> invalid code <a
+                href="https://stackoverflow.com/questions/37411256/why-super-keyword-in-generics-is-not-allowed-at-class-level">explained here on SO</a>.
+        </div>
+
     </div>
 
 

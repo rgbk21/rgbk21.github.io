@@ -1325,7 +1325,7 @@ FROM employees worker
 JOIN employees manager
 ON (worker.manager_id = manager.employee_id);
 
--- For some reason, adding the As keyword causes the query to fail:
+-- For some reason, adding the AS keyword causes the query to fail:
 SELECT worker.first_name, worker.last_name, worker.employee_id, worker.manager_id, 
         manager.first_name, manager.last_name, manager.employee_id
 FROM employees AS worker

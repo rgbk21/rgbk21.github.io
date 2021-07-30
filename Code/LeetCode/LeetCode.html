@@ -314,7 +314,9 @@
             recursive call. Two arrays are equal if they contain the same elements in the same order. Two arrays are also equal if both of them are <code>null</code>.
             <br>
             - Remember that <code>Objects.equals(arg1, arg2)</code> internally simply calls <code>arg1.equals(arg2)</code> method of <i>arg1</i> (the first argument passed into the
-            Objects.equals method). Keep that in mind when you see the behavior of <code>equals</code> and <code>Objects.equals</code> in the case of arrays.
+            Objects.equals method). Keep that in mind when you see the behavior of <code>equals</code> and <code>Objects.equals</code> in the case of arrays. <br>
+            - Sorting an array, without having to convert it into a <code>List</code>, is a story of its own. <a href="https://www.baeldung.com/java-sorting-arrays">Read here on
+            Baeldung</a>.
             <div class="code-block">
                 <div class="expand-code-snip-btn border border-primary rounded">
                     <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
@@ -325,7 +327,7 @@
             </div>
         </div>
 
-        <div class="sub-heading">List Basic Operations</div>
+        <div id="LC_Lists" class="sub-heading">List Basic Operations</div>
         <div>
             - Refer how to use a <code>Comparator</code> <a href="../ThingsToRemember/ThingsToRemember.html#num40">here</a>. Also keep in
             mind everything we went over regarding removing/modifying elements in a list while iterating over the same list like <a
@@ -474,7 +476,7 @@
                 href="https://stackoverflow.com/questions/68422044/time-complexity-of-checking-whether-a-string-is-present-in-a-hashset-java">Explained on SO here</a>.
         </div>
 
-        <div class="sub-heading">Hash Set</div>
+        <div id="LC_HashSet" class="sub-heading">Hash Set</div>
         <div>
             - Basic operations in a HashSet <br>
             - Also recall the discussion we had about modifying a hashset while iterating over the same HashSet. It is going to throw a <code>ConcurrentModificationException</code>.
@@ -514,6 +516,8 @@
 
         <div class="sub-heading">Hash Map</div>
         <div>
+            - Each element in a <code>Map</code> represents a key-value pair as &lt;key, value&gt;. A &lt;key, value&gt; pair is also known as an <code>entry</code> in the map. The
+            key and the value must be reference types. You cannot use primitive types (int, double, etc.) for either keys or values in a map. <br>
             - Map does not allow any duplicate keys. Each key is mapped to exactly one value. In other words, each key in a Map has exactly one value. Values do not have to be
             unique. That is, two keys may map to the same value. <br>
             - The view operations category contains three methods. Each returns a different view of a <code>Map</code>. You can view all <i>keys</i> in a <code>Map</code> as a
