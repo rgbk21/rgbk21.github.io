@@ -84,6 +84,7 @@
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="../../Lectures/COMS_631/COMS_631_index.html">COMS 631</a>
                     <a class="dropdown-item" href="../../Lectures/COMS_535/COMS_535_index.html">COMS 535</a>
+                    <a class="dropdown-item" href="../../Lectures/EffectiveJava/EffectiveJava.html">Effective Java</a>
                     <div class="dropdown-divider"></div>
                 </div>
             </li>
@@ -1239,6 +1240,15 @@
     </div>
 
     <div class="one-point">
+        57.1) Git related stuff <br>
+        - Let's say, my current git log is (latest) commit3 :: commit2 :: commit1 (earliest). I reset the head to commit2. Now I want to go back to commit3, but I forget the sha-1
+        of commit3, so I want to look at the log , but "git log" will only show commit2, commit1, my question is how to reset to commit3 or let the log show also commit3 now?
+        We use <code>git reflog</code> in this case <a href="https://stackoverflow.com/questions/4768225/see-all-history-of-git">(Source on SO)</a>. Note that after you run this
+        command you will see a "HEAD Detached" warning in IntelliJ. You can rectify that by following <a href="https://stackoverflow.com/a/10229202">this SO post linked here</a>.
+        It explains what a detached head really means, and what you can do about it. <br>
+    </div>
+
+    <div class="one-point">
         58) Difference between Abstract classes and interface in java 8 <br>
         - Java Doc Source <a href="https://docs.oracle.com/javase/tutorial/java/IandI/abstract.html">here</a>. <br>
         - An abstract class is a class that is declared abstract - it may or may not include abstract methods. Abstract classes cannot be instantiated, but they can be subclassed.
@@ -1950,6 +1960,25 @@
         language"</a>. <a href="https://stackoverflow.com/questions/6101311/what-is-the-native-keyword-in-java-for/30635871">Source on SO</a>. <br>
         - You can look at the source code for <a href="http://openjdk.java.net/">OpenJDK</a> (licensed under GPLv2 with Classpath Exception). Probably the best way to study the JDK
         implementation internals.
+    </div>
+
+    <div class="one-point">
+        86) Adding a new Tomcat Server to the IntelliJ Idea Run Configuration <br>
+        - First you will have to make sure that Tomcat is actually installed on your system. Download the version that you require from <a
+            href="https://tomcat.apache.org/whichversion.html">here</a>. You can download the .exe installer. Change the shutdown server port to 8005 as explained <a
+            href="https://stackoverflow.com/questions/62912431/how-to-shutdown-apache-tomcat9-0-server">here</a>
+        (<code>C:\Program Files\Apache Software Foundation\Tomcat 9.0\conf</code>). Accept the other default options. <br>
+        - In your system, for some reason you were unable to view the contents of the installed folder because the folder was in the <i>Read Only Mode</i>. You had to change the
+        permissions for the folder by following the link <a href="https://superuser.com/questions/846143/remove-read-only-attribute-from-folder-after-windows-reinstall">here</a>.
+        <br>
+        - Once that is done, the next step is to just add the Tomcat Dependency to IntelliJ. Which you can do by following the tutorial <a
+            href="https://www.jetbrains.com/help/idea/configuring-and-managing-application-server-integration.html">here</a>. <br>
+        - Once that is done, then from now on in your projects, you just need to Click on Run - Edit Configurations - + - Tomcat Server Local - Input the required information
+    </div>
+
+    <div class="one-point">
+        87) <code>trim</code> vs <code>strip</code> method for <code>String</code> in Java <br>
+        - Read <a href="https://stackoverflow.com/a/51266583/8742428">here on SO</a>.
     </div>
 
 

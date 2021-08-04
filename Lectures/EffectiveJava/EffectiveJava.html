@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9QJ5D3X353"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+        gtag('config', 'G-9QJ5D3X353');
+    </script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../globalStyles.css">
+    <meta name="author" content="Raj Gaurav Ballabh Kumar">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Effective Java Notes</title>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+
+    <div class="navbar-header">
+        <a href="../../index.html" class="navbar-brand"> rgbk21</a>
+    </div>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"><span
+            class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="nav navbar-nav">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+                   aria-expanded="false">
+                    Projects
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="../../Projects/TwitterCritNodes/TwitterCritNodes_1.html">Identifying
+                        Critical Nodes on Twitter</a>
+                    <a class="dropdown-item" href="../../Projects/isRelatedTo/isRelatedTo.html">isRelatedTo</a>
+                    <div class="dropdown-divider"></div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+                   aria-expanded="false">
+                    HTML Projects
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="../../Pig_Game/index.html">2-Player Pig Game</a>
+                    <a class="dropdown-item" href="../../ImageGallery/ImageGallery.html">Image Gallery</a>
+                    <a class="dropdown-item" href="../../RGB_Guesser_Game/RGB.html">RGB Guesser Game</a>
+                    <a class="dropdown-item" href="../../ToDoList/todo.html">To-Do List</a>
+                    <div class="dropdown-divider"></div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+                   aria-expanded="false">
+                    Notes
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="../COMS_631/COMS_631_index.html">COMS 631</a>
+                    <a class="dropdown-item" href="../COMS_535/COMS_535_index.html">COMS 535</a>
+                    <a class="dropdown-item" href="../EffectiveJava/EffectiveJava.html">Effective Java</a>
+                    <div class="dropdown-divider"></div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+                   aria-expanded="false">
+                    Code
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="../../Code/ThingsToRemember/ThingsToRemember.html">Things To Remember</a>
+                    <a class="dropdown-item" href="../../Code/Java_Notes/JavaNotes.html">Java Notes</a>
+                    <a class="dropdown-item" href="../../Code/Java_Notes/JavaNotes_2.html">Java Notes 2</a>
+                    <a class="dropdown-item" href="../../Code/LeetCode/LeetCode.html">LeetCode Notes</a>
+                    <a class="dropdown-item" href="../../Code/Applying_Java_Notes/ApplyingJava_Notes.html">ApplyingJava Notes</a>
+                    <a class="dropdown-item" href="../../Code/JavaScript/JavaScript.html">JavaScript Notes</a>
+                    <a class="dropdown-item" href="../../Code/HTML_CSS/HTML_CSS_Basics.html">HTML & CSS Notes</a>
+                    <a class="dropdown-item" href="../../Code/SQL/SQL.html">SQL Notes</a>
+                    <a class="dropdown-item" href="../../Code/Spring/Spring.html">Spring Notes</a>
+                    <a class="dropdown-item" href="../../Code/Kafka/Kafka.html">Kafka Notes</a>
+                    <a class="dropdown-item" href="../../Code/Angular/Angular.html">Angular</a>
+                    <a class="dropdown-item" href="../../Code/Hibernate/Hibernate.html">Hibernate</a>
+                    <div class="dropdown-divider"></div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+                   aria-expanded="false">
+                    In Another Life
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="../../InAnotherLife/Chapter1.html">Chapter 1</a>
+                    <div class="dropdown-divider"></div>
+                </div>
+            </li>
+
+        </ul>
+
+
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active"><a class="nav-link" href="https://github.com/rgbk21">GitHub</a></li>
+            <li class="nav-item active"><a class="nav-link"
+                                           href="https://www.linkedin.com/in/raj-gaurav-ballabh-kumar-97002058/">LinkedIn</a>
+            </li>
+            <li class="nav-item active"><a class="nav-link" href="https://www.instagram.com/wobblyframes/">Instagram</a>
+            </li>
+            <li class="nav-item active"><a class="nav-link"
+                                           href="https://www.facebook.com/SomeRandomThoughts">Facebook</a></li>
+        </ul>
+
+    </div>
+</nav>
+
+<div class="container">
+
+    <button id='load-all-gists' type="button" class="btn btn-outline-primary">Show all Gists!</button>
+
+    <div>
+        This page contains my notes from Effective Java book by Joshua Bloch <br>
+    </div>
+
+    <br>
+    Index:
+    <br>
+    Chapter 2: <a href="#Chapter2">Creating and Destroying Objects</a> <br>
+    Chapter 3: <a href="#Chapter3">Methods common to all objects</a> <br>
+    Chapter 8: <a href="#Chapter8">Methods</a> <br>
+
+    <hr>
+    <div id="Chapter0" class="chapter">Chapter 0: Useful Links</div>
+    <hr>
+
+    <div class="textual-content">
+        - <a href="https://www.youtube.com/watch?v=jKCSTi5HMw8">Revisiting Effective Java in 2019 by Edson Yanaga</a>
+
+    </div>
+
+
+    <hr>
+    <div id="Chapter2" class="chapter">Chapter 2: Creating and Destroying Objects</div>
+    <hr>
+
+    <div class="textual-content">
+
+        <div id="Item#1" class="sub-heading">Item 1: Consider <code>static</code> factory methods instead of Constructors</div>
+        <div>
+            - A class can provide its clients with static factory methods instead of, or in addition to, public constructors. Providing a static factory method instead of a public
+            constructor has both advantages and disadvantages. <br>
+            - One advantage of static factory methods is that, unlike constructors, they have names. A class can have only a single constructor with a given signature. Programmers
+            have been known to get around this restriction by providing two constructors whose parameter lists differ only in the order of their parameter types. This is a bad
+            idea. Because they have names, static factory methods don't share the same restriction. <br>
+            - A second advantage of static factory methods is that, unlike constructors, they are not required to create a new object each time they're invoked. This allows
+            immutable classes (Item 17) to use preconstructed instances, or to cache instances as they're constructed, and dispense them repeatedly to avoid creating unnecessary
+            duplicate objects. <br>
+            - The ability of static factory methods to return the same object from repeated invocations allows classes to maintain strict control over what instances exist at any
+            time. Classes that do this are said to be <i>instance-controlled</i>. Instance control allows a class to guarantee that it is a singleton (Item 3) or noninstantiable
+            (Item 4). Also, it allows an immutable value class (Item 17) to make the guarantee that no two equal instances exist: <code>a.equals(b)</code> if and only if
+            <code>a == b</code>. This is the basis of the Flyweight pattern. <br>
+            - For instance consider the following code. When a new instance of the <i>CreatorClass</i> is being created, the first thing that will be done is that the
+            <code>static</code> variable, <i>baseClass</i> will be initialized. Now everytime that the <i>getBaseClassInstance</i> method is called to return an instance of the
+            <i>BaseClass</i> object, it will the <i>same</i> instance of <i>BaseClass</i> that will be returned. This is what we are validating by using the <code>==</code> check
+            in the code as well.
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/08311d5f2388e9ea3225fb619b8dec74.js"></script>
+                </div>
+            </div>
+
+            - A third advantage of static factory methods is that, unlike constructors, they can return an object of any subtype of their return type. This gives you great
+            flexibility in choosing the class of the returned object. Look at the Pizza example from Item#2 to see an example of this in action. <br>
+            - A fourth advantage of static factories is that the class of the returned object can vary from call to call as a function of the input parameters. Any subtype of the
+            declared return type is permissible. <br>
+            - A fifth advantage of static factories is that the class of the returned object need not exist when the class containing the method is written. Such flexible static
+            factory methods form the basis of service provider frameworks, like the Java Database Connectivity API (JDBC). A service provider framework is a system in which
+            providers implement a service, and the system makes the implementations available to clients, decoupling the clients from the implementations. <br>
+            - The main limitation of providing only static factory methods is that classes without public or protected constructors cannot be subclassed. <br>
+            - A second shortcoming of static factory methods is that they are hard for programmers to find. They do not stand out in API documentation in the way that constructors
+            do, so it can be difficult to figure out how to instantiate a class that provides static factory methods instead of constructors.
+
+            <br>
+            <br>
+
+            <p class="inline-heading">Some common names for <code>static</code> methods</p>: <br>
+            a) <code>from</code>: A <i>type-conversion</i> method that takes a single parameter and returns a corresponding instance of this type, for example:
+            <code>Date d = Date.from(instant);</code> <br>
+            b) <code>of</code>: An aggregation method that takes multiple parameters and returns an instance of this type, for example:
+            <code>Set&lt;Rank&gt; faceCards = EnumSet.of(JACK, QUEEN, KING);</code> <br>
+            c) <code>valueOf</code>: A more verbose version alternative to <code>from</code> and <code>of</code>, for example:
+            <code>BigInteger prime = BigInteger.valueOf(Integer.MAX_VALUE);</code> <br>
+            d) <code>instance</code> or <code>getInstance</code>: Returns an instance that is described by its parameters (if any) but cannot be said to have the same value, for
+            example:
+            <code>StackWalker luke = StackWalker.getInstance(options);</code> <br>
+            e) <code>create</code> or <code>newInstance</code>: Like <code>instance</code> or <code>getInstance</code>, except that the method guarantees that each call returns a
+            new instance, for example:
+            <code>Object newArray = Array.newInstance(classObject, arrayLen);</code> <br>
+            f) <code>get<i>Type</i></code>: Like <code>getInstance</code>, but used if the factory method is in a different class. <i>Type</i> is the type of object returned by the
+            factory method, for example: <br>
+            <code>FileStore fs = Files.getFileStore(path);</code> <br>
+            g) <code>new<i>Type</i></code>: Like <code>newInstance</code> but used if the factory method is in a different class. <i>Type</i> is the type of object returned by the
+            factory method, for example: <br>
+            <code>BufferedReader br = Files.newBufferedReader(path);</code> <br>
+            h) <code><i>type</i></code>: A concise alternative to getType and newType, for example:
+            <code>List&lt;Complaint&gt; litany = Collections.list(legacyLitany);</code>
+
+            <br>
+            <br>
+
+            <p class="inline-heading">How to use the Builder pattern where inheritance is involved?</p> <br>
+            - This seems to be quite the struggle in itself. Google: "use inheritance in builder pattern java". // TODO: Some links: <br>
+            a) <a href="https://stackoverflow.com/questions/21086417/builder-pattern-and-inheritance">Builder Pattern and Inheritance</a> <br>
+            b) <a href="https://stackoverflow.com/questions/17164375/subclassing-a-java-builder-class">Subclassing a Java Builder class</a> <br>
+        </div>
+
+
+        <div id="Item#2" class="sub-heading">Item 2: Consider a <code>Builder</code> when faced with many constructor parameters</div>
+        <div>
+            - Static factories and constructors share a limitation: they do not scale well to large numbers of optional parameters. Consider the case of a class representing the
+            Nutrition Facts label that appears on packaged foods. These labels have a few required fields - serving size, servings per container, and calories per serving - and
+            more
+            than twenty optional fields - total fat, saturated fat, trans fat, cholesterol, sodium, and so on. <br>
+            - Traditionally, programmers have used the <i>telescoping constructor pattern</i>, in which you provide a constructor with only the required parameters, another with a
+            single optional parameter, a third with two optional parameters, and so on, culminating in a constructor with all the optional parameters. The telescoping constructor
+            pattern works, but it is hard to write client code when there are many parameters, and harder still to read it.<br>
+            - A second alternative when you're faced with many optional parameters in a constructor is the <i>JavaBeans</i> pattern, in which you call a parameterless
+            constructor to create the object and then call setter methods to set each required parameter and each optional parameter of interest. <br>
+            - Unfortunately, the JavaBeans pattern has serious disadvantages of its own. Because construction is split across multiple calls, a JavaBean may be in an inconsistent
+            state partway through its construction. The class does not have the option of enforcing consistency merely by checking the validity of the constructor parameters.
+            Attempting to use an object when it's in an inconsistent state may cause failures that are far removed from the code containing the bug and hence difficult to debug. A
+            related disadvantage is that the JavaBeans pattern precludes (prevent from happening; make impossible) the possibility of making a class immutable (Item 17) and
+            requires added effort on the part of the programmer to ensure thread safety. <br>
+            - It is possible to reduce these disadvantages by manually "freezing" the object when its construction is complete and not allowing it to be used until frozen, but this
+            variant is unwieldy and rarely used in practice. What does "freezing" an object in Java mean? Read <a
+                href="https://softwareengineering.stackexchange.com/a/369575/399623"> here on SE</a>. This is a messy pattern and probably not widely used. A far neater pattern is
+            the builder pattern. <br>
+
+            <br>
+            <p class="inline-heading">What is the Builder Pattern?</p> <br>
+            - Instead of making the desired object directly, the client calls a constructor (or static factory) with all of the required parameters and gets a builder object. Then
+            the client calls setter-like methods on the builder object to set each optional parameter of interest. Finally, the client calls a parameterless build method to
+            generate the object, which is typically immutable.
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/b477aeb713caee798a20927020fb9952.js"></script>
+                </div>
+            </div>
+
+            - The Builder pattern is well-suited to class hierarchies. The following example makes use of recursive type parameters. Read more about them
+            <a href="../../Code/Java_Notes/JavaNotes_2.html#recursive-type-params">here on the other page</a>. <br>
+            - You can refactor the existing constructor in your class into a Builder or a static method by right-clicking on the constructor - Refactor - Replace Constructor With *
+            <br>
+            - There is stuff going on over here that I do not understand. <br>
+            // TODO: Builder pattern for class hierarchies <br>
+            - The technique, wherein a subclass method is declared to return a subtype of the return type declared in the superclass, is known as
+            <i>covariant return typing</i>. It allows clients to use these builders without the need for casting. <br>
+            - Note that Pizza.Builder is a generic type with a recursive type parameter (Item 30). This, along with the abstract self method, allows method chaining to work
+            properly in subclasses, without the need for casts.
+
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/5764253cc8a2da3c2170492b770cfaa5.js"></script>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="Item#3" class="sub-heading">Item 3: Enforce the Singleton property with a private constructor or an Enum type</div>
+        <div>
+            - The first two techniques of creating a Singleton is by creating a class with a <code>private</code> constructor.
+            - Read <a href="https://dzone.com/articles/java-singletons-using-enum">this explanation on DZone</a> explaining how to use Enums for creating Singletons. It also goes
+            over the first two techniques of creating singletons along with their drawbacks. <br>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/ea71c15ccc713faed47f3aadb3ea327a.js"></script>
+                </div>
+            </div>
+
+            - Go through all the answers at <a href="https://stackoverflow.com/questions/26285520/implementing-singleton-with-an-enum-in-java">this SO Link</a>. <br>
+            - An enum is a java class with the special condition that its definition must start with at least one "enum constant". Apart from that, and that enums can't be
+            extended or used to extend other classes, an enum is a class like any class and you use it by adding methods below the constant definitions:
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/2154452736a75b82dfc40865bde52d22.js"></script>
+                </div>
+            </div>
+            - Note that the enum is created only when the INSTANCE field is first accessed. Only at that point will JVM implicitly call the (implicit) constructor of the enum.
+            Hence the instantiation is a lazy instantiation. You can override the constructor of the enum that you create. But note that manually calling the constructor is a
+            compile error. To sum up, by default enums have implicit private constructor and that explicitly adding a private constructor is not needed unless you actually have
+            code that you need to run in that constructor
+
+
+            <br>
+            - Why is it mentioned in the book that a Singleton Class is hard to test. "Making a class a singleton can make it difficult to test its clients because it's impossible
+            to substitute a mock implementation for a singleton unless it implements an interface that serves as its type." Read
+            <a href="https://stackoverflow.com/questions/25273210/why-is-a-singleton-class-hard-to-test">this SO Link</a>.
+        </div>
+
+
+        <div id="Item#4" class="sub-heading">Item 4: Enforce non-instantiability with a private constructor</div>
+        <div>
+            - You have the concept of <i>Utility Classes</i> in java. The idea is that these classes have <code>static</code> methods that serve some specific purpose, but the
+            class in which the methods are present is NEVER meant to be instantiated. For example, consider the <code>java.lang.Math</code> class. You can call a number of methods
+            from this class like <code>Math.log10(1000)</code>, <code>Math.pow(10,2)</code> etc. All of these methods are declared <code>static</code> in the <code>Math</code>
+            class and you are not expected to instantiate the <code>Math</code> class in order to make use of these methods. In fact, you CANNOT instantiate the <code>Math</code>
+            class because the constructor of the <code>Math</code> class is declared <code>private</code> with the following comment on top of it: <i>Don't let anyone instantiate
+            this class.</i>. <br>
+            - You can see the same thing when you look at the <code>java.util.Arrays</code> class as well. Remember this class has useful methods such as
+            <code>Arrays.asList("Alice", "Bob");</code>. Again, just like the <code>Math</code> class, these methods are also declared <code>static</code>. And the
+            <code>Arrays</code>
+            class itself has a <code>private</code> constructor. With the following comment: <i>Suppresses default constructor, ensuring non-instantiability.</i> <br>
+            - This is important. This idiom is mildly counterintuitive because the <code>private</code> constructor is provided expressly so that it cannot be invoked. Remember
+            that if you did not specify a constructor, then java would have provided a default constructor, which would have allowed others to instantiate the class. <br>
+            - Attempting to enforce noninstantiability by making a class <code>abstract</code> does not work. The class can be subclassed and the subclass instantiated. <br>
+            - Note that as a side-effect of using this idiom, this prevents the Utility Class from being subclassed. All constructors must invoke a superclass constructor,
+            explicitly or implicitly, and a subclass would have no accessible superclass constructor to invoke.
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/1324dd49a7b8c4a1508f2d77f5718a49.js"></script>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="Item#5" class="sub-heading">Item 5: Prefer Dependency Injection to hard-wiring resources</div>
+        <div>
+            - Static utility classes and singletons are inappropriate for classes whose behavior is parameterized by an underlying resource. <br>
+            - Imagine you wanted to create a spell checker. The spell checker depends on the dictionary that is going to be used for testing the spelling. Thus the dictionary is a
+            dependency for the <i>SpellChecker</i> class. You can create an instance variable of type <i>Dictionary</i> in the <i>SpellChecker</i> class and have that class use
+            that particular dictionary. But now if you want to create a spell checker for a different language, you will have to create a different <i>SpellChecker</i> class with a
+            different <i>Dictionary</i>. This is certainly not ideal.
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/d2df913324f3fb98b638fd28799a3323.js"></script>
+                </div>
+            </div>
+            - What is required is the ability to support multiple instances of the class (in our example, <i>SpellChecker</i>), each of which uses the resource desired by the
+            client (in our example, the dictionary). A simple pattern that satisfies this requirement is to pass the resource into the constructor when creating a new instance.
+            This is one form of <i>dependency injection</i>: the dictionary is a <i>dependency</i> of the spell checker and is <i>injected</i> into the spell checker when it is
+            created.
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/8067a9e6a4963ffe494e1599946a6cb9.js"></script>
+                </div>
+            </div>
+
+            - Read about <a href="https://stackoverflow.com/questions/8578104/how-dependency-injection-fosters-testability">how DI improves the testability of class here on SO</a>.
+            <br>
+        </div>
+
+
+        <div id="Item#6" class="sub-heading">Item 6: Avoid creating unnecessary objects</div>
+        <div>
+            - Never use <code>new String()</code> to create a new <code>String</code>. Use the String literal because in that way you can reuse the same String instance. <br>
+            - Why does the code say: "Prevents VM from optimizing away everything". Explained <a href="https://stackoverflow.com/a/53683915/8742428">here on SO</a>.
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/a8b3dc7703f56cc4e57b1141a07366cc.js"></script>
+                </div>
+            </div>
+
+            - You can often avoid creating unnecessary objects by using static factory methods (Item 1) in preference to constructors on immutable classes that provide both. <br>
+            - Use a <code>Pattern</code> when you are trying to match a string with a regex instead of directly calling <code>yourStr.matches("regexExpression")</code>. Note the
+            below example how we are making use of the <code>Pattern</code> class. <br>
+            - While <code>String.matches</code> is the easiest way to check if a string matches a regular expression, it’s not suitable for repeated use in performance-critical
+            situations. The problem is that it internally creates a <code>Pattern</code> instance for the regular expression and uses it only once, after which it becomes eligible
+            for garbage collection. Creating a <code>Pattern</code> instance is expensive because it requires compiling the regular expression into a finite state machine. To
+            improve the performance, explicitly compile the regular expression into a <code>Pattern</code> instance (which is immutable) as part of class initialization, cache it,
+            and reuse the same instance for every invocation of the <i>isRomanNumeral</i> method.
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/83c12ac5c868987e5c9b84bc190bc6f2.js"></script>
+                </div>
+            </div>
+
+            - You can use the <code>keySet</code> method of a <code>Map</code> interface to get a view of the keys of the <code>Map</code> in the form of a <code>Set</code>. The
+            <code>keySet</code> is backed by the underlying <code>Map</code>, i.e. any changes to the key set are going to be reflected in the <code>Map</code>. If you create
+            multiple instances of a key set from the same <code>Map</code>, making changes to one key set are going to impact all of the other key sets that you have created as
+            well. <br>
+            - Prefer primitives to boxed primitives, and be wary of unintentional autoboxing. In the below example, the variable <i>sum</i> is declared as a <code>Long</code>
+            instead of a <code>long</code>, which means that the program constructs about 2^31 unnecessary <code>Long</code> instances (roughly one for each time the
+            <code>long</code> i is added to the <code>Long</code> sum). Changing the declaration of <i>sum</i> from <code>Long</code> to <code>long</code> reduces the runtime.
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/5bbd58c8ad757a399d5ce90e1ce67563.js"></script>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="Item#7" class="sub-heading">Item 7: Eliminate obsolete object references</div>
+        <div>
+            - You can run into <code>OutOfMemoryError</code> in Java as well if you are not careful with Objects that are no longer in use in the program, but your
+            datastructures are still maintaining a reference to it. <br>
+            - Consider the below code. As you are adding elements to the array, you are increasing the <i>length</i> value, and once you "remove" the last element, you are
+            simulating that by just reducing the <i>length</i> parameter of the array. This causes a memory leak, because your array is still storing a reference to the object in
+            the array. Imagine this was a reference to a rather large object, which had references of its own. As your program scaled, you would have run into memory issues. <br>
+            - One way of getting around this problem is by <code>null</code>ing out the references once you are done with them.
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/c28818805f858f3e848c82257453e2d6.js"></script>
+                </div>
+            </div>
+            - Nulling out object references should be the exception rather than the norm. The best way to eliminate an obsolete reference is to let the variable that contained the
+            reference fall out of scope. This occurs naturally if you define each variable in the narrowest possible scope. <br>
+
+            <br>
+            <br>
+
+            - <p class="inline-heading">So when should you null out a reference? What aspect of the MyArray class makes it susceptible to memory leaks?</p> <br>
+            - Simply put, it manages its own memory. <br>
+            - The storage pool consists of the elements of the <i>myArray</i> array (the object reference cells, not the objects themselves). The elements in the active portion of
+            the array (elements of the array that are at index less than <i>length</i>) are allocated, and those in the remainder of the array are free. The garbage collector has
+            no way of knowing this; to the garbage collector, all of the object references in the elements array are equally valid. Only the programmer knows that the inactive
+            portion of the array is unimportant. The programmer effectively communicates this fact to the garbage collector by manually nulling out array elements as soon as they
+            become part of the inactive portion. Generally speaking, whenever a class manages its own memory, the programmer should be alert for memory leaks. Whenever an element
+            is freed, any object references contained in the element should be nulled out.
+        </div>
+
+
+        <div id="Item#8" class="sub-heading">Item 8: Avoid finalizers and cleaners</div>
+        <div>
+            - Finalizers are deprecated as of Java 9 and have been replaced by cleaners. Cleaners are less dangerous than finalizers, but still unpredictable, slow, and generally
+            unnecessary. <br>
+            - <a href="https://stackoverflow.com/a/56454348/8742428">This SO answer</a> goes into details about why the mechanism of <i>finalization</i> is weird? <br>
+            - <a href="https://stackoverflow.com/a/52889247/8742428">This SO answer </a> goes into details about Cleaners vs Finalizers. <br>
+            - Refer text for complete explanation.
+        </div>
+
+        <div id="Item#9" class="sub-heading">Item 9: Prefer try-with resources to try-finally</div>
+        <div>
+            - Always use try-with-resources instead of using the old try-catch block. <br>
+            - The problem with using the older method is: Even the correct code for closing resources with try-finally statements, as illustrated in the first code example, has a
+            subtle deficiency. The code in both the try block and the finally block is capable of throwing exceptions. For example, in the firstLineOfFile method, the call to readLine could throw an
+            exception due to a failure in the underlying physical device, and the call to close
+            could then fail for the same reason.
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/a22e385d898ec80bb0d8818c0bcae15c.js"></script>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <hr>
+    <div id="Chapter3" class="chapter">Chapter 3: Methods common to all objects</div>
+    <hr>
+
+    <div class="textual-content">
+        - Although <code>Object</code> is a concrete class, it is designed primarily for extension. All of its non-final methods (<code>equals</code>, <code>hashCode</code>, <code>toString</code>,
+        <code>clone</code>, and <code>finalize</code>) have explicit <i>general contracts</i> because they are designed to be overridden. It is the responsibility of any class
+        overriding these methods to obey their general contracts; failure to do so will prevent other classes that depend on the contracts (such as <code>HashMap</code> and <code>HashSet</code>)
+        from functioning properly in conjunction with the class. <br>
+        - The equals method for class <code>Object</code> implements the most discriminating possible equivalence relation on objects; that is, for any non-null reference values x
+        and y, this
+        method returns true if and only if x and y refer to the same object (x == y has the value true). <br>
+        - This chapter tells you when and how to override the nonfinal <code>Object</code> methods.
+
+        <div class="sub-heading">Item 10: Obey the general contract when overriding <code>equals</code></div>
+        <div>
+            -
+        </div>
+
+    </div>
+
+
+    <hr>
+    <div id="Chapter8" class="chapter">Chapter 8: Methods</div>
+    <hr>
+
+
+    <div class="textual-content">
+        - This chapter discusses several aspects of method design: how to treat parameters and return values, how to design method signatures, and how to document methods.
+
+        <div class="sub-heading">Item 49: Check parameters for validity</div>
+        <div>
+            - General principle: you should attempt to detect errors as soon as possible after they occur. Failing to do so makes it less likely that an error will be detected and
+            makes it harder to determine the source of an error once it has been detected.
+        </div>
+
+
+    </div>
+</div>
+
+<script src="../../script.js"></script>
+
+</body>
+</html>

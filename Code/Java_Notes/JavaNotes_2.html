@@ -81,6 +81,7 @@
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="../../Lectures/COMS_631/COMS_631_index.html">COMS 631</a>
                     <a class="dropdown-item" href="../../Lectures/COMS_535/COMS_535_index.html">COMS 535</a>
+                    <a class="dropdown-item" href="../../Lectures/EffectiveJava/EffectiveJava.html">Effective Java</a>
                     <div class="dropdown-divider"></div>
                 </div>
             </li>
@@ -159,6 +160,15 @@
     <div id="Generics" class="chapter">Chapter 4: Generics</div>
     <hr>
     <div class="textual-content">
+
+        <div class="sub-heading">Useful Links</div>
+        <div>
+            - <a href="http://www.angelikalanger.com/GenericsFAQ/FAQSections/ProgrammingIdioms.html#FAQ302">Angelika Langer FAQs about Generics</a> <br>
+            - <a href="https://stackoverflow.com/questions/5730929/java-generics-are-these-two-method-declarations-equivalent/5731463#5731463">This SO post answers</a> the doubt
+            you had about why we would use <code>public &lt;T extends SomeBaseClass&gt; void myMethod(Class&lt;T&gt; clz)</code> vs
+            <code>public void myMethod(Class&lt;? extends SomeBaseClass&gt; clz)</code>
+        </div>
+
 
         <div class="sub-heading">What is the Problem that we are trying to solve?</div>
         <div>
@@ -280,7 +290,8 @@
             <code>Wrapper<?> unknownWrapper = new Wrapper<>(1234);</code>. Then what am I supposed to do at this line of code: <code>String str = unknownWrapper.getRef();</code> I
             am going to show you a compile error so that you know that is not right. If you do this <code>String str = (String) unknownWrapper.getRef();</code>, I will no longer
             show you the compile error, but you are still going to get a <code>ClassCastException</code> at runtime. All I know is that the <i>getRef</i> is going to return an
-            unknown type, and that unknown type is going to be atleast an <code>Object</code>. So the best you can do is write <code>Object obj = unknownWrapper.getRef();</code>. <br>
+            unknown type, and that unknown type is going to be atleast an <code>Object</code>. So the best you can do is write <code>Object obj = unknownWrapper.getRef();</code>.
+            <br>
             - Now why do I show compile errors when you are trying to use <i>setRef</i>? <br>
             - Why does the <i>setRef(new Object())</i> method generate a compile-error as well? Field&lt;?&gt; means Field&lt;? extends Object&gt; and when you have
             <i>? extends Something</i> you can only <i>get</i> values out of it, you can't <i>set</i> values in it except <code>null</code> (<a
@@ -382,6 +393,67 @@
             </div>
         </div>
 
+        <div id="recursive-type-params" class="sub-heading">What is recursive type parameter in Generics? And why is it used?</div>
+        <div>
+            - Excellent answer <a href="https://stackoverflow.com/a/64901718/8742428">here on SO.</a> <br>
+            - Assume that we have to sort the fruits by their sizes. And we are told that we can only compare fruits of the same types. For example, we can't compare apples with
+            oranges.
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/9c2da6b8ed0d54fbe292faf2638fa748.js"></script>
+                </div>
+            </div>
+
+            - So what is the problem with the above solution? The problem here is that the code for implementing the <code>compareTo()</code> method is duplicated for Apple and
+            Orange class. And will be duplicated more in all the classes that we extend from the Fruit, for creating new fruits in the future. The amount of repeated code in our
+            example is less but in real world the repeated code can be of hundreds of lines in each class. <br>
+            - So we come up with the following solution. In this step, we get rid of the repeated code of <code>compareTo()</code> method by moving it to a superclass. Our extended
+            classes Apple and Orange are no longer polluted with common code. But now the problem is that we are now able to compare different types, comparing apples to oranges no
+            longer gives us an error.
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/2f1b41e795dcafbdedab94ea16d392ec.js"></script>
+                </div>
+            </div>
+
+            - So we try a different approach where we try to introduce a type parameter. To restrict comparison of different types, we introduce a type parameter <code>T</code>. So
+            that the comparable <i>Fruit&lt;Apple&gt;</i> cannot be compared to comparable <i>Fruit&lt;Orange&gt;</i>. Note our Apple and Orange classes; they now inherit from the
+            types <i>Fruit&lt;Apple&gt;</i> and <i>Fruit&lt;Orange&gt;</i> respectively. Now if we try to compare different types, the IDE shows an error, which is our desired
+            behaviour. But in this step, our <i>Fruit</i> class doesn't compile. The <i>getSize()</i> method of <code>T</code> is unknown to the compiler. This is because the type
+            parameter <code>T</code> of our <i>Fruit</i> class doesn't have any bound. So, the <code>T</code> could be any class, it is not possible that every class would have a
+            <i>getSize()</i> method. So the compiler is right in not recognizing the <i>getSize()</i> method of <code>T</code>.
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/f7dbe01a569c04c360f254c522d9c51b.js"></script>
+                </div>
+            </div>
+
+            - So to solve this problem, we finally introduce the Recursive Type Parameter. So, we tell the compiler that our <code>T</code> is a subtype of Fruit. In other words,
+            we specify the upper bound <code>T extends Fruit&lt;T&gt;</code>. This makes sure that only subtypes of Fruit are allowed as type arguments. Now the compiler knows that
+            the <i>getSize()</i> method can be found in the subtype of Fruit class (Apple, Orange etc.) because the <code>Comparable&lt;T&gt;</code> also receives our type
+            (<code>Fruit&lt;T&gt;</code>) that contains the <i>getSize()</i> method. This allows us to get rid of the repeated code of <code>compareTo()</code> method and also
+            allows us to
+            compare the fruits of the same types, apples with apples and oranges with oranges.
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/56616b08961256514dca0c90dc7d8d3c.js"></script>
+                </div>
+            </div>
+        </div>
+
+
         <div class="sub-heading">Sample Question and Code</div>
         <div>
             - Implement class that will merge two inputs, remove duplicates and return values one by one. It should have a method to return values one by one and has next() method.
@@ -407,7 +479,7 @@
         <div>
             - Notes have been taken from Venkat <a href="https://www.youtube.com/watch?v=kG2SEcl1aMM">presentation</a>.
 
-            <li><b>Elasticity</b>: <br>
+            <li><p class="inline-heading">Elasticity</p>: <br>
                 How many threads should I create? <br>
                 There are 2 scenarios - <br>
                 a) If your task is computation intensive, then the number of threads that you create should be &lt= the
@@ -423,42 +495,38 @@
             </li>
 
             <li>
-                <b>Message-Driven</b>: <br>
+                <p class="inline-heading">Message-Driven</p>: <br>
                 THe idea is that you should never share database. That is if you have multiple microservices taht want
                 to access the database, you should export the data from the database and make it available to the
                 microservice instead of having them individually access the DB instead.
             </li>
 
             <li>
-                <b>Responsive</b>: <br>
+                <p class="inline-heading">Responsive</p>: <br>
                 - Infinite-scrolling is an example. You can amortize the cost of fetching a page by fetching the page in
                 the background while the user is scrolling.
             </li>
 
             <li>
-                <b>Resilience</b>: <br>
+                <p class="inline-heading">Resilience</p>: <br>
                 - Fail task successfully. <br>
                 - Add circuit-breakers to your application/allow partial-access to the app if some data is not reachable
                 <br>
             </li>
 
-            - Reactive programming is functionalProgramming++. It builds on functional composition and lazy evaluation
-            and takes the abstraction even further
+            - Reactive programming is functionalProgramming++. It builds on functional composition and lazy evaluation and takes the abstraction even further.
         </div>
 
 
         <div class="sub-heading">Concurrency vs Parallelism</div>
         <div>
-            - Fork/Join Frameworks and Parallel Streams are examples of Parallelism. They divide a task into multiple
-            sub-tasks and perform those sub-tasks on <i>different</i> cores, CPUs, or even machines. <br>
-            - Conversely, when you are dealing with concurrency, you are trying to perform multiple loosely-related
-            tasks on the <i>same</i> CPU. The objective being to keep the core as busy as possible to maximize the
-            throughput of your application. You want to avoid blocking a thread and wasting its computational resources
-            while waiting (potentially for quite a while) for a result from a remote service or from interrogating a
-            database. <br>
-            - Concurrency is a programming property (overlapped execution) that can occur even for a
-            single-core machine, whereas parallelism is a property of execution hardware (simultaneous execution).
-
+            - Fork/Join Frameworks and Parallel Streams are examples of Parallelism. They divide a task into multiple sub-tasks and perform those sub-tasks on <i>different</i>
+            cores, CPUs, or even machines. <br>
+            - Conversely, when you are dealing with concurrency, you are trying to perform multiple loosely-related tasks on the <i>same</i> CPU. The objective being to keep the
+            core as busy as possible to maximize the throughput of your application. You want to avoid blocking a thread and wasting its computational resources while waiting
+            (potentially for quite a while) for a result from a remote service or from interrogating a database. <br>
+            - Concurrency is a programming property (overlapped execution) that can occur even for a single-core machine, whereas parallelism is a property of execution hardware
+            (simultaneous execution).
             <div class="row">
                 <img src="imgs/Concepts_CompletableFuture/DiffBetnParallelAndConcurrent.PNG"
                      class="center-block img-fluid" alt="Thread_States" width="375">
@@ -467,83 +535,62 @@
 
         <div class="sub-heading">Evolving Java support for expressing concurrency</div>
         <div>
-            - Terms: Java had locks (via <code>synchronized</code> classes and methods), <code>Runnable</code>s, and
-            <code>Thread</code>s. The <code>ExecutorService</code> interface extends the <code>Executor</code> interface
-            with the
-            <code>submit</code> method to run a <code>Callable</code>; the <code>Executor</code> interface merely has an
-            <code>execute</code> method for <code>Runnable</code>s. Hence, <code>ExecutorService</code> can execute both
-            <code>Runnable</code>s and <code>Callable</code>s. <code>Callable&ltT&gt</code>
-            and <code>Future&ltT&gt</code>, which produced higher-level and result-returning variants of
-            <code>Runnable</code> and <code>Thread</code> and used generics. <br>
-            - What is the difference betn <code>Callable</code> and <code>Runnable</code>? <a
-                href="https://stackoverflow.com/a/3952292/8742428">SO Link</a> <br>
+            - Terms: Java had locks (via <code>synchronized</code> classes and methods), <code>Runnable</code>s, and <code>Thread</code>s. The <code>ExecutorService</code>
+            interface extends the <code>Executor</code> interface with the <code>submit</code> method to run a <code>Callable</code>; the <code>Executor</code> interface merely has
+            an <code>execute</code> method for <code>Runnable</code>s. Hence, <code>ExecutorService</code> can execute both <code>Runnable</code>s and <code>Callable</code>s.
+            <code>Callable&ltT&gt</code> and <code>Future&ltT&gt</code>, which produced higher-level and result-returning variants of <code>Runnable</code> and <code>Thread</code>
+            and used generics.
+
+            <br>
+            <br>
+
+            <p class="inline-heading">What is the difference between <code>Callable</code> and <code>Runnable</code>?</p> <br>
+            - <a href="https://stackoverflow.com/a/3952292/8742428">SO Link</a> <br>
             - Java 9, provided explicit support for distributed asynchronous programming. (How?) <br>
-            - A process can request that the operating system allocate it one or more threads. Each core can be used for
-            one or more processes or threads, but if your program doesn't use threads, it's effectively using only one
-            of the processor cores. <br>
-            - My task manager shows that I have 4 cores (8 logical processors), but 4400+ threads running currently. How
-            is this possible?
-            The number of operating system (and Java) threads will significantly exceed the number of hardware threads,
-            so all the hardware threads (We’d use the word <i>core</i> here, but CPUs like the Intel i7-6900K have
-            multiple hardware threads per core) can be usefully occupied executing code even when some operating-system
-            threads
-            are blocked or sleeping. Each core would be able to execute one thread simultaneously. So if there are 30
-            threads and 4 cores, 26 threads will be waiting to get context switched to get executed. Something like,
-            thread 1-4 runs for 200ms and then 5-8 runs for 200 ms and so on.
-            <a href="https://stackoverflow.com/a/26685128/8742428">A single core can also support multiple threads.</a>
+            - A process can request that the operating system allocate it one or more threads. Each core can be used for one or more processes or threads, but if your program
+            doesn't use threads, it's effectively using only one of the processor cores. <br>
+            - My task manager shows that I have 4 cores (8 logical processors), but 4400+ threads running currently. How is this possible? The number of operating system (and Java)
+            threads will significantly exceed the number of hardware threads, so all the hardware threads (We'd use the word <i>core</i> here, but CPUs like the Intel i7-6900K have
+            multiple hardware threads per core) can be usefully occupied executing code even when some operating-system threads are blocked or sleeping. Each core would be able to
+            execute one thread simultaneously. So if there are 30 threads and 4 cores, 26 threads will be waiting to get context switched to get executed. Something like, thread
+            1-4 runs for 200ms and then 5-8 runs for 200 ms and so on. <a href="https://stackoverflow.com/a/26685128/8742428">A single core can also support multiple threads.</a>
             <br>
-            - See also <a href="https://stackoverflow.com/questions/5593328/software-threads-vs-hardware-threads">this
-            difference </a> between software threads, hardware threads, and java threads. <br>
-            - <a href="https://www.cs.uic.edu/~jbell/CourseNotes/OperatingSystems/4_Threads.html">Note that the</a> JVM
-            runs on top of a native OS, and that the JVM specification does not specify what model
-            to use for mapping Java threads to kernel threads. This decision is JVM implementation dependant, and may be
-            one-to-one, many-to-many, or many to one.. (On a UNIX system the JVM normally uses PThreads and on a
-            Windows system it normally uses windows threads.) <br>
-            - Java 5 provided the Executor framework and the idea of thread pools as a higher-level
-            idea capturing the power of threads, which allow Java programmers to decouple <i>task submission</i>
-            from <i>task execution</i>.
+            - See also <a href="https://stackoverflow.com/questions/5593328/software-threads-vs-hardware-threads">this difference </a> between software threads, hardware threads,
+            and java threads. <br>
+            - <a href="https://www.cs.uic.edu/~jbell/CourseNotes/OperatingSystems/4_Threads.html">Note that the</a> JVM runs on top of a native OS, and that the JVM specification
+            does not specify what model to use for mapping Java threads to kernel threads. This decision is JVM implementation dependant, and may be one-to-one, many-to-many, or
+            many to one.. (On a UNIX system the JVM normally uses PThreads and on a Windows system it normally uses windows threads.) <br>
+            - Java 5 provided the Executor framework and the idea of thread pools as a higher-level idea capturing the power of threads, which allow Java programmers to decouple
+            <i>task submission</i> from <i>task execution</i>.
 
             <br>
             <br>
 
-            - So how do I use concurrency in my program? <br>
-            - You could manually create <code>new Thread()</code> and then use <code>Callable</code> or
-            <code>Runnable</code>. But then the question is: how many new threads should you create? Remember if you
-            exceed the number of <code>operating system</code> threads that the system is capable of, it would likely
-            cause the application to crash.
+            <p class="inline-heading">So how do I use concurrency in my program?</p> <br>
+            - You could manually create <code>new Thread()</code> and then use <code>Callable</code> or <code>Runnable</code>. But then the question is: how many new threads should
+            you create? Remember if you exceed the number of <code>operating system</code> threads that the system is capable of, it would likely cause the application to crash.
             <br>
             <br>
-            - So what should we do instead? <br>
+
+            <p class="inline-heading">So what should we do instead?</p> <br>
             - Use Thread Pools instead of directly creating a thread. <br>
-            - The <code>ExecutorService</code> in Java provides a way to submit a task and then obtain its result later.
-            <br>
-            - It uses the <code>ExecutorService newFixedThreadPool(int nThreads)</code> method. This method creates a
-            <code>ExecutorService</code> containing <code>nThreads</code> (often called <i>worker threads</i>) and
-            stores them in a thread pool, from which unused threads are taken to run
-            submitted tasks on a first-come, first-served basis. These threads are returned to the pool
-            when their tasks terminate. So you can submit a large number of <i>tasks</i> to the pool while keeping the
-            total number of threads created to a hardware-appropriate number. Note the wording: The programmer provides
-            a
-            <i>task</i> (a <code>Runnable</code> or a <code>Callable</code>), which is executed by a thread.
-
+            - The <code>ExecutorService</code> in Java provides a way to submit a task and then obtain its result later. <br>
+            - It uses the <code>ExecutorService newFixedThreadPool(int nThreads)</code> method. This method creates a <code>ExecutorService</code> containing <code>nThreads</code>
+            (often called <i>worker threads</i>) and stores them in a thread pool, from which unused threads are taken to run submitted tasks on a first-come, first-served basis.
+            These threads are returned to the pool when their tasks terminate. So you can submit a large number of <i>tasks</i> to the pool while keeping the total number of
+            threads created to a hardware-appropriate number. Note the wording: The programmer provides a <i>task</i> (a <code>Runnable</code> or a <code>Callable</code>), which is
+            executed by a thread.
             <br>
             <br>
 
-            - Thread pools are bad though. Why? <br>
-            - A thread pool with <i>k</i> threads can execute only <i>k</i> tasks concurrently. Any further
-            task submissions are held in a queue and not allocated a thread until one of the
-            existing tasks completes. This situation is generally good, in that it allows you to
-            submit many tasks without accidentally creating an excessive number of
-            threads, but you have to be wary of tasks that sleep or wait for I/O or network
-            connections. <br>
-            - For eg., if you have 20 tasks submitted to a thread pool of size 5, and 3 of those threads in the pool end
-            up waiting/blocking on some kind of I/O op, the remaining 15 tasks in the queue will end up having only 2
-            threads for their execution. <br>
-            - It's even possible to cause deadlock in a thread pool if
-            earlier task submissions or already running tasks, need to wait for later task submissions, which is a
+            <p class="inline-heading">Thread pools are bad though. Why?</p> <br>
+            - A thread pool with <i>k</i> threads can execute only <i>k</i> tasks concurrently. Any further task submissions are held in a queue and not allocated a thread until
+            one of the existing tasks completes. This situation is generally good, in that it allows you to submit many tasks without accidentally creating an excessive number of
+            threads, but you have to be wary of tasks that sleep or wait for I/O or network connections. <br>
+            - For eg., if you have 20 tasks submitted to a thread pool of size 5, and 3 of those threads in the pool end up waiting/blocking on some kind of I/O op, the remaining
+            15 tasks in the queue will end up having only 2 threads for their execution. <br>
+            - It's even possible to cause deadlock in a thread pool if earlier task submissions or already running tasks, need to wait for later task submissions, which is a
             typical use-pattern for Futures. <br>
-
-
         </div>
 
         <div class="sub-heading">Threads and higher-level abstractions</div>
@@ -1313,7 +1360,7 @@
     <hr>
     <div id="DesignPatterns" class="chapter">Chapter ?: Design Patterns</div>
     <hr>
-    
+
     <div class="textual-content">
 
         <div class="sub-heading">Singleton Pattern</div>
@@ -1323,7 +1370,7 @@
         </div>
 
     </div>
-    
+
 </div>
 <script src="../../script.js"></script>
 </body>

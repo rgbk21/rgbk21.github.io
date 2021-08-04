@@ -82,6 +82,7 @@
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="../../Lectures/COMS_631/COMS_631_index.html">COMS 631</a>
                     <a class="dropdown-item" href="../../Lectures/COMS_535/COMS_535_index.html">COMS 535</a>
+                    <a class="dropdown-item" href="../../Lectures/EffectiveJava/EffectiveJava.html">Effective Java</a>
                     <div class="dropdown-divider"></div>
                 </div>
             </li>
@@ -632,15 +633,11 @@
         </div>
 
         <div class="one-point">
-            3) I included spring-mvc as the single dependency in my pom. Why do I not find the
-            <code>HtttpServletRequest</code> in the downloaded jars? <br>
-            - SO Source: <a href="https://stackoverflow.com/questions/860022/wheres-javax-servlet">Where's
-            javax.servlet??</a> <code>javax.servlet</code> is a package that's part of Java EE (Java Enterprise
-            Edition). You've got the JDK for Java SE (Java Standard Edition).
-            <br>
-            - Because spring-webmvc does not pull <code>javax</code> library. To pull in that dependency, you need to
-            include <code>javax.servlet</code>. Now <code>spring-boot-starter-web</code> automatically pulls in tomcat
-            which in turn pulls in javax.servlet. If you are not using Boot, you will probably have to do this manually.<br>
+            3) I included spring-mvc as the single dependency in my pom. Why do I not find the <code>HtttpServletRequest</code> in the downloaded jars? <br>
+            - SO Source: <a href="https://stackoverflow.com/questions/860022/wheres-javax-servlet">Where's javax.servlet??</a> <code>javax.servlet</code> is a package that's part
+            of Java EE (Java Enterprise Edition). You've got the JDK for Java SE (Java Standard Edition). <br>
+            - Because spring-webmvc does not pull <code>javax</code> library. To pull in that dependency, you need to include <code>javax.servlet</code>. Now <code>spring-boot-starter-web</code>
+            automatically pulls in tomcat which in turn pulls in javax.servlet. If you are not using Boot, you will probably have to do this manually.<br>
             <img
                     src="resources/random_images/Spring-Boot-Starter-Files.PNG"
                     width="600"
@@ -672,9 +669,7 @@
 
         <div class="one-point">
             6) Spring: namespace vs contextConfigLocation init parameters in web.xml <br>
-            - <a
-                href="https://stackoverflow.com/questions/15818047/spring-namespace-vs-contextconfiglocation-init-parameters-in-web-xml">Source
-            on SO</a>.
+            - <a href="https://stackoverflow.com/questions/15818047/spring-namespace-vs-contextconfiglocation-init-parameters-in-web-xml">Source on SO</a>.
         </div>
 
         <div class="one-point">
@@ -687,6 +682,13 @@
         <div class="one-point">
             8) How to define the execution order of interceptor in Spring Boot application? <br>
             - <a href="https://stackoverflow.com/a/50813713/8742428">Source on SO here</a>.
+        </div>
+
+        <div class="one-point">
+            9) Servlet returns “HTTP Status 404 The requested resource (/servlet) is not available”? <br>
+            - Two answers. Read <a href="https://stackoverflow.com/a/11731512/8742428">Balus C answer here</a> that goes into details about the various scenarios that can cause
+            this issue. Another <a href="https://stackoverflow.com/questions/43186315/tomcat-404-error-the-origin-server-did-not-find-a-current-representation-for-th">related
+            question is over here on SO</a>.
         </div>
 
 
