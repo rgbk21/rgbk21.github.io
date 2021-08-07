@@ -241,8 +241,7 @@
         <div>
             - Static factories and constructors share a limitation: they do not scale well to large numbers of optional parameters. Consider the case of a class representing the
             Nutrition Facts label that appears on packaged foods. These labels have a few required fields - serving size, servings per container, and calories per serving - and
-            more
-            than twenty optional fields - total fat, saturated fat, trans fat, cholesterol, sodium, and so on. <br>
+            more than twenty optional fields - total fat, saturated fat, trans fat, cholesterol, sodium, and so on. <br>
             - Traditionally, programmers have used the <i>telescoping constructor pattern</i>, in which you provide a constructor with only the required parameters, another with a
             single optional parameter, a third with two optional parameters, and so on, culminating in a constructor with all the optional parameters. The telescoping constructor
             pattern works, but it is hard to write client code when there are many parameters, and harder still to read it.<br>
@@ -296,7 +295,7 @@
 
         <div id="Item#3" class="sub-heading">Item 3: Enforce the Singleton property with a private constructor or an Enum type</div>
         <div>
-            - The first two techniques of creating a Singleton is by creating a class with a <code>private</code> constructor.
+            - The first two techniques of creating a Singleton is by creating a class with a <code>private</code> constructor. <br>
             - Read <a href="https://dzone.com/articles/java-singletons-using-enum">this explanation on DZone</a> explaining how to use Enums for creating Singletons. It also goes
             over the first two techniques of creating singletons along with their drawbacks. <br>
             <div class="code-block">
@@ -487,7 +486,8 @@
         <div>
             - Always use try-with-resources instead of using the old try-catch block. <br>
             - The problem with using the older method is: Even the correct code for closing resources with try-finally statements, as illustrated in the first code example, has a
-            subtle deficiency. The code in both the try block and the finally block is capable of throwing exceptions. For example, in the firstLineOfFile method, the call to readLine could throw an
+            subtle deficiency. The code in both the try block and the finally block is capable of throwing exceptions. For example, in the firstLineOfFile method, the call to
+            readLine could throw an
             exception due to a failure in the underlying physical device, and the call to close
             could then fail for the same reason.
             <div class="code-block">
@@ -507,13 +507,12 @@
     <hr>
 
     <div class="textual-content">
-        - Although <code>Object</code> is a concrete class, it is designed primarily for extension. All of its non-final methods (<code>equals</code>, <code>hashCode</code>, <code>toString</code>,
-        <code>clone</code>, and <code>finalize</code>) have explicit <i>general contracts</i> because they are designed to be overridden. It is the responsibility of any class
-        overriding these methods to obey their general contracts; failure to do so will prevent other classes that depend on the contracts (such as <code>HashMap</code> and <code>HashSet</code>)
-        from functioning properly in conjunction with the class. <br>
+        - Although <code>Object</code> is a concrete class, it is designed primarily for extension. All of its non-final methods (<code>equals</code>, <code>hashCode</code>,
+        <code>toString</code>, <code>clone</code>, and <code>finalize</code>) have explicit <i>general contracts</i> because they are designed to be overridden. It is the
+        responsibility of any class overriding these methods to obey their general contracts; failure to do so will prevent other classes that depend on the contracts (such as
+        <code>HashMap</code> and <code>HashSet</code>) from functioning properly in conjunction with the class. <br>
         - The equals method for class <code>Object</code> implements the most discriminating possible equivalence relation on objects; that is, for any non-null reference values x
-        and y, this
-        method returns true if and only if x and y refer to the same object (x == y has the value true). <br>
+        and y, this method returns true if and only if x and y refer to the same object (x == y has the value true). <br>
         - This chapter tells you when and how to override the nonfinal <code>Object</code> methods.
 
         <div class="sub-heading">Item 10: Obey the general contract when overriding <code>equals</code></div>

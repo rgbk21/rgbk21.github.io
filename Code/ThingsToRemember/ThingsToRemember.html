@@ -152,8 +152,9 @@
 
     <div class="one-point">
         0) Always, for every IF, write an ELSE. In a while loop, make sure to increment the index. Whenever you are calculating squares/multiplying, be very careful about overflow.
-        arrays have <code>length</code>, strings have <code>length()</code>, collections have <code>size()</code>. You lexicographically compare two strings using the <code>compareTo</code>
-        method, whereas in the <code>Comparator</code> class you have to override the <code>compare</code> method.
+        arrays have <code>length</code>, strings have <code>length()</code>, collections have <code>size()</code>. You lexicographically compare two strings using the
+        <code>compareTo</code> method, in the <code>Comparator</code> class you have to override the <code>compare</code> method, if a class implements the <code>Comparable</code>
+        interface, you have to override the <code>compareTo</code> method.
     </div>
 
     <div class="one-point">
@@ -968,6 +969,98 @@
                 <script src="https://gist.github.com/rgbk21/1849debb042170ec169414310210fa6f.js"></script>
             </div>
         </div>
+    </div>
+
+    <div class="one-point">
+        40.1) How to implement the <code>Comparable</code> interface and the <code>compareTo</code> method? <br>
+        - <a href="https://www.baeldung.com/java-compareto">Guide to implementing the compareTo Method</a> on Baeldung. <br>
+        - SO links: <br>
+        a) <a href="https://stackoverflow.com/questions/21626439/how-to-implement-the-java-comparable-interface">How to implement the Java comparable interface?</a><br>
+        b) <a href="https://stackoverflow.com/questions/10017381/how-do-i-write-a-compareto-method-which-compares-objects">How do I write a compareTo method which compares
+        objects?</a> <br>
+        c) <a href="https://stackoverflow.com/questions/3718383/why-should-a-java-class-implement-comparable">Why should a Java class implement comparable?</a>
+
+        <br>
+        <br>
+
+        - First, let us take a look at the <code>Comparable</code> interface itself:
+        <div class="code-block">
+            <div class="expand-code-snip-btn border border-primary rounded">
+                <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+            </div>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/d6a68409695008366e0b2a0e39f2ac2a.js"></script>
+            </div>
+        </div>
+        - Note that the interface is making use of Generics. The type parameter that is passed into the interface name here in <code>Comparable&lt;T&gt;</code> is the same type
+        parameter that is being expected to be passed in as the args to the <code>compareTo(T o)</code> method. Read the comment to <a
+            href="https://stackoverflow.com/a/64901718/8742428">this answer on SO</a> to understand that. <br>
+        - So what this means is that you can make a class implement the <code>Comparable</code> interface in the following ways: <br>
+        a) You implement <code>Comparable&lt;ComparablePerson&gt;</code>
+        <div class="code-block">
+            <div class="expand-code-snip-btn border border-primary rounded">
+                <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+            </div>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/23f9b9539d97dc02a71c038c34d0911f.js"></script>
+            </div>
+        </div>
+
+        b) You implement <code>Comparable&lt;Person&gt;</code>
+        <div class="code-block">
+            <div class="expand-code-snip-btn border border-primary rounded">
+                <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+            </div>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/815e886399500707c007b07b6f5831ec.js"></script>
+            </div>
+        </div>
+
+        c) You implement <code>Comparable</code>
+        <div class="code-block">
+            <div class="expand-code-snip-btn border border-primary rounded">
+                <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+            </div>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/ec47e76181883a7cf3cb625502368214.js"></script>
+            </div>
+        </div>
+
+        - All of the above 3 will compile and order the <i>ComparablePerson</i> class as intended. Point that we are trying to note over here is that the same type parameter that
+        is used in interface definition is also used in the <code>compareTo</code> method. Depending on the type that you use for the <code>Comparable</code>, you can only use it
+        with the appropriate type of object. <code>Comparable&lt;ComparablePerson&gt;</code> can be compared only with another <i>ComparablePerson</i>,
+        <code>Comparable&lt;Person&gt;</code> will be able to be compared with other <i>Person</i> types, and if you use <code>Comparable&lt;Object&gt;</code>, you can compare all
+        <code>Object</code> types with it.
+
+        <br>
+        <br>
+
+        <p class="inline-heading">What is <code>Comparable</code> interface</p>? <br>
+        - Read <a href="https://stackoverflow.com/a/3718478/8742428">this SO Answer to understand this</a>. <br>
+        - Comparable defines a 'natural ordering'. What this means is that you're defining it when one object should be considered "less than" or "greater than". Things like
+        <code>String</code> and <code>Integer</code> already have a 'natural ordering' associated with them. For example, you can sort strings lexicographically by calling
+        <code>Collections.sort()</code> and the strings will be sorted for you. Same for Integers as well. All sorting methods in JDK will use this natural ordering by default.<br>
+        - But what happens in the case of custom objects that you create? For example, the <i>ComparablePerson</i> object that we created above. If we need to sort a list of
+        <i>ComparablePerson</i> objects, we need to specify a natural ordering to the objects, just like the <code>String</code> class or the <code>Integer</code> class. This is
+        done by implementing the <code>Comparable</code> interface <i>inside</i> the class. Which is what we are doing in the above examples. <br>
+        - Note that you can do the equivalent thing by defining a <code>Comparator</code>. The difference is that the <code>Comparator</code> defines the ordering logic <i>outside
+        the object</i>. Maybe in a separate process I need to order the same objects by <i>name</i> and not <i>id</i> - in that case the ordering isn't necessarily a property of
+        the object, or differs from the objects natural ordering. In that case, could use an external <code>Comparator</code>. This is just like sorting a list of strings by the
+        length of the string, instead of sorting them lexically. <br>
+        - The point is that the logic has to exist somewhere. That can be: <br>
+        i) in the object itself, if it's naturally comparable (implements Comparable -e.g. integers) <br>
+        ii) supplied in an external comparator, as in the example above.
+
+        <br>
+        <br>
+
+        <p class="inline-heading">Some key facts to remember while you are overriding <code>compareTo</code>:</p> (<a href="https://stackoverflow.com/a/37720126/8742428">Source on
+        SO</a>)<br>
+        i) CompareTo must be in consistent with equals method e.g. if two objects are equal via equals() , there compareTo() must return zero otherwise if those objects are stored
+        in SortedSet or SortedMap they will not behave properly. <br>
+        ii) CompareTo() must throw NullPointerException if current object get compared to null object as opposed to equals() which return false on such scenario. <br>
+
+
     </div>
 
     <div class="one-point">

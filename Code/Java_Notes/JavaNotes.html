@@ -1681,17 +1681,26 @@
 
         <div class="sub-heading">The <code>Collection</code> Interface</div>
         <div>
-            - The Collection interface is the root of the collection interface hierarchy. It defines a generic collection. The Collections Framework does not provide an
+            - The <code>Collection</code> interface is the root of the collection interface hierarchy. It defines a generic collection. The Collections Framework does not provide
+            an
             implementation for the Collection interface. <br>
             - This is the most generic type of collection. You can use it as an argument type in methods, where you do not care about the collection type of the argument, provided
-            it isn’t a map. <br>
+            it isn't a map. <br>
             - Note the <code>add()</code> and the <code>remove()</code> methods in the <code>Collection</code> interface. Both of them return true if calling them on the collection
             ended up changing the collection. Otherwise they return false. For eg, in the case of a <code>Set</code> trying to add an element that already exists in the set is
             going to return false. Similarly, trying to remove an element from a collection that does not exist returns false. <br>
             - We need a way to bridge the gap between array and Collections. We need a way to easily convert <i>Foo[]</i> to <i>Collection&lt;Foo&gt;</i>. There are two ways to
             accomplish this, as shown in <a href="https://stackoverflow.com/a/51545469/8742428">this answer on SO</a>. <br>
+            a) Converting a <code>Collection</code> to an <code>array</code>: you can use the <a
+                href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/Collection.html#toArray(T%5B%5D)"><code>toArray</code></a> method provided in the
+            <code>Collection</code> interface to convert the collection into an array. <br>
             <code>Foo[] foos = fooCollection.toArray(new Foo[0]); // before JDK 11</code> <br>
             <code>Foo[] updatedFoos = fooCollection.toArray(Foo[]::new); // after JDK 11</code> <br>
+            b) Converting an <code>array</code> to a <code>Collection</code>: There is no method on the <code>Collection</code> interface to directly convert arrays into
+            collections. Instead you will have to do this individually for the specific collection that you are trying to obtain. <br>
+            <code>List&lt;Foos&gt; fooList = new ArrayList<>(Arrays.toList(fooArray))</code> <br>
+            <code>Set&lt;Foos&gt; fooSet = new HashSet<>(Arrays.toList(fooArray))</code> <br>
+
         </div>
 
 
@@ -1792,7 +1801,7 @@
                 </div>
             </div>
 
-            - How is a <code>null</code> element stored in a <code>SortedSet</code>? If a <code>SortedSet</code> uses natural order (uses the <code>Comparable</code> interface’s
+            - How is a <code>null</code> element stored in a <code>SortedSet</code>? If a <code>SortedSet</code> uses natural order (uses the <code>Comparable</code> interface's
             <code>compareTo()</code> method), adding a <code>null</code> element will throw a <code>NullPointerException</code>. If you use a <code>Comparator</code> object to
             apply the ordering, it is up to you to allow a null element in the <code>SortedSet</code>. If you allow a null element in the <code>SortedSet</code>, you can decide
             whether the null element will be placed in the beginning or at the end of the Set. <br>
@@ -1842,15 +1851,383 @@
             - Read the basics of operations that can be performed on a list <a href="../LeetCode/LeetCode.html#LC_Lists">here on the other page</a>. <br>
             - A <code>List</code> lets you iterate over its elements using a specialized iterator represented by an instance of the <code>ListIterator</code> interface. The
             <code>ListIterator</code> interface inherits the <code>Iterator</code> interface; it adds a few more methods to give you access to elements in the list from the current
-            position in the backward direction.
+            position in the backward direction. <br>
+            - <code>List</code> has two implementations that are primarily used: <code>LinkedList</code> and <code>ArrayList</code>. Note that for the <code>LinkedList</code>, the
+            list is implemented as a Doubly-Linked list. What this means is that fetching the last element is also going to take O(1) time and not O(n). In general, operations that
+            index into the list will traverse the list from the beginning or the end, whichever is closer to the specified index. (<a
+                href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedList.html">Source on Oracle Docs</a>).
         </div>
 
         <div class="sub-heading">Working with Queues</div>
         <div>
-            -
+            - A queue has two ends known as head and tail. In the simple queue, objects are added to the tail and removed from the head; the object added first will be removed
+            first. <br>
+            - Remember that <code>Queue</code> extends the <code>Collection</code> interface. So all of the methods in the <code>Collection</code> interface can also be accessed in
+            the <code>Queue</code> interface as well. Things like <code>isEmpty</code> for example. <br>
+            - Queues can be categorized based on the way it allows insertion and removal of its elements: <br>
+            a) Simple Queue: allows insertion at the tail and removal from the head. <br>
+            b) Priority Queue: associates a priority with every element of the queue and allows the element with the highest priority to be removed next from the queue. <br>
+            c) Delay Queue: associates a delay with every element of the queue and allows for the removal of the element only when its delay has elapsed. <br>
+            d) Doubly-Ended Queue: allows for insertion and removal of its elements from the head as well as the tail. <br>
+            e) Blocking Queue: blocks the thread that adds elements to it when it is full and it blocks the thread removing elements from it when it is empty. <br>
+            f) Transfer Queue: a special type of blocking queue where a handoff of an object occurs between two threads (a producer and a consumer). <br>
+            g) Blocking Doubly Ended Queue: combination of a doubly ended queue and a blocking queue. <br>
+            - The <code>Queue</code> interface itself has 3 implementations that you can use depending on your requirement:
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/8df9bccdd7c13d7dd9d5a7c6a20d0be1.js"></script>
+                </div>
+            </div>
         </div>
 
 
+        <div class="sub-heading">Simple Queues</div>
+        <div>
+            - Although the <code>Deque</code> interface also allows us to define a Queue, we should use the <code>Queue</code> interface to create a queue. For a stack you should
+            prefer the <code>Deque</code> interface over the <code>Stack</code> class (<a href="https://docs.oracle.com/javase/10/docs/api/java/util/Stack.html">Source on Oracle
+            Docs</a>) <br>
+            - Simple queues are represented by an instance of the <code>Queue</code> interface. Objects are added to the tail and removed from the head. FIFO. <br>
+            - Typically, a <code>null</code> element does not make sense in a <code>Queue</code>. After all, the purpose of having a queue is to apply some processing logic on its
+            elements or use the elements to perform some logic. In either case, a <code>null</code> value does not make sense. It is up to the implementation of the
+            <code>Queue</code> interface to allow or disallow <code>null</code> values. The use of <code>null</code> elements in a queue is not recommended. If you use
+            <code>null</code> elements in a queue, you will not be able to distinguish between the <code>null</code> value returned from its method to indicate a special situation
+            and the <code>null</code> value of the element. <br>
+            - There are two implementations of the <code>Queue</code> interface that can be used as a simple queue - FIFO operations basically. These are <code>LinkedList</code>
+            and <code>ArrayDeque</code>. You should prefer the <code>ArrayDeque</code> implementation instead of the <code>LinkedList</code> one. Reasons are present on the
+            following SO links: <a href="https://stackoverflow.com/questions/6163166/why-is-arraydeque-better-than-linkedlist">Why is ArrayDeque better than LinkedList</a>,
+            <a href="https://stackoverflow.com/questions/6129805/what-is-the-fastest-java-collection-with-the-basic-functionality-of-a-queue">What is the fastest Java collection
+                with the basic functionality of a Queue?</a> <br>
+
+            - A queue lets you perform 3 basic operations: <br>
+            a) Add an element to its tail <br>
+            b) Remove an element from its head <br>
+            c) Peek the element at the head <br>
+            - The <code>Queue</code> interface defines two methods for each of these operations. One method throws an exception if the operation is not possible; the other method
+            returns a value (<code>false</code> or <code>null</code>) to indicate the failure.
+
+            <table class="table table-bordered table-sm">
+                <thead>
+                <tr>
+                    <th style="width: 15%">Category</th>
+                    <th style="width: 15%">Method</th>
+                    <th style="width: 70%">Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Adding an element to the queue</td>
+                    <td>boolean add(E e)</td>
+                    <td>Adds an element to the queue if it is possible. Otherwise, it throws an exception.</td>
+                </tr>
+                <tr>
+                    <td>Adding an element to the queue</td>
+                    <td>boolean offer(E e)</td>
+                    <td>
+                        Adds an element to the queue without throwing an exception if the element cannot not be added. It returns <code>false</code> on failure and
+                        <code>true</code> on success. It is the preferred way to add an element in a bounded queue
+                    </td>
+                </tr>
+                <tr>
+                    <td>Removing an element from the queue</td>
+                    <td>E remove()</td>
+                    <td>Retrieves and removes the head of the queue. It throws an exception if the queue is empty.</td>
+                </tr>
+                <tr>
+                    <td>Removing an element from the queue</td>
+                    <td>E poll()</td>
+                    <td>
+                        Performs the same job as the <code>remove()</code> method. However, it returns <code>null</code> if the queue is empty instead of throwing an exception.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Peeking at the head of the queue</td>
+                    <td>E element()</td>
+                    <td>
+                        Retrieves the head of the queue without removing it from the queue. It throws an exception if the queue is empty.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Peeking at the head of the queue</td>
+                    <td>E peek()</td>
+                    <td>
+                        Performs the same job as the <code>element()</code> method. However, it returns <code>null</code> if the queue is empty instead of throwing an exception.
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+        <div class="sub-heading">Priority Queue</div>
+        <div>
+            - <code>PriorityQueue</code> is another implementation of the <code>Queue</code> interface. In a priority queue, each element is associated with a priority. The element
+            with the highest priority is removed next from the queue. But what is "highest priority"? The head of this queue is the <i>least</i> element with respect to the
+            specified ordering. If multiple elements are tied for least value, the head is one of those elements -- ties are broken arbitrarily.<br>
+            - You can use the natural order of the elements in the queue as a priority. In that case, the elements should implement the <code>Comparable</code> interface. <br>
+            - You can also supply a <code>Comparator</code> object, which will determine the priority of the elements. You can read about how to make use of <code>Comparable</code>
+            and <code>Comparator</code> <a href="../ThingsToRemember/ThingsToRemember.html#num40">here on the other page</a>. <br>
+            - In the output of the below code, note that the elements within the Priority Queue are not in any specific order. The only guarantee is that the call to
+            <code>peek</code> or <code>remove</code> is going to return the correct element based on the priority that you have specified. The <code>PriorityQueue</code> class does
+            not guarantee any ordering of the elements when you use an iterator.
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/31fc9f0f9431fc4f8de071a9f2747dd5.js"></script>
+                </div>
+            </div>
+            - Implementation note: this implementation provides O(log(n)) time for the enqueuing and dequeuing methods (offer, add, poll, remove()); linear time for the
+            remove(Object) and contains(Object) methods; and constant time for the retrieval methods (peek, element, and size). (<a
+                href="https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/PriorityQueue.html">Source on Oracle Docs</a>)<br>
+
+        </div>
+
+
+        <div class="sub-heading">Double-Ended Queue</div>
+        <div>
+            - A doubly ended queue or deque is an extended version of a queue to allow insertion and removal of elements from both ends (the head and the tail). <br>
+            - There are some new methods that are offered by the <code>Deque</code> interface to facilitate insertion, removal, and peeking at either end (head or tail) of a
+            <code>Deque</code>. In the method names, first means head and last means tail.
+
+            <table class="table table-bordered table-sm">
+                <thead>
+                <tr>
+                    <th style="width: 15%">Category</th>
+                    <th style="width: 15%">Method</th>
+                    <th style="width: 70%">Description</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Adding an element to the Deque</td>
+                    <td>void addFirst(E) <br> void addLast(E)</td>
+                    <td>
+                        The <i>addXxx()</i> methods add an element at the head or tail, and they throw an exception if an element cannot be added, such as in a full bounded Deque.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Adding an element to the Deque</td>
+                    <td>boolean offerFirst(E e) <br> boolean offerLast(E e)</td>
+                    <td>
+                        The <i>offerXxx()</i> methods work the same way as the <i>addXxx()</i> methods. However, they do not throw an exception on failure. Rather, they return
+                        <code>false</code> if the specified element cannot be added to a Deque.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Removing an element from the Deque</td>
+                    <td>E removeFirst() <br> E removeLast()</td>
+                    <td>
+                        The <i>removeXxx()</i> methods retrieve and remove the element from the head or tail of the Deque. They throw an exception if the Deque is
+                        empty.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Removing an element from the Deque</td>
+                    <td>E pollFirst() <br> E pollLast()</td>
+                    <td>
+                        The <i>pollXxx()</i> methods perform the same job as the <i>removeXxx()</i> methods. However, they return <code>null</code> if the Deque is empty.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Peeking at the end of the Deque</td>
+                    <td>E getFirst() <br> E getLast()</td>
+                    <td>
+                        The <i>getXxx()</i> methods retrieve without removing the element at the head or the tail of the Deque. They throw an exception if the Deque is empty
+                    </td>
+                </tr>
+                <tr>
+                    <td>Peeking at the end of the Deque</td>
+                    <td>E peekFirst() <br> E peekLast()</td>
+                    <td>
+                        The <i>peekXxx()</i> methods perform the same job as the <i>getXxx()</i> methods. However, they return <code>null</code> if the Deque is empty instead of
+                        throwing an exception.
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            - A <code>Deque</code> inherits from the <code>Queue</code> interface which allows it to work as a FIFO Queue. You can also use a Deque as a stack (a LIFO queue). Below
+            we will look at methods that we should use when we are using the <code>Deque</code> interface as a queue and as a stack respectively.
+
+            <br>
+            <br>
+
+            <p class="inline-heading">Using a Deque as a Queue:</p>
+            <table class="table table-bordered table-sm">
+                <thead>
+                <tr>
+                    <th style="width: 15%">Method in Queue</th>
+                    <th style="width: 15%">Equivalent method in Deque</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>add(e)</td>
+                    <td>addLast(e)</td>
+                </tr>
+                <tr>
+                    <td>offer(e)</td>
+                    <td>offerLast(e)</td>
+                </tr>
+                <tr>
+                    <td>remove()</td>
+                    <td>removeFirst()</td>
+                </tr>
+                <tr>
+                    <td>poll()</td>
+                    <td>pollFirst()</td>
+                </tr>
+                <tr>
+                    <td>element()</td>
+                    <td>getFirst()</td>
+                </tr>
+                <tr>
+                    <td>peek()</td>
+                    <td>peekFirst()</td>
+                </tr>
+                </tbody>
+            </table>
+
+            <br>
+
+            <p class="inline-heading">Using a Deque as a Stack:</p> <br>
+            - A stack needs four methods to perform its operations: isEmpty(), push(), pop() and peek().
+            <table class="table table-bordered table-sm">
+                <thead>
+                <tr>
+                    <th style="width: 15%">Stack Specific Methods in Deque</th>
+                    <th style="width: 15%">Equivalent Alternate Methods in Deque</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>isEmpty</td>
+                    <td>Inherited from the <code>Collection</code> interface</td>
+                </tr>
+                <tr>
+                    <td>push(E e)</td>
+                    <td>addFirst(E e)</td>
+                </tr>
+                <tr>
+                    <td>pop()</td>
+                    <td>removeFirst()</td>
+                </tr>
+                <tr>
+                    <td>peek()</td>
+                    <td>peekFirst()</td>
+                </tr>
+                </tbody>
+            </table>
+
+            <p class="inline-heading">Example of using a Deque as a Queue and as a Stack:</p>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/95a21d5f6783362cd986166217e19180.js"></script>
+                </div>
+            </div>
+        </div>
+
+        <div class="sub-heading">Creating Different Views of a Collection</div>
+        <div>
+            - // TODO
+        </div>
+
+        <div class="sub-heading">Read-Only Views of Collections</div>
+        <div>
+            - You can get a read-only view (also called unmodifiable view) of a collection. This is useful when you want to pass around your collection to other methods and you do
+            not want the called method to modify your collection. In such cases, you need to pass a read-only view of your collection to those methods.
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/62f45f7f4f1cf73dce1eb87118d1fc8a.js"></script>
+                </div>
+            </div>
+        </div>
+
+        <div class="sub-heading">Creating Empty Collections</div>
+        <div>
+            - Sometimes you need to call a method that accepts a collection. However, you do not have any elements for the collection to pass. In such cases, you do not need to go
+            through the hassle of creating a collection object. The Collections class provides an immutable empty collection object of each type as a return value of its static
+            methods. <br>
+            - You can return these datastructures instead of returning <code>null</code> or you can pass these into a method that needs one of these datastructures. The size of all
+            these is going to be 0. Also, all of these are immutable. So the method to which you will be passing these to won't be able to make any changes to them.
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/ef0d75f34fed47dce70b8327f962d192.js"></script>
+                </div>
+            </div>
+        </div>
+
+        <div class="sub-heading">Creating Singleton Collections</div>
+        <div>
+            - Sometimes you want to create a collection that needs to have one and only one element in it. This kind of situation arises when a method accepts a collection as its
+            argument and you have only one object to pass to that method. Instead of going through the hassle of creating a new collection and adding a lone element to it, you can
+            use one of the three static methods of the Collections class, which will create an <i>immutable</i> collection with the one specified element.
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/9fdc186666cd4b7bd57f3b7e314926d9.js"></script>
+                </div>
+            </div>
+        </div>
+
+        <div class="sub-heading">Understanding Hash-Based Collections</div>
+        <div>
+            - Two methods in the <code>Object</code> class are central to the working of hash-based collections. Those methods are <code>equals()</code> and <code>hashCode()</code>.
+            <br>
+            - Hash-based collections maintain a number of buckets to store objects. When you add an object to a hash-based collection, Java gets the hash code value of the object
+            by calling object's <code>hashCode()</code> method. Then, it applies an algorithm to the hash code value to compute the bucket in which the object should be placed.
+            When you want to check if an object exists in a hash-based collection, Java applies the same logic to compute the bucket in which the object might have been placed. It
+            calls the <code>hashCode()</code> method of the object and applies some algorithm to computethe bucket in which it might have been placed. Then, it uses the
+            <code>equals()</code> method of the object to compare the object with existing objects in the bucket to check if the object exists in that bucket. <br>
+            - It is easy to screw-up the implementation of the <code>hashCode()</code> and the <code>equals()</code> method. Below is an example of how NOT to implement these
+            methods. <br>
+            - The problem with the below class is that it is a <i>mutable</i> class. You can modify the <i>id</i> field of the class by calling the <i>setId</i> method. And you are
+            using the same <i>id</i> field to calculate the hash code of the object as well. Hence if you mutate the id field after you have added the object to a hash-based DS
+            like HashSet and then check for <code>contains</code>, you are going to get false. Because when you stored the object into the Hash Set, the bucket was calculated using
+            the hash code, and the hash code was in turn calculated using the <i>id</i> field which was 300. But then you changed the <i>id</i> field to 200. So now when you check
+            for <code>contains</code>, the bucket number to check for the existence of the object will be calculated based on the <i>new</i> hash code that has been calculated
+            using the mutated <i>id</i> field value of 200. And sure enough the Hash Set is NOT going to find the object in that particular bucket, and it is going to return false
+            as a result of that. <br>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/3780b491c1946e750e03f87ca08bdc3d.js"></script>
+                </div>
+            </div>
+            - Note that in the auto-generated <code>hashCode</code> method, there are two different methods that can be used for calculating the hash code of an object
+            <code>Objects.hash()</code> and <code>Objects.hashCode()</code>. There is also a third method that can be used for calculating the hash code of an object, and that is
+            by calling the <code>hashCode()</code> method directly on the object reference itself, as in <code>int hc = myObject.hashCode()</code>. <br>
+            - So what is the difference between the 3 methods? Read <a href="https://stackoverflow.com/a/11656642/8742428">here on SO</a>. Basically: <br>
+            a) <code>Objects.hash(Object... values)</code> should be used in cases when you want a hash of a sequence of objects, e.g. when defining your own hashCode method and
+            want a simply-coded hash for multiple values that make up the identity of your object. <br>
+            b) <code>Objects.hashCode(Object o)</code> should be used when you want the hash of a single object, without throwing NPE if the object is null. <br>
+            c) <code>Object::hashCode()</code> should be used when you want the hash of a single object, and will throw an exception if the object is null. <br>
+            - Point to note is that: <code>hash(o)</code> and <code>hashCode(o)</code> won't necessarily return the same thing! If you're doing it for a single object, you should
+            probably use <code>hashCode</code>. This is because <code>Objects.hash</code> just calls <code>Arrays.hashCode</code> and the hashCode of a single object is different
+            from the hashCode of an array with that single object in it. This in turn is because the <code>Objects.hash(Object... values)</code> method has two phases. First it
+            will call <code>.hashCode</code> on each passed object, collecting each result. Then it will calculate another hash on the collected results. If you pass a single
+            object, <code>Objects.hash(myObject)</code>, first <code>myObject.hashCode</code> is called and collected, and then a hash on that single-item collection is calculated.
+            So, you end up with a hash of a hash. <a href="https://stackoverflow.com/a/52654058/8742428">Source here on SO</a>. <br>
+            - You can also see the same thing when you use the Auto Code Completion in Intellij. <br>
+            - Asked a <a href="https://stackoverflow.com/questions/68696328/is-the-automatic-hashcode-method-generation-in-intellij-broken">question here on SO</a>. Waiting for it
+            to be downvoted to hell and back. <br>
+        </div>
     </div>
 
 
@@ -2132,6 +2509,7 @@
                 </tr>
                 </tbody>
             </table>
+            `
         </div>
 
         <div class="sub-heading">Using the Function&lt;T,R&gt; Interface</div>
