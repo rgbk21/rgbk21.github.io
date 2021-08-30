@@ -689,8 +689,8 @@
 
     <div class="one-point">
         32) Interconversion of types: <br>
-
-        Also, surrogate pairs for chars <a href="https://stackoverflow.com/a/54922477/8742428">on SO</a>.
+        - Read <a href="https://www.baeldung.com/java-primitive-conversions">here on Baeldung</a>. <br>
+        - Also, surrogate pairs for chars <a href="https://stackoverflow.com/a/54922477/8742428">on SO</a>.
         <div class="code-block">
             <div class="expand-code-snip-btn border border-primary rounded">
                 <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
@@ -880,8 +880,8 @@
             href="https://lankydan.dev/2019/03/03/removing-elements-from-a-map-in-java">Source</a>. <code>removeIf</code> is a method available to <code>Collections</code>. A
         <code>Map</code> itself is not a <code>Collection</code> and does not have access to <code>removeIf</code> itself. But, by using: <code>values</code>, <code>keySet</code>
         or <code>entrySet</code>, a view of the Map's contents is returned. This view implements <code>Collection</code> allowing <code>removeIf</code> to be called on it. The
-        <code>Collection</code> returned by <i>values</i> is backed by the <code>Map</code> and that changing either the <code>Collection</code> or the <code>Map</code> will alter
-        the other. <code>keySet</code> and <code>entrySet</code> are also both backed by the Map's contents.<br>
+        <code>Collection</code> returned by <code>values</code> is backed by the <code>Map</code> and that changing either the <code>Collection</code> or the <code>Map</code> will
+        alter the other. <code>keySet</code> and <code>entrySet</code> are also both backed by the Map's contents.<br>
         <div class="code-block">
             <div class="expand-code-snip-btn border border-primary rounded">
                 <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
@@ -1076,6 +1076,7 @@
     <div class="one-point">
         43) How to create a Queue, Stack, PriorityQueue? <br>
         - Why use a deque instead of a Stack <a href="https://www.baeldung.com/java-deque-vs-stack">explained here on Baeldung</a>. <br>
+        - Don't do this now. Read this <a href="/Code/Java_Notes/JavaNotes.html#java8queues">on the other page here</a>. <br>
         - Create a Queue: <code>Deque&ltInteger&gt queue = new ArrayDeque&ltInteger&gt();</code>
         <a href="https://stackoverflow.com/a/4626858/8742428">SO Link</a><br>
         - Create a Stack: <code>Deque&ltInteger&gt stack = new ArrayDeque&ltInteger&gt();</code>
@@ -1330,6 +1331,9 @@
     <div class="one-point">
         57) Gradle related stuff in IntelliJ <br>
         - "Could Not target platform" error on <a href="https://stackoverflow.com/a/50284453/8742428">SO here</a>. <br>
+        - <a href="https://stackoverflow.com/a/68319095/8742428">Build error with gradle Could not find method testCompile()</a> which leads to
+        <a href="https://stackoverflow.com/questions/44493378/whats-the-difference-between-implementation-api-and-compile-in-gradle">What's the difference between implementation,
+            api and compile in Gradle?</a>
     </div>
 
     <div class="one-point">
@@ -1724,6 +1728,12 @@
     </div>
 
     <div class="one-point">
+        66.4) Also read this: <br>
+        - <a href="https://stackoverflow.com/questions/4595512/java-calling-a-super-method-which-calls-an-overridden-method">Calling a super method which calls an overridden
+        method</a>
+    </div>
+
+    <div class="one-point">
         67) You can create overloaded methods and constructors just by changing the order of the parameters in the
         method/constructor declaration <br>
         - <a href="https://stackoverflow.com/questions/1182153/constructor-overloading-in-java-best-practice">Constructor
@@ -2072,6 +2082,146 @@
     <div class="one-point">
         87) <code>trim</code> vs <code>strip</code> method for <code>String</code> in Java <br>
         - Read <a href="https://stackoverflow.com/a/51266583/8742428">here on SO</a>.
+    </div>
+
+    <div class="one-point">
+        88) What are the rules for casting in Java? How does it work? <br>
+        - <a href="https://www.baeldung.com/java-type-casting">Read here on Baeldung</a>. <br>
+        - The important thing to understand is that by casting a reference, you are not changing the actual object that the reference was pointing to in any way. <br>
+        - You can either <i>Upcast</i> a reference (eg. casting a <code>ArrayList</code> to a <code>List</code>) which will limit the properties and methods that you can access on
+        the object. Else, you can <i>Downcast</i> an object, which will increase the properties and methods that you can access on the object. <br>
+        - Upcasting in the same inheritance tree is done implicitly (again, think about casting a <code>ArrayList</code> to a <code>List</code>. You never have to mention the cast.
+        The compiler automatically does that for you). <br>
+        - In upcasting, the following apply: <br>
+        a) A reference variable can refer to an object if the object is of the same type as a variable or if it is a subtype. <br>
+        b) Upcasting happens implicitly. <br>
+        c) All Java objects are polymorphic and can be treated as objects of supertype due to upcasting. <br>
+
+        <div class="code-block">
+            <div class="expand-code-snip-btn border border-primary rounded">
+                <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+            </div>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/d33dd66fcfd50800703a1f370a78815e.js"></script>
+            </div>
+        </div>
+
+        - Then you have <i>Downcasting</i>. It's the casting from a superclass to a subclass.<br>
+        - In the above example, we used the <i>Animal</i> reference to point to a <i>Cat</i> object. But as we noticed, it is not possible to call the <i>meow()</i> method on the
+        <i>Cat</i> object if the reference is of type <i>Animal</i>. Hence, in this case, we need to Downcast the Animal to a Cat.
+        <div class="code-block">
+            <div class="expand-code-snip-btn border border-primary rounded">
+                <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+            </div>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/dd1d32e5ed9a030f5bb2108fc7aacd00.js"></script>
+            </div>
+        </div>
+
+        - Running into <code>ClassCastException</code>. <br>
+        - Why did we have to use the <code>instance of</code> operator to check whether the reference is of type <i>Cat</i> before we called the <i>meow</i> method on it? <br>
+        - Let's remove that and see what happens. We get the following error: Exception in thread "main" java.lang.ClassCastException: class JoshuaBloch.Chapter3.Dog cannot be cast
+        to class JoshuaBloch.Chapter3.Cat. <br>
+        - Point to note is that the code compiled without any errors. It is only when we ran the program that we found out the issue. So the point is,
+        <code>ClassCastException</code> is not going to be warned by the compiler. You as a developer are responsible for making sure that the code will not throw any such
+        exception. <br>
+        - Understand that the exception is thrown because you initially stored both, a <i>Dog</i> and a <i>Cat</i> object in the List (because you used the <code>new</code>
+        operator to do it, even though the reference that you used to access the object was an <i>Animal</i> reference). But like we saw above, casting does not change the object
+        in any way. All it does is change the way in which you access the methods and properties on the object. Hence even though the reference assigned to the <i>Dog</i> object is
+        <i>Animal</i>, the <i>object</i> intrinsically is still a <i>Dog</i> object. And when you try to cast that <i>Dog</i> object to a <i>Cat</i> object, the JVM is unable to do
+        it because you are trying to downcast to a type that does not match the type of the actual object. <br>
+        <div class="code-block">
+            <div class="expand-code-snip-btn border border-primary rounded">
+                <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+            </div>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/11dc4a729e44cd75460125752ba640ba.js"></script>
+            </div>
+        </div>
+
+        <br>
+
+        <p class="inline-heading">What are the rules that go into casting?</p> <br>
+        - Read <a href="https://stackoverflow.com/a/41298960/8742428">this answer here on SO</a>. <br>
+        - <a href="https://stackoverflow.com/a/5289493/8742428">Another explanation on SO</a>. <br>
+        - Suppose we want to cast object <i>d</i> to <i>A</i> <code>A a = (C) d;</code> <br>
+        - Internally, 3 rules will be checked by the Compiler and the JVM. The compiler is checking the first two rules at compile-time and the JVM is checking the last one at
+        runtime. <br>
+        a) Rule 1: Type of <i>d</i> and <i>C</i> must have some relation (child to parent or parent to child or same type). If there is no relationship then we will get a compile
+        error (inconvertible types). <br>
+        b) Rule 2: <i>C</i> must be either same type or derived type (subclass) of <i>A</i> otherwise we will get a compile error (incompatible types). <br>
+        c) Rule 3: Runtime object type of <i>d</i> must be same or derived a type of <i>C</i> otherwise we will get a runtime exception (<code>ClassCastException</code> Exception).
+
+        <div class="code-block">
+            <div class="expand-code-snip-btn border border-primary rounded">
+                <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+            </div>
+            <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/c6ee30bded5834283bb37be81ef523fc.js"></script>
+            </div>
+        </div>
+    </div>
+
+    <div class="one-point">
+        89) What are <code>&lt;init&gt;</code> and <code>&lt;clinit&gt;</code>? What are the differences between them? <br>
+        - <a href="https://www.baeldung.com/jvm-init-clinit-methods">Explained here on Baeldung</a>. To better understand how initialization works in the JVM, it's highly
+        recommended to <a href="https://docs.oracle.com/javase/specs/jvms/se14/html/jvms-5.html#jvms-5.5">read the JVM specification</a>. <br>
+        - <a href="https://stackoverflow.com/questions/8517121/java-what-is-the-difference-between-init-and-clinit">Source on SO</a>. <br>
+        - <code>&lt;init&gt;</code> is the (or one of the) constructor(s) for the instance, and non-static field initialization. <br>
+        - <code>&lt;clinit&gt;</code> are the static initialization blocks for the class, and static field initialization.
+
+        <br>
+        <br>
+
+        <p class="inline-heading">What commands can I use to see the detail of the <code>&lt;clinit&gt;</code> of some class of Java?</p> <br>
+        - The <code>javap</code> commands displays the <code>&lt;init&gt;</code> and the <code>&lt;clinit&gt;</code> methods. (<a
+            href="https://stackoverflow.com/a/54838384/8742428">Source on SO. Good explanation</a>).
+
+        <br>
+        <br>
+        <p class="inline-heading">Who invokes the class initializer method <code>&lt;init&gt;</code> and when?</p> <br>
+        - <code>&lt;clinit&gt;</code> is a static method added by javac and called by JVM after class loading. We can see this method in class bytecode with bytecode outline tools.
+        Note that <code>&lt;clinit&gt;</code> is added only if a class needs static initialization.
+
+        <br>
+        <br>
+
+        <p class="inline-heading">How is all of this related to the <code>ExceptionInInitializerError</code> that we are seeing?</p><br>
+        - Read about the error <a href="https://www.baeldung.com/java-exceptionininitializererror">here on Baeldung</a>. <br>
+        - Note the following points that are present in the page: <br>
+        - The <code>ExceptionInInitializerError</code> indicates that an unexpected exception has occurred in a static initializer. Basically, when we see this exception, we should
+        know that Java failed to evaluate a static initializer block or to instantiate a static variable. In fact, every time any exception happens inside a static initializer,
+        Java automatically wraps that exception inside an instance of the <code>ExceptionInInitializerError</code> class. This way, it also maintains a reference to the actual
+        exception as the root cause. <br>
+        - And this is exactly what is happening in our case as well. The <i>BaseComponent</i> class has a <code>static</code> initialization block, and within that block is a
+        method that calls another <code>static</code> method on the <i>BaseComponentPropertyAdapter</i> class (<i>getTypeSingleton</i> is the method that is called on the
+        <i>BaseComponentPropertyAdapter</i>). And the <i>getTypeSingleton</i> throws a NPE. Hence, since the <i>static </i> initialization block has run into an exception in the
+        form of a NPE, we get a <code>ExceptionInInitializerError</code>, as has been mentioned in the previous point. <br>
+        - Note that the <code>&lt;clinit&gt;</code> method is a <a href="https://www.baeldung.com/jvm-init-clinit-methods#clinit">class initialization method</a> in the JVM.
+        <img src="imgs/ExceptionInInitiailizerError.PNG"
+             width="750"
+             class="center-block img-fluid"
+             alt="ExceptionInInitiailizerError">
+
+        <br>
+        <br>
+
+        <p class="inline-heading">How does hot-swapping in the case of servers like Tomcat work</p>? <br>
+        - <a href="https://stackoverflow.com/questions/60439461/how-many-times-can-a-clinit-method-execute-in-java">Source on SO</a>. <br>
+        - A class static initializer is called each time a class is loaded. <br>
+        - A class named <i>com.example.Data</i> loaded by ClassLoader <i>C1</i> and a class named <i>com.example.Data</i> loaded by ClassLoader <i>C2</i> are different
+        classes, and
+        trying to cast an instance of one class to the other class will result in a <code>ClassCastException</code>. <br>
+        - With multiple classloaders, even though strictly speaking they would be different objects, you can't count on the initialization code being run exactly one time,
+        so you
+        at least have to keep that in mind when writing the <code>init</code> code. <br>
+        - Instantiating directly with the <code>new</code> operator and again via reflection still uses only one <a
+            href="https://docs.oracle.com/javase/8/docs/api/java/lang/ClassLoader.html"><code>ClassLoader</code></a>. <br>
+        - An application can create new classloaders and load classes with them. ClassA loaded with the new classloader is technically a different class than ClassA loaded
+        with the default classloader. Tomcat (and I assume others) uses this technique to re-load a running web application. You can, for example, fix a bug in SomeClass and drop
+        the new .class file into the running application without re-deploying the whole application or taking Tomcat down. Tomcat will notice the update and load new instances of
+        the classes in the app. This is an example of the hot-fix or the hot-deploy functionality of the servers. This shows that it is possible and there are cases where a
+        class may be loaded by more than one classloader and, therefore, the clinit could be called more than once.
     </div>
 
 

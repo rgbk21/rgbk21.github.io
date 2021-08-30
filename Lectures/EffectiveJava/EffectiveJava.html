@@ -153,8 +153,8 @@
     <hr>
 
     <div class="textual-content">
-        - <a href="https://www.youtube.com/watch?v=jKCSTi5HMw8">Revisiting Effective Java in 2019 by Edson Yanaga</a> on YouTube.
-
+        - <a href="https://www.youtube.com/watch?v=jKCSTi5HMw8">Revisiting Effective Java in 2019 by Edson Yanaga</a> on YouTube. <br>
+        - <a href="https://www.youtube.com/watch?v=ANZXvXVa1Lg">Revisiting Effective Java in 2018 by Edson Yanaga</a> on Youtube. 2hr version. <br>
     </div>
 
 
@@ -262,6 +262,8 @@
             - Instead of making the desired object directly, the client calls a constructor (or static factory) with all of the required parameters and gets a builder object. Then
             the client calls setter-like methods on the builder object to set each optional parameter of interest. Finally, the client calls a parameterless build method to
             generate the object, which is typically immutable.
+            - IntelliJ can create Builder Patterns for you <a href="https://stackoverflow.com/questions/10348491/builder-pattern-code-generation-in-intellij">as shown here on
+            SO</a>.
             <div class="code-block">
                 <div class="expand-code-snip-btn border border-primary rounded">
                     <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
@@ -328,6 +330,18 @@
             - Why is it mentioned in the book that a Singleton Class is hard to test. "Making a class a singleton can make it difficult to test its clients because it's impossible
             to substitute a mock implementation for a singleton unless it implements an interface that serves as its type." Read
             <a href="https://stackoverflow.com/questions/25273210/why-is-a-singleton-class-hard-to-test">this SO Link</a>.
+
+            <br>
+            <br>
+
+            <p class="inline-heading">What is the difference between a Singleton class and a static class? Should a Java singleton use <code>static</code> fields? When should a
+                Singleton be used, and when should a <code>static</code> static class be used? </p><br>
+            - <a href="https://stackoverflow.com/questions/519520/difference-between-static-class-and-singleton-pattern">Difference between static class and singleton pattern?</a>
+            <br>
+            - <a href="https://stackoverflow.com/questions/18634415/should-a-java-singleton-use-static-variables">Should a Java singleton use static variables</a>? <br>
+            - <a href="https://softwareengineering.stackexchange.com/questions/235527/when-to-use-a-singleton-and-when-to-use-a-static-class">When to use a Singleton and when to
+            use a static class</a>?
+
         </div>
 
 
@@ -517,9 +531,308 @@
 
         <div class="sub-heading">Item 10: Obey the general contract when overriding <code>equals</code></div>
         <div>
-            -
+            - You can read about the equals and hashcode <a href="https://www.baeldung.com/java-equals-hashcode-contracts">here on Baeldung</a>. <br>
+            - And <a href="https://thorben-janssen.com/ultimate-guide-to-implementing-equals-and-hashcode-with-hibernate/">here are on Thorben Janssen</a> <br>
+            - <a href="https://stackoverflow.com/questions/27581/what-issues-should-be-considered-when-overriding-equals-and-hashcode-in-java">SO Link on the topic</a> <br>
+            - The easiest way to avoid problems when overriding <code>equals</code> is to <i>not</i> override <code>equals</code>. This is the right thing to do if any of the
+            following conditions apply: <br>
+            a) Each instance of the class is inherently unique: This is the case when a class represents active <i>entities</i> rather than <i>values</i>. <br>
+            b) There is no need for the class to provide a "logical equality" test: Does the client need the functionality where they will have to compare two instances of this
+            class? <br>
+            c) A superclass has already overridden <i>equals</i>, and the superclass behavior is appropriate for this class: For example, most <code>Set</code> implementations
+            inherit their <code>equals</code> implementation from <code>AbstractSet</code>, <code>List</code> implementations from <code>AbstractList</code>, and <code>Map</code>
+            implementations from <code>AbstractMap</code>. <br>
+            d) The class is <code>private</code> or <code>package-private</code> and you are sure that its <code>equals</code> method will never be invoked.
+
+            <br>
+            <br>
+
+            <p class="inline-heading">So when is it appropriate to override <code>equals</code>?</p> <br>
+            - It is when a class has a notion of <i>logical equality</i> that differs from mere <i>object identity</i> and a superclass has not already overridden
+            <code>equals</code>. This is generally the case for <i>value classes</i>. A value class is simply a class that represents a value, such as <code>Integer</code> or
+            <code>String</code>. <br>
+            - Someone that calls <code>equals</code> on such a class will expect the result to return whether the two classes are logically equivalent, and not just whether they
+            refer to the same object or not. Overriding <code>equals</code> is necessary to satisfy this expectation, as well as enable the instances of these value classes to
+            serve as keys to a map, or allow them to be added to a Set. <br>
+            - Note that singleton value classes do not need their <code>equals</code> method overridden, since there will always be just a single instance of these classes. Hence
+            in these cases the object equality is the same as the value equality.
+
+            <br>
+            <br>
+
+            <p class="inline-heading">What is the contract of the <code>equals</code> method?</p> <br>
+            - The contract says that the <code>equals</code> method should be an equivalence relation. What this means is that the <code>equals</code> method should satisfy the
+            following conditions: <br>
+
+            a) <p class="inline-heading">Reflexive</p>: Each instance should be equal to itself. For any non-null reference value x, <code>x.equals(x)</code> must return true. If
+            you were to violate it and then
+            add an instance of your class to a collection, the <code>contains</code> method might well say that the collection didn't contain the instance that you just added. Hard
+            to screw this one up. <br>
+
+            b) <p class="inline-heading">Symmetry</p>: For any non-null reference values x and y, <code>x.equals(y)</code> must return true if and only if <code>y.equals(x)</code>
+            returns true. <br>
+            - Consider this implementation of <code>equals</code>. As expected, <code>cis.equals(s)</code> returns true. The problem is that while the equals method in
+            <i>CaseInsensitiveString</i> knows about ordinary strings, the <code>equals</code> method in <code>String</code> is oblivious to case-insensitive strings (i.e. no
+            relations has been specified between the <i>CaseInsensitiveString</i> class and the <code>String</code> class). Therefore, <code>s.equals(cis)</code> returns false, a
+            clear violation of symmetry.
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/05a6419affb690453fba468ea4176220.js"></script>
+                </div>
+            </div>
+
+            - In order to correct this error, we change the <code>equals</code> implementation as follows. Now, we are no longer trying to compare <code>String</code> and
+            <code>CaseInsensitiveString</code> in the <code>equals</code> method. Hence, comparison on both sides now returns <i>false</i>.
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/6f0b300c148471ca411bdf800ad4ce86.js"></script>
+                </div>
+            </div>
+
+            - This is the equals that was auto-generated by IntelliJ. Note that the overridden equals methods is checking whether the two strings being compared are EXACTLY equal
+            or not. And not checking for equalsIgnoreCase, as we want. So do not blindly use the auto-generated equals method. Check what is going on.
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/c2719f999cf0d4d9868b6957012630f2.js"></script>
+                </div>
+            </div>
+
+            c) <p class="inline-heading">Transitivity</p>: For any non-null reference values x, y, z, if <code>x.equals(y)</code> returns true and <code>y.equals(z)</code> returns
+            true, then <code>x.equals(z)</code> must return true. <br>
+            - Consider the case of a subclass that adds a new <i>value</i> component to its superclass. Below is a class <i>Point</i> that is being extended by
+            <i>ColorPoint</i>. <i>ColorPoint</i> adds a new field called <i>color</i> to the <i>Point</i> class.
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/48bfb08066c7c1fbcde70fab6bff250e.js"></script>
+                </div>
+            </div>
+
+            - Now, how should the <code>equals</code> of the <i>ColorPoint</i> class be written? If you leave it out entirely, the implementation is inherited from Point and color
+            information is ignored in equals comparisons. While this does not violate the equals contract, it is clearly unacceptable. <br>
+            - So the first version that we write compares whether the points are the same and the color is the same as well. But this solution breaks the rule of symmetricity.
+            <code>point.equals(colorPoint))</code> returns true, whereas <code>colorPoint.equals(point)</code> returns false. <br>
+            - Note that the expectation here is that <i>both</i> of the comparisons should return <i>false</i>.
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/c54c52f2e546f2e214c9d6f3c66c3879.js"></script>
+                </div>
+            </div>
+
+            - So, in order to get around this issue, say we decide that if the types are different, then we are not going to compare the <i>color</i> values at all. And that kind
+            of makes sense as well. But if we do this, this ends up breaking the rule of transitivity.
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/749be63344c3f795be8a36075405b2f8.js"></script>
+                </div>
+            </div>
+
+            <br>
+
+            <p class="inline-heading">So, what's the solution?</p> <br>
+            - It turns out that this is a fundamental problem of equivalence relations in object-oriented languages. <br>
+            - There is no way to extend an instantiable class and add a value component while preserving the equals contract, unless you're willing to forgo the benefits of
+            object-oriented abstraction. <br>
+            - You may hear it said that you can extend an instantiable class and add a value component while preserving the equals contract by using a <code>getClass</code> test in
+            place of the <code>instanceof</code> test in the <code>equals</code> method. In fact, note that this is what Intellij was auto-generating in the example above. This is
+            an example of using this <code>equals</code> in the <i>Point</i> class. We already saw that this will return false when performing the comparisons from both sides. <br>
+            - This has the effect of equating objects only if they have the same implementation class. This may not seem so bad, but the consequences are unacceptable: An instance
+            of a subclass of <i>Point</i> is still a <i>Point</i>, and it still needs to function as one, but it fails to do so if you take this approach! <br>
+            - You can read about the <a href="../../Code/Java_Notes/JavaNotes.html#solid-principle">Liskov Substitution Principle here on the other page</a>. <br>
+            - In the below example, although the <i>ColorPoint</i> class extends the <i>Point</i> class (and hence every instance of a <i>ColorPoint</i> class IS-A <i>Point</i>
+            class), the <code>equals</code> method of the <i>Point</i> class checks for the exact implementation type in <code>getClass</code>. Hence the code treats the two
+            classes as different classes and that is a violation of Liskov Substitution Principle.
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/e340bc90844e69b824b46b98e5531f3e.js"></script>
+                </div>
+            </div>
+
+            <br>
+            <p class="inline-heading">What is a workaround to this problem then?</p> <br>
+            - Follow the advice of Item 18, "Favor composition over inheritance." <br>
+            - Instead of having <i>ColorPoint</i> extend <i>Point</i>, give <i>ColorPoint</i> a private <i>Point</i> field and a public view method (Item 6) that returns the point
+            at the same position as this color point:
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/35328534ca4082be9bbcaacac390c88a.js"></script>
+                </div>
+            </div>
+
+            - Note that you can add a value component to a subclass of an abstract class without violating the equals contract. (Item 23) <br>
+
+            d) <p class="inline-heading">Consistency</p>: For any non-null reference values x and y, multiple invocations of <code>x.equals(y)</code> must consistently return true
+            or consistently return false, provided no information used in equals comparisons is modified. <br>
+            - If two objects are equal, they must remain equal for all time unless one (or both) of them is modified. In other words, mutable objects can be equal to different
+            objects at different times while immutable objects can't. <br>
+            - Do not write an equals method that depends on unreliable resources. equals methods should perform only deterministic computations on memory-resident objects. <br>
+
+            e) <p class="inline-heading">Non-Nullity</p>: For any non-null reference value x, <code>x.equals(null)</code> must return false. <br>
+            - Note the places above where we have been using the <code>instanceof</code> operator. <br>
+            - To test its argument for equality, the equals method must first cast its argument to an appropriate type so its accessors can be invoked or its fields accessed.
+            Before doing the cast, the method must use the <code>instanceof</code> operator to check that its argument is of the correct type. <br>
+            - If this type check were missing and the <code>equals</code> method were passed an argument of the wrong type, the <code>equals</code> method would throw a
+            <code>ClassCastException</code>, which violates the equals contract. But the <code>instanceof</code> operator is specified to return false if its first operand is null,
+            regardless of what type appears in the second operand. Therefore, the type check will return false if null is passed in, so you don't need an explicit null check.
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/2674cc9624f6579079c58f6df1c68fdd.js"></script>
+                </div>
+            </div>
+
+            <br>
+            <p class="inline-heading">What are the things to remember when writing a custom <code>equals</code> method</p>? <br>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/621a4bc050e8856bdb98d6a8b32a438e.js"></script>
+                </div>
+            </div>
         </div>
 
+
+        <div class="sub-heading">Item 11: Always override <code>hashCode</code> when you override <code>equals</code></div>
+        <div>
+            - The contract of the <code>hashCode</code> states the following three rules: <br>
+            a) When the <code>hashCode</code> method is invoked on an object repeatedly during an execution of an application, it must consistently return the same value, provided
+            no information used in equals comparisons is modified. This value need not remain consistent from one execution of an application to another. <br>
+            b) If two objects are equal according to the <code>equals(Object)</code> method, then calling <code>hashCode</code> on the two objects must produce the same integer
+            result. <br>
+            c) If two objects are unequal according to the <code>equals(Object)</code> method, it is <i>not</i> required that calling <code>hashCode</code> on each of the objects
+            must produce distinct results. However, the programmer should be aware that producing distinct results for unequal objects may improve the performance of hash tables.
+            <br>
+            - The key provision that is violated when you override the <code>equals</code> but do not override the <code>hashCode</code> is point 2: equal objects <i>must have</i>
+            equal hash codes. If you override <code>equals</code> but do not override <code>hashCode</code>, two distinct instances of a class might be <i>logically</i> equal
+            according to the <code>equals</code> method that you overrode. But these two equal objects will end up returning different numbers when you call the
+            <code>hashCode</code> method on these two logically equal objects. <br>
+            - So why does this matter? Consider the below code. <br>
+            - The PhoneNumber class's failure to override <code>hashCode</code> causes the two equal instances to have unequal hash codes, in violation of the hashCode contract.
+            Therefore, the <code>get</code> method is likely to look for the phone number in a different hash bucket from the one in which it was stored by the <code>put</code>
+            method. Even if the two instances happen to hash to the same bucket, the <code>get</code> method will almost certainly return <code>null</code>, because
+            <code>HashMap</code> has an optimization that caches the hash code associated with each entry and doesn't bother checking for object equality if the hash codes don't
+            match.
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/5331bc4bd45f1e4de81477dc23d94569.js"></script>
+                </div>
+            </div>
+
+            <br>
+            <p class="inline-heading">So how should we write a proper <code>hashCode</code> function?</p> <br>
+            - Read the complete thing in the text. <br>
+            - <a href="https://stackoverflow.com/questions/24427586/what-is-a-canonical-representation-of-a-field-meant-to-be-for-equals-method">What is a "canonical
+            representation" of a field mean</a> here on SO. <br>
+            - You may exclude <i>derived fields</i> from the hash code computation. In other words, you may ignore any field whose value can be computed from fields included
+            in the computation. <br>
+            - You <i>must</i> exclude any fields that are not used in <code>equals</code> comparisons, or you risk violating the second provision of the <code>hashCode</code>
+            contract. <br>
+            - This is what the auto-generated <code>hashCode</code> from IntelliJ looks like. Note that in this auto-generated method, we are not calculating the hash values of the
+            individual fields for some reason.
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/8caba7f05b08f5be0c84ac2d1b23a75a.js"></script>
+                </div>
+            </div>
+
+            - Alternatively, the <code>Objects</code> class has a static <code>hash</code> method that takes an arbitrary number of objects and returns a hash code for them. This
+            method lets you write one-line <code>hashCode</code> methods whose quality is comparable to those written according to the recipe in this item. Unfortunately, they run
+            more slowly because they entail array creation to pass a variable number of arguments, as well as boxing and unboxing if any of the arguments are of primitive type.
+            This style of hash function is recommended for use only in situations where performance is not critical. <br>
+            - This is what it looks like.
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/8fc9b4b9cc3ede204ac2fca791e5c2e2.js"></script>
+                </div>
+            </div>
+
+            - If a class is immutable and the cost of computing the hash code is significant, you might consider caching the hash code in the object rather than recalculating it
+            each time it is requested. If you believe that most objects of this type will be used as hash keys, then you should calculate the hash code when the instance is
+            created. Otherwise, you might choose to lazily initialize the hash code the first time hashCode is invoked. The <code>String</code> class for example lazily-initializes
+            it's hash code. Once the hashCode has been computed, it caches the value.
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/5a7900329e48dabf3e7310a62c7ef564.js"></script>
+                </div>
+            </div>
+
+            - Do not be tempted to exclude significant fields from the hash code computation to improve performance. While the resulting hash function may run faster, its poor
+            quality may degrade hash tables' performance to the point where they become unusable. In particular, the hash function may be confronted with a large collection of
+            instances that differ mainly in regions you've chosen to ignore.
+        </div>
+
+
+        <div class="sub-heading">Item 12: Always override <code>toString</code></div>
+        <div>
+            - While <code>Object</code> provides an implementation of the <code>toString</code> method, the string that it returns is generally not what the user of your class
+            wants to see. It consists of the class name followed by an "at" sign (@) and the unsigned hexadecimal representation of the hash code. <br>
+            - Override <code>Object</code>'s <code>toString</code> implementation in every instantiable class you write, unless a superclass has already done so. It makes classes
+            much more pleasant to use and aids in debugging. The <code>toString</code> method should return a concise, useful description of the object, in an aesthetically
+            pleasing format.
+        </div>
+
+        <div class="sub-heading">Item 13: Override <code>clone</code> judiciously</div>
+        <div>
+            - Read text. <br>
+            - The idea is to create a deep-copy of the object. But you cannot have your class just implement the <code>Cloneable</code> interface in order to achieve this
+            functionality. Your class needs to, both, implement <code>Cloneable</code> and override the <code>clone</code> method from the <code>Object</code> class in order to
+            achieve a deep copy. <br>
+            - But there are better ways to create a copy of the object. Either by using a copy constructor, or by using a static method. <code>clone</code> is rarely used to
+            achieve this outcome. This is also the way that is preferred nowadays? See for example SO answer <a href="https://stackoverflow.com/a/16507720/8742428">here</a> and <a
+                href="https://stackoverflow.com/a/4081895/8742428">here</a>. <br>
+            - If we can create a deep copy of an object by specifying a method of our own, why do we need to explicitly implement and then override the <code>clone</code> method?
+            <a href="https://stackoverflow.com/a/33184755/8742428">Explained here on SO</a>. <br>
+        </div>
+
+
+        <div class="sub-heading">Item 14: Consider implementing <code>Comparable</code></div>
+        <div>
+            - A lot of stuff going on over here. Read the text for full info. <br>
+            - If you are writing a value class with an obvious natural ordering, such as alphabetical order, numerical order, or chronological order, you should implement the
+            <code>Comparable</code> interface. Implementing the <code>Comparable</code> interface means overriding the <code>compareTo</code> method. <br>
+            - The general contract of the <code>compareTo</code> method is similar to that of <code>equals</code>:
+            Compares this object with the specified object for order. Returns a negative integer, zero, or a positive integer as this object is less than, equal to, or greater
+            than the specified object. Throws <code>ClassCastException</code> if the specified object's type prevents it from being compared to this object.
+        </div>
     </div>
 
 

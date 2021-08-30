@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9QJ5D3X353"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'G-9QJ5D3X353');
+    </script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,400&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../globalStyles.css">
+    <meta name="author" content="Raj Gaurav Ballabh Kumar">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JUnit/Mockito Notes</title>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+
+    <div class="navbar-header">
+        <a href="../../index.html" class="navbar-brand"> rgbk21</a>
+    </div>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"><span
+            class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="nav navbar-nav">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Projects</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="../../Projects/TwitterCritNodes/TwitterCritNodes_1.html">Identifying Critical Nodes on Twitter</a>
+                    <a class="dropdown-item" href="../../Projects/isRelatedTo/isRelatedTo.html">isRelatedTo</a>
+                    <div class="dropdown-divider"></div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">HTML Projects</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="../../Pig_Game/index.html">2-Player Pig Game</a>
+                    <a class="dropdown-item" href="../../ImageGallery/ImageGallery.html">Image Gallery</a>
+                    <a class="dropdown-item" href="../../RGB_Guesser_Game/RGB.html">RGB Guesser Game</a>
+                    <a class="dropdown-item" href="../../ToDoList/todo.html">To-Do List</a>
+                    <div class="dropdown-divider"></div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Notes</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="../../Lectures/COMS_631/COMS_631_index.html">COMS 631</a>
+                    <a class="dropdown-item" href="../../Lectures/COMS_535/COMS_535_index.html">COMS 535</a>
+                    <a class="dropdown-item" href="../../Lectures/EffectiveJava/EffectiveJava.html">Effective Java</a>
+                    <div class="dropdown-divider"></div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Code</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="../../Code/ThingsToRemember/ThingsToRemember.html">Things To Remember</a>
+                    <a class="dropdown-item" href="../../Code/Java_Notes/JavaNotes.html">Java Notes</a>
+                    <a class="dropdown-item" href="../../Code/Java_Notes/JavaNotes_2.html">Java Notes 2</a>
+                    <a class="dropdown-item" href="../../Code/LeetCode/LeetCode.html">LeetCode Notes</a>
+                    <a class="dropdown-item" href="../../Code/Applying_Java_Notes/ApplyingJava_Notes.html">ApplyingJava Notes</a>
+                    <a class="dropdown-item" href="../../Code/JavaScript/JavaScript.html">JavaScript Notes</a>
+                    <a class="dropdown-item" href="../../Code/HTML_CSS/HTML_CSS_Basics.html">HTML & CSS Notes</a>
+                    <a class="dropdown-item" href="../../Code/SQL/SQL.html">SQL Notes</a>
+                    <a class="dropdown-item" href="../../Code/Spring/Spring.html">Spring Notes</a>
+                    <a class="dropdown-item" href="../../Code/Kafka/Kafka.html">Kafka Notes</a>
+                    <a class="dropdown-item" href="../../Code/Angular/Angular.html">Angular</a>
+                    <a class="dropdown-item" href="../../Code/Hibernate/Hibernate.html">Hibernate</a>
+                    <div class="dropdown-divider"></div>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">In Another Life</a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="../../InAnotherLife/Chapter1.html">Chapter 1</a>
+                    <div class="dropdown-divider"></div>
+                </div>
+            </li>
+        </ul>
+
+
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active"><a class="nav-link" href="https://github.com/rgbk21">GitHub</a></li>
+            <li class="nav-item active"><a class="nav-link" href="https://www.linkedin.com/in/raj-gaurav-ballabh-kumar-97002058/">LinkedIn</a></li>
+            <li class="nav-item active"><a class="nav-link" href="https://www.instagram.com/wobblyframes/">Instagram</a></li>
+            <li class="nav-item active"><a class="nav-link" href="https://www.facebook.com/SomeRandomThoughts">Facebook</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container">
+
+    <button id='load-all-gists' type="button" class="btn btn-outline-primary">Show all Gists!</button>
+
+    <div>
+        This page contains my notes from the following books: <br>
+        a) JUnit in Action <br>
+    </div>
+
+
+    <br>
+    Index for Book: <br>
+    Module 2 - <a href="#InterestingLinks">Dive into HTML</a> <br>
+
+    <br>
+
+    <hr>
+    <div id="InterestingLinks" class="chapter">Interesting Links</div>
+    <hr>
+
+    <div class="textual-content">
+
+        <div class="sub-heading">Links</div>
+        <div>
+            - <a href="https://frontbackend.com/java/difference-between-mockito-mock-method-and-the-mock-annotation">Difference between Mockito.mock() method and the @Mock
+            annotation</a> <br>
+            - <a href="https://www.devtrends.co.uk/blog/how-not-to-do-dependency-injection-the-static-or-singleton-container">How not to do dependency injection - the static or
+            singleton container</a> <br>
+            - <a href="https://stackoverflow.com/questions/16815940/do-mock-objects-get-reset-for-each-test">Are mocks recreated for each test</a>? JUnit creates a new instance of
+            test class each time it runs a new test method and runs @Before method each time it creates a new test class. <br>
+            - Strange behavior when creating a mock of a class that contains some <code>static</code> code. <a
+                href="https://stackoverflow.com/questions/67056776/junit-jupiter-how-can-i-change-a-mockito-mock-behavior-cached-in-a-list-outside">Here on SO</a>. <br>
+            - <a href="https://stackoverflow.com/questions/1087339/using-mockito-to-test-abstract-classes">Mockito can make a mock of an abstract class</a> so long as you do not
+            call the method that has been declared <code>abstract</code>. TODO: This is still not clear. Create an example to see and read the link again. <br>
+            - Do not use <code>@Test(Exception.class)</code> to test if your code throws an exception or not. Instead use the <a
+                href="https://junit.org/junit4/javadoc/4.13/org/junit/Assert.html#assertThrows(java.lang.Class,%20org.junit.function.ThrowingRunnable)">assertThrows</a> method.
+            Include ONLY the line of code that you expect should throw an error in the lambda. The <code>assertThrows</code> method returns the exception that was raised so that
+            you can do other computations on it such as
+            - First the fields that have been annotated with <code>@Mock</code> are initialised. It is the line
+            <code>@Rule public final MockitoRule mockito = MockitoJUnit.rule();</code> that is responsible for this, because it is this rule that says: NOW initialize all the
+            mocks. [Citation Needed]. It is only once the mocks have been created that the method that has been annotated with <code>@Before</code> executes.
+        </div>
+    </div>
+
+
+    <hr>
+    <div id="Module3_Udemy" class="chapter">Module 3 - Formatting with CSS</div>
+    <hr>
+
+    <div class="textual-content">
+
+        <div class="sub-heading">Lecture 11: Getting started with CSS</div>
+        <div>
+            - CSS can be used in the following ways: <br>
+            <img src="imgs/Udemy_Lecture_HTML_CSS/Module3/Wasy_To_Use_CSS.PNG"
+                 width="500"
+                 class="center-block img-fluid"
+                 alt="Different ways to use CSS in page">
+            - CSS is attached to the html page by pasting this into the head:
+            <code>&lt;link rel="stylesheet" type="text/css" href="HTML_CSS_Basics.css"&gt;</code>
+        </div>
+
+        <div class="sub-heading">Lecture 12: Starting to make our web page pretty</div>
+        <div>
+            - Avoid repeating the same styles - meaning - group common property names in a single selector separated by
+            commas
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/ed6542f7913cf873e053ab92446fe113.js"></script>
+                </div>
+            </div>
+            - Properties are inherited in CSS. When a property is declared on an element, all of the elements that are
+            inside that element inherit that property. In other words, child elements inherit the properties of their
+            parent elements. But remember that this behavior varies from property to property.
+            Not all properties are inherited. <br>
+            - Also we can override the styles of the parent element by defining a new style with the same name in the
+            child element.
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/d06929924737be25b4af5c7ed6120f33.js"></script>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="sub-heading">Lecture 13: Colors</div>
+        <div>
+            - Colors are represented in CSS using the RGB Model. <br>
+            - Colors are represented using <code>#000000</code>. The
+            first two 00 stand for the Red Channel, next two 00 for the green channel, and last two 00 for the blue
+            channel. All colors are a combination of these three channels. <br>
+            - If all the six letters in the hex code are the same, for eg. <code>#555555</code>, we can write it in
+            shorthand as <code>#555</code>. <br>
+            - In addition to this, colors in CSS can also have transparencies. If we want to include the transparency
+            value, then we cannot use the hex notation to represent colors. Instead we use
+            <code>rgba(29, 167, 23, 0.75)</code>. 0.75 is the transparency value. A value of 0 means the color is
+            transparent, and a value of 1 means the color is completely solid.
+            <img src="imgs/Udemy_Lecture_HTML_CSS/Module3/RGB_Model.PNG"
+                 width="500"
+                 class="center-block img-fluid"
+                 alt="RGB Model">
+        </div>
+
+
+        <div class="sub-heading">Lecture 14: Classes and ID's</div>
+        <div>
+            - We prefer classes over id's in html because id's can be used only once in the entire page.
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/b8767ff4d660a019a68f2d4ffcc5e265.js"></script>
+                </div>
+            </div>
+        </div>
+
+        <div class="sub-heading">Lecture 15: The CSS Box Model</div>
+        <div>
+            - The <i>content</i> is where the text and images appear. <code>padding</code>, <code>margin</code>, and
+            <code>border</code> are properties in CSS and can specified either for the entire box, or for the individual
+            sides - <i>top</i>, <i>right</i>, <i>bottom</i>, <i>left</i>. <br>
+            - The box model also allows us to set the height and width of an element. The annoying thing about the
+            standard box model is that you can set the height and the width only of the <i>content</i>, not of the
+            entire box itself. What this means is that the <code>padding</code>, <code>margin</code>, and
+            <code>border</code> are added to the height and width that we specify. This is not ideal.
+            <img src="imgs/Udemy_Lecture_HTML_CSS/Module3/CSS_Box_Model.PNG"
+                 width="550"
+                 class="center-block img-fluid"
+                 alt="CSS Box Model">
+            - In order to get around this, we use a CSS property called <code>box-sizing</code> and set it to
+            <code>box-sizing: border-box;</code>.
+            <img src="imgs/Udemy_Lecture_HTML_CSS/Module3/CSS_Box_Model_Border_Box.PNG"
+                 width="550"
+                 class="center-block img-fluid"
+                 alt="CSS Box Model after setting the box-sizing property">
+            - In HTML, there are <i>block elements</i> and <i>inline elements</i>. Block elements use the entire width
+            of the browser and force line breaks. Eg. heading, paragraph elements. Inline elements do not do anything of
+            this sort. <a href="https://www.samanthaming.com/pictorials/css-inline-vs-inlineblock-vs-block/#a-inline">Inline
+            elements do NOT start on a new line</a> and only takes up as much width as its content. So, if
+            you try to set any width and height, it will have NO effects. <code>span</code>, <code>img</code>,
+            <code>a</code> tags are some examples of inline elements. <br>
+            - If you do not specify any margins in your stylesheet, all browsers, by default, add some margins to your
+            elements. You can override these margins by using the universal selector <code>*</code>.
+
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/48c01cb57f09635ed9fab145b344270b.js"></script>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="sub-heading">Lecture 16: Building a simple layout</div>
+        <div>
+            - Project page linked <a href="test.html">here</a>. <br>
+            - This is the expected final setup of the page that we want:
+            <img src="imgs/Udemy_Lecture_HTML_CSS/Module3/Expected_Output.PNG"
+                 width="375"
+                 class="center-block img-fluid"
+                 alt="Expected final setup of the page">
+            - Go to the <a
+                href="https://www.udemy.com/course/design-and-develop-a-killer-website-with-html5-and-css3/learn/lecture/2569170?start=6">Udemy
+            Lecture here</a>. <br>
+            - Enclose the entire content of the page inside a div <code>my-container</code> <br>
+            - Establish a width for <code>my-container</code> using <code>width: 1140px;</code> <br>
+            - Center the <code>my-container</code> by using <code>margin-left: auto;</code> and
+            <code>margin-right: auto;</code> properties. <br>
+            - Divide the <code>my-container</code> div into the three boxes by using <code>div</code>. Because div
+            elements are block elements, the three divs will be placed one below another right now. <br>
+            - The <i>blog-posts</i> should occupy 70% of the width of the container and the <i>linked-posts</i> should
+            occupy the remaining 30%. <br>
+            - To put the <i>linked-posts</i> to the right of <i>blog-posts</i>, we need to use a new property called
+            <code>float</code>. <code>float</code> allows us to push elements to the left or to the right, allowing
+            other elements to wrap around it. So we put <code>float: left;</code> to both the <i>linked-posts</i> and
+            the <i>blog-posts</i>. <br>
+            - But now the <i>author-details</i> div also floats to the right. So we need a <i>clearfix</i> class to
+            rectify this. Add the <i>clearfix</i> class to the CSS, and add a empty div before the <i>author-details</i>
+            that uses the <i>clearfix</i> class. <br>
+            - Add some padding to the right side of the <i>blog-posts</i> box using <code>padding-right: 30px;</code>.
+            Remember that padding is within the box. Hence the background will remain colored in this case. Had you used
+            margin, the background would have been white. <br>
+            - Add some spacing from the top of the container using <code>margin-top</code>. <br>
+            - Change the color of the hyper links only in the <i>author-details</i>. Use <code>.author-details a</code>
+            selector to select only the anchor tags that are in the <i>author-details</i> class. <br>
+            - If you were resizing images, make sure you change either only the <code>height</code> or only the <code>width</code>
+            property so that the aspect ratio of the image is preserved. <br>
+        </div>
+
+        <div class="sub-heading">Lecture 18: Relative vs Absolute</div>
+        <div>
+            - We want to add a date to each post. The date should appear in the right top corner of the div. For this
+            kind of stuff, we make use of the <code>position: absolute</code> and <code>position: relative</code>
+            - The first thing that we need to make sure is that the parent element is a <code>relative</code> positioned
+            element. In this case the parent of the <i>date</i> element is the <i>blog-post</i> element. Hence we need
+            to edit the CSS of <i>blog-post</i> element to say <code>position: relative</code>. <br>
+            - Then we change the CSS of the <i>date</i> element to say <code>position: absolute</code> and specify the
+            exact location where we want the element to be placed. We need to explicitly say that the parent has
+            position: relative, otherwise the browser would not know where to position the absolute element.<br>
+            - The entire CSS so far looks like this:
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/b3e40fece2837954be00f8a1210f0d29.js"></script>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+    <div id="Module4_Udemy" class="chapter">Module 4 - Web Design Basics</div>
+    <hr>
+
+    <div class="textual-content">
+        <div class="sub-heading">Lecture 30: The Cheat Sheet</div>
+        <div class="parent-float-class">
+
+
+            <div class="float-class">
+                Typography <br>
+                1. Use a font-size between 15 and 25 pixels for body text <br>
+                2. Use (really) big font sizes for headlines <br>
+                3. Use a line spacing between 120 and 150% of the font size <br>
+                4. 45 to 90 characters per line <br>
+                5. Use good fonts <br>
+                6. Chose a font which reflects the look and feel you want for your website <br>
+                7. Use only one font <br>
+            </div>
+
+            <div class="float-class">
+                Using Colors Like a Pro <br>
+                1. Use only one base color <br>
+                2. Use a tool if you want to use more colors <br>
+                3. Use color to draw attention <br>
+                4. Never use black in your design <br>
+                5. Choose colors wisely <br>
+            </div>
+
+
+            <div class="float-class">
+                Working with Images <br>
+                1. Put text directly on the image <br>
+                2. Overlay the image <br>
+                3. Put your text in a box <br>
+                4. Blur the image <br>
+                5. The floor fade <br>
+            </div>
+
+            <!--  Add the clearfix class to fix the float error  -->
+            <div class="clearfix"></div>
+
+            <div class="float-class">
+                Working with icons <br>
+                1. Use icons to list features/steps <br>
+                2. Use icons for actions and links <br>
+                3. Icons should be recognizable <br>
+                4. Label your icons <br>
+                5. Icons should not take a center stage <br>
+                6. Use icon fonts whenever possible <br>
+            </div>
+
+            <div class="float-class">
+                Spacing and layout <br>
+                1. Put whitespace between your elements <br>
+                2. Put whitespace between your groups of elements <br>
+                3. Put whitespace between you website's sections <br>
+                4. Define where you want your audience to look first <br>
+                5. Establish a flow that corresponds to your content's message <br>
+                6. Use whitespace to build that flow <br>
+            </div>
+
+
+        </div>
+    </div>
+
+    <hr>
+    <div id="Module5_Udemy" class="chapter">Module 5 - WebSite Project</div>
+    <hr>
+
+    <div class="textual-content">
+
+        <div class="sub-heading">Lecture 36: First Development Steps</div>
+        <div>
+            - <a href="Udemy_Projects/Section5_Project/index.html">You can see the finished page here</a>. <br>
+            - The HTML created at the end of this section <a
+                href="https://github.com/rgbk21/rgbk21.github.io/blob/1d022abd3cb45ed92e10644287c3b2ecaa7380b3/Code/HTML_CSS/Udemy_Projects/Section5_Project/index.html">can
+            be seen here.</a>.
+            <br>
+            - The CSS created at the end of this section
+            <a href="https://github.com/rgbk21/rgbk21.github.io/blob/2de4cbadb176416423161684e641b1890fb8dae0/Code/HTML_CSS/Udemy_Projects/Section5_Project/resources/css/styles.css">can
+                be seen here</a>.
+            <br>
+            - Get the project structure set up with the correct folder formats. <br>
+            - Pick out a font that you want to use. Include it in the header of the html page. <br>
+            - Reset the CSS for the entire page:
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/60020ec655b5dd4beda8545a3f2fa04c.js"></script>
+                </div>
+            </div>
+            - Add the following CSS:
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/3017208fb286c444fc46c943fe9a7ab3.js"></script>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="sub-heading">Lecture 37: Setting up fluid grid for responsive web design</div>
+        <div>
+            - Following are the points to keep in mind to create responsive web design: <br>
+            a) Fluid Grid: all layout elements are sized in relative units, such as percentages, instead of absolute A
+            <code>header</code> element works like a normal <code>div</code>
+            units, such as pixels. <br>
+            b) Flexible images: are also sized in relative units <br>
+            c) Media Queries: allow us to specify different CSS style rules for different browser widths. <br>
+            - Add <code>grid.css</code> to the <code>vendors/css</code> folder. <br>
+            - All of our data will be contained within rows. So we create a new class called <code>row</code> and assign
+            it the following styles:
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/fd3a73d161110cb7a544fa679288f63b.js"></script>
+                </div>
+            </div>
+        </div>
+
+        <div class="sub-heading">Lecture 38: Building the header</div>
+        <div>
+            - A <code>header</code> element works like a normal <code>div</code> element. There are other similar
+            elements like <code>nav</code>, <code>main</code> for the main body, and <code>footer</code>. Using these
+            elements attaches semantics that are helpful for search engines. They know that this div is a header and not
+            just another div with a random class applied to it. <br>
+            - Add a background image to the div using <code>background-image: url("imgs/hero.jpg");</code>. <br>
+            - But now you
+            see a problem. The background image only fills the part of the header that has some content. We want the
+            image to fill the entire viewport instead. We do that using <code>height: 100vh</code>. <br>
+            - The image is too zoomed in right now. We want the image to fill the view:
+            <code>background-size: cover;</code> <br>
+            - When we resize the window now, the image cuts off. We want the aspect ratio of the image to changne on
+            window resize such that the entire image is visible irrespective of the window size:
+            <code>background-position: center;</code> <br>
+            - Now we want to center the <code>div</code> both horizontally and vertically. We will have to use the
+            <code>absolute</code> positioning in this case. In order to center the div, we first
+            <code>position: absolute; top: 50%; left: 50%;</code>. But this means that the <i>starting</i> point of the
+            div is now position center. We now need to offset it such that the div is centered:
+            <code>transform: translate(-50%, -50%);</code>. This will translate the element half of it's width to the
+            left, and half of it's height to the top. <br>
+            - The next thing is we need to make the background image darker so that we can see the text that is present
+            on the top of it. We do this by adding a image on top of the existing background image:
+            <code>background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("imgs/hero.jpg");</code> <br>
+            - Next we want to change the font-size of the header element. But we do not want to specify the font-size in
+            pixels. We have specified the base font-size in our html element as 20px. Relative to that, we do this in
+            the h1 element: <code>font-size: 200%</code>. When we increase the font-size, we try to decrease the
+            font-weight. We also want to change the heading to uppercase: <code>text-transform: uppercase;</code> <br>
+            - We can increase the letter-spacing and the word-spacing as well.
+            <code>letter-spacing: 1px; word-spacing: 4px;</code> <br>
+            - We want to create button for the links. <br>
+            - A button is by default an inline elements. We can change that to be a inline-block element. An
+            inline-block element is a hybrid between a block and an inline element. An inline-block element does not
+            force a line break, but you can add properties on it like padding and margin, unlike a normal inline
+            element. We can change this by doing <code>display: inline-block;</code>. And now we can add some padding
+            and margin to this element. <code>a</code> tags also have an underline by default. We can remove this by
+            doing <code>text-decoration: none;</code> <br>
+            - Right now the button is square. We can make the edges round: <code>border-radius: 200px;</code> <br>
+            - Add a border to the button: <code>border: 1px solid #e67e22;</code>. <br>
+            - Buttons can have 4 different states: <br>
+            a) link: how the link looks like in the normal state <br>
+            b) visited: how the link looks like after it has been visited (some links appear grey after having being
+            clicked) <br>
+            c) hover: when we put our mouse over the button <br>
+            d) active: when we click on the button <br>
+            - We want the behavior of the buttons in the normal state and after being visited to remain the same. Hence,
+            we write the following. We are doing this by soecifying the same styles for
+            <code>.btn:link, .btn:visited</code>. <code>link</code> and <code>visited</code> are examples of pseudo
+            classes.
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/673bffb28a7e5c6ab2c99e8ee51d99e0.js"></script>
+                </div>
+            </div>
+            - When we hover over or click a button, we want the behavior to be a bit different. We want the background
+            to get a bit darker. Hence we can do this:
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/6df51e2507ba5414d7f9f57b8b3ba7f3.js"></script>
+                </div>
+            </div>
+            - The transition of the background color from the lighter shade to the darker shade on hover is
+            instantaneous. We want there to be a slight delay. To give the impression of an animation. We write:
+            <code>transition: background-color 0.2s;</code>. We mean that when there is a transition in the
+            <code>background-color</code> property, there should be a delay of 0.2s. But remember it's not just the
+            <code>background-color</code> that we are changing. We are also changing the
+            <code>border</code> and <code>color</code> as well. We can apply a single transition for all of them:
+            <code>transition: background-color 0.5s, color 0.5s, border 0.5s;</code>. <br>
+            - Now we want to add the <code>nav</code> element. The logo of the page is intended to go here. <br>
+            - The nav links are present in the <code>nav</code> element as an <code>ul</code>. Test within the
+            <code>ul</code> assigned bullets by default. We can override this default behavior by using:
+            <code>list-style: none;</code>. <br>
+            - <code>li</code> elements are block elements by default. Hence each of them introduce a line break. We want
+            all the <code>li</code> elements to appear in a single line. Hence we change the <code>li</code> elements to
+            <code>display: inline-block;</code>. <br>
+            - Below each of the <code>li</code> elements in the <code>nav</code>bar, we want the element to be
+            underlined once we hover over that element. But note that just defining this is not going to work properly:
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/fb3a62ff816b30a685071d9f40fd296f.js"></script>
+                </div>
+            </div>
+            - What we need to do is define a transparent border on the <code>link/visited</code> itself. So the correct
+            code should look like this:
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/da18e6eb2586a0607a77e03b7f19c86f.js"></script>
+                </div>
+            </div>
+
+            - Complete CSS at the end of this looks like this:
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/75545185b2abf76375e65ad18d4ccb7f.js"></script>
+                </div>
+            </div>
+        </div>
+
+        <div class="sub-heading">Lecture 41: Building the features section</div>
+        <div>
+            - Each page should have only one main <code>h1</code> heading. If you need more headings, use
+            <code>h2</code>, <code>h3</code>, and so on. <br>
+            - <code>&amp;mdash;</code> gives us a bigger &mdash; compared to -. <br>
+            - <code>text-align: center;</code> aligns the text to the center of the <code>div</code>. <br>
+            - We can also add content to the webpage using JUST CSS. We do this by using the <code>:after</code> pseudo
+            class. In this case, we want the element to appear after the <code>h2</code> heading element. In this
+            particular case, we do not want to add text. We just want to add a small horizontal line that acts as a
+            separator. Hence we write the following CSS:
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/05676420185b1657b88108c5fadd6be1.js"></script>
+                </div>
+            </div>
+            - You should never change the styles of the classes that are being imported from other libraries, i.e.
+            override the styles present in vendor css files. Always add your own class. For eg:
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/7849a18978e5ce1d3898d96881a464c5.js"></script>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="sub-heading">Lecture 43: Building the favorite meals section</div>
+        <div>
+            - In this lecture we are going to build a grid of images that span the entire width of the screen. The
+            images will be dark at first, but when you hover over them, the images will get lighter and their size will
+            increase. <br>
+            - For the images, we want a total of 8 images, 4 in each row with each row spanning the entire width of the
+            screen. The way to implement this is to have each image as an <code>li</code> item in <code>ul</code>. Hence
+            2 <code>ul</code>s, with each <code>ul</code> having 4 <code>li</code> items. Each <code>li</code> in turn
+            is going to contain one image. Remember that <code>li</code> items can contain anything - text, images, etc.
+            <br>
+            - Let's start applying the relevant CSS now. <br>
+            - Remove the default bullets from the ul elements: <code>list-style: none;</code> <br>
+            - Have the ul occupy the entire width of the webpage: <code>width: 100%;</code> <br>
+            - Start styling the li elements within the ul <br>
+            - Each image should display as a block: <code>display: block;</code> <br>
+            - Instead of each image occurring one below the other, we want the images to be next to each other:
+            <code>float: left;</code> <br>
+            - We have 4 images to display within a width of 100%. Hence for each image: <code>width: 25%;</code> <br>
+            - Take note of how the widths of the elements are stacked. The <code>ul</code> element takes the entire
+            available width of the webpage. Each <code>li</code> element within the <code>ul</code> takes a width of
+            25% of it's parent container - the parent in this case being <code>ul</code>. Hence width of each
+            <code>li</code> is also computed as 25%. Each <code>img</code> within the <code>li</code> takes a width of
+            100% of it's parent container - the parent container in this case being the <code>li</code>. Hence the image
+            still occupies only 25% of the screen width. Even after you resize the screen, you can see the entire image
+            being visible. <br>
+
+            <img src="imgs/Udemy_Lecture_HTML_CSS/Module5/Image_Widths.PNG"
+                 width="1339"
+                 class="center-block img-fluid"
+                 alt="Image widths">
+
+
+            - We are increasing the size of the image. We want the image to be 115%:
+            <code>transform: scale(1.15);</code>. You can see in the browser that this means the images will no longer
+            fir in the width of the browser and we now see the horizontal scrollbar appear to accommodate the images.
+            <br>
+            - The reason this happens is that the images are 'overflowing' from their parent container, which as you can
+            see in the html, is the <code>meals-showcase</code> class. Hence we need to tell CSS to hide any overflow,
+            which we do by adding <code>overflow: hidden;</code> to the <code>meals-showcase</code> class. <br>
+            - Next, when we hover over the image, we want the image to return back to it's original size:
+            <code>transform: scale(1.05);</code>. Scaling to 1.05 instead of 1 because scaling to 1 causes a white gap
+            to appear between the images. <br>
+            - Next we want to do is animate this transformation in size on hover
+            <code>transition: transform 0.5s;</code> <br>
+            - The next effect that we want to create is we want all of the images to be darker initially. Then when we
+            hover over the image that we want, that image becomes darker. All the images in the
+            <code>meals-showcase</code>can be made darker by following these two steps: <br>
+            a) Change the opacity of the <code>meals-showcase</code> container to 0.7 (important that you change the
+            opacity here. Else you get weird overlap errors). But now the image becomes lighter, and this is because the
+            background of the image is white. Hence the next step is to make the background color of the image container
+            as black. <br>
+
+            b) The <code>meals-showcase</code> has the opacity set to 0.7. Hence we change the background-color of it's
+            parent color to black. <br>
+
+            - The last thing we want to do is, on hover, change the opacity back to 1 with some animation.
+
+            <img src="imgs/Udemy_Lecture_HTML_CSS/Module5/Image_Background.PNG"
+                 width="1751"
+                 class="center-block img-fluid"
+                 alt="Image widths">
+        </div>
+
+        <div class="sub-heading">Lecture 45: Building the how-it-works section</div>
+        <div>
+            - Refer the <a
+                href="https://www.udemy.com/course/design-and-develop-a-killer-website-with-html5-and-css3/learn/lecture/2619788?start=7">Udemy
+            Lecture here</a>. Too much is going on over here to write it all down. And also I am lazy... <br>
+            - How do we add a clickable image that serves as a button:
+            <code>&lt;a href="link-you-want-to-go-to"&gt;&lt;img src="your-image.png"&gt;&lt;/a&gt;</code> <br>
+            - We have two useful pseudo selectors:
+            <code>.steps-box:first-child</code> and <code>.steps-box:last-child</code>. These will select the first and
+            the last elements which have the <code>steps-box</code> class applied to it. <br>
+            - <code>text-align</code> does not only align the text, but any inline image within the box is also aligned.
+            Images are inline element. Hence, <code>text-align</code> can be used to align images within the box as
+            well. <br>
+            - We want to add numbers to the steps - numbers 1, 2, 3 and circle them. Go through the CSS for this. <br>
+            - Format the buttons to to have the same size <br>
+            - Another pseudo-selector is <code>last-of-type</code>. <a
+                href="https://stackoverflow.com/questions/24657555/what-is-the-difference-between-first-child-and-first-of-type">What
+            is the difference between first-of-type and first-child</a>. <br>
+            - When you define some floats, you also have to clear thos flows. This is where we normally use the <code>clearfix</code>
+            hack that we talked about earlier. You can check whether you require the <code>clearfix</code> by looking at
+            the height of the floated element. If the height is 0, it means that you will have to clear the flow. <br>
+            - <a href="https://stackoverflow.com/questions/211383/what-methods-of-clearfix-can-i-use">What methods of
+            clearfix can I use</a> on SO. <br>
+        </div>
+
+
+        <div class="sub-heading">Lecture 47: Building the Cities Section</div>
+        <div>
+            - Main takeaway was how are we going to align icons with text. Refer
+            the lecture <a
+                href="https://www.udemy.com/course/design-and-develop-a-killer-website-with-html5-and-css3/learn/lecture/2619792?start=180#notes">here</a>
+            if you want to see how the icons are supposed to look like in the page. <br>
+            - If you want to align the icons, you do the following:
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/6f531ee0f30f2225d84225629739eb76.js"></script>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="sub-heading">Lecture 49: Building the Customer Testimonials Section</div>
+        <div>
+            - We want to include testimonials from our customers, which is basically comments provided by our customers
+            on our services. HTML has a <code>blockquote</code> element that indicates that the enclosed text is an
+            extended quotation. Usually, this is rendered visually by indentation. <br>
+            - Add a background image to the testimonials section:
+            <code>background-image: url("imgs/back-customers.jpg");</code> <br>
+            - Have the image fill the entire background:
+            <code>background-size: cover;</code> <br>
+            - Make the background image darker by overlaying a dark gradient on top of the image <br>
+            <code>background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),</code>
+            <code>url("imgs/back-customers.jpg");</code> <br>
+            - Make the text white: <code>color: #ffffff;</code> <br>
+            - Make the background image static so that when the page is scrolled, the position of the image remains
+            fixed: <code>background-attachment: fixed;</code> <br>
+            - Whenever you want to include italic text in your webpage, you have to make sure that you have included
+            italic fonts as well in your page, like you have done in the header element of this page. <br>
+            - The <code>vertical-align</code> CSS property sets vertical alignment of an inline, inline-block or
+            table-cell box. Set <code>vertical-align: middle;</code> for the name of the person to appear vertically
+            center aligned to the image. <br>
+            - We want to add a quotation mark before the text of the testimonial starts. Recall that content can be
+            added to the webpage just through CSS only. We will define the position of the blockquote as
+            <code>absolute</code>. Recall that for an element to be positioned as <code>absolute</code>, we need the
+            parent element to be positioned as <code>relative</code> or else the changes are not going to take effect.
+        </div>
+
+        <div class="sub-heading">Lecture 51: Building the Sign-Up Section</div>
+        <div>
+            - We use the <code>span</code> element in order to style some text in a <code>p</code>, or some other
+            enclosing element, in a way that is different from the styling that has eben applied to the parent element.
+            <br>
+            - Remember that certain CSS properties are inherited. For example, consider the following CSS for a <code>span</code>
+            element that is within the <code>plan-price</code> class.
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/68c16e73dfa78c7dd6efdfa3942ab79c.js"></script>
+                </div>
+            </div>
+            - There is a special character that you can add for space in HTML: <code>&amp;nbsp;</code>.
+            <a href="https://stackoverflow.com/questions/7861978/how-can-i-escape-the-nbsp-nbsp-in-message-board">Source
+                on SO</a>.
+            <br>
+            - Adding <code>box-shadow: 0 2px 2px #e3e3e3;</code>
+        </div>
+
+
+        <div class="sub-heading">Lecture 53: Building the Contact Form</div>
+        <div>
+            - Read this: <a href="https://css-tricks.com/a-complete-guide-to-links-and-buttons/">A complete guide to CSS
+            Links and Buttons</a>. <br>
+            - Do you really understand forms? <a href="https://developer.mozilla.org/en-US/docs/Learn/Forms">MDN
+            Tutorial on Forms</a>. <br>
+            - Read about how to use radio buttons in forms <a
+                href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio">here on MDN</a>. <br>
+            - Read about how to use checkboxes and multiple checkboxes in forms <a
+                href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox">here on MDN</a>. <br>
+            - Refer the <a
+                href="https://www.udemy.com/course/design-and-develop-a-killer-website-with-html5-and-css3/learn/lecture/2619806?start=6">Udemy
+            Lecture here </a> to see the HTML that is used to build a form. <br>
+            - Button styles on Submit Button disappear after applying the <code>:visited</code> and <code>:link</code>
+            pseudo-classes to the <code>input[type=submit]</code> button - semi-anser <a
+                href="https://www.udemy.com/course/design-and-develop-a-killer-website-with-html5-and-css3/learn/lecture/2619808#questions/8956746">here
+            on Udemy</a>. <br>
+            - The complete form HTML looks like this:
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/e2ca23a5c3fa7357272c819a0334ea6e.js"></script>
+                </div>
+            </div>
+            - The CSS for the form looks like this. A few new ways of styling elements were covered. Look at the
+            lecture. <br>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/9fbd0842aa603a90ea9a744513efaedd.js"></script>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="sub-heading">Lecture 55: Building the Footer</div>
+        <div>
+            - Question: how do you make a footer stick to the bottom of the screen when your content does not occupt the
+            entire height of the screen? Read <a href="https://css-tricks.com/couple-takes-sticky-footer/">here on CSS
+            Tricks</a>.
+        </div>
+
+    </div>
+
+
+    <hr>
+    <div id="Module6_Udemy" class="chapter">Module 6 - ResponsiveWeb Design with Media Queries</div>
+    <hr>
+
+    <div class="textual-content">
+
+        <div class="sub-heading">Lecture 57: Making the webpage responsive</div>
+        <div>
+            -
+        </div>
+
+    </div>
+
+
+</div>
+
+
+<script src="../../script.js"></script>
+</body>
+</html>

@@ -149,6 +149,7 @@
     Chapter 2: <a href="#Arrays">Arrays</a> <br>
     Chapter 3: <a href="#Arrays&Strings">Arrays, Lists, and Strings</a> <br>
     Chapter 4: <a href="#Hashing">Hash Tables</a> <br>
+    Chapter 5: <a href="#CollectionsJava8">The Collections Class Utilities</a> <br>
 
     <hr>
     <div id="BinarySearch" class="chapter">Binary Search</div>
@@ -474,7 +475,12 @@
             - <a href="https://stackoverflow.com/questions/1516549/bad-idea-to-use-string-key-in-hashmap">Good answer on SO</a> explaining how Hash Map works. <br>
             - Note that if you are using <code>String</code>s as keys for your Set/Map, then the complexity of checking whether a <code>String</code> exists in the set/map or not
             is going to be O(m), where <i>m</i> is the number of characters in the string. <a
-                href="https://stackoverflow.com/questions/68422044/time-complexity-of-checking-whether-a-string-is-present-in-a-hashset-java">Explained on SO here</a>.
+                href="https://stackoverflow.com/questions/68422044/time-complexity-of-checking-whether-a-string-is-present-in-a-hashset-java">Explained on SO here</a>. Once you add
+            a <code>String</code> object to a <code>Set</code>/<code>Map</code>, the hashCode of the string is stored/cached in <i>that</i> <code>String</code> object. Hence, later
+            on if you use the same instance of the string to check for something like <code>contains</code>, the <code>Set</code>/<code>Map</code> will not have to recalculate the
+            hash again, since it will just use the cached value instead giving you O(1) time complexity. But if you use a <i>new</i> string object that is logically equal to the
+            earlier string that you added, but is a completely new instance of <code>String</code>, the hash value of it will have to be calculated all over again giving you O(m)
+            once again.
         </div>
 
         <div id="LC_HashSet" class="sub-heading">Hash Set</div>
@@ -564,6 +570,20 @@
         <div>
             - TODO.
         </div>
+    </div>
+
+
+    <hr>
+    <div id="CollectionsJava8" class="chapter">The Collections Class Utilities</div>
+    <hr>
+
+    <div class="textual-content">
+        <div class="sub-heading">Introduction</div>
+        <div>
+            - // TODO
+        </div>
+
+
     </div>
 
 

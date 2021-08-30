@@ -231,7 +231,7 @@
 
         <br>
 
-        What is the <a href="https://en.wikipedia.org/wiki/SOLID">SOLID</a> principle? <br>
+        <p id="solid-principle" class="inline-heading">What is the <a href="https://en.wikipedia.org/wiki/SOLID">SOLID</a> principle? </p> <br>
         - Single-responsibility principle: A class should only have a single responsibility, that is, only changes to
         one part of the software's specification should be able to affect the specification of the class. <br>
         - Open-closed principle: Software entities ... should be open for extension, but closed for modification. <br>
@@ -1682,8 +1682,7 @@
         <div class="sub-heading">The <code>Collection</code> Interface</div>
         <div>
             - The <code>Collection</code> interface is the root of the collection interface hierarchy. It defines a generic collection. The Collections Framework does not provide
-            an
-            implementation for the Collection interface. <br>
+            an implementation for the Collection interface. <br>
             - This is the most generic type of collection. You can use it as an argument type in methods, where you do not care about the collection type of the argument, provided
             it isn't a map. <br>
             - Note the <code>add()</code> and the <code>remove()</code> methods in the <code>Collection</code> interface. Both of them return true if calling them on the collection
@@ -1700,7 +1699,8 @@
             collections. Instead you will have to do this individually for the specific collection that you are trying to obtain. <br>
             <code>List&lt;Foos&gt; fooList = new ArrayList<>(Arrays.toList(fooArray))</code> <br>
             <code>Set&lt;Foos&gt; fooSet = new HashSet<>(Arrays.toList(fooArray))</code> <br>
-
+            - There is also the <code>Collections</code> Utility class that offers multiple methods for performing operations on different types of <code>Collection</code> and
+            <code>Map</code>. Read about that on the <a href="../LeetCode/LeetCode.html">other page here</a>.
         </div>
 
 
@@ -1858,7 +1858,7 @@
                 href="https://docs.oracle.com/javase/8/docs/api/java/util/LinkedList.html">Source on Oracle Docs</a>).
         </div>
 
-        <div class="sub-heading">Working with Queues</div>
+        <div id="java8queues" class="sub-heading">Working with Queues</div>
         <div>
             - A queue has two ends known as head and tail. In the simple queue, objects are added to the tail and removed from the head; the object added first will be removed
             first. <br>
