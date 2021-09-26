@@ -17,7 +17,11 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-9QJ5D3X353"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
         gtag('js', new Date());
 
         gtag('config', 'G-9QJ5D3X353');
@@ -148,11 +152,14 @@
         </footer>
     </blockquote>
 
-    <p>This is part 1 of a 3-part series on the study of critical nodes in a network. <br>
-        Links to: <a href=../../Projects/TwitterCritNodes/TwitterCritNodes_2.html>part 2</a> and <a
-                href=../../Projects/TwitterCritNodes/TwitterCritNodes_3.html>part 3</a>
+    <p>
+        This is part 1 of a 3-part series on the study of critical nodes in a network. <br>
+        Links to: <a href=../../Projects/TwitterCritNodes/TwitterCritNodes_2.html>part 2</a> and <a href=../../Projects/TwitterCritNodes/TwitterCritNodes_3.html>part 3</a>
         <br>
-		<a href="https://lib.dr.iastate.edu/etd/17723/">Direct download link of the Thesis</a>
+        Part of this work is published in <a target="_blank" href="https://ieeexplore.ieee.org/document/9457825">2020 IEEE/WIC/ACM International Joint Conference on Web Intelligence and
+        Intelligent Agent Technology (WI-IAT)</a>. <br>
+        <a target="_blank" href="https://lib.dr.iastate.edu/etd/17723/">Direct download link of the Thesis</a>
+    </p>
 
     <div class="sub-heading">Goal</div>
     <p>
@@ -248,22 +255,22 @@
     </p>
     <div class="sub-heading">Experimental Setup</div>
     <p>
-    For the purpose of this experiment, tweets mentioning Hong Kong were filtered using the <a
-        href=https://tweepy.readthedocs.io/en/latest/#>Tweepy library</a> written in Python and the <a
-        href=https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/intro-to-tweet-json>Twitter API</a>.
-    The <a href=https://github.com/rgbk21/TwitterStream>Python code for the streaming process </a> can be found here.
-    Tweets were collected from Tue Aug 13 21:30:14 +0000 2019 to Thu Aug 15 13:08:30 +0000 2019. In all, around 1.2
-    million tweets were collected. <br>
-    A graph was created from the tweets. Graph was created in the following manner: there are 3 actions that any user
-    can take from a tweet: retweet, retweet with comment, and reply. All 3 actions are perceived as engaging with the
-    tweet. An edge was created from a user <em>v</em> to a user <em>w</em> if <em>w</em> took any of the above stated 3
-    actions on <em>v</em>'s tweet. The graph created in this manner contained a total of 607525 nodes and 994220 edges.
-    The <a href=https://github.com/rgbk21/GraphManipulations>JAVA code for the parsing of the Tweet JSON object and the
-    subsequent creation of the graph</a> can be found here. <br>
-    The version of our algorithm applied here does not require the knowledge of the source nodes spreading the
-    (mis)information provided to us. The <a
-        href=https://github.com/rgbk21/Disrupting_Diffusion_By_Finding_Critical_Nodes/tree/CodeContaining_topCrit_WithoutAnySeedSetContextGiven_Exp2>C++
-    code that we used for identifying the critical nodes in the network</a> can be found here.
+        For the purpose of this experiment, tweets mentioning Hong Kong were filtered using the <a
+            href=https://tweepy.readthedocs.io/en/latest/#>Tweepy library</a> written in Python and the <a
+            href=https://developer.twitter.com/en/docs/tweets/data-dictionary/overview/intro-to-tweet-json>Twitter API</a>.
+        The <a href=https://github.com/rgbk21/TwitterStream>Python code for the streaming process </a> can be found here.
+        Tweets were collected from Tue Aug 13 21:30:14 +0000 2019 to Thu Aug 15 13:08:30 +0000 2019. In all, around 1.2
+        million tweets were collected. <br>
+        A graph was created from the tweets. Graph was created in the following manner: there are 3 actions that any user
+        can take from a tweet: retweet, retweet with comment, and reply. All 3 actions are perceived as engaging with the
+        tweet. An edge was created from a user <em>v</em> to a user <em>w</em> if <em>w</em> took any of the above stated 3
+        actions on <em>v</em>'s tweet. The graph created in this manner contained a total of 607525 nodes and 994220 edges.
+        The <a href=https://github.com/rgbk21/GraphManipulations>JAVA code for the parsing of the Tweet JSON object and the
+        subsequent creation of the graph</a> can be found here. <br>
+        The version of our algorithm applied here does not require the knowledge of the source nodes spreading the
+        (mis)information provided to us. The <a
+            href=https://github.com/rgbk21/Disrupting_Diffusion_By_Finding_Critical_Nodes/tree/CodeContaining_topCrit_WithoutAnySeedSetContextGiven_Exp2>C++
+        code that we used for identifying the critical nodes in the network</a> can be found here.
     </p>
     <p>
     <div class="sub-heading">Results and Observations</div>

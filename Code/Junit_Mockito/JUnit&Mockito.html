@@ -119,12 +119,18 @@
     <div>
         This page contains my notes from the following books: <br>
         a) JUnit in Action <br>
+        b) Mockito Code Lab
     </div>
 
 
     <br>
     Index for Book: <br>
     Module 2 - <a href="#InterestingLinks">Interesting Links</a> <br>
+
+
+    Index for Mockito Code Lab: <br>
+    Module 1 - <a href="#TestSizes">Test Sizes</a> <br>
+
 
     <br>
 
@@ -152,8 +158,66 @@
             you can do other computations on it such as checking to see that the raised exception does in fact have the same message that you wanted. (TODO) <br>
             - First the fields that have been annotated with <code>@Mock</code> are initialised. It is the line
             <code>@Rule public final MockitoRule mockito = MockitoJUnit.rule();</code> that is responsible for this, because it is this rule that says: NOW initialize all the
-            mocks. [Citation Needed]. It is only once the mocks have been created that the method that has been annotated with <code>@Before</code> executes.
+            mocks. [Citation Needed]. It is only once the mocks have been created that the method that has been annotated with <code>@Before</code> executes. <br>
+            - Mocking a class vs mocking an interface. Should one be preferred over the other? <a
+                href="https://stackoverflow.com/questions/9226323/mocking-a-class-vs-mocking-its-interface">Source on SO</a>. <br>
+            -
         </div>
+    </div>
+
+    <hr>
+    <div id="TestSizes" class="chapter">Test Sizes</div>
+    <hr>
+
+    <div class="textual-content">
+        <div class="sub-heading">How to reduce the size of tests</div>
+        <div>
+            - Systems can span multiple processes and machines. This doesn't mean that the tests of those systems should be complicated either. The most common technique for
+            testing a large system with small tests is to take advantage of <i>test doubles</i>, which allow for fake or mock implementations of parts of the system to be used in
+            tests. Whenever, a component of a system under test would communicate with another machine, or process, or make a non-blocking call, it should be possible to replace
+            that component with an in-process test double. This allows the important parts of the system to be tested entirely using small tests. <br>
+        </div>
+
+        <div class="sub-heading">Small tests are not required to use mocks extensively</div>
+        <div>
+            - Mocks and other test doubles are a tool that make it possible to write small tests of systems with dependencies that are slow, non-deterministic, or run in different
+            processes.Test doubles typically should not be used for other purposes when a real implementation is available that is fast and in-process. In particular, mocking out
+            all of a class's dependencies so that the test "focuses only on a single class" usually does more harm than good.
+        </div>
+
+        <div class="sub-heading">Using Parameterized Tests</div>
+        <div>
+            - There are some common test anti-patterns that you should avoid: <br>
+            - Copying/Pasting the same test again, just with a different set of inputs <br>
+            - The tests should not be in a helper method. Because then you have to jump between the helper method and the place where the actual assertion is being made in order to
+            figure out where the error in the case of the test actually is. <br>
+            - You should not have assert statements that are being called/used in while or for loops. This is because if the test fails, you wouldn't know which set of inputs
+            actually caused the test to fail. <br>
+            - These issues can be solved by using parameterized tests instead. There are multiple points that are being covered in the following example. <br>
+            <div class="code-block">
+                <div class="expand-code-snip-btn border border-primary rounded">
+                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+                </div>
+                <div class="code-snippet">
+                    <script src="https://gist.github.com/rgbk21/f3997d6787980b6b26f1b5b4ac9d2042.js"></script>
+                </div>
+            </div>
+            - Note that running the tests now shows the parameterized tests separately, and we can clearly see which test failed with which params.
+            <img src="imgs/ParameterizedTests.PNG"
+                 class="center-block img-fluid"
+                 alt="UML Collections Diagram"
+                 width="500">
+        </div>
+
+        <div class="sub-heading">Flakes and Code Coverage</div>
+        <div>
+            - Flaky tests are tests that passes or fails non-deterministically with respect to its test inputs. You should either remove such test cases itself or fix the flakiness
+            issues. <br>
+            - High code coverage does not guarantee high quality in test coverage. But a low code coverage number guarantees that large areeas are completely untested. The gains of
+            increasing test coverage are logarithmic. While it might be worthwhile to improve the test coverage from 30% to 70%, increasing from 90% to 95%, maybe not so much.
+        </div>
+
+
     </div>
 
 </div>
