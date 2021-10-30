@@ -110,6 +110,7 @@ code {
     font-weight: 500;
     display: inline-block;
     margin-bottom: 0;
+    text-decoration: underline;
 }
 
 hr{

@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+          integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+          crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+          integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+          crossorigin="anonymous"></script>
+  <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+          integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+          crossorigin="anonymous"></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9QJ5D3X353"></script>
+  <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+          dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-9QJ5D3X353');
+  </script>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,400&display=swap"
+        rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../../globalStyles.css">
+  <meta name="author" content="Raj Gaurav Ballabh Kumar">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DI</title>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+
+  <div class="navbar-header">
+    <a href="../../index.html" class="navbar-brand"> rgbk21</a>
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"><span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="nav navbar-nav">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Projects</a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="../../Projects/TwitterCritNodes/TwitterCritNodes_1.html">Identifying Critical Nodes on Twitter</a>
+          <a class="dropdown-item" href="../../Projects/isRelatedTo/isRelatedTo.html">isRelatedTo</a>
+          <div class="dropdown-divider"></div>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">HTML Projects</a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="../../Pig_Game/index.html">2-Player Pig Game</a>
+          <a class="dropdown-item" href="../../ImageGallery/ImageGallery.html">Image Gallery</a>
+          <a class="dropdown-item" href="../../RGB_Guesser_Game/RGB.html">RGB Guesser Game</a>
+          <a class="dropdown-item" href="../../ToDoList/todo.html">To-Do List</a>
+          <div class="dropdown-divider"></div>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Notes</a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="../../Lectures/COMS_631/COMS_631_index.html">COMS 631</a>
+          <a class="dropdown-item" href="../../Lectures/COMS_535/COMS_535_index.html">COMS 535</a>
+          <a class="dropdown-item" href="../../Lectures/EffectiveJava/EffectiveJava.html">Effective Java</a>
+          <a class="dropdown-item" href="../../Lectures/DI/DI.html">Dependency Injection</a>
+          <div class="dropdown-divider"></div>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Code</a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="../../Code/ThingsToRemember/ThingsToRemember.html">Things To Remember</a>
+          <a class="dropdown-item" href="../../Code/Java_Notes/JavaNotes.html">Java Notes</a>
+          <a class="dropdown-item" href="../../Code/Java_Notes/JavaNotes_2.html">Java Notes 2</a>
+          <a class="dropdown-item" href="../../Code/LeetCode/LeetCode.html">LeetCode Notes</a>
+          <a class="dropdown-item" href="../../Code/Applying_Java_Notes/ApplyingJava_Notes.html">ApplyingJava Notes</a>
+          <a class="dropdown-item" href="../../Code/JavaScript/JavaScript.html">JavaScript Notes</a>
+          <a class="dropdown-item" href="../../Code/HTML_CSS/HTML_CSS_Basics.html">HTML & CSS Notes</a>
+          <a class="dropdown-item" href="../../Code/SQL/SQL.html">SQL Notes</a>
+          <a class="dropdown-item" href="../../Code/Spring/Spring.html">Spring Notes</a>
+          <a class="dropdown-item" href="../../Code/Kafka/Kafka.html">Kafka Notes</a>
+          <a class="dropdown-item" href="../../Code/Angular/Angular.html">Angular</a>
+          <a class="dropdown-item" href="../../Code/Hibernate/Hibernate.html">Hibernate</a>
+          <div class="dropdown-divider"></div>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">In Another Life</a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="../../InAnotherLife/Chapter1.html">Chapter 1</a>
+          <div class="dropdown-divider"></div>
+        </div>
+      </li>
+    </ul>
+
+
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active"><a class="nav-link" href="https://github.com/rgbk21">GitHub</a></li>
+      <li class="nav-item active"><a class="nav-link" href="https://www.linkedin.com/in/raj-gaurav-ballabh-kumar-97002058/">LinkedIn</a></li>
+      <li class="nav-item active"><a class="nav-link" href="https://www.instagram.com/wobblyframes/">Instagram</a></li>
+      <li class="nav-item active"><a class="nav-link" href="https://www.facebook.com/SomeRandomThoughts">Facebook</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+
+  <button id='load-all-gists' type="button" class="btn btn-outline-primary">Show all Gists!</button>
+
+  <div>
+    This page contains my notes from the following books: <br>
+    a) Dependency Injection in Action by Prasanna <br>
+  </div>
+
+
+  <br>
+  Index for Book: <br>
+  Chapter 0 - <a href="#InterestingLinks">Interesting Links</a> <br>
+  Chapter 1 - <a href="#Chapter1">Dependency injection: what's all the hype</a> <br>
+  Chapter 2 - <a href="#Chapter2">Time for Injection</a>
+
+
+  <br>
+
+  <hr>
+  <div id="InterestingLinks" class="chapter">Interesting Links</div>
+  <hr>
+
+  <div class="textual-content">
+
+    <div class="sub-heading">Links</div>
+    <div>
+      -
+    </div>
+  </div>
+
+  <hr>
+  <div id="Chapter1" class="chapter">Dependency injection: what's all the hype?</div>
+  <hr>
+
+  <div class="textual-content">
+    <div class="sub-heading">Seeing objects as services</div>
+    <div>
+      - A central idea in this book is that - <i>of an object acting as a service</i>. Take an email sending service for example. The email itself can be viewed as a message
+      composition service, the internet relays that are routing the email to its destination as delivery agents, and the receiver's inbox as a receiving service. <br>
+      - Consider the following architecture for the service:
+      <img src="imgs/ch1/EmailMessagingService.PNG"
+           class="center-block img-fluid"
+           alt="EmailMessagingService"
+           width="700">
+      - Let the three objects responsible for these actions be: <code>Emailer</code>, <code>InternetRelay</code>, <code>RecipientInbox</code>. Each object is a <i>client</i>
+      of the next. <code>Emailer</code> uses the <code>InternetRelay</code> as a service to send email, and in turn, the <code>InternetRelay</code> uses the
+      <code>RecipientInbox</code>
+      as a service to deliver sent mail. <br>
+      - There's value in decomposing our services into objects. Take the <code>Emailer</code> for example. The <code>Emailer</code> will require a text editor to type-in the
+      email. This logic could be added in the <code>Emailer</code> class itself, but it is better to create a new <code>TextEditor</code>. Pulling this functionality into its
+      own class has the following advantages: <br>
+      a) Our <code>Emailer</code> is not cluttered with distracting code meant for text manipulation. <br>
+      b) We can reuse the <code>TextEditor</code> component in other scenarios (say, a calendar or note-taking application) without much additional coding. <br>
+      c) If someone else has written a general-purpose text-editing component, we can make use of it rather than writing one from scratch <br>
+      - This principle is important because it highlights the relationship between one object and other objects it uses to perform its function: an object depends on its
+      services in order to perform its function. In this example that we are talking about, the <code>Emailer</code> class depends upon a <code>TextEditor</code>,
+      <code>SpellChecker</code>, and a <code>Dictionary</code> to perform its functions. Hence these 3 classes are the <i>dependencies</i> of the <code>Emailer</code> class.
+      In other words, the <code>Emailer</code> class is a <i>client</i> of its <i>dependencies</i>. <br>
+      - The dependencies of the <code>Emailer</code> class may have dependencies of their own and this relationship carries on transitively. This composite system of
+      dependencies is known as the <i>object graph</i>. <br>
+      - Hence we get the following definitions: <br>
+      a) <p class="inline-heading">Service</p>: An object that performs a <i>well-defined</i> function when it is called. <br>
+      b) <p class="inline-heading">Client</p>: Any consumer of a service. A cient calls a service to perform a <i>well-understood</i> function. <br>
+      c) <p class="inline-heading">Dependency</p>: A specific service that is <i>required</i> by another object to fulfill its function. <br>
+      d) <p class="inline-heading">Dependent</p>: A client object that needs a dependency (or dependencies) in order to perform its function. <br>
+      e) <p class="inline-heading">Dependency Injection</p>: DI is the study of reliably and efficiently building such object graphs and the strategies, patterns, and best
+      practices therein. <br>
+    </div>
+
+    <div class="sub-heading">Pre DI Solutions</div>
+    <div>
+      - Suppose you were asked to create an <code>Emailer</code> which is composed of a <code>SpellChecker</code>, this might be the first thing that you come up with:
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/b8be3cd32369ab39bd09f6e334f47985.js"></script>
+        </div>
+      </div>
+      - But what is the problem with this approach? Suppose you wanted to test that the <code>SpellChecker</code> was in-fact being called when you used the <i>send</i>
+      method to send an email. One way to do this would be to create a <code>MockSpellChecker</code>and make <code>Emailer</code> use that:
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/14034bdca00106464dad5a0c52d1434d.js"></script>
+        </div>
+      </div>
+      - But now you cannot use this mock because you cannot substitute the internal spellchecker that the <code>Emailer</code> class has. This effectively makes the
+      <code>Emailer</code> class untestable. <br>
+      - There is another problem with this approach. You cannot create objects of the same <code>Emailer</code> class with different functionality. For instance, suppose you
+      were writing an email client for the english language, then you would do something like:
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/45b4380ab5c6575fcfca05017208a99b.js"></script>
+        </div>
+      </div>
+      - Now if you wanted to use the same <code>Emailer</code> class for the french language, you would have to create a completely new <code>Emailer</code> class. We need
+      another system where instead of the dependent creating its own dependencies, it has them provided externally. <br>
+    </div>
+
+    <div class="sub-heading">Construction by hand</div>
+    <div>
+      - Instead of the constructor of the <code>Emailer</code> creating its own <code>SpellChecker</code>, we can add a method that <i>accepts</i> a <code>SpellChecker</code>.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/eebbd96e096960d8ef94a39aef5b12d4.js"></script>
+        </div>
+      </div>
+      - This allows us to substitute the <code>SpellChecker</code> with a version of our own, and thus we can use the <code>MockSpellChecker</code> that we created above to
+      now test the functionality of the <code>Emailer</code> class. Similarly, we can also substitute the <code>SpellChecker</code> with another spell checker easily now.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/5433736deef30f1c06ea70be32b53f5a.js"></script>
+        </div>
+      </div>
+      - In the above example, we are setting the <code>SpellChecker</code> manually. At the time of construction of the <code>Emailer</code> class, we are manually setting the
+      dependency. Hence, this is also sometimes referred to as <i>construction by hand</i>. <br>
+      - The above code was an example of <i>setter injection</i>. You can also do a <i>constructor injection</i> by passing in the dependency during the construction of the
+      <code>Emailer</code> class itself. The advantage of following this approach is that it makes the dependency between the two classes explicit. You cannot create an
+      <code>Emailer</code> class without creating a <code>SpellChecker</code> class. And thus it reduces the chances of someone forgetting to set the dependency on the object.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/61dd10e33ac604bb15728f8590b1e356.js"></script>
+        </div>
+      </div>
+
+      <p class="inline-heading">Problems with construction-by-hand</p>:
+      The problem with this technique is that the burden of knowing how to create the object graph is placed on the client of the service. In this case, it is the
+      <code>Emailer</code> class that must set up its dependency, <code>SpellChecker</code>, either through constructor or through setter injection. Also, if the same object is
+      being
+      used in multiple places, then you need to repeat the code of wiring together the object in all the places. If you decide to change the dependency graph in the future, you
+      will have to go to all the places and make the change yourself. <br>
+      - Another problem is the fact that users need to know how object graphs are wired internally. This violates the principle of encapsulation and becomes problematic when
+      dealing with code that is used by many clients, who really shouldn't have to care about the internals of their dependencies in order to use them.
+    </div>
+
+
+    <div class="sub-heading">Factory Pattern</div>
+    <div>
+      - One way of getting around the problem of having to construct the objects in an object graph yourself is to use a Factory Pattern.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/6d175592d5dcb92296c26debe810c19c.js"></script>
+        </div>
+      </div>
+      - The most important thing to notice here is that the client code has no reference to spellchecking, address books, or any of the other internals of <code>Emailer</code>.
+      By adding a level of abstraction (the Factory pattern), we have separated the code using the <code>Emailer</code> from the code that creates the <code>Emailer</code>. This
+      leaves client code clean and concise. This becomes even more useful when the object graph of the created object is even more complex.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/0e2ee1d113d17abdf6b279edd180fc17.js"></script>
+        </div>
+      </div>
+      - Talking about testing, the <code>Emailer</code> code is still using the same constructor injection it was using previously. So we can still test the <code>Emailer</code>
+      class as we were previously. <br>
+
+      <p class="inline-heading">Problems with using Factory Pattern</p>:
+      Testing the internals of the object returned from the factory becomes difficult unless the factory has explicitly provided capabilities to test it. What do I mean by that?
+      This client does not know anything about <code>Emailer</code>'s internals; instead, it depends on a Factory. In one of the previous scenarios, we were able to swap out the
+      <code>SpellChecker</code> being injected into the class with a <code>MockSpellChecker</code> of our own. But that will not be possible in this case. <br>
+      - Another issue is that if you are going with Factory Pattern then you will have to create a new method for <i>every</i> variation of <i>every</i> service. That is a lot of
+      code to test and maintain. If you decided that you wanted to replace the <code>AddressBook</code> with <code>PhoneAndAddressBook</code>, you will have to go through all the
+      methods in the factory and make the substitution. Plus there might be many dependencies that are common across different types of <i>Emailer</i> objects but which you still
+      have to specify separately for each new method that you add to the factory. One way to get around this is to use a 'general' factory that first creates a common version of
+      the object and then use that intermediate object to set any specific fields on it. But this again leads to code that is difficult to test.
+    </div>
+
+
+    <div class="sub-heading">Service Locator Pattern</div>
+    <div>
+      - A Service Locator is also a kind of factory. The way that it works is that you pass in a <i>key</i> to the service locator, and the service locator replies with a
+      fully-formed object that you can use in your code. <br>
+      - This is what it would look like: <code>Emailer emailer = (Emailer) new ServiceLocator().get("Emailer");</code> <br>
+      - Since all the locator needs is a key, a Service Locator acts as a factory that can return <i>any</i> kind of service. Compare this to the <i>EmailerFactory</i> class where
+      it was returning only one type of object - namely <i>Emailer</i>. <br>
+      - The Java Naming and Directory Interface (JNDI) is a good example of a Service Locator pattern. It is often used by application servers to register resources at start time
+      and later by deployed applications to look them up. Web applications typically use JNDI to look up data sources in this manner. <br>
+      - An example of gettig a different object: <code>Emailer emailer = (Emailer) new ServiceLocator().get("JapaneseEmailerWithPhoneAndEmail");</code>
+
+      <p class="inline-heading">Problems with using Service Locator Pattern</p>:
+      Being a kind of Factory, Service Locators suffer from the same problems of testability and shared state. The keys used to identify a service are opaque and
+      can be confusing to work with. The practice of embedding information about the service within its identifier (namely, "JapaneseEmailerWithPhoneAndEmail") is also verbose and
+      places too much emphasis on arbitrary conventions.
+    </div>
+
+
+    <div class="sub-heading">Embracing Dependency Injection</div>
+    <div>
+      - DI is a magical way that takes all the good parts of the above solutions and leaves behind all the bad parts. DI enables testability in the same way as construction
+      by hand, via a setter method or constructor injection. DI removes the need for clients to know about their dependencies and how to create them, just as factories do. It
+      leaves behind the problems of shared state and repetitive clutter, by moving construction responsibility to a library. <br>
+      - In case of DI, the task of creating, assembling, and wiring the dependencies into an object graph is performed by an external framework known as a <i>dependency
+      injection framework</i> or simply a <i>dependency injector</i>. The control over the construction, wiring, and assembly of an object graph no loger resides with the clients
+      or services themselves. This is also known as the <i>Inversion of Control</i>.
+
+      <img src="imgs/ch1/DI_Basics.png"
+           class="center-block img-fluid"
+           alt="EmailMessagingService"
+           width="700">
+    </div>
+
+    - Notice that <i>EmailClient</i> knows nothing about what kind of <i>Emailer</i> it needs or is using to send a message. All it knows is that it accepts <i>some kind</i> of
+    <i>Emailer</i>, and this dependency is used when needed. Also notice that the client code is now starting to resemble service code; both are free of logic to create or locate
+    dependencies. <br>
+    - This highlights the separation of <i>infrastructure</i> code (meant for wiring and construction) from <i>application</i> code (the core purpose of a service).
+
+    <div class="code-block">
+      <div class="expand-code-snip-btn border border-primary rounded">
+        <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+      </div>
+      <div class="code-snippet">
+        <script src="https://gist.github.com/rgbk21/ec25eeab502bc56ce05816aff7b0cc21.js"></script>
+      </div>
+    </div>
+
+    - Footnote about Gin: Guice is also available inside the Google Web Toolkit (GWT), via its cousin Gin. Google Gin is a port of Guice for the GWT, a JavaScript web framework.
+    Find out more <a href=" http://code.google.com/p/google-gin">here</a>.
+  </div>
+
+  <hr>
+  <div id="Chapter2" class="chapter">Time for Injection</div>
+  <hr>
+
+  <div class="textual-content">
+
+  </div>
+
+</div>
+
+
+<script src="../../script.js"></script>
+</body>
+</html>
