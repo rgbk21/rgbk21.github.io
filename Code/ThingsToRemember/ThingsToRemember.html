@@ -516,6 +516,43 @@
   </div>
 
   <div class="one-point">
+    59) Why are methods declared <code>final</code>? <br>
+    - You can declare some or all of a class's methods <code>final</code>. You use the <code>final</code> keyword in
+    a method declaration to indicate that the method cannot be overridden by subclasses. <br>
+    - You might wish to make a method <code>final</code> if it has an implementation that should not be changed and
+    it is critical to the consistent state of the object. <br>
+    - Methods called from constructors should generally be declared <code>final</code>. If a constructor calls a
+    non-final method, a subclass may redefine that method with surprising or undesirable results. <br>
+    - Note that you can also declare an entire class <code>final</code>. A class that is declared <code>final</code>
+    cannot be subclassed. This is particularly useful, for example, when creating an immutable class like the String
+    class. <br>
+    - Source on Oracle Java Docs <a href="https://docs.oracle.com/javase/tutorial/java/IandI/final.html">here</a>.
+  </div>
+
+  <div class="one-point">
+    59.2) A variable declared as <code>final</code> in a class cannot be instantiated/set with a value when it is being done from a setter that is being called from within a
+    constructor. <br>
+    - <a href="https://stackoverflow.com/questions/65797536/why-java-final-variables-cannot-be-assigned-a-value-in-the-setter-method">Source on SO</a>. <br>
+    -
+  </div>
+
+  <div class="one-point">
+    61) Why can final object be modified? <br>
+    - If a final variable holds a reference to an object, then the state of the object may be changed by operations
+    on the object, but the variable will always refer to the same object. <code>final</code> simply makes the object
+    <i>reference</i> unchangeable. The object it points to is not immutable by doing this. <a
+    href="https://stackoverflow.com/questions/2435163/why-can-final-object-be-modified">Source on SO</a>.
+    <div class="code-block">
+      <div class="expand-code-snip-btn border border-primary rounded">
+        <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+      </div>
+      <div class="code-snippet">
+        <script src="https://gist.github.com/rgbk21/75bcf378f0c89fb4fd3e8207e8f1ce9e.js"></script>
+      </div>
+    </div>
+  </div>
+
+  <div class="one-point">
     24) What does it mean when one class is said to inherit another in actual code? <br>
     - <code>Stream.Builder&ltT&gt</code> interface inherits from the <code>Consumer&ltT&gt</code> interface,
     (meaning, <code>interface Builder&ltT&gt extends Consumer&ltT&gt</code>) <br>
@@ -1368,21 +1405,6 @@
   </div>
 
   <div class="one-point">
-    59) Why are methods declared <code>final</code>? <br>
-    - You can declare some or all of a class's methods <code>final</code>. You use the <code>final</code> keyword in
-    a method declaration to indicate that the method cannot be overridden by subclasses. <br>
-    - You might wish to make a method <code>final</code> if it has an implementation that should not be changed and
-    it is critical to the consistent state of the object. <br>
-    - Methods called from constructors should generally be declared <code>final</code>. If a constructor calls a
-    non-final method, a subclass may redefine that method with surprising or undesirable results. <br>
-    - Note that you can also declare an entire class <code>final</code>. A class that is declared <code>final</code>
-    cannot be subclassed. This is particularly useful, for example, when creating an immutable class like the String
-    class. <br>
-    - Source on Oracle Java Docs <a href="https://docs.oracle.com/javase/tutorial/java/IandI/final.html">here</a>.
-  </div>
-
-
-  <div class="one-point">
     60) Oh boy.. What are interfaces in Java? <br>
     - (<a href="https://docs.oracle.com/javase/tutorial/java/IandI/createinterface.html">Source on Java Docs</a>). <br>
     - <a href="https://rgbk21.github.io/Code/Java_Notes/JavaNotes.html#interfaces">My notes on Interfaces</a>
@@ -1396,22 +1418,6 @@
       </div>
       <div class="code-snippet">
         <script src="https://gist.github.com/rgbk21/63702d1e52ee4140f92ebc392f27f243.js"></script>
-      </div>
-    </div>
-  </div>
-
-  <div class="one-point">
-    61) Why can final object be modified? <br>
-    - If a final variable holds a reference to an object, then the state of the object may be changed by operations
-    on the object, but the variable will always refer to the same object. <code>final</code> simply makes the object
-    <i>reference</i> unchangeable. The object it points to is not immutable by doing this. <a
-    href="https://stackoverflow.com/questions/2435163/why-can-final-object-be-modified">Source on SO</a>.
-    <div class="code-block">
-      <div class="expand-code-snip-btn border border-primary rounded">
-        <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-      </div>
-      <div class="code-snippet">
-        <script src="https://gist.github.com/rgbk21/75bcf378f0c89fb4fd3e8207e8f1ce9e.js"></script>
       </div>
     </div>
   </div>
