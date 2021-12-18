@@ -22,6 +22,7 @@ const player1HoldBtn = document.querySelector('.player1--btn--hold .btn--hold');
 const player2HoldBtn = document.querySelector('.player2--btn--hold .btn--hold');
 const createNewGameBtn = document.querySelector('.btn--new');
 const showOpenGamesBtn = document.querySelector('.btn--openGames');
+const challengeMeBtn = document.querySelector('.btn--challengeMeOption');
 
 const diceContainer = document.querySelector('.dice-container');
 const diceElmnt = document.querySelector('.dice');
@@ -71,6 +72,7 @@ player1HoldBtn.addEventListener('click', hold);
 player2HoldBtn.addEventListener('click', hold);
 createNewGameBtn.addEventListener('click', createGame, false);
 showOpenGamesBtn.addEventListener('click', listAllOpenGames);
+challengeMeBtn.addEventListener('click', sendGameChallengeNotification);
 
 /*
 document.querySelector('.btn--roll').addEventListener('click', function () {

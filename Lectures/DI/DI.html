@@ -18,9 +18,11 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-9QJ5D3X353"></script>
   <script>
       window.dataLayer = window.dataLayer || [];
+
       function gtag() {
           dataLayer.push(arguments);
       }
+
       gtag('js', new Date());
       gtag('config', 'G-9QJ5D3X353');
   </script>
@@ -95,7 +97,7 @@
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">In Another Life</a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="../../InAnotherLife/Chapter1.html">Chapter 1</a>
+          <a class="dropdown-item" href="../../InAnotherLife/Chapter1/Chapter1.html">Chapter 1</a>
           <div class="dropdown-divider"></div>
         </div>
       </li>
@@ -143,7 +145,7 @@
   </div>
 
   <hr>
-  <div id="Chapter1" class="chapter">Dependency injection: what's all the hype?</div>
+  <div id="Chapter1" class="chapter">Chapter 1: Dependency injection - what's all the hype?</div>
   <hr>
 
   <div class="textual-content">
@@ -174,7 +176,7 @@
       dependencies is known as the <i>object graph</i>. <br>
       - Hence we get the following definitions: <br>
       a) <p class="inline-heading">Service</p>: An object that performs a <i>well-defined</i> function when it is called. <br>
-      b) <p class="inline-heading">Client</p>: Any consumer of a service. A cient calls a service to perform a <i>well-understood</i> function. <br>
+      b) <p class="inline-heading">Client</p>: Any consumer of a service. A client calls a service to perform a <i>well-understood</i> function. <br>
       c) <p class="inline-heading">Dependency</p>: A specific service that is <i>required</i> by another object to fulfill its function. <br>
       d) <p class="inline-heading">Dependent</p>: A client object that needs a dependency (or dependencies) in order to perform its function. <br>
       e) <p class="inline-heading">Dependency Injection</p>: DI is the study of reliably and efficiently building such object graphs and the strategies, patterns, and best
@@ -353,10 +355,125 @@
   </div>
 
   <hr>
-  <div id="Chapter2" class="chapter">Time for Injection</div>
+  <div id="Chapter2" class="chapter">Chapter 2: Time for Injection</div>
   <hr>
 
   <div class="textual-content">
+    <div class="sub-heading">Constructing objects with dependency injection</div>
+    <div>
+      - The dependency injector is itself a service like any other. And like any service, it must be constructed and prepared before it can be used. Once the injector has been
+      bootstrapped, we can obtain an object from it for use. <br>
+      - This is an example of using Guice for injection:
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/e86b74b88b00f833425b131e3f78a3a0.js"></script>
+        </div>
+      </div>
+      - Think of Guice as a factory class for Dependency Injectors. Note that in the above example, you are asking Guice directly for an <i>Emailer</i> class. The object graph of
+      the <i>Emailer</i> class requires dependencies <i>SpellChecker</i> and <i>Dict</i>. But you don't have to worry about providing these. Guice can wire-up the fully-formed
+      object for you when you request it. Also note that you had to use the <code>@Inject</code> annotation on the <i>Emailer</i> and the <i>SpellChecker</i> classes in order to
+      get the code to compile properly. If you remove this annotation, from either of the classes, you get the following error: "Could not find a suitable constructor in
+      Chapter2._1_Basics.SpellChecker. Classes must have either one (and only one) constructor annotated with @Inject or a zero-argument constructor that is not private." <br>
+      - The <code>@Inject</code> annotation is supposed to tell Guice which constructor to use when creating the object, and consequently what it's dependencies are. <br>
+      - In this particular line: <code>Emailer emailer = Guice.createInjector().getInstance(Emailer.class);</code> you are doing something similar to what we did in the Service
+      Locator pattern, the difference being now we are using a class type to get an object as the key, instead of directly using a string. In a sense the injector is an automated,
+      all-purpose service locator prepackaged for convenience.
+    </div>
+
+    <div class="sub-heading">Metadata and injector configuration</div>
+    <div>
+      - In essence what you did by using the <code>@Inject</code> annotation was configure the <i>injector</i> by telling it which constructor to use and hence what the
+      dependencies of the object are. If you had been using Spring, you would do the same thing by using <code>@Component</code> and <code>@Autowired</code> combination. <br>
+      - There are multiple ways in which you can configure the injector: <br>
+      a) Using an XML Configuration File <br>
+      b) Invoking into a programmatic API <br>
+      c) Using an injection-oriented DSL <br>
+      d) By inference; that is, implicitly from the structure of classes <br>
+      e) By inference from annotated source code <br>
+    </div>
+
+    <div class="sub-heading">XML Injection in Spring</div>
+    <div>
+      - When using injection in Spring, we do the following (the other stuff remains common):
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/cd4caccc8345e055c4c03d10393d2a5d.js"></script>
+        </div>
+      </div>
+      - Here, <code>BeanFactory</code> refers to the Spring dependency injector. The call to <code>getBean()</code> is analogous to the original call to <code>getInstance()</code>.
+      Both return an instance of <i>Emailer</i>. The <code>FileSystemXmlApplicationContext</code> is a special type of <code>BeanFactory</code>. There are other kinds of
+      application contexts available for use as well. They are mentioned on <a href="https://www.baeldung.com/spring-application-context">this link on Baeldung</a>. <br>
+      - The file email.xml contains the configuration required for Spring's injector to provide us with an emailer correctly wired with its dependencies.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/32d203ce8fc105af20bb09e6c4ef62ef.js"></script>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="sub-heading">XML to in-code configuration in Guice</div>
+    <div>
+      - Using an XML configuration is advantageous in the sense that all the configuration can be easily seen in one place which becomes easier when you are working on a large
+      project. You can do the same thing with Guice as well. In the case of Guice, you can do it in two ways. Either by implementing the <code>Module</code> interface, or by
+      extending the <code>AbstractModule</code> class. <br>
+      - Guice is able to automatically inject Concrete Class with either a public no argument constructor or a constructor with @Inject without any specific defined binding in your
+      module but when it comes to Interfaces you have to define the necessary bindings. <a href="https://stackoverflow.com/a/24767043/8742428">Source on SO</a>. This is what the
+      module class would look like with the bindings defined:
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/4a751aa7e972a90f9e16bc5adc4f128b.js"></script>
+        </div>
+      </div>
+      - Note that the config on the main class now changes slightly. Note that we are passing in the module class that we created to the <code>createInjector</code> method. Without
+      this it does not work.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/c6de64563a10362fd45c653be092c593.js"></script>
+        </div>
+      </div>
+      - If you were doing the same thing using the <code>AbstractModule</code>, this is what the module class would look like. And instead of passing in the
+      <code>new EmailModule()</code> as you did above, you would now be passing in <code>new EmailAbstractModule()</code>.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/579b34d53bbd72572650f977f1d3ff92.js"></script>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-heading">Revisiting Spring and autowiring</div>
+    <div>
+      - You can use autowire in the config files to configure the Spring injections as well. The config file in that case will look like this. But note that Intellij does not like
+      this and tries to revert to the method above, ie. make the constructor injection explicit.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/f5c015df851d377dad20fca44f12e184.js"></script>
+        </div>
+      </div>
+      - Of course, you can also just entirely ignore the XML configuration, and go directly with annotations.
+    </div>
+
 
   </div>
 

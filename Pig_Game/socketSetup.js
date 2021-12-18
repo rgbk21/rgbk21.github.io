@@ -110,7 +110,6 @@ function createGame(event) {
             console.log(`errorThrown: ${errorThrown}`);
         }
     });
-
     createNewGameBtn.blur();
 }
 
@@ -195,6 +194,45 @@ function connectToGameWithId({gameId, player: {userName}}) {
             console.log(`Error fetching available open games: ${error}`);
         }
     })
+}
+
+function sendGameChallengeNotification() {
+    p1userName = document.getElementById("player1Name")?.value;
+    if (p1userName == null || p1userName === '') {
+        p1userName = 'player1';
+    }
+    resetPage();
+    console.log("In sendGameChallengeNotification");
+    $.ajax({
+        url: url + '/game/gameplay/challenge',
+        type: 'POST',
+        dataType: 'JSON',
+        contentType: 'application/json',
+        xhrFields: {
+            withCredentials: true
+        },
+        data: JSON.stringify({
+            "player": {
+                "userName": p1userName
+            },
+            "targetScore": targetWinValue
+        }),
+        success: function (data) {
+            gameId = data.gameId;
+            gameStatus = data.gameStatus;
+            connectToSocket(gameId);
+            showAlertWithText(`Game created with gameID: <strong>${data.gameId.split('-')[4]}</strong>, target score: <strong>${data.targetScore}</strong> <br> 
+                            Email notification sent! If I am free, I will join within a minute or two!`
+            );
+            console.log('Game created with ID: ' + data.gameId);
+        },
+        error: function (jqXHR, textStatus, errorThrown) {
+            console.log(`jqXHR: ${jqXHR}`);
+            console.log(`textStatus: ${textStatus}`);
+            console.log(`errorThrown: ${errorThrown}`);
+        }
+    });
+    challengeMeBtn.blur();
 }
 
 //////////////////////// Game Play
