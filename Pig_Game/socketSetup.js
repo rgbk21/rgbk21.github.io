@@ -183,6 +183,7 @@ function connectToGameWithId({gameId, player: {userName}}) {
                     connectToSocket(gameId);
                     gameStatus = data.gameStatus;
                     // alert(`You are now playing with: ${data.p1UserName}`);
+                    hideChallengeMeBtn();
                     showAlertWithText(`You are now playing with: ${data.p1UserName} <br>
                                     Target score to win is: ${data.targetScore}`);
                 }
@@ -221,15 +222,16 @@ function sendGameChallengeNotification() {
             gameId = data.gameId;
             gameStatus = data.gameStatus;
             connectToSocket(gameId);
+            hideChallengeMeBtn();
             showAlertWithText(`Game created with gameID: <strong>${data.gameId.split('-')[4]}</strong>, target score: <strong>${data.targetScore}</strong> <br> 
-                            Email notification sent! If I am free, I will join within a minute or two!`
-            );
+                            Email notification sent! If I am free, I will join within a minute or two!`);
             console.log('Game created with ID: ' + data.gameId);
         },
         error: function (jqXHR, textStatus, errorThrown) {
             console.log(`jqXHR: ${jqXHR}`);
             console.log(`textStatus: ${textStatus}`);
             console.log(`errorThrown: ${errorThrown}`);
+            showAlertWithText(`Whoops! Something went wrong. The developer will be severely punished.`);
         }
     });
     challengeMeBtn.blur();
@@ -428,9 +430,13 @@ function showSettingsOverlay() {
 function hideSettingsOverlay() {
     document.querySelector(".settings").classList.add("hidden");
 }
+function hideChallengeMeBtn() {
+    challengeMeBtn.classList.add("hidden");
+}
 
-function showAlertWithText(alertText) {
-    const html = `<div class="alert alert-success alert-dismissible fade show" role="alert">
+function showAlertWithText(alertText, alertBecauseFailure = false) {
+    const alertClass = alertBecauseFailure ? 'alert-danger' : 'alert-success';
+    const html = `<div class="alert ${alertClass} alert-dismissible fade show" role="alert">
                     ${alertText}
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
