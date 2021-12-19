@@ -99,8 +99,9 @@ function createGame(event) {
             gameId = data.gameId;
             gameStatus = data.gameStatus;
             connectToSocket(gameId);
+            clearAlertContainer();
             showAlertWithText(`Game created with gameID: <strong>${data.gameId.split('-')[4]}</strong>, target score: <strong>${data.targetScore}</strong> <br> 
-                            In their own browser, tell player 2 to click on 'Show Open Games' and then select the above gameID`
+                            In their own browser, tell player 2 to click on 'Show Open Games' and then select the above gameID.`
             );
             console.log('Game created with ID: ' + data.gameId);
         },
@@ -108,11 +109,15 @@ function createGame(event) {
             console.log(`jqXHR: ${jqXHR}`);
             console.log(`textStatus: ${textStatus}`);
             console.log(`errorThrown: ${errorThrown}`);
+            showAlertWithText("Unexpected error while trying to create new game. Please try again.", true);
         }
     });
     createNewGameBtn.blur();
 }
 
+// Lists all the open games, ie. games that are waiting for a second player to join. Once all the games have been
+// listed, and the user selects a radio button, and clicks submit, a request will have to be sent to
+// "/game/connect" in order to connect to the specific game.
 function listAllOpenGames(event) {
 
     let openGames;
@@ -148,11 +153,11 @@ function listAllOpenGames(event) {
                 showOverlay();
             } else {
                 showAlertWithText(data.errorInfoList[0].messageText);
-                // TODO: How are you going to handle the case where no active games are returned from the server
             }
         },
         error: function (error) {
             console.log(`Error fetching available open games: ${error}`);
+            showAlertWithText("Unexpected error while trying to fetch open games. Please try again.", true);
         }
     });
 
@@ -184,6 +189,7 @@ function connectToGameWithId({gameId, player: {userName}}) {
                     gameStatus = data.gameStatus;
                     // alert(`You are now playing with: ${data.p1UserName}`);
                     hideChallengeMeBtn();
+                    clearAlertContainer();
                     showAlertWithText(`You are now playing with: ${data.p1UserName} <br>
                                     Target score to win is: ${data.targetScore}`);
                 }
@@ -193,6 +199,7 @@ function connectToGameWithId({gameId, player: {userName}}) {
         },
         error: function (error) {
             console.log(`Error fetching available open games: ${error}`);
+            showAlertWithText("Unexpected error while trying to connect to the game. Please try again.", true);
         }
     })
 }
@@ -223,6 +230,7 @@ function sendGameChallengeNotification() {
             gameStatus = data.gameStatus;
             connectToSocket(gameId);
             hideChallengeMeBtn();
+            clearAlertContainer();
             showAlertWithText(`Game created with gameID: <strong>${data.gameId.split('-')[4]}</strong>, target score: <strong>${data.targetScore}</strong> <br> 
                             Email notification sent! If I am free, I will join within a minute or two!`);
             console.log('Game created with ID: ' + data.gameId);
@@ -231,7 +239,7 @@ function sendGameChallengeNotification() {
             console.log(`jqXHR: ${jqXHR}`);
             console.log(`textStatus: ${textStatus}`);
             console.log(`errorThrown: ${errorThrown}`);
-            showAlertWithText(`Whoops! Something went wrong. The developer will be severely punished.`);
+            showAlertWithText(`Whoops! Something went wrong. Don't worry, the developer will be severely punished.`, true);
         }
     });
     challengeMeBtn.blur();
@@ -409,7 +417,8 @@ function declareVictory(data) {
     }
     hideBothPlayerButtons();
     if (gameStatus === 'IN_PROGRESS') {
-        showAlertWithText(`${winner} has won!`);
+        const flawlessVictoryMsg = data?.messageList[0]?.messageText ? data.messageList[0].messageText : '';
+        showAlertWithText(`${winner} has won! ${flawlessVictoryMsg}`);
         gameStatus = 'FINISHED';
     }
     console.log(`Player with username ${winner} has won!`);
@@ -432,6 +441,10 @@ function hideSettingsOverlay() {
 }
 function hideChallengeMeBtn() {
     challengeMeBtn.classList.add("hidden");
+}
+
+function clearAlertContainer() {
+    alertElmnt.innerHTML = "";
 }
 
 function showAlertWithText(alertText, alertBecauseFailure = false) {
