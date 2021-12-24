@@ -471,8 +471,37 @@
           <script src="https://gist.github.com/rgbk21/f5c015df851d377dad20fca44f12e184.js"></script>
         </div>
       </div>
-      - Of course, you can also just entirely ignore the XML configuration, and go directly with annotations.
+      - Of course, you can also just entirely ignore the XML configuration, and go directly with annotations. In the setup that you are using, you still included the xml file as
+      well.
+      <div class="code-block">
+          <div class="expand-code-snip-btn border border-primary rounded">
+              <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+          </div>
+          <div class="code-snippet">
+            <script src="https://gist.github.com/rgbk21/2fb23c6b05b2844647cfda9551688488.js"></script>
+          </div>
+      </div>
     </div>
+    - And the context that we are using to get the beans from is defined as follows:
+    <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+            <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/fd9c66d9a2c10e213fbd05b70bb5ceb4.js"></script>
+        </div>
+    </div>
+    - Note that now we have to use the <code>ClassPathXmlApplicationContext</code>, instead of the <code>FileSystemXmlApplicationContext</code> that we used previously above. Note
+    that you also had to add this in Facets in Intellij, because it was giving you a warning. Note the folder structure as well. The reason for highlighting the folder structure is
+    so that you can notice the usage of class path related stuff. See how paths are being used in <code>new ClassPathXmlApplicationContext("email-actual-autowire-config.xml")</code>
+    and <code>&lt;context:component-scan base-package="_1_Basics"/&gt;</code> and relate it to the folder structure being used.
+    <img src="imgs/ch2/SpringFacets.PNG"
+         class="center-block img-fluid"
+         alt="SpringFacets"
+         width="1500">
+
+
+
 
 
   </div>
