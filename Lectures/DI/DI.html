@@ -1,13 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-5M9WZR5');</script>
-  <!-- End Google Tag Manager -->
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
           integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
           crossorigin="anonymous"></script>
@@ -44,11 +37,6 @@
   <title>DI</title>
 </head>
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5M9WZR5"
-                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
 
   <div class="navbar-header">
@@ -139,7 +127,8 @@
   Index for Book: <br>
   Chapter 0 - <a href="#InterestingLinks">Interesting Links</a> <br>
   Chapter 1 - <a href="#Chapter1">Dependency injection: what's all the hype</a> <br>
-  Chapter 2 - <a href="#Chapter2">Time for Injection</a>
+  Chapter 2 - <a href="#Chapter2">Time for Injection</a> <br>
+  Chapter 3 - <a href="#Chapter3">Investigating DI</a>
 
 
   <br>
@@ -486,37 +475,220 @@
       - Of course, you can also just entirely ignore the XML configuration, and go directly with annotations. In the setup that you are using, you still included the xml file as
       well.
       <div class="code-block">
-          <div class="expand-code-snip-btn border border-primary rounded">
-              <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-          </div>
-          <div class="code-snippet">
-            <script src="https://gist.github.com/rgbk21/2fb23c6b05b2844647cfda9551688488.js"></script>
-          </div>
-      </div>
-    </div>
-    - And the context that we are using to get the beans from is defined as follows:
-    <div class="code-block">
         <div class="expand-code-snip-btn border border-primary rounded">
-            <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/2fb23c6b05b2844647cfda9551688488.js"></script>
+        </div>
+      </div>
+      - And the context that we are using to get the beans from is defined as follows:
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
         </div>
         <div class="code-snippet">
           <script src="https://gist.github.com/rgbk21/fd9c66d9a2c10e213fbd05b70bb5ceb4.js"></script>
         </div>
+      </div>
+      - Note that now we have to use the <code>ClassPathXmlApplicationContext</code>, instead of the <code>FileSystemXmlApplicationContext</code> that we used previously above.
+      Note that you also had to add this in Facets in Intellij, because it was giving you a warning. Note the folder structure as well. The reason for highlighting the folder
+      structure is so that you can notice the usage of class path related stuff. See how paths are being used in
+      <code>new ClassPathXmlApplicationContext("email-actual-autowire-config.xml")</code> and <code>&lt;context:component-scan base-package="_1_Basics"/&gt;</code> and relate it to
+      the folder structure being used.
+      <img src="imgs/ch2/SpringFacets.PNG"
+           class="center-block img-fluid"
+           alt="SpringFacets"
+           width="1919">
+      - The three application contexts that were introduced above can be seen here:
+      <img src="imgs/ch2/ApplicationContexts.PNG"
+           class="center-block img-fluid"
+           alt="SpringFacets"
+           width="1920">
     </div>
-    - Note that now we have to use the <code>ClassPathXmlApplicationContext</code>, instead of the <code>FileSystemXmlApplicationContext</code> that we used previously above. Note
-    that you also had to add this in Facets in Intellij, because it was giving you a warning. Note the folder structure as well. The reason for highlighting the folder structure is
-    so that you can notice the usage of class path related stuff. See how paths are being used in <code>new ClassPathXmlApplicationContext("email-actual-autowire-config.xml")</code>
-    and <code>&lt;context:component-scan base-package="_1_Basics"/&gt;</code> and relate it to the folder structure being used.
-    <img src="imgs/ch2/SpringFacets.PNG"
-         class="center-block img-fluid"
-         alt="SpringFacets"
-         width="1500">
+
+    <div class="sub-heading">Identifying dependencies for injection</div>
+    <div>
+      - A <i>flat object</i> is an object that has no dependencies of its own. <br>
+      - In the Guice example that we saw above, there is a single implementation of the <i>EmailerIF</i> that we are using to inject in as a dependency, namely the <i>Emailer</i>
+      class. But we might have multiple implemnetations of the same interface and we may want to conditionally inject different implementations depending on our requirements. For
+      example, on the right side, we have two implementations of the <i>EmailerIF</i>, <i>Emailer</i> and <i>AdvancedEmailer</i>. So when we create an <i>EmailClient</i>, we might
+      might want to choose either of the implementations, <i>Emailer</i> or <i>AdvancedEmailer</i>. So how do you tell your injector which of these two dependencies you want to
+      use? This is the question we will be trying to answer here.
+      <img src="imgs/ch2/DependencyGraph.png"
+           class="center-block img-fluid"
+           alt="SpringFacets"
+           width="2288">
+    </div>
+
+    <div class="sub-heading">Identifying by String keys</div>
+    <div>
+      - Suppose that we are using Spring, and we are trying to create the following dependency graph. <i>Emailer</i> requires a <i>SpellChecker</i>, and there are two possible
+      implementations of it - <i>EnglishSpellChecker</i> and <i>FrenchSpellChecker</i>.
+      <img src="imgs/ch2/DependencyGraph-MultipleSpellCheckers.png"
+           class="center-block img-fluid"
+           alt="SpringFacets"
+           width="650">
+      - Then depending on the type of <i>Emailer</i> that we are trying to create, we can configure the xml as follows:
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/9afb7a7196facbfb28a31e4def5f26f5.js"></script>
+        </div>
+      </div>
+      - And we create instances of the <i>Emailer</i> as follows: and this will give us a fully-formed french emailer.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/56ccc5aab5595ffe13c9be564c054a65.js"></script>
+        </div>
+      </div>
+
+      <p class="inline-heading">Drawbacks of this method</p>: <br>
+      a) A misspelled key that maps to no valid service can be difficult to detect until well into the runtime of the program. If you are working with a statically typed language
+      like Java, this is a poor sacrifice to have to make. These languages are supposed to offer guarantees around type validity at compile time. Ideally, one should not have to
+      wait until runtime to detect problems in key bindings. Intellij does not warn you about these kinds of errors, and they appear only during runtime. <br>
+      b) In your injector configuration there is no way to determine the type of a binding if all you have is a string key. Without starting up the injector and inspecting the
+      specific instance for a key, it is hard to determine what type the key is bound to. But do note that Intellij does provide you with some level of static checking in order to
+      minimize this kind of issue. For example suppose you passed in an incorrect class <i>Dict_2</i> instead of <i>Dict</i>, Intellij would give you a compile error.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/9b1177e703fd32ab7c59ccb9267dc39a.js"></script>
+        </div>
+      </div>
+    </div>
 
 
+    <div class="sub-heading">Identifying by type</div>
+    <div>
+      - Since Guice configuration file requires you to explicitly specify the class that you are going to inject, the compile time checking of the classes being injected can be
+      done in Guice configuration as well (just like Spring). This takes care of the point 2 of the drawback we discussed above. Also since there is no name in the form of String
+      being associated with the dependency, there is no scope of mistyping the name and getting a run time error either. This takes care of the point 1 of the drawback. <br>
+      - All the stuff with the XML configuration that we did in the above section using Spring, we can also do using simple annotations. We make use of the
+      <code>@Configuration</code> and <code>@Bean</code> annotations for this. The objective is still the same - pass in different implementations of the <i>SpellChecker</i> class
+      for the specific implementations for the <i>Emailer</i>. But this time without using XML.
+      - First we need to define a configuration class that would be equivalent to defining the XML file in the previous approach. The <code>@Configuration</code> annotation
+      indicates that the class can be used by the Spring IoC container as a source of bean definitions. It indicates that a class declares one or more <code>@Bean</code> methods
+      and may be processed by the Spring container to generate bean definitions and service requests for those beans at runtime. <br>
+      - The <code>@Bean</code> annotation tells Spring that a method annotated with <code>@Bean</code> will return an object that should be registered as a bean in the Spring
+      application context. See <a href="https://www.tutorialspoint.com/spring/spring_java_based_configuration.htm">this link on Tutorials Point for a good explanation</a>.
+      We aren't doing anything special, all we have done is convert the XML bindings into code.
+
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/25754a5e019d116afd77c350b9dd177c.js"></script>
+        </div>
+      </div>
+
+      - And then we can use these beans as follows. We need to register and refresh the context for <a
+      href="https://stackoverflow.com/questions/28404817/annotationconfigapplicationcontext-has-not-been-refreshed-yet-whats-wrong">this reason explained on SO</a>. <br>
+      - If you had just a single object of a particular type, you could have fetched the object using the type of the object, as we are doing with the <i>EnglishSpellChecker</i> in
+      the below example. For other cases, you would have to fall back to using the String keys instead.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/15819463dcb790c67fdf08d33efd09f9.js"></script>
+        </div>
+      </div>
+
+      <p class="inline-heading">Drawbacks of this method</p>: <br>
+      a) Like we saw, if we use types, we cannot distinguish between different implementations of the same service.
+    </div>
 
 
+    <div class="sub-heading">Combinatorial Keys</div>
+    <div>
+      - Ideally we want something like this: <i>[Emailer.class, "english"]</i>. The type key identifies the service that dependents rely on, in a safe and consistent manner. Its
+      counterpart, the string key, identifies the specific variant that the key is bound to but does so in an abstract manner. However, the String part of the key is still
+      susceptible to typos and errors that we saw previously. We get around this issue by using an annotation in place of a String. <br>
+      - Guice<sup>TM</sup> embodies the use of type/annotation combinatorial keys and was probably the first library to use this strategy. <br>
+      - Suppose this is the object graph that we are going to create. As we can see in the diagram, <i>FrenchEmailer</i> and <i>EnglishEmailer</i> both require the dependency
+      <i>SpellChecker</i>. But there are two different implementations available: <i>FrenchSpellChecker</i> and <i>EnglishSpellChecker</i>. We want the <i>EnglishSpellChecker</i>
+      to be injected into the <i>EnglishEmailer</i> class and the <i>FrenchSpellChecker</i> into the <i>FrenchEmailer</i> class. <br>
+      - The way we are going to do this is through the use of annotations. At the point where we are injecting <i>SpellChecker</i> type into the <i>EnglishEmailer</i> for eg., we
+      will annotate that injection with a custom annotation <code>@English</code> that we have created. Then we are going to tell Guice that - hey, whenever you see a dependency
+      that requires the <i>SpellChecker</i> object, and has been annotated with <i>@English</i>, you should inject the <i>EnglishSpellChecker</i> exclusively. In the same manner,
+      we are going to do for the french side as well.
+      <img src="imgs/ch2/Emailer_Guice_Annotations.png"
+           class="center-block img-fluid"
+           alt="SpringFacets"
+           width="1764">
 
+
+      Step 1) We create custom annotations that we are going to make use of.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/ec3f8c09cbfcbf1e971dd54d58c1793a.js"></script>
+        </div>
+      </div>
+
+      Step 2) Annotate the injections with the respective annotations:
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/c9c8382e8f51029c271ea6b7e548b010.js"></script>
+        </div>
+      </div>
+
+      Step 3) Tell Guice to inject the dependencies based off of the annotation that we are using:
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/63f146607e32c890047a33813184e62f.js"></script>
+        </div>
+      </div>
+
+      Step 4) Get the object that you are interested in from the injector and makes use as required:
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/b6a32fe74f1f6e7917822ccc4e57dec7.js"></script>
+        </div>
+      </div>
+
+      - This might strike you as odd - while the <i>EnglishEmailer</i> does not depend directly on a specific implementation, it seems to couple via the use of
+      <code>@English</code> annotation. Doesn't this mean <i>EnglishEmailer</i> is tightly coupled to English spellcheckers? The answer is a surprising no. To understand why,
+      consider the following altered injector configuration: <code>bind(SpellChecker.class).annotatedWith(English.class).to(FrenchSpellChecker.class);</code>. Here, we've changed
+      the service implementation bound to the combinatorial key <i>[SpellChecker.class, English.class]</i> so that any dependent referring to an <i>@English</i> annotated
+      <i>SpellChecker</i> will actually receive an implementation of type <i>FrenchSpellChecker</i>. There are no errors, and <i>EnglishEmailer</i> is unaware of
+      any change and more importantly <i>unaffected</i> by any change. No client code needs to change, and we were able to alter configuration transparently. So they aren't really
+      tightly coupled.
+    </div>
   </div>
+
+
+  <hr>
+  <div id="Chapter3" class="chapter">Chapter 3: Investigating DI</div>
+  <hr>
+
+  <div class="textual-content">
+    <div class="sub-heading">Constructing objects with dependency injection</div>
+    <div>
+      -
+    </div>
+  </div>
+
 
 </div>
 
