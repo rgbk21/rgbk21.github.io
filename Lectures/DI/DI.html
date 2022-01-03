@@ -143,7 +143,9 @@
     <div>
       - <a href="https://github.com/google/guice/wiki/">Google Guice Wiki on Github</a> <br>
       - <a href="https://github.com/google/guice/wiki/FrequentlyAskedQuestions">FAQs on Guice</a> <br>
-      - <a href="https://groups.google.com/g/google-guice">Google Guice Group</a>
+      - <a href="https://groups.google.com/g/google-guice">Google Guice Group</a> <br>
+      - <a href="https://google.github.io/guice/api-docs/latest/javadoc/com/google/inject/assistedinject/FactoryModuleBuilder.html">Link to java doc for</a>
+      <code>FactoryModuleBuilder</code>.
     </div>
   </div>
 
@@ -1159,7 +1161,11 @@
     <div>
       - Provider pattern is a Factory that the injector creates, wires, and manages. It contains a single method, which provides new instances. It is particularly useful
       for solving the reinjection problem, since <i>a dependent can be wired with a Provider rather than the dependency itself</i> and can obtain instances from it as necessary.
+
       <br>
+      <br>
+
+      <p class="inline-heading">Using Provider pattern with Guice</p>: <br>
       - This is an example of how we would set the Provider pattern up. Note that no injector configuration apart from this was required in order to set this up. Guice is clever
       enough to work out how to give you an <i>Apple</i> provider.
       <div class="code-block">
@@ -1175,7 +1181,8 @@
       a) A Provider is unique (and specific) to the type of object it provides. This means you don't do any downcasting on a <code>get()</code> as you might do with a Service
       Locator. <br>
       b) A Provider's only purpose is to provide scoped instances of a dependency. Therefore, it has just the one method, <code>get()</code>. Guice provides Providers out of the
-      box for all bound types. This is what the <code>Provider</code> interface looks like. Method <code>get()</code> is fairly straightforward: it says get me an instance of
+      box for all bound types. <br>
+      - This is what the <code>Provider</code> interface in Guice looks like. Method <code>get()</code> is fairly straightforward: it says get me an instance of
       <code>T</code>. This may or may not be a new instance depending on the scope of <code>T</code>. For example, if the key is bound as a singleton, the same instance is returned
       every time.
       <div class="code-block">
@@ -1187,6 +1194,8 @@
         </div>
       </div>
 
+      <br>
+      <p id="Ch3.ProviderPatternSpring" class="inline-heading">Using Provider pattern with Spring</p>: <br>
       - Spring does not have a Provider class out of the box. But we can create a Provider of our own and use it pretty much in the same way that we did with Guice.
       <div class="code-block">
         <div class="expand-code-snip-btn border border-primary rounded">
@@ -1201,6 +1210,14 @@
       <i>Apple</i> to be returned everytime. Note that for the <i>AppleProvider</i> class, we did not have to explicitly tell Spring to wire-in the injector. Spring was able to
       look at the <code>BeanFactoryAware</code> interface and able to inject it automatically. <code>BeanFactoryAware</code> is an example of the Interface Injection that we
       looked at above in <a href="#Ch3.IntefaceInjection">Interface Injection section</a>.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/97ddf777b5e210e500cf60a9fd34305f.js"></script>
+        </div>
+      </div>
     </div>
 
 
@@ -1243,14 +1260,59 @@
 
       - So much talking. Does it even help clear things up? This is what the code looks like.
       <div class="code-block">
-          <div class="expand-code-snip-btn border border-primary rounded">
-              <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-          </div>
-          <div class="code-snippet">
-            <script src="https://gist.github.com/rgbk21/8a8629e423da8c54737961706bd0d81d.js"></script>
-          </div>
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/8a8629e423da8c54737961706bd0d81d.js"></script>
+        </div>
       </div>
     </div>
+
+    <div class="sub-heading">Using <code>@Assisted</code> with multiple args that are of the same type - Using <code>@Named</code></div>
+    <div>
+      - Suppose in the above example, we needed to pass an additional <code>String</code> param to the constructor of the <i>Deliverer</i> class called <i>name</i> that would also
+      have to be provided by the instance's creator (just like the <i>date</i> param for exmaple). We would then need to add this param to the <i>Factory</i> interface. But this
+      won't work. If we try to run the code, we will get an error. <br>
+      - <a href="https://stackoverflow.com/questions/23553865/using-assisted-inject-with-multiple-params-of-same-type-named-params">This SO post</a> explains the problem and the
+      solution. <a href="https://google.github.io/guice/api-docs/latest/javadoc/com/google/inject/assistedinject/FactoryModuleBuilder.html">Java Doc for </a>
+      <code>FactoryModuleBuilder</code>. <br>
+      - You get the following error when you do this: <code>String annotated with @Assisted(value="") was bound multiple times</code>. Learn more at <a
+      href="https://github.com/google/guice/wiki/BINDING_ALREADY_SET">this link</a>. <br>
+      - The types of the factory method's parameters must be distinct. To use multiple parameters of the same type, use a named <code>@Assisted</code> annotation to disambiguate
+      the parameters. The names must be applied to the factory method's parameters and to the concrete type's constructor parameters. Hence the class would now look something like
+      this. The places where we changed the code are commented with // changed here.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/3885dbdba4ab4ffc2ceee617c4e1e675.js"></script>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-heading">Similar functionality in Spring as <code>@Assisted</code>?</div>
+    <div>
+      - The following two links on SO discuss couple of ways in which this could be achieved: <br>
+      a) <a href="https://stackoverflow.com/questions/6222460/is-it-possible-and-how-to-do-assisted-injection-in-spring">Is it possible and how to do Assisted Injection in
+      Spring?</a> <br>
+      b) <a href="https://stackoverflow.com/questions/42987414/partial-auto-wire-spring-prototype-bean-with-runtime-determined-constructor-argu">Partial auto-wire Spring prototype
+      bean with runtime determined constructor arguments</a> <br>
+
+      - Here I am following a slightly different approach compared to the above two links, but one that we had done previously in the <code>Provider</code> approach for Spring
+      <a href="#Ch3.ProviderPatternSpring">here</a>. The same <code>BeanFactoryAware</code> method is being used to create a Factory that can form the <i>Deliverer</i> object for
+      us consisting partially of dependencies injected from the container, and runtime values added by us.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/2164a73e2940091fc6d0081deb43c45d.js"></script>
+        </div>
+      </div>
+    </div>
+
 
     <div class="sub-heading">Flexible partial injection using the Builder Pattern</div>
     <div>
@@ -1277,7 +1339,6 @@
 
 
   </div>
-
 
 
 </div>
