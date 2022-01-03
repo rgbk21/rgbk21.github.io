@@ -924,7 +924,7 @@
       implementation of the method? To handle these and other similar types of situations, Java defines a set of
       rules that resolves such conflicts. <br>
       - First, in all cases, a class implementation takes priority over an interface default implementation. Thus,
-      if MyClass provides an override of the reset( ) default method, MyClass' version is used. This is the case
+      if MyClass provides an override of the reset() default method, MyClass' version is used. This is the case
       even if MyClass implements both Alpha and Beta. In this case, both defaults are overridden by MyClass'
       implementation. <br>
       - Second, in cases in which a class implements two interfaces that both have the same default method, but
@@ -946,6 +946,20 @@
       </div>
     </div>
 
+    <div class="sub-heading">What happens if a class implements two different interfaces, and both interfaces contain the same method and signature</div>
+    <div>
+      - <a href="https://stackoverflow.com/questions/2801878/implementing-two-interfaces-in-a-class-with-same-method-which-interface-method">Source on SO</a>. <br>
+      - Consider the following class structure.
+      <img src="imgs/Intefaces/MultipleInterfaces.png"
+           class="center-block img-fluid"
+           alt="EmailMessagingService"
+           width="550">
+      - <i>SingleDataListBox</i> implements two interfaces, both of which declare the same method and the same method signature. Now when you override the <i>setValue()</i> method,
+      in the <i>SingleDataListBox</i> class,
+      the method from which of the two interfaces has been implemented? Both of them actually. Because from the compiler's perspective they are the same method. And there should be
+      a single implementation for both of them. That is, there is only one <code>@Override</code> that will be necessary. The two methods have become 'override-equivalent'. Whether
+      you treat the <i>SingleDataListBox</i> as a <i>HasValue</i> type, or a <i>SingleDataListBoxDisplay</i> type, there is only one method to invoke.
+    </div>
 
     <div class="sub-heading">Using static methods in an interface</div>
     <div>

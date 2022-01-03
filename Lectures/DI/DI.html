@@ -128,8 +128,8 @@
   Chapter 0 - <a href="#InterestingLinks">Interesting Links</a> <br>
   Chapter 1 - <a href="#Chapter1">Dependency injection: what's all the hype</a> <br>
   Chapter 2 - <a href="#Chapter2">Time for Injection</a> <br>
-  Chapter 3 - <a href="#Chapter3">Investigating DI</a>
-
+  Chapter 3 - <a href="#Chapter3">Investigating DI</a> <br>
+  Chapter 4 - <a href="#Chapter4">Building Modular Applications</a>
 
   <br>
 
@@ -141,7 +141,9 @@
 
     <div class="sub-heading">Links</div>
     <div>
-      -
+      - <a href="https://github.com/google/guice/wiki/">Google Guice Wiki on Github</a> <br>
+      - <a href="https://github.com/google/guice/wiki/FrequentlyAskedQuestions">FAQs on Guice</a> <br>
+      - <a href="https://groups.google.com/g/google-guice">Google Guice Group</a>
     </div>
   </div>
 
@@ -573,7 +575,7 @@
       being associated with the dependency, there is no scope of mistyping the name and getting a run time error either. This takes care of the point 1 of the drawback. <br>
       - All the stuff with the XML configuration that we did in the above section using Spring, we can also do using simple annotations. We make use of the
       <code>@Configuration</code> and <code>@Bean</code> annotations for this. The objective is still the same - pass in different implementations of the <i>SpellChecker</i> class
-      for the specific implementations for the <i>Emailer</i>. But this time without using XML.
+      for the specific implementations for the <i>Emailer</i>. But this time without using XML. <br>
       - First we need to define a configuration class that would be equivalent to defining the XML file in the previous approach. The <code>@Configuration</code> annotation
       indicates that the class can be used by the Spring IoC container as a source of bean definitions. It indicates that a class declares one or more <code>@Bean</code> methods
       and may be processed by the Spring container to generate bean definitions and service requests for those beans at runtime. <br>
@@ -683,11 +685,599 @@
   <hr>
 
   <div class="textual-content">
-    <div class="sub-heading">Constructing objects with dependency injection</div>
+    - In this chapter we will look at different injection idioms. We will see why we should favor constructor injection. We will also see when setter injection is favorable and how
+    to decide between the two. Understanding injection idioms and the nuances behind them is central to a good grasp of dependency injection and architecture in general. <br>
+
+    <div class="sub-heading">Injection idioms</div>
+    <div>
+      - The key to understanding the differences between setter and constructor injection is to understand the differences between methods and constructors. The advantages and
+      limitations arise from these essential language constructs.
+
+      <br>
+      <br>
+
+      <p class="inline-heading">1) Constructor Injection</p>: <br>
+      - A constructor's purpose is to perform initial setup work on the instance being constructed, using provided arguments as necessary. This setup work may be wiring of
+      dependencies (what we are typically interested in) or some computation that is necessary prior to the object's use. <br>
+      - A constructor has restrictions that differentiate it from a normal method: <br>
+      a) Cannot (does not) return anything <br>
+      b) Must <i>complete</i> before an instance is considered fully constructed <br>
+      c) Can initialize <code>final</code> fields, whereas a method cannot <br>
+      d) Can be called only once per instance <br>
+      e) Cannot be given an arbitrary name - in general, it is named after the class
+
+      <br>
+      <br>
+
+      <p class="inline-heading">2) Setter Injection</p>: <br>
+      - In case of setter injection, the wiring takes place <i>after</i> the instance has been fully constructed. <br>
+      - The setter injection differs based on the DI framework that you are using. In the case of Spring, a setter directly refers to a property on the object and is set via the
+      <code>&lt;property&gt;</code> XML element. <br>
+
+      - This is what the class in the case of Setter Injection would look like. Also note that the setters in this case need to be declared as <code>public</code>.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/25f39e6b4ad740776061b0621fd0a01a.js"></script>
+        </div>
+      </div>
+
+      - And the XML configuration file would look like this. Note that if you misspell the name of the setter, Intellij is smart enough to give you a compile error. Also note that
+      the order in which these setters are called usually matches the order of the <code>&lt;property&gt;</code> tags. This ordering is unique to the XML configuration
+      mechanism and is not available with autowiring. <br>
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/af379c831a3c284bd07dafa7f00dccd3.js"></script>
+        </div>
+      </div>
+
+      - Doing the same setter injection in the case of Guice would look something like this. Recall that for concrete classes dependency in the case of Guice, we do not need to
+      bind them in the AbstractModule. So for this example, we can leave the AbstractModule class empty. Note that we have annotated the methods with <code>@Inject</code>.
+      Interestingly, even if you remove the annotation from the method, the code still works. So the annotations are not mandatory? <br>
+      - The order in which these setters are called is undefined, unlike with Spring's XML configuration. <br>
+      - Another thing to keep in mind is that these setters are called by Guice itself, immediately after the constructor has been executed completely. So when you use this object,
+      the object that you get finally is the fully-formed object. At no point do you have to call the setters manually yourself in order to set these dependencies on the object.
+      The framework does that for you automatically like magic. Of course, nothing is stopping you from calling the setters yourself if you want to and set in a different object
+      for these dependencies, but you do not HAVE to. And that is the important thing to keep in mind. All of the injection is happening behind the scenes, without you having to
+      do things like: <code>Amplifier amp = new Amplifier(); amp.setGuitar(new Guitar()); amp.setSpeaker(new Speaker())</code> etc. before having to use the amp object.
+
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/4c976c93e1467153e1606e0a39becd55.js"></script>
+        </div>
+      </div>
+
+      - But one nice thing is that you do not need the setter naming convention in Guice, so you can rewrite this class in a more compact way.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/5655c2e4e4c7072dc5422378c479617e.js"></script>
+        </div>
+      </div>
+      - Notice that this new setter now looks very much like a constructor, as in, it does not return anything, it accepts a bunch of dependencies, and it is called only once when
+      the object is created by the injector. <br>
+      - Guice does not place any restrictions on the name or visibility of setters either. So you can hide them from accidental misuse. In the above example, you could have
+      declared the set up method as <code>@Inject private void setUp(...)</code>, and the code would STILL have worked. This is because Guice takes use of reflection, and
+      reflection can do very weird things. But is this a good thing to do, declaring methods as <code>private</code> and using <code>@Inject</code> on top of that? I don't know.
+
+      <br>
+      <br>
+
+      <p id="Ch3.IntefaceInjection" class="inline-heading">3) Interface Injection</p>: <br>
+      - Interface injection is the same as setter injection except that each setter is housed in its own interface. This design is not commonly used. However, some of the ideas
+      behind interface injection form the basis of important design patterns and solutions to several knotty design problems.
+
+      <br>
+      <br>
+
+      <p id="Ch3.MethodDecoration" class="inline-heading">4) Method Decoration</p>: <br>
+      - When they are called, these methods return an injector-provided value instead of their normal value. This process is called <i>decorating</i> the method and gets its name
+      from the Decorator pattern. It is useful if you want to make a Factory out of an <i>arbitrary method</i> on your object. <br>
+      - The problem that we are trying to solve is this. We want the <i>Candy</i> class to be wired and created by the injector. Hence, the way that we are manually creating and
+      returning the object is not sufficient.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/2059eb24980682d798e22d153d0f8d9f.js"></script>
+        </div>
+      </div>
+
+      - An alternative would be to have the <i>Sugar</i> dependency injected into the <i>Dispenser</i> class, and use that to create the <i>Candy</i> class. But this is also not
+      optimal because we are reusing the SAME <i>Sugar</i> instance for every new <i>Candy</i> that we are creating. What we want is a <i>new</i> <i>Sugar</i> for a <i>new</i>
+      <i>Candy</i>. Besides, <i>Dispenser</i> must know how to construct <i>Candy</i> and consequently is <i>tightly coupled</i> to its internals. Also, <i>Dispenser</i> is now
+      cluttered with the dependencies of <i>Candy</i>.
+
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/283bdf4bf42666b7622284f87ef62e70.js"></script>
+        </div>
+      </div>
+
+      - Method Decoration gets around this problem in the following way. First we provide a <i>dummy</i> implementation of <i>dispense</i> in the code.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/e925c7ee1521d58cb1b7e55d8a467683.js"></script>
+        </div>
+      </div>
+
+      - Then the actual impl of the <i>Candy</i> class is done in the XML files as follows. Read more about this approach <a
+      href="https://stackoverflow.com/questions/20261769/how-to-configure-spring-lookup-method-with-spring-property">here on SO</a>. What we have basically ended up doing is
+      injecting a prototype-scoped bean (<i>Candy</i>) into a singleton-scoped bean (<i>Dispenser</i>).
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/39a27aa80625af1a42ea9fc47e241b1b.js"></script>
+        </div>
+      </div>
+
+      <br>
+
+      <p class="inline-heading">5) Field Injection</p>: <br>
+      - You can also wire dependencies directly into the fields.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/d7f0feec9bf16417b4043425acafd631.js"></script>
+        </div>
+      </div>
+      - Annotating fields <i>barley</i> and <i>yeast</i> with <code>@Inject</code> tells the injector to wire dependencies directly to them when <i>BrewingVat</i> is requested.
+      This happens after the class's constructor has completed and before any annotated setters are called for setter injection. <br>
+      - Without the ability to set dependencies (whether mocked or real) for testing, unit tests cannot be relied on to indicate the validity of code. It is also not possible to
+      declare field-injected fields immutable, since they are set post construction. So, while field injection is nice and compact (and often good for examples), it has little
+      worth in practice.
+    </div>
+
+    <div class="sub-heading">Choosing an Injection Idiom</div>
+    <div>
+      - We are going to be comparing the constructor injection and the setter injection idioms as they are the ones that are the most frequently used.
+
+      <br>
+      <br>
+
+      <p class="inline-heading">1) Constructor vs Setter Injection</p>: <br>
+      - The merits and demerits of using either constructor or setter injection are the same as those for setting <i>fields</i> by either constructor or setters. <br>
+      - An important practice regards the <i>state</i> of fields once set. In most cases we want fields to be set once (at the time the object is created) and never modified again.
+      This means not only that the dependent can rely on its dependencies throughout its life but also that they are ready for use right away. Such fields are said to be
+      <i>immutable</i>. The basic idea is that once the dependency object graph has been created, the graph is fixed, and no changes can be done to the graph whatsoever. <br>
+      - If you think of private member variables as a <i>spatial</i> form of encapsulation, then immutability is a form of <i>temporal</i> encapsulation, that is, unchanging with
+      respect to time. With respect to dependency injection, this can be thought of as <i>freezing</i> a completely formed object graph. Constructor injection affords us the
+      ability to create immutable dependencies by declaring fields as <code>final</code>. <br>
+      - Immutability is essential in application programming. Unfortunately, it is not available using setter injection. Because setter methods are no different from ordinary
+      methods, a compiler can make no guarantees about the one-call-per-instance restriction that is needed to ensure field immutability. <br>
+      - A second advantage to using constructor injection is that the object becomes fully available for use immediately. I.e. if a dependency were not provided, either in the
+      configuration, or in a unit test, a compiler error would have alerted us to a misconfiguration immediately. Contrast this with a setter injection. Suppose you forgot to add
+      <code>@Inject</code> on a setter, you wouldn't realize that you missed it unless you tried to execute some method on the injected object, ultimately resulting in a NPE
+      (because the dependency was never set by the injector). Similarly, if you were writing tests for a class using constructor injection, you would just have to call the
+      constructor, and would be enough for the <code>setUp()</code>. But in the case of using setter injection, you need to call the constructor, and then separately have to call
+      each of the setters on the object to set the required dependencies before being able to run any of the tests. Not cool. <br>
+      - One problem with the constructor injection though is that if your object requires multiple dependencies which are of the same type, it is easy to get the order of the
+      dependencies mixed up and end up with a malformed object. The error goes <i>completely</i> undetected. Imagine a case where you have like 8 string args in a constructor.
+      Compare this to if we were using setter injection, and it would have been very easy to give meaningful names to the setters, thus minimizing any chances of such errors.
+
+      <br>
+      <br>
+
+      <p class="inline-heading">2) The Constructor Pyramid Problem</p>: <br>
+      - When you have different object graph permutations of the same object, the number of constructors can get out of hand, which becomes confusing when it comes to deciding
+      which constructor to make use of. <br>
+      - Consider the following <i>Amphibian</i> class:
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/af9b031e88163c1ac9702c8757b1d2d4.js"></script>
+        </div>
+      </div>
+      - Here we require two mutually exclusive constructors that match either profile but not both. Were you to require more such profiles, there would be more constructors, one
+      for each case. All these constructors differ by is the type of argument they take; unlike setters, they can't have different names. This makes them hard to read and to
+      distinguish from one another. Where an object requires only a partial set of dependencies, additional, smaller constructors need to be written, further adding to the
+      confusion. This issue is called the <i>constructor pyramid problem</i>, because the collection of constructors resembles a rising pyramid. On the other hand, with setters,
+      you can wire any permutation of an object's dependencies without writing any additional code. <br>
+      - If you find yourself encountering the pyramid problem often, you should ask serious questions about your design befor pronouncing setter injection as a mitigant.
+
+      <br>
+      <br>
+
+      <p class="inline-heading">3) The Circular Reference Problem </p>: <br>
+      - The problem becomes when you are trying to create an object graph that looks like this. The constructor for a <i>Symbiote</i> requires a <i>Host</i>, and the constructor
+      for <i>Host</i> requires a <i>Symbiote</i>. Both of them refer to the <i>same</i> instances of each other. Syntactically, there is no conceivable way to construct these
+      objects so that circularity is satisfied with constructor wiring alone. If you decide to construct <i>Host</i> first, it requires a <i>Symbiote</i> as dependency to be valid.
+      So you are forced to construct <i>Symbiote</i> first; however, the same issue resides with <i>Symbiote</i>.
+      <img src="imgs/ch3/CircularDependencyProblem.png"
+           class="center-block img-fluid"
+           alt="CircularDependencyProblem"
+           width="1500">
+
+      - This classic chicken-and-egg scenario is called the <i>circular reference problem</i>. The triangle one is more commonly seen in the wild. <br>
+      - There are two possible solutions to this, using setter or constructor injection. <a href="https://www.baeldung.com/circular-dependencies-in-spring">This link on
+      baeldung</a> explains how to solve this issue in the case of Spring. <br>
+      - Refer <a href="https://github.com/google/guice/wiki/CyclicDependencies">this page on Guice docs</a> to read about cyclical dependencies and how to get around them.
+      <a href="https://stackoverflow.com/questions/36042838/avoiding-framework-imposed-circular-dependencies-in-guice">This SO answer</a> goes into detail about how Guice works to
+      resolve circular dependency issues. <a href="https://stackoverflow.com/questions/39947729/spring-and-guice-when-di-frameworks-create-proxies">This answer on SO</a> explains
+      the scenarios in which Spring creates proxies. <br>
+
+
+      <br>
+      <br>
+
+      <p class="inline-heading">Spring - using setter injection to solve the issue</p>: <br>
+      - The setter injection solution is to just switch to setter injection. When the injector starts up, both host and symbiote object graphs are constructed via their nullary
+      (zero-argument) constructors and then wired by setter to reference each other. The drawback of this approach is that the dependencies can now no longer be declared as
+      <code>final</code>.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/d7b8a7ed67c12a4b4239de3e4f867523.js"></script>
+        </div>
+      </div>
+
+      - And the XML Configuration file would look like this:
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/487569b866a932ad6e35afa5f398eba1.js"></script>
+        </div>
+      </div>
+
+      <br>
+
+      <p class="inline-heading">Spring - using constructor injection to solve the issue</p>: <br>
+      - Solving this by using constructor injection requires us to use a <i>proxy</i> object. First we decouple the <i>Host</i> and the <i>Symbiote</i> so that they use interfaces.
+      The concrete classes <i>HostImpl</i> and <i>SymbioteImpl</i> now have dependency on the interfaces instead of the concrete classes. We have introduced a new class
+      <i>HostProxy</i> that implements the same interface that the <i>HostImpl</i> implements. Unlike <i>HostImpl</i>, <i>HostProxy</i> has a zero-dependency constructor. This
+      means we can now carry out the following sequence of steps in order to form the object graph: <br>
+      a) Construct <i>HostProxy</i> <br>
+      b) Construct <i>SymbioteImpl</i> using the instance of <i>HostProxy</i> created in step 1 <br>
+      c) Construct <i>HostImpl</i> using the <i>SymbioteImpl</i> created in step 2 <br>
+      d) Call the setter <i>setDelegate</i> on <i>HostProxy</i> by passing in the <i>HostImpl</i> created in step 3
+      <img src="imgs/ch3/ConstructorSolutionByCreatingProxy.png"
+           class="center-block img-fluid"
+           alt="CircularDependencyProblem"
+           width="2500">
+      - (From the gang of four book) Delegation is basically defined as follows: Delegation is a way of making composition as powerful for reuse as inheritance. In delegation, two
+      objects are involved in handling a request: a receiving object delegates operations to its <i>delegate</i>. This is analogous to subclasses deferring requests to parent
+      classes. <br>
+      - For example, instead of making class Window a subclass of Rectangle (because windows happen to be rectangular), the Window class might reuse the behavior of
+      Rectangle by keeping a Rectangle instance variable and <i>delegating</i> Rectangle-specific behavior to it. In other words, instead of a Window <i>being a</i> Rectangle, it
+      would <i>have a</i> Rectangle. Window must now forward requests to its Rectangle instance explicitly, whereas before it would have inherited those operations. <br>
+      - This is the same concept that we are also using over here. The <i>HostProxy</i> is supposed to simply delegate the requests that it gets for performing operations on the
+      <i>Host</i> object to the actual implementation of the <i>Host</i> type (<i>HostImpl</i>) that it has saved. <br>
+      - Question: Well even though the <i>Host hostProxy</i> field on <i>SymbioteImpl</i> has been marked as <code>final</code>, the <code>setDelegate</code> method allows you
+      to change the underlying reference of <i>Host</i> as and when you like. So where is the immutability that was promised? Hmm? <br>
+      - This is what the code looks like when we are using Constructor Injection in order to solve the circular dependency issue:
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/f47d0dc71ee0ff52a3cb9aa6a870fc14.js"></script>
+        </div>
+      </div>
+      - And this is what the XML Config corresponding to the code looks like:
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/5fd645d972e370d6983af6f05aa3a4b9.js"></script>
+        </div>
+      </div>
+
+      <br>
+      <p class="inline-heading">Spring - using annotations to solve the issue</p>: <br>
+      - You can get Spring to create the proxies automatically by using the <code>@Lazy</code> annotation. <br>
+      - This is what the code looks like in this scenario:
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/fb4972ed4ecc967a80f12811212a0a7e.js"></script>
+        </div>
+      </div>
+      - Sice we are using annotations, the XML files are going to look pretty vanilla.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/187396c85630d0150d3b10363230642e.js"></script>
+        </div>
+      </div>
+
+      <br>
+      <p class="inline-heading">Guice - using annotations to solve the issue</p>: <br>
+      - In the case of Guice, all you need to do is extract the classes to an interface of its own (a step that we have already done) and then bind the classes to their resp.
+      implementation in the Guice module. The Guice injector automatically provides the proxy in the middle. We can also trust the injector to work out the correct order of
+      construction. We don't deal directly with proxies or setter injection or any other infrastructure concern.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/1a979943b20066599acfc956e2699cd5.js"></script>
+        </div>
+      </div>
+
+      - And the module itself looks something like this:
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/c8bf8ad5a86509940af5e51756379428.js"></script>
+        </div>
+      </div>
+
+      <br>
+      <br>
+
+      <p class="inline-heading">4) The In-Construction Problem</p>: <br>
+      - One close relative of the circular reference problem that we saw above is where initialization logic requires a dependency that is not yet ready for use. What this
+      typically means is that a circular reference was solved with a proxy, which has not yet been wired with its delegate. <br>
+      - This example code is building up on the example that we discussed in the circular dependency problem. Since Host has been proxied but does not yet hold a valid reference to
+      its delegate, it has no way of passing through calls to the dependency. This is the in-construction problem in a nutshell. The only recourse in such cases is setter
+      injection. <br>
+      - Example code here is in Spring using the same config xml file that we used above.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/c1070bf081c96e2eed4c6d6be3417932.js"></script>
+        </div>
+      </div>
+
+      - The above problem can be solved by just using setter injection instead of constructor injection as follows:
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+
+        </div>
+      </div>
+
+      - But even the setter injection cannot solve this problem if instead of just the symbiote making use of the host, we now have the host making use of the symbiote as well.
+      Idk man. This seems to be working for some reason. I have no idea what is going on. This code is present <a
+      href="https://github.com/rgbk21/DIBookCode_Guice/tree/master/src/main/java/Chapter3/InConstructionProblemWithoutSolution">here on Github</a>. Figure out what is happening I
+      guess...
+
+      <br>
+      <br>
+
+      <p class="inline-heading">5) Constructor Injection and Object Validity</p>: <br>
+      - If you use setter injection, you require a lot of upfront work in order to make sure that all the dependencies have been injected properly. For instance, suppose we were
+      trying to set up Spring to wire in the following objects:
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/33131c7859bc0a04701c84001c60c8e8.js"></script>
+        </div>
+      </div>
+
+      - The XML file would look like this:
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/bebc3415a162734e357a9fe6bbf8731f.js"></script>
+        </div>
+      </div>
+
+      - We would have to make sure of a bunch of things: <br>
+      a) We have to remember to set both of the setters manually by using the <code>property</code> tags. <br>
+      b) We have an <i>init</i> method defined in the class, that needs to be manually set up as well by using the <code>init-method</code> tag. <br>
+      c) Objects in Spring are Singletons by default. This means that other multiple threads are concurrently accessing <i>unsafeObject</i>. While the injector is itself safe to
+      concurrent accesses of this sort, <i>UnsafeObject</i> may not be. The Java Memory Model makes no guarantees about the visibility of non-<code>final</code>,
+      non-<code>volatile</code> fields across threads. To fix this, you can remove the concept of shared visibility, so an instance is exposed to only a single thread. We do this
+      by scoping each bean to a <code>prototype</code>. This tells the injector to create a new instance of <i>UnsafeObject</i> each time it is needed. Now there are no concurrent
+      accesses to <i>UnsafeObject</i>. Notice that you are forced to mark both dependencies with <code>scope="prototype"</code> as well. Otherwise they may be shared
+      <i>underneath</i>. <br>
+      - You were also confused about the order in which the methods would be called: <br>
+      Inside the UnsafeObject constructor -&gt;
+      Inside the constructor for Shady -&gt;
+      Inside the constructor for Slippery -&gt;
+      Inside the setShady method -&gt;
+      Inside the setSlippery method -&gt;
+      Inside the init method (init method is called only after the setter dependencies have been set) <br>
+      - We can solve all of these issues in one go by simply using Constructor Injection. There is only one way to construct it, since it exposes only the one constructor.
+      Both dependencies are declared <code>final</code>, making them safely published and thus guaranteed to be visible to all threads. Initialization is done at the end of the
+      constructor. And <i>init()</i> is now private, so it can't accidentally be called after construction.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/9a3021b23c114f81072a7420740ee2d3.js"></script>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="sub-heading">The Reinjection Problem</div>
+    <div>
+      - This problem is about injecting an object that has already been injected once earlier. Reinjection is typical in cases where you have a long-lived dependent with
+      short-lived dependencies. For instance, consider an example of a dialog box that opens up when a button is clicked and accepts some user text. Every time that the user clicks
+      on the button, you would want a new dialog box to be created, so that the text that was input the previous time does not show. <br>
+      - Consider the following example. <i>Granny</i> is given one apple when she comes into existence. Upon being told to <i>eat()</i>, she consumes that apple but is still
+      hungry. The apple cannot be consumed again since it is already gone. In other words, the <i>state of the dependency has changed</i> and it is no longer usable. <i>Apple</i>
+      is short-lived, while <i>Granny</i> is long-lived, and on each use (every time she eats), she needs a new <i>Apple</i>.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/c0d91e91056d958a45310ac2f079d8a4.js"></script>
+        </div>
+      </div>
+
+      - One solution to the problem would be the <a href="#Ch3.MethodDecoration">method decoration solution</a> that we saw above. There we were also returning a prototype-scoped
+      bean from a singleton-scoped bean. We could use the same thing here as follows. But this belies our original object graph (of <i>Granny</i> depending on an <i>Apple</i>) and
+      more importantly is difficult to test. One alternative to this solution is using the <code>Provider</code> pattern that we are going to look at next.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/1168b9ce399195237b671ab9136ea3a6.js"></script>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-heading">Reinjection with the Provider Pattern - Using <code>Provider&lt;T&gt;</code></div>
+    <div>
+      - Provider pattern is a Factory that the injector creates, wires, and manages. It contains a single method, which provides new instances. It is particularly useful
+      for solving the reinjection problem, since <i>a dependent can be wired with a Provider rather than the dependency itself</i> and can obtain instances from it as necessary.
+      <br>
+      - This is an example of how we would set the Provider pattern up. Note that no injector configuration apart from this was required in order to set this up. Guice is clever
+      enough to work out how to give you an <i>Apple</i> provider.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/40aced07d73559b182cd88e3062e8371.js"></script>
+        </div>
+      </div>
+
+      - There a couple of things that we can say about the Providers: <br>
+      a) A Provider is unique (and specific) to the type of object it provides. This means you don't do any downcasting on a <code>get()</code> as you might do with a Service
+      Locator. <br>
+      b) A Provider's only purpose is to provide scoped instances of a dependency. Therefore, it has just the one method, <code>get()</code>. Guice provides Providers out of the
+      box for all bound types. This is what the <code>Provider</code> interface looks like. Method <code>get()</code> is fairly straightforward: it says get me an instance of
+      <code>T</code>. This may or may not be a new instance depending on the scope of <code>T</code>. For example, if the key is bound as a singleton, the same instance is returned
+      every time.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/8c94c7a1cf36e77ccdffc7a8a673e256.js"></script>
+        </div>
+      </div>
+
+      - Spring does not have a Provider class out of the box. But we can create a Provider of our own and use it pretty much in the same way that we did with Guice.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/74c5fefcaca630f56161aaa5caaadad3.js"></script>
+        </div>
+      </div>
+
+      - And the XML Config will look something like this. Note that we also had to declare the <i>beans.apple</i> as <code>prototype</code> in order for a new instance of
+      <i>Apple</i> to be returned everytime. Note that for the <i>AppleProvider</i> class, we did not have to explicitly tell Spring to wire-in the injector. Spring was able to
+      look at the <code>BeanFactoryAware</code> interface and able to inject it automatically. <code>BeanFactoryAware</code> is an example of the Interface Injection that we
+      looked at above in <a href="#Ch3.IntefaceInjection">Interface Injection section</a>.
+    </div>
+
+
+    <div class="sub-heading">The Contextual Injection Problem - Using Custom Factory and <code>@Assisted</code></div>
+    <div>
+      - There are some cases where we might want to do partial injection, i.e. have the injector wire up some dependencies for us and provide some dependencies ourselves (for eg. a
+      text that has been entered by the user). <br>
+      - <a href="https://stackoverflow.com/questions/8976250/how-to-use-guices-assistedinject">This SO Link</a> explains Assisted Inject. <br>
+      - Consider the following example. The <i>Deliverer</i> instance that we want to create has 3 dependencies. Suppose <i>EmailService</i> is supposed to be injected by the
+      injector, whereas the other two dependencies, <i>NewsLetter</i> and <i>date</i> need to supplied by the instance's creator.
+      <img src="imgs/ch3/NewsLetterManager_WithoutAnnotation.png"
+           class="center-block img-fluid"
+           alt="NewsLetterManager"
+           width="800">
+
+      - In such a case, the standard solution is to write a factory that helps Guice build the objects. <i>NewsLetterManager</i> needs an instance of <i>Deliverer</i> in order to
+      send the newsletter to its list of recipients. We cannot create the <i>Deliverer</i> object in the way that we have been doing so far because we need to pass in two args to
+      the object ourselves. We are doing this by creating a factory, <i>DelivererFactory</i>. <i>NewsLetterManger</i> makes the use of <i>DelivererFactoryImpl</i> in order to
+      obtain an instance of <i>Deliverer</i>.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/af3cfdeecea1ce03ca637287afe9d7b7.js"></script>
+        </div>
+      </div>
+
+      - Instead of creating a Factory ourselves, we can get Guice to create a factory for <i>Deliverer</i> for us, and then we can just inject the factory whenever we need an
+      instance of <i>Deliverer</i>. This is what the UML looks like in the case when we do use Annotation. The <i>Deliverer</i> class is going to contain the <i>Factory</i>
+      interface. The params passed to the factory interface will be the same params that we want to pass in manually. The corresponding args on the <i>Deliverer</i> constructor
+      itself will have to be annotated with <code>@Assisted</code> and the constructor will have to be annotated with <code>@Inject</code>. This <i>Factory</i> will have to be
+      injected into the <i>NewsLetterManager</i> constructor because that is where we are originally making use of the <i>Deliverer</i> class. We call <i>create</i> there, which
+      goes to the <i>Deliverer.Factory</i> interface, from where Guice automatically creates an implementation of the Factory for us. This is by telling Guice to do so in the
+      <i>GuiceModule</i> class. Guice creates the implementation of the <i>Factory</i> and returns back a fully-formed <i>Deliverer</i> object for us.
+      <img src="imgs/ch3/NewsLetterManager_WithAnnotation.png"
+           class="center-block img-fluid"
+           alt="NewsLetterManager"
+           width="500">
+
+      - So much talking. Does it even help clear things up? This is what the code looks like.
+      <div class="code-block">
+          <div class="expand-code-snip-btn border border-primary rounded">
+              <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+          </div>
+          <div class="code-snippet">
+            <script src="https://gist.github.com/rgbk21/8a8629e423da8c54737961706bd0d81d.js"></script>
+          </div>
+      </div>
+    </div>
+
+    <div class="sub-heading">Flexible partial injection using the Builder Pattern</div>
+    <div>
+      - // TODO: <br>
+      - Refer the Gang of Four book for the Builder pattern. Refer the text for this.
+    </div>
+
+    <div class="sub-heading">Injecting objects in sealed code</div>
+    <div>
+      - // TODO: <br>
+      - Goes over how you can use the Adapter Pattern to inject dependencies into third-party code??
+    </div>
+  </div>
+
+  <hr>
+  <div id="Chapter4" class="chapter">Chapter 4: Building Modular Applications</div>
+  <hr>
+
+  <div class="textual-content">
+    <div class="sub-heading">Injection idioms</div>
     <div>
       -
     </div>
+
+
   </div>
+
 
 
 </div>

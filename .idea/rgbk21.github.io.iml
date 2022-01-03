@@ -11,5 +11,6 @@
     <orderEntry type="library" name="popper.js" level="application" />
     <orderEntry type="library" name="jquery-3.3.1.slim" level="application" />
     <orderEntry type="library" name="ba79d9022d2625127daa0f40896e3ceb" level="application" />
+    <orderEntry type="library" name="fireworks-js" level="application" />
   </component>
 </module>
