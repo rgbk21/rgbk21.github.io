@@ -146,6 +146,8 @@
       - <a href="https://groups.google.com/g/google-guice">Google Guice Group</a> <br>
       - <a href="https://google.github.io/guice/api-docs/latest/javadoc/com/google/inject/assistedinject/FactoryModuleBuilder.html">Link to java doc for</a>
       <code>FactoryModuleBuilder</code>.
+      - In Guice, the default scope is Prototype. In Spring, the default scope of a Bean is Singleton. <br>
+      - <a href="https://stackoverflow.com/questions/39688830/why-use-develop-guice-when-you-have-spring-and-dagger">Guice, Dagger, Spring</a> <br>
     </div>
   </div>
 
@@ -462,6 +464,18 @@
           <script src="https://gist.github.com/rgbk21/579b34d53bbd72572650f977f1d3ff92.js"></script>
         </div>
       </div>
+
+      - Note that you can also pass in multiple modules as args:
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/1861cfa6d03e9327364c17505ba6aee2.js"></script>
+        </div>
+      </div>
+
+
     </div>
 
     <div class="sub-heading">Revisiting Spring and autowiring</div>
@@ -499,7 +513,8 @@
       Note that you also had to add this in Facets in Intellij, because it was giving you a warning. Note the folder structure as well. The reason for highlighting the folder
       structure is so that you can notice the usage of class path related stuff. See how paths are being used in
       <code>new ClassPathXmlApplicationContext("email-actual-autowire-config.xml")</code> and <code>&lt;context:component-scan base-package="_1_Basics"/&gt;</code> and relate it to
-      the folder structure being used.
+      the folder structure being used. The same warning that you get when you add an XML configuration file, you also get when you annotate a java class with
+      <code>@Configuration</code>. Both, XML files and <code>@Configuration</code> are different but equivalent ways of telling Spring how you want to setup the beans.
       <img src="imgs/ch2/SpringFacets.PNG"
            class="center-block img-fluid"
            alt="SpringFacets"
@@ -1314,6 +1329,12 @@
     </div>
 
 
+    <div class="sub-heading"><code>@Provides</code> annotation vs the <code>Provider</code> class</div>
+    <div>
+      - <a href="https://stackoverflow.com/questions/28202882/guice-provides-methods-vs-provider-classes?">Guice @Provides Methods vs Provider Classes?</a> <br>
+      - <a href="https://stackoverflow.com/questions/30153765/guice-provider-vs-toprovider-binding">@Provides vs toProvider binding</a>
+    </div>
+
     <div class="sub-heading">Flexible partial injection using the Builder Pattern</div>
     <div>
       - // TODO: <br>
@@ -1332,12 +1353,185 @@
   <hr>
 
   <div class="textual-content">
-    <div class="sub-heading">Injection idioms</div>
+    <div class="sub-heading">Understanding the role of an object</div>
     <div>
-      -
+      - An object is: <br>
+      a) A logical grouping of data and related operations <br>
+      b) An instance of a class of things <br>
+      c) A component with specific responsibilities <br>
+      - An object is all these things, but it is also a building block for programs. And as such, the design of objects is paramount to the design of programs themselves. Classes
+      should have a specific, well-defined purpose and stay within clearly defined boundaries. Each object has its area of concern. Good design keeps those concerns separated.
     </div>
 
 
+    <div class="sub-heading">Separation of concerns</div>
+    <div>
+      - Earlier we laid down the principle: separating infrastructure from application logic so that logic that dealt with construction, organization, and bootstrapping was housed
+      independently from core business logic. If you think of infrastructure as being orthogonal to application logic, then separating the two can be seen as dividing horizontally.
+      <br>
+      - Similarly, logic dealing with different business areas can be separated vertically. Checking spelling and editing text are two core parts of any email application. Both
+      deal with application logic and are thus focused on business purpose. However, neither is especially related to the other. In other words, separating logic by area of concern
+      is a good practice.
+      <img src="imgs/ch4/AppArchitecture_SeparationOfConcerns.png"
+           class="center-block img-fluid"
+           alt="CircularDependencyProblem"
+           width="850">
+    </div>
+
+
+    <div class="sub-heading">Perils of tight coupling</div>
+    <div>
+      - Recall the very first incarnation of <i>Emailer</i> that we wrote:
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/b8be3cd32369ab39bd09f6e334f47985.js"></script>
+        </div>
+      </div>
+
+      - This email service was poorly written because it encapsulated not only its dependencies but also the <i>creation</i> of its dependencies. Following are the problems with
+      this: <br>
+      a) It prevents any external agent (like the injector) from reaching its dependencies. By preventing any external agent from reaching its dependencies, not only does it
+      prevent an injector from creating and wiring them, it prevents a unit test from substituting mock objects in their place.<br>
+      b) It allows for only one <i>particular</i> structure of its object graph (created in its constructor). By deciding its own dependencies, Emailer prevents any variant of
+      them from being created. This makes for poor reuse and a potential explosion of similar code, since a new kind of Emailer would have to be written for each permutation<br>
+      c) It is forced to know how to construct and assemble its dependencies. <br>
+      d) It is forced to know how to construct and assemble dependencies of its dependencies, and so on ad infinitum. <br>
+      - When a dependent is inextricably bound to its dependencies, code is no longer testable. This, in a nutshell, is <i>tight coupling</i>. Tight coupling also means that we
+      have opened the door in the iron wall separating infrastructure from application logic - something that should raise alarm bells on its own.<br>
+      - <a href="https://stackoverflow.com/questions/2832017/what-is-the-difference-between-loose-coupling-and-tight-coupling-in-the-object-o">What is the difference between loose
+      coupling and tight coupling in the object oriented paradigm?</a> on SO. <br>
+      - <a href="https://softwareengineering.stackexchange.com/questions/150045/what-is-the-point-of-having-every-service-class-have-an-interface">What is the point of having every
+      service class have an interface?</a> on SE. <br>
+    </div>
+
+
+    <div class="sub-heading">Programming to a contract</div>
+    <div>
+      - An example of a class with tight coupling. In the following example, if we wanted to search for the <i>startsWith</i> in an <code>ArrayList</code> instead of a
+      <code>HashSet</code>, we would have to change the type of the dependency being passed in into the constructor.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/c98508e9ea1f2c3abdbcaa9f3ec6a3e3.js"></script>
+        </div>
+      </div>
+
+      - An example of implementation of the class with loose coupling. By placing an abstraction between dependent and dependency (the interface <code>Collection</code>), the code
+      loses any awareness of the underlying data structure and interacts with it only through an interface.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/5857cec4573f34b119724f493ffb7dc3.js"></script>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="sub-heading">Rebinding Dependencies</div>
+    <div>
+      - The basic idea is altering dependency bindings at runtime. It refers purely to changing the association of a key to an object graph. This is what enables hot deployment of
+      changes. But there are multiple pitfalls that need to be kept in mind: <br>
+      a) Once bound, a key provides instances of its related object until rebound. <br>
+      b) When you rebind a key, all objects already referencing the old binding retain the old instance(s). <br>
+      c) Rebinding is very closely tied to scope. A longer-lived object holding an instance of a key that has been rebound will need to be reinjected or discarded altogether. <br>
+      d) Rebinding is also tied to lifecycle. When significant dependencies are changed, relevant modules may need to be notified. <br>
+      e) Not all injectors support rebinding, but there are alternative design patterns in such cases. <br>
+      - It encapsulates any infrastructure logic and can be used in place of the original dependency with no impact to client code. A change in the binding is signaled to the
+      adapter(s) via a rebinding notification, and the adapter shifts to the new binding. While this is a robust and workable solution, it is fraught with potential pitfalls and
+      should be weighed carefully before being embarked upon. <br>
+      - There is a difference between hot-deploy and hot-swap as mentioned in <a href="http://arhipov.blogspot.com/2016/02/hotswap-vs-hot-deploy_12.html">this blog post</a>.
+      <a href="https://stackoverflow.com/questions/35249234/how-hot-deployment-works-internally">This SO answer</a> goes into details about how hot-deploy is done. <br>
+      - <a href="https://stackoverflow.com/questions/34473125/why-is-javas-debugging-hot-swap-limited-to-intra-method-changes">This is a SO answer</a> about how hot-swap works.
+    </div>
+
+
+    <div class="sub-heading">Rebinding Dependencies - The Simple Way</div>
+    <div>
+      - Here we are considering a case where we are using an injector that does not support dynamic rebinding. The problem that we are trying to solve is that there isn't enough
+      knowledge while coding to bind all the dependencies appropriately. In other words, the structure of the object graph might change over the course of the life of the
+      application. <br>
+      - One very simple solution is to maintain both object graphs and simply flip the switch when you need to move from one object graph to another. Here the method
+      <i>rebind()</i> controls which dependency <i>LongLived</i> uses. At some stage in its life, when the rebinding is called for, you need to make a call to <i>rebind()</i>. The
+      problem with this approach is that we end up mixing infrastructure logic with our application logic.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/8fbf63e32dc32eeba27a1759116a93fa.js"></script>
+        </div>
+      </div>
+
+      - What's really needed is an abstraction, an intermediary to which we can move the rebinding logic and still remain totally transparent to clients. We can achieve this by
+      using the adapter pattern. An <i>adapter</i> is supposed to inherit its <i>adaptee</i>.
+    </div>
+
+
+    <div class="sub-heading">Adapter Pattern</div>
+    <div>
+      - Adapter pattern is used to convert the interface of a class into one that the client is expecting. We achieve this by wrapping the object that has an incompatible interface
+      with an object that implements the correct one. <br>
+      - // TODO: Add text in detail about what Adapter Pattern is, and how it actually works. <br>
+      - <a href="https://www.baeldung.com/java-adapter-pattern">Adapter pattern on Baeldung</a> <br>
+      - <a href="https://refactoring.guru/design-patterns/adapter/java/example">Adapter pattern on Refactoring</a>
+    </div>
+
+
+    <div class="sub-heading">Rebinding Dependencies - Adapter Pattern</div>
+    <div>
+      - This is how you would use the Adapter Pattern to achieve the same result:
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/0f5aa0b7df5031931067feb2a8707ff6.js"></script>
+        </div>
+      </div>
+
+      - And the Guice module would look something like this. Note that we had to declare the <i>DependencyAdapter</i> as a <code>Singleton</code>. This was to make sure that the
+      same <i>DependencyAdapter</i> that is being injected into the <i>LongLived</i> class is the same one on which we are calling the <i>rebind()</i> method in the test class.
+      If you remove the <code>Singleton</code> declaration, then the <i>rebind</i> is called on a different instance of <i>DependencyAdapter</i>, and hence both calls of the
+      <i>compute()</i> method end up being called on the <i>DependencyA</i> instance.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/a09d3a7668f5ec7851d82359b53c2705.js"></script>
+        </div>
+      </div>
+
+      - Now most of the infrastructure code has been moved to <i>DependencyAdapter</i>. When the rebinding occurs, flag useA is set to false and the adapter changes, now delegating
+      calls to <i>DependencyB</i> instead. <br>
+      - One interesting feature of this is the use of a <i>Rebindable role interface</i>. The control logic for dynamic rebinding is thus itself decoupled from the "rebinding"
+      adapters. All it needs to do is maintain a list of <i>Rebindable</i>s, go through them, and signal each one to <i>rebind()</i> when appropriate. (What?). Rebinding of the key
+      associated with <i>Dependency</i> is now completely transparent to <i>LongLived</i> - and any other client code for that matter. <br>
+      - Picture, because why not:
+      <img src="imgs/ch4/LongLived.png"
+           class="center-block img-fluid"
+           alt="LongLivedClassStructure"
+           width="800">
+    </div>
+  </div>
+
+
+  <hr>
+  <div id="Chapter5" class="chapter">Chapter 5: Scope - A Fresh Breath of State</div>
+  <hr>
+
+  <div class="textual-content">
+    <div class="sub-heading">WHAT IS SCOPE?!</div>
+    <div>
+      - Baby don't hurt me.
+    </div>
   </div>
 
 

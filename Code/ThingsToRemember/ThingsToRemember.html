@@ -2203,18 +2203,20 @@
     - <a href="https://stackoverflow.com/questions/60439461/how-many-times-can-a-clinit-method-execute-in-java">Source on SO</a>. <br>
     - A class static initializer is called each time a class is loaded. <br>
     - A class named <i>com.example.Data</i> loaded by ClassLoader <i>C1</i> and a class named <i>com.example.Data</i> loaded by ClassLoader <i>C2</i> are different
-    classes, and
-    trying to cast an instance of one class to the other class will result in a <code>ClassCastException</code>. <br>
+    classes, and trying to cast an instance of one class to the other class will result in a <code>ClassCastException</code>. <br>
     - With multiple classloaders, even though strictly speaking they would be different objects, you can't count on the initialization code being run exactly one time,
-    so you
-    at least have to keep that in mind when writing the <code>init</code> code. <br>
+    so you at least have to keep that in mind when writing the <code>init</code> code. <br>
     - Instantiating directly with the <code>new</code> operator and again via reflection still uses only one <a
     href="https://docs.oracle.com/javase/8/docs/api/java/lang/ClassLoader.html"><code>ClassLoader</code></a>. <br>
     - An application can create new classloaders and load classes with them. ClassA loaded with the new classloader is technically a different class than ClassA loaded
     with the default classloader. Tomcat (and I assume others) uses this technique to re-load a running web application. You can, for example, fix a bug in SomeClass and drop
     the new .class file into the running application without re-deploying the whole application or taking Tomcat down. Tomcat will notice the update and load new instances of
     the classes in the app. This is an example of the hot-fix or the hot-deploy functionality of the servers. This shows that it is possible and there are cases where a
-    class may be loaded by more than one classloader and, therefore, the clinit could be called more than once.
+    class may be loaded by more than one classloader and, therefore, the clinit could be called more than once. <br>
+    - There is a difference between hot-deploy and hot-swap as mentioned in <a href="http://arhipov.blogspot.com/2016/02/hotswap-vs-hot-deploy_12.html">this blog post</a>.
+    <a href="https://stackoverflow.com/questions/35249234/how-hot-deployment-works-internally">This SO answer</a> goes into details about how hot-deploy is done. <br>
+    - <a href="https://stackoverflow.com/questions/34473125/why-is-javas-debugging-hot-swap-limited-to-intra-method-changes">This is a SO answer</a> about how hot-swap works.
+
   </div>
 
   <div class="one-point">
