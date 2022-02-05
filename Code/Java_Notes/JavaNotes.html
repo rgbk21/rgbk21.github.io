@@ -179,67 +179,64 @@
   <hr>
   <div class="textual-content">
     - There are 4 aspects of Object-Oriented programming (OOP): <br>
-    a) Abstraction <br>
+    a) Abstraction (fancy way of saying that you can ignore most of the details) <br>
     b) Encapsulation (data-hiding using <code>private</code> members to access state of a class) <br>
     c) Inheritance <br>
     d) Polymorphism (says that - don't worry about the reference you have at hand. Go ahead and call the method and
     we will call the right method based on the true type of the object at runtime, and not the perceived type of the
     object at compile time) <br>
     - <a href="https://stackoverflow.com/questions/8960918/encapsulation-vs-abstraction?">SO Link </a> that explains
-    the difference betn Abstraction and Encapsulation. <br>
+    the difference betweenn Abstraction and Encapsulation. <br>
 
     <br>
-    <a href="https://www.baeldung.com/java-composition-aggregation-association">What is Composition, Aggregation,
-      and Association?</a><br>
+    <a href="https://www.baeldung.com/java-composition-aggregation-association">What is Composition, Aggregation, and Association?</a><br>
 
-    <li>
-      <b>Composition</b>: Think of it as a "has-a" kind of relationship, compared to inheritance which is more of
-      a "is-a" kind of relationship. For eg. a building <i>has a </i> room.
-      Composition is a strong kind of "has-a" relationship because the containing object owns it. Therefore, the
-      objects' lifecycles are tied. It means that if we destroy the owner object, its members also will be
-      destroyed with it. So if we destroyed the building, the room would also be destroyed.
-      In Java, we can model this with a non-static inner class: <br>
-      <code>class Building {</code> <br>
-      <code> class Room {}</code> <br>
-      <code>}</code>
-    </li>
+    <p class="inline-heading">Composition</p>: Think of it as a "has-a" kind of relationship, compared to inheritance which is more of a "is-a" kind of relationship. For eg. a
+    building <i>has a </i> room. Composition is a strong kind of "has-a" relationship because the containing object owns it. Therefore, the objects' lifecycles are tied. It means
+    that if we destroy the owner object, its members also will be destroyed with it. So if we destroyed the building, the room would also be destroyed.
+    In Java, we can model this with a non-static inner class: <br>
+    <code>class Building {</code> <br>
+    <code> class Room {}</code> <br>
+    <code>}</code>
 
-    <li>
-      <b>Aggregation</b>: Aggregation is also a "has-a" relationship. What distinguishes it from composition, that
-      it doesn't involve owning. As a result, the lifecycles of the objects aren't tied: every one of them can
-      exist independently of each other.
-      In Java, we can model aggregation with a plain old reference: <br>
-      <code>class Wheel {}</code> <br>
-      <code>class Car {</code> <br>
-      <code> List&lt;Wheel&gt wheels;</code> <br>
-      <code>}</code>
-    </li>
+    <br>
+    <br>
 
-    <li>
-      <b>Association:</b> Association is the weakest relationship between the three. It isn't a "has-a"
-      relationship, none of the objects are parts or members of another. In Java, we can model association the
-      same way as aggregation: <br>
-      <code>class Child {}</code> <br>
-      <code>class Mother {</code> <br>
-      <code> List&lt;Child&gt children;</code> <br>
-      <code>}</code> <br>
+    <p class="inline-heading">Aggregation</p>: Aggregation is also a "has-a" relationship. What distinguishes it from composition, that
+    it doesn't involve owning. As a result, the lifecycles of the objects aren't tied: every one of them can exist independently of each other. In Java, we can model aggregation
+    with a plain old reference: <br>
+    <code>class Wheel {}</code> <br>
+    <code>class Car {</code> <br>
+    <code> List&lt;Wheel&gt wheels;</code> <br>
+    <code>}</code>
 
-      How can we tell if a reference means aggregation or association?
-      Well, we can't. The difference is only logical: whether one of the objects is part of the other or not.
-    </li>
+    <br>
+    <br>
 
+    <p class="inline-heading">Association:</p> Association is the weakest relationship between the three. It isn't a "has - a"
+    relationship, none of the objects are parts or members of another. In Java, we can model association the same way as aggregation: <br>
+    <code>class Child {}</code> <br>
+    <code>class Mother {</code> <br>
+    <code> List&lt;Child&gt children;</code> <br>
+    <code>}</code>
+
+    <br>
+    <br>
+
+    How can we tell if a reference means aggregation or association?
+    Well, we can't. The difference is only logical: whether one of the objects is part of the other or not. <br>
     - And then there is <a href="https://softwareengineering.stackexchange.com/a/61446">this SO link</a>. <br>
 
     <br>
 
     <p id="solid-principle" class="inline-heading">What is the <a href="https://en.wikipedia.org/wiki/SOLID">SOLID</a> principle? </p> <br>
-    - Single-responsibility principle: A class should only have a single responsibility, that is, only changes to one part of the software's specification should be able to affect
+    - <b>S</b>ingle-responsibility principle: A class should only have a single responsibility, that is, only changes to one part of the software's specification should be able to affect
     the specification of the class. <br>
-    - Open-closed principle: Software entities ... should be open for extension, but closed for modification. <br>
-    - Liskov substitution principle: Objects in a program should be replaceable with instances of their subtypes without altering the correctness of that program.
+    - <b>O</b>pen-closed principle: Software entities... should be open for extension, but closed for modification. <br>
+    - <b>L</b>iskov substitution principle: Objects in a program should be replaceable with instances of their subtypes without altering the correctness of that program.
     <a href="https://stackoverflow.com/questions/56860/what-is-an-example-of-the-liskov-substitution-principle">This SO Link</a> explains using examples what this actually means.
     <br>
-    Check <a href="https://www.baeldung.com/java-method-overload-override#1-type-substitutability">this on Baeldung for a much clearer explanation</a>. It says: <br>
+    - Check <a href="https://www.baeldung.com/java-method-overload-override#1-type-substitutability">this on Baeldung for a much clearer explanation</a>. It says: <br>
     It's valid to make an overridden method to accept arguments of different types and return a different type as well, but with full adherence to these rules. (But note that not
     all of these rules apply in the case of java. Java rules are present below this) <br>
     a) If a method in the base class takes argument(s) of a given type, the overridden method should take the same type or a <i>supertype</i> (NOTE: It's supertype, NOT subtype)
@@ -272,15 +269,14 @@
       </div>
     </div>
 
-
-    - Interface segregation principle: Many client-specific interfaces are better than one general-purpose interface. <br>
-    - Dependency inversion principle: One should depend upon abstractions, [not] concretions. <br>
+    - <b>I</b>nterface segregation principle: Many client-specific interfaces are better than one general-purpose interface. <br>
+    - <b>D</b>ependency inversion principle: One should depend upon abstractions, [not] concretions. <br>
 
     <br><br>
 
-    - A class that does the inheriting is called the <i>subclass</i> and the class that is inherited is called the <i>superclass</i>.
-    Therefore, a subclass is a specialized version of the superclass and adds its own unique elements.
     <div class="sub-heading">Inheritance Basics</div>
+    - A class that does the inheriting is called the <i>subclass</i> and the class that is inherited is called the <i>superclass</i>.
+    Therefore, a subclass is a specialized version of the superclass and adds its own unique elements. <br>
     - class <i>subclass-name</i> extends <i>superclass-name</i>{
     <br>
     }
@@ -953,13 +949,35 @@
       <img src="imgs/Intefaces/MultipleInterfaces.png"
            class="center-block img-fluid"
            alt="EmailMessagingService"
-           width="550">
+           width="450">
       - <i>SingleDataListBox</i> implements two interfaces, both of which declare the same method and the same method signature. Now when you override the <i>setValue()</i> method,
       in the <i>SingleDataListBox</i> class,
       the method from which of the two interfaces has been implemented? Both of them actually. Because from the compiler's perspective they are the same method. And there should be
       a single implementation for both of them. That is, there is only one <code>@Override</code> that will be necessary. The two methods have become 'override-equivalent'. Whether
       you treat the <i>SingleDataListBox</i> as a <i>HasValue</i> type, or a <i>SingleDataListBoxDisplay</i> type, there is only one method to invoke.
     </div>
+
+    <div class="sub-heading">What happens if a class extends a class and implements another interface but does not define some method in the interface</div>
+    <div>
+      - Consider the following example. <i>SingleDataListBox</i> implements <i>SingleDataListBoxDisplay</i> but does not define the method <i>String getItemText(int)</i>. The
+      implementation of that method comes from the <i>DecoratedListBox</i> that the <i>SingleDataListBox</i> <code>extends</code>. <br>
+      - The class diagram looks like follows:
+      <img src="imgs/Intefaces/SingleDataListBox.png"
+           class="center-block img-fluid"
+           alt="SingleDataListBox"
+           width="450">
+
+      - The code will look like follows:
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/4165ff9d998243f77e3d364d6f74dd22.js"></script>
+        </div>
+      </div>
+    </div>
+
 
     <div class="sub-heading">Using static methods in an interface</div>
     <div>
@@ -1023,14 +1041,6 @@
       <div class="sub-heading">Difference between <code>capacity</code> and <code>size</code> of an Array List</div>
       <div class="textual-content">
 
-        <div class="code-block">
-          <div class="expand-code-snip-btn border border-primary rounded">
-            <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-          </div>
-          <div class="code-snippet">
-            <script src="https://gist.github.com/rgbk21/2287175fc5fd7a6e5161cf6ca19558c6.js"></script>
-          </div>
-        </div>
         <div class="code-block">
           <div class="expand-code-snip-btn border border-primary rounded">
             <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>

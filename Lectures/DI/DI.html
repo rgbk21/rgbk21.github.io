@@ -131,6 +131,7 @@
   Chapter 3 - <a href="#Chapter3">Investigating DI</a> <br>
   Chapter 4 - <a href="#Chapter4">Building Modular Applications</a> <br>
   Chapter 5 - <a href="#Chapter5">Scope - A Fresh Breath of State</a>
+  Chapter 6 - <a href="#Chapter6">More use cases in scoping</a>
 
   <br>
 
@@ -791,14 +792,14 @@
       <br>
       <br>
 
-      <p id="Ch3.IntefaceInjection" class="inline-heading">3) Interface Injection</p>: <br>
+      <p id="Ch3_InterfaceInjection" class="inline-heading">3) Interface Injection</p>: <br>
       - Interface injection is the same as setter injection except that each setter is housed in its own interface. This design is not commonly used. However, some of the ideas
       behind interface injection form the basis of important design patterns and solutions to several knotty design problems.
 
       <br>
       <br>
 
-      <p id="Ch3.MethodDecoration" class="inline-heading">4) Method Decoration</p>: <br>
+      <p id="Ch3_MethodDecoration" class="inline-heading">4) Method Decoration</p>: <br>
       - When they are called, these methods return an injector-provided value instead of their normal value. This process is called <i>decorating</i> the method and gets its name
       from the Decorator pattern. It is useful if you want to make a Factory out of an <i>arbitrary method</i> on your object. <br>
       - The problem that we are trying to solve is this. We want the <i>Candy</i> class to be wired and created by the injector. Hence, the way that we are manually creating and
@@ -1091,7 +1092,7 @@
       <br>
       <br>
 
-      <p class="inline-heading">5) Constructor Injection and Object Validity</p>: <br>
+      <p id="Ch3_ConstructorInjection_ObjectValidity" class="inline-heading">5) Constructor Injection and Object Validity</p>: <br>
       - If you use setter injection, you require a lot of upfront work in order to make sure that all the dependencies have been injected properly. For instance, suppose we were
       trying to set up Spring to wire in the following objects:
       <div class="code-block">
@@ -1160,7 +1161,7 @@
         </div>
       </div>
 
-      - One solution to the problem would be the <a href="#Ch3.MethodDecoration">method decoration solution</a> that we saw above. There we were also returning a prototype-scoped
+      - One solution to the problem would be the <a href="#Ch3_MethodDecoration">method decoration solution</a> that we saw above. There we were also returning a prototype-scoped
       bean from a singleton-scoped bean. We could use the same thing here as follows. But this belies our original object graph (of <i>Granny</i> depending on an <i>Apple</i>) and
       more importantly is difficult to test. One alternative to this solution is using the <code>Provider</code> pattern that we are going to look at next.
       <div class="code-block">
@@ -1181,7 +1182,7 @@
       <br>
       <br>
 
-      <p class="inline-heading">Using Provider pattern with Guice</p>: <br>
+      <p id="Ch3_ProviderPatternGuice" class="inline-heading">Using Provider pattern with Guice</p>: <br>
       - This is an example of how we would set the Provider pattern up. Note that no injector configuration apart from this was required in order to set this up. Guice is clever
       enough to work out how to give you an <i>Apple</i> provider.
       <div class="code-block">
@@ -1211,7 +1212,7 @@
       </div>
 
       <br>
-      <p id="Ch3.ProviderPatternSpring" class="inline-heading">Using Provider pattern with Spring</p>: <br>
+      <p id="Ch3_ProviderPatternSpring" class="inline-heading">Using Provider pattern with Spring</p>: <br>
       - Spring does not have a Provider class out of the box. But we can create a Provider of our own and use it pretty much in the same way that we did with Guice.
       <div class="code-block">
         <div class="expand-code-snip-btn border border-primary rounded">
@@ -1225,7 +1226,7 @@
       - And the XML Config will look something like this. Note that we also had to declare the <i>beans.apple</i> as <code>prototype</code> in order for a new instance of
       <i>Apple</i> to be returned everytime. Note that for the <i>AppleProvider</i> class, we did not have to explicitly tell Spring to wire-in the injector. Spring was able to
       look at the <code>BeanFactoryAware</code> interface and able to inject it automatically. <code>BeanFactoryAware</code> is an example of the Interface Injection that we
-      looked at above in <a href="#Ch3.IntefaceInjection">Interface Injection section</a>.
+      looked at above in <a href="#Ch3_InterfaceInjection">Interface Injection section</a>.
       <div class="code-block">
         <div class="expand-code-snip-btn border border-primary rounded">
           <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
@@ -1317,7 +1318,7 @@
       bean with runtime determined constructor arguments</a> <br>
 
       - Here I am following a slightly different approach compared to the above two links, but one that we had done previously in the <code>Provider</code> approach for Spring
-      <a href="#Ch3.ProviderPatternSpring">here</a>. The same <code>BeanFactoryAware</code> method is being used to create a Factory that can form the <i>Deliverer</i> object for
+      <a href="#Ch3_ProviderPatternSpring">here</a>. The same <code>BeanFactoryAware</code> method is being used to create a Factory that can form the <i>Deliverer</i> object for
       us consisting partially of dependencies injected from the container, and runtime values added by us.
       <div class="code-block">
         <div class="expand-code-snip-btn border border-primary rounded">
@@ -1513,8 +1514,8 @@
       - Now most of the infrastructure code has been moved to <i>DependencyAdapter</i>. When the rebinding occurs, flag useA is set to false and the adapter changes, now delegating
       calls to <i>DependencyB</i> instead. <br>
       - One interesting feature of this is the use of a <i>Rebindable role interface</i>. The control logic for dynamic rebinding is thus itself decoupled from the "rebinding"
-      adapters. All it needs to do is maintain a list of <i>Rebindable</i>s, go through them, and signal each one to <i>rebind()</i> when appropriate. (What?). Rebinding of the key
-      associated with <i>Dependency</i> is now completely transparent to <i>LongLived</i> - and any other client code for that matter. <br>
+      adapters. All it needs to do is maintain a list of <i>Rebindable</i>s, go through them, and signal each one to <i>rebind()</i> when appropriate. (Question: What?). Rebinding
+      of the key associated with <i>Dependency</i> is now completely transparent to <i>LongLived</i> - and any other client code for that matter. <br>
       - Picture, because why not:
       <img src="imgs/ch4/LongLived.png"
            class="center-block img-fluid"
@@ -1529,11 +1530,301 @@
   <hr>
 
   <div class="textual-content">
-    <div class="sub-heading">WHAT IS SCOPE?!</div>
+    <div class="sub-heading">What is Scope?</div>
     <div>
-      - Baby don't hurt me.
+      - Scope is a way of specifying a context under which a key refers to the same instance. When the scope context ends, the instance which is bound to the particular key is
+      discarded, and is no longer injected in other instances. You are basically telling the injector that a particular key is bound to an object only within a specific scope. <br>
+      - This has some benefits: <br>
+      a) It lets the injector manage the <i>latent state</i> of your objects <br>
+      b) It ensures that your services get new instances of dependencies as needed <br>
+      c) It implicitly separates state by context (for eg. two HTTP requests specifies two different contexts). This means that code working in a context is oblivious to that
+      context. It is the injector's responsibility to manage these contexts. <br>
+      d) It reduces the need for <i>state-aware</i> application logic
+    </div>
+
+    <div class="sub-heading">What is the importance of 'Context' in Scope?</div>
+    <div>
+      - Consider the following scenario: there are three people in a family. There is one bathroom in which there can be exactly one toothpaste. Each of the three members of the
+      family need to use the toothpaste. Since the bathroom is shared by all of the family members, all the family members end up using the same instance of the <i>Toothpaste</i>.
+      Then in this example, the bathroom is an example of a <i>context</i>. Ignore the details currently, and just try to think on a high-level. In this case, we would say that the
+      <i>Toothpaste</i> is <i>Singleton</i> scoped.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/79eec06fd12d691e4e59ff42f8c2f41c.js"></script>
+        </div>
+      </div>
+
+      - In contrast, if each family member had their own bathroom (each with it's own toothpaste), then a <i>new</i> instance of <i>Toothpaste</i> would be available to each family
+      member. In this case, the context under which each object operates is unique (that is, its own bathroom). This is like the <i>Toothpaste</i> having no scope at all. This is
+      referred to as <i>no-scope</i> or <i>prototype</i> scope.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/c3b22e881530b8fd51ec108a14a5dd27.js"></script>
+        </div>
+      </div>
+
+      - No code changes were done between the above two cases. All we did was change the context.
+    </div>
+
+    <div class="sub-heading">No-scope/Prototype</div>
+    <div>
+      - In a sense, no-scope fulfills the functions of scope, as it: <br>
+      a) Provides new instances transparently <br>
+      b) Is managed by the injector <br>
+      c) Associates a service (key) with some context <br>
+      - The first two points are self evident. But the last one is not. It's not even true. It is difficult to point out what is the scope that no-scope represents. <br>
+      - Consider the example that we looked at above. We saw that we could alter the scopes of the objects without making any changes to the objects themselves. To be more precise,
+      the <i>family.give()</i> sequence looked exactly the same for both the singleton as well as the no-scope setup. In that example, we equated the scope of a <i>toothpaste</i>
+      with a <i>bathroom</i> context, and said that each instance of <i>bathroom</i> gets its own instance of <i>toothpaste</i>. But that is not entirely correct. <br>
+      - Suppose if Charlie wanted to brush his teeth twice daily. In that case, when we asked for a <i>toothpaste</i>, he would have received a completely new instance of it. So
+      now we would have had three instances of <i>bathroom</i>s, but four instances of <i>toothpaste</i>s. <br>
+      - This means that no scope cannot be relied on to adhere to any conceptual context. No scope means that every time an injector looks for a given key (one bound under no
+      scope), <i>it will construct and wire a new instance</i>. <br>
+      - You can think of no-scope as a split-second scope where the context is entirely tied to referents of a key. <br>
+      - This becomes very useful when you are trying to inject dependencies in a long-lived object, like we did in the Granny eating example using Provider Pattern <a
+      href="#Ch3_ProviderPatternGuice">here</a>. There, <i>Apple</i> was no-scoped. <br>
+      - Guice and Spring differ in nomenclature with regard to the no scope. Spring calls it as the <i>prototype</i> scope, the idea being that a key (and binding) is a kind of
+      template (or prototype) for creating new objects. <br>
+      - Recall in <a href="#Ch3_ConstructorInjection_ObjectValidity">this section in Chapter 3</a> where we used prototype instances of the objects.
+    </div>
+
+    <div id="Ch5_SingletonScope" class="sub-heading">Singleton Scope</div>
+    <div>
+      - A Singleton's context is the injector itself. The life of a singleton is tied to the life of the injector. Therefore, only one instance of a singleton is ever created per
+      injector. <br>
+      - It is important to emphasize this last point, since it is possible for multiple injectors to exist in the same application. In such a scenario, each injector will hold a
+      different instance of the singleton-scoped object. This is important to understand because many people mistakenly believe that a singleton means one instance for the entire
+      life of an application. In dependency injection, this is not the case.
+    </div>
+
+    <div class="sub-heading">Diagram explanation for Singleton vs Prototype Scope</div>
+    <div>
+      - In the case of a prototype scoped binding, a new instance is returned by the injector everytime that a new object is requested by using its binding. Because of this reason,
+      prototype does not lend itself to a context. <br>
+      - On the other hand, in the case of a Singleton scoped binding, we can establish a context quite easily. A singleton's context is the injector itself. As long as the injector
+      exists, the singleton object will exist as well. There is a small subtlety here that the scope is one singleton per <i>injector</i>, not per <i>application</i>. If your
+      application has multiple injectors, <i>each</i> of those injectors will hold a separate/distinct reference of the singleton object. Refer the section on Singleton scope
+      <a href="#Ch5_SingletonScope">here for details</a>.
+      <img src="imgs/ch5/Singleton_vs_Prototype_LifeCycle.png"
+           class="center-block img-fluid"
+           alt="Singleton_vs_Prototype_LifeCycle"
+           width="300">
+    </div>
+
+    <div class="sub-heading">How to decide when to use a Singleton</div>
+    <div>
+      - If a service represents a conceptual nexus for clients, then it is a likely candidate. For instance, a database connection pool is a central port of call for any service
+      that wants to connect to a database. Thus, connection pools are good candidates for singleton scoping. <br>
+      - Services that are stateless (in other words, objects that have no dependencies or whose dependencies are immutable) are good candidates. <br>
+      - In the scenario where there are no states to manage, either of prototype or singleton scopes can be used. Singleton does have some advantages over prototype in these
+      scenarios: <br>
+      a) Objects can be created at startup (sometimes called <i>eager instantiation</i>), saving on construction and wiring overhead. <br>
+      b) There is a single point of reference when stepping through a debugger. <br>
+      c) Maintaining the lone instance saves on memory (memory complexity is constant as opposed to linear in the case of no scoping) <br>
+      - Remember the singleton litmus test: Should the object exist for the same duration as the injector?
+    </div>
+
+    <div class="sub-heading">Singletons in Practice: Keys are bound under scope, not object or class (Spring example)</div>
+    <div>
+      - The important thing to keep in mind about scoping is that a key is bound under a scope, not an object or class. This is true of any scope, not just the singleton. <br>
+      - This is how we would create Singleton scoped beans in the case of Spring. Note that we can also use two different bean names for the same class. (Using
+      <i>camera.basement</i> and <i>camera.penthouse</i> for the same class <i>SimpleCamera</i>).
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/25205647b1a065b5a3801352519fc2f4.js"></script>
+        </div>
+      </div>
+
+      - And then we can make use of the beans as follows. <i>camera.basement</i> and <i>camera.penthouse</i> are declared as prototype, hence we get different instances of the
+      <i>SimpleCamera</i> class that is associated with the beans. But the <i>MasterTerminal</i> class that is injected into the <i>SimpleCamera</i> class is declared as a
+      Singleton, and hence the instance injected into the two classes is the same.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/4433f370c885b7bb18b5cf50f05b8d09.js"></script>
+        </div>
+      </div>
+
+      - But now, what would happen if we defined the two beans, <i>camera.basement</i> and <i>camera.penthouse</i>, as singletons? Note that both beans are supposed to create
+      instances of the <i>SAME</i> class, i.e. <i>SimpleCamera</i>. So would the calls to <i>getBean</i> return the <i>same</i> instance of the <i>SimpleClass</i>? <br>
+      - We changed the xml so that the two beans are now defined as singletons.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/468c3d5debc04c87ba001303a69dd25b.js"></script>
+        </div>
+      </div>
+
+      - And we are running the following test. As you can see, the instance of the <i>SimpleClass</i> that is returned from the injector are different. Despite the
+      <i>SimpleClass</i> being associated with a <i>Singleton</i> key. What does this tell us? This tells us that in the case of an injector, the scope is a concept that is
+      associated COMPLETELY with the key. Not with the class. Not with the object. But with a key. It is the <i>KEY</i> that is bound under a scope. If you ask the injector for an
+      object via it's key, the injector will look at the key, see if it is a singleton or prototype, and based off of that, return either the same object, or a new object. There is
+      nothing stopping you from having a completely different key for the same class. The injector does not care about the class. If a key is bound to Singleton, injector can allow
+      multiple instances of the class. But it will allow only ONE instance associated with the key that will be shared with all the dependents.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/f9ba31db060d9a3ac566d780af41ceb7.js"></script>
+        </div>
+      </div>
+
+      - In fact, the same class can also be bound to both Singleton and Prototype. Consider the following xml configuration.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/9a9b7a77f97d2052b5bcd62726d99139.js"></script>
+        </div>
+      </div>
+      - And the test class becomes this:
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/0c1390a9a287ed150484ccdbfbc2194a.js"></script>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-heading">Singletons in Practice: Keys are bound under scope, not object or class (Guice example)</div>
+    <div>
+      - The same thing we can do in Guice as well. Consider the simple way first where we have the following Guice Module setup.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/3d89a7b62a1eac450a6d3e58bb60051a.js"></script>
+        </div>
+      </div>
+
+      - And the classes making use of the module would look like this. <i>BasementCamera</i> and <i>PenthouseCamera</i> require instances of <i>Camera</i> that is declared as
+      prototype in the Guice Module. Hence, everytime that we construct a new <i>BasementCamera</i> and <i>PenthouseCamera</i>, a new instance of <i>Camera</i> would be injected
+      into it.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/4fa8094ce253075496cd394cbe82b231.js"></script>
+        </div>
+      </div>
+
+      - When two instances of prototype key are being injected into the same constructor, they are still different instances. Consider the following case. <i>BasementFloor</i>
+      requires two instances of the object bound to the <i>[Camera, Basement]</i> key. Both the instances will be different since the <i>[Camera, Basement]</i> key is bound to the
+      prototype scope.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/c2dac3b6cf94b3eaffe02866ef038952.js"></script>
+        </div>
+      </div>
+
+      - Similarly, in this case all four fields of <i>Building</i> receive different instances of <i>Camera</i> even though only two keys are present.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/5aae36e8f1a53dd73359412cd7dce351.js"></script>
+        </div>
+      </div>
+
+      - This is opposed to the following class, <i>ControlRoom</i>, which has four fields that refer to the same instance of <i>MasterTerminal</i> but via four references.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/f718d614a35d01f932de1a25f48f635f.js"></script>
+        </div>
+      </div>
+
+      - But now, (to recreate the example we saw in Spring above), let us consider the following Guice Module setup. We have two keys defined: <i>[MasterTerminal, RoofMaster]</i>
+      and <i>[MasterTerminal, BasementMaster]</i>. Both of these keys will return an instance of <i>MasterTerminalImpl</i> when injected. Both of these keys are also defined as
+      <code>Singleton</code>. This means that the object associated with <i>each</i> of <i>[MasterTerminal, RoofMaster]</i> and <i>[MasterTerminal, BasementMaster]</i> keys will be
+      unique.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/cb539de68bce8af9caa00d7c16ad16c2.js"></script>
+        </div>
+      </div>
+
+      - Now we make use of the keys in the following test. <i>[MasterTerminal, RoofMaster]</i> and <i>[MasterTerminal, BasementMaster]</i> keys are bound to the same class declared
+      as Singleton. But the instances that are returned by either of the keys are different. Any dependents of <i>[MasterTerminal, RoofMaster]</i> see the SAME SHARED instance. But
+      any dependents of <i>[MasterTerminal, BasementMaster]</i> see a DIFFERENT SHARED instance.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/ea0878f91b0dcb30b22c062d4ac1036c.js"></script>
+        </div>
+      </div>
+
+      - To reiterate, it is very important to distinguish that a key, rather than an object, is bound under a scope. Singleton scoping allows many instances of the same class to
+      exist and be used by dependents; it allows only one shared instance of a key. <br>
+      - This is different from the conventional "Singleton Design Pattern" that we see being used in books which defines a more absolute singleton in the sense that there can
+      always be exactly one instance of a class in an application. This is often considered as an anti-pattern.
+    </div>
+
+
+    <div class="sub-heading">The Singleton Anti-Pattern</div>
+    <div>
+      - As mentioned above, there is a difference between <i>singleton scope</i>, a feature of DI, and <i>singleton objects</i> (or singleton anti-patterns). <br>
+      - Singleton objects are shared even between injectors and can cause a real headache if you are trying to separate modules by walling them off in their own injectors. <br>
+      - Singleton objects bad, singleton scoping good. Singleton objects make testing difficult if not impossible and are antithetical to good design with dependency injection.
+      Singleton scoping, on the other hand, is a purely injector-driven feature and completely removed from the class in question. <br>
+      - Singleton scope is thus flexible and grants the usefulness of the Singleton antipattern without all of its nasty problems.
+      <img src="imgs/ch5/SingletonAntiPattern.PNG"
+           class="center-block img-fluid"
+           alt="SingletonAntiPattern"
+           width="750">
+    </div>
+
+    <div class="sub-heading">Domain-Specific Scopes - The Web</div>
+    <div>
+      - Goes over request-scoped objects and session-scoped objects. <br>
+      - TODO.
     </div>
   </div>
+
+
+  <hr>
+  <div id="Chapter6" class="chapter">Chapter 6: More use cases in scoping</div>
+  <hr>
+
+  <div class="textual-content">
+    <div class="sub-heading">Defining a custom scope</div>
+    <div>
+
+    </div>
+
+  </div>
+
+</div>
 
 
 </div>
