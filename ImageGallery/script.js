@@ -27,7 +27,7 @@ const openFullImageOverlay = function () {
     // console.log(this.src);
     let optimizedImgSrc = this.src;
     // console.log(`Optimized img: ${optimizedImgSrc}`);
-    fullImage.src = optimizedImgSrc.replace('Optimized_I', 'i');;
+    fullImage.src = optimizedImgSrc.replace('Optimized_I', 'i');
     // console.log(fullImage.src);
     // When it comes to removing or adding classes, we can add/removing multiple classes at the same time
     // The list of classes is passed comma separated. Eg.
