@@ -2238,7 +2238,20 @@
   </div>
 
 
-  <div></div>
+  <div class="one-point">
+    92) Private constructors of inner classes can be called from the enclosing parent class. <br>
+    - Refer <a href="https://stackoverflow.com/a/70687/8742428">this SO Link</a> for explanation about the different types of inner classes. <br>
+    - <a href="https://stackoverflow.com/a/12542295/8742428">This SO Answer</a> explains why you are able to access the private constructor. If the member or constructor is
+    declared private, then access is permitted if and only if it occurs within the body of the top level class that encloses the declaration of the member or constructor.
+    <div class="code-block">
+      <div class="expand-code-snip-btn border border-primary rounded">
+        <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+      </div>
+      <div class="code-snippet">
+        <script src="https://gist.github.com/rgbk21/bc3304747f322f213b76e7ef261f5992.js"></script>
+      </div>
+    </div>
+  </div>
 
 
   <hr>

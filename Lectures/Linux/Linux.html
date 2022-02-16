@@ -144,8 +144,8 @@
 
     <div class="sub-heading">Stuff</div>
     <div>
-      - Commands in this book will typically look like this: <code>$ <strong>ls</strong>/</code>. You are supposed to enter the text in bold. The non-bold text is what the machine
-      sends back. The <code>$</code> is the prompt for your regular user account. If you see a <code>#</code> as a prompt, you should be superuser.  
+      - Commands in this book will typically look like this: <code>$ <strong>ls</strong>/</code>. You are supposed to enter the text in bold. The <code>$</code> is the prompt for
+      your regular user account. If you see a <code>#</code> as a prompt, you should be superuser.
     </div>
 
   </div>
@@ -155,7 +155,47 @@
   <hr>
 
   <div class="textual-content">
-    <div class="sub-heading">Seeing objects as services</div>
+    <div class="sub-heading">Levels and layers of abstraction in a linux system</div>
+    <div>
+      - A <i>layer</i> or <i>level</i> is a classification (or grouping) of a component according to where that component sits between the user and the hardware. A linux system has
+      three main levels. <i>Hardware</i> at the base consists of the memory and the CPUs. Disks and network interfaces also form a part of this level. The <i>kernel</i> is the core
+      of the OS. This is the software residing in the memory that tells the CPU what to do. The kernel manages the hardware and acts as the interface between the hardware and any
+      running programs. <i>Processes</i> are the running programs that the kernel manages. These are more specifically referred to as <i>user processes</i>, regardless of whether
+      the user directly interacts with them or not.
+      <img src="imgs/ch1/Levels_In_Linux_System.PNG"
+           class="center-block img-fluid"
+           alt="Levels_In_Linux_System"
+           width="500">
+
+      - There is a critical difference between the way that the kernel and the user processes run. The kernel runs in the <i>kernel mode</i> whereas the user processes run in the
+      <i>user mode</i>. Code running in the kernel mode has unrestricted access to the processors and the main memory. The area that only the kernel can access is known as the <i>kernel
+      space</i>. User space on the other hand restricts access to a much smaller subset of the memory and safe CPU operations. <i>User Space</i> refers to the parts of the main
+      memory that the user processes can access. This segregation means that if a process makes a mistake and crashes, the consequences are limited and can be cleaned up by the
+      kernel. So your web browser crashing does not also end up crashing your text editor. But do note that depending on the permissions that you allow a particular process to
+      have, the impact might be greater.
+    </div>
+
+    <div class="sub-heading">Hardware: Understanding Main Memory</div>
+    <div>
+      - The running kernel and processes reside in the main memory. At it's most basic level, the main memory is just a collection of bits. The CPU operates on the contents of the
+      main memory. It reads instructions and data from it, and writes the results of the computation back to the main memory. <br>
+      - <i>State</i> of a memory is a specific arrangement of the 0's and 1's present in the memory. This is also called an <i>image</i>.
+    </div>
+
+    <div class="sub-heading">Tasks of the Kernel</div>
+    <div>
+      - One of the kernel's tasks is to split memory into many subdivisions, and it must maintain certain state information about those subdivisions at all times. Each process gets
+      its own share of memory, and the kernel must ensure that each process keeps to its share. <br>
+      - The kernel is in charge of managing tasks in four general system areas: <br>
+      a) Processes: the kernel is responsible for determining which processes are allowed to use the CPU <br>
+      b) Memory: the kernel is required to keep track of all memory - what is currently allocated to a particular process, what might be shared between processes, and what is free.
+      <br>
+      c) Device Drivers: the kernel acts as an interface between the hardware (such as a disk) and processes. It's usually the kernel's job to operate the hardware. <br>
+      d) System calls and support: Processes normally use system calls to communicate with the kernel. <br>
+      - We will be looking at each of these function
+    </div>
+
+    <div class="sub-heading">Kernel task: Process Managemet</div>
     <div>
       -
     </div>

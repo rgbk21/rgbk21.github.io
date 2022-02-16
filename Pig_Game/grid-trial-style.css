@@ -53,7 +53,7 @@ body {
 }
 
 /*************** PLAYER 1 DETAILS ***************/
-.player1--container{
+.letters--container{
     /* Which rows does this div occupy relative to its parent div */
     grid-row: 1/5;
     grid-column: 1/4;

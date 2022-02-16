@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    color: #333;
+    background-image: linear-gradient(to top left, #753682 0%, #bf2e34 100%);
+    height: 100vh;
+
+    display: grid;
+    grid-template-rows: 1fr 8fr 1fr;
+    /*grid-template-columns: 1fr 2fr 1fr 1fr 1fr 1fr 1fr 1fr;*/
+    /*width: 90%;*/
+    /*height: 90%;*/
+    /* Center the container*/
+    /*margin: 5% auto 0 auto;*/
+    /*display: grid;*/
+    /*width: 90%;*/
+    /*display: flex;*/
+    /*align-items: center;*/
+    /*justify-content: center;*/
+}
+
+.game-container{
+    /* Which rows does this div occupy relative to its parent div */
+    grid-row: 2/3;
+    /*grid-column: 2/8;*/
+
+    /* Styling of the div */
+    background-color: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(200px);
+    filter: blur();
+    box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
+    /*border-radius: 9px;*/
+
+    /* How should the child divs of this div be styled */
+    display: grid;
+    grid-template-rows: 1fr 1fr 0.5fr 5.5fr;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr;
+    /*align-items: center;*/
+    /*justify-items: center;*/
+}
+
+/*************** Text that is associated with the fields ***************/
+.letter-text{
+    display: grid;
+    grid-row: 1/2;
+    grid-column: 1/2;
+    align-items: center;
+    justify-items: center;
+    padding: 0.5rem;
+}
+.checkbox-text{
+    display: grid;
+    grid-row: 2/3;
+    grid-column: 1/2;
+    align-items: center;
+    justify-items: center;
+    padding: 0.5rem;
+}
+
+/*************** Letter Container DETAILS ***************/
+.letters--container{
+    /* Which rows does this div occupy relative to its parent div */
+    grid-row: 1/3;
+    grid-column: 2/7;
+
+    /* How should the child divs of this div be styled */
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    align-items: stretch;
+    justify-items: stretch;
+}
+/*************** Letter 1 ***************/
+.letter-1{
+    grid-column: 1/2;
+    grid-row: 1/3;
+    align-self: stretch;
+    justify-self: stretch;
+    padding: 0.5rem;
+
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+.letter-1--text{
+    display: grid;
+    grid-row: 1/2;
+    align-self: stretch;
+    justify-self: stretch;
+    padding: 0.5rem;
+}
+.letter-1--cb{
+    display: grid;
+    grid-row: 2/3;
+    align-self: stretch;
+    justify-self: stretch;
+    padding: 0.5rem;
+}
+/*************** Letter 2 ***************/
+.letter-2{
+    grid-column: 2/3;
+    grid-row: 1/3;
+    align-self: stretch;
+    justify-self: stretch;
+    padding: 0.5rem;
+
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+.letter-2--text{
+    display: grid;
+    grid-row: 1/2;
+    align-self: stretch;
+    justify-self: stretch;
+    padding: 0.5rem;
+}
+.letter-2--cb{
+    display: grid;
+    grid-row: 2/3;
+    align-self: stretch;
+    justify-self: stretch;
+    padding: 0.5rem;
+}
+/*************** Letter 3 ***************/
+.letter-3{
+    grid-column: 3/4;
+    grid-row: 1/3;
+    align-self: stretch;
+    justify-self: stretch;
+    padding: 0.5rem;
+
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+.letter-3--text{
+    display: grid;
+    grid-row: 1/2;
+    align-self: stretch;
+    justify-self: stretch;
+    padding: 0.5rem;
+}
+.letter-3--cb{
+    display: grid;
+    grid-row: 2/3;
+    align-self: stretch;
+    justify-self: stretch;
+    padding: 0.5rem;
+}
+/*************** Letter 4 ***************/
+.letter-4{
+    grid-column: 4/5;
+    grid-row: 1/3;
+    align-self: stretch;
+    justify-self: stretch;
+    padding: 0.5rem;
+
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+.letter-4--text{
+    display: grid;
+    grid-row: 1/2;
+    align-self: stretch;
+    justify-self: stretch;
+    padding: 0.5rem;
+}
+.letter-4--cb{
+    display: grid;
+    grid-row: 2/3;
+    align-self: stretch;
+    justify-self: stretch;
+    padding: 0.5rem;
+}
+/*************** Letter 5 ***************/
+.letter-5{
+    grid-column: 5/6;
+    grid-row: 1/3;
+    align-self: stretch;
+    justify-self: stretch;
+    padding: 0.5rem;
+
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+.letter-5--text{
+    display: grid;
+    grid-row: 1/2;
+    align-self: stretch;
+    justify-self: stretch;
+    padding: 0.5rem;
+}
+.letter-5--cb{
+    display: grid;
+    grid-row: 2/3;
+    align-self: stretch;
+    justify-self: stretch;
+    padding: 0.5rem;
+}
+
+/*************** Answer Container DETAILS ***************/
+.answers--container{
+    display: grid;
+    grid-row: 4/5;
+    grid-column: 1/8;
+    /*align-items: center;*/
+    /*justify-items: center;*/
+    padding: 0.5rem;
+    /*max-width: 100%;*/
+    /*overflow: auto;*/
+    /*overflow-wrap: break-word;*/
+    word-break: break-all;
+}
+
+
+/*************** Button DETAILS ***************/
+.btn {
+    color: #444;
+    background: none;
+    border: none;
+    font-family: inherit;
+    font-size: 1.4rem;
+    /*text-transform: uppercase;*/
+    cursor: pointer;
+    font-weight: 400;
+    transition: all 0.4s;
+
+    background-color: white;
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+
+    padding: 0.75rem 1.5rem;
+    box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
+
+    /*display: grid;*/
+    grid-row: 3/4;
+    grid-column: 3/5;
+    align-self: center;
+    justify-self: center;
+}
+
+
+
+
+
+
+
+.player1--name{
+    grid-row: 1/2;
+    grid-column: 2/3;
+}
+.player1--score{
+    grid-row: 2/3;
+    grid-column: 2/3;
+}
+.player1--buttons{
+    grid-row: 3/4;
+    grid-column: 2/3;
+
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    align-self: stretch;
+}
+.player1--btn--rollDice{
+    grid-row: 1/2;
+    margin: auto;
+}
+.player1--btn--hold{
+    margin: auto;
+    grid-row: 2/3;
+}
+.player1--current{
+    grid-row: 4/5;
+    grid-column: 2/3;
+
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    /*align-self: stretch;*/
+    /*align-items: center;*/
+    /*justify-items: center;*/
+}
+.current-label-1{
+    grid-row: 1/2;
+    align-self: end;
+    /*margin: auto;*/
+}
+.current-score-1{
+    grid-row: 2/3;
+    align-self: start;
+}
+
+/*!******************* HIDDEN CLASS *****************************!*/
+.hidden {
+    display: none;
+}
+
+/*!******************* ALERT STYLES *****************************!*/
+.alert--container{
+    grid-row: 1/2;
+    grid-column: 2/3;
+    margin: auto;
+    font-size: 1.5rem;
+}
+
+/*!******************* MEDIA QUERIES *****************************!*/
+@media (max-width: 600px) {
+    .game-container{
+        grid-column: 1/4;
+    }
+    .btn{
+        padding: 0.75rem 0.75rem;
+    }
+    .name{
+        font-size: 2rem;
+    }
+    .current{
+        width: 100%;
+    }
+}
