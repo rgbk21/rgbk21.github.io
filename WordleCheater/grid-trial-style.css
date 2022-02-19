@@ -80,6 +80,7 @@ body {
     /* How should the child divs of this div be styled */
     /*grid-template-rows: 1fr 1fr;*/
     grid-template-rows: minmax(auto, 200px) minmax(auto, 200px);
+    grid-row-gap: 2rem;
 }
 .answers--container--wordleAnswers{
     display: grid;
@@ -234,8 +235,15 @@ body {
 }
 
 /*************** Button DETAILS ***************/
+.btn--container{
+    grid-row: 3/4;
+    grid-column: 3/5;
+    align-self: center;
+    justify-self: center;
+}
 .btn {
     color: #444;
+    background: none;
     border: none;
     font-family: inherit;
     font-size: 1.4rem;
@@ -244,17 +252,20 @@ body {
     font-weight: 400;
     transition: all 0.4s;
 
-    background: rgba(255, 255, 255, 0.6) none;
+    background-color: white;
+    background-color: rgba(255, 255, 255, 0.6);
     backdrop-filter: blur(10px);
 
     padding: 0.75rem 1.5rem;
+    /*border-radius: 75rem;*/
     box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
-
-    /*display: grid;*/
-    grid-row: 3/4;
-    grid-column: 3/5;
-    align-self: center;
-    justify-self: center;
+}
+.btn:active {
+    transform: translate(2%, 3px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+}
+.btn:focus {
+    outline: none;
 }
 
 
