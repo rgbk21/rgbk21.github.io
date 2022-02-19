@@ -95,6 +95,10 @@ body {
     overflow-y: auto;
 }
 
+/*************** Text size for letters in text box ***************/
+input[type="text"]{
+    font-size: 18px;
+}
 /*************** Letter Container DETAILS ***************/
 .letters--container{
     /* Which rows does this div occupy relative to its parent div */
