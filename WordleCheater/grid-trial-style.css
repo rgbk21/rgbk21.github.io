@@ -98,9 +98,14 @@ body {
     overflow-y: auto;
 }
 
-/*************** Text size for letters in text box ***************/
+/*************** Text size for the five input alphabets ***************/
 input[type="text"]{
     font-size: 18px;
+}
+/*************** Checkbox size for the five checkboxes ***************/
+.big--checkbox{
+    width: 20px;
+    height: 20px;
 }
 /*************** Letter Container DETAILS ***************/
 .letters--container{

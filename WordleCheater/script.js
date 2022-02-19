@@ -104,12 +104,12 @@ function showAnswers(allPossibleAnswers, wordlePossibleAnswers) {
         wordleAnswersText += wordlePossibleAnswers[i] + ", ";
     }
     console.log("Reached here");
-    wordleAnswersContainer.innerHTML = `Answers from Wordle list: ${wordleAnswersText.slice(0,-2)}`;
+    wordleAnswersContainer.innerHTML = `ANSWERS FROM WORDLE LIST: ${wordleAnswersText.slice(0,-2)}`;
 
     for (let i = 0; i < allPossibleAnswers.length; i++) {
         allAnswersText += allPossibleAnswers[i] + ", ";
     }
-    allAnswersContainer.innerHTML = `All possible 5 letter words: ${allAnswersText.slice(0,-2)}`;
+    allAnswersContainer.innerHTML = `ALL POSSIBLE 5 LETTER WORDS: ${allAnswersText.slice(0,-2)}`;
     // answersContainer.appendChild(allAnswers);
 }
 
