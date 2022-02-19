@@ -79,8 +79,6 @@ function sendRequestToServer() {
             wordlePossibleAnswers = data.wordlePossibleAnswers;
             alertElmnt.innerHTML = "";
             showAnswers(allPossibleAnswers, wordlePossibleAnswers);
-            console.log('All Possible Answers: ' + allPossibleAnswers);
-            console.log('Wordle Possible Answers: ' + wordlePossibleAnswers);
         },
         error: function (jqXHR, textStatus, errorThrown) {
             console.log(`jqXHR: ${jqXHR}`);
