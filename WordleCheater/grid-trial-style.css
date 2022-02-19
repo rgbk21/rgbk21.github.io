@@ -46,6 +46,7 @@ body {
 
 /*************** Text that is associated with the fields ***************/
 .letter-text{
+    font-size: 12px;
     display: grid;
     grid-row: 1/2;
     grid-column: 1/2;
@@ -54,6 +55,7 @@ body {
     padding: 1rem;
 }
 .checkbox-text{
+    font-size: 12px;
     display: grid;
     grid-row: 2/3;
     grid-column: 1/2;
@@ -65,6 +67,7 @@ body {
 /*************** Answer Container DETAILS ***************/
 .answers--container{
     overflow: auto;
+    font-size: 12px;
 
     display: grid;
     grid-row: 4/5;
@@ -310,5 +313,11 @@ input[type="text"]{
     }
     .current{
         width: 100%;
+    }
+    .letter-text{
+        font-size: 10px;
+    }
+    .checkbox-text{
+        font-size: 10px;
     }
 }
