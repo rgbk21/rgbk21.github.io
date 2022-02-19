@@ -20,22 +20,13 @@ body {
 
     display: grid;
     grid-template-rows: 1fr 8fr 1fr;
-    /*grid-template-columns: 1fr 2fr 1fr 1fr 1fr 1fr 1fr 1fr;*/
-    /*width: 90%;*/
-    /*height: 90%;*/
-    /* Center the container*/
-    /*margin: 5% auto 0 auto;*/
-    /*display: grid;*/
-    /*width: 90%;*/
-    /*display: flex;*/
-    /*align-items: center;*/
-    /*justify-content: center;*/
+    grid-template-columns: 1fr 8fr 1fr;
 }
 
 .game-container{
     /* Which rows does this div occupy relative to its parent div */
     grid-row: 2/3;
-    /*grid-column: 2/8;*/
+    grid-column: 2/3;
 
     /* Styling of the div */
     background-color: rgba(255, 255, 255, 0.35);
@@ -46,7 +37,7 @@ body {
 
     /* How should the child divs of this div be styled */
     display: grid;
-    grid-template-rows: 1fr 1fr 0.5fr 5.5fr;
+    grid-template-rows: 100px 100px 50px 1fr;
     grid-template-columns: 2fr 1fr 1fr 1fr 1fr 1fr;
     /*align-items: center;*/
     /*justify-items: center;*/
@@ -70,6 +61,38 @@ body {
     padding: 0.5rem;
 }
 
+/*************** Answer Container DETAILS ***************/
+.answers--container{
+    overflow: auto;
+
+    display: grid;
+    grid-row: 4/5;
+    grid-column: 1/8;
+    /*align-items: center;*/
+    /*justify-items: center;*/
+    padding: 0.5rem;
+    /*max-width: 100%;*/
+    /*overflow: auto;*/
+    /*overflow-wrap: break-word;*/
+    word-break: break-all;
+
+    /* How should the child divs of this div be styled */
+    /*grid-template-rows: 1fr 1fr;*/
+    grid-template-rows: minmax(auto, 200px) minmax(auto, 200px);
+}
+.answers--container--wordleAnswers{
+    display: grid;
+    grid-row: auto;
+    padding: 1rem 0.5rem;
+    overflow-y: auto;
+}
+.answers--container--allAnswers{
+    display: grid;
+    grid-row: auto;
+    padding: 1rem 0.5rem;
+    overflow-y: auto;
+}
+
 /*************** Letter Container DETAILS ***************/
 .letters--container{
     /* Which rows does this div occupy relative to its parent div */
@@ -78,10 +101,10 @@ body {
 
     /* How should the child divs of this div be styled */
     display: grid;
-    grid-template-rows: 1fr 1fr;
+    /*grid-template-rows: 1fr 1fr;*/
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    align-items: stretch;
-    justify-items: stretch;
+    /*align-items: stretch;*/
+    /*justify-items: center;*/
 }
 /*************** Letter 1 ***************/
 .letter-1{
@@ -104,8 +127,8 @@ body {
 .letter-1--cb{
     display: grid;
     grid-row: 2/3;
-    align-self: stretch;
-    justify-self: stretch;
+    align-self: center;
+    justify-self: center;
     padding: 0.5rem;
 }
 /*************** Letter 2 ***************/
@@ -129,8 +152,8 @@ body {
 .letter-2--cb{
     display: grid;
     grid-row: 2/3;
-    align-self: stretch;
-    justify-self: stretch;
+    align-self: center;
+    justify-self: center;
     padding: 0.5rem;
 }
 /*************** Letter 3 ***************/
@@ -154,8 +177,8 @@ body {
 .letter-3--cb{
     display: grid;
     grid-row: 2/3;
-    align-self: stretch;
-    justify-self: stretch;
+    align-self: center;
+    justify-self: center;
     padding: 0.5rem;
 }
 /*************** Letter 4 ***************/
@@ -179,8 +202,8 @@ body {
 .letter-4--cb{
     display: grid;
     grid-row: 2/3;
-    align-self: stretch;
-    justify-self: stretch;
+    align-self: center;
+    justify-self: center;
     padding: 0.5rem;
 }
 /*************** Letter 5 ***************/
@@ -204,30 +227,14 @@ body {
 .letter-5--cb{
     display: grid;
     grid-row: 2/3;
-    align-self: stretch;
-    justify-self: stretch;
+    align-self: center;
+    justify-self: center;
     padding: 0.5rem;
 }
-
-/*************** Answer Container DETAILS ***************/
-.answers--container{
-    display: grid;
-    grid-row: 4/5;
-    grid-column: 1/8;
-    /*align-items: center;*/
-    /*justify-items: center;*/
-    padding: 0.5rem;
-    /*max-width: 100%;*/
-    /*overflow: auto;*/
-    /*overflow-wrap: break-word;*/
-    word-break: break-all;
-}
-
 
 /*************** Button DETAILS ***************/
 .btn {
     color: #444;
-    background: none;
     border: none;
     font-family: inherit;
     font-size: 1.4rem;
@@ -236,8 +243,7 @@ body {
     font-weight: 400;
     transition: all 0.4s;
 
-    background-color: white;
-    background-color: rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.6) none;
     backdrop-filter: blur(10px);
 
     padding: 0.75rem 1.5rem;
@@ -250,55 +256,6 @@ body {
     justify-self: center;
 }
 
-
-
-
-
-
-
-.player1--name{
-    grid-row: 1/2;
-    grid-column: 2/3;
-}
-.player1--score{
-    grid-row: 2/3;
-    grid-column: 2/3;
-}
-.player1--buttons{
-    grid-row: 3/4;
-    grid-column: 2/3;
-
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    align-self: stretch;
-}
-.player1--btn--rollDice{
-    grid-row: 1/2;
-    margin: auto;
-}
-.player1--btn--hold{
-    margin: auto;
-    grid-row: 2/3;
-}
-.player1--current{
-    grid-row: 4/5;
-    grid-column: 2/3;
-
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    /*align-self: stretch;*/
-    /*align-items: center;*/
-    /*justify-items: center;*/
-}
-.current-label-1{
-    grid-row: 1/2;
-    align-self: end;
-    /*margin: auto;*/
-}
-.current-score-1{
-    grid-row: 2/3;
-    align-self: start;
-}
 
 /*!******************* HIDDEN CLASS *****************************!*/
 .hidden {
