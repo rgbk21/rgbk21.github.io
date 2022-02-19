@@ -84,13 +84,13 @@ body {
 }
 .answers--container--wordleAnswers{
     display: grid;
-    grid-row: auto;
+    grid-row: 1/2;
     padding: 1rem 0.5rem;
     overflow-y: auto;
 }
 .answers--container--allAnswers{
     display: grid;
-    grid-row: auto;
+    grid-row: 2/3;
     padding: 1rem 0.5rem;
     overflow-y: auto;
 }

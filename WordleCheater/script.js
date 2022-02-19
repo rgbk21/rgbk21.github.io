@@ -97,15 +97,19 @@ function showAnswers(allPossibleAnswers, wordlePossibleAnswers) {
     allAnswersContainer.innerHTML = "";
 
     const wordleAnswersElmnt = document.createElement('div');
-    var wordleAnswersText = "";
-    for (var i = 0; i < wordlePossibleAnswers.length; i++) {
-        wordleAnswersText = wordleAnswersText + wordlePossibleAnswers[i] + ", ";
+    const allAnswersElmnt = document.createElement('div');
+    let wordleAnswersText = "";
+    let allAnswersText = "";
+    for (let i = 0; i < wordlePossibleAnswers.length; i++) {
+        wordleAnswersText += wordlePossibleAnswers[i] + ", ";
     }
-    wordleAnswersContainer.innerHTML = `Answers from Wordle list: ${wordleAnswersText}`;
-    // answersContainer.appendChild(wordleAnswersElmnt);
+    console.log("Reached here");
+    wordleAnswersContainer.innerHTML = `Answers from Wordle list: ${wordleAnswersText.slice(0,-2)}`;
 
-    // const allAnswers = document.createElement('div');
-    allAnswersContainer.innerHTML = `All possible 5 letter words: ${allPossibleAnswers}`;
+    for (let i = 0; i < allPossibleAnswers.length; i++) {
+        allAnswersText += allPossibleAnswers[i] + ", ";
+    }
+    allAnswersContainer.innerHTML = `All possible 5 letter words: ${allAnswersText.slice(0,-2)}`;
     // answersContainer.appendChild(allAnswers);
 }
 
