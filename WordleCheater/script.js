@@ -103,14 +103,20 @@ function showAnswers(allPossibleAnswers, wordlePossibleAnswers) {
     for (let i = 0; i < wordlePossibleAnswers.length; i++) {
         wordleAnswersText += wordlePossibleAnswers[i] + ", ";
     }
-    console.log("Reached here");
-    wordleAnswersContainer.innerHTML = `ANSWERS FROM WORDLE LIST: ${wordleAnswersText.slice(0,-2)}`;
+    if (wordleAnswersText.length === 0) {
+        wordleAnswersContainer.innerHTML = `ANSWERS FROM WORDLE LIST: No such combination of letters exists!`;
+    } else {
+        wordleAnswersContainer.innerHTML = `ANSWERS FROM WORDLE LIST: ${wordleAnswersText.slice(0,-2)}`;
+    }
 
     for (let i = 0; i < allPossibleAnswers.length; i++) {
         allAnswersText += allPossibleAnswers[i] + ", ";
     }
-    allAnswersContainer.innerHTML = `ALL POSSIBLE 5 LETTER WORDS: ${allAnswersText.slice(0,-2)}`;
-    // answersContainer.appendChild(allAnswers);
+    if (allAnswersText.length === 0) {
+        allAnswersContainer.innerHTML = `ALL POSSIBLE 5 LETTER WORDS: No such combination of letters exists!`;
+    } else {
+        allAnswersContainer.innerHTML = `ALL POSSIBLE 5 LETTER WORDS: ${allAnswersText.slice(0,-2)}`;
+    }
 }
 
 function showAlertWithText(alertText, alertBecauseFailure = false) {
