@@ -22,6 +22,8 @@ const letter4 = document.getElementById("letter4");
 const letter5 = document.getElementById("letter5");
 
 const answersContainer = document.querySelector(".answers--container");
+const wordleAnswersContainer = document.querySelector(".answers--container--wordleAnswers");
+const allAnswersContainer = document.querySelector(".answers--container--allAnswers");
 
 submitLettersBtn.addEventListener('click', sendRequestToServer);
 
@@ -91,19 +93,20 @@ function sendRequestToServer() {
 }
 
 function showAnswers(allPossibleAnswers, wordlePossibleAnswers) {
-    answersContainer.innerHTML = "";
+    wordleAnswersContainer.innerHTML = "";
+    allAnswersContainer.innerHTML = "";
 
     const wordleAnswersElmnt = document.createElement('div');
     var wordleAnswersText = "";
     for (var i = 0; i < wordlePossibleAnswers.length; i++) {
         wordleAnswersText = wordleAnswersText + wordlePossibleAnswers[i] + ", ";
     }
-    wordleAnswersElmnt.innerHTML = `<div>Answers from Wordle list: ${wordleAnswersText}</div>`;
-    answersContainer.appendChild(wordleAnswersElmnt);
+    wordleAnswersContainer.innerHTML = `Answers from Wordle list: ${wordleAnswersText}`;
+    // answersContainer.appendChild(wordleAnswersElmnt);
 
-    const allAnswers = document.createElement('div');
-    allAnswers.innerHTML = `<div>All possible 5 letter words: ${allPossibleAnswers}</div>`;
-    answersContainer.appendChild(allAnswers);
+    // const allAnswers = document.createElement('div');
+    allAnswersContainer.innerHTML = `All possible 5 letter words: ${allPossibleAnswers}`;
+    // answersContainer.appendChild(allAnswers);
 }
 
 function showAlertWithText(alertText, alertBecauseFailure = false) {

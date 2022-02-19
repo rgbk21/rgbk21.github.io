@@ -27,6 +27,7 @@ body {
     /* Which rows does this div occupy relative to its parent div */
     grid-row: 2/3;
     grid-column: 2/3;
+    grid-row-gap: 2rem;
 
     /* Styling of the div */
     background-color: rgba(255, 255, 255, 0.35);
@@ -50,7 +51,7 @@ body {
     grid-column: 1/2;
     align-items: center;
     justify-items: center;
-    padding: 0.5rem;
+    padding: 1rem;
 }
 .checkbox-text{
     display: grid;
@@ -58,7 +59,7 @@ body {
     grid-column: 1/2;
     align-items: center;
     justify-items: center;
-    padding: 0.5rem;
+    padding: 1rem;
 }
 
 /*************** Answer Container DETAILS ***************/

@@ -56,14 +56,14 @@
   <div class="letter-text">Enter the letters that are green or orange.
     Letters that are green should be entered at the exact position at which they occur</div>
   <div class="checkbox-text">Mark the checkbox as selected only if the letter above it was green.
-    For a letter that is empty, you can leave it unselected.</div>
+    For a letter that is empty, you should leave it unselected.</div>
   <div class="letters--container">
-    <div class="letter-1">
+    <div class="letter-1 form-check form-switch">
       <div class="letter-1--text">
         <input type="text" id="letter1" name="letter1" minlength="1" maxlength="1" size="1">
       </div>
       <div class="letter-1--cb">
-        <input type="checkbox" id="letter1-cb" name="letter1-cb">
+        <input class="form-check-label" type="checkbox" id="letter1-cb" name="letter1-cb">
       </div>
     </div>
     <div class="letter-2">
@@ -105,6 +105,12 @@
 
 
   <div class="answers--container">
+    <div class="answers--container--wordleAnswers">
+
+    </div>
+    <div class="answers--container--allAnswers">
+
+    </div>
 
   </div>
 
