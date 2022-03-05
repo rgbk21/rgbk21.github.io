@@ -18,6 +18,26 @@ let p2userName;
 let gamePlay;
 let winner;
 
+// WAKE UP!
+window.addEventListener('load', function () {
+    wakeUp();
+})
+
+function wakeUp() {
+    $.ajax({
+        url: url + '/game/gameInfo',
+        type: 'GET',
+        dataType: 'JSON',
+        contentType: 'application/json',
+        xhrFields: {
+            withCredentials: true
+        },
+        success: function (data) {
+            console.log("Reply received");
+        }
+    });
+}
+
 //////////////////////// Event Listeners
 gameSelectForm.addEventListener("submit", function (event) {
     let formData = new FormData(gameSelectForm);
