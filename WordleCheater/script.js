@@ -7,6 +7,7 @@ let allPossibleAnswers;
 let wordlePossibleAnswers;
 
 const submitLettersBtn = document.querySelector('.btn-submit-words');
+const clearOptionsBtn = document.querySelector('.btn-clear-words');
 const alertElmnt = document.querySelector('.alert--container');
 
 const checkbox1 = document.getElementById("letter1-cb");
@@ -21,11 +22,16 @@ const letter3 = document.getElementById("letter3");
 const letter4 = document.getElementById("letter4");
 const letter5 = document.getElementById("letter5");
 
-const answersContainer = document.querySelector(".answers--container");
 const wordleAnswersContainer = document.querySelector(".answers--container--wordleAnswers");
 const allAnswersContainer = document.querySelector(".answers--container--allAnswers");
 
 submitLettersBtn.addEventListener('click', sendRequestToServer);
+clearOptionsBtn.addEventListener('click', clearOptions);
+
+letter1.addEventListener('input', moveFocus);
+letter2.addEventListener('input', moveFocus);
+letter3.addEventListener('input', moveFocus);
+letter4.addEventListener('input', moveFocus);
 
 window.addEventListener('load', function () {
     wakeUp();
@@ -45,6 +51,18 @@ function wakeUp() {
         }
     });
 }
+
+function moveFocus() {
+    const idOfElementBeingEdited = this.id;
+    const endNumber = parseInt(idOfElementBeingEdited.substr(-1));
+    const idName = idOfElementBeingEdited.slice(0, -1);
+    const inputElValue = this.value;
+    if (inputElValue.length === 1 && endNumber !== 5) {
+        const moveFocusTo = idName + (endNumber + 1);
+        document.getElementById(moveFocusTo).focus();
+    }
+}
+
 
 function sendRequestToServer() {
     $.ajax({
@@ -79,6 +97,7 @@ function sendRequestToServer() {
             wordlePossibleAnswers = data.wordlePossibleAnswers;
             alertElmnt.innerHTML = "";
             showAnswers(allPossibleAnswers, wordlePossibleAnswers);
+            showAlertWithText("Refreshed!", false);
         },
         error: function (jqXHR, textStatus, errorThrown) {
             console.log(`jqXHR: ${jqXHR}`);
@@ -94,8 +113,6 @@ function showAnswers(allPossibleAnswers, wordlePossibleAnswers) {
     wordleAnswersContainer.innerHTML = "";
     allAnswersContainer.innerHTML = "";
 
-    const wordleAnswersElmnt = document.createElement('div');
-    const allAnswersElmnt = document.createElement('div');
     let wordleAnswersText = "";
     let allAnswersText = "";
     for (let i = 0; i < wordlePossibleAnswers.length; i++) {
@@ -117,6 +134,25 @@ function showAnswers(allPossibleAnswers, wordlePossibleAnswers) {
     }
 }
 
+function clearOptions() {
+    letter1.value = '';
+    letter2.value = '';
+    letter3.value = '';
+    letter4.value = '';
+    letter5.value = '';
+
+    checkbox1.checked = false;
+    checkbox2.checked = false;
+    checkbox3.checked = false;
+    checkbox4.checked = false;
+    checkbox5.checked = false;
+
+    wordleAnswersContainer.innerHTML = "";
+    allAnswersContainer.innerHTML = "";
+
+    clearOptionsBtn.blur();
+}
+
 function showAlertWithText(alertText, alertBecauseFailure = false) {
     const alertClass = alertBecauseFailure ? 'alert-danger' : 'alert-success';
     const html = `<div class="alert ${alertClass} alert-dismissible fade show" role="alert">
@@ -126,4 +162,7 @@ function showAlertWithText(alertText, alertBecauseFailure = false) {
                     </button>
                   </div>`;
     alertElmnt.insertAdjacentHTML("afterbegin", html);
+    if (!alertBecauseFailure) {
+        $('.alert').delay(1000).fadeOut();
+    }
 }

@@ -247,9 +247,15 @@ input[type="text"]{
 }
 
 /*************** Button DETAILS ***************/
-.btn--container{
+.btn--container--clear{
     grid-row: 3/4;
-    grid-column: 3/5;
+    grid-column: 3/4;
+    align-self: center;
+    justify-self: center;
+}
+.btn--container--submit{
+    grid-row: 3/4;
+    grid-column: 5/6;
     align-self: center;
     justify-self: center;
 }
