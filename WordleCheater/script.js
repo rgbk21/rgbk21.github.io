@@ -63,7 +63,6 @@ function moveFocus() {
     }
 }
 
-
 function sendRequestToServer() {
     $.ajax({
         url: url + '/game/wordle/words',
@@ -150,6 +149,7 @@ function clearOptions() {
     wordleAnswersContainer.innerHTML = "";
     allAnswersContainer.innerHTML = "";
 
+    document.getElementById("letter1").focus();
     clearOptionsBtn.blur();
 }
 
