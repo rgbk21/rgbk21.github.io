@@ -165,7 +165,7 @@
       - The cell is the basic building block of a cell widget. Each cell is typed so that it knows exactly what kind of data it's going to be expected to render. <br>
       - The important point is that cells need to sit within a cell widget in order to be functional. <br>
       - A cell is created with an associated type parameter that defines its underlying data type. For example, a cell that displays a String will be defined as
-      <i>Cell&lt;String&gt;</i>, or you can use your own object, as you’ll see later for creating <i>Cell<&lt;PhotoDetails&gt;></i>. <br>
+      <i>Cell&lt;String&gt;</i>, or you can use your own object, as we'll see later for creating <i>Cell&lt;PhotoDetails&gt;</i>. <br>
       - Rather than looking at cells based on this hierarchy, they're best thought of as falling into one of three groups: <br>
       a) Display cells that render only the data provided <br>
       b) Editable cells that give a user the opportunity to change the value shown by the cell <br>
@@ -179,7 +179,7 @@
 
     <div class="sub-heading">Looking at Display Cells</div>
     <div>
-      - Display cells are those cells that can be used to present some data to the user - some text or an image or whatever you can think of. You can’t do anything else with these
+      - Display cells are those cells that can be used to present some data to the user - some text or an image or whatever you can think of. You can't do anything else with these
       cells such as react to clicks or make changes to the data. <br>
       - Earlier we said that a cell needs to be inside a cell container. <code>CellWidget</code> is the simplest type of cell container. It can contain only a single cell. <br>
       - This is an example of how to setup a basic <code>TextCell</code> using a <code>CellWidget</code>. Note that you set the value on the cell through the
@@ -400,8 +400,8 @@
       order in which they're added. <br>
       - First off, you create an <code>ArrayList</code> of <code>HasCell&lt;T,C&gt;</code> objects, which will be the list of component cells to be passed to the composite cell's
       constructor. <i>T</i> relates to the underlying data object <i>PhotoDetails</i> in this case - and <i>C</i> relates to the type of Cell values. If all the cell values in the
-      composite are the same, for example, Strings, you can substitute that type here (though in this case maybe the CellList widget is more appropriate for you). Let's assume you
-      have different cell types - it's best to define them as follows: <br>
+      composite are the same, for example, Strings, you can substitute that type here (though in this case maybe the <code>CellList</code> widget is more appropriate for you).
+      Let's assume you have different cell types - it's best to define them as follows: <br>
       <code>ArrayList&lt;HasCell&lt;PhotoDetails, ?&gt;&gt; cells = new ArrayList&lt;HasCell&lt;PhotoDetails, ?&gt;&gt;();</code> <br>
       - Cells are added to <i>cells</i>, and <i>cells</i> is then passed to the <code>CompositeCell</code> as follows: <br>
       <code>CompositeCell&lt;PhotoDetails&gt; compCell = new CompositeCell&lt;PhotoDetails&gt;(cells);</code> <br>
@@ -426,12 +426,12 @@
       - Extending <code>AbstractCell</code> means you need to do two things: <br>
       a) Implement the <code>render</code> method (that draws the cell), that is, implement the following method: <br>
       <code>public void render(Context context, PhotoDetails value, SafeHtmlBuilder sb)</code>.
-      Note the type of the value parameter: this always matches the type of the cell's underlying data object, so in our example it's <i>PhotoDetails</i>. <br>
+      Note the type of the <i>value</i> parameter: this always matches the type of the cell's underlying data object, so in our example it's <i>PhotoDetails</i>. <br>
       b) Potentially handle events on the Cell. That is, implement the following method: <br>
       <code>public void onBrowserEvent(Context context, Element parent, PhotoDetails value, NativeEvent event, ValueUpdater&lt;String&gt; valueUpdater)</code> <br>
       - There are three ways that you can render a cell widget yourself: <br>
-      a) The <code>SafeHtmlBuilder</code> passed to the cell’s render method by the <code>CellWidget</code> <br>
-      b) A <code>SafeHtmlTemplate</code> to build the HTML that’s then inserted into <code>SafeHtmlBuilder</code> <br>
+      a) The <code>SafeHtmlBuilder</code> passed to the cell's <code>render</code> method by the <code>CellWidget</code> <br>
+      b) A <code>SafeHtmlTemplate</code> to build the HTML that's then inserted into <code>SafeHtmlBuilder</code> <br>
       c) <code>UiBinder</code> (possible from GWT 2.5 onward) <br>
       - We will now look at all the three methods, one-by-one...
     </div>
