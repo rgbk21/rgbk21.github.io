@@ -1,200 +1,703 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-            crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-            crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-            crossorigin="anonymous"></script>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9QJ5D3X353"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-        gtag('config', 'G-9QJ5D3X353');
-    </script>
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,400&display=swap"
-          rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="../../globalStyles.css">
-    <meta name="author" content="Raj Gaurav Ballabh Kumar">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GWT</title>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+          integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+          crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+          integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+          crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+          integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+          crossorigin="anonymous"></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9QJ5D3X353"></script>
+  <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+          dataLayer.push(arguments);
+      }
+
+      gtag('js', new Date());
+      gtag('config', 'G-9QJ5D3X353');
+  </script>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,400&display=swap"
+        rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../../globalStyles.css">
+  <meta name="author" content="Raj Gaurav Ballabh Kumar">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GWT</title>
 </head>
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
 
-    <div class="navbar-header">
-        <a href="../../index.html" class="navbar-brand"> rgbk21</a>
-    </div>
+  <div class="navbar-header">
+    <a href="../../index.html" class="navbar-brand"> rgbk21</a>
+  </div>
 
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"><span
-            class="navbar-toggler-icon"></span>
-    </button>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"><span
+    class="navbar-toggler-icon"></span>
+  </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="nav navbar-nav">
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Projects</a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="../../Projects/TwitterCritNodes/TwitterCritNodes_1.html">Identifying Critical Nodes on Twitter</a>
-                    <a class="dropdown-item" href="../../Projects/isRelatedTo/isRelatedTo.html">isRelatedTo</a>
-                    <div class="dropdown-divider"></div>
-                </div>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">HTML Projects</a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="../../WordleCheater/index.html">Wordle Cheater</a>
-                    <a class="dropdown-item" href="../../Pig_Game/index.html">2-Player Pig Game</a>
-                    <a class="dropdown-item" href="../../ImageGallery/ImageGallery.html">Image Gallery</a>
-                    <a class="dropdown-item" href="../../RGB_Guesser_Game/RGB.html">RGB Guesser Game</a>
-                    <a class="dropdown-item" href="../../ToDoList/todo.html">To-Do List</a>
-                    <div class="dropdown-divider"></div>
-                </div>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Notes</a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="../../Lectures/COMS_631/COMS_631_index.html">COMS 631</a>
-                    <a class="dropdown-item" href="../../Lectures/COMS_535/COMS_535_index.html">COMS 535</a>
-                    <a class="dropdown-item" href="../../Lectures/EffectiveJava/EffectiveJava.html">Effective Java</a>
-                    <a class="dropdown-item" href="../../Lectures/DI/DI.html">Dependency Injection</a>
-                    <div class="dropdown-divider"></div>
-                </div>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Code</a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="../../Code/ThingsToRemember/ThingsToRemember.html">Things To Remember</a>
-                    <a class="dropdown-item" href="../../Code/Java_Notes/JavaNotes.html">Java Notes</a>
-                    <a class="dropdown-item" href="../../Code/Java_Notes/JavaNotes_2.html">Java Notes 2</a>
-                    <a class="dropdown-item" href="../../Code/LeetCode/LeetCode.html">LeetCode Notes</a>
-                    <a class="dropdown-item" href="../../Code/Applying_Java_Notes/ApplyingJava_Notes.html">ApplyingJava Notes</a>
-                    <a class="dropdown-item" href="../../Code/JavaScript/JavaScript.html">JavaScript Notes</a>
-                    <a class="dropdown-item" href="../../Code/HTML_CSS/HTML_CSS_Basics.html">HTML & CSS Notes</a>
-                    <a class="dropdown-item" href="../../Code/SQL/SQL.html">SQL Notes</a>
-                    <a class="dropdown-item" href="../../Code/Spring/Spring.html">Spring Notes</a>
-                    <a class="dropdown-item" href="../../Code/Kafka/Kafka.html">Kafka Notes</a>
-                    <a class="dropdown-item" href="../../Code/Angular/Angular.html">Angular</a>
-                    <a class="dropdown-item" href="../../Code/Hibernate/Hibernate.html">Hibernate</a>
-                    <div class="dropdown-divider"></div>
-                </div>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">In Another Life</a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="../../InAnotherLife/Chapter1/Chapter1.html">Chapter 1</a>
-                    <div class="dropdown-divider"></div>
-                </div>
-            </li>
-        </ul>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="nav navbar-nav">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Projects</a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="../../Projects/TwitterCritNodes/TwitterCritNodes_1.html">Identifying Critical Nodes on Twitter</a>
+          <a class="dropdown-item" href="../../Projects/isRelatedTo/isRelatedTo.html">isRelatedTo</a>
+          <div class="dropdown-divider"></div>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">HTML Projects</a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="../../WordleCheater/index.html">Wordle Cheater</a>
+          <a class="dropdown-item" href="../../Pig_Game/index.html">2-Player Pig Game</a>
+          <a class="dropdown-item" href="../../ImageGallery/ImageGallery.html">Image Gallery</a>
+          <a class="dropdown-item" href="../../RGB_Guesser_Game/RGB.html">RGB Guesser Game</a>
+          <a class="dropdown-item" href="../../ToDoList/todo.html">To-Do List</a>
+          <div class="dropdown-divider"></div>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Notes</a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="../../Lectures/COMS_631/COMS_631_index.html">COMS 631</a>
+          <a class="dropdown-item" href="../../Lectures/COMS_535/COMS_535_index.html">COMS 535</a>
+          <a class="dropdown-item" href="../../Lectures/EffectiveJava/EffectiveJava.html">Effective Java</a>
+          <a class="dropdown-item" href="../../Lectures/DI/DI.html">Dependency Injection</a>
+          <div class="dropdown-divider"></div>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Code</a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="../../Code/ThingsToRemember/ThingsToRemember.html">Things To Remember</a>
+          <a class="dropdown-item" href="../../Code/Java_Notes/JavaNotes.html">Java Notes</a>
+          <a class="dropdown-item" href="../../Code/Java_Notes/JavaNotes_2.html">Java Notes 2</a>
+          <a class="dropdown-item" href="../../Code/LeetCode/LeetCode.html">LeetCode Notes</a>
+          <a class="dropdown-item" href="../../Code/Applying_Java_Notes/ApplyingJava_Notes.html">ApplyingJava Notes</a>
+          <a class="dropdown-item" href="../../Code/JavaScript/JavaScript.html">JavaScript Notes</a>
+          <a class="dropdown-item" href="../../Code/HTML_CSS/HTML_CSS_Basics.html">HTML & CSS Notes</a>
+          <a class="dropdown-item" href="../../Code/SQL/SQL.html">SQL Notes</a>
+          <a class="dropdown-item" href="../../Code/Spring/Spring.html">Spring Notes</a>
+          <a class="dropdown-item" href="../../Code/Kafka/Kafka.html">Kafka Notes</a>
+          <a class="dropdown-item" href="../../Code/Angular/Angular.html">Angular</a>
+          <a class="dropdown-item" href="../../Code/Hibernate/Hibernate.html">Hibernate</a>
+          <div class="dropdown-divider"></div>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">In Another Life</a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="../../InAnotherLife/Chapter1/Chapter1.html">Chapter 1</a>
+          <div class="dropdown-divider"></div>
+        </div>
+      </li>
+    </ul>
 
 
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item active"><a class="nav-link" href="https://github.com/rgbk21">GitHub</a></li>
-            <li class="nav-item active"><a class="nav-link" href="https://www.linkedin.com/in/raj-gaurav-ballabh-kumar-97002058/">LinkedIn</a></li>
-            <li class="nav-item active"><a class="nav-link" href="https://www.instagram.com/wobblyframes/">Instagram</a></li>
-            <li class="nav-item active"><a class="nav-link" href="https://www.facebook.com/SomeRandomThoughts">Facebook</a></li>
-        </ul>
-    </div>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active"><a class="nav-link" href="https://github.com/rgbk21">GitHub</a></li>
+      <li class="nav-item active"><a class="nav-link" href="https://www.linkedin.com/in/raj-gaurav-ballabh-kumar-97002058/">LinkedIn</a></li>
+      <li class="nav-item active"><a class="nav-link" href="https://www.instagram.com/wobblyframes/">Instagram</a></li>
+      <li class="nav-item active"><a class="nav-link" href="https://www.facebook.com/SomeRandomThoughts">Facebook</a></li>
+    </ul>
+  </div>
 </nav>
 
 <div class="container">
 
-    <button id='load-all-gists' type="button" class="btn btn-outline-primary">Show all Gists!</button>
+  <button id='load-all-gists' type="button" class="btn btn-outline-primary">Show all Gists!</button>
 
+  <div>
+    This page contains my notes from the following books: <br>
+    a) GWT in Action <br>
+  </div>
+
+
+  <br>
+  Index for Book: <br>
+  Chapter 0 - <a href="#InterestingLinks">Interesting Links</a> <br>
+  Chapter 10 - <a href="#Chapter10">Data-Presentation (cell) widgets</a>
+
+  <br>
+
+  <hr>
+  <div id="InterestingLinks" class="chapter">Interesting Links</div>
+  <hr>
+
+  <div class="textual-content">
+
+    <div class="sub-heading">Links</div>
     <div>
-        This page contains my notes from the following books: <br>
-        a) GWT in Action <br>
+      -
+    </div>
+  </div>
+
+  <hr>
+  <div id="Chapter10" class="chapter">Chapter 10: Data-Presentation (cell) widgets</div>
+  <hr>
+
+  <div class="textual-content">
+
+    <div class="sub-heading">Introduction</div>
+    <div>
+      - For drawing large data on the screen, we now use cell widgets. <br>
+      - GWT provides 16 different types of cells such as <code>TextCell</code>, <code>EditTextCell</code>, <code>ImageCell</code>, and <code>DateCell</code>, and in addition, we
+      can create our own custom cells. <br>
+      - Cells can't survive on their own and need to be used within a cell widget, which provides the necessary context and other management aspects. GWT 2.5 contains six cell
+      widgets: <code>CellWidget</code>, <code>CellList</code>, <code>CellTree</code>, <code>CellBrowser</code>, <code>CellTable</code>, and <code>DataGrid</code>. <br>
+      - Cell widgets are backed by data coming from local or remote sources (using <code>DataProvider</code>s). When a cell widget needs to display data on a page, it hands that
+      data to specific cells that then produce the necessary HTML for the cell widget. <br>
+      - Beyond providing the data to cells, cell widgets typically support data paging, sorting, item-selection models, updating of data, as well as data validation.
+    </div>
+
+    <div class="sub-heading">Understanding Cells</div>
+    <div>
+      - The cell is the basic building block of a cell widget. Each cell is typed so that it knows exactly what kind of data it's going to be expected to render. <br>
+      - The important point is that cells need to sit within a cell widget in order to be functional. <br>
+      - A cell is created with an associated type parameter that defines its underlying data type. For example, a cell that displays a String will be defined as
+      <i>Cell&lt;String&gt;</i>, or you can use your own object, as you’ll see later for creating <i>Cell<&lt;PhotoDetails&gt;></i>. <br>
+      - Rather than looking at cells based on this hierarchy, they're best thought of as falling into one of three groups: <br>
+      a) Display cells that render only the data provided <br>
+      b) Editable cells that give a user the opportunity to change the value shown by the cell <br>
+      c) Action cells that trigger an action of some sort <br>
+      <img src="imgs/chapter10/TypesOfCells.PNG"
+           class="center-block img-fluid"
+           alt="TypesOfCells"
+           width="900">
     </div>
 
 
-    <br>
-    Index for Book: <br>
-    Chapter 0 - <a href="#InterestingLinks">Interesting Links</a> <br>
-    Chapter 1 - <a href="#Chapter1">GWT</a>
-
-    <br>
-
-    <hr>
-    <div id="InterestingLinks" class="chapter">Interesting Links</div>
-    <hr>
-
-    <div class="textual-content">
-
-        <div class="sub-heading">Links</div>
-        <div>
-            -
+    <div class="sub-heading">Looking at Display Cells</div>
+    <div>
+      - Display cells are those cells that can be used to present some data to the user - some text or an image or whatever you can think of. You can’t do anything else with these
+      cells such as react to clicks or make changes to the data. <br>
+      - Earlier we said that a cell needs to be inside a cell container. <code>CellWidget</code> is the simplest type of cell container. It can contain only a single cell. <br>
+      - This is an example of how to setup a basic <code>TextCell</code> using a <code>CellWidget</code>. Note that you set the value on the cell through the
+      <code>CellWidget</code> because it holds the context of the cell.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
         </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/2f66f4b6809f2c9bdebb423feb03c85d.js"></script>
+        </div>
+      </div>
+
+      - Each cell has a default <code>render</code> method that's responsible for rendering the cell content in HTML. For instance, this is an example of a <code>render</code>
+      method. When the <code>Template</code>'s <i>photo</i> method is called, the parameter is inserted into the contents of the <code>@Template</code> annotation at the respective
+      placeholder, giving us the standard HTML that then goes into the cell widget for our display.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/f5652889e27fec125d9da2d9d09e2e9d.js"></script>
+        </div>
+      </div>
+
+      - The different types of display cells:
+      <table class="table table-bordered table-sm">
+        <thead>
+        <tr>
+          <th>Cell</th>
+          <th>Type</th>
+          <th>Overview</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>TextCell</td>
+          <td>Cell&lt;String&gt;</td>
+          <td>Displays simple text.</td>
+        </tr>
+        <tr>
+          <td>NumberCell</td>
+          <td>Cell&lt;Number&gt;</td>
+          <td>Can render any of the Java numerical wrapper types. If a com.google.gwt.i18n.client.Number-Format is provided in the constructor, then that's used to
+            format the display (for example, supplying NumberFormat.getPercentFormat() would show numbers as a percent; by default the number is shown in decimal format).
+          </td>
+        </tr>
+        <tr>
+          <td>DateCell</td>
+          <td>Cell&lt;Date&gt;</td>
+          <td>Displays dates as a string. A DateTimeFormat can be provided in the constructor to alter how the date is displayed (for example,
+            DateTimeFormat.getFormat(PredefinedFormat.DATE_SHORT) would display dates in short format; by default the format is long). Additionally, a TimeZone can be provided in
+            the constructor.
+          </td>
+        </tr>
+        <tr>
+          <td>ImageCell</td>
+          <td>Cell&lt;String&gt;</td>
+          <td>Assumes the String passed to it is the URL of an image. The String is sanitized before use, but no attempt is made to ensure the URL is pointing to a
+            valid image or if it's a URI.
+          </td>
+        </tr>
+        <tr>
+          <td>ImageLoadingCell</td>
+          <td>Cell&lt;String&gt;</td>
+          <td>Like ImageCell, but displays some loading HTML (by default an animated image) while waiting for the real image to load. If loading is successful, the
+            loaded image replaces the loading HTML; otherwise some error HTML is displayed. It's possible to provide alternate ImageLoadingCell.Renderers in the constructor for
+            the loading, error, and image display.
+          </td>
+        </tr>
+        <tr>
+          <td>ImageResourceCell</td>
+          <td>Cell &lt;ImageResource&gt;</td>
+          <td>Like ImageCell but takes data from an ImageResource instead of a String.</td>
+        </tr>
+        <tr>
+          <td>SafeImageCell</td>
+          <td>Cell&lt;SafeUri&gt;</td>
+          <td>Like ImageCell but takes data from a SafeUri object instead of a String.</td>
+        </tr>
+        <tr>
+          <td>SafeHtmlCell</td>
+          <td>Cell&lt;SafeHtml&gt;</td>
+          <td>Displays the contents of a SafeHtml object.</td>
+        </tr>
+        <tr>
+          <td>IconCellDecorator</td>
+          <td>&nbsp;</td>
+          <td>Wraps another cell and allows an icon to be displayed (in our example we display a delete icon next to a TextCell).</td>
+        </tr>
+        </tbody>
+      </table>
     </div>
 
-    <hr>
-    <div id="TestSizes" class="chapter">Test Sizes</div>
-    <hr>
-
-    <div class="textual-content">
-        <div class="sub-heading">How to reduce the size of tests</div>
-        <div>
-            - Systems can span multiple processes and machines. This doesn't mean that the tests of those systems should be complicated either. The most common technique for
-            testing a large system with small tests is to take advantage of <i>test doubles</i>, which allow for fake or mock implementations of parts of the system to be used in
-            tests. Whenever, a component of a system under test would communicate with another machine, or process, or make a non-blocking call, it should be possible to replace
-            that component with an in-process test double. This allows the important parts of the system to be tested entirely using small tests. <br>
+    <div class="sub-heading">Updating Edit Cells</div>
+    <div>
+      - Edit cells allow the user to update the initial value. <br>
+      - This is how you would create an Edit Cell. Note that in the below example, we have added a handler to the cell widget that handles the updates on the cell. The approach is
+      different depending on the Cell Widget. Now when the user changes the value of the <code>EditTextCell</code>, a <code>ValueChangeEvent</code> is raised and is handled by the
+      handler (and in this case an alert is shown to the user).
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
         </div>
-
-        <div class="sub-heading">Small tests are not required to use mocks extensively</div>
-        <div>
-            - Mocks and other test doubles are a tool that make it possible to write small tests of systems with dependencies that are slow, non-deterministic, or run in different
-            processes.Test doubles typically should not be used for other purposes when a real implementation is available that is fast and in-process. In particular, mocking out
-            all of a class's dependencies so that the test "focuses only on a single class" usually does more harm than good.
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/168148feb1976c89ed93d7d7854ef684.js"></script>
         </div>
+      </div>
+    </div>
+    - There might be cases where the value the cell holds in its model (real value) may be different than the value shown on the screen - that is, you can have pending updates.
+    There are different ways of "committing" these changes depending on the type of cell that you are using. Refer the text for more explanation. <br>
+    - Cells that have this capability are subclasses of <code>AbstractEditableCell</code>. <br>
+    - The different types of Edit Cells are:
+    <table class="table table-bordered table-sm">
+      <thead>
+      <tr>
+        <th><p>Cell</p></th>
+        <th><p>Type</p></th>
+        <th><p>Overview</p></th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>EditTextCell</td>
+        <td>Cell&lt;String&gt;</td>
+        <td>A cell that displays simple text, which when clicked turns into an input field.</td>
+      </tr>
+      <tr>
+        <td>TextInputCell</td>
+        <td>Cell&lt;String&gt;</td>
+        <td>A cell that's an input field.</td>
+      </tr>
+      <tr>
+        <td>CheckboxCell</td>
+        <td>Cell&lt;Boolean&gt;</td>
+        <td>A check box.</td>
+      </tr>
+      <tr>
+        <td>SelectionCell</td>
+        <td>Cell&lt;String&gt;</td>
+        <td>A cell that's a drop-down box of strings, one of which can be selected. The data is provided as one of the concrete implementations of Java's List object.</td>
+      </tr>
+      <tr>
+        <td>DatePickerCell</td>
+        <td>Cell&lt;Date&gt;</td>
+        <td>A cell that displays a date and that, when clicked, shows a GWT DatePicker object. A DateTimeFormat can be provided in the constructor to alter how the date is
+          displayed (for example, DateTimeFormat.getFormat (PredefinedFormat.DATE_SHORT) would display dates in short format; by default the format is long).
+        </td>
+      </tr>
+      </tbody>
+    </table>
 
-        <div class="sub-heading">Using Parameterized Tests</div>
-        <div>
-            - There are some common test anti-patterns that you should avoid: <br>
-            - Copying/Pasting the same test again, just with a different set of inputs <br>
-            - The tests should not be in a helper method. Because then you have to jump between the helper method and the place where the actual assertion is being made in order to
-            figure out where the error in the case of the test actually is. <br>
-            - You should not have assert statements that are being called/used in while or for loops. This is because if the test fails, you wouldn't know which set of inputs
-            actually caused the test to fail. <br>
-            - These issues can be solved by using parameterized tests instead. There are multiple points that are being covered in the following example. <br>
-            <div class="code-block">
-                <div class="expand-code-snip-btn border border-primary rounded">
-                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-                </div>
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/f3997d6787980b6b26f1b5b4ac9d2042.js"></script>
-                </div>
-            </div>
-            - Note that running the tests now shows the parameterized tests separately, and we can clearly see which test failed with which params.
-            <img src="imgs/ParameterizedTests.PNG"
-                 class="center-block img-fluid"
-                 alt="UML Collections Diagram"
-                 width="500">
+    <div class="sub-heading">Reacting with Action Cells</div>
+    <div>
+      - Action cells don't allow the user to change the data value directly, but they do allow a trigger of an action of some sort, such as buttons or clickable text. <br>
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
         </div>
-
-        <div class="sub-heading">Flakes and Code Coverage</div>
-        <div>
-            - Flaky tests are tests that passes or fails non-deterministically with respect to its test inputs. You should either remove such test cases itself or fix the flakiness
-            issues. <br>
-            - High code coverage does not guarantee high quality in test coverage. But a low code coverage number guarantees that large areeas are completely untested. The gains of
-            increasing test coverage are logarithmic. While it might be worthwhile to improve the test coverage from 30% to 70%, increasing from 90% to 95%, maybe not so much.
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/902bf48e360e3f4fc9621373afab78f4.js"></script>
         </div>
+      </div>
 
-
+      - The different types of Action Cells are:
+      <table class="table table-bordered table-sm">
+        <thead>
+        <tr>
+          <th><p>Cell</p></th>
+          <th><p>Type</p></th>
+          <th><p>Overview</p></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>ButtonCell</td>
+          <td>Cell&lt;String&gt;</td>
+          <td>A cell that represents a standard HTML button. When it's clicked, or the Enter key is pressed when it has focus, the associated ValueUpdater is called.</td>
+        </tr>
+        <tr>
+          <td>ClickableTextCell</td>
+          <td>Cell&lt;String&gt;</td>
+          <td>A cell that has simple text that handles mouse clicks (you can make it look like an HTML anchor by using CSS). Like ButtonCell, the ValueUpdater is called upon a
+            mouse
+            click or a key press.
+          </td>
+        </tr>
+        <tr>
+          <td>ButtonTextCell</td>
+          <td>Cell&lt;String&gt;</td>
+          <td>A cell that acts like a button but is rendered as pure HTML using the Appearance pattern. (GWT documentation hints that this is the way most widgets will go in the
+            future, but that has not happened yet.)
+          </td>
+        </tr>
+        <tr>
+          <td>ActionCell</td>
+          <td>Cell&lt;C&gt;</td>
+          <td>A generic Cell&lt;C&gt; that forwards its value object to an ActionCell.Delegate&lt;C&gt; when it's clicked. This cell renders as a button. Both the button label and
+            the Delegate implementation are supplied at cell instantiation.
+          </td>
+        </tr>
+        </tbody>
+      </table>
     </div>
 
+
+    <div class="sub-heading">Creating Custom Cells</div>
+    <div>
+      - If the provided cells aren't quite what you need, you can create your own custom cells. You can create custom cells in couple of ways: <br>
+      a) Create a composite of existing cells <br>
+      b) Create a cell from scratch <br>
+    </div>
+
+    <div class="sub-heading">Creating Custom Cells using Composite</div>
+    <div>
+      - Read text for how to do this. You basically use the <code>CompositeCell</code> for this purpose. <br>
+      - Composite cells display a number of cells together within a span element. This means that generally the component cells will be displayed in left-to-right manner in the
+      order in which they're added. <br>
+      - First off, you create an <code>ArrayList</code> of <code>HasCell&lt;T,C&gt;</code> objects, which will be the list of component cells to be passed to the composite cell's
+      constructor. <i>T</i> relates to the underlying data object <i>PhotoDetails</i> in this case - and <i>C</i> relates to the type of Cell values. If all the cell values in the
+      composite are the same, for example, Strings, you can substitute that type here (though in this case maybe the CellList widget is more appropriate for you). Let's assume you
+      have different cell types - it's best to define them as follows: <br>
+      <code>ArrayList&lt;HasCell&lt;PhotoDetails, ?&gt;&gt; cells = new ArrayList&lt;HasCell&lt;PhotoDetails, ?&gt;&gt;();</code> <br>
+      - Cells are added to <i>cells</i>, and <i>cells</i> is then passed to the <code>CompositeCell</code> as follows: <br>
+      <code>CompositeCell&lt;PhotoDetails&gt; compCell = new CompositeCell&lt;PhotoDetails&gt;(cells);</code> <br>
+      - The code looks like the following:
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/229ccfc8971019772bc865e39c05698f.js"></script>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="sub-heading">Creating Custom Cells from scratch</div>
+    <div>
+      - If you want a little more control over the layout of a custom cell, and in our opinion an easier process than composite cells give you, then you can build a new cell from
+      scratch by extending <code>AbstractCell</code>. <br>
+      - Never implement the <code>Cell</code> interface yourself, always use <code>AbstractCell</code>. GWT documentation states that the <code>Cell</code> interface may change in
+      the future but that <code>AbstractCell</code> always provides a stable implementation of <code>Cell</code>. <br>
+      - Extending <code>AbstractCell</code> means you need to do two things: <br>
+      a) Implement the <code>render</code> method (that draws the cell), that is, implement the following method: <br>
+      <code>public void render(Context context, PhotoDetails value, SafeHtmlBuilder sb)</code>.
+      Note the type of the value parameter: this always matches the type of the cell's underlying data object, so in our example it's <i>PhotoDetails</i>. <br>
+      b) Potentially handle events on the Cell. That is, implement the following method: <br>
+      <code>public void onBrowserEvent(Context context, Element parent, PhotoDetails value, NativeEvent event, ValueUpdater&lt;String&gt; valueUpdater)</code> <br>
+      - There are three ways that you can render a cell widget yourself: <br>
+      a) The <code>SafeHtmlBuilder</code> passed to the cell’s render method by the <code>CellWidget</code> <br>
+      b) A <code>SafeHtmlTemplate</code> to build the HTML that’s then inserted into <code>SafeHtmlBuilder</code> <br>
+      c) <code>UiBinder</code> (possible from GWT 2.5 onward) <br>
+      - We will now look at all the three methods, one-by-one...
+    </div>
+
+
+    <div class="sub-heading">Creating custom cells: Rendering HTML via a <code>SafeHtmlBuilder</code></div>
+    <div>
+      - The <code>render</code> method is called by the cell widget that the cell will be sitting in. That cell widget provides a number of things, for example,
+      <code>Context</code> and a <code>SafeHtmlBuilder</code> class. <br>
+      - You can think of the <code>SafeHtmlBuilder</code> instance as a writing stream to the browser that helps protect against XSS (cross-site scripting) attacks by escaping
+      input where necessary. <br>
+      - To build our cell, we'll append the necessary HTML to it in the cell's <code>render</code> method. If we were using a cell widget that has more than one cell, then the
+      updated <code>SafeHtmlBuilder</code> instance would get passed to the next cell by the cell widget so that that cell could draw itself and so on. (This answers the question
+      about why in the code, in the <code>render</code> method, when we print out the text in the <code>SafeHtmlBuilder</code>, we only see the contents of one specific cell, and
+      not the entire browser. The <code>append</code> is not appending to the entire browser, rather it is just appending HTML to the HTML of the specific cell widget. Interesting.
+      So before calling <code>append</code>, the text in the <code>SafeHtmlBuilder</code> is empty.)<br>
+      - This is how we write the <code>render</code> method using this approach. The first thing to do in any version of the render method is check if the value to be
+      rendered is not null. Because the render method can be called on instantiation, it might get a null object, so you exit in this case. (Question: Why are we not doing this?)
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/a479c82302ebc7686d7bc75ff9c11391.js"></script>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-heading">Creating custom cells: Rendering HTML via a <code>SafeHtmlTemplates</code></div>
+    <div>
+      - <code>SafeHtmlTemplates</code> is an interface whose method declaration(s) contain an annotation describing the HTML they should produce. A key aspect of this template is
+      that it can contain placeholders for arguments of the method declaration. <br>
+      - This is the render method that we are using in the code. <br>
+      - In the below example, we have a template interface with a single method (there could be more). Associated with the method is the <code>@Template</code> annotation that
+      declaratively describes the HTML you wish to produce. Within the annotation you have placeholders, such as <code>{0}</code>, <code>{1}</code>, <code>{2}</code>, which relate
+      to the parameters in the method declaration. In this case, they refer to the <i>title</i>, <i>image</i>, and <i>date</i> respectively. <br>
+      - Within the constructor of the cell, you should use the <code>GWT.create()</code> method to create an instance of <code>Template</code> to tell the compiler to take the
+      defined interface and annotation, and create the necessary implementation. This is also referred to as deferred binding. <br>
+      - From GWT 2.5 onwards, you can declare cells using <code>UiBinder</code>. Chapter 6 goes over what <code>UiBinder</code> is. <br>
+      - The <code>render</code> method is simpler compared to the previous case. We are appending the result of applying data to the template, to the <code>SafeHtmlBuilder</code>
+      passed in from the cell widget.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/d3d7e916a4d04eb2ce339f27ee886be9.js"></script>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="sub-heading">Creating custom cells: Rendering HTML via a <code>UiBinder</code></div>
+    <div>
+      - This is not what we are using in the code. Read text to understand what is going on here. Hopefully, should not be relevant. Hopefully.
+    </div>
+
+
+    <div class="sub-heading">Creating custom cells: Handling Events</div>
+    <div>
+      - Events happen on the cell widget that the cell is associated with but are handled by the cell itself. For a GWT widget, events are internally handled by sinking the events
+      the cell will handle and overriding the <code>onBrowserEvent</code> method with the necessary functionality. <br>
+      - The same approach is followed with cells, though in a slightly different way. Events are sunk by calling the parent constructor with their native names (assuming you're
+      extending <code>AbstractCell</code>, as you should). <br>
+      - In our two non-UiRenderer versions, that means you write something similar to the following:
+      <code>public PhotoCellWithTemplate() {super(BrowserEvents.CLICK);}</code>. The next step is to override the <code>onBrowserEvent</code> method. Refer the code snippet above
+      in order to see how we are doing this. This is not being used in the code though. <br>
+    </div>
+
+    <div class="sub-heading">Reviewing GWT Cell Widgets</div>
+    <div>
+      - Six different types of cell widgets come in GWT, each providing a different type of functionality: <br>
+      a) <code>CellWidget</code>: It allows one cell to be managed. <br>
+      b) <code>CellList</code>: Holds a vertical list of cells, all with the same type. <br>
+      c) <code>CellTree</code>: A tree structure of cells. Cells of the same level need to be of the same type. But there is no requirement for different levels to have the same
+      cell type. For example, level 0 could be a <code>TextCell</code>, level 1 a <code>SafeHtmlCell</code>, level 2 an <code>ImageCell</code>, and so on. <br>
+      d) <code>CellBrowser</code>: A <a href="https://en.wikipedia.org/wiki/Miller_columns">Miller Columns-style</a> component. This is the one that we are using in the code. <br>
+      e) <code>CellTable</code>: Each cell in a column must be of the same type, but there can be many different types across a row. Any header and footer provided will scroll with
+      the screen. <br>
+      f) <code>DataGrid</code>: Like a <code>CellTable</code>, but any headers/footers that are provided are completely static, and data scrolls between them. <br>
+      - This is a view of how <code>CellTree</code> stores it's cells. The view might differ, but the underlying idea is the same.
+      <img src="imgs/chapter10/CellWidgetsReview.PNG"
+           class="center-block img-fluid"
+           alt="TypesOfCells"
+           width="700">
+    </div>
+
+    <div class="sub-heading">What is a Cell Context?</div>
+    <div>
+      - Up until now we have been using the simple cell widget, <code>CellWidget</code>. This takes a single cell and provides the necessary <code>Context</code> and
+      <code>SafeHtmlBuilder</code> within which the cell will render itself. <br>
+      - This <code>Context</code> includes the following: <br>
+      a) The <i>column number</i>: A column index of the cell (zero if there's only one column in the cell widget). <br>
+      b) A <i>key</i>: A unique key that represents the row value of the widget (usually provided by a <code>KeyProvider</code>) <br>
+      c) An <i>index</i>: An absolute index of the cell. <br>
+      d) An optional <i>subindex</i>: If the row value renders to a single row element, then this will be zero; else it may be greater than zero (depending on the implementation).
+      <br>
+      - So what is the difference between all the above things? This is how the things are laid out in the case of cell browser in our case. I don't know why, but for some reason
+      the <code>getColumn</code> always returns 0.
+      <img src="imgs/chapter10/CellBrowserLayout.jpg"
+           class="center-block img-fluid"
+           alt="TypesOfCells"
+           width="1750">
+    </div>
+
+    <div class="sub-heading">Looking at <code>CellList</code></div>
+    <div>
+      - <code>CellList</code> is probably the second simplest of the cell widgets, after <code>CellWidget</code>, because it holds a list of cells, all of the same type.
+
+      <br>
+      <br>
+
+      <p class="inline-heading">Creating a <code>CellList</code></p>: <br>
+      - Creating a <code>CellList</code> is done by passing the type of cell that the list will hold into the constructor. <br>
+      <code>CellList&lt;PhotoDetails&gt; photoList = new CellList&lt;PhotoDetails&gt;(new PhotoCellWithUiBinder());</code> <br>
+      - Once the widget is created, you need to populate it with data. That can be done in one of several ways that we'll look at next.
+
+      <br>
+      <br>
+
+      <p class="inline-heading">Populating data in a <code>CellList</code></p>: <br>
+      - Data to populate the cell widget can be inserted via one of four approaches. <br>
+      - The direct approach is the equivalent of shoving the data into the cell manually and is probably the least interesting in most real applications. To use it, you call the
+      <code>setRowData</code> method on the widget and pass in the row number where the data will start to be entered and a <code>List</code> of the data. For this, we first create
+      a list of data: <br>
+      <code>List&lt;PhotoDetails&gt; data = Arrays.asList(new PhotoDetails(...), new PhotoDetails(...));</code> <br>
+      and then pass in the data and the row number where we want to start adding the data: <br>
+      <code>photoList.setRowData(0, data);</code>
+
+      <br>
+
+      - Alternatively, we can tell the <code>CellList</code> to keep an eye on a model and reflect any changes. You do that with a <code>DataProvider</code>, of which there are
+      three: <br>
+      a) <code>ListDataProvider</code>: Any changes to a backing list held on the client side are reflected in the widget. <br>
+      b) <code>AsyncDataProvider</code>: Data is retrieved usually from a server source <br>
+      c) <code>CustomDataProvider</code>: You manually handle any <code>RangeChangeEvents</code> from the widget
+      <img src="imgs/chapter10/DataProviders.PNG"
+           class="center-block img-fluid"
+           alt="DataProviders"
+           width="750">
+
+      <p class="inline-heading">Storing data in <code>ListDataProvider</code></p>: <br>
+      - We are using this in the code. <br>
+      - A <code>ListDataProvider</code> is a <code>List</code> that holds the objects. You can access the list and add or update data, which is then reflected by the widget in the
+      view. <br>
+      <code>ListDataProvider&lt;PhotoDetails&gt; dataProvider = new ListDataProvider&lt;&gt;()</code> <br>
+      <code>dataProvider.addDataDisplay(photoList);</code> <br>
+      - This code creates a new <code>ListDataProvider</code> (an empty model) with a <code>type</code> parameter indicating it will hold <i>PhotoDetails</i> objects. The view
+      (your cell widget) is then added to the list via the provider's <code>addDataDisplay</code> method. When you want to update or add data to the model now backing the
+      <code>CellList</code> widget, you retrieve a <code>List</code> representation of the model from the <code>ListDataProvider</code>: <br>
+      <code>List&lt;PhotoDetails&gt; theList = dataProvider.getList();</code> <br>
+      and then make the necessary updates. <br>
+      - But note that in the code we are neither using the <code>addDataDisplay</code> method, and nor are we using the <code>getList</code> methods. So the data is being added to
+      the <code>ListDataProvider</code> in some other way. But we are using a constructor, which passes in two args. So maybe that is it? <br>
+
+      <p class="inline-heading">Storing data in <code>AsyncDataProvider</code></p>: <br>
+      - If the data will come from a server, then you need to take into account the fact that it will be asynchronously provided. The <code>AsyncDataProvider</code> handles this
+      for you. <br>
+      - This is not being used in the code. Refer text for details.
+
+      <br>
+      <br>
+
+      <p class="inline-heading">Paging a <code>CellList</code></p>: <br>
+      - Paging allows you to look at subsets of your data at a time. This is particularly useful for large data sets arriving from a server - you don't want to have to load
+      everything before you start displaying. <br>
+      - We are not using paging in the code.
+
+      <br>
+      <br>
+
+      <p class="inline-heading">Handling User Updates in a <code>CellList</code></p>: <br>
+      - Handling updates on cells in a <code>CellList</code> is generally done through an attached <code>ValueUpdater</code>. <br>
+      - In the below code snippet, when the user clicks on a cell in the <code>CellList</code>, the cell widget determines which cell has been clicked, and then directs the event
+      to the cell along with the widget's <code>ValueUpdater</code>. <br>
+      - However, we don't seem to be using this method to listen to click events on the cell.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/7a95be6551775368fbc803ed314c44aa.js"></script>
+        </div>
+      </div>
+
+      <br>
+
+      <p class="inline-heading">Managing data with SelectionModels in a <code>CellList</code></p>: <br>
+      - Cell widget views use a <code>SelectionModel</code> to determine if an item is selected and and to provide the rules for selection, ie., can only one item be selected? Or
+      are multiple items selectable? <br>
+      - By default, the <code>CellList</code> only allows one cell to be selected at a time. You can change this to allow multiple selections. <br>
+      - We are using a <code>SelectionModel</code> in the code, but we are using a <code>SingleSelectionModel</code>.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/cf4074103e9450f059baba74726a1a47.js"></script>
+        </div>
+      </div>
+
+      <br>
+
+      <p class="inline-heading">Managing the Keyboard in a <code>CellList</code></p>: <br>
+      <div>
+        - Cell widgets react to some keyboard events automatically when a selection is made. <br>
+        - Different kinds of keyboard selection policies are available:
+        <table class="table table-bordered table-sm">
+          <thead>
+          <tr>
+            <th><p>Value</p></th>
+            <th><p>Description</p></th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td>BOUND_TO_SELECTION</td>
+            <td>Selection is bound to the selection model. This is the one that we are using in the code.</td>
+          </tr>
+          <tr>
+            <td>ENABLED</td>
+            <td>Selection via keyboard is enabled (for example, Ctrl+click or Shift+click).</td>
+          </tr>
+          <tr>
+            <td>DISABLED</td>
+            <td>If the user navigates to the end or beginning of the page, then the range is increased.</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="sub-heading">Walking through a <code>CellTree</code></div>
+    <div>
+      - A <code>CellTree</code> provides a tree-like structure for data representation. <br>
+      - Creating a <code>CellTree</code> is done this way:
+      <code>CellTree photoList = new CellTree(treeViewModel, null);</code> <br>
+      - Typically the node to show (the second parameter to the constructor), is set to <code>null</code>. That will reveal the tree's root nodes. Though note that there is nothing
+      stopping you from opening the tree at a known lower-level node by passing that instead. <br>
+      - The <i>treeViewModel</i> is of type <code>TreeViewModel</code>. This explains to the widget how the tree works. <br>
+      - The purpose of the <code>TreeViewModel</code> is two-fold. It lets the widget know what to do when: <br>
+      a) the user tries to open a node <br>
+      b) the user has navigated to the leaf node (that is, there are no more nodes to open) <br>
+
+      - Creating a model requires the implementation of the <code>TreeViewModel</code> interface together with the <code>getNodeInfo</code> and the <code>isLeaf</code> methods.
+    </div>
+
+    <div class="sub-heading">Opening a new node in a <code>CellTree</code></div>
+    <div>
+      - The <code>getNodeInfo</code> provides the children of the value passed to it. <br>
+      - The basic pattern within <code>getNodeInfo(T value)</code> is to check some property of the <i>value</i> parameter, create an appropriate <code>DataProvider</code> (list or
+      asynchronous depending on your approach. In our case, we are using <code>ListDataProvider</code>), and then return a new <code>DefaultNodeInfo</code> object created from
+      the new provider, and the type of cell in which that data will be displayed (we are using an <code>AbstractCell</code> in the code). <br>
+      - The <code>ListDataProvider</code> is supposed to provide the children of the current node. We are also passing in a key provider, that is an implementation of the
+      <code>ProvidesKey&lt;T&gt;</code> interface. <br>
+      - So while the example uses this constructor: <br>
+      <code>ListDataProvider(List&lt;T&gt; listToWrap)</code>, we are using this constructor: <br>
+      <code>ListDataProvider(List&lt;T&gt; listToWrap, ProvidesKey&lt;T&gt; keyProvider)</code> <br>
+      - Similarly, for creating the <code>DefaultNodeInfo</code>, we are using not using the constructor in the example which was this: <br>
+      <code>DefaultNodeInfo(AbstractDataProvider&lt;T&gt; dataProvider, Cell&lt;T&gt; cell)</code> but instead using: <br>
+      <code>DefaultNodeInfo(AbstractDataProvider&lt;T&gt; dataProvider, final Cell&lt;T&gt; cell, SelectionModel&lt;? super T&gt; selectionModel,</code>
+      <code>final ValueUpdater&lt;T&gt; valueUpdater)</code>
+    </div>
+
+
+  </div>
 </div>
 
 

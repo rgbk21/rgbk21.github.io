@@ -620,8 +620,8 @@
     27) What should I normally initialize a <code>char</code> to? <br>
     - <code>char temp = '';</code> is a compile error. You cannot do this. <br>
     - <code>char temp = '\u0000';</code> <br>
-    - This is just the unicode for <code>null</code>.
-    <a href="https://stackoverflow.com/a/5860040/8742428">SO Link</a>
+    - This is just the unicode for <code>null</code>. <a href="https://stackoverflow.com/a/5860040/8742428">SO Link</a>.
+    <a href="https://stackoverflow.com/questions/8534178/how-to-represent-empty-char-in-java-character-class">Another SO Link</a>.
   </div>
 
   <div class="one-point">
@@ -1218,13 +1218,11 @@
     <code>RuntimeException</code> is un-checked. RuntimeExceptions do not need to be explicitly handled by the
     calling code.
     <br>
-    When to use Checked and when to use Unchecked exception: <br>
+    - Also read about exceptions on the Java Notes page <a href="../Java_Notes/JavaNotes.html#Udemy_Java_Section18">here</a> <br>
+    - When to use Checked and when to use Unchecked exception: <br>
     - <a href="https://stackoverflow.com/questions/4639432/checked-vs-unchecked-exception">SO Link 1</a> <br>
-    - <a href="https://stackoverflow.com/questions/1656376/why-are-runtime-exceptions-unchecked-in-java">SO Link
-    2</a><br>
-    - <a
-    href="https://stackoverflow.com/questions/499437/in-java-when-should-i-create-a-checked-exception-and-when-should-it-be-a-runti">SO
-    Link 3</a>
+    - <a href="https://stackoverflow.com/questions/1656376/why-are-runtime-exceptions-unchecked-in-java">SO Link 2</a><br>
+    - <a href="https://stackoverflow.com/questions/499437/in-java-when-should-i-create-a-checked-exception-and-when-should-it-be-a-runti">SO Link 3</a>
   </div>
 
   <div class="one-point">
@@ -1303,8 +1301,17 @@
     - In places where you have to use both <code>this()</code> and <code>super()</code>, make sure that last
     constructor to be called is the <code>super()</code> constructor. <a
     href="https://stackoverflow.com/questions/6965561/how-to-call-both-super-and-this-in-case-of-overloaded-constructors">SO
-    Link Source</a>.
-
+    Link Source</a>. <br>
+    - You can also use <code>super</code> to call an overridden method of a super class. In that case, the <code>super</code> call does not necessarily need to be the first
+    statement in the method body.
+    <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+            <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/1c5b8c3bd5a862f90fa68770e3f86646.js"></script>
+        </div>
+    </div>
   </div>
 
   <div class="one-point">
@@ -2253,6 +2260,75 @@
         <script src="https://gist.github.com/rgbk21/bc3304747f322f213b76e7ef261f5992.js"></script>
       </div>
     </div>
+  </div>
+
+  <div class="one-point">
+    93) TODO Dump: <br>
+    - ThreadLocal <br>
+    - Difference between <code>this.something</code> and <code>ClassName.this</code>: <a href="https://stackoverflow.com/questions/45637427/what-is-classname-this">On SO here</a>,
+    and <a href="https://stackoverflow.com/questions/4080868/using-this-with-class-name">here</a>. <br>
+    - Regex stuff: <br>
+    a) https://stackoverflow.com/questions/10172753/adding-variables-in-a-regular-expression-to-make-it-dynamic-in-java <br>
+    b) https://stackoverflow.com/questions/172303/is-there-a-regular-expression-to-detect-a-valid-regular-expression <br>
+    c) https://stackoverflow.com/questions/60160/how-to-escape-text-for-regular-expression-in-java <br>
+    d) https://stackoverflow.com/questions/8534178/how-to-represent-empty-char-in-java-character-class <br>
+    e) https://stackoverflow.com/questions/3976616/how-to-find-nth-occurrence-of-character-in-a-string? <br>
+    f) https://docs.oracle.com/javase/tutorial/essential/regex/index.html <br>
+    g) https://stackoverflow.com/questions/23536133/how-do-you-match-multiple-regex-patterns-for-a-single-line-of-text-in-java/23536172 <br>
+    h) https://stackoverflow.com/questions/22252297/match-a-string-against-multiple-regex-patterns <br>
+    i) https://stackoverflow.com/questions/27666725/running-multiple-regex-patterns-on-string <br>
+    j) https://stackoverflow.com/questions/869809/combine-regexp <br>
+    k) https://www.regular-expressions.info/lookaround.html <br>
+    l) https://stackoverflow.com/questions/4389644/regex-to-match-string-containing-two-names-in-any-order <br>
+    m) https://stackoverflow.com/questions/20924693/how-to-find-words-containing-a-certain-letter-with-regular-expressions <br>
+    n) https://stackoverflow.com/questions/18643157/regex-must-contain-specific-letters-in-any-order <br>
+    o) https://stackoverflow.com/questions/5238491/check-if-string-contains-only-letters <br>
+
+    - Grid: <br>
+    a) https://stackoverflow.com/questions/43311943/prevent-content-from-expanding-grid-items <br>
+    b) https://css-tricks.com/almanac/properties/o/overflow-wrap/ <br>
+    c) https://stackoverflow.com/questions/33454533/cant-scroll-to-top-of-flex-item-that-is-overflowing-container <br>
+    d) https://developer.mozilla.org/en-US/docs/web/CSS/overflow-wrap <br>
+    e) https://developer.mozilla.org/en-US/docs/Web/CSS/word-break <br>
+    f) https://developer.mozilla.org/en-US/docs/Web/CSS/minmax() <br>
+    g) https://stackoverflow.com/questions/8083430/how-to-change-the-font-and-font-size-of-an-html-input-tag <br>
+
+
+    - XPATH: <br>
+    a) https://www.youtube.com/watch?v=3uktjWgKrtI <br>
+    b) https://stackoverflow.com/questions/16016521/how-do-i-select-child-elements-of-any-depth-using-xpath <br>
+    c) https://stackoverflow.com/questions/1604471/how-can-i-find-an-element-by-css-class-with-xpath <br>
+    d) https://stackoverflow.com/questions/6353259/how-do-i-verify-that-an-element-does-not-exist-in-selenium-2 <br>
+    e) https://stackoverflow.com/questions/23804123/selenium-gettext <br>
+    f) https://www.tutorialspoint.com/how-to-get-entered-text-from-a-textbox-in-selenium <br>
+    g) https://stackoverflow.com/questions/5856146/how-to-get-the-value-of-a-span-tag <br>
+    h) https://www.browserstack.com/guide/find-element-by-xpath-in-selenium <br>
+    i) https://stackoverflow.com/questions/18436102/selenium-findby-vs-driver-findelement <br>
+    j) https://stackoverflow.com/questions/35606708/what-is-the-difference-between-and-in-xpath <br>
+    k) https://riptutorial.com/xpath/example/6209/find-all-elements-with-certain-text <br>
+    l) https://stackoverflow.com/questions/5643323/get-xpath-for-all-the-nodes <br>
+    m) https://stackoverflow.com/questions/15077462/xpath-to-select-all-elements-with-a-specified-name/15077631 <br>
+    n) https://stackoverflow.com/questions/1022345/current-node-vs-context-node-in-xslt-xpath <br>
+    o) https://www.w3schools.com/xml/xpath_syntax.asp <br>
+    p) https://stackoverflow.com/questions/15077462/xpath-to-select-all-elements-with-a-specified-name <br>
+    q) https://stackoverflow.com/questions/43512114/how-to-use-findby-for-driver-findelementsby-xpath-size0 <br>
+    r) https://stackoverflow.com/questions/49982869/what-is-the-use-of-findbys-and-findall <br>
+    s) https://stackoverflow.com/questions/25914156/difference-between-findall-and-findbys-annotations-in-webdriver-page-factory <br>
+    t) https://stackoverflow.com/questions/35597991/how-to-select-element-from-the-list-click-on-it-go-back-to-the-list-and-select <br>
+    u) https://stackoverflow.com/questions/52667092/how-to-get-element-in-element-from-the-list-of-elements-in-java-and-selenium <br>
+    v) https://stackoverflow.com/questions/22556423/xpath-search-by-id-attribute-giving-npe-java <br>
+    w) https://stackoverflow.com/questions/3317018/xpath-check-for-non-existing-node <br>
+    x) https://stackoverflow.com/questions/36622160/xpath-select-element-if-other-not-exist <br>
+    y) https://stackoverflow.com/questions/3317018/xpath-check-for-non-existing-node <br>
+    z) http://www.zvon.org/xxl/XPathTutorial/Output/example7.html <br>
+    aa) https://stackoverflow.com/questions/10176657/xpath-count-function <br>
+    ab) https://stackoverflow.com/questions/38942850/xpath-select-div-that-contains-class-and-whose-specific-child-element-contains <br>
+    ac) https://stackoverflow.com/questions/1390568/how-can-i-match-on-an-attribute-that-contains-a-certain-string <br>
+    ad) https://stackoverflow.com/questions/1604471/how-can-i-find-an-element-by-css-class-with-xpath <br>
+    ae) https://stackoverflow.com/questions/7713797/how-to-get-css-class-name-using-selenium <br>
+    af) https://stackoverflow.com/questions/11259890/how-to-get-the-class-name-through-selenium <br>
+    ag)
+
   </div>
 
 
