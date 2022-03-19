@@ -158,22 +158,22 @@
     <div class="sub-heading">Goal</div>
     <p>
         Given a social network graph, like twitter, and an integer <em>k</em>, identify <em>k</em> nodes (user accounts)
-        that are most critical to the spread of (mis)information in the network when the source of the (mis)information
+        that are most critical to the spread of misinformation in the network when the source of the misinformation
         is known.
     </p>
 
     <div class="sub-heading">Previously</div>
     <p>
         Recall that in part 1 of the series we had looked at how we can identify the nodes critical to the spread of
-        (mis)information when there was no knowledge of the source of the spread available to us. For those scenarios we
-        treated every node as a potential source for the (mis)information spread and computed the critical nodes based
+        misinformation when there was no knowledge of the source of the spread available to us. For those scenarios we
+        treated every node as a potential source for the misinformation spread and computed the critical nodes based
         on this. <br>
         In this part we look at the case when we do have knowledge about the source of the spread of the
-        (mis)information.
-        Since the source is given, we know that the (mis)information can reach only those nodes that are connected to
+        misinformation.
+        Since the source is given, we know that the misinformation can reach only those nodes that are connected to
         the source through some path. This reduces our search space for critical nodes, allowing us to perform this
         computation much faster and with lesser memory requirements. <br>
-        A valid question arises in this case though - if we already know the source of the (mis)information spread, why
+        A valid question arises in this case though - if we already know the source of the misinformation spread, why
         not simply block/ban those accounts? Yes, you could do that. But consider a case where Twitter does not want to
         ban the account completely but keep the account active and just limit the exposure from said account.
 
@@ -187,10 +187,10 @@
     <p>
         <img src="Fig1.PNG" class="float-left" alt="Example">
         Consider the same example as the one in part 1. Suppose we knew that the node <em>v<sub>2</sub></em> was the
-        source of the (mis)information. Now if we had a critical node to remove from the network, the choice would be
+        source of the misinformation. Now if we had a critical node to remove from the network, the choice would be
         pretty clear. We would be selecting <em>v<sub>4</sub></em> as the critical node and removing it. <br> <br>
         A helpful way to think about the problem is to think of it as a game with 2 players - one player (Twitter in
-        this case) plays the role of the defender whereas the entity trying to spread (mis)information plays the role of
+        this case) plays the role of the defender whereas the entity trying to spread misinformation plays the role of
         the attacker (PRC in this case). In part 1, when we had selected critical nodes without knowledge of the source,
         it was the defender who was playing the first move by selecting the critical nodes beforehand. Since the
         defender had no knowledge of where the attacker might select the source, the defender selected the critical
@@ -200,15 +200,15 @@
         because now the defender can select the critical nodes keeping the nodes selected by the attacker in step1 in
         mind. This not only makes the computation easier, but also improves the degree to which we can contain the
         spread of misinformation (when compared to part 1). <br>
-        As you can guess, knowing the source of the (mis)information spread before hand is not at all trivial and
+        As you can guess, knowing the source of the misinformation spread before hand is not at all trivial and
         presents a completely different set of challenges.
     </p>
     <p>
     <div class="sub-heading">Advantages of this Solution over the one specified in part 1</div>
     <p>
         1) One clear advantage of this version of the algorithm over the one specified in part 1 is that this version
-        gives a larger reduction in the spread of (mis)information in the network when compared to the algo of part 1.
-        This makes it the better choice of algorithm when the source of the (mis)information spread is already known.
+        gives a larger reduction in the spread of misinformation in the network when compared to the algo of part 1.
+        This makes it the better choice of algorithm when the source of the misinformation spread is already known.
         <br>
         2) It also runs in a shorter amount of time and can compute critical nodes for a larger size of the graph when
         compared to part 1 algo (given the same amount of memory obviously).
@@ -238,10 +238,9 @@
 
     <div class="sub-heading">Selecting the Source</div>
     <p>
-        Since this version assumes that we already know the source of the (mis)information spread, we need to select a
+        Since this version assumes that we already know the source of the misinformation spread, we need to select a
         seed that we could use as the source. As stated earlier, this problem is not trivial and is, currently, outside
-        the scope of the discussion we are having. One of the options towards future work is to incorporate machine
-        learning into the algorithm to see if it improves the quality of the results. <br>
+        the scope of the discussion we are having. <br>
         For now, the selection of seed was done as follows (using a conservative approach): we looked at the user
         descriptions of all the 607525 accounts. If description contained the keywords "China" and "News" in it, we made
         the assumption that the account belonged to a news organization from China and hence could be a potential
@@ -305,8 +304,8 @@
     the disease spread, we could target the critical communities and ensure that the spread is contained by using the
     algo described in part 2. The use of this is manifold. <br><br>
 
-    So now that we have looked at ways to minimize the spread of (mis)information by playing the role of the defender,
-    what if we were trying to maximize the spread of (mis)information instead? Is there a way to do that?
+    So now that we have looked at ways to minimize the spread of misinformation by playing the role of the defender,
+    what if we were trying to maximize the spread of misinformation instead? Is there a way to do that?
     <br><br>
     <em>As it turns out, there is an algorithm for that as well.</em><br><br>
     We will be covering this in <a href="TwitterCritNodes_3.html"> part 3.</a>

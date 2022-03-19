@@ -159,37 +159,35 @@
     Links to: <a href=../../Projects/TwitterCritNodes/TwitterCritNodes_2.html>part 2</a> and <a href=../../Projects/TwitterCritNodes/TwitterCritNodes_3.html>part 3</a>
     <br>
     Part of this work is published in <a target="_blank" href="https://www.computer.org/csdl/proceedings-article/wi-iat/2020/192400a397/1uHhf7RV9Je">2020 IEEE/WIC/ACM International
-    Joint Conference on Web Intelligence and Intelligent Agent Technology (WI-IAT)</a> and can be read <a href="https://par.nsf.gov/servlets/purl/10288394">here</a>. <br>
+    Joint Conference on Web Intelligence and Intelligent Agent Technology (WI-IAT)</a> and can be <a href="https://par.nsf.gov/servlets/purl/10288394">read here</a>. <br>
     <a target="_blank" href="https://lib.dr.iastate.edu/etd/17723/">Direct download link of the Thesis</a>
   </p>
 
   <div class="sub-heading">Goal</div>
   <p>
-    Given a social network graph, like twitter, and an integer <em>k</em>, identify <em>k</em> nodes (user accounts)
-    that are most critical to the spread of (mis)information in the network when the source of the (mis)information
-    is not known.
+    Given a social network graph, like twitter, and an integer <em>k</em>, identify <em>k</em> nodes (user accounts) whose absence will maximally disrupt the flow of misinformation
+    in the network, assuming the source of misinformation is not known.
   </p>
 
   <div class="sub-heading">Motivation</div>
   <p>
     <i>
-      Suppose someone gave you the information that there might be certain nodes in a network that could try to
-      spread misinformation in the network, and your job was to pre-emptively remove a certain fixed number of
-      nodes so that the spread of misinformation in the network was minimized. Then which nodes would you remove,
-      given that you did not know the exact nodes that were going to spread the misinformation?
-    </i><br><br>
-    As of the 25th of August, there was a <a
-    href="https://en.wikipedia.org/wiki/2019_Hong_Kong_anti-extradition_bill_protests"> demonstration ongoing in
-    Hong Kong</a> against an extradition bill that had been proposed by the government of Hong Kong. During the
-    demonstrations, the government of China was accused of <a
-    href="https://www.nytimes.com/2019/08/19/technology/hong-kong-protests-china-disinformation-facebook-twitter.html">spreading
-    misinformation</a> by creating multiple fake state-backed twitter accounts that tweeted incorrect information
-    about the demonstrations. These accounts tried to paint the protestors in bad light, by primarily showing them
-    as more violent than they actually were. Twitter later released a list of 936 accounts that it had detected (and
-    later blocked) to be state-backed accounts created by PRC whose <a
-    href="https://blog.twitter.com/en_us/topics/company/2019/information_operations_directed_at_Hong_Kong.html">sole
-    purpose was to undermine the legitimacy and political positions of the protest movement on the ground</a>.
-    Twitter also reported that they shut down a network of approximately 20,000 other spammy/fake twitter accounts
+      Suppose someone gave you the information that there might be certain nodes in a network that could try to spread misinformation in the network, and your job was to
+      pre-emptively remove a certain fixed number of nodes, so that the spread of misinformation in the network was minimized. Then which nodes would you remove,
+      given that you did not know the exact nodes that were going to spread the misinformation? <br>
+    </i>
+    <br>
+    (Author's note: I am using "misinformation" as a placeholder. This series is written assuming we want to stop misinformation from spreading in a social network. But we can use
+    the same reasoning for the diffusion of any entity in a network: information in a group of people, a large scale medical infection, virus in computer networks etc.).
+
+    <br><br>
+    As of the 25th of August, there was a <a href="https://en.wikipedia.org/wiki/2019_Hong_Kong_anti-extradition_bill_protests"> demonstration ongoing in Hong Kong</a> against an
+    extradition bill that had been proposed by the government of Hong Kong. During the demonstrations, the government of China was accused of <a
+    href="https://www.nytimes.com/2019/08/19/technology/hong-kong-protests-china-disinformation-facebook-twitter.html">spreading misinformation</a> by creating multiple fake
+    state-backed twitter accounts that tweeted incorrect information about the demonstrations. These accounts tried to paint the protestors in bad light, by primarily showing them
+    as more violent than they actually were. Twitter later released a list of 936 accounts that it had detected (and later blocked) to be state-backed accounts created by PRC whose
+    <a href="https://blog.twitter.com/en_us/topics/company/2019/information_operations_directed_at_Hong_Kong.html">sole purpose was to undermine the legitimacy and political
+      positions of the protest movement on the ground</a>. Twitter also reported that they shut down a network of approximately 20,000 other spammy/fake twitter accounts
     that were created as a result of them blocking the above 936 accounts. <br>
   </p>
   <p>
@@ -203,18 +201,21 @@
     1) It was not completely proactive. By the time the account was detected as a fake account, and subsequently
     blocked, the account might have already succeeded in its goal of influencing people with its tweets.<br>
     2) Banning an account is a temporary solution. As was seen in this case, banning an account just leads to other
-    accounts being created that serve the same purpose. It's like a dog trying to chase it's own tail. <br>
+    accounts being created that serve the same purpose.
 
-    We need a better strategy to curtail the spread of (mis)information than to reactively ban them as and when they
+    <br>
+    <br>
+
+    We need a better strategy to curtail the spread of misinformation than to reactively ban them as and when they
     are deteced by the algorithms that Twitter might be running. <br>
   </p>
   <div class="sub-heading">Our Solution</div>
   <p>
     We introduce the notion of <em>critical nodes</em>. Intuitively, <em>critical nodes</em> are the nodes that are
-    critical/important to the spread of (mis)information in a given network. This implies that removal of these
-    nodes from the network would lead to maximal disruption in the spread of (mis)information. So if we can
-    inform/isolate these nodes from getting influenced by the (mis)information, we can drastically reduce the spread
-    of (mis)information in the network.
+    critical/important to the spread of misinformation in a given network. This implies that removal of these
+    nodes from the network would lead to maximal disruption in the spread of misinformation. So if we can
+    inform/isolate these nodes from getting influenced by the misinformation, we can drastically reduce the spread
+    of misinformation in the network.
   </p>
   <p>
     Consider the following simplified example:
@@ -229,7 +230,7 @@
     every tweet sent out by a user is read by and retweeted by every one the user's followers. We say that a user is
     <em>influenced</em> by a tweet if the user ends up retweeting/replying/quoting the original tweet.<br>
     In this scenario, if the objective was to influence the maximum number of users, I would select the node
-    <em>v<sub>0</sub></em> as the source to spread the (mis)information since I could reach all of the nodes in the
+    <em>v<sub>0</sub></em> as the source to spread the misinformation since I could reach all of the nodes in the
     network by selecting <em>v<sub>0</sub></em>. A natural instinct in this case would be then to select
     <em>v<sub>0</sub></em> as the critical node as well. However, note that if we selected <em>v<sub>0</sub></em> as
     the critical node and removed it from the graph, choosing a source node, <em>v<sub>3</sub></em> for example,
@@ -246,14 +247,14 @@
   <p>
   <div class="sub-heading">Advantages of our Solution</div>
   <p>
-    1) The version of the algorithm described above is completely independent of the source of the (mis)information.
+    1) The version of the algorithm described above is completely independent of the source of the misinformation.
     This means that the computation of the critical nodes in any network can be done <em>before</em> the spread of
-    (mis)information has been even detected. This opens up many new possibilities of pre-emptive action against any
-    adversary planning a co-ordinated attempt at spreading (mis)information in the netowrk. <br>
+    misinformation has been even detected. This opens up many new possibilities of pre-emptive action against any
+    adversary planning a co-ordinated attempt at spreading misinformation in the network. <br>
     2) Instead of trying to chase after the fake accounts, we can now focus on the critical nodes that we want to
     protect. This becomes our first line of defense. Once we have ensured that the critical nodes have been
     isolated, we can then run other algorithms to detect which accounts are acting as the source of the
-    (mis)information.
+    misinformation.
   </p>
   <div class="sub-heading">Experimental Setup</div>
   <p>
@@ -270,7 +271,7 @@
     The <a href=https://github.com/rgbk21/GraphManipulations>JAVA code for the parsing of the Tweet JSON object and the
     subsequent creation of the graph</a> can be found here. <br>
     The version of our algorithm applied here does not require the knowledge of the source nodes spreading the
-    (mis)information provided to us. The <a
+    misinformation provided to us. The <a
     href=https://github.com/rgbk21/Disrupting_Diffusion_By_Finding_Critical_Nodes/tree/CodeContaining_topCrit_WithoutAnySeedSetContextGiven_Exp2>C++
     code that we used for identifying the critical nodes in the network</a> can be found here.
   </p>
@@ -301,7 +302,7 @@
     important to the information diffusion </em><br>
   These are the user accounts that are unverified. It is difficult to comment on the user accounts based on their
   descriptions alone. It is difficult to gauge the identity or the leanings of these accounts, making them more
-  susceptible to tweeting out (mis)information. Some screen_names have been kept hidden in accordance with Twitter's
+  susceptible to tweeting out misinformation. Some screen_names have been kept hidden in accordance with Twitter's
   user policy. <br>
   The below table shows some of the identified nodes along with other user details
 
@@ -310,16 +311,16 @@
     <img src="Fig_NoSeedSetContext_UnVerifiedUsers.PNG" class="center-block img-fluid" alt="Example3">
   </div>
 
-  Opinion: If I were Twitter, and trying to minimize the spread of (mis)information in the network, these would be the
+  Opinion: If I were Twitter, and trying to minimize the spread of misinformation in the network, these would be the
   accounts that I would be paying closer attention to. The fact that these are unverified and seem like accounts
   belonging to normal users, these would be the accounts that would have a greater probability of being influenced by
-  (mis)information and hence should be isolated from the influence of (mis)information or prevented from tweeting out
-  (mis)information when they eventually are exposed to any. These nodes are central to preventing the spread of
-  (mis)information.
+  misinformation and hence should be isolated from the influence of misinformation or prevented from tweeting out
+  misinformation when they eventually are exposed to any. These nodes are central to preventing the spread of
+  misinformation.
 
   <br><br>
   <em>Observation 3) Accounts that are identified as critical might belong to the party trying to spread
-    (mis)information </em><br>
+    misinformation </em><br>
   One of the nodes identified as critical was the account belonging to GlobalTimesNews. This is a state media news
   outlet based in China and comes <a
   href=https://www.cnn.com/2019/08/16/asia/china-global-times-hu-xijin-hong-kong-intl-hnk/index.html>under the
@@ -330,11 +331,11 @@
   </div>
 
   This presents an entirely different problem. In this case we can presume that the account associated with
-  GlobalTimesNews might tweet out (mis)information regarding the HKProtests. In that case, we can assume
+  GlobalTimesNews might tweet out misinformation regarding the HKProtests. In that case, we can assume
   GlobalTimesNews to be a <em>source</em> of the misinformation. Recall that while stating our goal in the start of
   the article, we assumed that the source of the misinformation spread was not known. <br><br>
 
-  <em>But what if we do know the source of the (mis)information spread? Can we then better estimate the nodes that are
+  <em>But what if we do know the source of the misinformation spread? Can we then better estimate the nodes that are
     critical to the spread of the information? As it turns out, we can.</em>
   <br><br>
   We will will be covering this in <a href="TwitterCritNodes_2.html"> part 2.</a>
@@ -346,6 +347,18 @@
   [2] <a href=https://arxiv.org/pdf/1404.0900.pdf> Influence Maximization: Near-Optimal Time Complexity Meets
   Practical Efficiency </a> <br>
   [3] <a href="https://lib.dr.iastate.edu/etd/16549/">Disrupting diffusion: Critical nodes in network</a>
+
+  <br><br>
+
+  FootNote 1: One of the details that we glanced over was the probability values that are used. In the example in part
+  1, we assumed for simplicity purposes that if <em>v<sub>0</sub></em> sent out a tweet, then every follower of
+  <em>v<sub>0</sub></em> acted upon that tweet (either through retweeting, replying, or quoting) with probability 1.
+  Of course, that is not the case in the real world. For this particular study, we assumed the probability of a user
+  <em>v</em> taking an action on every tweet to be 1/indegree(<em>v</em>). This means that if a vertex <em>v</em> has
+  an indegree of 4, then <em>v</em> will be influenced by the information shared by each of the 4 vertices with a
+  probability of 1/4. In the real world, this probability will vary and will not be the same for all of the users.
+  Computing this probability exactly is way more complicated than the scope of this discussion permits, and we will
+  hence not be going into that here.
 
 </div>
 

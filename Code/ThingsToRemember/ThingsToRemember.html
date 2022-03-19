@@ -483,6 +483,11 @@
   <!--    </div>-->
 
   <div class="one-point">
+    21) Another Page:
+
+  </div>
+
+  <div class="one-point">
     21) Set up a new Linux VM: <br>
     - <a href="https://www.youtube.com/watch?v=ThsxqznrgCw">Step 1 - Youtube Link</a>. <br> Do not eject the CD
     image.
@@ -1305,12 +1310,12 @@
     - You can also use <code>super</code> to call an overridden method of a super class. In that case, the <code>super</code> call does not necessarily need to be the first
     statement in the method body.
     <div class="code-block">
-        <div class="expand-code-snip-btn border border-primary rounded">
-            <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-        </div>
-        <div class="code-snippet">
-          <script src="https://gist.github.com/rgbk21/1c5b8c3bd5a862f90fa68770e3f86646.js"></script>
-        </div>
+      <div class="expand-code-snip-btn border border-primary rounded">
+        <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+      </div>
+      <div class="code-snippet">
+        <script src="https://gist.github.com/rgbk21/1c5b8c3bd5a862f90fa68770e3f86646.js"></script>
+      </div>
     </div>
   </div>
 
@@ -1353,6 +1358,25 @@
   <div class="one-point">
     55) What is a Class Loader in Java? <br>
     - <a href="https://stackoverflow.com/questions/2424604/what-is-a-java-classloader">SO here</a>.
+  </div>
+
+  <div class="one-point">
+    56.0) Intellij being Intellij I guess? <br>
+    - Why am I seeing weird "library has broken clases path" error all of a sudden:
+    <img src="imgs/IntellijBuildErrors/BrokenSourcePathsError.png"
+         class="center-block img-fluid"
+         alt="BrokenSourcePathsError"
+         width="1200">
+    - If Intellij is showing compile errors that it cannot find the library that you have imported, one way to fix it would be to first "Reload all Gradle Projects" from the
+    "Gradle" tab in Intellij. Once done, right click on the name of the module here, and select "Rebuild Project". That fixed the compile errors.
+    <img src="imgs/IntellijBuildErrors/RebuildProject.png"
+         class="center-block img-fluid"
+         alt="RebuildProject"
+         width="400">
+    - But even if that fixed the compile errors, the "Project Structure" window still shows the errors. The way to fix them is as follows: <br>
+    - <a href="https://youtrack.jetbrains.com/issue/SCL-10756">Bug on Intellij</a> to track feature. <br>
+    - How to fix: click on the [Fix] and this should open a dropdown "Remove invalid root". That will remove the invalid path from "Libraries" tab in the above window. You can 
+    reimport the sources by following the steps <a href="https://stackoverflow.com/a/33653146/8742428">here on SO on how to tell Gradle to download all sources</a>.
   </div>
 
   <div class="one-point">
