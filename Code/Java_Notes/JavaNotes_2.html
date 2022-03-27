@@ -151,6 +151,7 @@
   <br>
   Chapter 0: <a href="#GenericsJavaTm">Generics Java <sup>TM</sup> Tutorials</a> <br>
   Chapter 4: <a href="#Generics">Generics</a> <br>
+  Chapter 1: <a href="#Ch1_GenericsBook">Introduction (Java Generics and Collection - Maurice Naftalin and Philip Wadler)</a> <br>
   Chapter 15: <a href="#CompletableFutures">Concepts behind CompletableFuture and Reactive Programming</a><br>
   Chapter 11: <a href="#MultiThreadedProg">Multithreaded Programming</a><br>
   Chapter 6: <a href="#Threads">Threads</a><br>
@@ -192,9 +193,8 @@
 
       <p class="inline-heading">Some commonly used terms</p>: <br>
       <p class="inline-heading">Type Parameter and Type Argument</p>: Many developers use the terms "type parameter" and "type argument" interchangeably, but these terms are not
-      the same. When
-      coding, one provides type arguments in order to create a parameterized type. Therefore, the <code>T</code> in <code>Foo&lt;T&gt;</code> is a type parameter and the
-      String in <code>Foo&lt;String&gt;</code> is a type argument. This lesson observes this definition when using these terms. <br>
+      the same. When coding, we provide type arguments in order to create a parameterized type. Therefore, the <code>T</code> in <code>Foo&lt;T&gt;</code> is a type parameter and
+      the String in <code>Foo&lt;String&gt;</code> is a type argument. This lesson observes this definition when using these terms. <br>
       <p class="inline-heading">Generic Type Invocation</p>: To reference the generic <i>Box</i> class from within your code, you must perform a generic type invocation, which
       replaces T with some concrete
       value, such as Integer. <code>Box&lt;Integer&gt; integerBox</code> is an example of this. Similar to how you would pass an argument to a method invocation, you pass a
@@ -264,12 +264,12 @@
       - The primary thing that you have to keep in mind is that although <code>Integer</code> is a subtype of <code>Number</code>, <code>List&lt;Integer&gt;</code> is not a
       subtype of <code>List&lt;Number&gt;</code>. The below code snippet provides an example of this:
       <div class="code-block">
-          <div class="expand-code-snip-btn border border-primary rounded">
-              <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-          </div>
-          <div class="code-snippet">
-            <script src="https://gist.github.com/rgbk21/5af39aac8712faf5949ddd38516fb5fe.js"></script>
-          </div>
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/5af39aac8712faf5949ddd38516fb5fe.js"></script>
+        </div>
       </div>
     </div>
 
@@ -591,6 +591,110 @@
 
   </div>
 
+  <hr>
+  <div id="Ch1_GenericsBook" class="chapter">Chapter 1: Introduction</div>
+  <hr>
+
+  <div class="textual-content">
+    <div class="sub-heading">"New" features introduced in Java</div>
+    <div>
+      - These are some of the features we will be looking at in this chapter: <br>
+      a) Generics <br>
+      b) Boxing and Unboxing <br>
+      c) For-Each <br>
+      d) Generic methods and variables
+    </div>
+
+    <div class="sub-heading">Generics</div>
+    <div>
+      - An interface or a class can be declared to take one or more <i>type parameters</i>. These are written in angle brackets. These parameters need to be supplied when you
+      declare a variable belonging to the class, or when you create a new instance of the class. <br>
+      - Consider the following example of code using generics vs using raw usage. Without generics, the type parameters are omitted, but you must explicitly cast whenever an
+      element is extracted from the list.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/cd1524a6e72162879fc86975b08fb224.js"></script>
+        </div>
+      </div>
+
+      - In fact, the bytecode compiled from the two sources above will be identical. We say that generics are implemented by <i>erasure</i>, because the types
+      <code>List&lt;Integer&gt;</code>, <code>List&lt;String&gt;</code>, and <code>List&lt;List&lt;String&gt;&gt;</code> are all represented at runtime by the same type -
+      <code>List</code>. We also use <i>erasure</i> to describe the process that converts the first program to the second program. <br>
+      - Note that this is not how it is implemented in other languages, as mentioned in the <a href="https://stackoverflow.com/a/879914/8742428">SO answer here</a>. .NET generics
+      actually create new types - a <code>List&lt;String&gt;</code> in C# is a different type than a <code>List&lt;Int&gt;</code> . In Java, under the covers, they are the same
+      thing.
+      - a <code>List&lt;Object&gt;</code>. This means that if you have one of each, you can't look at them at runtime and see what they were declared as - only what they are now.
+      <br>
+      - The term <i>erasure</i> is a slight misnomer (a wrong or inaccurate use of a name or term) because although the process erases type parameters, it introduces casts. Hence,
+      generics implicitly performs the same cast that is done explicitly when we are not using generics. The guarantee is that the implicit casts added by generics never fail. The
+      fine-print on the guarantee is that it applies only when no <i>unchecked warnings</i> have been issued by the compiler (?). <br>
+      - A consequence of implementing generics by erasure is that array types differ in key ways from its parameterized types. Executing <code>new String[<i>size</i>]</code>
+      allocates an array, and stores in that array an indication that it's components are of type <code>String</code>. (Note that here they are talking about storing the type in
+      the byte-code/code available during runtime rather than the code at compile time). In contrast, executing <code>new ArrayList&lt;String&gt;()</code> allocates a list, but
+      does not store in the list any indication of the type of its elements. In the jargon we say that, Java <i>reifies</i> array component types but does not reify list element
+      types (or other generic types). <br>
+      - Also note that type parameters can only be bound to reference types, and not to primitive types. What this means is that you can declare a <code>List&lt;Integer&gt;</code>
+      but not of <code>List&lt;int&gt;</code>.
+    </div>
+
+
+    <div class="sub-heading">Boxing and Unboxing</div>
+    <div>
+      - Every type in java is either a <i>reference</i> type or a <i>primitive</i> type. A reference type is any class, interface, or array type. All reference types are subtypes
+      of class <code>Object</code>, and any variable of the reference type can be set to <code>null</code>. All eight primitive types in java have corresponding class of a
+      reference type. <br>
+      - Conversion of a primitive type to the corresponding reference type is called <i>boxing</i> and conversion of the reference type to the corresponding primitive type is
+      called <i>unboxing</i>. <br>
+      - One subtlety of boxing and unboxing is that <code> == </code> is defined differently on primitive and reference types. On type <code>int</code>, it is defined by the
+      equality of values, and on type <code>Integer</code>, it is defined by object identity. <br>
+      - Consider the following example:
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/2132abcc2e381380ce5db426dab1556f.js"></script>
+        </div>
+      </div>
+
+      - Another subtlety to keep in mind is that boxed values can be cached. Caching is required when boxing an <code>int</code> or <code>short</code> between -128 and 127, a
+      <code>char</code> value between <code>'\u0000'</code> and <code>'\u007f'</code>, a <code>byte</code>, or a <code>boolean</code>. <br>
+      - This leads to the following scenario. Taking the same code example as above, we now calculate the sum of 1,2,3,4. We compare the results using the
+      <i>calculateIntegerSum</i>, but now we see that it prints that the two results are equal, as opposed to the above case where we got the result as false. This is because 10 is
+      smaller than 128, so boxing the value 10 always returns exactly the same object. In general, it is not specified whether boxing the same value twice should return identical
+      or distinct objects, so the inequality assertion shown earlier may either fail or succeed depending on the implementation.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/01990c8a36dfaa3485f897b1c2fbfd53.js"></script>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-heading">Generic Methods</div>
+    <div>
+      - Here is a method that accepts an <code>array</code> of any type and converts it into a <code>List</code>. The method <i>convertArraysToList</i> accepts an array of type
+      <code>T[]</code> and returns a list of type <code>List&lt;T&gt;</code>, and does so for <i>any</i> type <code> T </code>. This is indicated by writing <code>&lt;T&gt;</code>
+      at the beginning of the method signature, which declares <code> T </code> as a new type variable. A method which declares a type variable in this way is called a <i>generic
+      method</i>. The scope of the type variable <code> T </code> is local to the method itself. <code> T </code> may appear in the method signature and the method body, but not
+      outside the method.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/a965de3f508e8239ba285365e107cd0f.js"></script>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
 
   <hr>
   <div id="CompletableFutures" class="chapter">Chapter 15: Concepts behind CompletableFuture and Reactive Programming</div>
