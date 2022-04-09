@@ -703,10 +703,368 @@
   <hr>
 
   <div class="textual-content">
-    <div class="sub-heading">"New" features introduced in Java</div>
+    <div class="sub-heading">Subtyping</div>
     <div>
+      - In java, one type is a <i>subtype</i> of another if they are related by an <code>implements</code> or <code>extends</code> clause. Here are some examples. The presence of
+      the <i>same</i> type parameter <code>E</code> in the below examples means that the relations hold only if the <i>same</i> type parameters are used in both lhs and rhs of a
+      row. So if the <code>E</code> on the rhs is <code>Number</code>, the <code>E</code> on the lhs HAS to be <code>Number</code> as well. It cannot be <code>Integer</code> or
+      <code>Double</code>.
+      <table class="table table-bordered table-sm">
+        <!--        <thead>-->
+        <!--        <tr>-->
+        <!--          <th><p>Value</p></th>-->
+        <!--          <th><p>Description</p></th>-->
+        <!--          <th><p>Description</p></th>-->
+        <!--        </tr>-->
+        <!--        </thead>-->
+        <tbody>
+        <tr>
+          <td><code>Integer</code></td>
+          <td>is a subtype of</td>
+          <td><code>Number</code></td>
+        </tr>
+        <tr>
+          <td><code>Double</code></td>
+          <td>is a subtype of</td>
+          <td><code>Number</code></td>
+        </tr>
+        <tr>
+          <td><code>ArrayList&lt;E&gt;</code></td>
+          <td>is a subtype of</td>
+          <td><code>List&lt;E&gt;</code></td>
+        </tr>
+        <tr>
+          <td><code>List&lt;E&gt;</code></td>
+          <td>is a subtype of</td>
+          <td><code>Collection&lt;E&gt;</code></td>
+        </tr>
+        <tr>
+          <td><code>Collection&lt;E&gt;</code></td>
+          <td>is a subtype of</td>
+          <td><code>Iterable&lt;E&gt;</code></td>
+        </tr>
+        </tbody>
+      </table>
+      - But also note that:
+      <table class="table table-bordered table-sm">
+        <!--        <thead>-->
+        <!--        <tr>-->
+        <!--          <th><p>Value</p></th>-->
+        <!--          <th><p>Description</p></th>-->
+        <!--          <th><p>Description</p></th>-->
+        <!--        </tr>-->
+        <!--        </thead>-->
+        <tbody>
+        <tr>
+          <td><code>List&lt;Integer&gt;</code></td>
+          <td>is NOT a subtype of</td>
+          <td><code>List&lt;Number&gt;</code></td>
+        </tr>
+        <tr>
+          <td><code>List&lt;Integer&gt;</code></td>
+          <td>IS a subtype of</td>
+          <td><code>List&lt;? extends Number&gt;</code></td>
+        </tr>
+        <tr>
+          <td><code>List&lt;Object&gt;</code></td>
+          <td>IS a subtype of</td>
+          <td><code>List&lt;? super Number&gt;</code></td>
+        </tr>
+        <tr>
+          <td><code>Integer[]</code></td>
+          <td>IS a subtype of</td>
+          <td><code>Number[]</code></td>
+        </tr>
+        </tbody>
+      </table>
 
+      - Subtyping is transitive, meaning that if one type is a subtype of a second, and the second is a subtype of a third, then the first is a subtype of the third. What this
+      means is, <code>List&lt;E&gt;</code> is a subtype of <code>Collection&lt;E&gt;</code>, <code>Collection&lt;E&gt;</code> is a subtype of <code>Iterable&lt;E&gt;</code>, hence
+      <code>List&lt;E&gt;</code> is a subtype of <code>Iterable&lt;E&gt;</code>. <br>
+      - If one type is a subtype of another, we also say that the second is a <i>supertype</i> of the first. <br>
+      - Every reference type is a subtype of <code>Object</code>, and <code>Object</code> is a supertype of every reference type. We also say, trivially, that every type is a
+      subtype of itself.
     </div>
+
+
+    <div class="sub-heading">Substitution principle</div>
+    <div>
+      - A variable of a given type may be assigned a value of any subtype of that type, and a method with a parameter of a given type may be invoked with an argument of any subtype
+      of that type. What this means is that wherever a value of one type is expected, we can provide a value of any subtype of that type. <br>
+      - Take the <code>Collection</code> class for example which has a method <code>add</code> which takes a parameter of type <code>E</code>. The substitution principle says that
+      if we have a <code>List&lt;Number&gt;</code>, we can add a <code>Decimal</code> or an <code>Integer</code> to it. This is because <code>Decimal</code> and
+      <code>Integer</code> are subtypes of <code>Number</code>.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/ab8bf2630919ace64f32ad84fc8c8816.js"></script>
+        </div>
+      </div>
+
+      - Like we mentioned in the table above, it may seem reasonable to expect that since <code>Integer</code> is a subtype of <code>Number</code>, it follows that
+      <code>List&lt;Integer&gt;</code> is a subtype of <code>List&lt;Number&gt;</code>. But this is NOT the case. Consider the following example. For the same reason, we cannot
+      consider <code>List&lt;Number&gt;</code> to be a subtype of <code>List&lt;Integer&gt;</code> either.
+      <div id="code-example-Ch2substitution" class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/1e915b63017ba8efe43e20a26f5f4756.js"></script>
+        </div>
+      </div>
+
+      - So <code>List&lt;Integer&gt;</code> is not a subtype of <code>List&lt;Number&gt;</code>, nor is <code>List&lt;Number&gt;</code> a subtype of
+      <code>List&lt;Integer&gt;</code>; all we have is the trivial case, where <code>List&lt;Integer&gt;</code> is a subtype of itself, and we also have that
+      <code>List&lt;Integer&gt;</code> is a subtype of <code>Collection&lt;Integer&gt;</code>. <br>
+      - Arrays behave quite differently though. An <code>Integer[]</code> IS a subtype of <code>Number[]</code>. <br>
+    </div>
+
+    <div class="sub-heading">Wildcard with <code>extends</code></div>
+    <div>
+      - Another member in the <code>Collection</code> interface is <code>addAll</code>. It adds all the members of one collection to another collection. This is what the method
+      on the interface looks like:
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/74f4c3680e020cce792e08089b9ec1f2.js"></script>
+        </div>
+      </div>
+
+      - Clearly, given a collection of type <code>E</code>, it is ok to add another collection with elements of type <code>E</code>. <br>
+      - The quizzical phrase <code>? extends E</code> means that it is also OK to add all members of a collection with elements of any type that is a <i>subtype</i> of
+      <code>E</code>. The <code>?</code> is called a <i>wildcard</i>, since it stands for <i>some</i> type that is a <i>subtype</i> of <code>E</code>. If the method signature for
+      <code>addAll</code> had been written without the wildcard, then the calls to add lists of integers and doubles to a list of numbers would not have been permitted; you would
+      only have been able to add a list that was explicitly declared to be a list of numbers.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/e77078ad2847906cd1da7fcd53d8a3b4.js"></script>
+        </div>
+      </div>
+
+      - We can also use wildcards when declaring variables. Consider the below example. Note the line that is now producing the compile error. It is different from the line that
+      was producing the compile error in the <a href="#code-example-Ch2substitution">substitution code example we saw earlier</a>. Earlier, it was the fourth line that was throwing
+      the error, because <code>List&lt;Integer&gt;</code> could not be assigned to <code>List&lt;Number&gt;</code>. And the fifth line was fine, since 3.14 is of type
+      <code>Double</code>, we could add it to a <code>List&lt;Number&gt;</code>. However, now the fourth line is fine because <code>List&lt;Integer&gt;</code> is a subtype of
+      <code>List&lt;? extends Number&gt;</code>, but the fifth line causes a compile error, because you cannot add a <code>Double</code> to a
+      <code>List&lt;? extends Number&gt;</code>, <i>since it might be a list of some other subtype of </i> <code>Number</code>. Because, similar to the argument we made during the
+      substitution example, if the line that is producing the compile error actually compiled, then we would have ended up adding a <code>double</code> value to
+      <i>extendedNumber</i> which is actually pointing to the same reference of the <code>List&lt;Number&gt;</code> <i>integers</i>, and hence we would have added a
+      <code>double</code> to a <code>List&lt;Integer&gt;</code>, and that would have created a black hole. <br>
+      - In general, if a structure contains elements with a type of the form <code>? extends E</code>, we can get elements out of the structure, but we cannot put elements into the
+      structure. To put elements <i>into</i> a structure we need another kind of wildcard, that we are going to see in the next section.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/46bc49e6f5d77f18d0d7bd05e375bcba.js"></script>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="sub-heading">Wildcard with <code>super</code></div>
+    <div>
+      - Here is a method that copies into a destination list, elements of all the elements of the source. <br>
+      - The quizzical phrase <code>? super T</code> means that the destination list may have elements of any type that is a <i>supertype</i> of <code>T</code>, just as the source
+      list may have elements of any type that is a <i>subtype</i> of <code>T</code>. <br>
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/5a728ae20cbad733cbd2096af58b4caf.js"></script>
+        </div>
+      </div>
+
+      - The method <i>copy</i> itself could have been declared with several different possible signatures:
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/238c25378c2e685ca385e43f32ec1195.js"></script>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="sub-heading">The Get and Put Principle</div>
+    <div>
+      - It may be good practice to insert wildcards whenever possible, but how do you decide <i>which</i> wildcard to use? Where should you use <code>extends</code>, where should
+      you use <code>super</code>, and where is it inappropriate to use a wildcard at all? We use the <i>Get and Put</i> principle to determine which is appropriate. <br>
+      - The principle states that: use an <code>extends</code> wildcard when you only <i>get</i> values out of a structure, use a <code>super</code> wildcard when you only
+      <i>put</i> values into a structure, and don't use a wildcard when you <i>both</i> get and put. <br>
+      - We already saw this principle at work in the signature of the <i>copy</i> method above. The method <i>gets</i> value out of the source <i>source</i>, so it is declared with
+      an <code>extends</code> wildcard. And it <i>puts</i> values into the destination <i>destination</i>, hence it is declared with the <code>super</code> wildcard.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/4cf04451d0aa794ba5daa93bf2ead813.js"></script>
+        </div>
+      </div>
+
+      - When you use an iterator over a collection, you are effectively getting values out of a structure. Hence you use an <code>extends</code> wildcard. For example, here is a
+      method that takes a collection of numbers, converts each into a <code>double</code>, sums them up and returns the answer in the form of a <code>double</code>. Here we are
+      looking at the case when we are not using the <code>? extends Number</code> in the parameter of the method. Hence we can only call the method with
+      <code>List&lt;Number&gt;</code>. The others generate compile error. This should not surprise you any more.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/7c0617e7462fb5dee5c23c364207f3a3.js"></script>
+        </div>
+      </div>
+
+      - Now when we actually use the <code>? extends Number</code> in the method declaration, we can pass in <code>List&lt;Integer&gt;</code> and <code>List&lt;Double&gt;</code>
+      as well.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/b547b83d64d85091f50f66ccf7030db9.js"></script>
+        </div>
+      </div>
+
+      - On the other side, whenever we use the <code>add</code> method, we <i>put</i> values into a structure, so we use a <code>super</code> wildcard. Here is a method that takes
+      a collection of <code>Integer</code>s, an integer <i>n</i>, and puts the numbers from 1 to n into the collection. We start with the method declaration not having
+      <code>? super Integer</code> in the method declaration. As expected, compile fails when trying to call the <i>count</i> method with anything other than
+      <code>Collection&lt;Integer&gt;</code>.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/c69e16f9a9bef6c9842fdfea5b415bd9.js"></script>
+        </div>
+      </div>
+
+      - Now we add <code>? super Integer</code> to the method declaration. Again as expected, all the three method calls now compile.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/5fc2edfa3742798339456afd2f7a0e4e.js"></script>
+        </div>
+      </div>
+
+      - Whenever you both <i>put</i> values into and <i>get</i> values out of the <i>same</i> structure, you should not use a wildcard. In the following example, the collection is
+      passed to <i>both</i> <i>sum</i> and <i>count</i>. Hence, the type parameter should <code>Collection&lt;? extends Number&gt;</code> and
+      <code>Collection&lt;? super Integer&gt;</code>. Hence the method declaration can only be either <code>Collection&lt;Number&gt;</code> or
+      <code>Collection&lt;Integer&gt;</code>. We went with <code>Collection&lt;Number&gt;</code>. Since there is no wildcard, the argument must be a collection of
+      <code>Number</code>.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/5eda0c40aabd5c13c3750fc1d5546d88.js"></script>
+        </div>
+      </div>
+
+      - The Get and Put Principle also works the other way around. If an <code>extends</code> wildcard is present, pretty much all you will be able to do is get but not put values
+      of that type; and if a <code>super</code> wildcard is present, pretty much all you will be able to do is put but not get values of that type.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/6afcee51d52e50efe5865898718515df.js"></script>
+        </div>
+      </div>
+
+      - Each of the rules in the Get and Put principle have one exception to each of them. <br>
+      - You cannot put anything into a type declared with an <code>extends</code> wildcard - except for the value <code>null</code>, which belongs to every reference type. <br>
+      - Similarly, you cannot get anything out from a type declared with a <code>super</code> wildcard - except for a value of type <code>Object</code>, which is a supertype of
+      every reference type. <br>
+      - You may find it helpful to think of <code>? extends T</code> as containing every type in an interval bounded by the type of <code>null</code> below and by <code>T</code>
+      above (where the type of <code>null</code> is a subtype of every reference type). Similarly, you may think of <code>? super T</code> as containing every type in an interval
+      bounded by <code>T</code> below and by <code>Object</code> above.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/02bd00a20a3c8b4fd8566c525aade3ca.js"></script>
+        </div>
+      </div>
+
+      - It is tempting to think that an <code>extends</code> wildcard ensures immutability, but it does not. As we saw earlier, given a list of type
+      <code>List&lt;? extends Number&gt;</code>, you may still add <code>null</code> values to the list. You may also remove list elements (using <code>remove</code>,
+      <code>removeAll</code>, or <code>retainAll</code>) or permute the list (using <code>swap</code>, <code>sort</code>, or <code>shuffle</code> in the convenience class
+      Collections). If you want to ensure that a list cannot be changed, use the method <code>unmodifiableList</code> in the class Collection.
+    </div>
+
+
+    <div class="sub-heading">Arrays</div>
+    <div>
+      - In Java, array subtyping is <i>covariant</i>, meaning that type <code>S[]</code> is considered to be a subtype of <code>T[]</code> whenever <code>S</code> is a subtype of
+      <code>T</code>. <br>
+      - The below example compiles without any errors. It is only when you try to run the program that you get a <code>ArrayStoreException</code>. So what causes the error? <br>
+      - When an array is allocated (as on the first line), it is tagged with its <i>reified type</i> (a run-time representation of its component type, in this case,
+      <code>Integer</code>). And every time an array is assigned into (as on the third line), an array store exception is raised if the reified type is not compatible with the
+      assigned value (in this case, a <code>double</code> cannot be stored into an array of <code>Integer</code>).
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/39b2b281d9bbcbf38787cb1e188f25c5.js"></script>
+        </div>
+      </div>
+
+      - In contrast, the subtyping relation for generics is invariant, meaning that type <code>List&lt;S&gt;</code> is not considered to be a subtype of <code>List&lt;T&gt;</code>,
+      except in the trivial case where <code>S</code> and <code>T</code> are identical. We have seen this already, here is the above example, but now using a <code>List</code>.
+      Hence, while using <code>List</code> we are able to detect the problem at compile-time itself.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/ea6c2a468d68f39f510b3a3e81c4c057.js"></script>
+        </div>
+      </div>
+
+      - Wildcards reintroduce covariant subtyping for generics, in that type <code>List&lt;S&gt;</code> is considered to be a subtype of <code>List&lt;? extends T&gt;</code> when
+      <code>S</code> is a subtype of <code>T</code>.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/2afa64bb7523f7806f583760eab3b574.js"></script>
+        </div>
+      </div>
+
+      - Wildcards also introduce <i>contravariant subtyping</i> for generics, in that type <code>List&lt;S&gt;</code> is considered to be a <i>subtype</i> of
+      <code>List&lt;? super T&gt;</code> when <code>S</code> is a supertype of <code>T</code> (as opposed to a subtype). Arrays do not support contravariant subtyping. <br>
+      - Choose <code>Collection</code>s over <code>array</code>s because collections are more flexible and they provide many more methods compared to the standard array. On the
+      other hand, arrays of primitive type are much more efficient since they don't involve boxing; and assignments into such an array need not check for an array store exception,
+      because arrays of primitive type do not have subtypes. And despite the check for array store exceptions, even arrays of reference type may be more efficient than collection
+      classes with the current generation of compilers, so you may want to use arrays in crucial inner loops. But this might change in the future(?). <br>
+      - In some sense, covariant arrays are an artifact of the lack of generics in earlier versions of Java. Once you have generics, covariant arrays are probably the wrong design
+      choice, and the only reason for retaining them is backward compatibility. <br>
+      - Wow. For many purposes, it may be sensible to consider arrays a deprecated type.
+    </div>
+
+
+    <div class="sub-heading">Wildcards Versus Type Parameters</div>
+    <div>
+      -
+    </div>
+
   </div>
 
   <hr>

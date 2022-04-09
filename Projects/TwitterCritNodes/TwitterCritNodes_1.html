@@ -160,7 +160,12 @@
     <br>
     Part of this work is published in <a target="_blank" href="https://www.computer.org/csdl/proceedings-article/wi-iat/2020/192400a397/1uHhf7RV9Je">2020 IEEE/WIC/ACM International
     Joint Conference on Web Intelligence and Intelligent Agent Technology (WI-IAT)</a> and can be <a href="https://par.nsf.gov/servlets/purl/10288394">read here</a>. <br>
-    <a target="_blank" href="https://lib.dr.iastate.edu/etd/17723/">Direct download link of the Thesis</a>
+    <a target="_blank" href="https://lib.dr.iastate.edu/etd/17723/">Direct download link of the Thesis</a> <br>
+    - If you are interested in the topic, another paper might interest you as well <a href="https://arxiv.org/abs/2010.13304">Measuring the Impact of Influence on Individuals:
+    Roadmap to Quantifying Attitude</a> that appeared in 2020 IEEE/ACM International Conference on Advances in Social Networks Analysis and Mining (ASONAM). (This was another paper
+    by our research lab. My contribution in this was limited to a couple of graph visualizations, the actual research was done by Xiaoyun and Madhavan). While the critical nodes
+    paper studies the problem of dealing with the spread of misinformation in Online Social Networks (OSN), the second paper, Quantifying Attitude, deals with studying the problem
+    of creation of echo chambers in OSNs.
   </p>
 
   <div class="sub-heading">Goal</div>
@@ -177,12 +182,20 @@
       given that you did not know the exact nodes that were going to spread the misinformation? <br>
     </i>
     <br>
-    (Author's note: I am using "misinformation" as a placeholder. This series is written assuming we want to stop misinformation from spreading in a social network. But we can use
-    the same reasoning for the diffusion of any entity in a network: information in a group of people, a large scale medical infection, virus in computer networks etc.).
+    (Author's note 1: I am using "misinformation" as a placeholder. This series is written assuming we want to stop misinformation from spreading in a social network. But we can
+    use the same reasoning for the diffusion of any entity in a network: information in a group of people, a large scale medical infection, virus in computer networks etc.). <br>
+    (Author's note 2: With the recent advances in ML/AI it might easy to conflate this problem with a ML one. That is not what we are trying to do. We are framing the problem as a
+    pure graph problem. To be somewhat precise, the problem is this: Given a directed graph, <code>G = (V, E)</code>, where <code>&#8704; e &#8712; E</code>, <code>e</code> is
+    assigned a probability <code>p<sub>uv</sub> &#8712; [0,1]</code> where <code>p<sub>uv</sub></code> represents the probability of reaching <code>v</code> when at <code>u</code>.
+    Assume an unknown set of nodes <code>S &#8834; V</code> that are going to spread misinformation in <code>G</code>. Then the
+    problem is to find a set of nodes <code>T</code>, where <code>T &#8834; V &#8726; S</code>, <code>|T| = k</code>, such that the spread of misinformation in a new graph
+    <code>G' = (V', E')</code> - that is created by removing the set of nodes <code>T</code> and the edges incident upon it from the earlier graph <code>G</code> - is minimized
+    <code>&#8704; S &#8834; V'</code>. Just to give a scale of the numbers, in the example that we will be considering, <code>|V| = 600,000</code>, <code>|E| = 990,000</code>,
+    <code>k = 20</code>).
 
     <br><br>
-    As of the 25th of August, there was a <a href="https://en.wikipedia.org/wiki/2019_Hong_Kong_anti-extradition_bill_protests"> demonstration ongoing in Hong Kong</a> against an
-    extradition bill that had been proposed by the government of Hong Kong. During the demonstrations, the government of China was accused of <a
+    As of the 25th of August 2019, there was a <a href="https://en.wikipedia.org/wiki/2019_Hong_Kong_anti-extradition_bill_protests"> demonstration ongoing in Hong Kong</a> against
+    an extradition bill that had been proposed by the government of Hong Kong. During the demonstrations, the government of China was accused of <a
     href="https://www.nytimes.com/2019/08/19/technology/hong-kong-protests-china-disinformation-facebook-twitter.html">spreading misinformation</a> by creating multiple fake
     state-backed twitter accounts that tweeted incorrect information about the demonstrations. These accounts tried to paint the protestors in bad light, by primarily showing them
     as more violent than they actually were. Twitter later released a list of 936 accounts that it had detected (and later blocked) to be state-backed accounts created by PRC whose
@@ -191,31 +204,26 @@
     that were created as a result of them blocking the above 936 accounts. <br>
   </p>
   <p>
-    The scale of this problem cannot be overstated. These kinds of attempts at spreading misinformation on social
-    media have become much too common and as the pervasiveness of social media increases, the problem only promises
-    to keep getting worse.
+    The scale of this problem cannot be overstated. These kinds of attempts at spreading misinformation on social media have become much too common and as the pervasiveness of
+    social media increases, the problem only promises to keep getting worse.
   </p>
   <p>
-    Although Twitter did end up banning many of the fake accounts, there are 2 major problems with the approach they
-    followed: <br>
-    1) It was not completely proactive. By the time the account was detected as a fake account, and subsequently
-    blocked, the account might have already succeeded in its goal of influencing people with its tweets.<br>
-    2) Banning an account is a temporary solution. As was seen in this case, banning an account just leads to other
-    accounts being created that serve the same purpose.
+    Although Twitter did end up banning many of the fake accounts, there are 2 major problems with the approach they followed: <br>
+    1) It was not completely proactive. By the time the account was detected as a fake account, and subsequently blocked, the account might have already succeeded in its goal of
+    influencing people with its tweets.<br>
+    2) Banning an account is a temporary solution. As was seen in this case, banning an account just leads to other accounts being created that serve the same purpose.
 
     <br>
     <br>
 
-    We need a better strategy to curtail the spread of misinformation than to reactively ban them as and when they
-    are deteced by the algorithms that Twitter might be running. <br>
+    We need a better strategy to curtail the spread of misinformation than to reactively ban them as and when they are detected by the algorithms that Twitter might be running.
+    <br>
   </p>
   <div class="sub-heading">Our Solution</div>
   <p>
-    We introduce the notion of <em>critical nodes</em>. Intuitively, <em>critical nodes</em> are the nodes that are
-    critical/important to the spread of misinformation in a given network. This implies that removal of these
-    nodes from the network would lead to maximal disruption in the spread of misinformation. So if we can
-    inform/isolate these nodes from getting influenced by the misinformation, we can drastically reduce the spread
-    of misinformation in the network.
+    We introduce the notion of <em>critical nodes</em>. Intuitively, <em>critical nodes</em> are the nodes that are critical/important to the spread of misinformation in a given
+    network. This implies that removal of these nodes from the network would lead to maximal disruption in the spread of misinformation. So if we can inform/isolate these nodes
+    from getting influenced by the misinformation, we can drastically reduce the spread of misinformation in the network.
   </p>
   <p>
     Consider the following simplified example:
@@ -224,24 +232,24 @@
     <img src="Fig1.PNG" class="float-left" alt="Example">
     Objective 1: Identify one critical node. Remove all incident edges on this critical node,<br>
     Objective 2: Identify one source node that can reach the largest number of nodes in the resulting graph.<br><br>
-    An edge from <em>v<sub>0</sub></em> to <em>v<sub>2</sub></em> implies that <em>v<sub>2</sub></em> follows
-    <em>v<sub>0</sub></em> on twitter. <em>p<sub>0,2</sub></em> is the probability that a tweet of <em>v<sub>0</sub></em>
-    is retweeted by <em>v<sub>2</sub></em>. For the sake of this example, assume every probability to be 1. That is,
-    every tweet sent out by a user is read by and retweeted by every one the user's followers. We say that a user is
-    <em>influenced</em> by a tweet if the user ends up retweeting/replying/quoting the original tweet.<br>
-    In this scenario, if the objective was to influence the maximum number of users, I would select the node
-    <em>v<sub>0</sub></em> as the source to spread the misinformation since I could reach all of the nodes in the
-    network by selecting <em>v<sub>0</sub></em>. A natural instinct in this case would be then to select
-    <em>v<sub>0</sub></em> as the critical node as well. However, note that if we selected <em>v<sub>0</sub></em> as
-    the critical node and removed it from the graph, choosing a source node, <em>v<sub>3</sub></em> for example,
-    would still end up influencing <em>n + 1</em> nodes (<em>u<sub>1</sub></em> to <em>u<sub>n</sub></em> +
-    <em>v<sub>4</sub></em>). <br>
-    Now note what happens if we select <em>v<sub>4</sub></em> as the critical node instead. Removing this node
-    disconnects most of the nodes from one another. The node that can now influence the largest number of nodes is
-    <em>v<sub>0</sub></em> which is only 3 (<em>v<sub>1</sub></em>, <em>v<sub>2</sub></em>, and
-    <em>v<sub>3</sub></em>). Compare this with when we selected <em>v<sub>0</sub></em> as the critical node. Hence
-    choosing <em>v<sub>4</sub></em> as the critial node is the correct option over here. <br>
-    Identifiying critical nodes such as these forms the basis of our algorithm.
+    An edge from <em>v<sub>0</sub></em> to <em>v<sub>2</sub></em> implies that <em>v<sub>2</sub></em> follows <em>v<sub>0</sub></em> on twitter. <em>p<sub>0,2</sub></em> is the
+    probability that a tweet of <em>v<sub>0</sub></em> is retweeted by <em>v<sub>2</sub></em>. For the sake of this example, assume every probability to be 1. That is,
+    every tweet sent out by a user is read by and retweeted by every one the user's followers. We say that a user is <em>influenced</em> by a tweet if the user ends up
+    retweeting/replying/quoting the original tweet. In this scenario, if the objective was to influence the maximum number of users, I would select the node <em>v<sub>0</sub></em>
+    as the source to spread the misinformation since I could reach all of the nodes in the network by selecting <em>v<sub>0</sub></em>. <br>
+
+    Coming to our objective 1 that we stated above, a natural instinct in this case would be then
+    to select <em>v<sub>0</sub></em> as the critical node as well. But now let's consider Objective 2. Note that if we selected <em>v<sub>0</sub></em> as the critical node and
+    removed it from the graph, choosing a source node, <em>v<sub>3</sub></em> for example, would still end up influencing <em>n + 1</em> nodes (<em>u<sub>1</sub></em> to <em>u<sub>n</sub></em>
+    + <em>v<sub>4</sub></em>). <br>
+
+    Now note what happens if we select <em>v<sub>4</sub></em> as the critical node instead as the node in Objective 1. Removing this node disconnects most of the nodes from one
+    another. Coming to objective 2 now, the node that can now influence the largest number of nodes is <em>v<sub>0</sub></em> which is only 3 (<em>v<sub>1</sub></em>,
+    <em>v<sub>2</sub></em>, and <em>v<sub>3</sub></em>). Compare this with when we selected <em>v<sub>0</sub></em> as the critical node. Hence choosing <em>v<sub>4</sub></em> as
+    the critical node is the correct option over here. <br>
+
+    So the idea is that if we isolate <em>v<sub>4</sub></em> from the misinformation, we have <i>maximally</i> disrupted the spread of misinformation in the network from <i>any</i>
+    possible node. Identifying critical nodes such as these forms the basis of our algorithm.
   </p>
 
   <p>
