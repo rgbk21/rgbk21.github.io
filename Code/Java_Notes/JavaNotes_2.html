@@ -703,6 +703,16 @@
   <hr>
 
   <div class="textual-content">
+    <div class="sub-heading">Links to go through</div>
+    <div>
+      - https://stackoverflow.com/questions/3290261/java-generics-required-capture67-of <br>
+      - https://stackoverflow.com/questions/11499989/java-generics-capture-list <br>
+      - https://stackoverflow.com/questions/11500385/how-does-the-jls-specify-that-wildcards-cannot-be-formally-used-within-methods <br>
+      - https://stackoverflow.com/questions/5361513/reference-is-ambiguous-with-generics <br>
+      - https://stackoverflow.com/questions/60798067/required-type-capture-of-provided-t <br>
+      - https://stackoverflow.com/questions/40217285/java-generics-capture-of <br>
+    </div>
+
     <div class="sub-heading">Subtyping</div>
     <div>
       - In java, one type is a <i>subtype</i> of another if they are related by an <code>implements</code> or <code>extends</code> clause. Here are some examples. The presence of
@@ -937,9 +947,9 @@
         </div>
       </div>
 
-      - On the other side, whenever we use the <code>add</code> method, we <i>put</i> values into a structure, so we use a <code>super</code> wildcard. Here is a method that takes
-      a collection of <code>Integer</code>s, an integer <i>n</i>, and puts the numbers from 1 to n into the collection. We start with the method declaration not having
-      <code>? super Integer</code> in the method declaration. As expected, compile fails when trying to call the <i>count</i> method with anything other than
+      - On the other side, whenever we use the <code>add</code> method on a collection, we <i>put</i> values into a structure, so we use a <code>super</code> wildcard. Here is a
+      method that takes a collection of <code>Integer</code>s, an integer <i>n</i>, and puts the numbers from 1 to n into the collection. We start with the method declaration not
+      having <code>? super Integer</code> in the method declaration. As expected, compile fails when trying to call the <i>count</i> method with anything other than
       <code>Collection&lt;Integer&gt;</code>.
       <div class="code-block">
         <div class="expand-code-snip-btn border border-primary rounded">
@@ -1062,9 +1072,111 @@
 
     <div class="sub-heading">Wildcards Versus Type Parameters</div>
     <div>
-      -
+      - Consider the following two methods on the <code>Collection</code> interface: <code>contains</code> and <code>containsAll</code>. <br>
+      - The <code>contains</code> method is defined as follows: <code>boolean contains(Object o);</code> <br>
+      - The <code>containsAll</code> method is defined as follows: <code>boolean containsAll(Collection&lt;?&gt; c);</code> <br>
+      - The first method does not even use generics. What this means is that it is perfectly legal code to search for a <code>String</code> in a <code>List&lt;Integer&gt;</code>
+      for example. <br>
+      - The second example introduces something new. The abbreviated type <code>Collection&lt;?&gt;</code> stands for <code>Collection&lt;? extends Object&gt;</code>. Extending
+      <code>Object</code> is one of the most common uses of wildcards, so it makes sense to provide a short form for writing it. <br>
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/601b7a625fa2c2fcd6633c583c30de50.js"></script>
+        </div>
+      </div>
+
+      - You could rewrite the <code>Collection</code> interface to make use of type parameters instead of wildcards (as we did in the above example). <br>
+      - So now we can check whether a list of objects contains a list of integers, but not the other way around. This option of using types should be the preferred one, and not the
+      one that the JDK library uses.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/9d02d179a7d58b35035dc16cb3e9abee.js"></script>
+        </div>
+      </div>
     </div>
 
+    <div class="sub-heading">Wildcard Capture</div>
+    <div>
+      - When a generic method is invoked, the type parameter may be chosen to match the unknown type represented by a wildcard. This is called <i>wildcard capture</i>. (Question:
+      What? Basically means we are going to replace the wildcard <code>?</code> with a type parameter <code>T</code>) <br>
+      - Consider the method <code>reverse</code> in the <code>Collections</code> class that accepts a <code>List</code> of any type and reverses it. It has the following two
+      method signatures that are equivalent: <br>
+      a) <code>public static void reverse(List&lt;?&gt; list);</code> <br>
+      b) <code>public static void &lt;T&gt; reverse(List&lt;T&gt; list);</code> <br>
+      - The library uses the wildcard one. Let's see the difference in the implementation of the two method signatures.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/edb8538df86ef994656ea3d050dfe7b6.js"></script>
+        </div>
+      </div>
+
+      - Another reason to know about wildcard capture is that it can show up in error messages. In general, each occurrence of a wildcard is taken to stand for some unknown type.
+      If the compiler prints an error message containing this type, it is referred to as <code>capture of ?</code>. Hence, if you see the quizzical phrase <code>capture of ?</code>
+      in an error message, it will come from a wildcard type. Even if there are two distinct wildcards, the compiler will print the type associated with each as
+      <code>capture of ?</code>. Bounded wildcards generate names that are even more long-winded, such as <code>capture of ? extends Number</code>. <br>
+      - Question: How does method overloading work with wildcards/generics? <br>
+    </div>
+
+    <div class="sub-heading">Restrictions on Wildcards</div>
+    <div>
+      - Wildcards may not appear at the top level in class instance creation expressions (<code>new</code>), in explicit type parameters in generic method calls, or in supertypes
+      (<code>extends</code> and <code>implements</code>).
+
+      <br>
+      <br>
+
+      <p class="inline-heading">Instance Creation</p>: In a class instance creation expression, if the type is a parameterized type, then none of the type parameters may be
+      wildcards. Only top-level parameters in instance creation are prohibited from containing wildcards. Nested wildcards are permitted. <br>
+      - This restriction of not being able to instantiate classes with wildcard types was necessry because the Java designers had in mind that every wildcard type is shorthand for
+      some ordinary type, so they believed that ultimately every object should be created with an ordinary type. <br>
+      - You can think of the relation between wildcard and ordinary types as the relation between interface and classes. You cannot instantiate interfaces, can you? So you cannot
+      instantiate wildcard types either.
+
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/f5804e7562081584de8d07b40e624c89.js"></script>
+        </div>
+      </div>
+
+      <br>
+
+      <p class="inline-heading">Generic Method Calls</p>: If a generic method call includes explicit type parameters, those type parameters must not be wildcards.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/1a24a600ccaaa7f9aa414adaf22c1dc9.js"></script>
+        </div>
+      </div>
+
+      <br>
+
+      <p class="inline-heading">Supertypes</p>: When a class instance is created, it invokes the initializer for its supertype. Hence, any restriction that applies to instance
+      creation must also apply to supertypes. In a class declaration, if the supertype or any superinterface has type parameters, these types must not be wildcards.
+      <div class="code-block">
+          <div class="expand-code-snip-btn border border-primary rounded">
+              <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+          </div>
+          <div class="code-snippet">
+            <script src="https://gist.github.com/rgbk21/8f0151f6b40ee9a0cf3bd5575896f115.js"></script>
+          </div>
+      </div>
+
+      -  Lmao get rekt noob.
+    </div>
   </div>
 
   <hr>
