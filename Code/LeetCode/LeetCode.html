@@ -1,592 +1,592 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-            crossorigin="anonymous">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-            crossorigin="anonymous">
-    </script>
-    <link rel="stylesheet"
-          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+          integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
           crossorigin="anonymous">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-            crossorigin="anonymous">
-    </script>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9QJ5D3X353"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+          integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+          crossorigin="anonymous">
+  </script>
+  <link rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+          integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+          crossorigin="anonymous">
+  </script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9QJ5D3X353"></script>
+  <script>
+      window.dataLayer = window.dataLayer || [];
 
-        function gtag() {
-            dataLayer.push(arguments);
-        }
+      function gtag() {
+          dataLayer.push(arguments);
+      }
 
-        gtag('js', new Date());
+      gtag('js', new Date());
 
-        gtag('config', 'G-9QJ5D3X353');
-    </script>
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="../../globalStyles.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LeetCode Notes</title>
+      gtag('config', 'G-9QJ5D3X353');
+  </script>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../../globalStyles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LeetCode Notes</title>
 </head>
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
 
-    <div class="navbar-header">
-        <a href="../../index.html" class="navbar-brand">rgbk21</a>
-    </div>
+  <div class="navbar-header">
+    <a href="../../index.html" class="navbar-brand">rgbk21</a>
+  </div>
 
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"><span
-            class="navbar-toggler-icon"></span>
-    </button>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"><span
+    class="navbar-toggler-icon"></span>
+  </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="nav navbar-nav">
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
-                   aria-expanded="false">
-                    Projects
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="../../Projects/TwitterCritNodes/TwitterCritNodes_1.html">Identifying
-                        Critical Nodes on Twitter</a>
-                    <a class="dropdown-item" href="../../Projects/isRelatedTo/isRelatedTo.html">isRelatedTo</a>
-                    <div class="dropdown-divider"></div>
-                </div>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
-                   aria-expanded="false">
-                    HTML Projects
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="../../WordleCheater/index.html">Wordle Cheater</a>
-                    <a class="dropdown-item" href="../../Pig_Game/index.html">2-Player Pig Game</a>
-                    <a class="dropdown-item" href="../../ImageGallery/ImageGallery.html">Image Gallery</a>
-                    <a class="dropdown-item" href="../../RGB_Guesser_Game/RGB.html">RGB Guesser Game</a>
-                    <a class="dropdown-item" href="../../ToDoList/todo.html">To-Do List</a>
-                    <div class="dropdown-divider"></div>
-                </div>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
-                   aria-expanded="false">
-                    Notes
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="../../Lectures/COMS_631/COMS_631_index.html">COMS 631</a>
-                    <a class="dropdown-item" href="../../Lectures/COMS_535/COMS_535_index.html">COMS 535</a>
-                    <a class="dropdown-item" href="../../Lectures/EffectiveJava/EffectiveJava.html">Effective Java</a>
-                    <a class="dropdown-item" href="../../Lectures/DI/DI.html">Dependency Injection</a>
-                    <div class="dropdown-divider"></div>
-                </div>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
-                   aria-expanded="false">
-                    Code
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="../../Code/ThingsToRemember/ThingsToRemember.html">Things To
-                        Remember</a>
-                    <a class="dropdown-item" href="../../Code/Java_Notes/JavaNotes.html">Java Notes</a>
-                    <a class="dropdown-item" href="../../Code/Java_Notes/JavaNotes_2.html">Java Notes 2</a>
-                    <a class="dropdown-item" href="../../Code/LeetCode/LeetCode.html">LeetCode Notes</a>
-                    <a class="dropdown-item" href="../../Code/Applying_Java_Notes/ApplyingJava_Notes.html">ApplyingJava Notes</a>
-                    <a class="dropdown-item" href="../../Code/JavaScript/JavaScript.html">JavaScript Notes</a>
-                    <a class="dropdown-item" href="../../Code/HTML_CSS/HTML_CSS_Basics.html">HTML & CSS Notes</a>
-                    <a class="dropdown-item" href="../../Code/SQL/SQL.html">SQL Notes</a>
-                    <a class="dropdown-item" href="../../Code/Spring/Spring.html">Spring Notes</a>
-                    <a class="dropdown-item" href="../../Code/Kafka/Kafka.html">Kafka Notes</a>
-                    <a class="dropdown-item" href="../../Code/Angular/Angular.html">Angular</a>
-                    <a class="dropdown-item" href="../../Code/Hibernate/Hibernate.html">Hibernate</a>
-                    <div class="dropdown-divider"></div>
-                </div>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
-                   aria-expanded="false">
-                    In Another Life
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="../../InAnotherLife/Chapter1/Chapter1.html">Chapter 1</a>
-                    <div class="dropdown-divider"></div>
-                </div>
-            </li>
-        </ul>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="nav navbar-nav">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+           aria-expanded="false">
+          Projects
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="../../Projects/TwitterCritNodes/TwitterCritNodes_1.html">Identifying
+            Critical Nodes on Twitter</a>
+          <a class="dropdown-item" href="../../Projects/isRelatedTo/isRelatedTo.html">isRelatedTo</a>
+          <div class="dropdown-divider"></div>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+           aria-expanded="false">
+          HTML Projects
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="../../WordleCheater/index.html">Wordle Cheater</a>
+          <a class="dropdown-item" href="../../Pig_Game/index.html">2-Player Pig Game</a>
+          <a class="dropdown-item" href="../../ImageGallery/ImageGallery.html">Image Gallery</a>
+          <a class="dropdown-item" href="../../RGB_Guesser_Game/RGB.html">RGB Guesser Game</a>
+          <a class="dropdown-item" href="../../ToDoList/todo.html">To-Do List</a>
+          <div class="dropdown-divider"></div>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+           aria-expanded="false">
+          Notes
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="../../Lectures/COMS_631/COMS_631_index.html">COMS 631</a>
+          <a class="dropdown-item" href="../../Lectures/COMS_535/COMS_535_index.html">COMS 535</a>
+          <a class="dropdown-item" href="../../Lectures/EffectiveJava/EffectiveJava.html">Effective Java</a>
+          <a class="dropdown-item" href="../../Lectures/DI/DI.html">Dependency Injection</a>
+          <div class="dropdown-divider"></div>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+           aria-expanded="false">
+          Code
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="../../Code/ThingsToRemember/ThingsToRemember.html">Things To
+            Remember</a>
+          <a class="dropdown-item" href="../../Code/Java_Notes/JavaNotes.html">Java Notes</a>
+          <a class="dropdown-item" href="../../Code/Java_Notes/JavaNotes_2.html">Java Notes 2</a>
+          <a class="dropdown-item" href="../../Code/LeetCode/LeetCode.html">LeetCode Notes</a>
+          <a class="dropdown-item" href="../../Code/Applying_Java_Notes/ApplyingJava_Notes.html">ApplyingJava Notes</a>
+          <a class="dropdown-item" href="../../Code/JavaScript/JavaScript.html">JavaScript Notes</a>
+          <a class="dropdown-item" href="../../Code/HTML_CSS/HTML_CSS_Basics.html">HTML & CSS Notes</a>
+          <a class="dropdown-item" href="../../Code/SQL/SQL.html">SQL Notes</a>
+          <a class="dropdown-item" href="../../Code/Spring/Spring.html">Spring Notes</a>
+          <a class="dropdown-item" href="../../Code/Kafka/Kafka.html">Kafka Notes</a>
+          <a class="dropdown-item" href="../../Code/Angular/Angular.html">Angular</a>
+          <a class="dropdown-item" href="../../Code/Hibernate/Hibernate.html">Hibernate</a>
+          <div class="dropdown-divider"></div>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+           aria-expanded="false">
+          In Another Life
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="../../InAnotherLife/Chapter1/Chapter1.html">Chapter 1</a>
+          <div class="dropdown-divider"></div>
+        </div>
+      </li>
+    </ul>
 
 
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item active"><a class="nav-link" href="https://github.com/rgbk21">GitHub</a></li>
-            <li class="nav-item active"><a class="nav-link" href="https://www.linkedin.com/in/raj-gaurav-ballabh-kumar-97002058/">LinkedIn</a></li>
-            <li class="nav-item active"><a class="nav-link" href="https://www.instagram.com/wobblyframes/">Instagram</a></li>
-            <li class="nav-item active"><a class="nav-link" href="https://www.facebook.com/SomeRandomThoughts">Facebook</a></li>
-        </ul>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active"><a class="nav-link" href="https://github.com/rgbk21">GitHub</a></li>
+      <li class="nav-item active"><a class="nav-link" href="https://www.linkedin.com/in/raj-gaurav-ballabh-kumar-97002058/">LinkedIn</a></li>
+      <li class="nav-item active"><a class="nav-link" href="https://www.instagram.com/wobblyframes/">Instagram</a></li>
+      <li class="nav-item active"><a class="nav-link" href="https://www.facebook.com/SomeRandomThoughts">Facebook</a></li>
+    </ul>
 
-    </div>
+  </div>
 </nav>
 
 <div class="container">
 
-    <button id='load-all-gists' type="button" class="btn btn-outline-primary">Show all Gists!</button>
+  <button id='load-all-gists' type="button" class="btn btn-outline-primary">Show all Gists!</button>
 
+  <div>
+    This page contains my notes from LeetCode<br>
+  </div>
+
+  <br>
+
+  Index:
+  <br>
+  Chapter 1: <a href="#BinarySearch">Binary Search</a> <br>
+  Chapter 2: <a href="#Arrays">Arrays</a> <br>
+  Chapter 3: <a href="#Arrays&Strings">Arrays, Lists, and Strings</a> <br>
+  Chapter 4: <a href="#Hashing">Hash Tables</a> <br>
+  Chapter 5: <a href="#CollectionsJava8">The Collections Class Utilities</a> <br>
+
+  <hr>
+  <div id="BinarySearch" class="chapter">Binary Search</div>
+  <hr>
+
+  <div class="textual-content">
+    <div class="sub-heading">Binary Search problems from LeetCode</div>
     <div>
-        This page contains my notes from LeetCode<br>
+      - Input array should be sorted. Input array may or may not contain duplicate elements. <br>
+      - Note that in the case of a sorted array, finding an element is going to take O(log n) time. But update operations like inserting an element or deleting an element are
+      going to take O(n) time, because you would need to shift the remaining elements. If you want to perform both find and update in O(log n) time, then you are going to
+      have to use a balanced binary search tree. <br>
+      - <a href="https://leetcode.com/explore/learn/card/binary-search/">Binary Search card on LC</a>. <br>
+      - Read <a href="https://en.wikipedia.org/wiki/Binary_search_algorithm#Duplicate_elements">here on wikipedia for what happens with binary search in the case that the
+      input array contains duplicate elements. </a> Basically, the procedure may return any index whose element is equal to the target value, even if there are duplicate
+      elements in the array. For example, if the array to be searched was [1,2,3,4,4,5,6,7] and the target was 4, then it would be correct for the algorithm to either return
+      the 4th (index 3) or 5th (index 4) element. The regular procedure would return the 4th element (index 3) in this case. It does not always return the first duplicate
+      (consider [1,2,4,4,4,5,6,7] which still returns the 4th element). However, it is sometimes necessary to find the leftmost element or the rightmost element for a target
+      value that is duplicated in the array. In the above example, the 4th element is the leftmost element of the value 4, while the 5th element is the rightmost element of
+      the value 4. <br>
+      <p class="inline-heading">Binary Search using Template 1</p>: The key thing to understand in this template is that - Template #1 is used to search for an element or
+      condition which can be determined by <i>accessing a single index</i> in the array. The search condition can be determined without having to look at the neighboring
+      elements. No post-processing required because at each step, you are checking to see if the element has been found. If you reach the end, then you know the element is
+      not found. <br>
+      - Take note of the looping condition in the while loop and the changing of the <i>left</i> and the <i>right</i> variables in each loop iteration. Since we are using
+      <code> &lt;= </code> in the while loop, we have to change <i>left</i> and <i>right</i> accordingly. Contrast this with the way that we are doing the same thing in the
+      case of Template #3 code below.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/d5434284cd4ea63b22244709e0cd00a8.js"></script>
+        </div>
+      </div>
+      - <p class="inline-heading">Binary Search using Template 3</p>: This is used to search for an element or condition which requires accessing the current index and its
+      immediate left and right neighbor's index in the array. Loop/Recursion ends when you have 2 elements left. Need to assess if the remaining elements meet the condition.
+      Again, take note of the looping condition in the while loop. At the point of termination of the while loop, <code>left + 1 == right</code>. Also note that in this
+      version of Binary Search, <i>left</i> and <i>right</i> are set to <i>mid</i>. Compare the same with the Template #1 being used above.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/fd73df0e75eb0ceae81393deaf296cec.js"></script>
+        </div>
+      </div>
+      - Comparison of the three templates is <a href="https://leetcode.com/explore/learn/card/binary-search/136/template-analysis/935/">present here on LC</a>. <br>
+      - Explanation for <a href="https://ai.googleblog.com/2006/06/extra-extra-read-all-about-it-nearly.html">why we are using l+(r-l)/2 instead of (l+r)/2</a>. <br>
+      - In binary search we find out the mid point and decide to either search on the left or right depending on some <i>condition</i>. Figure out the <i>condition</i>, and
+      you should be good. <br>
+      - <a href="https://leetcode.com/problems/guess-number-higher-or-lower/">Guess Number Higher or Lower</a> to get you started. <br>
+      - <a href="https://leetcode.com/problems/first-bad-version/">First Bad Version</a>. Note how the solution of this problem is different from the above problem. You are
+      kind of doing the same thing. In the above guessing number problem you are using Template#1, but in this problem you have to use Template#3. <br>
+      - <a href="https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/">Find minimum in rotated sorted array</a> <br>
+      - <a href="https://leetcode.com/problems/search-in-rotated-sorted-array/">Search in Rotated Sorted Array</a>. Good practice problem. Both templates, Template#1 and
+      Template#3 are used in the code. <br>
+      - <a href="https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/">Find First and Last Position of Element in Sorted Array</a>. Good
+      problem to show how to handle duplicate elements in the case of binary search. If duplicate elements are present in the array, find the leftmost and the rightmost
+      occurrences of the element. <br>
+      - <a href="https://leetcode.com/problems/find-k-closest-elements/">Find K Closest Elements</a>. Good question. Hence you have decided not to do it?<br>
+      - <a href="https://leetcode.com/problems/closest-binary-search-tree-value/">Closest Binary Search Tree Value</a>. You are given a Binary Search Tree now, and you have
+      to recursively iterate through the tree in order to find the element that you are looking for. <br>
+      - <a href="https://leetcode.com/problems/search-in-a-sorted-array-of-unknown-size/">Search in a Sorted Array of Unknown Size</a>. How do you do a binary search in a
+      sorted array whose size you do not know? <br>
+      - <a href="https://leetcode.com/problems/find-peak-element/">Find Peak Element</a>. Did not do this either. <br>
+    </div>
+  </div>
+
+  <hr>
+  <div id="Arrays" class="chapter">Arrays</div>
+  <hr>
+
+  <div class="textual-content">
+    <div class="sub-heading">Array problems from LeetCode</div>
+    <div>
+      - <a href="https://leetcode.com/explore/learn/card/fun-with-arrays/">Card on LeetCode is present here</a>. <br>
+      - General Tips to keep in mind: <br>
+      a) If iterating from the front of the array is not immediately giving an algo, try iterating from the end of the array instead. <br>
+      b) If the algo is becoming too complicated when you are trying to do everything in one pass of the array, try splitting the tasks into multiple passes of the array. Use
+      2 or 3 for-loops to make multiple passes over the array and see if it simplifies the solution. <br>
+      c) Two-Pointer technique can be very useful. Think of the two-pointer technique as a <i>readIdx</i> and a <i>writeIdx</i>. You generally increment the <i>readIdx</i>
+      every loop because you would want to evaluate the next element of the array. If the current element being read satisfies certain conditions, then in that case you will
+      copy the element and put it at the <i>writeIdx</i>, and increment both <i>writeIdx</i> and <i>readIdx</i> after that. At no point will the <i>writeIdx</i> ever become
+      greater than the <i>readIdx</i> and hence we will never overwrite any elements that we have not read yet. Refer it <a
+      href="https://leetcode.com/explore/learn/card/fun-with-arrays/511/in-place-operations/3255/">here on LC</a>.<br>
+      d) General questions to consider: Can it contain duplicate values? Can it contain negative values? <br>
+      - Java always initializes empty Array slots to null if the Array contains <i>objects</i>, or to default values if it contains <i>primitive types</i>. For example, the
+      array <code>int[]</code> would contain the default value of 0 for each element, <code>float[]</code> would contain default values of 0.0, and <code>boolean[]</code>
+      would contain default values of false. <br>
+      - <a href="https://leetcode.com/problems/max-consecutive-ones/">Max Consecutive Ones</a>. Note when you are counting the maximum value of max ones in an array, you
+      might have been given an array like this: [0,1,1,1,1]. In this case, you would end up never updating the <i>overallMaxNumOfOnes</i> variable. Hence, do not forget to
+      return the Max of the two numbers.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/107e4fa8a0aedd7c65ed51c073bb9df5.js"></script>
+        </div>
+      </div>
+      - <a href="https://leetcode.com/problems/find-numbers-with-even-number-of-digits/">Find Numbers with Even Number of Digits</a>. Note how we can count the number of
+      digits in a number using log to the base 10 in Approach 2. Also note how we are counting the number of digits by extracting each digit in approach 1.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/f3b37408daedb86acf18cc10fefef152.js"></script>
+        </div>
+      </div>
+    </div>
+    - <a href="https://leetcode.com/problems/squares-of-a-sorted-array/">Squares of a Sorted Array</a>. Uses two pointer technique - going inside-out. Once you hit either the
+    left or right end of the array, you need to copy the remaining elements on the other side to the target array. <br>
+    - Inserting an element at the start of the array (index 0) <a href="https://leetcode.com/explore/learn/card/fun-with-arrays/525/inserting-items-into-an-array/3244/">takes
+    O(n) time</a> since each of the elements need to be shifted to the right by 1 position. <br>
+    - <a href="https://leetcode.com/problems/duplicate-zeros/">Duplicate Zeros</a>. <br>
+    - <a href="https://leetcode.com/problems/merge-sorted-array/">Merge Sorted Array</a>. Good problem to show the advantages of iterating from the end of the array. <br>
+    - <a href="https://leetcode.com/problems/remove-element/">Remove Element</a>. <br>
+    - <a href="https://leetcode.com/problems/remove-duplicates-from-sorted-array/">Remove Duplicates from Sorted Array</a>. Go over this. If you are running a loop on the array
+    using two-pointer technique, and then you are running another loop within that loop that is making use of the pointers, then you need to make sure that the inner loop
+    traversal bounds are satisfied and do not throw out of bounds exception.
+    <div class="code-block">
+      <div class="expand-code-snip-btn border border-primary rounded">
+        <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+      </div>
+      <div class="code-snippet">
+        <script src="https://gist.github.com/rgbk21/778356cd51ece9313ccdec5f3578d5f3.js"></script>
+      </div>
+    </div>
+    - <a href="https://leetcode.com/problems/check-if-n-and-its-double-exist/">Check If N and Its Double Exist</a> <br>
+    - <a href="https://leetcode.com/problems/valid-mountain-array/">Valid Mountain Array</a>
+    <div class="code-block">
+      <div class="expand-code-snip-btn border border-primary rounded">
+        <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+      </div>
+      <div class="code-snippet">
+        <script src="https://gist.github.com/rgbk21/a127f75389c00492b5863422968788e8.js"></script>
+      </div>
+    </div>
+    - <a href="https://leetcode.com/problems/replace-elements-with-greatest-element-on-right-side/">Replace Elements with Greatest Element on Right Side</a> <br>
+    - <a href="https://leetcode.com/problems/height-checker/">Height Checker</a>. Uses Counting Sort. Counting Sort explained <a href="https://youtu.be/Nz1KZXbghj8?t=1923">here
+    on MIT OCW lecture</a>. <br>
+    - <a href="https://leetcode.com/problems/max-consecutive-ones-ii/">Max Consecutive Ones II</a>. Still to do. <br>
+    - <a href="https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/">Find All Numbers Disappeared in an Array</a>. Uses a good technique of making in-place
+    changes to an array. <br>
+  </div>
+
+  <hr>
+  <div id="Arrays&Strings" class="chapter">Arrays, Lists, and Strings</div>
+  <hr>
+
+  <div class="textual-content">
+    - <a href="https://leetcode.com/explore/learn/card/array-and-string/">Card on LC here</a> <br>
+
+    <div class="sub-heading">Arrays Basic Operations</div>
+    <div>
+      - <a href="https://stackoverflow.com/questions/11596884/on-java-7s-equals-and-deepequals">Difference between <code>equals</code> and <code>deepEquals</code></a> on SO.
+      <br>
+      - <a href="https://stackoverflow.com/questions/8777257/equals-vs-arrays-equals-in-java">Difference between <code>equals</code> and <code>Arrays.equals</code></a> on SO.
+      Note that <code>array1.equals(array2)</code> is the same as <code>array1 == array2</code>, i.e. is it the same array. <code>Arrays.equals(array1, array2)</code>
+      compares the contents of the arrays. Note that <code>Arrays.equals()</code> does not work as expected for multidimensional arrays, it only compares items of the 1st
+      dimension for reference equality. That's why we have <code>Arrays.deepEquals(Object[], Object[])</code>. <code>Arrays.deepEquals(Object[], Object[])</code> is a
+      recursive call. Two arrays are equal if they contain the same elements in the same order. Two arrays are also equal if both of them are <code>null</code>.
+      <br>
+      - Remember that <code>Objects.equals(arg1, arg2)</code> internally simply calls <code>arg1.equals(arg2)</code> method of <i>arg1</i> (the first argument passed into the
+      Objects.equals method). Keep that in mind when you see the behavior of <code>equals</code> and <code>Objects.equals</code> in the case of arrays. <br>
+      - Sorting an array, without having to convert it into a <code>List</code>, is a story of its own. <a href="https://www.baeldung.com/java-sorting-arrays">Read here on
+      Baeldung</a>.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/b465605ba187d4ebf42a7a8286b165b1.js"></script>
+        </div>
+      </div>
     </div>
 
-    <br>
-
-    Index:
-    <br>
-    Chapter 1: <a href="#BinarySearch">Binary Search</a> <br>
-    Chapter 2: <a href="#Arrays">Arrays</a> <br>
-    Chapter 3: <a href="#Arrays&Strings">Arrays, Lists, and Strings</a> <br>
-    Chapter 4: <a href="#Hashing">Hash Tables</a> <br>
-    Chapter 5: <a href="#CollectionsJava8">The Collections Class Utilities</a> <br>
-
-    <hr>
-    <div id="BinarySearch" class="chapter">Binary Search</div>
-    <hr>
-
-    <div class="textual-content">
-        <div class="sub-heading">Binary Search problems from LeetCode</div>
-        <div>
-            - Input array should be sorted. Input array may or may not contain duplicate elements. <br>
-            - Note that in the case of a sorted array, finding an element is going to take O(log n) time. But update operations like inserting an element or deleting an element are
-            going to take O(n) time, because you would need to shift the remaining elements. If you want to perform both find and update in O(log n) time, then you are going to
-            have to use a balanced binary search tree. <br>
-            - <a href="https://leetcode.com/explore/learn/card/binary-search/">Binary Search card on LC</a>. <br>
-            - Read <a href="https://en.wikipedia.org/wiki/Binary_search_algorithm#Duplicate_elements">here on wikipedia for what happens with binary search in the case that the
-            input array contains duplicate elements. </a> Basically, the procedure may return any index whose element is equal to the target value, even if there are duplicate
-            elements in the array. For example, if the array to be searched was [1,2,3,4,4,5,6,7] and the target was 4, then it would be correct for the algorithm to either return
-            the 4th (index 3) or 5th (index 4) element. The regular procedure would return the 4th element (index 3) in this case. It does not always return the first duplicate
-            (consider [1,2,4,4,4,5,6,7] which still returns the 4th element). However, it is sometimes necessary to find the leftmost element or the rightmost element for a target
-            value that is duplicated in the array. In the above example, the 4th element is the leftmost element of the value 4, while the 5th element is the rightmost element of
-            the value 4. <br>
-            <p class="inline-heading">Binary Search using Template 1</p>: The key thing to understand in this template is that - Template #1 is used to search for an element or
-            condition which can be determined by <i>accessing a single index</i> in the array. The search condition can be determined without having to look at the neighboring
-            elements. No post-processing required because at each step, you are checking to see if the element has been found. If you reach the end, then you know the element is
-            not found. <br>
-            - Take note of the looping condition in the while loop and the changing of the <i>left</i> and the <i>right</i> variables in each loop iteration. Since we are using
-            <code> &lt;= </code> in the while loop, we have to change <i>left</i> and <i>right</i> accordingly. Contrast this with the way that we are doing the same thing in the
-            case of Template #3 code below.
-            <div class="code-block">
-                <div class="expand-code-snip-btn border border-primary rounded">
-                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-                </div>
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/d5434284cd4ea63b22244709e0cd00a8.js"></script>
-                </div>
-            </div>
-            - <p class="inline-heading">Binary Search using Template 3</p>: This is used to search for an element or condition which requires accessing the current index and its
-            immediate left and right neighbor's index in the array. Loop/Recursion ends when you have 2 elements left. Need to assess if the remaining elements meet the condition.
-            Again, take note of the looping condition in the while loop. At the point of termination of the while loop, <code>left + 1 == right</code>. Also note that in this
-            version of Binary Search, <i>left</i> and <i>right</i> are set to <i>mid</i>. Compare the same with the Template #1 being used above.
-            <div class="code-block">
-                <div class="expand-code-snip-btn border border-primary rounded">
-                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-                </div>
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/fd73df0e75eb0ceae81393deaf296cec.js"></script>
-                </div>
-            </div>
-            - Comparison of the three templates is <a href="https://leetcode.com/explore/learn/card/binary-search/136/template-analysis/935/">present here on LC</a>. <br>
-            - Explanation for <a href="https://ai.googleblog.com/2006/06/extra-extra-read-all-about-it-nearly.html">why we are using l+(r-l)/2 instead of (l+r)/2</a>. <br>
-            - In binary search we find out the mid point and decide to either search on the left or right depending on some <i>condition</i>. Figure out the <i>condition</i>, and
-            you should be good. <br>
-            - <a href="https://leetcode.com/problems/guess-number-higher-or-lower/">Guess Number Higher or Lower</a> to get you started. <br>
-            - <a href="https://leetcode.com/problems/first-bad-version/">First Bad Version</a>. Note how the solution of this problem is different from the above problem. You are
-            kind of doing the same thing. In the above guessing number problem you are using Template#1, but in this problem you have to use Template#3. <br>
-            - <a href="https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/">Find minimum in rotated sorted array</a> <br>
-            - <a href="https://leetcode.com/problems/search-in-rotated-sorted-array/">Search in Rotated Sorted Array</a>. Good practice problem. Both templates, Template#1 and
-            Template#3 are used in the code. <br>
-            - <a href="https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/">Find First and Last Position of Element in Sorted Array</a>. Good
-            problem to show how to handle duplicate elements in the case of binary search. If duplicate elements are present in the array, find the leftmost and the rightmost
-            occurrences of the element. <br>
-            - <a href="https://leetcode.com/problems/find-k-closest-elements/">Find K Closest Elements</a>. Good question. Hence you have decided not to do it?<br>
-            - <a href="https://leetcode.com/problems/closest-binary-search-tree-value/">Closest Binary Search Tree Value</a>. You are given a Binary Search Tree now, and you have
-            to recursively iterate through the tree in order to find the element that you are looking for. <br>
-            - <a href="https://leetcode.com/problems/search-in-a-sorted-array-of-unknown-size/">Search in a Sorted Array of Unknown Size</a>. How do you do a binary search in a
-            sorted array whose size you do not know? <br>
-            - <a href="https://leetcode.com/problems/find-peak-element/">Find Peak Element</a>. Did not do this either. <br>
+    <div id="LC_Lists" class="sub-heading">List Basic Operations</div>
+    <div>
+      - Refer how to use a <code>Comparator</code> <a href="../ThingsToRemember/ThingsToRemember.html#num40">here</a>. Also keep in
+      mind everything we went over regarding removing/modifying elements in a list while iterating over the same list like <a
+      href="../ThingsToRemember/ThingsToRemember.html#num38.2">we discussed over here</a>. <br>
+      - <a href="https://stackoverflow.com/questions/1075656/simple-way-to-find-if-two-different-lists-contain-exactly-the-same-elements">How to check if two lists have the
+      same elements</a> on SO. <br>
+      - <a href="https://stackoverflow.com/questions/5283047/intersection-and-union-of-arraylists-in-java">Calculating the intersection and union of array lists</a> on SO.
+      Traditionally, unions and intersections defined only for sets, not lists. So it's not exactly clear what you mean by union of two lists for example. For instance, what
+      happens if there are duplicate elements in one of the list? Are both of the elements included in the union. What if duplicate elements in intersection. All of these are
+      things that you will have to think about before you try performing set operations on lists. <br>
+      - Note that a <code>List</code> does not allow inserting an element at any arbitrary index by using the <code>add(int index, E element)</code> method. If the List is
+      empty, you can use only 0 as the index to add the first element to the list. If you have five elements in a <code>List</code>, you must use indexes between 0 and 5 to
+      add a new element to the <code>List</code>. The index from 0 to 4 will insert an element between existing elements. The index of 5 will append the element to the end of
+      the <code>List</code>. This implies that a <code>List</code> must grow sequentially. You cannot have a sparse <code>List</code> such as a <code>List</code> with first
+      element and tenth element, leaving second to ninth elements non-populated. This is the reason that a <code>List</code> is also known as a sequence. <br>
+      - The size, isEmpty, get, set, iterator, and listIterator operations run in constant time. The add operation runs in amortized constant time, that is, adding n elements
+      requires O(n) time. All of the other operations run in linear time (roughly speaking). The constant factor is low compared to that for the LinkedList implementation.
+      <a href="https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html">Source Oracle Java Docs</a>. <br>
+      - There is a <code>subList</code> method present in the List interface as well. Write about that.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
         </div>
-    </div>
-
-    <hr>
-    <div id="Arrays" class="chapter">Arrays</div>
-    <hr>
-
-    <div class="textual-content">
-        <div class="sub-heading">Array problems from LeetCode</div>
-        <div>
-            - <a href="https://leetcode.com/explore/learn/card/fun-with-arrays/">Card on LeetCode is present here</a>. <br>
-            - General Tips to keep in mind: <br>
-            a) If iterating from the front of the array is not immediately giving an algo, try iterating from the end of the array instead. <br>
-            b) If the algo is becoming too complicated when you are trying to do everything in one pass of the array, try splitting the tasks into multiple passes of the array. Use
-            2 or 3 for-loops to make multiple passes over the array and see if it simplifies the solution. <br>
-            c) Two-Pointer technique can be very useful. Think of the two-pointer technique as a <i>readIdx</i> and a <i>writeIdx</i>. You generally increment the <i>readIdx</i>
-            every loop because you would want to evaluate the next element of the array. If the current element being read satisfies certain conditions, then in that case you will
-            copy the element and put it at the <i>writeIdx</i>, and increment both <i>writeIdx</i> and <i>readIdx</i> after that. At no point will the <i>writeIdx</i> ever become
-            greater than the <i>readIdx</i> and hence we will never overwrite any elements that we have not read yet. Refer it <a
-                href="https://leetcode.com/explore/learn/card/fun-with-arrays/511/in-place-operations/3255/">here on LC</a>.<br>
-            d) General questions to consider: Can it contain duplicate values? Can it contain negative values? <br>
-            - Java always initializes empty Array slots to null if the Array contains <i>objects</i>, or to default values if it contains <i>primitive types</i>. For example, the
-            array <code>int[]</code> would contain the default value of 0 for each element, <code>float[]</code> would contain default values of 0.0, and <code>boolean[]</code>
-            would contain default values of false. <br>
-            - <a href="https://leetcode.com/problems/max-consecutive-ones/">Max Consecutive Ones</a>. Note when you are counting the maximum value of max ones in an array, you
-            might have been given an array like this: [0,1,1,1,1]. In this case, you would end up never updating the <i>overallMaxNumOfOnes</i> variable. Hence, do not forget to
-            return the Max of the two numbers.
-            <div class="code-block">
-                <div class="expand-code-snip-btn border border-primary rounded">
-                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-                </div>
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/107e4fa8a0aedd7c65ed51c073bb9df5.js"></script>
-                </div>
-            </div>
-            - <a href="https://leetcode.com/problems/find-numbers-with-even-number-of-digits/">Find Numbers with Even Number of Digits</a>. Note how we can count the number of
-            digits in a number using log to the base 10 in Approach 2. Also note how we are counting the number of digits by extracting each digit in approach 1.
-            <div class="code-block">
-                <div class="expand-code-snip-btn border border-primary rounded">
-                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-                </div>
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/f3b37408daedb86acf18cc10fefef152.js"></script>
-                </div>
-            </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/32a581ced1091397afbc9cb61a71332a.js"></script>
         </div>
-        - <a href="https://leetcode.com/problems/squares-of-a-sorted-array/">Squares of a Sorted Array</a>. Uses two pointer technique - going inside-out. Once you hit either the
-        left or right end of the array, you need to copy the remaining elements on the other side to the target array. <br>
-        - Inserting an element at the start of the array (index 0) <a href="https://leetcode.com/explore/learn/card/fun-with-arrays/525/inserting-items-into-an-array/3244/">takes
-        O(n) time</a> since each of the elements need to be shifted to the right by 1 position. <br>
-        - <a href="https://leetcode.com/problems/duplicate-zeros/">Duplicate Zeros</a>. <br>
-        - <a href="https://leetcode.com/problems/merge-sorted-array/">Merge Sorted Array</a>. Good problem to show the advantages of iterating from the end of the array. <br>
-        - <a href="https://leetcode.com/problems/remove-element/">Remove Element</a>. <br>
-        - <a href="https://leetcode.com/problems/remove-duplicates-from-sorted-array/">Remove Duplicates from Sorted Array</a>. Go over this. If you are running a loop on the array
-        using two-pointer technique, and then you are running another loop within that loop that is making use of the pointers, then you need to make sure that the inner loop
-        traversal bounds are satisfied and do not throw out of bounds exception.
-        <div class="code-block">
-            <div class="expand-code-snip-btn border border-primary rounded">
-                <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-            </div>
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/778356cd51ece9313ccdec5f3578d5f3.js"></script>
-            </div>
-        </div>
-        - <a href="https://leetcode.com/problems/check-if-n-and-its-double-exist/">Check If N and Its Double Exist</a> <br>
-        - <a href="https://leetcode.com/problems/valid-mountain-array/">Valid Mountain Array</a>
-        <div class="code-block">
-            <div class="expand-code-snip-btn border border-primary rounded">
-                <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-            </div>
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/a127f75389c00492b5863422968788e8.js"></script>
-            </div>
-        </div>
-        - <a href="https://leetcode.com/problems/replace-elements-with-greatest-element-on-right-side/">Replace Elements with Greatest Element on Right Side</a> <br>
-        - <a href="https://leetcode.com/problems/height-checker/">Height Checker</a>. Uses Counting Sort. Counting Sort explained <a href="https://youtu.be/Nz1KZXbghj8?t=1923">here
-        on MIT OCW lecture</a>. <br>
-        - <a href="https://leetcode.com/problems/max-consecutive-ones-ii/">Max Consecutive Ones II</a>. Still to do. <br>
-        - <a href="https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/">Find All Numbers Disappeared in an Array</a>. Uses a good technique of making in-place
-        changes to an array. <br>
-    </div>
-
-    <hr>
-    <div id="Arrays&Strings" class="chapter">Arrays, Lists, and Strings</div>
-    <hr>
-
-    <div class="textual-content">
-        - <a href="https://leetcode.com/explore/learn/card/array-and-string/">Card on LC here</a> <br>
-
-        <div class="sub-heading">Arrays Basic Operations</div>
-        <div>
-            - <a href="https://stackoverflow.com/questions/11596884/on-java-7s-equals-and-deepequals">Difference between <code>equals</code> and <code>deepEquals</code></a> on SO.
-            <br>
-            - <a href="https://stackoverflow.com/questions/8777257/equals-vs-arrays-equals-in-java">Difference between <code>equals</code> and <code>Arrays.equals</code></a> on SO.
-            Note that <code>array1.equals(array2)</code> is the same as <code>array1 == array2</code>, i.e. is it the same array. <code>Arrays.equals(array1, array2)</code>
-            compares the contents of the arrays. Note that <code>Arrays.equals()</code> does not work as expected for multidimensional arrays, it only compares items of the 1st
-            dimension for reference equality. That's why we have <code>Arrays.deepEquals(Object[], Object[])</code>. <code>Arrays.deepEquals(Object[], Object[])</code> is a
-            recursive call. Two arrays are equal if they contain the same elements in the same order. Two arrays are also equal if both of them are <code>null</code>.
-            <br>
-            - Remember that <code>Objects.equals(arg1, arg2)</code> internally simply calls <code>arg1.equals(arg2)</code> method of <i>arg1</i> (the first argument passed into the
-            Objects.equals method). Keep that in mind when you see the behavior of <code>equals</code> and <code>Objects.equals</code> in the case of arrays. <br>
-            - Sorting an array, without having to convert it into a <code>List</code>, is a story of its own. <a href="https://www.baeldung.com/java-sorting-arrays">Read here on
-            Baeldung</a>.
-            <div class="code-block">
-                <div class="expand-code-snip-btn border border-primary rounded">
-                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-                </div>
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/b465605ba187d4ebf42a7a8286b165b1.js"></script>
-                </div>
-            </div>
-        </div>
-
-        <div id="LC_Lists" class="sub-heading">List Basic Operations</div>
-        <div>
-            - Refer how to use a <code>Comparator</code> <a href="../ThingsToRemember/ThingsToRemember.html#num40">here</a>. Also keep in
-            mind everything we went over regarding removing/modifying elements in a list while iterating over the same list like <a
-                href="../ThingsToRemember/ThingsToRemember.html#num38.2">we discussed over here</a>. <br>
-            - <a href="https://stackoverflow.com/questions/1075656/simple-way-to-find-if-two-different-lists-contain-exactly-the-same-elements">How to check if two lists have the
-            same elements</a> on SO. <br>
-            - <a href="https://stackoverflow.com/questions/5283047/intersection-and-union-of-arraylists-in-java">Calculating the intersection and union of array lists</a> on SO.
-            Traditionally, unions and intersections defined only for sets, not lists. So it's not exactly clear what you mean by union of two lists for example. For instance, what
-            happens if there are duplicate elements in one of the list? Are both of the elements included in the union. What if duplicate elements in intersection. All of these are
-            things that you will have to think about before you try performing set operations on lists. <br>
-            - Note that a <code>List</code> does not allow inserting an element at any arbitrary index by using the <code>add(int index, E element)</code> method. If the List is
-            empty, you can use only 0 as the index to add the first element to the list. If you have five elements in a <code>List</code>, you must use indexes between 0 and 5 to
-            add a new element to the <code>List</code>. The index from 0 to 4 will insert an element between existing elements. The index of 5 will append the element to the end of
-            the <code>List</code>. This implies that a <code>List</code> must grow sequentially. You cannot have a sparse <code>List</code> such as a <code>List</code> with first
-            element and tenth element, leaving second to ninth elements non-populated. This is the reason that a <code>List</code> is also known as a sequence. <br>
-            - The size, isEmpty, get, set, iterator, and listIterator operations run in constant time. The add operation runs in amortized constant time, that is, adding n elements
-            requires O(n) time. All of the other operations run in linear time (roughly speaking). The constant factor is low compared to that for the LinkedList implementation.
-            <a href="https://docs.oracle.com/javase/8/docs/api/java/util/ArrayList.html">Source Oracle Java Docs</a>. <br>
-            - There is a <code>subList</code> method present in the List interface as well. Write about that.
-            <div class="code-block">
-                <div class="expand-code-snip-btn border border-primary rounded">
-                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-                </div>
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/32a581ced1091397afbc9cb61a71332a.js"></script>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="sub-heading">String Basic Operations</div>
-        <div>
-            - You can sort arrays using <code>Arrays.sort(arrayName)</code>. You can also pass in a custom <code>Comparator</code> as a second args to sort it by something other
-            than the natural order. Refer <a href="../ThingsToRemember/ThingsToRemember.html#num34">here</a>.
-            <div class="code-block">
-                <div class="expand-code-snip-btn border border-primary rounded">
-                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-                </div>
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/28948ec64dca2abf8b73e4e9c513a80e.js"></script>
-                </div>
-            </div>
-
-            - <a href="https://leetcode.com/problems/find-pivot-index/">Find Pivot Index</a> <br>
-            - <a href="https://leetcode.com/problems/plus-one/">Plus One</a> <br>
-        </div>
-
-        <div class="sub-heading">Two Dimensional Arrays</div>
-        <div>
-            - Vanilla traversal over a 2D array:
-            <div class="code-block">
-                <div class="expand-code-snip-btn border border-primary rounded">
-                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-                </div>
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/f2ba8239238839fc0a8de791b7d52acf.js"></script>
-                </div>
-            </div>
-            - <a href="https://leetcode.com/problems/diagonal-traverse/">Diagonal Travers</a>. Good insight into the indices in <a
-                href="https://leetcode.com/problems/diagonal-traverse/discuss/581868/Easy-Python-NO-DIRECTION-CHECKING">this solution in the comments here</a>. <br>
-            - TODO: <a href="https://leetcode.com/problems/spiral-matrix/">Spiral Matrix</a> <br>
-            - <a href="https://leetcode.com/problems/pascals-triangle/">Pascal's Triangle</a> <br>
-        </div>
-
-        <div class="sub-heading">String Questions on LeetCode</div>
-        <div>
-            - <a href="https://leetcode.com/problems/add-binary/">Add Binary</a>. Basic template for questions involving adding two numbers when input is as strings.
-            <div class="code-block">
-                <div class="expand-code-snip-btn border border-primary rounded">
-                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-                </div>
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/cab002415c2c399f2552258d44d857ad.js"></script>
-                </div>
-            </div>
-            - <a href="https://leetcode.com/problems/implement-strstr/">Implement strStr()</a> <br>
-            - <a href="https://leetcode.com/problems/longest-common-prefix/">Longest Common Prefix</a> <br>
-        </div>
-
-        <div class="sub-heading">Two Pointer Technique</div>
-        <div>
-            - Two pointer technique is often used on a sorted array. <br>
-            - <a href="https://leetcode.com/problems/reverse-string/">Reverse String</a>. Two things to note here:
-            <div class="code-block">
-                <div class="expand-code-snip-btn border border-primary rounded">
-                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-                </div>
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/db41120b6777700097b9b0a0b0d6fc4e.js"></script>
-                </div>
-            </div>
-            - <a href="https://leetcode.com/problems/array-partition-i/">Array Partition I</a>. Another application of Counting Sort. This one has -ve numbers as well. <br>
-            - <a href="https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/">Two Sum II - Input array is sorted</a>. If the input array is sorted and you are trying to
-            find if two elements of the array add up to a target sum, then you can use the 2 pointer technique as well. Keep the left and the right indices at the two ends of the
-            array. Find their sum. If the curr sum is greater than the target, then you need to consider a smaller element, in which case you will move the right pointer to the
-            left. On the other hand, if the curr sum is lesser than the target sum, it means that you need to consider a larger number next, in which case you should move the left
-            pointer to the right. <br>
-            - <a href="https://leetcode.com/problems/minimum-size-subarray-sum/">Minimum Size Subarray Sum</a>. Excellent question to understand the basics of a sliding window
-            pattern. Note carefully how the window is being used. Also refer the wrong method that you were using in order to create the window. The question page and the related
-            discussion page has some similar questions that use the same technique. Refer the post <a
-                href="https://leetcode.com/problems/minimum-window-substring/discuss/26808/Here-is-a-10-line-template-that-can-solve-most-'substring'-problems">here on LC for a
-            template</a>. TODO.
-            <div class="code-block">
-                <div class="expand-code-snip-btn border border-primary rounded">
-                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-                </div>
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/5234eef2bacc9ab48ca43972f6d08f82.js"></script>
-                </div>
-            </div>
-        </div>
-
-        <div class="sub-heading">Conclusion - Array Related Techniques</div>
-        <div>
-            - The two-pointer technique sometimes will relate to Greedy Algorithm which helps us design our pointers' movement strategy. <br>
-            - <a href="https://leetcode.com/problems/rotate-array/">Rotate Array</a>. You are still using extra space. Go over the other two approaches that are present in the
-            solution. <br>
-            - <a href="https://leetcode.com/problems/reverse-words-in-a-string/">Reverse Words in a String</a>. You can either use the built-in methods or not. Another similar
-            problem is <a href="https://leetcode.com/problems/reverse-words-in-a-string-iii/">Reverse Words in a String III</a>. <br>
-        </div>
-    </div>
-
-    <hr>
-    <div id="Hashing" class="chapter">Hash Table</div>
-    <hr>
-
-    <div class="textual-content">
-        - <a href="https://leetcode.com/explore/learn/card/hash-table/">Card on LeetCode here</a>. <br>
-        <div class="sub-heading">Introduction</div>
-        <div>
-            - There are two different kinds of hash datastructures: hash set and hash map. The <code>HashSet</code> is one implementation of the <code>Set</code> datastructure that
-            does not allow duplicated values. The <code>HashMap</code> is an implementation of the <code>Map</code> datastructure that stores elements in the form of
-            <code>&lt;key, value&gt;</code>. <br>
-            - <a href="https://leetcode.com/problems/design-hashset/">Design HashSet</a>. Good solution with write-up about the different ways that collision can be handled. <a
-                href="https://en.wikipedia.org/wiki/Hash_table#Separate_chaining">Separate Chaining</a>, <a href="https://en.wikipedia.org/wiki/Hash_table#Open_addressing">Open
-            Addressing</a>, and <a href="https://en.wikipedia.org/wiki/2-choice_hashing">2 choice hashing</a>. <br>
-            - <a href="https://leetcode.com/problems/design-hashmap/">Design HashMap</a>. Note that in the case when there are two or more elements that have the same hash value,
-            both the elements will be mapped to the same bucket. Suppose the elements mapped to the same bucket are stored in a list. In this case, if you want to delete one of the
-            elements (and suppose you have a reference to the element that you want to delete), once you have deleted the element, you will have to move all of the elements, to the
-            right of the deleted element, one space to the left. You can get around this by first swapping the element that you want to delete with the last element of the list and
-            then deleting the last element instead. Now no need of shifting any elements once the required element has been deleted. <br>
-            - You have not done the above two problems but just copied the solution in order to see the hidden stuff. <br>
-            - <a href="https://stackoverflow.com/questions/1516549/bad-idea-to-use-string-key-in-hashmap">Good answer on SO</a> explaining how Hash Map works. <br>
-            - Note that if you are using <code>String</code>s as keys for your Set/Map, then the complexity of checking whether a <code>String</code> exists in the set/map or not
-            is going to be O(m), where <i>m</i> is the number of characters in the string. <a
-                href="https://stackoverflow.com/questions/68422044/time-complexity-of-checking-whether-a-string-is-present-in-a-hashset-java">Explained on SO here</a>. Once you add
-            a <code>String</code> object to a <code>Set</code>/<code>Map</code>, the hashCode of the string is stored/cached in <i>that</i> <code>String</code> object. Hence, later
-            on if you use the same instance of the string to check for something like <code>contains</code>, the <code>Set</code>/<code>Map</code> will not have to recalculate the
-            hash again, since it will just use the cached value instead giving you O(1) time complexity. But if you use a <i>new</i> string object that is logically equal to the
-            earlier string that you added, but is a completely new instance of <code>String</code>, the hash value of it will have to be calculated all over again giving you O(m)
-            once again.
-        </div>
-
-        <div id="LC_HashSet" class="sub-heading">Hash Set</div>
-        <div>
-            - Basic operations in a HashSet <br>
-            <div class="code-block">
-                <div class="expand-code-snip-btn border border-primary rounded">
-                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-                </div>
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/9207da44d4a3dbc29b3b4bbdd110c669.js"></script>
-                </div>
-            </div>
-            - Also recall the discussion we had about modifying a hashset while iterating over the same HashSet. It is going to throw a <code>ConcurrentModificationException</code>.
-            Like we <a href="../ThingsToRemember/ThingsToRemember.html#num38.3">discussed here</a>. <br>
-            - Tree Set behavior explained <a href="https://stackoverflow.com/q/12830320/8742428">here on SO</a>. <br>
-            - <a href="https://leetcode.com/problems/contains-duplicate/">Contains Duplicate</a>. Given an integer array nums, return true if any value appears at least twice in
-            the array, and return false if every element is distinct. Note that you can use the return value of the <code>add()</code> method to check if the element being added to
-            the set already existed in the Set or not. Point being, you do not need to separately use <code>contains</code> to check.
-            <div class="code-block">
-                <div class="expand-code-snip-btn border border-primary rounded">
-                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-                </div>
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/5946c329fa1bd8467c8497e6a2791191.js"></script>
-                </div>
-            </div>
-            - <a href="https://leetcode.com/problems/single-number/">Single Number</a>. Given a non-empty array of integers nums, every element appears twice except for one. Find
-            that element that occurs only once.
-            <div class="code-block">
-                <div class="expand-code-snip-btn border border-primary rounded">
-                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-                </div>
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/c7d52089442dd7a62d2dc8f09eae760b.js"></script>
-                </div>
-            </div>
-            - <a href="https://leetcode.com/problems/happy-number/">Happy Number</a>.
-        </div>
-
-        <div class="sub-heading">Hash Map</div>
-        <div>
-            - Each element in a <code>Map</code> represents a key-value pair as &lt;key, value&gt;. A &lt;key, value&gt; pair is also known as an <code>entry</code> in the map. The
-            key and the value must be reference types. You cannot use primitive types (int, double, etc.) for either keys or values in a map. <br>
-            - Map does not allow any duplicate keys. Each key is mapped to exactly one value. In other words, each key in a Map has exactly one value. Values do not have to be
-            unique. That is, two keys may map to the same value. <br>
-            - The view operations category contains three methods. Each returns a different view of a <code>Map</code>. You can view all <i>keys</i> in a <code>Map</code> as a
-            <code>Set</code>, all <i>values</i> as a <code>Collection</code>, and all <i>&lt;key, value&gt;</i> pairs as a <code>Set</code>. Note that all <i>keys</i> and all
-            <i>&lt;key, value&gt;</i> pairs are always unique in a <code>Map</code> and that is the reason why you get their <code>Set</code> views. Since a <code>Map</code> may
-            contain duplicate <i>values</i>, you get a <code>Collection</code> view of its <i>values</i>. <br>
-            - Make sure to read the different ways that we can remove elements from a <code>Map</code> while iterating over the same <code>Map</code> using the
-            <code>removeIf</code> method <a href="../ThingsToRemember/ThingsToRemember.html#num38.3">here on this page</a>. <br>
-            - Basic Operations involving a Hash Map.
-            <div class="code-block">
-                <div class="expand-code-snip-btn border border-primary rounded">
-                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-                </div>
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/82f26a5bb4d5dc920f22465d035281fb.js"></script>
-                </div>
-            </div>
-            - <a href="https://leetcode.com/problems/isomorphic-strings/">Isomorphic Strings</a>. Note the below solution. It uses the technique of associating each key with a
-            <code>Collection</code>, like a <code>List</code>. Basically we are trying to store all the positions that a character appears in a String. Can be used as a general
-            template for these kinds of questions.
-            <div class="code-block">
-                <div class="expand-code-snip-btn border border-primary rounded">
-                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-                </div>
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/bb2e8672c25c1ee23b89bfe690a8fbcb.js"></script>
-                </div>
-            </div>
-            - <a href="https://leetcode.com/problems/first-unique-character-in-a-string/">First Unique Character in a String</a>. This is what I wanted to explain to you. Instead
-            of using a datastructure like a <code>LinkedHashMap</code> to store the order of iteration over the string (and then iterating over the map to get the required answer),
-            use the given string to iterate and get the values from the HashSet to see if the condition is satisfied.
-            <div class="code-block">
-                <div class="expand-code-snip-btn border border-primary rounded">
-                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-                </div>
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/df64c27dc809cd71b74d46c737464248.js"></script>
-                </div>
-            </div>
-        </div>
-
-        <div class="sub-heading">Design the Key</div>
-        <div>
-            - TODO.
-        </div>
+      </div>
     </div>
 
 
-    <hr>
-    <div id="CollectionsJava8" class="chapter">The Collections Class Utilities</div>
-    <hr>
-
-    <div class="textual-content">
-        <div class="sub-heading">Introduction</div>
-        <div>
-            - // TODO
+    <div class="sub-heading">String Basic Operations</div>
+    <div>
+      - You can sort arrays using <code>Arrays.sort(arrayName)</code>. You can also pass in a custom <code>Comparator</code> as a second args to sort it by something other
+      than the natural order. Refer <a href="../ThingsToRemember/ThingsToRemember.html#num34">here</a>.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
         </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/28948ec64dca2abf8b73e4e9c513a80e.js"></script>
+        </div>
+      </div>
 
-
+      - <a href="https://leetcode.com/problems/find-pivot-index/">Find Pivot Index</a> <br>
+      - <a href="https://leetcode.com/problems/plus-one/">Plus One</a> <br>
     </div>
+
+    <div class="sub-heading">Two Dimensional Arrays</div>
+    <div>
+      - Vanilla traversal over a 2D array:
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/f2ba8239238839fc0a8de791b7d52acf.js"></script>
+        </div>
+      </div>
+      - <a href="https://leetcode.com/problems/diagonal-traverse/">Diagonal Travers</a>. Good insight into the indices in <a
+      href="https://leetcode.com/problems/diagonal-traverse/discuss/581868/Easy-Python-NO-DIRECTION-CHECKING">this solution in the comments here</a>. <br>
+      - TODO: <a href="https://leetcode.com/problems/spiral-matrix/">Spiral Matrix</a> <br>
+      - <a href="https://leetcode.com/problems/pascals-triangle/">Pascal's Triangle</a> <br>
+    </div>
+
+    <div class="sub-heading">String Questions on LeetCode</div>
+    <div>
+      - <a href="https://leetcode.com/problems/add-binary/">Add Binary</a>. Basic template for questions involving adding two numbers when input is as strings.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/cab002415c2c399f2552258d44d857ad.js"></script>
+        </div>
+      </div>
+      - <a href="https://leetcode.com/problems/implement-strstr/">Implement strStr()</a> <br>
+      - <a href="https://leetcode.com/problems/longest-common-prefix/">Longest Common Prefix</a> <br>
+    </div>
+
+    <div class="sub-heading">Two Pointer Technique</div>
+    <div>
+      - Two pointer technique is often used on a sorted array. <br>
+      - <a href="https://leetcode.com/problems/reverse-string/">Reverse String</a>. Two things to note here:
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/db41120b6777700097b9b0a0b0d6fc4e.js"></script>
+        </div>
+      </div>
+      - <a href="https://leetcode.com/problems/array-partition-i/">Array Partition I</a>. Another application of Counting Sort. This one has -ve numbers as well. <br>
+      - <a href="https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/">Two Sum II - Input array is sorted</a>. If the input array is sorted and you are trying to
+      find if two elements of the array add up to a target sum, then you can use the 2 pointer technique as well. Keep the left and the right indices at the two ends of the
+      array. Find their sum. If the curr sum is greater than the target, then you need to consider a smaller element, in which case you will move the right pointer to the
+      left. On the other hand, if the curr sum is lesser than the target sum, it means that you need to consider a larger number next, in which case you should move the left
+      pointer to the right. <br>
+      - <a href="https://leetcode.com/problems/minimum-size-subarray-sum/">Minimum Size Subarray Sum</a>. Excellent question to understand the basics of a sliding window
+      pattern. Note carefully how the window is being used. Also refer the wrong method that you were using in order to create the window. The question page and the related
+      discussion page has some similar questions that use the same technique. Refer the post <a
+      href="https://leetcode.com/problems/minimum-window-substring/discuss/26808/Here-is-a-10-line-template-that-can-solve-most-'substring'-problems">here on LC for a
+      template</a>. TODO.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/5234eef2bacc9ab48ca43972f6d08f82.js"></script>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-heading">Conclusion - Array Related Techniques</div>
+    <div>
+      - The two-pointer technique sometimes will relate to Greedy Algorithm which helps us design our pointers' movement strategy. <br>
+      - <a href="https://leetcode.com/problems/rotate-array/">Rotate Array</a>. You are still using extra space. Go over the other two approaches that are present in the
+      solution. <br>
+      - <a href="https://leetcode.com/problems/reverse-words-in-a-string/">Reverse Words in a String</a>. You can either use the built-in methods or not. Another similar
+      problem is <a href="https://leetcode.com/problems/reverse-words-in-a-string-iii/">Reverse Words in a String III</a>. <br>
+    </div>
+  </div>
+
+  <hr>
+  <div id="Hashing" class="chapter">Hash Table</div>
+  <hr>
+
+  <div class="textual-content">
+    - <a href="https://leetcode.com/explore/learn/card/hash-table/">Card on LeetCode here</a>. <br>
+    <div class="sub-heading">Introduction</div>
+    <div>
+      - There are two different kinds of hash datastructures: hash set and hash map. The <code>HashSet</code> is one implementation of the <code>Set</code> datastructure that
+      does not allow duplicated values. The <code>HashMap</code> is an implementation of the <code>Map</code> datastructure that stores elements in the form of
+      <code>&lt;key, value&gt;</code>. <br>
+      - <a href="https://leetcode.com/problems/design-hashset/">Design HashSet</a>. Good solution with write-up about the different ways that collision can be handled. <a
+      href="https://en.wikipedia.org/wiki/Hash_table#Separate_chaining">Separate Chaining</a>, <a href="https://en.wikipedia.org/wiki/Hash_table#Open_addressing">Open
+      Addressing</a>, and <a href="https://en.wikipedia.org/wiki/2-choice_hashing">2 choice hashing</a>. <br>
+      - <a href="https://leetcode.com/problems/design-hashmap/">Design HashMap</a>. Note that in the case when there are two or more elements that have the same hash value,
+      both the elements will be mapped to the same bucket. Suppose the elements mapped to the same bucket are stored in a list. In this case, if you want to delete one of the
+      elements (and suppose you have a reference to the element that you want to delete), once you have deleted the element, you will have to move all of the elements, to the
+      right of the deleted element, one space to the left. You can get around this by first swapping the element that you want to delete with the last element of the list and
+      then deleting the last element instead. Now no need of shifting any elements once the required element has been deleted. <br>
+      - You have not done the above two problems but just copied the solution in order to see the hidden stuff. <br>
+      - <a href="https://stackoverflow.com/questions/1516549/bad-idea-to-use-string-key-in-hashmap">Good answer on SO</a> explaining how Hash Map works. <br>
+      - Note that if you are using <code>String</code>s as keys for your Set/Map, then the complexity of checking whether a <code>String</code> exists in the set/map or not
+      is going to be O(m), where <i>m</i> is the number of characters in the string. <a
+      href="https://stackoverflow.com/questions/68422044/time-complexity-of-checking-whether-a-string-is-present-in-a-hashset-java">Explained on SO here</a>. Once you add
+      a <code>String</code> object to a <code>Set</code>/<code>Map</code>, the hashCode of the string is stored/cached in <i>that</i> <code>String</code> object. Hence, later
+      on if you use the same instance of the string to check for something like <code>contains</code>, the <code>Set</code>/<code>Map</code> will not have to recalculate the
+      hash again, since it will just use the cached value instead giving you O(1) time complexity. But if you use a <i>new</i> string object that is logically equal to the
+      earlier string that you added, but is a completely new instance of <code>String</code>, the hash value of it will have to be calculated all over again giving you O(m)
+      once again.
+    </div>
+
+    <div id="LC_HashSet" class="sub-heading">Hash Set</div>
+    <div>
+      - Basic operations in a HashSet <br>
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/9207da44d4a3dbc29b3b4bbdd110c669.js"></script>
+        </div>
+      </div>
+      - Also recall the discussion we had about modifying a hashset while iterating over the same HashSet. It is going to throw a <code>ConcurrentModificationException</code>.
+      Like we <a href="../ThingsToRemember/ThingsToRemember.html#num38.3">discussed here</a>. <br>
+      - Tree Set behavior explained <a href="https://stackoverflow.com/q/12830320/8742428">here on SO</a>. <br>
+      - <a href="https://leetcode.com/problems/contains-duplicate/">Contains Duplicate</a>. Given an integer array nums, return true if any value appears at least twice in
+      the array, and return false if every element is distinct. Note that you can use the return value of the <code>add()</code> method to check if the element being added to
+      the set already existed in the Set or not. Point being, you do not need to separately use <code>contains</code> to check.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/5946c329fa1bd8467c8497e6a2791191.js"></script>
+        </div>
+      </div>
+      - <a href="https://leetcode.com/problems/single-number/">Single Number</a>. Given a non-empty array of integers nums, every element appears twice except for one. Find
+      that element that occurs only once.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/c7d52089442dd7a62d2dc8f09eae760b.js"></script>
+        </div>
+      </div>
+      - <a href="https://leetcode.com/problems/happy-number/">Happy Number</a>.
+    </div>
+
+    <div class="sub-heading">Hash Map</div>
+    <div>
+      - Each element in a <code>Map</code> represents a key-value pair as &lt;key, value&gt;. A &lt;key, value&gt; pair is also known as an <code>entry</code> in the map. The
+      key and the value must be reference types. You cannot use primitive types (int, double, etc.) for either keys or values in a map. <br>
+      - Map does not allow any duplicate keys. Each key is mapped to exactly one value. In other words, each key in a Map has exactly one value. Values do not have to be
+      unique. That is, two keys may map to the same value. <br>
+      - The view operations category contains three methods. Each returns a different view of a <code>Map</code>. You can view all <i>keys</i> in a <code>Map</code> as a
+      <code>Set</code>, all <i>values</i> as a <code>Collection</code>, and all <i>&lt;key, value&gt;</i> pairs as a <code>Set</code>. Note that all <i>keys</i> and all
+      <i>&lt;key, value&gt;</i> pairs are always unique in a <code>Map</code> and that is the reason why you get their <code>Set</code> views. Since a <code>Map</code> may
+      contain duplicate <i>values</i>, you get a <code>Collection</code> view of its <i>values</i>. <br>
+      - Make sure to read the different ways that we can remove elements from a <code>Map</code> while iterating over the same <code>Map</code> using the
+      <code>removeIf</code> method <a href="../ThingsToRemember/ThingsToRemember.html#num38.3">here on this page</a>. <br>
+      - Basic Operations involving a Hash Map.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/82f26a5bb4d5dc920f22465d035281fb.js"></script>
+        </div>
+      </div>
+      - <a href="https://leetcode.com/problems/isomorphic-strings/">Isomorphic Strings</a>. Note the below solution. It uses the technique of associating each key with a
+      <code>Collection</code>, like a <code>List</code>. Basically we are trying to store all the positions that a character appears in a String. Can be used as a general
+      template for these kinds of questions.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/bb2e8672c25c1ee23b89bfe690a8fbcb.js"></script>
+        </div>
+      </div>
+      - <a href="https://leetcode.com/problems/first-unique-character-in-a-string/">First Unique Character in a String</a>. This is what I wanted to explain to you. Instead
+      of using a datastructure like a <code>LinkedHashMap</code> to store the order of iteration over the string (and then iterating over the map to get the required answer),
+      use the given string to iterate and get the values from the HashSet to see if the condition is satisfied.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/df64c27dc809cd71b74d46c737464248.js"></script>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-heading">Design the Key</div>
+    <div>
+      - TODO.
+    </div>
+  </div>
+
+
+  <hr>
+  <div id="CollectionsJava8" class="chapter">The Collections Class Utilities</div>
+  <hr>
+
+  <div class="textual-content">
+    <div class="sub-heading">Introduction</div>
+    <div>
+      - // TODO
+    </div>
+
+
+  </div>
 
 
 </div>

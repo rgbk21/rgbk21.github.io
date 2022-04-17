@@ -1074,8 +1074,9 @@
       - The <code>containsAll</code> method is defined as follows: <code>boolean containsAll(Collection&lt;?&gt; c);</code> <br>
       - The first method does not even use generics. What this means is that it is perfectly legal code to search for a <code>String</code> in a <code>List&lt;Integer&gt;</code>
       for example. <br>
-      - The second example introduces something new. The abbreviated type <code>Collection&lt;?&gt;</code> stands for <code>Collection&lt;? extends Object&gt;</code>. Extending
-      <code>Object</code> is one of the most common uses of wildcards, so it makes sense to provide a short form for writing it. <br>
+      - <p class="highlight-text">The second example, <code>containsAll</code> introduces something new. The abbreviated type <code>Collection&lt;?&gt;</code> stands for
+      <code>Collection&lt;? extends Object&gt;</code>. Extending <code>Object</code> is one of the most common uses of wildcards, so it makes sense to provide a short form for
+      writing it. </p> <br>
       <div class="code-block">
         <div class="expand-code-snip-btn border border-primary rounded">
           <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
@@ -1182,10 +1183,171 @@
   <hr>
 
   <div class="textual-content">
+    - In this chapter, we will be looking at bounds on types.
+
     <div class="sub-heading">Links to go through</div>
+    <div>
+      - <a href="https://stackoverflow.com/questions/42317551/generic-method-equality-constraint">Incompatible equality constraint</a> <br>
+      - <a href="https://stackoverflow.com/questions/48539706/generic-method-performs-implicit-cast-while-non-generic-method-needs-explicit-ca">Generic method performs implicit
+      cast while non-generic method needs explicit cast</a> <br>
+      - <a href="https://stackoverflow.com/questions/30918308/why-is-generic-of-a-return-type-erased-when-there-is-an-unchecked-conversion-of">Why is generic of a return type
+      erased when there is an unchecked conversion of a method parameter in Java 8?</a>
+    </div>
+
+
+    <div class="sub-heading">Comparable</div>
+    <div>
+      - The interface <code>Comparable&lt;T&gt;</code> contains a method that can be used to compare one object to another. <br>
+      - Why do I remember already doing this somewhere else? Here is what the <code>Comparable</code> interface looks like. <br>
+      - The <code>compareTo</code> method returns a value that is negative, zero, or positive depending upon whether the argument is less than, equal to, or greater than the given
+      object. When a class implements <code>Comparable</code>, the ordering specified by this interface is called the <i>natural ordering</i> for that class. <br>
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/8c21c579f9249e9e4f9a95e99dc56670.js"></script>
+        </div>
+      </div>
+
+      - Typically, an object belonging to a class can only be compared to another object belonging to the same class. For instance, both the <code>Integer</code> and the
+      <code>String</code> class implement the <code>Comparable</code> interface, and hence you can compare one integer to another, but not one string to another integer.
+      Just for reference, this is what the signature for <code>String</code> and <code>Integer</code> class looks like: <br>
+      <code>public final class String implements java.io.Serializable, Comparable&lt;String&gt;, CharSequence</code> <br>
+      <code>public final class Integer extends Number implements Comparable&lt;Integer&gt;</code> <br>
+      <code>public abstract class Number implements java.io.Serializable</code> <br>
+      - Also note that, you cannot compare <code>Integer</code> to a <code>Number</code>
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/ec464c61e8dc976ee17f827f189d76a1.js"></script>
+        </div>
+      </div>
+
+      - There is the concept of <i>natural ordering being consistent with the <code>equals</code> method</i>. What this means is that the following statement should hold true:
+      <code>x.equals(y)</code> iff <code>x.compareTo(y) == 0</code>. <br>
+      - This becomes important when you are making use of collection such as <code>SortedSet</code> or <code>SortedMap</code>. Check the <code>SortedSet</code> example on the
+      <a href="../LeetCode/LeetCode.html#LC_HashSet">LeetCode page here</a>. When we pass in a custom comparator to the sorted set, we see that the string "Eve" is not added to the
+      set because "Bob" was already added. This is because we passed in a custom comparator, that uses the <i>length</i> of two strings to check for equality. It sees that "Eve"
+      has the same length as "Bob", and decides that the two strings are "equal", and hence does not add "Eve" to the set. Clearly, if you did <code>"Eve".equals("Bob")</code>, you
+      would get false as the result. Hence, this is an instance of the <code>compareTo</code> being inconsistent with the <code>equals</code>. This does not seem to be necessarily
+      a bad thing in this case, because we are passing in a custom comparator. But when we are trying to decide a <i>natural ordering</i> of a class, by making the class
+      <code>implements</code> the <code>Comparable</code> interface, we want to be careful that the <code>compareTo</code> <i>is consistent</i> with the
+      <code>equals</code> method that is defined in the class. Later, we will be taking a look at another sample class where the <code>equals</code> and <code>compareTo</code> are
+      inconsistent, meaning, <code>compareTo</code> returns 0 on comparing two objects (implying that they are equal), but if you compared the two objects using the
+      <code>equals</code> implementation of the class, the <code>equals</code> method would return false. <br>
+      - Comparison differs from equality in that is does not accept a null argument. If x is not null, <code>x.equals(null)</code> must return false, while
+      <code>x.compareTo(null)</code> must throw a <code>NullPointerException</code>. <br>
+      - Text goes on to discuss the contract of implementing a <code>Comparable</code> interface.
+    </div>
+
+    <div class="sub-heading">Maximum of a Collection</div>
+    <div>
+      - Here we have a generic method that declares a <i>bound</i> on the type variable. The method <i>max</i> takes a collection of type <code>Collection&lt;T&gt;</code> and
+      returns a <code>T</code>, and it does this for any type <code>T</code> such that <code>T</code> is a subtype of <code>Comparable&lt;T&gt;</code>. <br>
+      - The phrase in angle brackets at the beginning of the type signature declares the type variable <code>T</code>, and we say that <code>T</code> is bounded by
+      <code>Comparable&lt;T&gt;</code>. In this case, the bound is recursive, in that the bound on <code>T</code> itself depends upon <code>T</code>. <br>
+      - As with wildcards, bounds for type variables are always indicated by the keyword <code>extends</code>, even when the bound is an interface rather than a class, as is the
+      case here. <br>
+      - <p class="highlight-text">Unlike wildcards, type variables must always be bounded using <code>extends</code>, never <code>super</code>.</p> <br>
+      - Note the error on using the <code>&gt;</code> operator. You can read up about what is causing this <a
+      href="https://stackoverflow.com/questions/45153497/operator-cannot-be-applied-to-t-t-for-bounded-generic-type">on SO here</a>.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/7644950633686a44c64e7409ccb5bb49.js"></script>
+        </div>
+      </div>
+
+      - <p class="highlight-text">Signatures for methods should be as general as possible to maximize utility. If you can replace a type parameter with a wildcard then you should
+      do so.</p> <br>
+      - We improve the signature of <i>max</i> by replacing <code>&lt;T extends Comparable&lt;T&gt;&gt; T max(Collection&lt;T&gt; coll)</code> with
+      <code>&lt;T extends Comparable&lt;? super T&gt;&gt; T max(Collection&lt;? extends T&gt; coll)</code> <br>
+      - Following the Get and Put Principle, we use <code>extends</code> with <code>Collection</code> because we <i>get</i> values of type <code>T</code> from the collection, and
+      we use <code>super</code> with <code>Comparable</code> because we <p class="highlight-text"><i>put</i> value of type <code>T</code> into the <code>compareTo</code> method</p>
+      . In the next section, we'll see an example that would not type-check if the <code>super</code> clause above was omitted. <br>
+      - <p class="highlight-text">Add example code that shows what is the problem once you have gone through that section???????????????????????????</p>
+    </div>
+
+    <div class="sub-heading">Fruity Example</div>
+    <div>
+      - The <code>Comparable</code> interface gives us fine control over what can and cannot be compared. Say, for instance, that we have a <i>Fruit</i> class, that has two
+      subclasses <i>Apple</i> and <i>Orange</i>. Then depending on how we set things up, we can either <i>allow</i> comparison of <i>Apple</i> and <i>Orange</i>, or we may prohibit
+      the comparison of the two. The first example that we are going to look at will allow comparison of <i>Apple</i> and <i>Orange</i>, whereas the second one will not. <br>
+      - In the first example, each fruit has a <i>name</i> and a <i>size</i>. Two fruits are <i>equal</i> if they have the same <i>name</i> and the same <i>size</i>. Refer the
+      <code>equals</code> method in the below example to verify that that is in fact what we are doing. Following good practice, when you override the <code>equals</code> method,
+      you should also override the <code>hashCode</code> method, as we have done in the examples below. <br>
+      - When it comes to <i>comparing</i> two objects, we are comparing <i>Fruit</i> based solely on its <i>size</i> and ignoring its <i>name</i>. <br>
+      - Since <i>Fruit</i> <code>implements</code> <code>Comparable&lt;Fruit&gt;</code>, any two <i>Fruit</i>s can be compared. And that is why, we are able to find the max in a
+      list of <i>Fruit</i>s that contains both <i>Apple</i> and <i>Orange</i>.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/427fec829115da8c0b3a4abdea6b23d1.js"></script>
+        </div>
+      </div>
+
+      - Example 2 now. What would you do if you wanted to <i>prohibit</i> the comparison of <i>Apple</i> and <i>Orange</i>? <br>
+      - The difference between the earlier and this code is that, one, the <i>Apple</i> class now <code>implements</code> the <code>Comparable&lt;Apple&gt;</code> (instead of the
+      <i>Fruit</i> class implementing the interface). This means that an instance of <i>Apple</i> can now ONLY be compared to another instance of <i>Apple</i>. Similarly, for <i>Orange</i>,
+      we implement the <code>Comparable&lt;Orange&gt;</code> interface, and thus making sure that when you call the <code>compareTo</code> method on instances of the <i>Orange</i>
+      class, you can only pass in other instances of <i>Orange</i> class as args. <br>
+      - Two, note that the code doing the comparison is in the base <i>Fruit</i> class which prevents duplicating the logic in both the <i>Apple</i> and the <i>Orange</i> classes.
+      Also, the method is now marked as <code>protected</code>, so that it can only be called from within the same package, or from other classes that <code>extends</code> the
+      base class that are also outside the package in which the <i>Fruit</i> class is present. Note that we can still directly use <i>internalCompareTo</i> method to compare two
+      instances of <i>Fruit</i>, but that is not the intended way that we want this method to be used. <br>
+      - Also, just so you can recall, <a href="https://stackoverflow.com/questions/71903317/using-comparable-interface-to-prohibit-comparison-between-inherited-types">this is a
+      confusion that you had for which you asked the question on SO</a>. <br>
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/36c1543e766fac7433b6cc951582e5aa.js"></script>
+        </div>
+      </div>
+
+      - The method declaration of the <code>max</code> method looks like this:
+      <code>public static &lt;T extends Object & Comparable&lt;? super T&gt;&gt; T max(Collection&lt;? extends T&gt; coll)</code>. We were in the process of understanding the
+      recursive type that is used in the method declaration by forming it ourselves in the <i>FindingMax</i> code example in the "Maximum of a Collection" section above. We reached
+      upto forming this method signature: <code>public static &lt;T extends Comparable&lt;T&gt;&gt; T findMax(Collection&lt;T&gt; collection)</code>. So the question now is, why
+      do we need the <code>public static &lt;T extends Comparable&lt;? super T&gt;&gt; T max(Collection&lt;? extends T&gt; coll)</code> <br>
+      - In the below example we are using the <i>Apple</i>, <i>Orange</i>, and <i>Fruit</i> class from the Example 1 above where we were allowing <i>Apple</i> and <i>Orange</i> to
+      be compared to each other because the <i>Fruit</i> class implemented the <code>Comparable</code> interface.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/2b28d14e745ee92c40e396b7af9aa4b5.js"></script>
+        </div>
+      </div>
+
+      - If you tried to do the same thing, but with the <i>Apple</i>, <i>Orange</i>, and <i>Fruit</i> class from the Example 2 where we did not allow <i>Apple</i> to be compared to
+      <i>Orange</i> because the <code>Comparable</code> interface was implemented individually by the child classes, you get the following:
+      <div class="code-block">
+          <div class="expand-code-snip-btn border border-primary rounded">
+              <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+          </div>
+          <div class="code-snippet">
+            <script src="https://gist.github.com/rgbk21/83c15b603e0dd4f4880e84f11c18c788.js"></script>
+          </div>
+      </div>
+    </div>
+
+
+    <div class="sub-heading">Comparator</div>
     <div>
       -
     </div>
+
+
   </div>
 
   <hr>
