@@ -98,6 +98,7 @@
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">In Another Life</a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="../../InAnotherLife/Chapter1/Chapter1.html">Chapter 1</a>
+          <a class="dropdown-item" href="../../InAnotherLife/Chapter2/Chapter2.html">Chapter 2</a>
           <div class="dropdown-divider"></div>
         </div>
       </li>
@@ -145,18 +146,107 @@
       - Change mode from Portrait to Landscape: press <code> X </code> in the crop overlay <br>
       - Horizontal ratios for IG: 1.91:1. Vertical ratios for IG: 4:5. <br>
       - Hold <code>Shift</code> and move mouse left or right for custom zoom. <br>
+      - Hold down the Alt key and then slide the sliders to see if there is clipping in your photos. <br>
+      - While adjusting the Tone sliders, I think the way to go is to move the Highlights to the very left (so they are at -100), the Shadows to the very right (so that they are at
+      +100), and then move on to the Whites and the Blacks. For the Whites, we want to move the slider to the right, hence making the whites brighter, while holding down the Alt
+      key to make sure we do not lose any detail. For the Blacks, we want to move the slider to the left, that is, make the blacks darker, again while holding down the Alt key so
+      that we can see when clipping starts. Clipping is not necessarily a bad thing. If there are extremely bright points in your pic, then you should expect to see some clipping.
+      For instance if you were taking a photo of a sunset and had the sun in your frame. Same goes for blacks as well. <br>
       - Hold <code>Shift</code> key and double click any of the slider names in LR, and it will auto-adjust to what LR 'thinks' should be the correct value of the slider. <br>
       - Reset the photo to the original by clicking on 'Reset' at the bottom right. Use <code> \ </code> to cycle between the original and the edited photos. <br>
       - On Develop tab, press <code> I </code> to show info about pic. Press <code> L </code> to darken the side panels so that just the pic is visible.
-      - In the History tab, you can copy the steps that you want and apply them to a separate image. You can do this by clicking on the Copy button in the bottom left corner of
-      Develop module.
+
     </div>
 
+
+    <div class="sub-heading">Importing Images into Lightroom</div>
+    <div>
+      - TimeStamp: 3:22 <br>
+      - This is where you import photos. Note the 3 options at the top: Copy, Move, Add. By default, it is the Add option that is selected. I think this is what was creating all
+      those warnings about LR unable to backup your catalog, because this option does not copy the image itself to LR. If you want to do this, you should have been selecting the
+      Copy option instead. <br>
+      - You also have the option of adding keywords when importing images. Note the keywords section on the right side. Keywords are added in the form of comma separated values.
+      For eg. winter, webster, stop_sign. This will mean you can search for either of these words and it will bring up the image. Also note that you can Ctrl + Click multiple
+      images in the Import view and add the same keywords to multiple images. <br>
+      Question: Where do you search for images? <br>
+
+      <img src="imgs/MattGTutorial/ImportPhotos.png"
+           class="center-block img-fluid"
+           alt="DataProviders"
+           width="1920">
+    </div>
+
+    <div class="sub-heading">Library Tab</div>
+    <div>
+      - TimeStamp: 7:11 <br>
+      - Once you have imported images img1, you will see img1 by default in the "Previous Import" folder on the lhs. But suppose you import some new images img2, img2 will replace
+      img1 and now appear in the "Previous Import". So how do you navigate to img1? You will see the imported images in the section below it. <br>
+      - Also note the "Library Filter" at the top. This allows you to filter the images in the library based off of a number of parameters. <br>
+      - For each image in the library you can also assign it a star tanking. This further enables you to filter images based on whether images have a certain number of stars
+      assigned. <br>
+      - In the filter section, select the "Text" option. There you will see a "Search" option at the top right. You can search for images by any kind of text there. <br>
+      - The Library tab also has a "Metadata" section on the right bottom that you can use to see all kinds of data about the pic. <br>
+      - Suppose you have taken two images that are similar, and now you want to decide which one of those two to edit. The Library tab has a X|Y option that enables you to do that.
+      You can select the two images in the library and then click that button at the bottom, and it will bring the two images up side-by-side.
+      <img src="imgs/MattGTutorial/AfterImport.png"
+           class="center-block img-fluid"
+           alt="DataProviders"
+           width="1920">
+    </div>
+
+    <div class="sub-heading">Develop Tab</div>
+    <div>
+      - TimeStamp: 17:02 <br>
+      - Pressing <code>I</code> can toggle info shown about the image. Pressing <code>L</code> will darken the toolbars at the side so that you just see the image, in all its
+      natural glory. <br>
+      - You have some presets on the lhs, that you can hover over, and you will get a preview of what the image will look like if that preset is applied. <br>
+      - Suppose you want to compare the original image that you started with and the edited image that you have right now. You can use the <code>\</code> key to quickly toggle
+      between the two. <br>
+      - On the lhs, you will also see "Snapshots". These allow you store the state of the photograph at different points allowing you to revert to the stored state in case the
+      changes screw up the pic. <br>
+      - Below the "History" section, you will also see the "Copy" button. This allows you to copy the steps/changes that you have made in this pic, and paste them into another pic
+      in which you might want to duplicate the changes. The "Copy" dialog also allows you to selectively select which parameters you want to copy. For pasting the setting to a new
+      image, all you have to do is open that new image in the Develop tab, and then press <code>Ctrl + V</code>. Note that this will not bring each of the steps into the History of
+      the new pic, instead it will just blanket include them in "Paste Settings".
+      <img src="imgs/MattGTutorial/DevelopTab.png"
+           class="center-block img-fluid"
+           alt="DataProviders"
+           width="1920">
+    </div>
 
     <div class="sub-heading">Histogram</div>
     <div>
-      -
+      - TimeStamp: 25:18 <br>
+      - <a href="https://www.youtube.com/watch?v=yLGMwU-2ypc">Unleashing the POWER of Lightroom's Histogram</a> <br>
+      - A histogram is a graph of the number of pixels in your photo of a particular color. On the left are the number of pixels that are pure black, and on the right are the
+      number of pixels that are pure white. All the mid tones come in between the two, going from black on the left, to white on the right. <br>
+      - The histogram in LR is not one but 4 different charts. It gives you value of the Red, Blue, Green channels. And then it gives you the combination of them in the form of the
+      White channel. For RGB, the graphs show whether color is dark or light. What this means is that, for the Blue channel for example, if there is a peak on the lhs, it means
+      that there are a large number of pixels in the image that are "darker" shade of blue, whereas if you have a peak on the rhs, that means that there are more pixels that are a
+      "lighter" shade of blue. <br>
+      - If all your tones are packed into one area of your histogram, and there's a lot of space on either side, the contrast may be too low. To fix this, deepen the midtones and
+      increase the <a href="https://www.adobe.com/creativecloud/video/discover/dynamic-range.html">dynamic range</a> of your image by moving the Contrast slider to the right.
+      Slight adjustments to the Clarity and Sharpening sliders can also increase the dynamic range of your photo. <br>
+      - If your shadows are clipped, the gray triangle in the left corner of the histogram will turn white. Click the triangle or tap the <code>J</code> key to show shadow
+      clipping, and the clipped shadows will turn blue so you can see them in the photo. If your highlights are clipped, the triangle in the top right corner of the histogram will
+      turn white. Click the triangle or tap the <code>J</code> key to see the lost highlight detail, which will be colored red.<br>
+      - The color white in the triangle thingy means that all the three channels are getting clipped. If only one specific channel is getting clipped, then the triangle thingy will
+      have the color of just that channel. <br>
+      - The RGBW channels directly correspond to the Tone section that is present below the histogram. Changing the histogram will change the value of these sliders, and vice-versa.
+      In fact, as you hover over the histogram, LR will highlight the subsection in the Tone. So for instance, if you hover over the leftmost section of the histogram, LR will
+      highlight the Blacks section below. The inverse also holds, hovering over the tone section also highlights the corresponding section in the histogram. <br>
+      - You can hence change the values in the Tone section by dragging the sliders in the histogram itself. <br>
+      - When you hover over the image, the histogram shows you the RGB percentage values in that specific pixel. <br>
+
+
+      - <a href="https://www.youtube.com/watch?v=q3nmWD_Ld8s">Matt Granger video</a> <br>
+      - <a href="https://www.youtube.com/watch?v=EUm6OSJCmy4">Mike Browne video</a> <br>
+      <img src="imgs/MattGTutorial/Histogram.png"
+           class="center-block img-fluid"
+           alt="Histogram"
+           width="600">
     </div>
+
 
   </div>
 
