@@ -155,12 +155,18 @@ function clearOptions() {
 
 function showAlertWithText(alertText, alertBecauseFailure = false) {
     const alertClass = alertBecauseFailure ? 'alert-danger' : 'alert-success';
-    const html = `<div class="alert ${alertClass} alert-dismissible fade show" role="alert">
-                    ${alertText}
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                  </div>`;
+    // If the height of the window is greater than 800px, this will show the error in the alertElmnt.
+    // If the height is lesser than that, then I am assuming the page is being viewed on mobile,
+    // in which case I want to show the error on top of the grid,
+    // and not have to push down the entire page down.
+    // Adding the class 'alert-fixed' seems to do the trick.
+    const html =
+        `<div class="alert ${alertClass} alert-dismissible fade show ${($(window).height() > 800) ? '' : 'alert-fixed'}" role="alert">
+          ${alertText}
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>`;
     alertElmnt.insertAdjacentHTML("afterbegin", html);
     if (!alertBecauseFailure) {
         $('.alert').delay(1000).fadeOut();

@@ -78,7 +78,9 @@ body {
     /*max-width: 100%;*/
     /*overflow: auto;*/
     /*overflow-wrap: break-word;*/
-    word-break: break-all;
+
+    /* This was breaking words in a very weird way. */
+    /*word-break: break-all;*/
 
     /* How should the child divs of this div be styled */
     /*grid-template-rows: 1fr 1fr;*/
@@ -300,6 +302,14 @@ input[type="text"]{
     font-size: 1.5rem;
 }
 
+.alert-fixed {
+    position:fixed;
+    margin-top:10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index:9;
+    border-radius:0;
+}
 /*!******************* SETTINGS STYLES *****************************!*/
 .settings-icon-container{
     grid-row: 1/2;
