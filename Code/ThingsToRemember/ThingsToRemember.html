@@ -1375,7 +1375,7 @@
          width="400">
     - But even if that fixed the compile errors, the "Project Structure" window still shows the errors. The way to fix them is as follows: <br>
     - <a href="https://youtrack.jetbrains.com/issue/SCL-10756">Bug on Intellij</a> to track feature. <br>
-    - How to fix: click on the [Fix] and this should open a dropdown "Remove invalid root". That will remove the invalid path from "Libraries" tab in the above window. You can 
+    - How to fix: click on the [Fix] and this should open a dropdown "Remove invalid root". That will remove the invalid path from "Libraries" tab in the above window. You can
     reimport the sources by following the steps <a href="https://stackoverflow.com/a/33653146/8742428">here on SO on how to tell Gradle to download all sources</a>.
   </div>
 
@@ -2355,6 +2355,75 @@
     af) https://stackoverflow.com/questions/11259890/how-to-get-the-class-name-through-selenium <br>
     ag)
 
+  </div>
+
+  <div class="one-point">
+    94) When assigning boxed values to the primitive types, if the boxed type is <code>null</code>, a NPE will be thrown. <br>
+    - Consider the following code snippet. Running this will produce a NPE in the method call when you try to pass in a null value.
+    <a href="https://stackoverflow.com/a/34492507/8742428">Assigning null to a native type (like boolean, int, etc.) will result in a NullPointerException</a> <br>
+    - Also remember that while <code>boolean</code> is initialized to <code>false</code>, <code>Boolean</code> is initialized to <code>null</code>. Hence, if you declare a type
+    of <code>Boolean</code> in your class, you must initialize it before you put it to use. Else, NPE. <a
+    href="https://stackoverflow.com/questions/6226290/default-value-of-boolean-and-boolean-in-java">Source on SO</a>.
+    <div class="code-block">
+      <div class="expand-code-snip-btn border border-primary rounded">
+        <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+      </div>
+      <div class="code-snippet">
+        <script src="https://gist.github.com/rgbk21/cbe4c0f86b8a96249d2dce931cdd909c.js"></script>
+      </div>
+    </div>
+  </div>
+
+  <div class="one-point">
+    95) Can we instantiate an abstract class? <br>
+    - <a href="https://stackoverflow.com/questions/13670991/can-we-instantiate-an-abstract-class">Source on SO</a>. <br>
+    - Asked <a href="https://stackoverflow.com/questions/72249054/cannot-use-due-to-non-private-method-which-doesnt-override-or-implement-a">this question on SO</a> for the
+    behavior that you were seeing. <br>
+    - No, you are not creating the instance of your abstract class here. Rather you are creating an instance of an <i>anonymous subclass</i> of your abstract class. And then you
+    are invoking the method on your <i>abstract class reference</i> pointing to <i>subclass object</i>. <br>
+    - Put simply: <code>= my() {};</code> means that there's an anonymous implementation, not simple instantiation of an object, which should have been: <code>= my()</code>. You
+    can never instantiate an abstract class.
+    <div class="code-block">
+      <div class="expand-code-snip-btn border border-primary rounded">
+        <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+      </div>
+      <div class="code-snippet">
+        <script src="https://gist.github.com/rgbk21/2e0e678f444e08cf27a6acfb87b6b961.js"></script>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="one-point">
+    96) What is the difference between using <code>this.<i>variableName</i></code> vs. <code><i>ClassName.this.variableName</i></code>? <br>
+    - <a href="https://stackoverflow.com/questions/12594229/whats-the-difference-between-passing-this-vs-classname-this-from-an-event-hand">SO Source 1</a>,
+    <a href="https://stackoverflow.com/questions/15715954/java-why-does-classname-this-variable-work-when-variable-is-static">SO Source 2</a> <br>
+    - Shadowing section in the <a href="https://docs.oracle.com/javase/tutorial/java/javaOO/nested.html">Nested Classes tutorial</a> on Oracle tutorials. This is the example that
+    they have over there. <br>
+    - If a declaration of a type (such as a member variable or a parameter name) in a particular scope (such as an inner class or a method definition) has the same name as another
+    declaration in the enclosing scope, then the declaration shadows the declaration of the enclosing scope. You cannot refer to a shadowed declaration by its name alone.
+    <div class="code-block">
+      <div class="expand-code-snip-btn border border-primary rounded">
+        <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+      </div>
+      <div class="code-snippet">
+        <script src="https://gist.github.com/rgbk21/cb5a4e0ba1f5656ddaa3364942e56c9b.js"></script>
+      </div>
+    </div>
+
+    - Where this is useful is in the case of anonymous classes and if you are changing anonymous class to an instance of lambda expression instead. <br>
+    - <a href="https://stackoverflow.com/a/15709337/8742428">To access the instance of the enclosing-class from inside the inner classes or the anonymous classes, you need to use
+    this syntax: </a> <code>EnclosingClass.this.someMethod();</code> <br>
+    - <a href="https://stackoverflow.com/a/45637841/8742428">The Classname.this syntax is used to refer to an outer class instance when you are using nested classes</a>
+
+    <div class="code-block">
+      <div class="expand-code-snip-btn border border-primary rounded">
+        <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+      </div>
+      <div class="code-snippet">
+        <script src="https://gist.github.com/rgbk21/0ffc241fc65f675c12571392eaff14fb.js"></script>
+      </div>
+    </div>
   </div>
 
 

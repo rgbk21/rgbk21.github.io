@@ -3409,10 +3409,10 @@
       <code>*.class</code> files that contain the bytecodes understood by the JVM. This compilation is done by
       using the <code>javac</code> command. After compilation, as many <code>.class</code> files will be generated
       as the number of classes in java program (eh.. not really) <br>
-      - This is the wrong understanding: Note that inner classes do not get .class files of their own.
-      Instead they are present in the .class files of their parent classes itself. [This was because when you look at the file in IntelliJ it shows that, both, the outer
-      class and the inner class are in the same file. But, if you go into file explorer in your system and see, you will see that the outer and the inner classes are actually
-      in separate files.] <br>
+      - This is the wrong understanding: "Note that inner classes do not get .class files of their own.
+      Instead, they are present in the .class files of their parent classes itself." [This incorrect understanding was because when you look at the file in IntelliJ it shows that,
+      both, the outer class and the inner class are in the same file. But, if you go into file explorer in your system and see, you will see that the outer and the inner classes
+      are actually in separate files.] <br>
       - The outer class, in this case, is <i>ShadowTest2</i>. This is present in the class file called <i>ShadowTest2.class</i>. The inner class is called <i>FirstLevel2</i>.
       And this is present in the class called <i>ShadowTest2$FirstLevel2.class</i>. This is the format, the parent class name, then the '$' symbol followed by the inner class
       name.
