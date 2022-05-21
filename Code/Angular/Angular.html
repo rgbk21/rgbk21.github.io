@@ -56,7 +56,7 @@
         </div>
       </li>
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"aria-expanded="false">HTML Projects</a>
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">HTML Projects</a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="../../WordleCheater/index.html">Wordle Cheater</a>
           <a class="dropdown-item" href="../../Pig_Game/index.html">2-Player Pig Game</a>
@@ -121,6 +121,7 @@
     This page contains my notes from the following books: <br>
     a) Angular in Action<br>
     b) ng-Book - The complete book on Angular <br>
+    c) Angular Core Deep Dive Video Lectures- Angular University <br>
   </div>
 
   <br>
@@ -1236,7 +1237,7 @@
 
 
   <hr>
-  <div id="LightRoomLinks" class="chapter">Interesting Links</div>
+  <div id="AngularCore_InterestingLinks" class="chapter">Interesting Links</div>
   <hr>
 
   <div>
@@ -1245,6 +1246,61 @@
     - <a href="https://blog.angular-university.io/onpush-change-detection-how-it-works/">OnPush change detection</a>
   </div>
 
+  <hr>
+  <div id="AngularCore_Chapter1" class="chapter">Chapter 1: Angular Core Deep Dive - Helicopter View</div>
+  <hr>
+
+  <div class="textual-content">
+    - <a href="https://angular-university.io/lesson/angular-course-helicopter-view">Link to tutorial</a>. <br>
+  </div>
+
+  <hr>
+  <div id="AngularCore_Chapter2" class="chapter">Chapter 2: Development Environment Setup</div>
+  <hr>
+
+  <div class="textual-content">
+    - <a href="https://angular-university.io/lesson/angular-course-kickoff">Link to tutorial</a>. <br>
+    - Install node/npm: <code>npm install -g npm</code>. The <code>-g</code> flag means that it will be installed globally (gives the ability to run commands on the CLI from
+    anywhere). Check the version installed by running <code>npm -v</code> or <code>node -v</code> <br>
+    - Install Angular CLI: <code>npm install -g @angular/cli</code> <br>
+    - <code>ng</code> will show the available commands that you can run. Had to run this in admin version of Command Prompt. The idea here is that Angular is not just a web
+    framework, but rather an entire ecosystem of tools that help you to build web frameworks. <br>
+    - If you run into this error when trying to run <code>ng</code> commands: "ng.ps1 cannot be loaded because running scripts is disabled on this system", run the following
+    command in the Command Prompt while logged in as the Admin: <code>powershell Set-ExecutionPolicy RemoteSigned</code>. <a
+    href="https://youtrack.jetbrains.com/issue/WEB-51891">Source</a>. <br>
+    - Run <code>ng new <i>nameOfTheProject</i></code> in order to create a new directory and a new Angular app. The directory created will have name as <i>nameOfTheProject</i>.
+    (Angular Routing: No, Stylesheet: CSS) <br>
+    - Go to the Webstorm terminal and run <code>npm start</code>. This will deploy the application on the port 4200 and can be accessed here: http://localhost:4200/ <br>
+  </div>
+
+  <hr>
+  <div id="AngularCore_Chapter3" class="chapter">Chapter 3: Custom HTML Elements, Model vs View</div>
+  <hr>
+
+  <div class="textual-content">
+    - <a href="https://angular-university.io/lesson/angular-introduction">Link to tutorial</a> <br>
+    - The Angular Core module allows us to create our own custom html tags (think div, li, etc.). The <code>app-root</code> tag below is not a standard browser element, we have
+    created it. We have constructed it using a construct that is known as a Component. A Component allows us to link some style (<code>styleUrls</code>) and html
+    (<code>templateUrl</code>), with some typescript logic (interpolation operator: <code>{{ }}</code>). Anything within <code>{{ }}</code> is evaluated as a JS expression within
+    the context of the component. <br>
+    - <code>@Component</code> is a decorator that identifies the class as an Angular component. <br>
+    - Main two takeaways: <br>
+    a) The main feature of Angular is the ability of defining our own custom HTML elements (<code>app-root</code>). This allows us to extend the browser functionality with our own
+    functionality. <br>
+    b) Separation between view and model. The view is the html file, the model is the <code>@Component</code> associated with the html, and the html can access values in the
+    component using <code>{{ }}</code>.
+    <img src="imgs/AngularDeepDive/Chapter2/Introduction.png"
+         class="center-block img-fluid"
+         alt="Introduction">
+  </div>
+
+  <hr>
+  <div id="AngularCore_Chapter4" class="chapter">Chapter 4: Key Features of Angular Core</div>
+  <hr>
+
+  <div class="textual-content">
+    - <a href="https://angular-university.io/lesson/why-angular">Link to tutorial</a>
+  </div>
 
   <hr>
   <div id="FAQs" class="chapter">FAQs</div>

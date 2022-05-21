@@ -156,9 +156,8 @@ function clearOptions() {
 function showAlertWithText(alertText, alertBecauseFailure = false) {
     const alertClass = alertBecauseFailure ? 'alert-danger' : 'alert-success';
     // If the height of the window is greater than 800px, this will show the error in the alertElmnt.
-    // If the height is lesser than that, then I am assuming the page is being viewed on mobile,
-    // in which case I want to show the error on top of the grid,
-    // and not have to push down the entire page down.
+    // If the height is lesser than that, then I am assuming the page is being viewed on (small) mobile,
+    // in which case I want to show the error on top of the grid, and not have to push down the entire page down.
     // Adding the class 'alert-fixed' seems to do the trick.
     const html =
         `<div class="alert ${alertClass} alert-dismissible fade show ${($(window).height() > 800) ? '' : 'alert-fixed'}" role="alert">
