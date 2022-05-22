@@ -1299,7 +1299,58 @@
   <hr>
 
   <div class="textual-content">
-    - <a href="https://angular-university.io/lesson/why-angular">Link to tutorial</a>
+    - <a href="https://angular-university.io/lesson/why-angular">Link to tutorial</a>. <br>
+    - The <code>app.component.css</code> file defines css rules that are going to be visible only inside the <code>app.component.html</code> page. <br>
+    - The angular input property syntax <code>&lt;input [value]="data.courseTitle"&gt;</code> is useful when you want to pass in some data to the template that is available at
+    the component class. <br>
+    - Another thing that we can do with the Angular Template Syntax is handle browser native events. We do that like this: <br>
+    <code>&lt;img (click)="onRocketImageClick()" src="./rocketImage"&gt;</code>. Here, <code>(click)</code> specifies the type of event that we are listening for on the
+    <code>img</code> element. The function <code>onRocketImageClick()</code> will have to be added to the component of this html. <br>
+    - Another thing that we can do with Angular specific syntax, is to give certain elements of a page, a name. We do this using <code> # </code>. Like so: <br>
+    <code>&lt;input [value]="<i>expression</i>" #titleInputBox&gt;</code>. This is called a "Template Reference". We can now use this reference <i>titleInputBox</i> to refer to the
+    <code>input</code> element in other parts of the template. The reference can also be injected into the component associated with the html as well. <br>
+    - Another thing that Angular does automatically for you is escaping any html/script tags that it encounters in the input. For instance, you are reading text from the
+    <code>input</code> box and updating it to reflect on the page using <code>&lt;span&gt;{{ data.courseTitle }} app is running!&lt;/span&gt;</code>. What if an attacker tries to
+    input some text that is wrapped inside a <code>&lt;script&gt;&lt;/script&gt;</code> tag? Angular sees that you are using the value input into the input textbox as a plain
+    string in your template, and hence will automatically escape any html/script tag that it finds. <br>
+    <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+            <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/0d8c8fa4fea05c244f77ca3e751ba3d9.js"></script>
+        </div>
+    </div>
+
+    - We will also need some small changes to the ts file.
+    <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+            <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/44180ddce0ae196504602a726e8806f0.js"></script>
+        </div>
+    </div>
+  </div>
+
+
+  <hr>
+  <div id="AngularCore_Chapter5" class="chapter">Chapter 5: Angular Components and Core Directives</div>
+  <hr>
+
+  <div class="textual-content">
+    - <a href="https://angular-university.io/lesson/angular-components-new-section">Link to tutorial</a> <br>
+    - Code from the github repo is downloaded into this folder: <code>C:\MY_BACKUP\LearningStuff\Angular8\DeepDiveTutorials\from-github_angular-course</code> <br>
+    - Multiple branches in the code. Each branch corresponds to a different topic. <br>
+    - Once you have checked out a remote branch locally, you will have to run <code>npm install</code> and <code>npm start</code>.
+  </div>
+
+  <hr>
+  <div id="AngularCore_Chapter6" class="chapter">Chapter 6: Building our First Angular Component</div>
+  <hr>
+
+  <div class="textual-content">
+    - <a href="https://angular-university.io/lesson/angular-first-component">Link to tutorial</a> <br>
   </div>
 
   <hr>
