@@ -1232,7 +1232,14 @@
   <hr>
 
   <div class="textual-content">
-    - <a href="https://angular-university.io/course/angular-course">Angular Core Deep Dive</a> video series link.
+    - <a href="https://angular-university.io/course/angular-course">Angular Core Deep Dive</a> video series link. <br><br>
+    Index: <br>
+    Chapter 2: <a href="#AngularCore_Chapter2">Development Environment Setup</a> <br>
+    Chapter 3: <a href="#AngularCore_Chapter3">Custom HTML Elements, Model vs View</a> <br>
+    Chapter 4: <a href="#AngularCore_Chapter4">Key Features of Angular Core</a> <br>
+    Chapter 5: <a href="#AngularCore_Chapter5">Angular Components and Core Directives</a> <br>
+    Chapter 6: <a href="#AngularCore_Chapter6">Building our First Angular Component</a> <br>
+    Chapter 7: <a href="#AngularCore_Chapter7">Component Inputs and the <code>@Input</code> Decorator</a> <br>
   </div>
 
 
@@ -1314,22 +1321,22 @@
     input some text that is wrapped inside a <code>&lt;script&gt;&lt;/script&gt;</code> tag? Angular sees that you are using the value input into the input textbox as a plain
     string in your template, and hence will automatically escape any html/script tag that it finds. <br>
     <div class="code-block">
-        <div class="expand-code-snip-btn border border-primary rounded">
-            <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-        </div>
-        <div class="code-snippet">
-          <script src="https://gist.github.com/rgbk21/0d8c8fa4fea05c244f77ca3e751ba3d9.js"></script>
-        </div>
+      <div class="expand-code-snip-btn border border-primary rounded">
+        <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+      </div>
+      <div class="code-snippet">
+        <script src="https://gist.github.com/rgbk21/0d8c8fa4fea05c244f77ca3e751ba3d9.js"></script>
+      </div>
     </div>
 
     - We will also need some small changes to the ts file.
     <div class="code-block">
-        <div class="expand-code-snip-btn border border-primary rounded">
-            <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-        </div>
-        <div class="code-snippet">
-          <script src="https://gist.github.com/rgbk21/44180ddce0ae196504602a726e8806f0.js"></script>
-        </div>
+      <div class="expand-code-snip-btn border border-primary rounded">
+        <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+      </div>
+      <div class="code-snippet">
+        <script src="https://gist.github.com/rgbk21/44180ddce0ae196504602a726e8806f0.js"></script>
+      </div>
     </div>
   </div>
 
@@ -1341,7 +1348,8 @@
   <div class="textual-content">
     - <a href="https://angular-university.io/lesson/angular-components-new-section">Link to tutorial</a> <br>
     - Code from the github repo is downloaded into this folder: <code>C:\MY_BACKUP\LearningStuff\Angular8\DeepDiveTutorials\from-github_angular-course</code> <br>
-    - Multiple branches in the code. Each branch corresponds to a different topic. <br>
+    - Multiple branches in the code. Each branch corresponds to a different topic. There are two sets of code for each chapter, one is the starting point, and the other is the
+    finished version. You are making changes in the starting point one. Not using your own repo, instead using the above from-github_angular-course one. <br>
     - Once you have checked out a remote branch locally, you will have to run <code>npm install</code> and <code>npm start</code>.
   </div>
 
@@ -1351,6 +1359,25 @@
 
   <div class="textual-content">
     - <a href="https://angular-university.io/lesson/angular-first-component">Link to tutorial</a> <br>
+    - Like we said before, Angular gives us the ability to create our own custom components. <br>
+    - <code>ng generate component <i>component-name</i></code> is the command that we can use for generating our own custom component using the CLI. This will generate the
+    following four files: <br>
+    a) src/app/course-card/course-card.component.html <br>
+    b) src/app/course-card/course-card.component.spec.ts <br>
+    c) src/app/course-card/course-card.component.ts <br>
+    d) src/app/course-card/course-card.component.css <br>
+    - The <code>@Component</code> decorator means that we can use the selector used in that component to create custom html elements of our own.
+    <img src="imgs/AngularDeepDive/Chapter6/CreatingComponent.png"
+         class="center-block img-fluid"
+         alt="CreatingComponent">
+  </div>
+
+  <hr>
+  <div id="AngularCore_Chapter7" class="chapter">Chapter 7: Component Inputs and the <code>@Input</code> Decorator</div>
+  <hr>
+
+  <div class="textual-content">
+    -
   </div>
 
   <hr>
