@@ -269,7 +269,7 @@ body {
 .current {
     background-color: #c7365f;
     opacity: 0.8;
-    border-radius: 5px;
+    /*border-radius: 5px;*/
     color: #fff;
     width: 65%;
     padding-bottom: 0.5rem;
