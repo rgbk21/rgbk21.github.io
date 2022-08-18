@@ -1241,6 +1241,7 @@
     Chapter 5: <a href="#AngularCore_Chapter5">Angular Components and Core Directives</a> <br>
     Chapter 6: <a href="#AngularCore_Chapter6">Building our First Angular Component</a> <br>
     Chapter 7: <a href="#AngularCore_Chapter7">Component Inputs and the <code>@Input</code> Decorator</a> <br>
+    Chapter 8: <a href="#AngularCore_Chapter8">Angular Component <code>@Output</code> - Custom Events and Event Emitters</a> <br>
   </div>
 
 
@@ -1380,6 +1381,30 @@
   <hr>
 
   <div class="textual-content">
+    - In order to be able to use some data in our template (html file), we need to first assign the data to the Component that is associated with the template. <br>
+    - In the above image, we saw how we were able to generate multiple cards by just using the <i>app-course-card</i> selector multiple times. Now what we want to do is, we want
+    to pass in course-specific data so that each of the cards can show data for different courses. We do this by using the <code>@Input</code> decorator. The idea here is to define
+    certain variables, annotated with <code>@Input()</code> on the <i>course-card</i> component, which will be read by the template associated with the component. The parent
+    component (in this case, the <i>app.component</i>), will pass the required data to the <i>course-card</i> component through the input property syntax that we saw in Chapter 4
+    above.
+    <img src="imgs/AngularDeepDive/Chapter7/UsingInputDecorator.png"
+         class="center-block img-fluid"
+         alt="CreatingComponent">
+
+    - Now what about the image and long description? They are also being repeated. One way would be to do the same thing that we did above, and add two more fields annotated with
+    <code>@Input()</code> to the <i>course-card</i> component. Alternatively, we can pass in the entire <i>Course</i> object.
+    <img src="imgs/AngularDeepDive/Chapter7/UsingInputDecoratorWithObject.png"
+         class="center-block img-fluid"
+         alt="CreatingComponent">
+  </div>
+
+
+  <hr>
+  <div id="AngularCore_Chapter8" class="chapter">Chapter 8: Angular Component <code>@Output</code> - Custom Events and Event Emitters</div>
+  <hr>
+
+  <div class="textual-content">
+    - <a href="https://angular-university.io/lesson/angular-component-outputs">Link to tutorial</a> <br>
     -
   </div>
 
