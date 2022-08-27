@@ -48,9 +48,9 @@ gameSelectForm.addEventListener("submit", function (event) {
     console.log(`Player 2 wants to connect to game with ID: ${userSelectedGameId}`);
 
     connectToGameWithId({
-        "gameId" : userSelectedGameId,
-        "player" : {
-            "userName" : p2userName
+        "gameId": userSelectedGameId,
+        "player": {
+            "userName": p2userName
         }
     });
     hideOverlay();
@@ -65,16 +65,17 @@ targetScoreForm.addEventListener("submit", function (event) {
     hideSettingsOverlay();
 }, false);
 
-closeOpenGamesOverlayBtn.addEventListener('click', function (event){
+closeOpenGamesOverlayBtn.addEventListener('click', function (event) {
     hideOverlay();
 })
 
-settingsBtn.addEventListener('click', function (event){
+settingsBtn.addEventListener('click', function (event) {
     showSettingsOverlay();
 })
-closeSettingsOverlayBtn.addEventListener('click', function (event){
+closeSettingsOverlayBtn.addEventListener('click', function (event) {
     hideSettingsOverlay();
 })
+
 //////////////////////// Socket Setup
 function connectToSocket(gId) {
     let socket = new SockJS(url + '/gameplay');
@@ -154,7 +155,7 @@ function listAllOpenGames(event) {
             withCredentials: true
         },
         data: JSON.stringify({
-                "userName": p2userName
+            "userName": p2userName
         }),
         success: function (data) {
             openGames = data.openGames;
@@ -195,10 +196,10 @@ function connectToGameWithId({gameId, player: {userName}}) {
             withCredentials: true
         },
         data: JSON.stringify({
-            "player" : {
-                "userName" : userName
+            "player": {
+                "userName": userName
             },
-            "gameId" : gameId
+            "gameId": gameId
         }),
         success: function (data) {
             if (data.errorInfoList.length === 0) {
@@ -252,7 +253,8 @@ function sendGameChallengeNotification() {
             hideChallengeMeBtn();
             clearAlertContainer();
             showAlertWithText(`Game created with gameID: <strong>${data.gameId.split('-')[4]}</strong>, target score: <strong>${data.targetScore}</strong> <br> 
-                            Email notification sent! If I am free, I will join within a minute or two!`);
+                            Email notification sent! If I am free, I will join within a minute or two. Please keep this browser tab open to this page.
+                            You will receive a notification in the window once I join.`);
             console.log('Game created with ID: ' + data.gameId);
         },
         error: function (jqXHR, textStatus, errorThrown) {
@@ -443,12 +445,14 @@ function declareVictory(data) {
     }
     console.log(`Player with username ${winner} has won!`);
 }
+
 //////////////////////// Utils
 
 function showOverlay() {
     document.querySelector(".overlay").classList.remove("hidden");
     // document.getElementById("overlay").style.display = "grid";
 }
+
 function hideOverlay() {
     document.querySelector(".overlay").classList.add("hidden");
 }
@@ -456,9 +460,11 @@ function hideOverlay() {
 function showSettingsOverlay() {
     document.querySelector(".settings").classList.remove("hidden");
 }
+
 function hideSettingsOverlay() {
     document.querySelector(".settings").classList.add("hidden");
 }
+
 function hideChallengeMeBtn() {
     challengeMeBtn.classList.add("hidden");
 }
