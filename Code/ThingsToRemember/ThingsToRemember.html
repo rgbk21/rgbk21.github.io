@@ -2428,6 +2428,55 @@
     </div>
   </div>
 
+  <div class="one-point">
+    97) You can pass code as data in java using lambda expressions. How do you do this? <br>
+    - <a href="https://stackoverflow.com/questions/1073358/function-pointers-in-java">SO Link</a>. <br>
+    - Suppose there is a function that you want to execute as a callback. For eg. when the user clicks on the close button on a popup, and in response you want to call a method
+    that will be executed. The straight-forward way of doing this would be to add a close handler to the popup (assume the popup has such a method that allows you to do so), such
+    that when you clicked on the close button, the method was called. But for this it is necessary that the function you want to add as a callback is in scope. <br>
+    - Consider the following code. In the below example, the <i>onBindingEditorPopupClose</i> is defined in the same class, and hence we can add the method as a callback.
+    <div class="code-block">
+      <div class="expand-code-snip-btn border border-primary rounded">
+        <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+      </div>
+      <div class="code-snippet">
+        <script src="https://gist.github.com/rgbk21/e5174b46e538c55a0abd861685bc962a.js"></script>
+      </div>
+    </div>
+
+    - But now suppose if you wanted to refactor the <i>BindingTextBox</i> class such that the <i>createPopup</i> no longer <i>returned</i> the instance of the popup that it had
+    created. In that case you wouldn't have a reference to the popup in the <i>PropertyRow</i> class, hence not allowing you to add the <i>addCloseHandler</i>. You can try to
+    add the close handler in the same place where you are instantiating the <i>bindingEditorPopup</i>, but then you would need a reference to the same <i>PropertyRow</i> class
+    because that is the class on which the <i>onBindingEditorPopupClose</i> is defined, which in turn means changing the constructor of the <i>BindingEditorPopup</i>, and all the
+    other places where the constructor is being used as well. This will in-turn end up changing the dependency graph of the objects are being created as well. Not such a clean way.
+    <br>
+    - There is an alternate way though. The problem can be solved by passing in the <i>onBindingEditorPopupClose</i> as data. <br>
+    <p class="inline-heading">Why does <i>setCloseHandlerCallback</i> use the <code>Runnable</code> interface</p>: The method that we intend to pass in as the callback in this
+    case is <i>onBindingEditorPopupClose</i>. <i>onBindingEditorPopupClose</i> does not take in any arguments and returns void. Hence, we need to refer the
+    <i>onBindingEditorPopupClose</i> function using an interface that also has the same definition. We could create an interface of ourselves, but java already has such an
+    interface in the form of <code>Runnable</code>, and hence that is the interface that we end up using.
+    <div class="code-block">
+      <div class="expand-code-snip-btn border border-primary rounded">
+        <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+      </div>
+      <div class="code-snippet">
+        <script src="https://gist.github.com/rgbk21/b3affa92b8fe630f8733c45734e046bd.js"></script>
+      </div>
+    </div>
+
+    <p class="inline-heading">What would we do if the <i>onBindingEditorPopupClose</i> took in params instead</p>: In the below code example, all we are changing is that
+    the <i>onBindingEditorPopupClose</i> now takes in an args and returns void. Hence, we change the interface to instead use the <code>Consumer</code> interface, since that has
+    the same definition as well.
+    <div class="code-block">
+      <div class="expand-code-snip-btn border border-primary rounded">
+        <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+      </div>
+      <div class="code-snippet">
+        <script src="https://gist.github.com/rgbk21/7fb25705ba5d3bbcd119bc074965286e.js"></script>
+      </div>
+    </div>
+  </div>
+
 
   <hr>
   <div id="bloch" class="chapter">Book Notes</div>
