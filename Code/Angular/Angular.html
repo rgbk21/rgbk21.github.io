@@ -1408,6 +1408,25 @@
   <div class="textual-content">
     - <a href="https://angular-university.io/lesson/angular-component-outputs">Link to tutorial</a> <br>
     - In this section, we are going to see how we can get the component to emit custom events that can be then handled at the level of the parent component. <br>
+    - We want to add a button to each of the course cards such that when the user clicks on the button we can send the user to a page that contains the entire description of the
+    course. We add a <code>button</code> input on the <i>course-card</i> template. Then we add a click handler to the button by using the <code>(click)=""</code> syntax. <br>
+    - The click event here works as a standard click event, which means that it bubbles outside of the <i>course-card</i> component as well. What this means is that if we add a
+    click handler on the <i>app-component</i> to listen for the click event, that event handler will trigger as well. Below is the flow when handling click event which is a browser
+    native event.
+    <img src="imgs/AngularDeepDive/Chapter8/OutputWithBrowserNativeEvents.png"
+         class="center-block img-fluid"
+         alt="OutputWithBrowserNativeEvents">
+
+    - Using a similar syntax that we've used to handle native browser events, we can also handle custom events (events that we've defined) in the same way. In the below example we
+    are going to define a custom event called <i>courseSelected</i>. <br>
+    - First we need to emit an event for which we make use of the <a href="https://angular.io/api/core/EventEmitter"><code>EventEmitter</code></a> class from Angular Core. Refer
+    the below setup to see how to do this. Note that there is a difference in the way that Angular treats native browser events and custom events. Native events, like the click
+    event that we saw above, are automatically bubbled to the parent components. But that is not the case with custom events. Custom events do not automatically bubble to their
+    parent components.
+    <img src="imgs/AngularDeepDive/Chapter8/OutputWithCustomEvents.png"
+         class="center-block img-fluid"
+         alt="OutputWithCustomEvents">
+
   </div>
 
   <hr>
