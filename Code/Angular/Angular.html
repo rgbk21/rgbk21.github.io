@@ -1242,6 +1242,7 @@
     Chapter 6: <a href="#AngularCore_Chapter6">Building our First Angular Component</a> <br>
     Chapter 7: <a href="#AngularCore_Chapter7">Component Inputs and the <code>@Input</code> Decorator</a> <br>
     Chapter 8: <a href="#AngularCore_Chapter8">Angular Component <code>@Output</code> - Custom Events and Event Emitters</a> <br>
+    Chapter 9: <a href="#AngularCore_Chapter9">The Angular ngFor Core Directive (also conditionally add styles to HTML elements)</a> <br>
   </div>
 
 
@@ -1422,11 +1423,48 @@
     - First we need to emit an event for which we make use of the <a href="https://angular.io/api/core/EventEmitter"><code>EventEmitter</code></a> class from Angular Core. Refer
     the below setup to see how to do this. Note that there is a difference in the way that Angular treats native browser events and custom events. Native events, like the click
     event that we saw above, are automatically bubbled to the parent components. But that is not the case with custom events. Custom events do not automatically bubble to their
-    parent components.
+    parent components. <br>
+    - So the way with how the event handlers are set up right now, you will be getting three different kinds of behavior by clicking the cards. <br>
+    a) When you click on the first card's "View Course" button, the click event is triggered which calls <i>handleViewCourseButtonClicked()</i>. The click event then bubbles to the
+    parent component, where it is intercepted by the click event listener, and that calls <i>handleCardClick()</i>. The <i>courseSelected</i> event is also fired, but since the
+    parent component is not listening for the event, <i>handleCourseSelectedEvent</i> is not called. If you added <code>(courseSelected)="handleCourseSelectedEvent($event)"</code>
+    to the first <i>app-course-card</i>, <i>handleCourseSelectedEvent</i> would be called as well. <br>
+    b) When you click the second card's "View Course" button, the <i>handleViewCourseButtonClicked()</i> is called. Since we are only listening for the <i>courseSelected</i> event,
+    only <i>handleCourseSelectedEvent</i> is called. And <i>handleCardClick()</i> is not called. <br>
+    c) When you click the third card's "View Course" button, it is just the <i>handleViewCourseButtonClicked()</i> that is called.
     <img src="imgs/AngularDeepDive/Chapter8/OutputWithCustomEvents.png"
          class="center-block img-fluid"
          alt="OutputWithCustomEvents">
 
+  </div>
+
+  <hr>
+  <div id="AngularCore_Chapter9" class="chapter">Chapter 9: The Angular ngFor Core Directive (also conditionally add styles to HTML elements)</div>
+  <hr>
+
+  <div class="textual-content">
+    - <a href="https://angular-university.io/lesson/angular-ngfor">Link to tutorial</a> <br>
+    - <a href="https://angular.io/api/common/NgForOf"><code>*ngFor</code></a> is a <i>structural directive</i>. A structural directive allows us to change the structure of a page
+    based on a javascript expression. <br>
+    - In the below example, each course from the <i>Courses</i> array is being exposed as a <i>course</i> which we can then pass into the <i>app-course-card</i> as an input. <br>
+    <div class="code-block">
+      <div class="expand-code-snip-btn border border-primary rounded">
+        <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+      </div>
+      <div class="code-snippet">
+        <script src="https://gist.github.com/rgbk21/68f045c3978f76984f10c32a0ccf6e42.js"></script>
+      </div>
+    </div>
+
+    - <code>*ngFor</code> also gives you some auxiliary features such as <code>index</code>, <code>first</code>, <code>last</code>, <code>even</code>, <code>odd</code>. <br>
+    - <code>index as i</code> allows us to access the index of the item currently iterating and assign it the name <i>i</i>. <code>first</code> tells us if the element currently in
+    iteration is the first element of the collection or not. Same for <code>last</code> as well. <code>even</code> and <code>odd</code> tell us whether the elements are the even or
+    odd numbered iterations respectively. <br>
+    - You can conditionally add styles to the html. This is done as follows. Note the selector that is being used in the css file to apply the styles. You can read more about
+    what is the meaning of the selectors on <a href="https://www.w3schools.com/cssref/css_selectors.asp">this W3Schools link</a>.
+    <img src="imgs/AngularDeepDive/Chapter9/ngFor_Directive.png"
+         class="center-block img-fluid"
+         alt="ngFor_Directive">
   </div>
 
   <hr>
