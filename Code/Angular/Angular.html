@@ -1243,6 +1243,8 @@
     Chapter 7: <a href="#AngularCore_Chapter7">Component Inputs and the <code>@Input</code> Decorator</a> <br>
     Chapter 8: <a href="#AngularCore_Chapter8">Angular Component <code>@Output</code> - Custom Events and Event Emitters</a> <br>
     Chapter 9: <a href="#AngularCore_Chapter9">The Angular ngFor Core Directive (also conditionally add styles to HTML elements)</a> <br>
+    Chapter 10: <a href="#AngularCore_Chapter10">Angular ngIf Directive and the Elvis Operator</a> <br>
+    Chapter 11: <a href="#AngularCore_Chapter11">Angular ngClass Core Directive</a> <br>
   </div>
 
 
@@ -1301,9 +1303,16 @@
     functionality. <br>
     b) Separation between view and model. The view is the html file, the model is the <code>@Component</code> associated with the html, and the html can access values in the
     component using <code>{{ }}</code>.
-    <img src="imgs/AngularDeepDive/Chapter2/Introduction.png"
-         class="center-block img-fluid"
-         alt="Introduction">
+    <div class="image-block">
+      <div class="expand-screenshot-image-btn border border-primary rounded">
+        <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
+      </div>
+      <div class="screenshot-image">
+        <img src="imgs/AngularDeepDive/Chapter2/Introduction.png"
+             class="center-block img-fluid"
+             alt="Introduction">
+      </div>
+    </div>
   </div>
 
   <hr>
@@ -1372,9 +1381,16 @@
     c) src/app/course-card/course-card.component.ts <br>
     d) src/app/course-card/course-card.component.css <br>
     - The <code>@Component</code> decorator means that we can use the selector used in that component to create custom html elements of our own.
-    <img src="imgs/AngularDeepDive/Chapter6/CreatingComponent.png"
-         class="center-block img-fluid"
-         alt="CreatingComponent">
+    <div class="image-block">
+      <div class="expand-screenshot-image-btn border border-primary rounded">
+        <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
+      </div>
+      <div class="screenshot-image">
+        <img src="imgs/AngularDeepDive/Chapter6/CreatingComponent.png"
+             class="center-block img-fluid"
+             alt="CreatingComponent">
+      </div>
+    </div>
   </div>
 
   <hr>
@@ -1390,15 +1406,28 @@
     certain variables, annotated with <code>@Input()</code> on the <i>course-card</i> component, which will be read by the template associated with the component. The parent
     component (in this case, the <i>app.component</i>), will pass the required data to the <i>course-card</i> component through the input property syntax that we saw in Chapter 4
     above.
-    <img src="imgs/AngularDeepDive/Chapter7/UsingInputDecorator.png"
-         class="center-block img-fluid"
-         alt="CreatingComponent">
-
+    <div class="image-block">
+      <div class="expand-screenshot-image-btn border border-primary rounded">
+        <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
+      </div>
+      <div class="screenshot-image">
+        <img src="imgs/AngularDeepDive/Chapter7/UsingInputDecorator.png"
+             class="center-block img-fluid"
+             alt="CreatingComponent">
+      </div>
+    </div>
     - Now what about the image and long description? They are also being repeated. One way would be to do the same thing that we did above, and add two more fields annotated with
     <code>@Input()</code> to the <i>course-card</i> component. Alternatively, we can pass in the entire <i>Course</i> object.
-    <img src="imgs/AngularDeepDive/Chapter7/UsingInputDecoratorWithObject.png"
-         class="center-block img-fluid"
-         alt="CreatingComponent">
+    <div class="image-block">
+      <div class="expand-screenshot-image-btn border border-primary rounded">
+        <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
+      </div>
+      <div class="screenshot-image">
+        <img src="imgs/AngularDeepDive/Chapter7/UsingInputDecoratorWithObject.png"
+             class="center-block img-fluid"
+             alt="CreatingComponent">
+      </div>
+    </div>
   </div>
 
 
@@ -1414,9 +1443,16 @@
     - The click event here works as a standard click event, which means that it bubbles outside of the <i>course-card</i> component as well. What this means is that if we add a
     click handler on the <i>app-component</i> to listen for the click event, that event handler will trigger as well. Below is the flow when handling click event which is a browser
     native event.
-    <img src="imgs/AngularDeepDive/Chapter8/OutputWithBrowserNativeEvents.png"
-         class="center-block img-fluid"
-         alt="OutputWithBrowserNativeEvents">
+    <div class="image-block">
+      <div class="expand-screenshot-image-btn border border-primary rounded">
+        <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
+      </div>
+      <div class="screenshot-image">
+        <img src="imgs/AngularDeepDive/Chapter8/OutputWithBrowserNativeEvents.png"
+             class="center-block img-fluid"
+             alt="OutputWithBrowserNativeEvents">
+      </div>
+    </div>
 
     - Using a similar syntax that we've used to handle native browser events, we can also handle custom events (events that we've defined) in the same way. In the below example we
     are going to define a custom event called <i>courseSelected</i>. <br>
@@ -1432,10 +1468,16 @@
     b) When you click the second card's "View Course" button, the <i>handleViewCourseButtonClicked()</i> is called. Since we are only listening for the <i>courseSelected</i> event,
     only <i>handleCourseSelectedEvent</i> is called. And <i>handleCardClick()</i> is not called. <br>
     c) When you click the third card's "View Course" button, it is just the <i>handleViewCourseButtonClicked()</i> that is called.
-    <img src="imgs/AngularDeepDive/Chapter8/OutputWithCustomEvents.png"
-         class="center-block img-fluid"
-         alt="OutputWithCustomEvents">
-
+    <div class="image-block">
+      <div class="expand-screenshot-image-btn border border-primary rounded">
+        <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
+      </div>
+      <div class="screenshot-image">
+        <img src="imgs/AngularDeepDive/Chapter8/OutputWithCustomEvents.png"
+             class="center-block img-fluid"
+             alt="OutputWithCustomEvents">
+      </div>
+    </div>
   </div>
 
   <hr>
@@ -1462,9 +1504,81 @@
     odd numbered iterations respectively. <br>
     - You can conditionally add styles to the html. This is done as follows. Note the selector that is being used in the css file to apply the styles. You can read more about
     what is the meaning of the selectors on <a href="https://www.w3schools.com/cssref/css_selectors.asp">this W3Schools link</a>.
-    <img src="imgs/AngularDeepDive/Chapter9/ngFor_Directive.png"
-         class="center-block img-fluid"
-         alt="ngFor_Directive">
+    <div class="image-block">
+      <div class="expand-screenshot-image-btn border border-primary rounded">
+        <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
+      </div>
+      <div class="screenshot-image">
+        <img src="imgs/AngularDeepDive/Chapter9/ngFor_Directive.png"
+             class="center-block img-fluid"
+             alt="ngFor_Directive">
+      </div>
+    </div>
+  </div>
+
+  <hr>
+  <div id="AngularCore_Chapter10" class="chapter">Chapter 10: Angular ngIf Directive and the Elvis Operator <code> ? </code></div>
+  <hr>
+
+  <div class="textual-content">
+    - <a href="https://angular-university.io/lesson/angular-ngif">Link to tutorial</a> <br>
+    - <code>ngIf</code> is a directive used for showing/hiding certain parts of the page from the user. <br>
+    - The syntax for using <code>ngIf</code> is <code>*ngIf="<i>expression</i>"</code>. If the <i>expression</i> evaluates to <code>true</code>, then the <i>element</i> on which
+    the ngIf is being applied will still be present on the screen. If the <i>expression</i> evaluates to <code>false</code>, the element gets hidden. If you "Inspect" the webpage
+    at this point, you will see that the element has been completely removed from the DOM. It is not just hidden with CSS. <br>
+    - The <i>expression</i> need not necessarily be strictly a boolean. We could pass in an entire object to the <i>expression</i>. If the object was undefined, the
+    <i>expression</i> would be evaluated to <code>false</code>, else it would be evaluated to <code>true</code>. You could also add a function call here that would be resolved at
+    the level of the component.
+    <div class="image-block">
+      <div class="expand-screenshot-image-btn border border-primary rounded">
+        <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+      </div>
+      <div class="screenshot-image">
+        <img src="imgs/AngularDeepDive/Chapter10/ngIf_Directive.png"
+             class="center-block img-fluid"
+             alt="ngIf_Directive">
+      </div>
+    </div>
+
+    - Angular also provides us with the Elvis operator <code> ? </code> that allows us to check whether the object is null or not. Consider the below example where the first item
+    in the <i>courses</i> array is <code>undefined</code>. This would create a NPE when we try to access <i>course.description</i> or <i>course.iconUrl</i> in the
+    <i>course-card.component</i>. We can prevent this by doing <i>course?.iconUrl</i> and <i>course?.description</i>. Instead of having to use suffix every usage of <i>course</i>
+    with <code>?</code>, we can instead conditionally show the card depending on whether the course is null or not.
+
+    <div class="image-block">
+      <div class="expand-screenshot-image-btn border border-primary rounded">
+        <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+      </div>
+      <div class="screenshot-image">
+        <img src="imgs/AngularDeepDive/Chapter10/elvis_operator.png"
+             class="center-block img-fluid"
+             alt="elvis_operator">
+      </div>
+    </div>
+
+    - Another commonly used feature of <code>*ngIf</code> is the <code>else</code> clause. We saw above how to hide the image when the <i>iconUrl</i> was null. Let's say that
+    instead of just hiding the element, we wanted to present some text to the user like "No Image Available". We do this by adding an <code>else</code> clause. The
+    <code>else</code> block requires a reference to a template block that is going to contain the message. The template block is created using <code>ng-template</code> and we
+    pass it to the <code>else</code> clause by using the template reference <code>#</code> syntax that we have seen before. This is an example of how we do that:
+    <div class="image-block">
+      <div class="expand-screenshot-image-btn border border-primary rounded">
+        <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+      </div>
+      <div class="screenshot-image">
+        <img src="imgs/AngularDeepDive/Chapter10/else_block.png"
+             class="center-block img-fluid"
+             alt="else_block">
+      </div>
+    </div>
+  </div>
+
+  <hr>
+  <div id="AngularCore_Chapter11" class="chapter">Chapter 11: Angular ngClass Core Directive</div>
+  <hr>
+
+  <div class="textual-content">
+    - <a href="https://angular-university.io/lesson/angular-ngclass">Link to tutorial</a> <br>
+
   </div>
 
   <hr>

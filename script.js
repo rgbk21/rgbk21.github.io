@@ -2,6 +2,7 @@
 
 const btn_loadAllGists = document.querySelector('#load-all-gists');
 const btn_showThisGist = document.querySelectorAll('.expand-code-snip-btn');
+const showImageBtns = document.querySelectorAll('.expand-screenshot-image-btn');
 
 
 btn_loadAllGists?.addEventListener('click', function (e) {
@@ -17,3 +18,9 @@ btn_showThisGist?.forEach(btn => {
         // $(this).css( "display", "none" );
     })
 })
+
+showImageBtns?.forEach(btn =>
+    btn.addEventListener('click', function (e){
+        $(this).next( ".screenshot-image" ).toggle("display");
+    })
+);
