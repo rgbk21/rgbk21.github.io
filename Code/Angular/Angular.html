@@ -1245,6 +1245,7 @@
     Chapter 9: <a href="#AngularCore_Chapter9">The Angular ngFor Core Directive (also conditionally add styles to HTML elements)</a> <br>
     Chapter 10: <a href="#AngularCore_Chapter10">Angular ngIf Directive and the Elvis Operator</a> <br>
     Chapter 11: <a href="#AngularCore_Chapter11">Angular ngClass Core Directive</a> <br>
+    Chapter 12: <a href="#AngularCore_Chapter12">Angular ngStyle Core Directive</a> <br>
   </div>
 
 
@@ -1573,12 +1574,46 @@
   </div>
 
   <hr>
-  <div id="AngularCore_Chapter11" class="chapter">Chapter 11: Angular ngClass Core Directive</div>
+  <div id="AngularCore_Chapter11" class="chapter">Chapter 11: Angular <code>ngClass</code> Core Directive</div>
   <hr>
 
   <div class="textual-content">
     - <a href="https://angular-university.io/lesson/angular-ngclass">Link to tutorial</a> <br>
+    - The <code>ngClass</code> directive is used to conditionally add CSS classes to the template. <br>
+    - In the example that we have been following, the <i>courses</i> list has a <i>category</i> field, and one of the values allowed for the field is <i>BEGINNER</i>. We want to
+    give cards that show data for beginner courses a different background color. The idea is here is to define a css class <i>beginner</i>, and have Angular conditionally append
+    that css class to the <code>class</code> list by using <code>ngClass</code> directive. <br>
+    - Using a <code>ngClass="<i>expression</i>"</code> directive allows us to pass an argument that turns on or off certain CSS classes. The <i>expression</i> can take multiple
+    kinds of arguments. We can pass it a string, an array, or a configuration object.
+    <div class="code-block">
+      <div class="expand-code-snip-btn border border-primary rounded">
+        <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+      </div>
+      <div class="code-snippet">
+        <script src="https://gist.github.com/rgbk21/34a63eefa536c6a6bcf525692f6d8ffc.js"></script>
+      </div>
+    </div>
 
+    - Similar to the other directives, we can specify a function that will instead return the configuration object/string/array instead of us having to hard-code the object
+    ourselves.
+    <div class="image-block">
+      <div class="expand-screenshot-image-btn border border-primary rounded">
+        <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+      </div>
+      <div class="screenshot-image">
+        <img src="imgs/AngularDeepDive/Chapter11/ngClass_directive.png"
+             class="center-block img-fluid"
+             alt="ngClass_directive">
+      </div>
+    </div>
+  </div>
+
+  <hr>
+  <div id="AngularCore_Chapter12" class="chapter">Chapter 12: Angular ngStyle Core Directive</div>
+  <hr>
+
+  <div class="textual-content">
+    - <a href="https://angular-university.io/lesson/angular-ngstyle">Link to tutorial</a> <br>
   </div>
 
   <hr>
