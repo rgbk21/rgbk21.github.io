@@ -1246,6 +1246,7 @@
     Chapter 10: <a href="#AngularCore_Chapter10">Angular ngIf Directive and the Elvis Operator</a> <br>
     Chapter 11: <a href="#AngularCore_Chapter11">Angular ngClass Core Directive</a> <br>
     Chapter 12: <a href="#AngularCore_Chapter12">Angular ngStyle Core Directive</a> <br>
+    Chapter 13: <a href="#AngularCore_Chapter13">Angular ngSwitch Core Directive</a> <br>
   </div>
 
 
@@ -1614,6 +1615,33 @@
 
   <div class="textual-content">
     - <a href="https://angular-university.io/lesson/angular-ngstyle">Link to tutorial</a> <br>
+    - In the previous lesson we took a look at how to add CSS classes conditionally. In this lesson, we are going to take a look at how to add CSS Styles conditionally. <br>
+
+    - Most of the time we should be able to style our components using plain CSS classes defined directly on the template (for eg. the <i>course-card</i> CSS class that was
+    defined on the div above). But there might be situation where we want to apply a style directly to the component. <br>
+    - First, let us see how to apply styles directly to an element without using the <code>ngStyle</code> directive. <br>
+    - Let's suppose we wanted to underline the title of the course name on each of the course cards. This is how we could do it:
+    <div class="code-block">
+      <div class="expand-code-snip-btn border border-primary rounded">
+        <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+      </div>
+      <div class="code-snippet">
+        <script src="https://gist.github.com/rgbk21/861f85e4203fec1a7e5f4f002c7592fc.js"></script>
+      </div>
+    </div>
+
+    - The above examples are just for reference purposes. You should not use <code>ngClass</code> or <code>ngStyle</code> to pass in constant styles to the template. These should
+    be used only in cases where the styles themselves are dependent on the data that is coming into the component. For instance, a good usage would be if we wanted to set the
+    background image of the cards to the course image that was being returned from the server. In that case we could use the <code>ngStyle</code> to set the background image
+    using the <code>background-image: url(<i>course.iconUrl</i>)</code>.
+  </div>
+
+  <hr>
+  <div id="AngularCore_Chapter13" class="chapter">Chapter 13: Angular ngSwitch Core Directive</div>
+  <hr>
+
+  <div class="textual-content">
+    - <a href="https://angular-university.io/lesson/angular-ngswitch">Link to tutorial</a> <br>
   </div>
 
   <hr>
