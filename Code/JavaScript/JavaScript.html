@@ -2,1717 +2,1819 @@
 <html lang="en">
 <head>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-            crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-            crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-            crossorigin="anonymous"></script>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9QJ5D3X353"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+          integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+          crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+          integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+          crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+          integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+          crossorigin="anonymous"></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9QJ5D3X353"></script>
+  <script>
+      window.dataLayer = window.dataLayer || [];
 
-        gtag('config', 'G-9QJ5D3X353');
-    </script>
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="../../globalStyles.css">
-    <meta name="author" content="Raj Gaurav Ballabh Kumar">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript Notes</title>
+      function gtag() {
+          dataLayer.push(arguments);
+      }
+
+      gtag('js', new Date());
+
+      gtag('config', 'G-9QJ5D3X353');
+  </script>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../../globalStyles.css">
+  <meta name="author" content="Raj Gaurav Ballabh Kumar">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Notes</title>
 </head>
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
 
-    <div class="navbar-header">
-        <a href="../../index.html" class="navbar-brand"> rgbk21</a>
-    </div>
+  <div class="navbar-header">
+    <a href="../../index.html" class="navbar-brand"> rgbk21</a>
+  </div>
 
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"><span
-            class="navbar-toggler-icon"></span>
-    </button>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"><span
+    class="navbar-toggler-icon"></span>
+  </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="nav navbar-nav">
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
-                   aria-expanded="false">
-                    Projects
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="../../Projects/TwitterCritNodes/TwitterCritNodes_1.html">Identifying
-                        Critical Nodes on Twitter</a>
-                    <a class="dropdown-item" href="../../Projects/isRelatedTo/isRelatedTo.html">isRelatedTo</a>
-                    <div class="dropdown-divider"></div>
-                </div>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
-                   aria-expanded="false">
-                    HTML Projects
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="../../WordleCheater/index.html">Wordle Cheater</a>
-                    <a class="dropdown-item" href="../../Pig_Game/index.html">2-Player Pig Game</a>
-                    <a class="dropdown-item" href="../../ImageGallery/ImageGallery.html">Image Gallery</a>
-                    <a class="dropdown-item" href="../../RGB_Guesser_Game/RGB.html">RGB Guesser Game</a>
-                    <a class="dropdown-item" href="../../ToDoList/todo.html">To-Do List</a>
-                    <div class="dropdown-divider"></div>
-                </div>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
-                   aria-expanded="false">
-                    Notes
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="../../Lectures/COMS_631/COMS_631_index.html">COMS 631</a>
-                    <a class="dropdown-item" href="../../Lectures/COMS_535/COMS_535_index.html">COMS 535</a>
-                    <a class="dropdown-item" href="../../Lectures/EffectiveJava/EffectiveJava.html">Effective Java</a>
-                    <a class="dropdown-item" href="../../Lectures/DI/DI.html">Dependency Injection</a>
-                    <div class="dropdown-divider"></div>
-                </div>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
-                   aria-expanded="false">
-                    Code
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="../../Code/ThingsToRemember/ThingsToRemember.html">Things To Remember</a>
-                    <a class="dropdown-item" href="../../Code/Java_Notes/JavaNotes.html">Java Notes</a>
-                    <a class="dropdown-item" href="../../Code/Java_Notes/JavaNotes_2.html">Java Notes 2</a>
-                    <a class="dropdown-item" href="../../Code/LeetCode/LeetCode.html">LeetCode Notes</a>
-                    <a class="dropdown-item" href="../../Code/Applying_Java_Notes/ApplyingJava_Notes.html">ApplyingJava Notes</a>
-                    <a class="dropdown-item" href="../../Code/JavaScript/JavaScript.html">JavaScript Notes</a>
-                    <a class="dropdown-item" href="../../Code/HTML_CSS/HTML_CSS_Basics.html">HTML & CSS Notes</a>
-                    <a class="dropdown-item" href="../../Code/SQL/SQL.html">SQL Notes</a>
-                    <a class="dropdown-item" href="../../Code/Spring/Spring.html">Spring Notes</a>
-                    <a class="dropdown-item" href="../../Code/Kafka/Kafka.html">Kafka Notes</a>
-                    <a class="dropdown-item" href="../../Code/Angular/Angular.html">Angular</a>
-                    <a class="dropdown-item" href="../../Code/Hibernate/Hibernate.html">Hibernate</a>
-                    <div class="dropdown-divider"></div>
-                </div>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
-                   aria-expanded="false">
-                    In Another Life
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="../../InAnotherLife/Chapter1/Chapter1.html">Chapter 1</a>
-                    <a class="dropdown-item" href="../../InAnotherLife/Chapter2/Chapter2.html">Chapter 2</a>
-                    <a class="dropdown-item" href="../../InAnotherLife/Chapter3/Chapter3.html">Chapter 3</a>
-                    <div class="dropdown-divider"></div>
-                </div>
-            </li>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="nav navbar-nav">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+           aria-expanded="false">
+          Projects
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="../../Projects/TwitterCritNodes/TwitterCritNodes_1.html">Identifying
+            Critical Nodes on Twitter</a>
+          <a class="dropdown-item" href="../../Projects/isRelatedTo/isRelatedTo.html">isRelatedTo</a>
+          <div class="dropdown-divider"></div>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+           aria-expanded="false">
+          HTML Projects
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="../../WordleCheater/index.html">Wordle Cheater</a>
+          <a class="dropdown-item" href="../../Pig_Game/index.html">2-Player Pig Game</a>
+          <a class="dropdown-item" href="../../ImageGallery/ImageGallery.html">Image Gallery</a>
+          <a class="dropdown-item" href="../../RGB_Guesser_Game/RGB.html">RGB Guesser Game</a>
+          <a class="dropdown-item" href="../../ToDoList/todo.html">To-Do List</a>
+          <div class="dropdown-divider"></div>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+           aria-expanded="false">
+          Notes
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="../../Lectures/COMS_631/COMS_631_index.html">COMS 631</a>
+          <a class="dropdown-item" href="../../Lectures/COMS_535/COMS_535_index.html">COMS 535</a>
+          <a class="dropdown-item" href="../../Lectures/EffectiveJava/EffectiveJava.html">Effective Java</a>
+          <a class="dropdown-item" href="../../Lectures/DI/DI.html">Dependency Injection</a>
+          <div class="dropdown-divider"></div>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+           aria-expanded="false">
+          Code
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="../../Code/ThingsToRemember/ThingsToRemember.html">Things To Remember</a>
+          <a class="dropdown-item" href="../../Code/Java_Notes/JavaNotes.html">Java Notes</a>
+          <a class="dropdown-item" href="../../Code/Java_Notes/JavaNotes_2.html">Java Notes 2</a>
+          <a class="dropdown-item" href="../../Code/LeetCode/LeetCode.html">LeetCode Notes</a>
+          <a class="dropdown-item" href="../../Code/Applying_Java_Notes/ApplyingJava_Notes.html">ApplyingJava Notes</a>
+          <a class="dropdown-item" href="../../Code/JavaScript/JavaScript.html">JavaScript Notes</a>
+          <a class="dropdown-item" href="../../Code/HTML_CSS/HTML_CSS_Basics.html">HTML & CSS Notes</a>
+          <a class="dropdown-item" href="../../Code/SQL/SQL.html">SQL Notes</a>
+          <a class="dropdown-item" href="../../Code/Spring/Spring.html">Spring Notes</a>
+          <a class="dropdown-item" href="../../Code/Kafka/Kafka.html">Kafka Notes</a>
+          <a class="dropdown-item" href="../../Code/Angular/Angular.html">Angular</a>
+          <a class="dropdown-item" href="../../Code/Hibernate/Hibernate.html">Hibernate</a>
+          <div class="dropdown-divider"></div>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+           aria-expanded="false">
+          In Another Life
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="../../InAnotherLife/Chapter1/Chapter1.html">Chapter 1</a>
+          <a class="dropdown-item" href="../../InAnotherLife/Chapter2/Chapter2.html">Chapter 2</a>
+          <a class="dropdown-item" href="../../InAnotherLife/Chapter3/Chapter3.html">Chapter 3</a>
+          <div class="dropdown-divider"></div>
+        </div>
+      </li>
 
-        </ul>
+    </ul>
 
 
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item active"><a class="nav-link" href="https://github.com/rgbk21">GitHub</a></li>
-            <li class="nav-item active"><a class="nav-link"
-                                           href="https://www.linkedin.com/in/raj-gaurav-ballabh-kumar-97002058/">LinkedIn</a>
-            </li>
-            <li class="nav-item active"><a class="nav-link" href="https://www.instagram.com/wobblyframes/">Instagram</a>
-            </li>
-            <li class="nav-item active"><a class="nav-link"
-                                           href="https://www.facebook.com/SomeRandomThoughts">Facebook</a></li>
-        </ul>
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active"><a class="nav-link" href="https://github.com/rgbk21">GitHub</a></li>
+      <li class="nav-item active"><a class="nav-link"
+                                     href="https://www.linkedin.com/in/raj-gaurav-ballabh-kumar-97002058/">LinkedIn</a>
+      </li>
+      <li class="nav-item active"><a class="nav-link" href="https://www.instagram.com/wobblyframes/">Instagram</a>
+      </li>
+      <li class="nav-item active"><a class="nav-link"
+                                     href="https://www.facebook.com/SomeRandomThoughts">Facebook</a></li>
+    </ul>
 
-    </div>
+  </div>
 </nav>
 
 <div class="container">
 
-    <button id='load-all-gists' type="button" class="btn btn-outline-primary">Show all Gists!</button>
+  <button id='load-all-gists' type="button" class="btn btn-outline-primary">Show all Gists!</button>
 
+  <div>
+    This page contains my notes from the following books and lectures: <br>
+    a) Eloquent JavaScript by Marijn Haverbeke <br>
+    b) Udemy course on JavaScript - Jonas Schmedtmann<br>
+  </div>
+
+  <br>
+  Index for Book: <br>
+  Chapter 13: <a href="#Chapter13">JavaScript and the Browser</a>
+  <br>
+  Chapter 14: <a href="#Chapter14">The Document Object Model</a>
+  <br>
+  <br>
+
+  Index for Udemy Course: <br>
+  Module 2 - <a id="Module2_Link" href="#Module2_Udemy">JavaScript Fundamentals Part 1</a> <br>
+  Module 3 - <a id="Module3_Link" href="#Module3_Udemy">JavaScript Fundamentals Part 2</a> <br>
+  Module 5 - <a id="Module5_Link" href="#Module5_Udemy">Developer Skills and Editor Setup</a> <br>
+  Module 6 - <a id="Module6_Link" href="#Module6_Udemy">HTML and CSS Crash Course</a> <br>
+  Module 7 - <a id="Module7_Link" href="#Module7_Udemy">JS in the Browser: DOM and Event Fundamentals</a> <br>
+  Module 8 - <a id="Module8_Link" href="#Module8_Udemy">How JS works behind the scenes</a> <br>
+  Module 9 - <a id="Module9_Link" href="#Module9_Udemy">Data Structures, Modern Operators, and Strings</a> <br>
+  Module 10 - <a id="Module10_Link" href="#Module10_Udemy">A closer look at functions</a> <br>
+  Module 11 - <a id="Module11_Link" href="#Module11_Udemy">Working with Arrays</a> <br>
+  Module 13 - <a id="Module13_Link" href="#Module13_Udemy">Advanced DOM and Events</a> <br>
+
+  <hr>
+  <div id="Chapter13" class="chapter">Chapter 13: JavaScript and the Browser</div>
+  <hr>
+  <div class="textual-content">
+
+    <li><b>HTML</b></li>
     <div>
-        This page contains my notes from the following books and lectures: <br>
-        a) Eloquent JavaScript by Marijn Haverbeke <br>
-        b) Udemy course on JavaScript - Jonas Schmedtmann<br>
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/968356973962cf08e0f2f2c18362d15e.js"></script>
+        </div>
+      </div>
+
+      - A HTML page contains text and <i>tags</i>. Tags give structure to the text, describing things such as
+      links,
+      paragraphs, and headings. <br>
+      - The <i>tags</i> are wrapped in <code>&lt;</code> <code>&gt;</code>. <br>
+      - The document starts with <code>&lt;!doctype html &gt;</code> , which tells the browser to interpret the
+      page
+      as modern HTML, as opposed to various dialects that were in use in the past. <br>
+      - An <i>HTML Element</i> is started by an opening tag like <code>&lt;p&gt;</code> and ended by a closing tag
+      like
+      <code>&lt;/p&gt;</code>. <br>
+      - Some opening tags, such as the one for the link (<code>&lt;a&gt;</code>), contain extra information in the
+      form of
+      name="value" pairs. These are called <i>attributes</i>. <br>
+      - Some kinds of tags do not enclose anything and thus do not need to be closed. The metadata tag
+      <code>&lt;meta charset="utf-8"&gt;</code> is an example of this. <br>
+      - <a
+      href="https://stackoverflow.com/questions/8937384/what-is-the-difference-between-html-tags-and-elements">This
+      SO Link</a> goes into the differences between tags, elements, and attributes. <br>
     </div>
 
     <br>
-    Index for Book: <br>
-    Chapter 13: <a href="#Chapter13">JavaScript and the Browser</a>
+
+    <li><b>HTML and JavaScript</b></li>
+    <div>
+      - The <code>&lt;script&gt;</code> tag allows us to include a piece of JavaScript in the document.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/0e789c4fbf549605dfbc222ab3a0b761.js"></script>
+        </div>
+      </div>
+
+      - Such a script will run as soon as its <code>&lt;script&gt;</code> tag is encountered while the browser
+      reads the HTML. <br>
+      - The <code>&lt;script&gt;</code> tag can be given an <code>src</code> attribute to fetch a script file (a
+      text file containing a JavaScript program) from a URL.
+
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/7f2b8663a4ec0d140287489d7903f0f2.js"></script>
+        </div>
+      </div>
+
+      - A script tag must always be closed with <code>&lt;script&gt;</code>, even if it refers to a script file
+      and doesn't contain any code. If you forget this, the rest of the page will be interpreted as part of the
+      script. <br>
+      - Some attributes can also contain a JavaScript program. The <code>&lt;button&gt;</code> tag (which shows up
+      as a button) has an <code>onclick</code> attribute. The attribute's value will be run whenever the button is
+      clicked.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/573a1e434a90b447af846adff9625568.js"></script>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <hr>
+  <div id="Chapter14" class="chapter">Chapter 14: The Document Object Model</div>
+  <hr>
+
+  <div class="textual-content">
+
+    <li><b>What is the DOM</b></li>
+    <div>
+      <div class="row">
+        <img src="imgs/Ch14/DOM.png" class="center-block img-fluid" alt="Example1">
+      </div>
+      - The data structure the browser uses to represent the document follows the above shape. For each box, there
+      is
+      an object, which we can interact with to find out things such as what HTML tag it represents and which boxes
+      and
+      text it contains. This representation is called the Document Object Model. <br>
+      - The global binding (other name for <i>variable</i>) <code>document</code> gives us access to these
+      objects. Its <code>documentElement</code> property refers to the object representing the
+      <code>&lt;html&gt;</code> tag.<br>
+      - You can think of the DOM as a tree datastructure with the <code>document.documentElement</code> serving as
+      the root of the tree. Just like a normal tree, the root is a node. A node can have children nodes
+      or can have leaves. <br>
+      - Each DOM node object has a <code>nodeType</code> property, which contains a code (number) that identifies
+      the type of node. Elements have code 1, which is also defined as the constant property
+      <code>Node.ELEMENT_NODE</code>. Text nodes, representing a section of text in the document, get code 3
+      (<code>Node.TEXT_NODE</code>). Comments have code 8 (<code>Node.COMMENT_NODE</code>). <br>
+      - What is the difference between Node object and Element object?
+      <a href="https://stackoverflow.com/questions/9979172/difference-between-node-object-and-element-object">This
+        SO Link explains</a>. <code>Element</code> inherits from <code>Node</code>, in the same way that Dog
+      inherits from Animal.
+      An <code>Element</code> object "is-a" <code>Node</code> object, in the same way that a Dog object "is-a"
+      Animal object.<br>
+      - Every node has a <code>parentNode</code> property that points to the node it is part of, if any. Likewise,
+      every element node (node type 1) has a <code>childNodes</code> property that points to an array-like object
+      holding its children. <br>
+      - The <code>firstChild</code> and <code>lastChild</code> properties point to the first and last child
+      elements or have the value <code>null</code> for nodes without children. <br>
+      - Similarly, <code>previousSibling</code> and <code>nextSibling</code> point to adjacent nodes, which are
+      nodes with the same parent that appear immediately before or after the node itself. For a first child,
+      <code>previousSibling</code> will be null, and for a last child, <code>nextSibling</code> will be null. <br>
+      - There's also the <code>children</code> property, which is like <code>childNodes</code> but contains
+      only element (type 1) children, not other types of child nodes. This can be useful when you aren't
+      interested in text nodes. <br>
+      - The <code>nodeValue</code> property of a text node holds the string of text that it represents. <br>
+    </div>
+
     <br>
-    Chapter 14: <a href="#Chapter14">The Document Object Model</a>
+    <li><b>Finding Elements in the DOM</b></li>
+    <div>
+      - If we want the <code>href</code> attribute of the link in that document, we can say:
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/f490eb65be0a2eaf4ebd0e89079cd237.js"></script>
+        </div>
+      </div>
+
+      - All element nodes have a <code>getElementsByTagName</code> method, which collects all elements with the
+      given tag name that are descendants (direct or indirect children) of that node and returns them as an
+      array-like object. <br>
+      - To find a specific single node, you can give it an <code>id</code> attribute and use
+      <code>document.getElementById</code> instead. <br>
+      - A third, similar method is <code>getElementsByClassName</code>, which, like
+      <code>getElementsByTagName</code>, searches through the contents of an element node and retrieves all
+      elements that have the given string in their class attribute. <br>
+    </div>
+
     <br>
-    <br>
+    <li><b>Changing the Document</b></li>
+    <div>
+      - Almost everything about the DOM data structure can be changed. The shape of the document tree can be
+      modified by changing parent-child relationships. Nodes have a <code>remove</code> method to remove them from
+      their current parent node. To add a child node to an element node, we can use <code>appendChild</code>,
+      which puts it at the end of the list of children, or <code>insertBefore</code>, which inserts the node
+      given as the first argument before the node given as the second argument. <br>
+      - Consider the following:
 
-    Index for Udemy Course: <br>
-    Module 2 - <a id="Module2_Link" href="#Module2_Udemy">JavaScript Fundamentals Part 1</a> <br>
-    Module 3 - <a id="Module3_Link" href="#Module3_Udemy">JavaScript Fundamentals Part 2</a> <br>
-    Module 5 - <a id="Module5_Link" href="#Module5_Udemy">Developer Skills and Editor Setup</a> <br>
-    Module 6 - <a id="Module6_Link" href="#Module6_Udemy">HTML and CSS Crash Course</a> <br>
-    Module 7 - <a id="Module7_Link" href="#Module7_Udemy">JS in the Browser: DOM and Event Fundamentals</a> <br>
-    Module 8 - <a id="Module8_Link" href="#Module8_Udemy">How JS works behind the scenes</a> <br>
-    Module 9 - <a id="Module9_Link" href="#Module9_Udemy">Data Structures, Modern Operators, and Strings</a> <br>
-    Module 10 - <a id="Module10_Link" href="#Module10_Udemy">A closer look at functions</a> <br>
-    Module 11 - <a id="Module11_Link" href="#Module11_Udemy">Working with Arrays</a> <br>
-    Module 13 - <a id="Module13_Link" href="#Module13_Udemy">Advanced DOM and Events</a> <br>
-
-    <hr>
-    <div id="Chapter13" class="chapter">Chapter 13: JavaScript and the Browser</div>
-    <hr>
-    <div class="textual-content">
-
-        <li><b>HTML</b></li>
-        <div>
-            <div class="code-block">
-                <div class="expand-code-snip-btn border border-primary rounded">
-                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-                </div>
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/968356973962cf08e0f2f2c18362d15e.js"></script>
-                </div>
-            </div>
-
-            - A HTML page contains text and <i>tags</i>. Tags give structure to the text, describing things such as
-            links,
-            paragraphs, and headings. <br>
-            - The <i>tags</i> are wrapped in <code>&lt;</code> <code>&gt;</code>. <br>
-            - The document starts with <code>&lt;!doctype html &gt;</code> , which tells the browser to interpret the
-            page
-            as modern HTML, as opposed to various dialects that were in use in the past. <br>
-            - An <i>HTML Element</i> is started by an opening tag like <code>&lt;p&gt;</code> and ended by a closing tag
-            like
-            <code>&lt;/p&gt;</code>. <br>
-            - Some opening tags, such as the one for the link (<code>&lt;a&gt;</code>), contain extra information in the
-            form of
-            name="value" pairs. These are called <i>attributes</i>. <br>
-            - Some kinds of tags do not enclose anything and thus do not need to be closed. The metadata tag
-            <code>&lt;meta charset="utf-8"&gt;</code> is an example of this. <br>
-            - <a
-                href="https://stackoverflow.com/questions/8937384/what-is-the-difference-between-html-tags-and-elements">This
-            SO Link</a> goes into the differences between tags, elements, and attributes. <br>
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
         </div>
-
-        <br>
-
-        <li><b>HTML and JavaScript</b></li>
-        <div>
-            - The <code>&lt;script&gt;</code> tag allows us to include a piece of JavaScript in the document.
-            <div class="code-block">
-                <div class="expand-code-snip-btn border border-primary rounded">
-                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-                </div>
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/0e789c4fbf549605dfbc222ab3a0b761.js"></script>
-                </div>
-            </div>
-
-            - Such a script will run as soon as its <code>&lt;script&gt;</code> tag is encountered while the browser
-            reads the HTML. <br>
-            - The <code>&lt;script&gt;</code> tag can be given an <code>src</code> attribute to fetch a script file (a
-            text file containing a JavaScript program) from a URL.
-
-            <div class="code-block">
-                <div class="expand-code-snip-btn border border-primary rounded">
-                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-                </div>
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/7f2b8663a4ec0d140287489d7903f0f2.js"></script>
-                </div>
-            </div>
-
-            - A script tag must always be closed with <code>&lt;script&gt;</code>, even if it refers to a script file
-            and doesn't contain any code. If you forget this, the rest of the page will be interpreted as part of the
-            script. <br>
-            - Some attributes can also contain a JavaScript program. The <code>&lt;button&gt;</code> tag (which shows up
-            as a button) has an <code>onclick</code> attribute. The attribute's value will be run whenever the button is
-            clicked.
-            <div class="code-block">
-                <div class="expand-code-snip-btn border border-primary rounded">
-                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-                </div>
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/573a1e434a90b447af846adff9625568.js"></script>
-                </div>
-            </div>
-
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/9fcb46cdd39aca71e26586fae4f603f1.js"></script>
         </div>
+      </div>
+
+      - A node can exist in the document in only one place. Thus, inserting paragraph Three in front of paragraph
+      One will first remove it from the end of the document and then insert it at the front, resulting in
+      Three/One/Two. All operations that insert a node somewhere will, as a side effect, cause it to be removed
+      from its current position (if it has one). <br>
+      - The <code>replaceChild</code> method is used to replace a child node with another one. It takes as
+      arguments two nodes: a new node and the node to be replaced. The replaced node must be a child of the
+      element the method is called on. Note that both <code>replaceChild</code> and <code>insertBefore</code>
+      expect the new node as their first argument.
+    </div>
+  </div>
+
+
+  <hr>
+  <div id="Module2_Udemy" class="chapter">Module 2 - JavaScript Fundamentals Part 1</div>
+  <hr>
+
+  <div class="textual-content">
+
+    <div class="sub-heading">Section 2: JavaScript Fundamentals, Part 1</div>
+    <div>
+      - JS can be included in your HTML code in 2 ways - either inline or by pointing to an external js file. <br>
+      - Inline js is when it is included in the .html page itself within <code>&lt;script&gt;</code> tags like:
+      <code>&lt;script&gt;alert("Hello World")&lt;/script&gt;</code> tags. Pointing to an external js is done as
+      follows:
+      <code>&lt;script src = "script.js"&gt;&lt;script&gt;</code> i.e. specify the location of the js file. Here
+      it means that the script.js file is in the same folder as the html file. <br>
+      - In the below image we have moved the js to an external file. Now when we load the index.html page, the
+      values from the js file are logged into the console. The console also shows the corresponding file and line
+      number that corresponds to the line that is logging the values. The variables that are present in the js
+      file, are also in-scope in the console window in the browser. So you can access variables such as <i>js</i>
+      and <i>firstName</i> in the console and change their values as required.
+
+      <div class="image-block">
+        <div class="expand-screenshot-image-btn border border-primary rounded">
+          <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
+        </div>
+        <div class="screenshot-image">
+          <img src="imgs/UdemyCourse/Module2/Image1.png" class="center-block img-fluid" alt="Example1">
+        </div>
+      </div>
+
+      <br>
+      - Errors that are present in your js file will appear on the console as follows:
+
+      <div class="image-block">
+        <div class="expand-screenshot-image-btn border border-primary rounded">
+          <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
+        </div>
+        <div class="screenshot-image">
+          <img src="imgs/UdemyCourse/Module2/Image2.png" class="center-block img-fluid" alt="Example1">
+        </div>
+      </div>
+
+      - Javascript has dynamic typing. Hence we do not have to manually define the datatype of the value stored in
+      the variable. The data types are determined automatically by javascript. This distinction is important - a
+      <i>variable</i> simply holds a <i>value</i> and it is the <i>value</i> that determines the <i>type</i>. This
+      also means that you can assign a different data type to the same variable in your code. <br>
+      - The <code>typeof</code> operator is used to find out the type of the variable. <br>
+      - You can check the operator precedence on MDN website <a
+      href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence#Table">here</a>.
+      21 is the highest value of precedence. <br>
+      - In JS, we have <i>Type Conversion</i> and <i>Type Coercion</i>. Type <i>conversion</i> is when we manually
+      convert variables from one type to another. Type <i>coercion</i> is when JS automatically converts the types
+      for us, ie. it is an <i>implicit</i> conversion that is hidden from us. <br>
+      - In 2009, ES5 (ECMA Script 5) was released. In 2015, ES6/ES2015 (ECMAScript 2015) was released. In 2015,
+      the release cycle changed to an annual release cycle. So a new version of JS is released every year. <br>
+      - You can check the entire compatibility of various JS versions <a
+      href="https://kangax.github.io/compat-table/es6/">here in this table</a>. <br>
+      - ES5 is full supported in all browsers, right down to IE9 from 2011. ES6+ is supported in all modern
+      browsers. ES6+ includes all JS version from 2015-2020. Future releases of JS are known as ESNext. These are
+      from 2021 onwards.
+
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/93d5ed36237175fb52a42698d97d949f.js"></script>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <hr>
+  <div id="Module3_Udemy" class="chapter">Module 3 - JavaScript Fundamentals Part 2</div>
+  <hr>
+
+  <div class="textual-content">
+
+    <div class="sub-heading">Lecture 32: Activating Strict Mode</div>
+    <div>
+      - Add <code>'use strict'</code> at the top of the js file in order to activate strict mode. This stops JS
+      from failing silently, and instead generates errors in the console when certain errors occur.
     </div>
 
-    <hr>
-    <div id="Chapter14" class="chapter">Chapter 14: The Document Object Model</div>
-    <hr>
+    <div class="sub-heading">Lecture 34: Function Declarations vs Expressions</div>
+    <div>
+      - There are 3 types of ways in which you can declare functions: <br>
+      a) Function Declaration <br>
+      b) Function Expression <br>
+      c) Arrow Function <br>
 
-    <div class="textual-content">
-
-        <li><b>What is the DOM</b></li>
-        <div>
-            <div class="row">
-                <img src="imgs/Ch14/DOM.png" class="center-block img-fluid" alt="Example1">
-            </div>
-            - The data structure the browser uses to represent the document follows the above shape. For each box, there
-            is
-            an object, which we can interact with to find out things such as what HTML tag it represents and which boxes
-            and
-            text it contains. This representation is called the Document Object Model. <br>
-            - The global binding (other name for <i>variable</i>) <code>document</code> gives us access to these
-            objects. Its <code>documentElement</code> property refers to the object representing the
-            <code>&lt;html&gt;</code> tag.<br>
-            - You can think of the DOM as a tree datastructure with the <code>document.documentElement</code> serving as
-            the root of the tree. Just like a normal tree, the root is a node. A node can have children nodes
-            or can have leaves. <br>
-            - Each DOM node object has a <code>nodeType</code> property, which contains a code (number) that identifies
-            the type of node. Elements have code 1, which is also defined as the constant property
-            <code>Node.ELEMENT_NODE</code>. Text nodes, representing a section of text in the document, get code 3
-            (<code>Node.TEXT_NODE</code>). Comments have code 8 (<code>Node.COMMENT_NODE</code>). <br>
-            - What is the difference between Node object and Element object?
-            <a href="https://stackoverflow.com/questions/9979172/difference-between-node-object-and-element-object">This
-                SO Link explains</a>. <code>Element</code> inherits from <code>Node</code>, in the same way that Dog
-            inherits from Animal.
-            An <code>Element</code> object "is-a" <code>Node</code> object, in the same way that a Dog object "is-a"
-            Animal object.<br>
-            - Every node has a <code>parentNode</code> property that points to the node it is part of, if any. Likewise,
-            every element node (node type 1) has a <code>childNodes</code> property that points to an array-like object
-            holding its children. <br>
-            - The <code>firstChild</code> and <code>lastChild</code> properties point to the first and last child
-            elements or have the value <code>null</code> for nodes without children. <br>
-            - Similarly, <code>previousSibling</code> and <code>nextSibling</code> point to adjacent nodes, which are
-            nodes with the same parent that appear immediately before or after the node itself. For a first child,
-            <code>previousSibling</code> will be null, and for a last child, <code>nextSibling</code> will be null. <br>
-            - There's also the <code>children</code> property, which is like <code>childNodes</code> but contains
-            only element (type 1) children, not other types of child nodes. This can be useful when you aren't
-            interested in text nodes. <br>
-            - The <code>nodeValue</code> property of a text node holds the string of text that it represents. <br>
-        </div>
-
-        <br>
-        <li><b>Finding Elements in the DOM</b></li>
-        <div>
-            - If we want the <code>href</code> attribute of the link in that document, we can say:
-            <div class="code-block">
-                <div class="expand-code-snip-btn border border-primary rounded">
-                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-                </div>
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/f490eb65be0a2eaf4ebd0e89079cd237.js"></script>
-                </div>
-            </div>
-
-            - All element nodes have a <code>getElementsByTagName</code> method, which collects all elements with the
-            given tag name that are descendants (direct or indirect children) of that node and returns them as an
-            array-like object. <br>
-            - To find a specific single node, you can give it an <code>id</code> attribute and use
-            <code>document.getElementById</code> instead. <br>
-            - A third, similar method is <code>getElementsByClassName</code>, which, like
-            <code>getElementsByTagName</code>, searches through the contents of an element node and retrieves all
-            elements that have the given string in their class attribute. <br>
-        </div>
-
-        <br>
-        <li><b>Changing the Document</b></li>
-        <div>
-            - Almost everything about the DOM data structure can be changed. The shape of the document tree can be
-            modified by changing parent-child relationships. Nodes have a <code>remove</code> method to remove them from
-            their current parent node. To add a child node to an element node, we can use <code>appendChild</code>,
-            which puts it at the end of the list of children, or <code>insertBefore</code>, which inserts the node
-            given as the first argument before the node given as the second argument. <br>
-            - Consider the following:
-
-            <div class="code-block">
-                <div class="expand-code-snip-btn border border-primary rounded">
-                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-                </div>
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/9fcb46cdd39aca71e26586fae4f603f1.js"></script>
-                </div>
-            </div>
-
-            - A node can exist in the document in only one place. Thus, inserting paragraph Three in front of paragraph
-            One will first remove it from the end of the document and then insert it at the front, resulting in
-            Three/One/Two. All operations that insert a node somewhere will, as a side effect, cause it to be removed
-            from its current position (if it has one). <br>
-            - The <code>replaceChild</code> method is used to replace a child node with another one. It takes as
-            arguments two nodes: a new node and the node to be replaced. The replaced node must be a child of the
-            element the method is called on. Note that both <code>replaceChild</code> and <code>insertBefore</code>
-            expect the new node as their first argument.
-        </div>
-    </div>
-
-
-    <hr>
-    <div id="Module2_Udemy" class="chapter">Module 2 - JavaScript Fundamentals Part 1</div>
-    <hr>
-
-    <div class="textual-content">
-
-        <div class="sub-heading">Section 2: JavaScript Fundamentals, Part 1</div>
-        <div>
-            - JS can be included in your HTML code in 2 ways - either inline or by pointing to an external js file. <br>
-            - Inline js is when it is included in the .html page itself within <code>&lt;script&gt;</code> tags like:
-            <code>&lt;script&gt;alert("Hello World")&lt;/script&gt;</code> tags. Pointing to an external js is done as
-            follows:
-            <code>&lt;script src = "script.js"&gt;&lt;script&gt;</code> i.e. specify the location of the js file. Here
-            it means that the script.js file is in the same folder as the html file. <br>
-            - In the below image we have moved the js to an external file. Now when we load the index.html page, the
-            values from the js file are logged into the console. The console also shows the corresponding file and line
-            number that corresponds to the line that is logging the values. The variables that are present in the js
-            file, are also in-scope in the console window in the browser. So you can access variables such as <i>js</i>
-            and <i>firstName</i> in the console and change their values as required.
-
-            <div class="row">
-                <img src="imgs/UdemyCourse/Module2/Image1.png" class="center-block img-fluid" alt="Example1">
-            </div>
-
-            <br>
-            - Errors that are present in your js file will appear on the console as follows:
-
-            <div class="row">
-                <img src="imgs/UdemyCourse/Module2/Image2.png" class="center-block img-fluid" alt="Example1">
-            </div>
-
-            - Javascript has dynamic typing. Hence we do not have to manually define the datatype of the value stored in
-            the variable. The data types are determined automatically by javascript. This distinction is important - a
-            <i>variable</i> simply holds a <i>value</i> and it is the <i>value</i> that determines the <i>type</i>. This
-            also means that you can assign a different data type to the same variable in your code. <br>
-            - The <code>typeof</code> operator is used to find out the type of the variable. <br>
-            - You can check the operator precedence on MDN website <a
-                href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence#Table">here</a>.
-            21 is the highest value of precedence. <br>
-            - In JS, we have <i>Type Conversion</i> and <i>Type Coercion</i>. Type <i>conversion</i> is when we manually
-            convert variables from one type to another. Type <i>coercion</i> is when JS automatically converts the types
-            for us, ie. it is an <i>implicit</i> conversion that is hidden from us. <br>
-            - In 2009, ES5 (ECMA Script 5) was released. In 2015, ES6/ES2015 (ECMAScript 2015) was released. In 2015,
-            the release cycle changed to an annual release cycle. So a new version of JS is released every year. <br>
-            - You can check the entire compatibility of various JS versions <a
-                href="https://kangax.github.io/compat-table/es6/">here in this table</a>. <br>
-            - ES5 is full supported in all browsers, right down to IE9 from 2011. ES6+ is supported in all modern
-            browsers. ES6+ includes all JS version from 2015-2020. Future releases of JS are known as ESNext. These are
-            from 2021 onwards.
-
-            <div class="code-block">
-                <div class="expand-code-snip-btn border border-primary rounded">
-                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-                </div>
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/93d5ed36237175fb52a42698d97d949f.js"></script>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <hr>
-    <div id="Module3_Udemy" class="chapter">Module 3 - JavaScript Fundamentals Part 2</div>
-    <hr>
-
-    <div class="textual-content">
-
-        <div class="sub-heading">Lecture 32: Activating Strict Mode</div>
-        <div>
-            - Add <code>'use strict'</code> at the top of the js file in order to activate strict mode. This stops JS
-            from failing silently, and instead generates errors in the console when certain errors occur.
-        </div>
-
-        <div class="sub-heading">Lecture 34: Function Declarations vs Expressions</div>
-        <div>
-            - There are 3 types of ways in which you can declare functions: <br>
-            a) Function Declaration <br>
-            b) Function Expression <br>
-            c) Arrow Function <br>
-
-            <div class="row">
-                <img src="imgs/UdemyCourse/Module3/FunctionDeclaration.png"
-                     width="360"
-                     class="center-block img-fluid"
-                     alt="Example1">
-            </div>
-            - Remember that the arrow function does not have the <code>this</code> scope. More on this later.
-
-        </div>
-
-        <div class="code-block">
-            <div class="expand-code-snip-btn border border-primary rounded">
-                <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-            </div>
-            <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/600dc0df29b3ad2b98f21dd00d88e0ec.js"></script>
-            </div>
-        </div>
+      <div class="row">
+        <img src="imgs/UdemyCourse/Module3/FunctionDeclaration.png"
+             width="360"
+             class="center-block img-fluid"
+             alt="Example1">
+      </div>
+      - Remember that the arrow function does not have the <code>this</code> scope. More on this later.
 
     </div>
 
-
-    <hr>
-    <div id="Module5_Udemy" class="chapter">Module 5 - Developer Skills and Editor Setup</div>
-    <hr>
-
-    <div class="textual-content">
-
-        <div class="sub-heading">Lecture 56: Installing Node.js and setting up a dev env</div>
-        <div>
-            - Check if npm is already installed in your IDE using: <code>npm -v</code> <br>
-            - Install live-server by running <code>npm install live-server -g</code> <br>
-            - Launch the web page by running <code>live-server</code>. Now you will not have to reload the page every
-            time you make changes to see if the changes took effect or not. <br>
-        </div>
-
-        <div class="sub-heading">Lecture 61: Debugging with the Chrome Console and Break Points</div>
-        <div>
-            - In Chrome, you can go to the Sources tab and view the debugger. You can set breakpoints, check the values
-            of the variables, everything that you want. <br>
-            - Alternatively, you could also write down <code>debugger;</code> anywhere in your js code, and then the
-            code would automatically switch over to the debugger when that particular line is reached. <br>
-        </div>
+    <div class="code-block">
+      <div class="expand-code-snip-btn border border-primary rounded">
+        <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+      </div>
+      <div class="code-snippet">
+        <script src="https://gist.github.com/rgbk21/600dc0df29b3ad2b98f21dd00d88e0ec.js"></script>
+      </div>
     </div>
 
-    <hr>
-    <div id="Module6_Udemy" class="chapter">Module 6 - HTML and CSS Crash Course</div>
-    <hr>
+  </div>
 
-    <div class="textual-content">
-        <div class="sub-heading">Lecture 64: Basic HTML Structure and Elements</div>
-        <div>
-            - Elements, Tags, Attributes, Classes, IDs <br>
-            - In HTML, some <i>Element</i>s can have <i>attribute</i>s. These <i>attribute</i>s describe <i>element</i>s.
-            <br>
-            - For example, consider the following anchor element.
-            <code>&lt;a href="https://github.com/rgbk21"&gt;My Github&lt;/a&gt;</code>. Here <code>href</code> is an
-            <i>attribute</i> of the <code>&lt;a&gt;</code> <i>tag</i> because it defines the link to which the anchor
-            element should point to. <br>
-            - An <code>&lt;a&gt;</code> is also known as an <i>inline element</i> because the text contained within the
-            <code>&lt;a&gt;</code> tags are displayed in-line. Contrast this with something like the &lt;p&gt; tag where
-            the text is displayed on a different line. Such an element is known as a <i>Block Element</i>. <br>
-            - Similarly you have the <code>&lt;img src="https://github.com/rgbk21" alt=""&gt;</code> element. An
-            <i>img</i> element does not have a closing <i>tag</i>. <br>
-            - There are two <i>attribute</i>s that we can use on ALL <i>element</i>s. These are <i>class</i> and
-            <i>id</i>. These attributes are used to name the HTML <i>element</i>s so that we can style them using CSS.
-            We also use them to select <i>elements</i> from JS when we are doing DOM Manipulation. <br>
-            - The difference between <i>class</i>es and <i>id</i>s is that <i>id</i>s are supposed to be unique. That
-            is, you can only use an <i>id</i> ONCE, on a page. <br>
-            - A <code>&lt;div&gt;</code> element is used to draw a box on the HTML page. <br>
-            - A <code>&lt;form&gt;</code> element is used to accept input from the user. <code>&lt;form&gt;</code> is
-            just a <code>&lt;div&gt;</code> that has been given some semantic meaning to explain to HTML that we intend
-            to take an input from the user. <br>
-        </div>
 
-        <div class="sub-heading">Lecture 66: Basic Styling with CSS</div>
-        <div>
-            - We use the <code>&lt;link&gt;</code> tag to link an HTML file to a CSS file. This line is supposed to go
-            in the <code>&lt;head&gt;</code> of the HTML page. <br>
-            - <code>&lt;link href="styles.css" rel="stylesheet"&gt;</code>. This code assumes that the CSS file is in
-            the
-            same folder as the HTML file. <br>
-            - Consider the following HTML File and the CSS associated with it:
-            <div class="code-block">
-                <div class="expand-code-snip-btn border border-primary rounded">
-                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-                </div>
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/781a3e26df4056cd6d47edd544c39cb7.js"></script>
-                </div>
-            </div>
-        </div>
+  <hr>
+  <div id="Module5_Udemy" class="chapter">Module 5 - Developer Skills and Editor Setup</div>
+  <hr>
 
-        <div class="sub-heading">Lecture 67: Introduction to the CSS Box Model</div>
-        <div>
-            - According to the box model in CSS, each and every element on a web page can be seen as a rectangular box.
+  <div class="textual-content">
 
-            <div class="row">
-                <img src="imgs/UdemyCourse/Module6/BoxModel.png"
-                     width="920"
-                     class="center-block img-fluid"
-                     alt="Example1">
-            </div>
-            - The CSS file corresponding to the HTML in the section above:
-
-            <div class="code-block">
-                <div class="expand-code-snip-btn border border-primary rounded">
-                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-                </div>
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/e1df98c9cf3a5f361fad24dce8538085.js"></script>
-                </div>
-            </div>
-
-        </div>
+    <div class="sub-heading">Lecture 56: Installing Node.js and setting up a dev env</div>
+    <div>
+      - Check if npm is already installed in your IDE using: <code>npm -v</code> <br>
+      - Install live-server by running <code>npm install live-server -g</code> <br>
+      - Launch the web page by running <code>live-server</code>. Now you will not have to reload the page every
+      time you make changes to see if the changes took effect or not. <br>
     </div>
 
-    <hr>
-    <div id="Module7_Udemy" class="chapter">Module 7 - JS in the Browser: DOM and Event Fundamentals</div>
-    <hr>
+    <div class="sub-heading">Lecture 61: Debugging with the Chrome Console and Break Points</div>
+    <div>
+      - In Chrome, you can go to the Sources tab and view the debugger. You can set breakpoints, check the values
+      of the variables, everything that you want. <br>
+      - Alternatively, you could also write down <code>debugger;</code> anywhere in your js code, and then the
+      code would automatically switch over to the debugger when that particular line is reached. <br>
+    </div>
+  </div>
 
-    <div class="textual-content">
-        <div class="sub-heading">Lecture 71: What is the DOM and DOM Manipulation</div>
-        <div>
-            - The DOM and DOM Methods like <code>document.querySelector()</code> are NOT a part of the JS language.
-            Instead, they are a part of the Web APIs. The Web APIs are libraries that the browser implements - and we
-            can access these libraries through our JS code. These web APIs are also written in JS. There is a separate
-            DOM specification that each browser implements. Just like DOM, there are other Web APIs as well, like -
-            Timers, Fetch, etc. <br>
-            - The HTML corresponding to the below JS can be seen <a href="imgs/UdemyCourse/Module7/index.html">here</a>.
-            This is not the functioning JS. It is more for your reference about how to use different aspects of the
-            language.
+  <hr>
+  <div id="Module6_Udemy" class="chapter">Module 6 - HTML and CSS Crash Course</div>
+  <hr>
 
-            <div class="code-block">
-                <div class="expand-code-snip-btn border border-primary rounded">
-                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-                </div>
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/f6247e96cf54ac707244a250ac4c71ce.js"></script>
-                </div>
-            </div>
-
-            - This is the Complete JS for the ImageGallery page <a href="../../ImageGallery/ImageGallery.html">here</a>.
-
-            <div class="code-block">
-                <div class="expand-code-snip-btn border border-primary rounded">
-                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-                </div>
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/8adb12197c1c3ed524e553b9864a1970.js"></script>
-                </div>
-            </div>
-            - TODO: How does the CSS on the Pig Game actually work? <br>
-            - This is the Complete JS for the Pig Game page <a href="../../Pig_Game/index.html">here</a>.
-            <div class="code-block">
-                <div class="expand-code-snip-btn border border-primary rounded">
-                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-                </div>
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/fa77ea1b0e44acf2f6a925b0e9d184d4.js"></script>
-                </div>
-            </div>
-        </div>
+  <div class="textual-content">
+    <div class="sub-heading">Lecture 64: Basic HTML Structure and Elements</div>
+    <div>
+      - Elements, Tags, Attributes, Classes, IDs <br>
+      - In HTML, some <i>Element</i>s can have <i>attribute</i>s. These <i>attribute</i>s describe <i>element</i>s.
+      <br>
+      - For example, consider the following anchor element.
+      <code>&lt;a href="https://github.com/rgbk21"&gt;My Github&lt;/a&gt;</code>. Here <code>href</code> is an
+      <i>attribute</i> of the <code>&lt;a&gt;</code> <i>tag</i> because it defines the link to which the anchor
+      element should point to. <br>
+      - An <code>&lt;a&gt;</code> is also known as an <i>inline element</i> because the text contained within the
+      <code>&lt;a&gt;</code> tags are displayed in-line. Contrast this with something like the &lt;p&gt; tag where
+      the text is displayed on a different line. Such an element is known as a <i>Block Element</i>. <br>
+      - Similarly you have the <code>&lt;img src="https://github.com/rgbk21" alt=""&gt;</code> element. An
+      <i>img</i> element does not have a closing <i>tag</i>. <br>
+      - There are two <i>attribute</i>s that we can use on ALL <i>element</i>s. These are <i>class</i> and
+      <i>id</i>. These attributes are used to name the HTML <i>element</i>s so that we can style them using CSS.
+      We also use them to select <i>elements</i> from JS when we are doing DOM Manipulation. <br>
+      - The difference between <i>class</i>es and <i>id</i>s is that <i>id</i>s are supposed to be unique. That
+      is, you can only use an <i>id</i> ONCE, on a page. <br>
+      - A <code>&lt;div&gt;</code> element is used to draw a box on the HTML page. <br>
+      - A <code>&lt;form&gt;</code> element is used to accept input from the user. <code>&lt;form&gt;</code> is
+      just a <code>&lt;div&gt;</code> that has been given some semantic meaning to explain to HTML that we intend
+      to take an input from the user. <br>
     </div>
 
-    <hr>
-    <div id="Module8_Udemy" class="chapter">Module 8 - How JS works behind the scenes</div>
-    <hr>
-
-    <div class="textual-content">
-        <div class="sub-heading">Lecture 89: A High-Level overview of JS</div>
-        <div>
-            - JS is: <br>
-            - High Level Language: In languages like C, you have to manage the memory yourself. High-level languages
-            abstract away the memory management (apart from doing other things). <br>
-            - Garbage Collected: One of the tools that takes memory management away from developers is automatic garbage
-            collection. <br>
-            - Interpreted or Just-In-Time (JIT) Compiled: <br>
-            - Multi Paradigm: Paradigm refers to a style of writing code. This can be imperative or declarative. JS can
-            support multiple styles of writing code, such as, Procedural (organizing code in a
-            very linear way so that the code runs top-to-bottom with functions in between), Object-Oriented,
-            Functional <br>
-            - Prototype-based Object-Oriented: <br>
-            - First-Class functions: functions are treated as regular variables, i.e., we can pass them into other
-            functions, and return them from functions. This is what enables functional programming in JS.
-
-            <div class="row">
-                <img src="imgs/UdemyCourse/Module8/Image1.png"
-                     width="380"
-                     class="center-block img-fluid"
-                     alt="Example1">
-            </div>
-            - Dynamically typed: In JS we do not assign datatypes to variables. The dataytpes are known only once JS
-            engine executes our code. Also the type of variables can easily be changed by reassigning variables. <br>
-            - Single-Threaded: JS runs in one single thread. <br>
-            - Non-Blocking Event-Loop: Long running tasks are executed by the event loop in the "background" and then
-            put back in the main thread once their execution is complete.
+    <div class="sub-heading">Lecture 66: Basic Styling with CSS</div>
+    <div>
+      - We use the <code>&lt;link&gt;</code> tag to link an HTML file to a CSS file. This line is supposed to go
+      in the <code>&lt;head&gt;</code> of the HTML page. <br>
+      - <code>&lt;link href="styles.css" rel="stylesheet"&gt;</code>. This code assumes that the CSS file is in
+      the
+      same folder as the HTML file. <br>
+      - Consider the following HTML File and the CSS associated with it:
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
         </div>
-
-        <div class="sub-heading">Lecture 90: JS Engine and RunTime</div>
-        <div>
-            - JS Engine is, simply put, the code that executes the JS code. Every browser has it's own JS engine. The
-            most well-known JS engine is Google's V8. The V8 engine powers Google Chrome, but also nodeJS. Other
-            browsers have their own JS engines. <br>
-            - A JS engine contains a call stack and a heap. The Call Stack is where our JS code is executed using
-            something known as the Execution Context. The heap is an unstructured memory pool that stores all the
-            objects that our application needs. <br>
-            <div class="row">
-                <img src="imgs/UdemyCourse/Module8/Image2.png"
-                     width="250"
-                     class="center-block img-fluid"
-                     alt="Example1">
-            </div>
-            - <a
-                href="https://stackoverflow.com/questions/3265357/compiled-vs-interpreted-languages">What is the
-            difference between Compiled language vs an Interpreted Language</a> on SO. <br>
-            - Before the code can be run by the target system (think your laptop CPU), it needs to be converted to
-            machine code (sequence of 0s and 1s). So your JS code has to be converted to machine code. Now how is this
-            going to happen? Compilation is the process by which the entire source code (your code) is converted into
-            machine code at once, and written to a binary file that can be executed on any computer. Any application
-            that you run your machine has been already previously compiled into a binary executable.
-            <div class="row">
-                <img src="imgs/UdemyCourse/Module8/Image3.png"
-                     width="480"
-                     class="center-block img-fluid"
-                     alt="Example1">
-            </div>
-            An interpreted language, on the other hand, consists of an interpreter that runs through the source code and
-            executes it line-by-line. So, basically, the code is read and executed at the same time. JS used to be an
-            interpreted language, but modern JS isn't. This is primarily because interpreted languages are slow, and JS
-            couldn't keep up with the development of the browser.
-            <div class="row">
-                <img src="imgs/UdemyCourse/Module8/Image4.png"
-                     width="440"
-                     class="center-block img-fluid"
-                     alt="Example1">
-            </div>
-            - Modern JS uses a combination of Compilation and Interpretation, which is known as Just-In-Time (JIT)
-            compilation.
-            <div class="row">
-                <img src="imgs/UdemyCourse/Module8/JIT-Compilation-Flow-Diagram.png"
-                     width="450"
-                     class="center-block img-fluid"
-                     alt="Example1">
-            </div>
-            - TODO: I still don't understand what is actually happening with the JIT Compilation. <br>
-            - The first step is parsing the code that reads the JS code and converts it into a datastructure known as
-            the AST (Abstract Syntax Tree). The compilation process takes the generated AST and converts it into machine
-            code. This machine code is executed right away because of the JIT compilation of JS. The machine code that
-            is generated initially is a very un-optimised version of the code just so that the execution can begin as
-            soon as possible. In the background, the machine code is taken and recompiled while the program is already
-            executing. During each iteration of the optimisation, the unoptimised code is swapped for the optimised code
-            - all while the program is already executing!!
-            <div class="row">
-                <img src="imgs/UdemyCourse/Module8/JS-Engine-Compilation-Flow.png"
-                     width="1205"
-                     class="center-block img-fluid"
-                     alt="Example1">
-            </div>
-            - A JS Runtime is something that is required to run JS in the browser. It is a combination of JS Engine
-            (discussed above), the Web APIs, and the Callback Queue. The Callback Queue is a datastructure that contains
-            all the callback functions that are ready to be executed. What are callback functions? The functions that
-            you attached to the event listeners are known as callback functions. So when an event happens - like a click
-            - the corresponding callback function will be called.
-            <div class="row">
-                <img src="imgs/UdemyCourse/Module8/JS_Runtime_In_The_Browser.png"
-                     width="1188"
-                     class="center-block img-fluid"
-                     alt="Example1">
-            </div>
-            - This is how it happens - when a user clicks on a
-            button, the callback function is added to the callback queue. Then, once the call stack is <i>empty</i>, the
-            callback function is passed to the call stack so that it can be executed. This happens by something known as
-            the Event Loop. The event loop picks up functions from the callback queue and places them in the call stack
-            so that they can be executed. The event loop is basically how javascript's non-blocking concurrency model is
-            implemented.
-            <div class="row">
-                <img src="imgs/UdemyCourse/Module8/JS_Runtime_In_The_Browser_2.png"
-                     width="1187"
-                     class="center-block img-fluid"
-                     alt="Example1">
-            </div>
-            - Remember that JS can also exist outside of browsers (nodeJS). In that case, the JS runtime will not
-            contain the Web APIs, because the Web APIs are provided by the browser. In this case, the WebAPIs are
-            replaced by C++ bindings and the thread pool.
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/781a3e26df4056cd6d47edd544c39cb7.js"></script>
         </div>
-
-
-        <div class="sub-heading">Lecture 91: Execution Contexts and the Call Stack</div>
-        <div>
-            - Once the code is code is compiled and ready to be executed, a <i>Global Execution Context</i> is created
-            for the top level code. Top-level code here means any code that is not inside any function. <br>
-            - For example, the <i>name</i> variable is a part of the top-level code. Hence it will be executed in the
-            Global execution Context. Then we have two functions - one expression and one declaration. These functions
-            will be declared so that they can be called later. The point is that - the code inside the function will be
-            executed only when the function is called. <br>
-            - An <i>Execution Context</i> is defined as an environment in which a piece of JS code is executed. The
-            context stores all the necessary information that is required by a code to be executed - such as local
-            variables or arguments passed to a function. <br>
-            - In every JS project, there is <i>only</i> one global execution context and this global execution context
-            is where the top level code executes.
-            <div class="row">
-                <img src="imgs/UdemyCourse/Module8/Execution_Context.png"
-                     width="1276"
-                     class="center-block img-fluid"
-                     alt="Example1">
-            </div>
-            - Now that we have a top-level execution context, we can begin execution of the code. For each function in
-            the code, a <i>new</i> execution context is created that contains all the necessary information that that
-            particular function requires to run. The same also goes for <i>methods</i> because they are just functions
-            attached to objects. All these execution contexts together make up the call stack. Once all the functions
-            have been executed, the JS Engine will wait for the callback function to arrive so that it can begin
-            executing those.
-            <div class="row">
-                <img src="imgs/UdemyCourse/Module8/Execution_Context_2.png"
-                     width="1351"
-                     class="center-block img-fluid"
-                     alt="Example1">
-            </div>
-
-            <br>
-
-            - What is inside an Execution Context:
-            <li><b>Variable Environment</b>: This environment stores all the variables and the function declarations.
-                Apart
-                from this, it also stores a special object called the <code>arguments</code> object. This object
-                contains all the arguments that were passed into the function that the current Execution Context belongs
-                to. Remember that each function gets its own execution context as soon as the function is called.
-            </li>
-            <li>
-                <b>Scope Chain</b>: Apart from the local variables defined inside the function, the Execution Context
-                can also
-                access variables that are defined outside the function. The scope chain consists of <i>references</i> to
-                variables that are outside the current function.
-            </li>
-            <li><code>this</code> <b>keyword</b> : One important sidenote is that Execution Contexts belonging to the
-                arrow
-                functions do not get their own <code>this</code> keyword or <code>arguments</code> object. Instead, they
-                use the <code>this</code> and <code>arguments</code> of their nearest normal function parent.
-            </li>
-            - An example explaining all of this can be found <a
-                href="https://www.udemy.com/course/the-complete-javascript-course/learn/lecture/22648479?start=488">here
-            on Udemy Lecture</a>. <br>
-            - Recall, as we discussed earlier, the Call Stack with the Memory Heap forms the JS Engine. The Call Stack
-            is the place where the Execution Contexts get stacked on top of each other to keep track of where we are in
-            the execution. The Execution Context on the top of the stack is the one that is currently running. <a
-                href="https://www.udemy.com/course/the-complete-javascript-course/learn/lecture/22648479?start=488#notes">This
-            Udemy Lecture</a> explains using a code example how JS makes use of the Call Stack and the Execution Context
-            to execute the code. <br>
-            <div class="row">
-                <img src="imgs/UdemyCourse/Module8/Execution_Context_Stored_In_Call_Stack.png"
-                     width="402"
-                     class="center-block img-fluid"
-                     alt="Example1">
-            </div>
-        </div>
-
-        <div class="sub-heading">Lecture 92: Scope and the Scope Chain</div>
-        <div>
-            - <i>Scope</i> controls where you can access a particular variable and where you can't access them. <br>
-            - JS uses <i>Lexical Scoping</i>, which means that scoping is controlled by the physical placement of
-            functions and blocks in the code. <br>
-            - In JS, we have 3 types of scope: <i>global</i> scope, <i>function</i> scope, and <i>block</i> scope. <br>
-            - Note that only variables declared with <code>let</code> or <code>const</code> are restricted to the block
-            in which they are created. That means that a variable that is declared using a <code>var</code> would be
-            scoped to the parent function, or else the global scope. Hence, we say that <code>let</code> and
-            <code>const</code> are <i>block scoped</i> whereas <code>var</code> is <code>function scoped</code>. IN ES5
-            and earlier versions, we only had global scope and function scope.
-            <div class="row">
-                <img src="imgs/UdemyCourse/Module8/Scopes_In_JS.png"
-                     width="1306"
-                     class="center-block img-fluid"
-                     alt="Example1">
-            </div>
-
-            <br>
-            - What is the Scope Chain? <br>
-            - Each function creates it's own scope. Hence, <i>first()</i> and <i>second()</i> get their own scopes. <br>
-            - Every scope has access to all of the variables from all of its outer/parent scopes. All of this also
-            applies to function <code>arguments</code>. So this is basically how the Scope Chain works - if one scope
-            needs to use a variable but is unable to find it in the current scope, it will look up it's scope chain and
-            see if it can find the variable in one of it's parent scopes. If it can, then it will use that variable. If
-            it can't, then you get an error. This process is also called <i>variable lookup in scope chain</i>. Note
-            that a scope cannot look for variables in it's children scopes. <br>
-            - Note that starting from ES6, the if-block is also able to create it's own scope. But this scope will only
-            work for the ES6 variable types - <code>let</code> and <code>const</code>.
-            - Take note of the <i>millenial</i> variable in the below figure. The variable is declared with the <code>var</code>
-            keyword. Hence, it is not scoped to the block, but rather scoped to the parent function, which in this case
-            is <i>first()</i>. Hence, unlike the <i>decade</i> variable, we see the <i>millenial</i> variable in the
-            scope of the <i>first()</i> function.
-            <div class="row">
-                <img src="imgs/UdemyCourse/Module8/Scope_Chain.png"
-                     width="1317"
-                     class="center-block img-fluid"
-                     alt="Example1">
-            </div>
-
-            <br>
-            - What is the difference between the Scope Chain and the Call Stack? <br>
-            - The scope of a function is the same as the Variable Environment in the function's Execution Context. Apart
-            from this, the scope also inherits the scope from all of it's parent scopes because of the scope chain that
-            we discussed above. <br>
-            - The order of function calls has no effect on the scope chain. What I mean by this is, consider the
-            following:
-            <div class="row">
-                <img src="imgs/UdemyCourse/Module8/ScopeChain_vs_CallStack.png"
-                     width="1475"
-                     class="center-block img-fluid"
-                     alt="Example1">
-            </div>
-
-            <div class="code-block">
-                <div class="expand-code-snip-btn border border-primary rounded">
-                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-                </div>
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/6a34e25a9bf832104b12d8394f0ed62b.js"></script>
-                </div>
-            </div>
-
-        </div>
-
-
-        <div class="sub-heading">Lecture 94: Variable Environment - Hoisting and the TDZ</div>
-        <div>
-            - Hoisting: makes some types of variables accessible/usable in the code before they are actually declared.
-            In other words, variables are "lifted" to the top of their scope. Behind the scenes, what actually happens
-            is that, before execution, the code is scanned for variable declarations and for each variable a new
-            property is created in the <i>variable environment object</i><br>
-            - The practical implementations of hoisting is that you can use a variable in the code <i>BEFORE</i> it is
-            actually declared! The value associated with the hoisted variables also varies - refer the table below. <br>
-
-            <div class="row">
-                <img src="imgs/UdemyCourse/Module8/Hoisting_In_JS.png"
-                     width="1367"
-                     class="center-block img-fluid"
-                     alt="Example1">
-            </div>
-
-            - function declarations are hoisted - this means that these types of functions can be used/called before
-            they are declared. <br>
-            - Variables declared with <code>var</code> are also hoisted, but the hoisting works differently when
-            compared to functions in the sense that the variables are hoisted, but their value is <code>undefined</code>
-            and not the value that they are declared with. <br>
-            - <code>let</code> and <code>const</code> variables are not hoisted. Hence these variables cannot be used
-            before they are declared. TDZ stands for the Temporal Dead Zone, which is indicating the region in the code
-            where the variable is in-scope but cannot be used because it has not been declared yet. <br>
-            - For function expressions and arrow functions, the hoisting depends on whether they were created using
-            <code>var</code>, <code>const</code>, or <code>let</code>. What this means is that function expressions and
-            arrow functions declared with a <code>var</code> is hoisted, but to <code>undefined</code>. But if they have
-            been declared using <code>let</code> or <code>const</code>, the functions are not usable before they have
-            been declared in the code - because of the TDZ. <br>
-            - There is one another difference between variables declared with a <code>var</code> and <code>let</code>/
-            <code>const</code> - the variables declared with <code>var</code> are added as properties to the global
-            <code>window</code> object in JS, whereas the variables declared with <code>let</code>/<code>const</code>
-            are not.
-
-            <div class="row">
-                <img src="imgs/UdemyCourse/Module8/Temporal_Dead_Zone.png"
-                     width="800"
-                     class="center-block img-fluid"
-                     alt="Example1">
-            </div>
-
-            <div class="code-block">
-                <div class="expand-code-snip-btn border border-primary rounded">
-                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-                </div>
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/1ded5c8802726b0ffc24b833b43db03a.js"></script>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="sub-heading">Lecture 96: The <code>this</code> keyword</div>
-        <div>
-            - The <code>this</code> keyword is a special variable that is created for every Execution Context (i.e. for
-            each function). We saw earlier that the <code>this</code> keyword is one of the three things that are a part
-            of the Execution Context that is created for every function. In general terms, the <code>this</code> keyword
-            takes the value of the "owner" of the function in which the <code>this</code> keyword is used. <br>
-            - The value of <code>this</code> is not static and varies depending on the way that the function is called.
-            <br>
-            - A function can be called in multiple ways. <br>
-            - A function can be a method - i.e. a function that is present on a object. When we use the
-            <code>this</code> keyword in a method, the <code>this</code> keyword points to the object calling the
-            method.
-            <br>
-            - A function can be called separately - like a usual stand-alone function call. In that case, the
-            <code>this</code> keyword is <code>undefined</code>. But this is only in the case when we are using the
-            "strict" mode. If we are not using the strict mode, tehn in that case the <code>this</code> keyword is going
-            to point at the global object, which in this case is the <code>window</code> object. <br>
-            - Arrow functions are not a way to call functions but they still need to be considered. Arrow functions do
-            not get their own <code>this</code> keyword. Instead, if you use the <code>this</code> keyword in an arrow
-            function, it is just going to be the <code>this</code> keyword of the surrounding/parent function. <br>
-            - If the function is called as an event listener, then the <code>this</code> keyword will point to the DOM
-            Element that the handler function is attached to.
-            <div class="row">
-                <img src="imgs/UdemyCourse/Module8/This_Keyword.png"
-                     width="705"
-                     class="center-block img-fluid"
-                     alt="Example1">
-            </div>
-
-            <div class="code-block">
-                <div class="expand-code-snip-btn border border-primary rounded">
-                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-                </div>
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/1075e71931a10ff75cac8cafe650bf2f.js"></script>
-                </div>
-            </div>
-        </div>
-
-        <div class="sub-heading">Lecture 98: Regular Functions vs Arrow Functions</div>
-        <div>
-            - One important point is that arrow functions should never be used as methods on an object. You should
-            always use function expressions. This is to do with the fact that arrow functions do not get their own
-            <code>this</code> keyword, instead they inherit the <code>this</code> keyword from their parent scope. This
-            can be a source of bugs.
-
-            <div class="code-block">
-                <div class="expand-code-snip-btn border border-primary rounded">
-                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-                </div>
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/b120065c26c5f385cb358511a96c452f.js"></script>
-                </div>
-            </div>
-            - Another important point is when we have to use functions inside methods. <br>
-            - Consider the following function inside a method. Why does line 11 print undefined? If you look closely,
-            you can see that the <i>isMillennial</i> function is being called as a simple function call. So, even though
-            the function is within a method, it is still a regular function call. And the rule says that inside a normal
-            function call, the <code>this</code> keyword is <code>undefined</code>.
-
-            <div class="code-block">
-                <div class="expand-code-snip-btn border border-primary rounded">
-                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-                </div>
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/cf44fdeb08397867de8fca65158cd325.js"></script>
-                </div>
-            </div>
-
-            - One way to get around this problem in solutions prior to ES6 was as follows:
-
-            <div class="code-block">
-                <div class="expand-code-snip-btn border border-primary rounded">
-                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-                </div>
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/2c0586d4b5a32d6eddf2d7b8ecc6f561.js"></script>
-                </div>
-            </div>
-
-            - However, starting form ES6, we can use the arrow function to get around this problem. Recall that the
-            arrow function does not have the <code>this</code> keyword of its own and instead inherits the
-            <code>this</code> keyword of its parent scope. So, we can do this: <br>
-            - TODO: but we are still calling the <i>isMillennial()</i> functio as a normal function inside the
-            <i>gina3</i> object. Then shouldn't the <code>this</code> keyword be <code>undefined</code>?
-
-            <div class="code-block">
-                <div class="expand-code-snip-btn border border-primary rounded">
-                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-                </div>
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/852bbc7db7c68857321afbb595a3e164.js"></script>
-                </div>
-            </div>
-
-            - Another thing is the <code>arguments</code> variable that we discussed earlier:
-
-            <div class="code-block">
-                <div class="expand-code-snip-btn border border-primary rounded">
-                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-                </div>
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/e265919bb7124a2e8adbe86df14d2829.js"></script>
-                </div>
-            </div>
-        </div>
-
-        <div class="sub-heading">Lecture 99: Primitives vs Reference Types</div>
-        <div>
-            - Refer the Udemy Lecture <a
-                href="https://www.udemy.com/course/the-complete-javascript-course/learn/lecture/22648509?start=33">here</a>.
-            <div class="row">
-                <img src="imgs/UdemyCourse/Module8/PrimitivesTypes_vs_ReferenceTypes.png"
-                     width="1265"
-                     class="center-block img-fluid"
-                     alt="Example1">
-            </div>
-        </div>
+      </div>
     </div>
 
-    <hr>
-    <div id="Module9_Udemy" class="chapter">Module 9 - Data Structures, Modern Operators, and Strings</div>
-    <hr>
+    <div class="sub-heading">Lecture 67: Introduction to the CSS Box Model</div>
+    <div>
+      - According to the box model in CSS, each and every element on a web page can be seen as a rectangular box.
 
-    <div class="textual-content">
+      <div class="row">
+        <img src="imgs/UdemyCourse/Module6/BoxModel.png"
+             width="920"
+             class="center-block img-fluid"
+             alt="Example1">
+      </div>
+      - The CSS file corresponding to the HTML in the section above:
 
-        <div class="sub-heading">Lecture 103: Destructuring Arrays</div>
-        <div>
-            - Destructuring is a way of unpacking data from an array or an object into separate variables. <br>
-            <div class="code-block">
-                <div class="expand-code-snip-btn border border-primary rounded">
-                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-                </div>
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/73e27f470e1a6a298107df5f0b945502.js"></script>
-                </div>
-            </div>
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
         </div>
-
-        <div class="sub-heading">Lecture 104: Destructuring Objects</div>
-        <div>
-            - Similar to destructuring arrays, we can also destructure objects.
-            <div class="code-block">
-                <div class="expand-code-snip-btn border border-primary rounded">
-                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-                </div>
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/4d577dabd285d5d6c000c1506be709fb.js"></script>
-                </div>
-            </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/e1df98c9cf3a5f361fad24dce8538085.js"></script>
         </div>
+      </div>
 
-        <div class="sub-heading">Lecture 105: The Spread Operator</div>
-        <div>
-            - We can use the spread operator to unpack an entire array or objects at once.
-            <div class="code-block">
-                <div class="expand-code-snip-btn border border-primary rounded">
-                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-                </div>
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/89485d51c64cad83c862c9329bbc0a78.js"></script>
-                </div>
-            </div>
+    </div>
+  </div>
+
+  <hr>
+  <div id="Module7_Udemy" class="chapter">Module 7 - JS in the Browser: DOM and Event Fundamentals</div>
+  <hr>
+
+  <div class="textual-content">
+    <div class="sub-heading">Lecture 71: What is the DOM and DOM Manipulation</div>
+    <div>
+      - The DOM and DOM Methods like <code>document.querySelector()</code> are NOT a part of the JS language.
+      Instead, they are a part of the Web APIs. The Web APIs are libraries that the browser implements - and we
+      can access these libraries through our JS code. These web APIs are also written in JS. There is a separate
+      DOM specification that each browser implements. Just like DOM, there are other Web APIs as well, like -
+      Timers, Fetch, etc. <br>
+      - The HTML corresponding to the below JS can be seen <a href="imgs/UdemyCourse/Module7/index.html">here</a>.
+      This is not the functioning JS. It is more for your reference about how to use different aspects of the
+      language.
+
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
         </div>
-
-        <div class="sub-heading">Lecture 106: Rest pattern and Rest Parameters</div>
-        <div>
-            - The Rest pattern is, in a way, the 'opposite' of the spread operator. It uses the same operator, but to
-            condense multiple values into an array.
-            <div class="code-block">
-                <div class="expand-code-snip-btn border border-primary rounded">
-                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-                </div>
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/84d0ba724b18a2e29b7c6fc99c3287fe.js"></script>
-                </div>
-            </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/f6247e96cf54ac707244a250ac4c71ce.js"></script>
         </div>
+      </div>
 
-        <div class="sub-heading">Lecture 107: Short Circuiting</div>
-        <div>
-            - The <code>&&</code> and <code>||</code> operators work very differently in JS when compared to Java. <br>
-            - Boolean operators can use any datatype as its operands, they can return any datatype, and they do
-            short-circuiting. <br>
-            - The OR operator (<code>||</code>) will return the <i>first</i> 'truthy' value among all of its operands or
-            the <i>last</i> value if all of them are 'falsy'. <br>
-            - The AND operator (<code>&&</code>) will return the <i>first</i> 'falsy' value among all of it's operands
-            or return the <i>last</i> value if all of them are 'truthy'. <br>
-            - We can use the OR operator to set default values. <br>
-            - We can use the AND operator to execute code in the second operand if the first operand is true.
+      - This is the Complete JS for the ImageGallery page <a href="../../ImageGallery/ImageGallery.html">here</a>.
 
-            <div class="code-block">
-                <div class="expand-code-snip-btn border border-primary rounded">
-                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-                </div>
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/0150e05c10addb33bd575fe9e44dd45a.js"></script>
-                </div>
-            </div>
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
         </div>
-
-
-        <div class="sub-heading">Lecture 110: Looping Arrays - The for-of loop</div>
-        <div>
-            - This is how we can use the new for-of loop in JS.
-            <div class="code-block">
-                <div class="expand-code-snip-btn border border-primary rounded">
-                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-                </div>
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/312144f0a21ce803dd4c13e2e1755617.js"></script>
-                </div>
-            </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/8adb12197c1c3ed524e553b9864a1970.js"></script>
         </div>
-
-
-        <div class="sub-heading">Lecture 111: Enhanced Object Literals</div>
-        <div>
-            - An object literal is when you create a new object by using the <code>{}</code> operator. ES6 introduced 3
-            new ways in which we can make writing object literals easier.
-
-            <div class="code-block">
-                <div class="expand-code-snip-btn border border-primary rounded">
-                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-                </div>
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/69c0c227203e4276105968a5357587ba.js"></script>
-                </div>
-            </div>
+      </div>
+      - TODO: How does the CSS on the Pig Game actually work? <br>
+      - This is the Complete JS for the Pig Game page <a href="../../Pig_Game/index.html">here</a>.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
         </div>
-
-        <div class="sub-heading">Lecture 112: Optional Chaining</div>
-        <div>
-            - The Optional Chaining operator <code> ?. </code> is used to check if variable <i>immediately</i> preceding
-            the operator exists or not. By 'exists' we mean the nullish concept and not the truthy/false concept. A
-            value is nullish only if it is either <code>null</code> or <code>undefined</code>. If the variable preceding
-            the operator is nullish, then the execution of the statement will immediately return with the value of
-            <code>undefined</code>. Else, the execution will proceed as normal.
-            <div class="code-block">
-                <div class="expand-code-snip-btn border border-primary rounded">
-                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-                </div>
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/ea13745f2c6eba965ce0a4503f66db96.js"></script>
-                </div>
-            </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/fa77ea1b0e44acf2f6a925b0e9d184d4.js"></script>
         </div>
+      </div>
+    </div>
+  </div>
 
+  <hr>
+  <div id="Module8_Udemy" class="chapter">Module 8 - How JS works behind the scenes</div>
+  <hr>
 
-        <div class="sub-heading">Lecture 113: Looping Objects - Object Keys, Values, and Entries</div>
-        <div>
-            - We can use the for-of operator to loop through either the keys, values, or both keys and values of an
-            object.
-            <div class="code-block">
-                <div class="expand-code-snip-btn border border-primary rounded">
-                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-                </div>
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/d1d4fd172b649aa2fcfdfff4f23cc017.js"></script>
-                </div>
-            </div>
+  <div class="textual-content">
+    <div class="sub-heading">Lecture 89: A High-Level overview of JS</div>
+    <div>
+      - JS is: <br>
+      - High Level Language: In languages like C, you have to manage the memory yourself. High-level languages
+      abstract away the memory management (apart from doing other things). <br>
+      - Garbage Collected: One of the tools that takes memory management away from developers is automatic garbage
+      collection. <br>
+      - Interpreted or Just-In-Time (JIT) Compiled: <br>
+      - Multi Paradigm: Paradigm refers to a style of writing code. This can be imperative or declarative. JS can
+      support multiple styles of writing code, such as, Procedural (organizing code in a
+      very linear way so that the code runs top-to-bottom with functions in between), Object-Oriented,
+      Functional <br>
+      - Prototype-based Object-Oriented: <br>
+      - First-Class functions: functions are treated as regular variables, i.e., we can pass them into other
+      functions, and return them from functions. This is what enables functional programming in JS.
+
+      <div class="row">
+        <img src="imgs/UdemyCourse/Module8/Image1.png"
+             width="380"
+             class="center-block img-fluid"
+             alt="Example1">
+      </div>
+      - Dynamically typed: In JS we do not assign datatypes to variables. The dataytpes are known only once JS
+      engine executes our code. Also the type of variables can easily be changed by reassigning variables. <br>
+      - Single-Threaded: JS runs in one single thread. <br>
+      - Non-Blocking Event-Loop: Long running tasks are executed by the event loop in the "background" and then
+      put back in the main thread once their execution is complete.
+    </div>
+
+    <div class="sub-heading">Lecture 90: JS Engine and RunTime</div>
+    <div>
+      - JS Engine is, simply put, the code that executes the JS code. Every browser has it's own JS engine. The
+      most well-known JS engine is Google's V8. The V8 engine powers Google Chrome, but also nodeJS. Other
+      browsers have their own JS engines. <br>
+      - A JS engine contains a call stack and a heap. The Call Stack is where our JS code is executed using
+      something known as the Execution Context. The heap is an unstructured memory pool that stores all the
+      objects that our application needs. <br>
+      <div class="row">
+        <img src="imgs/UdemyCourse/Module8/Image2.png"
+             width="250"
+             class="center-block img-fluid"
+             alt="Example1">
+      </div>
+      - <a
+      href="https://stackoverflow.com/questions/3265357/compiled-vs-interpreted-languages">What is the
+      difference between Compiled language vs an Interpreted Language</a> on SO. <br>
+      - Before the code can be run by the target system (think your laptop CPU), it needs to be converted to
+      machine code (sequence of 0s and 1s). So your JS code has to be converted to machine code. Now how is this
+      going to happen? Compilation is the process by which the entire source code (your code) is converted into
+      machine code at once, and written to a binary file that can be executed on any computer. Any application
+      that you run your machine has been already previously compiled into a binary executable.
+      <div class="row">
+        <img src="imgs/UdemyCourse/Module8/Image3.png"
+             width="480"
+             class="center-block img-fluid"
+             alt="Example1">
+      </div>
+      An interpreted language, on the other hand, consists of an interpreter that runs through the source code and
+      executes it line-by-line. So, basically, the code is read and executed at the same time. JS used to be an
+      interpreted language, but modern JS isn't. This is primarily because interpreted languages are slow, and JS
+      couldn't keep up with the development of the browser.
+      <div class="row">
+        <img src="imgs/UdemyCourse/Module8/Image4.png"
+             width="440"
+             class="center-block img-fluid"
+             alt="Example1">
+      </div>
+      - Modern JS uses a combination of Compilation and Interpretation, which is known as Just-In-Time (JIT)
+      compilation.
+      <div class="row">
+        <img src="imgs/UdemyCourse/Module8/JIT-Compilation-Flow-Diagram.png"
+             width="450"
+             class="center-block img-fluid"
+             alt="Example1">
+      </div>
+      - TODO: I still don't understand what is actually happening with the JIT Compilation. <br>
+      - The first step is parsing the code that reads the JS code and converts it into a datastructure known as
+      the AST (Abstract Syntax Tree). The compilation process takes the generated AST and converts it into machine
+      code. This machine code is executed right away because of the JIT compilation of JS. The machine code that
+      is generated initially is a very un-optimised version of the code just so that the execution can begin as
+      soon as possible. In the background, the machine code is taken and recompiled while the program is already
+      executing. During each iteration of the optimisation, the unoptimised code is swapped for the optimised code
+      - all while the program is already executing!!
+      <div class="image-block">
+        <div class="expand-screenshot-image-btn border border-primary rounded">
+          <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
         </div>
-
-
-        <div class="sub-heading">Lecture 115: Sets</div>
-        <div>
-            - In ES6, two new datastructures were added to JS - Sets and Maps. <br>
-            - A set is a collection of unique values - there can be no duplicate elements in a set. Hence, sets are
-            often used to remove duplicate elements from an array. <br>
-            - A set can hold mixed datatypes. <br>
-            - In the args for the constructor of the set, we can pass in any kind of iterable. Since an array is an
-            iterable, it works. Similarly, if you pass in a single string, that would work as well. The resulting set
-            that would be created would contain the unique characters that are present in the string.
-            <div class="code-block">
-                <div class="expand-code-snip-btn border border-primary rounded">
-                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-                </div>
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/65587d15322490f3ebe2ffe9cff9fbf9.js"></script>
-                </div>
-            </div>
+        <div class="screenshot-image">
+          <img src="imgs/UdemyCourse/Module8/JS-Engine-Compilation-Flow.png"
+               width="1205"
+               class="center-block img-fluid"
+               alt="Example1">
         </div>
+      </div>
 
-
-        <div class="sub-heading">Lecture 116: Maps</div>
-        <div>
-            - Just like an object, the data in a map is stored as key-value pairs. The difference between the two is
-            that in the case of maps, the keys can have <i>any</i> type, whereas in the case of objects, the keys <i>have
-            to </i> be strings. So maps can have an object, an array, or even another map as a key. <br>
-            - Note that the insertion order is maintained in maps in JS as mentioned <a
-                href="https://stackoverflow.com/a/50862944/8742428">here on SO</a>.
-
-            <div class="code-block">
-                <div class="expand-code-snip-btn border border-primary rounded">
-                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-                </div>
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/c4c09f447e140cf2d3aaad4ab46a49b8.js"></script>
-                </div>
-            </div>
+      - A JS Runtime is something that is required to run JS in the browser. It is a combination of JS Engine
+      (discussed above), the Web APIs, and the Callback Queue. The Callback Queue is a datastructure that contains
+      all the callback functions that are ready to be executed. What are callback functions? The functions that
+      you attached to the event listeners are known as callback functions. So when an event happens - like a click
+      - the corresponding callback function will be called.
+      <div class="image-block">
+        <div class="expand-screenshot-image-btn border border-primary rounded">
+          <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
         </div>
-
-
-        <div class="sub-heading">Lecture 117: Maps - Iteration</div>
-        <div>
-            - Instead of using the <code>set</code> method to add elements to a map, you can just add the elements all
-            at once by passing in an array as shown in the example below. This allows us to easily create maps from
-            existing objects.<br>
-            - Similarly, we can use existing maps to convert them into arrays by using the spread operator. <br>
-            <div class="code-block">
-                <div class="expand-code-snip-btn border border-primary rounded">
-                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-                </div>
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/294654f452f088c2c502f926e21d5e91.js"></script>
-                </div>
-            </div>
+        <div class="screenshot-image">
+          <img src="imgs/UdemyCourse/Module8/JS_Runtime_In_The_Browser.png"
+               width="1188"
+               class="center-block img-fluid"
+               alt="Example1">
         </div>
+      </div>
 
-        <div class="sub-heading">Lecture 118: Working with Strings</div>
-        <div>
-            - Here are some examples of working with strings
-            <div class="code-block">
-                <div class="expand-code-snip-btn border border-primary rounded">
-                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-                </div>
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/5d3084887c277e4d24fe885258c4dd8f.js"></script>
-                </div>
-            </div>
+      - This is how it happens - when a user clicks on a
+      button, the callback function is added to the callback queue. Then, once the call stack is <i>empty</i>, the
+      callback function is passed to the call stack so that it can be executed. This happens by something known as
+      the Event Loop. The event loop picks up functions from the callback queue and places them in the call stack
+      so that they can be executed. The event loop is basically how javascript's non-blocking concurrency model is
+      implemented.
+      <div class="image-block">
+        <div class="expand-screenshot-image-btn border border-primary rounded">
+          <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
         </div>
+        <div class="screenshot-image">
+          <img src="imgs/UdemyCourse/Module8/JS_Runtime_In_The_Browser_2.png"
+               width="1187"
+               class="center-block img-fluid"
+               alt="Example1">
+        </div>
+      </div>
+
+      - Remember that JS can also exist outside of browsers (nodeJS). In that case, the JS runtime will not
+      contain the Web APIs, because the Web APIs are provided by the browser. In this case, the WebAPIs are
+      replaced by C++ bindings and the thread pool.
+    </div>
+
+
+    <div class="sub-heading">Lecture 91: Execution Contexts and the Call Stack</div>
+    <div>
+      - Once the code is code is compiled and ready to be executed, a <i>Global Execution Context</i> is created
+      for the top level code. Top-level code here means any code that is not inside any function. <br>
+      - For example, the <i>name</i> variable is a part of the top-level code. Hence it will be executed in the
+      Global execution Context. Then we have two functions - one expression and one declaration. These functions
+      will be declared so that they can be called later. The point is that - the code inside the function will be
+      executed only when the function is called. <br>
+      - An <i>Execution Context</i> is defined as an environment in which a piece of JS code is executed. The
+      context stores all the necessary information that is required by a code to be executed - such as local
+      variables or arguments passed to a function. <br>
+      - In every JS project, there is <i>only</i> one global execution context and this global execution context
+      is where the top level code executes.
+      <div class="image-block">
+        <div class="expand-screenshot-image-btn border border-primary rounded">
+          <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
+        </div>
+        <div class="screenshot-image">
+          <img src="imgs/UdemyCourse/Module8/Execution_Context.png"
+               width="1276"
+               class="center-block img-fluid"
+               alt="Example1">
+        </div>
+      </div>
+
+      - Now that we have a top-level execution context, we can begin execution of the code. For each function in
+      the code, a <i>new</i> execution context is created that contains all the necessary information that that
+      particular function requires to run. The same also goes for <i>methods</i> because they are just functions
+      attached to objects. All these execution contexts together make up the call stack. Once all the functions
+      have been executed, the JS Engine will wait for the callback function to arrive so that it can begin
+      executing those.
+      <div class="image-block">
+        <div class="expand-screenshot-image-btn border border-primary rounded">
+          <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
+        </div>
+        <div class="screenshot-image">
+          <img src="imgs/UdemyCourse/Module8/Execution_Context_2.png"
+               width="1351"
+               class="center-block img-fluid"
+               alt="Example1">
+        </div>
+      </div>
+
+      <br>
+
+      - What is inside an Execution Context:
+      <li><b>Variable Environment</b>: This environment stores all the variables and the function declarations.
+        Apart
+        from this, it also stores a special object called the <code>arguments</code> object. This object
+        contains all the arguments that were passed into the function that the current Execution Context belongs
+        to. Remember that each function gets its own execution context as soon as the function is called.
+      </li>
+      <li>
+        <b>Scope Chain</b>: Apart from the local variables defined inside the function, the Execution Context
+        can also
+        access variables that are defined outside the function. The scope chain consists of <i>references</i> to
+        variables that are outside the current function.
+      </li>
+      <li><code>this</code> <b>keyword</b> : One important sidenote is that Execution Contexts belonging to the
+        arrow
+        functions do not get their own <code>this</code> keyword or <code>arguments</code> object. Instead, they
+        use the <code>this</code> and <code>arguments</code> of their nearest normal function parent.
+      </li>
+      - An example explaining all of this can be found <a
+      href="https://www.udemy.com/course/the-complete-javascript-course/learn/lecture/22648479?start=488">here
+      on Udemy Lecture</a>. <br>
+      - Recall, as we discussed earlier, the Call Stack with the Memory Heap forms the JS Engine. The Call Stack
+      is the place where the Execution Contexts get stacked on top of each other to keep track of where we are in
+      the execution. The Execution Context on the top of the stack is the one that is currently running. <a
+      href="https://www.udemy.com/course/the-complete-javascript-course/learn/lecture/22648479?start=488#notes">This
+      Udemy Lecture</a> explains using a code example how JS makes use of the Call Stack and the Execution Context
+      to execute the code. <br>
+      <div class="row">
+        <img src="imgs/UdemyCourse/Module8/Execution_Context_Stored_In_Call_Stack.png"
+             width="402"
+             class="center-block img-fluid"
+             alt="Example1">
+      </div>
+    </div>
+
+    <div class="sub-heading">Lecture 92: Scope and the Scope Chain</div>
+    <div>
+      - <i>Scope</i> controls where you can access a particular variable and where you can't access them. <br>
+      - JS uses <i>Lexical Scoping</i>, which means that scoping is controlled by the physical placement of
+      functions and blocks in the code. <br>
+      - In JS, we have 3 types of scope: <i>global</i> scope, <i>function</i> scope, and <i>block</i> scope. <br>
+      - Note that only variables declared with <code>let</code> or <code>const</code> are restricted to the block
+      in which they are created. That means that a variable that is declared using a <code>var</code> would be
+      scoped to the parent function, or else the global scope. Hence, we say that <code>let</code> and
+      <code>const</code> are <i>block scoped</i> whereas <code>var</code> is <code>function scoped</code>. IN ES5
+      and earlier versions, we only had global scope and function scope.
+      <div class="image-block">
+          <div class="expand-screenshot-image-btn border border-primary rounded">
+              <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
+          </div>
+          <div class="screenshot-image">
+            <img src="imgs/UdemyCourse/Module8/Scopes_In_JS.png"
+                 width="1306"
+                 class="center-block img-fluid"
+                 alt="Example1">
+          </div>
+      </div>
+
+      <br>
+      - What is the Scope Chain? <br>
+      - Each function creates it's own scope. Hence, <i>first()</i> and <i>second()</i> get their own scopes. <br>
+      - Every scope has access to all of the variables from all of its outer/parent scopes. All of this also
+      applies to function <code>arguments</code>. So this is basically how the Scope Chain works - if one scope
+      needs to use a variable but is unable to find it in the current scope, it will look up it's scope chain and
+      see if it can find the variable in one of it's parent scopes. If it can, then it will use that variable. If
+      it can't, then you get an error. This process is also called <i>variable lookup in scope chain</i>. Note
+      that a scope cannot look for variables in it's children scopes. <br>
+      - Note that starting from ES6, the if-block is also able to create it's own scope. But this scope will only
+      work for the ES6 variable types - <code>let</code> and <code>const</code>.
+      - Take note of the <i>millenial</i> variable in the below figure. The variable is declared with the <code>var</code>
+      keyword. Hence, it is not scoped to the block, but rather scoped to the parent function, which in this case
+      is <i>first()</i>. Hence, unlike the <i>decade</i> variable, we see the <i>millenial</i> variable in the
+      scope of the <i>first()</i> function.
+      <div class="image-block">
+          <div class="expand-screenshot-image-btn border border-primary rounded">
+              <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
+          </div>
+          <div class="screenshot-image">
+            <img src="imgs/UdemyCourse/Module8/Scope_Chain.png"
+                 width="1317"
+                 class="center-block img-fluid"
+                 alt="Example1">
+          </div>
+      </div>
+
+      <br>
+      - What is the difference between the Scope Chain and the Call Stack? <br>
+      - The scope of a function is the same as the Variable Environment in the function's Execution Context. Apart
+      from this, the scope also inherits the scope from all of it's parent scopes because of the scope chain that
+      we discussed above. <br>
+      - The order of function calls has no effect on the scope chain. What I mean by this is, consider the
+      following:
+      <div class="image-block">
+          <div class="expand-screenshot-image-btn border border-primary rounded">
+              <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
+          </div>
+          <div class="screenshot-image">
+            <img src="imgs/UdemyCourse/Module8/ScopeChain_vs_CallStack.png"
+                 width="1475"
+                 class="center-block img-fluid"
+                 alt="Example1">
+          </div>
+      </div>
+
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/6a34e25a9bf832104b12d8394f0ed62b.js"></script>
+        </div>
+      </div>
 
     </div>
 
 
-    <hr>
-    <div id="Module10_Udemy" class="chapter">Module 10 - A closer look at functions</div>
-    <hr>
+    <div class="sub-heading">Lecture 94: Variable Environment - Hoisting and the TDZ</div>
+    <div>
+      - Hoisting: makes some types of variables accessible/usable in the code before they are actually declared.
+      In other words, variables are "lifted" to the top of their scope. Behind the scenes, what actually happens
+      is that, before execution, the code is scanned for variable declarations and for each variable a new
+      property is created in the <i>variable environment object</i><br>
+      - The practical implementations of hoisting is that you can use a variable in the code <i>BEFORE</i> it is
+      actually declared! The value associated with the hoisted variables also varies - refer the table below. <br>
 
-    <div class="textual-content">
-        <div class="sub-heading">Lecture 126: Default Parameters</div>
-        <div>
-            - ES6 introduced Default Parameters
-            <div class="code-block">
-                <div class="expand-code-snip-btn border border-primary rounded">
-                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-                </div>
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/15e7292ed8484578398b34ed3c9231f3.js"></script>
-                </div>
-            </div>
+      <div class="image-block">
+          <div class="expand-screenshot-image-btn border border-primary rounded">
+              <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
+          </div>
+          <div class="screenshot-image">
+            <img src="imgs/UdemyCourse/Module8/Hoisting_In_JS.png"
+                 width="1367"
+                 class="center-block img-fluid"
+                 alt="Example1">
+          </div>
+      </div>
+
+      - function declarations are hoisted - this means that these types of functions can be used/called before
+      they are declared. <br>
+      - Variables declared with <code>var</code> are also hoisted, but the hoisting works differently when
+      compared to functions in the sense that the variables are hoisted, but their value is <code>undefined</code>
+      and not the value that they are declared with. <br>
+      - <code>let</code> and <code>const</code> variables are not hoisted. Hence these variables cannot be used
+      before they are declared. TDZ stands for the Temporal Dead Zone, which is indicating the region in the code
+      where the variable is in-scope but cannot be used because it has not been declared yet. <br>
+      - For function expressions and arrow functions, the hoisting depends on whether they were created using
+      <code>var</code>, <code>const</code>, or <code>let</code>. What this means is that function expressions and
+      arrow functions declared with a <code>var</code> is hoisted, but to <code>undefined</code>. But if they have
+      been declared using <code>let</code> or <code>const</code>, the functions are not usable before they have
+      been declared in the code - because of the TDZ. <br>
+      - There is one another difference between variables declared with a <code>var</code> and <code>let</code>/
+      <code>const</code> - the variables declared with <code>var</code> are added as properties to the global
+      <code>window</code> object in JS, whereas the variables declared with <code>let</code>/<code>const</code>
+      are not.
+
+      <div class="row">
+        <img src="imgs/UdemyCourse/Module8/Temporal_Dead_Zone.png"
+             width="800"
+             class="center-block img-fluid"
+             alt="Example1">
+      </div>
+
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
         </div>
-
-        <div class="sub-heading">Lecture 127: How passing arguments works - Value vs. Reference</div>
-        <div>
-            - In JS, Primitives are passed by value, and Objects are passed by "copy of a reference". <br>
-            - <a href="https://stackoverflow.com/questions/13104494/does-javascript-pass-by-reference">Source on SO
-            here</a>.
-            <div class="code-block">
-                <div class="expand-code-snip-btn border border-primary rounded">
-                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-                </div>
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/23eb0e3896d997e8b41dd55b0f26d28b.js"></script>
-                </div>
-            </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/1ded5c8802726b0ffc24b833b43db03a.js"></script>
         </div>
+      </div>
 
+    </div>
 
-        <div class="sub-heading">Lecture 128: First-Class and Higher-Order Functions</div>
-        <div>
-            - JS has First-Class functions that enables us to write Higher-Order functions. But what does this mean?
-            <br>
-            - What does JS having 'First-Class Functions' mean? <br>
-            - It just means that functions are a different 'type' of
-            object in JS. Since objects are values, functions are values too. And since functions are values, they can
-            be stored in variables or even object properties (keys in an object). We have already been doing this so
-            far. <br>
-            - We can also pass functions as args to other functions. We already did that with
-            <code>addEvenListener</code> where we passed in the callback function as an argument . <br>
-            - We can also return a function from another function. <br>
-            - Finally, since functions are objects, and objects can have methods on them, there can also be function
-            methods. <code>bind</code> method is an example of that. <br> <br>
-            - What is a Higher-Order Function then? <br>
-            - A Higher-Order function is either a function that receives a function as an argument, or returns a new
-            function, or both. <br>
-            - <code>addEventListener</code> is an example of a higher-order function because it accepts another function
-            as an arg. <br>
-            - Similarly we can have functions that return other functions.
-            <div class="row">
-                <img src="imgs/UdemyCourse/Module10/HigherOrderFunctions.png"
-                     width="1275"
-                     class="center-block img-fluid"
-                     alt="Example1">
-            </div>
+    <div class="sub-heading">Lecture 96: The <code>this</code> keyword</div>
+    <div>
+      - The <code>this</code> keyword is a special variable that is created for every Execution Context (i.e. for
+      each function). We saw earlier that the <code>this</code> keyword is one of the three things that are a part
+      of the Execution Context that is created for every function. In general terms, the <code>this</code> keyword
+      takes the value of the "owner" of the function in which the <code>this</code> keyword is used. <br>
+      - The value of <code>this</code> is not static and varies depending on the way that the function is called.
+      <br>
+      - A function can be called in multiple ways. <br>
+      - A function can be a method - i.e. a function that is present on a object. When we use the
+      <code>this</code> keyword in a method, the <code>this</code> keyword points to the object calling the
+      method.
+      <br>
+      - A function can be called separately - like a usual stand-alone function call. In that case, the
+      <code>this</code> keyword is <code>undefined</code>. But this is only in the case when we are using the
+      "strict" mode. If we are not using the strict mode, tehn in that case the <code>this</code> keyword is going
+      to point at the global object, which in this case is the <code>window</code> object. <br>
+      - Arrow functions are not a way to call functions but they still need to be considered. Arrow functions do
+      not get their own <code>this</code> keyword. Instead, if you use the <code>this</code> keyword in an arrow
+      function, it is just going to be the <code>this</code> keyword of the surrounding/parent function. <br>
+      - If the function is called as an event listener, then the <code>this</code> keyword will point to the DOM
+      Element that the handler function is attached to.
+      <div class="row">
+        <img src="imgs/UdemyCourse/Module8/This_Keyword.png"
+             width="705"
+             class="center-block img-fluid"
+             alt="Example1">
+      </div>
+
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
         </div>
-
-        <div class="sub-heading">Lecture 129: Functions accepting Callback Functions</div>
-        <div>
-            - Higher-Order Function examples and how they are used in JS:
-            <div class="code-block">
-                <div class="expand-code-snip-btn border border-primary rounded">
-                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-                </div>
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/b7de4bb972c8b324900585261e4adce0.js"></script>
-                </div>
-            </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/1075e71931a10ff75cac8cafe650bf2f.js"></script>
         </div>
+      </div>
+    </div>
 
-        <div class="sub-heading">Lecture 130: Functions accepting Callback Functions</div>
-        <div>
-            - Refer the <a
-                href="https://www.udemy.com/course/the-complete-javascript-course/learn/lecture/22648657?start=9#notes">Udemy
-            Lecture here</a>. <br>
-            <div class="code-block">
-                <div class="expand-code-snip-btn border border-primary rounded">
-                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-                </div>
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/89eb3d329c64744aea916f449e234777.js"></script>
-                </div>
-            </div>
+    <div class="sub-heading">Lecture 98: Regular Functions vs Arrow Functions</div>
+    <div>
+      - One important point is that arrow functions should never be used as methods on an object. You should
+      always use function expressions. This is to do with the fact that arrow functions do not get their own
+      <code>this</code> keyword, instead they inherit the <code>this</code> keyword from their parent scope. This
+      can be a source of bugs.
+
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
         </div>
-
-        <div class="sub-heading">Lecture 131: The <code>call</code> and <code>apply</code> methods</div>
-        <div>
-            - We can set the <code>this</code> keyword manually in JS as well.
-            <div class="code-block">
-                <div class="expand-code-snip-btn border border-primary rounded">
-                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-                </div>
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/fab9fde4875ce1a53aac56d837e87880.js"></script>
-                </div>
-            </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/b120065c26c5f385cb358511a96c452f.js"></script>
         </div>
+      </div>
+      - Another important point is when we have to use functions inside methods. <br>
+      - Consider the following function inside a method. Why does line 11 print undefined? If you look closely,
+      you can see that the <i>isMillennial</i> function is being called as a simple function call. So, even though
+      the function is within a method, it is still a regular function call. And the rule says that inside a normal
+      function call, the <code>this</code> keyword is <code>undefined</code>.
 
-        <div class="sub-heading">Lecture 132: The <code>bind</code> method</div>
-        <div>
-            - Just like the <code>call</code> and the <code>apply</code> method, the <code>bind</code> method allows us
-            to set the <code>this</code> keyword for any function call. <br>
-            - The difference is that, unlike the <code>call</code> and <code>apply</code> methods, <code>bind</code>
-            does not immediately call the function. Instead it returns a NEW function where the <code>this</code>
-            keyword is already bound. <br>
-            - This is especially useful when we have to manually assign the <code>this</code>
-            keyword in the case of event listeners. Recall for event listeners the callback function should be a
-            function, and it should not be immediately called. <code>call</code> and <code>apply</code> immediately call
-            the function. Hence we use the <code>bind</code> method instead.<br>
-            - Lecture on <a
-                href="https://www.udemy.com/course/the-complete-javascript-course/learn/lecture/22648667?start=5#notes">Udemy
-            here refer</a>.
-
-            <div class="code-block">
-                <div class="expand-code-snip-btn border border-primary rounded">
-                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-                </div>
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/a786c0acb8e3a0008d28673cf769b083.js"></script>
-                </div>
-            </div>
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
         </div>
-
-        <div class="sub-heading">Lecture 134: Immediately Invoked Function Expressions</div>
-        <div>
-            - Sometimes in JS, we need a function that is only executed once, and never executed again. We need this to
-            implement something known as aync await.
-
-            <div class="code-block">
-                <div class="expand-code-snip-btn border border-primary rounded">
-                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-                </div>
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/3372bfdecde87074ef2d51ad91bced33.js"></script>
-                </div>
-            </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/cf44fdeb08397867de8fca65158cd325.js"></script>
         </div>
+      </div>
 
-        <div class="sub-heading">Lecture 135: Closures</div>
-        <div>
-            - Refer <a
-                href="https://www.udemy.com/course/the-complete-javascript-course/learn/lecture/22648683?start=50#notes">Udemy
-            Lecture here</a>.
-            <br>
+      - One way to get around this problem in solutions prior to ES6 was as follows:
 
-            <div class="code-block">
-                <div class="expand-code-snip-btn border border-primary rounded">
-                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-                </div>
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/58ebd4cff976b168ea0d5ac492357ddb.js"></script>
-                </div>
-            </div>
-            - Read about closures <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures#closure">on MDN here</a>. <br>
-            - A <i>closure</i> is the combination of a function and the lexical environment within which that function
-            was declared. This environment consists of any local variables that were in-scope at the time the closure
-            was created. <br>
-            - Any function always has access to the variable environment of the execution context in which the function
-            was created, even after that execution context is gone.
-
-            <div class="row">
-                <img src="imgs/UdemyCourse/Module10/Closures.png"
-                     width="1327"
-                     class="center-block img-fluid"
-                     alt="Example1">
-            </div>
-            - We can access the closure of a variable by doing:
-            <div class="code-block">
-                <div class="expand-code-snip-btn border border-primary rounded">
-                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-                </div>
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/cdbadf3a12400fe44365e707b7514321.js"></script>
-                </div>
-            </div>
-
-            - And now if look into the console, you will see something like this. Note that when the name of a property
-            is enclosed in <code>[[ ]]</code>, as shown below, it means that the property is an internal property that
-            cannot be accessed by us through the code.
-            <div class="row">
-                <img src="imgs/UdemyCourse/Module10/Closures_Logged.png"
-                     width="1320"
-                     class="center-block img-fluid"
-                     alt="Example1">
-            </div>
-            - Examples of Closure in use:
-            <div class="code-block">
-                <div class="expand-code-snip-btn border border-primary rounded">
-                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-                </div>
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/433962db00646e8e2c8444eb2a3a28ec.js"></script>
-                </div>
-            </div>
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
         </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/2c0586d4b5a32d6eddf2d7b8ecc6f561.js"></script>
+        </div>
+      </div>
+
+      - However, starting form ES6, we can use the arrow function to get around this problem. Recall that the
+      arrow function does not have the <code>this</code> keyword of its own and instead inherits the
+      <code>this</code> keyword of its parent scope. So, we can do this: <br>
+      - TODO: but we are still calling the <i>isMillennial()</i> functio as a normal function inside the
+      <i>gina3</i> object. Then shouldn't the <code>this</code> keyword be <code>undefined</code>?
+
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/852bbc7db7c68857321afbb595a3e164.js"></script>
+        </div>
+      </div>
+
+      - Another thing is the <code>arguments</code> variable that we discussed earlier:
+
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/e265919bb7124a2e8adbe86df14d2829.js"></script>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-heading">Lecture 99: Primitives vs Reference Types</div>
+    <div>
+      - Refer the Udemy Lecture <a
+      href="https://www.udemy.com/course/the-complete-javascript-course/learn/lecture/22648509?start=33">here</a>.
+      <div class="image-block">
+          <div class="expand-screenshot-image-btn border border-primary rounded">
+              <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
+          </div>
+          <div class="screenshot-image">
+            <img src="imgs/UdemyCourse/Module8/PrimitivesTypes_vs_ReferenceTypes.png"
+                 width="1265"
+                 class="center-block img-fluid"
+                 alt="Example1">
+          </div>
+      </div>
+
+    </div>
+  </div>
+
+  <hr>
+  <div id="Module9_Udemy" class="chapter">Module 9 - Data Structures, Modern Operators, and Strings</div>
+  <hr>
+
+  <div class="textual-content">
+
+    <div class="sub-heading">Lecture 103: Destructuring Arrays</div>
+    <div>
+      - Destructuring is a way of unpacking data from an array or an object into separate variables. <br>
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/73e27f470e1a6a298107df5f0b945502.js"></script>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-heading">Lecture 104: Destructuring Objects</div>
+    <div>
+      - Similar to destructuring arrays, we can also destructure objects.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/4d577dabd285d5d6c000c1506be709fb.js"></script>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-heading">Lecture 105: The Spread Operator</div>
+    <div>
+      - We can use the spread operator to unpack an entire array or objects at once.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/89485d51c64cad83c862c9329bbc0a78.js"></script>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-heading">Lecture 106: Rest pattern and Rest Parameters</div>
+    <div>
+      - The Rest pattern is, in a way, the 'opposite' of the spread operator. It uses the same operator, but to
+      condense multiple values into an array.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/84d0ba724b18a2e29b7c6fc99c3287fe.js"></script>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-heading">Lecture 107: Short Circuiting</div>
+    <div>
+      - The <code>&&</code> and <code>||</code> operators work very differently in JS when compared to Java. <br>
+      - Boolean operators can use any datatype as its operands, they can return any datatype, and they do
+      short-circuiting. <br>
+      - The OR operator (<code>||</code>) will return the <i>first</i> 'truthy' value among all of its operands or
+      the <i>last</i> value if all of them are 'falsy'. <br>
+      - The AND operator (<code>&&</code>) will return the <i>first</i> 'falsy' value among all of it's operands
+      or return the <i>last</i> value if all of them are 'truthy'. <br>
+      - We can use the OR operator to set default values. <br>
+      - We can use the AND operator to execute code in the second operand if the first operand is true.
+
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/0150e05c10addb33bd575fe9e44dd45a.js"></script>
+        </div>
+      </div>
     </div>
 
 
-    <hr>
-    <div id="Module11_Udemy" class="chapter">Module 11 - Working with Arrays</div>
-    <hr>
-
-    <div class="textual-content">
-        <div class="sub-heading">Lecture 141: Simple Array Methods</div>
-        <div>
-            - Arrays are objects, and as we have seen, objects can have functions of their own that are called methods.
-            There are several methods that are defined on the array object.
-            <div class="code-block">
-                <div class="expand-code-snip-btn border border-primary rounded">
-                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-                </div>
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/da81bbe5e04ef4ca05e9acc3c4ece3a2.js"></script>
-                </div>
-            </div>
+    <div class="sub-heading">Lecture 110: Looping Arrays - The for-of loop</div>
+    <div>
+      - This is how we can use the new for-of loop in JS.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
         </div>
-
-        <div class="sub-heading">Lecture 142: Looping Arrays using <code>forEach</code></div>
-        <div>
-            - We can loop over arrays using either the <code>for-of</code> loop that we looked at earlier. Or we can use
-            the <code>forEach</code> loop. <br>
-            - The difference between the two is that you can use keywords like <code>break</code> and
-            <code>continue</code> to break out of a
-            <code>for-of</code> loop, but you cannot do that with a <code>forEach</code> loop. The <code>forEach</code>
-            loop will be executed for each element in the collection by default.
-            <div class="code-block">
-                <div class="expand-code-snip-btn border border-primary rounded">
-                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-                </div>
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/f5c1cd8d8b07df3a696af2ec3e39de31.js"></script>
-                </div>
-            </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/312144f0a21ce803dd4c13e2e1755617.js"></script>
         </div>
+      </div>
+    </div>
 
-        <div class="sub-heading">Lecture 143: <code>forEach</code> with Maps and Sets</div>
-        <div>
-            - Similar to arrays, <code>forEach</code> can also work with maps and sets. <br>
-            <div class="code-block">
-                <div class="expand-code-snip-btn border border-primary rounded">
-                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-                </div>
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/9d26a3e61ad2c84031d22097491ac49b.js"></script>
-                </div>
-            </div>
+
+    <div class="sub-heading">Lecture 111: Enhanced Object Literals</div>
+    <div>
+      - An object literal is when you create a new object by using the <code>{}</code> operator. ES6 introduced 3
+      new ways in which we can make writing object literals easier.
+
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
         </div>
-
-        <div class="sub-heading">Lecture 145: Creating DOM Elements</div>
-        <div>
-            - There are multiple ways in which we can create and add elements to the DOM. <br>
-            - Using <code>insertAdjacentHTML</code> method is one such way. We will look at other ways later in the
-            course.
-            <div class="code-block">
-                <div class="expand-code-snip-btn border border-primary rounded">
-                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-                </div>
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/b81b1359cd55017155f68f1401342e43.js"></script>
-                </div>
-            </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/69c0c227203e4276105968a5357587ba.js"></script>
         </div>
+      </div>
+    </div>
+
+    <div class="sub-heading">Lecture 112: Optional Chaining</div>
+    <div>
+      - The Optional Chaining operator <code> ?. </code> is used to check if variable <i>immediately</i> preceding
+      the operator exists or not. By 'exists' we mean the nullish concept and not the truthy/false concept. A
+      value is nullish only if it is either <code>null</code> or <code>undefined</code>. If the variable preceding
+      the operator is nullish, then the execution of the statement will immediately return with the value of
+      <code>undefined</code>. Else, the execution will proceed as normal.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/ea13745f2c6eba965ce0a4503f66db96.js"></script>
+        </div>
+      </div>
+    </div>
 
 
-        <div class="sub-heading">Lecture 147: Data Transformations - map, filter, reduce</div>
-        <div>
-            - This image shows what each of these methods do on a high level:
+    <div class="sub-heading">Lecture 113: Looping Objects - Object Keys, Values, and Entries</div>
+    <div>
+      - We can use the for-of operator to loop through either the keys, values, or both keys and values of an
+      object.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/d1d4fd172b649aa2fcfdfff4f23cc017.js"></script>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="sub-heading">Lecture 115: Sets</div>
+    <div>
+      - In ES6, two new datastructures were added to JS - Sets and Maps. <br>
+      - A set is a collection of unique values - there can be no duplicate elements in a set. Hence, sets are
+      often used to remove duplicate elements from an array. <br>
+      - A set can hold mixed datatypes. <br>
+      - In the args for the constructor of the set, we can pass in any kind of iterable. Since an array is an
+      iterable, it works. Similarly, if you pass in a single string, that would work as well. The resulting set
+      that would be created would contain the unique characters that are present in the string.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/65587d15322490f3ebe2ffe9cff9fbf9.js"></script>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="sub-heading">Lecture 116: Maps</div>
+    <div>
+      - Just like an object, the data in a map is stored as key-value pairs. The difference between the two is
+      that in the case of maps, the keys can have <i>any</i> type, whereas in the case of objects, the keys <i>have
+      to </i> be strings. So maps can have an object, an array, or even another map as a key. <br>
+      - Note that the insertion order is maintained in maps in JS as mentioned <a
+      href="https://stackoverflow.com/a/50862944/8742428">here on SO</a>.
+
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/c4c09f447e140cf2d3aaad4ab46a49b8.js"></script>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="sub-heading">Lecture 117: Maps - Iteration</div>
+    <div>
+      - Instead of using the <code>set</code> method to add elements to a map, you can just add the elements all
+      at once by passing in an array as shown in the example below. This allows us to easily create maps from
+      existing objects.<br>
+      - Similarly, we can use existing maps to convert them into arrays by using the spread operator. <br>
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/294654f452f088c2c502f926e21d5e91.js"></script>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-heading">Lecture 118: Working with Strings</div>
+    <div>
+      - Here are some examples of working with strings
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/5d3084887c277e4d24fe885258c4dd8f.js"></script>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <hr>
+  <div id="Module10_Udemy" class="chapter">Module 10 - A closer look at functions</div>
+  <hr>
+
+  <div class="textual-content">
+    <div class="sub-heading">Lecture 126: Default Parameters</div>
+    <div>
+      - ES6 introduced Default Parameters
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/15e7292ed8484578398b34ed3c9231f3.js"></script>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-heading">Lecture 127: How passing arguments works - Value vs. Reference</div>
+    <div>
+      - In JS, Primitives are passed by value, and Objects are passed by "copy of a reference". <br>
+      - <a href="https://stackoverflow.com/questions/13104494/does-javascript-pass-by-reference">Source on SO
+      here</a>.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/23eb0e3896d997e8b41dd55b0f26d28b.js"></script>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="sub-heading">Lecture 128: First-Class and Higher-Order Functions</div>
+    <div>
+      - JS has First-Class functions that enables us to write Higher-Order functions. But what does this mean?
+      <br>
+      - What does JS having 'First-Class Functions' mean? <br>
+      - It just means that functions are a different 'type' of
+      object in JS. Since objects are values, functions are values too. And since functions are values, they can
+      be stored in variables or even object properties (keys in an object). We have already been doing this so
+      far. <br>
+      - We can also pass functions as args to other functions. We already did that with
+      <code>addEvenListener</code> where we passed in the callback function as an argument . <br>
+      - We can also return a function from another function. <br>
+      - Finally, since functions are objects, and objects can have methods on them, there can also be function
+      methods. <code>bind</code> method is an example of that. <br> <br>
+      - What is a Higher-Order Function then? <br>
+      - A Higher-Order function is either a function that receives a function as an argument, or returns a new
+      function, or both. <br>
+      - <code>addEventListener</code> is an example of a higher-order function because it accepts another function
+      as an arg. <br>
+      - Similarly we can have functions that return other functions.
+      <div class="image-block">
+          <div class="expand-screenshot-image-btn border border-primary rounded">
+              <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
+          </div>
+          <div class="screenshot-image">
+            <img src="imgs/UdemyCourse/Module10/HigherOrderFunctions.png"
+                 width="1275"
+                 class="center-block img-fluid"
+                 alt="Example1">
+          </div>
+      </div>
+
+    </div>
+
+    <div class="sub-heading">Lecture 129: Functions accepting Callback Functions</div>
+    <div>
+      - Higher-Order Function examples and how they are used in JS:
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/b7de4bb972c8b324900585261e4adce0.js"></script>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-heading">Lecture 130: Functions accepting Callback Functions</div>
+    <div>
+      - Refer the <a
+      href="https://www.udemy.com/course/the-complete-javascript-course/learn/lecture/22648657?start=9#notes">Udemy
+      Lecture here</a>. <br>
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/89eb3d329c64744aea916f449e234777.js"></script>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-heading">Lecture 131: The <code>call</code> and <code>apply</code> methods</div>
+    <div>
+      - We can set the <code>this</code> keyword manually in JS as well.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/fab9fde4875ce1a53aac56d837e87880.js"></script>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-heading">Lecture 132: The <code>bind</code> method</div>
+    <div>
+      - Just like the <code>call</code> and the <code>apply</code> method, the <code>bind</code> method allows us
+      to set the <code>this</code> keyword for any function call. <br>
+      - The difference is that, unlike the <code>call</code> and <code>apply</code> methods, <code>bind</code>
+      does not immediately call the function. Instead it returns a NEW function where the <code>this</code>
+      keyword is already bound. <br>
+      - This is especially useful when we have to manually assign the <code>this</code>
+      keyword in the case of event listeners. Recall for event listeners the callback function should be a
+      function, and it should not be immediately called. <code>call</code> and <code>apply</code> immediately call
+      the function. Hence we use the <code>bind</code> method instead.<br>
+      - Lecture on <a
+      href="https://www.udemy.com/course/the-complete-javascript-course/learn/lecture/22648667?start=5#notes">Udemy
+      here refer</a>.
+
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/a786c0acb8e3a0008d28673cf769b083.js"></script>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-heading">Lecture 134: Immediately Invoked Function Expressions</div>
+    <div>
+      - Sometimes in JS, we need a function that is only executed once, and never executed again. We need this to
+      implement something known as aync await.
+
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/3372bfdecde87074ef2d51ad91bced33.js"></script>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-heading">Lecture 135: Closures</div>
+    <div>
+      - Refer <a
+      href="https://www.udemy.com/course/the-complete-javascript-course/learn/lecture/22648683?start=50#notes">Udemy
+      Lecture here</a>.
+      <br>
+
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/58ebd4cff976b168ea0d5ac492357ddb.js"></script>
+        </div>
+      </div>
+      - Read about closures <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures#closure">on MDN here</a>. <br>
+      - A <i>closure</i> is the combination of a function and the lexical environment within which that function
+      was declared. This environment consists of any local variables that were in-scope at the time the closure
+      was created. <br>
+      - Any function always has access to the variable environment of the execution context in which the function
+      was created, even after that execution context is gone.
+
+      <div class="image-block">
+          <div class="expand-screenshot-image-btn border border-primary rounded">
+              <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
+          </div>
+          <div class="screenshot-image">
+            <img src="imgs/UdemyCourse/Module10/Closures.png"
+                 width="1327"
+                 class="center-block img-fluid"
+                 alt="Example1">
+          </div>
+      </div>
+
+      - We can access the closure of a variable by doing:
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/cdbadf3a12400fe44365e707b7514321.js"></script>
+        </div>
+      </div>
+
+      - And now if look into the console, you will see something like this. Note that when the name of a property
+      is enclosed in <code>[[ ]]</code>, as shown below, it means that the property is an internal property that
+      cannot be accessed by us through the code.
+      <div class="image-block">
+          <div class="expand-screenshot-image-btn border border-primary rounded">
+              <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
+          </div>
+          <div class="screenshot-image">
+            <img src="imgs/UdemyCourse/Module10/Closures_Logged.png"
+                 width="1320"
+                 class="center-block img-fluid"
+                 alt="Example1">
+          </div>
+      </div>
+
+      - Examples of Closure in use:
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/433962db00646e8e2c8444eb2a3a28ec.js"></script>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <hr>
+  <div id="Module11_Udemy" class="chapter">Module 11 - Working with Arrays</div>
+  <hr>
+
+  <div class="textual-content">
+    <div class="sub-heading">Lecture 141: Simple Array Methods</div>
+    <div>
+      - Arrays are objects, and as we have seen, objects can have functions of their own that are called methods.
+      There are several methods that are defined on the array object.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/da81bbe5e04ef4ca05e9acc3c4ece3a2.js"></script>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-heading">Lecture 142: Looping Arrays using <code>forEach</code></div>
+    <div>
+      - We can loop over arrays using either the <code>for-of</code> loop that we looked at earlier. Or we can use
+      the <code>forEach</code> loop. <br>
+      - The difference between the two is that you can use keywords like <code>break</code> and
+      <code>continue</code> to break out of a
+      <code>for-of</code> loop, but you cannot do that with a <code>forEach</code> loop. The <code>forEach</code>
+      loop will be executed for each element in the collection by default.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/f5c1cd8d8b07df3a696af2ec3e39de31.js"></script>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-heading">Lecture 143: <code>forEach</code> with Maps and Sets</div>
+    <div>
+      - Similar to arrays, <code>forEach</code> can also work with maps and sets. <br>
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/9d26a3e61ad2c84031d22097491ac49b.js"></script>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-heading">Lecture 145: Creating DOM Elements</div>
+    <div>
+      - There are multiple ways in which we can create and add elements to the DOM. <br>
+      - Using <code>insertAdjacentHTML</code> method is one such way. We will look at other ways later in the
+      course.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/b81b1359cd55017155f68f1401342e43.js"></script>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="sub-heading">Lecture 147: Data Transformations - map, filter, reduce</div>
+    <div>
+      - This image shows what each of these methods do on a high level:
+      <div class="image-block">
+          <div class="expand-screenshot-image-btn border border-primary rounded">
+              <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
+          </div>
+          <div class="screenshot-image">
             <img src="imgs/UdemyCourse/Module11/Map_Filter_Reduce.png"
                  width="1312"
                  class="center-block img-fluid"
                  alt="Example1">
+          </div>
+      </div>
+
+    </div>
+
+
+    <div class="sub-heading">Lecture 148: The <code>map</code> method</div>
+    <div>
+      - The <code>map</code> method returns a new array. It does not mutate the original array. <br>
+      - For every element in the original array, the callback function passed into the map method is executed on
+      that element. The result is stored in a new array, and that array is returned as the result. <br>
+      - A rule of thumb is that the <code>forEach</code> method is used in case you want to produce side-effects.
+      Use the <code>map</code> method when you want to follow a functional paradigm where you return a new array
+      and do nto mutate the state of any existing objects.
+
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
         </div>
-
-
-        <div class="sub-heading">Lecture 148: The <code>map</code> method</div>
-        <div>
-            - The <code>map</code> method returns a new array. It does not mutate the original array. <br>
-            - For every element in the original array, the callback function passed into the map method is executed on
-            that element. The result is stored in a new array, and that array is returned as the result. <br>
-            - A rule of thumb is that the <code>forEach</code> method is used in case you want to produce side-effects.
-            Use the <code>map</code> method when you want to follow a functional paradigm where you return a new array
-            and do nto mutate the state of any existing objects.
-
-            <div class="code-block">
-                <div class="expand-code-snip-btn border border-primary rounded">
-                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-                </div>
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/796949de10914488fe9eaf7b6e581082.js"></script>
-                </div>
-            </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/796949de10914488fe9eaf7b6e581082.js"></script>
         </div>
+      </div>
+    </div>
 
 
-        <div class="sub-heading">Lecture 150: The <code>filter</code> method</div>
-        <div>
-            - The <code>filter</code> method is used to return a new array that contains only those elements from the
-            original array that have passed a specific condition. <br>
-            - Just like the <code>map</code> method, the <code>filter</code> method also accepts a callback function,
-            and just like the callback function in the <code>map</code> method, the callback function in the <code>filter</code>
-            method also accepts three args, namely - currentElement, index, entire array. <br>
-            <div class="code-block">
-                <div class="expand-code-snip-btn border border-primary rounded">
-                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-                </div>
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/de770f6beb2e7a943bd8dd696960a003.js"></script>
-                </div>
-            </div>
+    <div class="sub-heading">Lecture 150: The <code>filter</code> method</div>
+    <div>
+      - The <code>filter</code> method is used to return a new array that contains only those elements from the
+      original array that have passed a specific condition. <br>
+      - Just like the <code>map</code> method, the <code>filter</code> method also accepts a callback function,
+      and just like the callback function in the <code>map</code> method, the callback function in the <code>filter</code>
+      method also accepts three args, namely - currentElement, index, entire array. <br>
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
         </div>
-
-        <div class="sub-heading">Lecture 151: The <code>reduce</code> method</div>
-        <div>
-            - The <code>reduce</code> method is used to compute a single value using all the values in the original
-            array.
-            <br>
-            - The callback function that is passed into the <code>reduce</code> method is different compared to the ones
-            passed nto <code>map</code> or <code>forEach</code>. In the callback for the <code>reduce</code> method, the
-            first parameter is the <i>accumulator</i>. This accumulator stores the value that will be finally returned
-            from the <code>reduce</code> function. So, for example, if we are using the <code>reduce</code> method to
-            calculate the sum of all the elements in an array, then the <i>accumulator</i> would simply return the final
-            sum. <br>
-            - The <code>reduce</code> method also accepts a second argument which t=is the starting value of the <i>accumulator</i>.
-            <div class="code-block">
-                <div class="expand-code-snip-btn border border-primary rounded">
-                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-                </div>
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/f589e7a31aac32a3ca4667abeb32cc96.js"></script>
-                </div>
-            </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/de770f6beb2e7a943bd8dd696960a003.js"></script>
         </div>
+      </div>
+    </div>
 
-        <div class="sub-heading">Lecture 152: The magic of chaining</div>
-        <div>
-            - How do we debug code that is in the pipeline:
-            <div class="code-block">
-                <div class="expand-code-snip-btn border border-primary rounded">
-                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-                </div>
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/12f81fbaab35873bd5689fb17fd9af3d.js"></script>
-                </div>
-            </div>
+    <div class="sub-heading">Lecture 151: The <code>reduce</code> method</div>
+    <div>
+      - The <code>reduce</code> method is used to compute a single value using all the values in the original
+      array.
+      <br>
+      - The callback function that is passed into the <code>reduce</code> method is different compared to the ones
+      passed nto <code>map</code> or <code>forEach</code>. In the callback for the <code>reduce</code> method, the
+      first parameter is the <i>accumulator</i>. This accumulator stores the value that will be finally returned
+      from the <code>reduce</code> function. So, for example, if we are using the <code>reduce</code> method to
+      calculate the sum of all the elements in an array, then the <i>accumulator</i> would simply return the final
+      sum. <br>
+      - The <code>reduce</code> method also accepts a second argument which t=is the starting value of the <i>accumulator</i>.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
         </div>
-
-
-        <div class="sub-heading">Lecture 155: The <code>find</code> method</div>
-        <div>
-            - The <code>find</code> method returns the <i>element</i> based on the condition that is specified in the
-            callback function. Note that if multiple elements of the array satisfy the given condition, then in that
-            case the <code>find</code> method will return the <i>first</i> element that satisfies the condition.
-            <div class="code-block">
-                <div class="expand-code-snip-btn border border-primary rounded">
-                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-                </div>
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/4642b3b595240aee694ce15b0f1ea3fc.js"></script>
-                </div>
-            </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/f589e7a31aac32a3ca4667abeb32cc96.js"></script>
         </div>
+      </div>
+    </div>
 
-        <div class="sub-heading">Lecture 158: The <code>findIndex</code> method</div>
-        <div>
-            - Returns the index of the first element in the array where predicate is true, and -1 otherwise. <br>
-            <div class="code-block">
-                <div class="expand-code-snip-btn border border-primary rounded">
-                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-                </div>
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/51246edf1568a1036d7194984262498c.js"></script>
-                </div>
-            </div>
+    <div class="sub-heading">Lecture 152: The magic of chaining</div>
+    <div>
+      - How do we debug code that is in the pipeline:
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
         </div>
-
-        <div class="sub-heading">Lecture 159: <code>some</code> and <code>every</code> method</div>
-        <div>
-            - <code>some</code> Determines whether the specified callback function returns true for any element of an
-            array. <br>
-            - <code>every</code> Determines whether all the members of an array satisfy the specified test. <br>
-
-            <div class="code-block">
-                <div class="expand-code-snip-btn border border-primary rounded">
-                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-                </div>
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/e6b213424238bc5e50dd7e0f64fc9bf8.js"></script>
-                </div>
-            </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/12f81fbaab35873bd5689fb17fd9af3d.js"></script>
         </div>
+      </div>
+    </div>
 
-        <div class="sub-heading">Lecture 160: <code>flat</code> and <code>flatMap</code> method</div>
-        <div>
-            - <code>flat</code> Returns a new array with all sub-array elements concatenated into it recursively up to
-            the specified depth. <br>
-            - <code>flatMap</code> Calls a defined callback function on each element of an array. Then, flattens the
-            result into a new array. This is identical to a <code>map</code> followed by <code>flat</code> with depth 1.
-            The <code>flatMap</code> method calls the callback function one time for each element in the array.
 
-            <div class="code-block">
-                <div class="expand-code-snip-btn border border-primary rounded">
-                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-                </div>
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/a9736831d35db39b40991e49eaaab69c.js"></script>
-                </div>
-            </div>
-
+    <div class="sub-heading">Lecture 155: The <code>find</code> method</div>
+    <div>
+      - The <code>find</code> method returns the <i>element</i> based on the condition that is specified in the
+      callback function. Note that if multiple elements of the array satisfy the given condition, then in that
+      case the <code>find</code> method will return the <i>first</i> element that satisfies the condition.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
         </div>
-
-        <div class="sub-heading">Lecture 161: Sorting Arrays</div>
-        <div>
-            - Note that the <code>sort</code> method by default converts everything to strings implicitly. Hence using
-            the <code>sort</code> method to sort arrays of number swill lead to wrong results. Hence be sure to pass in
-            a custom comparator when sorting numbers.
-
-            <div class="code-block">
-                <div class="expand-code-snip-btn border border-primary rounded">
-                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-                </div>
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/17f5fdf389bdc0376e25860e0fbb8b60.js"></script>
-                </div>
-            </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/4642b3b595240aee694ce15b0f1ea3fc.js"></script>
         </div>
+      </div>
+    </div>
 
-
-        <div class="sub-heading">Lecture 162: More ways of creating and filling arrays</div>
-        <div>
-            - Here you go:
-            <div class="code-block">
-                <div class="expand-code-snip-btn border border-primary rounded">
-                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-                </div>
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/95a1f8d7cc1f61b275608c6bb0fef6cb.js"></script>
-                </div>
-            </div>
+    <div class="sub-heading">Lecture 158: The <code>findIndex</code> method</div>
+    <div>
+      - Returns the index of the first element in the array where predicate is true, and -1 otherwise. <br>
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
         </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/51246edf1568a1036d7194984262498c.js"></script>
+        </div>
+      </div>
+    </div>
 
-        <div class="sub-heading">Lecture 163: Which array method to use</div>
-        <div>
+    <div class="sub-heading">Lecture 159: <code>some</code> and <code>every</code> method</div>
+    <div>
+      - <code>some</code> Determines whether the specified callback function returns true for any element of an
+      array. <br>
+      - <code>every</code> Determines whether all the members of an array satisfy the specified test. <br>
+
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/e6b213424238bc5e50dd7e0f64fc9bf8.js"></script>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-heading">Lecture 160: <code>flat</code> and <code>flatMap</code> method</div>
+    <div>
+      - <code>flat</code> Returns a new array with all sub-array elements concatenated into it recursively up to
+      the specified depth. <br>
+      - <code>flatMap</code> Calls a defined callback function on each element of an array. Then, flattens the
+      result into a new array. This is identical to a <code>map</code> followed by <code>flat</code> with depth 1.
+      The <code>flatMap</code> method calls the callback function one time for each element in the array.
+
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/a9736831d35db39b40991e49eaaab69c.js"></script>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="sub-heading">Lecture 161: Sorting Arrays</div>
+    <div>
+      - Note that the <code>sort</code> method by default converts everything to strings implicitly. Hence using
+      the <code>sort</code> method to sort arrays of number swill lead to wrong results. Hence be sure to pass in
+      a custom comparator when sorting numbers.
+
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/17f5fdf389bdc0376e25860e0fbb8b60.js"></script>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="sub-heading">Lecture 162: More ways of creating and filling arrays</div>
+    <div>
+      - Here you go:
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/95a1f8d7cc1f61b275608c6bb0fef6cb.js"></script>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-heading">Lecture 163: Which array method to use</div>
+    <div>
+      <div class="image-block">
+          <div class="expand-screenshot-image-btn border border-primary rounded">
+              <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
+          </div>
+          <div class="screenshot-image">
             <img src="imgs/UdemyCourse/Module11/WhichArrayMethodToUse.png"
                  width="1356"
                  class="center-block img-fluid"
                  alt="Example1">
+          </div>
+      </div>
 
-            <div class="code-block">
-                <div class="expand-code-snip-btn border border-primary rounded">
-                    <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-                </div>
-                <div class="code-snippet">
-                    <script src="https://gist.github.com/rgbk21/d49fcf43999696da411873b830cf8024.js"></script>
-                </div>
-            </div>
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
         </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/d49fcf43999696da411873b830cf8024.js"></script>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <hr>
+  <div id="Module13_Udemy" class="chapter">Module 13 - Advanced DOM and Events</div>
+  <hr>
+
+  <div class="textual-content">
+
+    <div class="sub-heading">Lecture 182: How DOM really works</div>
+    <div>
+      -
     </div>
 
-
-    <hr>
-    <div id="Module13_Udemy" class="chapter">Module 13 - Advanced DOM and Events</div>
-    <hr>
-
-    <div class="textual-content">
-
-        <div class="sub-heading">Lecture 182: How DOM really works</div>
-        <div>
-            -
-        </div>
-
-    </div>
+  </div>
 
 
 </div>
