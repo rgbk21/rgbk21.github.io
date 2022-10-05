@@ -1247,7 +1247,8 @@
     Chapter 11: <a href="#AngularCore_Chapter11">Angular ngClass Core Directive</a> <br>
     Chapter 12: <a href="#AngularCore_Chapter12">Angular ngStyle Core Directive</a> <br>
     Chapter 13: <a href="#AngularCore_Chapter13">Angular ngSwitch Core Directive</a> <br>
-    Chapter 14: <a href="#AngularCore_Chapter14"> Angular ng-container Core Directive</a> <br>
+    Chapter 14: <a href="#AngularCore_Chapter14">Angular ng-container Core Directive</a> <br>
+    Chapter 15: <a href="#AngularCore_Chapter15">Angular Built-In Pipes</a> <br>
   </div>
 
 
@@ -1645,7 +1646,7 @@
     - <a href="https://angular-university.io/lesson/angular-ngswitch">Link to tutorial</a> <br>
     - We have seen how to conditionally add or remove elements from the page using the <code>ngIf</code> directive. So it offers us just two options. Sometimes, we want more. <br>
     - Suppose we want to add a label element to the card dependent on whether the category is beginner, intermediate, or advanced. <br>
-    - The expression passed into the <code>ngSwitch="<i>expression</i>"</code> directive is the expression that we want to switch on, which in this case is going to be
+    - The <i>expression</i> passed into the <code>ngSwitch="<i>expression</i>"</code> directive is the expression that we want to switch on, which in this case is going to be
     <i>course.category</i>. We use <code>ngSwitchDefault</code> to handle the default case.
     <div class="image-block">
       <div class="expand-screenshot-image-btn border border-primary rounded">
@@ -1665,6 +1666,21 @@
 
   <div class="textual-content">
     - <a href="https://angular-university.io/lesson/angular-ngswitch">Link to tutorial</a> <br>
+    - <a href="https://angular.io/api/core/ng-container"><code>ng-container</code></a> docs. <br>
+    - <a href="http://nataliesmith.ca/blog/2018-05-01-ngtemplate-ngcontainer-ngcontent/">ng-template, ng-container, and ng-content in Angular</a> <br>
+    - <a href="https://stackoverflow.com/questions/54029503/benefit-of-using-ng-container-vs-template">Benefit of using ng-container vs. template?</a> <br>
+    - In the structural directives that we looked at above (like <code>ngIf</code>, <code>ngSwitch</code>), we had clear parent elements onto which we could apply these directives.
+    This is not always the case. We might find ourselves in a situation where we do not have a single parent component onto which we can apply the directive (?). <br>
+    - If you ever find yourself in a situation where you don't have a convenient place to apply a structural directive, instead of creating an extra element such as a
+    <code>div</code> just for being able to apply the directive, use <code>ng-container</code> instead, because it will not create extra DOM elements.
+  </div>
+
+  <hr>
+  <div id="AngularCore_Chapter15" class="chapter">Chapter 15: Angular Built-In Pipes</div>
+  <hr>
+
+  <div class="textual-content">
+    -
   </div>
 
   <hr>
