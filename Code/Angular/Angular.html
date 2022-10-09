@@ -1680,7 +1680,41 @@
   <hr>
 
   <div class="textual-content">
-    -
+    - <a href="https://angular-university.io/lesson/angular-pipes">Link to tutorial</a> <br>
+    - A pipe is a template mechanism that we can use to transform data and display it in another form to the user. <br>
+    - Example of Date, String, Number, Currency, Percentage pipes:
+    <div class="code-block">
+      <div class="expand-code-snip-btn border border-primary rounded">
+        <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+      </div>
+      <div class="code-snippet">
+        <script src="https://gist.github.com/rgbk21/d5a15a2b2ee164ca793497ea544252e8.js"></script>
+      </div>
+    </div>
+
+    - We also have pipes for handling collections of data. The <code>slice</code> pipe for example allows us to slice arrays similar to how we would do it with the JS
+    <code>slice</code> method. In the below example, we are slicing <i>courses</i> array such that we will take the elements from index 0 (inclusive) to 3 (exclusive). Hence,
+    irrespective of the number of elements in the <i>courses</i> array, our list will contain only 3 elements. Also note that here we are passing in multiple args to the pipe by
+    separating them with the <code> : </code> operator.
+    <div class="code-block">
+      <div class="expand-code-snip-btn border border-primary rounded">
+        <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+      </div>
+      <div class="code-snippet">
+        <script src="https://gist.github.com/rgbk21/86365e789f67b29be85968bffde82032.js"></script>
+      </div>
+    </div>
+
+    - Some other helpful pipes are the <code>json</code> pipe which will print the entire json object to the page. Another helpful pipe is the <code>keyvalue</code> pipe that
+    prints an object as key, value pairs.
+    <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+            <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/dcb6688558b7f7719f8abb2bb0ca745e.js"></script>
+        </div>
+    </div>
   </div>
 
   <hr>
