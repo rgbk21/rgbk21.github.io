@@ -1251,6 +1251,7 @@
     Chapter 15: <a href="#AngularCore_Chapter15">Angular Built-In Pipes</a> <br>
     Chapter 16: <a href="#AngularCore_Chapter16">Angular View Child Decorator - How Does it Work?</a> <br>
     Chapter 17: <a href="#AngularCore_Chapter17">View Child - Learn the multiple View Query Configuration Options</a> <br>
+    Chapter 18: <a href="#AngularCore_Chapter18">The AfterViewInit Lifecycle Hook - How deep can we query with View Child?</a> <br>
   </div>
 
 
@@ -1751,6 +1752,58 @@
 
   <div class="textual-content">
     - <a href="https://angular-university.io/lesson/angular-view-child-2">Link to tutorial</a> <br>
+    - Using <code>@ViewChild</code>, we can also query based on a template reference. This is useful in the case when we have multiple components of the same type.
+    <div class="image-block">
+      <div class="expand-screenshot-image-btn border border-primary rounded">
+        <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
+      </div>
+      <div class="screenshot-image">
+        <img src="imgs/AngularDeepDive/Chapter17/ViewChildRef.png"
+             class="center-block img-fluid"
+             alt="ViewChild Using References">
+      </div>
+    </div>
+
+    - So far we have been using the <code>@ViewChild</code> to inject components. But we can also use this to inject plain HTML elements. <br>
+    - The <code>ElementRef</code> type from Angular Core allows us to handle plain native HTML elements. Notice in the below example that when we logged the component, the type
+    printed in the console was the component type, i.e. <i>CourseCardComponent</i>. But when we logged the native HTML element, we get the <code>ElementRef</code> type logged
+    instead. The <code>ElementRef</code> object contains a property called <code>nativeElement</code> which corresponds to the <i>div.courses</i> element. If you hover over it, the
+    div on the html page will get highlighted. Hence, the <code>@ViewChild</code> decorator will give you different behavior depending on whether you are using to query plain DOM
+    elements, or if you are querying a component.
+    <div class="image-block">
+      <div class="expand-screenshot-image-btn border border-primary rounded">
+        <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
+      </div>
+      <div class="screenshot-image">
+        <img src="imgs/AngularDeepDive/Chapter17/ViewChildRefWithElementRef.png"
+             class="center-block img-fluid"
+             alt="ViewChildRefWithElementRef">
+      </div>
+    </div>
+
+    - As we saw above, when querying components, we are going to get back the component, and not the HTML element. But we know that each component corresponds to a custom DOM
+    element. So suppose if we have a use case where we want to get a reference to the HTML element <i>course-card</i>, and not its component <i>CourseCardComponent</i>. For this,
+    we can pass-in a custom object to the <code>@ViewChild()</code> like <code>@ViewChild('cardOneRef', {read: ElementRef})</code>. As we can see in the below example, we are now
+    getting the <i>app-course-card</i> for the second card printed on the console.
+    <div class="image-block">
+      <div class="expand-screenshot-image-btn border border-primary rounded">
+        <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
+      </div>
+      <div class="screenshot-image">
+        <img src="imgs/AngularDeepDive/Chapter17/ViewChildRef_readElementRef.png"
+             class="center-block img-fluid"
+             alt="ViewChildRef_readElementRef">
+      </div>
+    </div>
+  </div>
+
+  <hr>
+  <div id="AngularCore_Chapter18" class="chapter">Chapter 18: The AfterViewInit Lifecycle Hook - How deep can we query with <code>@ViewChild</code>?</div>
+  <hr>
+
+  <div class="textual-content">
+    - <a href="https://angular-university.io/lesson/angular-afterviewinit">Link to tutorial</a> <br>
+
   </div>
 
 
