@@ -1252,6 +1252,7 @@
     Chapter 16: <a href="#AngularCore_Chapter16">Angular View Child Decorator - How Does it Work?</a> <br>
     Chapter 17: <a href="#AngularCore_Chapter17">View Child - Learn the multiple View Query Configuration Options</a> <br>
     Chapter 18: <a href="#AngularCore_Chapter18">The AfterViewInit Lifecycle Hook - How deep can we query with View Child?</a> <br>
+    Chapter 19: <a href="#AngularCore_Chapter19">The View Children Decorator and Query List In Detail</a> <br>
   </div>
 
 
@@ -1803,6 +1804,78 @@
 
   <div class="textual-content">
     - <a href="https://angular-university.io/lesson/angular-afterviewinit">Link to tutorial</a> <br>
+    - The question we are trying to answer is: when are the variables that are annotated with the <code>@ViewChild</code> annotation populated? <br>
+    - In the below example, we have added a constructor to the component, and are logging <i>card1</i> there. When we do that, we see that the reference is logged as
+    <i>undefined</i>. This means that the view child ref is not available when the constructor for the component has been called.
+    <div class="image-block">
+      <div class="expand-screenshot-image-btn border border-primary rounded">
+        <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
+      </div>
+      <div class="screenshot-image">
+        <img src="imgs/AngularDeepDive/Chapter18/ViewChild_NotInitInConstructor.png"
+             class="center-block img-fluid"
+             alt="ViewChild_NotInitInConstructor">
+      </div>
+    </div>
+
+    - So the question is, when is the earliest moment when we are sure that the references queried by the <code>@ViewChild</code> decorator are already filled in? <br>
+    - For this, we need the class to implement a lifecycle hook: <code>AfterViewInit</code>. This will force us to implement the <code>ngAfterViewInit()</code> method. And it is in
+    this method where we can earliest access the references populated by the <code>@ViewChild</code> decorator. It is the Angular framework itself that calls this method after the
+    references are filled in. Hence, <code>ngAfterViewInit</code> is the place to put some initialization logic that needs access to the <code>@ViewChild</code> elements.
+    <div class="image-block">
+      <div class="expand-screenshot-image-btn border border-primary rounded">
+        <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
+      </div>
+      <div class="screenshot-image">
+        <img src="imgs/AngularDeepDive/Chapter18/ViewChild_PopulatesInNgAfterViewInit.png"
+             class="center-block img-fluid"
+             alt="ViewChild_PopulatesInNgAfterViewInit">
+      </div>
+    </div>
+
+    - When using these kinds of lifecycle hooks, it is important to not modify the data that the component is trying to render. What this means is that, suppose we try to change
+    the <i>description</i> of the card in the <code>ngAfterViewInit</code>. This will throw a <code>ExpressionChangedAfterItHasBeenCheckedError</code>. Read about the error
+    <a href="https://angular.io/errors/NG0100">here on the Angular Site</a>. Also has a video lesson about why this error is caused, and how to fix it. <br>
+
+    <div class="image-block">
+      <div class="expand-screenshot-image-btn border border-primary rounded">
+        <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
+      </div>
+      <div class="screenshot-image">
+        <img src="imgs/AngularDeepDive/Chapter18/ngAfterViewInit_exception.png"
+             class="center-block img-fluid"
+             alt="ngAfterViewInit_exception">
+      </div>
+    </div>
+
+    - In a nutshell, what happens is this: Angular throws an <code>ExpressionChangedAfterItHasBeenCheckedError</code> when an expression value has been changed after change
+    detection has completed. Angular only throws this error in development mode. The goal of Change Detection is to keep your model (ts code) in sync with the template (your HTML).
+    It does this by looking for data changes in the component tree from top to bottom. The below image is a simplified breakdown of the steps that Angular performs when the
+    component is first initialized. Note that the <code>ngAfterViewInit</code> runs after Change Detection. Any code that runs here should not attempt to update the view.
+    <div class="image-block">
+      <div class="expand-screenshot-image-btn border border-primary rounded">
+        <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
+      </div>
+      <div class="screenshot-image">
+        <img src="imgs/AngularDeepDive/Chapter18/AngularSimplifiedLifeCycle.png"
+             class="center-block img-fluid"
+             alt="AngularSimplifiedLifeCycle">
+      </div>
+    </div>
+
+    - We also need to understand the scope of the template queries that we are doing. Using <code>@ViewChild</code> annotations, we can query anything at the level of the component
+    itself. You cannot query elements that are either in the parent component, or elements that are in the children component either. What this means is that, note in the above
+    images that the <i>app.component.html</i> makes use of the <i>app-course-card</i>. The <i>course-card.component</i> makes use of the <i>img</i> tag. If you added a template
+    reference to that <i>img</i>, and tried to fetch that image in the <i>app.component.ts</i>, you would get <i>undefined</i>. <br>
+    - Hence, the scope of the <code>@ViewChild</code> queries are restricted to the template that is associated with the component in which the decorator is being used.
+  </div>
+
+  <hr>
+  <div id="AngularCore_Chapter19" class="chapter">Chapter 19: The <code>@ViewChildren</code> Decorator and Query List In Detail</div>
+  <hr>
+
+  <div class="textual-content">
+    - <a href="https://angular-university.io/lesson/angular-view-children">Link to tutorial</a> <br>
 
   </div>
 
