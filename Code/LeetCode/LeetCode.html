@@ -485,7 +485,22 @@
       on if you use the same instance of the string to check for something like <code>contains</code>, the <code>Set</code>/<code>Map</code> will not have to recalculate the
       hash again, since it will just use the cached value instead giving you O(1) time complexity. But if you use a <i>new</i> string object that is logically equal to the
       earlier string that you added, but is a completely new instance of <code>String</code>, the hash value of it will have to be calculated all over again giving you O(m)
-      once again.
+      once again. <br>
+      - Note that when it comes to <code>Set</code>/<code>Map</code> implementations, we have the <code>TreeSet</code> and <code>TreeMap</code> implementations as well. The time
+      complexity of <a href="https://docs.oracle.com/javase/8/docs/api/java/util/TreeSet.html">basic operations (<code>add</code>, <code>remove</code>, <code>contains</code>) is
+      O(logN)</a> on a <code>TreeSet</code>.
+      The <code>TreeMap</code> provides <a href="https://docs.oracle.com/javase/8/docs/api/java/util/TreeMap.html">guaranteed log(n) time cost for the <code>containsKey</code>,
+      <code>get</code>, <code>put</code> and <code>remove</code> operations.</a>
+      Also read the <a href="https://stackoverflow.com/questions/14379515/computational-complexity-of-treeset-methods-in-java">Computational Complexity of TreeSet methods in
+      Java</a> on SO. <br>
+      - Point to note is that while the <a href="https://docs.oracle.com/javase/8/docs/api/java/util/HashSet.html">HashSet provides O(1) time complexity for basic operations like
+      <code>add</code>, <code>remove</code>, <code>contains</code>, <code>size</code></a>, the <code>TreeSet</code>/<code>TreeMap</code> do the <code>add</code>,
+      <code>remove</code>, <code>contains</code> in O(logN). Also note that the <code>HashMap</code> has a <code>containsKey</code> and <code>containsValue</code> method. The
+      <code>containsKey</code> has a O(1) time, whereas the <code>containsValue</code> has O(n) time because <a href="https://stackoverflow.com/a/8923300/8742428"><code>containsKey()</code>
+      is just a <code>get()</code> that throws away the retrieved value</a>. <br>
+      - Baeldung: <a href="https://www.baeldung.com/java-collections-complexity">Java Collections Complexity</a> <br>
+      - Baeldung: <a href="https://www.baeldung.com/java-hashmap">Java HashMap Basics</a> <br>
+      - Baeldung: <a href="https://www.baeldung.com/java-hashmap-advanced">Java HashMap Advanced</a>
     </div>
 
     <div id="LC_HashSet" class="sub-heading">Hash Set</div>

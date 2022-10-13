@@ -1253,6 +1253,7 @@
     Chapter 17: <a href="#AngularCore_Chapter17">View Child - Learn the multiple View Query Configuration Options</a> <br>
     Chapter 18: <a href="#AngularCore_Chapter18">The AfterViewInit Lifecycle Hook - How deep can we query with View Child?</a> <br>
     Chapter 19: <a href="#AngularCore_Chapter19">The View Children Decorator and Query List In Detail</a> <br>
+    Chapter 20: <a href="#AngularCore_Chapter20">Angular Content Projection with ng-content In Detail</a> <br>
   </div>
 
 
@@ -1871,12 +1872,38 @@
   </div>
 
   <hr>
-  <div id="AngularCore_Chapter19" class="chapter">Chapter 19: The <code>@ViewChildren</code> Decorator and Query List In Detail</div>
+  <div id="AngularCore_Chapter19" class="chapter">Chapter 19: The <code>@ViewChildren</code> Decorator and <code>QueryList</code> In Detail</div>
   <hr>
 
   <div class="textual-content">
     - <a href="https://angular-university.io/lesson/angular-view-children">Link to tutorial</a> <br>
+    - The <code>@ViewChildren</code> is similar to <code>@ViewChild</code>, but the difference being that instead of querying for just one single element, the
+    <code>@ViewChildren</code> allows us to query for a collection of elements. <br>
+    - For instance, in the <i>app.component.html</i>, we are iterating over the entire list of <i>courses</i> using a <code>*ngFor</code> loop. Suppose that we want to get a
+    reference of all the <i>app-course-card</i> that are created. We can do that by using the <code>@ViewChildren</code> decorator. <br>
+    - Notice in the below example that the type that we get is a new type: <code>QueryList&lt;CourseCardComponent&gt;</code>, and not something like a list of <i>CourseCardComponent</i>
+    as one might expect. Also, just like with <code>@ViewChild</code>, we can specify what type of elements we want to extract. So instead of obtaining references to each of the
+    <i>CourseCardComponent</i>, we would like to get a reference to the DOM element of each component. <br>
+    - Also talks about using <code>Observable</code> to subscribe to the changes in <i>cards</i>. The <code>Observable</code> will emit multiple values as the collection changes
+    over time.
+    <div class="image-block">
+        <div class="expand-screenshot-image-btn border border-primary rounded">
+            <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
+        </div>
+        <div class="screenshot-image">
+          <img src="imgs/AngularDeepDive/Chapter19/QueryList.png"
+               class="center-block img-fluid"
+               alt="QueryList">
+        </div>
+    </div>
+  </div>
 
+  <hr>
+  <div id="AngularCore_Chapter20" class="chapter">Chapter 20: Angular Content Projection with ng-content In Detail</div>
+  <hr>
+
+  <div class="textual-content">
+    - <a href="https://angular-university.io/lesson/angular-content-projection">Link to tutorial</a> <br>
   </div>
 
 
