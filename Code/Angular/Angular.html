@@ -1901,7 +1901,7 @@
   </div>
 
   <hr>
-  <div id="AngularCore_Chapter20" class="chapter">Chapter 20: Angular Content Projection with ng-content In Detail</div>
+  <div id="AngularCore_Chapter20" class="chapter">Chapter 20: Angular Content Projection with <code>ng-content</code> In Detail</div>
   <hr>
 
   <div class="textual-content">
@@ -1910,10 +1910,10 @@
     can do things like ngIf, ngSwitch, etc. but the core template itself cannot be changed. Suppose you wanted to replace the image in the component such that in some cases you
     want the image to be replaced by some other interactive component with buttons and everything, you cannot do that. Content projection says that similar to how we pass in data
     as <code>@Input</code>, we can pass in entire custom HTML as input to child elements as well. <br>
-    - We do this using the <code>ng-content</code> tag. The content inside the <i>course-card</i> tag is being projected into the template using <code>ng-template</code>. Any
-    content that we have between the opening and the closing <i>course-card</i> tag is going to get projected into the template using <code>ng-template</code>. <br>
-    - Suppose we added another <i>course-card</i> and in it we did not specify an image, but just a <i>h5</i> tag. Then it will just be the h5 tag that will be projected. The point
-    to note here is that the <code>ng-content</code> is going to show any content that is between the opening and closing tags of the component.
+    - We do this using the <code>ng-content</code> tag. The content inside the <i>course-card</i> tag is being projected into the template using <code>ng-content</code>. Any
+    content that we have between the opening and the closing <i>course-card</i> tag is going to get projected into the template using <code>ng-content</code>. <br>
+    - Suppose we added another <i>course-card</i> and in it, we did not specify an image, but just a <i>h5</i> tag. Then it will just be the h5 tag that will be projected. The
+    point to note here is that the <code>ng-content</code> is going to show any content that is between the opening and closing tags of the component.
     <div class="image-block">
       <div class="expand-screenshot-image-btn border border-primary rounded">
         <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
@@ -2052,12 +2052,26 @@
   </div>
 
   <hr>
-  <div id="AngularCore_Chapter23" class="chapter">Chapter 23: Angular Templates Introduction with ng-template</div>
+  <div id="AngularCore_Chapter23" class="chapter">Chapter 23: Angular Templates Introduction with <code>ng-template</code></div>
   <hr>
 
   <div class="textual-content">
     - <a href="https://angular-university.io/lesson/angular-templates">Link to tutorial</a> <br>
+    - In <a href="#AngularCore_Chapter10">Chapter 10</a> we looked at <code>ng-template</code> on how to show alternate element in case an image is not provided. <br>
+    - One point to note about <code>ng-template</code> is that the HTML associated with the template is included in the DOM only if the template reference that is being used to
+    refer to the <code>ng-template</code> is actually being used somewhere in the page. Else, the associated HTML is not included (like how elements that use the <code>*ngIf</code>
+    directive are not included in the DOM if the expression evaluates to false). Refer lecture if this is not clear. <br>
+    - Also note that the references that are in-scope within the template are also in-scope in the <code>ng-template</code>.
   </div>
+
+  <hr>
+  <div id="AngularCore_Chapter24" class="chapter">Chapter 24: Angular Template Instantiation with ngTemplateOutlet</div>
+  <hr>
+
+  <div class="textual-content">
+    - <a href="https://angular-university.io/lesson/angular-ngtemplateoutlet">Link to tutorial</a> <br>
+  </div>
+
 
   <hr>
   <div id="FAQs" class="chapter">FAQs</div>
@@ -2079,8 +2093,7 @@
       <div class="row">
         <img src="imgs/Ch5/Angular_Version.png" class="center-block img-fluid" alt="Example1">
       </div>
-      - <a href="https://stackoverflow.com/questions/46332383/how-to-check-the-angular-version/52510475">SO
-      Link</a>
+      - <a href="https://stackoverflow.com/questions/46332383/how-to-check-the-angular-version/52510475">SO Link</a>
     </div>
 
     <li><b>How to install ng-bootstrap in your project</b></li>
