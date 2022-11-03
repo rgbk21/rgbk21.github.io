@@ -1254,6 +1254,7 @@
     Chapter 18: <a href="#AngularCore_Chapter18">The AfterViewInit Lifecycle Hook - How deep can we query with View Child?</a> <br>
     Chapter 19: <a href="#AngularCore_Chapter19">The View Children Decorator and Query List In Detail</a> <br>
     Chapter 20: <a href="#AngularCore_Chapter20">Angular Content Projection with ng-content In Detail</a> <br>
+    Chapter 21: <a href="#AngularCore_Chapter21">Angular Content Child Decorator</a> <br>
   </div>
 
 
@@ -1887,14 +1888,14 @@
     - Also talks about using <code>Observable</code> to subscribe to the changes in <i>cards</i>. The <code>Observable</code> will emit multiple values as the collection changes
     over time.
     <div class="image-block">
-        <div class="expand-screenshot-image-btn border border-primary rounded">
-            <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
-        </div>
-        <div class="screenshot-image">
-          <img src="imgs/AngularDeepDive/Chapter19/QueryList.png"
-               class="center-block img-fluid"
-               alt="QueryList">
-        </div>
+      <div class="expand-screenshot-image-btn border border-primary rounded">
+        <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
+      </div>
+      <div class="screenshot-image">
+        <img src="imgs/AngularDeepDive/Chapter19/QueryList.png"
+             class="center-block img-fluid"
+             alt="QueryList">
+      </div>
     </div>
   </div>
 
@@ -1904,6 +1905,60 @@
 
   <div class="textual-content">
     - <a href="https://angular-university.io/lesson/angular-content-projection">Link to tutorial</a> <br>
+    - Content Projection is all about making configurable components. For instance, if you look at the <i>course-card</i> component, you will see that the template is fixed. You
+    can do things like ngIf, ngSwitch, etc. but the core template itself cannot be changed. Suppose you wanted to replace the image in the component such that in some cases you
+    want the image to be replaced by some other interactive component with buttons and everything, you cannot do that. Content projection says that similar to how we pass in data
+    as <code>@Input</code>, we can pass in entire custom HTML as input to child elements as well. <br>
+    - We do this using the <code>ng-content</code> tag. The content inside the <i>course-card</i> tag is being projected into the template using <code>ng-template</code>. Any
+    content that we have between the opening and the closing <i>course-card</i> tag is going to get projected into the template using <code>ng-template</code>. <br>
+    - Suppose we added another <i>course-card</i> and in it we did not specify an image, but just a <i>h5</i> tag. Then it will just be the h5 tag that will be projected. The point
+    to note here is that the <code>ng-content</code> is going to show any content that is between the opening and closing tags of the component.
+    <div class="image-block">
+      <div class="expand-screenshot-image-btn border border-primary rounded">
+        <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
+      </div>
+      <div class="screenshot-image">
+        <img src="imgs/AngularDeepDive/Chapter20/ng-content.png"
+             class="center-block img-fluid"
+             alt="ng-content">
+      </div>
+    </div>
+
+    - There can also be cases where we want to constrain which elements actually get projected into the <code>ng-content</code> tag. In that case we can use the <code>select</code>
+    property of the <code>ng-content</code> tag. There are different ways in which we can restrict the content that will be projected in the <code>ng-content</code> tag. We can
+    restrict using the element tag or using the class on the element. Below image shows how.
+    <div class="image-block">
+      <div class="expand-screenshot-image-btn border border-primary rounded">
+        <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
+      </div>
+      <div class="screenshot-image">
+        <img src="imgs/AngularDeepDive/Chapter20/ng-content_conditionallyShowingElement.png"
+             class="center-block img-fluid"
+             alt="ng-content">
+      </div>
+    </div>
+
+    - We can also add just an <code>ng-content</code> tag in order to catch any elements that would be left over after using the <code>select</code> property. In the below example,
+    the "Edit Description:" does not have a CSS selector that is used in either of the <code>ng-content</code>'s <code>select</code> property. In this case, it is the third
+    <code>ng-content</code> that enables us to project all the remaining stuff.
+    <div class="image-block">
+      <div class="expand-screenshot-image-btn border border-primary rounded">
+        <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
+      </div>
+      <div class="screenshot-image">
+        <img src="imgs/AngularDeepDive/Chapter20/ng-content_conditionallyShowingElement_2.png"
+             class="center-block img-fluid"
+             alt="ng-content">
+      </div>
+    </div>
+  </div>
+
+  <hr>
+  <div id="AngularCore_Chapter21" class="chapter">Chapter 21: Angular Content Child Decorator</div>
+  <hr>
+
+  <div class="textual-content">
+    - <a href="https://angular-university.io/lesson/angular-content-child">Link to tutorial</a> <br>
   </div>
 
 
