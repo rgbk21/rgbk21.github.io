@@ -1255,6 +1255,7 @@
     Chapter 19: <a href="#AngularCore_Chapter19">The View Children Decorator and Query List In Detail</a> <br>
     Chapter 20: <a href="#AngularCore_Chapter20">Angular Content Projection with ng-content In Detail</a> <br>
     Chapter 21: <a href="#AngularCore_Chapter21">Angular Content Child Decorator</a> <br>
+    Chapter 22: <a href="#AngularCore_Chapter22">Angular Content Children and the AfterContentInit Lifecycle Hook</a> <br>
   </div>
 
 
@@ -1954,13 +1955,70 @@
   </div>
 
   <hr>
-  <div id="AngularCore_Chapter21" class="chapter">Chapter 21: Angular Content Child Decorator</div>
+  <div id="AngularCore_Chapter21" class="chapter">Chapter 21: Angular <code>@ContentChild</code> Decorator</div>
   <hr>
 
   <div class="textual-content">
     - <a href="https://angular-university.io/lesson/angular-content-child">Link to tutorial</a> <br>
+    - In the earlier lesson we looked at how we can use the <code>@ViewChild</code> and <code>@ViewChildren</code> decorators to query the template of a given component so that the
+    component class can have a direct reference to some elements in its own template. The scope of this query was restricted to the template of the component and nothing else.
+    <br>
+    - The same way that a component might want to get references to parts of its template, there can also be situations where a component that supports content projection would
+    also like to get references to the elements that are injected dynamically within the <code>ng-content</code>. One idea could be to add template reference to the element that we
+    are interested in, in the <i>app.component.html</i> as below. But as you can see, it prints <i>undefined</i> and does not work. This is expected behavior, since although the
+    <code>@ViewChild</code> can see within the template, it <i>cannot</i> see within the projected <code>ng-content</code>
+    <div class="image-block">
+      <div class="expand-screenshot-image-btn border border-primary rounded">
+        <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
+      </div>
+      <div class="screenshot-image">
+        <img src="imgs/AngularDeepDive/Chapter21/UsingViewChildDoesNotWork.png"
+             class="center-block img-fluid"
+             alt="UsingContentChildDoesNotWork">
+      </div>
+    </div>
+
+    - In order to see within the projected content, we are going to need a new decorator called <code>@ContentChild</code>. This works similar to how <code>@ViewChild</code> works,
+    except that it can see <i>only</i> within <code>ng-content</code>. You cannot query other elements that are defined in the template with it. The below image shows the scope of
+    the <code>@ContentChild</code>. As you can see, you can query elements from the parent element using <code>@ContentChild</code>, but <i>only</i> those elements that are defined
+    within the opening and closing braces of the <i>course-card</i> component.
+    <div class="image-block">
+      <div class="expand-screenshot-image-btn border border-primary rounded">
+        <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
+      </div>
+      <div class="screenshot-image">
+        <img src="imgs/AngularDeepDive/Chapter21/UsingContentChildWorks.png"
+             class="center-block img-fluid"
+             alt="UsingContentChildWorks">
+      </div>
+    </div>
+
+    - Just like the case of the <code>@ViewChild</code> query, the <code>@ContentChild</code> decorator can also be used to query components inside the content of the component.
+    In the above examples, all the content within <code>&lt;course-card&gt;...&lt;course-card/&gt;</code> were native DOM elements. But we can also have components within the
+    <code>course-card</code> component, as we are having in the below example. We have taken the <i>img</i> and extracted it to a component of its own. So what we have managed to
+    do is to project a component inside another component. Hence, we also ended up changing the way we were querying the element using the <code>@ContentChild</code> decorator as
+    well. In the below example, the decorator is going to return an instance of <i>CourseImageComponent</i>. But optionally, we can pass in
+    <code>@ContentChild(CourseImageComponent, {read: ElementRef})</code> in order to get a reference to the underlying element itself (just like we did with <code>@ViewChild</code>).
+    <div class="image-block">
+      <div class="expand-screenshot-image-btn border border-primary rounded">
+        <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
+      </div>
+      <div class="screenshot-image">
+        <img src="imgs/AngularDeepDive/Chapter21/ContentChildInsideComponents.png"
+             class="center-block img-fluid"
+             alt="ContentChildInsideComponents">
+      </div>
+    </div>
   </div>
 
+  <hr>
+  <div id="AngularCore_Chapter22" class="chapter">Chapter 22: Angular <code>@ContentChildren</code> and the <code>AfterContentInit</code> Lifecycle Hook</div>
+  <hr>
+
+  <div class="textual-content">
+    - <a href="https://angular-university.io/lesson/angular-content-children">Link to tutorial</a> <br>
+
+  </div>
 
   <hr>
   <div id="FAQs" class="chapter">FAQs</div>
