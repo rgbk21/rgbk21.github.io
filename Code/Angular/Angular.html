@@ -2017,7 +2017,46 @@
 
   <div class="textual-content">
     - <a href="https://angular-university.io/lesson/angular-content-children">Link to tutorial</a> <br>
+    - Similar to <code>@ViewChildren</code>, <code>@ContentChildren</code> allows us to query multiple elements. <br>
+    - In the below example, we are passing in multiple images. There are three things to note in it. <br>
+    - First, so far we have been using <code>ngAfterViewInit()</code> to get the content. But this is not the earliest point at which Angular has populated these references for us.
+    We can have the class <code>implements</code> <code>AfterContentInit</code> which will force us to override the <code>ngAfterContentInit()</code> method. This method is the
+    earliest point at which the references have already been populated for us. You can see this in the console log prints below. The <code>ngAfterContentInit()</code> is called
+    before the <code>ngAfterViewInit()</code> and already has all valid references. <br>
+    - Second, the return type of the <code>@ViewChildren</code> is <code>QueryList&lt;CourseImageComponent&gt;</code>. <br>
+    - Third, similar to how we got references to the components, we can similarly get references to the DOM elements as well.
+    <div class="image-block">
+      <div class="expand-screenshot-image-btn border border-primary rounded">
+        <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
+      </div>
+      <div class="screenshot-image">
+        <img src="imgs/AngularDeepDive/Chapter22/ContentChildren.png"
+             class="center-block img-fluid"
+             alt="ContentChildren">
+      </div>
+    </div>
 
+    - Well the thing is you don't even need to project the elements using the <code>ng-content</code> tag in order to see the elements of the parent component. In the below
+    example, we have removed the <code>ng-content</code> from the <i>course-card</i> template, and we are still able to query the elements. Ofcourse, doing this also means that the
+    images will no longer show in the page either. But you can still programmatically access them is what I am saying.
+    <div class="image-block">
+      <div class="expand-screenshot-image-btn border border-primary rounded">
+        <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
+      </div>
+      <div class="screenshot-image">
+        <img src="imgs/AngularDeepDive/Chapter22/NoContentProjectionNeeded.png"
+             class="center-block img-fluid"
+             alt="NoContentProjectionNeeded">
+      </div>
+    </div>
+  </div>
+
+  <hr>
+  <div id="AngularCore_Chapter23" class="chapter">Chapter 23: Angular Templates Introduction with ng-template</div>
+  <hr>
+
+  <div class="textual-content">
+    - <a href="https://angular-university.io/lesson/angular-templates">Link to tutorial</a> <br>
   </div>
 
   <hr>
