@@ -1256,6 +1256,9 @@
     Chapter 20: <a href="#AngularCore_Chapter20">Angular Content Projection with ng-content In Detail</a> <br>
     Chapter 21: <a href="#AngularCore_Chapter21">Angular Content Child Decorator</a> <br>
     Chapter 22: <a href="#AngularCore_Chapter22">Angular Content Children and the AfterContentInit Lifecycle Hook</a> <br>
+    Chapter 23: <a href="#AngularCore_Chapter23">Angular Templates Introduction with ng-template</a> <br>
+    Chapter 24: <a href="#AngularCore_Chapter24">Angular Template Instantiation with ngTemplateOutlet</a> <br>
+    Chapter 25: <a href="#AngularCore_Chapter25">Angular Templates as Component Inputs</a> <br>
   </div>
 
 
@@ -1679,7 +1682,8 @@
     - In the structural directives that we looked at above (like <code>ngIf</code>, <code>ngSwitch</code>), we had clear parent elements onto which we could apply these directives.
     This is not always the case. We might find ourselves in a situation where we do not have a single parent component onto which we can apply the directive (?). <br>
     - If you ever find yourself in a situation where you don't have a convenient place to apply a structural directive, instead of creating an extra element such as a
-    <code>div</code> just for being able to apply the directive, use <code>ng-container</code> instead, because it will not create extra DOM elements.
+    <code>div</code> just for being able to apply the directive, use <code>ng-container</code> instead, because it will not create extra DOM elements. Refer <a
+    href="#AngularCore_Chapter24">Chapter 24 for an example</a>.
   </div>
 
   <hr>
@@ -2062,14 +2066,58 @@
     refer to the <code>ng-template</code> is actually being used somewhere in the page. Else, the associated HTML is not included (like how elements that use the <code>*ngIf</code>
     directive are not included in the DOM if the expression evaluates to false). Refer lecture if this is not clear. <br>
     - Also note that the references that are in-scope within the template are also in-scope in the <code>ng-template</code>.
+    <div class="image-block">
+      <div class="expand-screenshot-image-btn border border-primary rounded">
+        <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
+      </div>
+      <div class="screenshot-image">
+        <img src="imgs/AngularDeepDive/Chapter23/InScopeReferences.png"
+             class="center-block img-fluid"
+             alt="InScopeReferences">
+      </div>
+    </div>
   </div>
 
   <hr>
-  <div id="AngularCore_Chapter24" class="chapter">Chapter 24: Angular Template Instantiation with ngTemplateOutlet</div>
+  <div id="AngularCore_Chapter24" class="chapter">Chapter 24: Angular Template Instantiation with <code>ngTemplateOutlet</code></div>
   <hr>
 
   <div class="textual-content">
     - <a href="https://angular-university.io/lesson/angular-ngtemplateoutlet">Link to tutorial</a> <br>
+    - We saw that we can access variables in <code>ng-template</code> that are defined within the template. In addition to that, we can also give to the ng-template its own private
+    variable context that is going to be visible only inside the <code>ng-template</code> itself. <br>
+    - Remember we talked about in the previous lecture how just having a <code>ng-template</code> in your HTML does not instantiate it? In the below example, the <i>#blankImage</i>
+    ref is not being used anywhere. Hence, we need to manually instantiate it in order for it to show up in the DOM. We do this using the <code>ngTemplateOutlet</code> structural
+    directive. <br>
+    - <code>let-courseName</code> and <code>let-courseNumber</code> below are how we declare variables. These variables will be visible only within the <code>ng-template</code>.
+    <br>
+    - The <code>ng-template</code> makes use of two variables: <i>courseName</i> and <i>courseNumber</i>. Hence, when we instantiate the template using
+    <code>ngTemplateOutlet</code>, we will have to pass in concrete values for these variables. This is done by using a <code>context{}</code> object. <br>
+    - The <code>let-courseName="description"</code> is how we assign a value to the <i>courseName</i> variable. The point to note here is that the expression will be evaluated
+    using the <code>context</code> value that has been passed in. So only the variables defined within the <code>context</code> object will be in scope here. <br>
+    - In the below example we are instantiating the <code>ng-template</code> twice, each time with custom <code>context</code> data to show that it is truly parameterized. <br>
+
+    <div class="image-block">
+      <div class="expand-screenshot-image-btn border border-primary rounded">
+        <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
+      </div>
+      <div class="screenshot-image">
+        <img src="imgs/AngularDeepDive/Chapter24/ngTempalteOutlet.png"
+             class="center-block img-fluid"
+             alt="ngTempalteOutlet">
+      </div>
+    </div>
+
+    - Note how in the above example we used <code>div</code> element just so we could use <code>*ngTemplateOutlet</code> directive on it. Instead of using the <code>div</code>, we
+    could just use the <code>ng-container</code> and avoid introducing another div as per <a href="#AngularCore_Chapter14">Chapter14</a>.
+  </div>
+
+  <hr>
+  <div id="AngularCore_Chapter25" class="chapter">Chapter 25: Angular Templates as Component Inputs</div>
+  <hr>
+
+  <div class="textual-content">
+    - <a href="https://angular-university.io/lesson/angular-template-inputs">Link to tutorial</a> <br>
   </div>
 
 
@@ -2081,8 +2129,7 @@
     <li><b>How to upgrade Angular CLI to the latest version</b></li>
     <div>
       - <code>npm install -g @angular/cli@latest</code> <br>
-      - <a href="https://stackoverflow.com/questions/43931986/how-to-upgrade-angular-cli-to-the-latest-version">SO
-      Link</a>
+      - <a href="https://stackoverflow.com/questions/43931986/how-to-upgrade-angular-cli-to-the-latest-version">SO Link</a>
     </div>
 
     <br>
