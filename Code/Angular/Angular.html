@@ -1259,6 +1259,7 @@
     Chapter 23: <a href="#AngularCore_Chapter23">Angular Templates Introduction with ng-template</a> <br>
     Chapter 24: <a href="#AngularCore_Chapter24">Angular Template Instantiation with ngTemplateOutlet</a> <br>
     Chapter 25: <a href="#AngularCore_Chapter25">Angular Templates as Component Inputs</a> <br>
+    Chapter 26: <a href="#AngularCore_Chapter26">Introduction to Angular Attribute Directives</a> <br>
   </div>
 
 
@@ -2117,7 +2118,28 @@
   <hr>
 
   <div class="textual-content">
-    - <a href="https://angular-university.io/lesson/angular-template-inputs">Link to tutorial</a> <br>
+    - <a href="https://angular-university.io/lesson/angular-template-inputs">Link to tutorial</a>. <br>
+    - Now what we want to do is pass in the template that we created as input. We do this by declaring an <code>@Input</code> of type <code>TemplateRef&lt;any&gt;</code> in the
+    <i>course-card</i> component. The template itself is defined in the parent component. It is then passed as an <code>@Input</code> to the child component, where it is
+    instantiated using the <code>ngTemplateOutlet</code> and conditionally shown.
+    <div class="image-block">
+      <div class="expand-screenshot-image-btn border border-primary rounded">
+        <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
+      </div>
+      <div class="screenshot-image">
+        <img src="imgs/AngularDeepDive/Chapter25/ngTemplatePassinToComponent.png"
+             class="center-block img-fluid"
+             alt="ngTemplatePassinToComponent">
+      </div>
+    </div>
+  </div>
+
+  <hr>
+  <div id="AngularCore_Chapter26" class="chapter">Chapter 26: Introduction to Angular Attribute Directives</div>
+  <hr>
+
+  <div class="textual-content">
+    - <a href="https://angular-university.io/lesson/angular-attribute-directives">Link to tutorial</a>. <br>
   </div>
 
 
