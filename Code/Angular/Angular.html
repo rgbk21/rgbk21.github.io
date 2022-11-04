@@ -1263,6 +1263,7 @@
     Chapter 27: <a href="#AngularCore_Chapter27">Angular Host Binding in Detail - DOM Properties vs Attributes</a> <br>
     Chapter 28: <a href="#AngularCore_Chapter28">Angular Host Listener - Handling Events in Directives</a> <br>
     Chapter 29: <a href="#AngularCore_Chapter29">Angular Directive Export As syntax - When to Use it and Why</a> <br>
+    Chapter 30: <a href="#AngularCore_Chapter30">Angular Structural Directives - Understanding the Star Syntax</a> <br>
   </div>
 
 
@@ -2315,14 +2316,57 @@
 
 
   <hr>
-  <div id="AngularCore_Chapter29" class="chapter">Chapter 29: Angular Directive Export As syntax - When to Use it and Why</div>
+  <div id="AngularCore_Chapter29" class="chapter">Chapter 29: Angular Directive <code>exportAs</code> syntax - When to Use it and Why</div>
   <hr>
 
   <div class="textual-content">
     - <a href="https://angular-university.io/lesson/angular-directive-exportas">Link to tutorial</a>. <br>
     - We have seen above how the directive works by modifying properties on the host element and detecting events. But there are situations where we might to access the directive
     directly, either in the template or in the associated component (we might need a reference to the directive because we need to call some method on the .ts class associated with
-    the directive).
+    the directive). In that case, we can use the <code>exportAs</code> syntax to export the directive. <br>
+    - First case is if we want to use the directive in the template itself. In that case we can do something like this:
+    <div class="image-block">
+      <div class="expand-screenshot-image-btn border border-primary rounded">
+        <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
+      </div>
+      <div class="screenshot-image">
+        <img src="imgs/AngularDeepDive/Chapter29/UsingDriectiveInTemplate.png"
+             class="center-block img-fluid"
+             alt="UsingDriectiveInTemplate">
+      </div>
+    </div>
+
+    - Second use case is if we want to use the directive in the component class. In that case we can do something like this:
+    <div class="image-block">
+      <div class="expand-screenshot-image-btn border border-primary rounded">
+        <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
+      </div>
+      <div class="screenshot-image">
+        <img src="imgs/AngularDeepDive/Chapter29/UsingDirectiveInComponent.png"
+             class="center-block img-fluid"
+             alt="UsingDirectiveInComponent">
+      </div>
+    </div>
+
+    - In case if we have multiple directives on the template, we can do something like this. This can be used in cases where an element has multiple custom directives
+    <div class="image-block">
+      <div class="expand-screenshot-image-btn border border-primary rounded">
+        <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
+      </div>
+      <div class="screenshot-image">
+        <img src="imgs/AngularDeepDive/Chapter29/MultipleDirectives.png"
+             class="center-block img-fluid"
+             alt="MultipleDirectives">
+      </div>
+    </div>
+  </div>
+
+  <hr>
+  <div id="AngularCore_Chapter30" class="chapter">Chapter 30: Angular Structural Directives - Understanding the Star Syntax</div>
+  <hr>
+
+  <div class="textual-content">
+    - <a href="https://angular-university.io/lesson/angular-structural-directives">Link to tutorial</a>. <br>
   </div>
 
 
