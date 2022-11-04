@@ -1262,6 +1262,7 @@
     Chapter 26: <a href="#AngularCore_Chapter26">Introduction to Angular Attribute Directives</a> <br>
     Chapter 27: <a href="#AngularCore_Chapter27">Angular Host Binding in Detail - DOM Properties vs Attributes</a> <br>
     Chapter 28: <a href="#AngularCore_Chapter28">Angular Host Listener - Handling Events in Directives</a> <br>
+    Chapter 29: <a href="#AngularCore_Chapter29">Angular Directive Export As syntax - When to Use it and Why</a> <br>
   </div>
 
 
@@ -2276,11 +2277,52 @@
   </div>
 
   <hr>
-  <div id="AngularCore_Chapter28" class="chapter">Chapter 28: Angular Host Listener - Handling Events in Directives</div>
+  <div id="AngularCore_Chapter28" class="chapter">Chapter 28: Angular <code>@HostListener</code> - Handling Events in Directives</div>
   <hr>
 
   <div class="textual-content">
     - <a href="https://angular-university.io/lesson/angular-host-listener">Link to tutorial</a>. <br>
+    - The requirement we are going for is, whenever we hover over the card, the <i>warn</i> CSS class gets added to the card, and when we leave the card, the class gets removed. We
+    can do this using the <code>@HostListener</code> decorator. <br>
+    - The <code>@HostListener('<i>args</i>')</code> takes as args the DOM event that we want to detect. We can also pass-in as args the native event that emitted by doing
+    <code>@HostListener('mouseover', ['$event'])</code>
+    <div class="image-block">
+      <div class="expand-screenshot-image-btn border border-primary rounded">
+        <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
+      </div>
+      <div class="screenshot-image">
+        <img src="imgs/AngularDeepDive/Chapter28/HostListener.png"
+             class="center-block img-fluid"
+             alt="HostListener">
+      </div>
+    </div>
+
+    - In addition to reacting to custom DOM events, you can also emit custom events from the directive.
+    <div class="image-block">
+      <div class="expand-screenshot-image-btn border border-primary rounded">
+        <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
+      </div>
+      <div class="screenshot-image">
+        <img src="imgs/AngularDeepDive/Chapter28/EmittingEventsFromDirectives.png"
+             class="center-block img-fluid"
+             alt="EmittingEventsFromDirectives">
+      </div>
+    </div>
+
+    - The point of creating a directive is that this functionality can now be added to any custom components that you've created, as well as native DOM elements, and then those
+    elements will get this functionality as well without having to rewrite any logic.
+  </div>
+
+
+  <hr>
+  <div id="AngularCore_Chapter29" class="chapter">Chapter 29: Angular Directive Export As syntax - When to Use it and Why</div>
+  <hr>
+
+  <div class="textual-content">
+    - <a href="https://angular-university.io/lesson/angular-directive-exportas">Link to tutorial</a>. <br>
+    - We have seen above how the directive works by modifying properties on the host element and detecting events. But there are situations where we might to access the directive
+    directly, either in the template or in the associated component (we might need a reference to the directive because we need to call some method on the .ts class associated with
+    the directive).
   </div>
 
 
