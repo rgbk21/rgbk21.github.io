@@ -1260,6 +1260,7 @@
     Chapter 24: <a href="#AngularCore_Chapter24">Angular Template Instantiation with ngTemplateOutlet</a> <br>
     Chapter 25: <a href="#AngularCore_Chapter25">Angular Templates as Component Inputs</a> <br>
     Chapter 26: <a href="#AngularCore_Chapter26">Introduction to Angular Attribute Directives</a> <br>
+    Chapter 27: <a href="#AngularCore_Chapter27">Angular Host Binding in Detail - DOM Properties vs Attributes</a> <br>
   </div>
 
 
@@ -2140,6 +2141,34 @@
 
   <div class="textual-content">
     - <a href="https://angular-university.io/lesson/angular-attribute-directives">Link to tutorial</a>. <br>
+    - Components are directives with a template. There are <i>structural directives</i> like <code>*ngIf</code>, <code>*ngFor</code>, <code>*ngSwitch</code>, etc. Structural
+    directives are <i>attributes</i> that are added to an element. Structural directives are directives which change the DOM layout by adding and removing DOM elements. Structural
+    directives normally begin with a <code>*</code>. <br>
+    - Then there are <i>attribute directives</i>. These attributes modify the behavior of the element on which they are applied. For instance, consider the example below. Adding
+    attribute directives like <code>required</code>, <code>disabled</code>, changes the appearance of the element.
+    <div class="image-block">
+      <div class="expand-screenshot-image-btn border border-primary rounded">
+        <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
+      </div>
+      <div class="screenshot-image">
+        <img src="imgs/AngularDeepDive/Chapter26/AttributeDirectives.png"
+             class="center-block img-fluid"
+             alt="AttributeDirectives">
+      </div>
+    </div>
+
+    - Just like how we were able to extend the browser functionality by adding custom tags/components of our own, we can also create and add custom directives of our own as well.
+    <br>
+    - We can create a new directive by running the following command: <code>ng generate directive <i>folderName</i>/<i>directiveName</i></code>. A sample example is
+    <code>ng generate directive directives/appHighlighted</code>. This will create a directive called <i>appHighlighted</i> in the <i>directives</i> folder.
+  </div>
+
+  <hr>
+  <div id="AngularCore_Chapter27" class="chapter">Chapter 27: Angular Host Binding in Detail - DOM Properties vs Attributes</div>
+  <hr>
+
+  <div class="textual-content">
+    - <a href="https://angular-university.io/lesson/angular-host-binding">Link to tutorial</a>. <br>
   </div>
 
 
