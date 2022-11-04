@@ -1261,6 +1261,7 @@
     Chapter 25: <a href="#AngularCore_Chapter25">Angular Templates as Component Inputs</a> <br>
     Chapter 26: <a href="#AngularCore_Chapter26">Introduction to Angular Attribute Directives</a> <br>
     Chapter 27: <a href="#AngularCore_Chapter27">Angular Host Binding in Detail - DOM Properties vs Attributes</a> <br>
+    Chapter 28: <a href="#AngularCore_Chapter28">Angular Host Listener - Handling Events in Directives</a> <br>
   </div>
 
 
@@ -2164,11 +2165,122 @@
   </div>
 
   <hr>
-  <div id="AngularCore_Chapter27" class="chapter">Chapter 27: Angular Host Binding in Detail - DOM Properties vs Attributes</div>
+  <div id="AngularCore_Chapter27" class="chapter">Chapter 27: Angular <code>@HostBinding</code> in Detail - DOM Properties vs Attributes</div>
   <hr>
 
   <div class="textual-content">
     - <a href="https://angular-university.io/lesson/angular-host-binding">Link to tutorial</a>. <br>
+    - In this lesson we are going to look at how attribute directives can interact with the elements onto which they are applied. <br>
+    - The element on which the directive is applied is known as the <i>host element</i> of the directive. <br>
+    - There are multiple ways in which the directive can interact with the host element. One of them is adding css classes to the host element. <br>
+    - The way that you would do this manually is as follows: Open up the Elements tab and click on the <i>app-course-card</i> element. This will assign it a reference of
+    <code>$0</code>. Now you can refer to this element using <code>$0</code>. Go to console, and type in <code>$0.className</code>. This will print out the css classes that are
+    currently assigned to this element. The list would be empty right now. Now when you do <code>$0.className='highlighted'</code>, it will assign the <i>highlighted</i> css class
+    that you have defined in your styles file to this element. It doesn't work with the <i>highlighted</i> class for some reason. <i>warn</i> is another class that is defined in
+    the same css file, and that works.
+    <div class="image-block">
+      <div class="expand-screenshot-image-btn border border-primary rounded">
+        <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
+      </div>
+      <div class="screenshot-image">
+        <img src="imgs/AngularDeepDive/Chapter27/AddingClassesManually.png"
+             width="600"
+             class="center-block img-fluid"
+             alt="AddingClassesManually">
+      </div>
+    </div>
+
+    - Now we want to do the same thing that we did above, but by using an Angular specific construct known as the <code>@HostBinding</code> Decorator. The <code>@HostBinding</code>
+    decorator allows us to modify DOM properties of the element onto which it is applied. The <code>@HostBinding</code> can be used to bind to <i>any</i> DOM property of the host
+    element.
+    <div class="image-block">
+      <div class="expand-screenshot-image-btn border border-primary rounded">
+        <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
+      </div>
+      <div class="screenshot-image">
+        <img src="imgs/AngularDeepDive/Chapter27/AddingClassesWithDirective.png"
+             class="center-block img-fluid"
+             alt="AddingClassesWithDirective">
+      </div>
+    </div>
+
+    - Adding and removing css classes from elements is a common operation, and hence Angular has provided a shorthand notation like <code>class.<i>className</i></code> that we can
+    use to do it.
+    Similarly, we can also use a shorthand for adding styles as <code>style.<i>styleName</i></code>
+    <div class="image-block">
+      <div class="expand-screenshot-image-btn border border-primary rounded">
+        <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
+      </div>
+      <div class="screenshot-image">
+        <img src="imgs/AngularDeepDive/Chapter27/AddingStyles.png"
+             class="center-block img-fluid"
+             alt="AddingStyles">
+      </div>
+    </div>
+
+    - Note that the selector we have defined in the directive is <code>[appHighlighted]</code>. The square brackets around its name specifies that it's an input property, but so
+    far we have not been passing in any expression into it. Let's change that.
+    <div class="image-block">
+      <div class="expand-screenshot-image-btn border border-primary rounded">
+        <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
+      </div>
+      <div class="screenshot-image">
+        <img src="imgs/AngularDeepDive/Chapter27/UsingInputsForDirectives.png"
+             class="center-block img-fluid"
+             alt="UsingInputsForDirectives">
+      </div>
+    </div>
+
+    - There's DOM <i>properties</i>, and then there's HTML <i>attributes</i>. There is a difference between the two that <a
+    href="https://angular.io/guide/binding-syntax#html-attributes-and-dom-properties">Angular Docs explain here</a>. Also, <a
+    href="https://stackoverflow.com/questions/6003819/what-is-the-difference-between-properties-and-attributes-in-html">this SO question</a> explains in more detail. The point to
+    understand is that HTML Attributes are what initialize DOM properties. <br>
+    - <a href="https://stackblitz.com/run?file=src%2Fapp%2Fapp.component.html">This live app</a> should help you understand the difference between attribute and property. <br>
+    - In the below example, we are binding to the DOM property. As you can see, the behavior is as expected. Doing <code>[disabled]="true"</code> disables the button, and doing
+    <code>[disabled]="false"</code> enables it.
+    <div class="image-block">
+      <div class="expand-screenshot-image-btn border border-primary rounded">
+        <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
+      </div>
+      <div class="screenshot-image">
+        <img src="imgs/AngularDeepDive/Chapter27/BindingToProperty.png"
+             class="center-block img-fluid"
+             alt="BindingToProperty">
+      </div>
+    </div>
+
+    - But if we bind to the attribute now, by doing <code>[attr.disabled]="false"</code>, the button still stays disabled, because the value of the attribute does not matter.
+    <div class="image-block">
+      <div class="expand-screenshot-image-btn border border-primary rounded">
+        <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
+      </div>
+      <div class="screenshot-image">
+        <img src="imgs/AngularDeepDive/Chapter27/BindingToAttribute.png"
+             class="center-block img-fluid"
+             alt="BindingToAttribute">
+      </div>
+    </div>
+
+    - So far we have been using the <code>@HostBinding</code> to set DOM properties. But we can also use it to set HTML attributes. We are changing the <code>attr.disabled</code>
+    attribute below.
+    <div class="image-block">
+      <div class="expand-screenshot-image-btn border border-primary rounded">
+        <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
+      </div>
+      <div class="screenshot-image">
+        <img src="imgs/AngularDeepDive/Chapter27/AttributeDirectives.png"
+             class="center-block img-fluid"
+             alt="AttributeDirectives">
+      </div>
+    </div>
+  </div>
+
+  <hr>
+  <div id="AngularCore_Chapter28" class="chapter">Chapter 28: Angular Host Listener - Handling Events in Directives</div>
+  <hr>
+
+  <div class="textual-content">
+    - <a href="https://angular-university.io/lesson/angular-host-listener">Link to tutorial</a>. <br>
   </div>
 
 
