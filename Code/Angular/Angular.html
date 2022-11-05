@@ -1270,6 +1270,7 @@
     Chapter 34: <a href="#AngularCore_Chapter34">Bypassing View Encapsulation with the ng-deep modifier</a> <br>
     Chapter 35: <a href="#AngularCore_Chapter35">The Host Context Selector - Theming Use Case</a> <br>
     Chapter 36: <a href="#AngularCore_Chapter36">Angular View Encapsulation - Default vs Shadow DOM</a> <br>
+    Chapter 37: <a href="#AngularCore_Chapter37">Angular Injectable Services - New Section Introduction</a> <br>
   </div>
 
 
@@ -2404,7 +2405,8 @@
     instantiating the template, it's going to take all the HTML elements that are present within the template and add this unique attribute to them. It is the presence of this
     attribute in the component's elements that is going to allow Angular to take the component style sheet and modify the styles in order to make them specific to the elements of
     the component only. This CSS rule makes use of the Attribute Selector for which a <a href="https://www.w3schools.com/csSref/tryit.php?filename=trycss_sel_attribute">demo can be
-    seen here</a>.
+    seen here</a>. <br>
+    - <a href="https://angular.io/guide/view-encapsulation#view-encapsulation">This Angular Docs link</a> explains about <code>_nghost</code> and <code>_ngcontent</code>. 
     <div class="image-block">
       <div class="expand-screenshot-image-btn border border-primary rounded">
         <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
@@ -2557,6 +2559,18 @@
 
   <div class="textual-content">
     - <a href="https://angular-university.io/lesson/angular-view-encapsulation-shadow-dom">Link to tutorial</a>. <br>
+    - In the <code>@Component()</code> annotation that is present on the ts file, you can pass in an args <code>encapsulation: ...</code> <a
+    href="https://angular.io/guide/view-encapsulation#view-encapsulation">like here</a>. The default value for this is
+    <code>ViewEncapsulation.Emulated</code>. <br>
+    - <a href="https://angular.io/guide/view-encapsulation">Read about it here on Angular Docs</a>.
+  </div>
+
+  <hr>
+  <div id="AngularCore_Chapter37" class="chapter">Chapter 37: Angular Injectable Services - New Section Introduction</div>
+  <hr>
+
+  <div class="textual-content">
+    - <a href="https://angular-university.io/lesson/angular-injectable-services">Link to tutorial</a>. <br>
   </div>
 
 
