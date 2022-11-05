@@ -1266,6 +1266,7 @@
     Chapter 30: <a href="#AngularCore_Chapter30">Angular Structural Directives - Understanding the Star Syntax</a> <br>
     Chapter 31: <a href="#AngularCore_Chapter31">Angular Structural Directives - Step-by-Step Implementation</a> <br>
     Chapter 32: <a href="#AngularCore_Chapter32">Angular View Encapsulation - Under the Hood</a> <br>
+    Chapter 33: <a href="#AngularCore_Chapter33">Angular View Encapsulation - the Host Selector</a> <br>
   </div>
 
 
@@ -2393,6 +2394,32 @@
 
   <div class="textual-content">
     - <a href="https://angular-university.io/lesson/angular-view-encapsulation-under-the-hood">Link to tutorial</a>. <br>
+    - Angular has the concept of View Encapsulation. If you look at the components that we have created, you will notice that we can pass in an args that contains the list of
+    styles <code>styleUrls: ['./course-image.component.css']</code>. The styles that are specified in this class will only be visible for the template associated with the
+    component. They won't be visible for other components. <br>
+    - The way that this works is that Angular takes each component and then creates a unique attribute for it. It looks something like the image below. Whenever Angular is
+    instantiating the template, it's going to take all the HTML elements that are present within the template and add this unique attribute to them. It is the presence of this
+    attribute in the component's elements that is going to allow Angular to take the component style sheet and modify the styles in order to make them specific to the elements of
+    the component only. This CSS rule makes use of the Attribute Selector for which a <a href="https://www.w3schools.com/csSref/tryit.php?filename=trycss_sel_attribute">demo can be
+    seen here</a>.
+    <div class="image-block">
+      <div class="expand-screenshot-image-btn border border-primary rounded">
+        <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
+      </div>
+      <div class="screenshot-image">
+        <img src="imgs/AngularDeepDive/Chapter32/ViewEncapsulation.png"
+             class="center-block img-fluid"
+             alt="ViewEncapsulation">
+      </div>
+    </div>
+  </div>
+
+  <hr>
+  <div id="AngularCore_Chapter33" class="chapter">Chapter 33: Angular View Encapsulation - the Host Selector</div>
+  <hr>
+
+  <div class="textual-content">
+    - <a href="https://angular-university.io/lesson/angular-view-encapsulation-host-selector">Link to tutorial</a>. <br>
   </div>
 
 
