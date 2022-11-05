@@ -1267,6 +1267,7 @@
     Chapter 31: <a href="#AngularCore_Chapter31">Angular Structural Directives - Step-by-Step Implementation</a> <br>
     Chapter 32: <a href="#AngularCore_Chapter32">Angular View Encapsulation - Under the Hood</a> <br>
     Chapter 33: <a href="#AngularCore_Chapter33">Angular View Encapsulation - the Host Selector</a> <br>
+    Chapter 34: <a href="#AngularCore_Chapter34">Bypassing View Encapsulation with the ng-deep modifier</a> <br>
   </div>
 
 
@@ -2415,11 +2416,70 @@
   </div>
 
   <hr>
-  <div id="AngularCore_Chapter33" class="chapter">Chapter 33: Angular View Encapsulation - the Host Selector</div>
+  <div id="AngularCore_Chapter33" class="chapter">Chapter 33: Angular View Encapsulation - the <code>:host</code> Selector</div>
   <hr>
 
   <div class="textual-content">
     - <a href="https://angular-university.io/lesson/angular-view-encapsulation-host-selector">Link to tutorial</a>. <br>
+    - If you look at the global style sheet, you'll see that there are two things there. <i>app-course-card</i> and <i>.course-card</i>. The <i>app-course-card</i> is styling the
+    component element itself. So this selector will target the HTML element <code>&lt;app-course-card&gt;&lt;/app-course-card&gt;</code> itself.
+    <div class="code-block">
+      <div class="expand-code-snip-btn border border-primary rounded">
+        <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+      </div>
+      <div class="code-snippet">
+        <script src="https://gist.github.com/rgbk21/7cd4c5a71c88e4500f046262833f8d6a.js"></script>
+      </div>
+    </div>
+
+    - The <i>app-course-card</i> selector is defined in the global <i>styles.css</i> file and can apply the styles to the <i>app-course-card</i> HTML element.
+    <div class="image-block">
+      <div class="expand-screenshot-image-btn border border-primary rounded">
+        <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
+      </div>
+      <div class="screenshot-image">
+        <img src="imgs/AngularDeepDive/Chapter33/GlobalStyles.png"
+             class="center-block img-fluid"
+             alt="GlobalStyles">
+      </div>
+    </div>
+
+    - But now if we move the <i>app-course-card</i> CSS rule to the <i>course-card.component.css</i> file, the style will no longer be applied.
+    <div class="image-block">
+      <div class="expand-screenshot-image-btn border border-primary rounded">
+        <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
+      </div>
+      <div class="screenshot-image">
+        <img src="imgs/AngularDeepDive/Chapter33/MovedClassToComponent.png"
+             class="center-block img-fluid"
+             alt="MovedClassToComponent">
+      </div>
+    </div>
+
+    - The reason is that in the <i>course-card.component.css</i> you can only specify style rules for the elements that are present <i>inside</i> the element. If you want to style
+    the element itself, you need to make use of the <code>:host</code> selector. Note in the below example that the styles are now being applied to the component using a different
+    attribute selector that uses <i>_nghost</i>. Note that this attribute is different from the <i>_ngcontent</i> attribute that was being applied on the element and its children.
+    The child elements of the <i>app-course-card</i> do not have this attribute applied to them. Every component will have its own <i>_nghost</i> attribute. The point to note is
+    that even if there were multiple <i>app-course-card</i> components on the page, they would all use the same <i>_nghost</i> attribute.
+    <div class="image-block">
+      <div class="expand-screenshot-image-btn border border-primary rounded">
+        <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
+      </div>
+      <div class="screenshot-image">
+        <img src="imgs/AngularDeepDive/Chapter33/UsingHostSelector.png"
+             class="center-block img-fluid"
+             alt="UsingHostSelector">
+      </div>
+    </div>
+  </div>
+
+
+  <hr>
+  <div id="AngularCore_Chapter34" class="chapter">Chapter 34: Bypassing View Encapsulation with the ng-deep modifier</div>
+  <hr>
+
+  <div class="textual-content">
+    - <a href="https://angular-university.io/lesson/angular-ng-deep">Link to tutorial</a>. <br>
   </div>
 
 
