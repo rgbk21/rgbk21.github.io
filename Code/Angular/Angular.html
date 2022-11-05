@@ -1268,6 +1268,7 @@
     Chapter 32: <a href="#AngularCore_Chapter32">Angular View Encapsulation - Under the Hood</a> <br>
     Chapter 33: <a href="#AngularCore_Chapter33">Angular View Encapsulation - the Host Selector</a> <br>
     Chapter 34: <a href="#AngularCore_Chapter34">Bypassing View Encapsulation with the ng-deep modifier</a> <br>
+    Chapter 35: <a href="#AngularCore_Chapter35">The Host Context Selector - Theming Use Case</a> <br>
   </div>
 
 
@@ -2475,12 +2476,26 @@
 
 
   <hr>
-  <div id="AngularCore_Chapter34" class="chapter">Chapter 34: Bypassing View Encapsulation with the ng-deep modifier</div>
+  <div id="AngularCore_Chapter34" class="chapter">Chapter 34: Bypassing View Encapsulation with the <code>::ng-deep</code> modifier</div>
   <hr>
 
   <div class="textual-content">
     - <a href="https://angular-university.io/lesson/angular-ng-deep">Link to tutorial</a>. <br>
+    - Very nice. See lecture. Also shows how you can tshoot CSS related issues. <br>
+    - Summary: This is a mechanism of bypassing the Angular view encapsulation mechanism. Whenever we apply <code>::ng-deep</code> to our style, the part of the CSS selector
+    <i>after</i> <code>ng-deep</code> is no longer going to be made specific to a particular component. The part <i>before</i> the <code>ng-deep</code> selector is still going to
+    be made specific to that component by applying the special <i>_ngcontent-c*</i> attributes.
   </div>
+
+  <hr>
+  <div id="AngularCore_Chapter35" class="chapter">Chapter 35: The Host Context Selector - Theming Use Case</div>
+  <hr>
+
+  <div class="textual-content">
+    - <a href="https://angular-university.io/lesson/angular-host-context">Link to tutorial</a>. <br>
+    -
+  </div>
+
 
 
   <hr>
