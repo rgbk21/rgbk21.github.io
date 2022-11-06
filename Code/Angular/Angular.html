@@ -1271,6 +1271,7 @@
     Chapter 35: <a href="#AngularCore_Chapter35">The Host Context Selector - Theming Use Case</a> <br>
     Chapter 36: <a href="#AngularCore_Chapter36">Angular View Encapsulation - Default vs Shadow DOM</a> <br>
     Chapter 37: <a href="#AngularCore_Chapter37">Angular Injectable Services - New Section Introduction</a> <br>
+    Chapter 38: <a href="#AngularCore_Chapter38">The Angular HTTP Client - GET calls with Request Parameters</a> <br>
   </div>
 
 
@@ -2406,7 +2407,7 @@
     attribute in the component's elements that is going to allow Angular to take the component style sheet and modify the styles in order to make them specific to the elements of
     the component only. This CSS rule makes use of the Attribute Selector for which a <a href="https://www.w3schools.com/csSref/tryit.php?filename=trycss_sel_attribute">demo can be
     seen here</a>. <br>
-    - <a href="https://angular.io/guide/view-encapsulation#view-encapsulation">This Angular Docs link</a> explains about <code>_nghost</code> and <code>_ngcontent</code>. 
+    - <a href="https://angular.io/guide/view-encapsulation#view-encapsulation">This Angular Docs link</a> explains about <code>_nghost</code> and <code>_ngcontent</code>.
     <div class="image-block">
       <div class="expand-screenshot-image-btn border border-primary rounded">
         <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
@@ -2530,12 +2531,12 @@
     element, up to the document root. For instance, in the following example, italicizes all text inside a component, but only if some <i>ancestor</i> element of the host element
     has the CSS class <code>active</code>. <a href="https://angular.io/guide/component-styles#host-context">Link to Angular Docs</a>.
     <div class="code-block">
-        <div class="expand-code-snip-btn border border-primary rounded">
-            <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-        </div>
-        <div class="code-snippet">
-          <script src="https://gist.github.com/rgbk21/dc429410141f67e7751bd4b56a4a3d74.js"></script>
-        </div>
+      <div class="expand-code-snip-btn border border-primary rounded">
+        <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+      </div>
+      <div class="code-snippet">
+        <script src="https://gist.github.com/rgbk21/dc429410141f67e7751bd4b56a4a3d74.js"></script>
+      </div>
     </div>
 
 
@@ -2560,8 +2561,7 @@
   <div class="textual-content">
     - <a href="https://angular-university.io/lesson/angular-view-encapsulation-shadow-dom">Link to tutorial</a>. <br>
     - In the <code>@Component()</code> annotation that is present on the ts file, you can pass in an args <code>encapsulation: ...</code> <a
-    href="https://angular.io/guide/view-encapsulation#view-encapsulation">like here</a>. The default value for this is
-    <code>ViewEncapsulation.Emulated</code>. <br>
+    href="https://angular.io/api/core/ViewEncapsulation#example">like here</a>. The default value for this is <code>ViewEncapsulation.Emulated</code>. <br>
     - <a href="https://angular.io/guide/view-encapsulation">Read about it here on Angular Docs</a>.
   </div>
 
@@ -2571,6 +2571,20 @@
 
   <div class="textual-content">
     - <a href="https://angular-university.io/lesson/angular-injectable-services">Link to tutorial</a>. <br>
+    - Getting two different errors when trying to run the <code>ng run server</code> command. First error was <code>'.' is not recognized as an internal or external command,</code>
+    and second error was <code>SyntaxError: missing ) after argument list</code>/ <code>unterminated `s' command</code>. These were fixed by replacing the <code>server</code>
+    definition in the <i>package.json</i> file with <code>"server": "node ./node_modules/ts-node/dist/bin.js -P ./server.tsconfig.json ./server.ts"</code> <a
+    href="https://github.com/angular-university/angular-course/issues/45#issuecomment-1304679842">as mentioned here</a>. <br>
+    - <code>localhost:9000/api/courses</code> is the path to access on the browser. <br>
+    - So far we have been focusing on the view layer. Now we are going to start looking at Service layer. This is the layer that talks to DBs and stuff.
+  </div>
+
+  <hr>
+  <div id="AngularCore_Chapter38" class="chapter">Chapter 38: The Angular HTTP Client - GET calls with Request Parameters</div>
+  <hr>
+
+  <div class="textual-content">
+    - <a href="https://angular-university.io/lesson/angular-http-client-get">Link to tutorial</a>. <br>
   </div>
 
 
