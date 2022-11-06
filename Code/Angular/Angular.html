@@ -1275,6 +1275,7 @@
     Chapter 39: <a href="#AngularCore_Chapter39">The Async Pipe - a Better way of passing Observable data to the View</a> <br>
     Chapter 40: <a href="#AngularCore_Chapter40">Angular Custom Services - The Injectable Decorator</a> <br>
     Chapter 41: <a href="#AngularCore_Chapter41">Angular Custom Service - Fetching Data</a> <br>
+    Chapter 42: <a href="#AngularCore_Chapter42">Angular Custom Service - Data Modification with an HTTP PUT</a> <br>
   </div>
 
 
@@ -2667,6 +2668,26 @@
 
   <div class="textual-content">
     - <a href="https://angular-university.io/lesson/angular-custom-service-fetching-data">Link to tutorial</a>. <br>
+    - We have moved the GET call to the <i>CoursesService</i> that we added. This allows us to now inject the <i>CoursesService</i> in multiple classes that might need the list of
+    courses without us having to duplicate the GET logic. Also note that the <i>getCourses()</i> returns an <code>Observable&lt;Course[]&gt;</code>.
+    <div class="image-block">
+      <div class="expand-screenshot-image-btn border border-primary rounded">
+        <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
+      </div>
+      <div class="screenshot-image">
+        <img src="imgs/AngularDeepDive/Chapter41/ServiceCallsHttpClient.png"
+             class="center-block img-fluid"
+             alt="ServiceCallsHttpClient">
+      </div>
+    </div>
+  </div>
+
+  <hr>
+  <div id="AngularCore_Chapter42" class="chapter">Chapter 42: Angular Custom Service - Data Modification with an HTTP PUT</div>
+  <hr>
+
+  <div class="textual-content">
+    - <a href="https://angular-university.io/lesson/angular-custom-service-data-modification">Link to tutorial</a>. <br>
   </div>
 
   <hr>
