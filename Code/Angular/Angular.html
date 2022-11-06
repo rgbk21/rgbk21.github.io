@@ -1273,6 +1273,7 @@
     Chapter 37: <a href="#AngularCore_Chapter37">Angular Injectable Services - New Section Introduction</a> <br>
     Chapter 38: <a href="#AngularCore_Chapter38">The Angular HTTP Client - GET calls with Request Parameters</a> <br>
     Chapter 39: <a href="#AngularCore_Chapter39">The Async Pipe - a Better way of passing Observable data to the View</a> <br>
+    Chapter 40: <a href="#AngularCore_Chapter40">Angular Custom Services - The Injectable Decorator</a> <br>
   </div>
 
 
@@ -2587,24 +2588,63 @@
   <div class="textual-content">
     - <a href="https://angular-university.io/lesson/angular-http-client-get">Link to tutorial</a>. <br>
     - Let's see how we can use an existing Angular service such as Angular <code>HttpClient</code> that we are going to use to fetch data from the backend. <br>
-    - In order to use <code>HttpClient</code>, we can simply inject it into our constructor. The <code>ngOnInit</code> method is where we should be adding the GET calls.
+    - <a href="https://angular.io/guide/http#requesting-data-from-a-server">Read about how we can request data from a server on the Angular docs</a>. <br>
+    - In order to use <code>HttpClient</code>, we can simply inject it into our constructor. The <code>ngOnInit</code> method is where we should be adding the GET calls. <br>
+    - You can also specify the type that is returned by the server <a href="https://angular.io/guide/http#requesting-a-typed-response">as mentioned in the Angular docs here</a>.
+    The entire section on <a href="https://angular.io/guide/http">HTTP Client</a> should <i>ideally</i> be read.
     <div class="code-block">
-        <div class="expand-code-snip-btn border border-primary rounded">
-            <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-        </div>
-        <div class="code-snippet">
-          <script src="https://gist.github.com/rgbk21/7d1bf390d448a0bfb19b4ba2b22c05f4.js"></script>
-        </div>
+      <div class="expand-code-snip-btn border border-primary rounded">
+        <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+      </div>
+      <div class="code-snippet">
+        <script src="https://gist.github.com/rgbk21/7d1bf390d448a0bfb19b4ba2b22c05f4.js"></script>
+      </div>
+    </div>
+
+    <div class="image-block">
+      <div class="expand-screenshot-image-btn border border-primary rounded">
+        <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
+      </div>
+      <div class="screenshot-image">
+        <img src="imgs/AngularDeepDive/Chapter38/UsingServices.png"
+             class="center-block img-fluid"
+             alt="UsingServices">
+      </div>
     </div>
   </div>
 
   <hr>
-  <div id="AngularCore_Chapter39" class="chapter">Chapter 39: The Async Pipe - a Better way of passing Observable data to the View</div>
+  <div id="AngularCore_Chapter39" class="chapter">Chapter 39: The <code>async</code> Pipe - a Better way of passing <code>Observable</code> data to the View</div>
   <hr>
 
   <div class="textual-content">
     - <a href="https://angular-university.io/lesson/angular-async-pipe">Link to tutorial</a>. <br>
-    -
+    - The asynchronous GET method sends an HTTP request, and returns an <code>Observable</code> that emits the requested data when the response is received. In the above example,
+    we were manually calling <code>subscribe</code> on the <code>Observable</code>. Note that calling <code>subscribe()</code> is what triggers execution of the observable and
+    causes HttpClient to compose and send the HTTP request to the server. Each <code>subscribe()</code> initiates a separate, independent execution of the observable. Subscribing
+    twice <a href="https://angular.io/guide/http#starting-the-request">results in two HTTP requests</a>. You should always unsubscribe from an observable when a component is
+    destroyed.<br>
+    - The <code>async</code> pipe allows us to implicitly subscribe to this observable from the template. This allows us to write reactive components. It also has the additional
+    advantage that whenever the component is destroyed, the <code>aysnc</code> pipe takes care of unsubscribing us from the <code>Observable</code> which prevents memory leaks.
+    <div class="image-block">
+      <div class="expand-screenshot-image-btn border border-primary rounded">
+        <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
+      </div>
+      <div class="screenshot-image">
+        <img src="imgs/AngularDeepDive/Chapter39/asyncMagic.png"
+             class="center-block img-fluid"
+             alt="asyncMagic">
+      </div>
+    </div>
+  </div>
+
+  <hr>
+  <div id="AngularCore_Chapter40" class="chapter">Chapter 40: Angular Custom Services - The Injectable Decorator</div>
+  <hr>
+
+  <div class="textual-content">
+    - <a href="https://angular-university.io/lesson/angular-injectable-decorator">Link to tutorial</a>. <br>
+
   </div>
 
   <hr>
