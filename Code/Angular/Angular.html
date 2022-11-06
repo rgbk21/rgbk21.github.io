@@ -1276,6 +1276,7 @@
     Chapter 40: <a href="#AngularCore_Chapter40">Angular Custom Services - The Injectable Decorator</a> <br>
     Chapter 41: <a href="#AngularCore_Chapter41">Angular Custom Service - Fetching Data</a> <br>
     Chapter 42: <a href="#AngularCore_Chapter42">Angular Custom Service - Data Modification with an HTTP PUT</a> <br>
+    Chapter 43: <a href="#AngularCore_Chapter43">Introduction to the Angular Dependency Injection System</a> <br>
   </div>
 
 
@@ -2688,6 +2689,62 @@
 
   <div class="textual-content">
     - <a href="https://angular-university.io/lesson/angular-custom-service-data-modification">Link to tutorial</a>. <br>
+    - We are using the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax#description">object spread operator</a> here. Since the
+    passed in name of the args in the method <i>onSaveClicked</i> <i>description</i> is the same as the name of the property that is defined on the <i>Course</i> interface, we can
+    create a new object using <code>{...this.course}</code> and then in this new object change the <i>description</i> property by doing <code>{...this.course, description}</code>.
+    You can try this in your browser if you are confused with this. In the image below is the case where the two names are different, just for clarity.
+    <div class="code-block">
+      <div class="expand-code-snip-btn border border-primary rounded">
+        <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+      </div>
+      <div class="code-snippet">
+        <script src="https://gist.github.com/rgbk21/5a4854d76499738f46aa27f55446bd8b.js"></script>
+      </div>
+    </div>
+
+    - This is how the control flow happens. Note that in the <i>courses.service.ts</i> file, in the <i>saveCourse</i> method, the <i>course</i> object passed in into the <i>put</i>
+    method will become the payload of the PUT request.
+    <div class="image-block">
+      <div class="expand-screenshot-image-btn border border-primary rounded">
+        <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
+      </div>
+      <div class="screenshot-image">
+        <img src="imgs/AngularDeepDive/Chapter42/HTTP_PUT.png"
+             class="center-block img-fluid"
+             alt="HTTP_PUT">
+      </div>
+    </div>
+
+    - We can also specify custom headers for our PUT request.
+    <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+            <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/58cc1b5646063f6373787ca00fd46718.js"></script>
+        </div>
+    </div>
+
+    - And you will be able to see the custom headers in the network tools:
+    <div class="image-block">
+      <div class="expand-screenshot-image-btn border border-primary rounded">
+        <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
+      </div>
+      <div class="screenshot-image">
+        <img src="imgs/AngularDeepDive/Chapter42/Headers.PNG"
+             class="center-block img-fluid"
+             width="500"
+             alt="Headers">
+      </div>
+    </div>
+  </div>
+
+  <hr>
+  <div id="AngularCore_Chapter43" class="chapter">Chapter 43: Introduction to the Angular Dependency Injection System</div>
+  <hr>
+
+  <div class="textual-content">
+    - <a href="https://angular-university.io/lesson/angular-introduction-to-di">Link to tutorial</a>. <br>
   </div>
 
   <hr>
