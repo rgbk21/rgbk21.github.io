@@ -1274,6 +1274,7 @@
     Chapter 38: <a href="#AngularCore_Chapter38">The Angular HTTP Client - GET calls with Request Parameters</a> <br>
     Chapter 39: <a href="#AngularCore_Chapter39">The Async Pipe - a Better way of passing Observable data to the View</a> <br>
     Chapter 40: <a href="#AngularCore_Chapter40">Angular Custom Services - The Injectable Decorator</a> <br>
+    Chapter 41: <a href="#AngularCore_Chapter41">Angular Custom Service - Fetching Data</a> <br>
   </div>
 
 
@@ -2639,12 +2640,33 @@
   </div>
 
   <hr>
-  <div id="AngularCore_Chapter40" class="chapter">Chapter 40: Angular Custom Services - The Injectable Decorator</div>
+  <div id="AngularCore_Chapter40" class="chapter">Chapter 40: Angular Custom Services - The <code>@Injectable</code> Decorator</div>
   <hr>
 
   <div class="textual-content">
     - <a href="https://angular-university.io/lesson/angular-injectable-decorator">Link to tutorial</a>. <br>
+    - We are going to look at how to create our own service in this lecture. <br>
+    - We can create a new service by running <code>ng generate service services/courses</code> where <i>services</i> is the name of the folder in which we want the files to be
+    generated, and <i>courses</i> is the name that we want to assign to the service. The generated service looks something like this. The
+    <code>@Injectable({providedIn: 'root'})</code> annotation means that this service can now be injected into the constructor of any class that we want, similar to how we were
+    injecting the <code>HttpClient</code> in the above examples. The <code>providedIn: 'root'</code> means that there should always be a <i>single</i> instance of the
+    <i>CoursesService</i> object available for injection (<i>CoursesService</i> should be a Singleton).
+    <div class="code-block">
+      <div class="expand-code-snip-btn border border-primary rounded">
+        <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+      </div>
+      <div class="code-snippet">
+        <script src="https://gist.github.com/rgbk21/6f5a62a90c4290a704089afdc6d50862.js"></script>
+      </div>
+    </div>
+  </div>
 
+  <hr>
+  <div id="AngularCore_Chapter41" class="chapter">Chapter 41: Angular Custom Service - Fetching Data</div>
+  <hr>
+
+  <div class="textual-content">
+    - <a href="https://angular-university.io/lesson/angular-custom-service-fetching-data">Link to tutorial</a>. <br>
   </div>
 
   <hr>
