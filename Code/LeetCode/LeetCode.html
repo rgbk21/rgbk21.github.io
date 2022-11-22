@@ -155,6 +155,7 @@
   Chapter 4: <a href="#Hashing">Hash Tables</a> <br>
   Chapter 5: <a href="#Heap">Heap</a> <br>
   Chapter 6: <a href="#CollectionsJava8">The Collections Class Utilities</a> <br>
+  Chapter 7: <a href="#ThingsYouHaveProbablyForgotten">Other Notes</a>
 
   <hr>
   <div id="BinarySearch" class="chapter">Binary Search</div>
@@ -268,7 +269,9 @@
       </div>
     </div>
     - <a href="https://leetcode.com/problems/squares-of-a-sorted-array/">Squares of a Sorted Array</a>. Uses two pointer technique - going inside-out. Once you hit either the
-    left or right end of the array, you need to copy the remaining elements on the other side to the target array. <br>
+    left or right end of the array, you need to copy the remaining elements on the other side to the target array. Better way to solve the problem is to go outside-in. Point to
+    remember in that case is that the <code>while</code> condition that will be written will be <code>while (leftIndex <= rightIndex)</code> and not
+    <code>while (leftIndex < rightIndex)</code>. Or alternatively you can just use <code>while(writeIndex >= 0)</code>. <br>
     - Inserting an element at the start of the array (index 0) <a href="https://leetcode.com/explore/learn/card/fun-with-arrays/525/inserting-items-into-an-array/3244/">takes
     O(n) time</a> since each of the elements need to be shifted to the right by 1 position. <br>
     - <a href="https://leetcode.com/problems/duplicate-zeros/">Duplicate Zeros</a>. <br>
@@ -625,6 +628,30 @@
     <div class="sub-heading">Introduction</div>
     <div>
       - // TODO
+    </div>
+
+
+  </div>
+
+  <hr>
+  <div id="ThingsYouHaveProbablyForgotten" class="chapter">Other Notes</div>
+  <hr>
+
+  <div class="textual-content">
+    <div class="sub-heading">Introduction</div>
+    <div>
+      1) Create an array using <code>int[] numbers = new int[<i>size</i>];</code>. Or you do: <code>int[] numbers = new int[]{1,2,3,4,5};</code> <br>
+      2) The problem with doing an if-else ladder in a while block is that if there is no <code>else</code> condition, you are probably going to run into an infinite loop condition
+      where none of the <code>else if</code> clauses are true, and hence the loop end condition never gets changed. So this is a bad idea. You need a <code>else</code> block to
+      catch everything else.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/81e348a80ad4bedbb41952edb938a292.js"></script>
+        </div>
+      </div>
     </div>
 
 

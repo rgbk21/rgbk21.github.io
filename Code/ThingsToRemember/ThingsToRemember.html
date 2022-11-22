@@ -1364,20 +1364,72 @@
   <div class="one-point">
     56.0) Intellij being Intellij I guess? <br>
     - Why am I seeing weird "library has broken clases path" error all of a sudden:
-    <img src="imgs/IntellijBuildErrors/BrokenSourcePathsError.png"
-         class="center-block img-fluid"
-         alt="BrokenSourcePathsError"
-         width="1200">
+    <div class="image-block">
+      <div class="expand-screenshot-image-btn border border-primary rounded">
+        <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
+      </div>
+      <div class="screenshot-image">
+        <img src="imgs/IntellijBuildErrors/BrokenSourcePathsError.png"
+             class="center-block img-fluid"
+             alt="BrokenSourcePathsError"
+             width="1200">
+      </div>
+    </div>
+
     - If Intellij is showing compile errors that it cannot find the library that you have imported, one way to fix it would be to first "Reload all Gradle Projects" from the
     "Gradle" tab in Intellij. Once done, right click on the name of the module here, and select "Rebuild Project". That fixed the compile errors.
-    <img src="imgs/IntellijBuildErrors/RebuildProject.png"
-         class="center-block img-fluid"
-         alt="RebuildProject"
-         width="400">
+    <div class="image-block">
+      <div class="expand-screenshot-image-btn border border-primary rounded">
+        <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
+      </div>
+      <div class="screenshot-image">
+        <img src="imgs/IntellijBuildErrors/RebuildProject.png"
+             class="center-block img-fluid"
+             alt="RebuildProject"
+             width="400">
+      </div>
+    </div>
     - But even if that fixed the compile errors, the "Project Structure" window still shows the errors. The way to fix them is as follows: <br>
     - <a href="https://youtrack.jetbrains.com/issue/SCL-10756">Bug on Intellij</a> to track feature. <br>
     - How to fix: click on the [Fix] and this should open a dropdown "Remove invalid root". That will remove the invalid path from "Libraries" tab in the above window. You can
-    reimport the sources by following the steps <a href="https://stackoverflow.com/a/33653146/8742428">here on SO on how to tell Gradle to download all sources</a>.
+    reimport the sources by following the steps <a href="https://stackoverflow.com/a/33653146/8742428">here on SO on how to tell Gradle to download all sources</a>. <br>
+    - Classpath things: When you downloaded the Budi Kurniawan project from <a href="https://bitbucket.org/budi-kurniawan/servletjsp2-apps/src/master/">here</a> and opened up in
+    Intellij, you got errors saying that the classes like <code>HttpServletRequest</code>, <code>HttpServletResponse</code>, were not found. You had to download the jar files that
+    contained these classes. Normally when you download a project, all these dependencies are managed through tools like maven, gradle. They download whatever dependencies are
+    required. But in this case, there wasn't any build file specified, hence you had to resort to downloading the dependencies manually (as in when you hovered over the name of the
+    file that was missing, Intellij asked you whether you want to download the dependency, and you said yes, because what else were you supposed to do, and that created a folder
+    like this that contained the dependencies). Point to note is that the files did not go into the "External Libraries" section.
+    <div class="image-block">
+      <div class="expand-screenshot-image-btn border border-primary rounded">
+        <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
+      </div>
+      <div class="screenshot-image">
+        <img src="imgs/IntellijBuildErrors/ClassPath1.PNG"
+             class="center-block img-fluid"
+             width="350"
+             alt="ClassPath1">
+      </div>
+    </div>
+
+    - But this was not enough. Now you need to tell Intellij that these files are available and that they can be imported. This is where the classpath thing comes in. This explains<a
+    href="https://stackoverflow.com/questions/854264/how-to-add-directory-to-classpath-in-an-application-run-profile-in-intellij-idea">how to add directory to classpath in an
+    application run profile in IntelliJ IDEA?</a>. The top voted answer does not work. Instead <a href="https://stackoverflow.com/a/66526883">this one does</a>. But the other
+    answers are also worth going through. This SO question talks about <a href="https://stackoverflow.com/questions/16742085/adding-jar-files-to-intellijidea-classpath">Adding Jar
+    files to Intellij Idea classpath</a>. <a href="https://www.jetbrains.com/help/idea/working-with-module-dependencies.html#add-a-new-dependency">This is the official Intellij
+    doc</a> for how to add dependencies to Modules. If you have multiple modules in your project, then you don't want to go to each module and add a dependency for all of them.
+    Instead, do File - Project Structure - Libraries. You will see all the libraries listed there. Right-click on the library that you want to add to the multiple modules, and then
+    click Add. From here, select the Modules into which you want to add the library to.
+    <div class="image-block">
+      <div class="expand-screenshot-image-btn border border-primary rounded">
+        <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
+      </div>
+      <div class="screenshot-image">
+        <img src="imgs/IntellijBuildErrors/ClassPath2.PNG"
+             class="center-block img-fluid"
+             width="1500"
+             alt="ClassPath2">
+      </div>
+    </div>
   </div>
 
   <div class="one-point">
@@ -2352,6 +2404,13 @@
     ae) https://stackoverflow.com/questions/7713797/how-to-get-css-class-name-using-selenium <br>
     af) https://stackoverflow.com/questions/11259890/how-to-get-the-class-name-through-selenium <br>
     ag) https://stackoverflow.com/questions/40611503/selenium-how-to-find-elements-by-attribute-with-any-value-in-java <br> <br>
+    ae) <a href="https://sqa.stackexchange.com/questions/46205/locating-element-with-one-class-out-of-multiple-classes-inside-a-div-using-xpath">You cannot search for an exact
+    class</a> using xpath. = validates the attribute value is exactly equal to given value. As the attribute class value is "ng-untouched ng-pristine ng-invalid
+    igx-input-group__input" you cannot say @class="ng-invalid". You should use <code>contains</code> instead. If you are searching for an exact class, try prefixing/suffixing the
+    class name with a space instead. Otherwise, you can also do this:
+    <code>//div[contains(concat(' ',normalize-space(@class),' '),' foo ')]</code> as <a href="https://tanzu.vmware.com/content/blog/xpath-css-class-matching">mentioned here</a>.
+    But note that there must be spaces on either side of the class name ‘foo’. <br>
+    af) <a href="https://stackoverflow.com/questions/64011255/difference-between-and-in-xpath">Difference between //, .//, and ..// in XPath?</a> <br>
 
     <code>JavascriptExecutor</code> related stuff: <br>
     ah) https://stackoverflow.com/questions/49871432/what-does-arguments0-and-arguments1-mean-when-using-executescript-method-fro <br>

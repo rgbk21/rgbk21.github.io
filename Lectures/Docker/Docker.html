@@ -187,7 +187,7 @@
   </div>
 
   <hr>
-  <div id="Section4" class="chapter">Section 3: Creating and using containers like a boss</div>
+  <div id="Section4" class="chapter">Section 4: Creating and using containers like a boss</div>
   <hr>
 
   <div class="textual-content">
@@ -196,7 +196,11 @@
     <div>
       - <a href="https://www.udemy.com/course/docker-mastery/learn/lecture/6489842#overview">Link to Lecture</a>. <br>
       - <code>docker version</code>: Check your docker versions and that docker is running. <br>
-      - <code>docker info</code>: Shows most configuration values for the docker engine.
+      - <code>docker info</code>: Shows most configuration values for the docker engine. <br>
+      - <code>docker</code>: Will show all the commands that you can run. The format of how to run commands has changed. We now have management commands that need to be specified.
+      So earlier, the format of a command was <code>docker &lt;<i>command</i>&gt; (options)</code>. Now, the format is
+      <code>docker &lt;<i>command</i>&gt; &lt;<i>sub-command</i>&gt; (options)</code>. So earlier you would run <code>docker run</code>, now instead you would run
+      <code>docker container run</code>. This change was introduced recently, so any commands that made use of the earlier syntax, still support that syntax.
 
     </div>
 
