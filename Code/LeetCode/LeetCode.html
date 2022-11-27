@@ -169,6 +169,13 @@
       going to take O(n) time, because you would need to shift the remaining elements. If you want to perform both find and update in O(log n) time, then you are going to
       have to use a balanced binary search tree. <br>
       - <a href="https://leetcode.com/explore/learn/card/binary-search/">Binary Search card on LC</a>. <br>
+      - Binary Search kicked you in the balls. Start going down the rabbit hole <a href="https://zhu45.org/posts/2018/Jan/12/how-to-write-binary-search-correctly/">here</a>. <a
+      href="https://www.cs.cmu.edu/~15122/handouts/06-binsearch.pdf">PDF from cs.cmu.edu</a>. <a
+      href="https://stackoverflow.com/questions/26564658/binary-search-and-invariant-relation">SO Question 1</a>, <a
+      href="https://stackoverflow.com/questions/504335/what-are-the-pitfalls-in-implementing-binary-search">SO Question 2</a>, <a
+      href="https://reprog.wordpress.com/2010/04/25/writing-correct-code-part-1-invariants-binary-search-part-4a/">another blog post</a>, <a
+      href="https://blog.tylerhou.io/posts/binary-search-with-confidence/">this blog post has colors</a>, <a
+      href="https://www.thealgorists.com/Algo/BinarySearch/AdvancedBinarySearch">blog post on Algorist</a>. <br>
       - Read <a href="https://en.wikipedia.org/wiki/Binary_search_algorithm#Duplicate_elements">here on wikipedia for what happens with binary search in the case that the
       input array contains duplicate elements. </a> Basically, the procedure may return any index whose element is equal to the target value, even if there are duplicate
       elements in the array. For example, if the array to be searched was [1,2,3,4,4,5,6,7] and the target was 4, then it would be correct for the algorithm to either return
@@ -274,7 +281,7 @@
     <code>while (leftIndex < rightIndex)</code>. Or alternatively you can just use <code>while(writeIndex >= 0)</code>. <br>
     - Inserting an element at the start of the array (index 0) <a href="https://leetcode.com/explore/learn/card/fun-with-arrays/525/inserting-items-into-an-array/3244/">takes
     O(n) time</a> since each of the elements need to be shifted to the right by 1 position. <br>
-    - <a href="https://leetcode.com/problems/duplicate-zeros/">Duplicate Zeros</a>. <br>
+    - <a href="https://leetcode.com/problems/duplicate-zeros/">Duplicate Zeros</a>. For when you want to cry. <br>
     - <a href="https://leetcode.com/problems/merge-sorted-array/">Merge Sorted Array</a>. Good problem to show the advantages of iterating from the end of the array. <br>
     - <a href="https://leetcode.com/problems/remove-element/">Remove Element</a>. <br>
     - <a href="https://leetcode.com/problems/remove-duplicates-from-sorted-array/">Remove Duplicates from Sorted Array</a>. Go over this. If you are running a loop on the array

@@ -168,6 +168,7 @@
       <a href="#Ch8">Chapter 8: Scriptless JSP - Script-free pages</a>
       <br>
     </div>
+    <br>
     c) <a href="#BudiKurniawan">Servlet and JSP : A Tutorial Kurniawan, Budi</a>
   </div>
 
@@ -2983,9 +2984,10 @@
   <div id="BudiKurniawan" class="chapter">Servlet and JSP : A Tutorial Kurniawan, Budi</div>
   <hr>
   <div class="textual-content">
-    Interesting Links:<a href="#BudiKurniawan_InterestingLinks">Interesting Links</a>
-    Chapter 0:<a href="#BudiKurniawan_Chapter0">Introduction</a>
-    Chapter 0:<a href="#BudiKurniawan_Chapter1">Servlets</a>
+    <a href="#BudiKurniawan_InterestingLinks">Interesting Links</a> <br>
+    Chapter -1: <a href="#BudiKurniawan_Tomcat">Tomcat</a> <br>
+    Chapter 0: <a href="#BudiKurniawan_Chapter0">Introduction</a> <br>
+    Chapter 1: <a href="#BudiKurniawan_Chapter1">Servlets</a> <br>
   </div>
 
   <hr>
@@ -2998,6 +3000,59 @@
       - <a href="https://web.dev/howbrowserswork/">How Browsers Work</a> <br>
       - <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Proxy_servers_and_tunneling">Proxy, reverse proxy, and HTTP Tunneling</a> <br>
     </div>
+  </div>
+
+  <hr>
+  <div id="BudiKurniawan_Tomcat" class="chapter">Chapter -1: Tomcat</div>
+  <hr>
+
+  <div class="textual-content">
+    <div class="sub-heading">Downloading and Configuring Tomcat</div>
+    <div>
+      - In the bin directory, you will find programs to start and stop Tomcat. The webapps directory is important because you can deploy your applications there. In addition, the
+      conf directory contains configuration files, including the server.xml and tomcat-users.xml files. The lib directory is also of interest since it contains the Servlet and JSP
+      APIs that you need to compile your servlets and custom tags. <br>
+      - Once you've downloaded and extracted a Tomcat binary, you can start Tomcat by running the startup.bat (on Windows) or the startup.sh file (on Unix/Linux/Mac OS). Both files
+      reside under the bin directory of Tomcat's installation directory. By default, Tomcat runs on port 8080, so you can test Tomcat by directing your browser to this address:
+      http://localhost:8080
+    </div>
+
+
+    <div class="sub-heading">Defining a Context</div>
+    <div>
+      - More information on the <code>Context</code> can be found <a href="https://tomcat.apache.org/tomcat-7.0-doc/config/context.html">here on the Tomcat docs</a>. Good read. Go
+      through the Host section under Containers as well. That is relevant too. <br>
+      - To deploy a servlet/JSP application to Tomcat, you need to define a Tomcat context either explicitly or implicitly. Each Tomcat context represents a web application in
+      Tomcat. <br>
+      - There are several ways of defining a Tomcat context explicitly, including: <br>
+      a) Creating an XML file in Tomcat's conf/Catalina/localhost directory: If you decide to create an XML file for each context, the file name is important as the context path is
+      derived from it. For example, if you place a <i>commerce.xml</i> file in the conf/Catalina/localhost directory, the context path of your application will be <i>commerce</i>
+      and a resource can be invoked using this URL: <code>http://localhost:8080/commerce/<i>resourceName</i></code>. <br>
+      - A context file must contain a Context element as its root element. Most of the times the element does not have child elements and is the only element in the file. For
+      example, here is an example context file, consisting of a single line: <code>&lt;Context docBase="C:/apps/commerce" reloadable="true"/&gt;</code>. The only required attribute
+      is docBase, which specifies the location of the application. The reloadable attribute is optional, but if it is present and its value is set to true, Tomcat will monitor the
+      application for any addition, deletion, or update of a Java class file and other resources. When such a change is detected, Tomcat will reload the application. Setting
+      reloadable to true is recommended during development but not in production. When you add a context file to the specified directory, Tomcat will automatically load the
+      application. When you delete it, Tomcat will unload the application. <br>
+      b) Adding a Context element in Tomcat’s conf/server.xml file: Another way of defining a context is by adding a Context element in the conf/server.xml file. To do this, open
+      the file and create a Context element under the Host element. Unlike the previous method, defining a context here requires that you specify the path attribute for your
+      context path.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/2fa93c187543d6ccf6ead80f60e5e6aa.js"></script>
+        </div>
+      </div>
+    </div>
+    - Generally, managing contexts through server.xml is not recommended as updates will only take effect after you restart Tomcat. However, if you have a bunch of applications
+    that you need to test quickly, like when you are learning to write servlets and JSP pages, you may find working with server.xml almost ideal as you can manage all your
+    applications in a single file. <br>
+
+    - We looked at two ways to deploy an application explicitly, but we can also deploy it implicitly. You can do it by by copying a war file or the whole application to Tomcat's
+    webapps directory.
+
   </div>
 
   <hr>
@@ -3107,7 +3162,7 @@
       </div>
       - The Method-Uniform Resource Identifier (URI)-Protocol/Version appears as the first line of the request. Here POST is the request method, /examples/default.jsp the URI, and
       HTTP/1.1 the Protocol/Version section. An HTTP request can use one of the many request methods specified in the HTTP standards. HTTP 1.1 supports seven request types: GET,
-      POST, HEAD, OPTIONS, PUT, DELETE, and TRACE. The URI specifies an Internet resource. It is usually interpreted as being relative to the server’s root directory. Thus, it
+      POST, HEAD, OPTIONS, PUT, DELETE, and TRACE. The URI specifies an Internet resource. It is usually interpreted as being relative to the server's root directory. Thus, it
       should always begin with a forward slash <code> / </code>. <br>
       - In an HTTP request, the request header contains useful information about the client environment and the entity body of the request. For instance, it may contain the
       language the browser is set for, the length of the entity body, and so on. Each header is separated by a carriage return/linefeed (CRLF) sequence. Between the headers and the
@@ -3150,10 +3205,297 @@
   <hr>
 
   <div class="textual-content">
-    <div class="sub-heading"></div>
+    <div class="sub-heading">The javax.servlet Package</div>
     <div>
+      - Contains classes and interfaces that define the contract between a servlet and a servlet container. <br>
+      <div class="image-block">
+        <div class="expand-screenshot-image-btn border border-primary rounded">
+          <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
+        </div>
+        <div class="screenshot-image">
+          <img src="imgs/BudiKurniawan/Chapter1/ServletTypes.png"
+               class="center-block img-fluid"
+               width="650"
+               alt="HTTP_Request">
+        </div>
+      </div>
 
+      - At the center of Servlet technology is <code>Servlet</code>, an interface that all servlet classes must implement either directly or indirectly. <br>
+      - The <code>Servlet</code> interface defines a contract between a servlet and the servlet container. The contract boils down to the promise by the servlet container to load
+      the servlet class into memory and call specific methods on the servlet instance. There can only be one instance for each servlet type in an application. <br>
+      - A user request causes the servlet container to call a servlet's <code>service</code> method, passing an instance of <code>ServletRequest</code> and an instance of
+      <code>ServletResponse</code>. The <code>ServletRequest</code> encapsulates the current HTTP request so that servlet developers do not have to parse and manipulate raw HTTP
+      data. The <code>ServletResponse</code> represents the HTTP response for the current user and makes it easy to send response back to the user. <br>
+      - For each application the servlet container also creates an instance of <code>ServletContext</code>. This object encapsulates the environment details of the context
+      (application). There is only one <code>ServletContext</code> for each context. For each servlet instance, there is also a <code>ServletConfig</code> that encapsulates the
+      servlet configuration.
     </div>
+
+    <div class="sub-heading">The <code>Servlet</code> interface</div>
+    <div>
+      - This interface defines methods to initialize a servlet, to service requests, and to remove a servlet from the server. These are known as life-cycle methods and are called
+      in the following sequence: <br>
+      1) The servlet is constructed, then initialized with the <code>init</code> method. <br>
+      2) Any calls from clients to the <code>service</code> method are handled. <br>
+      3) The servlet is taken out of service, then destroyed with the <code>destroy</code> method, then garbage collected and finalized. <br>
+      - An important point to note is thread safety. A servlet instance is shared by all users in an application, so class-level variables are not recommended, unless they are
+      read-only or members of the java.util.concurrent.atomic package. <br>
+      - The <code>Servlet</code> interface defines the following 5 methods <a href="https://javaee.github.io/javaee-spec/javadocs/javax/servlet/Servlet.html">here on the Oracle
+      site</a>: <br>
+      a) <code>void init(ServletConfig config) throws ServletException</code>: The servlet container invokes this method the first time the servlet is requested. This method is not
+      called at subsequent requests. You use this method to write initialization code. When invoking this method, the servlet container passes a <code>ServletConfig</code>.
+      Normally, you will assign the <code>ServletConfig</code> to a class level variable so that this object can be used from other points in the servlet class. <br>
+      b) <code>void service(ServletRequest req, ServletResponse res) throws ServletException, IOException</code> : The servlet container invokes this method each time the
+      servlet is requested. You write the code that the servlet is supposed to do here. The first time the servlet is requested, the servlet container calls the <code>init</code>
+      method and the <code>service</code> method. For subsequent requests, only <code>service</code> is invoked. <br>
+      c) <code>void destroy()</code> : The servlet container invokes this method when the servlet is about to be destroyed. This occurs when the application is unloaded or when the
+      servlet container is being shut down. Normally, you write clean-up code in this method <br>
+      d) <code>String getServletInfo()</code> : This method returns the description of the servlet. You can return any string that might be useful or even null. <br>
+      e) <code>ServletConfig getServletConfig()</code>: This method returns the ServletConfig passed by the servlet container to the init method. However, in order for
+      <code>getServletConfig</code> to return a non-null value, you must have assigned the <code>ServletConfig</code> passed to the <code>init</code> method to a class level
+      variable.
+    </div>
+
+
+    <div class="sub-heading">Application Directory Structure</div>
+    <div>
+      - This is what the application directory is supposed to look like:
+      <div class="image-block">
+        <div class="expand-screenshot-image-btn border border-primary rounded">
+          <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
+        </div>
+        <div class="screenshot-image">
+          <img src="imgs/BudiKurniawan/Chapter1/ApplicationDirectory.png"
+               class="center-block img-fluid"
+               width="400"
+               alt="ApplicationDirectory">
+        </div>
+      </div>
+
+      - The app01a directory at the top of the structure is the application directory. Under the application directory is a WEB-INF directory. It in turn has two subdirectories:
+      <br>
+      a) <p class="inline-heading">classes</p>: Your servlet classes and other Java classes must reside here. The directories under classes reflect the class package. In Figure 1.2
+      there is one class deployed, app01a.MyServlet. <br>
+      b) <p class="inline-heading">lib</p>: Deploy jar files required by your servlet application here. The Servlet API jar file does not need to be deployed here because the
+      servlet
+      container already has a copy of it. In this application, the lib directory is empty. An empty lib directory may be deleted. <br>
+
+      - Any resource you put under the application directory is directly accessible to the user by typing the URL to the resource. If you want to include a resource that can be
+      accessed by a servlet but not accessible to the user, put it under WEB-INF. <br>
+      - The directory name is also important because this also appears in the URL to your servlet. See the URL that we are using to access the site below. In Intellij, this project
+      name forms a part of the "Application Context". Go to Run - Edit Configurations - Deployment. There you will see the Application Context field. In your webapp, when you do
+      <code>servletRequest.getContextPath()</code>, it is the value of this "Application Context" that will be returned. <br>
+      - The recommended method for deploying a servlet/JSP application is to deploy it as a war file. A war file is a jar file with war extension. You can create a war file using
+      the jar program that comes with the JDK or tools like WinZip. You can then copy the war file to Tomcat's webapps directory. When you start or restart Tomcat, Tomcat will
+      extract the war file automatically. Deployment as a war file will work in all servlet containers. <br>
+      - Note that Servlet 3.0 onwards, they have started using the <code>@WebServlet(name = "WelcomeServlet", urlPatterns = {"/welcome"})</code> annotation instead of writing this
+      configuration in the <code>web.xml</code> file. You would access this link by doing <i>http://localhost:8080/app01a/welcome</i>.
+    </div>
+
+
+    <div class="sub-heading">ServletRequest</div>
+    <div>
+      - <a href="https://docs.oracle.com/javaee/7/api/javax/servlet/ServletRequest.html">ServletRequest docs</a>. <br>
+      - For every HTTP request, the servlet container creates an instance of <code>ServletRequest</code> and passes it to the servlet's <code>service</code> method. The
+      <code>ServletRequest</code> encapsulates information about the request. <br>
+      - <code>getParameter(String name)</code> is the most frequently used method in ServletRequest. A common use of this method is to return the value of an HTML form field.
+      <code>getParameter</code> can also be used to get the value of a query string. For example, if a servlet is invoked using this URI
+      <i>http://domain/context/servletName?id=123</i>, you can retrieve the value of <i>id</i> from inside your servlet using this statement:
+      <code>String id = request.getParameter("id");</code>. Note that <code>getParameter</code> returns null if the parameter does not exist.
+    </div>
+
+    <div class="sub-heading">ServletResponse</div>
+    <div>
+      - <a href="https://docs.oracle.com/javaee/7/api/javax/servlet/ServletResponse.html">ServletResponse docs</a>. <br>
+      - Prior to invoking a servlet's <code>service</code> method, the servlet container creates a <code>ServletResponse</code> and pass it as the second argument to the service
+      method. The <code>ServletResponse</code> hides the complexity of sending response to the browser. <br>
+      - One of the methods defined in <code>ServletResponse</code> is the <code>getWriter</code> method, which returns a <code>java.io.PrintWriter</code> that can send text to the
+      client. There is also another method that you can use to send output to the browser: <code>getOutputStream</code>. However, this method is for sending binary data. <br>
+      - Before sending any HTML tag, you should set the content type of the response by calling the <code>setContentType</code> method, passing "text/html" as an argument. This is
+      how you tell the browser that the content type is HTML. Most browsers by default render a response as HTML in the absence of a content type.
+    </div>
+
+    <div class="sub-heading">ServletConfig</div>
+    <div>
+      - <a href="https://docs.oracle.com/javaee/7/api/javax/servlet/ServletConfig.html">ServletConfig docs</a>. <br>
+      - The servlet container passes a <code>ServletConfig</code> to the servlet's <code>init</code> method when the servlet container initializes the servlet. The
+      <code>ServletConfig</code> encapsulates configuration information that you can pass to a servlet through <code>@WebServlet</code> or the deployment descriptor. Every piece of
+      information so passed is called an initial parameter. An initial parameter has two components: key and value. <br>
+      - To retrieve the value of an initial parameter from inside a servlet, call the <code>getInitParameter</code> method on the <code>ServletConfig</code> passed by the servlet
+      container to the servlet's <code>init</code> method.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/f392d97196a3aaf5e818ae34765a0a5c.js"></script>
+        </div>
+      </div>
+
+      - Alternatively, instead of using the annotations, you can do the setup using the deployment descriptor, ie. web.xml file. Utilizing the deployment descriptor for this
+      purpose is easier than using <code>@WebServlet</code> since the deployment descriptor is a text file and you can edit it without recompiling the servlet class. The deployment
+      descriptor also allows you to override values specified in a servlet annotation.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/8dd5b48458b2fba5ec29df34eea65365.js"></script>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-heading">ServletContext</div>
+    <div>
+      - <a href="https://docs.oracle.com/javaee/7/api/javax/servlet/ServletContext.html">ServletContext docs</a>. <br>
+      - The <code>ServletContext</code> represents the servlet application. There is only one context per web application. In a distributed environment where an application is
+      deployed simultaneously to multiple containers, there is one <code>ServletContext</code> object per Java Virtual Machine. In this situation, the context cannot be used as a
+      location to share global information (because the information won't be truly global). Use an external resource like a database instead. <br>
+      - The <code>ServletContext</code> is there so that you can share information that can be accessed from all resources in the application and to enable dynamic registration of
+      web objects. The former is done by storing objects in an internal <code>Map</code> within the <code>ServletContext</code>. Objects stored in <code>ServletContext</code> are
+      called <i>attributes</i>.
+    </div>
+
+
+    <div class="sub-heading">GenericServlet</div>
+    <div>
+      - <a href="https://docs.oracle.com/javaee/7/api/javax/servlet/GenericServlet.html">GenericServlet docs</a>. <br>
+      - In the above example, we saw how implementing the <code>Servlet</code> interface caused us to implement all the 5 methods defined on the interface even if we did not have
+      the need for all of them. In its place, we can extend the <code>GenericServlet</code> which provides default implementations of the methods except the <code>service</code>
+      method. <br>
+      - <code>GenericServlet</code> implements the <code>Servlet</code> and <code>ServletConfig</code> interfaces. <code>GenericServlet</code> may be directly extended by a
+      servlet, although it's more common to extend a protocol-specific subclass such as <code>HttpServlet</code>. It also assigns the <code>ServletConfig</code> in the
+      <code>init</code> method to a class level variable so that it can be retrieved by calling <code>getServletConfig</code>.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/f3a494b4ac38d9fe83538b32841d6a30.js"></script>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="sub-heading">HTTP Servlets</div>
+    <div>
+      - Most, if not all, servlet applications you write will work with HTTP. This means, you can make use of the features offered by HTTP. <br>
+      <div class="image-block">
+        <div class="expand-screenshot-image-btn border border-primary rounded">
+          <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
+        </div>
+        <div class="screenshot-image">
+          <img src="imgs/BudiKurniawan/Chapter1/HTTP_Servlet_Types.png"
+               class="center-block img-fluid"
+               width="650"
+               alt="ApplicationDirectory">
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-heading">HttpServlet</div>
+    <div>
+      - <a href="https://docs.oracle.com/javaee/7/api/javax/servlet/http/HttpServlet.html">HttpServlet docs</a>. <br>
+      - The <code>HttpServlet</code> class extends the <code>GenericServlet</code> class. The <code>HttpServletRequest</code> interface extends <code>ServletRequest</code> and
+      <code>HttpServletResponse</code> extends <code>ServletResponse</code>.<code>HttpServlet</code> overrides the <code>service</code> method in <code>GenericServlet</code> and
+      adds another <code>service</code> method with the following signature:
+      <code>protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException</code>. <br>
+      - To summarize, there are two features in <code>HttpServlet</code> that you do not find in <code>GenericServlet</code>: <br>
+      a) Instead of the <code>service</code> method, you will override <code>doGet</code>, <code>doPost</code>, or both of them. In rare cases, you will also override any of these
+      methods: <code>doHead</code>, <code>doPut</code>, <code>doTrace</code>, <code>doOptions</code>, <code>doDelete</code>. <br>
+      b) You will work with <code>HttpServletRequest</code> and <code>HttpServletResponse</code>, instead of <code>ServletRequest</code> and <code>ServletResponse</code>. <br>
+    </div>
+
+    <div class="sub-heading">HttpServletRequest</div>
+    <div>
+      - <a href="https://docs.oracle.com/javaee/7/api/javax/servlet/http/HttpServletRequest.html">HttpServletRequest Docs</a>. <br>
+      - <code>HttpServletRequest</code> represents the servlet request in the HTTP environment. It extends the <code>ServletRequest</code> interface and adds several methods. Some
+      methods added are as follows: <br>
+      a) <code>String getContextPath()</code>: Returns the portion of the request URI that indicates the context of the request. <br>
+      b) <code>Cookie[] getCookies()</code>: Returns an array containing all the <code>Cookie</code> objects the client sent with this request. This method returns null if no
+      cookies were sent. <br>
+      c) <code>String getHeader(String name)</code>: Returns the value of the specified request header as a String. If the request did not include a header of the specified name,
+      this method returns null. If there are multiple headers with the same name, this method returns the first header in the request. The header name is case-insensitive. You can
+      use this method with any request header. <br>
+      d) <code>String getMethod()</code>: Returns the name of the HTTP method with which this request was made, for example, GET, POST, or PUT. <br>
+      e) <code>String getQueryString()</code>: Returns the query string that is contained in the request URL after the path. This method returns null if the URL does not have a
+      query string. For instance, if this is the URL: <i>http://localhost:8080/ServletsTutorial/QueryStringExample?firstName=Java&lastName=InterviewPoint</i>, then the value
+      returned by this method will be <i>firstName=Java&lastName=InterviewPoint</i>. <br>
+      f) <code>HttpSession getSession()</code>: Returns the current session associated with this request, or if the request does not have a session, creates one. <br>
+      g) <code>HttpSession getSession(boolean create)</code>: Returns the current <code>HttpSession</code> associated with this request or, if there is no current session and
+      create is true, returns a new session. If create is false and the request has no valid <code>HttpSession</code>, this method returns null.
+    </div>
+
+
+    <div class="sub-heading">HttpServletResponse</div>
+    <div>
+      - <a href="https://docs.oracle.com/javaee/7/api/javax/servlet/http/HttpServletResponse.html">HttpServletResponse docs</a>. <br>
+      - Extends the <code>ServletResponse</code> interface to provide HTTP-specific functionality in sending a response. For example, it has methods to access HTTP headers and
+      cookies. Here are some of the methods defined in it: <br>
+      a) <code>void addCookie(Cookie cookie)</code>: Adds the specified cookie to the response. This method can be called multiple times to set more than one cookie. <br>
+      b) <code>void addHeader(String name, String value)</code>: Adds a response header with the given name and value. This method allows response headers to have multiple values.
+      <br>
+      c) <code>void sendRedirect(String location)</code>: Sends a temporary redirect response to the client using the specified redirect location URL and clears the buffer. The
+      buffer will be replaced with the data set by this method. Calling this method sets the status code to SC_FOUND 302 (Found). This method can accept relative URLs; the servlet
+      container must convert the relative URL to an absolute URL before sending the response to the client. If the location is relative without a leading '/' the container
+      interprets it as relative to the current request URI. If the location is relative with a leading '/' the container interprets it as relative to the servlet container root. If
+      the location is relative with two leading '/' the container interprets it as a network-path reference.
+    </div>
+
+
+    <div class="sub-heading">Working with HTML Forms</div>
+    <div>
+      - <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input">Input</a>: The value of an HTML input field (a text field, a hidden field, or a password field) or
+      text area is sent to the server as a string. An empty input field or text area sends an empty string. As such, <code>ServletRequest.getParameter</code> that takes an input
+      field name never returns null. <br>
+      - <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select">Select</a>: An HTML select element also sends a string to the server. If none of the options in
+      the select element is selected, the value of the option that is displayed is sent. A multiple-value select element (a select element that allows multiple selection and is
+      indicated by <code>&lt;select multiple&gt;</code>) sends a string array and has to be handled by <code>ServletRequest.getParameterValues()</code>. <br>
+      - <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox">Checkbox</a>: A checkbox is a bit extraordinary. A checked checkbox sends the string
+      "on" to the server. An unchecked checkbox sends nothing to the server and <code>ServletRequest.getParameter(<i>fieldName</i>)</code> returns null. Note that by "nothing" we
+      mean that there will be no parameter in the <code>HttpServletRequest</code> that will correspond to the <i>name</i> attribute of the checkbox. Hence, doing
+      <code>ServletRequest.getParameter(<i>fieldName</i>)</code> returns null.
+      - <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio">Radio Buttons</a>: Radio buttons send the value of the selected button to the server. If
+      none of the buttons is selected, nothing is sent to the server and <code>ServletRequest.getParameter(fieldName)</code> returns null. Similar to the above case, by "nothing is
+      sent to the server", we mean that there will be no parameter in the <code>HttpServletRequest</code> that will correspond to the <i>name</i> attribute of the radio button.
+      <br>
+      - If a form contains multiple input elements with the same <i>name</i>, all values will be submitted and you have to use <code>ServletRequest.getParameterValues()</code> to
+      retrieve them. <code>ServletRequest.getParameter()</code> will only return the last value. <br>
+      - Below is the form that we are discussing in the above example:
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/a6ba6f9492412c0d9fb4a35e677cfb5e.js"></script>
+        </div>
+      </div>
+
+      - Note that refreshing the page that is sent back as the response once you click on "Submit" on the form causes the form to be resubmitted. You can avoid this by doing the
+      Post/Redirect/Get pattern as has been described in <a href="https://stackoverflow.com/questions/6320113/how-to-prevent-form-resubmission-when-page-is-refreshed-f5-ctrlr">this
+      SO Question: How to prevent form resubmission when page is refreshed (F5 / CTRL+R)</a>. There are some other ways described in there as well where you directly manipulate the
+      history object of the browser. Why does doing this solve the problem?
+      <a href="https://stackoverflow.com/a/660367/8742428">Read this comment on "Prevent Back button from showing POST confirmation alert"</a> to find out. Suppose your browser
+      GETs page A, which has a POST form on it. Your browser history has GET A in it. You post the form to B, and are redirected to GET C. You browser history now has GET A, GET C
+      in it. It should not record POST B as browsers should not record the page in the history if it gets a 303 redirect. Now when you refresh the page, browser will do GET C. Even
+      if you press the "Back" button on C, you will end up on A. Hence the form should not be resubmitted in this case, and no warning should appear either. In the above gist, you
+      can see the commented out code snippet in order to see how to send a redirect. Note the path that we are using. It does not start with a "/". <br>
+      - Another SO Question: <a href="https://stackoverflow.com/questions/638494/stop-data-inserting-into-a-database-twice">Stop data inserting into a database twice</a> and <a
+      href="https://stackoverflow.com/questions/3923904/preventing-form-resubmission">Preventing form resubmission</a> on the same topic.
+    </div>
+  </div>
+
+
+  <hr>
+  <div id="BudiKurniawan_Chapter2" class="chapter">Chapter 2: Session Management</div>
+  <hr>
+
+  <div class="textual-content">
+    <div class="sub-heading">The javax.servlet Package</div>
+    <div>
+      -
+    </div>
+
   </div>
 
 </div>
