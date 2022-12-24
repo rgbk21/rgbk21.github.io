@@ -1,0 +1,21 @@
+.fireworks-container {
+  background-size: cover;
+  background-position: 50% 50%;
+  background-color: black;
+}
+
+.text {
+  text-align: center;
+  background-color: black;
+  animation: color-change 3s infinite;
+}
+
+@keyframes color-change {
+  0% { color: violet; }
+  15% { color: indigo; }
+  30% { color: blue; }
+  45% { color: green; }
+  60% { color: yellow; }
+  75% { color: orange; }
+  100% { color: red; }
+}
