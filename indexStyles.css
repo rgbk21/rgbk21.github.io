@@ -1,21 +1,15 @@
-body {
-  margin: 0;
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+*{
+  box-sizing: border-box;
   padding: 0;
-  height: 100vh;
+  margin: 0;
 }
 
 .fireworks-container {
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
-
-  /*position: fixed;*/
-  /*left: 0;*/
-  /*top: 0;*/
-  /*width: 100%;*/
-  /*height: 100%;*/
-  /*width: 1700px;*/
-  /*height: 250px;*/
 }
 
 .text {
@@ -36,50 +30,49 @@ body {
 
 .grid-container {
   display: grid;
-  grid-template-rows: max-content 3fr 1fr 3fr 1fr;
+  /* Make the grid occupy the entire height of the viewport, but only 90% of it*/
+  /* because the top part is occupied by the nav bar, and using 100 causes v-scrollbars to appear*/
+  width: 100vw;
+  height: 90vh;
+  grid-template-rows: max-content 3fr 1fr max-content 1fr;
   grid-template-columns: 1fr 6fr 1fr;
-  grid-template-areas:
-    "hbdText hbdText hbdText"
-    "fireworks fireworks fireworks"
-    " . searchBar . "
-    " . bodyText . "
-    " . footer . ";
-}
-
-.search-bar-container {
-  grid-area: searchBar;
-  /*grid-row: 1/2;*/
-  /*grid-column: 2/3;*/
 }
 
 .hbd-text-container {
   grid-area: hbdText;
-  /*grid-row: 2/3;*/
-  /*grid-column: 2/3;*/
+  grid-row: 1/2;
+  grid-column: 1/4;
   background-color: black;
   color: white;
   text-align: center;
-  z-index: -1;
+  font-family: 'Nunito', sans-serif;
 }
 
 .fireworks-container {
   grid-area: fireworks;
-  /*grid-row: 3/4;*/
-  /*grid-column: 2/3;*/
+  grid-row: 2/3;
+  grid-column: 1/4;
 }
-
 .fireworks-container canvas {
   background-color: black;
 }
 
+.search-bar-container {
+  grid-area: searchBar;
+  grid-row: 3/4;
+  grid-column: 2/3;
+  align-self: center;
+}
+
 .body-text-container {
   grid-area: bodyText;
-  /*grid-row: 4/5;*/
-  /*grid-column: 2/3;*/
+  grid-row: 4/5;
+  grid-column: 2/3;
 }
 
 .footer-container {
   grid-area: footer;
-  /*grid-row: 5/6;*/
-  /*grid-column: 2/3;*/
+  grid-row: 5/6;
+  grid-column: 2/3;
+  align-self: center;
 }
