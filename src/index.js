@@ -7,7 +7,7 @@ const fireworks = new Fireworks(container, {
         max: 360
     },
     acceleration: 1.00,
-    autoresize: true,
+    autoresize: false,
     brightness: {
         min: 50,
         max: 100
@@ -54,3 +54,13 @@ const fireworks = new Fireworks(container, {
     }
 })
 fireworks.start();
+
+let containerWidth = container.offsetWidth;
+let containerHeight = container.offsetHeight;
+
+window.addEventListener('resize', function(){
+    // use the original height with which the container was initialized with.
+    // This fixes the issue where the height would keep increasing infinitely on window resize.
+    let newSize = {width: container.offsetWidth, height: containerHeight};
+    fireworks.updateSize(newSize);
+});
