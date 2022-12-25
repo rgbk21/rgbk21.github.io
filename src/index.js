@@ -1,6 +1,7 @@
 import {Fireworks} from "fireworks-js"
 
 const container = document.querySelector('.fireworks-container');
+const hbdContainer = document.querySelector('.hbd-text-container');
 const fireworks = new Fireworks(container, {
     hue: {
         min: 0,
@@ -53,6 +54,7 @@ const fireworks = new Fireworks(container, {
         color: '#000000',
     }
 })
+
 fireworks.start();
 
 let containerWidth = container.offsetWidth;
@@ -64,3 +66,11 @@ window.addEventListener('resize', function(){
     let newSize = {width: container.offsetWidth, height: containerHeight};
     fireworks.updateSize(newSize);
 });
+
+// Remove HBD text. This also ends up hiding the entire grid row. So there is no top
+// black border that is left behind.
+let date = new Date();
+let currentDate = date.getDate() + '/' + date.getMonth();
+if (currentDate !== '27/11') {
+    hbdContainer.textContent = "";
+}
