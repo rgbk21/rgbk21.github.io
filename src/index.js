@@ -71,6 +71,6 @@ window.addEventListener('resize', function(){
 // black border that is left behind.
 let date = new Date();
 let currentDate = date.getDate() + '/' + date.getMonth();
-if (currentDate !== '27/11') {
-    hbdContainer.textContent = "";
+if (currentDate === '27/11') {
+    hbdContainer.textContent = "HAPPY BIRTHDAY, RETARD!";
 }
