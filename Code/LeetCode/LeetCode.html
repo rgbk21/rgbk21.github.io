@@ -250,6 +250,8 @@
       greater than the <i>readIdx</i> and hence we will never overwrite any elements that we have not read yet. Refer it <a
       href="https://leetcode.com/explore/learn/card/fun-with-arrays/511/in-place-operations/3255/">here on LC</a>.<br>
       d) General questions to consider: Can it contain duplicate values? Can it contain negative values? <br>
+      e) Do sanity check at the start of Array problems. Check that the array is not null and the <code>length &gt; 0</code>. <br>
+      f) If at anytime you feel like there is an O(n^2) algo only that can solve the problem, then sort the input and do a binary search. That would still be faster. <br>
       - Java always initializes empty Array slots to null if the Array contains <i>objects</i>, or to default values if it contains <i>primitive types</i>. For example, the
       array <code>int[]</code> would contain the default value of 0 for each element, <code>float[]</code> would contain default values of 0.0, and <code>boolean[]</code>
       would contain default values of false. <br>
@@ -508,7 +510,9 @@
       <code>remove</code>, <code>contains</code> in O(logN). Also note that the <code>HashMap</code> has a <code>containsKey</code> and <code>containsValue</code> method. The
       <code>containsKey</code> has a O(1) time, whereas the <code>containsValue</code> has O(n) time because <a href="https://stackoverflow.com/a/8923300/8742428"><code>containsKey()</code>
       is just a <code>get()</code> that throws away the retrieved value</a>. <br>
-      - Baeldung: <a href="https://www.baeldung.com/java-collections-complexity">Java Collections Complexity</a> <br>
+      - Baeldung: <a href="https://www.baeldung.com/java-collections-complexity">Java Collections Complexity</a>. For HashSet, LinkedHashSet, and EnumSet, the add(), remove() and
+      contains() operations cost constant O(1) time thanks to the internal HashMap implementation. Likewise, the TreeSet has O(log(n)) time complexity for the operations listed in
+      the previous group. This is because of the TreeMap implementation. <br>
       - Baeldung: <a href="https://www.baeldung.com/java-hashmap">Java HashMap Basics</a> <br>
       - Baeldung: <a href="https://www.baeldung.com/java-hashmap-advanced">Java HashMap Advanced</a>
     </div>
@@ -563,6 +567,9 @@
       contain duplicate <i>values</i>, you get a <code>Collection</code> view of its <i>values</i>. <br>
       - Make sure to read the different ways that we can remove elements from a <code>Map</code> while iterating over the same <code>Map</code> using the
       <code>removeIf</code> method <a href="../ThingsToRemember/ThingsToRemember.html#num38.3">here on this page</a>. <br>
+      - If you want to initialize a <code>HashMap</code> from multiple items, you can use the <code>Map.of()</code> method as mentioned in <a
+      href="https://stackoverflow.com/a/36867326/8742428">this SO answer</a>. Note that this creates an ImmutableMap, and also you can only add a max of 10 entries to the map using
+      this method. <br>
       - Basic Operations involving a Hash Map.
       <div class="code-block">
         <div class="expand-code-snip-btn border border-primary rounded">

@@ -1744,8 +1744,9 @@
       <code>Foo[] updatedFoos = fooCollection.toArray(Foo[]::new); // after JDK 11</code> <br>
       b) Converting an <code>array</code> to a <code>Collection</code>: There is no method on the <code>Collection</code> interface to directly convert arrays into
       collections. Instead you will have to do this individually for the specific collection that you are trying to obtain. <br>
-      <code>List&lt;Foos&gt; fooList = new ArrayList<>(Arrays.toList(fooArray))</code> <br>
-      <code>Set&lt;Foos&gt; fooSet = new HashSet<>(Arrays.toList(fooArray))</code> <br>
+      <code>List&lt;Foos&gt; fooList = new ArrayList<>(Arrays.asList(fooArray))</code> <br>
+      <code>Set&lt;Foos&gt; fooSet = new HashSet<>(Arrays.asList(fooArray))</code> <br>
+      The exception to the rule here is that you cannot convert an array of a primitive type directly to a collection. You will have to iterate over each element. <br>
       - There is also the <code>Collections</code> Utility class that offers multiple methods for performing operations on different types of <code>Collection</code> and
       <code>Map</code>. Read about that on the <a href="../LeetCode/LeetCode.html">other page here</a>.
     </div>
