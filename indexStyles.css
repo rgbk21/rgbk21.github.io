@@ -12,34 +12,22 @@
   background-repeat: no-repeat;
 }
 
-.text {
-  text-align: center;
-  background-color: black;
-  animation: color-change 7s infinite;
-}
-
-@keyframes color-change {
-  30% { color: blue; }
-  15% { color: indigo; }
-  45% { color: green; }
-  100% { color: red; }
-  0% { color: violet; }
-  60% { color: yellow; }
-  75% { color: orange; }
-}
-
 .grid-container {
   display: grid;
   /* Make the grid occupy the entire height of the viewport, but only 90% of it*/
   /* because the top part is occupied by the nav bar, and using 100 causes v-scrollbars to appear*/
   width: 100vw;
   height: 90vh;
-  grid-template-rows: max-content 3fr 1fr max-content 1fr;
   grid-template-columns: 1fr 6fr 1fr;
+
+  /* CSS Style for fireworks */
+  /*grid-template-rows: max-content 3fr 1fr max-content 1fr;*/
+
+  /* CSS Style for no fireworks */
+  grid-template-rows: max-content max-content 1fr max-content 2fr;
 }
 
 .hbd-text-container {
-  grid-area: hbdText;
   grid-row: 1/2;
   grid-column: 1/4;
   background-color: black;
@@ -49,7 +37,6 @@
 }
 
 .fireworks-container {
-  grid-area: fireworks;
   grid-row: 2/3;
   grid-column: 1/4;
 }
@@ -58,21 +45,23 @@
 }
 
 .search-bar-container {
-  grid-area: searchBar;
   grid-row: 3/4;
   grid-column: 2/3;
   align-self: center;
 }
 
 .body-text-container {
-  grid-area: bodyText;
   grid-row: 4/5;
   grid-column: 2/3;
 }
 
 .footer-container {
-  grid-area: footer;
   grid-row: 5/6;
   grid-column: 2/3;
-  align-self: center;
+  align-self: start;
+}
+
+.footer {
+  padding-top: 2em;
+  padding-bottom: 2em;
 }
