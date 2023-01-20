@@ -130,7 +130,7 @@
   Index for Book: <br>
   Chapter 0 - <a href="#InterestingLinks">Interesting Links</a> <br>
   Chapter 1 - <a href="#Chapter1">The Big Picture</a> <br>
-
+  Chapter 2 - <a href="#Chapter2">Basic Commands and Directory Hierarchy</a> <br>
 
   <br>
 
@@ -165,10 +165,18 @@
       of the OS. This is the software residing in the memory that tells the CPU what to do. The kernel manages the hardware and acts as the interface between the hardware and any
       running programs. <i>Processes</i> are the running programs that the kernel manages. These are more specifically referred to as <i>user processes</i>, regardless of whether
       the user directly interacts with them or not.
-      <img src="imgs/ch1/Levels_In_Linux_System.PNG"
-           class="center-block img-fluid"
-           alt="Levels_In_Linux_System"
-           width="500">
+      <div class="image-block">
+        <div class="expand-screenshot-image-btn border border-primary rounded">
+          <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
+        </div>
+        <div class="screenshot-image">
+          <img src="imgs/ch1/Levels_In_Linux_System.png"
+               class="center-block img-fluid"
+               alt="Levels_In_Linux_System"
+               width="500">
+        </div>
+      </div>
+
 
       - There is a critical difference between the way that the kernel and the user processes run. The kernel runs in the <i>kernel mode</i> whereas the user processes run in the
       <i>user mode</i>. Code running in the kernel mode has unrestricted access to the processors and the main memory. The area that only the kernel can access is known as the <i>kernel
@@ -180,7 +188,7 @@
 
     <div class="sub-heading">Hardware: Understanding Main Memory</div>
     <div>
-      - The running kernel and processes reside in the main memory. At it's most basic level, the main memory is just a collection of bits. The CPU operates on the contents of the
+      - The running kernel and processes reside in the main memory. At its most basic level, the main memory is just a collection of bits. The CPU operates on the contents of the
       main memory. It reads instructions and data from it, and writes the results of the computation back to the main memory. <br>
       - <i>State</i> of a memory is a specific arrangement of the 0's and 1's present in the memory. This is also called an <i>image</i>.
     </div>
@@ -198,12 +206,134 @@
       - We will be looking at each of these function
     </div>
 
-    <div class="sub-heading">Kernel task: Process Managemet</div>
+    <div class="sub-heading">Kernel task: Process Management</div>
     <div>
-      -
+      - <i>Process management</i> describes the starting, pausing, resuming, and terminating of processes. <br>
+      - How do <i>processes</i> run? Consider a system with a one-core CPU. Many processes may be able to use the CPU, but only one process may actually use the CPU at any given
+      time. In practice, each process uses the CPU for a small fraction of a second, then pauses; then another process uses the CPU for another small fraction of a second; then
+      another process takes a turn, and so on. Each piece of time (called a <i>time slice</i>) gives a process enough time for significant computation. The act of one process
+      giving up control of the CPU to another process is called a <i>context switch</i>. <br>
+      - It is the kernel that is responsible for context-switching. <br>
+      - This is what happens when a process is running in user-mode, and its time slice is up: <br>
+      a) The CPU (the actual hardware) interrupts the current process based on an internal timer, switches into kernel mode, and hands control back to the kernel. <br>
+      b) The kernel records the current state of the CPU and memory, which will be essential to resuming the process that was just interrupted. <br>
+      c) The kernel performs any tasks that might have come up during the preceding time slice (such as collecting data from input and output, or I/O, operations). <br>
+      d) The kernel is now ready to let another process run. The kernel analyzes the list of processes that are ready to run and chooses one. <br>
+      e) The kernel prepares the memory for this new process, and then prepares the CPU. <br>
+      f) The kernel tells the CPU how long the time slice for the new process will last. <br>
+      g) The kernel switches the CPU into user mode and hands control of the CPU to the process. <br>
+      - This context switch answers the question of "when does the kernel run?". The kernel runs <i>between</i> process time slices during a context switch.
     </div>
 
+    <div class="sub-heading">Kernel task: Memory Management</div>
+    <div>
+      - The kernel must manage memory when there is context switch. This is complicated because the following conditions must hold: <br>
+      a) The kernel must have its own private area in memory that user processes can't access. <br>
+      b) Each user process needs its own section of memory. <br>
+      c) One user process may not access the private memory of another process. <br>
+      d) User processes can share memory. <br>
+      e) Some memory in user processes can be read-only. <br>
+      f) The system can use more memory than is physically present by using disk space as auxiliary. <br>
+      - Modern CPUs include a <i>memory management unit</i> (MMU) that enables a memory access scheme called <i>virtual memory</i>. When using virtual memory, a process does not
+      directly access the memory by its physical location in the hardware. Instead, the kernel sets up each process to act as if it had an entire machine to itself. When the
+      process accesses some of its memory, the MMU intercepts the access and uses a memory address map to translate the memory location from the process into an actual physical
+      memory location on the machine. The kernel must still initialize and continuously maintain and alter this memory address map. For example, during a context switch, the kernel
+      has to change the map from the outgoing process to the incoming process.
+      - The implementation of a memory address map is called a <i>page table</i>.
+    </div>
 
+    <div class="sub-heading">Kernel task: Device Drivers and Management</div>
+    <div>
+      - A device is typically accessible only in kernel mode because improper access (such as a user process asking to turn off the power) could crash the machine. Having the
+      kernel talk to drivers also helps provide a uniform interface to the user processes. The user process can just call the kernel, and then the kernel can call the appropriate
+      method on the hardware, depending on the type of hw that is installed on the system. This simplifies things for people writing user processes.
+    </div>
+
+    <div class="sub-heading">Kernel task: System Calls and Support</div>
+    <div>
+      - <a href="https://askubuntu.com/questions/506510/what-is-the-difference-between-terminal-console-shell-and-command-line">What is the difference between Terminal, Console,
+      Shell, and Command Line?</a> Basically, a <i>shell</i> is a program which processes commands and returns output. A <i>terminal</i> is a program that runs a <i>shell</i>. In
+      unix circles, shell has specialized to mean a <a href="https://en.wikipedia.org/wiki/Shell_%28computing%29">command-line shell</a>, centered around entering the name of the
+      application one wants to start, followed by the names of files or other objects that the application should act on, and pressing the Enter key. There are different unix
+      shells. Ubuntu's default shell is <a href="https://en.wikipedia.org/wiki/Bash_(Unix_shell)">Bash</a> (like most other Linux distributions). Popular alternatives include zsh
+      (which emphasizes power and customizability) and fish (which emphasizes simplicity). Command-line shells include flow control constructs to combine commands. In addition to
+      typing commands at an interactive prompt, users can write scripts. The most common shells have a common syntax based on the <a
+      href="https://en.wikipedia.org/wiki/Bourne_shell">Bourne shell</a>. When discussing "shell programming", the shell is almost always implied to be a Bourne-style shell. <br>
+      - <i>System Calls</i> or <i>syscalls</i> refers to tasks that the user process cannot do on its own, but instead needs the system to do it for it instead. For instance,
+      opening, reading and writing files all need system calls to complete. Hence, a system call is an interaction between a process and the kernel.<br>
+      - Two system calls are specifically important to understand: <code>fork()</code> and <code>exec()</code>. <a
+      href="https://stackoverflow.com/questions/1653340/differences-between-fork-and-exec">Differences between fork and exec</a> on SO. <br>
+      - <p class="inline-heading"><code>fork</code></p>: When a process calls fork(), the kernel creates a nearly identical copy of the process. <br>
+      - <p class="inline-heading"><code>exec</code></p>: When a process calls exec(<i>program</i>), the kernel starts <i>program</i>, replacing the current process. <br>
+      - Other than init (will see Chapter 6), all user processes on a Linux system start as a result of fork(), and most of the time, you also run exec() to start
+      a new program instead of running a copy of an existing process. <br>
+      - For example: consider a program that you run at the command line, such as the <code>ls</code> command to show the contents of a directory. When you enter ls into a terminal
+      window, the shell that's running inside the terminal window calls <code>fork()</code> to create a copy of the shell, and then the new copy of the shell calls
+      <code>exec(ls)</code> to run <code>ls</code>.
+      <div class="image-block">
+        <div class="expand-screenshot-image-btn border border-primary rounded">
+          <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
+        </div>
+        <div class="screenshot-image">
+          <img src="imgs/ch1/ForkAndExec.png"
+               class="center-block img-fluid"
+               width="700"
+               alt="ForkAndExec">
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-heading">User Space</div>
+    <div>
+      - As we looked earlier, the main memory that the kernel allocates for user processes is known as the <i>user space</i>. Because a process is simply a state (or image) in
+      memory, user space also refers to the memory for the entire collection of running processes. <br>
+      - Although all user processes are essentially equal from the kernel's point of view, different processes might perform different kinds of tasks. Basic services are at the
+      bottom level (closest to the kernel), utility services are in the middle, and applications that users touch are at the top. The bottom level tends to consist of small
+      components that perform single, uncomplicated tasks. The middle level has larger components such as mail, print, and database services. Finally, components at the top level
+      perform complicated tasks that the user often controls directly. Components also use other components. Generally, if one component wants to use another, the second component
+      is either at the same service level or below. <br>
+      - But note that this is a greatly simplified diagram:
+      <div class="image-block">
+        <div class="expand-screenshot-image-btn border border-primary rounded">
+          <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
+        </div>
+        <div class="screenshot-image">
+          <img src="imgs/ch1/ProcessTypesAndInteractions.png"
+               class="center-block img-fluid"
+               width="700"
+               alt="ProcessTypesAndInteractions">
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-heading">Users</div>
+    <div>
+      - A <i>user</i> is an entity that can run processes and own files. A user is associated with a <i>username</i>. However, the kernel does not manage the usernames; instead, it
+      identifies users by simple numeric identifiers called <i>userids</i>. <br>
+      - Users exist primarily to support permissions and boundaries. Every user-space process has a user <i>owner</i>, and processes are said to run <i>as</i> the owner. A user may
+      terminate or modify the behavior of its own processes (within certain limits), but it cannot interfere with other users' processes. In addition, users may own files and
+      choose whether they share them with other users. <br>
+      - A Linux system normally has a number of users in addition to the ones that correspond to the real human beings who use the system. The most important user to know about is
+      <i>root</i>. The root user is an exception to the preceding rules because root may terminate and alter another user's processes and read any file on the local system. For
+      this reason, root is known as the <i>superuser</i>. A person who can operate as root is said to have <i>root access</i> and is an administrator on a traditional Unix system.
+      <br>
+      - Operating as root can be dangerous. It can be difficult to identify and correct mistakes because the system will let you do anything, even if what you're doing is harmful
+      to the system. For this reason, system designers constantly try to make root access as unnecessary as possible, for example, by not requiring root access to switch between
+      wireless networks on a notebook. In addition, as powerful as the root user is, it still runs in the operating system's user mode, not kernel mode. <br>
+      - <i>Groups</i> are sets of users. The primary purpose of groups is to allow a user to share file access to other users in a group.
+    </div>
+  </div>
+
+
+  <hr>
+  <div id="Chapter2" class="chapter">Chapter 2: Basic Commands and Directory Hierarchy</div>
+  <hr>
+
+  <div class="textual-content">
+    <div class="sub-heading">Levels and layers of abstraction in a linux system</div>
+    <div>
+
+    </div>
   </div>
 
 </div>
