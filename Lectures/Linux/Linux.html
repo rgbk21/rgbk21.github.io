@@ -156,8 +156,8 @@
       Impatient (Addison-Wesley Professional, 1995), and Learning the UNIX Operating System, 5th edition (O'Reilly, 2001). <br>
       - Pressing ctrl-D on an empty line stops the current standard input entry from the terminal (and often terminates a program). Don't confuse this with ctrl-c, which
       terminates a program regardless of its input or output. <br>
-      - You will often see control characters marked with a caret; for example, ^C for ctrl-c.
-      - Mastering Regular Expressions, 3rd edition (O’Reilly, 2006) <br>
+      - You will often see control characters marked with a caret; for example, ^C for ctrl-c. <br>
+      - Mastering Regular Expressions, 3rd edition (O'Reilly, 2006) <br>
       - You can search through the previous commands using: <code>Ctrl + r</code>. Then you can cycle between the different commands by pressing <code>Ctrl + r</code> again. <br>
     </div>
 
@@ -213,7 +213,7 @@
       <br>
       c) Device Drivers: the kernel acts as an interface between the hardware (such as a disk) and processes. It's usually the kernel's job to operate the hardware. <br>
       d) System calls and support: Processes normally use system calls to communicate with the kernel. <br>
-      - We will be looking at each of these function
+      - We will be looking at each of these functions.
     </div>
 
     <div class="sub-heading">Kernel task: Process Management</div>
@@ -248,7 +248,7 @@
       directly access the memory by its physical location in the hardware. Instead, the kernel sets up each process to act as if it had an entire machine to itself. When the
       process accesses some of its memory, the MMU intercepts the access and uses a memory address map to translate the memory location from the process into an actual physical
       memory location on the machine. The kernel must still initialize and continuously maintain and alter this memory address map. For example, during a context switch, the kernel
-      has to change the map from the outgoing process to the incoming process.
+      has to change the map from the outgoing process to the incoming process. <br>
       - The implementation of a memory address map is called a <i>page table</i>.
     </div>
 
@@ -364,7 +364,7 @@
       <br>
       <br>
 
-      <p class="inline-heading">cat</p>: It outputs the contents of one or more files. The general syntax of the cat command is as follows:
+      <code>cat</code>: It outputs the contents of one or more files. The general syntax of the cat command is as follows:
       <code>cat file1 file2 ...</code>. When you run this command, cat prints the contents of file1, file2, and any other files that you specify (denoted by ...), and then exits.
       The command is called cat because it performs concatenation when it prints the contents of more than one file.
 
@@ -393,7 +393,7 @@
       lists the contents of a directory. The default is the current directory. Use <code>ls -l</code> for a detailed (long) listing and
       <code>ls -F</code> to display file type information. <br>
       - The output to ls -l would look something like this. It includes the owner of the file (column 3), the group (column 4), the file size (column 5), and the modification
-      date/time (between column 5 and the filename)
+      date/time (between column 5 and the filename). The file size is given in bytes. You can run <code>ls -lh</code> to print the listing with human readable file sizes.
       <div class="image-block">
         <div class="expand-screenshot-image-btn border border-primary rounded">
           <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
@@ -411,20 +411,32 @@
       b) <code>cp</code>:
       copies files. For example, to copy file1 to file2, enter this: <code>cp file1 file2</code>. This will create a new file <i>file2</i> that
       is a copy of <i>file1</i>. To copy a number of files to a directory enter <code>cp file1 ... fileN dir</code> where <i>dir</i> is the name of the folder to which the files
-      will be copied to. This folder should already have been created. <br>
+      will be copied to. This folder should already have been created.
+
+      <br>
+      <br>
 
       c) <code>mv</code>:
       In its simplest form, it renames a file. For example, to rename file1 to file2, enter this: <code>mv file1 file2</code>. This will rename
       <i>file1</i> to <i>file2</i>. You can also use mv to move a number of files to a different directory: <code>mv file1 ... fileN dir</code>. Note that <i>dir</i> can be
-      relative path as well. What this means is that in order to move files one directory up, you could do <code>mv file1 file2 ..</code>. <br>
+      relative path as well. What this means is that in order to move files one directory up, you could do <code>mv file1 file2 ..</code>.
+
+      <br>
+      <br>
 
       d) <code>touch</code>:
       creates a file. If the file already exists, touch does not change it, but it does update the file's modification time stamp printed
-      with the <code>ls -l</code> command. <code>touch file</code> will create a new file named <i>file</i>. <br>
+      with the <code>ls -l</code> command. <code>touch file</code> will create a new file named <i>file</i>.
+
+      <br>
+      <br>
 
       e) <code>rm</code>:
       To delete (remove) a file, use rm. After you remove a file, it's gone from your system and generally cannot be undeleted. <code>rm file</code> will delete the file named
-      <i>file</i>. <br>
+      <i>file</i>.
+
+      <br>
+      <br>
 
       f) <code>echo</code>:
       The echo command prints its arguments to the standard output. The echo command is very useful for finding expansions of shell globs
@@ -447,20 +459,20 @@
       be in or somewhere close by. <br>
       - Some basic directory commands: <br>
 
-      a) <p class="inline-heading">cd</p>: The <i>current working directory</i> is the directory that a process (such as the shell) is currently in. The cd command changes the
+      a) <code>cd</code>: The <i>current working directory</i> is the directory that a process (such as the shell) is currently in. The cd command changes the
       shell's current working directory: <code>cd dir</code> will change the working directory to <i>dir</i>. If you omit <i>dir</i>, the shell returns to your <i>home
       directory</i>, the directory you started in when you first logged in.
 
       <br>
       <br>
 
-      b) <p class="inline-heading">mkdir</p>: creates a new directory. <code>mkdir dir</code> will create a new directory named <i>dir</i>. Will throw error if <i>dir</i> already
+      b) <code>mkdir</code>: creates a new directory. <code>mkdir dir</code> will create a new directory named <i>dir</i>. Will throw error if <i>dir</i> already
       exists.
 
       <br>
       <br>
 
-      c) <p class="inline-heading">rmdir</p>: removes the directory. <code>rmdir dir</code> will remove the directory <i>dir</i>. If dir isn't empty, this command fails. <br>
+      c) <code>rmdir</code>: removes the directory. <code>rmdir dir</code> will remove the directory <i>dir</i>. If dir isn't empty, this command fails. <br>
       - You can use <code>rm -rf dir</code> to delete a directory and its contents, but be careful! This is one of the few commands that can do serious damage, especially if you
       run it as the superuser. The <code>-r</code> option specifies recursive delete to repeatedly delete everything inside dir, and <code>-f</code> forces the delete operation.
       Don't use the <code>-rf</code> flags with globs such as a star (*).
@@ -480,15 +492,12 @@
       d) If no files match a glob, the shell performs no expansion, and the command runs with literal characters such as *. <br>
       e) If you don't want the shell to expand a glob in a command, enclose the glob in single quotes (''). For example, the command echo '*' prints a star. <br>
       - This is an example of usage:
-      <div class="image-block">
-        <div class="expand-screenshot-image-btn border border-primary rounded">
-          <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
         </div>
-        <div class="screenshot-image">
-          <img src="imgs/ch2/globbing_output.png"
-               class="center-block img-fluid"
-               alt="ls output"
-               width="400">
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/50352ec57c0a6f8a60506ea73b681c7a.js"></script>
         </div>
       </div>
 
@@ -532,13 +541,15 @@
       is the difference between find . and find . -print</a>. <br>
       - Most systems also have a <code>locate</code> command for finding files. Rather than searching for a file in real time, <code>locate</code> searches an index that the system
       builds periodically. Searching with locate is much faster than find, but if the file you're looking for is newer than the index, <code>locate</code> won't find it. <br>
+      - <code>whereis</code> is another similar useful command. For example, in order to find out where the <code>ls</code> command is located, you could run
+      <code>whereis ls</code> and that would print <code>ls: /usr/bin/ls /usr/share/man/man1/ls.1.gz</code>. <br>
 
       g) <code>head</code> and <code>tail</code>: To quickly view a portion of a file or stream of data, use the <code>head</code> and <code>tail</code> commands. For example,
       <code>head /etc/passwd</code> shows the first 10 lines of the password file, and <code>tail /etc/passwd</code> shows the last 10 lines. <br>
       - To change the number of lines to display, use the <code>-n</code> option, where n is the number of lines you want to see (for example, <code>head -5 /etc/passwd</code> or
       <code>tail -5 /etc/passwd</code>). <br>
-      - To print lines starting at line n, use tail +n. For instance, <code>tail +25 /etc/passwd</code> will print the contents of the password file starting from line 25 right up
-      to the end of the file. <br>
+      - To print lines starting at line n, use <code>tail +n</code>. For instance, <code>tail +25 /etc/passwd</code> will print the contents of the password file starting from line
+      25 right up to the end of the file. <br>
 
       h) <code>sort</code>: The <code>sort</code> command puts the lines of a text file in alphanumeric order. If the file's lines start with numbers and you want to sort in
       numerical order, use the -n option. The -r option reverses the order of the sort. It won't modify the actual file though.
@@ -724,7 +735,8 @@
       - The various fields in the above image are as follows: <br>
       a) PID: The process ID <br>
       b) TTY: The terminal device where the process is running <br>
-      c) STAT: The process status, that is, what the process is doing and where its memory resides. For example, S means sleeping and R means running. <br>
+      c) STAT: The process status, that is, what the process is doing and where its memory resides. For example, S means sleeping and R means running. <a
+      href="https://askubuntu.com/questions/360252/what-do-the-stat-column-values-in-ps-mean">What do the STAT column values in ps mean?</a> <br>
       d) TIME: The amount of CPU time in minutes and seconds that the process has used so far. In other words, the total amount of time that the process has spent running
       instructions on the processor. <br>
       e) COMMAND: Note that a process can change this field from its original value.
@@ -746,7 +758,7 @@
       signal (the terminate signal) to the process with pid <i>processId</i>. You can send different signals by adding an extra option to kill. For example, to freeze a process
       instead of terminating it, use the <code>STOP</code> signal: <code>kill -STOP <i>processId</i></code>. A stopped process is still in memory, ready to pick up where it left
       off. Use the <code>CONT</code> signal to continue running the process again: <code>kill -CONT <i>processId</i></code>. <br>
-      - Using ctrl-c to terminate a process that is running in the current terminal is the same as using <code>kill</code> to end the process with the <code>INT</code> (interrupt)
+      - Using ctrl+c to terminate a process that is running in the current terminal is the same as using <code>kill</code> to end the process with the <code>INT</code> (interrupt)
       signal. <br>
       - The most brutal way to terminate a process is with the <code>KILL</code> signal. Other signals give the process a chance to clean up after itself, but <code>KILL</code>
       does not. The operating system terminates the process and forcibly removes it from memory. Use this as a last resort. <br>
@@ -978,20 +990,27 @@
       <a href="https://superuser.com/questions/838392/how-to-tar-a-directory-preserving-not-only-permissions-but-ownership-too">How to tar a directory preserving not only
         permissions, but ownership too</a>,
       <a href="https://askubuntu.com/questions/463325/what-does-tars-p-preserve-permissions-flag-actually-preserve">What does tar's -p (preserve permissions) flag actually
-        preserve?</a>. Also, when you are unpacking the files, you will want to be logged in as the root use, because a user cannot change the permissions of another user.
+        preserve?</a>. Also, when you are unpacking the files, you will want to be logged in as the root user, because a user cannot change the permissions of another user.
     </div>
 
 
     <div class="sub-heading">Archiving and Compressing Files: Compressed Archives (tar.gz)</div>
     <div>
+      <p class="inline-heading">Archiving and Compressing files in one go</p>: <code>tar zcvf allInOne.tar.gz file1 file2</code> <br>
+      <p class="inline-heading">Decompressing and unpacing files in one go</p>: <code>tar zxvf allInOne.tar.gz</code>
+
+      <br>
+      <br>
+
       - As we have looked above, archives are normally found compressed, and have a file extension of <i>.tar.gz</i>. To unpack a compressed archive, work from the right side to
       the left; get rid of the <code>.gz</code> first and then worry about the <code>.tar</code>. For instance, to decompress and unpack something like <i>myFile.tar.gz</i>, you
       would first run <code>gunzip myFile.tar.gz</code> to decompress it, and then <code>tar xvf myFile.tar</code> to unpack it. <br>
       - You can also do both of these together by using the <code>zcat</code> command. <br>
       - <code>zcat file.tar.gz | tar xvf -</code> is a command pipeline that will unpack <i>file.tar.gz</i>. The <code>zcat</code> command is the same as <code>gunzip -dc</code>.
-      The <code>-d</code> option decompresses and the <code>-c</code> option sends the result to standard output (in this case, to the <code>tar</code> command). Some commands
-      accept <code>-</code> in place of a filename to read from standard input instead of from a named file. This is what the <code>-</code> argument passed to <code>tar</code>
-      after <code>xzf</code>. Read <a href="https://askubuntu.com/a/1151912/1033660">What does the hyphen "-" mean in "tar xzf -"?</a> for details. <br>
+      The <code>-d</code> option decompresses and the <code>-c</code> option sends the result to standard output (in this case, to the <code>tar</code> command). <br>
+      - What is the <code> - </code> passed in to the tar command above? Some commands accept <code>-</code> in place of a filename to read from standard input instead of from a
+      named file. This is what the <code>-</code> argument passed to <code>tar</code> after <code>xzf</code> is. Read <a href="https://askubuntu.com/a/1151912/1033660">What does
+      the hyphen "-" mean in "tar xzf -"?</a> for details. <br>
       - Because it's so common to use <code>zcat</code>, the version of <code>tar</code> that comes with Linux has a shortcut. You can use <code>z</code> as an option to
       automatically invoke <code>gzip</code> on the archive; this works both for extracting an archive (with the <code>x</code> or <code>t</code> modes in <code>tar</code>) and
       creating one (with <code>c</code>). <br>
