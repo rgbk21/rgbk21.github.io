@@ -131,6 +131,7 @@
   Chapter 0 - <a href="#InterestingLinks">Interesting Links</a> <br>
   Chapter 1 - <a href="#Chapter1">The Big Picture</a> <br>
   Chapter 2 - <a href="#Chapter2">Basic Commands and Directory Hierarchy</a> <br>
+  Chapter 3 - <a href="#Chapter3">Basic Commands and Directory Hierarchy</a> <br>
 
   <br>
 
@@ -148,7 +149,15 @@
     <div class="sub-heading">Stuff</div>
     <div>
       - Commands in this book will typically look like this: <code>$ <strong>ls</strong>/</code>. You are supposed to enter the text in bold. The <code>$</code> is the prompt for
-      your regular user account. If you see a <code>#</code> as a prompt, you should be superuser.
+      your regular user account. If you see a <code>#</code> as a prompt, you should be superuser. <br>
+      - Linux is a Unix flavor at heart. You'll see the word Unix in some chapters more than Linux because you can take what you learn straight over to Solaris, BSD, and other
+      Unix-flavored systems. For more details about Unix for beginners than you'll find here, consider reading The Linux Command Line (No Starch Press, 2012), UNIX for the
+      Impatient (Addison-Wesley Professional, 1995), and Learning the UNIX Operating System, 5th edition (O'Reilly, 2001). <br>
+      - Pressing ctrl-D on an empty line stops the current standard input entry from the terminal (and often terminates a program). Don't confuse this with ctrl-c, which
+      terminates a program regardless of its input or output. <br>
+      - You will often see control characters marked with a caret; for example, ^C for ctrl-c.
+      - Mastering Regular Expressions, 3rd edition (O’Reilly, 2006) <br>
+      - You can search through the previous commands using: <code>Ctrl + r</code>. Then you can cycle between the different commands by pressing <code>Ctrl + r</code> again. <br>
     </div>
 
   </div>
@@ -330,6 +339,784 @@
   <hr>
 
   <div class="textual-content">
+    <div class="sub-heading">The Bourne shell: /bin/sh</div>
+    <div>
+      - A <i>shell</i> is a program that runs commands, like the ones the users enter. Shell also serves as a small programming environment. Many important parts of the system are
+      actually <i>shell scripts</i> - text files that contain a sequence of shell commands. <br>
+      - There are many different Unix shells, but all derive several of their features from the Bourne shell (/bin/sh), a standard shell developed for the earlier versions of Unix.
+      Every Unix system needs the Bourne shell in order to function correctly. Linux uses an enhanced version of the Bourne shell called <code>bash</code> or the "Bourne-again"
+      shell. The bash shell is the default shell on most Linux distributions, and <code>/bin/sh</code> is normally a link to <code>bash</code> on a Linux system. <br>
+    </div>
+
+    <div class="sub-heading">Using the shell</div>
+    <div>
+      - When you install Linux, you should create at least one regular user in addition to the root user; this will be your personal account. For this chapter, you should log in as
+      the regular user. <br>
+    </div>
+
+    <div class="sub-heading">Using the shell: The Shell Window</div>
+    <div>
+      - Open a shell window/terminal. Once you've opened a shell, it should display a prompt at the top that usually ends with a dollar sign ($). On Ubuntu, that prompt should look
+      like <code>name@host:path$</code>, (<code>rgbk@rgbk-VirtualBox:~$</code>). <br>
+      - <code>cat /etc/passwd</code> This command displays the contents of the /etc/passwd system information file and then returns your shell prompt. <br>
+
+      <br>
+      <br>
+
+      <p class="inline-heading">cat</p>: It outputs the contents of one or more files. The general syntax of the cat command is as follows:
+      <code>cat file1 file2 ...</code>. When you run this command, cat prints the contents of file1, file2, and any other files that you specify (denoted by ...), and then exits.
+      The command is called cat because it performs concatenation when it prints the contents of more than one file.
+
+      <br>
+      <br>
+
+      <p class="inline-heading">Standard Input and Standard Output</p>: We'll use <code>cat</code> to briefly explore Unix input and output (I/O). Unix processes use I/O
+      <i>streams</i>
+      to read and write data. Processes read data from input streams and write data to output streams. Streams are very flexible. For example, the source of an input stream can be
+      a file, a device, a terminal, or even the output stream from another process. <br>
+      - If you run <code>cat</code> in the terminal (without specifying a filename) you won't get the shell prompt back because cat is still running. Any text that you enter in the
+      terminal now gets repeated back to you. The reason cat adopted an interactive behavior has to do with streams. Because you did not specify an input filename, cat read from
+      the <i>standard input</i> stream provided by the Linux kernel rather than a stream connected to a file. In this case, the standard input was connected to the terminal in
+      which you ran cat. <br>
+      - <i>Standard output</i> is similar. The kernel gives each process a standard output stream where it can write its output. The cat command always writes its output to the
+      standard output. When you ran cat in the terminal, the standard output was connected to that terminal, so that's where you saw the output. <br>
+      - Standard input and output are often abbreviated as <i>stdin</i> and <i>stdout</i>. Many commands operate as cat does; if you don't specify an input file, the command reads
+      from stdin. Output is a little different. Some commands (like cat) send output only to stdout, but others have the option to send output directly to files. <br>
+      - There is a third standard I/O stream called <i>standard error</i>. We will look at it later.
+    </div>
+
+
+    <div class="sub-heading">Basic Commands</div>
+    <div>
+      a) <code>ls</code>:
+      lists the contents of a directory. The default is the current directory. Use <code>ls -l</code> for a detailed (long) listing and
+      <code>ls -F</code> to display file type information. <br>
+      - The output to ls -l would look something like this. It includes the owner of the file (column 3), the group (column 4), the file size (column 5), and the modification
+      date/time (between column 5 and the filename)
+      <div class="image-block">
+        <div class="expand-screenshot-image-btn border border-primary rounded">
+          <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
+        </div>
+        <div class="screenshot-image">
+          <img src="imgs/ch2/ls_output.png"
+               class="center-block img-fluid"
+               alt="ls output"
+               width="400">
+        </div>
+      </div>
+
+      <br>
+
+      b) <code>cp</code>:
+      copies files. For example, to copy file1 to file2, enter this: <code>cp file1 file2</code>. This will create a new file <i>file2</i> that
+      is a copy of <i>file1</i>. To copy a number of files to a directory enter <code>cp file1 ... fileN dir</code> where <i>dir</i> is the name of the folder to which the files
+      will be copied to. This folder should already have been created. <br>
+
+      c) <code>mv</code>:
+      In its simplest form, it renames a file. For example, to rename file1 to file2, enter this: <code>mv file1 file2</code>. This will rename
+      <i>file1</i> to <i>file2</i>. You can also use mv to move a number of files to a different directory: <code>mv file1 ... fileN dir</code>. Note that <i>dir</i> can be
+      relative path as well. What this means is that in order to move files one directory up, you could do <code>mv file1 file2 ..</code>. <br>
+
+      d) <code>touch</code>:
+      creates a file. If the file already exists, touch does not change it, but it does update the file's modification time stamp printed
+      with the <code>ls -l</code> command. <code>touch file</code> will create a new file named <i>file</i>. <br>
+
+      e) <code>rm</code>:
+      To delete (remove) a file, use rm. After you remove a file, it's gone from your system and generally cannot be undeleted. <code>rm file</code> will delete the file named
+      <i>file</i>. <br>
+
+      f) <code>echo</code>:
+      The echo command prints its arguments to the standard output. The echo command is very useful for finding expansions of shell globs
+      ("wildcards" such as *) and variables (such as $HOME), which you will encounter later in this chapter. For instance check this question: <a
+      href="https://stackoverflow.com/questions/46133657/ls-not-working-in-certain-directories">ls - Not working in certain directories</a> on SO.
+    </div>
+
+    <div class="sub-heading">Navigating Directories</div>
+    <div>
+      - Unix has a directory hierarchy that starts at <code>/</code>, sometimes called the <code>root directory</code>. The directory separator is the slash (/), not the backslash
+      (\). <br>
+      - When you refer to a file or directory, you specify a <i>path</i> or <i>pathname</i>. When a path starts with / (such as /usr/lib), it's a <i>full</i> or <i>absolute
+      path</i>. <br>
+      - A path component identified by two dots (..) specifies the parent of a directory. For example, if you're working in /usr/lib, the path <code>..</code> would refer to /usr.
+      Similarly, <code>../bin</code> would refer to /usr/bin. <br>
+      - One dot (.) refers to the current directory; for example, if you're in /usr/lib, the path <code>.</code> is still /usr/lib, and <code>./X11</code> is /usr/lib/X11. You
+      won't have to use <code>.</code> very often because most commands default to the current directory if a path doesn't start with / (you could just use X11 instead of ./X11 in
+      the preceding example). <br>
+      - A path not beginning with / is called a <i>relative path</i>. Most of the time, you'll work with relative pathnames, because you'll already be in the directory you need to
+      be in or somewhere close by. <br>
+      - Some basic directory commands: <br>
+
+      a) <p class="inline-heading">cd</p>: The <i>current working directory</i> is the directory that a process (such as the shell) is currently in. The cd command changes the
+      shell's current working directory: <code>cd dir</code> will change the working directory to <i>dir</i>. If you omit <i>dir</i>, the shell returns to your <i>home
+      directory</i>, the directory you started in when you first logged in.
+
+      <br>
+      <br>
+
+      b) <p class="inline-heading">mkdir</p>: creates a new directory. <code>mkdir dir</code> will create a new directory named <i>dir</i>. Will throw error if <i>dir</i> already
+      exists.
+
+      <br>
+      <br>
+
+      c) <p class="inline-heading">rmdir</p>: removes the directory. <code>rmdir dir</code> will remove the directory <i>dir</i>. If dir isn't empty, this command fails. <br>
+      - You can use <code>rm -rf dir</code> to delete a directory and its contents, but be careful! This is one of the few commands that can do serious damage, especially if you
+      run it as the superuser. The <code>-r</code> option specifies recursive delete to repeatedly delete everything inside dir, and <code>-f</code> forces the delete operation.
+      Don't use the <code>-rf</code> flags with globs such as a star (*).
+
+      <br>
+      <br>
+
+      d) <p class="inline-heading">Shell Globbing/Wildcards</p>: The shell can match simple patterns to file and directory names, a process known as <i>globbing</i>. The simplest
+      of these is the glob character <code>*</code>, which tells the shell to match any number of arbitrary characters. For example, running <code>echo *</code> will print all the
+      files in the current directory. <br>
+      - The way that this works is that the shell matches arguments containing globs to filenames, substitutes the filenames for those arguments, and then runs the revised command
+      line. The substitution is called <i>expansion</i> because the shell substitutes all matching filenames. <br>
+      - Here are some ways to use * to expand filenames: <br>
+      a) <code>at*</code> expands to all filenames that start with <i>at</i> <br>
+      b) <code>*at</code> expands to all filenames that end with <i>at</i> <br>
+      c) <code>*at*</code> expands to all filenames that contain <i>at</i> <br>
+      d) If no files match a glob, the shell performs no expansion, and the command runs with literal characters such as *. <br>
+      e) If you don't want the shell to expand a glob in a command, enclose the glob in single quotes (''). For example, the command echo '*' prints a star. <br>
+      - This is an example of usage:
+      <div class="image-block">
+        <div class="expand-screenshot-image-btn border border-primary rounded">
+          <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
+        </div>
+        <div class="screenshot-image">
+          <img src="imgs/ch2/globbing_output.png"
+               class="center-block img-fluid"
+               alt="ls output"
+               width="400">
+        </div>
+      </div>
+
+      - If you're used to MS-DOS, you might instinctively type <code>*.*</code> to match all files. Break this habit now. In Linux and other versions of Unix, you must use
+      <code>*</code> to match all files. In the Unix shell, <code>*.*</code> matches only files and directories that contain the dot (.) character in their names. Unix filenames do
+      not need extensions and often do not carry them. <br>
+      - Another shell glob character, the question mark (<code>?</code>), instructs the shell to match exactly one arbitrary character. For example, b?at matches boat and brat.
+      <br>
+      - It is important to remember that the shell performs expansions <i>before</i> running commands, and only then. Therefore, if a * makes it to a command without expanding,
+      the shell will do nothing more with it; it's up to the command to decide what it wants to do.
+    </div>
+
+    <div class="sub-heading">Intermediate Commands</div>
+    <div>
+      a) <code>grep</code>: The grep command prints the lines from a file or input stream that match an expression. For instance, running
+      <code>grep root /etc/passwd</code> will print all the lines in the /etc/passwd file that contains the word <i>root</i>. <br>
+      - The grep command is extraordinarily handy when operating on multiple files at once because it prints the filename in addition to the matching line. For example, if you want
+      to check every file in /etc that contains the word <i>root</i>, you could use this command: <code>grep root /etc/*</code>. <br>
+      - Two of the most important grep options are <code>-i</code> (for case-insensitive matches) and <code>-v</code> (which inverts the search, that is, prints all lines that
+      <i>don't</i> match). There is also a more powerful variant called <code>egrep</code> (which is just a synonym for <code>grep -E</code>). <br>
+
+      b) <code>less</code>: The less command comes in handy when a file is really big or when a command's output is long and scrolls off the top of the screen. To page through a
+      big file like /usr/share/dict/words, use the command <code>less /usr/share/dict/words</code>. When running <code>less</code>, you'll see the contents of the file one
+      screenful at a time. Press the spacebar to go forward in the file and the <code>b</code> key to skip back one screenful. To quit, type <code>q</code>. <br>
+      - You can also search for text inside less. For example, to search forward for a word, type <code>/word</code>, and to search backward, use <code>?word</code>. When you find
+      a match, press <code>n</code> to continue searching. <br>
+      - You can send the standard output of nearly any program directly to another program's standard input. This is exceptionally useful when you have a command with a lot of
+      output to sift through and you'd like to use something like <code>less</code> to view the output. Here's an example of sending the output of a grep command to
+      <code>less</code>: <code>grep ie /usr/share/dict/words | less</code>. <br>
+
+      c) <code>pwd</code>: The pwd (print working directory) program simply outputs the name of the current working directory. <br>
+
+      d) <code>diff</code>: To see the differences between two text files. <code>diff file1 file2</code> will show the differences between them. Weird output though. <br>
+
+      e) <code>file</code>: If you see a file and are unsure of its format, try using the file command to see if the system can guess. <code>file fileName</code>. <br>
+
+      f) <code>find</code> and <code>locate</code>: <code>find</code> is used to find a file anywhere in the entire directory tree. <code>find dir -name file -print</code> will
+      find the file with name <i>file</i> anywhere within the directory <i>dir</i> including its sub-directories. The <code>-name</code> args is used to specify the name of the
+      file. The <code>-print</code> flag will print the path of the found file on the terminal with a newline character at the end. The <code>-print</code> flag is passed in by
+      default even when you do not specify it in the command. See <a href="https://unix.stackexchange.com/questions/197824/what-is-the-difference-between-find-and-find-print">What
+      is the difference between find . and find . -print</a>. <br>
+      - Most systems also have a <code>locate</code> command for finding files. Rather than searching for a file in real time, <code>locate</code> searches an index that the system
+      builds periodically. Searching with locate is much faster than find, but if the file you're looking for is newer than the index, <code>locate</code> won't find it. <br>
+
+      g) <code>head</code> and <code>tail</code>: To quickly view a portion of a file or stream of data, use the <code>head</code> and <code>tail</code> commands. For example,
+      <code>head /etc/passwd</code> shows the first 10 lines of the password file, and <code>tail /etc/passwd</code> shows the last 10 lines. <br>
+      - To change the number of lines to display, use the <code>-n</code> option, where n is the number of lines you want to see (for example, <code>head -5 /etc/passwd</code> or
+      <code>tail -5 /etc/passwd</code>). <br>
+      - To print lines starting at line n, use tail +n. For instance, <code>tail +25 /etc/passwd</code> will print the contents of the password file starting from line 25 right up
+      to the end of the file. <br>
+
+      h) <code>sort</code>: The <code>sort</code> command puts the lines of a text file in alphanumeric order. If the file's lines start with numbers and you want to sort in
+      numerical order, use the -n option. The -r option reverses the order of the sort. It won't modify the actual file though.
+    </div>
+
+
+    <div class="sub-heading">Dot Files</div>
+    <div>
+      - Running <code>ls -a</code> shows configuration files known as <i>dot files</i>. These are files and directories whose names begin with a dot (.). Common dot files are
+      <code>.bashrc</code> and <code>.login</code>. There are dot directories too, like <code>.ssh</code>. <br>
+      - There is nothing special about dot files or directories. Some programs don't show them by default to keep the output clean. For example, <code>ls</code> doesn't list dot
+      files unless you use the -a option. <br>
+      - Shell globs don't match dot files unless you explicitly use a pattern such as <code>.*</code>. For instance, look at the below output. <code>echo *</code> does not show the
+      dot files, but doing <code>echo .*</code> does. But note: you can run into problems with globs because <code>.*</code> matches <code>.</code> and <code>..</code> (the current
+      and parent directories). You may wish to use a pattern such as <code>.[^.]*</code> or <code>.??*</code> to get all dot files except the current and parent directories. You
+      can see this in the below output as well.
+      <div class="image-block">
+        <div class="expand-screenshot-image-btn border border-primary rounded">
+          <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
+        </div>
+        <div class="screenshot-image">
+          <img src="imgs/ch2/dotFiles_output.png"
+               class="center-block img-fluid"
+               alt="ls output"
+               width="1600">
+        </div>
+      </div>
+    </div>
+
+
+    <div class="sub-heading">Environment and Shell Variables</div>
+    <div>
+      - The shell can store temporary variables, called <i>shell variables</i>, containing the values of text strings. <br>
+      - Shell variables are very useful for keeping track of values in scripts. Some shell variables also control the way the shell behaves. For example, the <i>bash</i> shell
+      reads the <code>PS1</code> variable before displaying the prompt. <code>$$</code> is another shell variable that evaluates to the current shell's PID. <br>
+      - You can create and assign a value to the shell variable by simple doing <code>variableName=value</code>. Note that there shouldn't be a space around the = sign. Then you
+      can read the value of the variable anywhere by doing <code>echo $variableName</code>. <br>
+      - An <i>environment variable</i> is like a shell variable, but it's not specific to the shell. The main difference between environment and shell variables is that the
+      operating system passes all of your shell's environment variables to programs that the shell runs, whereas shell variables cannot be accessed in the commands that you run.
+      <br>
+      - You can assign an environment variable with the shell's <code>export</code> command. For example, if you want to declare a shell variable as an environment variable, you
+      can do the following:
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/f4865e4970ac932085adf746d6322160.js"></script>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-heading">The Command Path</div>
+    <div>
+      - <code>PATH</code> is a special environment variable that contains the <i>command path</i> (or <code>path</code> for short). A command path is a list of system directories
+      that the shell searches when trying to locate a command. For example, when you run <code>ls</code>, the shell searches the directories listed in <code>PATH</code> for the ls
+      program. If programs with the same name appear in several directories in the path, the shell runs the first matching program. <br>
+      - If you run echo <code>$PATH</code>, you'll see that the path components are separated by colons (:). To tell the shell to look in more places for programs, change the
+      <code>PATH</code> environment variable. For instance, <code>PATH=dir:$PATH</code> (note: no $ on the variable name on the lhs) will add <i>dir</i> to the path so that the
+      shell looks in <i>dir</i> before looking at other <code>PATH</code> directories. Similarly, doing <code>PATH=$PATH:dir</code> will add <i>dir</i> to the end so that the shell
+      looks in <i>dir</i> only if it has not been able to find the program in any of the other <code>PATH</code> directories. <br>
+      - Be careful when modifying the path because you can accidentally wipe out your entire path if you mistype $PATH. However, unless you have not run <code>export PATH</code> or
+      something after changing the <code>PATH</code>, you can just close the terminal and open a new one and the <code>PATH</code> would be reverted to the old value.
+    </div>
+
+    <div class="sub-heading">Command Line Editing</div>
+    <div>
+      - Some shortcuts:
+      <div class="image-block">
+        <div class="expand-screenshot-image-btn border border-primary rounded">
+          <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
+        </div>
+        <div class="screenshot-image">
+          <img src="imgs/ch2/CommandLineKeystrokes.png"
+               class="center-block img-fluid"
+               alt="CommandLineKeystrokes"
+               width="600">
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-heading">Getting Online Help</div>
+    <div>
+      - You can run <code>man <i>commandName</i></code> in order to get more info regarding a command. For example, <code>man ls</code> will give you info about the <code>ls</code>
+      command. <br>
+      - You can search through all the available commands by running <code>man -k <i>commandName</i></code>. For example, <code>man -k sort</code> will print out all the commands
+      that contain "sort" in it along with what they do. <br>
+      <div class="image-block">
+        <div class="expand-screenshot-image-btn border border-primary rounded">
+          <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
+        </div>
+        <div class="screenshot-image">
+          <img src="imgs/ch2/sort_output.png"
+               class="center-block img-fluid"
+               alt="Sort Output"
+               width="500">
+        </div>
+      </div>
+      - Manual pages are referenced by numbered sections. When someone refers to a manual page, the section number appears in parentheses next to the name, like ping(8), for
+      example. These are the section
+      <div class="image-block">
+        <div class="expand-screenshot-image-btn border border-primary rounded">
+          <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
+        </div>
+        <div class="screenshot-image">
+          <img src="imgs/ch2/OnlineManualSections.png"
+               class="center-block img-fluid"
+               alt="Sort Output"
+               width="800">
+        </div>
+      </div>
+
+      - If you're looking for a certain option for a command, try entering a command name followed by <code>--help</code> or <code>-h</code> (the option varies from command to
+      command). <br>
+      - To access the info manual, run <code>info <i>commandName</i></code>, like so: <code>info grep</code>.
+    </div>
+
+
+    <div class="sub-heading">Shell Input and Output</div>
+    <div>
+      - To send the output of <i>command</i> to a file instead of the terminal, use the <code>&gt;</code> redirection character <code>command > fileName</code>. For example,
+      <code>cat /etc/passwd &gt;passwords</code>. The shell creates <i>fileName</i> if it does not already exist. If <i>fileName</i> exists, the shell erases (clobbers) the
+      original file first. <br>
+      - You can append the output to the file instead of overwriting it with the <code>&gt;&gt;</code> redirection syntax: <code>command &gt;&gt; fileName</code>. <br>
+      - To send the standard output of a command to the standard input of another command, use the pipe character <code> | </code>. For example,
+      <code>head /proc/cpuinfo | tr a-z A-Z</code>. You can send output through as many piped commands as you wish; just add another pipe before each additional command.
+
+      <br>
+      <br>
+
+      <p class="inline-heading">Standard Error</p>: Occasionally, you may redirect standard output but find that the program still prints something to the terminal. This is called
+      <i>standard error (stderr)</i>; it's an additional output stream for diagnostics and debugging. <br>
+      - For instance, consider the following command: <code>ls /fff > newFile</code>. When you run this command, the <i>newFile</i> that is created will be empty, and you will this
+      message on the terminal instead: "ls: cannot access '/fff': No such file or directory". Since we only redirected the <i>stdout</i> stream, the <i>stderr</i> stream still gets
+      displayed on the terminal. In order to save the error message to the text file as well, we would have to redirect the <i>stderr</i> stream as well. We do this with:
+      <code>ls /fff &gt; newFile 2&gt; errorFile</code>. The number 2 specifies the <i>stream ID</i> that the shell modifies. Stream ID 1 is standard output (the default), and 2 is
+      standard error. <br>
+      - You can also send the standard error to the same place as stdout with the <code>&gt;&</code> notation. For example, to send both standard output and standard
+      error to the file you can do this <code>ls /fff &gt; newFile 2&gt;&1</code>. This will send both the standard output as well as the standard error to the same file
+      <i>newFile</i>.
+
+      <br>
+      <br>
+
+      <p class="inline-heading">Standard Input Redirection</p>: To channel a file into a commands standard input you can use the <code>&lt;</code> operator. For example,
+      <code>head &lt; /proc/cpuinfo</code>. Most Unix commands accept filenames as arguments, hence this isn't very common. For example, the preceding command could have
+      been written as <code>head /proc/cpuinfo</code>.
+    </div>
+
+
+    <div class="sub-heading">Common Errors</div>
+    <div>
+      a) No such file or directory: Unix file I/O system doesn't discriminate between files and directories, this error message occurs everywhere. You get it when you try
+      to read a file that does not exist, when you try to change to a directory that isn't there, when you try to write to a file in a directory that doesn't exist, and so on. <br>
+      b) File exists: You probably tried to create a file that already exists. This is common when you try to create a directory with the same name as a file. <br>
+      c) Not a directory, Is a directory: These messages pop up when you try to use a file as a directory or a directory as a file. <br>
+      d) No space left on device: You're out of disk space :( <br>
+      e) Permission denied: You get this error when you attempt to read or write to a file or directory that you're not allowed to access (you have insufficient privileges). This
+      error also shows when you try to execute a file that does not have the execute bit set (even if you can read the file). <br>
+      f) Operation not permitted: This usually happens when you try to kill a process that you don't own. <br>
+      g) Segmentation fault, Bus error: A <i>segmentation fault</i> essentially means that the person who wrote the program that you just ran screwed up somewhere. The program
+      tried to access a part of memory that it was not allowed to touch, and the operating system killed it. Similarly, a <i>bus error</i> means that the program tried to access
+      some memory in a particular way that it shouldn't. When you get one of these errors, you might be giving a program some input that it did not expect.
+    </div>
+
+
+    <div class="sub-heading">Listing and Manipulating Processes</div>
+    <div>
+      - A <i>process</i> is a running <i>program</i>. Each process on the system has a unique <i>process id (PID)</i>. Running <code>ps a</code> will show the processes currently
+      running and show an output like this:
+      <div class="image-block">
+        <div class="expand-screenshot-image-btn border border-primary rounded">
+          <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
+        </div>
+        <div class="screenshot-image">
+          <img src="imgs/ch2/ps_output.png"
+               class="center-block img-fluid"
+               alt="Sort Output"
+               width="1000">
+        </div>
+      </div>
+
+      - The various fields in the above image are as follows: <br>
+      a) PID: The process ID <br>
+      b) TTY: The terminal device where the process is running <br>
+      c) STAT: The process status, that is, what the process is doing and where its memory resides. For example, S means sleeping and R means running. <br>
+      d) TIME: The amount of CPU time in minutes and seconds that the process has used so far. In other words, the total amount of time that the process has spent running
+      instructions on the processor. <br>
+      e) COMMAND: Note that a process can change this field from its original value.
+
+      <br>
+      <br>
+
+      <p class="inline-heading">Command Options</p>: The <code>ps</code> command has many options. Here are some of the most useful combinations: <br>
+      a) <code>ps x</code>: Show all of your running processes <br>
+      b) <code>ps ax</code>: Show all processes on the system, not just the ones you own <br>
+      c) <code>ps u</code>: Include more detailed information on processes <br>
+      d) <code>ps w</code>: Show full command names, not just what fits on one line
+
+      <br>
+      <br>
+
+      <p class="inline-heading">Killing Processes</p>: To terminate a process, send it a <i>signal</i> with the <code>kill</code> command. A <i>signal</i> is a message to a process
+      from the kernel. When you run kill, you're asking the kernel to send a signal to another process. Doing <code>kill <i>processId</i></code> will send the <code>TERM</code>
+      signal (the terminate signal) to the process with pid <i>processId</i>. You can send different signals by adding an extra option to kill. For example, to freeze a process
+      instead of terminating it, use the <code>STOP</code> signal: <code>kill -STOP <i>processId</i></code>. A stopped process is still in memory, ready to pick up where it left
+      off. Use the <code>CONT</code> signal to continue running the process again: <code>kill -CONT <i>processId</i></code>. <br>
+      - Using ctrl-c to terminate a process that is running in the current terminal is the same as using <code>kill</code> to end the process with the <code>INT</code> (interrupt)
+      signal. <br>
+      - The most brutal way to terminate a process is with the <code>KILL</code> signal. Other signals give the process a chance to clean up after itself, but <code>KILL</code>
+      does not. The operating system terminates the process and forcibly removes it from memory. Use this as a last resort. <br>
+      - The kernel uses numbers to denote the different signals. For instance, you can do <code>kill -9 <i>processId</i></code> instead of <code>kill -KILL <i>processId</i></code>.
+    </div>
+
+    <div class="sub-heading">Background Processes</div>
+    <div>
+      - Normally, when you run a Unix command from the shell, you don't get the shell prompt back until the program finishes executing. However, you can detach a process from the
+      shell and put it in the "background" with the ampersand (&); this gives you the prompt back. <br>
+      - For example, if you have a large file that you need to decompress with gunzip, and you want to do some other stuff while it's running, run a command like this one:
+      <code>gunzip file.gz &</code>. The shell should respond by printing the PID of the new background process, and the prompt should return immediately so that you can continue
+      working. <br>
+      - A program sent to the background may still expect something to be input from the terminal, or print something to the output. In this case, you might see random text appear
+      on your terminal. The best way to make sure that a background process doesn't bother you is to redirect its output (and possibly input).
+    </div>
+
+
+    <div class="sub-heading">File Modes and Permissions</div>
+    <div>
+      - Every Unix file has a set of <code>permissions</code> that determine whether you can read, write, or run the file. Running <code>ls -l</code> displays the permissions. This
+      is an example:
+      <div class="image-block">
+        <div class="expand-screenshot-image-btn border border-primary rounded">
+          <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
+        </div>
+        <div class="screenshot-image">
+          <img src="imgs/ch2/permissions_output.png"
+               class="center-block img-fluid"
+               alt="Sort Output"
+               width="600">
+        </div>
+      </div>
+
+      - <code>groups</code>: shows which groups the currently logged in user belongs to. <br>
+      - <code>cat /etc/group</code>: lists all the groups that are present. <br>
+      - <code>sudo groupadd <i>myGroup</i></code>: creates a new group named <i>myGroup</i> <br>
+      - <code>sudo usermod -a -G myGroup rgbk</code>: will add the user <i>rgbk</i> to <i>myGroup</i>. But doing this does not seem to show <i>myGroup</i> when you run
+      <code>groups</code>. <br>
+
+      - The leftmost column represents the file's <i>mode</i>. This represents the file's permissions and some extra information. This is what the pieces represent:
+      <div class="image-block">
+        <div class="expand-screenshot-image-btn border border-primary rounded">
+          <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
+        </div>
+        <div class="screenshot-image">
+          <img src="imgs/ch2/permissions_output_explained.png"
+               class="center-block img-fluid"
+               alt="Permissions Output Explained"
+               width="370">
+        </div>
+      </div>
+
+      - The first character of the mode is the <i>file type</i>. A dash <code> - </code> in this position, as in the example, denotes a regular file, meaning that there's nothing
+      special about the file. This is by far the most common kind of file. Directories are also common and are indicated by a <code> d </code> in the file type slot. <br>
+      - The rest of a file's mode contains the permissions, which break down into three sets: <code>user</code>, <code>group</code>, and <code>other</code>, in that order. For
+      example, the rw- characters in the example are the user permissions, the r-- characters that follow are the group permissions, and the final r-- characters are the other
+      permissions. <br>
+      - Each permission set can contain four basic representations: <br>
+      a) <code> r </code>: means that the file is readable. This permission give you the authority to open and read a file. Read permission on a directory gives you the ability to
+      lists its content. <br>
+      b) <code> w </code>: means that the file is writable. The write permission on a file gives you the authority to modify the contents of a file. The write permission on a
+      directory gives you the authority to add, remove and rename files stored in the directory. Consider a scenario where you have write permission on file but do not have
+      write permission on the directory where the file is stored. You will be able to modify the file contents. But you will not be able to rename, move or remove the file from the
+      directory. <br>
+      c) <code> x </code>: means that the file is executable (you can run it as a program) <br>
+      d) <code> - </code>: means nothing/no permission <br>
+      - The user permissions (the first set) pertain to the user who owns the file. The second set, group permissions, are for the file's group. Any user in that group can take
+      advantage of these permissions. Everyone else on the system has access according to the third set, the <i>other</i> permissions, which are sometimes called <i>world</i>
+      permissions. <br>
+      - Each read, write, and execute permission slot is sometimes called a permission bit. Therefore, you may hear people refer to parts of the permissions as "the read bits".
+      <br>
+      - Some executable files have an <code> s </code> in the user permissions listing instead of an <code>x</code>. This indicates that the executable is <i>setuid</i>, meaning
+      that when you execute the program, it runs as though the file owner is the user instead of you. Many programs use this setuid bit to run as root in order to get the
+      privileges they need to change system files. One example is the passwd program, which needs to change the /etc/passwd file.
+      <div class="image-block">
+        <div class="expand-screenshot-image-btn border border-primary rounded">
+          <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
+        </div>
+        <div class="screenshot-image">
+          <img src="imgs/ch2/passwd_output.png"
+               class="center-block img-fluid"
+               alt="Where is Passwd"
+               width="1200">
+        </div>
+      </div>
+    </div>
+
+
+    <div class="sub-heading">Permissions: Modifying Permissions</div>
+    <div>
+      - To change permissions, use the <code>chmod</code> command. First, pick the set of permissions that you want to change, and then pick the bit to change. For example, to add
+      group (g) and world (o, for "other") read (r) permissions to <i>fileName</i>, you could run these two commands: <code>chmod g+r <i>fileName</i></code>,
+      <code>chmod o+r <i>fileName</i></code>. Or you could do all of it in one shot: <code>chmod go+r <i>fileName</i></code>. To remove these permissions, we would do:
+      <code>chmod go-r <i>fileName</i></code>. <br>
+      - <a href="https://www.guru99.com/file-permissions.html">This link</a> goes over how to change permissions. Below gist shows how to do this:
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/3fe90c254a735507a7920870d9c841cf.js"></script>
+        </div>
+      </div>
+
+      - You will also see people changing permissions with numbers: <code>chmod 644 <i>fileName</i></code>. This is called an <i>absolute</i> change because it sets all permission
+      bits at once. <br>
+      - To understand how this works, you need to know how to represent the permission bits in octal form (each numeral represents a number in base 8 and corresponds to a
+      permission set). You don't really need to know how to construct absolute modes; just memorize the modes that you use most often.
+      <div class="image-block">
+        <div class="expand-screenshot-image-btn border border-primary rounded">
+          <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
+        </div>
+        <div class="screenshot-image">
+          <img src="imgs/ch2/AbsolutePermissionModes.png"
+               class="center-block img-fluid"
+               alt="Absolute Permission Modes"
+               width="800">
+        </div>
+      </div>
+
+      - Directories also have permissions. You can list the contents of a directory if it's readable, but you can only access a file in a directory if the directory is executable.
+      (One common mistake people make when setting the permissions of directories is to accidentally remove the execute permission when using absolute modes.)
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/bc04049bdfd0430b163de6fd42055875.js"></script>
+        </div>
+      </div>
+
+      - Something about <code>umask</code>.
+    </div>
+
+
+    <div class="sub-heading">Permissions: Symbolic Links</div>
+    <div>
+      - A <i>symbolic link</i> is a file that points to another file or a directory, effectively creating an alias (like a shortcut in Windows). Symbolic links offer quick access
+      to obscure directory paths. <br>
+      - A symbolic link would look something like this. Note the <code>l</code> as the file type for <i>symLinkToNewFolder1</i>. If you try to do
+      <code>cd symLinkToNewFolder1</code>, you will enter the <code>/home/rgbk/Desktop/MyStuff/newFolder1</code> instead. Symbolic links are simply names that point to other names.
+      Their names and the paths to which they point don't have to mean anything. For example, <code>/home/rgbk/Desktop/MyStuff/newFolder1</code> doesn't even need to exist.
+      <div class="image-block">
+        <div class="expand-screenshot-image-btn border border-primary rounded">
+          <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
+        </div>
+        <div class="screenshot-image">
+          <img src="imgs/ch2/symlink_output.png"
+               class="center-block img-fluid"
+               alt="Symbolic Link"
+               width="900">
+        </div>
+      </div>
+
+      - One problem with using symbolic links is that you can't right away say that the link is to a file or a directory. You will have to follow the link to see this. Also, your
+      system can have links that point to other links, ie. <i>chained symbolic links</i>.
+    </div>
+
+    <div class="sub-heading">Permissions: Creating Symbolic Links</div>
+    <div>
+      - We can creat a symbolic link by doing <code>ln -s target linkname</code> where <i>linkname</i> is the name of the symbolic link, and <i>target</i> is the path of the file
+      or directory that the link is meant to point to. The <code>-s</code> is meant to say that the link is a symbolic link. Don't forget the -s option when creating a symbolic
+      link. Without it, ln creates a hard link, giving an additional real filename to a single file. And this is supposed to be bad for reasons that are beyond me.
+    </div>
+
+
+    <div class="sub-heading">Archiving and Compressing Files: What is the difference between the two?</div>
+    <div>
+      - See <a href="https://askubuntu.com/questions/122141/whats-the-difference-between-tar-gz-and-gz-or-tar-7z-and-7z">What's the difference between .tar.gz and .gz, or .tar.7z
+      and .7z?</a> on Stack Exchange. Below is a high-level idea. Read the corresponding sections for the complete explanation. <br>
+      - If you come from a Windows background, you may be familiar with the zip and rar formats. These are <i>archives</i> of multiple files <i>compressed</i> together. In Unix and
+      Unix-like systems (like Ubuntu), archiving and compression are separate. <br>
+      - <code>tar</code> puts multiple files into a single (tar) file (archiving) <br>
+      - <code>gzip</code> compresses one file (compressing) <br>
+      - So, to get a <i>compressed archive</i>, you combine the two. First use <code>tar</code> to get all the files into a single file, let's say <i>archive.tar</i>, and then
+      compress it by calling <code>gzip</code> on it to convert it into <i>archive.tar.gz</i>. <br>
+      - If you have just one file, like <i>notes</i>, there is no need to run <code>tar</code> on it. You can just run <code>gzip</code> on it directly.
+    </div>
+
+    <div class="sub-heading">Archiving and Compressing Files: Using <code>gzip</code></div>
+    <div>
+      <p class="inline-heading">Compress a file: </p> <code>gzip -k <i>file1</i></code>. <code>k</code> to keep the original uncompressed file. <br>
+      <p class="inline-heading">Decompress a file: </p> <code>gunzip <i>file1.gz</i></code>
+
+      <br>
+      <br>
+
+      - The program gzip (GNU Zip) is one of the current standard Unix compression programs. <br>
+      - A file that ends with <code>.gz</code> is a GNU Zip archive. Use <code>gunzip file.gz</code> to uncompress <i>file.gz</i> and remove the suffix; to compress it again,
+      use <code>gzip file</code>. <br>
+      - Running <code>gzip file1 file2</code> will create two separate files <i>file1.gz</i> and <i>file2.gz</i>. Note that this will also delete <i>file1</i> and <i>file2</i>. In
+      order to keep the original files along with the newly created compressed files, run with <code>-k</code> option: <code>gzip -k file1 file2</code> as mentioned in this SO
+      answer: <a href="https://unix.stackexchange.com/a/79411">How to tell gzip to keep original file</a>?
+    </div>
+
+    <div class="sub-heading">Archiving and Compressing Files: Using <code>tar</code></div>
+    <div>
+      <p class="inline-heading">Archive files: </p> <code>tar cvf myArchive.tar file1 file2 ...</code>. c for create, v for verbose, f for file name. Creates archive called
+      <i>myArchive.tar</i> <br>
+      <p class="inline-heading">Unpack archive: </p> <code>tar xvf myArchive.tar</code>. x for extract, v for verbose, f to pass in the archive name to unpack. Won't work without
+      the f flag. <br>
+      <p class="inline-heading">See contents of archive: </p> <code>tar -tf myArchive.tar</code>. t to list the contents of the archive.
+
+      <br>
+      <br>
+
+      - Use <code>tar cvf myArchive.tar file1 file2 ...</code> to archive files. This will create a new archive named <i>myArchive</i>. The <code>-c</code> flag tells it to create
+      a new archive. The <code>-v</code> flag gives a verbose representation of the output. <code>-f</code> is used to tell it what the name of the final archived file should be.
+      If you are using the <code>-f</code> flag, make sure that the next argument that you pass in is the file name that you want the archive to have. Otherwise, if you erroneously
+      do something like this <code>tar cvf file1 file2 ...</code>, your <i>file1</i> will be overwritten with the archived <i>file2</i>. Also, if you do something like this:
+      <code>tar -cvfp newArchive.tar file1 file2</code>, you will end up creating a new archive named <i>p</i> instead of the terminal reading <i>p</i> as a flag that you are
+      passing. Hence, run this instead <code>tar -cvpf newArchive.tar file1 file2</code>. This will correctly create a new archive that is named <i>newArchive.tar</i> and has the
+      files that you need. Else you can also run something like this: <code>tar -cv -f archive3.tar file1 file2</code><br>
+      - Archives created by tar usually have a .tar suffix. This isn't required, it's just by convention. <br>
+      - You can unpack a tar file by running <code>tar xvf myArchive.tar</code>. The <code>x</code> flag puts tar into <i>extract (unpack)</i> mode. When using extract mode,
+      remember that tar does not remove the archived .tar file after extracting its contents.
+
+      <br>
+      <br>
+
+      <p class="inline-heading">Table-of-Contents Mode</p>: <br>
+      - Before unpacking an archive, you should check the contents of the tar by using the table-of-contents mode by using the <code>t</code> flag instead of the <code>x</code>
+      flag. This will print the files within it so that when you unpack, you will have a manageable mess on your hands. <code>tar -tf myArchive.tar</code> will show the contents of
+      the <i>myArchive.tar</i> archive. Doing <code>tar -tvf myArchive.tar</code> will show some other details as well. <br>
+      - Say you created an archive. Then you want to unpack the archive while still maintaining the permissions that were originally associated with the files before you archived
+      them. In this case, you would unpack the archive by using the <code>-p</code> flag. Refer <a
+      href="https://askubuntu.com/questions/225865/copy-files-without-losing-file-folder-permissions">Copy files without losing file/folder permissions</a>,
+      <a href="https://superuser.com/questions/838392/how-to-tar-a-directory-preserving-not-only-permissions-but-ownership-too">How to tar a directory preserving not only
+        permissions, but ownership too</a>,
+      <a href="https://askubuntu.com/questions/463325/what-does-tars-p-preserve-permissions-flag-actually-preserve">What does tar's -p (preserve permissions) flag actually
+        preserve?</a>. Also, when you are unpacking the files, you will want to be logged in as the root use, because a user cannot change the permissions of another user.
+    </div>
+
+
+    <div class="sub-heading">Archiving and Compressing Files: Compressed Archives (tar.gz)</div>
+    <div>
+      - As we have looked above, archives are normally found compressed, and have a file extension of <i>.tar.gz</i>. To unpack a compressed archive, work from the right side to
+      the left; get rid of the <code>.gz</code> first and then worry about the <code>.tar</code>. For instance, to decompress and unpack something like <i>myFile.tar.gz</i>, you
+      would first run <code>gunzip myFile.tar.gz</code> to decompress it, and then <code>tar xvf myFile.tar</code> to unpack it. <br>
+      - You can also do both of these together by using the <code>zcat</code> command. <br>
+      - <code>zcat file.tar.gz | tar xvf -</code> is a command pipeline that will unpack <i>file.tar.gz</i>. The <code>zcat</code> command is the same as <code>gunzip -dc</code>.
+      The <code>-d</code> option decompresses and the <code>-c</code> option sends the result to standard output (in this case, to the <code>tar</code> command). Some commands
+      accept <code>-</code> in place of a filename to read from standard input instead of from a named file. This is what the <code>-</code> argument passed to <code>tar</code>
+      after <code>xzf</code>. Read <a href="https://askubuntu.com/a/1151912/1033660">What does the hyphen "-" mean in "tar xzf -"?</a> for details. <br>
+      - Because it's so common to use <code>zcat</code>, the version of <code>tar</code> that comes with Linux has a shortcut. You can use <code>z</code> as an option to
+      automatically invoke <code>gzip</code> on the archive; this works both for extracting an archive (with the <code>x</code> or <code>t</code> modes in <code>tar</code>) and
+      creating one (with <code>c</code>). <br>
+      - A .tgz file is the same as a .tar.gz file. The suffix is meant to fit into FAT (MS-DOS based) filesystems.
+    </div>
+
+
+    <div class="sub-heading">Linux directory Hierarchy Essentials</div>
+    <div>
+      - There is a standard for Filesystem <a href="https://www.pathname.com/fhs/">defined here</a>. <br>
+      - Simplified view of the hierarchy. Note that the directory structure under <code>/usr</code> contains some of the same directory names as <code>/</code> <br>
+      <div class="image-block">
+        <div class="expand-screenshot-image-btn border border-primary rounded">
+          <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
+        </div>
+        <div class="screenshot-image">
+          <img src="imgs/ch2/FileSystemHierarchy.png"
+               class="center-block img-fluid"
+               alt="File System Hierarchy"
+               width="790">
+        </div>
+      </div>
+
+      <br>
+
+      <p class="inline-heading">Important subdirectories in root</p>: <br>
+      a) <code>/bin</code>: Contains ready-to-run programs (also known as an executables), including most of the basic Unix commands such as ls and cp.
+      Most of the programs in /bin are in binary format, having been created by a C compiler, but some are shell scripts in modern systems. <br>
+
+      b) <code>/dev</code>: Contains device files. We will look at these in Chapter 3. <br>
+
+      c) <code>/etc</code>: This core system configuration directory (pronounced EHT-see) contains the user password, boot, device, networking, and other setup files. Many items in
+      /etc are specific to the machine's hardware. <br>
+
+      d) <code>/home</code>: Holds personal directories for regular users. Most Unix installations conform to this standard. <br>
+
+      e) <code>/lib</code>: An abbreviation for library, this directory holds library files containing code that executables can use. There are two types of libraries:
+      static and shared. The /lib directory should contain only shared libraries, but other lib directories, such as /usr/lib, contain both varieties and other auxiliary files.
+      <br>
+      - What is the difference between a shared and a static library? DLLs are Microsoft's implementation of shared libraries for instnce.Shared libraries allow common code to be
+      bundled into a wrapper, the DLL, which is used by any application software on the system without loading multiple copies into memory. A simple example might be the GUI text
+      editor, which is widely used by many programs. By placing this code in a DLL, all the applications on the system can use it without using more memory. This contrasts with
+      static libraries, which are functionally similar but copy the code directly into the application. In this case, every application grows by the size of all the libraries it
+      uses, and this can be quite large for modern programs. <br>
+      - <a href="https://stackoverflow.com/questions/2649334/difference-between-static-and-shared-libraries">Difference between static and shared libraries?</a> goes over the
+      differences between the two in more details. Read through all the answers. <br>
+
+      f) <code>/proc</code>: Provides systems statistics through a browsable directory-and-file interface. The /proc directory contains information about currently running
+      processes as well as some kernel parameters. <br>
+
+      g) <code>/sys</code>: This directory is similar to /proc in that it provides a device and system interface. We will look at it in more detail in Chapter 3. <br>
+
+      h) <code>/sbin</code>: The place for system executables. Programs in /sbin directories relate to system management, so regular users usually do not have /sbin components in
+      their command paths. Many of the utilities found here will not work if you're not running them as root. <br>
+
+      i) <code>/tmp</code>: A storage area for smaller, temporary files that you don't care much about. Any user may read to and write from /tmp, but the user may not have
+      permission to access another user's files there. Many programs use this directory as a workspace. If something is extremely important, don't put it in /tmp because most
+      distributions clear /tmp when the machine boots and some even remove its old files periodically. Also, don't let /tmp fill up with garbage because its space is usually
+      shared with something critical (like the rest of /, for example). <br>
+
+      j) <code>/usr</code>: Although pronounced "user", this subdirectory has no user files. Instead, it contains a large directory hierarchy, including the bulk of the Linux
+      system. Many of the directory names in /usr are the same as those in the root directory (like /usr/bin and /usr/lib), and they hold the same type of files. (The reason that
+      the root directory does not contain the complete system is primarily historic-in the past, it was to keep space requirements low for the root.) <br>
+
+      k) <code>/var</code>: The variable subdirectory, where programs record runtime information. System logging, user tracking, caches, and other files that system
+      programs create and manage are here.
+
+      <br>
+      <br>
+
+      <p class="inline-heading">Other Root Subdirectories</p>: There are a few other interesting subdirectories in the root directory: <br>
+      a) <code>/boot</code>: Contains kernel bootloader files. These files pertain only to the very first stage of the Linux startup procedure. <br>
+      b) <code>/media</code>: A base attachment point for removable media such as flash drives that is found in many distributions <br>
+      c) <code>/opt</code>: This may contain additional third-party software. Many systems don't use /opt.
+
+      <br>
+      <br>
+
+      <p class="inline-heading">Subdirectories in /usr</p>: /usr is where most of the user-space programs and data reside. In addition to /usr/bin, /usr/sbin, and /usr/lib, /usr
+      contains the following: <br>
+      a) <code>/include</code>: Holds header files used by the C compiler. What are header files in C? <a href="https://www.youtube.com/watch?v=oe11Dhw9dOg">This YT video</a>
+      explains how it works. <br>
+      b) <code>/info</code>: Contains GNU info manuals <br>
+      c) <code>/local</code>: Is where administrators can install their own software. Its structure should look like that of / and /usr. What does that mean? <br>
+      d) <code>/man</code>: Contains manual pages.
+
+      <br>
+      <br>
+
+      <p class="inline-heading">Kernel Location</p>: On Linux systems, the kernel is normally in /vmlinuz or /boot/vmlinuz. A boot loader loads this file into memory and sets it in
+      motion when the system boots. We will read more about bootloader in Chapter 5. vmlinuz is the name of the Linux kernel executable. vmlinuz is a compressed Linux kernel, and
+      it is capable of loading the operating system into memory so that the computer becomes usable and application programs can be run. <br>
+      - Once the boot loader runs and sets the kernel in motion, the main kernel file is no longer used by the running system. However, you'll find many modules that the kernel can
+      load and unload on demand during the course of normal system operation. Called loadable kernel modules, they are located under /lib/modules.
+    </div>
+
+
+    <div class="sub-heading">Running Commands as the SuperUser</div>
+    <div>
+      - In a terminal you can run <code>su</code> and enter the root password in order to start a root shell. This way you can run commands as the superuser. However, this has some
+      drawbacks: <br>
+      a) You have no record of system-altering commands <br>
+      b) You have no record of the users who performed system-altering commands <br>
+      c) You don't have access to your normal shell environment <br>
+      d) You have to enter the root password
+
+      <br>
+      <br>
+
+      <p class="inline-heading">sudo</p>: sudo allows administrators to run commands as root when they are logged in as themselves. When you run a command with <code>sudo</code>,
+      sudo logs this action with the syslog service under the local2 facility. We will look at this later.
+
+      <br>
+      <br>
+
+      <p class="inline-heading">Who can run <code>sudo</code>: </p> In order to run a command with <code>sudo</code>, you must be configured as a privileged user in your
+      <code>/etc/sudoers</code> file.
+    </div>
+  </div>
+
+
+  <hr>
+  <div id="Chapter3" class="chapter">Chapter 3: Devices</div>
+  <hr>
+
+  <div class="textual-content">
     <div class="sub-heading">Levels and layers of abstraction in a linux system</div>
     <div>
 
@@ -339,6 +1126,6 @@
 </div>
 
 
-<script src="../../script.js"></script>
+<script src=" ../../script.js"></script>
 </body>
 </html>
