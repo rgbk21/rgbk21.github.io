@@ -124,6 +124,7 @@
   <div>
     This page contains my notes from the following books: <br>
     a) How Linux Works by Brian Ward <br>
+    b) The Linux Command Line by William E. Shotts, Jr. <br>
   </div>
 
 
@@ -159,6 +160,14 @@
       - You will often see control characters marked with a caret; for example, ^C for ctrl-c. <br>
       - Mastering Regular Expressions, 3rd edition (O'Reilly, 2006) <br>
       - You can search through the previous commands using: <code>Ctrl + r</code>. Then you can cycle between the different commands by pressing <code>Ctrl + r</code> again. <br>
+      - Filenames and commands in Linux, as in Unix, are case sensitive. The filenames <i>File1</i> and <i>file1</i> refer to different files. <br>
+      - Commands are often followed by one or more <i>options</i> that modify their behavior, and further, by one or more <i>argument</i>, the items upon which the command acts. So
+      most commands look something like this: <code>command -options arguments</code>. Most commands use options consisting of a single option preceded by a <code> - </code>. For
+      instance, <code>ls -l</code>. But many commands also support <i>long options</i>, which are entire words that are preceded by two dashes instead of just one. For instance,
+      the long option version of <code>ls -a</code> would be <code>ls --all</code>. Also, many commands allow short options to be strung together. For instance, you can run
+      <code>ls -lt</code>, where <code>l</code> would give you the long form output, and <code>t</code> would sort the output by the modified date of the file. You can combine the
+      long and the short forms together as well. For instance, <code>ls -lt --reverse</code> would reverse the sorting order. <br>
+      - One of the common ideas in Unix like operating systems such as Linux is that "everything is a file".
     </div>
 
   </div>
@@ -393,7 +402,8 @@
       lists the contents of a directory. The default is the current directory. Use <code>ls -l</code> for a detailed (long) listing and
       <code>ls -F</code> to display file type information. <br>
       - The output to ls -l would look something like this. It includes the owner of the file (column 3), the group (column 4), the file size (column 5), and the modification
-      date/time (between column 5 and the filename). The file size is given in bytes. You can run <code>ls -lh</code> to print the listing with human readable file sizes.
+      date/time (between column 5 and the filename). The file size is given in bytes. You can run <code>ls -lh</code> to print the listing with human readable file sizes. <br>
+      - Column 2 represents the number of hard links to the file. This is related to the symbolic links that we will look at later on. <br>
       <div class="image-block">
         <div class="expand-screenshot-image-btn border border-primary rounded">
           <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
@@ -403,6 +413,19 @@
                class="center-block img-fluid"
                alt="ls output"
                width="400">
+        </div>
+      </div>
+
+      - You can pass in multiple options to the ls command. Some of the more commonly used options are:
+      <div class="image-block">
+        <div class="expand-screenshot-image-btn border border-primary rounded">
+          <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
+        </div>
+        <div class="screenshot-image">
+          <img src="imgs/ch2/ls_options.png"
+               class="center-block img-fluid"
+               alt="ls output"
+               width="500">
         </div>
       </div>
 
@@ -454,14 +477,26 @@
       Similarly, <code>../bin</code> would refer to /usr/bin. <br>
       - One dot (.) refers to the current directory; for example, if you're in /usr/lib, the path <code>.</code> is still /usr/lib, and <code>./X11</code> is /usr/lib/X11. You
       won't have to use <code>.</code> very often because most commands default to the current directory if a path doesn't start with / (you could just use X11 instead of ./X11 in
-      the preceding example). <br>
+      the preceding example). In other words, if you do not specify a pathname to something, the working directory will be assumed. <br>
       - A path not beginning with / is called a <i>relative path</i>. Most of the time, you'll work with relative pathnames, because you'll already be in the directory you need to
       be in or somewhere close by. <br>
       - Some basic directory commands: <br>
 
       a) <code>cd</code>: The <i>current working directory</i> is the directory that a process (such as the shell) is currently in. The cd command changes the
       shell's current working directory: <code>cd dir</code> will change the working directory to <i>dir</i>. If you omit <i>dir</i>, the shell returns to your <i>home
-      directory</i>, the directory you started in when you first logged in.
+      directory</i>, the directory you started in when you first logged in. Each user account is given its own home directory, which is the only place the user is allowed
+      to write files when operating as a regular user.
+      <div class="image-block">
+        <div class="expand-screenshot-image-btn border border-primary rounded">
+          <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
+        </div>
+        <div class="screenshot-image">
+          <img src="imgs/ch2/cd_shortcuts.png"
+               class="center-block img-fluid"
+               alt="ls output"
+               width="600">
+        </div>
+      </div>
 
       <br>
       <br>
@@ -527,6 +562,19 @@
       - You can send the standard output of nearly any program directly to another program's standard input. This is exceptionally useful when you have a command with a lot of
       output to sift through and you'd like to use something like <code>less</code> to view the output. Here's an example of sending the output of a grep command to
       <code>less</code>: <code>grep ie /usr/share/dict/words | less</code>. <br>
+      - Some keyboard commands used by less are:
+      <div class="image-block">
+        <div class="expand-screenshot-image-btn border border-primary rounded">
+          <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
+        </div>
+        <div class="screenshot-image">
+          <img src="imgs/ch2/less_commands.PNG"
+               class="center-block img-fluid"
+               alt="less commands"
+               width="500">
+        </div>
+      </div>
+
 
       c) <code>pwd</code>: The pwd (print working directory) program simply outputs the name of the current working directory. <br>
 
@@ -1020,7 +1068,8 @@
 
     <div class="sub-heading">Linux directory Hierarchy Essentials</div>
     <div>
-      - There is a standard for Filesystem <a href="https://www.pathname.com/fhs/">defined here</a>. <br>
+      - There is a standard for Filesystem <a href="https://www.pathname.com/fhs/">defined here</a>. Not all Linux distributions conform to the standard exactly, but most come
+      pretty close. <br>
       - Simplified view of the hierarchy. Note that the directory structure under <code>/usr</code> contains some of the same directory names as <code>/</code> <br>
       <div class="image-block">
         <div class="expand-screenshot-image-btn border border-primary rounded">
@@ -1043,9 +1092,10 @@
       b) <code>/dev</code>: Contains device files. We will look at these in Chapter 3. <br>
 
       c) <code>/etc</code>: This core system configuration directory (pronounced EHT-see) contains the user password, boot, device, networking, and other setup files. Many items in
-      /etc are specific to the machine's hardware. <br>
+      /etc are specific to the machine's hardware. /etc/passwd contains a list of the user accounts <br>
 
-      d) <code>/home</code>: Holds personal directories for regular users. Most Unix installations conform to this standard. <br>
+      d) <code>/home</code>: Holds personal directories for regular users. Most Unix installations conform to this standard. Ordinary users can write files only in their
+      home directories. This limitation protects the system from errant user activity. <br>
 
       e) <code>/lib</code>: An abbreviation for library, this directory holds library files containing code that executables can use. There are two types of libraries:
       static and shared. The /lib directory should contain only shared libraries, but other lib directories, such as /usr/lib, contain both varieties and other auxiliary files.
@@ -1059,7 +1109,8 @@
       differences between the two in more details. Read through all the answers. <br>
 
       f) <code>/proc</code>: Provides systems statistics through a browsable directory-and-file interface. The /proc directory contains information about currently running
-      processes as well as some kernel parameters. <br>
+      processes as well as some kernel parameters. It's not a real filesystem in the sense of files stored on your hard drive. Rather, it is a virtual filesystem maintained by the
+      Linux kernel. The "files" it contains are peepholes into the kernel itself that can tell you how the kernel is performing. <br>
 
       g) <code>/sys</code>: This directory is similar to /proc in that it provides a device and system interface. We will look at it in more detail in Chapter 3. <br>
 
@@ -1139,7 +1190,7 @@
   <div class="textual-content">
     <div class="sub-heading">Levels and layers of abstraction in a linux system</div>
     <div>
-
+      - In fact, if this is your first time looking at Linux devices, you're encouraged to move to the next chapter to start learning about how to use disks.
     </div>
   </div>
 
