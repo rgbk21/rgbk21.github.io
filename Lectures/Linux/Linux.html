@@ -1188,9 +1188,120 @@
   <hr>
 
   <div class="textual-content">
-    <div class="sub-heading">Levels and layers of abstraction in a linux system</div>
+    <div class="sub-heading">What is this chapter about</div>
     <div>
-      - In fact, if this is your first time looking at Linux devices, you're encouraged to move to the next chapter to start learning about how to use disks.
+      - It's important to understand how the kernel interacts with user space when presented with new devices. The udev system enables user-space programs to automatically
+      configure and use new devices. You'll see the workings of how the kernel sends a message to a user-space process through udev, as well as what the process does with it. <br>
+      - <a href="https://tldp.org/LDP/tlk/dd/drivers.html">TLDP Chapter 8: Device Drivers</a> <br>
+      - Remember how we had to install drivers on Windows XP in the before times? It was only after that that we could play sound on the machine? This chapter is about those
+      drivers. The drivers are supposed to provide a software interface to the hardware device, and enables access to the operating system and other applications.
+    </div>
+
+    <div class="sub-heading">Device Files</div>
+    <div>
+      - It is easy to manipulate most devices on a Unix system because the kernel presents many of the device I/O interfaces to user processes as files. These device files are
+      sometimes called <i>device nodes</i>. <br>
+      - Device files are in the /dev directory. <br>
+      - You can send text to a device. For instance, <code>echo string1 string 2 &gt; /dev/null</code>, this will redirect the stderr output to a file. In this case, the "file" is
+      actually a device: <code>/dev/null</code>. Now it is upto the kernel to decide what it should do with the data written to this device. In the case of /dev/null, the kernel
+      simply ignores the input and throws away the data. Why would you need something like /dev/null? It is useful in case you are running a command and want to ignore the stderr
+      stream for example. So <code>ssh myhostname "command1; command2;...commandn;" 2&gt;/dev/null</code> will send the error stream to /dev/null which will be ignored, and you
+      will only see stdout on the terminal. <a href="https://stackoverflow.com/questions/13408619/what-does-dev-null-mean-at-the-end-of-shell-commands">What does "/dev/null" mean
+      at the end of shell commands</a>, and also <a href="https://linuxhint.com/what_is_dev_null/">What is /dev/null</a>. <br>
+    </div>
+
+
+    <div class="sub-heading">Types of devices</div>
+    <div>
+      - Linux supports four types of hardware devices. Note the first character of each line. If this character is b, c, p, or s, the file is a device. These letters stand for
+      <i>block</i>, <i>character</i>, <i>pipe</i>, and <i>socket</i>, respectively. <br>
+      - The numbers before the dates in the first two lines are the <i>major</i> and <i>minor</i> device numbers that help the kernel identify the device. Similar devices usually
+      have the same major number, such as sda3 and sdb1 (both of which are hard disk partitions). <br>
+      - Not all devices have device files because the block and character device I/O interfaces are not appropriate in all cases.
+      <div class="image-block">
+        <div class="expand-screenshot-image-btn border border-primary rounded">
+          <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
+        </div>
+        <div class="screenshot-image">
+          <img src="imgs/ch3/device_types.png"
+               class="center-block img-fluid"
+               alt="ls output"
+               width="700">
+        </div>
+      </div>
+
+      <p class="inline-heading">Block Device</p>
+      <div>
+        - Programs access data from a block device in fixed chunks. The sda1 in the preceding example is a disk device, a type of block device. <br>
+        - Disks can be easily split up into blocks of data. Because a block device's total size is fixed and easy to index, processes have random access to any block in the device
+        with the help of the kernel. USB devices, Hard Disks, DVDs are examples of block devices.
+      </div>
+
+      <br>
+
+      <p class="inline-heading">Character Device</p>
+      <div>
+        - Character devices work with data streams. You can only read characters from or write characters to character devices, as previously demonstrated with /dev/null. <br>
+        - Character devices don't have a size; when you read from or write to one, the kernel usually performs a read or write operation on the device. Printers directly attached
+        to your computer are represented by character devices. It's important to note that during character device interaction, the kernel cannot back up and reexamine the data
+        stream after it has passed data to a device or process.
+      </div>
+
+      <br>
+
+      <p class="inline-heading">Pipe Device</p>
+      <div>
+        - <i>Named Pipes</i> are like character devices, with another process at the other end of the I/O stream instead of a kernel driver. <br>
+        - Remember how we use the pipe operator <code> | </code> to redirect the output of one command into the input of another command? Like so:
+        <code>ls -l | grep newFolder</code>. In this case, the pipe that we were using is known as an anonymous/unnamed pipe. It is called anonymous because the pipe exists only
+        inside the kernel and cannot be accessed by processes that created it, in this case, the bash shell. The other sort of pipe is a "named" pipe, which is sometimes called a
+        FIFO. FIFO stands for "First In, First Out" and refers to the property that the order of bytes going in is the same coming out. The "name" of a named pipe is actually a
+        file name within the file system. <a href="https://www.linuxjournal.com/article/2156">Some relevant source</a>. <br>
+        - <code>mkfifo pipe1</code> will create a new pipe device. <a href="https://www.baeldung.com/linux/anonymous-named-pipes">Source on Baeldung</a>.
+      </div>
+
+      <br>
+
+      <p class="inline-heading">Socket Device</p>
+      <div>
+        - Sockets are special-purpose interfaces that are frequently used for interprocess communication. They're often found outside of the /dev directory. Socket files represent
+        Unix domain sockets; we'll learn more about those in Chapter 10.
+      </div>
+    </div>
+
+    <div class="sub-heading">The sysfs device Path</div>
+    <div>
+      - The traditional Unix /dev directory is a convenient but simplistic way for user processes to reference and interface with devices supported by the kernel. For instance,
+      the kernel assigns devices in on the basis of which drive gets enumerated first. The first drive gets /dev/sda, the second /dev/sdb, etc. So a device may have a different
+      name between reboots. Source: <a href="https://superuser.com/questions/282618/how-does-dev-sdx-work?">How does /dev/sdX work?</a><br>
+      - To provide a uniform view for attached devices based on their actual hardware attributes, the Linux kernel offers the sysfs interface through a system of files and
+      directories. The base path for devices is /sys/devices. However, do note that the files and subdirectories here are meant to be read primarily by programs rather than humans.
+      <br>
+      - There are a few shortcuts in the /sys directory. For example, /sys/block should contain all the block devices available on a system. However, those
+      are just symbolic links; run <code>ls -l /sys/block</code> to reveal the true sysfs paths.
+    </div>
+
+
+    <div class="sub-heading">dd and Devices</div>
+    <div>
+      - <code>dd</code> reads from an input file or stream and writes to an output file or stream, possibly doing some encoding conversion on the way. <br>
+      - <a href="https://www.youtube.com/watch?v=BisJBC93sjQ">This YT tutorial</a> goes into some details about how to use the dd command. <br>
+    </div>
+
+    <div class="sub-heading">Device Name Summary</div>
+    <div>
+      - // TODO: Everything after this is left undone.
+    </div>
+  </div>
+
+  <hr>
+  <div id="Chapter4" class="chapter">Chapter 4: Disks and FileSystems</div>
+  <hr>
+
+  <div class="textual-content">
+    <div class="sub-heading">What is this chapter about</div>
+    <div>
+
     </div>
   </div>
 
