@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+          integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+          crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+          integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+          crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+          integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+          crossorigin="anonymous"></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9QJ5D3X353"></script>
+  <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+          dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-9QJ5D3X353');
+  </script>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../../globalStyles.css">
+  <meta charset="UTF-8">
+  <meta name="author" content="Raj Gaurav Ballabh Kumar">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dart2 Notes</title>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+
+  <div class="navbar-header">
+    <a href="../../index.html" class="navbar-brand">rgbk21</a>
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"><span
+    class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="nav navbar-nav">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+           aria-expanded="false">
+          Projects
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="../../Projects/TwitterCritNodes/TwitterCritNodes_1.html">Identifying
+            Critical Nodes on Twitter</a>
+          <a class="dropdown-item" href="../../Projects/isRelatedTo/isRelatedTo.html">isRelatedTo</a>
+          <div class="dropdown-divider"></div>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+           aria-expanded="false">
+          HTML Projects
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="../../WordleCheater/index.html">Wordle Cheater</a>
+          <a class="dropdown-item" href="../../Pig_Game/index.html">2-Player Pig Game</a>
+          <a class="dropdown-item" href="../../ImageGallery/ImageGallery.html">Image Gallery</a>
+          <a class="dropdown-item" href="../../RGB_Guesser_Game/RGB.html">RGB Guesser Game</a>
+          <a class="dropdown-item" href="../../ToDoList/todo.html">To-Do List</a>
+          <div class="dropdown-divider"></div>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+           aria-expanded="false">
+          Notes
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="../../Lectures/COMS_631/COMS_631_index.html">COMS 631</a>
+          <a class="dropdown-item" href="../../Lectures/COMS_535/COMS_535_index.html">COMS 535</a>
+          <a class="dropdown-item" href="../../Lectures/EffectiveJava/EffectiveJava.html">Effective Java</a>
+          <a class="dropdown-item" href="../../Lectures/DI/DI.html">Dependency Injection</a>
+          <a class="dropdown-item" href="../../Lectures/Linux/Linux.html">Linux</a>
+          <div class="dropdown-divider"></div>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+           aria-expanded="false">
+          Code
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="../../Code/ThingsToRemember/ThingsToRemember.html">Things To Remember</a>
+          <a class="dropdown-item" href="../../Code/Java_Notes/JavaNotes.html">Java Notes</a>
+          <a class="dropdown-item" href="../../Code/Java_Notes/JavaNotes_2.html">Java Notes 2</a>
+          <a class="dropdown-item" href="../../Code/LeetCode/LeetCode.html">LeetCode Notes</a>
+          <a class="dropdown-item" href="../../Code/Applying_Java_Notes/ApplyingJava_Notes.html">ApplyingJava Notes</a>
+          <a class="dropdown-item" href="../../Code/JavaScript/JavaScript.html">JavaScript Notes</a>
+          <a class="dropdown-item" href="../../Code/HTML_CSS/HTML_CSS_Basics.html">HTML & CSS Notes</a>
+          <a class="dropdown-item" href="../../Code/SQL/SQL.html">SQL Notes</a>
+          <a class="dropdown-item" href="../../Code/Spring/Spring.html">Spring Notes</a>
+          <a class="dropdown-item" href="../../Code/Kafka/Kafka.html">Kafka Notes</a>
+          <a class="dropdown-item" href="../../Code/Angular/Angular.html">Angular</a>
+          <a class="dropdown-item" href="../../Code/Hibernate/Hibernate.html">Hibernate</a>
+          <div class="dropdown-divider"></div>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+           aria-expanded="false">
+          In Another Life
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="../../InAnotherLife/Chapter1/Chapter1.html">Chapter 1</a>
+          <a class="dropdown-item" href="../../InAnotherLife/Chapter2/Chapter2.html">Chapter 2</a>
+          <a class="dropdown-item" href="../../InAnotherLife/Chapter3/Chapter3.html">Chapter 3</a>
+          <div class="dropdown-divider"></div>
+        </div>
+      </li>
+    </ul>
+
+
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active"><a class="nav-link" href="https://github.com/rgbk21">GitHub</a></li>
+      <li class="nav-item active"><a class="nav-link" href="https://www.linkedin.com/in/raj-gaurav-ballabh-kumar-97002058/">LinkedIn</a></li>
+      <li class="nav-item active"><a class="nav-link" href="https://www.instagram.com/wobblyframes/">Instagram</a></li>
+      <li class="nav-item active"><a class="nav-link" href="https://www.facebook.com/SomeRandomThoughts">Facebook</a></li>
+    </ul>
+
+  </div>
+</nav>
+
+<div class="container">
+
+  <button id='load-all-gists' type="button" class="btn btn-outline-primary">Show all Gists!</button>
+
+  <div>
+    This page contains my personal notes from the Dart Apprentice Textbook for easy reference. <br>
+    Index: <br>
+    <a href="#Ch1">Chapter 1: Hello Dart</a> <br>
+    <a href="#Ch2">Chapter 2: Expressions, Variables & Constants</a> <br>
+    <a href="#Ch3">Chapter 3: Types and Operations</a> <br>
+  </div>
+
+  <hr>
+  <div id="Ch1" class="chapter">Chapter 1: Hello Dart</div>
+  <hr>
+  <div class="textual-content">
+    <div class="sub-heading">Installing the Dart SDK</div>
+    <div>
+      - Follow the instructions <a href=" https://dart.dev/get-dart">here</a> to install the SDK. <br>
+      - Verify that the SDK has been installed by running: <code>dart --version</code>. <br>
+      - You can run dart code on <a href="https://dartpad.dev">dartpad.dev</a>. <br>
+      - Check the contents of the SDK using <code>dart help</code>. This will show you the list of tools that make up the SDK. This is a list of what they are and what they do:
+      <br>
+      a) <code>analyze</code>: Your IDE uses this tool to tell you when you've made a mistake in your code. <br>
+      b) <code>compile</code>: This tool compiles Dart code into an optimized native executable program for Windows, Linux or macOS. This is known as ahead-of-time, or AOT,
+      compilation. Alongside native executables, web technologies are another major focus for Dart, so you can also use the compile tool to convert Dart code to JavaScript. <br>
+      c) <code>create</code>: This is for creating new Dart projects. <br>
+      d) <code>fix</code>: The fix tool is there to help developers update their old projects to use the shiniest new Dart syntax. <br>
+      e) <code>format</code>: Automatic indentation of your code. <br>
+      f) <code>migrate</code>: Helps migrate old projects to use null safety. <br>
+      g) <code>pub</code>: Pub is the name of the package manager for Dart, and <code>pub</code> is the tool that handles the job. A package is a collection of third-party code
+      that you can use in your own Dart project. You can browse packages available to you on <a href="https://pub.dev/">pub.dev</a>. <br>
+      h) <code>run</code>: This runs your Dart program in the Dart Virtual Machine, or VM. The Dart VM compiles your code right before it's needed. In contrast to AOT, this is
+      known as just-in-time, or JIT, compilation, which will let you make small changes to your code and rerun it almost instantly. This is especially useful for applications like
+      Flutter where you'll need to make lots of little changes as you refine the UI. <br>
+      i) <code>test</code>: Unit testing. <br>
+    </div>
+
+    <div class="sub-heading">Running Dart</div>
+    <div>
+      - You can run a single dart file by going to the folder that has the file and then running <code>dart run <i>myDartFile.dart</i></code>. <br>
+      - If you want to create a whole project, you can run <code>dart create hello_world_project</code>. This will create a Dart project with some default code. You can run this
+      project by <code>cd hello_world_project</code>, and then run the project by doing <code>dart run bin/hello_dart_project.dart</code>. The <code>run</code> keyword is optional
+      in the statement. <br>
+      - The above command to create a project would create a simple console app because that is the default. You can create other types of project by using the
+      <code>--template</code> option. You would use it like this: <code>dart create --template console-full hello_dart_project</code>.
+    </div>
+
+    <div class="sub-heading">Browsing the generated code</div>
+    <div>
+      - The generated code will contain something like this. The <code>List&lt;String&gt; arguments</code> is only necessary when creating command-line apps that take arguments.
+      For example, in order to pass args to a dart program, you would do: <code>dart <i>myDartAppName</i> args1 args2 args3</code>. If you don't want to pass args, you can remove
+      that from the method definition.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/c8236883b614b40eaaed4f5c829fb1ea.js"></script>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <hr>
+  <div id="Ch2" class="chapter">Chapter 2: Expressions, Variables & Constants</div>
+  <hr>
+  <div class="textual-content">
+    <div class="sub-heading">Adding comments</div>
+    <div>
+      - You add documentation comments in dart by using <code>///</code> for single line comments or <code>/** */</code> for block comments. Documentation comments also support
+      Markdown formatting. <br>
+    </div>
+
+    <div class="sub-heading">Statements and Expressions</div>
+    <div>
+      - A <i>statement</i> is a command, something that you tell your computer to do. A <i>simple statement</i> is something that ends in a semicolon. So
+      <code>print('Hello, Dart Apprentice reader!');</code> is a statement. <br>
+      - There are also complex statements and code blocks that use curly braces, but there's no need to add semicolon after the braces. <br>
+      - Unlike a statement, an <i>experession</i> doesn't do something. In other words, an expression is a value or something that can be calculated as a value. eg. 42, 3+2, 'Hello
+      World'. These are all expressions. <br>
+    </div>
+
+    <div class="sub-heading">Arithmetic Operations</div>
+    <div>
+      - Doing something like <code>22/7</code> would print the output as 3 in some languages. Not in dart. It will give you the value <code>3.142857142857143</code>. If you
+      actually did want to perform integer division, you do <code>22 ~/ 7</code>. The <code>~/</code> operator is officially called the truncating division operator when applied to
+      numbers. <br>
+      - The modulo operator is <code>%</code>. So <code>28 % 10</code> will print 8. <br>
+      - The <code>~/</code> and <code>%</code> operators have the same precedence as multiplication and division.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/00a72df78f3d742a778f5a6d6853563e.js"></script>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-heading">Math Functions</div>
+    <div>
+      - Dart has a large built-in set of math functions that you can import by doing <code>import 'dart:math';</code>. <code>dart:math</code> is one of Dart's core libraries.
+      Adding the <code>import</code> statement tells the compilert that you want to use something from that library.
+    </div>
+
+    <div class="sub-heading">Variables</div>
+    <div>
+      - Dart has types. <code>int</code> and <code>double</code> do what their names suggest. <br>
+      - 10, 3.14159 and every other value that you can assign to a variable are objects in Dart. In fact, Dart doesn't have the primitive variable types that exist in some
+      languages. Everything is an object. Although <code>int</code> and <code>double</code> look like primitives, they're subclasses of <code>num</code>, which is a subclass of
+      <code>Object</code>. This means you can call methods directly on the int or double value, as shown in the below code snippet. <br>
+      - Also note that dart is type-safe. Means variables once declared cannot be reassigned to another type. The same rules of inheritance apply. As in variables that are subtypes
+      can be assigned to a super type reference. <br>
+      - Alternatively, Dart provides a <code>dynamic</code> type. Declaring a variable of this type will allow you to assign any data type you like to your variable, and the
+      compiler won't warn you about anything.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/6ca2285dc7cc09ac6bacd5ae3c8e6b38.js"></script>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-heading">Type Inference</div>
+    <div>
+      - The <code>var</code> keyword is used to tell Dart to use whatever type it feels appropriate. Note that type safety still applies though.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/400234faa8b3bcdbc8512f3d01171539.js"></script>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-heading">Constants</div>
+    <div>
+      - Dart has two different types of 'variables' whose values never change. They are declared with the <code>const</code> and <code>final</code> keywords. There is a difference
+      between the two keywords.
+
+      <br>
+      <br>
+
+      a) <p class="inline-heading"><code>const</code> constants</p>: <br>
+      - To create a constant in Dart, use the <code>const</code> keyword. <code>const myConstant = 10;</code>. Just like with the <code>var</code> keyword, Dart uses type inference
+      to determine that <i>myConstant</i> is an <code>int</code>. <br>
+      - Once you've declared a constant, you can't change its data. So <code>myConstant = 0</code> is not allowed.
+
+      <br>
+      <br>
+
+      b) <p class="inline-heading"><code>final</code> constants</p>: <br>
+      - Often, you know you'll want a constant in your program, but you don't know what its value is at compile time. You'll only know the value after the program starts running.
+      This kind of constant is known as a runtime constant. <br>
+      - In Dart <code>const</code> is only used for compile-time constants; that is, for values that can be determined by the compiler before the program ever starts running. <br>
+      - If you can't create a <code>const</code> variable because you don't know its value at compile time, then you must use the <code>final</code> keyword to make it a runtime
+      constant. There are many reasons you might not know a value until after your program is running. For example, you might need to fetch a value from the server, or query the
+      device settings, or ask a user to input their age. <br>
+      - For example, <code>final hoursSinceMidnight = DateTime.now().hour;</code> <br>
+      - As a general rule, try <code>const</code> first, and if the compiler complains, then make it <code>final</code>. The benefit of using <code>const</code> is it gives the
+      compiler the freedom to make internal optimizations to the code before compiling it.
+
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/695c5ea0c51b61c2b39fe147d4cca03f.js"></script>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <hr>
+  <div id="Ch3" class="chapter">Chapter 3: Types and Operations</div>
+  <hr>
+  <div class="textual-content">
+    <div class="sub-heading">Type Inference</div>
+    <div>
+      - We saw earlier how dart can infer the type of the variable when it's obvious. For instance, consider the following:
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/84d9a5e235cca4316d127b5e514a2629.js"></script>
+        </div>
+      </div>
+
+      - Dart provides ways to check the type at runtime. There are two ways that you can do this. You can use the <code>is</code> operator to check the type. Or you can use the
+      <code>runtimeType</code> property to do it. <br>
+      - Dart does not do implicit type conversions. Like we saw earlier, assigning a <code>double</code> to an <code>int</code> causes compile error. If you did want to convert a
+      decimal to an integer, you can do that explicitly by calling <code>toInt()</code> on the <code>double</code> object.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/ee70831c649961a416d1c8f695522bf6.js"></script>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-heading">Casting Down</div>
+    <div>
+      - Suppose you have a variable of a certain supertype. But now you want to call a method on the variable that only exists on the subtype. In this case, you would have to cast
+      the variable to the subtype. You use the <code>as</code> keyword to cast in dart. You need to be careful though, because if you cast to the wrong type, you get a Cast Error
+      message. Point being, you cannot cast to a sibling type.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/41f51200dc7aef45046ad5db7b8b567c.js"></script>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-heading">Strings</div>
+    <div>
+      - Everything in a computer is denoted as a number. So are Strings. Strings are a sequence of characters. Eavh character is represented as a unique number in the computer.
+      This two-way mapping between a character and a number is called a <i>character set</i>. In isolation, a computer could use any kind of mapping between a character and a
+      number. For instance, you could use 1 to denote A, 2 for B and so on. But in a world where computers need to share data, you want a certain standard so that when a computer
+      sends a sequence of numbers (that denote a string) to another, that other computer can reproduce the original string. <br>
+      - There have been different standards over the years, but the most modern one is Unicode, at <a href="https://home.unicode.org">unicode.org</a>. <br>
+      - For instance, the word "cafe" would be mapped to the following numbers "99 97 102 101" in unicode. Each of the number associated with a character is known as <i>code
+      point</i>. So we would say that the letter "c" has a code point of 99. <br>
+      - Unicode maps letters in other languages as well. For instance, " 我 爱 你 " would be mapped to "25105 29233 20320". <br>
+      - Similarly, in dart, strings are represented as a sequence of characters as well. But what is different in the case of Dart is that it doesn't have a <code>Character</code>
+      or <code>char</code> type. What this means is that in <code>final firstLetter = 'a';</code>, even though <i>firstLetter</i> is a single character, it is still of type
+      <code>String</code>. <br>
+      - Even though everything is a <code>String</code>, you can still get the underlying characters. <br>
+      - Dart strings are a collection of UTF-16 code units. UTF-16 is a way to encode Unicode values by using 16-bit numbers. You can get the underlying character value by using
+      <code>codeUnits</code>.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/5dc6f97f19e12dcc606c94d26383af7a.js"></script>
+        </div>
+      </div>
+
+      - UTF-16 uses 16 bits to store characters and this means you can represent only 65,536 characters. But there are more characters than that. For characters that have a code
+      point higher than 65,536, UTF-16 uses two code units called <i>surrogate pairs</i>.
+
+    </div>
+
+  </div>
+
+
+</div>
+
+<script src="../../script.js"></script>
+</body>
+</html>
