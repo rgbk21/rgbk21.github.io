@@ -17,9 +17,11 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-9QJ5D3X353"></script>
   <script>
       window.dataLayer = window.dataLayer || [];
+
       function gtag() {
           dataLayer.push(arguments);
       }
+
       gtag('js', new Date());
       gtag('config', 'G-9QJ5D3X353');
   </script>
@@ -142,6 +144,7 @@
     <a href="#Ch1">Chapter 1: Hello Dart</a> <br>
     <a href="#Ch2">Chapter 2: Expressions, Variables & Constants</a> <br>
     <a href="#Ch3">Chapter 3: Types and Operations</a> <br>
+    <a href="#Ch4">Chapter 4: Control Flow</a> <br>
   </div>
 
   <hr>
@@ -153,6 +156,8 @@
       - Follow the instructions <a href=" https://dart.dev/get-dart">here</a> to install the SDK. <br>
       - Verify that the SDK has been installed by running: <code>dart --version</code>. <br>
       - You can run dart code on <a href="https://dartpad.dev">dartpad.dev</a>. <br>
+      - Whenever you download and open a new Dart project that contains Pub packages, you'll need to run <code>dart pub get</code> in the root folder of your project. This will
+      download any libraries mentioned in <i>pubspec.yaml</i> file.
       - Check the contents of the SDK using <code>dart help</code>. This will show you the list of tools that make up the SDK. This is a list of what they are and what they do:
       <br>
       a) <code>analyze</code>: Your IDE uses this tool to tell you when you've made a mistake in your code. <br>
@@ -358,7 +363,7 @@
 
     <div class="sub-heading">Strings</div>
     <div>
-      - Everything in a computer is denoted as a number. So are Strings. Strings are a sequence of characters. Eavh character is represented as a unique number in the computer.
+      - Everything in a computer is denoted as a number. So are Strings. Strings are a sequence of characters. Each character is represented as a unique number in the computer.
       This two-way mapping between a character and a number is called a <i>character set</i>. In isolation, a computer could use any kind of mapping between a character and a
       number. For instance, you could use 1 to denote A, 2 for B and so on. But in a world where computers need to share data, you want a certain standard so that when a computer
       sends a sequence of numbers (that denote a string) to another, that other computer can reproduce the original string. <br>
@@ -381,11 +386,89 @@
         </div>
       </div>
 
+      - <a href="https://stackoverflow.com/questions/27331819/whats-the-difference-between-a-character-a-code-point-a-glyph-and-a-grapheme">What's the difference between a
+      character, a code point, a glyph and a grapheme?</a> on SO. <br>
       - UTF-16 uses 16 bits to store characters and this means you can represent only 65,536 characters. But there are more characters than that. For characters that have a code
-      point higher than 65,536, UTF-16 uses two code units called <i>surrogate pairs</i>.
+      point higher than 65,536, UTF-16 uses two code units called <i>surrogate pairs</i>. <br>
+      - For example, the code point for 🎯 emoji is 127919. Which means that emoji is uniquely identified by 127919. But if you run <code>🎯.codeUnits</code> you get [55356, 57263]
+      which is its surrogate pair. You can get the code point of the emoji by accessing the <code>runes</code> property of the variable. Hence, <code>🎯.runes</code> will print
+      (127919). <br>
+      - // TODO: If the code units for the emoji look like [55356, 57263], how does it know that it is supposed to combine the two to form an emoji, and not show the individual
+      characters that are corresponding to 55356 and 57263 individually? <br>
+      - But sometimes even code points can be combined. For instance, Unicode doesn't create a new code point every time there is a new country flag. It uses a pair of code points
+      called regional symbols to represent a flag. For instance, <code>'🇲🇳'.runes</code> prints (127474, 127475). 127474 is the code for the regional indicator symbol letter M, and
+      127475 is the code for the regional indicator symbol letter N. MN represents Mongolia. <br>
+      - A more extreme example is '👨‍👩‍👧‍👦'. When you run <code>'👨‍👩‍👧‍👦'.runes</code>, you get (128104, 8205, 128105, 8205, 128103, 8205, 128102). So there are 7 code points that
+      are being combined to create one emoji. If you try <code>'👨‍👩‍👧‍👦'.length</code> in order to get the length of the string, you get 11. This is because getting the length of
+      the string is equivalent to finding the number of UTF-16 code units. And like we've seen we get the code units by doing <code>'👨‍👩‍👧‍👦'.codeUnits</code>. But you would expect
+      the length of the emoji to be 1. <br>
+      - When a string with multiple code points looks like a single character, this is known as a user perceived character. In technical terms it's called a Unicode extended
+      grapheme cluster, or more commonly, just <i>grapheme cluster</i>. <br>
+      - In order to correct this, we make use of an external package called <code>characters</code>. We import a package by mentioning it in the <code>pubspec.yaml</code> file.
+      Indentation is important in .yaml files, so make sure to indent the package name with two spaces. The ^ carat character means that any version higher than or equal to 1.1.0
+      but lower than 2.0.0 is OK to use in your project. This is known as semantic versioning.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/6b6ea8649137717ac7fed7ea2b5af480.js"></script>
+        </div>
+      </div>
 
+      - Now when you try to find the length of the emoji, it will work as you expected it to. These are the code samples from the above discussion.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/b0580b954823f95cadcf8a9244256a54.js"></script>
+        </div>
+      </div>
     </div>
 
+
+    <div class="sub-heading">Other String Things</div>
+    <div>
+      - You can use either single-quote or double-quote strings in Dart. Hence, both of these are valid: "Hello", and 'Hello'. We are going to use the single-quote one since that
+      is the design guide suggestion. <br>
+      - You can concatenate strings by using the <code> + </code> operator like you would do in other programming languages. <br>
+      - The below code snippets show the various ways in which you can concatenate strings:
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/7c83d7a17e2c0ff39f478e56ac684077.js"></script>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="sub-heading">Objects and Dynamic Types</div>
+    <div>
+      - JavaScript is a dynamically-typed language. Dynamic means that something can change, and for JavaScript that means the types can change at runtime. Dart is an
+      optionally-typed language. That means you can choose to use Dart as a dynamically typed language or as a statically-typed language. Static means that something cannot change;
+      once you tell Dart what type a variable is, you're not allowed to change it anymore. <br>
+      - Like we saw earlier, dart has a <code>dynamic</code> type. A variable that has been declared as <code>dynamic</code> can be assigned any type of value. <br>
+      - Also, if you declare a variable as <code>var</code> and don't assign it a value, dart treats that variable as type <code>dynamic</code>. <br>
+      - If you need to explicitly say that any type is allowed, you should consider using the <code>Object?</code> type. <br>
+      - At runtime, <code>Object?</code> and <code>dynamic</code> behave nearly the same. However, when you explicitly declare a variable as <code>Object?</code>, you're telling
+      everyone that you generalized your variable on purpose, and that they'll need to check its type at runtime if they want to do anything specific with it. Using
+      <code>dynamic</code>, on the other hand, is more like saying you don't know what the type is; you're telling people they can do what they like with this variable, but it's
+      completely on them if their code crashes.
+    </div>
+  </div>
+
+  <hr>
+  <div id="Ch4" class="chapter">Chapter 4: Control Flow</div>
+  <hr>
+
+  <div class="textual-content">
+    <div class="sub-heading">Type Inference</div>
+    <div>
+      -
+    </div>
   </div>
 
 
