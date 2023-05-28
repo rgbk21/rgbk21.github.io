@@ -145,6 +145,7 @@
     <a href="#Ch2">Chapter 2: Expressions, Variables & Constants</a> <br>
     <a href="#Ch3">Chapter 3: Types and Operations</a> <br>
     <a href="#Ch4">Chapter 4: Control Flow</a> <br>
+    <a href="#Ch5">Chapter 5: Functions</a> <br>
   </div>
 
   <hr>
@@ -465,10 +466,43 @@
   <hr>
 
   <div class="textual-content">
-    <div class="sub-heading">Type Inference</div>
+    <div class="sub-heading">Boolean Operations</div>
+    <div>
+      - In the case of an else-if ladder, only the code associated with the first true condition encountered will be executed, regardless of whether there are subsequent else-if
+      conditions that evaluate to true. In other words, the order of your conditions matters. You can add an else clause at the end to handle the case where none of the conditions
+      are true. This else clause is optional if you don't need it. <br>
+      - The ternary conditional operator takes a condition and returns one of two values, depending on whether the condition is true or false. The syntax is as follows:
+      <code>(condition) ? valueIfTrue : valueIfFalse;</code>. <br>
+      - In Dart, <code>switch</code> statements don't support ranges like <code>number > 5</code>. Only <code>==</code> equality checking is allowed. If your conditions involve
+      ranges, then you should use if statements. <code>switch</code> statements can also work with Strings.
+    </div>
+
+    <div class="sub-heading">Enumerated Types and Looping</div>
+    <div>
+      - Name of the enum is normally written with a capital letter, for instance, <i>Weather</i>. The individual enums are written in camelCase. <br>
+      - You can use for-in loops to iterate over collections. It doesn't provide an index. Example of using enum.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/2f417e0ea72461f2142993b38c2bf1d1.js"></script>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <hr>
+  <div id="Ch5" class="chapter">Chapter 5: Functions</div>
+  <hr>
+
+  <div class="textual-content">
+    <div class="sub-heading">Boolean Operations</div>
     <div>
       -
     </div>
+
   </div>
 
 
