@@ -498,7 +498,199 @@
   <hr>
 
   <div class="textual-content">
-    <div class="sub-heading">Boolean Operations</div>
+    <div class="sub-heading">Anatomy of a Dart function</div>
+    <div>
+      - <code>main</code> is also a function. It is the function that every Dart program starts with. Since <code>main</code> doesn't return a value, the return type of
+      <code>main</code> must be <code>void</code>. <code>main</code> can also take parameters if required. <br>
+      - Note that in the below example <i>compliment</i> is outside <code>main</code>. Dart supports top-level functions, which are functions that aren't inside a class or another
+      function. <br>
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/cf1c31980662fc85fc1aa19ab91aae51.js"></script>
+        </div>
+      </div>
+
+      - A parameter is the name and type that you define as an input for your function. An argument , on the other hand, is the actual value that you pass in. A parameter is
+      abstract, while an argument is concrete.
+    </div>
+
+    <div class="sub-heading">Making parameters optional</div>
+    <div>
+      - To indicate that a parameter is optional, you surround the parameter with square brackets and add a question mark after the type. Adding the <code>?</code> would mean that
+      the parameter can be null, in which case the method would have to handle the case where the parameter is null explicitly. Alternatively, you can provide default values for
+      the optional parameters. <br>
+      - Note that you cannot use the <code>required</code> keyword with the [] notation. It is a compile error.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/443c1e4e0c9a0adc4b44c7575fc23ab2.js"></script>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-heading">Naming parameters</div>
+    <div>
+      - Dart allows you to use named parameters to make the meaning of the parameters more clear in function calls. To create a named parameter you surround it with curly braces
+      instead of square brackets. <br>
+      - Note that named parameters are still optional. <br>
+      - Similar to the [] notation, you can provide default values for parameters that are implicitly null. Else you can force the user to pass a value as an argument while calling
+      the method by using the <code>required</code> keyword. <br>
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/b56016885734058e220d88372e8d5a8a.js"></script>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-heading">Functions and side-effects</div>
+    <div>
+      - When you write a function, you know what the inputs are: the parameters. You also know what the output is: the return value. Anything beyond that, that is, anything that
+      affects the world outside the function, is a side effect. For example if a function prints something to the console, then that printing counts as a side-effect. <br>
+      - An example:
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/c540efcc7deb89bb6d789ad762e730b2.js"></script>
+        </div>
+      </div>
+
+      - It is necessary for some functions to have side effects. But as a general rule, functions without side effects are easier to deal with and reason about because the do
+      <i>exactly</i> what you expect them to do <i>everytime</i> that you pass in the same input. These kinds of functions are also called pure functions.
+    </div>
+
+    <div class="sub-heading">Functions and Optional types</div>
+    <div>
+      - Like we said earlier, Dart is an optionally typed language, which means that you can omit the types from your function declaration. And do monstrous things like this:
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/e16cdc9a97667fdbec0efd51786fc6f5.js"></script>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-heading">Anonymous Functions</div>
+    <div>
+      - Functions that we saw so far had a name and a return type. If you remove the name and the return type, what you get is an anonymous function. The return type is inferred
+      from the return value of the function body. <br>
+      - In dart, function are first-class citizens, which means that you can treat them like any other type. You can assign functions as values to variables, pass functions around
+      as parameters to other functions, and return functions from other functions. <br>
+      - <a href="https://api.dart.dev/stable/3.0.6/dart-core/Function-class.html">Functions doc on Dart site</a>. Read entire page. <br>
+      - Let us look at how to do these things one-by-one:
+
+      <br>
+      <br>
+
+      <p class="inline-heading">Assigning functions to variables</p>: <br>
+      - The type of the variable to use for assigning a function is <code>Function</code>.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/0e3b82ee9615a717b70d628d85e77d74.js"></script>
+        </div>
+      </div>
+
+      <br>
+
+      <p class="inline-heading">Passing functions to functions</p>: <br>
+      - Just as you can write a function to take <code>int</code> or <code>String</code> as a parameter, you can also have <code>Function</code> as a parameter. <br>
+      - Functions that accept other functions as parameters are called <i>higher-order functions</i>. <br>
+      - A function type also has a <code>call</code> method with a signature that has the same function type as the function type itself. Calling the <code>call</code> method
+      behaves just as calling the function. This is mainly used to conditionally call a nullable function value.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/624807fab91ae0688f3d84c19708c67d.js"></script>
+        </div>
+      </div>
+
+      <br>
+
+      <p class="inline-heading">Returning functions from functions</p>: <br>
+      - Just as you can pass in functions as input parameters, you can also return them as output.
+      - Similar to functions that accept other functions as parameters, functions that return other functions are also called <i>higher-order functions</i>. <br>
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/742b52146e0474fbb9905e2d565ead91.js"></script>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-heading">The problem with using functions the way we defined above, and what to do about it</div>
+    <div>
+      - Consider the example we used above. If we do something like we are doing in the below example, we do not get any compile errors. It is only when we run the program that
+      we get exceptions.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/522503e9b626cb318a04282856005d2f.js"></script>
+        </div>
+      </div>
+
+      - The problem is that the <code>Function</code> type does not carry information about the parameter signatures or return type of a function. To express a more precise
+      function type, use the function type syntax, which is the <code>Function</code> keyword followed by a parameter list, or a type argument list and a parameter list, and which
+      can also have an optional return type. <br>
+      - The function type syntax mirrors the definition of a function, with the function name replaced by the word "Function." <br>
+      - So for instance, declaring a function literal of type <code>String Function(int)</code> would point to a function that accepts an <code>int</code> type as argument and
+      returns a <code>String</code> type. <br>
+      - So the above example that threw the exception can be rewritten using types so that the compiler warns us when we try to incorrectly call the function. We can do it like
+      this:
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/b7cc406833c9d550b62f91512cb8d5b5.js"></script>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-heading">Closures and Scopes</div>
+    <div>
+      - Anonymous functions in Dart act as what are known as closures. The term closure means that the code "closes around" the surrounding scope, and therefore has access to
+      variables and functions defined within that scope. <br>
+      - A "scope" in Dart is defined by a pair of curly braces. All the code within these braces is a scope. You can have nested scopes within other scopes. Examples of scopes are
+      function bodies and bodies of loops. <br>
+      - Already forgotten what Closures were supposed to be. <a href="../JavaScript/JavaScript.html#JS_Closures">Read about it on the JS page here</a>.
+      <div class="code-block">
+          <div class="expand-code-snip-btn border border-primary rounded">
+              <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+          </div>
+          <div class="code-snippet">
+            <script src="https://gist.github.com/rgbk21/61ff689e6fe459f430796c3845b39c1c.js"></script>
+          </div>
+      </div>
+    </div>
+
+  </div>
+
+  <hr>
+  <div id="Ch6" class="chapter">Chapter 6: Classes</div>
+  <hr>
+
+  <div class="textual-content">
+    <div class="sub-heading">Anatomy of a Dart function</div>
     <div>
       -
     </div>
