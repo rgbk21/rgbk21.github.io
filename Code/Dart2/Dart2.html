@@ -674,12 +674,12 @@
       function bodies and bodies of loops. <br>
       - Already forgotten what Closures were supposed to be. <a href="../JavaScript/JavaScript.html#JS_Closures">Read about it on the JS page here</a>.
       <div class="code-block">
-          <div class="expand-code-snip-btn border border-primary rounded">
-              <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-          </div>
-          <div class="code-snippet">
-            <script src="https://gist.github.com/rgbk21/61ff689e6fe459f430796c3845b39c1c.js"></script>
-          </div>
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/61ff689e6fe459f430796c3845b39c1c.js"></script>
+        </div>
       </div>
     </div>
 
@@ -690,7 +690,76 @@
   <hr>
 
   <div class="textual-content">
-    <div class="sub-heading">Anatomy of a Dart function</div>
+    <div class="sub-heading">Introduction to classes</div>
+    <div>
+      - All values in Dart are objects that are built from a class. This includes the values of basic types like <code>int</code>, <code>double</code>, and <code>bool</code>.
+      That's different from other languages like Java whet basic types are primitive. For example, if you have <code>x = 10</code> in java, the value of <i>x</i> is 10 itself.
+      However, Dart doesn't have primitive types. Even for a simple <code>int</code>, the value is an object that wraps the integer. <br>
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/dd409386ec7ad0555aded193ae232c4a.js"></script>
+        </div>
+      </div>
+
+      - Note that you cannot assign values to variables that you have declared as <code>final</code> in the constructor, like you can do in java. <a
+      href="https://stackoverflow.com/questions/42864913/how-do-i-initialize-a-final-class-property-in-a-constructor">SO question</a> that explains what to do.
+    </div>
+
+    <div class="sub-heading">Understanding Object Serialization</div>
+    <div>
+      - <i>Serialization</i> is the process of converting a complex data object into a string. Once the object has been serialized, it's easy to save that data or transfer it
+      across the network because everything from your app to the network and beyond knows how to deal with strings. Later, when you want to read that data bak in, you can do so by
+      way of <i>deserialization</i>, which is simply the process of converting a string back into an object of your datatype. <br>
+      - Serialization and Deserialization are such common tasks that people have devised a number of standardized formats for serializing data. One of the most common ones is
+      called JSON: JavaScript Object Notation. <br>
+      - In JSON, objects are surrounded by curly braces, properties are separated by commas, property names are separated from property values by colons, and strings are surrounded
+      by double-quotes. If a string needs to include double-quotes inside itself, you can escape it with a backslash like so: <code>\"</code>. <br>
+      - JSON is very similar to a Dart data type called <code>Map</code>. In fact, Dart even has built-in functions in the <code>dart:convert</code> library to serialize and
+      deserialize JSON maps. We will look at this later.
+    </div>
+
+    <div class="sub-heading">Constructor</div>
+    <div>
+      - The <i>User</i> class that we looked at above did not have an explicit constructor. In cases like this, Dart provides a default constructor that takes no parameters and
+      just returns an instance of the class. This is what we were using in the above case. <br>
+      - The other option is to pass parameters to the constructor name so that Dart can know how to build your object. <br>
+      - There are different types of constructors that Dart provides: <br>
+      a) Long-form constructor <br>
+      b) Short-form constructor <br>
+      c) Named constructor <br>
+
+      - The long-form and short-form constructor use just the class name. These are also known as <i>unnamed constructors</i>. <br>
+      - The below examples show the usage of all the three types of constructor.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/f8715e570fb81dbad425b5012ef0d364.js"></script>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="sub-heading">Forwarding Constructors</div>
+    <div>
+      - This is similar to chaining constructors in java.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/9239982d0eb656d1cfafb64a3a82927a.js"></script>
+        </div>
+      </div>
+
+      - Everything we saw in the optional and named parameters in functions also carries over to constructors. Constructors can also be defined with named and optional parameters.
+    </div>
+
+    <div class="sub-heading">Iniitializer Lists</div>
     <div>
       -
     </div>
