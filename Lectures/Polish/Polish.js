@@ -1,5 +1,5 @@
 $('.playNow').click(function() {
     let recordingName = $(this).attr('data-audio');
-    const audio = new Audio(`assets/Lecture2/${recordingName}`);
+    const audio = new Audio(`assets/${recordingName}`);
     audio.play();
 });
