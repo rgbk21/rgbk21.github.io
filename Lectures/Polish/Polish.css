@@ -1,3 +1,7 @@
 .playNow {
   margin-bottom: 8px;
 }
+
+#verbs-table-container {
+  overflow-x: scroll;
+}
