@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+          integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+          crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+          integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+          crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+          integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+          crossorigin="anonymous"></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9QJ5D3X353"></script>
+  <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+          dataLayer.push(arguments);
+      }
+
+      gtag('js', new Date());
+      gtag('config', 'G-9QJ5D3X353');
+  </script>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../../globalStyles.css">
+  <link rel="stylesheet" type="text/css" href="PolishWords.css">
+  <meta name="author" content="Raj Gaurav Ballabh Kumar">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Language" content="pl">
+  <meta charset="UTF-8">
+  <title>Polish Words</title>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+
+  <div class="navbar-header">
+    <a href="../../index.html" class="navbar-brand"> rgbk21</a>
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"><span
+    class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="nav navbar-nav">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+           aria-expanded="false">
+          Projects
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="../../Projects/TwitterCritNodes/TwitterCritNodes_1.html">Identifying
+            Critical Nodes on Twitter</a>
+          <a class="dropdown-item" href="../../Projects/isRelatedTo/isRelatedTo.html">isRelatedTo</a>
+          <div class="dropdown-divider"></div>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+           aria-expanded="false">
+          HTML Projects
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="../../WordleCheater/index.html">Wordle Cheater</a>
+          <a class="dropdown-item" href="../../Pig_Game/index.html">2-Player Pig Game</a>
+          <a class="dropdown-item" href="../../ImageGallery/ImageGallery.html">Image Gallery</a>
+          <a class="dropdown-item" href="../../RGB_Guesser_Game/RGB.html">RGB Guesser Game</a>
+          <a class="dropdown-item" href="../../ToDoList/todo.html">To-Do List</a>
+          <div class="dropdown-divider"></div>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+           aria-expanded="false">
+          Notes
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="../COMS_631/COMS_631_index.html">COMS 631</a>
+          <a class="dropdown-item" href="../COMS_535/COMS_535_index.html">COMS 535</a>
+          <a class="dropdown-item" href="../../Lectures/EffectiveJava/EffectiveJava.html">Effective Java</a>
+          <a class="dropdown-item" href="../../Lectures/DI/DI.html">Dependency Injection</a>
+          <a class="dropdown-item" href="../../Lectures/Linux/Linux.html">Linux</a>
+          <a class="dropdown-item" href="../../Lectures/Polish/Polish.html">Polish</a>
+          <div class="dropdown-divider"></div>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+           aria-expanded="false">
+          Code
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="../../Code/ThingsToRemember/ThingsToRemember.html">Things To Remember</a>
+          <a class="dropdown-item" href="../../Code/Java_Notes/JavaNotes.html">Java Notes</a>
+          <a class="dropdown-item" href="../../Code/Java_Notes/JavaNotes_2.html">Java Notes 2</a>
+          <a class="dropdown-item" href="../../Code/LeetCode/LeetCode.html">LeetCode Notes</a>
+          <a class="dropdown-item" href="../../Code/Applying_Java_Notes/ApplyingJava_Notes.html">ApplyingJava Notes</a>
+          <a class="dropdown-item" href="../../Code/JavaScript/JavaScript.html">JavaScript Notes</a>
+          <a class="dropdown-item" href="../../Code/HTML_CSS/HTML_CSS_Basics.html">HTML & CSS Notes</a>
+          <a class="dropdown-item" href="../../Code/SQL/SQL.html">SQL Notes</a>
+          <a class="dropdown-item" href="../../Code/Spring/Spring.html">Spring Notes</a>
+          <a class="dropdown-item" href="../../Code/Kafka/Kafka.html">Kafka Notes</a>
+          <a class="dropdown-item" href="../../Code/Angular/Angular.html">Angular</a>
+          <a class="dropdown-item" href="../../Code/Hibernate/Hibernate.html">Hibernate</a>
+          <div class="dropdown-divider"></div>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+           aria-expanded="false">
+          In Another Life
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="../../InAnotherLife/Chapter1/Chapter1.html">Chapter 1</a>
+          <a class="dropdown-item" href="../../InAnotherLife/Chapter2/Chapter2.html">Chapter 2</a>
+          <a class="dropdown-item" href="../../InAnotherLife/Chapter3/Chapter3.html">Chapter 3</a>
+          <div class="dropdown-divider"></div>
+        </div>
+      </li>
+
+    </ul>
+
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active"><a class="nav-link" href="https://github.com/rgbk21">GitHub</a></li>
+      <li class="nav-item active"><a class="nav-link" href="https://www.linkedin.com/in/raj-gaurav-ballabh-kumar-97002058/">LinkedIn</a></li>
+      <li class="nav-item active"><a class="nav-link" href="https://www.instagram.com/wobblyframes/">Instagram</a></li>
+      <li class="nav-item active"><a class="nav-link" href="https://www.facebook.com/SomeRandomThoughts">Facebook</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+
+  <hr>
+  <div id="Lecture1" class="chapter">Lecture 1: Alphabets, basic questions</div>
+  <hr>
+
+  <div class="textual-content">
+
+    <div class="sub-heading">Basic words in Polish</div>
+    <div>
+      - Co: What. Co słychać? (What's up?)<br>
+      - Kto: Who. Kto to jest? (Who is this?). These two (<i>Co</i> and <i>Kto</i> can actually become cofusing in dialogue. <a
+      href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=Co%20to%20jest%3F&op=translate">Co to jest?</a> (meaning: What is this?). And <a
+      href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=Kto%20to%20jest%3F&op=translate">Kto to jest?</a> (meaning: Who is this?))
+      <br>
+      - Gdzie: Where. Gdzie mieszkasz? (Where do you live?)<br>
+      - Kiedy: When. Kiedy weekend? (When is the weekend?)<br>
+      - Dlaczego: Why. <br>
+      - <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=chc%C4%99%20%0A&op=translate">Chcę</a>: I want.. <br>
+      - Jak: This can be "How?", "What?", "Which?". It's not a clear conversion. But the answer to this question is always an adjective. <a
+      href="https://youtu.be/9x8hxSjXpVs?t=3195">Explanation in Lecture 11 video</a>. <a href="#Lecture11">See notes for lecture 11 below</a>. <br>
+      - Tutaj / Tu: Here. <br>
+      - Tam: There <br>
+      - Teraz: Now/Here/Right now. <a href="https://www.diki.pl/slownik-angielskiego?q=teraz">On diki</a>. <br>
+      - <a href="https://translate.google.com/details?hl=en&sl=pl&tl=en&text=Tw%C3%B3j%0A&op=translate">Twój</a>: Your <br>
+      - <a href="https://translate.google.com/details?hl=en&sl=pl&tl=en&text=m%C3%B3j%0A&op=translate">Mój</a>: My <br>
+      - Ten/Ta/To: Different forms of "This...". The forms are for usage with On/Ona/Ono nouns resp. <br>
+      - Ja: I <br>
+      - o: At. <a href="https://www.diki.pl/slownik-angielskiego?q=o">O Diki</a><br>
+      - do: In, into, <a href="https://www.diki.pl/slownik-angielskiego?q=do">and everything in between</a>... <br>
+      - na: On, at, in, around. <a href="https://www.diki.pl/slownik-angielskiego?q=na">The list goes on</a>. <br>
+      - <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=czy%0A%0A&op=translate">Czy</a>: Whether. Questions starting with <i>Czy</i> typically have a <i>Tak / Nie</i>
+      (Yes/No) answer. <br> <br>
+      - z: With <br>
+      - Tylko: Only <br>
+      - Albo: Either/Or <br>
+      - Ale: But <br>
+      - Ile: How many? / How much? <br>
+      - Jestem: I am <br>
+      - Imię / Nazywa: First name / Full name <br>
+      - Nazwisko: Last name <br>
+    </div>
+
+    <div class="sub-heading">Revising words</div>
+    <div>
+      <button id='show-all-words-button' type="button" class="btn btn-outline-primary">Show all words</button>
+      <button id='hide-all-words-button' type="button" class="btn btn-outline-primary">Hide all words</button>
+
+      <div class="all-words-container">
+        <div class="single-word-container">
+          <div class="word-name">
+            <a href="https://translate.google.com/details?hl=en&sl=pl&tl=en&text=g%C3%B3ry&op=translate">góry</a>
+          </div>
+          <div class="answer">
+            Meaning: mountain
+          </div>
+        </div>
+
+        <div class="single-word-container">
+          <div class="word-name">
+            <a href="https://translate.google.com/details?hl=en&sl=pl&tl=en&text=parasol&op=translate">parasol</a>
+          </div>
+          <div class="answer">
+            Meaning: umbrella
+          </div>
+        </div>
+
+        <div class="single-word-container">
+          <div class="word-name">
+            <a href="https://translate.google.com/details?hl=en&sl=pl&tl=en&text=og%C3%B3rek&op=translate">ogórek</a>
+          </div>
+          <div class="answer">
+            Meaning: cucumber
+          </div>
+        </div>
+
+        <div class="single-word-container">
+          <div class="word-name">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=naprawd%C4%99%3F%0A&op=translate">Naprawdę?</a>
+          </div>
+          <div class="answer">
+            Meaning: Really?!
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="sub-heading">Random words that come up</div>
+    <div>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=blisko%0A&op=translate">blisko</a>: near/close
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=j%C4%99zyka&op=translate">języka</a>: language
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=obcy%0A&op=translate">obcy</a>: foreign (diff. meaning on diki)
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=obcy%0A&op=translate">rodzina</a>: family
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=pi%C4%99knym&op=translate">pięknym</a>: beautiful
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=kraj%0A%0A&op=translate">kraj</a>: country
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=pi%C5%82k%C4%99%20no%C5%BCn%C4%85&op=translate">piłkę nożną</a>: football
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=pi%C5%82karz&op=translate">piłkarz</a>: footballer
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=fabryka&op=translate">fabryka</a>: factory
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=Ksi%C4%85%C5%BCka&op=translate">Książka</a>: Book
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=paragon&op=translate">paragon</a>: receipt
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=waluta&op=translate">waluta</a>: currency
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=malarz%0A%0A&op=translate">malarz</a>: painter
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=szachy%0A&op=translate">szachy</a>: chess
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=pytanie&op=translate">pytanie</a>: question
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=s%C5%82owo%0A&op=translate">słowo</a>: word
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm">
+            kino/film: movie
+          </div>
+          <div class="col-sm">
+            okno: window
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=drzwi%0A&op=translate">drzwi</a>: door
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=przystanek&op=translate">przystanek</a>: (bus/tram)stop / station
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=siostra&op=translate">siostra</a>: sister
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=brata&op=translate">brata</a>: brother
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=kolegami&op=translate">kolegami</a>: friends/colleagues
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=Nast%C4%99pny&op=translate">następny</a>: next
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=pok%C3%B3j&op=translate">pokój</a>: room
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=ogr%C3%B3d&op=translate">ogród</a>: garden
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=codziennie%0A&op=translate">codziennie</a>: daily
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=cz%C4%99sto%0A&op=translate">często</a>: often
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=pieni%C4%85dze&op=translate">pieniądze</a>: money
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=bankomat&op=translate">bankomat</a>: ATM
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=pogotowie&op=translate">pogotowie</a>: emergency/ambulance
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=stra%C5%BC%20po%C5%BCarna&op=translate">straż pożarna</a>: fire brigade
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=du%C5%BCym&op=translate">dużym</a>: big
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=Rano%0A&op=translate">rano</a>: in the morning
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=dworzec&op=translate">dworzec</a>: station
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=g%C5%82o%C5%9Bnej%0A&op=translate">głośnej</a>: loud
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=ca%C5%82e%0A&op=translate">całe</a>: whole/entire
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=mieszkanie&op=translate">mieszkanie</a>: apartment
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=basen&op=translate">basen</a>: swimming pool
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=godzina%0A&op=translate">godzina</a>: hour
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=piosenka%0A&op=translate">piosenka</a>: song
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=c%C3%B3rka&op=translate">córka</a>: daughter
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=rodzic%C3%B3w%0A&op=translate">rodziców</a>: parents
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=klasa%0A&op=translate">klasa</a>: classroom
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=st%C3%B3%C5%82&op=translate">stół </a>: table
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=torba%20podr%C3%B3%C5%BCna&op=translate">torba/torebka</a>: bag
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=segregator&op=translate">segregator</a>: binder for document
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=tablica&op=translate">tablica</a>: (black/white) board
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=kubek&op=translate">kubek </a>: mug/cup
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=gumka&op=translate">gumka</a>: elastic rubber
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=o%C5%82%C3%B3wek&op=translate">ołówek</a>: pencil
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=krzes%C5%82o&op=translate">krzesło</a>: chair
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=klucz&op=translate">klucz </a>: key (lock and key)
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=zeszyt&op=translate">zeszyt</a>: notebook
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=nauczycielka&op=translate">nauczycielka</a>: teacher
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=s%C5%82ownik&op=translate">słownik</a>: dictionary
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=kot%0A&op=translate">kot</a>: cat
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=pies%0A&op=translate">pies</a>: dog
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=rower&op=translate">rower</a>: bicycle
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=karta%20dan&op=translate">karta dan</a>: menu card
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=miasto&op=translate">miasto</a>: city
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=gwiazda&op=translate">gwiazda</a>: star
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=niebo&op=translate">niebo</a>: sky
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=chmura&op=translate">chmura</a>: cloud
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=truskawka&op=translate">truskawka</a>: strawberry
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=%C5%9Bnieg&op=translate">śnieg</a>: snow
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=t%C4%99cza&op=translate">tęcza</a>: rainbow
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=kolorowy&op=translate">kolorowy</a>: colorful
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=budynek%0A&op=translate">budynek</a>: building
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=sklep%0A&op=translate">sklep</a>: shop
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=ma%C5%82y&op=translate">mały</a>: small
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=du%C5%BCe&op=translate">duże</a>: big
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=fajna&op=translate">fajna</a>: cool (slang)
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=rynek%0A&op=translate">rynek</a>: market
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=fryzjer&op=translate">fryzjer</a>: hair dresser
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=rynek%0A&op=translate">rynek</a>: market
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=m%C4%99ski&op=translate">męski</a>: male
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=damska&op=translate">damska</a>: female
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=modna&op=translate">modna</a>: fashionable/trendy
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=m%C5%82ody&op=translate">młody</a>: young
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=szcz%C4%99%C5%9Bliwa&op=translate">szczęśliwa</a>: happy
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=ja%20te%C5%BC&op=translate">ja też</a>: me too
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=chory&op=translate">chory</a>: sick
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=zdrowy&op=translate">zdrowy</a>: healthy
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=wysoki%0A&op=translate">wysoki</a>: tall
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=szczup%C5%82y%0A&op=translate">szczupły</a>: slim/slender
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=niemi%C5%82y%0A&op=translate">niemiły</a>: nasty/horrible
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=drewniany%0A&op=translate">drewniany</a>: wooden
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=pomidor%0A&op=translate">pomidor</a>: tomato
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=trawa%0A&op=translate">trawa</a>: grass
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=ostatnia%0A&op=translate">ostatnia</a>: last/final
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=myszka%0A&op=translate">myszka</a>: electronic mouse
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=sympatyczny%0A&op=translate">sympatyczny</a>: pleasant/friendly
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=%C5%82adny%0A&op=translate">ładny</a>: pretty
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=bogaty%0A&op=translate">bogaty</a>: rich
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=smacznego&op=translate">smacznego</a>: Enjoy your meal
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=przystojna&op=translate">przystojna</a>: handsome
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=trudny&op=translate">trudny</a>: difficult
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=%C5%82atwy&op=translate">łatwy</a>: easy
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=troch%C4%99&op=translate">trochę</a>: a little
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=niestety&op=translate">niestety</a>: unfortunately
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=pogoda&op=translate">pogoda</a>: weather
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=zimny%0A&op=translate">zimny</a>: cold
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=zm%C4%99czony&op=translate">zmęczony</a>: tired
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=nos&op=translate">nos</a>: nose
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=spacer&op=translate">spacer</a>: walk
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=prawo&op=translate">prawo</a>: right
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=lewo&op=translate">lewo</a>: left
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=rybka%0A&op=translate">rybka</a>: fish
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=k%C3%B3%C5%82ko&op=translate">kółko</a>: circle
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=tr%C3%B3jk%C4%85t&op=translate">trójkąt</a>: triangle
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=kelnerka&op=translate">kelnerka</a>: waitress
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=smutny%20dzie%C5%84&op=translate">smutny</a>: sad
+          </div>
+          <div class="col-sm">
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&tab=TT&sl=pl&tl=en&text=weso%C5%82y%0A&op=translate">wesoły</a>: cheerful
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=gor%C4%85cy&op=translate">gorący</a>: hot
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=ciep%C5%82y&op=translate">ciepły</a>: warm
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=przystojny&op=translate">przystojny</a>: handsome
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=brzydki&op=translate">brzydki</a>: ugly
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=tani&op=translate">tani</a>: cheap
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=leniwy&op=translate">leniwy</a>: lazy
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=pracowity&op=translate">pracowity</a>: busy/hard-working
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=gruby&op=translate">gruby</a>: fat
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=brzydka%0A&op=translate">brzydka</a>: ugly
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=zamkni%C4%99ty&op=translate">zamknięty</a>: closed
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=otwarty%0A&op=translate">otwarty</a>: open
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=niski&op=translate">niski</a>: short
+          </div>
+          <div class="col-sm">
+
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=brudny&op=translate">brudny</a>: dirty
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=czysta&op=translate">czysta</a>: clean
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=drogi&op=translate">drogi</a>: expensive
+          </div>
+          <div class="col-sm">
+
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=osoba&op=translate">osoba</a>: person
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=m%C4%85%C5%BC&op=translate">mąż</a>: husband
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=%C5%BCona%0A&op=translate">żona</a>: wife
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=zdenerwowany&op=translate">zdenerwowany</a>: nervous/upset
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=szarmancki&op=translate">szarmancki</a>: gallant
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=sceptyczny&op=translate">sceptyczny</a>: skeptical
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=optymistyczny&op=translate">optymistyczny</a>: optimistic
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=tolerancyjny&op=translate">tolerancyjny</a>: tolerant
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=atrakcyjny&op=translate">atrakcyjny</a>: attractive
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=stolica&op=translate">stolica</a>: capital
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=optymistyczny&op=translate">optymistyczny</a>: optimistic
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=tolerancyjny&op=translate">tolerancyjny</a>: tolerant
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <hr>
+  <div id="Lecture9" class="chapter">Lecture 9: Commonly used verbs, Monety/Banknoty, Pronouncing numbers 100, 200, 300..</div>
+  <hr>
+
+  <div class="textual-content">
+    <div class="sub-heading">Commonly used verbs</div>
+    <div>
+      - <a href="https://youtu.be/RQ4fGAeVa-M?t=113">Timestamp to section</a>. <br>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm">
+            pytać: to ask
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=ogl%C4%85da%C4%87&op=translate">oglądać</a>: to watch
+          </div>
+          <div class="col-sm">
+            otwierać: to open
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=zamyka%C4%87&op=translate">zamykać</a>: to close
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm">
+            znać: to know
+          </div>
+          <div class="col-sm">
+            grać: to play
+          </div>
+          <div class="col-sm">
+            czekać: to wait
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=sprz%C4%85ta%C4%87&op=translate">sprzątać</a>: to clean
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm">
+            wiedzieć: to know
+          </div>
+          <div class="col-sm">
+            mieć: to have
+          </div>
+          <div class="col-sm">
+            studiować: to study
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=odpoczywa%C4%87&op=translate">odpoczywać</a>: to rest
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm">
+            wymienić: to exchange
+          </div>
+          <div class="col-sm">
+            literować: to spell
+          </div>
+          <div class="col-sm">
+            podrózować: to travel
+          </div>
+          <div class="col-sm">
+            śpiewać: to sing
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=p%C5%82ywa%C4%87&op=translate">pływać</a>: to swim
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=ubiera%C4%87%20si%C4%99&op=translate">ubierać się</a>: to dress/put on clothes
+          </div>
+          <div class="col-sm">
+            czytać: to read
+          </div>
+          <div class="col-sm">
+            odpowiadać: to answer
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=kocha%C4%87&op=translate">kochać</a>: to love
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=s%C5%82ucha%C4%87&op=translate">słuchać</a>: to listen
+          </div>
+          <div class="col-sm">
+            rozumieć: to understand
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=je%C5%9B%C4%87&op=translate">jeść</a>: to eat
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm">
+            umieć: to be able to (do something)
+          </div>
+          <div class="col-sm">
+            pracować: to work
+          </div>
+          <div class="col-sm">
+            rozmawiać: to talk
+          </div>
+          <div class="col-sm">
+            mówić: to speak
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm">
+            biegać: to run
+          </div>
+          <div class="col-sm">
+            wracać: to come back
+          </div>
+          <div class="col-sm">
+            robić: to do
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=czu%C4%87&op=translate">czuć</a>: to feel/sense
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=widzie%C4%87&op=translate">widzieć</a>: to see
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=chodzi%C4%87&op=translate">chodzić</a>: to walk
+          </div>
+          <div class="col-sm">
+            opowiadać: to talk
+          </div>
+          <div class="col-sm">
+            <a href="https://translate.google.com/?hl=en&sl=pl&tl=en&text=i%C5%9B%C4%87&op=translate">iść (idzie)</a>: to go
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script src="../../script.js"></script>
+<script src="PolishWords.js"></script>
+</body>
+</html>
