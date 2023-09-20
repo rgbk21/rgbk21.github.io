@@ -14,3 +14,7 @@
 #show-all-words-button, #hide-all-words-button {
   margin-top: 8px;
 }
+
+.words-button-container {
+  margin-bottom: 8px;
+}

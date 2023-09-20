@@ -12,6 +12,18 @@ showAllWordsBtn?.addEventListener('click', function (e) {
 hideAllWordsBtn?.addEventListener('click', function (e) {
     document.querySelectorAll('.answer').forEach(elmnt => elmnt.classList.add('hidden'));
     hideAllWordsBtn.blur();
+
+    // Shuffle the divs inside the single-word-container
+    // https://stackoverflow.com/a/62713103/8742428
+    const allSingleWordsContainers = document.querySelectorAll('.single-word-container');
+    let shuffle = [...allSingleWordsContainers];
+    const getRandomValue = (i, N) => Math.floor(Math.random() * (N - i) + i);
+    shuffle.forEach( (elem, i, arr, j = getRandomValue(i, arr.length)) => [arr[i], arr[j]] = [arr[j], arr[i]] );
+
+    const allWordsContainer = document.querySelector('.all-words-container');
+    allWordsContainer.innerHTML = '';
+
+    allWordsContainer.append(...shuffle);
 });
 
 allAnswers?.forEach(element =>
