@@ -5,3 +5,10 @@
 #verbs-table-container {
   overflow-x: auto;
 }
+
+.playable-alphabet {
+  border: 1px solid black;
+  cursor: pointer;
+  display: inline-block;
+  margin: 8px;
+}
