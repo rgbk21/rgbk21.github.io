@@ -12,3 +12,12 @@
   display: inline-block;
   margin: 8px;
 }
+
+.top-icon {
+  background: white;
+  border: 1px solid black;
+  bottom: 5%;
+  cursor: pointer;
+  position: fixed;
+  right: 5%;
+}
