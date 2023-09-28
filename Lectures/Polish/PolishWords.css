@@ -29,3 +29,8 @@
   position: fixed;
   right: 5%;
 }
+
+.non-breaking-word {
+  display: inline-block;
+  margin-bottom: 0;
+}
