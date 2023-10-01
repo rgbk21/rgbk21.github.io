@@ -9,142 +9,332 @@
 
 <url>
   <loc>https://rgbk21.github.io/</loc>
-  <lastmod>2021-05-10T13:35:07+00:00</lastmod>
+  <lastmod>2023-10-01T13:41:12+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://rgbk21.github.io/Projects/TwitterCritNodes/TwitterCritNodes_1.html</loc>
-  <lastmod>2021-05-10T13:35:07+00:00</lastmod>
+  <lastmod>2023-10-01T13:41:12+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://rgbk21.github.io/Projects/isRelatedTo/isRelatedTo.html</loc>
-  <lastmod>2021-05-10T13:35:07+00:00</lastmod>
+  <lastmod>2023-10-01T13:41:12+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://rgbk21.github.io/ImageGallery/ImageGallery.html</loc>
-  <lastmod>2021-05-10T13:35:07+00:00</lastmod>
+  <loc>https://rgbk21.github.io/WordleCheater/index.html</loc>
+  <lastmod>2023-10-01T13:41:12+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://rgbk21.github.io/Pig_Game/index.html</loc>
-  <lastmod>2021-05-10T13:35:07+00:00</lastmod>
+  <lastmod>2023-10-01T13:41:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rgbk21.github.io/ImageGallery/ImageGallery.html</loc>
+  <lastmod>2023-10-01T13:41:11+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://rgbk21.github.io/RGB_Guesser_Game/RGB.html</loc>
-  <lastmod>2021-05-10T13:35:07+00:00</lastmod>
+  <lastmod>2023-10-01T13:41:12+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://rgbk21.github.io/ToDoList/todo.html</loc>
-  <lastmod>2021-05-10T13:35:07+00:00</lastmod>
+  <lastmod>2023-10-01T13:41:12+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://rgbk21.github.io/Lectures/COMS_631/COMS_631_index.html</loc>
-  <lastmod>2021-05-10T13:35:07+00:00</lastmod>
+  <lastmod>2023-10-01T13:41:12+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://rgbk21.github.io/Lectures/COMS_535/COMS_535_index.html</loc>
-  <lastmod>2021-05-10T13:35:07+00:00</lastmod>
+  <lastmod>2023-10-01T13:41:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rgbk21.github.io/Lectures/EffectiveJava/EffectiveJava.html</loc>
+  <lastmod>2023-10-01T13:41:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rgbk21.github.io/Lectures/DI/DI.html</loc>
+  <lastmod>2023-10-01T13:41:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rgbk21.github.io/Lectures/Linux/Linux.html</loc>
+  <lastmod>2023-10-01T13:41:12+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rgbk21.github.io/Lectures/Polish/Polish.html</loc>
+  <lastmod>2023-10-01T13:41:12+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://rgbk21.github.io/Code/ThingsToRemember/ThingsToRemember.html</loc>
-  <lastmod>2021-05-10T13:35:07+00:00</lastmod>
+  <lastmod>2023-10-01T13:41:11+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://rgbk21.github.io/Code/Java_Notes/JavaNotes.html</loc>
-  <lastmod>2021-05-10T13:35:07+00:00</lastmod>
+  <lastmod>2023-10-01T13:41:11+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://rgbk21.github.io/Code/Java_Notes/JavaNotes_2.html</loc>
-  <lastmod>2021-05-10T13:35:07+00:00</lastmod>
+  <lastmod>2023-10-01T13:41:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rgbk21.github.io/Code/LeetCode/LeetCode.html</loc>
+  <lastmod>2023-10-01T13:41:11+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://rgbk21.github.io/Code/Applying_Java_Notes/ApplyingJava_Notes.html</loc>
-  <lastmod>2021-05-10T13:35:06+00:00</lastmod>
+  <lastmod>2023-10-01T13:41:11+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://rgbk21.github.io/Code/JavaScript/JavaScript.html</loc>
-  <lastmod>2021-05-10T13:35:07+00:00</lastmod>
+  <lastmod>2023-10-01T13:41:11+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://rgbk21.github.io/Code/HTML_CSS/HTML_CSS_Basics.html</loc>
-  <lastmod>2021-05-10T13:35:06+00:00</lastmod>
+  <lastmod>2023-10-01T13:41:11+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://rgbk21.github.io/Code/SQL/SQL.html</loc>
-  <lastmod>2021-05-10T13:35:07+00:00</lastmod>
+  <lastmod>2023-10-01T13:41:11+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://rgbk21.github.io/Code/Spring/Spring.html</loc>
-  <lastmod>2021-05-10T13:35:07+00:00</lastmod>
+  <lastmod>2023-10-01T13:41:11+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://rgbk21.github.io/Code/Kafka/Kafka.html</loc>
-  <lastmod>2021-05-10T13:35:07+00:00</lastmod>
+  <lastmod>2023-10-01T13:41:11+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://rgbk21.github.io/Code/Angular/Angular.html</loc>
-  <lastmod>2021-05-10T13:35:06+00:00</lastmod>
+  <lastmod>2023-10-01T13:41:11+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://rgbk21.github.io/Code/Hibernate/Hibernate.html</loc>
-  <lastmod>2021-05-10T13:35:07+00:00</lastmod>
+  <lastmod>2023-10-01T13:41:11+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://rgbk21.github.io/InAnotherLife/Chapter1.html</loc>
-  <lastmod>2021-05-10T13:35:07+00:00</lastmod>
+  <loc>https://rgbk21.github.io/InAnotherLife/Chapter1/Chapter1.html</loc>
+  <lastmod>2023-10-01T13:41:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rgbk21.github.io/InAnotherLife/Chapter2/Chapter2.html</loc>
+  <lastmod>2023-10-01T13:41:11+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://rgbk21.github.io/InAnotherLife/Chapter3/Chapter3.html</loc>
+  <lastmod>2023-10-01T13:41:12+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://rgbk21.github.io/index.html</loc>
-  <lastmod>2021-05-10T13:35:07+00:00</lastmod>
+  <lastmod>2023-10-01T13:41:12+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://rgbk21.github.io/Projects/TwitterCritNodes/TwitterCritNodes_2.html</loc>
-  <lastmod>2021-05-10T13:35:07+00:00</lastmod>
+  <lastmod>2023-10-01T13:41:12+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://rgbk21.github.io/Projects/TwitterCritNodes/TwitterCritNodes_3.html</loc>
-  <lastmod>2021-05-10T13:35:07+00:00</lastmod>
+  <lastmod>2023-10-01T13:41:12+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://rgbk21.github.io/Lectures/COMS_631/COMS_631_Approximate_Matrix_Multiplication.pdf</loc>
-  <lastmod>2021-05-10T13:35:07+00:00</lastmod>
+  <lastmod>2023-10-01T13:41:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rgbk21.github.io/Lectures/Polish/PolishWords.html</loc>
+  <lastmod>2023-10-01T13:41:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rgbk21.github.io/Lectures/Polish/docs/Polish_cheat_sheet.pdf</loc>
+  <lastmod>2023-10-01T13:41:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rgbk21.github.io/Lectures/Polish/assets/Lecture1/Lecture1_PDF.pdf</loc>
+  <lastmod>2023-10-01T13:41:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rgbk21.github.io/Lectures/Polish/assets/Lecture2/Lecture2_PDF.pdf</loc>
+  <lastmod>2023-10-01T13:41:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rgbk21.github.io/Lectures/Polish/assets/Lecture3/Conversations.pdf</loc>
+  <lastmod>2023-10-01T13:41:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rgbk21.github.io/Lectures/Polish/assets/Lecture3/Numbers.pdf</loc>
+  <lastmod>2023-10-01T13:41:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rgbk21.github.io/Lectures/Polish/assets/Lecture4/Lecture4_PDF.pdf</loc>
+  <lastmod>2023-10-01T13:41:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rgbk21.github.io/Lectures/Polish/assets/Lecture5/Lecture5_ChangingVerbs.pdf</loc>
+  <lastmod>2023-10-01T13:41:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rgbk21.github.io/Lectures/Polish/assets/Lecture5/Lecture5_Co_Slychahc.pdf</loc>
+  <lastmod>2023-10-01T13:41:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rgbk21.github.io/Lectures/Polish/assets/Lecture6/Lecture6_PDF.pdf</loc>
+  <lastmod>2023-10-01T13:41:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rgbk21.github.io/Lectures/Polish/assets/Lecture7/Lecture7_PDF.pdf</loc>
+  <lastmod>2023-10-01T13:41:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rgbk21.github.io/Lectures/Polish/assets/Lecture8/Lecture8_PDF.pdf</loc>
+  <lastmod>2023-10-01T13:41:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rgbk21.github.io/Lectures/Polish/assets/Lecture9/Lecture9_PDF.pdf</loc>
+  <lastmod>2023-10-01T13:41:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rgbk21.github.io/Lectures/Polish/assets/Lecture10/Lecture10_PDF.pdf</loc>
+  <lastmod>2023-10-01T13:41:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rgbk21.github.io/Lectures/Polish/assets/Lecture10/AllNumbers.pdf</loc>
+  <lastmod>2023-10-01T13:41:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rgbk21.github.io/Lectures/Polish/assets/Lecture11/Lecture11_PDF.pdf</loc>
+  <lastmod>2023-10-01T13:41:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rgbk21.github.io/Lectures/Polish/assets/Lecture12/Lecture12_PDF.pdf</loc>
+  <lastmod>2023-10-01T13:41:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rgbk21.github.io/Lectures/Polish/assets/Lecture12/Comprehension_PDF.pdf</loc>
+  <lastmod>2023-10-01T13:41:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rgbk21.github.io/Lectures/Polish/assets/Lecture12/Colors_Adjectives.pdf</loc>
+  <lastmod>2023-10-01T13:41:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rgbk21.github.io/Lectures/Polish/assets/Lecture13/Lecture13_PDF.pdf</loc>
+  <lastmod>2023-10-01T13:41:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rgbk21.github.io/Lectures/Polish/assets/Lecture14/Lecture14_PDF.pdf</loc>
+  <lastmod>2023-10-01T13:41:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rgbk21.github.io/Lectures/Polish/assets/Lecture15/Lecture15_PDF.pdf</loc>
+  <lastmod>2023-10-01T13:41:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rgbk21.github.io/Lectures/Polish/assets/Lecture15/HomeWorkDoc.pdf</loc>
+  <lastmod>2023-10-01T13:41:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rgbk21.github.io/Lectures/Polish/assets/Lecture16/Lecture16_PDF.pdf</loc>
+  <lastmod>2023-10-01T13:41:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rgbk21.github.io/Lectures/Polish/assets/Lecture17/Lecture17_PDF.pdf</loc>
+  <lastmod>2023-10-01T13:41:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rgbk21.github.io/Lectures/Polish/assets/Lecture17/zadanie29.09.%20(1).pdf</loc>
+  <lastmod>2023-10-01T13:41:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rgbk21.github.io/Code/AnotherPage/AnotherPage.html</loc>
+  <lastmod>2023-10-01T13:41:11+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://rgbk21.github.io/Code/JavaScript/imgs/UdemyCourse/Module7/index.html</loc>
-  <lastmod>2021-05-10T13:35:07+00:00</lastmod>
+  <lastmod>2023-10-01T13:41:11+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://rgbk21.github.io/Code/HTML_CSS/test.html</loc>
-  <lastmod>2021-05-10T13:35:07+00:00</lastmod>
+  <lastmod>2023-10-01T13:41:11+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://rgbk21.github.io/Code/HTML_CSS/Udemy_Projects/Section5_Project/index.html</loc>
-  <lastmod>2021-05-10T13:35:06+00:00</lastmod>
+  <lastmod>2023-10-01T13:41:11+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rgbk21.github.io/InAnotherLife/Chapter3/Chapter0/Notes.html</loc>
+  <lastmod>2023-10-01T13:41:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rgbk21.github.io/InAnotherLife/Chapter3/Chapter1/Nala.html</loc>
+  <lastmod>2023-10-01T13:41:12+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://rgbk21.github.io/InAnotherLife/Chapter3/Chapter2/Chapter2.html</loc>
+  <lastmod>2023-10-01T13:41:12+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 
