@@ -8,7 +8,7 @@ const closeSettingsOverlayBtn = document.querySelector('.settings-close-overlay-
 const targetScoreForm = document.querySelector('#select-target-score-form');
 
 // const url = "http://localhost:8080";
-const url = "https://pig-game-rgbk21.herokuapp.com";
+const url = "https://rgbk21-piggame-backend.onrender.com";
 
 let stompClient;
 let gameId;

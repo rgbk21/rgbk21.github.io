@@ -1,6 +1,6 @@
 'use strict';
 
-const url = "https://pig-game-rgbk21.herokuapp.com";
+const url = "https://rgbk21-piggame-backend.onrender.com";
 // const url = "http://localhost:8080";
 
 let allPossibleAnswers;
