@@ -46,11 +46,11 @@
 <div class="alert--container">
   <!-- Alert Content added dynamically -->
   <div class="alert alert-success alert-dismissible fade show" role="alert">
-<!--    <strong>PLEASE NOTE:</strong>-->
-<!--    This is a free-tier heroku-hosted app. If the dyno (remote server) has received no traffic in the last 30 mins, it will put the dyno to sleep. Hence when you click the very-->
-<!--    first button, it might take around 15-20 seconds for the server to respond. Please be patient and do not repeatedly click the buttons just because the-->
-<!--    buttons seem to be not doing anything. Thanks for your time!-->
-    Heroku shut down my free server. Game no longer works :(
+    <strong>PLEASE NOTE:</strong>
+    This is a free-tier render-hosted app. If the dyno remote server has received no traffic in the last 15 mins, it will put the server to sleep. Hence, when you click the very
+    first button, it might take around 15-20 seconds for the server to respond. Please be patient and do not repeatedly click the buttons just because the
+    buttons seem to be not doing anything. Thanks for your time!
+<!--    Heroku shut down my free server. Game no longer works :(-->
     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
       <span aria-hidden="true">&times;</span>
     </button>
@@ -113,9 +113,10 @@
     <button class="btn btn--openGames">Show Open Games</button>
   </div>
 
-  <div class="btn--challengeMe">
-    <button class="btn btn--challengeMeOption">Challenge Me!</button>
-  </div>
+<!--  // TODO: Uncomment once you figure out how to use a mail server in render. -->
+<!--  <div class="btn&#45;&#45;challengeMe">-->
+<!--    <button class="btn btn&#45;&#45;challengeMeOption">Challenge Me!</button>-->
+<!--  </div>-->
 
   <!-- DICE -->
   <div class="dice-container">
@@ -157,9 +158,19 @@
         <input type="number" name="target-score-input" id="input_score" value="20" min="1" max="100" required>
       </div>
 
+
       <!-- Submit the score by clicking on this button -->
       <div class="select-target-score-submit-button">
         <button class="btn" type="submit">Set Target</button>
+      </div>
+
+      <div class="instructions">
+        How to play: <br>
+        The objective of the game is to be the first one to reach the target score. <br>
+        Each turn, a player repeatedly rolls a die until either a 1 is rolled or the player decides to "hold": <br>
+        - If the player rolls any number other than 1, it is added to their turn's total and that player's turn continues. <br>
+        - If the player rolls a 1, they score nothing and it becomes the other player's turn.
+        - If a player chooses to "hold", their turn total is added to their score, and it becomes the other player's turn.
       </div>
     </form>
   </div>

@@ -208,10 +208,10 @@ function connectToGameWithId({gameId, player: {userName}}) {
                 if (data.gameStatus === 'IN_PROGRESS') {
                     connectToSocket(gameId);
                     gameStatus = data.gameStatus;
-                    // alert(`You are now playing with: ${data.p1UserName}`);
-                    hideChallengeMeBtn();
+                       hideChallengeMeBtn();
                     clearAlertContainer();
-                    showAlertWithText(`You are now playing with: ${data.p1UserName} <br>
+                    showAlertWithText(`You are now playing with: ${data.p1UserName} <br> It is ${data.p1UserName}'s turn.
+                                    Please wait while they roll!
                                     Target score to win is: ${data.targetScore}`);
                 }
             } else {
@@ -390,6 +390,7 @@ function updateUI(data) {
         initializePlayer1Turn(data);
         gameStatus = data.gameStatus;
         showAlertWithText(`Player 2 has entered the game as: ${data.p2UserName} <br>
+                            It is your turn! Click on "Roll Dice" to begin playing.
                             Target score to win is: ${data.targetScore}`);
     }
 
