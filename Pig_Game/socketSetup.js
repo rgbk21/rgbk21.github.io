@@ -225,6 +225,7 @@ function connectToGameWithId({gameId, player: {userName}}) {
     })
 }
 
+// TODO: Uncomment the method call
 function sendGameChallengeNotification() {
     p1userName = document.getElementById("player1Name")?.value;
     if (p1userName == null || p1userName === '') {
@@ -467,7 +468,8 @@ function hideSettingsOverlay() {
 }
 
 function hideChallengeMeBtn() {
-    challengeMeBtn.classList.add("hidden");
+    // TODO: Uncomment
+    // challengeMeBtn.classList.add("hidden");
 }
 
 function clearAlertContainer() {
