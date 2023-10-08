@@ -147,6 +147,7 @@
     <a href="#Ch3">Chapter 3: Types and Operations</a> <br>
     <a href="#Ch4">Chapter 4: Control Flow</a> <br>
     <a href="#Ch5">Chapter 5: Functions</a> <br>
+    <a href="#Ch6">Chapter 6: Classes</a> <br>
   </div>
 
   <hr>
@@ -694,7 +695,7 @@
     <div class="sub-heading">Introduction to classes</div>
     <div>
       - All values in Dart are objects that are built from a class. This includes the values of basic types like <code>int</code>, <code>double</code>, and <code>bool</code>.
-      That's different from other languages like Java whet basic types are primitive. For example, if you have <code>x = 10</code> in java, the value of <i>x</i> is 10 itself.
+      That's different from other languages like Java where basic types are primitive. For example, if you have <code>x = 10</code> in java, the value of <i>x</i> is 10 itself.
       However, Dart doesn't have primitive types. Even for a simple <code>int</code>, the value is an object that wraps the integer. <br>
       <div class="code-block">
         <div class="expand-code-snip-btn border border-primary rounded">
@@ -712,7 +713,7 @@
     <div class="sub-heading">Understanding Object Serialization</div>
     <div>
       - <i>Serialization</i> is the process of converting a complex data object into a string. Once the object has been serialized, it's easy to save that data or transfer it
-      across the network because everything from your app to the network and beyond knows how to deal with strings. Later, when you want to read that data bak in, you can do so by
+      across the network because everything from your app to the network and beyond knows how to deal with strings. Later, when you want to read that data back in, you can do so by
       way of <i>deserialization</i>, which is simply the process of converting a string back into an object of your datatype. <br>
       - Serialization and Deserialization are such common tasks that people have devised a number of standardized formats for serializing data. One of the most common ones is
       called JSON: JavaScript Object Notation. <br>
@@ -758,12 +759,68 @@
       </div>
 
       - Everything we saw in the optional and named parameters in functions also carries over to constructors. Constructors can also be defined with named and optional parameters.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/ff5c6a5141bc6cb5ef16e773030b6f27.js"></script>
+        </div>
+      </div>
     </div>
 
-    <div class="sub-heading">Iniitializer Lists</div>
+    <div class="sub-heading">Private variables and Initializer Lists</div>
     <div>
-      -
+      - Dart allows you to make variables private by adding an underscore in front of their name. Note that named parameters cannot start with an <code>_</code>. <br>
+      - Also note that when a constructor contains both an initializer list and a body, the initializer list gets executed before the body of the constructor. <br>
+      - Also note that private variables are library private, not class private. <br>
+      - A good use of initializer lists is sanity check of the input.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/551f42663e718b7c2ea79472545868d9.js"></script>
+        </div>
+      </div>
     </div>
+
+    <div class="sub-heading">Making properties and classes immutable</div>
+    <div>
+      - There are two ways to mark a variable immutable in Dart: <code>final</code> and <code>const</code>. hwever, since the compiler won't know what the properties are until
+      runtime, your only choice here is to use <code>final</code>. <br>
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/34778009038d58506d6dd4efb0f63e54.js"></script>
+        </div>
+      </div>
+
+      - If the objects of a particular class can never change, because all fields of the class are <code>final</code>, you can add <code>const</code> to the constructor to ensure
+      that all instances of the class will be constants at compile-time. In the above class, since both <i>_id</i> and <i>_name</i> were final, we can mark the class itself as
+      <code>const</code>.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/98d24433079d735c7ab9c6d31267a643.js"></script>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-heading">Factory Constructors</div>
+    <div>
+      - All the constructors we saw above were generative constructors, which means that they can only create a <i>new</i> instance of the class. <br>
+      - Factory constructors on the other hand can <i>return</i> existing instances oth the class, or even subclasses of it. <br>
+      - <a href="https://dart.dev/language/constructors#factory-constructors">The official dart docs</a> have a better explanation of it. <br>
+      - Use the <code>factory</code> keyword when implementing a constructor that doesn't always create a new instance of its class. For example, a <code>factory</code> constructor
+      might return an instance from a cache, or it might return an instance of a subtype. Another use case for <code>factory</code> constructors is initializing a <code>final</code>
+      variable using logic that can't be handled in the initializer list.
+    </div>
+
 
   </div>
 
