@@ -15,6 +15,46 @@ $('.top-icon').click(function() {
 });
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/// Methods handling the visibility of the words in the basic words section
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+const showAllBasicWordsBtn = document.querySelector('#show-all-basic-words-button');
+const hideAndRandomizeAllBasicWordsBtn = document.querySelector('#hide-and-randomize-all-basic-words-button');
+const onlyHideAllBasicWordsBtn = document.querySelector('#only-hide-all-basic-words-button');
+
+/// Show all words in the basic words section if they are hidden
+showAllBasicWordsBtn?.addEventListener('click', function (e) {
+    document.querySelectorAll('#basic-words-container .answer').forEach(elmnt => elmnt.classList.remove('hidden'));
+    showAllWordsBtn.blur();
+});
+
+/// Hides all the words that are present in the basic words section and then randomizes them.
+hideAndRandomizeAllBasicWordsBtn?.addEventListener('click', function (e) {
+    _hideAllBasicWords();
+    hideAndRandomizeAllBasicWordsBtn.blur();
+
+    // Shuffle the divs inside the single-word-container
+    // https://stackoverflow.com/a/62713103/8742428
+    const allSingleBasicWordsContainers = document.querySelectorAll('#basic-words-container .single-word-container');
+    let shuffle = [...allSingleBasicWordsContainers];
+    const getRandomValue = (i, N) => Math.floor(Math.random() * (N - i) + i);
+    shuffle.forEach( (elem, i, arr, j = getRandomValue(i, arr.length)) => [arr[i], arr[j]] = [arr[j], arr[i]] );
+
+    const allBasicWordsContainer = document.querySelector('#basic-words-container .all-basic-words-container');
+    allBasicWordsContainer.innerHTML = '';
+
+    allBasicWordsContainer.append(...shuffle);
+});
+
+/// Only hides (does not randomize) all the words that are present in the Words and Adjectives section.
+onlyHideAllBasicWordsBtn?.addEventListener('click', function (e) {
+    _hideAllBasicWords();
+    onlyHideAllBasicWordsBtn.blur();
+});
+
+function _hideAllBasicWords() {
+    document.querySelectorAll('#basic-words-container .answer').forEach(elmnt => elmnt.classList.add('hidden'));
+}
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /// Methods handling the visibility of the words in the Words and Adjectives section.
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
