@@ -1945,7 +1945,7 @@
       - A JS identifier must begin with a letter, an underscore, or a dollar sign. Digits are not allowed to be the first character. <br>
       - Certain reserved words like <code>if, while, for</code> cannot be used as the name of constants, variables, functions, or classes. But they can be used as names of
       properties within an object. <br>
-      - Others such as <code>from, of get, set</code> are used in limited contexts with no syntactic ambiguity and are perfectly legal as identifiers. <br>
+      - Others such as <code>from, of, get, set</code> are used in limited contexts with no syntactic ambiguity and are perfectly legal as identifiers. <br>
       - Others like <code>let</code> can't be fully reserved in order to retain backward compatibility with older programs. <code>let</code> can be used as a variable name if
       declared with <code>var</code> outside of a class, for example, but not if declared inside a class or with <code>const</code>. <br>
     </div>
@@ -2014,7 +2014,11 @@
       with a value U+10000 or higher require two code units each. These pairs of code units have a unique term in UTF-16: "<a
       href="https://en.wikipedia.org/wiki/UTF-16#Code_points_from_U+010000_to_U+10FFFF">Unicode surrogate pairs</a>". (What this means is that Surrogate Pairs are a term that is <a
       href="http://zuga.net/articles/text-what-is-a-unicode-surrogate-pair">limited to UTF-16</a>) <br>
-      UTF-32: the 32-bit code unit is large enough that every code point is represented as a single code unit.
+      UTF-32: the 32-bit code unit is large enough that every code point is represented as a single code unit. <br>
+      - The Single Most Important Fact About Encodings is "It does not make sense to have a string without knowing what encoding it uses." How do we preserve this information about
+      what encoding a string uses? When it comes to html, use the following <code>&lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8"&gt;</code>. But that meta
+      tag really has to be the very first thing in the &lt;head&gt; section because as soon as the web browser sees this tag it’s going to stop parsing the page and start over
+      after reinterpreting the whole page using the encoding you specified.
     </div>
 
     <div class="sub-heading">Unicode escapes sequences when it comes to JS</div>
