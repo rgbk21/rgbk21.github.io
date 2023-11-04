@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
           integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
           crossorigin="anonymous"></script>
@@ -147,7 +147,8 @@
   <div>
     This page contains my notes from the following books and lectures: <br>
     a) Eloquent JavaScript by Marijn Haverbeke <br>
-    b) Udemy course on JavaScript - Jonas Schmedtmann<br>
+    b) Udemy course on JavaScript - Jonas Schmedtmann <br>
+    c) Javascript - The Definitive Guide by David Flanagan <br>
   </div>
 
   <br>
@@ -170,6 +171,13 @@
   Module 11 - <a id="Module11_Link" href="#Module11_Udemy">Working with Arrays</a> <br>
   Module 13 - <a id="Module13_Link" href="#Module13_Udemy">Advanced DOM and Events</a> <br>
   Module 16 - <a id="Module16_Link" href="#Module16_Udemy">Async JS: Promises, async/await, and AJAX</a> <br>
+
+  <br>
+  <br>
+
+  Index for JS The Definitive Guide book: <br>
+  Chapter 2 - <a href="#DefinitiveGuide_Ch2">Lexical Structure</a> <br>
+  Chapter 3 - <a href="#DefinitiveGuide_Ch3">Types, Values, and Variables</a> <br>
 
   <hr>
   <div id="Chapter13" class="chapter">Chapter 13: JavaScript and the Browser</div>
@@ -1825,7 +1833,6 @@
   <hr>
 
   <div class="textual-content">
-
     <div class="sub-heading">Lecture 246: Asynchronous JS, AJAX and APIs</div>
     <div>
       - <a href="https://www.udemy.com/course/the-complete-javascript-course/learn/lecture/22649283#overview">Link to lecture</a>. <br>
@@ -1890,12 +1897,12 @@
       <code>https://countries-api-836d.onrender.com/countries/name/portugal</code>. <br>
       - In JS, there are multiple ways of doing AJAX calls. We are going to start with the most old-school one: <code>XMLHttpRequest</code>.
       <div class="code-block">
-          <div class="expand-code-snip-btn border border-primary rounded">
-              <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-          </div>
-          <div class="code-snippet">
-            <script src="https://gist.github.com/rgbk21/3b482f406ffe63687979de8df91bc2cb.js"></script>
-          </div>
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/3b482f406ffe63687979de8df91bc2cb.js"></script>
+        </div>
       </div>
     </div>
 
@@ -1904,15 +1911,15 @@
       - <a href="https://www.udemy.com/course/the-complete-javascript-course/learn/lecture/22649297#overview">Link to lecture</a>. <br>
       - High-level overview of what goes on when a browser makes a request to a webpage
       <div class="image-block">
-          <div class="expand-screenshot-image-btn border border-primary rounded">
-              <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
-          </div>
-          <div class="screenshot-image">
-            <img src="imgs/UdemyCourse/Module16/RequestResponseDiagram.png"
-             width="1500"
-             class="center-block img-fluid"
-             alt="Example1">
-          </div>
+        <div class="expand-screenshot-image-btn border border-primary rounded">
+          <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
+        </div>
+        <div class="screenshot-image">
+          <img src="imgs/UdemyCourse/Module16/RequestResponseDiagram.png"
+               width="1500"
+               class="center-block img-fluid"
+               alt="Example1">
+        </div>
       </div>
     </div>
 
@@ -1925,6 +1932,134 @@
 
   </div>
 
+
+  <hr>
+  <div id="DefinitiveGuide_Ch2" class="chapter">Chapter 2: Lexical Structure</div>
+  <hr>
+
+  <div class="textual-content">
+    <div class="sub-heading">Identifiers and Reserved Words</div>
+    <div>
+      - An <i>identifier</i> is simply a name. <br>
+      - In JS, identifiers are used to name constants, variables, properties, functions, and classes and to provide labels for certain loops in JS code. <br>
+      - A JS identifier must begin with a letter, an underscore, or a dollar sign. Digits are not allowed to be the first character. <br>
+      - Certain reserved words like <code>if, while, for</code> cannot be used as the name of constants, variables, functions, or classes. But they can be used as names of
+      properties within an object. <br>
+      - Others such as <code>from, of get, set</code> are used in limited contexts with no syntactic ambiguity and are perfectly legal as identifiers. <br>
+      - Others like <code>let</code> can't be fully reserved in order to retain backward compatibility with older programs. <code>let</code> can be used as a variable name if
+      declared with <code>var</code> outside of a class, for example, but not if declared inside a class or with <code>const</code>. <br>
+    </div>
+
+
+    <div class="sub-heading">Some background about Unicode</div>
+    <div>
+      - <a
+      href="https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses/">The
+      Absolute Minimum Every Software Developer Absolutely, Positively Must Know About Unicode and Character Sets (No Excuses!)</a>. <br>
+      - The only characters that mattered were good old unaccented English letters, and we had a code for them called ASCII which was able to represent every character using a
+      number between 32 and 127. Space was 32, the letter "A" was 65, etc. This could conveniently be stored in 7 bits. Most computers in those days were using 8-bit bytes, so not
+      only could you store every possible ASCII character, but you had a whole bit to spare. <br>
+      - In the ANSI standard, everybody agreed on what to do below 128, which was pretty much the same as ASCII, but there were lots of different ways to handle the characters from
+      128 and on up, depending on where you lived. These different systems were called code pages. But still, most people just pretended that a byte was a character and a character
+      was 8 bits and as long as you never moved a string from one computer to another, or spoke more than one language, it would sort of always work. Luckily, Unicode had been
+      invented. <br>
+      - Some people are under the misconception that Unicode is simply a 16-bit code where each character takes 16 bits and therefore there are 65,536 possible characters. This
+      is not, actually, correct. It is the single most common myth about Unicode. In fact, Unicode has a different way of thinking about characters, and you have to understand the
+      Unicode way of thinking of things or nothing will make sense. <br>
+      - Until now, we've assumed that a letter maps to some bits which you can store on disk or in memory: A -&gt; 0100 0001. <br>
+      - In Unicode, a letter maps to something called a <i>code point</i> which is still just a theoretical concept. How that code point is represented in memory or on disk is a
+      whole another story. <br>
+      - Consider the letter A. Every (platonic, as in unique) letter in every alphabet is assigned a magic number by the Unicode consortium which is written like this: U+0041. You
+      can find them all by visiting the <a href="https://home.unicode.org/">Unicode website</a>. There is no real limit on the number of letters that Unicode can define and in fact
+      they have gone beyond 65,536 so not every unicode letter can really be squeezed into two bytes, but that was a myth anyway. <br>
+      - OK, so say we have a string: <code>Hello</code> which, in Unicode, corresponds to these five code points: <code>U+0048 U+0065 U+006C U+006C U+006F</code>. Just a bunch of
+      code points. Numbers, really. We haven't yet said anything about how to store this in memory or represent it in an email message. That's where <i>encodings</i> come in. <br>
+      - Unicode Transformation Format 8-bit (UTF-8) is a <i>variable-width</i> encoding that can represent every character in the Unicode character set. It was designed for
+      backward compatibility with ASCII and to avoid the complications of endianness and byte order marks in UTF-16 and UTF-32. UTF-8 is capable of encoding all 1,112,064 valid
+      Unicode code points using one to four one-byte (8-bit) code units. What the <i>variable-width</i> means is that characters with code points with small values (like
+      <code>A</code>) can be represented with just one byte. In fact, in UTF-8, every code point from 0-127 is stored in a single byte. Only code points 128 and above are stored
+      using 2, 3, up to 6 bytes (Note: using five- and six-octet sequences are now illegal UTF-8). This enables UTF-8 to be backwards compatible with ASCII. <br>
+      - For example, <code>Hello</code>, which was <code>U+0048 U+0065 U+006C U+006C U+006F</code>, will be stored as <code>48 65 6C 6C 6F</code>, which, behold! is the same as it
+      was stored in ASCII, and ANSI, and every OEM character set on the planet. Now, if you are so bold as to use accented letters or Greek letters or Klingon letters, you'll have
+      to use several bytes to store a single code point. <br>
+      - <a href="https://en.wikipedia.org/wiki/UTF-8#Encoding">UTF-8 on wikipedia</a> explains with an example how the encoding is actually done. Point 3 has the sentence:
+      "The two leading zeros are added because a three-byte encoding needs exactly sixteen bits from the code point." What this means is that the number of x's that we need to fill
+      in the U+0800 to U+FFFF encoding is 16. <br>
+      - Note: A "character" can take more than 4 bytes because it is made of more than one code point. For instance a national flag character takes 8 bytes since it is "constructed
+      from a pair of Unicode scalar values" both from outside the <a href="https://en.wikipedia.org/wiki/Plane_(Unicode)#Basic_Multilingual_Plane">Base Multilingual Plane</a>. (I
+      think what this means is that each of the two code points that would combine to form a flag representation won't individually be the same as the code point that maps to an
+      already existing platonic letter. This way when the parser sees this code point, it knows that it has to treat the two code points as a "single character" and thus render it
+      as expected as a flag. And not as two disjoint platonic letters.) I think this understanding is correct as <a
+      href="https://en.wikipedia.org/wiki/UTF-16#Code_points_from_U+010000_to_U+10FFFF">this text on Wikipedia explains</a>. Since the ranges for the high surrogates
+      (0xD800–0xDBFF), low surrogates (0xDC00–0xDFFF), and valid BMP characters (0x0000–0xD7FF, 0xE000–0xFFFF) are disjoint, it is not possible for a surrogate to match a BMP
+      character, or for two adjacent code units to look like a legal surrogate pair. This simplifies searches a great deal. (But note that surrogate pair is a UTF-16 concept, and
+      does not apply to UTF-8 (?)). <br>
+      - Note: Some complex emoji characters can take even more than this; the transgender flag emoji (🏳️‍⚧️), which consists of the five-codepoint sequence U+1F3F3 U+FE0F U+200D
+      U+26A7 U+FE0F, requires sixteen bytes to encode, while that for the flag of Scotland (🏴󠁧󠁢󠁳󠁣󠁴󠁿) requires a total of twenty-eight bytes for the seven-codepoint sequence U+1F3F4
+      U+E0067 U+E0062 U+E0073 U+E0063 U+E0074 U+E007F. <a href="https://stackoverflow.com/a/20310289/8742428">Then there's Zalgo text</a>. <br>
+      - Uh oh: <a href="https://mathiasbynens.be/notes/javascript-unicode">JavaScript has a Unicode problem</a>. <br>
+      - <a href="https://stackoverflow.com/questions/27331819/whats-the-difference-between-a-character-a-code-point-a-glyph-and-a-grapheme">What's the difference between a
+      character, a code point, a glyph and a grapheme?</a> <br>
+      - From the wikipedia definitions: <br>
+      a) <a href="https://en.wikipedia.org/wiki/Character_encoding#Code_units">Code Units</a>: The code unit size is equivalent to the bit measurement for the particular encoding:
+      <br>
+      - A code unit in US-ASCII consists of 7 bits <br>
+      - A code unit in UTF-8, EBCDIC and GB 18030 consists of 8 bits <br>
+      - A code unit in UTF-16 consists of 16 bits <br>
+      - A code unit in UTF-32 consists of 32 bits <br>
+      b) <a href="https://en.wikipedia.org/wiki/Character_encoding#Code_points">Code Points</a>: A code point is represented by a sequence of code units. The mapping is defined by
+      the encoding. Thus, the number of code units required to represent a code point depends on the encoding: <br>
+      - UTF-8: code points map to a sequence of one, two, three or four code units. <br>
+      - UTF-16: code units are twice as long as 8-bit code units. Therefore, any code point with a scalar value less than U+10000 is encoded with a single code unit. Code points
+      with a value U+10000 or higher require two code units each. These pairs of code units have a unique term in UTF-16: "<a
+      href="https://en.wikipedia.org/wiki/UTF-16#Code_points_from_U+010000_to_U+10FFFF">Unicode surrogate pairs</a>". (What this means is that Surrogate Pairs are a term that is <a
+      href="http://zuga.net/articles/text-what-is-a-unicode-surrogate-pair">limited to UTF-16</a>) <br>
+      UTF-32: the 32-bit code unit is large enough that every code point is represented as a single code unit.
+    </div>
+
+    <div class="sub-heading">Unicode escapes sequences when it comes to JS</div>
+    <div>
+      - JS defines escapes sequences that allows us to write Unicode characters using only ASCII characters. <br>
+      - These Unicode escapes begin with the characters <code>\u</code> and are either followed by exactly four hexadecimal digits (uisng uppercase or lowercase letters A-F) or by
+      one to six hexadecimal digits enclosed within curly braces.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/3f04860c66242bd1e8dca24200e11d90.js"></script>
+        </div>
+      </div>
+
+      - Note that Unicode allows more than one way of encoding the same character. The string 'é' for example, can be encoded as the single Unicode character <code>\u00E9</code>
+      or as the regular ASCII 'e' followed by the acute accent combining mark <code>\u0301</code>. <br>
+      - The Unicode standard defines the preferred encoding for all characters and specifies a normalization procedure to convert text to a canonical form suitable for comparisons.
+      JavaScript assumes that the source code it is interpreting has already been normalized and does not do any normalization on its own. If you plan to use Unicode characters in
+      your JavaScript programs, you should ensure that your editor or some other tool performs Unicode normalization of your source code to prevent you from ending up with
+      different but visually indistinguishable identifiers.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/55a642782c42b7b1055322c4c4a192c8.js"></script>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <hr>
+  <div id="DefinitiveGuide_Ch3" class="chapter">Chapter 3: Types, Values, and Variables</div>
+  <hr>
+
+  <div class="textual-content">
+    <div class="sub-heading">Lecture 246: Asynchronous JS, AJAX and APIs</div>
+    <div>
+      -
+    </div>
+  </div>
 
 </div>
 
