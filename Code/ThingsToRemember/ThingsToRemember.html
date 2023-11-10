@@ -1471,6 +1471,9 @@
     We use <code>git reflog</code> in this case <a href="https://stackoverflow.com/questions/4768225/see-all-history-of-git">(Source on SO)</a>. Note that after you run this
     command you will see a "HEAD Detached" warning in IntelliJ. You can rectify that by following <a href="https://stackoverflow.com/a/10229202">this SO post linked here</a>.
     It explains what a detached head really means, and what you can do about it. <br>
+    57.2) I mistakenly added files to Git using the command: <code>git add myfile.txt</code> I have not yet run git commit. How do I undo this so that these changes will not be
+    included in the commit? <a href="https://stackoverflow.com/a/348234/8742428">Source on SO</a>. <br>
+    - To unstage a specific file: <code>git reset <i>fileName</i></code>. To unstage all files from the current change set: <code>git reset</code>.
   </div>
 
   <div class="one-point">
