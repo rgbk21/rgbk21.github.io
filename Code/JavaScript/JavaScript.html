@@ -179,6 +179,7 @@
   Chapter 2 - <a href="#DefinitiveGuide_Ch2">Lexical Structure</a> <br>
   Chapter 3 - <a href="#DefinitiveGuide_Ch3">Types, Values, and Variables</a> <br>
   Chapter 4 - <a href="#DefinitiveGuide_Ch4">Expressions and Operators</a> <br>
+  Chapter 5 - <a href="#DefinitiveGuide_Ch5">Statements</a> <br>
 
   <hr>
   <div id="Chapter13" class="chapter">Chapter 13: JavaScript and the Browser</div>
@@ -2422,11 +2423,243 @@
   <hr>
 
   <div class="textual-content">
-    <div class="sub-heading">Overview and Definitions</div>
+    <div class="sub-heading">Object and Array Initializers</div>
     <div>
-      -
+      - Object and array initializers are expressions whose value is a newly created object or array. <br>
+      - An array initializer is a comma-separated list of expressions contained within square brackets.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/16ad3520efafb933f023e6e7a3fa671f.js"></script>
+        </div>
+      </div>
+
+      - An object initializer expression is like an array initializer expression, but the square brackets are replaced by curly brackets, and each subexpression is prefixed with a
+      property name and a colon.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/87b103cbe781730b5cccf9f222399cee.js"></script>
+        </div>
+      </div>
     </div>
 
+    <div class="sub-heading">Property Access Expressions</div>
+    <div>
+      - A <i>property access expression</i> evaluates to the value of an object property or an array element. <br>
+      - You can access properties either using <code>expression . <i>identifier</i></code> or <code>expression [<i>expression</i>] </code>. <br>
+      - The difference between the two is that: when using a dot and an identifier, the value of the property name by that identifier is looked up. On the other hand, if [] is
+      used, the <i>expression</i> inside the [] is evaluated and converted into a string, and then the value of the property named by that string is looked up. Using the dot
+      notation is the simpler way, but you can use it only when you already know the name of the property (while writing the program) that you want to access. If the property
+      contains spaces, or punctuations, or itself is the result of some computation, you will need to use the [] syntax instead. <br>
+      - As we have seen before, two JS values cannot have properties: <code>null</code> and <code>undefined</code>. Trying to access properties on either of these, either through
+      <code> . </code> or <code> [] </code> syntax, causes a <code>TypeError</code> to be thrown.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/05a444660fe3b18cdf7222948a80a71b.js"></script>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-heading">Conditional Property Access</div>
+    <div>
+      - ES2020 adds two new kinds of property access expressions: <code>expression ?. <i>identifier</i></code> and <code>expression ?. [<i>expression</i>]</code>. <br>
+      - These are used to guard against the <code>TypeError</code> that we get when trying to access properties on <code>null</code> or <code>undefined</code>. <br>
+      - Consider the expression <code>a?.b</code>. <p class="highlight-text">If <i>a is <code>null</code></i> or <code>undefined</code>, then the expression evaluates to
+      <code>undefined</code></p> without any attempt to access the property <i>b</i>. If <i>a</i> is some other valid value, then <code>a?.b</code> evaluates to whatever
+      <code>a.b</code> would evaluate to. And if <i>a</i> does not have a property named <i>b</i>, then the value will again be <code>undefined</code>. <br>
+      - Consider the below example. <i>a</i> is an object, so <i>a.b</i> is a valid property access expression. But the value of <i>a.b</i> is <code>null</code>,
+      so <i>a.b.c</i> would throw a <code>TypeError</code>. By using <code>?.</code> instead of <code>.</code> we avoid the <code>TypeError</code>, and <code>a.b?.c</code>
+      evaluates to <code>undefined</code>. <br>
+      - This means that <code>(a.b?.c).d</code> will throw a <code>TypeError</code>, because the expression attempts to access a property of the value <code>undefined</code>. <br>
+      - <p class="highlight-text">But <code>a.b?.c.d</code> (without the parentheses) simply evaluates to <code>undefined</code> and does not throw an error. This is because
+      property access with <code>?.</code> is "short-circuiting": if the subexpression to the left of <code>?.</code> evaluates to <code>null</code> or <code>undefined</code>, then
+      the entire expression immediately evaluates to <code>undefined</code> without any further property access attempts. </p> <br>
+      - Of course, if <code>a.b</code> is an object, and if that object has no property named <i>c</i>, then <code>a.b?.c.d</code> will again throw a <code>TypeError</code> which
+      we can then prevent by using another conditional operator: <code>a.b?.c?.d</code>.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/7d771c46bc90053719b012fc3f029050.js"></script>
+        </div>
+      </div>
+
+
+      - Conditional property access is also possible using <code>?.[]</code> instead of <code>[]</code>. For instance, in the expression <code>a?.[b][c]</code>, if the value of
+      <i>a</i> is <code>null</code> or <code>undefined</code>, then the entire expression immediately evaluates to <code>undefined</code>, and the subexpressions <i>b</i> and
+      <i>c</i> are never evaluated. <br>
+      - If either of those expressions have side effects, the side effect will not occur if <i>a</i> is not defined.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/fb70bc472cb4baf915057c3aa0e919b3.js"></script>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="sub-heading">Conditional Invocations of Functions</div>
+    <div>
+      - Similar to property access, you can also call a function conditionally. <br>
+      - For instance, consider <code>myFunction()</code>. Here if <i>myFunction</i> was <code>null</code> or <code>undefined</code>, a <code>TypeError</code> would be thrown.
+      But if you did <code>myFunction?.()</code>, this would evaluate to <code>undefined</code> and no exception would be thrown. <br>
+      - The same short-circuiting rules regarding increment of passed arguments apply as well. <br>
+      - Consider the following three different cases:
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/d6544bd401b863949017e742311783ed.js"></script>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-heading">Some JS Operators</div>
+    <div>
+      - <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/delete">delete</a>: remove a property <br>
+      - <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof">typeof</a>: determine type of operand <br>
+      - <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/instanceof">instanceof</a>: test object class <br>
+      - <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/in">in</a>: test whether property exists <br>
+      - The / operator divides its first operand by its second. If you are used to programming languages that distinguish between integer and floating point numbers, you might
+      expect to get an integer result when you divide one integer by another. In JavaScript, however, all numbers are floating-point, so all division operations have floating-point
+      results: 5/2 evaluates to 2.5, not 2. <br>
+      - You should almost always be using the strict-equality operators: <code> === </code> and <code> !== </code>. <br>
+    </div>
+
+    <div class="sub-heading">When are two values equal when using <code> === </code>?</div>
+    <div>
+      - Two value are equal when comparing with <code> === </code> as per the following rules: <br>
+      a) If the two values have different types, they are not equal <br>
+      b) If both values are <code>null</code> or both values are <code>undefined</code>, they are equal <br>
+      c) If both values are the boolean value true or both are the boolean value false, they are equal <br>
+      d) If one or both values is <code>NaN</code>, they are not equal. (This is surprising, but the NaN value is never equal to any other value, including itself! To check whether
+      a value x is NaN, use x !== x, or the global <code>isNaN()</code> function.) <br>
+      e) If both values are numbers and have the same value, they are equal. If one value is 0 and the other is -0, they are also equal. <br>
+      f) If both values are strings and contain exactly the same 16-bit values in the same positions, they are equal. Two strings may have the same meaning and the same
+      visual appearance, but still be encoded using different sequences of 16-bit values. JavaScript performs no Unicode normalization, and a pair of strings like this is not
+      considered equal to the === or == operators. <br>
+      g) If both values refer to the same object, array, or function, they are equal. If they refer to different objects, they are not equal, even if both objects have identical
+      properties.
+
+      <br>
+      <br>
+
+      - Note that the <= (less than or equal) and >= (greater than or equal) operators do not rely on the equality or strict equality operators for determining whether two values
+      are "equal." Instead, the less-than-or-equal operator is simply defined as "not greater than," and the greater-than-or-equal operator is defined as "not less than."
+    </div>
+
+    <div class="sub-heading">The <code>in</code> operator</div>
+    <div>
+      - The <code>in</code> operator expects a left-side operand that is a string, symbol, or value that can be converted to a string. <br>
+      - It expects a right-side operand that is an object. <br>
+      - It evaluates to true if the left-side value is the name of a property of the right-side object.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/c6ef48b93c48ab7775d054b76012b233.js"></script>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-heading">The <code>instanceof</code> operator</div>
+    <div>
+      - // TODO: In order to understand how the <code>instanceof</code> operator works, you must understand the "prototype chain."
+    </div>
+
+    <div class="sub-heading">Logical <code>&&</code> operator</div>
+    <div>
+      - The <code>&&</code> operator can be understood at three different levels: <br>
+      a) At the simplest level, when used with boolean operands, && performs the Boolean AND operation on the two values: it returns true if and only if both its first operand and
+      its second operand are true. If one or both of these operands is false, it returns false. <br>
+      b) The second level at which && can be understood is as a Boolean AND operator for truthy and falsy values. If both operands are truthy, the operator returns a truthy value.
+      Otherwise, one or both operands must be falsy, and the operator returns a falsy value. In JavaScript, any expression or statement that expects a boolean value will work with
+      a truthy or falsy value, <p class="highlight-text">so the fact that && does not always return true or false does not cause practical problems</p>. <br>
+      c) Notice that this description says that the operator returns "a truthy value" or "a falsy value" but does not specify what that value is. For that, we need to describe &&
+      at the third and final level. This operator starts by evaluating its first operand, the expression on its left. If the value on the left is falsy, the value of the entire
+      expression must also be falsy, so && simply returns the value on the left and does not even evaluate the expression on the right. On the other hand, if the value on the left
+      is truthy, then the overall value of the expression depends on the value on the right hand side. If the value on the right is truthy, then the overall value must be truthy,
+      and if the value on the right is falsy, then the overall value must be falsy. So when the value on the left is truthy, the && operator evaluates and returns the value on the
+      right.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/36b999a9aced9539156a09e19ece0e03.js"></script>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-heading">Logical <code>||</code> operator</div>
+    <div>
+      - Like the <code>&&</code> operator discussed above, <code>||</code> starts by evaluating its first operand, the expression on its left. If the value of this first operand is
+      truthy, it short-circuits and returns that truthy value without ever evaluating the expression on the right. If, on the other hand, the value of the first operand is falsy,
+      then || evaluates its second operand and returns the value of that expression.
+      <div class="code-block">
+          <div class="expand-code-snip-btn border border-primary rounded">
+              <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+          </div>
+          <div class="code-snippet">
+            <script src="https://gist.github.com/rgbk21/de74b41af561fd6e8df0f6440f4ad8c6.js"></script>
+          </div>
+      </div>
+    </div>
+
+    <div class="sub-heading"><code>?:</code> and <code>??</code> operators</div>
+    <div>
+      - Ternary operator: <code> ? : </code> <br>
+      - First-Defined operator: <code> ?? </code> <br>
+      - Writing <code>a ?? b</code> is equivalent to writing <code>(a !== null && a !== undefined) ? a : b</code>.
+      <div class="code-block">
+          <div class="expand-code-snip-btn border border-primary rounded">
+              <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+          </div>
+          <div class="code-snippet">
+            <script src="https://gist.github.com/rgbk21/b6b5b2d63a420887a5b22bffe3a916ce.js"></script>
+          </div>
+      </div>
+    </div>
+
+    <div class="sub-heading">The <code>delete</code> operator</div>
+    <div>
+      - <code>delete</code> is a unary operator that attempts to delete the object property or array element specified as its operand.
+      <div class="code-block">
+          <div class="expand-code-snip-btn border border-primary rounded">
+              <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+          </div>
+          <div class="code-snippet">
+            <script src="https://gist.github.com/rgbk21/64a6b91b7632dd0c62266b1e4cee2e4b.js"></script>
+          </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <hr>
+  <div id="DefinitiveGuide_Ch5" class="chapter">Chapter 5: Statements</div>
+  <hr>
+
+  <div class="textual-content">
+    <div class="sub-heading">Object and Array Initializers</div>
+    <div>
+      -
+
+    </div>
 
   </div>
 
