@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+          integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+          crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+          integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+          crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+          integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+          crossorigin="anonymous"></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9QJ5D3X353"></script>
+  <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+          dataLayer.push(arguments);
+      }
+
+      gtag('js', new Date());
+
+      gtag('config', 'G-9QJ5D3X353');
+  </script>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../../globalStyles.css">
+  <meta name="author" content="Raj Gaurav Ballabh Kumar">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript 2 Notes</title>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+
+  <div class="navbar-header">
+    <a href="../../index.html" class="navbar-brand"> rgbk21</a>
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"><span
+    class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="nav navbar-nav">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+           aria-expanded="false">
+          Projects
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="../../Projects/TwitterCritNodes/TwitterCritNodes_1.html">Identifying
+            Critical Nodes on Twitter</a>
+          <a class="dropdown-item" href="../../Projects/isRelatedTo/isRelatedTo.html">isRelatedTo</a>
+          <div class="dropdown-divider"></div>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+           aria-expanded="false">
+          HTML Projects
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="../../WordleCheater/index.html">Wordle Cheater</a>
+          <a class="dropdown-item" href="../../Pig_Game/index.html">2-Player Pig Game</a>
+          <a class="dropdown-item" href="../../ImageGallery/ImageGallery.html">Image Gallery</a>
+          <a class="dropdown-item" href="../../RGB_Guesser_Game/RGB.html">RGB Guesser Game</a>
+          <a class="dropdown-item" href="../../ToDoList/todo.html">To-Do List</a>
+          <div class="dropdown-divider"></div>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+           aria-expanded="false">
+          Notes
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="../../Lectures/COMS_631/COMS_631_index.html">COMS 631</a>
+          <a class="dropdown-item" href="../../Lectures/COMS_535/COMS_535_index.html">COMS 535</a>
+          <a class="dropdown-item" href="../../Lectures/EffectiveJava/EffectiveJava.html">Effective Java</a>
+          <a class="dropdown-item" href="../../Lectures/DI/DI.html">Dependency Injection</a>
+          <a class="dropdown-item" href="../../Lectures/Linux/Linux.html">Linux</a>
+          <a class="dropdown-item" href="../../Lectures/Polish/Polish.html">Polish</a>
+          <div class="dropdown-divider"></div>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+           aria-expanded="false">
+          Code
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="../../Code/ThingsToRemember/ThingsToRemember.html">Things To Remember</a>
+          <a class="dropdown-item" href="../../Code/Java_Notes/JavaNotes.html">Java Notes</a>
+          <a class="dropdown-item" href="../../Code/Java_Notes/JavaNotes_2.html">Java Notes 2</a>
+          <a class="dropdown-item" href="../../Code/LeetCode/LeetCode.html">LeetCode Notes</a>
+          <a class="dropdown-item" href="../../Code/Applying_Java_Notes/ApplyingJava_Notes.html">ApplyingJava Notes</a>
+          <a class="dropdown-item" href="../../Code/JavaScript/JavaScript.html">JavaScript Notes</a>
+          <a class="dropdown-item" href="../../Code/HTML_CSS/HTML_CSS_Basics.html">HTML & CSS Notes</a>
+          <a class="dropdown-item" href="../../Code/SQL/SQL.html">SQL Notes</a>
+          <a class="dropdown-item" href="../../Code/Spring/Spring.html">Spring Notes</a>
+          <a class="dropdown-item" href="../../Code/Kafka/Kafka.html">Kafka Notes</a>
+          <a class="dropdown-item" href="../../Code/Angular/Angular.html">Angular</a>
+          <a class="dropdown-item" href="../../Code/Hibernate/Hibernate.html">Hibernate</a>
+          <div class="dropdown-divider"></div>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+           aria-expanded="false">
+          In Another Life
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="../../InAnotherLife/Chapter1/Chapter1.html">Chapter 1</a>
+          <a class="dropdown-item" href="../../InAnotherLife/Chapter2/Chapter2.html">Chapter 2</a>
+          <a class="dropdown-item" href="../../InAnotherLife/Chapter3/Chapter3.html">Chapter 3</a>
+          <div class="dropdown-divider"></div>
+        </div>
+      </li>
+
+    </ul>
+
+
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active"><a class="nav-link" href="https://github.com/rgbk21">GitHub</a></li>
+      <li class="nav-item active"><a class="nav-link"
+                                     href="https://www.linkedin.com/in/raj-gaurav-ballabh-kumar-97002058/">LinkedIn</a>
+      </li>
+      <li class="nav-item active"><a class="nav-link" href="https://www.instagram.com/wobblyframes/">Instagram</a>
+      </li>
+      <li class="nav-item active"><a class="nav-link"
+                                     href="https://www.facebook.com/SomeRandomThoughts">Facebook</a></li>
+    </ul>
+
+  </div>
+</nav>
+
+<div class="container">
+
+  <button id='load-all-gists' type="button" class="btn btn-outline-primary">Show all Gists!</button>
+
+  <div>
+    This page contains my notes from the following books: <br>
+    a) Javascript - The Definitive Guide by David Flanagan <br>
+  </div>
+
+  <br>
+
+  Index for JS The Definitive Guide book: <br>
+  Chapter 2 - <a href="#DefinitiveGuide_Ch2">Lexical Structure</a> <br>
+  Chapter 3 - <a href="#DefinitiveGuide_Ch3">Types, Values, and Variables</a> <br>
+  Chapter 4 - <a href="#DefinitiveGuide_Ch4">Expressions and Operators</a> <br>
+  Chapter 5 - <a href="#DefinitiveGuide_Ch5">Statements</a> <br>
+
+  <hr>
+  <div id="DefinitiveGuide_Ch2" class="chapter">Chapter 2: Lexical Structure</div>
+  <hr>
+
+  <div class="textual-content">
+    <div class="sub-heading">Identifiers and Reserved Words</div>
+    <div>
+      - An <i>identifier</i> is simply a name. <br>
+      - In JS, identifiers are used to name constants, variables, properties, functions, and classes and to provide labels for certain loops in JS code. <br>
+      - A JS identifier must begin with a letter, an underscore, or a dollar sign. Digits are not allowed to be the first character. <br>
+      - Certain reserved words like <code>if, while, for</code> cannot be used as the name of constants, variables, functions, or classes. But they can be used as names of
+      properties within an object. <br>
+      - Others such as <code>from, of, get, set</code> are used in limited contexts with no syntactic ambiguity and are perfectly legal as identifiers. <br>
+      - Others like <code>let</code> can't be fully reserved in order to retain backward compatibility with older programs. <code>let</code> can be used as a variable name if
+      declared with <code>var</code> outside of a class, for example, but not if declared inside a class or with <code>const</code>. <br>
+    </div>
+
+
+    <div class="sub-heading">Some background about Unicode</div>
+    <div>
+      - <a
+      href="https://www.joelonsoftware.com/2003/10/08/the-absolute-minimum-every-software-developer-absolutely-positively-must-know-about-unicode-and-character-sets-no-excuses/">The
+      Absolute Minimum Every Software Developer Absolutely, Positively Must Know About Unicode and Character Sets (No Excuses!)</a>. <br>
+      - The only characters that mattered were good old unaccented English letters, and we had a code for them called ASCII which was able to represent every character using a
+      number between 32 and 127. Space was 32, the letter "A" was 65, etc. This could conveniently be stored in 7 bits. Most computers in those days were using 8-bit bytes, so not
+      only could you store every possible ASCII character, but you had a whole bit to spare. <br>
+      - In the ANSI standard, everybody agreed on what to do below 128, which was pretty much the same as ASCII, but there were lots of different ways to handle the characters from
+      128 and on up, depending on where you lived. These different systems were called code pages. But still, most people just pretended that a byte was a character and a character
+      was 8 bits and as long as you never moved a string from one computer to another, or spoke more than one language, it would sort of always work. Luckily, Unicode had been
+      invented. <br>
+      - Some people are under the misconception that Unicode is simply a 16-bit code where each character takes 16 bits and therefore there are 65,536 possible characters. This
+      is not, actually, correct. It is the single most common myth about Unicode. In fact, Unicode has a different way of thinking about characters, and you have to understand the
+      Unicode way of thinking of things or nothing will make sense. <br>
+      - Until now, we've assumed that a letter maps to some bits which you can store on disk or in memory: A -&gt; 0100 0001. <br>
+      - In Unicode, a letter maps to something called a <i>code point</i> which is still just a theoretical concept. How that code point is represented in memory or on disk is a
+      whole another story. <br>
+      - Consider the letter A. Every (platonic, as in unique) letter in every alphabet is assigned a magic number by the Unicode consortium which is written like this: U+0041. You
+      can find them all by visiting the <a href="https://home.unicode.org/">Unicode website</a>. There is no real limit on the number of letters that Unicode can define and in fact
+      they have gone beyond 65,536 so not every unicode letter can really be squeezed into two bytes, but that was a myth anyway. <br>
+      - OK, so say we have a string: <code>Hello</code> which, in Unicode, corresponds to these five code points: <code>U+0048 U+0065 U+006C U+006C U+006F</code>. Just a bunch of
+      code points. Numbers, really. We haven't yet said anything about how to store this in memory or represent it in an email message. That's where <i>encodings</i> come in. <br>
+      - Unicode Transformation Format 8-bit (UTF-8) is a <i>variable-width</i> encoding that can represent every character in the Unicode character set. It was designed for
+      backward compatibility with ASCII and to avoid the complications of endianness and byte order marks in UTF-16 and UTF-32. UTF-8 is capable of encoding all 1,112,064 valid
+      Unicode code points using one to four one-byte (8-bit) code units. What the <i>variable-width</i> means is that characters with code points with small values (like
+      <code>A</code>) can be represented with just one byte. In fact, in UTF-8, every code point from 0-127 is stored in a single byte. Only code points 128 and above are stored
+      using 2, 3, up to 6 bytes (Note: using five- and six-octet sequences are now illegal UTF-8). This enables UTF-8 to be backwards compatible with ASCII. <br>
+      - For example, <code>Hello</code>, which was <code>U+0048 U+0065 U+006C U+006C U+006F</code>, will be stored as <code>48 65 6C 6C 6F</code>, which, behold! is the same as it
+      was stored in ASCII, and ANSI, and every OEM character set on the planet. Now, if you are so bold as to use accented letters or Greek letters or Klingon letters, you'll have
+      to use several bytes to store a single code point. <br>
+      - <a href="https://en.wikipedia.org/wiki/UTF-8#Encoding">UTF-8 on wikipedia</a> explains with an example how the encoding is actually done. Point 3 has the sentence:
+      "The two leading zeros are added because a three-byte encoding needs exactly sixteen bits from the code point." What this means is that the number of x's that we need to fill
+      in the U+0800 to U+FFFF encoding is 16. <br>
+      - Note: A "character" can take more than 4 bytes because it is made of more than one code point. For instance a national flag character takes 8 bytes since it is "constructed
+      from a pair of Unicode scalar values" both from outside the <a href="https://en.wikipedia.org/wiki/Plane_(Unicode)#Basic_Multilingual_Plane">Base Multilingual Plane</a>. (I
+      think what this means is that each of the two code points that would combine to form a flag representation won't individually be the same as the code point that maps to an
+      already existing platonic letter. This way when the parser sees this code point, it knows that it has to treat the two code points as a "single character" and thus render it
+      as expected as a flag. And not as two disjoint platonic letters.) I think this understanding is correct as <a
+      href="https://en.wikipedia.org/wiki/UTF-16#Code_points_from_U+010000_to_U+10FFFF">this text on Wikipedia explains</a>. Since the ranges for the high surrogates
+      (0xD800–0xDBFF), low surrogates (0xDC00–0xDFFF), and valid BMP characters (0x0000–0xD7FF, 0xE000–0xFFFF) are disjoint, it is not possible for a surrogate to match a BMP
+      character, or for two adjacent code units to look like a legal surrogate pair. This simplifies searches a great deal. (But note that surrogate pair is a UTF-16 concept, and
+      does not apply to UTF-8 (?)). <br>
+      - Note: Some complex emoji characters can take even more than this; the transgender flag emoji (🏳️‍⚧️), which consists of the five-codepoint sequence U+1F3F3 U+FE0F U+200D
+      U+26A7 U+FE0F, requires sixteen bytes to encode, while that for the flag of Scotland (🏴󠁧󠁢󠁳󠁣󠁴󠁿) requires a total of twenty-eight bytes for the seven-codepoint sequence U+1F3F4
+      U+E0067 U+E0062 U+E0073 U+E0063 U+E0074 U+E007F. <a href="https://stackoverflow.com/a/20310289/8742428">Then there's Zalgo text</a>. <br>
+      - Uh oh: <a href="https://mathiasbynens.be/notes/javascript-unicode">JavaScript has a Unicode problem</a>. <br>
+      - <a href="https://stackoverflow.com/questions/27331819/whats-the-difference-between-a-character-a-code-point-a-glyph-and-a-grapheme">What's the difference between a
+      character, a code point, a glyph and a grapheme?</a> <br>
+      - From the wikipedia definitions: <br>
+      a) <a href="https://en.wikipedia.org/wiki/Character_encoding#Code_units">Code Units</a>: The code unit size is equivalent to the bit measurement for the particular encoding:
+      <br>
+      - A code unit in US-ASCII consists of 7 bits <br>
+      - A code unit in UTF-8, EBCDIC and GB 18030 consists of 8 bits <br>
+      - A code unit in UTF-16 consists of 16 bits <br>
+      - A code unit in UTF-32 consists of 32 bits <br>
+      b) <a href="https://en.wikipedia.org/wiki/Character_encoding#Code_points">Code Points</a>: A code point is represented by a sequence of code units. The mapping is defined by
+      the encoding. Thus, the number of code units required to represent a code point depends on the encoding: <br>
+      - UTF-8: code points map to a sequence of one, two, three or four code units. <br>
+      - UTF-16: code units are twice as long as 8-bit code units. Therefore, any code point with a scalar value less than U+10000 is encoded with a single code unit. Code points
+      with a value U+10000 or higher require two code units each. These pairs of code units have a unique term in UTF-16: "<a
+      href="https://en.wikipedia.org/wiki/UTF-16#Code_points_from_U+010000_to_U+10FFFF">Unicode surrogate pairs</a>". (What this means is that Surrogate Pairs are a term that is <a
+      href="http://zuga.net/articles/text-what-is-a-unicode-surrogate-pair">limited to UTF-16</a>) <br>
+      UTF-32: the 32-bit code unit is large enough that every code point is represented as a single code unit. <br>
+      - <p class="highlight-text">The Single Most Important Fact About Encodings is</p> "It does not make sense to have a string without knowing what encoding it uses." How do we
+      preserve this information about what encoding a string uses? When it comes to html, use the following
+      <code>&lt;meta http-equiv="Content-Type" content="text/html; charset=utf-8"&gt;</code>. But that meta
+      tag really has to be the very first thing in the &lt;head&gt; section because as soon as the web browser sees this tag it’s going to stop parsing the page and start over
+      after reinterpreting the whole page using the encoding you specified. <br>
+      - <a href="https://codepoints.net/">codepoints.net</a> helps you find the character corresponding to a particular code point.
+    </div>
+
+    <div class="sub-heading">Unicode escapes sequences when it comes to JS</div>
+    <div>
+      - JS defines escapes sequences that allows us to write Unicode characters using only ASCII characters. <br>
+      - These Unicode escapes begin with the characters <code>\u</code> and are either followed by exactly four hexadecimal digits (uisng uppercase or lowercase letters A-F) or by
+      one to six hexadecimal digits enclosed within curly braces.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/3f04860c66242bd1e8dca24200e11d90.js"></script>
+        </div>
+      </div>
+
+      - Note that Unicode allows more than one way of encoding the same character. The string 'é' for example, can be encoded as the single Unicode character <code>\u00E9</code>
+      or as the regular ASCII 'e' followed by the acute accent combining mark <code>\u0301</code>. <br>
+      - The Unicode standard defines the preferred encoding for all characters and specifies a normalization procedure to convert text to a canonical form suitable for comparisons.
+      JavaScript assumes that the source code it is interpreting has already been normalized and does not do any normalization on its own. If you plan to use Unicode characters in
+      your JavaScript programs, you should ensure that your editor or some other tool performs Unicode normalization of your source code to prevent you from ending up with
+      different but visually indistinguishable identifiers.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/55a642782c42b7b1055322c4c4a192c8.js"></script>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <hr>
+  <div id="DefinitiveGuide_Ch3" class="chapter">Chapter 3: Types, Values, and Variables</div>
+  <hr>
+
+  <div class="textual-content">
+    <div class="sub-heading">Overview and Definitions</div>
+    <div>
+      - JS types can be divided into two categories: <i>primitive tyeps</i> and <i>object types</i>. Primitive values include numbers, strings, and booleans. <br>
+      - The special JS values <code>null</code> and <code>undefined</code> are primitive values but they are not numbers, strings, or booleans. <br>
+      - ES6 adds a new special-purpose type known as <i>Symbol</i>. <br>
+      - Any JS value that is not a number, string, boolean, symbol, <code>null</code>, or <code>undefined</code> is an object. An object is a collection of <i>properties</i> where
+      each property has a name and a value (the value can be a primitive value or another object). <br>
+      - One very special object is the <i>global object</i>. <br>
+      - JS supports object-oriented programming style. Loosely, this means that rather than having globally defined functions to operate on values of various types, the types
+      themselves define methods for working with values. For instance, to sort the elements of an array <i>a</i>, we don't pass <i>a</i> to a <i>sort()</i> function, instead we
+      invoke the sort method on <i>a</i> as <code>a.sort()</code>. <br>
+      - Technically it is only JS objects that have methods. But numbers, strings, boolean, and symbol values behave as if they have methods. In JS, <code>null</code> and
+      <code>undefined</code> are the only values that methods cannot be invoked on. <br>
+      - JS's object types are <i>mutable</i> and its primitive types are <i>immutable</i>. <br>
+      - JS liberally converts values from one type to another based on some rules. These rules affect its definition of equality, and the <code>==</code> operator performs type
+      conversion along with comparison. In practice, however, the <code>==</code> operator is deprecated in favor of the strict equality operator <code>===</code> which does no
+      type conversions. <br>
+      - JS constants and variables are <i>untyped</i>: declarations do not specify what kind of values will be assigned. <br>
+    </div>
+
+    <div class="sub-heading">Numbers</div>
+    <div>
+      - JavaScript represents numbers using the 64-bit floating-point format defined by the IEEE 754 standard, which means it can represent numbers as large as ±1.7976931348623157
+      × 10<sup>308</sup> and as small as ±5 × 10<sup>-324</sup>. IEEE 754 standard is the format for numbers of type <code>double</code> in Java, C++, and most modern programming
+      languages. So the point to note is that the <i>same</i> datatype is being used to represent both integers as well as floating-point numbers. The mental picture of having
+      separate representation for <code>int</code> and <code>double</code> / <code>float</code> like in Java is incorrect. <br>
+      - The JavaScript number format allows you to <i>exactly</i> represent all integers between −9,007,199,254,740,992 (−2<sup>53</sup>) and 9,007,199,254,740,992 (2<sup>53</sup>),
+      inclusive. If you use integer values larger than this, you may lose precision in the trailing digits. <br>
+      - Note however that certain operations in JS such as array indexing and the bitwise operators are performed with 32-bit integers. What this means is that the maximum number
+      of elements that you can store in an array is 2<sup>32</sup> - 1 = 4,294,967,295.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/58994bf71523cdd16b0678787af21f9b.js"></script>
+        </div>
+      </div>
+
+      - ES2016 adds <code>**</code> for exponentiation. There are functions defined on the <a
+      href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math">Math Object</a>. The <code>Math</code> namespace object contains static
+      properties and methods for mathematical constants and functions. <code>Math</code> works with the <code>Number</code> type. It doesn't work with <code>BigInt</code>. <br>
+      - Arithmetic in JS does not raise errors in cases of overflow, underflow, or division by zero. <br>
+      - <i>Overflow</i> occurs when the result of a numeric operation is larger than the largest representable number. In this case, the result is a special infinity value,
+      <code>Infinity</code>. Similarly, when the absolute value of a negative value becomes larger than the absolute value of the largest representable negative number, the result
+      is negative infinity, <code>-Infinity</code>. <br>
+      - <i>Underflow</i> occurs when the result of a numeric operation is closer to zero than the smallest representable number. In this case, JS returns 0. If underflow occurs
+      from a negative number, JS returns a special value known as "negative zero." This value is almost completely indistinguishable from regular zero and JavaScript programmers
+      rarely need to detect it. <br>
+      - Any ways, <a href="https://stackoverflow.com/questions/7223359/are-0-and-0-the-same">here is a SO post </a> answering if +0 and -0 are the same? Note that
+      <code>+0 === -0</code> evaluates to true but <code>Object.is(-0, +0)</code> evaluates to false. <br>
+      - Division by zero is not an error in JS, it returns infinity or negative infinity. <br>
+      - There is one exception, however: zero divided by zero does not have a well-defined value, and the result of this operation is the special not-a-number value
+      <code>NaN</code>. <code>NaN</code> also arises if you attempt ot divide infinity by infinity, take the square root of a negative number, or use arithmetic operators with
+      non-numeric operands that cannot be converted to numbers. <br>
+      - The not-a-number value has one unusual feature in JavaScript: it does not compare equal to any other value, including itself. This means that you can't write
+      <code>x === NaN</code> to determine whether the value of a variable x is NaN. Instead, you must write <code>x != x</code> or <code>Number.isNaN(x)</code>. Those expressions
+      will be true if, and only if, x has the same value as the global constant <code>NaN</code>. Note that there is a similar method <i>isNan()</i> defined on the global object.
+      You can use either of these. <br>
+      - A related function <code>Number.isFinite()</code> returns true if its argument is a number other than <code>NaN</code>, <code>Infinity</code>, or <code>-Infinity</code>.
+      <br>
+      - BigInt is a numeric type whose values are integers. The type was added to JavaScript mainly to allow the representation of 64-bit integers, which are required for
+      compatibility with many other programming languages. BigInt literals are written as a string of digits followed by a lowercase letter <code>n</code>. You can use
+      <code>BigInt()</code> as a function for converting regular JavaScript numbers or strings to BigInt values. You cannot mix operands of type <code>BigInt</code> with regular
+      numbers. Bitwise operators "generally" work with BigInt operands. None of the functions of the <code>Math</code> object accept BigInt operands however.
+    </div>
+
+    <div class="sub-heading">Dates</div>
+    <div>
+      - JS defines a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date">Date object</a> that encapsulates an integral number that
+      represents milliseconds since the midnight at the beginning of January 1, 1970, UTC (the epoch).
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/46aa0349349fde5f23f5d8ec1e6e0a64.js"></script>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-heading">Text</div>
+    <div>
+      - A string is an immutable ordered sequence of 16-bit values, each of which typically represents a Unicode character. <br>
+      - The length of a string is the number of 16-bit values it contains. <br>
+      - JS uses UTF-16 encoding of the Unicode character set. The most commonly used Unicode characters (those from the "Basic Multilingual Plane") have codepoints that fit in 16
+      bits and can be represented by one element of a string. Unicode characters whose codepoints do not fit in 16 bits are encoded using the rules of UTF-16 as a sequence (known
+      as a "surrogate-pair") of two 16-bit values. This means that a JS string of length 2 (two 16-bit values) might represent only a single Unicode character. <br>
+      - Most string-manipulation methods defined by JavaScript operate on 16-bit values, not characters. They do not treat surrogate pairs specially, they perform no normalization
+      of the string, and don't even ensure that a string is well-formed UTF-16. In ES6, however, strings are iterable, and if you use the for/of loop or ... operator with a string,
+      it will iterate the actual characters of the string, not the 16-bit values.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/9dc8f41dde3667bcb487bdae49c8f9b4.js"></script>
+        </div>
+      </div>
+
+      - Some operations that can be performed with a String:
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/bc1782b845c655bc8869d2cc535c53c0.js"></script>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-heading">Template Literals</div>
+    <div>
+      - Template literals can include arbitrary JS expressions. <br>
+      - Everything between the <code>${...}</code> is interpreted as a JS expression. <br>
+      - Another feature of template literals is that if a function name (or "tag") comes right before the opening backtick, then the text and the values of the expressions within
+      the template literal are passed to the function. <br>
+      - TODO: Section also goes over Regular Expressions Regex.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/873dd66eca5f8c3bad4a85572f48abaa.js"></script>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-heading">Boolean Values</div>
+    <div>
+      - Any JS value can be converted to a boolean value. <br>
+      - The following values convert to, and therefore work like, false: <br>
+      a) <code>undefined</code> <br>
+      b) <code>null</code> <br>
+      c) 0 <br>
+      d) -0 <br>
+      f) <code>""</code> (the empty string) <br>
+
+      - All other values including all objects and arrays convert to, and work like, true. <br>
+      - For example, you can test explicitly to see if an object <i>obj</i> is not null by doing <code>if (obj !== null) {...}</code>
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/60a2ab5963ce8a5bf142605d676c2fb2.js"></script>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-heading"><code>null</code> and <code>undefined</code></div>
+    <div>
+      - Using the <code>typeof</code> operator on <code>null</code> returns the string "object", indicating that <code>null</code> can be thought of as a special object value that
+      indicates "no object". <br>
+      - JS also has a second value that indicates absence of value. The <code>undefined</code> value represents a deeper kind of absence. It is the value of variables that have not
+      been initialized and the value you get when you query the vaalue of an object property or array element that does not exist. <br>
+      - <code>undefined</code> is also the return value of functions that do not explicitly return a value and the value of function parameters for which no value has been passed.
+    </div>
+
+
+    <div class="sub-heading">Symbols</div>
+    <div>
+      - JS's fundamental <code>Object</code> type is an unordered collection of properties, where each property has a name and a value. Property names, until ES6, were exclusively
+      strings. But in ES6 and later, Symbols can also serve this purpose. <br>
+      - To obtain a Symbol value, you call the <code>Symbol()</code> function. This function never returns the same value twice, even when called with the same argument. <br>
+      - If you supply a string argument, that stirng will be included in the output of the Symbol's <code>toString()</code> method. Note in the below example that calling
+      <code>Symbol()</code> twice with the same stirng produces two completely different Symbol values. <br>
+      - <code>Symbol()</code> never returns the same value twice, but <code>Symbol.for()</code> always returns the same value when called with the same string.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/be342a887be31d35412bfd82e3b2a655.js"></script>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-heading">The Global Object</div>
+    <div>
+      - The <i>global object</i> is a regular JS object that serves a very important purpose: the properties of this object are the globally defined identifiers that are available
+      to a JS program. When the JS interpreter starts or whenever a web browser loads a new page, it creates a new global object and gives it an initial set of properties that
+      define: <br>
+      a) Global constants like <code>undefined</code>, <code>Infinity</code>, and <code>NaN</code> <br>
+      b) Global functions like <code>isName()</code>, <code>parseInt()</code>, and <code>eval()</code> <br>
+      c) Constructor functions llke <code>Date()</code>, <code>RegExp()</code>, <code>String()</code>, <code>Object()</code>, <code>Array()</code> <br>
+      d) Global objects like <code>Math</code> and <code>JSON</code> <br>
+
+      - In browsers, the <code>Window</code> object serves as the global object for all JS code contained in the browser window it represents. This global <code>Window</code>
+      object has a self-referential <code>window</code> property that can be used to refer to the global object. The <code>Window</code> object defines the core global properties,
+      but it also defines quite a few other globals that are specific to web browsers and client-side JS. <br>
+      - ES2020 defines <code>globalThis</code> as the standard way to refer to the global object in any context (like Node / Web browser / Web Worker Thread). <br>
+      - <a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/window">From window docs on MDN</a>. <br>
+      - <p class="highlight-text">Note in the below example that global variables declared with <code>var</code> become the properties of the window object. This is not the case
+      when you declare variables with <code>let</code> or <code>const</code>. </p> We will see more about global variables and how defining them means that they can be accessed
+      across all <code>&lt;script&gt;</code> tags that are associated with that HTML file in "Variable and Constant Scope" section somewhere below.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/271a142c1d687a249a64c5a3ee6ee7a7.js"></script>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-heading">Type Conversions</div>
+    <div>
+      - The below table summarizes how values convert from one type to another in JS. Bold entries in the table highlight conversions that you may find surprising. Empty cells
+      indicate that no conversion is necessary and none is performed. <br>
+
+      <div class="image-block">
+        <div class="expand-screenshot-image-btn border border-primary rounded">
+          <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
+        </div>
+        <div class="screenshot-image">
+          <img src="imgs/DefinitiveGuide/Chapter3/TypeConversions.png"
+               width="600"
+               class="center-block img-fluid"
+               alt="Example1"
+               loading="lazy">
+        </div>
+      </div>
+
+      - JS has two operators that test whether two values are equal. The "strict equality operator" <code> === </code> does not consider its operands to be equal if they are not of
+      the same type. <br>
+      - Because JS is flexible with type conversions, it also defines the <code> == </code> operator with a flexible definition of equality. <br>
+      - Keep in mind that convertibility of one value to another does not imply equality of those two values.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/955f7ccbba04bbdc2758d11152680d03.js"></script>
+        </div>
+      </div>
+
+      - Of course we can always perform explicit type conversions when required. <br>
+      - The simplest way to perform a type conversion is to use the <code>Boolean()</code>, <code>Number()</code>, and <code>String()</code> functions. <br>
+      - Certain JS operators perform implicit type conversions and are sometimes used explicitly for the purpose of type conversion. If one operand of the <code>+</code> operator
+      is a string, it converts the other one to a string. The unary <code>+</code> operator converts its operand to a number. And the unary <code>!</code> operator converts its
+      operand to a boolean and negates it. <br>
+      - When it comes to converting strings to numbers, the <code>parseInt()</code> and <code>parseFloat()</code> offer more flexibility.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/98a371bc1e0238dc9ba373474b538279.js"></script>
+        </div>
+      </div>
+
+      - Sometimes you might have to convert a number to string and you might want to control the number of decimal points that are present in the formatted string. This, and other
+      such operations, can be done using the following methods. <br>
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/f92cc4c6f35336352e5aa76100b4e2e9.js"></script>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="sub-heading">Object to Primitive Conversions</div>
+    <div>
+      - // TODO: If this is your first reading of this chapter, you should feel free to skip ahead to §3.10.
+    </div>
+
+    <div class="sub-heading">Variable declaration and assignment</div>
+    <div>
+      - In modern JS (ES6 and later), variables are declared with the <code>let</code> keyword. It is good programming practice to assign an initial value to your variables when
+      you declare them when possible. <br>
+      - If you don't specify an initial value for a variable with the <code>let</code> statement, the variable is declared, but its value is <code>undefined</code> until your code
+      assigns a value to it. <br>
+      - To declare a constant, use <code>const</code>. <code>const</code> works just like <code>let</code> except that you must initialize the constant when you declare it.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/02ee0c8376087277d6b8ab33e4fb6ce8.js"></script>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-heading">Variable and Constant Scope</div>
+    <div>
+      - The <i>scope</i> of a variable is the region of your program source code in which it is defined. <br>
+      - Variables and constants declared with <code>let</code> and <code>const</code> are <i>block scoped</i>. This means that they are only defined within the block of code in
+      which the <code>let</code> or <code>const</code> statement appears. <br>
+      - When a declaration (with any of <code>let</code>, <code>const</code>, or <code>var</code>) appears at the top level, outside of any code blocks, we say it is a <i>global
+      variable or constant</i> and has global scope. <br>
+      - In Node and in client-side JS modules (Chapter 10), the scope of a global variable is the file that it is defined in. <br>
+      - In traditional client-side JS, however, the scope of a global variable is the HTML document in which it is defined. <br>
+      - <p class="highlight-text">What this is means is that if one <code>&lt;script&gt;</code> declares a global variable or constant, that variable or constant is defined (and
+      can be accessed ) <i>in all of the</i> <code>&lt;script&gt;</code> elements in that HTML document (or at least all of the scripts that execute <i>after</i> the
+      <code>let</code> or <code>const</code> statement executes). </p>
+
+      <div class="image-block">
+        <div class="expand-screenshot-image-btn border border-primary rounded">
+          <span class="btn btn-link">Show Image <img src="imgs/chevron-expand.svg" alt="Show Image Button"></span>
+        </div>
+        <div class="screenshot-image">
+          <img src="imgs/DefinitiveGuide/Chapter3/GlobalVariables.png"
+               width="1900"
+               class="center-block img-fluid"
+               alt="Example1"
+               loading="lazy">
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-heading">Difference between <code>var</code> and <code>let</code></div>
+    <div>
+      - These differences are more for reference. Pretty much a copy-paste of the section in the book. <br>
+      - Variables declared with <code>var</code> do not have block scope. Instead, they are scoped to the body of the containing function no matter how deeply nested they are
+      inside that function. <br>
+      - If you use <code>var</code> outside of a function body, it declares a global variable. But global variables declared with <code>var</code> differ from globals declared with
+      <code>let</code> in an important way. Globals declared with <code>var</code> are implemented as properties of the global object. The global object can be referenced as
+      <code>globalThis</code>. So if you write <code>var x = 2;</code> outside of a function, it is like you wrote <code>globalThis.x = 2;</code>. Note however, that the analogy is
+      not perfect: the properties created with global <code>var</code> declarations cannot be deleted with the <code>delete</code> operator. Global variables and
+      constants declared with <code>let</code> and <code>const</code> are not properties of the global object. <br>
+      - Unlike variables declared with <code>let</code>, it is legal to declare the same variable multiple times with <code>var</code>. <br>
+      - When a variable is declared with var, the declaration is lifted up (or "hoisted") to the top of the enclosing function. The initialization of the variable remains
+      where you wrote it, but the definition of the variable moves to the top of the function. So variables declared with var can be used, without error, anywhere in the enclosing
+      function. If the initialization code has not run yet, then the value of the variable may be undefined, but you won't get an error if you use the variable before it is
+      initialized. This can be a source of bugs and is one of the important misfeatures that <code>let</code> corrects: if you declare a variable with <code>let</code> but attempt
+      to use it before the let statement runs, you will get an actual error instead of just seeing an <code>undefined</code> value. <br>
+      - In strict mode, if you attempt to use an undeclared variable, you'll get a reference error when you run your code. Outside of strict mode, however, if you assign a value to
+      a name that has not been declared with let, const, or var, you'll end up creating a new global variable. It will be a global no matter how deeply nested within functions and
+      blocks your code is, which is almost certainly not what you want, is bug-prone, and is one of the best reasons for using strict mode! Global variables created in this
+      accidental way are like global variables declared with var: they define properties of the global object. But unlike the properties defined by proper var declarations, these
+      properties <i>can</i> be deleted with the delete operator.
+    </div>
+
+    <div class="sub-heading">Destructuring Assignment</div>
+    <div>
+      - In a destructuring assignment, the value on the right hand side of the equals sign is an array or object (a "structured" value) and the left hand side specifies one or more
+      variable names using a syntax that mimics array and object literal syntax.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/9938d4fcdb5a34d078815235a6d2a8d4.js"></script>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+
+  <hr>
+  <div id="DefinitiveGuide_Ch4" class="chapter">Chapter 4: Expressions and Operators</div>
+  <hr>
+
+  <div class="textual-content">
+    <div class="sub-heading">Object and Array Initializers</div>
+    <div>
+      - Object and array initializers are expressions whose value is a newly created object or array. <br>
+      - An array initializer is a comma-separated list of expressions contained within square brackets.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/16ad3520efafb933f023e6e7a3fa671f.js"></script>
+        </div>
+      </div>
+
+      - An object initializer expression is like an array initializer expression, but the square brackets are replaced by curly brackets, and each subexpression is prefixed with a
+      property name and a colon.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/87b103cbe781730b5cccf9f222399cee.js"></script>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-heading">Property Access Expressions</div>
+    <div>
+      - A <i>property access expression</i> evaluates to the value of an object property or an array element. <br>
+      - You can access properties either using <code>expression . <i>identifier</i></code> or <code>expression [<i>expression</i>] </code>. <br>
+      - The difference between the two is that: when using a dot and an identifier, the value of the property name by that identifier is looked up. On the other hand, if [] is
+      used, the <i>expression</i> inside the [] is evaluated and converted into a string, and then the value of the property named by that string is looked up. Using the dot
+      notation is the simpler way, but you can use it only when you already know the name of the property (while writing the program) that you want to access. If the property
+      contains spaces, or punctuations, or itself is the result of some computation, you will need to use the [] syntax instead. <br>
+      - As we have seen before, two JS values cannot have properties: <code>null</code> and <code>undefined</code>. Trying to access properties on either of these, either through
+      <code> . </code> or <code> [] </code> syntax, causes a <code>TypeError</code> to be thrown.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/05a444660fe3b18cdf7222948a80a71b.js"></script>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-heading">Conditional Property Access</div>
+    <div>
+      - ES2020 adds two new kinds of property access expressions: <code>expression ?. <i>identifier</i></code> and <code>expression ?. [<i>expression</i>]</code>. <br>
+      - These are used to guard against the <code>TypeError</code> that we get when trying to access properties on <code>null</code> or <code>undefined</code>. <br>
+      - Consider the expression <code>a?.b</code>. <p class="highlight-text">If <i>a is <code>null</code></i> or <code>undefined</code>, then the expression evaluates to
+      <code>undefined</code></p> without any attempt to access the property <i>b</i>. If <i>a</i> is some other valid value, then <code>a?.b</code> evaluates to whatever
+      <code>a.b</code> would evaluate to. And if <i>a</i> does not have a property named <i>b</i>, then the value will again be <code>undefined</code>. <br>
+      - Consider the below example. <i>a</i> is an object, so <i>a.b</i> is a valid property access expression. But the value of <i>a.b</i> is <code>null</code>,
+      so <i>a.b.c</i> would throw a <code>TypeError</code>. By using <code>?.</code> instead of <code>.</code> we avoid the <code>TypeError</code>, and <code>a.b?.c</code>
+      evaluates to <code>undefined</code>. <br>
+      - This means that <code>(a.b?.c).d</code> will throw a <code>TypeError</code>, because the expression attempts to access a property of the value <code>undefined</code>. <br>
+      - <p class="highlight-text">But <code>a.b?.c.d</code> (without the parentheses) simply evaluates to <code>undefined</code> and does not throw an error. This is because
+      property access with <code>?.</code> is "short-circuiting": if the subexpression to the left of <code>?.</code> evaluates to <code>null</code> or <code>undefined</code>, then
+      the entire expression immediately evaluates to <code>undefined</code> without any further property access attempts. </p> <br>
+      - Of course, if <code>a.b</code> is an object, and if that object has no property named <i>c</i>, then <code>a.b?.c.d</code> will again throw a <code>TypeError</code> which
+      we can then prevent by using another conditional operator: <code>a.b?.c?.d</code>.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/7d771c46bc90053719b012fc3f029050.js"></script>
+        </div>
+      </div>
+
+
+      - Conditional property access is also possible using <code>?.[]</code> instead of <code>[]</code>. For instance, in the expression <code>a?.[b][c]</code>, if the value of
+      <i>a</i> is <code>null</code> or <code>undefined</code>, then the entire expression immediately evaluates to <code>undefined</code>, and the subexpressions <i>b</i> and
+      <i>c</i> are never evaluated. <br>
+      - If either of those expressions have side effects, the side effect will not occur if <i>a</i> is not defined.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/fb70bc472cb4baf915057c3aa0e919b3.js"></script>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="sub-heading">Conditional Invocations of Functions</div>
+    <div>
+      - Similar to property access, you can also call a function conditionally. <br>
+      - For instance, consider <code>myFunction()</code>. Here if <i>myFunction</i> was <code>null</code> or <code>undefined</code>, a <code>TypeError</code> would be thrown.
+      But if you did <code>myFunction?.()</code>, this would evaluate to <code>undefined</code> and no exception would be thrown. <br>
+      - The same short-circuiting rules regarding increment of passed arguments apply as well. <br>
+      - Consider the following three different cases:
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/d6544bd401b863949017e742311783ed.js"></script>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-heading">Some JS Operators</div>
+    <div>
+      - <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/delete">delete</a>: remove a property <br>
+      - <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof">typeof</a>: determine type of operand <br>
+      - <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/instanceof">instanceof</a>: test object class <br>
+      - <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/in">in</a>: test whether property exists <br>
+      - The / operator divides its first operand by its second. If you are used to programming languages that distinguish between integer and floating point numbers, you might
+      expect to get an integer result when you divide one integer by another. In JavaScript, however, all numbers are floating-point, so all division operations have floating-point
+      results: 5/2 evaluates to 2.5, not 2. <br>
+      - You should almost always be using the strict-equality operators: <code> === </code> and <code> !== </code>. <br>
+    </div>
+
+    <div class="sub-heading">When are two values equal when using <code> === </code>?</div>
+    <div>
+      - Two value are equal when comparing with <code> === </code> as per the following rules: <br>
+      a) If the two values have different types, they are not equal <br>
+      b) If both values are <code>null</code> or both values are <code>undefined</code>, they are equal <br>
+      c) If both values are the boolean value true or both are the boolean value false, they are equal <br>
+      d) If one or both values is <code>NaN</code>, they are not equal. (This is surprising, but the NaN value is never equal to any other value, including itself! To check whether
+      a value x is NaN, use x !== x, or the global <code>isNaN()</code> function.) <br>
+      e) If both values are numbers and have the same value, they are equal. If one value is 0 and the other is -0, they are also equal. <br>
+      f) If both values are strings and contain exactly the same 16-bit values in the same positions, they are equal. Two strings may have the same meaning and the same
+      visual appearance, but still be encoded using different sequences of 16-bit values. JavaScript performs no Unicode normalization, and a pair of strings like this is not
+      considered equal to the === or == operators. <br>
+      g) If both values refer to the same object, array, or function, they are equal. If they refer to different objects, they are not equal, even if both objects have identical
+      properties.
+
+      <br>
+      <br>
+
+      - Note that the <= (less than or equal) and >= (greater than or equal) operators do not rely on the equality or strict equality operators for determining whether two values
+      are "equal." Instead, the less-than-or-equal operator is simply defined as "not greater than," and the greater-than-or-equal operator is defined as "not less than."
+    </div>
+
+    <div class="sub-heading">The <code>in</code> operator</div>
+    <div>
+      - The <code>in</code> operator expects a left-side operand that is a string, symbol, or value that can be converted to a string. <br>
+      - It expects a right-side operand that is an object. <br>
+      - It evaluates to true if the left-side value is the name of a property of the right-side object.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/c6ef48b93c48ab7775d054b76012b233.js"></script>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-heading">The <code>instanceof</code> operator</div>
+    <div>
+      - // TODO: In order to understand how the <code>instanceof</code> operator works, you must understand the "prototype chain."
+    </div>
+
+    <div class="sub-heading">Logical <code>&&</code> operator</div>
+    <div>
+      - The <code>&&</code> operator can be understood at three different levels: <br>
+      a) At the simplest level, when used with boolean operands, && performs the Boolean AND operation on the two values: it returns true if and only if both its first operand and
+      its second operand are true. If one or both of these operands is false, it returns false. <br>
+      b) The second level at which && can be understood is as a Boolean AND operator for truthy and falsy values. If both operands are truthy, the operator returns a truthy value.
+      Otherwise, one or both operands must be falsy, and the operator returns a falsy value. In JavaScript, any expression or statement that expects a boolean value will work with
+      a truthy or falsy value, <p class="highlight-text">so the fact that && does not always return true or false does not cause practical problems</p>. <br>
+      c) Notice that this description says that the operator returns "a truthy value" or "a falsy value" but does not specify what that value is. For that, we need to describe &&
+      at the third and final level. This operator starts by evaluating its first operand, the expression on its left. If the value on the left is falsy, the value of the entire
+      expression must also be falsy, so && simply returns the value on the left and does not even evaluate the expression on the right. On the other hand, if the value on the left
+      is truthy, then the overall value of the expression depends on the value on the right hand side. If the value on the right is truthy, then the overall value must be truthy,
+      and if the value on the right is falsy, then the overall value must be falsy. So when the value on the left is truthy, the && operator evaluates and returns the value on the
+      right.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/36b999a9aced9539156a09e19ece0e03.js"></script>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-heading">Logical <code>||</code> operator</div>
+    <div>
+      - Like the <code>&&</code> operator discussed above, <code>||</code> starts by evaluating its first operand, the expression on its left. If the value of this first operand is
+      truthy, it short-circuits and returns that truthy value without ever evaluating the expression on the right. If, on the other hand, the value of the first operand is falsy,
+      then || evaluates its second operand and returns the value of that expression.
+      <div class="code-block">
+          <div class="expand-code-snip-btn border border-primary rounded">
+              <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+          </div>
+          <div class="code-snippet">
+            <script src="https://gist.github.com/rgbk21/de74b41af561fd6e8df0f6440f4ad8c6.js"></script>
+          </div>
+      </div>
+    </div>
+
+    <div class="sub-heading"><code>?:</code> and <code>??</code> operators</div>
+    <div>
+      - Ternary operator: <code> ? : </code> <br>
+      - First-Defined operator: <code> ?? </code> <br>
+      - Writing <code>a ?? b</code> is equivalent to writing <code>(a !== null && a !== undefined) ? a : b</code>.
+      <div class="code-block">
+          <div class="expand-code-snip-btn border border-primary rounded">
+              <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+          </div>
+          <div class="code-snippet">
+            <script src="https://gist.github.com/rgbk21/b6b5b2d63a420887a5b22bffe3a916ce.js"></script>
+          </div>
+      </div>
+    </div>
+
+    <div class="sub-heading">The <code>delete</code> operator</div>
+    <div>
+      - <code>delete</code> is a unary operator that attempts to delete the object property or array element specified as its operand.
+      <div class="code-block">
+          <div class="expand-code-snip-btn border border-primary rounded">
+              <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+          </div>
+          <div class="code-snippet">
+            <script src="https://gist.github.com/rgbk21/64a6b91b7632dd0c62266b1e4cee2e4b.js"></script>
+          </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <hr>
+  <div id="DefinitiveGuide_Ch5" class="chapter">Chapter 5: Statements</div>
+  <hr>
+
+  <div class="textual-content">
+    <div class="sub-heading">Object and Array Initializers</div>
+    <div>
+      -
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<script src="../../script.js"></script>
+</body>
+</html>
