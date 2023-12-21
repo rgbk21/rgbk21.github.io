@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bigelow+Rules&family=Elsie+Swash+Caps&family=Chicle&family=Kranky&family=Milonga&display=swap');
 
 *{
   box-sizing: border-box;
@@ -21,10 +22,10 @@
   grid-template-columns: 1fr 6fr 1fr;
 
   /* CSS Style for fireworks */
-  /*grid-template-rows: max-content 3fr 1fr max-content 1fr;*/
+  grid-template-rows: max-content 3fr 1fr max-content 1fr;
 
   /* CSS Style for no fireworks */
-  grid-template-rows: max-content max-content 1fr max-content 2fr;
+  /*grid-template-rows: max-content max-content 1fr max-content 2fr;*/
 }
 
 .hbd-text-container {
@@ -33,7 +34,8 @@
   background-color: black;
   color: white;
   text-align: center;
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Elsie Swash Caps', serif;
+  font-size: 3vh;
 }
 
 .fireworks-container {

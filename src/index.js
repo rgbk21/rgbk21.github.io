@@ -72,5 +72,5 @@ window.addEventListener('resize', function(){
 let date = new Date();
 let currentDate = date.getDate() + '/' + date.getMonth();
 if (currentDate === '27/11') {
-    hbdContainer.textContent = "HAPPY BIRTHDAY RETARD!";
+    hbdContainer.textContent = "Happy Birthday Retard!";
 }
