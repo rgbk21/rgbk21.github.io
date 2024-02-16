@@ -338,7 +338,7 @@
       <code>+0 === -0</code> evaluates to true but <code>Object.is(-0, +0)</code> evaluates to false. <br>
       - Division by zero is not an error in JS, it returns infinity or negative infinity. <br>
       - There is one exception, however: zero divided by zero does not have a well-defined value, and the result of this operation is the special not-a-number value
-      <code>NaN</code>. <code>NaN</code> also arises if you attempt ot divide infinity by infinity, take the square root of a negative number, or use arithmetic operators with
+      <code>NaN</code>. <code>NaN</code> also arises if you attempt to divide infinity by infinity, take the square root of a negative number, or use arithmetic operators with
       non-numeric operands that cannot be converted to numbers. <br>
       - The not-a-number value has one unusual feature in JavaScript: it does not compare equal to any other value, including itself. This means that you can't write
       <code>x === NaN</code> to determine whether the value of a variable x is NaN. Instead, you must write <code>x != x</code> or <code>Number.isNaN(x)</code>. Those expressions
@@ -450,7 +450,7 @@
       - JS's fundamental <code>Object</code> type is an unordered collection of properties, where each property has a name and a value. Property names, until ES6, were exclusively
       strings. But in ES6 and later, Symbols can also serve this purpose. <br>
       - To obtain a Symbol value, you call the <code>Symbol()</code> function. This function never returns the same value twice, even when called with the same argument. <br>
-      - If you supply a string argument, that stirng will be included in the output of the Symbol's <code>toString()</code> method. Note in the below example that calling
+      - If you supply a string argument, that string will be included in the output of the Symbol's <code>toString()</code> method. Note in the below example that calling
       <code>Symbol()</code> twice with the same stirng produces two completely different Symbol values. <br>
       - <code>Symbol()</code> never returns the same value twice, but <code>Symbol.for()</code> always returns the same value when called with the same string.
       <div class="code-block">
@@ -832,12 +832,12 @@
       truthy, it short-circuits and returns that truthy value without ever evaluating the expression on the right. If, on the other hand, the value of the first operand is falsy,
       then || evaluates its second operand and returns the value of that expression.
       <div class="code-block">
-          <div class="expand-code-snip-btn border border-primary rounded">
-              <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-          </div>
-          <div class="code-snippet">
-            <script src="https://gist.github.com/rgbk21/de74b41af561fd6e8df0f6440f4ad8c6.js"></script>
-          </div>
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/de74b41af561fd6e8df0f6440f4ad8c6.js"></script>
+        </div>
       </div>
     </div>
 
@@ -847,12 +847,12 @@
       - First-Defined operator: <code> ?? </code> <br>
       - Writing <code>a ?? b</code> is equivalent to writing <code>(a !== null && a !== undefined) ? a : b</code>.
       <div class="code-block">
-          <div class="expand-code-snip-btn border border-primary rounded">
-              <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-          </div>
-          <div class="code-snippet">
-            <script src="https://gist.github.com/rgbk21/b6b5b2d63a420887a5b22bffe3a916ce.js"></script>
-          </div>
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/b6b5b2d63a420887a5b22bffe3a916ce.js"></script>
+        </div>
       </div>
     </div>
 
@@ -860,16 +860,15 @@
     <div>
       - <code>delete</code> is a unary operator that attempts to delete the object property or array element specified as its operand.
       <div class="code-block">
-          <div class="expand-code-snip-btn border border-primary rounded">
-              <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-          </div>
-          <div class="code-snippet">
-            <script src="https://gist.github.com/rgbk21/64a6b91b7632dd0c62266b1e4cee2e4b.js"></script>
-          </div>
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/64a6b91b7632dd0c62266b1e4cee2e4b.js"></script>
+        </div>
       </div>
     </div>
   </div>
-
 
 
   <hr>
@@ -877,10 +876,78 @@
   <hr>
 
   <div class="textual-content">
-    <div class="sub-heading">Object and Array Initializers</div>
+    <div class="sub-heading">Random stuff</div>
     <div>
-      -
+      - The rule in JS (as in most programming languages) is that by default an <code>else</code> clause is part of the nearest <code>if</code> statement.
 
+    </div>
+
+    <div class="sub-heading"><code>switch</code> statement</div>
+    <div>
+      - The general format of a switch statement looks something like this: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/switch">example on
+      MDN</a>. <br>
+      - When a switch executes, it computes the value of expression and then looks for a case label whose expression evaluates to the same value (where sameness is determined by
+      the <code>===</code> operator). If it finds one, it starts executing the block of code at the statement labeled by the <code>case</code>. If it does not find a
+      <code>case</code> with a matching value, it looks for a statement labeled <code>default:</code> If there is no <code>default:</code> label, the switch statement skips the
+      block of code altogether.
+    </div>
+
+    <div class="sub-heading">for/of loop</div>
+    <div>
+      - This loop works with iterable objects. What constitutes an iterable object will be discussed in Chapter 12. For now, just know that arrays, strings, sets, and maps are
+      iterable. <br>
+      - Note that arrays are iterated "live" - changes made during the iteration may affect the outcome of the iteration. If we modified the preceding code by adding the line
+      <code>data.push(sum);</code> inside the loop body, then we create an infinite loop because the iteration can never reach the last element of the array.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="./imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/41b0057838e4b41d44ec2fecd48e2823.js"></script>
+        </div>
+      </div>
+
+      - Objects are not by-default iterable. Attempting to use for/of on a regular object throws a TypeError at runtime. <br>
+      - <code>Object.keys()</code>: If you want to iterate through the properties of an object, you can use the for/in loop, or use the for/of with the <code>Object.keys()</code>
+      method. This works because <code>Object.keys()</code> returns an array of property names for an object, and arrays are iterable with for/of. Note also that this iteration of
+      the keys of an object is not live as the array example above was - changes to the object <i>obj</i> made in the loop body will have no effect on the iteration. <br>
+      - <code>Object.values()</code>: Similarly, if you are interested only in the values of the object, you can iterate through the object using this. <br>
+      - <code>Object.entries()</code>: And use this if you are interested in both keys and values of an object's properties. <code>Object.entries()</code> returns an array of
+      arrays, where each inner array represents a key/value pair for one property of the object. We use destructuring assignment in this code example to unpack those inner
+      arrays into two individual variables.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="./imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/ce803f57d7a2b8acf4ffd4df9a3a5283.js"></script>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-heading">for/of with strings</div>
+    <div>
+      - Strings are iterable character-by-character. <br>
+      - Note that strings are iterated by Unicode codepoint, not by UTF-16 character. The string "I🖤🐈" has a length of 5 because the two emoji characters each require two UTF-16
+      characters to represent. But if you iterate that string with for/of, the loop body will run 3 times, once for each of the three code points "I", "🖤", and "🐈".
+    </div>
+
+    <div class="sub-heading">for/of with sets and maps</div>
+    <div>
+      - The built-in ES6 Set and Map classes are iterable. This is how you would iterate over them
+      <div class="code-block">
+          <div class="expand-code-snip-btn border border-primary rounded">
+              <span class="btn btn-link">Expand Gist <img src="./imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+          </div>
+          <div class="code-snippet">
+            <script src="https://gist.github.com/rgbk21/04420cbe2c5ae1ee3aa1ec6602498c92.js"></script>
+          </div>
+      </div>
+    </div>
+
+    <div class="sub-heading">for/in</div>
+    <div>
+      - While a for/of loop requires an iterable object after the <code>of</code>, a for/in loop works with any object after the <code>in</code>.
     </div>
 
   </div>
