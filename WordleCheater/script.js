@@ -48,6 +48,7 @@ function wakeUp() {
         },
         success: function (data) {
             console.log("Reply received");
+            showAlertWithText('Bootup Complete! Initiate Activity!', true);
         }
     });
 }
@@ -153,8 +154,8 @@ function clearOptions() {
     clearOptionsBtn.blur();
 }
 
-function showAlertWithText(alertText, alertBecauseFailure = false) {
-    const alertClass = alertBecauseFailure ? 'alert-danger' : 'alert-success';
+function showAlertWithText(alertText, persistAlert = false) {
+    const alertClass = persistAlert ? 'alert-danger' : 'alert-success';
     // If the height of the window is greater than 800px, this will show the error in the alertElmnt.
     // If the height is lesser than that, then I am assuming the page is being viewed on (small) mobile,
     // in which case I want to show the error on top of the grid, and not have to push down the entire page down.
@@ -167,7 +168,7 @@ function showAlertWithText(alertText, alertBecauseFailure = false) {
           </button>
         </div>`;
     alertElmnt.insertAdjacentHTML("afterbegin", html);
-    if (!alertBecauseFailure) {
+    if (!persistAlert) {
         $('.alert').delay(1000).fadeOut();
     }
 }

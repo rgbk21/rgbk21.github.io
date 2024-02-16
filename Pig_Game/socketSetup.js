@@ -34,6 +34,7 @@ function wakeUp() {
         },
         success: function (data) {
             console.log("Reply received");
+            showAlertWithText('Bootup Complete! Initiate Activity!');
         }
     });
 }
