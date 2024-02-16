@@ -47,7 +47,7 @@
   <!-- Alert Content added dynamically -->
   <div class="alert alert-success alert-dismissible fade show" role="alert">
     <strong>PLEASE NOTE:</strong>
-    This is a free-tier render-hosted app. If the dyno remote server has received no traffic in the last 15 mins, it will put the server to sleep. Hence, when you click the very
+    This is a free-tier render-hosted app. If the server has received no traffic in the last 15 mins, it will put the server to sleep. Hence, when you click the very
     first button, it might take around 2 mins for the server to respond ¯\_(ツ)_/¯. Please be patient and do not repeatedly click the buttons just because the
     buttons seem to be not doing anything. Notification will be presented on page once server is ready. Thanks for your time!
     <!--    Heroku shut down my free server. Game no longer works :(-->
@@ -169,7 +169,7 @@
         The objective of the game is to be the first one to reach the target score. <br>
         Each turn, a player repeatedly rolls a die until either a 1 is rolled or the player decides to "hold": <br>
         - If the player rolls any number other than 1, it is added to their turn's total and that player's turn continues. <br>
-        - If the player rolls a 1, they score nothing and it becomes the other player's turn.
+        - If the player rolls a 1, they lose their total, score nothing, and it becomes the other player's turn. <br>
         - If a player chooses to "hold", their turn total is added to their score, and it becomes the other player's turn.
       </div>
     </form>
