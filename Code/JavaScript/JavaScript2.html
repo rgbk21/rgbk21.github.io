@@ -16,15 +16,15 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-9QJ5D3X353"></script>
   <script>
-      window.dataLayer = window.dataLayer || [];
+    window.dataLayer = window.dataLayer || [];
 
-      function gtag() {
-          dataLayer.push(arguments);
-      }
+    function gtag() {
+      dataLayer.push(arguments);
+    }
 
-      gtag('js', new Date());
+    gtag('js', new Date());
 
-      gtag('config', 'G-9QJ5D3X353');
+    gtag('config', 'G-9QJ5D3X353');
   </script>
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -156,6 +156,7 @@
   Chapter 3 - <a href="#DefinitiveGuide_Ch3">Types, Values, and Variables</a> <br>
   Chapter 4 - <a href="#DefinitiveGuide_Ch4">Expressions and Operators</a> <br>
   Chapter 5 - <a href="#DefinitiveGuide_Ch5">Statements</a> <br>
+  Chapter 6 - <a href="#DefinitiveGuide_Ch6">Objects</a> <br>
 
   <hr>
   <div id="DefinitiveGuide_Ch2" class="chapter">Chapter 2: Lexical Structure</div>
@@ -879,7 +880,10 @@
     <div class="sub-heading">Random stuff</div>
     <div>
       - The rule in JS (as in most programming languages) is that by default an <code>else</code> clause is part of the nearest <code>if</code> statement.
-
+      - Note the difference in behavior of the <code>continue</code> statement in the <code>while</code> and <code>for</code> loops: a while loop returns directly to its condition,
+      but a for loop first evaluates its increment expression and then returns to its condition. Earlier, we considered the behavior of the for loop in terms of an "equivalent"
+      while loop. Because the continue statement behaves differently for these two loops, however, it is not actually possible to perfectly simulate a for loop with a while loop
+      alone.
     </div>
 
     <div class="sub-heading"><code>switch</code> statement</div>
@@ -948,10 +952,54 @@
     <div class="sub-heading">for/in</div>
     <div>
       - While a for/of loop requires an iterable object after the <code>of</code>, a for/in loop works with any object after the <code>in</code>. The for/in statement loops through
-      the property names of a specified object.
+      the property names of a specified object. <br>
+      - // Something ... <br>
+      - The for/in loop does not actually enumerate all properties of an object. It does not enumerate properties whose names are symbols. And of the properties whose names are
+      strings, it only loops over the <i>enumerable</i> properties, as in, the various built-in methods and properties defined by core JS are not enumerable (for eg.
+      <code>toString()</code>). The bottom line here is <p class="highlight-text">prefer to use a for/of loop with <code>Object.keys()</code> instead of a for/in loop. When
+      working with arrays, you almost always want to use for/of instead of for/in.</p>
+    </div>
+
+    <div class="sub-heading"><code>throw</code> and <code>try/catch/finally</code></div>
+    <div>
+      - An <i>exception</i> is a signal that indicates that some sort of exceptional condition or error has occurred. To <i>throw</i> an exception is to signal such an error or
+      exceptional condition. To <i>catch</i> an exception is to handle it using a <code>try/catch/finally</code> statement. <br>
+      - The <code>throw</code> statement has the following syntax: <code>throw <i>expresion</i></code> where <i>expression</i> may evaluate to a value of any type. You might decide
+      to throw a number, or a string, or something else. <br>
+      - When the JS interpreter itself throws an error, it uses the
+      <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/Error"><code>Error</code></a> class and its subclasses. <br>
+      - When a exception is thrown, the JS interpreter immediately stops normal program execution and jumps to the nearest exception handler. An exception handler is the
+      <code>catch</code> clause of a try/catch/finally block. If the block of code in which the exception was thrown does not have an associated catch clause, the interpreter
+      checks the next highest enclosing block of code to see if it has an exception handler associated with it. This continues until a handler is found. In this way, exceptions
+      propagate up through the lexical structure of JS methods and up the call stack. If no exception handler is ever found, the exception is treated as an error and is reported to
+      the user. <br>
+      - The following code illustrates the syntax and purpose of the <code>try/catch/finally</code> statement:
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="./imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/0e4e8a9cbe02aa94bd19fe52c554eb0e.js"></script>
+        </div>
+      </div>
+
     </div>
 
   </div>
+
+
+  <hr>
+  <div id="DefinitiveGuide_Ch6" class="chapter">Chapter 6: Objects</div>
+  <hr>
+
+  <div class="textual-content">
+    <div class="sub-heading">Random stuff</div>
+    <div>
+      -
+    </div>
+
+  </div>
+
 
 </div>
 
