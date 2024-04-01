@@ -29,21 +29,56 @@
   </script>
   <!-- End Global site tag (gtag.js) - Google Analytics -->
 
-  <!--    libs for stomp and sockjs-->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.4.0/sockjs.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
-  <!--    end libs for stomp and sockjs-->
   <!--    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"/>-->
   <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-  <link rel="stylesheet" href="words.css"/>
+  <link rel="stylesheet" href="./words.css"/>
   <title>Words</title>
 </head>
 
 <body>
 
-<div class="words-container">
-
+<div class="alert--container">
+  <!-- Alert Content added dynamically -->
+  <div class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>PLEASE NOTE:</strong>
+    This is a free-tier render-hosted app. If the remote server has received no traffic in the last 15 mins, it will put the server to sleep. Hence, when you click the very
+    first button, it might take around 2 mins for the server to respond ¯\_(ツ)_/¯. Please be patient and do not repeatedly click the buttons just because the
+    buttons seem to be not doing anything. Notification will be presented on page once server is ready. Thanks for your time!
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
 </div>
 
+<div class="words-container">
+  <div class="alphabet" onclick="fetchWordsForAlphabet('A')">A</div>
+  <div class="alphabet" onclick="fetchWordsForAlphabet('B')">B</div>
+  <div class="alphabet" onclick="fetchWordsForAlphabet('C')">C</div>
+  <div class="alphabet" onclick="fetchWordsForAlphabet('D')">D</div>
+  <div class="alphabet" onclick="fetchWordsForAlphabet('E')">E</div>
+  <div class="alphabet" onclick="fetchWordsForAlphabet('F')">F</div>
+  <div class="alphabet" onclick="fetchWordsForAlphabet('G')">G</div>
+  <div class="alphabet" onclick="fetchWordsForAlphabet('H')">H</div>
+  <div class="alphabet" onclick="fetchWordsForAlphabet('I')">I</div>
+  <div class="alphabet" onclick="fetchWordsForAlphabet('J')">J</div>
+  <div class="alphabet" onclick="fetchWordsForAlphabet('K')">K</div>
+  <div class="alphabet" onclick="fetchWordsForAlphabet('L')">L</div>
+  <div class="alphabet" onclick="fetchWordsForAlphabet('M')">M</div>
+  <div class="alphabet" onclick="fetchWordsForAlphabet('N')">N</div>
+  <div class="alphabet" onclick="fetchWordsForAlphabet('O')">O</div>
+  <div class="alphabet" onclick="fetchWordsForAlphabet('P')">P</div>
+  <div class="alphabet" onclick="fetchWordsForAlphabet('Q')">Q</div>
+  <div class="alphabet" onclick="fetchWordsForAlphabet('R')">R</div>
+  <div class="alphabet" onclick="fetchWordsForAlphabet('S')">S</div>
+  <div class="alphabet" onclick="fetchWordsForAlphabet('T')">T</div>
+  <div class="alphabet" onclick="fetchWordsForAlphabet('U')">U</div>
+  <div class="alphabet" onclick="fetchWordsForAlphabet('V')">V</div>
+  <div class="alphabet" onclick="fetchWordsForAlphabet('W')">W</div>
+  <div class="alphabet" onclick="fetchWordsForAlphabet('X')">X</div>
+  <div class="alphabet" onclick="fetchWordsForAlphabet('Y')">Y</div>
+  <div class="alphabet" onclick="fetchWordsForAlphabet('Z')">Z</div>
+</div>
+
+<script src="./words.js"></script>
 </body>
 </html>

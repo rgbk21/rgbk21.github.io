@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+.alphabet {
+  border: 1px solid grey;
+  font-size: large;
+  margin: 8px;
+  padding: 24px;
+}
+
+.words-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 8px;
+}
+
