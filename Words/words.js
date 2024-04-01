@@ -26,8 +26,9 @@ function wakeUp() {
 
 const fetchWordsForAlphabet = function (alphabet) {
   console.log(alphabet);
+
   $.ajax({
-    url: url + `/words/alphabet?alphabet=${alphabet}`,
+    url: url + `/words/alphabet?alphabet=${alphabet.toLowerCase()}`,
     type: 'GET',
     dataType: 'JSON',
     contentType: 'application/json',
