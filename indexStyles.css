@@ -22,10 +22,10 @@
   grid-template-columns: 1fr 6fr 1fr;
 
   /* CSS Style for fireworks */
-  /*grid-template-rows: max-content 3fr 1fr max-content 1fr;*/
+  grid-template-rows: max-content 3fr 1fr max-content 1fr;
 
   /* CSS Style for no fireworks */
-  grid-template-rows: max-content max-content 1fr max-content 2fr;
+  /*grid-template-rows: max-content max-content 1fr max-content 2fr;*/
 }
 
 .hbd-text-container {
