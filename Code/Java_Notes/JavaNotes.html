@@ -16,12 +16,14 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-9QJ5D3X353"></script>
   <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-          dataLayer.push(arguments);
-      }
-      gtag('js', new Date());
-      gtag('config', 'G-9QJ5D3X353');
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'G-9QJ5D3X353');
   </script>
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -166,10 +168,14 @@
   Section 16: <a href="#Udemy_Java_Section16">Static and final</a> <br>
   Section 17: <a href="#Udemy_Java_Section17">Packages</a> <br>
   Section 18: <a href="#Udemy_Java_Section18">Exceptions</a> <br>
-  Section 19: <a href="#Udemy_Java_Section19">MultiThreading</a> <br>
   Section 20: <a href="#Udemy_Java_Section20">java.lang package</a> <br>
   Section 21: <a href="#Udemy_Java_Section21">Annotations and JavaDoc</a> <br>
   Section 24: <a href="#Udemy_Java_Section24">Generics</a> <br>
+
+  <br>
+  <br>
+  Section 19: <a href="#Udemy_Java_Section19">Tim Buchalka: MultiThreading</a> <br>
+
 
   <hr>
   <div id="inheritance" class="chapter">Chapter 8: Inheritance</div>
@@ -3972,14 +3978,6 @@
   </div>
 
   <hr>
-  <div id="Udemy_Java_Section19" class="chapter">Section 19: MultiThreading</div>
-  <hr>
-
-  <div>
-    - //TODO
-  </div>
-
-  <hr>
   <div id="Udemy_Java_Section20" class="chapter">Section 20: java.lang package</div>
   <hr>
 
@@ -4197,6 +4195,134 @@
 
   </div>
 
+  <hr>
+  <div id="Udemy_Java_Section19" class="chapter">Section 21: Concurrency</div>
+  <hr>
+
+  <div class="textual-content">
+    <div class="sub-heading">Lecture 321: Introduction</div>
+    <div>
+      - <a href="https://www.udemy.com/course/java-the-complete-java-developer-course/learn/lecture/40562738#overview">Link to lecture</a>. <br>
+      - First we need to define a few concepts: <br>
+      a) <p class="inline-heading">Process</p>: unit of executiong that has its own memory space. An instance of JVM itself would run as a process for instance. So when we are
+      running a java application, we are in effect kicking off a process. The terms "process" and "application" are used interchangeably. Each application/process that runs gets
+      its own memory space, known as the <i>heap</i>. The heap isn't shared between two processes, ie., each process gets its own heap. <br>
+      b) <p class="inline-heading">Thread: </p>: single unit of execution within a process. Each process can have multiple threads. In java, every application will have atleast one
+      thread which is the <i>main thread</i>. Every thread that is created by a process shares that process's memory space, ie. its heap. Apart from that, each thread's also gets
+      its
+      own thread stack. This is memory that only that thread will have access to.
+    </div>
+
+    <div class="sub-heading">Lecture 322: Java Threads and Thread Basics</div>
+    <div>
+      - <a href="https://www.udemy.com/course/java-the-complete-java-developer-course/learn/lecture/40562742#overview">Link to lecture</a>. <br>
+      - A <code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Thread.html">Thread</a></code> is a thread of execution in a program. <br>
+      - Each instance of a thread has some state. These are JVM specific states and have nothing to do with the OS thread states. <br>
+      - A thread also has a priority that you can assign it from 1 (lowest) to 10 (highest). <br>
+    </div>
+
+    <div class="sub-heading">Lecture 323: Thread creation and execution</div>
+    <div>
+      - <a href="https://www.udemy.com/course/java-the-complete-java-developer-course/learn/lecture/40562744#overview">Link to lecture</a>. <br>
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="./imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/b3982a04206643860d2083dfdbc4749f.js"></script>
+        </div>
+      </div>
+
+      - In the above example, the main thread does not block just because we created a new thread. It <i>appears</i> to block because the JVM does not terminate immediately after
+      the
+      main thread completes. This behavior occurs because the JVM waits for all <i>non-daemon threads</i> to complete before it shuts down. By default, threads we create using the
+      <code>Thread</code> class are non-daemon threads. These threads prevent the JVM from shutting down, even if the main thread has completed its execution. The JVM shuts down
+      only once all non-daemon threads have finished their tasks. This is why it seems like the main thread is "blocked" even after its execution. In reality, it's not the main
+      thread that's blocking; it's the JVM waiting for other threads to finish. If we want the JVM to terminate regardless of other threads, we can set a thread as a daemon
+      thread by running <code>thread.setDaemon(true)</code>. In this case, as soon as the main thread completes, the JVM terminates, and any running daemon threads are stopped
+      abruptly. <br>
+      - Note that calling the <code>run()</code> method on the class is not going to start it as a new thread. In order to start computation on a new thread you should call the
+      <code>start()</code> method.
+    </div>
+
+    <div class="sub-heading">Lecture 324: Interacting with a running thread</div>
+    <div>
+      - <a href="https://www.udemy.com/course/java-the-complete-java-developer-course/learn/lecture/40562746#overview">Link to lecture</a>. <br>
+      - Goes over code examples about how we can interrupt a thread from the thread that started it. Manually call
+      <code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Thread.html#interrupt--">interrupt()</a></code> on it. Also gives an example about using
+      <code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Thread.html#join--">join()</a></code>. Also mentions <a
+      href="https://docs.oracle.com/javase/8/docs/api/java/lang/Thread.State.html">Thread States</a>.
+    </div>
+
+    <div class="sub-heading">Lecture 326: Multithreading and Memory</div>
+    <div>
+      - <a href="https://www.udemy.com/course/java-the-complete-java-developer-course/learn/lecture/40562752#overview">Link to lecture</a>. <br>
+      - Each thread has its own stack for local variables and method calls. One thread doesn't have access to another thread's stack. <br>
+      - Every concurrent thread additionally has access to the process memory, or the heap. This shared space allows all threads to read and modify the same objects. So when one
+      thread changes an object on the heap, that change immediately becomes visible to other threads.
+      <div class="image-block">
+        <div class="expand-screenshot-image-btn border border-primary rounded">
+          <span class="btn btn-link">Show Image <img src="./imgs/chevron-expand.svg" alt="Show Image Button"></span>
+        </div>
+        <div class="screenshot-image">
+          <img src="./imgs/Udemy_Java/Section21/Threads.jpg"
+               width="700"
+               class="center-block img-fluid"
+               alt="Example1"
+               loading="lazy">
+        </div>
+      </div>
+
+      - In a nutshell, the code below works because the StopWatch class itself does not maintain any <i>shared mutable state</i>. <br>
+      - Yes, all the three thread use the same StopWatch instance, but the methods in the instance do not modify any instance variables or rely on mutable shared data during
+      execution. The <i>countDown</i> methods perform all their operations locally. The <i>threadName</i>, the <i>unitCount</i>, <i>color</i>, the loop variable <i>i</i> are all
+      thread-local, meaning that each thread works on its own copy of the data. A race condition occurs when multiple threads try to modify shared data simultaneously. The only
+      shared object is the <i>StopWatch</i> instance, but no state within the <i>StopWatch</i> instance is modified during the method execution. <br>
+      - You might expect a race condition if you thought <i>StopWatch</i> maintained a shared state (like a global counter). However, <i>StopWatch</i> is only a wrapper for the
+      <i>countDown</i> behavior and does not hold such state. If the StopWatch class had a shared mutable field (e.g., a currentCount variable that all threads updated), then a
+      race condition would occur unless proper synchronization mechanisms (like <code>synchronized</code> or <code>Lock</code>) were used. <br>
+      - Ofcourse you could always have created 3 different instances of teh <i>StopWatch</i> class to sidestep this.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="./imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/26e4a465b6912b2f2d49eb3d43e1414d.js"></script>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-heading">Lecture 327: Concurrent Thread Concepts: Interleaving, Atomicity, Memory Consistency, Volatile</div>
+    <div>
+      - <a href="https://www.udemy.com/course/java-the-complete-java-developer-course/learn/lecture/40562756#overview">Link to lecture</a>. <br>
+      - <p class="inline-heading">Atomic</p>: an operation that is performed as a single, indivisible step. This means that it cannot be interrupted or observed in an incomplete
+      state by other threads, ensuring its thread-safety. <br>
+      - <p class="inline-heading">Memory Consistency Errors</p>: The OS may read from heap variables and make a copy of the value in each thread's own cache. (This cache is
+      different from the stack that is allocated to each thread). One thread can modify a shared variable, but this change might not be immediately reflected or visible on the
+      heap. Instead, it's first updated in the thread's local cache. <br>
+      - Consider the below code example that shows this issue. There are other issues in the code as well, like using the busy-wait loop which is inefficient because it consumes
+      cpu cycles unnecessarily while waiting. A better approach would be to use <code>wait/notify</code>, <code>Lock</code>, or <code>CountDownLatch</code>.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="./imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/51377f803be60a137468d30f4256d75f.js"></script>
+        </div>
+      </div>
+
+      - <p class="inline-heading"><code>volatile</code></p>: ensures that the variable is always read from, adn written to the amin memory, rather than from any thread-specific
+      caches. This provides memory consistency for this variable's value across threads.
+    </div>
+
+    <div class="sub-heading">Lecture 328: Synchronization, synchronized methods</div>
+    <div>
+      - <a href="https://www.udemy.com/course/java-the-complete-java-developer-course/learn/lecture/40562758#overview">Link to lecture</a>. <br>
+      -
+    </div>
+
+
+  </div>
 
   <script src="../../script.js"></script>
 </div>
