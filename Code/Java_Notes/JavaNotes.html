@@ -174,7 +174,7 @@
 
   <br>
   <br>
-  Section 19: <a href="#Udemy_Java_Section19">Tim Buchalka: MultiThreading</a> <br>
+  Section 19: <a href="#TimBuchalka_Java_Section21">Tim Buchalka: MultiThreading</a> <br>
 
 
   <hr>
@@ -4196,7 +4196,7 @@
   </div>
 
   <hr>
-  <div id="Udemy_Java_Section19" class="chapter">Section 21: Concurrency</div>
+  <div id="TimBuchalka_Java_Section21" class="chapter">Section 21: Concurrency</div>
   <hr>
 
   <div class="textual-content">
@@ -4318,7 +4318,95 @@
     <div class="sub-heading">Lecture 328: Synchronization, synchronized methods</div>
     <div>
       - <a href="https://www.udemy.com/course/java-the-complete-java-developer-course/learn/lecture/40562758#overview">Link to lecture</a>. <br>
-      -
+      - Different invocations of the <code>synchronized</code> methods, on the same object, are guaranteed not to interleave. <br>
+      - <p class="highlight-text">When one thread is executing a <code>synchronized</code> method on an object, all other threads that invoke <code>synchronized</code> methods for
+      the same object, block, and suspend their execution, until the first thread is done with the object. </p> Hence when adding code in a <code>synchronized</code> method, you
+      need to be sure that the method only contains code that is interacting with the shared variable, and does not have any other tasks that could block the execution of the
+      other threads. <a href="https://www.udemy.com/course/java-the-complete-java-developer-course/learn/lecture/40562758?start=525">Refer lecture</a>. <br>
+      - The below code shows how to use the <code>synchronized</code> keyword, and a potential pitfall in its usage.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="./imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/5f6fe0c388a6606cf89b0d8bd24afc78.js"></script>
+        </div>
+      </div>
+      - When a <code>synchronized</code> method exits, it ensures that the state of the object is visible to all threads (similar to what the <code>volatile</code> keyword would
+      do). <br>
+      - We can specify code to be synchronized in the below way as well. This avoids by narrowing the critical section to only the shared variables. <br>
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="./imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/8285521e8ce7226fd44f7fc908611aed.js"></script>
+        </div>
+      </div>
+      - <code>synchronized(this)</code> locks on the current object instance. If you have multiple instances of the class, each instance will have its own lock. Only the code
+      within the <code>synchronized(this)</code> block is protected. Other code outside the block can still be executed concurrently by multiple threads. Take the below code as
+      an example. <i>Instance1Thread1</i> locks <i>instance1thread1</i> and executes <i>displayMessage()</i>. <i>Instance1Thread2</i> also attempts to access the same instance for
+      the same method, <i>displayMessage()</i>. <code>synchronized</code> does not allow this because the two threads are now trying to access the same object. But
+      <i>Instance2Thread1</i> is attempting to access <i>instance2thread1</i>, which is a different object, and hence their locks are independent, allowing both the threads to run
+      at the same time. This is also the same behavior that would occur in methods that have been marked <code>synchronized</code>.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="./imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/4e2700487830dad51de52b22b354cb73.js"></script>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-heading">Lecture 329: Synchronization, synchronized blocks</div>
+    <div>
+      - <a href="https://www.udemy.com/course/java-the-complete-java-developer-course/learn/lecture/40562760#overview">Link to lecture</a>. <br>
+      - What does it mean to "lock" an object in java? <br>
+      - Every object instance in Java has a built-in intrinsic lock, also known as a monitor lock. A thread acquires a lock by executing a <code>synchronized</code> method on the
+      instance, or by using the instance as the parameter to a <code>synchronized</code> statement. A thread releases a lock when it exits from a synchronized block or method, even
+      if it throws an exception. Only one thread at a time can acquire this lock, which prevents all other threads from accessing the instance's state, until the lock is released.
+      All other threads which want access to the instance's state through synchronized code will block and wait until they can acquire a lock. <br>
+      - The <code>synchronized</code> block can also use a different object on which to acquire its lock. This means that code accessing the instance doesn't need to lock the
+      entire instance. But why would we want to do this? What is the problem with simply using a <code>synchronised</code> method or a <code>synchronized(this)</code> block? The
+      below example shows a potential pitfall. <br>
+
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="./imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/5fce1cbc1d5066a8f93b4e7775aa57c7.js"></script>
+        </div>
+      </div>
+
+      What is happening: <br>
+      1) The <i>externalThread</i> starts and acquires the lock on <i>myInstance</i> by synchronizing on it. <br>
+      2) While the <i>externalThread</i> is holding the lock, the main thread tries to call <i>myInstance.safeMethod()</i>. <br>
+      3) Since <i>safeMethod</i> is synchronized on <code>this</code> (the same instance), the main thread must wait for the <i>externalThread</i> to release the lock. <br>
+      4) The <i>externalThread</i> holds the lock for 2 seconds, so the main thread is blocked for that duration, even though the <i>safeMethod</i> is supposed to be "safe" and
+      controlled by the class itself. <br>
+
+      So, how do we avoid this? By using private locks. Now, even if external code synchronizes on the instance of <i>UsingPrivateLocks</i>, it won't block <i>safeMethod</i>
+      because <i>safeMethod</i> uses a private lock object that is inaccessible to external code.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="./imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/2e4996d68fbd220f436690b49b221bf6.js"></script>
+        </div>
+      </div>
+
+      - Also mentions about <a href="https://docs.oracle.com/javase/tutorial/essential/concurrency/locksync.html">Reentrant Synchronization</a>: Recall that a thread cannot acquire
+      a lock owned by another thread. But a thread can acquire a lock that it already owns. Allowing a thread to acquire the same lock more than once enables reentrant
+      synchronization. This describes a situation where synchronized code, directly or indirectly, invokes a method that also contains synchronized code, and both sets of code use
+      the same lock. Without reentrant synchronization, synchronized code would have to take many additional precautions to avoid having a thread cause itself to block.
+    </div>
+
+    <div class="sub-heading">Lecture 330: Producer/Consumer Application, Deadlocks</div>
+    <div>
+      - <a href="https://www.udemy.com/course/java-the-complete-java-developer-course/learn/lecture/40562762#overview">Link to lecture</a>. <br>
     </div>
 
 
