@@ -995,6 +995,253 @@
       -
     </div>
 
+    <div class="sub-heading">Introduction to objects</div>
+    <div>
+      - An object is an unordered collection of <i>properties</i> each of which has a name and a value. <br>
+      - Property names are usually strings, although we will see later that they can also be <code>Symbols</code>. <br>
+      - So we can say that objects map strings to values. This is what some languages refer to as a hashtable/dictionary. <br>
+      - In addition to maintaining its own set of properties, a JS object also inherits the properties of another object, known as its "prototype". <br>
+      - Any value in JS that is not a string, a number, a Symbol, or true, false, null, or undefined is an object. <br>
+      - A <i>property</i> has a name and a value. A property name may be any string, including the empty string (or any Symbol), but no object may havve two properties with the
+      same name. <br>
+      - The value may be any JS value, or it may be a getter or setter function (or both). <br>
+      - Apart from a name and value, each property also has three <i>property attributes</i>: <br>
+      a) The <i>writable attribute</i> specifies whether the value of the property can be set. <br>
+      b) The <i>enumerable attribute</i> specifies whether the property name is returned by a for/in loop. <br>
+      c) The <i>configurable attribute</i> specifies whether the property can be deleted and whether its attributes can be altered. <br>
+    </div>
+
+    <div class="sub-heading">Creating objects: Object Literals</div>
+    <div>
+      - An <i>object literal</i> is a comma-separated list of colon-separated name:value pairs, enclosed within curly braces. <br>
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="./imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/c1c56a78192c69f8806d9a444c8d13fe.js"></script>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-heading">Creating objects: Creating objects with <code>new</code></div>
+    <div>
+      - The <code>new</code> keyword must be followed by a function invocation, <br>
+      - A function used in this way is called a constructor and serves to initialize a newly created object. <br>
+      - The following line for instance is going to create an empty object, the same as using {}
+      <code>let o = new Object();</code>
+    </div>
+
+    <div class="sub-heading">Prototypes</div>
+    <div>
+      - <i>Almost</i> every JS object has a second JS object associated with it known as a <i>Prototype</i>. The second JS object is known as the <i>prototype</i>. The first object
+      inherits properties from the prototype. <br>
+      - <i>All</i> objects created using the object literal <code>{}</code> as well as those created using <code>new Object()</code> <i>have the same prototype object</i>. You can
+      see this prototype object by using <code>console.log(Object.prototype)</code>.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="./imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/c2808c7de9cc7d868188090b545a3dee.js"></script>
+        </div>
+      </div>
+      - Expanding on the word "almost". There are two primary cases in which a JS object does not have a prototype: <br>
+      a) The Base Object, ie Object.prototype. The chain of inheritance has to end somewhere. <br>
+      b) Object.create(null) - you can intentionally create an object that does not inherit from anything else. <br>
+
+      - <code>new Object()</code> uses <code>Object.prototype</code> as its prototype. <code>new Array()</code> uses <code>Array.prototype</code> as its prototype.
+      <code>new Date()</code> uses <code>Date.prototype</code> as its prototype. Almost all object have a <i>prototype</i>, but only a relatively small number of objects have a
+      <code>prototype</code> property. But what does this mean?! <br>
+      - "Almost all objects have a prototype": this is the object that JS looks for a property on once it is unable to find the requested property on the actual object itself.
+      <code>__proto__</code> is another property that you can access to access the same prototype object.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="./imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/347e0a09c36ea26337884e4f357d5453.js"></script>
+        </div>
+      </div>
+      - "... but only a relatively small number of objects have a prototype property": The <code>prototype</code> property exists only on constructor functions, ie. functions that
+      can be used with <code>new</code>.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="./imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/1c767af8baf0f914e4f2b1f09ae47982.js"></script>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-heading">Creating Objects: Object.create()</div>
+    <div>
+      - <code>Object.create</code> creates a new object, using its first argument as the prototype of that object. <br>
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="./imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/f0264529b97886a7eabbe878b77ae4d1.js"></script>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-heading">Querying and Setting Properties</div>
+    <div>
+      - You can use either the dot(.) operator or the square bracket ([]) operators. <br>
+      - When using the square bracket notation, the evaluation inside the square brackets must evaluate to a string. A more precise statement is that the expression must evaluate
+      to a string or a value that can be converted to a string or to a <code>Symbol</code>. <br>
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="./imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/0e2b2d3b25801c29cdd0e195083a5d8f.js"></script>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-heading">Inheritance</div>
+    <div>
+      - JS objects have a set of own properties and they also inherit a set of properties from their prototype object. <br>
+      - Suppose you query the property <i>x</i> in the object <i>o</i>. If <i>o</i> does not have tna own property with that name, the prototype object of <i>o</i> is queried for
+      the property <i>x</i>. If the prototype object does not have an own property by that name, but has a prototype itself, the query is performed on the prototype of the
+      prototype. This continues until the property <i>x</i> is found or until an object with a <code>null</code> prototype is searched. The <i>prototype</i> attribute of an object
+      creates a chain or linked list from which properties are inherited. <br>
+      - This is more of a self-question that you had:
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="./imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/1907305f9f5db35de744c89b3be426e4.js"></script>
+        </div>
+      </div>
+
+      - We are now back with our regularly scheduled program:
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="./imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/26b1a32ed9a63344a235ee2b26fd60aa.js"></script>
+        </div>
+      </div>
+
+      - Suppose you assign to the property <i>x</i> of the object <i>obj2</i>. If <i>obj2</i> already has an own (non-inherited) property named <i>x</i>, then the assignment simply
+      changes the value of this existing property. Otherwise the assignment creates a new property named <i>x</i> on the object <i>obj2</i>. If <i>obj2</i> previously inherited the
+      property <i>x</i>, that inherited property is now hidden by the newly created own property with the same name. <br>
+      - Note that in the case of setting a value on an inherited property, the value is always changed on the object directly, ie. the objects in the prototype chain are not
+      modified. The fact that inheritance occurs when qquerying properties but not when setting them is a key feature of JS because it allows us to selectively override inherited
+      properties.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="./imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/82a0e511bb6d20f68e073ce0d0f7d605.js"></script>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-heading">Property Access Errors</div>
+    <div>
+      - It is not an error to query a property that does not exist. If the property <i>x</i> is not found as an own property or an inherited property of <i>o</i>, the property
+      access expression <i>o.x</i> will evaluate to <code>undefined</code>. <br>
+      - It is a <code>TypeError</code> however to attempt to query a property of an object that does not exist. The <code>null</code> amd <code>undefined</code> value have no
+      properties, and it is an error to query properties of these values. Hence, when trying to access properties of the type <i>book.author.name</i> you should first make sure
+      that the <i>book</i> and <i>author</i> objects are not null or undefined. There are few ways that you can prevent this error:
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="./imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/a7f66a878c92b4ad3487204f50d42a53.js"></script>
+        </div>
+      </div>
+
+      - Similarly it is also a <code>TypeError</code> to set properties on object that is null or undefined. In Strict Mode, it is also a TypeError to set properties that are
+      read-only and cannot be set, or some objects that do not allow the addition of new properties. Outside of strict mode, these errors are usually silent.
+    </div>
+
+    <div class="sub-heading">Deleting Properties</div>
+    <div>
+      - The <code>delete</code> operator removes a property from an object. Its single operand should be a property access expression. Note that <code>delete</code> does not
+      operate on the value of the property but rather on the property itself. <br>
+      - The <code>delete</code> operator only deletes own properties, not inherited ones. To delete an inherited property, you must delete it from the prototype object in which it
+      is defined. Doing this affects every object that inherits from that prototype. <br>
+      - A delete operation evaluates to true if the delete succeeded or if the delete had no effect (such as deleting a non-existent property). <br>
+      - <code>delete</code> also does not remove properties that have a <i>configurable</i> attribute of false. In strict mode, attempting to delete a non-configurable property
+      causes a TypeError.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="./imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/db33a203fb15a88f23680fd10023166f.js"></script>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-heading">Testing Properties</div>
+    <div>
+      - We can also check whether a particular object has a certain property. We can do this with the <code>in</code> operator, with <code>hasOwnProperty()</code>, and
+      <code>propertyIsEnumerable()</code> methods. <br>
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="./imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/2a4ec65f4620896e2a9b886744031750.js"></script>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-heading">Enumerating Properties</div>
+    <div>
+      - Sometimes you would also want to obtain a list of all the properties in an object. We can do this either through: <br>
+      a) for/in loop <br>
+      b) <code>Object.keys()</code>: returns an array of the names of the enumerable own properties of an object. It does not include non-enumerable properties, inherited
+      properties, or properties whose name is a <code>Symbol</code>. <br>
+      c) <code>Object.getOwnPropertyNames()</code>: works like <code>Object.keys</code> but returns an array of the names of non-enumerable own properties as well, as long as their
+      names are strings.
+      d) <code>Object.getOwnPropertySymbols()</code>: returns own properties whose names are <code>Symbol</code>s, whether or not they are enumerable. <br>
+      e) <code>Reflect.ownKeys()</code>: returns all own property names, both enumerable and non-enumerable, and both string and Symbol.
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="./imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/71eb86d1252f4a8cac9e4500514ea534.js"></script>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-heading">Extending Objects</div>
+    <div>
+      - Sometimes you will also want to copy properties from one object to another. You can use <code>Object.assign(targetObject, sourceObject1, ...)</code> in order to do this.
+      <br>
+      - <code>Object.assign()</code> expects two or more objects as its arguments. It modifies and returns the first argument, which is the target object, but does not alter the
+      second or any subsequent arguments, which are the source objects. <br>
+      - For each source obejct, it copies the enumerable own properties of that object (including those whose names are Symbols) into the target object. It processes the source
+      objects in argument list order so that the properties in the first source obejct override properties by the same name in the target object and properties in teh second source
+      object (if there is one) override properties with the same name in the first source object. <br>
+      - <code>Object.assign()</code> copies properties with ordinary property get and set operations, so if a source object has a getter method or the target object has a setter
+      method, they will be invoked during the copy, but they will not themselves be copied. What does this mean though? <br>
+      -
+      <div class="code-block">
+          <div class="expand-code-snip-btn border border-primary rounded">
+              <span class="btn btn-link">Expand Gist <img src="./imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+          </div>
+          <div class="code-snippet">
+            <script src="https://gist.github.com/rgbk21/64b8026025a1d0cd5057a7096f01d012.js"></script>
+          </div>
+      </div>
+    </div>
+
+
   </div>
 
 

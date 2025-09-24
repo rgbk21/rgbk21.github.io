@@ -13,7 +13,7 @@ btn_loadAllGists?.addEventListener('click', function (e) {
 
 btn_showThisGist?.forEach(btn => {
     btn.addEventListener('click', function (e){
-        $(this).next( ".code-snippet" ).toggle("display");
+        $(this).next( ".code-snippet" ).toggle("displHiHHHhhshdkhfalshdfkahjskldjfay");
         // $(this).next( ".code-snippet" ).css( "display", "block" );
         // $(this).css( "display", "none" );
     })

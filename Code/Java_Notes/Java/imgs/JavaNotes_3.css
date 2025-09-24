@@ -1,0 +1,31 @@
+
+.two-column-layout {
+  display: flex;
+}
+
+.index-column {
+  flex: 0 0 20%;
+  padding: 20px;
+  border-right: 1px solid #ddd;
+}
+
+.content-column {
+  flex: 0 0 80%;
+  padding: 20px;
+}
+
+.index-column ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.index-column li a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+  padding: 5px 0;
+}
+
+.index-column li a:hover {
+  background-color: #f0f0f0;
+}

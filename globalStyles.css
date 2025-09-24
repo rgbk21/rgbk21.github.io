@@ -1,8 +1,8 @@
 /*https://stackoverflow.com/a/56467997/8742428*/
 /* Text disappearing behind nav-bar on clicking anchor elements */
 html {
-    scroll-padding-top: 75px; /* height of sticky header */
-    font-size: 14px;
+  scroll-padding-top: 75px; /* height of sticky header */
+  font-size: 14px;
 }
 
 /*****************************************************************************************/
@@ -11,65 +11,67 @@ html {
 
 .navbar-header .navbar-brand:link,
 .navbar-header .navbar-brand:visited {
-    color: #4d90fe;
-    transition: color 0.5s;
+  color: #4d90fe;
+  transition: color 0.5s;
 }
 
 .navbar-header .navbar-brand:hover,
 .navbar-header .navbar-brand:active {
-    color: #ffffff;
+  color: #ffffff;
 }
 
 /*-- change navbar dropdown color --*/
 .navbar-dark .navbar-nav .nav-link:link,
 .navbar-dark .navbar-nav .nav-link:visited {
-    color: #d4d4d4;
-    transition: color 0.5s;
+  color: #d4d4d4;
+  transition: color 0.5s;
 }
 
 .navbar-dark .navbar-nav .nav-link:hover,
 .navbar-dark .navbar-nav .nav-link:active {
-    color: #ffffff;
+  color: #ffffff;
 }
 
 .social-links {
-    /*font-size: 130%;*/
+  /*font-size: 130%;*/
 }
 
 #navbarSupportedContent .social-links a:link,
 #navbarSupportedContent .social-links a:visited {
-    color: #c1c1c1;
-    transition: color 0.2s;
+  color: #c1c1c1;
+  transition: color 0.2s;
 }
 
 #navbarSupportedContent .social-links a:hover,
 #navbarSupportedContent .social-links a:active {
-    color: #ffffff;
+  color: #ffffff;
 }
 
 /*****************************************************************************************/
 /* Buttons */
 /*****************************************************************************************/
 #load-all-gists {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
 }
 
 .expand-code-snip-btn {
 }
 
 .code-block {
-    padding: 0.5rem 0;
+  padding: 0.5rem 0;
 }
+
 .image-block {
-    padding: 0.5rem 0;
+  padding: 0.5rem 0;
 }
+
 /*****************************************************************************************/
 /* Container */
 /*****************************************************************************************/
 
 .container {
-    margin-top: 30px;
-    margin-bottom: 50px;
+  margin-top: 30px;
+  margin-bottom: 50px;
 }
 
 /*****************************************************************************************/
@@ -77,64 +79,75 @@ html {
 /*****************************************************************************************/
 
 .code-snippet {
-    padding-top: 10px;
-    display: none;
+  padding-top: 10px;
+  display: none;
 }
 
 .screenshot-image {
-    padding-top: 10px;
-    display: none;
+  padding-top: 10px;
+  display: none;
 }
 
 .textual-content {
-    padding-top: 10px;
-    padding-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .chapter {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    font-size: 18px;
-    font-weight: 500;
-    /*border: 1px solid black;*/
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 18px;
+  font-weight: 500;
+  /*border: 1px solid black;*/
 }
 
 code {
-    padding: 2px 5px;
-    white-space: pre-wrap;
-    font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, sans-serif;
-    background-color: #eff0f1;
-    color: black;
+  padding: 2px 5px;
+  white-space: pre-wrap;
+  font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, sans-serif;
+  background-color: #eff0f1;
+  color: black;
 }
 
 .sub-heading {
-    padding-top: 10px;
-    font-size: 16px;
-    font-weight: 500;
-    border-bottom: 1px solid black;
+  padding-top: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  border-bottom: 1px solid black;
 }
 
 .highlight-text {
-    background-color: rgba(255, 255, 0, 0.6);
-    display: inline;
-    margin-bottom: 0;
+  background-color: rgba(255, 255, 0, 0.6);
+  display: inline;
+  margin-bottom: 0;
+}
+
+.underline-text {
+  display: inline;
+  text-decoration: underline;
 }
 
 .inline-heading {
-    font-size: 14px;
-    font-weight: 500;
-    display: inline-block;
-    margin-bottom: 0;
-    text-decoration: underline;
+  font-size: 14px;
+  font-weight: 500;
+  display: inline-block;
+  margin-bottom: 0;
+  text-decoration: underline;
+}
+
+.sub-section {
+  border: 1px solid green;
+  padding: 8px;
+  margin-bottom: 8px;
 }
 
 hr {
-    border-top: 1px solid rgba(0, 0, 0, 1);
+  border-top: 1px solid rgba(0, 0, 0, 1);
 }
 
 .one-point {
-    padding-top: 10px;
-    padding-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 /*****************************************************************************************/
@@ -142,7 +155,7 @@ hr {
 /*****************************************************************************************/
 
 .center-block {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }

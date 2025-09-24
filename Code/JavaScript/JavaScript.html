@@ -16,15 +16,15 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-9QJ5D3X353"></script>
   <script>
-      window.dataLayer = window.dataLayer || [];
+    window.dataLayer = window.dataLayer || [];
 
-      function gtag() {
-          dataLayer.push(arguments);
-      }
+    function gtag() {
+      dataLayer.push(arguments);
+    }
 
-      gtag('js', new Date());
+    gtag('js', new Date());
 
-      gtag('config', 'G-9QJ5D3X353');
+    gtag('config', 'G-9QJ5D3X353');
   </script>
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -1940,6 +1940,61 @@
     <div class="sub-heading">Lecture 250: Welcome to callback hell</div>
     <div>
       - <a href="https://www.udemy.com/course/the-complete-javascript-course/learn/lecture/22649301#overview">Link to lecture</a>. <br>
+      - We are going to create a sequence of AJAX calls where the next one runs only after the first one has finished. <br>
+      <div class="code-block">
+        <div class="expand-code-snip-btn border border-primary rounded">
+          <span class="btn btn-link">Expand Gist <img src="./imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+        </div>
+        <div class="code-snippet">
+          <script src="https://gist.github.com/rgbk21/c44f337a257158ae265fe57f2998d9cf.js"></script>
+        </div>
+      </div>
+
+      - Notice how in the above example the second ajax call is dependent on the first one since we are firing the second call in the callback of the first one. Now if we wanted to
+      do the same thing with neighbours of the neighbour, we would have to nest another callback in the second callback. And if we wanted to go deeper, we would just end up keep
+      nesting.
+    </div>
+
+    <div class="sub-heading">Lecture 263: Promises and the Fetch API</div>
+    <div>
+      - <a href="https://www.udemy.com/course/the-complete-javascript-course/learn/lecture/22649313#overview">Link to lecture</a>. <br>
+      - <code>Promise</code> is an object that is used as a placeholder for the future result of an asynchronous operation. The advantage of using a <code>Promise</code> is that we
+      no longer need to rely on events and callbacks passed into asynchronous functions to handle asynchronous results. Also, instead of nesting callbacks, we can chain promises
+      for a sequence of asynchronous operations which helps us escape callback hell. <br>
+      - Promises change over time and hence have a lifecycle. To trigger this lifecycle, a promise has to be first built. This is done when we use the <code>fetch</code> API. We
+      can also build a promise manually. And then when the result of the promise is ready, we "consume" the future value. Consuming a promise may involve adding a
+      <code>.then()</code> or <code>.catch()</code> block for rejection, or a <code>.finally()</code> that runs regardless of outcome of the promise.
+      <div class="image-block">
+        <div class="expand-screenshot-image-btn border border-primary rounded">
+          <span class="btn btn-link">Show Image <img src="./imgs/chevron-expand.svg" alt="Show Image Button"></span>
+        </div>
+        <div class="screenshot-image">
+          <img src="./imgs/UdemyCourse/Module16/PromiseLifeCycle.jpg"
+               width="500"
+               class="center-block img-fluid"
+               alt="Example1"
+               loading="lazy">
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-heading">Lecture 264: Consuming Promises</div>
+    <div>
+      - <a href="https://www.udemy.com/course/the-complete-javascript-course/learn/lecture/22649319#overview">Link to lecture</a>. <br>
+      - Assume that for now all the promises will complete successfully.
+      <div class="code-block">
+          <div class="expand-code-snip-btn border border-primary rounded">
+              <span class="btn btn-link">Expand Gist <img src="./imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+          </div>
+          <div class="code-snippet">
+            <script src="https://gist.github.com/rgbk21/197a884b174211d9fe131203282d8201.js"></script>
+          </div>
+      </div>
+    </div>
+
+    <div class="sub-heading">Lecture 265: Chaining Promises</div>
+    <div>
+      - <a href="https://www.udemy.com/course/the-complete-javascript-course/learn/lecture/22649327#overview">Link to lecture</a>. <br>
       -
     </div>
 
