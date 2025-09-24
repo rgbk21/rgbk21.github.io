@@ -1,0 +1,23 @@
+.two-column-layout {
+  display: flex;
+}
+
+.index-column {
+  flex: 0 0 15%;
+  padding: 20px;
+  border-right: 1px solid #ddd;
+}
+.index-entries-container {
+  display: block;
+}
+.index-column-entry {
+  border-bottom: 1px solid #10ffff;
+  display: block;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.content-column {
+  flex: 0 0 85%;
+  padding: 8px;
+}

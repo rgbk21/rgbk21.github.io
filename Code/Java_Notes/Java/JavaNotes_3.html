@@ -30,6 +30,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="../../../globalStyles.css">
+  <link rel="stylesheet" type="text/css" href="./JavaNotes_3.css">
   <meta name="author" content="Raj Gaurav Ballabh Kumar">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Java Notes 3</title>
@@ -118,1012 +119,1069 @@
   </div>
 </nav>
 
-<div class="container">
 
-  <button id='load-all-gists' type="button" class="btn btn-outline-primary">Show all Gists!</button>
-
-  <div>
-    This page contains <br>
-    a) Java: <br>
-  </div>
-
-
-  <div class="sub-heading">Useful Links</div>
-  <div>
-    - <a href="https://google.github.io/styleguide/javaguide.html">Google Java Style Guide</a>.
-
-  </div>
-
-  <hr>
-  <div id="Tip1" class="chapter">Tip 1: Assertions</div>
-  <hr>
-
-  <div class="textual-content">
-    - Assertions vs Conditional Failures vs Verification Checks. <br>
-    - An assertion is a check that will always pass unless the class making the assertion is badly broken. Assertions are mostly useful while you are actively modifying the code,
-    but by the time development settles down, you should be essentially 100% sure it will never fail. This means that there is no value in actuall performing the check in prod.
-    It is a waste of resources.
-  </div>
-
-  <hr>
-  <div id="Tip2" class="chapter">Tip 2: Boolean Parameters</div>
-  <hr>
-
-  <div class="textual-content">
-    - Avoid using boolean params in public methods where feasible. Consider the following alternatives:
-    <br>
-    <br>
-    a) Use two uniquely named methods: <br>
-    - If the parameter is used to change some aspect of the method's behavior, consider providing two differently-named methods instead. A common prefix is probably a good idea.
-    For example, see <a href="https://github.com/google/guava/blob/47b7e9e5ef3f2267f8ac327d68cc56b99e186aa8/guava/src/com/google/common/collect/Iterators.java#L602">partition</a>
-    and <a href="https://github.com/google/guava/blob/47b7e9e5ef3f2267f8ac327d68cc56b99e186aa8/guava/src/com/google/common/collect/Iterators.java#L621">paddedPartition</a>
-    methods in <a href="https://github.com/google/guava/blob/master/guava/src/com/google/common/collect/Iterators.java">Iterators</a>. This makes it easy to count the usages of
-    two methods separately. <br>
-    - Different behaviors call for different methods. Ofc, these methods can still be implemented by passing a <code>boolean</code> to a <code>private</code> helper. <br>
-    - If this is a constructor, you can't exactly split it into differently-named constructors. But you can switch to factory methods, as recommended in <a
-    href="../../../Lectures/EffectiveJava/EffectiveJava.html#Item#1">Item1</a>. <br>
-    - This change may result in some callers having to write code such as <code>condition() ? foo.methodA() : foo.methodB()</code>. If it's many callers, you may need to
-    reevaluate. In such cases prefer alternatives below. <br>
-    - The same advice also holds for methods that use null or a special magic vlaue to trigger an alternative behavior. Provide for that behavior explicitly with its own methodd
-    atleast.
-
-    <br>
-    <br>
-
-    b) Replace with a two-element enum. <br>
-    - When the above advice doesn't apply, or just doesn't make sense in your particular case, consider replacing the boolean with a two-element enum type as advised in Effective
-    Java (Prefer two-element enum types to boolean parameters).
-
-    <br>
-    <br>
-
-    c) Define an enum with one constant for each boolean parameter. <br>
-    - See <a href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html#newInputStream-java.nio.file.Path-java.nio.file.OpenOption...-">Files.newInputStream</a>
-    which lets caller pass args like <a href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/StandardOpenOption.html">APPEND, CREATE</a>... etc instead of true/false
-    values.
-
-    <br>
-    <br>
-
-    d) Wrap with a value type. <br>
-    - If the number of params is getting large, say more than two, you can introduce a value type, for example a <code>Record</code>, that holds these args which provides type
-    safety and improves readability without needing to introduce separate methods/types for each argument.
-
-    <br>
-    <br>
-
-    e) When calling boolean parameter method, consider argument comments. <br>
-    - <code>booleanMethod(/* enableFoo = */ true);</code>
-  </div>
-
-  <hr>
-  <div id="Tip3" class="chapter">Tip 3: Builders</div>
-  <hr>
-
-  <div class="textual-content">
-
-    <br>
-    <p class="inline-heading">What is a Builder?</p> <br>
-    - Builders are mutable objects whose sole purpose is to collect data and then use that data to construct (typically immutable and longer-lived) instance of the related type.
-    <br>
-    - <code>Song song = Song.builder().setArtist("TS").setTitle("Up in Flames").build()</code>. In this example, the builder class <code>Song.Builder</code> is never referenced
-    explicitly. <br>
-    - Builders are typically very short-lived, used within a single method or related private methods. Chaining the method calls as shown above is generally preferred when
-    possible, which is not only more concise, but also allows the temporary builder instance to be immediately forgotten, having never even been stored in a local variable. Note
-    how also we are using <a href="https://en.wikipedia.org/wiki/Fluent_interface#Java">fluent API</a>.
-
-    <br>
-    <br>
-
-    <p class="inline-heading">When should I use a Builder?</p> <br>
-    - The main alternative to a builder is a factory method (or a public constructor, but those are somewhat <a href="../../../Lectures/EffectiveJava/EffectiveJava.html#Item#1">discouraged</a>).
-    Use a buiider if: <br>
-    a) when some params are meant to be optional (perhaps having default values) <br>
-    b) when there are "many" params <br>
-    c) when several params are of the same type, eg firstName, lastName <br>
-    See <a href="../../../Lectures/EffectiveJava/EffectiveJava.html#Item#2">Item#2</a> for more info.
-
-    <br>
-    <br>
-
-    <p class="inline-heading">What should my Builder look like?</p> <br>
-    a) Built objects should be deeply immutable. If they aren't, it is imperative that the builder and the built object each have their own completely
-    separate state. <br>
-    - Deep immutability means that not only is the object itself immutable, but any objects it contains are also immutable, all the way down. <br>
-    - For instance, this is an example of Builder:
-    <div class="code-block">
-      <div class="expand-code-snip-btn border border-primary rounded">
-        <span class="btn btn-link">Expand Gist <img src="../imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-      </div>
-      <div class="code-snippet">
-        <script src="https://gist.github.com/rgbk21/20d356a390a1a2c5fe8bdb6262c27544.js"></script>
-      </div>
-    </div>
-
-    - However, sometimes you can't make an object deeply immutable, like a list or another object that is inherently mutable, like <code>java.util.date</code>. This is where the
-    second part of the rule is critical: "...it is imperative that the builder and the built object each have their own completely separate state." This means that when you call
-    the build() method, the builder must not share its internal data with the object it creates. If it does, changes to the builder after an object has been built could
-    accidentally change the already-built object. This is a major source of bugs. The solution is to make defensive copies of any mutable data. Refer the below example:
-    <div class="code-block">
-      <div class="expand-code-snip-btn border border-primary rounded">
-        <span class="btn btn-link">Expand Gist <img src="../imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-      </div>
-      <div class="code-snippet">
-        <script src="https://gist.github.com/rgbk21/cea2484f3d77701bdaa65b1b3453c113.js"></script>
-      </div>
-    </div>
-
-    b) If possible, you should nest the builder type inside of your type (eg. Song.Builder). Your type should provide a <code>public static builder()</code> to instantiate a new
-    builder instance. <br>
-    - If you are unable to nest the buiider type, the builder should be a top-level type with a descriptive name. You might have to resort to this if you are creating a buiider
-    for a class you cannot modify, eg, it's from a third-party library and is <code>final</code>. <br>
-
-    c) The builder type may be either an interface or a static class. <br>
-    d) The <code>build()</code> method should have no params. <br>
-    e) Any validation that can be done on individual property values should <i>ideally</i> happen immediately in the setter for that value (throwing an <code>IllegalArgumentException</code>)
-    or during <code>build()</code>. <br>
-
-    - Using Builders with inheritance is tricky. <a href="https://eamonnmcmanus.blogspot.com/2020/10/using-builder-pattern-with-subclasses.html">Eamonn Mcmanus</a> blog.
-
-  </div>
-
-  <hr>
-  <div id="Tip4" class="chapter">Tip 4: Charsets</div>
-  <hr>
-
-  <div class="textual-content">
-
-    - This section describes the best practices when working with <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/charset/Charset.html">Charset</a>
-    class.
-
-    <br>
-    <br>
-
-    <p class="inline-heading">Introduction: Characters and Bytes</p> <br>
-    - Conceptually, we think of strings in programs as sequences of <i>characters</i> - individual written marks in a language. Like "a" or "A" or &#x1F60A. However, these
-    character sequences are actually sequences of bytes. So it comes down to how sequences of bytes map to an abstract idea of characters. For instance, we decide that the
-    character "a" will be mapped to the byte "0x61". This is known as <i>character encoding</i>. <br>
-    - Java follows the <a href="https://www.unicode.org/standard/WhatIsUnicode.html">Unicode Standard</a>. Unicode aims to define one <i>global</i> character set of all of the
-    world's major languages, so that people can use software effectively no matter what language they use. But before we do that we get to go through... definitions!
-
-    <br>
-    <br>
-
-    <p class="inline-heading">Abstract Characters</p>: Unicode's term for the smallest meaningful component of a written language. When it comes to the problem of
-    <i>character encoding</i>, these are the basic values being encoded. <br>
-    - It is important to keep in mind that an individual abstract character might have multiple possible <i>visual representation</i>, or <i>glyphs</i>. Abstract characters refer
-    to the character themselves, independent of a particular visual representation. In addition, a single glyph may represent multiple characters. Explained in english, what this
-    means is that: A single abstract character can be drawn in many different ways. The font you are using determines which "glyph" is shown. For example, the abstract character
-    "lowercase g" can have different glyphs. Even though they look different, they all represent the same underlying character. The concept of single glyph representing
-    multiple characters is: This often happens with ligatures, where two or more characters are combined into a single, flowing glyph for better readability or style. For
-    example, the two characters f and i can be combined into a single glyph: ﬁ. Each of these characters has a distinct name that identifies it. Considered together, the abstract
-    characters of a written language form a ... <br>
-
-    <p class="inline-heading">Character Set</p>: A set of one or more abstract characters that make up some written language to be encoded in a program. These are also known as
-    <i>Abstract Character Repertories</i>. A <i>Coded Character Set</i> (CCS) is a mapping from the characters in an abstract character set into a... <br>
-
-    <p class="inline-heading">Codespace</p>: A range of numeric values, usually non-negative integers, that can represent abstract characters under a given encoding. <br>
-
-    <p class="inline-heading">Code Point</p>: A single numeric value in a given codespace. Code points are NOT necessarily mapped one-to-one to graphic characters. They can serve
-    other purposes too. For example, some code points are reserved for internal use by algorithms that perform encoding tasks. Code points form the basis for encoding characters
-    in a given encoding scheme. <br>
-    - The unicode codespace ranges over the integers 0x0 to 0x10FFFF. At least 21 bits are needed to represent any value in this range in binary. <br>
-    - Low-level code that deals with characters one at a time may operate on code point integers, and they are typically used to access character properties like "is white space"
-    or "is letter" or "get digit value". However, for storing <i>strings</i> in a program, we need... <br>
-
-    <p class="inline-heading">Code Units</p>: Code units are the basic building blocks actually used in a computer to represent code points in strings. Code units are stored in
-    unsigned integers that are 8, 16, or 32 bits wide. Each <i>code point</i> maps to 1-4 <i>code units</i> according to a... <br>
-
-    <p class="inline-heading">Character Encoding Format (CEF)</p>: <br>
-    - A mapping from the code points in a codespace to code unit sequences that can be handled by software. <br>
-    - As you can see in the below example, code points are mapped to <i>sequences of code units</i> - and it is normal for a code point to map to more than one code unit. In many
-    cases, looking at code units individually is meaningless.
-
-    <div class="image-block">
-      <div class="expand-screenshot-image-btn border border-primary rounded">
-        <span class="btn btn-link">Show Image <img src="../imgs/chevron-expand.svg" alt="Show Image Button"></span>
-      </div>
-      <div class="screenshot-image">
-        <img src="./imgs/Unicode.jpg"
-             width="1200"
-             class="center-block img-fluid"
-             alt="Example1"
-             loading="lazy">
-      </div>
-    </div>
-
-    <div class="sub-section">
-      - Question: Something like the 😊 "Smiling face with smiling eyes" in UTF-8 would be mapped to the byte sequence: <code>0xF0 0x9F 0x98 0x8A</code>. So if we reverse the
-      direction of the conversion, that is going from the byte value to the actual abstract character being represented, how doe the code know to consider all the four bytes
-      together? Why doesn't it convert it into, for example, four individual glyphs with code points 0xF0, 0x9F, 0x98, and 0x8A? <br>
-      Answer: The answer lies in the clever, self-synchronizing design of UTF-8. A UTF-8 decoder knows how many bytes to read for a single character by looking at the bit pattern
-      of the <i>first byte</i>. <br>
-      <br>
-      Here are the rules:
-      <ul>
-        <li>If the first byte starts with <code>0</code>, it's a single-byte character (this covers all of standard ASCII). <br>
-          Pattern: <code>0xxxxxxx</code>
-        </li>
-        <li>If the first byte starts with <code>110</code>, it's the start of a two-byte character. <br>
-          Pattern: <code>110xxxxx 10xxxxxx</code>
-        </li>
-        <li>If the first byte starts with <code>1110</code>, it's the start of a three-byte character. <br>
-          Pattern: <code>1110xxxx 10xxxxxx 10xxxxxx</code>
-        </li>
-        <li>If the first byte starts with <code>11110</code>, it's the start of a four-byte character. <br>
-          Pattern: <code>11110xxx 10xxxxxx 10xxxxxx 10xxxxxx</code>
-        </li>
-      </ul>
-      Any byte that starts with <code>10</code> is called a <i>continuation byte</i>. It can <i>only</i> appear after a starting byte; it can never be the beginning of a
-      character
-      on its own. <br>
-
-      Let's apply this to your example, the emoji 😊 (<code>U+1F60A</code>), which is <code>0xF0 0x9F 0x98 0x8A</code> in UTF-8: <br>
-      1. The decoder reads the first byte: <code>0xF0</code>. In binary, this is <code>11110000</code>. <br>
-      2. It sees the <code>11110...</code> pattern and immediately knows: "This is the start of a <i>4-byte</i> character. I must read the next <i>3</i> bytes to complete it."
-      <br>
-      3. It reads the next three bytes: <code>0x9F</code> (<code>10011111</code>), <code>0x98</code> (<code>10011000</code>), and <code>0x8A</code> (<code>10001010</code>). <br>
-      4. It confirms that all three of these start with the <code>10...</code> pattern, verifying they are valid continuation bytes. <br>
-      5. The decoder then combines the data bits (the <code>x</code>'s) from all four bytes to reconstruct the original Unicode code point <code>U+1F60A</code>, which it then
-      maps
-      to the "Smiling face with smiling eyes" character. <br>
-      This is why it doesn't see four separate characters. The bytes <code>0x9F</code>, <code>0x98</code>, and <code>0x8A</code> are invalid as starting bytes, so the decoder
-      knows
-      they are just parts of the character that began with <code>0xF0</code>.
-    </div>
-
-    <p class="inline-heading">What does all of this mean for Java?</p>: <br>
-    - Java uses the UTF-16 encoding form for all text processing. The <code>char</code> type for <i>code units</i>. This means that java internally represents text using UTF-16.
-    This means that APIs that operate on the <code>char</code> level do not necessarily operate on complete Unicode characters. A given <code>char</code> value may only be one
-    portion of a code point. Operating directly on <code>char</code>s should typically be reserved for cases in which you know it is safe to do so (specifically, cases in which
-    you <i>know</i> that you are only dealing with characters that consist of a single code unit under UTF-16)
-
-    <div class="code-block">
-      <div class="expand-code-snip-btn border border-primary rounded">
-        <span class="btn btn-link">Expand Gist <img src="../imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-      </div>
-      <div class="code-snippet">
-        <script src="https://gist.github.com/rgbk21/49db0952f084fd3c9b4ba932c50af2d0.js"></script>
-      </div>
-    </div>
-
-    So the points that you need to remember are: <br>
-    a) Don't trust <code>String.length()</code>. It tells you the number of 16-bit <code>char</code> units, not the number of visual characters. <br>
-    b) Avoid <code>charAt(i)</code> loops. Iterating over a string with a simple for loop from 0 to length() - 1 is fragile. It will break and misinterpret any string containing
-    emojis or other supplementary characters. <br>
-    c) Use Code Point-Aware Methods: For any operation that needs to handle individual characters (like reversing a string, counting characters, or splitting a string), you
-    should use methods that understand code points. The <code>String.codePoints()</code> stream (available since Java 8) is the best and most modern way to do this. <br>
-
-    The below diagram shows the comparison between UTF8 and UTF 16.
-    <div class="image-block">
-      <div class="expand-screenshot-image-btn border border-primary rounded">
-        <span class="btn btn-link">Show Image <img src="../imgs/chevron-expand.svg" alt="Show Image Button"></span>
-      </div>
-      <div class="screenshot-image">
-        <img src="./imgs/utf8_vs_utf16_comparison.png"
-             width="1000"
-             class="center-block img-fluid"
-             alt="Example1"
-             loading="lazy">
-      </div>
-    </div>
-
-
-    <p class="inline-heading">How does this all fit in when trying to read from a file or write to a file</p>: <br>
-    - A <code>Charset</code> is the crucial bridge that connects that internal world to the external world of files, network streams, and databases.
-
-    <br>
-    <br>
-
-    What is a <code>Charset</code>? <br>
-    In simple terms, a Charset is a rulebook for converting between characters and bytes. <br>
-    Encoder: When you write a Java String to a file, the Charset's encoder is used. It takes the sequence of 16-bit chars (which are internally UTF-16) and converts them into a
-    sequence of 8-bit bytes according to its rules (e.g., UTF-8, ISO-8859-1,
-    etc.). <br>
-    Decoder: When you read a file into a Java String, the Charset's decoder is used. It reads the sequence of bytes from the file and interprets them to reconstruct the sequence
-    of chars that form the String.
-
-    <br>
-    <br>
-
-    <p class="inline-heading">The Critical Mistake to Avoid: The "Platform Default"</p> <br>
-    - If you use a Java API for reading or writing files that does not ask for a Charset, it will use the platform default charset. This is a major source of bugs. <br>
-    - A program running on a Mac or Linux machine will likely default to UTF-8. <br>
-    - The same program running on an older Windows machine in the US might default to windows-1252. If you write a file containing “I cost €5” on the Windows machine and then try
-    to read it on the Mac, the € symbol will be corrupted because the bytes representing it in windows-1252 are meaningless when interpreted as UTF-8. <br>
-    The rule is simple: Always explicitly specify the <code>Charset</code> when converting between characters and bytes.
-
-    <br>
-    <br>
-
-    <p class="inline-heading">How to Use Charset for File I/O (The Right Way)</p> <br>
-    - The modern <code>java.nio.file.Files</code> API makes this easy and is the recommended approach. The best practice is to use the predefined constants in
-    <code>java.nio.charset.StandardCharsets</code>. <code>StandardCharsets.UTF_8</code> is almost always the right choice for interoperability.
-
-    <br>
-    <br>
-
-    <p class="inline-heading">Writing a String to a File</p>: <br>
-    - This example takes a <code>String</code> and writes it to a file, explicitly encoding it as UTF-8.
-    <div class="code-block">
-      <div class="expand-code-snip-btn border border-primary rounded">
-        <span class="btn btn-link">Expand Gist <img src="../imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-      </div>
-      <div class="code-snippet">
-        <script src="https://gist.github.com/rgbk21/6cc2935ba975d1be710171fdfcfaee6b.js"></script>
-      </div>
-    </div>
-
-    <p class="inline-heading">Reading a String from a File</p>: <br>
-    - This example reads the bytes from the file we just created and correctly decodes them back into a <code>String</code> because we specify the same <code>Charset</code>.
-    <div class="code-block">
-      <div class="expand-code-snip-btn border border-primary rounded">
-        <span class="btn btn-link">Expand Gist <img src="../imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-      </div>
-      <div class="code-snippet">
-        <script src="https://gist.github.com/rgbk21/15ab5098ad5daa845e006a94f16ee45a.js"></script>
-      </div>
-    </div>
-
-
-    <div class="sub-section">
-      Question: How does specifying the charset fix this problem? For instance, if I was running the program on the windows-1252 example provided above, wouldn't the bytes when
-      writing to the text file be interpreted as that format? Or is the OS going to say that, ok, you provided this specific charset of UTF8, so I am going to make sure to store
-      the bytes as that. And then what happens when the user opens the text file through a UI interface, like notepad or something? Does the user see the actual text that was
-      stored? Or gibberish?
-
-      <br>
-      <br>
-
-      Answer:
-      <br>
-      <br>
-      <p class="inline-heading">The Roles of the Java Program and the Operating System</p> <br>
-
-      It's helpful to think of the Java program and the Operating System (OS) as having two very distinct jobs: <br>
-      1) The Java Program's Job (The "Translator"): <br>
-      - When you write a <code>String</code> to a file, your Java code is responsible for translating its internal character representation (UTF-16) into a sequence of raw bytes.
-      The <code>Charset</code> you provide is the rulebook for this translation. <br>
-      2) The OS's Job (The "Courier"): <br>
-      The OS file system is like a courier. It doesn't know or care what the bytes mean. Its only job is to take the exact sequence of bytes your Java program gives it and write
-      them to the disk.
-
-      <br>
-      <br>
-
-      <p class="inline-heading">How Specifying a Charset Fixes the Problem</p> <br>
-      - Let's use your example of writing the character € on a Windows machine that defaults to windows-1252. <br>
-      Scenario 1: You DON'T specify a charset (The WRONG way): <br>
-      1. Your Java code has the string "€". <br>
-      2. You use an old API like <code>new FileWriter("file.txt")</code> which uses the platform default. <br>
-      3. The JVM sees it's on Windows and uses the windows-1252 charset encoder. <br>
-      4. The windows-1252 rulebook says the character € translates to the single byte 0x80. <br>
-      5. Java hands the byte 0x80 to the OS. <br>
-      6. The OS writes the single byte 0x80 into the file on the disk. <br>
-      The file is now fundamentally a windows-1252 file. It will only be read correctly by programs that know to use the windows-1252 rulebook. <br>
-
-      <br>
-
-      Scenario 2: You DO specify <code>StandardCharsets.UTF_8</code> (The RIGHT way) <br>
-      1. Your Java code has the string "€". <br>
-      2. You use the modern API: <code>Files.write(path, lines, StandardCharsets.UTF_8)</code>. <br>
-      3. You have explicitly told Java: "Ignore the OS default. Use the UTF-8 rulebook." <br>
-      4. The UTF-8 rulebook says the character € translates to the three-byte sequence 0xE2 0x82 0xAC. <br>
-      5. Java hands the three bytes E2, 82, AC to the OS. <br>
-      6. The OS writes those exact three bytes into the file on the disk. <br>
-
-      By specifying the charset, you have taken control. You've ensured that no matter where your program runs—Windows, Mac, Linux—it will always produce a file with the exact
-      same bytes for the same content. You've created a portable, predictable file.
-
-      <br>
-      <br>
-
-      <p class="inline-heading">What Happens When a User Opens the File in Notepad?</p> <br>
-      This is the crucial second half of the equation. Now, the text editor (like Notepad) has to play the role of the decoder. It reads the raw bytes from the file and must
-      guess
-      which rulebook (charset) to use to turn them back into visible characters. <br>
-      Scenario 1: If you wrote the file using UTF-8 (containing bytes E2 82 AC): <br>
-      On Modern Notepad (Windows 10/11): These versions are much smarter. They often default to or can auto-detect UTF-8. They will read the three bytes, apply the UTF-8 rules,
-      and
-      correctly display €. The user sees the correct text. <br>
-      On Old Notepad (or a misconfigured editor): An older editor might blindly assume the system's default windows-1252. It would read the first byte 0xE2 and display â. Then it
-      would read 0x82 and display ‚. Then 0xAC and display ¬. The user sees gibberish: â‚¬. <br>
-      Scenario 2: If you wrote the file using the windows-1252 default (containing byte 0x80): <br>
-      On the same Windows PC: The user opens it in Notepad. Notepad assumes the default windows-1252, reads the byte 0x80, and correctly displays €. It works perfectly...
-      locally.
-      <br>
-      On a Mac or Linux PC: The user opens the file. The text editor on that machine defaults to UTF-8. It reads the byte 0x80. In the UTF-8 rulebook, a byte starting with 10...
-      (like 0x80) is invalid as the <i>start</i> of a character. The editor knows the data is corrupt and will likely display a replacement character like ``. The user sees
-      gibberish.
-
-      <br>
-      <br>
-      <p class="inline-heading">Conclusion</p>: <br>
-      - By specifying StandardCharsets.UTF_8 in your Java code, you are choosing to create files in the most universal, widely-supported
-      format. You are betting that most modern software (text editors, web browsers, other programs) that reads your file will correctly guess or default to UTF-8, leading to the
-      highest probability that your text will be displayed correctly for everyone, everywhere. You are fixing the problem by enforcing a consistent, portable standard at the
-      point of file creation.
+<div class="two-column-layout">
+  <div class="index-column">
+    <h4>Index</h4>
+    <div class="index-entries-container">
+      <a class="index-column-entry" href="#Tip1">Tip1: Assertions</a>
+      <a class="index-column-entry" href="#Tip2">Tip2: Boolean Parameters</a>
+      <a class="index-column-entry" href="#Tip3">Tip3: Builders</a>
+      <a class="index-column-entry" href="#Tip4">Tip4: Charsets</a>
+      <a class="index-column-entry" href="#Tip5">Tip5: Choosing Collections</a>
+      <a class="index-column-entry" href="#Tip6">Tip6: Classes</a>
+      <a class="index-column-entry" href="#Tip7">Tip7: Closing Resources</a>
+      <a class="index-column-entry" href="#Tip8">Tip8: Code Generation</a>
+      <a class="index-column-entry" href="#Tip9">Tip9: Collection Implementations</a>
     </div>
   </div>
+  <div class="content-column">
+    <div class="container">
 
-  <hr>
-  <div id="Tip5" class="chapter">Tip 5: Choosing Collections</div>
-  <hr>
+      <button id='load-all-gists' type="button" class="btn btn-outline-primary">Show all Gists!</button>
 
-  <div class="textual-content">
-
-    - Points to consider when choosing which collection type and implementation to use. <br>
-    <p class="inline-heading">Prefer immutable collections</p>: <br>
-    - <a href="https://github.com/google/guava/wiki/ImmutableCollectionsExplained">Why use immutable collections</a> on github.
-
-    <br>
-    <br>
-
-    <p class="inline-heading">Understand deterministic vs. non-deterministic iteration</p> <br>
-    - Some popular hash-based collections such as <code>HashMap</code> and <code>HashSet</code> have non-deterministic iteration order. These collections iterate in a different
-    randomly-seeded order per VM invocation (in tests) and per JDK release. <br>
-    - If non one will ever iterate over the collection, only performing mutations and map lookups on it, then there's no harm in using these collections. But if the collections
-    may be iterated over, the randomization policy can easily lead to flaky tests and sudden behavior changes in production. <br>
-    - Fortunately, if you use the immutable collections, this is a non-issue. They all have deterministic iteration. As for mutable types, most such classes (with the exception
-    of <code>ConcurrentHashMap</code>) have a deterministic cousin, expressed through the interface of <code>SequencedCollection&lt;E&gt;</code>,
-    <code>SequencedSet&lt;E&gt;</code> and <code>SequencedMap&lt;K, V&gt;</code>. Examples include <code>LinkedHashMap</code> and <code>LinkedHashSet</code>. These are a safer
-    bet, but at the cost of added memory consumption. <code>TreeMap</code> and <code>TreeSet</code> may be worth considering as well.
-
-    <br>
-    <br>
-
-    <p class="inline-heading">Choosing a collection sub-interface</p>: Set, List, etc.<br>
-    - Choosing the most logically appropriate collection sub-interface type mostly depends on your answers to two basic questions. <br>
-    1) Question 1: Duplicates - Does it matter how many occurrences of the same element are present in the collection? Or does it only matter whether the element is contained or
-    not (so duplicates should just be collapsed)? <br>
-    2) Question 2: Ordering - There are 3 choices for how to treat the ordering of your elements. <br>
-    a) Comparator-imposed ordering: Should elements always appear in the order determined by a comparator (which might be their natural order)? <br>
-    b) Ordered (order-dependent equality): Should two collections containing the same elements but in a different order be considered <i>different</i> collections? Note that
-    order-dependent equality always implies deterministic iteration. <br>
-    c) Unordered (order-independent equality): Or should order not matter? This should still use deterministic iteration, it's just that we don't care the order specifically.
-    <br>
-
-    Once you have those answers, just find their intersection below: <br>
-    <table class="table table-bordered table-sm">
-      <thead>
-      <tr>
-        <th>Order</th>
-        <th>Keep Duplicates</th>
-        <th>Collapse Duplicates</th>
-      </tr>
-      </thead>
-      <tbody>
-      <tr>
-        <td>ordered</td>
-        <td><a href=https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html"">List</a></td>
-        <td> -</td>
-      </tr>
-      <tr>
-        <td>unordered</td>
-        <td><a href="https://guava.dev/releases/18.0/api/docs/com/google/common/collect/Multiset.html">Multiset</a></td>
-        <td><a href="https://docs.oracle.com/en/java/javase/20/docs/api/java.base/java/util/Set.html">Set</a></td>
-      </tr>
-      <tr>
-        <td>comparator-imposed</td>
-        <td><a href="https://guava.dev/releases/21.0/api/docs/com/google/common/collect/SortedMultiset.html">SortedMultiset</a></td>
-        <td><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/NavigableSet.html">NavigableSet</a></td>
-      </tr>
-      </tbody>
-    </table>
-
-    <br>
-    <br>
-
-    <p class="inline-heading">Simpler types to consider</p>
-    <br>
-    <br>
-    <table class="table table-bordered table-sm">
-      <thead>
-      <tr>
-        <th>If you have...</th>
-        <th>and...</th>
-        <th>You might want to consider...</th>
-      </tr>
-      </thead>
-      <tbody>
-      <tr>
-        <td><code>Iterable&lt;Pair&lt;Foo, Bar&gt;&gt;</code></td>
-        <td>The same <code>Foo</code> won’t appear in multiple pairs</td>
-        <td>
-          <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html" target="_blank">
-            Map&lt;Foo, Bar&gt;
-          </a>
-        </td>
-      </tr>
-      <tr>
-        <td><code>Iterable&lt;Pair&lt;Foo, Bar&gt;&gt;</code></td>
-        <td>The same <code>Foo</code> might appear in multiple pairs</td>
-        <td>
-          <a href="https://guava.dev/releases/20.0/api/docs/com/google/common/collect/Multimap.html" target="_blank">
-            Multimap&lt;Foo, Bar&gt;
-          </a>
-        </td>
-      </tr>
-      <tr>
-        <td><code>List&lt;Pair&lt;Foo, Bar&gt;&gt;</code></td>
-        <td>The same <code>Foo</code> might appear in multiple pairs</td>
-        <td>
-          <a href="https://guava.dev/releases/19.0/api/docs/com/google/common/collect/ListMultimap.html" target="_blank">ListMultimap&lt;Foo, Bar&gt;</a>
-        </td>
-      </tr>
-      <tr>
-        <td><code>Set&lt;Pair&lt;Foo, Bar&gt;&gt;</code></td>
-        <td>The same <code>Foo</code> might appear in multiple pairs</td>
-        <td>
-          <a href="https://guava.dev/releases/19.0/api/docs/com/google/common/collect/SetMultimap.html" target="_blank">SetMultimap&lt;Foo, Bar&gt;</a>
-        </td>
-      </tr>
-      <tr>
-        <td><code>Pair&lt;List&lt;Foo&gt;, List&lt;Bar&gt;&gt;</code></td>
-        <td>The lists are the same size, and there is some relationship between elements at the same index</td>
-        <td>
-          <a href="https://guava.dev/releases/19.0/api/docs/com/google/common/collect/ListMultimap.html" target="_blank">ListMultimap&lt;Foo, Bar&gt;</a>
-          or
-          <a href="https://guava.dev/releases/19.0/api/docs/com/google/common/collect/SetMultimap.html" target="_blank">SetMultimap&lt;Foo, Bar&gt;</a>
-        </td>
-      </tr>
-      <tr>
-        <td><code>Iterable&lt;Foo&gt;</code></td>
-        <td><code>Foo</code> is <code>Comparable</code>, and the values are always contiguous with no gaps (e.g., {5, 6, 7, 8})</td>
-        <td>
-          <a href="https://guava.dev/releases/19.0/api/docs/com/google/common/collect/ContiguousSet.html" target="_blank">ContiguousSet&lt;Foo&gt;</a>
-        </td>
-      </tr>
-      <tr>
-        <td><code>List&lt;Foo&gt;</code> and <code>Set&lt;Foo&gt;</code></td>
-        <td>You keep identical contents in both, using one to maintain order and the other to de-duplicate</td>
-        <td>
-          <a href="https://guava.dev/releases/19.0/api/docs/com/google/common/collect/ImmutableSet.html" target="_blank">ImmutableSet&lt;Foo&gt;</a> (with <code>asList()</code>
-          view), or <code>UniqueList&lt;Foo&gt;</code> that rejects duplicate elements and can therefore be viewed as a set.
-        </td>
-      </tr>
-      <tr>
-        <td><code>Iterable&lt;Range&lt;Foo&gt;&gt;</code></td>
-        <td>The ranges are disjoint (or should be coalesced, making them disjoint)</td>
-        <td>
-          <a href="https://guava.dev/releases/23.0/api/docs/com/google/common/collect/RangeSet.html" target="_blank">RangeSet&lt;Foo&gt;</a>
-        </td>
-      </tr>
-      <tr>
-        <td><code>Iterable&lt;Pair&lt;Range&lt;Foo&gt;, Bar&gt;&gt;</code></td>
-        <td>The ranges are disjoint</td>
-        <td>
-          <a href="https://guava.dev/releases/20.0/api/docs/com/google/common/collect/RangeMap.html" target="_blank">RangeMap&lt;Foo, Bar&gt;</a>
-        </td>
-      </tr>
-      <tr>
-        <td><code>Iterable&lt;? extends Number&gt;</code></td>
-        <td>You don’t need it to be mutable</td>
-        <td>
-          <a href="https://guava.dev/releases/22.0/api/docs/com/google/common/primitives/ImmutableIntArray.html" target="_blank">ImmutableIntArray</a> and friends
-        </td>
-      </tr>
-      </tbody>
-    </table>
-
-    <table class="table table-bordered table-sm">
-      <thead>
-      <tr>
-        <th>If you have...</th>
-        <th>and...</th>
-        <th>You might want to consider...</th>
-      </tr>
-      </thead>
-      <tbody>
-      <tr>
-        <td><code>Map&lt;Key, Boolean&gt;</code></td>
-        <td>You don’t absolutely need to distinguish between <code>false</code>, <code>null</code> and/or "not present"</td>
-        <td>
-          <a href="https://guava.dev/releases/23.0/api/docs/com/google/common/collect/Sets.html" target="_blank">
-            Set&lt;Key&gt;
-          </a>
-        </td>
-      </tr>
-      <tr>
-        <td><code>Map&lt;Key, Integer&gt;</code> or <code>Map&lt;Key, Long&gt;</code></td>
-        <td>You are doing arithmetic on the values (for example, retrieve a value, add 1, store it back)</td>
-        <td>
-          <a href="https://guava.dev/releases/23.0/api/docs/com/google/common/collect/Multiset.html" target="_blank">
-            Multiset&lt;Key&gt;
-          </a>
-          or
-          <a href="https://guava.dev/releases/23.0/api/docs/com/google/common/util/concurrent/AtomicLongMap.html" target="_blank">
-            AtomicLongMap&lt;Key&gt;
-          </a>
-        </td>
-      </tr>
-      <tr>
-        <td><code>Map&lt;Enum, Integer&gt;</code></td>
-        <td>You are doing arithmetic on the values (for example, retrieve a value, add 1, store it back)</td>
-        <td>
-          <a href="https://guava.dev/releases/23.0/api/docs/com/google/common/collect/EnumMultiset.html" target="_blank">
-            EnumMultiset&lt;Enum&gt;
-          </a>
-        </td>
-      </tr>
-      <tr>
-        <td><code>Map&lt;Key, NumericValue&gt;</code></td>
-        <td><code>NumericValue</code> is some other conceptually numeric type (such as <code>Double</code>) and you are doing arithmetic on the values</td>
-        <td>NumericValueMap&lt;Key, NumericValue&gt;</td>
-      </tr>
-      <tr>
-        <td><code>Map&lt;Foo, List&lt;Bar&gt;&gt;</code></td>
-        <td>You don’t absolutely need to distinguish empty list from "not present"</td>
-        <td>
-          <a href="https://guava.dev/releases/23.0/api/docs/com/google/common/collect/ListMultimap.html" target="_blank">
-            ListMultimap&lt;Foo, Bar&gt;
-          </a>
-        </td>
-      </tr>
-      <tr>
-        <td><code>Map&lt;Foo, Set&lt;Bar&gt;&gt;</code></td>
-        <td>You don’t absolutely need to distinguish empty set from "not present"</td>
-        <td>
-          <a href="https://guava.dev/releases/23.0/api/docs/com/google/common/collect/SetMultimap.html" target="_blank">
-            SetMultimap&lt;Foo, Bar&gt;
-          </a>
-        </td>
-      </tr>
-      <tr>
-        <td><code>Map&lt;Foo, Map&lt;Bar, Qux&gt;&gt;</code></td>
-        <td>You don’t absolutely need to distinguish empty map from "not present"</td>
-        <td>
-          <a href="https://guava.dev/releases/23.0/api/docs/com/google/common/collect/Table.html" target="_blank">
-            Table&lt;Foo, Bar, Qux&gt;
-          </a>
-        </td>
-      </tr>
-      <tr>
-        <td><code>Map&lt;Pair&lt;Foo, Bar&gt;, Qux&gt;</code></td>
-        <td>You wouldn’t benefit from defining a nested type for the <code>Pair</code></td>
-        <td>
-          <a href="https://guava.dev/releases/23.0/api/docs/com/google/common/collect/Table.html" target="_blank">
-            Table&lt;Foo, Bar, Qux&gt;
-          </a>
-        </td>
-      </tr>
-      <tr>
-        <td><code>Multimap&lt;Foo, Pair&lt;Bar, Qux&gt;&gt;</code></td>
-        <td>The same <code>Bar</code> won’t appear in multiple pairs for the same <code>Foo</code></td>
-        <td>
-          <a href="https://guava.dev/releases/23.0/api/docs/com/google/common/collect/Table.html" target="_blank">
-            Table&lt;Foo, Bar, Qux&gt;
-          </a>
-        </td>
-      </tr>
-      <tr>
-        <td><code>Map&lt;Foo, Bar&gt;</code> and <code>Map&lt;Bar, Foo&gt;</code></td>
-        <td>The same entry is always stored in both maps (once in each order)</td>
-        <td>
-          <a href="https://guava.dev/releases/23.0/api/docs/com/google/common/collect/BiMap.html" target="_blank">
-            BiMap&lt;Foo, Bar&gt;
-          </a>
-        </td>
-      </tr>
-      <tr>
-        <td><code>Map&lt;Foo, Bar&gt;</code></td>
-        <td>Adjacent <code>Foo</code> values often share the same value</td>
-        <td>
-          <a href="https://guava.dev/releases/23.0/api/docs/com/google/common/collect/RangeMap.html" target="_blank">
-            RangeMap&lt;Foo, Bar&gt;
-          </a>
-        </td>
-      </tr>
-      <tr>
-        <td><code>Map&lt;Key, AtomicInteger&gt;</code></td>
-        <td>You are using the <code>AtomicInteger</code> only as a "mutable int" and values are always positive and less than 2^31</td>
-        <td>
-          <a href="https://guava.dev/releases/23.0/api/docs/com/google/common/collect/Multiset.html" target="_blank">
-            Multiset&lt;Key&gt;
-          </a>
-        </td>
-      </tr>
-      <tr>
-        <td><code>Map&lt;Key, AtomicInteger&gt;</code></td>
-        <td>You do not need a reference to an <code>AtomicInteger</code>, only int values that are always positive and less than 2^31</td>
-        <td>
-          <a href="https://guava.dev/releases/23.0/api/docs/com/google/common/collect/ConcurrentHashMultiset.html" target="_blank">
-            ConcurrentHashMultiset&lt;Key&gt;
-          </a>
-        </td>
-      </tr>
-      <tr>
-        <td><code>Map&lt;Key, AtomicLong&gt;</code></td>
-        <td>You do not need a reference to an <code>AtomicLong</code>, only long values</td>
-        <td>
-          <a href="https://guava.dev/releases/23.0/api/docs/com/google/common/util/concurrent/AtomicLongMap.html" target="_blank">
-            AtomicLongMap&lt;Key&gt;
-          </a>
-        </td>
-      </tr>
-      <tr>
-        <td><code>AtomicLongMap</code></td>
-        <td>Your values are always positive and less than 2^31</td>
-        <td>
-          <a href="https://guava.dev/releases/23.0/api/docs/com/google/common/collect/ConcurrentHashMultiset.html" target="_blank">
-            ConcurrentHashMultiset&lt;Key&gt;
-          </a>
-        </td>
-      </tr>
-      </tbody>
-    </table>
-
-    <table class="table table-bordered table-sm">
-      <thead>
-      <tr>
-        <th>If you have...</th>
-        <th>and...</th>
-        <th>You might want to consider...</th>
-      </tr>
-      </thead>
-      <tbody>
-      <tr>
-        <td><code>int[]</code>, <code>long[]</code>, or <code>double[]</code></td>
-        <td>You don’t need it to be mutable</td>
-        <td>
-          <a href="https://guava.dev/releases/23.0/api/docs/com/google/common/primitives/ImmutableIntArray.html" target="_blank">
-            ImmutableIntArray
-          </a> and friends
-        </td>
-      </tr>
-      <tr>
-        <td><code>LoadingCache&lt;Key, AtomicLong&gt;</code></td>
-        <td>The <code>CacheLoader</code> is returning <code>new AtomicLong()</code> or <code>new AtomicLong(0)</code></td>
-        <td>
-          <a href="https://guava.dev/releases/23.0/api/docs/com/google/common/util/concurrent/AtomicLongMap.html" target="_blank">
-            AtomicLongMap&lt;Key&gt;
-          </a>
-        </td>
-      </tr>
-      <tr>
-        <td><code>Pair&lt;Foo, Foo&gt;</code></td>
-        <td><code>Foo</code> is <code>Comparable</code>, and <code>first</code> and <code>second</code> represent bounds of a range</td>
-        <td>
-          <a href="https://guava.dev/releases/23.0/api/docs/com/google/common/collect/Range.html" target="_blank">
-            Range&lt;Foo&gt;
-          </a>
-        </td>
-      </tr>
-      <tr>
-        <td><code>Pair&lt;Foo, Bar&gt;</code></td>
-        <td>You are not being forced to use it by go/Flume</td>
-        <td>
-          Please define a named type with named accessors!
-          <a href="https://github.com/google/auto/blob/main/value/userguide/index.md" target="_blank">
-            AutoValue
-          </a> makes it easy.
-        </td>
-      </tr>
-      <tr>
-        <td><code>Comparator&lt;Foo&gt;</code></td>
-        <td>You don’t impose a correct total order, and care only about whether it returns zero or nonzero</td>
-        <td>
-          <a href="https://guava.dev/releases/23.0/api/docs/com/google/common/base/Equivalence.html" target="_blank">
-            Equivalence&lt;Foo&gt;
-          </a>
-        </td>
-      </tr>
-      <tr>
-        <td><code>Function&lt;Foo, Bar&gt;</code> and <code>Function&lt;Bar, Foo&gt;</code></td>
-        <td>The functions convert in both directions between different representations of the same data</td>
-        <td>
-          <a href="https://guava.dev/releases/23.0/api/docs/com/google/common/base/Converter.html" target="_blank">
-            Converter&lt;Foo, Bar&gt;
-          </a>
-        </td>
-      </tr>
-      <tr>
-        <td><code>long</code> and <code>TimeUnit</code></td>
-        <td>You are trying to represent an amount of time</td>
-        <td>
-          <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html" target="_blank">
-            Duration
-          </a>
-        </td>
-      </tr>
-      <tr>
-        <td><code>long</code>, <code>int</code>, <code>double</code>, etc.</td>
-        <td>You are trying to represent an amount of time</td>
-        <td>
-          <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html" target="_blank">
-            Duration
-          </a>
-        </td>
-      </tr>
-      <tr>
-        <td><code>long</code>, <code>int</code>, <code>double</code>, etc.</td>
-        <td>You are trying to represent an instant in time (i.e., a timestamp)</td>
-        <td>
-          <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Instant.html" target="_blank">
-            Instant
-          </a>
-        </td>
-      </tr>
-      </tbody>
-    </table>
-
-    <p class="inline-heading">Legacy classes and interfaces to avoid</p>: <br>
-    - <code>SortedSet</code> and <code>SortedMap</code>: Replaced by <code>NavigableSet</code> and <code>NavigableMap</code> in Java 6. <br>
-    - <code>LinkedList</code>: It is very rare for its performance to beat <code>ArrayList</code> or <code>ArrayDeque</code>. <br>
-    - <code>Vector</code>: Use <code>ArrayList</code> <br>
-    - <code>Stack</code>: use <code>ArrayDeque</code> <br>
-    - <code>Hashtable</code> and <code>Dictionary</code>: use <code>LinkedHashMap</code>
-  </div>
-
-  <hr>
-  <div id="Tip6" class="chapter">Tip 6: Classes</div>
-  <hr>
-
-  <div class="textual-content">
-    <p class="inline-heading">Utility Classes</p>: <br>
-    By utility class, we mean a class containing only static members. <br>
-
-    1) It's common to see a series of static methods that take a common argument type. Consider adding the method to that type instead, if possible; perhaps even as instance
-    methods. For instance, refer the below examples:
-    <div class="code-block">
-      <div class="expand-code-snip-btn border border-primary rounded">
-        <span class="btn btn-link">Expand Gist <img src="../imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+      <div>
+        This page contains <br>
+        a) Java: <br>
       </div>
-      <div class="code-snippet">
-        <script src="https://gist.github.com/rgbk21/8f96809349c4555e7b857710da548215.js"></script>
+
+
+      <div class="sub-heading">Useful Links</div>
+      <div>
+        - <a href="https://google.github.io/styleguide/javaguide.html">Google Java Style Guide</a>.
+
       </div>
+
+      <hr>
+      <div id="Tip1" class="chapter">Tip 1: Assertions</div>
+      <hr>
+
+      <div class="textual-content">
+        - Assertions vs Conditional Failures vs Verification Checks. <br>
+        - An assertion is a check that will always pass unless the class making the assertion is badly broken. Assertions are mostly useful while you are actively modifying the
+        code,
+        but by the time development settles down, you should be essentially 100% sure it will never fail. This means that there is no value in actually performing the check in
+        prod. It is a waste of resources.
+      </div>
+
+      <hr>
+      <div id="Tip2" class="chapter">Tip 2: Boolean Parameters</div>
+      <hr>
+
+      <div class="textual-content">
+        - Avoid using boolean params in public methods where feasible. Consider the following alternatives:
+        <br>
+        <br>
+        a) Use two uniquely named methods: <br>
+        - If the parameter is used to change some aspect of the method's behavior, consider providing two differently-named methods instead. A common prefix is probably a good
+        idea.
+        For example, see <a
+        href="https://github.com/google/guava/blob/47b7e9e5ef3f2267f8ac327d68cc56b99e186aa8/guava/src/com/google/common/collect/Iterators.java#L602">partition</a>
+        and <a href="https://github.com/google/guava/blob/47b7e9e5ef3f2267f8ac327d68cc56b99e186aa8/guava/src/com/google/common/collect/Iterators.java#L621">paddedPartition</a>
+        methods in <a href="https://github.com/google/guava/blob/master/guava/src/com/google/common/collect/Iterators.java">Iterators</a>. This makes it easy to count the usages of
+        two methods separately. <br>
+        - Different behaviors call for different methods. Ofc, these methods can still be implemented by passing a <code>boolean</code> to a <code>private</code> helper. <br>
+        - If this is a constructor, you can't exactly split it into differently-named constructors. But you can switch to factory methods, as recommended in <a
+        href="../../../Lectures/EffectiveJava/EffectiveJava.html#Item#1">Item1</a>. <br>
+        - This change may result in some callers having to write code such as <code>condition() ? foo.methodA() : foo.methodB()</code>. If it's many callers, you may need to
+        reevaluate. In such cases prefer alternatives below. <br>
+        - The same advice also holds for methods that use null or a special magic vlaue to trigger an alternative behavior. Provide for that behavior explicitly with its own
+        methodd
+        atleast.
+
+        <br>
+        <br>
+
+        b) Replace with a two-element enum. <br>
+        - When the above advice doesn't apply, or just doesn't make sense in your particular case, consider replacing the boolean with a two-element enum type as advised in
+        Effective
+        Java (Prefer two-element enum types to boolean parameters).
+
+        <br>
+        <br>
+
+        c) Define an enum with one constant for each boolean parameter. <br>
+        - See <a href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/Files.html#newInputStream-java.nio.file.Path-java.nio.file.OpenOption...-">Files.newInputStream</a>
+        which lets caller pass args like <a href="https://docs.oracle.com/javase/8/docs/api/java/nio/file/StandardOpenOption.html">APPEND, CREATE</a>... etc instead of true/false
+        values.
+
+        <br>
+        <br>
+
+        d) Wrap with a value type. <br>
+        - If the number of params is getting large, say more than two, you can introduce a value type, for example a <code>Record</code>, that holds these args which provides type
+        safety and improves readability without needing to introduce separate methods/types for each argument.
+
+        <br>
+        <br>
+
+        e) When calling boolean parameter method, consider argument comments. <br>
+        - <code>booleanMethod(/* enableFoo = */ true);</code>
+      </div>
+
+      <hr>
+      <div id="Tip3" class="chapter">Tip 3: Builders</div>
+      <hr>
+
+      <div class="textual-content">
+
+        <br>
+        <p class="inline-heading">What is a Builder?</p> <br>
+        - Builders are mutable objects whose sole purpose is to collect data and then use that data to construct (typically immutable and longer-lived) instance of the related
+        type.
+        <br>
+        - <code>Song song = Song.builder().setArtist("TS").setTitle("Up in Flames").build()</code>. In this example, the builder class <code>Song.Builder</code> is never referenced
+        explicitly. <br>
+        - Builders are typically very short-lived, used within a single method or related private methods. Chaining the method calls as shown above is generally preferred when
+        possible, which is not only more concise, but also allows the temporary builder instance to be immediately forgotten, having never even been stored in a local variable.
+        Note
+        how also we are using <a href="https://en.wikipedia.org/wiki/Fluent_interface#Java">fluent API</a>.
+
+        <br>
+        <br>
+
+        <p class="inline-heading">When should I use a Builder?</p> <br>
+        - The main alternative to a builder is a factory method (or a public constructor, but those are somewhat <a
+        href="../../../Lectures/EffectiveJava/EffectiveJava.html#Item#1">discouraged</a>).
+        Use a buiider if: <br>
+        a) when some params are meant to be optional (perhaps having default values) <br>
+        b) when there are "many" params <br>
+        c) when several params are of the same type, eg firstName, lastName <br>
+        See <a href="../../../Lectures/EffectiveJava/EffectiveJava.html#Item#2">Item#2</a> for more info.
+
+        <br>
+        <br>
+
+        <p class="inline-heading">What should my Builder look like?</p> <br>
+        a) Built objects should be deeply immutable. If they aren't, it is imperative that the builder and the built object each have their own completely
+        separate state. <br>
+        - Deep immutability means that not only is the object itself immutable, but any objects it contains are also immutable, all the way down. <br>
+        - For instance, this is an example of Builder:
+        <div class="code-block">
+          <div class="expand-code-snip-btn border border-primary rounded">
+            <span class="btn btn-link">Expand Gist <img src="../imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+          </div>
+          <div class="code-snippet">
+            <script src="https://gist.github.com/rgbk21/20d356a390a1a2c5fe8bdb6262c27544.js"></script>
+          </div>
+        </div>
+
+        - However, sometimes you can't make an object deeply immutable, like a list or another object that is inherently mutable, like <code>java.util.date</code>. This is where
+        the
+        second part of the rule is critical: "...it is imperative that the builder and the built object each have their own completely separate state." This means that when you
+        call
+        the build() method, the builder must not share its internal data with the object it creates. If it does, changes to the builder after an object has been built could
+        accidentally change the already-built object. This is a major source of bugs. The solution is to make defensive copies of any mutable data. Refer the below example:
+        <div class="code-block">
+          <div class="expand-code-snip-btn border border-primary rounded">
+            <span class="btn btn-link">Expand Gist <img src="../imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+          </div>
+          <div class="code-snippet">
+            <script src="https://gist.github.com/rgbk21/cea2484f3d77701bdaa65b1b3453c113.js"></script>
+          </div>
+        </div>
+
+        b) If possible, you should nest the builder type inside of your type (eg. Song.Builder). Your type should provide a <code>public static builder()</code> to instantiate a
+        new
+        builder instance. <br>
+        - If you are unable to nest the buiider type, the builder should be a top-level type with a descriptive name. You might have to resort to this if you are creating a buiider
+        for a class you cannot modify, eg, it's from a third-party library and is <code>final</code>. <br>
+
+        c) The builder type may be either an interface or a static class. <br>
+        d) The <code>build()</code> method should have no params. <br>
+        e) Any validation that can be done on individual property values should <i>ideally</i> happen immediately in the setter for that value (throwing an <code>IllegalArgumentException</code>)
+        or during <code>build()</code>. <br>
+
+        - Using Builders with inheritance is tricky. <a href="https://eamonnmcmanus.blogspot.com/2020/10/using-builder-pattern-with-subclasses.html">Eamonn Mcmanus</a> blog.
+
+      </div>
+
+      <hr>
+      <div id="Tip4" class="chapter">Tip 4: Charsets</div>
+      <hr>
+
+      <div class="textual-content">
+
+        - This section describes the best practices when working with <a
+        href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/nio/charset/Charset.html">Charset</a>
+        class.
+
+        <br>
+        <br>
+
+        <p class="inline-heading">Introduction: Characters and Bytes</p> <br>
+        - Conceptually, we think of strings in programs as sequences of <i>characters</i> - individual written marks in a language. Like "a" or "A" or &#x1F60A. However, these
+        character sequences are actually sequences of bytes. So it comes down to how sequences of bytes map to an abstract idea of characters. For instance, we decide that the
+        character "a" will be mapped to the byte "0x61". This is known as <i>character encoding</i>. <br>
+        - Java follows the <a href="https://www.unicode.org/standard/WhatIsUnicode.html">Unicode Standard</a>. Unicode aims to define one <i>global</i> character set of all of the
+        world's major languages, so that people can use software effectively no matter what language they use. But before we do that we get to go through... definitions!
+
+        <br>
+        <br>
+
+        <p class="inline-heading">Abstract Characters</p>: Unicode's term for the smallest meaningful component of a written language. When it comes to the problem of
+        <i>character encoding</i>, these are the basic values being encoded. <br>
+        - It is important to keep in mind that an individual abstract character might have multiple possible <i>visual representation</i>, or <i>glyphs</i>. Abstract characters
+        refer
+        to the character themselves, independent of a particular visual representation. In addition, a single glyph may represent multiple characters. Explained in english, what
+        this
+        means is that: A single abstract character can be drawn in many different ways. The font you are using determines which "glyph" is shown. For example, the abstract
+        character
+        "lowercase g" can have different glyphs. Even though they look different, they all represent the same underlying character. The concept of single glyph representing
+        multiple characters is: This often happens with ligatures, where two or more characters are combined into a single, flowing glyph for better readability or style. For
+        example, the two characters f and i can be combined into a single glyph: ﬁ. Each of these characters has a distinct name that identifies it. Considered together, the
+        abstract
+        characters of a written language form a ... <br>
+
+        <p class="inline-heading">Character Set</p>: A set of one or more abstract characters that make up some written language to be encoded in a program. These are also known as
+        <i>Abstract Character Repertories</i>. A <i>Coded Character Set</i> (CCS) is a mapping from the characters in an abstract character set into a... <br>
+
+        <p class="inline-heading">Codespace</p>: A range of numeric values, usually non-negative integers, that can represent abstract characters under a given encoding. <br>
+
+        <p class="inline-heading">Code Point</p>: A single numeric value in a given codespace. Code points are NOT necessarily mapped one-to-one to graphic characters. They can
+        serve
+        other purposes too. For example, some code points are reserved for internal use by algorithms that perform encoding tasks. Code points form the basis for encoding
+        characters
+        in a given encoding scheme. <br>
+        - The unicode codespace ranges over the integers 0x0 to 0x10FFFF. At least 21 bits are needed to represent any value in this range in binary. <br>
+        - Low-level code that deals with characters one at a time may operate on code point integers, and they are typically used to access character properties like "is white
+        space"
+        or "is letter" or "get digit value". However, for storing <i>strings</i> in a program, we need... <br>
+
+        <p class="inline-heading">Code Units</p>: Code units are the basic building blocks actually used in a computer to represent code points in strings. Code units are stored in
+        unsigned integers that are 8, 16, or 32 bits wide. Each <i>code point</i> maps to 1-4 <i>code units</i> according to a... <br>
+
+        <p class="inline-heading">Character Encoding Format (CEF)</p>: <br>
+        - A mapping from the code points in a codespace to code unit sequences that can be handled by software. <br>
+        - As you can see in the below example, code points are mapped to <i>sequences of code units</i> - and it is normal for a code point to map to more than one code unit. In
+        many
+        cases, looking at code units individually is meaningless.
+
+        <div class="image-block">
+          <div class="expand-screenshot-image-btn border border-primary rounded">
+            <span class="btn btn-link">Show Image <img src="../imgs/chevron-expand.svg" alt="Show Image Button"></span>
+          </div>
+          <div class="screenshot-image">
+            <img src="./imgs/Unicode.jpg"
+                 width="1200"
+                 class="center-block img-fluid"
+                 alt="Example1"
+                 loading="lazy">
+          </div>
+        </div>
+
+        <div class="sub-section">
+          - Question: Something like the 😊 "Smiling face with smiling eyes" in UTF-8 would be mapped to the byte sequence: <code>0xF0 0x9F 0x98 0x8A</code>. So if we reverse the
+          direction of the conversion, that is going from the byte value to the actual abstract character being represented, how doe the code know to consider all the four bytes
+          together? Why doesn't it convert it into, for example, four individual glyphs with code points 0xF0, 0x9F, 0x98, and 0x8A? <br>
+          Answer: The answer lies in the clever, self-synchronizing design of UTF-8. A UTF-8 decoder knows how many bytes to read for a single character by looking at the bit
+          pattern
+          of the <i>first byte</i>. <br>
+          <br>
+          Here are the rules:
+          <ul>
+            <li>If the first byte starts with <code>0</code>, it's a single-byte character (this covers all of standard ASCII). <br>
+              Pattern: <code>0xxxxxxx</code>
+            </li>
+            <li>If the first byte starts with <code>110</code>, it's the start of a two-byte character. <br>
+              Pattern: <code>110xxxxx 10xxxxxx</code>
+            </li>
+            <li>If the first byte starts with <code>1110</code>, it's the start of a three-byte character. <br>
+              Pattern: <code>1110xxxx 10xxxxxx 10xxxxxx</code>
+            </li>
+            <li>If the first byte starts with <code>11110</code>, it's the start of a four-byte character. <br>
+              Pattern: <code>11110xxx 10xxxxxx 10xxxxxx 10xxxxxx</code>
+            </li>
+          </ul>
+          Any byte that starts with <code>10</code> is called a <i>continuation byte</i>. It can <i>only</i> appear after a starting byte; it can never be the beginning of a
+          character
+          on its own. <br>
+
+          Let's apply this to your example, the emoji 😊 (<code>U+1F60A</code>), which is <code>0xF0 0x9F 0x98 0x8A</code> in UTF-8: <br>
+          1. The decoder reads the first byte: <code>0xF0</code>. In binary, this is <code>11110000</code>. <br>
+          2. It sees the <code>11110...</code> pattern and immediately knows: "This is the start of a <i>4-byte</i> character. I must read the next <i>3</i> bytes to complete it."
+          <br>
+          3. It reads the next three bytes: <code>0x9F</code> (<code>10011111</code>), <code>0x98</code> (<code>10011000</code>), and <code>0x8A</code> (<code>10001010</code>).
+          <br>
+          4. It confirms that all three of these start with the <code>10...</code> pattern, verifying they are valid continuation bytes. <br>
+          5. The decoder then combines the data bits (the <code>x</code>'s) from all four bytes to reconstruct the original Unicode code point <code>U+1F60A</code>, which it then
+          maps
+          to the "Smiling face with smiling eyes" character. <br>
+          This is why it doesn't see four separate characters. The bytes <code>0x9F</code>, <code>0x98</code>, and <code>0x8A</code> are invalid as starting bytes, so the decoder
+          knows
+          they are just parts of the character that began with <code>0xF0</code>.
+        </div>
+
+        <p class="inline-heading">What does all of this mean for Java?</p>: <br>
+        - Java uses the UTF-16 encoding form for all text processing. The <code>char</code> type for <i>code units</i>. This means that java internally represents text using
+        UTF-16.
+        This means that APIs that operate on the <code>char</code> level do not necessarily operate on complete Unicode characters. A given <code>char</code> value may only be one
+        portion of a code point. Operating directly on <code>char</code>s should typically be reserved for cases in which you know it is safe to do so (specifically, cases in which
+        you <i>know</i> that you are only dealing with characters that consist of a single code unit under UTF-16)
+
+        <div class="code-block">
+          <div class="expand-code-snip-btn border border-primary rounded">
+            <span class="btn btn-link">Expand Gist <img src="../imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+          </div>
+          <div class="code-snippet">
+            <script src="https://gist.github.com/rgbk21/49db0952f084fd3c9b4ba932c50af2d0.js"></script>
+          </div>
+        </div>
+
+        So the points that you need to remember are: <br>
+        a) Don't trust <code>String.length()</code>. It tells you the number of 16-bit <code>char</code> units, not the number of visual characters. <br>
+        b) Avoid <code>charAt(i)</code> loops. Iterating over a string with a simple for loop from 0 to length() - 1 is fragile. It will break and misinterpret any string
+        containing
+        emojis or other supplementary characters. <br>
+        c) Use Code Point-Aware Methods: For any operation that needs to handle individual characters (like reversing a string, counting characters, or splitting a string), you
+        should use methods that understand code points. The <code>String.codePoints()</code> stream (available since Java 8) is the best and most modern way to do this. <br>
+
+        The below diagram shows the comparison between UTF8 and UTF 16.
+        <div class="image-block">
+          <div class="expand-screenshot-image-btn border border-primary rounded">
+            <span class="btn btn-link">Show Image <img src="../imgs/chevron-expand.svg" alt="Show Image Button"></span>
+          </div>
+          <div class="screenshot-image">
+            <img src="./imgs/utf8_vs_utf16_comparison.png"
+                 width="1000"
+                 class="center-block img-fluid"
+                 alt="Example1"
+                 loading="lazy">
+          </div>
+        </div>
+
+
+        <p class="inline-heading">How does this all fit in when trying to read from a file or write to a file</p>: <br>
+        - A <code>Charset</code> is the crucial bridge that connects that internal world to the external world of files, network streams, and databases.
+
+        <br>
+        <br>
+
+        What is a <code>Charset</code>? <br>
+        In simple terms, a Charset is a rulebook for converting between characters and bytes. <br>
+        Encoder: When you write a Java String to a file, the Charset's encoder is used. It takes the sequence of 16-bit chars (which are internally UTF-16) and converts them into a
+        sequence of 8-bit bytes according to its rules (e.g., UTF-8, ISO-8859-1,
+        etc.). <br>
+        Decoder: When you read a file into a Java String, the Charset's decoder is used. It reads the sequence of bytes from the file and interprets them to reconstruct the
+        sequence
+        of chars that form the String.
+
+        <br>
+        <br>
+
+        <p class="inline-heading">The Critical Mistake to Avoid: The "Platform Default"</p> <br>
+        - If you use a Java API for reading or writing files that does not ask for a Charset, it will use the platform default charset. This is a major source of bugs. <br>
+        - A program running on a Mac or Linux machine will likely default to UTF-8. <br>
+        - The same program running on an older Windows machine in the US might default to windows-1252. If you write a file containing “I cost €5” on the Windows machine and then
+        try
+        to read it on the Mac, the € symbol will be corrupted because the bytes representing it in windows-1252 are meaningless when interpreted as UTF-8. <br>
+        The rule is simple: Always explicitly specify the <code>Charset</code> when converting between characters and bytes.
+
+        <br>
+        <br>
+
+        <p class="inline-heading">How to Use Charset for File I/O (The Right Way)</p> <br>
+        - The modern <code>java.nio.file.Files</code> API makes this easy and is the recommended approach. The best practice is to use the predefined constants in
+        <code>java.nio.charset.StandardCharsets</code>. <code>StandardCharsets.UTF_8</code> is almost always the right choice for interoperability.
+
+        <br>
+        <br>
+
+        <p class="inline-heading">Writing a String to a File</p>: <br>
+        - This example takes a <code>String</code> and writes it to a file, explicitly encoding it as UTF-8.
+        <div class="code-block">
+          <div class="expand-code-snip-btn border border-primary rounded">
+            <span class="btn btn-link">Expand Gist <img src="../imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+          </div>
+          <div class="code-snippet">
+            <script src="https://gist.github.com/rgbk21/6cc2935ba975d1be710171fdfcfaee6b.js"></script>
+          </div>
+        </div>
+
+        <p class="inline-heading">Reading a String from a File</p>: <br>
+        - This example reads the bytes from the file we just created and correctly decodes them back into a <code>String</code> because we specify the same <code>Charset</code>.
+        <div class="code-block">
+          <div class="expand-code-snip-btn border border-primary rounded">
+            <span class="btn btn-link">Expand Gist <img src="../imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+          </div>
+          <div class="code-snippet">
+            <script src="https://gist.github.com/rgbk21/15ab5098ad5daa845e006a94f16ee45a.js"></script>
+          </div>
+        </div>
+
+
+        <div class="sub-section">
+          Question: How does specifying the charset fix this problem? For instance, if I was running the program on the windows-1252 example provided above, wouldn't the bytes when
+          writing to the text file be interpreted as that format? Or is the OS going to say that, ok, you provided this specific charset of UTF8, so I am going to make sure to
+          store
+          the bytes as that. And then what happens when the user opens the text file through a UI interface, like notepad or something? Does the user see the actual text that was
+          stored? Or gibberish?
+
+          <br>
+          <br>
+
+          Answer:
+          <br>
+          <br>
+          <p class="inline-heading">The Roles of the Java Program and the Operating System</p> <br>
+
+          It's helpful to think of the Java program and the Operating System (OS) as having two very distinct jobs: <br>
+          1) The Java Program's Job (The "Translator"): <br>
+          - When you write a <code>String</code> to a file, your Java code is responsible for translating its internal character representation (UTF-16) into a sequence of raw
+          bytes.
+          The <code>Charset</code> you provide is the rulebook for this translation. <br>
+          2) The OS's Job (The "Courier"): <br>
+          The OS file system is like a courier. It doesn't know or care what the bytes mean. Its only job is to take the exact sequence of bytes your Java program gives it and
+          write
+          them to the disk.
+
+          <br>
+          <br>
+
+          <p class="inline-heading">How Specifying a Charset Fixes the Problem</p> <br>
+          - Let's use your example of writing the character € on a Windows machine that defaults to windows-1252. <br>
+          Scenario 1: You DON'T specify a charset (The WRONG way): <br>
+          1. Your Java code has the string "€". <br>
+          2. You use an old API like <code>new FileWriter("file.txt")</code> which uses the platform default. <br>
+          3. The JVM sees it's on Windows and uses the windows-1252 charset encoder. <br>
+          4. The windows-1252 rulebook says the character € translates to the single byte 0x80. <br>
+          5. Java hands the byte 0x80 to the OS. <br>
+          6. The OS writes the single byte 0x80 into the file on the disk. <br>
+          The file is now fundamentally a windows-1252 file. It will only be read correctly by programs that know to use the windows-1252 rulebook. <br>
+
+          <br>
+
+          Scenario 2: You DO specify <code>StandardCharsets.UTF_8</code> (The RIGHT way) <br>
+          1. Your Java code has the string "€". <br>
+          2. You use the modern API: <code>Files.write(path, lines, StandardCharsets.UTF_8)</code>. <br>
+          3. You have explicitly told Java: "Ignore the OS default. Use the UTF-8 rulebook." <br>
+          4. The UTF-8 rulebook says the character € translates to the three-byte sequence 0xE2 0x82 0xAC. <br>
+          5. Java hands the three bytes E2, 82, AC to the OS. <br>
+          6. The OS writes those exact three bytes into the file on the disk. <br>
+
+          By specifying the charset, you have taken control. You've ensured that no matter where your program runs—Windows, Mac, Linux—it will always produce a file with the exact
+          same bytes for the same content. You've created a portable, predictable file.
+
+          <br>
+          <br>
+
+          <p class="inline-heading">What Happens When a User Opens the File in Notepad?</p> <br>
+          This is the crucial second half of the equation. Now, the text editor (like Notepad) has to play the role of the decoder. It reads the raw bytes from the file and must
+          guess
+          which rulebook (charset) to use to turn them back into visible characters. <br>
+          Scenario 1: If you wrote the file using UTF-8 (containing bytes E2 82 AC): <br>
+          On Modern Notepad (Windows 10/11): These versions are much smarter. They often default to or can auto-detect UTF-8. They will read the three bytes, apply the UTF-8 rules,
+          and
+          correctly display €. The user sees the correct text. <br>
+          On Old Notepad (or a misconfigured editor): An older editor might blindly assume the system's default windows-1252. It would read the first byte 0xE2 and display â. Then
+          it
+          would read 0x82 and display ‚. Then 0xAC and display ¬. The user sees gibberish: â‚¬. <br>
+          Scenario 2: If you wrote the file using the windows-1252 default (containing byte 0x80): <br>
+          On the same Windows PC: The user opens it in Notepad. Notepad assumes the default windows-1252, reads the byte 0x80, and correctly displays €. It works perfectly...
+          locally.
+          <br>
+          On a Mac or Linux PC: The user opens the file. The text editor on that machine defaults to UTF-8. It reads the byte 0x80. In the UTF-8 rulebook, a byte starting with
+          10...
+          (like 0x80) is invalid as the <i>start</i> of a character. The editor knows the data is corrupt and will likely display a replacement character like ``. The user sees
+          gibberish.
+
+          <br>
+          <br>
+          <p class="inline-heading">Conclusion</p>: <br>
+          - By specifying StandardCharsets.UTF_8 in your Java code, you are choosing to create files in the most universal, widely-supported
+          format. You are betting that most modern software (text editors, web browsers, other programs) that reads your file will correctly guess or default to UTF-8, leading to
+          the
+          highest probability that your text will be displayed correctly for everyone, everywhere. You are fixing the problem by enforcing a consistent, portable standard at the
+          point of file creation.
+        </div>
+      </div>
+
+      <hr>
+      <div id="Tip5" class="chapter">Tip 5: Choosing Collections</div>
+      <hr>
+
+      <div class="textual-content">
+
+        - Points to consider when choosing which collection type and implementation to use. <br>
+        <p class="inline-heading">Prefer immutable collections</p>: <br>
+        - <a href="https://github.com/google/guava/wiki/ImmutableCollectionsExplained">Why use immutable collections</a> on github.
+
+        <br>
+        <br>
+
+        <p class="inline-heading">Understand deterministic vs. non-deterministic iteration</p> <br>
+        - Some popular hash-based collections such as <code>HashMap</code> and <code>HashSet</code> have non-deterministic iteration order. These collections iterate in a different
+        randomly-seeded order per VM invocation (in tests) and per JDK release. <br>
+        - If non one will ever iterate over the collection, only performing mutations and map lookups on it, then there's no harm in using these collections. But if the collections
+        may be iterated over, the randomization policy can easily lead to flaky tests and sudden behavior changes in production. <br>
+        - Fortunately, if you use the immutable collections, this is a non-issue. They all have deterministic iteration. As for mutable types, most such classes (with the exception
+        of <code>ConcurrentHashMap</code>) have a deterministic cousin, expressed through the interface of <code>SequencedCollection&lt;E&gt;</code>,
+        <code>SequencedSet&lt;E&gt;</code> and <code>SequencedMap&lt;K, V&gt;</code>. Examples include <code>LinkedHashMap</code> and <code>LinkedHashSet</code>. These are a safer
+        bet, but at the cost of added memory consumption. <code>TreeMap</code> and <code>TreeSet</code> may be worth considering as well.
+
+        <br>
+        <br>
+
+        <p class="inline-heading">Choosing a collection sub-interface</p>: Set, List, etc.<br>
+        - Choosing the most logically appropriate collection sub-interface type mostly depends on your answers to two basic questions. <br>
+        1) Question 1: Duplicates - Does it matter how many occurrences of the same element are present in the collection? Or does it only matter whether the element is contained
+        or
+        not (so duplicates should just be collapsed)? <br>
+        2) Question 2: Ordering - There are 3 choices for how to treat the ordering of your elements. <br>
+        a) Comparator-imposed ordering: Should elements always appear in the order determined by a comparator (which might be their natural order)? <br>
+        b) Ordered (order-dependent equality): Should two collections containing the same elements but in a different order be considered <i>different</i> collections? Note that
+        order-dependent equality always implies deterministic iteration. <br>
+        c) Unordered (order-independent equality): Or should order not matter? This should still use deterministic iteration, it's just that we don't care the order specifically.
+        <br>
+
+        Once you have those answers, just find their intersection below: <br>
+        <table class="table table-bordered table-sm">
+          <thead>
+          <tr>
+            <th>Order</th>
+            <th>Keep Duplicates</th>
+            <th>Collapse Duplicates</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td>ordered</td>
+            <td><a href=https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/List.html"">List</a></td>
+            <td> -</td>
+          </tr>
+          <tr>
+            <td>unordered</td>
+            <td><a href="https://guava.dev/releases/18.0/api/docs/com/google/common/collect/Multiset.html">Multiset</a></td>
+            <td><a href="https://docs.oracle.com/en/java/javase/20/docs/api/java.base/java/util/Set.html">Set</a></td>
+          </tr>
+          <tr>
+            <td>comparator-imposed</td>
+            <td><a href="https://guava.dev/releases/21.0/api/docs/com/google/common/collect/SortedMultiset.html">SortedMultiset</a></td>
+            <td><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/NavigableSet.html">NavigableSet</a></td>
+          </tr>
+          </tbody>
+        </table>
+
+        <br>
+        <br>
+
+        <p class="inline-heading">Simpler types to consider</p>
+        <br>
+        <br>
+        <table class="table table-bordered table-sm">
+          <thead>
+          <tr>
+            <th>If you have...</th>
+            <th>and...</th>
+            <th>You might want to consider...</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td><code>Iterable&lt;Pair&lt;Foo, Bar&gt;&gt;</code></td>
+            <td>The same <code>Foo</code> won’t appear in multiple pairs</td>
+            <td>
+              <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Map.html" target="_blank">
+                Map&lt;Foo, Bar&gt;
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td><code>Iterable&lt;Pair&lt;Foo, Bar&gt;&gt;</code></td>
+            <td>The same <code>Foo</code> might appear in multiple pairs</td>
+            <td>
+              <a href="https://guava.dev/releases/20.0/api/docs/com/google/common/collect/Multimap.html" target="_blank">
+                Multimap&lt;Foo, Bar&gt;
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td><code>List&lt;Pair&lt;Foo, Bar&gt;&gt;</code></td>
+            <td>The same <code>Foo</code> might appear in multiple pairs</td>
+            <td>
+              <a href="https://guava.dev/releases/19.0/api/docs/com/google/common/collect/ListMultimap.html" target="_blank">ListMultimap&lt;Foo, Bar&gt;</a>
+            </td>
+          </tr>
+          <tr>
+            <td><code>Set&lt;Pair&lt;Foo, Bar&gt;&gt;</code></td>
+            <td>The same <code>Foo</code> might appear in multiple pairs</td>
+            <td>
+              <a href="https://guava.dev/releases/19.0/api/docs/com/google/common/collect/SetMultimap.html" target="_blank">SetMultimap&lt;Foo, Bar&gt;</a>
+            </td>
+          </tr>
+          <tr>
+            <td><code>Pair&lt;List&lt;Foo&gt;, List&lt;Bar&gt;&gt;</code></td>
+            <td>The lists are the same size, and there is some relationship between elements at the same index</td>
+            <td>
+              <a href="https://guava.dev/releases/19.0/api/docs/com/google/common/collect/ListMultimap.html" target="_blank">ListMultimap&lt;Foo, Bar&gt;</a>
+              or
+              <a href="https://guava.dev/releases/19.0/api/docs/com/google/common/collect/SetMultimap.html" target="_blank">SetMultimap&lt;Foo, Bar&gt;</a>
+            </td>
+          </tr>
+          <tr>
+            <td><code>Iterable&lt;Foo&gt;</code></td>
+            <td><code>Foo</code> is <code>Comparable</code>, and the values are always contiguous with no gaps (e.g., {5, 6, 7, 8})</td>
+            <td>
+              <a href="https://guava.dev/releases/19.0/api/docs/com/google/common/collect/ContiguousSet.html" target="_blank">ContiguousSet&lt;Foo&gt;</a>
+            </td>
+          </tr>
+          <tr>
+            <td><code>List&lt;Foo&gt;</code> and <code>Set&lt;Foo&gt;</code></td>
+            <td>You keep identical contents in both, using one to maintain order and the other to de-duplicate</td>
+            <td>
+              <a href="https://guava.dev/releases/19.0/api/docs/com/google/common/collect/ImmutableSet.html" target="_blank">ImmutableSet&lt;Foo&gt;</a> (with <code>asList()</code>
+              view), or <code>UniqueList&lt;Foo&gt;</code> that rejects duplicate elements and can therefore be viewed as a set.
+            </td>
+          </tr>
+          <tr>
+            <td><code>Iterable&lt;Range&lt;Foo&gt;&gt;</code></td>
+            <td>The ranges are disjoint (or should be coalesced, making them disjoint)</td>
+            <td>
+              <a href="https://guava.dev/releases/23.0/api/docs/com/google/common/collect/RangeSet.html" target="_blank">RangeSet&lt;Foo&gt;</a>
+            </td>
+          </tr>
+          <tr>
+            <td><code>Iterable&lt;Pair&lt;Range&lt;Foo&gt;, Bar&gt;&gt;</code></td>
+            <td>The ranges are disjoint</td>
+            <td>
+              <a href="https://guava.dev/releases/20.0/api/docs/com/google/common/collect/RangeMap.html" target="_blank">RangeMap&lt;Foo, Bar&gt;</a>
+            </td>
+          </tr>
+          <tr>
+            <td><code>Iterable&lt;? extends Number&gt;</code></td>
+            <td>You don’t need it to be mutable</td>
+            <td>
+              <a href="https://guava.dev/releases/22.0/api/docs/com/google/common/primitives/ImmutableIntArray.html" target="_blank">ImmutableIntArray</a> and friends
+            </td>
+          </tr>
+          </tbody>
+        </table>
+
+        <table class="table table-bordered table-sm">
+          <thead>
+          <tr>
+            <th>If you have...</th>
+            <th>and...</th>
+            <th>You might want to consider...</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td><code>Map&lt;Key, Boolean&gt;</code></td>
+            <td>You don’t absolutely need to distinguish between <code>false</code>, <code>null</code> and/or "not present"</td>
+            <td>
+              <a href="https://guava.dev/releases/23.0/api/docs/com/google/common/collect/Sets.html" target="_blank">
+                Set&lt;Key&gt;
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td><code>Map&lt;Key, Integer&gt;</code> or <code>Map&lt;Key, Long&gt;</code></td>
+            <td>You are doing arithmetic on the values (for example, retrieve a value, add 1, store it back)</td>
+            <td>
+              <a href="https://guava.dev/releases/23.0/api/docs/com/google/common/collect/Multiset.html" target="_blank">
+                Multiset&lt;Key&gt;
+              </a>
+              or
+              <a href="https://guava.dev/releases/23.0/api/docs/com/google/common/util/concurrent/AtomicLongMap.html" target="_blank">
+                AtomicLongMap&lt;Key&gt;
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td><code>Map&lt;Enum, Integer&gt;</code></td>
+            <td>You are doing arithmetic on the values (for example, retrieve a value, add 1, store it back)</td>
+            <td>
+              <a href="https://guava.dev/releases/23.0/api/docs/com/google/common/collect/EnumMultiset.html" target="_blank">
+                EnumMultiset&lt;Enum&gt;
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td><code>Map&lt;Key, NumericValue&gt;</code></td>
+            <td><code>NumericValue</code> is some other conceptually numeric type (such as <code>Double</code>) and you are doing arithmetic on the values</td>
+            <td>NumericValueMap&lt;Key, NumericValue&gt;</td>
+          </tr>
+          <tr>
+            <td><code>Map&lt;Foo, List&lt;Bar&gt;&gt;</code></td>
+            <td>You don’t absolutely need to distinguish empty list from "not present"</td>
+            <td>
+              <a href="https://guava.dev/releases/23.0/api/docs/com/google/common/collect/ListMultimap.html" target="_blank">
+                ListMultimap&lt;Foo, Bar&gt;
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td><code>Map&lt;Foo, Set&lt;Bar&gt;&gt;</code></td>
+            <td>You don’t absolutely need to distinguish empty set from "not present"</td>
+            <td>
+              <a href="https://guava.dev/releases/23.0/api/docs/com/google/common/collect/SetMultimap.html" target="_blank">
+                SetMultimap&lt;Foo, Bar&gt;
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td><code>Map&lt;Foo, Map&lt;Bar, Qux&gt;&gt;</code></td>
+            <td>You don’t absolutely need to distinguish empty map from "not present"</td>
+            <td>
+              <a href="https://guava.dev/releases/23.0/api/docs/com/google/common/collect/Table.html" target="_blank">
+                Table&lt;Foo, Bar, Qux&gt;
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td><code>Map&lt;Pair&lt;Foo, Bar&gt;, Qux&gt;</code></td>
+            <td>You wouldn’t benefit from defining a nested type for the <code>Pair</code></td>
+            <td>
+              <a href="https://guava.dev/releases/23.0/api/docs/com/google/common/collect/Table.html" target="_blank">
+                Table&lt;Foo, Bar, Qux&gt;
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td><code>Multimap&lt;Foo, Pair&lt;Bar, Qux&gt;&gt;</code></td>
+            <td>The same <code>Bar</code> won’t appear in multiple pairs for the same <code>Foo</code></td>
+            <td>
+              <a href="https://guava.dev/releases/23.0/api/docs/com/google/common/collect/Table.html" target="_blank">
+                Table&lt;Foo, Bar, Qux&gt;
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td><code>Map&lt;Foo, Bar&gt;</code> and <code>Map&lt;Bar, Foo&gt;</code></td>
+            <td>The same entry is always stored in both maps (once in each order)</td>
+            <td>
+              <a href="https://guava.dev/releases/23.0/api/docs/com/google/common/collect/BiMap.html" target="_blank">
+                BiMap&lt;Foo, Bar&gt;
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td><code>Map&lt;Foo, Bar&gt;</code></td>
+            <td>Adjacent <code>Foo</code> values often share the same value</td>
+            <td>
+              <a href="https://guava.dev/releases/23.0/api/docs/com/google/common/collect/RangeMap.html" target="_blank">
+                RangeMap&lt;Foo, Bar&gt;
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td><code>Map&lt;Key, AtomicInteger&gt;</code></td>
+            <td>You are using the <code>AtomicInteger</code> only as a "mutable int" and values are always positive and less than 2^31</td>
+            <td>
+              <a href="https://guava.dev/releases/23.0/api/docs/com/google/common/collect/Multiset.html" target="_blank">
+                Multiset&lt;Key&gt;
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td><code>Map&lt;Key, AtomicInteger&gt;</code></td>
+            <td>You do not need a reference to an <code>AtomicInteger</code>, only int values that are always positive and less than 2^31</td>
+            <td>
+              <a href="https://guava.dev/releases/23.0/api/docs/com/google/common/collect/ConcurrentHashMultiset.html" target="_blank">
+                ConcurrentHashMultiset&lt;Key&gt;
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td><code>Map&lt;Key, AtomicLong&gt;</code></td>
+            <td>You do not need a reference to an <code>AtomicLong</code>, only long values</td>
+            <td>
+              <a href="https://guava.dev/releases/23.0/api/docs/com/google/common/util/concurrent/AtomicLongMap.html" target="_blank">
+                AtomicLongMap&lt;Key&gt;
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td><code>AtomicLongMap</code></td>
+            <td>Your values are always positive and less than 2^31</td>
+            <td>
+              <a href="https://guava.dev/releases/23.0/api/docs/com/google/common/collect/ConcurrentHashMultiset.html" target="_blank">
+                ConcurrentHashMultiset&lt;Key&gt;
+              </a>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+
+        <table class="table table-bordered table-sm">
+          <thead>
+          <tr>
+            <th>If you have...</th>
+            <th>and...</th>
+            <th>You might want to consider...</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td><code>int[]</code>, <code>long[]</code>, or <code>double[]</code></td>
+            <td>You don’t need it to be mutable</td>
+            <td>
+              <a href="https://guava.dev/releases/23.0/api/docs/com/google/common/primitives/ImmutableIntArray.html" target="_blank">
+                ImmutableIntArray
+              </a> and friends
+            </td>
+          </tr>
+          <tr>
+            <td><code>LoadingCache&lt;Key, AtomicLong&gt;</code></td>
+            <td>The <code>CacheLoader</code> is returning <code>new AtomicLong()</code> or <code>new AtomicLong(0)</code></td>
+            <td>
+              <a href="https://guava.dev/releases/23.0/api/docs/com/google/common/util/concurrent/AtomicLongMap.html" target="_blank">
+                AtomicLongMap&lt;Key&gt;
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td><code>Pair&lt;Foo, Foo&gt;</code></td>
+            <td><code>Foo</code> is <code>Comparable</code>, and <code>first</code> and <code>second</code> represent bounds of a range</td>
+            <td>
+              <a href="https://guava.dev/releases/23.0/api/docs/com/google/common/collect/Range.html" target="_blank">
+                Range&lt;Foo&gt;
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td><code>Pair&lt;Foo, Bar&gt;</code></td>
+            <td>You are not being forced to use it by go/Flume</td>
+            <td>
+              Please define a named type with named accessors!
+              <a href="https://github.com/google/auto/blob/main/value/userguide/index.md" target="_blank">
+                AutoValue
+              </a> makes it easy.
+            </td>
+          </tr>
+          <tr>
+            <td><code>Comparator&lt;Foo&gt;</code></td>
+            <td>You don’t impose a correct total order, and care only about whether it returns zero or nonzero</td>
+            <td>
+              <a href="https://guava.dev/releases/23.0/api/docs/com/google/common/base/Equivalence.html" target="_blank">
+                Equivalence&lt;Foo&gt;
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td><code>Function&lt;Foo, Bar&gt;</code> and <code>Function&lt;Bar, Foo&gt;</code></td>
+            <td>The functions convert in both directions between different representations of the same data</td>
+            <td>
+              <a href="https://guava.dev/releases/23.0/api/docs/com/google/common/base/Converter.html" target="_blank">
+                Converter&lt;Foo, Bar&gt;
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td><code>long</code> and <code>TimeUnit</code></td>
+            <td>You are trying to represent an amount of time</td>
+            <td>
+              <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html" target="_blank">
+                Duration
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td><code>long</code>, <code>int</code>, <code>double</code>, etc.</td>
+            <td>You are trying to represent an amount of time</td>
+            <td>
+              <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Duration.html" target="_blank">
+                Duration
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td><code>long</code>, <code>int</code>, <code>double</code>, etc.</td>
+            <td>You are trying to represent an instant in time (i.e., a timestamp)</td>
+            <td>
+              <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Instant.html" target="_blank">
+                Instant
+              </a>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+
+        <p class="inline-heading">Legacy classes and interfaces to avoid</p>: <br>
+        - <code>SortedSet</code> and <code>SortedMap</code>: Replaced by <code>NavigableSet</code> and <code>NavigableMap</code> in Java 6. <br>
+        - <code>LinkedList</code>: It is very rare for its performance to beat <code>ArrayList</code> or <code>ArrayDeque</code>. <br>
+        - <code>Vector</code>: Use <code>ArrayList</code> <br>
+        - <code>Stack</code>: use <code>ArrayDeque</code> <br>
+        - <code>Hashtable</code> and <code>Dictionary</code>: use <code>LinkedHashMap</code>
+      </div>
+
+      <hr>
+      <div id="Tip6" class="chapter">Tip 6: Classes</div>
+      <hr>
+
+      <div class="textual-content">
+        <p class="inline-heading">Utility Classes</p>: <br>
+        By utility class, we mean a class containing only static members. <br>
+
+        1) It's common to see a series of static methods that take a common argument type. Consider adding the method to that type instead, if possible; perhaps even as instance
+        methods. For instance, refer the below examples:
+        <div class="code-block">
+          <div class="expand-code-snip-btn border border-primary rounded">
+            <span class="btn btn-link">Expand Gist <img src="../imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+          </div>
+          <div class="code-snippet">
+            <script src="https://gist.github.com/rgbk21/8f96809349c4555e7b857710da548215.js"></script>
+          </div>
+        </div>
+
+        - When should you keep static utilities? <br>
+        a) Cross‑cutting helpers that don’t logically belong to one type (e.g., preconditions, object mappers). <br>
+        b) Pure functions over multiple disparate types where no single receiver is natural. <br>
+        c) Factory methods and builders. <br>
+
+        Rule of thumb: If most methods in a util class take the same first parameter type, that’s a smell. Prefer moving those methods onto that type (as instance methods) or, if
+        that’s impossible, add them via a wrapper or an interface with default methods.
+      </div>
+
+      <hr>
+      <div id="Tip7" class="chapter">Tip 7: Closing Resources</div>
+      <hr>
+
+      <div class="textual-content">
+
+        - This discusses the types which conceptually require "closing" or "cleanup". Specifically, a new instance is returned to a user (whether by a constructor or otherwise),
+        and
+        that user is expected to call a method on that instance when they are finished using the instance. <br>
+
+        <p class="inline-heading">Avoid the need</p>: <br>
+        - The best way to handle this situation is to avoid it entirely by using libraries that operate at a higher level. For example, working with I/O streams requires closing
+        those streams when finished. But most I/O needs can be solved using library classes like
+        <a href="https://guava.dev/releases/19.0/api/docs/com/google/common/io/ByteSource.html">ByteSource</a> or
+        <a href="https://guava.dev/releases/19.0/api/docs/com/google/common/io/CharSink.html">CharSink</a>. Code can be found <a
+        href="https://github.com/google/guava/tree/master/guava/src/com/google/common/io">here on GitHub</a>. <br>
+        - The reasoning is that if you don't let the user access an opened resource in the first place, they can't forget to close it.
+
+        <br>
+        <br>
+
+        <p class="inline-heading">Creating a Closeable Type</p>: <br>
+        Perhaps it can't be avoided and you must define a closeable type. When doing so:
+        - Implement <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/AutoCloseable.html">AutoCloseable</a> in your <code>throws</code> clause,
+        declare
+        only the specific checked exception types that your implementation can actually throw. <br>
+        - After <code>close</code> is called, any methods that cna no longer function properly should throw <code>IllegalStateException</code> if invoked. <br>
+        - The API users call to obtain instances of this type should return them in an already "opened", usable state, not require an additional <code>open</code> or
+        <code>init</code> method to be called. <br>
+        - Supporting <i>reopening</i> the same instance again is atypical and discouraged. <br>
+        - Make sure to clearly document any subtypes or returned instances that <i>don't</i> require closing. <br>
+        - Consider annotating constructors and methods returning your type as <a href="https://errorprone.info/bugpattern/MustBeClosedChecker">@MustBeClosed</a>.
+
+        <br>
+        <br>
+
+        <p class="inline-heading">Use "try with resources"</p>: <br>
+        - When using an instance of <code>AutoCloseable</code> that will need to be closed you should use the "try with resources" language feature. <br>
+        - Note that a <code>catch</code> statement need not be present. At the end of the try block, both <code>in</code> and <code>out</code> will be closed. Importantly,
+        <code>in</code> will be closed een if the call to <code>newOutputStream</code> throws an exception, and no thrown exceptions will be swallowed (they are instead attached as
+        "suppressed exceptions"). <br>
+        - The variables initialized in the <code>try</code> header are <i>usually</i> referenced within the <code>try</code> block, but in some cases they are not, and that is
+        okay.
+        <div class="code-block">
+          <div class="expand-code-snip-btn border border-primary rounded">
+            <span class="btn btn-link">Expand Gist <img src="../imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+          </div>
+          <div class="code-snippet">
+            <script src="https://gist.github.com/rgbk21/6295c0dce31e26489b1db5866b0596a1.js"></script>
+          </div>
+        </div>
+
+        <br>
+
+        <p class="inline-heading">Preserving Exceptions</p>: <br>
+        - It's a common pattern to do some work to initialize some object before returning it to a caller that will eventually close it. But this can be challenging. Refer the code
+        below.
+        <div class="code-block">
+          <div class="expand-code-snip-btn border border-primary rounded">
+            <span class="btn btn-link">Expand Gist <img src="../imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+          </div>
+          <div class="code-snippet">
+            <script src="https://gist.github.com/rgbk21/ba615138f2dfc80b446bddd7568b01c5.js"></script>
+          </div>
+        </div>
+      </div>
+
+      <hr>
+      <div id="Tip8" class="chapter">Tip 8: Code Generation</div>
+      <hr>
+
+      <div class="textual-content">
+        - TODO
+      </div>
+
+      <hr>
+      <div id="Tip9" class="chapter">Tip 9: Collection Implementations</div>
+      <hr>
+
+      <div class="textual-content">
+
+        - See <a href="#Tip5">Choosing a collection type</a>. <br>
+
+        <div class="sub-heading">List</div>
+        - Regular: <code>ImmutableList</code>, <code>ArrayList</code>. <br>
+        - Unique elements: <code>StandardUniqueList</code> (internal). <br>
+        - Special factories: <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collections.html#nCopies-int-T-"><code>Collections.nCopies()</code></a>,
+        <a href="https://guava.dev/releases/21.0/api/docs/com/google/common/collect/Lists.html#asList-E-E:A-"><code>Lists.asList()</code></a>,
+        <a href="https://guava.dev/releases/23.0/api/docs/com/google/common/primitives/ImmutableDoubleArray.html#asList--"><code>ImmutableDoubleArray.asList()</code></a>,
+        <a href="https://guava.dev/releases/19.0/api/docs/com/google/common/primitives/Doubles.html#asList(double...)"><code>Doubles.asList()</code></a> <br>
+        - Concurrent: <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/CopyOnWriteArrayList.html"><code>CopyOnWriteArrayList</code></a>
+
+        <br>
+        <br>
+
+        <div class="sub-heading">Set</div>
+        <p class="inline-heading">Regular</p>: <br>
+        - Basic: <code>ImmutableSet</code>, <code>HashSet</code>, <code>LinkedHashSet</code> <br>
+        - Enum: <a href="https://guava.dev/releases/19.0/api/docs/com/google/common/collect/Sets.html#immutableEnumSet(E,%20E...)"><code>Sets.immutableEnumSet()</code></a>,
+        <code>EnumSet</code> <br>
+        - Memory-optimized: <a href="https://github.com/google/guava/blob/master/guava/src/com/google/common/collect/CompactHashSet.java"><code>CompactHashSet</code></a>,
+        <a href="https://github.com/google/guava/blob/master/guava/src/com/google/common/collect/CompactLinkedHashSet.java"><code>CompactLinkedHashSet</code></a><br>
+        - Identity Semantics: <a href="https://guava.dev/releases/22.0/api/docs/com/google/common/collect/Sets.html#newIdentityHashSet--"><code>Sets.newIdentityHashSet()</code></a>
+        (does not rely on <code>Object.hashCode()</code> or <code>equals</code> to dedupe the elements).
+
+        <br>
+        <br>
+
+        <p class="inline-heading">Concurrent</p>: <br>
+        - Basics: <a href="https://guava.dev/releases/22.0/api/docs/com/google/common/collect/Sets.html#newConcurrentHashSet--"><code>Sets.newConcurrentHashSet</code></a> <br>
+        - Copy on write: <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CopyOnWriteArraySet.html?is-external=true"><code>CopyOnWriteArraySet</code></a>.
+
+        <br>
+        <br>
+
+        <p class="inline-heading">Comparator-imposed order</p>: <code>NavigableSet</code><br>
+        - Basic: <a href="https://guava.dev/releases/19.0/api/docs/com/google/common/collect/ImmutableSortedSet.html"><code>ImmutableSortedSet</code></a>, <code>TreeSet</code><br>
+        - Concurrent:<code>ConcurrentSkipListSet</code>
+
+        <br>
+        <br>
+
+        <p class="inline-heading">Containing ranges</p>: <a href="https://guava.dev/releases/23.0/api/docs/com/google/common/collect/RangeSet.html">RangeSet</a> <br>
+        <code>ImmutableRangeSet</code>, <code>TreeRangeSet</code>
+
+
+        <div class="sub-heading">Map</div>
+        Regular:
+        &nbsp; Basic: <code>ImmutableMap</code>, <code>HashMap</code>, <code>LinkedHashMap</code> <br>
+        &nbsp; Enum Keys: <code>Maps.immutableEnumMap()</code>, <code>EnmMap</code>, <code>EnumMappers</code> <br>
+        &nbsp; Memory Optimized: <code>CompactHashMap</code>, <code>CompactLinkedHshMap</code> <br>
+        &nbsp; Identity Semantics: <code>IdentityHashMap</code>, <code>WeakHashMap</code> (does not rely on <code>Object.hashCode()</code> or <code>equals</code> to index the
+        keys)<br>
+
+        Concurrent: <code>ConcurrentMap</code>
+        Basic: <code>ConcurrentHashMap</code>
+        &nbsp; Enum keys: <code>ConcurrentEnumMap</code>
+
+        Comparator-imposed key order: NavigableMap <br>
+        &nbsp; Basic: <code>ImmutableSortedMap</code>, <code>TreeMap</code>
+        &nbsp; Concurrent: <code>ConcurrentEnumMap</code> <br>
+      </div>
+
     </div>
-
-    - When should you keep static utilities? <br>
-    a) Cross‑cutting helpers that don’t logically belong to one type (e.g., preconditions, object mappers). <br>
-    b) Pure functions over multiple disparate types where no single receiver is natural. <br>
-    c) Factory methods and builders. <br>
-
-    Rule of thumb: If most methods in a util class take the same first parameter type, that’s a smell. Prefer moving those methods onto that type (as instance methods) or, if
-    that’s impossible, add them via a wrapper or an interface with default methods.
   </div>
-
-  <hr>
-  <div id="Tip7" class="chapter">Tip 7: Closing Resources</div>
-  <hr>
-
-  <div class="textual-content">
-
-    - This discusses the types which conceptually require "closing" or "cleanup". Specifically, a new instance is returned to a user (whether by a constructor or otherwise), and
-    that user is expected to call a method on that instance when they are finished using the instance. <br>
-
-    <p class="inline-heading">Avoid the need</p>: <br>
-    - The best way to handle this situation is to avoid it entirely by using libraries that operate at a higher level. For example, working with I/O streams requires closing
-    those streams when finished. But most I/O needs can be solved using library classes like
-    <a href="https://guava.dev/releases/19.0/api/docs/com/google/common/io/ByteSource.html">ByteSource</a> or
-    <a href="https://guava.dev/releases/19.0/api/docs/com/google/common/io/CharSink.html">CharSink</a>. Code can be found <a
-    href="https://github.com/google/guava/tree/master/guava/src/com/google/common/io">here on GitHub</a>. <br>
-    - The reasoning is that if you don't let the user access an opened resource in the first place, they can't forget to close it.
-
-    <br>
-    <br>
-
-    <p class="inline-heading">Creating a Closeable Type</p>: <br>
-    Perhaps it can't be avoided and you must define a closeable type. When doing so:
-    - Implement <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/lang/AutoCloseable.html">AutoCloseable</a> in your <code>throws</code> clause, declare
-    only the specific checked exception types that your implementation can actually throw. <br>
-    - After <code>close</code> is called, any methods that cna no longer function properly should throw <code>IllegalStateException</code> if invoked. <br>
-    - The API users call to obtain instances of this type should return them in an already "opened", usable state, not require an additional <code>open</code> or
-    <code>init</code> method to be called. <br>
-    - Supporting <i>reopening</i> the same instance again is atypical and discouraged. <br>
-    - Make sure to clearly document any subtypes or returned instances that <i>don't</i> require closing. <br>
-    - Consider annotating constructors and methods returning your type as <a href="https://errorprone.info/bugpattern/MustBeClosedChecker">@MustBeClosed</a>.
-
-    <br>
-    <br>
-
-    <p class="inline-heading">Use "try with resources"</p>: <br>
-    - When using an instance of <code>AutoCloseable</code> that will need to be closed you should use the "try with resources" language feature. <br>
-    - Note that a <code>catch</code> statement need not be present. At the end of the try block, both <code>in</code> and <code>out</code> will be closed. Importantly,
-    <code>in</code> will be closed een if the call to <code>newOutputStream</code> throws an exception, and no thrown exceptions will be swallowed (they are instead attached as
-    "suppressed exceptions"). <br>
-    - The variables initialized in the <code>try</code> header are <i>usually</i> referenced within the <code>try</code> block, but in some cases they are not, and that is okay.
-    <div class="code-block">
-      <div class="expand-code-snip-btn border border-primary rounded">
-        <span class="btn btn-link">Expand Gist <img src="../imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-      </div>
-      <div class="code-snippet">
-        <script src="https://gist.github.com/rgbk21/6295c0dce31e26489b1db5866b0596a1.js"></script>
-      </div>
-    </div>
-
-    <br>
-
-    <p class="inline-heading">Preserving Exceptions</p>: <br>
-    - It's a common pattern to do some work to initialize some object before returning it to a caller that will eventually close it. But this can be challenging. Refer the code
-    below.
-    <div class="code-block">
-      <div class="expand-code-snip-btn border border-primary rounded">
-        <span class="btn btn-link">Expand Gist <img src="../imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-      </div>
-      <div class="code-snippet">
-        <script src="https://gist.github.com/rgbk21/ba615138f2dfc80b446bddd7568b01c5.js"></script>
-      </div>
-    </div>
-  </div>
-
-  <hr>
-  <div id="Tip8" class="chapter">Tip 8: Code Generation</div>
-  <hr>
-
-  <div class="textual-content">
-    - TODO
-  </div>
-
-  <hr>
-  <div id="Tip9" class="chapter">Tip 9: Collection Implementations</div>
-  <hr>
-
-  <div class="textual-content">
-
-    - See <a href="#Tip5">Choosing a collection type</a>. <br>
-
-    <div class="sub-heading">List</div>
-    - Regular: <code>ImmutableList</code>, <code>ArrayList</code>. <br>
-    - Unique elements: <code>StandardUniqueList</code> (internal). <br>
-    - Special factories: <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collections.html#nCopies-int-T-"><code>Collections.nCopies()</code></a>,
-    <a href="https://guava.dev/releases/21.0/api/docs/com/google/common/collect/Lists.html#asList-E-E:A-"><code>Lists.asList()</code></a>,
-    <a href="https://guava.dev/releases/23.0/api/docs/com/google/common/primitives/ImmutableDoubleArray.html#asList--"><code>ImmutableDoubleArray.asList()</code></a>,
-    <a href="https://guava.dev/releases/19.0/api/docs/com/google/common/primitives/Doubles.html#asList(double...)"><code>Doubles.asList()</code></a> <br>
-    - Concurrent: <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/CopyOnWriteArrayList.html"><code>CopyOnWriteArrayList</code></a>
-
-    <br>
-    <br>
-
-    <div class="sub-heading">Set</div>
-    <p class="inline-heading">Regular</p>: <br>
-    - Basic: <code>ImmutableSet</code>, <code>HashSet</code>, <code>LinkedHashSet</code> <br>
-    - Enum: <a href="https://guava.dev/releases/19.0/api/docs/com/google/common/collect/Sets.html#immutableEnumSet(E,%20E...)"><code>Sets.immutableEnumSet()</code></a>,
-    <code>EnumSet</code> <br>
-    - Memory-optimized: <a href="https://github.com/google/guava/blob/master/guava/src/com/google/common/collect/CompactHashSet.java"><code>CompactHashSet</code></a>,
-    <a href="https://github.com/google/guava/blob/master/guava/src/com/google/common/collect/CompactLinkedHashSet.java"><code>CompactLinkedHashSet</code></a><br>
-    - Identity Semantics: <a href="https://guava.dev/releases/22.0/api/docs/com/google/common/collect/Sets.html#newIdentityHashSet--"><code>Sets.newIdentityHashSet()</code></a>
-    (does not rely on <code>Object.hashCode()</code> or <code>equals</code> to dedupe the elements).
-
-    <br>
-    <br>
-
-    <p class="inline-heading">Concurrent</p>: <br>
-    - Basics: <a href="https://guava.dev/releases/22.0/api/docs/com/google/common/collect/Sets.html#newConcurrentHashSet--"><code>Sets.newConcurrentHashSet</code></a> <br>
-    - Copy on write: <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CopyOnWriteArraySet.html?is-external=true"><code>CopyOnWriteArraySet</code></a>.
-
-    <br>
-    <br>
-
-    <p class="inline-heading">Comparator-imposed order</p>: <code>NavigableSet</code><br>
-    - Basic: <a href="https://guava.dev/releases/19.0/api/docs/com/google/common/collect/ImmutableSortedSet.html"><code>ImmutableSortedSet</code></a>, <code>TreeSet</code><br>
-    - Concurrent:<code>ConcurrentSkipListSet</code>
-
-    <br>
-    <br>
-
-    <p class="inline-heading">Containing ranges</p>: <a href="https://guava.dev/releases/23.0/api/docs/com/google/common/collect/RangeSet.html">RangeSet</a> <br>
-    <code>ImmutableRangeSet</code>, <code>TreeRangeSet</code>
-
-
-    <div class="sub-heading">Map</div>
-    Regular:
-    &nbsp; Basic: <code>ImmutableMap</code>, <code>HashMap</code>, <code>LinkedHashMap</code> <br>
-    &nbsp; Enum Keys: <code>Maps.immutableEnumMap()</code>, <code>EnmMap</code>, <code>EnumMappers</code> <br>
-    &nbsp; Memory Optimized: <code>CompactHashMap</code>, <code>CompactLinkedHshMap</code> <br>
-    &nbsp; Identity Semantics: <code>IdentityHashMap</code>, <code>WeakHashMap</code> (does not rely on <code>Object.hashCode()</code> or <code>equals</code> to index the
-    keys)<br>
-
-    Concurrent: <code>ConcurrentMap</code>
-    Basic: <code>ConcurrentHashMap</code>
-    &nbsp; Enum keys: <code>ConcurrentEnumMap</code>
-
-    Comparator-imposed key order: NavigableMap <br>
-    &nbsp; Basic: <code>ImmutableSortedMap</code>, <code>TreeMap</code>
-    &nbsp; Concurrent: <code>ConcurrentEnumMap</code> <br>
-  </div>
-
 </div>
+
+<button id="scrollToTopBtn" title="Go to top"><i class="fa fa-arrow-up"></i></button>
 <script src="../../../script.js"></script>
 </body>
 </html>
