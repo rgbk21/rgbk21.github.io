@@ -81,6 +81,11 @@ html {
 .code-snippet {
   padding-top: 10px;
   display: none;
+  border: 2px solid #f7f7f7;
+}
+
+.code-snippet .gist .gist-file {
+  margin-bottom: 0;
 }
 
 .screenshot-image {
@@ -133,6 +138,7 @@ code {
   display: inline-block;
   margin-bottom: 0;
   text-decoration: underline;
+  padding-top: 8px;
 }
 
 .sub-section {
