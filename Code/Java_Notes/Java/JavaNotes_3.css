@@ -6,6 +6,15 @@
   flex: 0 0 15%;
   padding: 20px;
   border-right: 1px solid #ddd;
+  position: sticky; /* Make the column stick to the top */
+  top: 80px; /* Height of the main navbar */
+  /* To make the column scrollable, it needs a fixed height.
+  We calculate this height to be 100% of the viewport height (100vh) minus the 75px taken up by the navbar.
+  This makes the index column fill the available vertical space perfectly. */
+  height: calc(100vh - 80px);
+  /* If the content inside the index column is taller than its calculated height,
+   a vertical scrollbar should appear for that column only. */
+  overflow-y: auto;
 }
 .index-entries-container {
   display: block;

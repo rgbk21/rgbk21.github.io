@@ -148,7 +148,9 @@
 
       <div class="sub-heading">Useful Links</div>
       <div>
-        - <a href="https://google.github.io/styleguide/javaguide.html">Google Java Style Guide</a>.
+        - <a href="https://google.github.io/styleguide/javaguide.html">Google Java Style Guide</a>. <br>
+        - <a href="https://guava.dev/releases/18.0/api/docs/">Guava 18 API Docs</a>, <a href="https://github.com/google/guava/tree/master/guava/src/com/google/common">Github</a>.
+        <br>
 
       </div>
 
@@ -309,7 +311,7 @@
         <br>
         <br>
 
-        <p class="inline-heading">Introduction: Characters and Bytes</p> <br>
+        <div class="sub-heading">Introduction: Characters and Bytes</div>
         - Conceptually, we think of strings in programs as sequences of <i>characters</i> - individual written marks in a language. Like "a" or "A" or &#x1F60A. However, these
         character sequences are actually sequences of bytes. So it comes down to how sequences of bytes map to an abstract idea of characters. For instance, we decide that the
         character "a" will be mapped to the byte "0x61". This is known as <i>character encoding</i>. <br>
@@ -412,7 +414,7 @@
           they are just parts of the character that began with <code>0xF0</code>.
         </div>
 
-        <p class="inline-heading">What does all of this mean for Java?</p>: <br>
+        <div class="sub-heading">What does all of this mean for Java?</div>
         - Java uses the UTF-16 encoding form for all text processing. The <code>char</code> type for <i>code units</i>. This means that java internally represents text using
         UTF-16.
         This means that APIs that operate on the <code>char</code> level do not necessarily operate on complete Unicode characters. A given <code>char</code> value may only be one
@@ -451,7 +453,7 @@
         </div>
 
 
-        <p class="inline-heading">How does this all fit in when trying to read from a file or write to a file</p>: <br>
+        <div class="sub-heading">How does this all fit in when trying to read from a file or write to a file?</div>
         - A <code>Charset</code> is the crucial bridge that connects that internal world to the external world of files, network streams, and databases.
 
         <br>
