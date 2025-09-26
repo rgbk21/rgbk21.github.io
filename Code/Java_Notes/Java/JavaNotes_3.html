@@ -134,6 +134,9 @@
       <a class="index-column-entry" href="#Tip8">Tip8: Code Generation</a>
       <a class="index-column-entry" href="#Tip9">Tip9: Collection Implementations</a>
       <a class="index-column-entry" href="#Tip10">Tip10: Comparison</a>
+      <a class="index-column-entry" href="#Tip11">Tip11: Concurrency</a>
+      <a class="index-column-entry" href="#Tip12">Tip12: Conditional Failures</a>
+      <a class="index-column-entry" href="#Tip13">Tip13: Constants</a>
     </div>
   </div>
   <div class="content-column">
@@ -1274,8 +1277,122 @@
       <hr>
 
       <div class="textual-content">
+        - Java has two ways of comparing objects: <br>
+        a) You can use a <a href="https://docs.oracle.com/en/java/javase/21//docs/api/java.base/java/util/Comparator.html"><code>Comparator&lt;T&gt;</code></a> to compare two
+        instances of T with <code>comparator.compare(instance1, instance2)</code>. <br>
+        b) If a class implements <a href="https://docs.oracle.com/en/java/javase/21//docs/api/java.base/java/lang/Comparable.html"><code>Comparable</code></a>, then you can compare
+        instances of that class with <code>instance1.compareTo(instance2)</code>. <br>
+        - That said, implementing Comparator and Comparable can be tedious and bug-prone. You can avoid most trouble by following the recommendations below.
+
+        <div class="sub-heading">Comparator</div>
+        <div>
+          - Typically, comparing two objects goes something like "whichever has the smaller value of the foo() method comes first, and if those are the same, whichever has the
+          smaller value of the bar() method comes first, and if those are the same then the objects compare equal". <br>
+          - This translates directly into method calls on the <code>Comparator</code> interface.
+          <div class="code-block">
+            <div class="expand-code-snip-btn border border-primary rounded">
+              <span class="btn btn-link">Expand Gist <img src="../imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+            </div>
+            <div class="code-snippet">
+              <script src="https://gist.github.com/rgbk21/de95c1fdb03a0a48b099168b342cd25c.js"></script>
+            </div>
+          </div>
+
+          - You can use <code>.reversed()</code> at any point in the chain to reverse the sense of the comparison up to that point.
+          <div class="code-block">
+            <div class="expand-code-snip-btn border border-primary rounded">
+              <span class="btn btn-link">Expand Gist <img src="../imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+            </div>
+            <div class="code-snippet">
+              <script src="https://gist.github.com/rgbk21/354393ad90c5bf3776ba54de87553cb6.js"></script>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="sub-heading">Comparable</div>
+        <div>
+          - Implementing <code>Comparable</code> defines a "natural order" for a class. The simplest way is with a <code>Comparator</code>.
+          <div class="code-block">
+            <div class="expand-code-snip-btn border border-primary rounded">
+              <span class="btn btn-link">Expand Gist <img src="../imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+            </div>
+            <div class="code-snippet">
+              <script src="https://gist.github.com/rgbk21/1392e12e281842c35d557ee3873db8b9.js"></script>
+            </div>
+          </div>
+        </div>
+
+        <div class="sub-heading"><code>compareTo()</code> should be consistent with <code>equals()</code></div>
+        <div>
+          - A type's <code>equals()</code> and <code>compareTo()</code> methods should be consistent. This means that, if <code>compareTo()</code> says that two objects are equal
+          (that is, if it returns 0 when comparing them), then <code>equals()</code> should return true for those same objects. For a start, <code>equals()</code> and
+          <code>compareTo()</code> should compare the same set of fields. <br>
+          - If you violate this contract, you will get very surprising and buggy behavior when using your objects in certain collections. <br>
+          - Collections like <code>HashSet</code> and <code>ArrayList</code> use <code>equals()</code> to check for containment and uniqueness. <br>
+          - Sorted collections like <code>TreeSet</code> and <code>TreeMap</code> use <code>compareTo()</code> (or a <code>Comparator</code>) to check for uniqueness and to
+          maintain order. <br>
+          - If <code>compareTo</code> and <code>equals</code> are inconsistent, a <code>TreeSet</code> and a <code>HashSet</code> will disagree on whether your collection contains
+          a specific object.
+        </div>
+      </div>
+
+      <hr>
+      <div id="Tip11" class="chapter">Tip 11: Concurrency</div>
+      <hr>
+
+      <div class="textual-content">
+        - Ooga booga concurrency hard. <br>
+        - // TODO.
+      </div>
+
+      <hr>
+      <div id="Tip12" class="chapter">Tip 12: Conditional Failures</div>
+      <hr>
+
+      <div class="textual-content">
+        - A <i>conditional failure</i>, sometimes called a runtime check or just check, is code that throws an exception if and only if a boolean condition holds. This page
+        provides an overview of the common kinds of such checks.
+
+        <div class="sub-heading">Kinds of conditional failures</div>
+        <div>
+          - Naively, it makes a certain amount of sense to just handle every conditional failure the same way: <code>throw new RuntimException()</code>. <br>
+          - However, when you spend a moment to consider the nature of this check, and handle it in the most appropriate way, it will make your code more understandable, and
+          errors easier to diagnose. <br>
+          - Here are the major kinds of runtime checks. <br>
+
+          <p class="inline-heading">Precondition Check</p>: A precondition check ensures that the <i>caller</i> of a public method has obeyed the requirements of the method's
+          specification. For example, a <code>sqrt</code> function may accept only nonnegative args. <br>
+
+          <p class="inline-heading">Verification Check</p>: A verification check is used when you lack high confidence that an API you consume will meet its (real or implied)
+          specification. For example, perhaps you have just invoked a weakly-specified remote service that pushes independently from yours, outside of your own service's QA cycle.
+          If you don't want to just blindly trust the response, you'll make verification checks. <br>
+
+          <p class="inline-heading">Test Assertion</p>: A test assertion is found in test code only, and ensures that the <i>code under test</i> has obeyed the requirements of its
+          own specification. <br>
+
+          <p class="inline-heading">Impossible-condition check</p>: An impossible-conidition check is one that cannot possibly fail, unless surrounding code is later modified, or
+          our deepest assumptions about platform behavior are grossly violated. This should be unnecessary, but are often forced because the compiler can't recognise that a
+          statement is unreachable. <br>
+
+          <p class="inline-heading">Exceptional Result</p>: An exceptional result means that the method can't provide the expected result, through no fault of its own, nor
+          necessarily the fault of any other code involved. This is similar to a precondition check, but here the caller isn't expected to have known any better. It's similar to a
+          post-verification check, but failure of the dependency is not unexpected. For example, trying to read a line from a file when end-of-file has already been reached is no
+          one's fault; simply an exceptional result. Use checked or unchecked exceptions according to the advice in Effective Java Item 70: Use checked exceptions for recoverable
+          conditions and runtime exceptions for programming errors.
+        </div>
+
+
+      </div>
+
+      <hr>
+      <div id="Tip13" class="chapter">Tip 13: Constants</div>
+      <hr>
+
+      <div class="textual-content">
         -
       </div>
+
 
     </div>
   </div>
