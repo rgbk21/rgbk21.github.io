@@ -166,9 +166,8 @@
       <div class="textual-content">
         - Assertions vs Conditional Failures vs Verification Checks. <br>
         - An assertion is a check that will always pass unless the class making the assertion is badly broken. Assertions are mostly useful while you are actively modifying the
-        code,
-        but by the time development settles down, you should be essentially 100% sure it will never fail. This means that there is no value in actually performing the check in
-        prod. It is a waste of resources.
+        code, but by the time development settles down, you should be essentially 100% sure it will never fail. This means that there is no value in actually performing the check
+        in prod. It is a waste of resources.
       </div>
 
       <hr>
@@ -1390,7 +1389,96 @@
       <hr>
 
       <div class="textual-content">
-        -
+        <div class="sub-heading">When to use a constant versus an inlined literal?</div>
+        <div>
+          - Literals (such as explicit strings and numbers) can be assigned to named constants, or just used inline in the flow of code. <br>
+          - You should use a constant if either of the following is true: <br>
+          a) The same value is used in several places, it's important that they all use the same value, and the value might change. <br>
+          b) The value needs some explanation, and a comment at tis use site is awkward. <br>
+          - Otherwise, prefer inlining the literal for better readability. <br>
+        </div>
+      </div>
+
+      <hr>
+      <div id="Tip14" class="chapter">Tip 14: Constructors</div>
+      <hr>
+
+      <div class="textual-content">
+        <div class="sub-heading">Constructors should rarely be <code>public</code></div>
+        <div>
+          - A constructor has limitations: it must always create a new object, and that object must always be of the exact class that contains the constructor. <br>
+          - For public construction, prefer a static factory method in the class to be consturcted, or a <a href="#Tip3">See Tip: Builder</a> or factory class. <br>
+          - These alternatives also allow the method name to describe what kind of object is being constructed.
+        </div>
+
+        <div class="sub-heading">Avoid doing work in constructors</div>
+        <div>
+          - The simplest and most common kind of constructor just assigns each of its parameters to a field of the same name and type, perhaps after validation. If your constructor
+          does not look like that, consider whether it could. The more additional work the constructor does, the harder it will be to test the class, and especially to test other
+          classes that need it. <br>
+          - While mocking frameworks like Mockito allow you to get an instance of a class without calling its constructor, that requires the class not to be <code>final</code>, and
+          can impose further constraints. Having a simple constructor gives test writers the option of constructing a real instance of the class without having to worry about
+          whether the constructor will behave as expected. <br>
+          - If a constructor calls an instance method, that method may observe the instance in a partially constructed state, with some fields still having default values. This is
+          especially likely if the class can be subclassed. See: Effective Java Item 19 - Design and document for inheritance or else prohibit it. <br>
+          - Instead of doing work in the constructor, consider whether it could be done in a factory method or class, in a builder, or when an <code>@Inject</code> constructor's
+          parameters are derived by Guice or Dagger.
+          <div class="code-block">
+            <div class="expand-code-snip-btn border border-primary rounded">
+              <span class="btn btn-link">Expand Gist <img src="../imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+            </div>
+            <div class="code-snippet">
+              <script src="https://gist.github.com/rgbk21/0a9d2cda79cbbf6476d578d7e47c8d09.js"></script>
+            </div>
+          </div>
+        </div>
+
+        <div class="sub-heading">Overloads</div>
+        <div>
+          - Overloaded constructors are typically used to allow some parameters to be optional. Prefer to have each of the other constructors chain directly to the big constrctor
+          rather than chaining each to the next. This makes less work for the reader.
+        </div>
+
+        <div class="sub-heading">Avoid unwieldy parameter lists</div>
+        <div>
+          - Can you combine multiple parameters into a value type that meaningfully encloses them, that would make your code cleaner and easier to work with? This can become
+          useful when dealing with multiple strings or boolean values.
+        </div>
+
+        <div class="sub-heading">Avoid Instance initializers</div>
+        <div>
+          - Java also supports <a href="https://docs.oracle.com/javase/tutorial/java/javaOO/initial.html">instance intializers</a>, {}-delimited code blocks that are executed when
+          an instance is first constructed. Put the code in the constructor instead. <br>
+          - In particular, never use the <a href="https://errorprone.info/bugpattern/DoubleBraceInitialization">double-braced initiailization pattern</a>. Introduces memory leak.
+        </div>
+      </div>
+
+
+      <hr>
+      <div id="Tip15" class="chapter">Tip 15: Dates and Times</div>
+      <hr>
+
+      <div class="textual-content">
+        - If you are using Java 8+, you should be using JavaTime. Avoid using date/time APIs in <code>java.util</code> like <code>java.util.date</code>,
+        <code>java.sql.Timestamp</code>, <code>java.util.calendar</code>, <code>java.util.TimeZone</code>. If you have to interact with an APIO that requires these types, you
+        should immediately convert them to one of the previously mentioned APIs. <br>
+        - If you want to use the value of "now", use an <a href="https://docs.oracle.com/en/java/javase/21//docs/api/java.base/java/time/InstantSource.html">InstantSource</a> for
+        <code>java.time</code>.
+
+        <div class="sub-heading">Get <i>wall time</i> with a <code>InstantSource</code> or <code>Clock</code></div>
+        <div>
+          - If you are <i>not</i> measuring elapsed time, but just need to know the value of "now", use: <br>
+          a) for JavaTime, use <a href="https://docs.oracle.com/en/java/javase/21//docs/api/java.base/java/time/InstantSource.html"><code>InstantSource</code></a> for a
+          time-zone-independent answer. Use <code>java.time.Clock</code> if you are operating in the context of a particular time zone, but this type is lightly discouraged.
+        </div>
+
+        <div class="sub-heading">When measuring <i>elapsed</i> time locally, prefer <code>Stopwatch</code></div>
+        <div>
+          - Be aware that functions such as <code>System.currentTImeMillis()</code>, <code>Instant.now()</code>, <code>instantSOurce.instant()</code>, or
+          <code>clock.instant()</code>
+        </div>
+
+
       </div>
 
 
