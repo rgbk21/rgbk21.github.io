@@ -137,6 +137,11 @@
       <a class="index-column-entry" href="#Tip11">Tip11: Concurrency</a>
       <a class="index-column-entry" href="#Tip12">Tip12: Conditional Failures</a>
       <a class="index-column-entry" href="#Tip13">Tip13: Constants</a>
+      <a class="index-column-entry" href="#Tip14">Tip14: Constructors</a>
+      <a class="index-column-entry" href="#Tip15">Tip15: Dates and Times</a>
+      <a class="index-column-entry" href="#Tip15.1">Tip15.1: JavaTime</a>
+      <a class="index-column-entry" href="#Tip16">Tip16: Dependency Injection</a>
+      <a class="index-column-entry" href="#Tip17">Tip17: Enums</a>
     </div>
   </div>
   <div class="content-column">
@@ -1460,7 +1465,7 @@
 
       <div class="textual-content">
         - If you are using Java 8+, you should be using JavaTime. Avoid using date/time APIs in <code>java.util</code> like <code>java.util.date</code>,
-        <code>java.sql.Timestamp</code>, <code>java.util.calendar</code>, <code>java.util.TimeZone</code>. If you have to interact with an APIO that requires these types, you
+        <code>java.sql.Timestamp</code>, <code>java.util.calendar</code>, <code>java.util.TimeZone</code>. If you have to interact with an APIs that requires these types, you
         should immediately convert them to one of the previously mentioned APIs. <br>
         - If you want to use the value of "now", use an <a href="https://docs.oracle.com/en/java/javase/21//docs/api/java.base/java/time/InstantSource.html">InstantSource</a> for
         <code>java.time</code>.
@@ -1474,12 +1479,200 @@
 
         <div class="sub-heading">When measuring <i>elapsed</i> time locally, prefer <code>Stopwatch</code></div>
         <div>
-          - Be aware that functions such as <code>System.currentTImeMillis()</code>, <code>Instant.now()</code>, <code>instantSOurce.instant()</code>, or
-          <code>clock.instant()</code>
+          - Be aware that functions such as <code>System.currentTImeMillis()</code>, <code>Instant.now()</code>, <code>instantSource.instant()</code>, or
+          <code>clock.instant()</code> are not guaranteed to be monotonic. Using them to compute an elapsed time can produce invalid results. <a
+          href="https://guava.dev/releases/snapshot-jre/api/docs/com/google/common/base/Stopwatch.html">Stopwatch</a> abstracts away the underlying time source and is intended to
+          provide a valid elapsed time. <br>
+          - If you can't use <code>Stopwatch</code>, prefer <a href="https://docs.oracle.com/en/java/javase/21//docs/api/java.base/java/lang/System.html#nanoTime()">System.nanoTime()</a>
+          which is montonic. Remember that nanoTime values are only meaningful relative to other nanoTime values produced on the same JVM instance. <br>
+          - Additional considerations when using
+          <cdoe>Stopwatch</cdoe>
+          : <br>
+          a) It can only measure elapsed time within its own lifetime. This means you may need to make your <code>Stopwatch</code> instance singleton or static. <br>
+          b) Stopwatch is not immutable. So it is not threadsafe. <br>
+          c) If you want to measure elapsed time that spans JVM restart, neither <code>Stopwatch</code> nor <code>System.nanoTime</code> will be an option.
         </div>
 
+        <div class="sub-heading">Avoid using primitives (eg. <code>double</code>, <code>long</code>, <code>String</code>) to represent dates or times</div>
+        <div>
+          - If you need to represent a point in time, use the <a href="https://docs.oracle.com/en/java/javase/21//docs/api/java.base/java/time/Instant.html">Instant</a> type. Do
+          not use a <code>long</code> that represents the seconds or ms since epoch. A <code>long</code> is ambiguous with unit. <br>
+          - If you need to represent elapsed time, use <a href="https://docs.oracle.com/en/java/javase/21//docs/api/java.base/java/time/Duration.html">Duration</a> type. Do not use
+          <code>double</code> or <code>long</code>. Never use an <code>int</code>. An <code>int</code> of milliseconds will overflow after 3.5 weeks and an <code>int</code> of
+          nanoseconds after 2.1 seconds. <br>
+          - A method in a Date/Time API should never accept a bare numeric value.
+        </div>
 
+        <div class="sub-heading">Converting between time units</div>
+        <div>
+          - If you need to convert units, prefer this order: <br>
+          1) Use the static factory methods and the conversion methods on <a
+          href="https://docs.oracle.com/en/java/javase/21//docs/api/java.base/java/time/Duration.html">Duration</a>.
+          <code>long milliseconds = java.time.Duration.ofSeconds(seconds).toMillis();</code>. Thses APIs correctly throw <code>ArithmeticException</code> if an overflow occurs.
+          <br>
+          2) If you cannot use <code>java.time</code> and you require sub-millisecond precision, consider using <a
+          href="https://docs.oracle.com/en/java/javase/21//docs/api/java.base/java/util/concurrent/TimeUnit.html">TimeUnit</a>.
+          <code>long milliseconds = TimeUnit.SECONDS.toMillis(seconds);</code>. Additionally, <code>TimeUnit.toUnit(long)</code> and <code>TimeUnit.convert()</code> silently
+          saturates to <code>Long.MIN_VALUE</code> on negative overflows and <code>Long.MAX_VALUE</code> on positive overflows. <br>
+          3) If you do need to do your own calculations, use <a href="http://guava.dev/releases/snapshot-jre/api/docs/com/google/common/math/LongMath.html">LongMath</a> to throw
+          <code>ArithmeticException</code> on overflows. As tempting as it may be, do not just use standard multiplication:
+          <code>long milliseconds = seconds * 1000;</code>.
+        </div>
       </div>
+
+      <hr>
+      <div id="Tip15.1" class="chapter">Tip 15.1: Java Time</div>
+      <hr>
+
+      <div class="textual-content">
+        - This is the main set of APIs for the java.time library
+        <table class="table table-bordered table-sm">
+          <thead>
+          <tr>
+            <th>Type</th>
+            <th>Informal Meaning</th>
+            <th>Example</th>
+            <th>Notes</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/time/Duration.html" target="_blank">Duration</a></td>
+            <td>an amount of time in terms of seconds and nanoseconds</td>
+            <td>34.5 seconds</td>
+            <td>be careful of <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/time/Duration.html#isNegative()" target="_blank">negative durations</a>
+            </td>
+          </tr>
+          <tr>
+            <td><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/time/Instant.html" target="_blank">Instant</a></td>
+            <td>a single instantaneous point on the timeline</td>
+            <td>1985-05-31T16:19:23Z</td>
+            <td>n/a</td>
+          </tr>
+          <tr>
+            <td><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/time/ZoneId.html" target="_blank">ZoneId</a></td>
+            <td>a region-based time-zone ID</td>
+            <td>Europe/Paris</td>
+            <td>n/a</td>
+          </tr>
+          <tr>
+            <td><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/time/LocalDate.html" target="_blank">LocalDate</a></td>
+            <td>a date without a time zone</td>
+            <td>2007-12-03</td>
+            <td>n/a</td>
+          </tr>
+          <tr>
+            <td><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/time/LocalDateTime.html" target="_blank">LocalDateTime</a></td>
+            <td>a date-time without a time zone</td>
+            <td>2007-12-03T10:15:30</td>
+            <td>n/a</td>
+          </tr>
+          <tr>
+            <td><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/time/LocalTime.html" target="_blank">LocalTime</a></td>
+            <td>a time without a time zone</td>
+            <td>10:15:30</td>
+            <td>n/a</td>
+          </tr>
+          <tr>
+            <td><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/time/InstantSource.html" target="_blank">InstantSource</a></td>
+            <td>an interface for accessing the current instant</td>
+            <td>n/a</td>
+            <td>replaces TimeSource</td>
+          </tr>
+          <tr>
+            <td><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/time/Clock.html" target="_blank">Clock</a></td>
+            <td>a clock that provides access to current instant, date, and time using a time zone</td>
+            <td>n/a</td>
+            <td><em>discouraged</em> in favor of <a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/time/InstantSource.html"
+                                                    target="_blank">InstantSource</a></td>
+          </tr>
+          <tr>
+            <td><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/time/Period.html" target="_blank">Period</a></td>
+            <td>a quantity of time represented in days, months, years</td>
+            <td>1 Year and 3 Months</td>
+            <td><em>lightly discouraged</em></td>
+          </tr>
+          <tr>
+            <td><a href="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/time/ZonedDateTime.html" target="_blank">ZonedDateTime</a></td>
+            <td>a date-time with a time zone</td>
+            <td>2007-12-03T10:15:30+01:00 Europe/Paris</td>
+            <td><em>discouraged</em></td>
+          </tr>
+          </tbody>
+        </table>
+
+        <div class="sub-heading">Be careful when decomposing <code>Duration</code></div>
+        <div>
+          - Decomposing a <code>Duration</code> to a numerical primitive is complicated. Please follow this advice: <br>
+          a) Use <a href="https://docs.oracle.com/en/java/javase/21//docs/api/java.base/java/time/Duration.html#toDays()">Duration.to<i>Unit</i></a> to convert a
+          <code>Duration</code> to a numeric primitive. <br>
+          b) Use <a href="https://docs.oracle.com/en/java/javase/21//docs/api/java.base/java/time/Duration.html#getSeconds()">getSeconds()</a> and <a
+          href="https://docs.oracle.com/en/java/javase/21//docs/api/java.base/java/time/Duration.html#getNano()">getNano()</a> to serialize a <code>Duration</code> without losing
+          precision. Both these methods should always be called together. <br>
+          c) Do not use <code>Duration.to<i>Unit</i>Part()</code> unless you're formatting a <code>Duration</code> for human consumption.
+        </div>
+
+        <div class="sub-heading">Be careful of negative <code>Duration</code></div>
+        <div>
+          - <code>Duration</code> instances are signed, ie, they can represent a negative amount of time.
+          <div class="code-block">
+            <div class="expand-code-snip-btn border border-primary rounded">
+              <span class="btn btn-link">Expand Gist <img src="../imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+            </div>
+            <div class="code-snippet">
+              <script src="https://gist.github.com/rgbk21/0edc8dba47fc985d25baef55550b184b.js"></script>
+            </div>
+          </div>
+        </div>
+
+        <div class="sub-heading">Avoid any APIs that use the default system time zone</div>
+        <div>
+          - Relying on the system's default time zone is often dangerous. It can vary from machine to machine. Use explicit timezone or just use UTC. <br>
+          - Examples of APIs that use the default time zone include: <br>
+          <code>LocaDate.now()</code>, <code>LocalDateTime.now()</code>, <code>LocalTime.now()</code>, <code>OffsetDateTime.now()</code>, <code>ZonedDateTime.now()</code>,
+          <code>Clock.systemDefaultZOne()</code>. <br>
+          - If you absolutely need the timezone of the user machine, pass
+          <a href="https://docs.oracle.com/en/java/javase/21//docs/api/java.base/java/time/ZoneId.html#systemDefault()">ZoneId.systemDefault()</a> to these methods.
+        </div>
+
+        <div class="sub-heading">Avoid any APIs that use the default system clock</div>
+        <div>
+          - A dependency on the system default clock should be explicit as well as indirect (so that a mock/fake can be substituted during unit testing). APIs such as <code>Instant.now()</code>
+          <i>implicitly</i> rely on system clock and are a direct dependency making it impossible to substritute a fake/mock. <br>
+          - Use <a href="https://docs.oracle.com/en/java/javase/21//docs/api/java.base/java/time/InstantSource.html">InstantSource</a> instead.
+        </div>
+
+        <div class="sub-heading">Be careful when using <code>java.time.Period</code></div>
+        <div>
+          - If you have a Period that represents the time between January 10th and February 12th, <code>period.getDays()</code> will return 2 and not 33 as you might expect. For
+          that, you must use <a
+          href="https://docs.oracle.com/en/java/javase/21//docs/api/java.base/java/time/temporal/ChronoUnit.html#between(java.time.temporal.Temporal,java.time.temporal.Temporal)">ChronoUnit.between()</a>.
+        </div>
+
+        <div class="sub-heading">Avoid offset-based "time zones"</div>
+        <div>
+          - Always use canonical time zones in the Region/Coty format, like America/Los_Angeles. Do <i>not</i> use "time zones" represented by raw offsets, lik +02:00. For one,
+          they do not respect daylight savings changes.
+        </div>
+      </div>
+
+
+      <hr>
+      <div id="Tip16" class="chapter">Tip 16: Dependency Injection</div>
+      <hr>
+
+      <div class="textual-content">
+        - // TODO.
+      </div>
+
+      <hr>
+      <div id="Tip17" class="chapter">Tip 17: Enums</div>
+      <hr>
+
+      <div class="textual-content">
+        -
+      </div>
+
 
 
     </div>
