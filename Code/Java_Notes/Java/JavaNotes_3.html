@@ -1670,9 +1670,29 @@
       <hr>
 
       <div class="textual-content">
-        -
-      </div>
+        <div class="sub-heading">Deeply immutable</div>
+        <div>
+          - Enum objects should always be deeply immutable. That is, each field of an enum class should be <code>final</code>, and if it holds a reference, that reference should be
+          to a deeply immutable object. <br>
+          - Enum state is a static state (// TODO: link static state when done), and modifiable static state is dangerous enough in general. But for enum values there is an even
+          stronger expectation of immutability, ie "Enum Constants". <br>
+          - If the field's type much be mutable, take pains to make sure the value can't observably change; for example by returning only copies of the value to the callers.
+        </div>
 
+        <div class="sub-heading">Don't rely on <code>ordinal()</code></div>
+        <div>
+          - You should almost never invoke the <code>ordinal()</code> method, nor depend on some enum constant being at a particular index of the <code>values()</code> array. The
+          ordinal value is not stable when enum values are added, removed, or reordered. <br>
+          - Instead, introduce an <code>int</code> field in the enum class to explicitly contain the value you want. <a
+          href="https://docs.oracle.com/javase/specs/jls/se8/html/jls-8.html#jls-8.9.2">Example</a>.
+        </div>
+
+        <div class="sub-heading">If order means anything, <i>specify it</i></div>
+        <div>
+          - Every enum type exposes the ordering of its constants, in several ways including: <br>
+          a) It implements <code>Comparable</code> based on the constants' declaration order.
+        </div>
+      </div>
 
 
     </div>

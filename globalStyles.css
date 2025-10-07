@@ -83,7 +83,13 @@ html {
   display: none;
   border: 2px solid #f7f7f7;
 }
-
+/* Break words in tables when the screen size becomes so small that the entire word can't fit in a single column. */
+.table td {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  /* Be more forceful about breaking words */
+  word-break: break-all;
+}
 .code-snippet .gist .gist-file {
   margin-bottom: 0;
 }
