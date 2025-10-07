@@ -1670,6 +1670,7 @@
       <hr>
 
       <div class="textual-content">
+        - Read chapter 6 of Effective Java. <br>
         <div class="sub-heading">Deeply immutable</div>
         <div>
           - Enum objects should always be deeply immutable. That is, each field of an enum class should be <code>final</code>, and if it holds a reference, that reference should be
@@ -1690,8 +1691,51 @@
         <div class="sub-heading">If order means anything, <i>specify it</i></div>
         <div>
           - Every enum type exposes the ordering of its constants, in several ways including: <br>
-          a) It implements <code>Comparable</code> based on the constants' declaration order.
+          a) It implements <code>Comparable</code> based on the constants' declaration order. <br>
+          b) It provides a static <code>values()</code> method, which returns an array of its constant values in that same order <br>
+          c) <a href="https://docs.oracle.com/en/java/javase/21//docs/api/java.base/java/util/EnumSet.html">EnumSet</a> iteration preserves that order as well. <br>
         </div>
+
+        <div class="sub-heading">Prefer <code>equals()</code> over <code> == </code></div>
+        <div>
+          - For enum types, should you use <code>e1 == e2</code>, or <code>e1.equals(e2)</code> / <code>Objects.equals(e1, e2)</code>? First try to bypass the question entirely bu
+          following the advice in the next section. Barring that. <br>
+          - Both choices produce the correct result. However, we want the code to be <i>self-evidently</i> correct: <br>
+          a) If <i>e1</i> is not nullable, use <code>e1.equals(e2)</code><br>
+          b) Otherwise, use <code>Objects.equals(e1, e2)</code>
+        </div>
+
+        <div class="sub-heading">Switching on an enum type</div>
+        <div>
+          - See also // TODO: Link Switch Statements section <br>
+
+          <p class="inline-heading">Consider a method on the enum type first</p>: <br>
+          - Before writing a switch statement on an enum type, consider whether you could add the behavior via an instance method on the enum itself. This approach is preferable if
+          the behavior in question is relatively simple, useful, and free of dependencies. Otherwise, or if that change can't be made, use <code>switch</code>. <br>
+          - There are two good ways to implement such a method in the enum class:
+          <div class="code-block">
+              <div class="expand-code-snip-btn border border-primary rounded">
+                  <span class="btn btn-link">Expand Gist <img src="../imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+              </div>
+              <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/5c77dd35207722a01a746087cff7f568.js"></script>
+              </div>
+          </div>
+
+          <p class="inline-heading">Advantages over if/else</p>: <br>
+          - If <i>Bar</i> is an enum type, it's possible to write this code:
+          <div class="code-block">
+              <div class="expand-code-snip-btn border border-primary rounded">
+                  <span class="btn btn-link">Expand Gist <img src="../imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+              </div>
+              <div class="code-snippet">
+                <script src="https://gist.github.com/rgbk21/c4172da066d98158644a16253eeeb75f.js"></script>
+              </div>
+          </div>
+
+        </div>
+
+
       </div>
 
 
