@@ -119,7 +119,18 @@ code {
   background-color: #eff0f1;
   color: black;
 }
-
+/* This is styling for code blocks imported from prism CSS libs. */
+code[class*=language-], pre[class*=language-] {
+  /*background: #1e1e1e;*/
+  /*color: #dcdcdc;*/
+  /*padding: 1rem;*/
+  /*border-radius: 0.75rem;*/
+  /*font-family: "JetBrains Mono", "Fira Code", monospace;*/
+  overflow-x: auto;
+  white-space: pre-wrap;
+  max-width: 100%;
+  box-sizing: border-box;
+}
 .sub-heading {
   padding-top: 10px;
   font-size: 16px;

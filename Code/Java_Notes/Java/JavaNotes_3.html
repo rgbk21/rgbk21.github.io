@@ -26,6 +26,11 @@
 
     gtag('config', 'G-9QJ5D3X353');
   </script>
+  <!-- Style for inline code blocks start -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-java.min.js"></script>
+  <!-- Style for inline code blocks end -->
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
@@ -162,8 +167,9 @@
         - <a href="https://google.github.io/styleguide/javaguide.html">Google Java Style Guide</a>. <br>
         - <a href="https://guava.dev/releases/snapshot-jre/api/docs/index.html">Guava API Docs</a>, <a
         href="https://github.com/google/guava/tree/master/guava/src/com/google/common">Github</a>, <a
-        href="https://www.javadoc.io/doc/com.google.guava/guava-testlib/latest/com/google/common/testing/package-summary.html">Guava Testing Utilities Docs</a>.
-        <br>
+        href="https://www.javadoc.io/doc/com.google.guava/guava-testlib/latest/com/google/common/testing/package-summary.html">Guava Testing Utilities Docs</a>. <br>
+        - <a href="https://docs.oracle.com/en/java/javase/21/core/toc.htm">Oracle: Java 21 Core Libraries</a>. <br>
+        - <a href="https://www.oracle.com/java/technologies/javase/seccodeguide.html">Oracle: Secure coding guidelines for Java SE</a>.
 
       </div>
 
@@ -277,10 +283,8 @@
         </div>
 
         - However, sometimes you can't make an object deeply immutable, like a list or another object that is inherently mutable, like <code>java.util.date</code>. This is where
-        the
-        second part of the rule is critical: "...it is imperative that the builder and the built object each have their own completely separate state." This means that when you
-        call
-        the build() method, the builder must not share its internal data with the object it creates. If it does, changes to the builder after an object has been built could
+        the second part of the rule is critical: "...it is imperative that the builder and the built object each have their own completely separate state." This means that when you
+        call the build() method, the builder must not share its internal data with the object it creates. If it does, changes to the builder after an object has been built could
         accidentally change the already-built object. This is a major source of bugs. The solution is to make defensive copies of any mutable data. Refer the below example:
         <div class="code-block">
           <div class="expand-code-snip-btn border border-primary rounded">
@@ -1790,22 +1794,22 @@
 
           - Here is a comparison of how we would have written the same code before and after 16:
           <div class="code-block">
-              <div class="expand-code-snip-btn border border-primary rounded">
-                  <span class="btn btn-link">Expand Gist <img src="../imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-              </div>
-              <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/6de6e0506eb27e45be3e7f18f800e9fb.js"></script>
-              </div>
+            <div class="expand-code-snip-btn border border-primary rounded">
+              <span class="btn btn-link">Expand Gist <img src="../imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+            </div>
+            <div class="code-snippet">
+              <script src="https://gist.github.com/rgbk21/6de6e0506eb27e45be3e7f18f800e9fb.js"></script>
+            </div>
           </div>
 
           <p class="inline-heading">What are some other use cases of using Pattern Matching</p>: <br>
           <div class="code-block">
-              <div class="expand-code-snip-btn border border-primary rounded">
-                  <span class="btn btn-link">Expand Gist <img src="../imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
-              </div>
-              <div class="code-snippet">
-                <script src="https://gist.github.com/rgbk21/4383928f494ea98c1d77cd1d922f5f70.js"></script>
-              </div>
+            <div class="expand-code-snip-btn border border-primary rounded">
+              <span class="btn btn-link">Expand Gist <img src="../imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+            </div>
+            <div class="code-snippet">
+              <script src="https://gist.github.com/rgbk21/4383928f494ea98c1d77cd1d922f5f70.js"></script>
+            </div>
           </div>
 
         </div>
@@ -1822,7 +1826,82 @@
       <hr>
 
       <div class="textual-content">
-        -
+        <div class="sub-heading">Catching Exceptions: Should you catch at all?</div>
+        <div>
+          - Just because a method you're calling can throw an exception doesn't mean <i>you</i> should catch it. Often the best thing to do is let exceptions propagate to your
+          caller, so they can decide how to handle them. <br>
+          - And it's <i>always</i> better to let an exception propagate than to mishandle it: <br>
+          a) <a href="#Tip19_emptyCatchBlocks">Don't write empty catch blocks</a>. <br>
+          b) If you return <code>null</code> (or an empty or "zero" value that might require special handling), document that behavior, perhaps using nullness annotations. (//
+          TODO: Link to nullness section). <br>
+          c) If you throw another exception, make sure that it <a href="#Tip19_wrapping">wraps the original</a> so as to <a href="#Tip_19_preserveCausalChain">preserve its causal
+          chain</a>. <br>
+          d) <a href="#Tip19_rethrowingException">Don't rethrow an exception that may come from another thread</a>. <br>
+
+          - In many cases, exceptions will be handled by surrounding framework. For instance: <br>
+          a) In a test method, you can just add <code>throws Exception</code> and let the testing framework catch any exception and fail the test. <br>
+          b) Most concurrency frameworks (like Dagger) allow your operations to throw checked exceptions. <br>
+          c) Some APIs offer separate methods for operations that may throw checked exceptions. <br>
+          d) Stream API was designed to work with functional interfaces like <code>Function&lt;T, R&gt;</code>, <code>Predicate&lt;T&gt;</code> etc. These interfaces do not allow
+          checked exceptions in their method signatures. For example:
+
+          <pre><code class="language-java">
+  Stream.of("a.txt", "b.txt")
+    .map(Files::readString) // compile error: readString throws IOException (checked)
+    .forEach(System.out::println);
+</code></pre>
+        </div>
+
+        <div class="sub-heading">Is an API forcing an unjustified checked exception on you?</div>
+        <div>
+          - Sometimes you will call a method that declares that it may thorw a checked exception, but you know that yiou call can never cause that exception. Or the exceptional
+          condition might still be <i>possible</i>, but you would be better served by a method that throws an unchecked exception, or handles the error internally. <br>
+          - In many of these cases, you are stuck with that method, and you'll have to catch the excption or let it propagate. <br>
+          - Also see the examples in impossible conditions section (// TODO).
+        </div>
+
+        <div class="sub-heading">Exception chaining (or propagating)</div>
+        <div>
+          - If you can't handle an exception, and it isn't appropriate to let it propagate as-is, you should almost always wrap the caught exception as a <a
+          href="https://docs.oracle.com/en/java/javase/21//docs/api/java.base/java/lang/Throwable.html#getCause()">cause</a> of another <a href="#Tip19_throwTypeAppropriate">appropriately-typed</a>
+          exception and throw that. Extending the causal chain this way ensures that exception stacktraces are complete. Nearly all <code>Exception</code> and <code>Error</code>
+          subclasses accept an optional <code>Throwable</code> cause constructor argument.
+          <pre><code class="language-java">
+  try {
+    // do stuff
+  } catch (InnerException e) {
+    // set e as cause of the new exception
+    throw new OuterException("Failed do the thing", e);
+  }
+</code></pre>
+          - If possible, the constructed exception's message should include additional context for the failure beyojnd just the underlying cause. Just don't <a
+          href="Tip19_Messages">overdo it</a>. (// TODO). <br>
+          - If the failure should be impossible (// TODO: Link), rethrow it wrapped in an <code>AssertionError</code>.
+        </div>
+
+        <div class="sub-heading"><code>catch(Throwable t)</code></div>
+        <div>
+          - This is usually not what you want to do. Most subclasses of Error are really not meant to be caught.
+        </div>
+
+        <div class="sub-heading"><code>catch(Exception e)</code> or <code>catch(RuntimeException e)</code></div>
+        <div>
+          - This is <i>sometimes</i> necessary, but don't do it as a shortcut for catching all of the individual exception tyeps you need to catch. For that, use <a
+          href="#Tip19_MultiCatch">multi-catch</a> (// TODO).
+          <pre><code class="language-java">
+  try {
+    // do stuff
+  } catch (Exception1 | Exception2 e) {
+    // handle them both in the same way.
+  }
+</code></pre>
+
+          - Only catch <code>Exception</code> when you legitimately want to handle <i>any</i> checked or unchecked exception that may arise, including ones that you don't expect to
+          actually happen. In particular, take care that you don't suppres <code>InterruptedException</code>. (// TODO: Add Link to section). <br>
+          - Similarly, if you're calling a method that throws only unchecked exceptions, you shouldn't catch <code>RuntimeException</code> to handle them unless you truly intend to
+          catch all such possible exceptions.
+        </div>
+
       </div>
 
 
