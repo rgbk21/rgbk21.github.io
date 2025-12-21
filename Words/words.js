@@ -1,6 +1,7 @@
 'use strict';
 
-const url = "https://rgbk21-piggame-backend.onrender.com";
+// const url = "https://rgbk21-piggame-backend.onrender.com";
+const url = "http://localhost:8080";
 
 const alertElmnt = document.querySelector('.alert--container');
 

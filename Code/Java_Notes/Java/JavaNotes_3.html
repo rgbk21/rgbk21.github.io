@@ -597,7 +597,7 @@
         <p class="inline-heading">Understand deterministic vs. non-deterministic iteration</p> <br>
         - Some popular hash-based collections such as <code>HashMap</code> and <code>HashSet</code> have non-deterministic iteration order. These collections iterate in a different
         randomly-seeded order per VM invocation (in tests) and per JDK release. <br>
-        - If non one will ever iterate over the collection, only performing mutations and map lookups on it, then there's no harm in using these collections. But if the collections
+        - If no one ever iterates over the collection, only performing mutations and map lookups on it, then there's no harm in using these collections. But if the collections
         may be iterated over, the randomization policy can easily lead to flaky tests and sudden behavior changes in production. <br>
         - Fortunately, if you use the immutable collections, this is a non-issue. They all have deterministic iteration. As for mutable types, most such classes (with the exception
         of <code>ConcurrentHashMap</code>) have a deterministic cousin, expressed through the interface of <code>SequencedCollection&lt;E&gt;</code>,
