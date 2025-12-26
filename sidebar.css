@@ -1,0 +1,99 @@
+.two-column-layout {
+  display: flex;
+}
+
+.index-column {
+  flex: 0 0 15%;
+  padding: 20px;
+  border-right: 1px solid #ddd;
+  position: sticky; /* Make the column stick to the top */
+  top: 80px; /* Height of the main navbar */
+  /* To make the column scrollable, it needs a fixed height.
+  We calculate this height to be 100% of the viewport height (100vh) minus the 75px taken up by the navbar.
+  This makes the index column fill the available vertical space perfectly. */
+  height: calc(100vh - 80px);
+  /* If the content inside the index column is taller than its calculated height,
+   a vertical scrollbar should appear for that column only. */
+  overflow-y: auto;
+}
+.index-entries-container {
+  display: block;
+}
+.index-column-entry {
+  border-bottom: 1px solid #10ffff;
+  display: block;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.content-column {
+  flex: 0 0 85%;
+  padding: 8px;
+}
+
+/* Hamburger menu button styles */
+#sidebarToggle {
+  position: fixed;
+  bottom: 16px; /* Inline with scrollToTop button */
+  left: 16px;
+  z-index: 99; /* Hide behind sidebar if it's open. */
+  border: none;
+  background-color: #007bff;
+  color: white;
+  padding: 10px; /* Slightly more horizontal padding for bars icon */
+  cursor: pointer;
+  font-size: 1.2em; /* Make icon a bit larger */
+}
+
+/* Overlay for when the sidebar is open on small screens */
+#sidebarOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1040; /* Between sidebar and content */
+  display: none; /* Hidden by default */
+}
+
+/* Media query for small screens (Bootstrap's 'lg' breakpoint and below) */
+@media screen and (max-width: 991.98px) {
+  .two-column-layout {
+    display: block; /* Revert to block layout on small screens */
+  }
+
+  .index-column {
+    position: fixed;
+    top: 0; /* Start from the very top */
+    left: -250px; /* Initially hide it off-screen (must match sidebarWidth in JS) */
+    width: 250px; /* Fixed width for the sidebar */
+    height: 100vh; /* Full viewport height */
+    background-color: #f8f9fa; /* Light background for the sidebar */
+    z-index: 1050; /* Above content, below toggle button */
+    transition: left 0.3s ease-in-out; /* Smooth slide animation */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    border-right: none; /* Remove border from large screen style */
+    padding-top: 80px; /* Push content below the fixed navbar */
+  }
+
+  .index-column.open {
+    left: 0; /* Slide in */
+  }
+
+  /* When sidebar is open, shift the entire body to the right */
+  body.sidebar-open {
+    overflow: hidden; /* Prevent background scrolling */
+    /*transform: translateX(250px); !* Shift entire body by sidebar width *!*/
+    transition: transform 0.3s ease-in-out; /* Smooth animation */
+  }
+
+  /* Ensure body has transition for smooth closing when sidebar-open class is removed */
+  body {
+    transition: transform 0.3s ease-in-out;
+  }
+
+  #sidebarOverlay.active {
+    display: block; /* Show the overlay */
+  }
+}
