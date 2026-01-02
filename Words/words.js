@@ -21,6 +21,10 @@ function wakeUp() {
     success: function (data) {
       console.log("Reply received");
       showAlertWithText('Bootup Complete! Initiate Activity!', true);
+    },
+    error: function (xhr, status, error) {
+      console.error("Wake up failed:", status, error);
+      showAlertWithText('Failed to wake up server.', true);
     }
   });
 }
