@@ -31,6 +31,7 @@ function wakeUp() {
 
 const fetchWordsForAlphabet = function (alphabet) {
   console.log(alphabet);
+  window.location.href = 'meanings.html?alphabet=' + alphabet;
 
   $.ajax({
     url: url + `/words/alphabet?alphabet=${alphabet.toLowerCase()}`,

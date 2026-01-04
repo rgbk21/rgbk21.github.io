@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+
+  <!-- Bootstrap libs   -->
+  <!-- If you’re using our compiled JavaScript, don’t forget to include CDN versions of jQuery and Popper.js before it. -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+          crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+          crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+          crossorigin="anonymous"></script>
+  <!-- End Bootstrap libs   -->
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9QJ5D3X353"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'G-9QJ5D3X353');
+  </script>
+  <!-- End Global site tag (gtag.js) - Google Analytics -->
+
+  <!--    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"/>-->
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <link rel="stylesheet" href="./meanings.css"/>
+  <style>
+    /* Ensure the word list scrolls independently if it gets too long */
+    .word-list-scroll {
+      max-height: 80vh; /* Adjust based on your preference */
+      overflow-y: auto;
+    }
+  </style>
+  <title>Words</title>
+</head>
+
+
+<body>
+<div class="alert--container hidden">
+  <!-- Alert Content added dynamically -->
+  <div class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>PLEASE NOTE:</strong>
+    This is a free-tier render-hosted app. If the remote server has received no traffic in the last 15 mins, it will put the server to sleep. Hence, when you click the very
+    first button, it might take around 2 mins for the server to respond ¯\_(ツ)_/¯. Please be patient and do not repeatedly click the buttons just because the
+    buttons seem to be not doing anything. Notification will be presented on page once server is ready. Thanks for your time!
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+</div>
+
+<div class="container">
+  <!-- WORDS DETAILS -->
+  <div class="player player1--container">
+    <div class="name player1--name player--active">
+      <div class="word-container">PLAYER 1</div>
+    </div>
+    <div class="name player1--name">
+      <div class="word-container">PLAYER 2</div>
+    </div>
+    <div class="name player1--name">
+      <div class="word-container">PLAYER 3</div>
+    </div>
+    <div class="name player1--name">
+      <div class="word-container">PLAYER 4</div>
+    </div>
+    <div class="name player1--name">
+      <div class="word-container">PLAYER 5</div>
+    </div>
+  </div>
+
+  <!-- MEANINGS DETAILS -->
+  <div class="player player2--container">
+    <div class="name player2--name">PLAYER 2</div>
+  </div>
+</div>
+
+<script src="./meanings.js"></script>
+</body>
+</html>
