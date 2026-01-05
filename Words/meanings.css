@@ -19,15 +19,7 @@ body {
 
   display: grid;
   grid-template-columns: 1fr 1fr;
-  /*width: 90%;*/
-  /*height: 90%;*/
-  /* Center the container*/
-  /*margin: 5% auto 0 auto;*/
-  /*display: grid;*/
-  /*width: 90%;*/
-  /*display: flex;*/
-  /*align-items: center;*/
-  /*justify-content: center;*/
+  overflow: hidden;
 }
 
 .container{
@@ -44,27 +36,27 @@ body {
   /* How should the child divs of this div be styled */
   display: grid;
   grid-template-columns: 1fr 1fr;
-  /*align-items: center;*/
-  /*justify-items: center;*/
+  height: 100vh;
+  gap: 2em;
 }
 
 /*************** PLAYER 1 DETAILS ***************/
-.player1--container{
+.words-container{
   grid-column: 1/2;
-
   /* How should the child divs of this div be styled */
   display: grid;
   align-items: center;
+  overflow-y: auto;
 }
 .player1--name{}
 
 /*************** PLAYER 2 DETAILS ***************/
-.player2--container{
+.word-meanings-container{
   grid-column: 2/3;
-
   /* How should the child divs of this div be styled */
   display: grid;
   align-items: center;
+  overflow-y: auto;
 }
 .player2--name{}
 
