@@ -3,6 +3,7 @@
 const url = "https://rgbk21-piggame-backend.onrender.com";
 // const url = "http://localhost:8080";
 const wordsMap = new Map();
+let isLoading = false;
 
 function populateUiWithWordData(data) {
   let wordsHtml = '';
@@ -27,14 +28,23 @@ function updateUiWithMeaningOfSelectedWord(wordId) {
   console.log(wordId);
   const wordData = wordsMap.get(Number(wordId));
   if (wordData) {
-    document.querySelector('.word-meanings-container').textContent = wordData.meaning;
+    const html = `
+    Meaning: ${wordData.meaning} <br>
+    Part of Speech: ${wordData.partOfSpeech}
+    `;
+    document.querySelector('.word-meanings-container').innerHTML = html;
   }
 }
 
 function addEventListenersForEachWordDiv() {
   const wordContainers = document.querySelectorAll('.word-container');
   wordContainers.forEach(container => {
-    container.addEventListener('click', function () {
+    container.addEventListener('click', function (event) {
+      const previousActive = document.querySelector('.word-container.active');
+      if (previousActive) {
+        previousActive.classList.remove('active');
+      }
+      this.classList.add('active');
       const wordId = this.querySelector('.word').id;
       updateUiWithMeaningOfSelectedWord(wordId);
     });
@@ -43,6 +53,9 @@ function addEventListenersForEachWordDiv() {
 
 const fetchWordsForAlphabet = function (alphabet) {
   console.log(alphabet);
+
+  isLoading = true;
+  $('#loading-spinner').show();
 
   $.ajax({
     url: url + `/words/alphabet?alphabet=${alphabet.toLowerCase()}`,
@@ -56,9 +69,13 @@ const fetchWordsForAlphabet = function (alphabet) {
       console.log(data);
       populateUiWithWordData(data);
     },
-    failures: function (xhr, status, error) {
+    failure: function (xhr, status, error) {
       console.error("Failed to fetch words:", status, error);
       showAlertWithText('Failed to fetch words for the selected Alphabet.', true);
+    },
+    complete: function () {
+      isLoading = false;
+      $('#loading-spinner').hide();
     }
   });
 };
@@ -71,5 +88,6 @@ const alphabet = urlParams.get('alphabet');
 if (alphabet) {
   fetchWordsForAlphabet(alphabet);
 } else {
-  fetchWordsForAlphabet("A");
+  fetchWordsForAlphabet('a');
+  showAlertWithText('Failed to fetch words for the selected Alphabet.', true);
 }
