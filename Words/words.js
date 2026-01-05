@@ -27,24 +27,13 @@ function wakeUp() {
       showAlertWithText('Failed to wake up server.', true);
     }
   });
+
+  showAlertWithText("Wake up request sent.");
 }
 
 const fetchWordsForAlphabet = function (alphabet) {
   console.log(alphabet);
   window.location.href = 'meanings.html?alphabet=' + alphabet;
-
-  $.ajax({
-    url: url + `/words/alphabet?alphabet=${alphabet.toLowerCase()}`,
-    type: 'GET',
-    dataType: 'JSON',
-    contentType: 'application/json',
-    xhrFields: {
-      withCredentials: true
-    },
-    success: function (data) {
-      console.log(data);
-    }
-  });
 };
 
 function showAlertWithText(alertText, persistAlert = false) {

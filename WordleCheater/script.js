@@ -55,6 +55,8 @@ function wakeUp() {
       showAlertWithText('Failed to wake up server.', true);
     }
   });
+
+  showAlertWithText("Wake up request sent.");
 }
 
 function moveFocus() {
