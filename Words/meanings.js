@@ -1,7 +1,7 @@
 'use strict';
 
-// const url = "https://rgbk21-piggame-backend.onrender.com";
-const url = "http://localhost:8080";
+const url = "https://rgbk21-piggame-backend.onrender.com";
+// const url = "http://localhost:8080";
 const wordsMap = new Map();
 
 function populateUiWithWordData(data) {
