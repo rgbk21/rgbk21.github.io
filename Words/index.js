@@ -4,6 +4,8 @@ const url = "https://rgbk21-piggame-backend.onrender.com";
 // const url = "http://localhost:8080";
 
 const alertElmnt = document.querySelector('.alert--container');
+const meaningFullCard = document.querySelector('.meaningfull-app');
+const rhymerCard = document.querySelector('.rhymer-app');
 
 window.addEventListener('load', function () {
   wakeUp();
@@ -31,10 +33,17 @@ function wakeUp() {
   showAlertWithText("Wake up request sent.");
 }
 
-const fetchWordsForAlphabet = function (alphabet) {
-  console.log(alphabet);
-  window.location.href = 'meanings.html?alphabet=' + alphabet;
-};
+if (meaningFullCard) {
+  meaningFullCard.addEventListener('click', () => {
+    window.location.href = './words.html';
+  });
+}
+
+if (rhymerCard) {
+  rhymerCard.addEventListener('click', () => {
+    window.location.href = './rhymes/rhymes.html';
+  });
+}
 
 function showAlertWithText(alertText, persistAlert = false) {
   const alertClass = persistAlert ? 'alert-danger' : 'alert-success';
@@ -44,6 +53,5 @@ function showAlertWithText(alertText, persistAlert = false) {
                         <span aria-hidden="true">&times;</span>
                     </button>
                   </div>`;
-  alertElmnt.innerHTML = html;
-  alertElmnt.classList.remove("hidden");
+  alertElmnt.insertAdjacentHTML("afterbegin", html);
 }

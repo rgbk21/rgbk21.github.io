@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
+  color: #333;
+  background-image: linear-gradient(to top left, #753682 0%, #bf2e34 100%);
+
+  /*display: grid;*/
+  /*grid-template-columns: 1fr;*/
+  height: 100vh;
+  padding: 2em;
+}
+
+.container{
+  /* How should the child divs of this div be styled */
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 2em;
+  padding-top: 2em;
+}
+
+/* ----------------- Card Styles ----------------- */
+.card {
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}

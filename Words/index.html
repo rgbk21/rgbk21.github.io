@@ -20,24 +20,24 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-9QJ5D3X353"></script>
   <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-          dataLayer.push(arguments);
-      }
-      gtag('js', new Date());
-      gtag('config', 'G-9QJ5D3X353');
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'G-9QJ5D3X353');
   </script>
   <!-- End Global site tag (gtag.js) - Google Analytics -->
 
   <!--    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"/>-->
   <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-  <link rel="stylesheet" href="./words.css"/>
+  <link rel="stylesheet" href="./index.css"/>
   <title>Words</title>
 </head>
 
 <body>
 
-<div class="alert--container hidden">
+<div class="alert--container">
   <!-- Alert Content added dynamically -->
   <div class="alert alert-success alert-dismissible fade show" role="alert">
     <strong>PLEASE NOTE:</strong>
@@ -50,35 +50,24 @@
   </div>
 </div>
 
-<div class="words-container">
-  <div class="alphabet" onclick="fetchWordsForAlphabet('A')">A</div>
-  <div class="alphabet" onclick="fetchWordsForAlphabet('B')">B</div>
-  <div class="alphabet" onclick="fetchWordsForAlphabet('C')">C</div>
-  <div class="alphabet" onclick="fetchWordsForAlphabet('D')">D</div>
-  <div class="alphabet" onclick="fetchWordsForAlphabet('E')">E</div>
-  <div class="alphabet" onclick="fetchWordsForAlphabet('F')">F</div>
-  <div class="alphabet" onclick="fetchWordsForAlphabet('G')">G</div>
-  <div class="alphabet" onclick="fetchWordsForAlphabet('H')">H</div>
-  <div class="alphabet" onclick="fetchWordsForAlphabet('I')">I</div>
-  <div class="alphabet" onclick="fetchWordsForAlphabet('J')">J</div>
-  <div class="alphabet" onclick="fetchWordsForAlphabet('K')">K</div>
-  <div class="alphabet" onclick="fetchWordsForAlphabet('L')">L</div>
-  <div class="alphabet" onclick="fetchWordsForAlphabet('M')">M</div>
-  <div class="alphabet" onclick="fetchWordsForAlphabet('N')">N</div>
-  <div class="alphabet" onclick="fetchWordsForAlphabet('O')">O</div>
-  <div class="alphabet" onclick="fetchWordsForAlphabet('P')">P</div>
-  <div class="alphabet" onclick="fetchWordsForAlphabet('Q')">Q</div>
-  <div class="alphabet" onclick="fetchWordsForAlphabet('R')">R</div>
-  <div class="alphabet" onclick="fetchWordsForAlphabet('S')">S</div>
-  <div class="alphabet" onclick="fetchWordsForAlphabet('T')">T</div>
-  <div class="alphabet" onclick="fetchWordsForAlphabet('U')">U</div>
-  <div class="alphabet" onclick="fetchWordsForAlphabet('V')">V</div>
-  <div class="alphabet" onclick="fetchWordsForAlphabet('W')">W</div>
-  <div class="alphabet" onclick="fetchWordsForAlphabet('X')">X</div>
-  <div class="alphabet" onclick="fetchWordsForAlphabet('Y')">Y</div>
-  <div class="alphabet" onclick="fetchWordsForAlphabet('Z')">Z</div>
+<div class="container">
+  <div class="meaningfull-app card">
+    <div class="card-body">
+      <h5 class="card-title">Meaning Full</h5>
+      <p class="card-text">Words and their meaning combinations.</p>
+      <a href="./words.html" class="card-link">Let's go!</a>
+    </div>
+  </div>
+
+  <div class="rhymer-app card">
+    <div class="card-body">
+      <h5 class="card-title">No Rhyme Nor Reason</h5>
+      <p class="card-text">Find words ending with a specific set of characters.</p>
+      <a href="./rhymes/rhymes.html" class="card-link">Let's go!</a>
+    </div>
+  </div>
 </div>
 
-<script src="./words.js"></script>
+<script src="./index.js"></script>
 </body>
 </html>
