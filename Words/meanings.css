@@ -95,7 +95,7 @@ body {
   /*border-radius: 75rem;*/
   box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
 }
-#loading-spinner {
+#loading-spinner, .no-words {
   position: fixed;
   top: 0;
   left: 0;

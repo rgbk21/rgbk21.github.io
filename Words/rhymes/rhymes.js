@@ -1,7 +1,7 @@
 'use strict';
 
-// const url = "https://rgbk21-piggame-backend.onrender.com";
-const url = "http://localhost:8080";
+const url = "https://rgbk21-piggame-backend.onrender.com";
+// const url = "http://localhost:8080";
 
 const wordInput = document.getElementById('word-input');
 const addBtn = document.getElementById('add-word-button');
