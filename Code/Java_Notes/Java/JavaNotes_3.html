@@ -1838,12 +1838,13 @@
           - Just because a method you're calling can throw an exception doesn't mean <i>you</i> should catch it. Often the best thing to do is let exceptions propagate to your
           caller, so they can decide how to handle them. <br>
           - And it's <i>always</i> better to let an exception propagate than to mishandle it: <br>
-          a) <a href="#Tip19_emptyCatchBlocks">Don't write empty catch blocks</a>. <br>
+          a) <a href="#Tip19_EmptyCatchBlocks">Don't write empty catch blocks</a>. <br>
           b) If you return <code>null</code> (or an empty or "zero" value that might require special handling), document that behavior, perhaps using nullness annotations. (//
           TODO: Link to nullness section). <br>
-          c) If you throw another exception, make sure that it <a href="#Tip19_wrapping">wraps the original</a> so as to <a href="#Tip_19_preserveCausalChain">preserve its causal
+          c) If you throw another exception, make sure that it <a href="#Tip19_ExceptionChaining">wraps the original</a> so as to <a href="#Tip_19_preserveCausalChain">preserve its
+          causal
           chain</a>. <br>
-          d) <a href="#Tip19_rethrowingException">Don't rethrow an exception that may come from another thread</a>. <br>
+          d) <a href="#Tip_19_preserveCausalChain">Don't rethrow an exception that may come from another thread</a>. <br>
 
           - In many cases, exceptions will be handled by surrounding framework. For instance: <br>
           a) In a test method, you can just add <code>throws Exception</code> and let the testing framework catch any exception and fail the test. <br>
@@ -1861,18 +1862,17 @@
 
         <div class="sub-heading">Is an API forcing an unjustified checked exception on you?</div>
         <div>
-          - Sometimes you will call a method that declares that it may thorw a checked exception, but you know that yiou call can never cause that exception. Or the exceptional
+          - Sometimes you will call a method that declares that it may throw a checked exception, but you know that your call can never cause that exception. Or the exceptional
           condition might still be <i>possible</i>, but you would be better served by a method that throws an unchecked exception, or handles the error internally. <br>
-          - In many of these cases, you are stuck with that method, and you'll have to catch the excption or let it propagate. <br>
+          - In many of these cases, you are stuck with that method, and you'll have to catch the exception or let it propagate. <br>
           - Also see the examples in impossible conditions section (// TODO).
         </div>
 
-        <div class="sub-heading">Exception chaining (or propagating)</div>
+        <div class="sub-heading" id="Tip19_ExceptionChaining">Exception chaining (or propagating)</div>
         <div>
           - If you can't handle an exception, and it isn't appropriate to let it propagate as-is, you should almost always wrap the caught exception as a <a
-          href="https://docs.oracle.com/en/java/javase/21//docs/api/java.base/java/lang/Throwable.html#getCause()">cause</a> of another <a href="#Tip19_throwTypeAppropriate">appropriately-typed</a>
-          exception and throw that. Extending the causal chain this way ensures that exception stacktraces are complete. Nearly all <code>Exception</code> and <code>Error</code>
-          subclasses accept an optional <code>Throwable</code> cause constructor argument.
+          href="https://docs.oracle.com/en/java/javase/21//docs/api/java.base/java/lang/Throwable.html#getCause()">cause</a> of another <a href="#Tip19_throwTypeAppropriate"> appropriately-typed</a> exception and throw that. Extending the causal chain this way ensures that exception stacktraces are complete. Nearly all
+          <code>Exception</code> and <code>Error</code> subclasses accept an optional <code>Throwable</code> cause constructor argument.
           <pre><code class="language-java">
   try {
     // do stuff
@@ -1881,9 +1881,9 @@
     throw new OuterException("Failed do the thing", e);
   }
 </code></pre>
-          - If possible, the constructed exception's message should include additional context for the failure beyojnd just the underlying cause. Just don't <a
-          href="Tip19_Messages">overdo it</a>. (// TODO). <br>
-          - If the failure should be impossible (// TODO: Link), rethrow it wrapped in an <code>AssertionError</code>.
+          - If possible, the constructed exception's message should include additional context for the failure beyond just the underlying cause. Just don't <a
+          href="#Tip19_Messages">overdo it</a>. <br>
+          - If the failure should be impossible, rethrow it wrapped in an <code>AssertionError</code>.
         </div>
 
         <div class="sub-heading"><code>catch(Throwable t)</code></div>
@@ -1893,8 +1893,8 @@
 
         <div class="sub-heading"><code>catch(Exception e)</code> or <code>catch(RuntimeException e)</code></div>
         <div>
-          - This is <i>sometimes</i> necessary, but don't do it as a shortcut for catching all of the individual exception tyeps you need to catch. For that, use <a
-          href="#Tip19_MultiCatch">multi-catch</a> (// TODO).
+          - This is <i>sometimes</i> necessary, but don't do it as a shortcut for catching all of the individual exception types you need to catch. For that, use <a
+          href="https://docs.oracle.com/javase/8/docs/technotes/guides/language/catch-multiple.html">multi-catch</a>.
           <pre><code class="language-java">
   try {
     // do stuff
@@ -1904,11 +1904,162 @@
 </code></pre>
 
           - Only catch <code>Exception</code> when you legitimately want to handle <i>any</i> checked or unchecked exception that may arise, including ones that you don't expect to
-          actually happen. In particular, take care that you don't suppres <code>InterruptedException</code>. (// TODO: Add Link to section). <br>
+          actually happen. In particular, take care that you don't suppress <code>InterruptedException</code>. (// TODO: Add Link to section). <br>
           - Similarly, if you're calling a method that throws only unchecked exceptions, you shouldn't catch <code>RuntimeException</code> to handle them unless you truly intend to
           catch all such possible exceptions.
         </div>
 
+        <div class="sub-heading">Avoid log-and-(re)throw</div>
+        <div>
+          - Avoid both logging <i>and</i> rethrowing. Do one or the other. Doing both creates noise and makes debugging harder, as it's likely the thrown exception will wind up
+          being logged again higher in the call stack.
+          <pre><code class="language-java">
+  try {
+    // do stuff
+  } catch (Exception1 | Exception2 e) {
+    logger.atWarning().withCause(e).log(e);
+    throw e;
+  }
+</code></pre>
+        </div>
+
+        <div class="sub-heading" id="Tip19_EmptyCatchBlocks">Avoid empty catch blocks</div>
+        <div>
+          - You must comment and explain why it is appropriate to do nothing. This should be very rare. You usually want to log, rethrow, or handle. This is not advisable. <a
+          href="https://google.github.io/styleguide/javaguide.html#s6.2-caught-exceptions">Refer style guide on how to correctly handle this</a>.
+          <pre><code class="language-java">
+  try {
+    // do stuff
+  } catch (Exception1 | Exception2 e) {
+    // Do nothing.
+  }
+</code></pre>
+        </div>
+
+        <div class="sub-heading">Avoid printing stack traces</div>
+        <div>
+          - Some code-generators will auto-wrap an exception-raising statement in a try-catch block which may result in something like this:
+          <pre><code class="language-java">
+  try {
+    methodThatThrowsIOException();
+  } catch (IOException e) {
+    e.printStackTrace();
+  }
+</code></pre>
+
+          - This lets your code compile, since the checked exception is not "handled" - unfortunately it's almost never what you want. It's actually worse than just an empty catch
+          block, because it <i>looks</i> like it's logging a stack trace - but it's not using a logging framework. Even worse, <code>.printStackTrace()</code> writes to stderr,
+          which likely is not where your other logs are being written to.
+        </div>
+
+        <div class="sub-heading">Keep try blocks focused</div>
+        <div>
+          - Limit the amount of code inside a try block, if this can be done without complicating the flow.
+        </div>
+
+
+        <div class="heading">Section: Throwing Exceptions</div>
+
+        <div class="sub-heading" id="Tip19_CheckedOrUnchecked">Checked or Unchecked?</div>
+        <div>
+          - From Effective Java: Item 71. A checked exception places a burden on the user of the API. This burden may be justified if the exceptional condition cannot be prevented
+          by proper use of the API and the programmer using the API can take some useful action once confronted with the exception. Unless both of these conditions are met, an
+          unchecked exception is appropriate.
+        </div>
+
+        <div class="sub-heading">Avoid throwing top-level throwable types</div>
+        <div>
+          - Treat <code>Throwable</code>, <code>Exception</code>, <code>Error</code>, and <code>RuntimeException</code> as if they were abstract. Avoid constructing or throwing a
+          new instance of any of these types directly. <br>
+          - Throwing a more specific type is better for callers: it allws callers to catch your exception without risking catching other unrelated exceptions at the same time. This
+          is most clearly important for checked exceptions. But it is important for unchecked exceptions too. When you throw a specific exception type, you can easily write a test
+          that your code throws the exception when it should, again without risking catching unrelated exceptions (like a NPE from a pro0blem in mocking or other test setup) which
+          would make the test falsely pass. <br>
+          - Additionally, <code>throw new RuntimeException(e)</code> makes some readers suspicious because it is commonly suggested by tools as an automated fix for uncaught
+          exceptions. <br>
+          - To figure out what kind of exception to throw, the first step is to decide between a <a href="#Tip19_CheckedOrUnchecked">checked and an unchecked exception</a>. After
+          that, you can find an appropriate subclass or define your own.
+        </div>
+
+        <div class="sub-heading" id="Tip19_throwTypeAppropriate">Throw a type appropriate to your abstraction</div>
+        <div>
+          - Effective Java Item 73. <br>
+          - Throw exceptions that make sense to your caller's perspective. For example, suppose an API has nothing to do with accessing a file system, but the implementations
+          happen to work that way. Don't let these methods throw <code>FileNotFoundException</code> in reponse to an invalid name. This may mean you have to catch and translate an
+          exception to a new type.
+        </div>
+
+        <div class="sub-heading">Document thrown exceptions specifically</div>
+        <div>
+          - Effective Java Item 74. <br>
+          - Do not declare <code>throws Exception</code> as a shortcut to avoid listing or chaining multiple types. List every checked exception in the <code>throws</code>
+          declaration, and every meaningul (checked or unchecked) exception with <code>@throws</code>.
+        </div>
+
+        <div class="sub-heading">Exception: Redundant throws</div>
+        <div>
+          - If an exception type does not <i>have</i> to be listed in the signature, either because it is unchecked or because it's a subtype of another thrown type, don't list it.
+          It's redundant, but it also misleads users into thinking they have to explicitly catch that redundant type. However, you should still document these types in a
+          <code>@throws</code> clause of your javadoc if you have anything meaningful to say about when they are thrown.
+        </div>
+
+        <div class="sub-heading">Exception: Test Framework methods</div>
+        <div>
+          - Test framework methods such as <code>@Test</code>, <code>@Before</code>, and <code>@After</code> methods should simply declare <code>throws Exception</code> intead of
+          listing specific types. These methods should have no callers, other than the test runners. If specific exception types are meaningful in the code being tested, write
+          tests that specifically check those exceptions with assertions.
+        </div>
+
+        <div class="sub-heading">Reuse an existing exception type whenever appropriate</div>
+        <div>
+          - Item 72 of Effective Java. <br>
+        </div>
+
+        <div class="sub-heading" id="Tip19_Messages">Messages</div>
+        <div>
+          - Item 75 of Effective Java: while it is critical to include all of the pertinent data in the detail message of an exception, it is generally unimportant to include a lot
+          of prose.
+        </div>
+
+
+        <div class="sub-heading">Failure Atomicity</div>
+        <div>
+          - Item 76 of Effective Java. <br>
+          - When an API throws a <i>checked</i> exceptio, the objects involved should be left in a consistent, well-defined state. Ideally, this will be the state they were in
+          prior to the invocation, in which case this is called <i>failure atomicity</i>. <br>
+          - When an unchecked exception is thrown, this indicates an unrevocerable error, so the same expectation generally does not apply.
+        </div>
+
+        <div class="sub-heading" id="Tip_19_preserveCausalChain">Be careful when pruning exceptions from the causal chain</div>
+        <div>
+          - See the code below
+          <pre><code class="language-java">
+void foo() throws FooException, InterruptedException {
+  try {
+    future.get(); // task might produce a FooException
+  } catch (ExecutionException e) {
+    throw (FooException) e.getCause();
+  }
+}
+</code></pre>
+          - The goal of the above code is to simplify the resulting stack traces - "pruning" the causal chain. However, this is often a bad idea. In this example,
+          <code>ExecutionException</code> has been stripped from the chain, but it was serving an important purpose: showing the diagnosing engineer that the stack traces above
+          that
+          point originated from one thread while those below (likely) came from another. With that cue missing, the stack trace may be quite puzzling. <br>
+          - If you remove the <code>ExecutionException</code> that ties the exception to this thread, replace it with your own wrapper:
+          <pre><code class="language-java">
+void foo() throws FooException, InterruptedException {
+  try {
+    future.get(); // task might produce a FooException
+  } catch (ExecutionException e) {
+    throw new FooException(e.getCause());
+  }
+}
+</code></pre>
+          - As a rule of thumb, prefer to create a new wrapper exception whenever <code>throw</code>ing an exception whose origin is unclear, and esp if it could have come from a
+          different thread. This will preserve the stack trace of the original failure while also surfacing the actual <code>throw</code> site in the wrapping exception's stack
+          trace.
+        </div>
       </div>
 
 
