@@ -155,6 +155,7 @@
     <h4>Index</h4>
     <div class="index-entries-container">
       <a class="index-column-entry" href="#CompleteReference_Chapter1">Ch1: The History and Evolution of Java</a>
+      <a class="index-column-entry" href="#CompleteReference_Chapter2">Ch2: An Overview of Java</a>
     </div>
   </div>
   <div class="content-column">
@@ -171,13 +172,48 @@
       Index:
       <br>
       Chapter 1: <a href="#CompleteReference_Chapter1">The History and Evolution of Java</a> <br>
+      Chapter 2: <a href="#CompleteReference_Chapter2">An Overview of Java</a> <br>
 
 
       <hr>
       <div id="CompleteReference_Chapter1" class="chapter">Chapter 1: The History and Evolution of Java</div>
       <hr>
       <div class="textual-content">
+        <div class="sub-heading">Java's Magic: The Bytecode</div>
+        <div>
+          - Bytecode is a highly optimized set of instructions designed to be executed by what is called the Java Virtual Machine (JVM), which is part of the Java Runtime
+          Environment (JRE). JVM was initially designed as an <i>interpreter for bytecode. </i> <br>
+          - Translating a Java program into bytecode makes it much easier to run a program in a wide variety of environments because only the JVM needs to be implemented for each
+          platform. Once a JRE exists for a given system, any Java program can run on it. <br>
+          <p class="inline-heading">Compiled Code</p>: The programmer writes the code, a different program called the <i>Compiler</i> translates that into <i>machine code</i>
+          (instructions specific to that CPU in the computer) before the programmer written code ever runs. Think of an <code>.exe</code> file. The pro is that since the computer
+          can execute the instructions instantaneously, it is incredibly fast. The con being that it becomes platform-specific. The same .exe file won't run on a Mac and you would
+          have to re-translate the original program. The same .exe file won't run on a Mac and you would have to re-translate the original program again. <br>
+          <p class="inline-heading">Interpreted Code</p>: In a purely interpreted language (like Python or early Ruby), there is no pre-translation. Instead, a program called an
+          <i>Interpreter</i> reads your code line-by-line while the program is running, converts it into machine code, and then the machine runs it. The pro is that the same
+          programmer-written code can now run on any computer as long as that computer has the right interpreter installed. The con is that it is slower. The computer has to
+          "waste" time translating while it's trying to work. If you have a loop that runs 1,000 times, the interpreter translates those same lines 1,000 times. <br>
+          <p class="inline-heading">What Java does</p>: Java combines the two steps: <br>
+          1) Compile to Bytecode: Compile your Java code into Bytecode by running <code>javac HelloWorld.java</code>. This will output <code>HelloWorld.class</code> intermediate
+          file that can't be directly understood by you or the computer. Only the JVM can understand this. <br>
+          2) JIT: When you run the program using <code>java HelloWorld</code>, the JVM <i>interprets</i> the bytecode, converting it into machine code that the computer can
+          understand. If the compiler sees a piece of bytecode being used a lot, it will use the <i>JVM (HotSpot) JIT</i> to compile that specific part into native machine code on
+          the fly so that it doesn't have to interpret it every time. <br>
+          <p class="inline-heading">Ahead-of-Time compilation</p>: Java also has tried Ahead-of-Time compilation. Java must be turned into Bytecode first. AOT is the process of
+          taking that universal Bytecode and converting it into a native binary before you ship it. The most significant way AOT lives in Java today is through GraalVM. Why? In
+          "Serverless" computing (like AWS Lambda), you want your code to start in milliseconds. A traditional JIT-based Java app might take seconds to start - which is too slow.
+          GraalVM AOT makes Java competitive with languages like Go or Rust for these tasks.
+        </div>
+      </div>
 
+      <hr>
+      <div id="CompleteReference_Chapter2" class="chapter">Chapter 2: An Overview of Java</div>
+      <hr>
+      <div class="textual-content">
+        <div class="sub-heading">Java's Magic: The Bytecode</div>
+        <div>
+          -
+        </div>
       </div>
 
     </div>
