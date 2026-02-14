@@ -36,6 +36,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="../../../globalStyles.css">
   <link rel="stylesheet" type="text/css" href="../../../sidebar.css">
+  <link rel="stylesheet" type="text/css" href="./JavaNotes_3.css">
   <meta name="author" content="Raj Gaurav Ballabh Kumar">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Java Notes 3</title>
@@ -156,6 +157,7 @@
       <a class="index-column-entry" href="#Tip17">Tip17: Enums</a>
       <a class="index-column-entry" href="#Tip18">Tip18: Equals</a>
       <a class="index-column-entry" href="#Tip19">Tip19: Exceptions</a>
+      <a class="index-column-entry" href="#Tip20">Tip20: Final</a>
     </div>
   </div>
   <div class="content-column">
@@ -173,7 +175,7 @@
       <div>
         - <a href="https://google.github.io/styleguide/javaguide.html">Google Java Style Guide</a>. <br>
         - <a href="https://guava.dev/releases/snapshot-jre/api/docs/index.html">Guava API Docs</a>, <a
-        href="https://github.com/google/guava/tree/master/guava/src/com/google/common">Github</a>, <a
+        href="https://github.com/google/guava/tree/master/guava/src/com/google/common">Github Code Repo</a>, <a
         href="https://www.javadoc.io/doc/com.google.guava/guava-testlib/latest/com/google/common/testing/package-summary.html">Guava Testing Utilities Docs</a>. <br>
         - <a href="https://docs.oracle.com/en/java/javase/21/core/toc.htm">Oracle: Java 21 Core Libraries</a>. <br>
         - <a href="https://www.oracle.com/java/technologies/javase/seccodeguide.html">Oracle: Secure coding guidelines for Java SE</a>.
@@ -330,7 +332,7 @@
         <br>
         <br>
 
-        <div class="sub-heading">Introduction: Characters and Bytes</div>
+        <div id="Tip4_Intro" class="sub-heading">Introduction: Characters and Bytes</div>
         - Conceptually, we think of strings in programs as sequences of <i>characters</i> - individual written marks in a language. Like "a" or "A" or &#x1F60A. However, these
         character sequences are actually sequences of bytes. So it comes down to how sequences of bytes map to an abstract idea of characters. For instance, we decide that the
         character "a" will be mapped to the byte "0x61". This is known as <i>character encoding</i>. <br>
@@ -429,7 +431,7 @@
           they are just parts of the character that began with <code>0xF0</code>.
         </div>
 
-        <div class="sub-heading">What does all of this mean for Java?</div>
+        <div id="Tip4_JavaMeaning" class="sub-heading">What does all of this mean for Java?</div>
         - Java uses the UTF-16 encoding form for all text processing. The <code>char</code> type for <i>code units</i>. This means that java internally represents text using
         UTF-16.
         This means that APIs that operate on the <code>char</code> level do not necessarily operate on complete Unicode characters. A given <code>char</code> value may only be one
@@ -468,7 +470,7 @@
         </div>
 
 
-        <div class="sub-heading">How does this all fit in when trying to read from a file or write to a file?</div>
+        <div id="Tip4_FileIO" class="sub-heading">How does this all fit in when trying to read from a file or write to a file?</div>
         - A <code>Charset</code> is the crucial bridge that connects that internal world to the external world of files, network streams, and databases.
 
         <br>
@@ -1287,7 +1289,6 @@
             collection at a point in time and are not affected by concurrent modifications, making them much safer and easier to use.
           </div>
         </div>
-
       </div>
 
       <hr>
@@ -1399,8 +1400,6 @@
           one's fault; simply an exceptional result. Use checked or unchecked exceptions according to the advice in Effective Java Item 70: Use checked exceptions for recoverable
           conditions and runtime exceptions for programming errors.
         </div>
-
-
       </div>
 
       <hr>
@@ -1748,8 +1747,6 @@
           </div>
 
         </div>
-
-
       </div>
 
       <hr>
@@ -1871,7 +1868,8 @@
         <div class="sub-heading" id="Tip19_ExceptionChaining">Exception chaining (or propagating)</div>
         <div>
           - If you can't handle an exception, and it isn't appropriate to let it propagate as-is, you should almost always wrap the caught exception as a <a
-          href="https://docs.oracle.com/en/java/javase/21//docs/api/java.base/java/lang/Throwable.html#getCause()">cause</a> of another <a href="#Tip19_throwTypeAppropriate"> appropriately-typed</a> exception and throw that. Extending the causal chain this way ensures that exception stacktraces are complete. Nearly all
+          href="https://docs.oracle.com/en/java/javase/21//docs/api/java.base/java/lang/Throwable.html#getCause()">cause</a> of another <a href="#Tip19_throwTypeAppropriate">
+          appropriately-typed</a> exception and throw that. Extending the causal chain this way ensures that exception stacktraces are complete. Nearly all
           <code>Exception</code> and <code>Error</code> subclasses accept an optional <code>Throwable</code> cause constructor argument.
           <pre><code class="language-java">
   try {
@@ -2060,6 +2058,32 @@ void foo() throws FooException, InterruptedException {
           different thread. This will preserve the stack trace of the original failure while also surfacing the actual <code>throw</code> site in the wrapping exception's stack
           trace.
         </div>
+      </div>
+
+      <hr>
+      <div id="Tip20" class="chapter">Tip 20: Final</div>
+      <hr>
+
+      <div class="textual-content">
+        - We are going to look at some best practices around using the <code>final</code> java keyword.
+
+        <div class="sub-heading">On classes</div>
+        <div>
+          - In short - use <code>final class</code> by default. Vast majority of concrete classes should be <code>final</code>. <br>
+          - If you do need to extend a concrete class, you'll have to accept some decrease in static analysis, but you can sometimes preserve some of the benefits of
+          <code>final</code>: <br>
+          a) Consider making the class <a href="https://docs.oracle.com/en/java/javase/21/language/sealed-classes-and-interfaces.html"><code>sealed</code></a>. <br>
+          b) Consider making the class's constructor package-private. <br>
+
+          - By default, Mockito cannot mock final classes, though this can be enabled using the 'inline mock maker' extension. But final classes are often meant to be "Value
+          Objects" (like String). You usually shouldn't mock String; you should just use a real one.
+        </div>
+
+        <div class="sub-heading">On static variables</div>
+        <div>
+          -
+        </div>
+
       </div>
 
 
