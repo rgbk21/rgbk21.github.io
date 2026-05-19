@@ -16,15 +16,15 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-9QJ5D3X353"></script>
   <script>
-      window.dataLayer = window.dataLayer || [];
+    window.dataLayer = window.dataLayer || [];
 
-      function gtag() {
-          dataLayer.push(arguments);
-      }
+    function gtag() {
+      dataLayer.push(arguments);
+    }
 
-      gtag('js', new Date());
+    gtag('js', new Date());
 
-      gtag('config', 'G-9QJ5D3X353');
+    gtag('config', 'G-9QJ5D3X353');
   </script>
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -155,10 +155,16 @@
 
 
   <div class="one-point">
-    0) Always, for every IF, write an ELSE. In a while loop, make sure to increment the index. Whenever you are calculating squares/multiplying, be very careful about overflow.
-    arrays have <code>length</code>, strings have <code>length()</code>, collections have <code>size()</code>. You lexicographically compare two strings using the
-    <code>compareTo</code> method, in the <code>Comparator</code> class you have to override the <code>compare</code> method, if a class implements the <code>Comparable</code>
-    interface, you have to override the <code>compareTo</code> method.
+    0) <br>
+    - Always, for every IF, write an ELSE. <br>
+    - In a while loop, make sure to increment the index. <br>
+    - Whenever you are calculating squares/multiplying, be very careful about overflow. <br>
+    - When testing code, for any objects, see what the code does on passing: null, 0, 1, 2. <br>
+    - If code accepts a list of objects which then get operated on, it might be worthwhile to filter the input list for duplicates to avoid unnecessary computation. <br>
+    <code>List&lt;Things&gt; argList = getArgumentsList().stream().distinct().collect(Collectors.toList());</code> <br>
+    - arrays have <code>length</code>, strings have <code>length()</code>, collections have <code>size()</code>. <br>
+    - You lexicographically compare two strings using the <code>compareTo</code> method, in the <code>Comparator</code> class you have to override the <code>compare</code> method,
+    if a class implements the <code>Comparable</code> interface, you have to override the <code>compareTo</code> method.
   </div>
 
   <div class="one-point">
@@ -1523,7 +1529,7 @@
     - Pivotal Certified Spring Web Application Developer page 17
   </div>
 
-  <div class="one-point">
+  <div class="one-point" id="q64">
     64) Java: compiled or interpreted? Compiler vs Interpreter? JIT Compiled vs Interpreted? Traditional interpreter vs Traditional Compiler vs JIT Compiler vs AOT Compiler?
     <br>
     - The main thing to keep in mind: JVM has, both, an interpreter as well as a compiler. With JVM, both interpreter
@@ -2565,7 +2571,6 @@
     error, and in order to fix it, you will have to convert the ts file to js. This is where webpack comes in. It converts the ts file to js, and then you include this new js file
     in your <code>script</code> tag.
   </div>
-
 
 
   <div class="one-point">

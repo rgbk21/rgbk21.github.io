@@ -202,7 +202,8 @@
           <p class="inline-heading">Ahead-of-Time compilation</p>: Java also has tried Ahead-of-Time compilation. Java must be turned into Bytecode first. AOT is the process of
           taking that universal Bytecode and converting it into a native binary before you ship it. The most significant way AOT lives in Java today is through GraalVM. Why? In
           "Serverless" computing (like AWS Lambda), you want your code to start in milliseconds. A traditional JIT-based Java app might take seconds to start - which is too slow.
-          GraalVM AOT makes Java competitive with languages like Go or Rust for these tasks.
+          GraalVM AOT makes Java competitive with languages like Go or Rust for these tasks. <br>
+          - Also see <a href="../ThingsToRemember/ThingsToRemember.html#q64">notes on the other page</a>.
         </div>
       </div>
 
@@ -210,9 +211,18 @@
       <div id="CompleteReference_Chapter2" class="chapter">Chapter 2: An Overview of Java</div>
       <hr>
       <div class="textual-content">
-        <div class="sub-heading">Java's Magic: The Bytecode</div>
+        <div class="sub-heading">Object-Oriented Programming</div>
         <div>
-          -
+          - An object-oriented program can be characterized as data controlling access to code. The data is wrapped in a protective shell, and it "owns" the code that is allowed to
+          touch it. For instance, the data says, "I am a BankAccount object. I contain a private 'Balance.' If you want to change me, you must use my specific deposit() or
+          withdraw() methods. You cannot touch the balance directly."
+          - The three OOP principles are: <br>
+          a) <p class="inline-heading">Encapsulation</p>: bundle data and the methods that operate on that data together within a single unit - the Class, hiding the internal state
+          from the outside world. <br>
+          b) <p class="inline-heading">Inheritance</p>: A mechanism that allows a new class (the subclass) to acquire the properties and behaviors of an existing class (the
+          superclass), promoting code reuse and establishing a hierarchy of objects.
+          c) <p class="inline-heading">Polymorphism</p>: Meaning 'many forms', this is the ability for objects of different classes to be treated as objects of a common superclass,
+          allowing a single action (like a method call) to be performed in different ways depending on the object's actual type.
         </div>
       </div>
 
