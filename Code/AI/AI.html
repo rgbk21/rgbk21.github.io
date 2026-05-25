@@ -29,6 +29,7 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet"/>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-java.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
   <!-- Style for inline code blocks end -->
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -153,7 +154,12 @@
   <div class="index-column">
     <h4>Index</h4>
     <div class="index-entries-container">
-      <a class="index-column-entry" href="#VertexAI_Chapter1">Ch1: Magic</a>
+      <a class="index-column-entry" href="#VertexAI_Chapter1">Ch1: Course Introduction</a>
+      <a class="index-column-entry" href="#VertexAI_Chapter2">Ch2: Introducing the Agent Development Kit</a>
+      <a class="index-column-entry" href="#VertexAI_Chapter3">Ch3: Develop Agents with ADK</a>
+      <a class="index-column-entry" href="#VertexAI_Chapter3.1">Ch3.1: Get Started with ADK Lab</a>
+      <a class="index-column-entry" href="#VertexAI_Chapter3.2">Ch3.2: Empower ADK Agents with tools Lab</a>
+      <a class="index-column-entry" href="#VertexAI_Chapter4">Ch4: Build multi-agent systems with ADK</a>
     </div>
   </div>
   <div class="content-column">
@@ -163,24 +169,2117 @@
 
       <div>
         This page contains my notes from the following: <br>
-        a) AI: Vertex
+        a) Deploy Multi-Agent Systems with Agent Development Kit (ADK) and Agent Engine <br>
+        a) Deploy and Agent with Agent Development Kit (ADK)
       </div>
 
       <br>
-      Index:
+      Index: Deploy Multi-Agent Systems with Agent Development Kit (ADK) and Agent Engine <br>
       <br>
-      Chapter 1: <a href="#VertexAI_Chapter1">The History and Evolution of AI</a> <br>
+      Chapter 1: <a href="#VertexAI_Chapter1">Course Introduction</a> <br>
 
 
       <hr>
-      <div id="VertexAI_Chapter1" class="chapter">Chapter 1: Magic</div>
+      <div id="VertexAI_Chapter1" class="chapter">Chapter 1: Course Introduction</div>
       <hr>
       <div class="textual-content">
-        <div class="sub-heading">Sub Heading</div>
+        <div class="sub-heading">Goal</div>
         <div>
-          - Description
+          - Develop agents equipped with tools, and connect them with parent-child relationships and flows to define how they interact. <br>
+          - Provide agents with session memory and artifact storage. <br>
+          - Run agents locally and deploy them to Vertex AI Agent Engine to run as a managed agentic flow with infrastructure decision sand resource scaling handled by Agent
+          Engine.
         </div>
       </div>
+
+
+      <hr>
+      <div id="VertexAI_Chapter2" class="chapter">Chapter 2: Introducing the Agent Development Kit</div>
+      <hr>
+      <div class="textual-content">
+        <div class="sub-heading">Introducing the ADK</div>
+        <div>
+          - AI Agents are interactive partners that help answer complex questions and complete tasks. <br>
+          - With Google Cloud, developers can build agents at their preferred level of abstraction. <br>
+          - There are a range of methods for agent building that range from highly customizable and flexible, which require more effort for configuration and implementation, to
+          very easy to use out-of-the-box solutions that offer very little customization and fine-tuning possibilities.
+          <div class="image-block">
+            <div class="expand-screenshot-image-btn border border-primary rounded">
+              <span class="btn btn-link">Show Image <img src="./imgs/chevron-expand.svg" alt="Show Image Button"></span>
+            </div>
+            <div class="screenshot-image">
+              <img src="./imgs/VertexAI/Chapter2/DifferentKindsOfAgents.jpg"
+                   width="700"
+                   class="center-block img-fluid"
+                   alt="Example1"
+                   loading="lazy">
+            </div>
+          </div>
+
+          - Google Cloud provides four key paths for building an agent: <br>
+          a) Through the Customer Engagement Suite (with Conversational Agents): external-facing conversational agents that can integrate with human support teams and existing
+          telephony and communication platforms. <br>
+          b) Using Agentspace: internal search to accelerate knowledge exchange throughout your organization, across your drives, chat, mail, ticketing platforms, databases, and
+          more, including AI assistant support. <br>
+          c) Building agents using open source frameworks or from scratch with Agent Engine: use basic building blocks and start building from the ground up, for example with the
+          Google Gen AI SDK or LangChain, where you will also need to make decisions about infrastructure and hosting. <br>
+          d) Using the Agent Development Kit with Agent Engine: custom development with support for communication between agents through conversation history and shared state. <br>
+
+          - Google ADK: <br>
+          a) local development user interface, with tools to help debug your agents and multi-agent systems. <br>
+          b) callbacks that can be used to invoke functions during various stages of a flow. <br>
+          c) session memory for stateful conversations, which enables agents to recall information about a user across multiple sessions, providing long-term context (in addition
+          to short-term session State). <br>
+          d) integrates artifact storage to facilitate agent collaboration on documents. <br>
+
+
+        </div>
+      </div>
+
+
+      <hr>
+      <div id="VertexAI_Chapter3" class="chapter">Chapter 3: Develop Agents with ADK</div>
+      <hr>
+      <div class="textual-content">
+        <div class="sub-heading">Develop Agents with ADK</div>
+        <div>
+          - Below are shown the key components within the Google Agent Development Kit:
+
+          <div class="image-block">
+            <div class="expand-screenshot-image-btn border border-primary rounded">
+              <span class="btn btn-link">Show Image <img src="./imgs/chevron-expand.svg" alt="Show Image Button"></span>
+            </div>
+            <div class="screenshot-image">
+              <img src="./imgs/VertexAI/Chapter3/ADK_KeyConcepts.jpg"
+                   width="450"
+                   class="center-block img-fluid"
+                   alt="Example1"
+                   loading="lazy">
+            </div>
+          </div>
+
+          <p class="inline-heading">Core Framework Components: </p><br>
+          - Agent: The central entity that perceives, reasons, and acts to achieve specific user goals. <br>
+          - BiDi streaming: Enables bidirectional, real-time data flow, allowing the agent and user to communicate continuously without waiting for full turn completion (Gemini
+          Live API, needs to be enabled with configuration). <br>
+          - Artifact management: Tracks and versions the various files (images, documents, other binary data), datasets, and outputs created or used by the agent throughout its
+          lifecycle. <br>
+          - Tool: Specific functions or APIs that the agent can call to perform actions outside its native knowledge, such as querying databases or interacting with external
+          services and APIs. <br>
+          - Session management: Maintains the state, history, and context of a conversation to ensure continuity across multiple interactions. Session Management for session and
+          state handles the context of a single conversation (the Session), including its history (as Events) and the agent's working memory for that conversation (the State). An
+          Event is the basic unit of communication representing things that happen during a session (such as user message, agent reply, and tool use), forming the conversation
+          history. <br>
+          - Memory: Stores information, user preferences, and past experiences that the agent retrieves to personalize and improve future performance. <br>
+          - Orchestration: Manages the complex flow of logic, task sequencing, and decision-making required to coordinate various agent components. As part of this orchestration
+          Google ADK uses a Runner, which is the engine that manages the execution flow, orchestrates agent interactions based on Events, and coordinates with backend services.<br>
+          - Evaluation: Provides metrics and testing frameworks to assess the agent's accuracy, reliability, and overall performance. <br>
+          - Code execution: Allows the agent to run code snippets in a sandbox environment to perform calculations, analyze data, or generate dynamic results. <br>
+          - Callbacks: Defined hooks that execute specific logic in response to system events or state changes during the agent's operation. <br>
+          - Deployment: The process of packaging and exposing the finished agent to a production environment for user interaction. Google ADK deploys to Agent Engine, a fully
+          managed Google Cloud service enabling developers to deploy, manage, and scale AI agents in production. Agent Engine handles the infrastructure to scale agents in
+          production. <br>
+          - Planning: The agent's ability to decompose complex tasks into smaller, logical steps and sequence them to achieve a final goal. <br>
+
+          <p class="inline-heading">Foundation & Support Layers: </p><br>
+          - Debugging: Integrated tools and logs used to inspect the agent's internal state to identify and resolve logic or execution errors. <br>
+          - Trace: Records a granular, step-by-step history of the agent's execution path, making it easier to audit and troubleshoot complex processes. <br>
+          - Models: The underlying large language models (LLMs) that provide the reasoning, natural language understanding, and generation capabilities for the agent.
+
+          <br>
+          <br>
+
+          - Below is the architecture of the Agent Runtime, which is the operational heart of the Agent Development Kit (ADK) that powers how an AI agent interacts with an end
+          user. Essentially, when a user sends a query, the Orchestration layer uses its Memory and instructions to plan the task. It then calls upon the Generative AI Models to
+          reason through that plan and uses Tools to fetch necessary external information, all within the Agent Runtime to provide a coherent response back to the user.
+          <div class="image-block">
+            <div class="expand-screenshot-image-btn border border-primary rounded">
+              <span class="btn btn-link">Show Image <img src="./imgs/chevron-expand.svg" alt="Show Image Button"></span>
+            </div>
+            <div class="screenshot-image">
+              <img src="./imgs/VertexAI/Chapter3/ADK_SDK.jpg"
+                   width="700"
+                   class="center-block img-fluid"
+                   alt="Example1"
+                   loading="lazy">
+            </div>
+          </div>
+
+
+        </div>
+
+        <div class="sub-heading">Configure ADK</div>
+        <div>
+          - // TODO
+        </div>
+
+        <div class="sub-heading" id="VertexAI_Chapter3.1">Lab: Get Started with ADK</div>
+        <div>
+          <p>For more information about ADK, check out these resources:</p>
+          <ul>
+            <li>ADK documentation <a href="https://google.github.io/adk-docs/" target="_blank">Agent Development Kit</a>
+            </li>
+            <li>
+              <code>adk-docs</code> GitHub repository <a href="https://github.com/google/adk-docs" target="_blank">adk-docs</a>
+            </li>
+            <li><a href="https://youtu.be/jZXvqEqJT7o?si=SWqbbFwgbAit26Rd" target="_blank">How to secure your AI Agents: A Technical Deep-dive</a></li>
+            <li><a href="https://youtu.be/eE_aD5QAgN4?si=X3ys526l7ewiz7oI" target="_blank">Build a multimodal, multi-agent with ADK in 37 lines of code</a></li>
+          </ul>
+
+          Task 1. Install ADK and set up your environment: In this task, you configure the Cloud Shell Editor, initialize your project, and install the Agent Development Kit (ADK)
+          to prepare your environment for building and testing agentic applications. <br>
+          - In this lab environment, the Agent Platform API and Telemetry API have been enabled for you. In your own projects, you will want to enable them in order to query models
+          and send telemetry data to Cloud Logging. <br>
+          - Lab Instructions copied over from lesson:
+
+          <div class="markdown-lab-instructions js-markdown-instructions" id="markdown-lab-instructions">
+            <h2 id="step2">Overview</h2>
+            <p>Building complex agentic applications often requires coordinating multiple specialized models, managing tool integrations, and debugging execution traces—all of
+              which can be manually intensive and difficult to scale.</p>
+            <p><a href="https://docs.cloud.google.com/agent-builder/agent-development-kit/overview" target="_blank">Agent Development Kit (ADK)</a> solves these challenges by
+              providing a modular framework to build, test, and deploy multi-agent systems. It allows you to compose specialized agents into a hierarchy, equip them with pre-built
+              or custom tools, and orchestrate workflows using both predictable pipelines and dynamic LLM-driven routing.</p>
+            <p>In this lab, you use ADK to build a research assistant that leverages
+              <ql-variable disablehighlight="" key="project_0.startup_script.gemini_flash_model_name" placeholder="model_name">
+                <template shadowrootmode="open"><!----><code class=" default "><!--?lit$583449698$-->model_name</code></template>
+              </ql-variable>
+              to analyze data and generate structured reports. You explore how to manage these dependencies dynamically to ensure your agentic workflows remain robust as new models
+              are released.
+            </p>
+            <h3>Objectives</h3>
+            <p>In this lab, you learn how to perform the following tasks:</p>
+            <ul>
+              <li>Describe ADK architecture (agents, tools, and sessions).</li>
+              <li>Configure a local development environment for agentic apps.</li>
+              <li>Define agents with dynamic models and custom tool access.</li>
+              <li>Execute and inspect agents using the ADK browser UI, Python code, and the CLI chat interface.</li>
+            </ul>
+            <h2 id="step3">Benefits of ADK</h2>
+            <p>ADK offers several key advantages for developers building agentic applications:</p>
+            <ul>
+              <li>
+                <strong>Multi-agent systems</strong>: Build modular, scalable applications by composing specialized agents into hierarchical structures.
+              </li>
+              <li>
+                <strong>Rich tool ecosystem</strong>: Equip agents with pre-built tools, custom functions, or integrations from frameworks like LangChain and CrewAI.
+              </li>
+              <li>
+                <strong>Flexible Orchestration</strong>: Define predictable pipelines with workflow agents or use LLMs for adaptive, dynamic routing.
+              </li>
+              <li>
+                <strong>Integrated Developer Experience</strong>: Develop and debug locally with a powerful CLI and an interactive UI to inspect execution step-by-step.
+              </li>
+              <li>
+                <strong>Built-in Evaluation</strong>: Systematically assess performance by evaluating response quality and execution trajectories against test cases.
+              </li>
+              <li>
+                <strong>Deployment Ready</strong>: Easily containerize and scale agents on Agent Runtime, Cloud Run, or custom Docker infrastructure.
+              </li>
+            </ul>
+            <p>While other SDKs allow you to query models, ADK provides a higher-level framework that handles the complex coordination between multiple models for you.</p>
+            <h2 id="step4">Setup and requirements</h2>
+
+            <h2 id="step5">Task 1. Install ADK and set up your environment</h2>
+            <p>In this task, you configure the Cloud Shell Editor, initialize your project, and install the Agent Development Kit (ADK) to prepare your environment for building and
+              testing agentic applications.</p>
+            <h3>Enable recommended APIs</h3>
+            <p>In this lab environment, the <strong>Agent Platform API</strong> and <strong>Telemetry API</strong> have been enabled for you. In your own projects, you will want to
+              enable them in order to query models and send telemetry data to Cloud Logging.</p>
+            <h3>Prepare a Cloud Shell Editor tab</h3>
+            <ol>
+              <li>
+                <p>Click <strong>Activate Cloud Shell</strong> (
+                  <button class="js-img-container" aria-haspopup="true"><img alt="Activate Cloud Shell" height="24"
+                                                                             src="https://cdn.qwiklabs.com/0R1bagVsqDIuRxFoBFZDlx4p2FrWrR8pyIX90XlMIMo%3D"></button>
+                  ) in the Google Cloud console title bar.
+                </p>
+                <ql-infobox>
+                  <template shadowrootmode="open"><!---->
+                    <aside part="aside">
+                      <slot></slot>
+                    </aside>
+                  </template>
+                  <strong>Note: </strong>Alternatively, select the console browser tab and press G then S to open the Cloud Shell terminal.
+                </ql-infobox>
+              </li>
+              <li>
+                <p>Click <strong>Continue</strong>.</p>
+              </li>
+              <li>
+                <p>When prompted to authorize Cloud Shell, click <strong>Authorize</strong>.</p>
+              </li>
+              <li>
+                <p>In the Cloud Shell Terminal action bar, click <strong>Open in new window</strong>
+                  <button class="js-img-container" aria-haspopup="true"><img alt="Open in new window button" height="24"
+                                                                             src="https://cdn.qwiklabs.com/g4I7jXdmqqSAUtXFvEv%2BUVPf%2FJ7v3AbMmd4cSeruvGI%3D"></button>
+                  .
+                </p>
+              </li>
+              <li>
+                <p>Click <strong>Open Editor</strong> (
+                  <button class="js-img-container" aria-haspopup="true"><img alt="Edit pencil icon" height="24"
+                                                                             src="https://cdn.qwiklabs.com/YEEoKikL4fSWKcfxpPyP%2BEEfg4619SPb9eIPTGG9QsA%3D"></button>
+                  ) on the Cloud Shell Editor action bar, to view files.
+                </p>
+              </li>
+              <li>
+                <p>Click <strong>Explorer</strong> (
+                  <button class="js-img-container" aria-haspopup="true"><img alt="Explorer icon" height="24"
+                                                                             src="https://cdn.qwiklabs.com/uOCsAsS9JuxOrJdQGBEaNhnUhKZ%2FB0SCCY2Jbb7tBEo%3D"></button>
+                  ) in the left pane to open your file explorer.
+                </p>
+              </li>
+              <li>
+                <p>Click <strong>Open Folder</strong>.</p>
+              </li>
+              <li>
+                <p>In the <strong>Open Folder</strong> dialog that opens, click <strong>OK</strong> to select your Google Skills student account's home folder.</p>
+              </li>
+              <li>
+                <p>Close any additional tutorial or Gemini panels that appear on the right side of the screen to save more of your window for your code editor.</p>
+              </li>
+            </ol>
+            <p>For the rest of this lab, you work in this window as your IDE with the Cloud Shell Editor and Cloud Shell Terminal.</p>
+            <h3>Download and install ADK and code samples for this lab</h3>
+            <ol>
+              <li>
+                <p>Paste the following command into the Cloud Shell Terminal to copy a project directory with code for this lab from a Cloud Storage bucket:</p>
+                <code-block language="bash" nowrap="" templated="">
+                  <template shadowrootmode="open"><!---->
+                    <div class=" container light-theme ">
+                      <pre class="bash hljs">gcloud storage cp -r gs://YOUR_GCP_PROJECT_ID-bucket/* .</pre>
+                    </div>
+
+                  </template>
+                  gcloud storage cp -r gs://{{{project_0.project_id| YOUR_GCP_PROJECT_ID}}}-bucket/* .
+                </code-block>
+              </li>
+              <li>
+                <p>Update your <code>PATH</code> environment variable to include your user's local environment and install ADK, including the OpenTelemetry (OTel) plugin for
+                  logging &amp; telemetry, and other lab requirements by running the following commands in the Cloud Shell Terminal:</p>
+                <code-block nowrap="" templated="" language="routeros">
+                  <template shadowrootmode="open"><!---->
+                    <div class=" container light-theme ">
+        <pre class="hljs routeros"><span class="hljs-builtin-name">export</span> <span class="hljs-attribute">PATH</span>=<span class="hljs-variable">$PATH</span>:"/home/${USER}/.local/bin<span
+          class="hljs-string">"
+python3 -m pip install google-adk[otel-gcp]==1.30.0 -r adk_project/requirements.txt</span></pre>
+                    </div>
+                    <!--?lit$583449698$-->
+                    <div class="copy-container"> <!--?lit$583449698$-->
+                      <span class="copied-message" aria-hidden="true" role="alert" aria-label="Copied!">
+        <!--?lit$583449698$-->Copied!
+      </span>
+                      <!--?lit$583449698$-->
+                      <ql-icon-button class="copy-button" label="Copy" title="Copy" aria-label="Copy export PATH=$PATH:&quot;/home/${USER}/.local/bin&quot;
+python3 -m pip install google-adk[otel-gcp]==1.30.0 -r adk_project/requirements.txt" translate="no" type="button">
+                        <template shadowrootmode="open"><!----> <!--?lit$583449698$-->
+                          <div class="buttonContainer" aria-disabled="false">
+                            <!--?lit$583449698$-->
+                            <md-icon-button class=" ql-icon-button " data-aria-label="Copy" data-aria-busy="false" value="">
+                              <template shadowrootmode="open" shadowrootdelegatesfocus=""><!---->
+                                <button id="button" class="icon-button  standard " aria-label="Copy">
+                                  <!--?lit$583449698$-->
+                                  <md-focus-ring part="focus-ring" for="button" aria-hidden="true">
+                                    <template shadowrootmode="open"><!----></template>
+                                  </md-focus-ring>
+                                  <!--?lit$583449698$-->
+                                  <md-ripple aria-hidden="true">
+                                    <template shadowrootmode="open"><!---->
+                                      <div class="surface   "></div>
+                                    </template>
+                                  </md-ripple>
+                                  <!--?lit$583449698$--><span class="icon"><slot></slot></span>
+                                  <!--?lit$583449698$-->
+                                  <!--?lit$583449698$--><span class="touch"></span>
+                                </button>
+                              </template>
+                              <!--?lit$583449698$-->
+                              <ql-icon translate="no">
+                                <template shadowrootmode="open"><!---->
+                                  <span aria-hidden="true" class=" google-symbols " style="font-size: inherit;">
+        <slot><!--?lit$583449698$--></slot>
+      </span>
+                                  <!--?lit$583449698$--><!--?-->
+                                </template><!--?lit$583449698$-->
+                                <slot></slot>
+                              </ql-icon>
+                            </md-icon-button>
+                          </div>
+                          <!--?lit$583449698$--> </template>
+                        content_copy
+                      </ql-icon-button>
+                    </div>
+
+                  </template>
+                  export PATH=$PATH:"/home/${USER}/.local/bin"
+                  python3 -m pip install google-adk[otel-gcp]==1.30.0 -r adk_project/requirements.txt
+                </code-block>
+              </li>
+            </ol>
+            <h2 id="step6">Task 2. Review the core concepts and structure of ADK project directories</h2>
+            <p>Explore the core concepts and fundamental building blocks of ADK, including agents, tools, and orchestration patterns, to understand the principles used to design
+              effective and flexible multi-agent systems:</p>
+            <ul>
+              <li>
+                <strong>Agent</strong>: Agents are core building blocks designed to accomplish specific tasks. They can be powered by LLMs to reason, plan, and utilize tools to
+                achieve goals, and can even collaborate on complex projects.
+              </li>
+              <li>
+                <strong>Tools</strong>: Tools give agents abilities beyond conversation, letting them interact with external APIs, search information, run code, or call other
+                services.
+              </li>
+              <li>
+                <strong>Session Services</strong>: Session services handle the context of a single conversation (<code>Session</code>), including its history (<code>Events</code>)
+                and the agent's working memory for that conversation (<code>State</code>).
+              </li>
+              <li>
+                <strong>Callbacks</strong>: Custom code snippets you provide to run at specific points in the agent's process, allowing for checks, logging, or behavior
+                modifications.
+              </li>
+              <li>
+                <strong>Artifact Management</strong>: Artifacts allow agents to save, load, and manage files or binary data (like images or PDFs) associated with a session or user.
+              </li>
+              <li>
+                <strong>Runner</strong>: The engine that manages the execution flow, orchestrates agent interactions based on Events, and coordinates with backend services.
+              </li>
+            </ul>
+            <p>Next, explore the standard layout of an ADK project to see how these concepts are organized in practice:</p>
+            <ol>
+              <li>
+                <p>In the Cloud Shell Editor's file explorer pane, click <strong>adk_project</strong> to open the directory.</p>
+              </li>
+              <li>
+                <p>Notice the four agent directories in <strong>adk_project</strong>: <code>adk_utils</code>, <code>app_agent</code>, <code>llm_auditor</code>, and <code>my_google_search_agent</code>.
+                  Each of these directories represents a separate agent. Separating agents into their own directories within a project directory provides organization and allows
+                  ADK to understand what agents are present.</p>
+              </li>
+              <li>
+                <p>Click <strong>my_google_search_agent</strong> to explore an agent directory.</p>
+                <ql-infobox>
+                  <template shadowrootmode="open"><!---->
+                    <aside part="aside">
+                      <slot></slot>
+                    </aside>
+                  </template>
+                  <strong>Note: </strong>Make sure you are in the <code>adk_project/my_google_search_agent</code> directory at this point.
+                </ql-infobox>
+              </li>
+              <li>
+                <p>Click <strong>init.py</strong> to view its contents and notice that the directory also contains an <code>agent.py</code> file.</p>
+              </li>
+              <li>
+                <p>Notice that the <code>init.py</code> file contains a single line, which imports from the <code>agent.py</code> file. ADK uses this to identify this directory as
+                  an agent package:</p>
+                <code-block language="python" output="">
+                  <template shadowrootmode="open"><!---->
+                    <div class=" container dark-theme ">
+                      <pre class="python wrap hljs"><span class="hljs-keyword">from</span> . <span class="hljs-keyword">import</span> agent</pre>
+                    </div>
+                    <!--?lit$583449698$-->
+                  </template>
+                  from . import agent
+                </code-block>
+              </li>
+              <li>
+                <p>Click <strong>agent.py</strong> to view the code for a simple agent equipped with the Google Search tool.</p>
+                <ul>
+                  <li>The imports from <code>google.adk</code>: the <code>Agent</code> class and the <code>google_search</code> tool from the <code>tools</code> module.</li>
+                  <li>Read the code comments that describe the parameters that configure this simple agent.</li>
+                </ul>
+              </li>
+              <li>
+                <p>To use the imported <code>google_search</code> tool, it needs to be passed to the agent. Paste the following line into the <code>agent.py</code> file around line
+                  34, where indicated at the end of the <code>Agent</code> object creation:</p>
+                <code-block language="python" templated="">
+                  <template shadowrootmode="open"><!---->
+                    <div class=" container light-theme ">
+                      <pre class="python wrap hljs">    tools=[google_search]</pre>
+                    </div>
+                    <!--?lit$583449698$-->
+                    <div class="copy-container"> <!--?lit$583449698$-->
+                      <span class="copied-message" aria-hidden="true" role="alert" aria-label="Copied!">
+        <!--?lit$583449698$-->Copied!
+      </span>
+                      <!--?lit$583449698$-->
+                      <ql-icon-button class="copy-button" label="Copy" title="Copy" aria-label="Copy     tools=[google_search]" translate="no" type="button">
+                        <template shadowrootmode="open"><!----> <!--?lit$583449698$-->
+                          <div class="buttonContainer" aria-disabled="false">
+                            <!--?lit$583449698$-->
+                            <md-icon-button class=" ql-icon-button " data-aria-label="Copy" data-aria-busy="false" value="">
+                              <template shadowrootmode="open" shadowrootdelegatesfocus=""><!---->
+                                <button id="button" class="icon-button  standard " aria-label="Copy">
+                                  <!--?lit$583449698$-->
+                                  <md-focus-ring part="focus-ring" for="button" aria-hidden="true">
+                                    <template shadowrootmode="open"><!----></template>
+                                  </md-focus-ring>
+                                  <!--?lit$583449698$-->
+                                  <md-ripple aria-hidden="true">
+                                    <template shadowrootmode="open"><!---->
+                                      <div class="surface   "></div>
+                                    </template>
+                                  </md-ripple>
+                                  <!--?lit$583449698$--><span class="icon"><slot></slot></span>
+                                  <!--?lit$583449698$-->
+                                  <!--?lit$583449698$--><span class="touch"></span>
+                                </button>
+                              </template>
+                              <!--?lit$583449698$-->
+                              <ql-icon translate="no">
+                                <template shadowrootmode="open"><!---->
+                                  <span aria-hidden="true" class=" google-symbols " style="font-size: inherit;">
+        <slot><!--?lit$583449698$--></slot>
+      </span>
+                                  <!--?lit$583449698$--><!--?-->
+                                </template><!--?lit$583449698$-->
+                                <slot></slot>
+                              </ql-icon>
+                            </md-icon-button>
+                          </div>
+                          <!--?lit$583449698$--> </template>
+                        content_copy
+                      </ql-icon-button>
+                    </div>
+
+                  </template>
+                  tools=[google_search]
+                </code-block>
+              </li>
+              <li>
+                <p>Save the <code>agent.py</code> file.</p>
+              </li>
+            </ol>
+            <p>Tools enable an agent to perform actions beyond generating text. In this case, the <code>google_search</code> tool allows the agent to decide when it would like more
+              information than it already has from its training data. It can then write a search query, use Google Search to search the web, and then base its response to the user
+              on the results.</p>
+            <p>When a model bases its response on additional information that it retrieves, it is called "grounding," and this overall process is known as "retrieval-augmented
+              generation" or "RAG."</p>
+            <h2 id="step7">Task 3. Run the agent using the ADK Dev UI</h2>
+            <p>ADK includes a development UI designed to run locally to help you develop and test your agents. It can help you visualize what each agent is doing and how multiple
+              agents interact with one another. In this task, you explore this interface.</p>
+            <ql-infobox>
+              <template shadowrootmode="open"><!---->
+                <aside part="aside">
+                  <slot></slot>
+                </aside>
+              </template>
+              <p><strong>Note: </strong>When you run an agent, ADK needs to know who is requesting the model API calls. You can provide this information in one of two ways:</p>
+              <ol>
+                <li>Provide a <a href="https://aistudio.google.com/apikey" target="_blank">Gemini API key</a>.</li>
+                <li>Authenticate your environment with Google Cloud credentials and associate your model API calls with an Agent Platform project and location.</li>
+              </ol>
+              <p>In this lab, you take the Agent Platform approach.</p>
+            </ql-infobox>
+            <ol>
+              <li>
+                <p>In the Cloud Shell Terminal, run the following commands to write an <code>.env</code> file to set your environment variables instructing the agent to use your
+                  project and the global endpoint:</p>
+                <code-block nowrap="" templated="" language="routeros">
+                  <template shadowrootmode="open"><!---->
+                    <div class=" container light-theme ">
+        <pre class="hljs routeros">cd ~/adk_project
+cat &lt;&lt; EOF &gt; my_google_search_agent/.env
+<span class="hljs-attribute">GOOGLE_GENAI_USE_VERTEXAI</span>=<span class="hljs-literal">TRUE</span>
+<span class="hljs-attribute">GOOGLE_CLOUD_PROJECT</span>=YOUR_GCP_PROJECT_ID
+<span class="hljs-attribute">GOOGLE_CLOUD_LOCATION</span>=global
+<span class="hljs-attribute">MODEL</span>=gemini_flash_model_id
+<span class="hljs-attribute">OTEL_SERVICE_NAME</span>=adk-agent
+<span class="hljs-attribute">OTEL_PYTHON_LOGGING_AUTO_INSTRUMENTATION_ENABLED</span>=<span class="hljs-literal">true</span>
+<span class="hljs-attribute">OTEL_INSTRUMENTATION_GENAI_CAPTURE_MESSAGE_CONTENT</span>=<span class="hljs-literal">true</span>
+EOF</pre>
+                    </div>
+                    <!--?lit$583449698$-->
+                    <div class="copy-container"> <!--?lit$583449698$-->
+                      <span class="copied-message" aria-hidden="true" role="alert" aria-label="Copied!">
+        <!--?lit$583449698$-->Copied!
+      </span>
+                      <!--?lit$583449698$-->
+
+                    </div>
+
+                  </template>
+                  cd ~/adk_project
+                  cat &lt;&lt; EOF &gt; my_google_search_agent/.env
+                  GOOGLE_GENAI_USE_VERTEXAI=TRUE
+                  GOOGLE_CLOUD_PROJECT={{{project_0.project_id| YOUR_GCP_PROJECT_ID}}}
+                  GOOGLE_CLOUD_LOCATION=global
+                  MODEL={{{project_0.startup_script.gemini_flash_model_id | gemini_flash_model_id}}}
+                  OTEL_SERVICE_NAME=adk-agent
+                  OTEL_PYTHON_LOGGING_AUTO_INSTRUMENTATION_ENABLED=true
+                  OTEL_INSTRUMENTATION_GENAI_CAPTURE_MESSAGE_CONTENT=true
+                  EOF
+                </code-block>
+                <p>These variables serve the following roles:</p>
+                <ul>
+                  <li>
+                    <code>GOOGLE_GENAI_USE_VERTEXAI=TRUE</code> indicates that you use Vertex AI for authentication as opposed to Gemini API key authentication.
+                  </li>
+                  <li>
+                    <code>GOOGLE_CLOUD_PROJECT</code> and <code>GOOGLE_CLOUD_LOCATION</code> provide the project and location with which to associate your model calls.
+                  </li>
+                  <li>
+                    <code>MODEL</code> is not required, but is stored here so that it can be loaded as another environment variable. This can be a convenient way to try different
+                    models in different deployment environments.
+                  </li>
+                  <li>
+                    <code>OTEL_SERVICE_NAME</code>, <code>OTEL_PYTHON_LOGGING_AUTO_INSTRUMENTATION_ENABLED</code>, and
+                    <code>OTEL_INSTRUMENTATION_GENAI_CAPTURE_MESSAGE_CONTENT</code> are used to configure OpenTelemetry (OTel) for collecting ADK-specific telemetry data from the
+                    agent.
+                  </li>
+                </ul>
+                <p>The ADK Dev UI and CLI chat interface automatically load configurations from an <code>.env</code> file. If no file is present, they use system environment
+                  variables with matching names.</p>
+              </li>
+              <li>
+                <p>In the Cloud Shell Terminal, ensure you are in the <strong>adk_project</strong> directory where your agent subdirectories are located by running:</p>
+                <code-block language="jboss-cli">
+                  <template shadowrootmode="open"><!---->
+                    <div class=" container light-theme ">
+                      <pre class="wrap hljs jboss-cli"><span class="hljs-keyword">cd</span> ~<span class="hljs-string">/adk_project</span></pre>
+                    </div>
+                    <!--?lit$583449698$-->
+                    <div class="copy-container"> <!--?lit$583449698$-->
+                      <span class="copied-message" aria-hidden="true" role="alert" aria-label="Copied!">
+        <!--?lit$583449698$-->Copied!
+      </span>
+                      <!--?lit$583449698$-->
+
+                    </div>
+
+                  </template>
+                  cd ~/adk_project
+                </code-block>
+              </li>
+              <li>
+                <p>Launch the ADK Dev UI with the following command with some useful flags. This command will:</p>
+                <ul>
+                  <li>Launch a Fast API web server with the ADK Dev UI</li>
+                  <li>Allow the Cloud Shell web preview to query your agent</li>
+                  <li>Send telemetry data to Cloud Logging</li>
+                  <li>Reload agents when code changes are detected</li>
+                </ul>
+                <code-block language="haml">
+                  <template shadowrootmode="open"><!---->
+                    <div class=" container light-theme ">
+        <pre class="wrap hljs haml">adk web \
+-<span class="ruby">-allow_origins <span class="hljs-string">"regex:https://.*\.cloudshell\.dev"</span> \
+</span>-<span class="ruby">-otel_to_cloud \
+</span>-<span class="ruby">-reload_agents</span></pre>
+                    </div>
+                    <!--?lit$583449698$-->
+                    <div class="copy-container"> <!--?lit$583449698$-->
+                      <span class="copied-message" aria-hidden="true" role="alert" aria-label="Copied!">
+        <!--?lit$583449698$-->Copied!
+      </span>
+                      <!--?lit$583449698$-->
+
+                    </div>
+
+                  </template>
+                  adk web \
+                  --allow_origins "regex:https://.*\.cloudshell\.dev" \
+                  --otel_to_cloud \
+                  --reload_agents
+                </code-block>
+                <p><strong>Output</strong></p>
+                <code-block language="plaintext" nowrap="" output="">
+                  <template shadowrootmode="open"><!---->
+                    <div class=" container dark-theme ">
+        <pre class="plaintext hljs">INFO:     Started server process [2434]
+INFO:     Waiting for application startup.
++-------------------------------------------------------+
+| ADK Web Server started                                |
+|                                                       |
+| For local testing, access at http://localhost:8000.   |
++-------------------------------------------------------+
+
+INFO: Application startup complete.
+INFO: Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)</pre>
+                    </div>
+                    <!--?lit$583449698$-->
+                  </template>
+                  INFO: Started server process [2434]
+                  INFO: Waiting for application startup.
+                  +-------------------------------------------------------+
+                  | ADK Web Server started |
+                  | |
+                  | For local testing, access at http://localhost:8000. |
+                  +-------------------------------------------------------+
+
+                  INFO: Application startup complete.
+                  INFO: Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+                </code-block>
+                <p>The result is the ADK Dev UI URL is displayed, as the DEV UI is currently running.</p>
+              </li>
+              <li>
+                <p>To view the web interface in a new tab, click the <strong>http://127.0.0.1:8000</strong> link in the Terminal output, which links you via proxy to this app
+                  running locally on your Cloud Shell instance. The result is you see the Dev UI running in a new tab.</p>
+              </li>
+              <li>
+                <p>From the <strong>Select an agent</strong> menu options on the left, select <strong>my_google_search_agent</strong>.</p>
+              </li>
+              <li>
+                <p>To prompt the agent to use its Google Search tool, enter the question:</p>
+                <code-block templated="" language="applescript">
+                  <template shadowrootmode="open"><!---->
+                    <div class=" container light-theme ">
+                      <pre class="wrap hljs applescript">I know <span class="hljs-keyword">the</span> Summer olympics are happening <span class="hljs-keyword">in</span> <span
+                        class="hljs-number">2028</span>, please <span class="hljs-keyword">tell</span> <span class="hljs-keyword">me</span> which countries are participating <span
+                        class="hljs-keyword">and</span> what events will be held.</pre>
+                    </div>
+                    <!--?lit$583449698$-->
+                    <div class="copy-container"> <!--?lit$583449698$-->
+                      <span class="copied-message" aria-hidden="true" role="alert" aria-label="Copied!">
+        <!--?lit$583449698$-->Copied!
+      </span>
+                      <!--?lit$583449698$-->
+
+                    </div>
+
+                  </template>
+                  I know the Summer olympics are happening in 2028, please tell me which countries are participating and what events will be held.
+                </code-block>
+                <p>Notice the agent uses Google Search to retrieve real-time information, bypassing the knowledge cutoff of its pre-trained model.</p>
+                <ql-infobox>
+                  <template shadowrootmode="open"><!---->
+                    <aside part="aside">
+                      <slot></slot>
+                    </aside>
+                  </template>
+                  <strong>Note: </strong>A response using grounding with Google search includes ready-to-display HTML "Search Suggestions" like those you see at the bottom of the
+                  agent's response. When you use grounding with Google Search, you are <a
+                  href="https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/grounding-search-suggestions" target="_blank">required to display these suggestions</a>,
+                  which help users follow up on the information the model used for its response.
+                </ql-infobox>
+              </li>
+              <li>
+                <p>Notice that in the left pane, you are in the <strong>Trace</strong> tab by default. Click on your last query text (<code>I know the Summer olympics are happening
+                  in 2028, please tell me which countries are participating and what events will be held.</code>) to see a trace of how long different parts of your query took to
+                  execute.</p>
+                <p>You can use this to debug more complex executions involving tool calls to understand how various processes contribute to the latency of your responses.</p>
+                <button class="js-img-container" aria-haspopup="true"><img alt="Trace of the Agent call" height="300"
+                                                                           src="https://cdn.qwiklabs.com/k6U7ldQvtjQBlUWL%2B3HgYm1tDKCwPKa4wphFOUUbyWA%3D"></button>
+              </li>
+              <li>
+                <p>Return to the chat discussion section of the window, and click the agent icon (
+                  <button class="js-img-container" aria-haspopup="true"><img alt="agent_icon" src="https://cdn.qwiklabs.com/0qmcUwc%2BaHGB6en11vU3HeZL1%2FsZuhC48PulduLYczg%3D">
+                  </button>
+                  ) next to the agent's response in the right pane to inspect the event returned by the agent. This event includes the <code>content</code> returned to the user and
+                  <code>groundingMetadata</code> detailing the search results that the response was based on.
+                </p>
+              </li>
+              <li>
+                <p>When you are finished exploring the ADK Dev UI, close this browser tab.</p>
+              </li>
+              <li>
+                <p>Return to your browser tab with the Cloud Shell Terminal and click in the terminal's pane.</p>
+              </li>
+              <li>
+                <p>Press CTRL+C to stop the web server.</p>
+              </li>
+            </ol>
+            <p>Click <strong>Check my progress</strong> to verify the objective.
+              <ql-activity-tracking step="1">
+                <template shadowrootmode="open"><!---->
+                  <ql-assessment aria-label="">
+                    <template shadowrootmode="open"><!---->
+                      <div class="assessment-left">
+                        <ql-assessment-status>
+                          <template shadowrootmode="open"><!---->
+                            <div class="status" role="progressbar" aria-live="assertive" status="uninitialized" tooltip="Start lab to track your progress." aria-hidden="true"
+                                 aria-valuenow="0" aria-label=""><!--?lit$583449698$--></div>
+                          </template>
+                        </ql-assessment-status>
+                      </div>
+
+                      <div class="assessment-right">
+                        <div class="assessment-content">
+                          <slot></slot>
+                        </div>
+
+                        <!--?lit$583449698$-->
+                      </div>
+                    </template>
+                    <p>
+                      <slot><!--?lit$583449698$-->I completed this step.</slot>
+                    </p>
+
+
+                  </ql-assessment>
+                </template>
+                Run the agent using the ADK Web UI.
+              </ql-activity-tracking>
+            </p>
+            <h2 id="step8">Task 4. Run an agent programmatically</h2>
+            <p>While the ADK Dev UI is great for testing and debugging, it is not suitable for presenting your agent to multiple users in production.</p>
+            <p>To run an agent as part of a larger application, you need to include a few additional components in your <code>agent.py</code> script that the web app handled for
+              you in the previous task. Proceed with the following steps to open a script with these components to review them.</p>
+            <ol>
+              <li>
+                <p>You can set environment variables for all of your agents to use if they do not have .env files in their directories. In the Cloud Shell Terminal run the
+                  following commands to export environment variables:</p>
+                <code-block nowrap="" templated="" language="routeros">
+                  <template shadowrootmode="open"><!---->
+                    <div class=" container light-theme ">
+        <pre class="hljs routeros"><span class="hljs-builtin-name">export</span> <span class="hljs-attribute">GOOGLE_GENAI_USE_VERTEXAI</span>=<span
+          class="hljs-literal">TRUE</span>
+<span class="hljs-builtin-name">export</span> <span class="hljs-attribute">GOOGLE_CLOUD_PROJECT</span>=YOUR_GCP_PROJECT_ID
+<span class="hljs-builtin-name">export</span> <span class="hljs-attribute">GOOGLE_CLOUD_LOCATION</span>=global
+<span class="hljs-builtin-name">export</span> <span class="hljs-attribute">MODEL</span>=gemini_flash_model_id</pre>
+                    </div>
+                    <!--?lit$583449698$-->
+                    <div class="copy-container"> <!--?lit$583449698$-->
+                      <span class="copied-message" aria-hidden="true" role="alert" aria-label="Copied!">
+        <!--?lit$583449698$-->Copied!
+      </span>
+                      <!--?lit$583449698$-->
+
+                    </div>
+
+                  </template>
+                  export GOOGLE_GENAI_USE_VERTEXAI=TRUE
+                  export GOOGLE_CLOUD_PROJECT={{{project_0.project_id| YOUR_GCP_PROJECT_ID}}}
+                  export GOOGLE_CLOUD_LOCATION=global
+                  export MODEL={{{project_0.startup_script.gemini_flash_model_id | gemini_flash_model_id}}}
+                </code-block>
+              </li>
+              <li>
+                <p>In the Cloud Shell Editor file browser, click <strong>adk_project/app_agent</strong>.</p>
+              </li>
+              <li>
+                <p>Click the <strong>agent.py</strong> file in this directory.</p>
+              </li>
+              <li>
+                <p>This agent is designed to run as part of an application. Read the commented code in <code>agent.py</code>, paying particular attention to the following
+                  components in the code:</p>
+                <ul>
+                  <li>
+                    <code>InMemoryRunner()</code> (around line 68), an oversight of agent execution feature: The Runner is the code responsible for receiving the user's query,
+                    passing it to the appropriate agent, receiving the agent's response event and passing it back to the calling application or UI, and then triggering the
+                    following event. You can read more in the ADK <a href="https://google.github.io/adk-docs/runtime/#the-heartbeat-the-event-loop-inner-workings" target="_blank">documentation
+                    about the event loop</a>.
+                  </li>
+                  <li>
+                    <code>runner.session_service.create_session()</code> (around line 71), a conversation history and shared state feature. Sessions allow an agent to preserve
+                    state, remembering a list of items, the current status of a task, or other 'current' information. This class creates a local session service for simplicity, but
+                    in production this could be handled by a database.
+                  </li>
+                  <li>
+                    <code>types.Content()</code> and <code>types.Part()</code> (around lines 78 and 79), a structured, multimodal messages feature. Instead of a simple string, the
+                    agent is passed a Content object which can consist of multiple Parts. This allows for complex messages, including text and multimodal content to be passed to
+                    the agent in a specific order.
+                  </li>
+                </ul>
+                <ql-infobox>
+                  <template shadowrootmode="open"><!---->
+                    <aside part="aside">
+                      <slot></slot>
+                    </aside>
+                  </template>
+                  <strong>Note: </strong>When you ran the agent in the ADK Dev UI, it created a session service, artifact service, and runner for you. When you write your own
+                  agents to deploy programmatically, it is recommended that you provide these components as external services rather than relying on in-memory versions.
+                </ql-infobox>
+                <p>Notice that the script includes a hardcoded query (around line 93), which asks the agent: <code>"What is the capital of France?"</code></p>
+              </li>
+              <li>
+                <p>Run the following command in the Cloud Shell Terminal to run this agent programmatically:</p>
+                <code-block language="vim">
+                  <template shadowrootmode="open"><!---->
+                    <div class=" container light-theme ">
+                      <pre class="wrap hljs vim"><span class="hljs-keyword">python3</span> app_agent/agent.<span class="hljs-keyword">py</span></pre>
+                    </div>
+                    <!--?lit$583449698$-->
+                    <div class="copy-container"> <!--?lit$583449698$-->
+                      <span class="copied-message" aria-hidden="true" role="alert" aria-label="Copied!">
+        <!--?lit$583449698$-->Copied!
+      </span>
+                      <!--?lit$583449698$-->
+
+                    </div>
+
+                  </template>
+                  python3 app_agent/agent.py
+                </code-block>
+                <p><strong>Selected Output</strong>:</p>
+                <code-block output="" language="mercury">
+                  <template shadowrootmode="open"><!---->
+                    <div class=" container dark-theme ">
+        <pre class="wrap hljs mercury">** User says: What <span class="hljs-keyword">is</span> the capital of France?
+...
+** trivia_agent: The capital of France <span class="hljs-keyword">is</span> Paris.</pre>
+                    </div>
+                    <!--?lit$583449698$-->
+                  </template>
+                  ** User says: What is the capital of France?
+                  ...
+                  ** trivia_agent: The capital of France is Paris.
+                </code-block>
+              </li>
+            </ol>
+            <h3>Add Pydantic schema classes</h3>
+            <p>You can also define specific input and/or output schema for an agent as follows:</p>
+            <ol>
+              <li>
+                <p>Around line 28, add the following import statements for the <a href="https://docs.pydantic.dev/1.10/usage/schema/" target="_blank">Pydantic schema classes</a>
+                  <code>BaseModel</code> and <code>Field</code> to define a schema class:</p>
+                <code-block nowrap="" language="python">
+                  <template shadowrootmode="open"><!---->
+                    <div class=" container light-theme ">
+        <pre class="hljs python"><span class="hljs-keyword">from</span> pydantic <span class="hljs-keyword">import</span> BaseModel, Field
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">CountryCapital</span>(<span class="hljs-params">BaseModel</span>):</span>
+    capital: <span class="hljs-built_in">str</span> = Field(description=<span class="hljs-string">"A country's capital."</span>)</pre>
+                    </div>
+                    <!--?lit$583449698$-->
+                    <div class="copy-container"> <!--?lit$583449698$-->
+                      <span class="copied-message" aria-hidden="true" role="alert" aria-label="Copied!">
+        <!--?lit$583449698$-->Copied!
+      </span>
+                      <!--?lit$583449698$-->
+                      <ql-icon-button class="copy-button" label="Copy" title="Copy" aria-label="Copy from pydantic import BaseModel, Field
+
+class CountryCapital(BaseModel):
+    capital: str = Field(description=&quot;A country's capital.&quot;)" translate="no" type="button">
+                        <template shadowrootmode="open"><!----> <!--?lit$583449698$-->
+                          <div class="buttonContainer" aria-disabled="false">
+                            <!--?lit$583449698$-->
+                            <md-icon-button class=" ql-icon-button " data-aria-label="Copy" data-aria-busy="false" value="">
+                              <template shadowrootmode="open" shadowrootdelegatesfocus=""><!---->
+                                <button id="button" class="icon-button  standard " aria-label="Copy">
+                                  <!--?lit$583449698$-->
+                                  <md-focus-ring part="focus-ring" for="button" aria-hidden="true">
+                                    <template shadowrootmode="open"><!----></template>
+                                  </md-focus-ring>
+                                  <!--?lit$583449698$-->
+                                  <md-ripple aria-hidden="true">
+                                    <template shadowrootmode="open"><!---->
+                                      <div class="surface   "></div>
+                                    </template>
+                                  </md-ripple>
+                                  <!--?lit$583449698$--><span class="icon"><slot></slot></span>
+                                  <!--?lit$583449698$-->
+                                  <!--?lit$583449698$--><span class="touch"></span>
+                                </button>
+                              </template>
+                              <!--?lit$583449698$-->
+                              <ql-icon translate="no">
+                                <template shadowrootmode="open"><!---->
+                                  <span aria-hidden="true" class=" google-symbols " style="font-size: inherit;">
+        <slot><!--?lit$583449698$--></slot>
+      </span>
+                                  <!--?lit$583449698$--><!--?-->
+                                </template><!--?lit$583449698$-->
+                                <slot></slot>
+                              </ql-icon>
+                            </md-icon-button>
+                          </div>
+                          <!--?lit$583449698$--> </template>
+                        content_copy
+                      </ql-icon-button>
+                    </div>
+
+                  </template>
+                  from pydantic import BaseModel, Field
+
+                  class CountryCapital(BaseModel):
+                  capital: str = Field(description="A country's capital.")
+                </code-block>
+              </li>
+              <li>
+                <p>In your <code>root_agent</code>'s <code>Agent</code> definition, around line 62, set the <code>output_schema</code> parameter to use the
+                  <code>CountryCapital</code> schema you defined above:</p>
+                <code-block language="routeros">
+                  <template shadowrootmode="open"><!---->
+                    <div class=" container light-theme ">
+                      <pre class="wrap hljs routeros">        <span class="hljs-attribute">output_schema</span>=CountryCapital</pre>
+                    </div>
+                    <!--?lit$583449698$-->
+                    <div class="copy-container"> <!--?lit$583449698$-->
+                      <span class="copied-message" aria-hidden="true" role="alert" aria-label="Copied!">
+        <!--?lit$583449698$-->Copied!
+      </span>
+                      <!--?lit$583449698$-->
+                      <ql-icon-button class="copy-button" label="Copy" title="Copy" aria-label="Copy         output_schema=CountryCapital" translate="no" type="button">
+                        <template shadowrootmode="open"><!----> <!--?lit$583449698$-->
+                          <div class="buttonContainer" aria-disabled="false">
+                            <!--?lit$583449698$-->
+                            <md-icon-button class=" ql-icon-button " data-aria-label="Copy" data-aria-busy="false" value="">
+                              <template shadowrootmode="open" shadowrootdelegatesfocus=""><!---->
+                                <button id="button" class="icon-button  standard " aria-label="Copy">
+                                  <!--?lit$583449698$-->
+                                  <md-focus-ring part="focus-ring" for="button" aria-hidden="true">
+                                    <template shadowrootmode="open"><!----></template>
+                                  </md-focus-ring>
+                                  <!--?lit$583449698$-->
+                                  <md-ripple aria-hidden="true">
+                                    <template shadowrootmode="open"><!---->
+                                      <div class="surface   "></div>
+                                    </template>
+                                  </md-ripple>
+                                  <!--?lit$583449698$--><span class="icon"><slot></slot></span>
+                                  <!--?lit$583449698$-->
+                                  <!--?lit$583449698$--><span class="touch"></span>
+                                </button>
+                              </template>
+                              <!--?lit$583449698$-->
+                              <ql-icon translate="no">
+                                <template shadowrootmode="open"><!---->
+                                  <span aria-hidden="true" class=" google-symbols " style="font-size: inherit;">
+        <slot><!--?lit$583449698$--></slot>
+      </span>
+                                  <!--?lit$583449698$--><!--?-->
+                                </template><!--?lit$583449698$-->
+                                <slot></slot>
+                              </ql-icon>
+                            </md-icon-button>
+                          </div>
+                          <!--?lit$583449698$--> </template>
+                        content_copy
+                      </ql-icon-button>
+                    </div>
+
+                  </template>
+                  output_schema=CountryCapital
+                </code-block>
+              </li>
+              <li>
+                <p>Run the agent script again to see the response following the <code>output_schema</code>:</p>
+                <code-block language="vim">
+                  <template shadowrootmode="open"><!---->
+                    <div class=" container light-theme ">
+                      <pre class="wrap hljs vim"><span class="hljs-keyword">python3</span> app_agent/agent.<span class="hljs-keyword">py</span></pre>
+                    </div>
+                    <!--?lit$583449698$-->
+                    <div class="copy-container"> <!--?lit$583449698$-->
+                      <span class="copied-message" aria-hidden="true" role="alert" aria-label="Copied!">
+        <!--?lit$583449698$-->Copied!
+      </span>
+                      <!--?lit$583449698$-->
+
+                    </div>
+
+                  </template>
+                  python3 app_agent/agent.py
+                </code-block>
+                <p><strong>Selected Output</strong>:</p>
+                <code-block language="plaintext" nowrap="" output="">
+                  <template shadowrootmode="open"><!---->
+                    <div class=" container dark-theme ">
+        <pre class="plaintext hljs">** User says: What is the capital of France?
+...
+** trivia_agent: {"capital": "Paris"}</pre>
+                    </div>
+                    <!--?lit$583449698$-->
+                  </template>
+                  ** User says: What is the capital of France?
+                  ...
+                  ** trivia_agent: {"capital": "Paris"}
+                </code-block>
+              </li>
+            </ol>
+            <p>Click <strong>Check my progress</strong> to verify the objective.
+              <ql-activity-tracking step="2">
+                <template shadowrootmode="open"><!---->
+                  <ql-assessment aria-label="">
+                    <template shadowrootmode="open"><!---->
+                      <div class="assessment-left">
+                        <ql-assessment-status>
+                          <template shadowrootmode="open"><!---->
+                            <div class="status" role="progressbar" aria-live="assertive" status="uninitialized" tooltip="Start lab to track your progress." aria-hidden="true"
+                                 aria-valuenow="0" aria-label=""><!--?lit$583449698$--></div>
+                          </template>
+                        </ql-assessment-status>
+                      </div>
+
+                      <div class="assessment-right">
+                        <div class="assessment-content">
+                          <slot></slot>
+                        </div>
+
+                        <!--?lit$583449698$-->
+                      </div>
+                    </template>
+                    <p>
+                      <slot><!--?lit$583449698$-->I completed this step.</slot>
+                    </p>
+
+
+                  </ql-assessment>
+                </template>
+                Run an agent programmatically.
+              </ql-activity-tracking>
+            </p>
+            <h2 id="step9">Task 5. Chat with an agent via the command-line interface</h2>
+            <p>You can also chat with an agent in your local development environment by using the command line interface. This can be very handy for quickly debugging and testing
+              agents as you develop them.</p>
+            <p>Like the web interface, the command line interface also handles the creation of the session service, artifact service, and runner for your agent.</p>
+            <p>To run an interactive session using the command line interface:</p>
+            <ol>
+              <li>
+                <p>Run the following in Cloud Shell Terminal:</p>
+                <code-block language="routeros">
+                  <template shadowrootmode="open"><!---->
+                    <div class=" container light-theme ">
+                      <pre class="wrap hljs routeros">adk <span class="hljs-builtin-name">run</span> my_google_search_agent</pre>
+                    </div>
+                    <!--?lit$583449698$-->
+                    <div class="copy-container"> <!--?lit$583449698$-->
+                      <span class="copied-message" aria-hidden="true" role="alert" aria-label="Copied!">
+        <!--?lit$583449698$-->Copied!
+      </span>
+                      <!--?lit$583449698$-->
+                      <ql-icon-button class="copy-button" label="Copy" title="Copy" aria-label="Copy adk run my_google_search_agent" translate="no" type="button">
+                        <template shadowrootmode="open"><!----> <!--?lit$583449698$-->
+                          <div class="buttonContainer" aria-disabled="false">
+                            <!--?lit$583449698$-->
+                            <md-icon-button class=" ql-icon-button " data-aria-label="Copy" data-aria-busy="false" value="">
+                              <template shadowrootmode="open" shadowrootdelegatesfocus=""><!---->
+                                <button id="button" class="icon-button  standard " aria-label="Copy">
+                                  <!--?lit$583449698$-->
+                                  <md-focus-ring part="focus-ring" for="button" aria-hidden="true">
+                                    <template shadowrootmode="open"><!----></template>
+                                  </md-focus-ring>
+                                  <!--?lit$583449698$-->
+                                  <md-ripple aria-hidden="true">
+                                    <template shadowrootmode="open"><!---->
+                                      <div class="surface   "></div>
+                                    </template>
+                                  </md-ripple>
+                                  <!--?lit$583449698$--><span class="icon"><slot></slot></span>
+                                  <!--?lit$583449698$-->
+                                  <!--?lit$583449698$--><span class="touch"></span>
+                                </button>
+                              </template>
+                              <!--?lit$583449698$-->
+                              <ql-icon translate="no">
+                                <template shadowrootmode="open"><!---->
+                                  <span aria-hidden="true" class=" google-symbols " style="font-size: inherit;">
+        <slot><!--?lit$583449698$--></slot>
+      </span>
+                                  <!--?lit$583449698$--><!--?-->
+                                </template><!--?lit$583449698$-->
+                                <slot></slot>
+                              </ql-icon>
+                            </md-icon-button>
+                          </div>
+                          <!--?lit$583449698$--> </template>
+                        content_copy
+                      </ql-icon-button>
+                    </div>
+
+                  </template>
+                  adk run my_google_search_agent
+                </code-block>
+                <p><strong>Output</strong>:</p>
+                <code-block language="plaintext" nowrap="" output="">
+                  <template shadowrootmode="open"><!---->
+                    <div class=" container dark-theme ">
+        <pre class="plaintext hljs">Log setup complete: /tmp/agents_log/agent.20250322_010300.log
+To access latest log: tail -F /tmp/agents_log/agent.latest.log
+Running agent basic_search_agent, type exit to exit.
+user:</pre>
+                    </div>
+                    <!--?lit$583449698$-->
+                  </template>
+                  Log setup complete: /tmp/agents_log/agent.20250322_010300.log
+                  To access latest log: tail -F /tmp/agents_log/agent.latest.log
+                  Running agent basic_search_agent, type exit to exit.
+                  user:
+                </code-block>
+              </li>
+              <li>
+                <p>Input the following message:</p>
+                <code-block language="applescript">
+                  <template shadowrootmode="open"><!---->
+                    <div class=" container light-theme ">
+                      <pre class="wrap hljs applescript">What are <span class="hljs-keyword">some</span> popular movies <span
+                        class="hljs-keyword">that</span> have been released <span class="hljs-keyword">in</span> India this <span class="hljs-built_in">year</span>?</pre>
+                    </div>
+                    <!--?lit$583449698$-->
+                    <div class="copy-container"> <!--?lit$583449698$-->
+                      <span class="copied-message" aria-hidden="true" role="alert" aria-label="Copied!">
+        <!--?lit$583449698$-->Copied!
+      </span>
+                      <!--?lit$583449698$-->
+                      <ql-icon-button class="copy-button" label="Copy" title="Copy" aria-label="Copy What are some popular movies that have been released in India this year?"
+                                      translate="no" type="button">
+                        <template shadowrootmode="open"><!----> <!--?lit$583449698$-->
+                          <div class="buttonContainer" aria-disabled="false">
+                            <!--?lit$583449698$-->
+                            <md-icon-button class=" ql-icon-button " data-aria-label="Copy" data-aria-busy="false" value="">
+                              <template shadowrootmode="open" shadowrootdelegatesfocus=""><!---->
+                                <button id="button" class="icon-button  standard " aria-label="Copy">
+                                  <!--?lit$583449698$-->
+                                  <md-focus-ring part="focus-ring" for="button" aria-hidden="true">
+                                    <template shadowrootmode="open"><!----></template>
+                                  </md-focus-ring>
+                                  <!--?lit$583449698$-->
+                                  <md-ripple aria-hidden="true">
+                                    <template shadowrootmode="open"><!---->
+                                      <div class="surface   "></div>
+                                    </template>
+                                  </md-ripple>
+                                  <!--?lit$583449698$--><span class="icon"><slot></slot></span>
+                                  <!--?lit$583449698$-->
+                                  <!--?lit$583449698$--><span class="touch"></span>
+                                </button>
+                              </template>
+                              <!--?lit$583449698$-->
+                              <ql-icon translate="no">
+                                <template shadowrootmode="open"><!---->
+                                  <span aria-hidden="true" class=" google-symbols " style="font-size: inherit;">
+        <slot><!--?lit$583449698$--></slot>
+      </span>
+                                  <!--?lit$583449698$--><!--?-->
+                                </template><!--?lit$583449698$-->
+                                <slot></slot>
+                              </ql-icon>
+                            </md-icon-button>
+                          </div>
+                          <!--?lit$583449698$--> </template>
+                        content_copy
+                      </ql-icon-button>
+                    </div>
+
+                  </template>
+                  What are some popular movies that have been released in India this year?
+                </code-block>
+                <p><strong>Example output (yours may be a little different):</strong></p>
+                <code-block language="plaintext" nowrap="" output="">
+                  <template shadowrootmode="open"><!---->
+                    <div class=" container dark-theme ">
+        <pre class="plaintext hljs" tabindex="0" role="region">[google_search_agent]: Here are some of the movies that have been released in India in the past month (January 2026 to early February 2026):
+*   **January 16, 2026**: *Bihu Attack*, *Happy Patel: Khatarnak Jasoos*.
+*   **January 23, 2026**: *Border 2*.
+*   **January 30, 2026**: *Mardaani 3*, *Mayasabha - The Hall of Illusion*.
+*   **February 5, 2026**: *Vadh 2*, *Haunted 3D: Ghosts Of The Past*.
+*   **February 13, 2026**: *Tu Yaa Main*, *O'Romeo*, *Swayambhu*,.
+*   **February 19, 2026**: *Veer Murarbaji*, *Do Deewane Seher Mein*.
+*   **February 20, 2026**: *Epic: Elvis Presley In Concert*, *Hamnet*.
+*   **February 26, 2026**: *The Kerala Story 2 Goes Beyond*.</pre>
+                    </div>
+                    <!--?lit$583449698$-->
+                  </template>
+                  [google_search_agent]: Here are some of the movies that have been released in India in the past month (January 2026 to early February 2026):
+                  * **January 16, 2026**: *Bihu Attack*, *Happy Patel: Khatarnak Jasoos*.
+                  * **January 23, 2026**: *Border 2*.
+                  * **January 30, 2026**: *Mardaani 3*, *Mayasabha - The Hall of Illusion*.
+                  * **February 5, 2026**: *Vadh 2*, *Haunted 3D: Ghosts Of The Past*.
+                  * **February 13, 2026**: *Tu Yaa Main*, *O'Romeo*, *Swayambhu*,.
+                  * **February 19, 2026**: *Veer Murarbaji*, *Do Deewane Seher Mein*.
+                  * **February 20, 2026**: *Epic: Elvis Presley In Concert*, *Hamnet*.
+                  * **February 26, 2026**: *The Kerala Story 2 Goes Beyond*.
+                </code-block>
+              </li>
+              <li>
+                <p>When you are finished chatting with the command line interface, enter <strong>exit</strong> at the next user prompt to end the chat.</p>
+              </li>
+            </ol>
+            <h2 id="step10">Task 6. Preview a multi-agent example</h2>
+            <p>In this task, you explore a multi-agent system to understand a core ADK capability.</p>
+            <p>This agentic system evaluates and improves the factual grounding of responses generated by LLMs. It includes:</p>
+            <ul>
+              <li>a <code>critic_agent</code> to serve as an automated fact-checker</li>
+              <li>a <code>reviser_agent</code> to rewrite responses if needed to correct inaccuracies based on verified findings</li>
+            </ul>
+            <p>To explore this agent:</p>
+            <ol>
+              <li>
+                <p>Use the Cloud Shell Editor file explorer to navigate to the directory <code>adk_project/llm_auditor</code>.</p>
+              </li>
+              <li>
+                <p>Within the <code>llm_auditor</code> directory, click <strong>agent.py</strong>.</p>
+              </li>
+              <li>
+                <p>Here are a few things to notice about this multi-agent example:</p>
+                <ul>
+                  <li>The <code>SequentialAgent</code> is a workflow class that passes conversation control between agents sequentially without requiring user input. When executed,
+                    the <code>critic_agent</code> and <code>reviser_agent</code> respond in order automatically."
+                  </li>
+                  <li>These sub-agents are each imported from their own directories within a <code>sub_agents</code> directory.</li>
+                  <li>Sub-agent directories contain <code>init.py</code>, <code>agent.py</code> and <code>prompt.py</code>. Use prompt.py to manage complex prompts independently
+                    before importing them into agent.py.
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <p>Copy the <code>.env</code> file you created earlier to be used by this agent as well and launch the ADK Dev UI again by running the following in the Cloud Shell
+                  Terminal:</p>
+                <code-block nowrap="" templated="" language="jboss-cli">
+                  <template shadowrootmode="open"><!---->
+                    <div class=" container light-theme ">
+        <pre class="hljs jboss-cli"><span class="hljs-keyword">cd</span> ~<span class="hljs-string">/adk_project</span>
+cp my_google_search_agent/<span class="hljs-string">.env</span> llm_auditor/<span class="hljs-string">.env</span>
+
+adk web \
+<span class="hljs-params">--allow_origins</span> <span class="hljs-string">"regex:https://.*\.cloudshell\.dev"</span> \
+<span class="hljs-params">--otel_to_cloud</span> \
+<span class="hljs-params">--reload_agents</span></pre>
+                    </div>
+                    <!--?lit$583449698$-->
+                    <div class="copy-container"> <!--?lit$583449698$-->
+                      <span class="copied-message" aria-hidden="true" role="alert" aria-label="Copied!">
+        <!--?lit$583449698$-->Copied!
+      </span>
+                      <!--?lit$583449698$-->
+                      <ql-icon-button class="copy-button" label="Copy" title="Copy" aria-label="Copy cd ~/adk_project
+cp my_google_search_agent/.env llm_auditor/.env
+
+adk web \
+--allow_origins &quot;regex:https://.*\.cloudshell\.dev&quot; \
+--otel_to_cloud \
+--reload_agents" translate="no" type="button">
+                        <template shadowrootmode="open"><!----> <!--?lit$583449698$-->
+                          <div class="buttonContainer" aria-disabled="false">
+                            <!--?lit$583449698$-->
+                            <md-icon-button class=" ql-icon-button " data-aria-label="Copy" data-aria-busy="false" value="">
+                              <template shadowrootmode="open" shadowrootdelegatesfocus=""><!---->
+                                <button id="button" class="icon-button  standard " aria-label="Copy">
+                                  <!--?lit$583449698$-->
+                                  <md-focus-ring part="focus-ring" for="button" aria-hidden="true">
+                                    <template shadowrootmode="open"><!----></template>
+                                  </md-focus-ring>
+                                  <!--?lit$583449698$-->
+                                  <md-ripple aria-hidden="true">
+                                    <template shadowrootmode="open"><!---->
+                                      <div class="surface   "></div>
+                                    </template>
+                                  </md-ripple>
+                                  <!--?lit$583449698$--><span class="icon"><slot></slot></span>
+                                  <!--?lit$583449698$-->
+                                  <!--?lit$583449698$--><span class="touch"></span>
+                                </button>
+                              </template>
+                              <!--?lit$583449698$-->
+                              <ql-icon translate="no">
+                                <template shadowrootmode="open"><!---->
+                                  <span aria-hidden="true" class=" google-symbols " style="font-size: inherit;">
+        <slot><!--?lit$583449698$--></slot>
+      </span>
+                                  <!--?lit$583449698$--><!--?-->
+                                </template><!--?lit$583449698$-->
+                                <slot></slot>
+                              </ql-icon>
+                            </md-icon-button>
+                          </div>
+                          <!--?lit$583449698$--> </template>
+                        content_copy
+                      </ql-icon-button>
+                    </div>
+
+                  </template>
+                  cd ~/adk_project
+                  cp my_google_search_agent/.env llm_auditor/.env
+
+                  adk web \
+                  --allow_origins "regex:https://.*\.cloudshell\.dev" \
+                  --otel_to_cloud \
+                  --reload_agents
+                </code-block>
+                <ql-infobox>
+                  <template shadowrootmode="open"><!---->
+                    <aside part="aside">
+                      <slot></slot>
+                    </aside>
+                  </template>
+                  <strong>Note:</strong> If you did not shut down your previous <code>adk web</code> session, the default port of 8000 is blocked, but you can launch the Dev UI
+                  with a new port by using <code>adk web --port 8001</code>, for example.
+                </ql-infobox>
+              </li>
+              <li>
+                <p>Click the <strong>http://127.0.0.1:8000</strong> link in the Terminal output. A new browser tab opens with the ADK Dev UI.</p>
+              </li>
+              <li>
+                <p>From the <strong>Select an agent</strong> menu options on the left, select <strong>llm_auditor</strong>.</p>
+              </li>
+              <li>
+                <p>Start the conversation with the following false statement:</p>
+                <code-block language="smali">
+                  <template shadowrootmode="open"><!---->
+                    <div class=" container light-theme ">
+                      <pre class="wrap hljs smali">Double<span class="hljs-built_in"> check </span>this: Earth is further away from the Sun than Mars.</pre>
+                    </div>
+                    <!--?lit$583449698$-->
+                    <div class="copy-container"> <!--?lit$583449698$-->
+                      <span class="copied-message" aria-hidden="true" role="alert" aria-label="Copied!">
+        <!--?lit$583449698$-->Copied!
+      </span>
+                      <!--?lit$583449698$-->
+                      <ql-icon-button class="copy-button" label="Copy" title="Copy" aria-label="Copy Double check this: Earth is further away from the Sun than Mars."
+                                      translate="no" type="button">
+                        <template shadowrootmode="open"><!----> <!--?lit$583449698$-->
+                          <div class="buttonContainer" aria-disabled="false">
+                            <!--?lit$583449698$-->
+                            <md-icon-button class=" ql-icon-button " data-aria-label="Copy" data-aria-busy="false" value="">
+                              <template shadowrootmode="open" shadowrootdelegatesfocus=""><!---->
+                                <button id="button" class="icon-button  standard " aria-label="Copy">
+                                  <!--?lit$583449698$-->
+                                  <md-focus-ring part="focus-ring" for="button" aria-hidden="true">
+                                    <template shadowrootmode="open"><!----></template>
+                                  </md-focus-ring>
+                                  <!--?lit$583449698$-->
+                                  <md-ripple aria-hidden="true">
+                                    <template shadowrootmode="open"><!---->
+                                      <div class="surface   "></div>
+                                    </template>
+                                  </md-ripple>
+                                  <!--?lit$583449698$--><span class="icon"><slot></slot></span>
+                                  <!--?lit$583449698$-->
+                                  <!--?lit$583449698$--><span class="touch"></span>
+                                </button>
+                              </template>
+                              <!--?lit$583449698$-->
+                              <ql-icon translate="no">
+                                <template shadowrootmode="open"><!---->
+                                  <span aria-hidden="true" class=" google-symbols " style="font-size: inherit;">
+        <slot><!--?lit$583449698$--></slot>
+      </span>
+                                  <!--?lit$583449698$--><!--?-->
+                                </template><!--?lit$583449698$-->
+                                <slot></slot>
+                              </ql-icon>
+                            </md-icon-button>
+                          </div>
+                          <!--?lit$583449698$--> </template>
+                        content_copy
+                      </ql-icon-button>
+                    </div>
+
+                  </template>
+                  Double check this: Earth is further away from the Sun than Mars.
+                </code-block>
+              </li>
+            </ol>
+            <p>You should see two responses from the agent in the chat area:</p>
+            <ul>
+              <li>First, a detailed response from the <code>critic_agent</code> checking the truthfulness of the statement based on fact-checking with Google Search.</li>
+              <li>Second, a short revised statement from the <code>reviser_agent</code> with a corrected version of your false input statement, for example, "Earth is closer to the
+                Sun than Mars."
+              </li>
+            </ul>
+            <ol start="8">
+              <li>Next to each response, click the agent icon (
+                <button class="js-img-container" aria-haspopup="true"><img alt="agent_icon" src="https://cdn.qwiklabs.com/0qmcUwc%2BaHGB6en11vU3HeZL1%2FsZuhC48PulduLYczg%3D">
+                </button>
+                ) to open the event panel for that response (or find the corresponding numbered event on the Events panel and select it).
+              </li>
+            </ol>
+            <p>At the top of the event view, there is a graph that visualizes the relationships between the agents and tools in this multi-agent system. The agent responsible for
+              this response is highlighted.</p>
+            <ol start="9">
+              <li>
+                <p>Explore the code further or ask for other fact-checking examples in the Dev UI. Another example you can try is:</p>
+                <code-block language="livecodeserver">
+                  <template shadowrootmode="open"><!---->
+                    <div class=" container light-theme ">
+                      <pre class="wrap hljs livecodeserver">Q: Why is <span class="hljs-keyword">the</span> sky blue? A: Because <span class="hljs-keyword">the</span> sky reflects <span
+                        class="hljs-keyword">the</span> color <span class="hljs-keyword">of</span> <span class="hljs-keyword">the</span> ocean.</pre>
+                    </div>
+                    <!--?lit$583449698$-->
+                    <div class="copy-container"> <!--?lit$583449698$-->
+                      <span class="copied-message" aria-hidden="true" role="alert" aria-label="Copied!">
+        <!--?lit$583449698$-->Copied!
+      </span>
+                      <!--?lit$583449698$-->
+                      <ql-icon-button class="copy-button" label="Copy" title="Copy" aria-label="Copy Q: Why is the sky blue? A: Because the sky reflects the color of the ocean."
+                                      translate="no" type="button">
+                        <template shadowrootmode="open"><!----> <!--?lit$583449698$-->
+                          <div class="buttonContainer" aria-disabled="false">
+                            <!--?lit$583449698$-->
+                            <md-icon-button class=" ql-icon-button " data-aria-label="Copy" data-aria-busy="false" value="">
+                              <template shadowrootmode="open" shadowrootdelegatesfocus=""><!---->
+                                <button id="button" class="icon-button  standard " aria-label="Copy">
+                                  <!--?lit$583449698$-->
+                                  <md-focus-ring part="focus-ring" for="button" aria-hidden="true">
+                                    <template shadowrootmode="open"><!----></template>
+                                  </md-focus-ring>
+                                  <!--?lit$583449698$-->
+                                  <md-ripple aria-hidden="true">
+                                    <template shadowrootmode="open"><!---->
+                                      <div class="surface   "></div>
+                                    </template>
+                                  </md-ripple>
+                                  <!--?lit$583449698$--><span class="icon"><slot></slot></span>
+                                  <!--?lit$583449698$-->
+                                  <!--?lit$583449698$--><span class="touch"></span>
+                                </button>
+                              </template>
+                              <!--?lit$583449698$-->
+                              <ql-icon translate="no">
+                                <template shadowrootmode="open"><!---->
+                                  <span aria-hidden="true" class=" google-symbols " style="font-size: inherit;">
+        <slot><!--?lit$583449698$--></slot>
+      </span>
+                                  <!--?lit$583449698$--><!--?-->
+                                </template><!--?lit$583449698$-->
+                                <slot></slot>
+                              </ql-icon>
+                            </md-icon-button>
+                          </div>
+                          <!--?lit$583449698$--> </template>
+                        content_copy
+                      </ql-icon-button>
+                    </div>
+
+                  </template>
+                  Q: Why is the sky blue? A: Because the sky reflects the color of the ocean.
+                </code-block>
+              </li>
+              <li>
+                <p>If you would like to reset the conversation, click <strong>New Session</strong> on the session title bar to restart the conversation.</p>
+              </li>
+              <li>
+                <p>When you are finished asking questions of this agent, close the browser tab and press CTRL+C in the Terminal to stop the server.</p>
+              </li>
+            </ol>
+            <ql-infobox>
+              <template shadowrootmode="open"><!---->
+                <aside part="aside">
+                  <slot></slot>
+                </aside>
+              </template>
+              <p><strong>Note: </strong>Even though this example uses a <code>SequentialAgent</code> workflow agent, think of this pattern as a human-in-the-loop pattern.</p>
+              <p>When the <code>SequentialAgent</code> ends its sequence, the conversation goes back to its parent, the <code>llm_auditor</code> in this example, to get a new input
+                turn from the user and then pass the conversation back around to the other agents.</p>
+            </ql-infobox>
+            <p>Click <strong>Check my progress</strong> to verify the objective.
+              <ql-activity-tracking step="3">
+                <template shadowrootmode="open"><!---->
+                  <ql-assessment aria-label="">
+                    <template shadowrootmode="open"><!---->
+                      <div class="assessment-left">
+                        <ql-assessment-status>
+                          <template shadowrootmode="open"><!---->
+                            <div class="status" role="progressbar" aria-live="assertive" status="uninitialized" tooltip="Start lab to track your progress." aria-hidden="true"
+                                 aria-valuenow="0" aria-label=""><!--?lit$583449698$--></div>
+                          </template>
+                        </ql-assessment-status>
+                      </div>
+
+                      <div class="assessment-right">
+                        <div class="assessment-content">
+                          <slot></slot>
+                        </div>
+
+                        <!--?lit$583449698$-->
+                      </div>
+                    </template>
+                    <p>
+                      <slot><!--?lit$583449698$-->I completed this step.</slot>
+                    </p>
+
+
+                  </ql-assessment>
+                </template>
+                Preview a multi-agent example.
+              </ql-activity-tracking>
+            </p>
+          </div>
+        </div>
+
+        <div class="sub-heading" id="VertexAI_Chapter3.2">Lab: Empower ADK Agents with tools</div>
+        <div>
+          - Code is here: <a href="https://github.com/rgbk21/adk_tools">Github Private Repo</a>. <br>
+          - This lab covers the use of tools with Agent Development Kit agents. From powerful tools provided by Google, like Google Search and Vertex AI Search, to the rich variety
+          of tools available in the LangChain ecosystem, there are many tools to get started with. Additionally, creating your own tool from a function only requires writing a good
+          docstring! <br>
+          - After this lab, you will be able to: <br>
+          a) Provide prebuilt Google or LangChain tools to an agent <br>
+          b) Discuss the importance of structured docstrings and typing when writing functions for agent tools <br>
+          c) Write your own tool functions for an agent
+
+          <br>
+          <br>
+
+          <div class="sub-section">
+            These are the lab Instructions copied over from lesson:
+            <div>
+
+              <h2>Overview</h2>
+              <p>This lab covers the use of tools with Agent Development Kit agents.</p>
+              <p>From powerful tools provided by Google, like Google Search and Vertex AI Search, to the rich variety of tools available in the LangChain ecosystem, there are many
+                tools to get started with.</p>
+              <p>Additionally, creating your own tool from a function only requires writing a good docstring!</p>
+              <p>This lab assumes you are familiar with the basics of ADK covered in the lab <em>Get started with Agent Development Kit (ADK)</em>.</p>
+
+              <h2>Objective</h2>
+              <p>In this lab, you will learn about the ecosystem of tools available to ADK agents. You will also learn how to provide a function to an agent as a custom tool.</p>
+              <p>After this lab, you will be able to:</p>
+              <ul>
+                <li>Provide prebuilt Google or LangChain tools to an agent</li>
+                <li>Discuss the importance of structured docstrings and typing when writing functions for agent tools</li>
+                <li>Write your own tool functions for an agent</li>
+              </ul>
+
+              <h2>Tool use with the Agent Developer Kit</h2>
+              <p>Leveraging tools effectively is what truly distinguishes intelligent agents from basic models. A <strong>tool</strong> is a block of code, like a function or a
+                method, that executes specific actions such as interacting with databases, making API requests, or invoking other external services.</p>
+              <p>Tools empower agents to interact with other systems and perform actions beyond their core reasoning and generation capabilities. It's crucial to note that these
+                tools operate independently of the agent's LLM, meaning that tools do not automatically possess their own reasoning abilities.</p>
+              <p>Agent Development Kit provides developers with a diverse range of tool options:</p>
+              <ul>
+                <li>
+                  <strong>Pre-built Tools</strong>: Ready-to-use functionalities such as Google Search, Code Execution, and Retrieval-Augmented Generation (RAG) tools.
+                </li>
+                <li>
+                  <strong>Third-Party Tools</strong>: Seamless integration of tools from external libraries like LangChain
+                </li>
+                <li>
+                  <strong>Custom Tools</strong>: The ability to create custom tools tailored to specific requirements, by using language specific constructs and Agents-as-Tools. The
+                  SDK also provides asynchronous capabilities through Long Running Function Tools.
+                </li>
+              </ul>
+              <p>In this lab, you will explore these categories and implement one of each type.</p>
+
+              <h2>Available Pre-Built Tools from Google</h2>
+              <p>Google provides several useful tools for your agents. They include:</p>
+              <p><strong>Google Search</strong> (<code>google_search</code>): Allows the agent to perform web searches using Google Search. You simply add <code>google_search</code>
+                to the agent's tools.</p>
+              <p><strong>Code Execution</strong> (<code>built_in_code_execution</code>): This tool allows the agent to execute code, to perform calculations, data manipulation, or
+                interact with other systems programmatically. You can use the pre-built <code>VertexCodeInterpreter</code> or any code executor that implements the
+                <code>BaseCodeExecutor</code> interface.</p>
+              <p><strong>Retrieval</strong> (<code>retrieval</code>): A package of tools designed to fetch information from various sources.</p>
+              <p><strong>Vertex AI Search Tool</strong> (<code>VertexAiSearchTool</code>): This tool integrates with Google Cloud's Vertex AI Search service to allow the agent to
+                search through your AI Applications data stores.</p>
+
+              <h2>Task 1. Install ADK and set up your environment</h2>
+              <h3>Enable Vertex AI recommended APIs</h3>
+              <ol>
+                <li>In this lab environment, the <strong>Vertex AI API has been enabled for you</strong>. If you were to follow these steps in your own project, you could enable it
+                  by navigating to Vertex AI and following the prompt to enable it.
+                </li>
+              </ol>
+              <h3>Prepare a Cloud Shell Editor tab</h3>
+              <ol>
+                <li>With your Google Cloud console window selected, open Cloud Shell by pressing the G key and then the S key on your keyboard. Alternatively, you can click the
+                  Activate Cloud Shell button (
+                  <button class="js-img-container" aria-haspopup="true"><img alt="Activate Cloud Shell" height="24"
+                                                                             src="https://cdn.qwiklabs.com/0R1bagVsqDIuRxFoBFZDlx4p2FrWrR8pyIX90XlMIMo%3D"></button>
+                  ) in the upper right of the Cloud console.
+                </li>
+                <li>Click <strong>Continue</strong>.</li>
+                <li>When prompted to authorize Cloud Shell, click <strong>Authorize</strong>.</li>
+                <li>In the upper right corner of the Cloud Shell Terminal panel, click the <strong>Open in new window</strong> button
+                  <button class="js-img-container" aria-haspopup="true"><img alt="Open in new window button" height="24"
+                                                                             src="https://cdn.qwiklabs.com/g4I7jXdmqqSAUtXFvEv%2BUVPf%2FJ7v3AbMmd4cSeruvGI%3D"></button>
+                  .
+                </li>
+                <li>Click the <strong>Open Editor</strong> pencil icon (
+                  <button class="js-img-container" aria-haspopup="true"><img alt="Edit pencil icon" height="24"
+                                                                             src="https://cdn.qwiklabs.com/YEEoKikL4fSWKcfxpPyP%2BEEfg4619SPb9eIPTGG9QsA%3D"></button>
+                  ) at the top of the pane to view files.
+                </li>
+                <li>At the top of the left-hand navigation menu, click the Explorer icon (
+                  <button class="js-img-container" aria-haspopup="true"><img alt="Explorer icon" height="24"
+                                                                             src="https://cdn.qwiklabs.com/uOCsAsS9JuxOrJdQGBEaNhnUhKZ%2FB0SCCY2Jbb7tBEo%3D"></button>
+                  ) to open your file explorer.
+                </li>
+                <li>Click the <strong>Open Folder</strong> button.</li>
+                <li>In the Open Folder dialog that opens, click <strong>OK</strong> to select your Qwiklab student account's home folder.</li>
+                <li>Close any additional tutorial or Gemini panels that appear on the right side of the screen to save more of your window for your code editor.</li>
+                <li>Throughout the rest of this lab, you can work in this window as your IDE with the Cloud Shell Editor and Cloud Shell Terminal.</li>
+              </ol>
+
+              <h3>Download and install ADK and code samples for this lab</h3>
+              <ol start="9">
+                <li>
+                  <p>Paste the following commands into the Cloud Shell Terminal to download code for this lab from a Cloud Storage bucket:</p>
+                  <code>gcloud storage cp -r gs://YOUR_GCP_PROJECT_ID-bucket/adk_tools .</code>
+                </li>
+                <li>
+                  <p>Update your <code>PATH</code> environment variable, <strong>install ADK</strong>, and install some additional requirements for this lab by running the following
+                    commands in the Cloud Shell Terminal.</p>
+                  <code>export PATH=$PATH:"/home/${USER}/.local/bin"</code> <br>
+                  <code>python3 -m pip install -r adk_tools/requirements.txt</code>
+                </li>
+              </ol>
+
+              <h2>Task 2. Create a search app that will be used to ground responses on your own data</h2>
+              <p>In a later task, <strong>you will use the Google-provided Vertex AI Search tool to ground responses on your own data in an AI Applications data store</strong>. Since
+                the app's data store needs a little while to ingest data, you will set it up now, then use it to ground responses on your data in a later task.</p>
+              <ol>
+                <li>
+                  <p>In your browser tab still showing the Cloud Console, navigate to <strong>AI Applications</strong> by searching for it at the top of the console. (Feel free to
+                    close any Cloud Shell Terminal or tutorial panels at the bottom or right side of this tab.)</p>
+                </li>
+                <li>
+                  <p>Select the terms and conditions checkbox and click <strong>Continue and activate the API</strong>.</p>
+                </li>
+                <li>
+                  <p>From the left-hand navigation menu, select <strong>Data Stores</strong>.</p>
+                </li>
+                <li>
+                  <p>Select <strong>Create data store</strong>.</p>
+                </li>
+                <li>
+                  <p>Find the <strong>Cloud Storage</strong> card and click <strong>Select</strong> on it.</p>
+                </li>
+                <li>
+                  <p>Under <strong>Unstructured Data Import (Document Search &amp; RAG)</strong>, select <strong>Documents</strong>.</p>
+                </li>
+                <li>
+                  <p>Example documents have been uploaded to Cloud Storage for you. They relate to the fictional discovery of a new planet named Persephone. A fictional planet is
+                    used in this case so that the model cannot have learned anything about this planet during its training.</p>
+                  <p>For a GCS path, enter <code>YOUR_GCP_PROJECT_ID-bucket/planet-search-docs</code>.
+                  </p>
+                </li>
+                <li>
+                  <p>Click <strong>Continue</strong>.</p>
+                </li>
+                <li>
+                  <p>Keep the <strong>location</strong> set to <strong>global</strong>.</p>
+                </li>
+                <li>
+                  <p>For a <strong>data store name</strong>, enter: <strong>Planet Search</strong>.</p>
+                </li>
+                <li>
+                  <p>Click <strong>Continue</strong>.</p>
+                </li>
+                <li>
+                  <p>When asked to select the pricing model, keep the default selection and click <strong>Create</strong>.</p>
+                </li>
+                <li>
+                  <p>Click <strong>Apps</strong> on the left-hand nav.</p>
+                </li>
+                <li>
+                  <p>Click <strong>Create a new app</strong>.</p>
+                </li>
+                <li>
+                  <p>Find the card for a <strong>Custom search (general)</strong> app and click <strong>Create</strong>.</p>
+                </li>
+                <li>
+                  <p><strong>Name</strong> the app <strong>Planet Search</strong></p>
+                </li>
+                <li>
+                  <p>Provide a <strong>Company name</strong> of <strong>Planet Conferences</strong></p>
+                </li>
+                <li>
+                  <p>Click <strong>Continue</strong>.</p>
+                </li>
+                <li>
+                  <p>Select the checkbox next to the <strong>Planet Search</strong> data store.</p>
+                </li>
+                <li>
+                  <p>Keep the default pricing terms and select <strong>Create</strong>.</p>
+                </li>
+                <li>
+                  <p>Once your app is created, click <strong>AI Applications</strong> in the upper left to return to your app dashboard.</p>
+                </li>
+                <li>
+                  <p><strong>Copy the ID</strong> value of your app displayed in the Apps table. Save it in a text document as you will need it later.</p>
+                  <p>For now, you will give the data store some time to ingest its data. Later you will provide your search app to an agent to ground its responses.</p>
+                </li>
+              </ol>
+
+              <h2>Task 3. Use a Third-Party Tool from the LangChain Community</h2>
+              <p>ADK allows you to use tools available from third-party AI frameworks like LangChain. The LangChain community has created a <a
+                href="https://python.langchain.com/docs/integrations/tools/" target="_blank">large number of tool integrations</a> to access many sources of data, integrate with
+                various web products, and accomplish many things. Using community tools within ADK can save you rewriting a tool that someone has already created.</p>
+              <ol>
+                <li>
+                  <p>Back in your browser tab displaying the Cloud Shell Editor, use the file explorer on the left-hand side to navigate to the directory <strong>adk_tools/langchain_tool_agent</strong>.
+                  </p>
+                </li>
+                <li>
+                  <p>Write a <strong>.env</strong> file to provide authentication details for this agent directory by running the following in the Cloud Shell Terminal:</p>
+                  <code>cd ~/adk_tools</code> <br>
+                  <code>cat &lt;&lt; EOF &gt; langchain_tool_agent/.env</code> <br>
+                  <code>GOOGLE_GENAI_USE_VERTEXAI=TRUE</code> <br>
+                  <code>GOOGLE_CLOUD_PROJECT={{{project_0.project_id| YOUR_GCP_PROJECT_ID}}}</code> <br>
+                  <code>GOOGLE_CLOUD_LOCATION=global</code> <br>
+                  <code>MODEL={{{project_0.startup_script.gemini_flash_model_id | gemini_flash_model_id}}}</code> <br>
+                  <code>EOF</code> <br>
+                </li>
+                <li>
+                  <p>Copy the <code>.env</code> file to the other agent directories you will use in this lab by running the following:</p>
+                  <code>cp langchain_tool_agent/.env function_tool_agent/.env</code> <br>
+                  <code>cp langchain_tool_agent/.env vertexai_search_tool_agent/.env</code> <br>
+                </li>
+                <li>
+                  <p>Click on the <strong>agent.py</strong> file in the <strong>langchain_tool_agent</strong> directory.</p>
+                </li>
+                <li>
+                  <p>Notice the import of the <code>LangchainTool</code> class. This is a wrapper class that allows you to use LangChain tools within Agent Development Kit.</p>
+                </li>
+                <li>
+                  <p>Add the following code where indicated in the <code>agent.py</code> file to add the <a
+                    href="https://docs.langchain.com/oss/python/integrations/providers/wikipedia" target="_blank">LangChain Wikipedia tool</a> to your agent. This will allow your
+                    agent to search for information on <a href="https://www.wikipedia.org/" target="_blank">Wikipedia</a>:</p>
+
+
+                  <pre><code class="language-python">
+    tools = [
+        # Use the LangchainTool wrapper...
+        LangchainTool(
+            # to pass in a LangChain tool. In this case, the WikipediaQueryRun tool, which requires the WikipediaAPIWrapper as
+            # part of the tool.
+            tool=WikipediaQueryRun(
+                api_wrapper=WikipediaAPIWrapper(),
+                handle_tool_error=True,
+            )
+        ),
+    ]
+</code></pre>
+
+                </li>
+              </ol>
+
+              <ol start="7">
+                <li>
+                  <p>In the Cloud Shell Terminal, from the <strong>adk_tools</strong> project directory, <strong>launch the Agent Development Kit Dev UI</strong> with the following
+                    commands:</p>
+                  <code>adk web --allow_origins "regex:https://.*\.cloudshell\.dev"</code>
+                </li>
+                <li>
+                  <p>To view the web interface in a new tab, click the <strong>http://127.0.0.1:8000</strong> link in the Terminal output.</p>
+                </li>
+                <li>
+                  <p>A new browser tab will open with the ADK Dev UI.</p>
+                </li>
+                <li>
+                  <p>From the <strong>Select an agent</strong> dropdown on the left, select the <strong>langchain_tool_agent</strong> from the dropdown.</p>
+                </li>
+                <li>
+                  <p>Query the agent with: Who was Grace Hopper?</p>
+                </li>
+                <li>
+                  <p>Click the agent icon (
+                    <button class="js-img-container" aria-haspopup="true"><img alt="agent_icon" src="https://cdn.qwiklabs.com/0qmcUwc%2BaHGB6en11vU3HeZL1%2FsZuhC48PulduLYczg%3D">
+                    </button>
+                    ) next to the agent's chat bubble indicating the use of the <strong>wikipedia</strong> tool.
+                  </p>
+                </li>
+                <li>
+                  <p>Notice that the content includes a <code>functionCall</code> with the query to Wikipedia.</p>
+                </li>
+                <li>
+                  <p>At the top of the tab, click the <strong>forward button</strong> to move to the next event.</p>
+                </li>
+                <li>
+                  <p>Exploring this event, you can see the result retrieved from Wikipedia used to generate the model's response.</p>
+                </li>
+                <li>
+                  <p>When you are finished asking questions of this agent, close the dev UI browser tab.</p>
+                </li>
+                <li>
+                  <p>Select the Cloud Shell Terminal panel and press <strong>CTRL + C</strong> to stop the server.</p>
+                </li>
+              </ol>
+
+              <h2>Task 4. Use a function as a custom tool</h2>
+              <p>When pre-built tools don't fully meet specific requirements, you can create your own tools. This allows for tailored functionality, such as connecting to proprietary
+                databases or implementing unique algorithms.</p>
+              <p>The most straightforward way to create a new tool is to write a standard Python function with a <a
+                href="https://google.github.io/adk-docs/tools/function-tools/#docstring" target="_blank">docstring written in a standard format</a> and pass it to your model as a
+                tool. This approach offers flexibility and quick integration.</p>
+              <p>When writing a function to be used as a tool, there are a few important things to keep in mind:</p>
+              <ul>
+                <li>
+                  <strong>Parameters:</strong> Your function can accept any number of parameters, each of which can be of any JSON-serializable type (e.g., string, integer, list,
+                  dictionary). It's important to avoid setting default values for parameters, as the large language model (LLM) does not currently support interpreting them.
+                </li>
+                <li>
+                  <strong>Return type:</strong> The preferred return type for a Python Function Tool is a dictionary. This allows you to structure the response with key-value pairs,
+                  providing context and clarity to the LLM. For example, instead of returning a numeric error code, return a dictionary with an <code>"error_message"</code> key
+                  containing a human-readable explanation. As a best practice, include a <code>"status"</code> key in your return dictionary to indicate the overall outcome (e.g.,
+                  <code>"success"</code>, <code>"error"</code>, <code>"pending"</code>), providing the LLM with a clear signal about the operation's state.
+                </li>
+                <li>
+                  <strong>Docstring:</strong> The docstring of your function serves as the tool's description and is sent to the LLM. Therefore, a well-written and comprehensive
+                  docstring is crucial for the LLM to understand how to use the tool effectively. Clearly explain the purpose of the function, the meaning of its parameters, and the
+                  expected return values.
+                </li>
+              </ul>
+              <p>Define a function and use it as a tool by completing the following steps:</p>
+              <ol>
+                <li>
+                  <p>Using the Cloud Shell Editor file explorer, navigate to the directory <strong>adk_tools/function_tool_agent</strong>.</p>
+                </li>
+                <li>
+                  <p>In the <strong>function_tool_agent</strong> directory, click on the <strong>agent.py</strong> file.</p>
+                </li>
+                <li>
+                  <p>Notice that the functions <code>get_date()</code> and <code>write_journal_entry()</code> have docstrings formatted properly for an ADK agent to know when and how
+                    to use them. They include:</p>
+                  <ul>
+                    <li>A clear description of what each function does</li>
+                    <li>an <code>Args:</code> section describing the function's input parameters with JSON-serializable types</li>
+                    <li>a <code>Returns:</code> section describing what the function returns, with the preferred response type of a <code>dict</code>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <p>To pass the function to your agent to use as a tool, add the following code where indicated in the <code>agent.py</code> file:</p>
+                  <code>tools=[get_date, write_journal_entry]</code>
+                </li>
+              </ol>
+
+              <ol start="5">
+                <li>
+                  <p>You will run this agent using the dev UI to see how its tools allow you to easily visualize tool requests and responses. In the Cloud Shell Terminal, from the
+                    <strong>adk_tools</strong> project directory, run the dev UI again with the following command (if the server is still running from before, stop the running server
+                    first with <strong>CTRL+C</strong>, then run the following to start it again):</p>
+                  <code>adk web --allow_origins "regex:https://.*\.cloudshell\.dev"</code>
+                </li>
+                <li>
+                  <p>Click the <strong>http://127.0.0.1:8000</strong> link in the Terminal output.</p>
+                </li>
+                <li>
+                  <p>A new browser tab will open with the ADK Dev UI.</p>
+                </li>
+                <li>
+                  <p>From the <strong>Select an agent</strong> dropdown on the left, select the <strong>function_tool_agent</strong>.</p>
+                </li>
+                <li>
+                  <p>Start a conversation with the agent with: hello!</p>
+
+                </li>
+                <li>
+                  <p>The agent should prompt you about your day. <strong>Respond with a sentence about how your day is going</strong> (like It's been a good day. I did a cool
+                    ADK lab.) and it will write a journal entry for you.</p>
+                  <p><strong>Example Output:</strong></p>
+                  <div class="image-block">
+                    <div class="expand-screenshot-image-btn border border-primary rounded">
+                      <span class="btn btn-link">Show Image <img src="./imgs/chevron-expand.svg" alt="Show Image Button"></span>
+                    </div>
+                    <div class="screenshot-image">
+                      <img src="https://cdn.qwiklabs.com/M4AR%2BOHlB0enhYBCd4d1nLhObCJ2eKnJlKQCfp2eZ4g%3D"
+                           width="800"
+                           class="center-block img-fluid"
+                           alt="Example1"
+                           loading="lazy">
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <p>Notice that your agent shows buttons for your custom tool's request and the response. You can click on each to see more information about each of these
+                    events.</p>
+                </li>
+                <li>
+                  <p>Close the dev UI tab.</p>
+                </li>
+                <li>
+                  <p>In the Cloud Shell Editor, you can find your dated journal entry file in the <strong>adk_tools</strong> directory. (You may want to use the Cloud Shell Editor's
+                    menu to enable View &gt; Word Wrap to see the full text without lots of horizontal scrolling.)</p>
+                </li>
+                <li>
+                  <p>Stop the server, by clicking on the Cloud Shell Terminal panel and pressing <strong>CTRL + C</strong>.</p>
+                  <div class="sub-section">
+                    <h4>Best practices for writing functions to be used as tools include</h4>
+                    <ul>
+                      <li>
+                        <strong>Fewer Parameters are Better:</strong> Minimize the number of parameters to reduce complexity.
+                      </li>
+                      <li>
+                        <strong>Use Simple Data Types:</strong> Favor primitive data types like <code>str</code> and <code>int</code> over custom classes when possible.
+                      </li>
+                      <li>
+                        <strong>Use Meaningful Names:</strong> The function's name and parameter names significantly influence how the LLM interprets and utilizes the tool. Choose
+                        names that clearly reflect the function's purpose and the meaning of its inputs.
+                      </li>
+                      <li>
+                        <strong>Break Down Complex Functions:</strong> Instead of a single <code>update_profile(profile: Profile)</code> function, create separate functions like
+                        <code>update_name(name: str)</code>, <code>update_age(age: int)</code>, etc.
+                      </li>
+                      <li>
+                        <strong>Return status:</strong> Include a <code>"status"</code> key in your return dictionary to indicate the overall outcome (e.g., <code>"success"</code>,
+                        <code>"error"</code>, <code>"pending"</code>) to provide the LLM a clear signal about the operation's state.
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ol>
+              <h2 id="step11">Task 5. Use Vertex AI Search as a tool to ground on your own data</h2>
+              <p>In this task, you will discover how easy it is to deploy a RAG application using an Agent Development Kit agent with the built-in Vertex AI Search tool from Google
+                and the AI Applications data store you created earlier.</p>
+              <ol>
+                <li>
+                  <p>Return to your <strong>Cloud Shell Editor</strong> tab and select the <strong>adk_tools/vertexai_search_tool_agent</strong> directory.</p>
+                </li>
+                <li>
+                  <p>Click on the <strong>agent.py</strong> file in the <strong>vertexai_search_tool_agent</strong> directory.</p>
+                </li>
+                <li>
+                  <p>Add an import of the <code>VertexAiSearchTool</code> class where indicated at the bottom of the imports:</p>
+                  <code>from google.adk.tools import VertexAiSearchTool</code>
+                </li>
+                <li>
+                  <p>Update the code where the <code>VertexAiSearchTool</code> is instantiated. In the path being passed to <code>search_engine_id</code>, update <code>YOUR_PROJECT_ID</code>
+                    to <code>YOUR_GCP_PROJECT_ID</code> and update <code>YOUR_SEARCH_APP_ID</code> to the search app ID you copied in the earlier task.
+                  </p>
+                </li>
+                <li>
+                  <p>Add the following line where indicated in the agent definition to provide the agent the tool:</p>
+                  <code>tools=[vertexai_search_tool]</code> <br>
+                  - You can confirm your data store is ready for use by selecting the data store's name on the <strong>AI Applications &gt; Data Stores</strong> page in the
+                  console.
+                  - <p>The <strong>Activity</strong> and <strong>Documents</strong> tabs provide statuses on the import and indexing of your documents. When the
+                  <strong>Activity</strong> tab reports "Import completed", your data store should be ready to query.</p>
+                </li>
+                <li>
+                  <p>In the Cloud Shell Terminal, from the <strong>adk_tools</strong> project directory, <strong>launch the command line interface</strong> with the following
+                    command. <p class="highlight-text">You'll include the <code>--reload_agents</code> flag so that the Dev UI reloads your agent when you make changes.</p>
+                  </p>
+                  <code>adk web --allow_origins "regex:https://.*\.cloudshell\.dev" --reload_agents</code>
+                </li>
+                <li>
+                  <p>Click the <strong>http://127.0.0.1:8000</strong> to open the ADK Dev UI.</p>
+                </li>
+                <li>
+                  <p>From the <strong>Select an agent</strong> dropdown on the left, select the <strong>vertexai_search_tool_agent</strong>.</p>
+                </li>
+                <li>
+                  <p>Query the agent about the fictional planet described in your Cloud Storage documents with:</p> <br>
+                  - Is the new planet Persephone suitable for habitation? <br>
+                  - Response: Based on the "Persephone Survey: What we Know So Far" document, Persephone exhibits several characteristics that suggest it could be habitable ...
+                  <p>(Example output. Yours may be a little different)</p>
+                </li>
+              </ol>
+
+              <h3>Using AgentTool to integrate search tools with other tools</h3>
+              <p>Search tools come with an implementation limitation in that you cannot mix search tools and non-search tools in the same agent. To get around this, you can wrap an
+                agent with a search tool with an AgentTool, and then use that agent-as-a-tool to conduct searches alongside other tools.</p>
+              <p>To see that in action:</p>
+              <ol start="10">
+                <li>
+                  <p>Ensure you have the <strong>adk_tools/vertexai_search_tool_agent/agent.py</strong> file open.</p>
+                </li>
+                <li>
+                  <p>Update the root_agent's <code>tools</code> parameter to include the <code>get_date</code> function tool:</p>
+                  <code>tools=[vertexai_search_tool, get_date]</code>
+                </li>
+              </ol>
+
+              <ol start="12">
+                <li>
+                  <p>In the ADK Dev UI, ask the agent: What is today's date?</p>
+                  <p><strong>Expected output:</strong></p>
+                  <div class="image-block">
+                    <div class="expand-screenshot-image-btn border border-primary rounded">
+                      <span class="btn btn-link">Show Image <img src="./imgs/chevron-expand.svg" alt="Show Image Button"></span>
+                    </div>
+                    <div class="screenshot-image">
+                      <img src="https://cdn.qwiklabs.com/c288d6l8RS55NVTrnJhLhnQhXZayOFt%2BlLH04fJkg7g%3D"
+                           width="600"
+                           class="center-block img-fluid"
+                           alt="Example1"
+                           loading="lazy">
+                    </div>
+                  </div>
+
+                </li>
+                <li>
+                  <p>Back in the <strong>adk_tools/vertexai_search_tool_agent/agent.py</strong> file, paste the following code above your root_agent. This agent is dedicated to using
+                    the search tool and contains both the search tool and instructions to use it:</p>
+
+                  <pre><code class="language-python">
+  vertexai_search_agent = Agent(
+  name="vertexai_search_agent",
+  model=Gemini(model=os.getenv("MODEL"), retry_options=RETRY_OPTIONS),
+  instruction="Use your search tool to look up facts.",
+  tools=[vertexai_search_tool]
+  )
+</code></pre>
+                </li>
+              </ol>
+
+              <ol start="14">
+                <li>
+                  <p>Then replace the <strong>root_agent's</strong> tools parameter with the following to wrap the agent created in the previous step with the
+                    <code>AgentTool()</code> :</p>
+                  <pre><code class="language-python">
+  tools=[
+  AgentTool(vertexai_search_agent, skip_summarization=False),
+  get_date
+  ]
+</code></pre>
+
+                </li>
+                <li>
+                  <p>Now you can query your agent and receive both search results and use the <code>get_date()</code> function.</p>
+                  <p>Back in the ADK Dev UI browser tab, click <strong>+ New Session</strong>.</p>
+                </li>
+                <li>
+                  <p>Ask again: What is today's date?</p>
+                  <p>The agent should respond with the correct date.</p>
+                </li>
+                <li>
+                  <p>Then to invoke the search tool, ask: When is the PlanetCon conference?</p>
+                  <p>Expected output: The PlanetCon: Persephone conference is scheduled for October 26th - 28th, 2028.</p>
+                </li>
+                <li>
+                  <p>Feel free to ask the agent more questions about this new planet and the conference where its discovery will be announced. When you are satisfied, close the dev
+                    UI tab.</p>
+                </li>
+                <li>
+                  <p>When you are finished asking questions of this agent, close the browser tab, select the Cloud Shell Terminal window where the server is running, and press
+                    <strong>CTRL + C</strong> to stop the server.</p>
+                </li>
+              </ol>
+
+              <h2>Even More Types of Tools!</h2>
+              <p>The following tool types are good for you to know about, but you will not implement them in this lab.</p>
+              <h3>The LongRunningFunctionTool Class</h3>
+              <p>This tool is a subclass of FunctionTool. It's designed for tasks that require a significant amount of processing time that should be called without blocking the
+                agent's execution.</p>
+              <p>When using a <code>LongRunningFunctionTool</code>, your Python function can initiate the long-running operation and optionally return an intermediate result to keep
+                the model and user informed about the progress (e.g., status updates or estimated completion time). The agent can then continue with other tasks.</p>
+              <p>An example is a human-in-the-loop scenario where the agent needs human approval before proceeding with a task.</p>
+              <h3>Application Integration workflows as tools</h3>
+              <p>With <a href="https://cloud.google.com/application-integration/docs/overview" target="_blank">Application Integration</a>, you can use a drag-and-drop interface in
+                the Google Cloud Console to build tools, data connections, and data transformations using Integration Connector’s 100+ pre-built connectors for Google Cloud products
+                and third-party systems like Salesforce, ServiceNow, JIRA, SAP, and more. You can then use an ADK <code>ApplicationIntegrationToolset</code> to <a
+                  href="https://google.github.io/adk-docs/tools/google-cloud-tools/#application-integration-tools" target="_blank">allow your agents to connect to those sources or
+                  call your workflows</a>.</p>
+              <h3>Model Context Protocol (MCP) Tools</h3>
+              <p><a href="https://modelcontextprotocol.io/introduction" target="_blank">Model Context Protocol (MCP)</a> is an open standard designed to standardize how Large
+                Language Models (LLMs) like Gemini and Claude communicate with external applications, data sources, and tools. ADK helps you both use and consume MCP tools in your
+                agents, whether you're trying to build a tool to call an MCP service, or exposing an MCP server for other developers or agents to interact with your tools.</p>
+              <p>Refer to the <a href="https://google.github.io/adk-docs/tools/mcp-tools/" target="_blank">MCP Tools documentation</a> for code samples and design patterns that help
+                you use ADK together with MCP servers, including:</p>
+              <ul>
+                <li>
+                  <strong>Using Existing MCP Servers within ADK:</strong> An ADK agent can act as an MCP client and use tools provided by external MCP servers.
+                </li>
+                <li>
+                  <strong>Exposing ADK Tools via an MCP Server:</strong> How to build an MCP server that wraps ADK tools, making them accessible to any MCP client.
+                </li>
+              </ul>
+              <p>For more information on using MCP with ADK agents, see the lab <a href="/catalog_lab/32353" target="_blank">Use Model Context Protocol (MCP) Tools with ADK
+                Agents</a>.</p>
+
+
+              <h2 id="step13">Congratulations!</h2>
+              <p>In this lab, you've learned to:</p>
+              <ul>
+                <li>Provide prebuilt Google and LangChain tools to an agent</li>
+                <li>Write your own tool functions for an agent</li>
+                <li>Discuss the importance of structured docstrings and typing when writing functions for agent tools</li>
+              </ul>
+              <h2 id="step14">Next Steps</h2>
+              <p>To learn more about building and deploying agents using Agent Development Kit, check out these labs:</p>
+              <ul>
+                <li><a href="https://partner.cloudskillsboost.google/catalog_lab/32044" target="_blank">Build multi-agent systems with ADK</a></li>
+                <li><a href="https://partner.cloudskillsboost.google/catalog_lab/32019" target="_blank">Deploy ADK agents to Agent Engine</a></li>
+              </ul>
+              <h3>Google Cloud training and certification</h3>
+              <p>...helps you make the most of Google Cloud technologies. <a href="https://cloud.google.com/training" target="_blank">Our classes</a> include technical skills and
+                best practices to help you get up to speed quickly and continue your learning journey. We offer fundamental to advanced level training, with on-demand, live, and
+                virtual options to suit your busy schedule. <a href="https://cloud.google.com/certification/" target="_blank">Certifications</a> help you validate and prove your
+                skill and expertise in Google Cloud technologies.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div id="VertexAI_Chapter4" class="chapter">Chapter 4: Build multi-agent systems with ADK</div>
+      <hr>
+      <div class="textual-content">
+        <div class="sub-heading">Develop Agents with ADK</div>
+        <div>
+
+        </div>
+      </div>
+
     </div>
   </div>
 </div>
