@@ -160,6 +160,9 @@
       <a class="index-column-entry" href="#VertexAI_Chapter3.1">Ch3.1: Get Started with ADK Lab</a>
       <a class="index-column-entry" href="#VertexAI_Chapter3.2">Ch3.2: Empower ADK Agents with tools Lab</a>
       <a class="index-column-entry" href="#VertexAI_Chapter4">Ch4: Build multi-agent systems with ADK</a>
+      <a class="index-column-entry" href="#VertexAI_Chapter4.1">Ch4.1: Build multi-agent systems with ADK</a>
+      <a class="index-column-entry" href="#VertexAI_Chapter4.2">Ch4.2: Callbacks</a>
+      <a class="index-column-entry" href="#VertexAI_Chapter4.3">Ch4.3: Lab: Build multi-agent systems with ADK</a>
     </div>
   </div>
   <div class="content-column">
@@ -1724,7 +1727,8 @@ adk web \
                   <strong>Third-Party Tools</strong>: Seamless integration of tools from external libraries like LangChain
                 </li>
                 <li>
-                  <strong>Custom Tools</strong>: The ability to create custom tools tailored to specific requirements, by using language specific constructs and Agents-as-Tools. The
+                  <strong>Custom Tools</strong>: The ability to create custom tools tailored to specific requirements, by using language specific constructs and Agents-as-Tools.
+                  The
                   SDK also provides asynchronous capabilities through Long Running Function Tools.
                 </li>
               </ul>
@@ -1732,7 +1736,8 @@ adk web \
 
               <h2>Available Pre-Built Tools from Google</h2>
               <p>Google provides several useful tools for your agents. They include:</p>
-              <p><strong>Google Search</strong> (<code>google_search</code>): Allows the agent to perform web searches using Google Search. You simply add <code>google_search</code>
+              <p><strong>Google Search</strong> (<code>google_search</code>): Allows the agent to perform web searches using Google Search. You simply add
+                <code>google_search</code>
                 to the agent's tools.</p>
               <p><strong>Code Execution</strong> (<code>built_in_code_execution</code>): This tool allows the agent to execute code, to perform calculations, data manipulation, or
                 interact with other systems programmatically. You can use the pre-built <code>VertexCodeInterpreter</code> or any code executor that implements the
@@ -1786,7 +1791,8 @@ adk web \
                   <code>gcloud storage cp -r gs://YOUR_GCP_PROJECT_ID-bucket/adk_tools .</code>
                 </li>
                 <li>
-                  <p>Update your <code>PATH</code> environment variable, <strong>install ADK</strong>, and install some additional requirements for this lab by running the following
+                  <p>Update your <code>PATH</code> environment variable, <strong>install ADK</strong>, and install some additional requirements for this lab by running the
+                    following
                     commands in the Cloud Shell Terminal.</p>
                   <code>export PATH=$PATH:"/home/${USER}/.local/bin"</code> <br>
                   <code>python3 -m pip install -r adk_tools/requirements.txt</code>
@@ -1794,7 +1800,8 @@ adk web \
               </ol>
 
               <h2>Task 2. Create a search app that will be used to ground responses on your own data</h2>
-              <p>In a later task, <strong>you will use the Google-provided Vertex AI Search tool to ground responses on your own data in an AI Applications data store</strong>. Since
+              <p>In a later task, <strong>you will use the Google-provided Vertex AI Search tool to ground responses on your own data in an AI Applications data store</strong>.
+                Since
                 the app's data store needs a little while to ingest data, you will set it up now, then use it to ground responses on your data in a later task.</p>
               <ol>
                 <li>
@@ -1966,7 +1973,8 @@ adk web \
               </ol>
 
               <h2>Task 4. Use a function as a custom tool</h2>
-              <p>When pre-built tools don't fully meet specific requirements, you can create your own tools. This allows for tailored functionality, such as connecting to proprietary
+              <p>When pre-built tools don't fully meet specific requirements, you can create your own tools. This allows for tailored functionality, such as connecting to
+                proprietary
                 databases or implementing unique algorithms.</p>
               <p>The most straightforward way to create a new tool is to write a standard Python function with a <a
                 href="https://google.github.io/adk-docs/tools/function-tools/#docstring" target="_blank">docstring written in a standard format</a> and pass it to your model as a
@@ -1978,14 +1986,16 @@ adk web \
                   dictionary). It's important to avoid setting default values for parameters, as the large language model (LLM) does not currently support interpreting them.
                 </li>
                 <li>
-                  <strong>Return type:</strong> The preferred return type for a Python Function Tool is a dictionary. This allows you to structure the response with key-value pairs,
+                  <strong>Return type:</strong> The preferred return type for a Python Function Tool is a dictionary. This allows you to structure the response with key-value
+                  pairs,
                   providing context and clarity to the LLM. For example, instead of returning a numeric error code, return a dictionary with an <code>"error_message"</code> key
                   containing a human-readable explanation. As a best practice, include a <code>"status"</code> key in your return dictionary to indicate the overall outcome (e.g.,
                   <code>"success"</code>, <code>"error"</code>, <code>"pending"</code>), providing the LLM with a clear signal about the operation's state.
                 </li>
                 <li>
                   <strong>Docstring:</strong> The docstring of your function serves as the tool's description and is sent to the LLM. Therefore, a well-written and comprehensive
-                  docstring is crucial for the LLM to understand how to use the tool effectively. Clearly explain the purpose of the function, the meaning of its parameters, and the
+                  docstring is crucial for the LLM to understand how to use the tool effectively. Clearly explain the purpose of the function, the meaning of its parameters, and
+                  the
                   expected return values.
                 </li>
               </ul>
@@ -1998,7 +2008,8 @@ adk web \
                   <p>In the <strong>function_tool_agent</strong> directory, click on the <strong>agent.py</strong> file.</p>
                 </li>
                 <li>
-                  <p>Notice that the functions <code>get_date()</code> and <code>write_journal_entry()</code> have docstrings formatted properly for an ADK agent to know when and how
+                  <p>Notice that the functions <code>get_date()</code> and <code>write_journal_entry()</code> have docstrings formatted properly for an ADK agent to know when and
+                    how
                     to use them. They include:</p>
                   <ul>
                     <li>A clear description of what each function does</li>
@@ -2016,7 +2027,8 @@ adk web \
               <ol start="5">
                 <li>
                   <p>You will run this agent using the dev UI to see how its tools allow you to easily visualize tool requests and responses. In the Cloud Shell Terminal, from the
-                    <strong>adk_tools</strong> project directory, run the dev UI again with the following command (if the server is still running from before, stop the running server
+                    <strong>adk_tools</strong> project directory, run the dev UI again with the following command (if the server is still running from before, stop the running
+                    server
                     first with <strong>CTRL+C</strong>, then run the following to start it again):</p>
                   <code>adk web --allow_origins "regex:https://.*\.cloudshell\.dev"</code>
                 </li>
@@ -2058,7 +2070,8 @@ adk web \
                   <p>Close the dev UI tab.</p>
                 </li>
                 <li>
-                  <p>In the Cloud Shell Editor, you can find your dated journal entry file in the <strong>adk_tools</strong> directory. (You may want to use the Cloud Shell Editor's
+                  <p>In the Cloud Shell Editor, you can find your dated journal entry file in the <strong>adk_tools</strong> directory. (You may want to use the Cloud Shell
+                    Editor's
                     menu to enable View &gt; Word Wrap to see the full text without lots of horizontal scrolling.)</p>
                 </li>
                 <li>
@@ -2117,7 +2130,8 @@ adk web \
                 </li>
                 <li>
                   <p>In the Cloud Shell Terminal, from the <strong>adk_tools</strong> project directory, <strong>launch the command line interface</strong> with the following
-                    command. <p class="highlight-text">You'll include the <code>--reload_agents</code> flag so that the Dev UI reloads your agent when you make changes.</p>
+                    command.
+                  <p class="highlight-text">You'll include the <code>--reload_agents</code> flag so that the Dev UI reloads your agent when you make changes.</p>
                   </p>
                   <code>adk web --allow_origins "regex:https://.*\.cloudshell\.dev" --reload_agents</code>
                 </li>
@@ -2168,7 +2182,8 @@ adk web \
 
                 </li>
                 <li>
-                  <p>Back in the <strong>adk_tools/vertexai_search_tool_agent/agent.py</strong> file, paste the following code above your root_agent. This agent is dedicated to using
+                  <p>Back in the <strong>adk_tools/vertexai_search_tool_agent/agent.py</strong> file, paste the following code above your root_agent. This agent is dedicated to
+                    using
                     the search tool and contains both the search tool and instructions to use it:</p>
 
                   <pre><code class="language-python">
@@ -2221,12 +2236,14 @@ adk web \
               <h3>The LongRunningFunctionTool Class</h3>
               <p>This tool is a subclass of FunctionTool. It's designed for tasks that require a significant amount of processing time that should be called without blocking the
                 agent's execution.</p>
-              <p>When using a <code>LongRunningFunctionTool</code>, your Python function can initiate the long-running operation and optionally return an intermediate result to keep
+              <p>When using a <code>LongRunningFunctionTool</code>, your Python function can initiate the long-running operation and optionally return an intermediate result to
+                keep
                 the model and user informed about the progress (e.g., status updates or estimated completion time). The agent can then continue with other tasks.</p>
               <p>An example is a human-in-the-loop scenario where the agent needs human approval before proceeding with a task.</p>
               <h3>Application Integration workflows as tools</h3>
               <p>With <a href="https://cloud.google.com/application-integration/docs/overview" target="_blank">Application Integration</a>, you can use a drag-and-drop interface in
-                the Google Cloud Console to build tools, data connections, and data transformations using Integration Connector’s 100+ pre-built connectors for Google Cloud products
+                the Google Cloud Console to build tools, data connections, and data transformations using Integration Connector’s 100+ pre-built connectors for Google Cloud
+                products
                 and third-party systems like Salesforce, ServiceNow, JIRA, SAP, and more. You can then use an ADK <code>ApplicationIntegrationToolset</code> to <a
                   href="https://google.github.io/adk-docs/tools/google-cloud-tools/#application-integration-tools" target="_blank">allow your agents to connect to those sources or
                   call your workflows</a>.</p>
@@ -2234,7 +2251,8 @@ adk web \
               <p><a href="https://modelcontextprotocol.io/introduction" target="_blank">Model Context Protocol (MCP)</a> is an open standard designed to standardize how Large
                 Language Models (LLMs) like Gemini and Claude communicate with external applications, data sources, and tools. ADK helps you both use and consume MCP tools in your
                 agents, whether you're trying to build a tool to call an MCP service, or exposing an MCP server for other developers or agents to interact with your tools.</p>
-              <p>Refer to the <a href="https://google.github.io/adk-docs/tools/mcp-tools/" target="_blank">MCP Tools documentation</a> for code samples and design patterns that help
+              <p>Refer to the <a href="https://google.github.io/adk-docs/tools/mcp-tools/" target="_blank">MCP Tools documentation</a> for code samples and design patterns that
+                help
                 you use ADK together with MCP servers, including:</p>
               <ul>
                 <li>
@@ -2274,10 +2292,1172 @@ adk web \
       <div id="VertexAI_Chapter4" class="chapter">Chapter 4: Build multi-agent systems with ADK</div>
       <hr>
       <div class="textual-content">
-        <div class="sub-heading">Develop Agents with ADK</div>
+        <div id="VertexAI_Chapter4.1" class="sub-heading">Build multi-agent systems with ADK</div>
         <div>
+          - <a href="https://codelabs.developers.google.com/multi-agent-app-with-adk#0">Somewhat relevant Codelab</a>. <br>
+          - In this section we will see how to build multi-agent systems with Google's ADK. <br>
+          - An <i>agent</i> is an autonomous program that talks to an AI model to perform a goal-based operation using the tools and context it has and is capable of autonomous
+          decision making grounded in truth. When your application has multiple agents working together autonomously and together as required to cater to its larger purpose with
+          each of its agents being independently knowledgeable and responsible for a specific focus area, then your application becomes a <i>multi-agent system</i>. <br>
+          - In ADK, a multi-agent system is an application where different agents, often forming a hierarchy, collaborate or coordinate to achieve a larger goal. <br>
+          - Below is what an example of "hierarchy" looks like:
+          <div class="image-block">
+            <div class="expand-screenshot-image-btn border border-primary rounded">
+              <span class="btn btn-link">Show Image <img src="./imgs/chevron-expand.svg" alt="Show Image Button"></span>
+            </div>
+            <div class="screenshot-image">
+              <img src="./imgs/VertexAI/Chapter4/MultiAgentSystems.jpg"
+                   width="800"
+                   class="center-block img-fluid"
+                   alt="Example1"
+                   loading="lazy">
+            </div>
+          </div>
 
+          - The key idea here is that there is a structure of parent and sub-agents constructed in a tree. <br>
+          - Agents can only transfer the conversation to sub-agents, back to a parent, or to a peer (another agent that shares the same parent). You can disable transferring to
+          peers on an agent-by-agent basis. This tree structure makes conversations more predictable and reliable. Hypothetically, if you could transfer to any agent, and two
+          agents in different parts of your system were each responsible for similar lookup activities, it might be very easy to call the wrong agent (e.g., an
+          "InventoryLookupAgent" in the Sales department and an "InventoryLookupAgent" in the Warehouse department, an unconstrained system might accidentally trigger the wrong
+          one.) <br>
+
+          <p class="inline-heading">Workflow Agents</p>: <br>
+          - When building sophisticated AI systems, relying entirely on an LLM to decide every step can sometimes lead to unpredictable behavior. Workflow Agents act as
+          "architectural guardrails," allowing you to define exactly how tasks should be sequenced, repeated, or executed in parallel. <br>
+          - Workflow Agents are these specialized components designed to control the execution flow of a multi-agent system. <br>
+          - Workflow agents typically result in deterministic workflow execution. This means that for a given input and configuration, the sequence of agents executed will always
+          be the same.
+          <div class="image-block">
+            <div class="expand-screenshot-image-btn border border-primary rounded">
+              <span class="btn btn-link">Show Image <img src="./imgs/chevron-expand.svg" alt="Show Image Button"></span>
+            </div>
+            <div class="screenshot-image">
+              <img src="./imgs/VertexAI/Chapter4/WorkflowAgents.jpg"
+                   width="800"
+                   class="center-block img-fluid"
+                   alt="Example1"
+                   loading="lazy">
+            </div>
+          </div>
+
+          - We are going to look at the above agents one-by-one. <a
+          href="https://medium.com/@saminchandeepa/mastering-workflow-strategies-in-google-agent-development-kit-adk-building-effective-multi-agent-59dbfcfa325f">Relevan Source at
+          Medium</a>. <br>
+
+          1) <p class="inline-heading">Sequential Agents</p>: <br>
+          - Sequential Agents execute a predefined list of agents one-after-another in a specific, linear order. <br>
+          - This is ideal for tasks that require a strict process, such as gathering information, then drafting content, then reviewing it. <br>
+          <div class="image-block">
+            <div class="expand-screenshot-image-btn border border-primary rounded">
+              <span class="btn btn-link">Show Image <img src="./imgs/chevron-expand.svg" alt="Show Image Button"></span>
+            </div>
+            <div class="screenshot-image">
+              <img src="./imgs/VertexAI/Chapter4/SequentialAgents.jpg"
+                   width="800"
+                   class="center-block img-fluid"
+                   alt="Example1"
+                   loading="lazy">
+            </div>
+          </div>
+
+          2) <p class="inline-heading">Loop Agents</p>: <br>
+          - Loop Agents repeatedly execute a set of agents until a certain condition is met. <br>
+          - Use the Loop Agent when your workflow involves tasks requiring iterative refinement, continuous monitoring, cyclical processes, or simulated negotiation. <br>
+          - This is commonly used for iterative tasks like "Generator-Critic" patterns, where an agent improves a response based on feedback until it meets a quality threshold.
+          <div class="image-block">
+            <div class="expand-screenshot-image-btn border border-primary rounded">
+              <span class="btn btn-link">Show Image <img src="./imgs/chevron-expand.svg" alt="Show Image Button"></span>
+            </div>
+            <div class="screenshot-image">
+              <img src="./imgs/VertexAI/Chapter4/LoopAgents.jpg"
+                   width="800"
+                   class="center-block img-fluid"
+                   alt="Example1"
+                   loading="lazy">
+            </div>
+          </div>
+
+          3) <p class="inline-heading">Parallel Agents</p>: <br>
+          - Parallel Agents can run multiple agents simultaneously. <br>
+          - This can significantly speed up tasks that can be broken down into independent sub-tasks. <br>
+          - This approach is particularly beneficial for operations like multi-source data retrieval or heavy computations, where parallelization yields substantial performance
+          gains. <br>
+          - Importantly, this strategy assumes no inherent need for shared state, or direct information exchange between the concurrently executing agents. <br>
+          - For example, a Parallel Agent could execute several “Report Generation Agents” in parallel, each responsible for a different region.
+          <div class="image-block">
+            <div class="expand-screenshot-image-btn border border-primary rounded">
+              <span class="btn btn-link">Show Image <img src="./imgs/chevron-expand.svg" alt="Show Image Button"></span>
+            </div>
+            <div class="screenshot-image">
+              <img src="./imgs/VertexAI/Chapter4/ParallelAgents.jpg"
+                   width="800"
+                   class="center-block img-fluid"
+                   alt="Example1"
+                   loading="lazy">
+            </div>
+          </div>
+
+          4) <p class="inline-heading">Custom Workflow Agents</p>: <br>
+          - Custom workflow agents in the Agent Development Kit allow you to define arbitrary orchestration logic, going beyond the predefined patterns of Sequential, Loop, and
+          Parallel Agents. <br>
+          - This provides maximum flexibility for complex workflows, stateful interactions, and integrating custom business rules.
         </div>
+
+        <div id="VertexAI_Chapter4.2" class="sub-heading">Callbacks</div>
+        <div>
+          - <a href="https://adk.dev/callbacks/types-of-callbacks/">Doc Link on adk.dev</a>. <br>
+          - Callbacks are a mechanism that enable you to interrupt the agent's execution lifecycle, enabling you to observe, modify, or augment the agent's operations directly.
+          <br>
+          - You define a Python function that takes specific parameters according to which callback hook you are using, then register them with an agent to be called at the
+          appropriate time. The framework automatically invokes these functions at predefined points during an agent's run. <br>
+          - The framework provides different types of callbacks that trigger at various stages of an agent's execution:
+          <br>
+          <br>
+
+          1) <a href="https://adk.dev/callbacks/types-of-callbacks/#before-agent-callback"><code>before_agent_callback</code></a>: <br>
+          - Setting up resources or state needed only for this specific agent's run. <br>
+          - Performing validation checks on the session state (<code>callback_context.state</code>) before execution starts. <br>
+          - Logging the entry point of the agent's activity. <br>
+          - Modifying session state before the agent uses it. <br>
+          - Can return content to skip the agent's execution.
+
+          <br>
+          <br>
+
+          2) <a href="https://adk.dev/callbacks/types-of-callbacks/#after-agent-callback"><code>after_agent_callback</code></a>: <br>
+          - Cleanup tasks. <br>
+          - Post execution validation. <br>
+          - Logging the completion of an agent's activity. <br>
+          - Modifying the final state. <br>
+          - Augmenting/replacing the agent's final output.
+
+          <br>
+          <br>
+
+          3) <a href="https://adk.dev/callbacks/types-of-callbacks/#before-model-callback"><code>before_model_callback</code></a>: <br>
+          - Inspection and modification of the request going to the LLM. <br>
+          - Adding dynamic instructions. <br>
+          - Injection few-shot examples based on state. <br>
+          - Modifying model config. <br>
+          - Implementing guardrails, like profanity check. <br>
+          - Implementing request-level caching.
+
+          <br>
+          <br>
+
+          4) <a href="https://adk.dev/callbacks/types-of-callbacks/#after-model-callback"><code>after_model_callback</code></a>: <br>
+          - Inspection and modification of the raw LLM response. <br>
+          - Logging model outputs. <br>
+          - Reformatting responses. <br>
+          - Censoring sensitive information generated by the model. <br>
+          - Parsing structured data from the LLM response and storing it in <code>callback_context.state</code>. <br>
+          - Handling specific error codes.
+
+          <br>
+          <br>
+
+          5) <a href="https://adk.dev/callbacks/types-of-callbacks/#before-tool-callback"><code>before_tool_callback</code></a>: <br>
+          - Inspection and modification of tool arguments. <br>
+          - Performing authorization checks before execution. <br>
+          - Logging tool usage attempts. <br>
+          - Implementing tool-level caching.
+
+          <br>
+          <br>
+
+          6) <a href="https://adk.dev/callbacks/types-of-callbacks/#after-tool-callback"><code>after_tool_callback</code></a>: <br>
+          - Inspection and modification of the tool's result before it's sent back to the LLM (potentially after summarization). <br>
+          - Logging tool results. <br>
+          - Post-processing or formatting results. <br>
+          - Saving specific parts of the result to the session state.
+
+          <br>
+          <br>
+
+
+          <table class="table table-bordered table-sm">
+            <thead>
+            <tr>
+              <th>Category</th>
+              <th>Callback</th>
+              <th>Execution Timing</th>
+              <th>Primary Purpose</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td rowspan="2">Agent <br> Lifecycle <br> Callbacks</td>
+              <td>before_agent_callback</td>
+              <td>Immediately before the agent begins its core logic.</td>
+              <td>Initializing resources, validating session state, or short-circuiting execution.</td>
+            </tr>
+            <tr>
+              <td>after_agent_callback</td>
+              <td>Immediately after the agent finishes its core logic.</td>
+              <td>Cleanup, post-execution validation, or augmenting the final output.</td>
+            </tr>
+
+            <tr>
+              <td rowspan="2">LLM <br> Interaction <br> Callbacks</td>
+              <td>before_model_callback</td>
+              <td>Before an LLM request is sent.</td>
+              <td>Inspecting/modifying the model request, or bypassing the model call.</td>
+            </tr>
+            <tr>
+              <td>after_model_callback</td>
+              <td>After the LLM returns a response.</td>
+              <td>Reformatting responses, parsing structured data, or censoring sensitive content.</td>
+            </tr>
+
+            <tr>
+              <td rowspan="2">Tool <br> Execution <br> Callbacks</td>
+              <td>before_tool_callback</td>
+              <td>Before a tool execution begins.</td>
+              <td>Validating tool arguments, authorization checks, or implementing caching.</td>
+            </tr>
+            <tr>
+              <td>after_tool_callback</td>
+              <td>After a tool returns its result.</td>
+              <td>Post-processing tool data or modifying the response before it reaches the model.</td>
+            </tr>
+            </tbody>
+          </table>
+
+          <div class="image-block">
+            <div class="expand-screenshot-image-btn border border-primary rounded">
+              <span class="btn btn-link">Show Image <img src="./imgs/chevron-expand.svg" alt="Show Image Button"></span>
+            </div>
+            <div class="screenshot-image">
+              <img src="./imgs/VertexAI/Chapter4/Callbacks.png"
+                   width="1200"
+                   class="center-block img-fluid"
+                   alt="Example1"
+                   loading="lazy">
+            </div>
+          </div>
+
+          To understand how the ADK lifecycle functions, let’s trace a hypothetical request: **"Check my flight status and email me the arrival time."**
+
+          ### 1. Request Start & Agent Initialization
+
+          The **User Input** enters the system. The `before_agent_callback` is triggered immediately, where the system might authenticate the user or load their profile from
+          **Memory**. The **Agent** (Manager) receives the intent.
+
+          ### 2. Decision-Making (Reasoning & Planning)
+
+          The Agent assesses the goal: it needs to (a) find the flight status and (b) send an email. It reasons that it needs an external tool.
+
+          * **Model Hook:** Before reaching out to the LLM to process the flight search, the `before_model_callback` fires, perhaps to check if the request contains PII (Personally
+          Identifiable Information) that needs masking. The LLM then generates the necessary tool call.
+
+          ### 3. Tool Execution
+
+          The system now pivots to **Tool Execution** to get real-time flight data.
+
+          * **Tool Hook:** The `before_tool_callback` triggers, allowing the system to verify if the Agent has the necessary permissions to access the Flight API. The API is
+          called.
+          * **After-Tool Hook:** Once the flight data returns (e.g., "Flight UA123 arrives at 5:00 PM"), the `after_tool_callback` fires, allowing the system to reformat the raw
+          JSON response into a cleaner format for the LLM to read.
+
+          ### 4. Planning & Iteration (The Loop)
+
+          The agent now has the information. It looks at the second part of the goal: "Email the arrival time." It decides to invoke an Email tool.
+
+          * The system repeats the **Tool Hook** cycle for the Email API.
+
+          ### 5. Finalize Output
+
+          Once all tools have successfully executed, the Agent consolidates the gathered info into a final human-readable response: *"Your flight UA123 arrives at 5:00 PM, and I
+          have sent those details to your email."*
+
+          ### 6. Response End
+
+          * **After-Agent Callback:** Before the final text is displayed to the user, the `after_agent_callback` is triggered. This is the final safety gate—the system might
+          perform a "toxicity check" to ensure the tone is professional, or log the entire conversation to the **Artifact/Trace** database for future debugging.
+
+          ---
+
+          ### Key Takeaway on the Flow
+
+          This path is **non-linear**. Depending on what the model reasons, it could loop back to the **Agent Processing** phase multiple times (e.g., if the flight was canceled,
+          it might need to restart the planning phase to find a rebooking option). The callback triggers act as **fixed checkpoints** regardless of how many times the agent loops,
+          ensuring that your security, logging, and data formatting rules are applied consistently every single time.
+        </div>
+
+        <div id="VertexAI_Chapter4.3" class="sub-heading">Lab: Build multi-agent systems with ADK</div>
+        <div>
+          - In this lab we will: <br>
+          - Create multiple agents and relate them to one another with parent to sub-agent relationships. <br>
+          - Build content across multiple turns of conversation and multiple agents by writing to a session's state dictionary. <br>
+          - Instruct agents to read values from the session state to use as context for their responses. <br>
+          - Use workflow agents to pass the conversation between agents directly.
+
+          <br>
+          <br>
+
+          - Lab copied over from the tutorial.
+          <div class="sub-section">
+            <div>
+              <h2>Overview</h2>
+              <p>This lab covers orchestrating multi-agent systems within the Google Agent Development Kit (Google ADK).</p>
+
+              <h2>Multi-Agent Systems</h2>
+              <p>The Agent Development Kit empowers developers to get more reliable, sophisticated, multi-step behaviors from generative models. Instead of writing long, complex
+                prompts that may not deliver results reliably, you can construct a flow of multiple, simple agents that can collaborate on complex problems by dividing tasks and
+                responsibilities.</p>
+              <p>This architectural approach offers several key advantages such as:</p>
+              <ul>
+                <li>
+                  <strong>Easier to design:</strong> You can think in terms of agents with specific jobs and skills.
+                </li>
+                <li>
+                  <strong>Specialized functions with more reliable performance:</strong> Specialized agents can learn from clear examples to become more reliable at their specific
+                  tasks.
+                </li>
+                <li>
+                  <strong>Organization:</strong> Dividing the workflow into distinct agents allows for a more organized, and therefor easier to think about, approach.
+                </li>
+                <li>
+                  <strong>Improvability and maintainability:</strong> It is easier to improve or fix a specialized component rather than make changes to a complex agent that may fix
+                  one behavior but might impact others.
+                </li>
+                <li>
+                  <strong>Modularity:</strong> Distinct agents from one workflow can be easily copied and included in other similar workflows.
+                </li>
+              </ul>
+
+              <h3>The Hierarchical Agent Tree</h3>
+              <div class="image-block">
+                <div class="expand-screenshot-image-btn border border-primary rounded">
+                  <span class="btn btn-link">Show Image <img src="./imgs/chevron-expand.svg" alt="Show Image Button"></span>
+                </div>
+                <div class="screenshot-image">
+                  <img src="https://cdn.qwiklabs.com/hc9s%2BOp9Z7JMMXEZLxYoHF%2Bi6Zm1aSaRgjeWOc%2BO7oY%3D"
+                       width="800"
+                       class="center-block img-fluid"
+                       alt="Example1"
+                       loading="lazy">
+                </div>
+              </div>
+
+              <p>In Agent Development Kit, you organize your agents in a tree-like structure. This helps limit the options for transfers for each agent in the tree, making it easier
+                to control and predict the possible routes the conversation can take through the tree. Benefits of the hierarchical structure include:</p>
+              <ul>
+                <li>It draws <strong>inspiration from real-world collaborative teams</strong>, making it easier to design and reason about the behavior of the multi-agent system.
+                </li>
+                <li>It is <strong>intuitive for developers</strong>, as it mirrors common software development patterns.</li>
+                <li>It provides <strong>greater control over the flow</strong> of information and task delegation within the system, making it easier to understand possible pathways
+                  and debug the system. For example, if a system has two report-generation agents at different parts of its flow with similar descriptions, the tree structure makes
+                  it easier to ensure that the correct one is invoked.
+                </li>
+              </ul>
+
+              <p>The structure always begins with the agent defined in the <strong>root_agent</strong> variable (although it may have a different user-facing <strong>name</strong> to
+                identify itself). The <code>root_agent</code> may act as a <strong>parent</strong> to one or more <strong>sub-agents</strong>. Each sub-agent agent may have its own
+                sub-agents.</p>
+
+
+              <h2>Task 1. Install ADK and set up your environment</h2>
+              <p>In this lab environment, the <strong>Vertex AI API has been enabled for you</strong>. If you were to follow these steps in your own project, you would enable it by
+                navigating to Vertex AI and following the prompt to enable it.</p>
+              <h3>Prepare a Cloud Shell Editor tab</h3>
+              <ol>
+                <li>With your Google Cloud console window selected, open Cloud Shell by pressing the G key and then the S key on your keyboard. Alternatively, you can click the
+                  Activate Cloud Shell button (
+                  <button class="js-img-container" aria-haspopup="true"><img alt="Activate Cloud Shell" height="24"
+                                                                             src="https://cdn.qwiklabs.com/4VN7LZSIdFTyYDAsU9S9rLW42Uc1xJb90mZnNQQCKec%3D"></button>
+                  ) in the upper right of the Cloud console.
+                </li>
+                <li>Click <strong>Continue</strong>.</li>
+                <li>When prompted to authorize Cloud Shell, click <strong>Authorize</strong>.</li>
+                <li>In the upper right corner of the Cloud Shell Terminal panel, click the <strong>Open in new window</strong> button
+                  <button class="js-img-container" aria-haspopup="true"><img alt="Open in new window button" height="24"
+                                                                             src="https://cdn.qwiklabs.com/0YM9CoxqcCKGEd4zWU%2B4%2BI%2FLNhKzdahTCRN5Apwtz0U%3D"></button>
+                  .
+                </li>
+                <li>Click the <strong>Open Editor</strong> pencil icon (
+                  <button class="js-img-container" aria-haspopup="true"><img alt="Edit pencil icon" height="24"
+                                                                             src="https://cdn.qwiklabs.com/7POoHpdERMUIBWA%2FjMozxLQrvj9vq8%2BetEiAFcG7syk%3D"></button>
+                  ) at the top of the pane to view files.
+                </li>
+                <li>At the top of the left-hand navigation menu, click the Explorer icon (
+                  <button class="js-img-container" aria-haspopup="true"><img alt="Explorer icon" height="24"
+                                                                             src="https://cdn.qwiklabs.com/zkcm4nnyMsWyDaX7wNePcmAE5cFI9OqQKeR9tgbZSZo%3D"></button>
+                  ) to open your file explorer.
+                </li>
+                <li>Click the <strong>Open Folder</strong> button.</li>
+                <li>In the Open Folder dialog that opens, click <strong>OK</strong> to select your Qwiklab student account's home folder.</li>
+                <li>Close any additional tutorial or Gemini panels that appear on the right side of the screen to save more of your window for your code editor.</li>
+                <li>Throughout the rest of this lab, you can work in this window as your IDE with the Cloud Shell Editor and Cloud Shell Terminal.</li>
+              </ol>
+
+              <h3>Download and install ADK and code samples for this lab</h3>
+              <ol>
+                <li>
+                  <p>Paste the following commands into the Cloud Shell Terminal to copy code files from a Cloud Storage bucket for this lab:</p>
+                  <code>gcloud storage cp -r gs://YOUR_GCP_PROJECT_ID-bucket/* .</code>
+                </li>
+                <li>
+                  <p>Update your <code>PATH</code> environment variable, <strong>install ADK</strong>, and install additional lab requirements by running the following commands in
+                    the Cloud Shell Terminal.</p>
+                  <code>export PATH=$PATH:"/home/${USER}/.local/bin"</code> <br>
+                  <code>python3 -m pip install google-adk[otel-gcp]==1.30.0 -r adk_multiagent_systems/requirements.txt</code>
+                </li>
+              </ol>
+
+              <h2>Task 2. Explore transfers between parent, sub-agent, and peer agents</h2>
+              <p>The conversation always begins with the agent defined as the <strong>root_agent</strong> variable.</p>
+              <p>The default behavior of a parent agent is to understand the <strong>description</strong> of each sub-agent and determine if control of the conversation should be
+                transferred to a sub-agent at any point.</p>
+              <p>You can help guide those transfers in the parent's <code>instruction</code> by referring to the sub-agents by name (the values of their <code>name</code> parameter,
+                not their variable names). Try an example:</p>
+              <ol>
+                <li>
+                  <p>In the Cloud Shell Terminal, run the following to create a <code>.env</code> file to authenticate the agent in the <strong>parent_and_subagents</strong>
+                    directory.</p>
+                  <code>cd ~/adk_multiagent_systems</code> <br>
+                  <code>cat << EOF > parent_and_subagents/.env</code> <br>
+                  <code>GOOGLE_GENAI_USE_VERTEXAI=TRUE</code> <br>
+                  <code>GOOGLE_CLOUD_PROJECT=YOUR_GCP_PROJECT_ID</code> <br>
+                  <code>GOOGLE_CLOUD_LOCATION=global</code> <br>
+                  <code>MODEL=gemini_flash_model_id</code> <br>
+                  <code>EOF</code> <br>
+                </li>
+                <li>
+                  <p>Run the following command to copy that <code>.env</code> file to the <strong>workflow_agents</strong> directory, which you will use later in the lab:</p>
+                  <code>cp parent_and_subagents/.env workflow_agents/.env</code>
+                </li>
+                <li>
+                  <p>In the Cloud Shell Editor file explorer pane, navigate to the <strong>adk_multiagent_systems/parent_and_subagents</strong> directory.</p>
+                </li>
+                <li>
+                  <p>Click on the <strong>agent.py</strong> file to open it.</p>
+                  <strong>Tip:</strong> Because Python code requires that we define our sub-agents before we can add them to an agent, in order to read an agent.py file in the order
+                  of
+                  the conversation flow, you may want to start reading with the bottom agent and work back towards the top.
+                </li>
+              </ol>
+
+              <ol start="5">
+                <li>
+                  <p>Notice that there are three agents here:</p>
+                  <ul>
+                    <li>a <strong>root_agent</strong> named <code>steering</code> (its name is used to identify it in ADK's dev UI and command line interfaces). It asks the user a
+                      question (if they know where they'd like to travel or if they need some help deciding), and the user's response to that question will help this steering agent
+                      know which of its two sub-agents to steer the conversation towards. Notice that it only has a simple <code>instruction</code> that does not mention the
+                      sub-agents, but it is aware of its sub-agents' descriptions.
+                    </li>
+                    <li>a <strong>travel_brainstormer</strong> that helps the user brainstorm destinations if they don't know where they would like to visit.</li>
+                    <li>an <strong>attractions_planner</strong> that helps the user build a list of things to do once they know which country they would like to visit.</li>
+                  </ul>
+                </li>
+                <li>
+                  <p>Make <strong>travel_brainstormer</strong> and <strong>attractions_planner</strong> sub-agents of the <strong>root_agent</strong> by adding the following line to
+                    the creation of the <strong>root_agent</strong>:</p>
+
+                  <pre><code class="language-python">sub_agents=[travel_brainstormer, attractions_planner]</code></pre>
+                </li>
+                <li>
+                  <p><strong>Save</strong> the file.</p>
+                </li>
+                <li>
+                  <p>Note that you don't add a corresponding <em>parent</em> parameter to the sub-agents. The hierarchical tree is defined only by specifying <code>sub_agents</code>
+                    when creating parent agents.</p>
+                </li>
+                <li>
+                  <p>In the Cloud Shell Terminal, run the following to use the ADK command line interface to chat with your agent:</p>
+                  <code>cd ~/adk_multiagent_systems</code>
+                  <code>adk run parent_and_subagents</code>
+                </li>
+                <li>
+                  <p>When you are presented the <code>[user]:</code> prompt, greet the agent with: hello!</p>
+                  <p><strong>Example output (yours may be a little different):</strong></p>
+                  <i>user: hello</i><br>
+                  <i>[steering]: Hi there! Do you already have a country in mind for your trip, or would you like some help deciding where to go?</i>
+                </li>
+                <li>
+                  <p>Tell the agent: <i>I could use some help deciding.</i></p>
+                  <p><strong>Example output (yours may be a little different):</strong></p>
+                  <i>user: I could use some help deciding.</i> <br>
+                  <i>[travel_brainstormer]: Okay! To give you the best recommendations, I need to understand what you're looking for in a trip.</i>
+                </li>
+                <li>
+                  <p>Notice from the name <strong>[travel_brainstormer]</strong> in brackets in the response that the <strong>root_agent</strong> (named <strong>[steering]</strong>)
+                    has transferred the conversation to the appropriate sub-agent based on that sub-agent's <code>description</code> alone.</p>
+                </li>
+                <li>
+                  <p>At the <code>user:</code> prompt, enter <strong>exit</strong> to end the conversation.</p>
+                </li>
+                <li>
+                  <p>You can also provide your agent more detailed instructions about when to transfer to a sub-agent as part of its <code>instructions</code>. In the
+                    <strong>agent.py</strong> file, add the following lines to the <strong>root_agent</strong>'s <code>instruction</code>:</p>
+                  <code>If they need help deciding, send them to 'travel_brainstormer'. If they know what country they'd like to visit, send them to the 'attractions_planner'.</code>
+                </li>
+                <li>
+                  <p><strong>Save</strong> the file.</p>
+                </li>
+                <li>
+                  <p>In the Cloud Shell Terminal, run the following to start the command line interface again: <code>adk run parent_and_subagents</code></p>
+                </li>
+                <li>
+                  <p>Greet the agent with: <i>hello!</i></p>
+                </li>
+                <li>
+                  <p>Reply to the agent's greeting with: <i>I would like to go to Japan.</i></p>
+                  <p><strong>Example output (yours may be a little different):</strong></p>
+                  <i>[attractions_planner]: Okay, I can help you with that! Here are some popular attractions in Japan: Tokyo, Senso-ji Temple, Shibuya Crossing, Tokyo Skytree,
+                    Kyoto</i>
+                </li>
+                <li>
+                  <p>Notice that you have been transferred to the other sub-agent, <strong>attractions_planner</strong>.</p>
+                </li>
+                <li>
+                  <p>Reply with: <i>Actually I don't know what country to visit.</i></p>
+                  <p><strong>Example output (yours may be a little different):</strong></p>
+                  <i>[travel_brainstormer]: Okay! I can help you brainstorm some countries for travel...</i>
+                </li>
+                <li>
+                  <p>Notice you have been transferred to the <strong>travel_brainstormer</strong> agent, which is a <strong>peer</strong> agent to the
+                    <strong>attractions_planner</strong>. This is allowed by default. If you wanted to prevent transfers to peers, you could have set the
+                    <code>disallow_transfer_to_peers</code> parameter to <code>True</code> on the <strong>attractions_planner</strong> agent.</p>
+                </li>
+                <li>
+                  <p>At the user prompt, type <code>exit</code> to end the session.</p>
+                </li>
+                <b>Step-by-step pattern:</b> If you are interested in an agent that guides a user through a process step-by-step, one useful pattern can be to make the first step the
+                <code>root_agent</code> with the second step agent its only sub-agent, and continue with each additional step being the only sub-agent of the previous step's agent.
+              </ol>
+
+              <h2>Task 3. Use session state to store and retrieve specific information</h2>
+              <p>Each conversation in ADK is contained within a <code>Session</code> that all agents involved in the conversation can access. A session includes the conversation
+                history, which agents read as part of the context used to generate a response. The session also includes a <strong>session state</strong> dictionary that you can use
+                to take greater control over the most important pieces of information you would like to highlight and how they are accessed.</p>
+              <p>This can be particularly helpful to pass information between agents or to maintain a simple data structure, like a list of tasks, over the course of a conversation
+                with a user.</p>
+              <p>To explore adding to and reading from state:</p>
+              <ol>
+                <li>
+                  <p>Return to the file <strong>adk_multiagent_systems/parent_and_subagents/agent.py</strong></p>
+                </li>
+                <li>
+                  <p>Paste the following function definition after the <code># Tools</code> header:</p>
+                  <pre><code class="language-python">
+def save_attractions_to_state(
+    tool_context: ToolContext,
+    attractions: List[str]
+) -> dict[str, str]:
+    """Saves the list of attractions to state["attractions"].
+
+    Args:
+        attractions [str]: a list of strings to add to the list of attractions
+
+    Returns:
+        None
+    """
+    # Load existing attractions from state. If none exist, start an empty list
+    existing_attractions = tool_context.state.get("attractions", [])
+
+    # Update the 'attractions' key with a combo of old and new lists.
+    # When the tool is run, ADK will create an event and make
+    # corresponding updates in the session's state.
+    tool_context.state["attractions"] = existing_attractions + attractions
+
+    # A best practice for tools is to return a status message in a return dict
+    return {"status": "success"}
+</code></pre>
+                </li>
+                <li>
+                  <p>In this code, notice:</p>
+                  <ul>
+                    <li>The session is passed to your tool function as <code>ToolContext</code>. All you need to do is assign a parameter to receive it, as you see here with the
+                      parameter named <code>tool_context</code>. You can then use <code>tool_context</code> to access session information like conversation history (through <code>tool_context.events</code>)
+                      and the session state dictionary (through <code>tool_context.state</code>). When the <code>tool_context.state</code> dictionary is modified by your tool
+                      function, those changes will be reflected in the session's state after the tool finishes its execution.
+                    </li>
+                    <li>The docstring provides a clear description and sections for argument and return values.</li>
+                    <li>The commented function code demonstrates how easy it is to make updates to the state dictionary.</li>
+                  </ul>
+                </li>
+                <li>
+                  <p>Add the tool to the <strong>attractions_planner</strong> agent by adding the <code>tools</code> parameter when the agent is created:</p>
+                  <pre><code class="language-python">
+tools=[save_attractions_to_state]
+</code></pre>
+                </li>
+                <li>
+                  <p>Add the following bullet points to the <strong>attractions_planner</strong> agent's existing <code>instruction</code>:</p>
+                  <code>- When they reply, use your tool to save their selected attraction and then provide more possible attractions.</code> <br>
+                  <code>- If they ask to view the list, provide a bulleted list of { attractions? } and then suggest some more.</code>
+                </li>
+                <li>
+                  <p>Notice the section in curly braces: <code>{ attractions? }</code>. This ADK feature, <a
+                    href="https://google.github.io/adk-docs/sessions/state/#using-key-templating" target="_blank">key templating</a>, loads the value of the <code>attractions</code>
+                    key from the state dictionary. The question mark after the <code>attractions</code> key prevents this from erroring if the field is not yet present.</p>
+                </li>
+                <li>
+                  <p>You will now run the agent from the web interface, which provides a tab for you to see the changes being made to the session state. <strong>Launch the Agent
+                    Development Kit Web UI</strong> with the following command:</p>
+                  <code>adk web --allow_origins "regex:https://.*\.cloudshell\.dev"</code>
+                </li>
+                <li>
+                  <p>To view the web interface in a new tab, click the <strong>http://127.0.0.1:8000</strong> link in the Terminal output.</p>
+                </li>
+                <li>
+                  <p>A new browser tab will open with the ADK Dev UI.</p>
+                </li>
+                <li>
+                  <p>From the <strong>Select an agent</strong> dropdown on the left, select the <strong>parent_and_subagents</strong> agent from the dropdown.</p>
+                </li>
+                <li>
+                  <p>Start the conversation with: <i>hello</i></p>
+                </li>
+                <li>
+                  <p>After the agent greets you, reply with: <i>I'd like to go to Egypt.</i></p>
+                  <p>You should be transferred to the <strong>attractions_planner</strong> and be provided a list of attractions.</p>
+                </li>
+                <li>
+                  <p>Choose an attraction, for example: <i>I'll go to the Sphinx</i></p>
+                </li>
+                <li>
+                  <p>You should receive an acknowledgement in the response, like: <i>Okay, I've saved The Sphinx to your list. Here are some other attractions...</i></p>
+                </li>
+                <li>
+                  <p>Click the response tool box (marked with a check mark) to view the event created from the tool's response. Notice that it includes an <strong>actions</strong>
+                    field which includes <strong>state_delta</strong> describing the changes to the state.</p>
+                </li>
+                <li>
+                  <p>You should be prompted by the agent to select more attractions. Reply to the agent by <strong>naming one of the options it has presented</strong>.</p>
+                </li>
+                <li>
+                  <p>On the left-hand navigation menu, click the "X" to exit the focus on the event you inspected earlier.</p>
+                </li>
+                <li>
+                  <p>Now in the sidebar, you should see the list of events and a few tab options. Select the <strong>State</strong> tab. Here you can view the current state,
+                    including your <strong>attractions</strong> array with the two values you have requested.</p>
+                  <div class="image-block">
+                    <div class="expand-screenshot-image-btn border border-primary rounded">
+                      <span class="btn btn-link">Show Image <img src="./imgs/chevron-expand.svg" alt="Show Image Button"></span>
+                    </div>
+                    <div class="screenshot-image">
+                      <img src="https://cdn.qwiklabs.com/ILEPEgsj0jm36NlN1fZKw06%2BbOgoKvdm2lSOrWfP2GE%3D"
+                           width="600"
+                           class="center-block img-fluid"
+                           alt="Example1"
+                           loading="lazy">
+                    </div>
+                  </div>
+
+                </li>
+                <li>
+                  <p>Send this message to the agent: <i>What is on my list?</i></p>
+                </li>
+                <li>
+                  <p>It should return your list formatted as a bulleted list according to its <code>instruction</code>.</p>
+                </li>
+                <li>
+                  <p>When you are finished experimenting with the agent, close the web browser tab and press <strong>CTRL + C</strong> in the Cloud Shell Terminal to stop the server.
+                  </p>
+                  <p>Later in this lab, you will demonstrate how to use state to communicate between agents.</p>
+                  <p>Instead of saving small pieces of information, if you would like to store your agent's entire text response in the state dictionary, you can set an
+                    <code>output_key</code> parameter when you define the agent, and its entire output will be stored in the state dictionary under that field name.</p>
+                </li>
+              </ol>
+
+              <h2>Workflow Agents</h2>
+              <p>Parent to sub-agent transfers are ideal when you have multiple specialist sub-agents, and you want the user to interact with each of them.</p>
+              <p>However, if you would like agents to act one-after-another without waiting for a turn from the user, you can use <strong>workflow agents</strong>. Some example
+                scenarios when you might use workflow agents include when you would like your agents to:</p>
+              <ul>
+                <li>
+                  <strong>Plan and Execute:</strong> When you want to have one agent prepare a list of items, and then have other agents use that list to perform follow-up tasks, for
+                  example writing sections of a document
+                </li>
+                <li>
+                  <strong>Research and Write:</strong> When you want to have one agent call functions to collect contextual information from Google Search or other data sources, then
+                  another agent use that information to produce some output.
+                </li>
+                <li>
+                  <strong>Draft and Revise:</strong> When you want to have one agent prepare a draft of a document, and then have other agents check the work and iterate on it
+                </li>
+              </ul>
+              <p>To accomplish these kinds of tasks, <strong>workflow agents</strong> have sub-agents and guarantee that each of their sub-agents acts. Agent Development Kit provides
+                three built-in workflow agents and the opportunity to define your own:</p>
+              <ul>
+                <li><code>SequentialAgent</code></li>
+                <li><code>LoopAgent</code></li>
+                <li><code>ParallelAgent</code></li>
+              </ul>
+              <p>Throughout the rest of this lab, you will build a multi-agent system that uses multiple LLM agents, workflow agents, and tools to help control the flow of the
+                agent.</p>
+              <p>Specifically, you will build an agent that will develop a pitch document for a new hit movie: a biographical film based on the life of a historical character. Your
+                sub-agents will handle the research, an iterative writing loop with a screenwriter and a critic, and finally some additional sub-agents will help brainstorm casting
+                ideas and use historical box office data to make some predictions about box office results.</p>
+              <p>In the end, your multi-agent system will look like this:</p>
+              <div class="image-block">
+                <div class="expand-screenshot-image-btn border border-primary rounded">
+                  <span class="btn btn-link">Show Image <img src="./imgs/chevron-expand.svg" alt="Show Image Button"></span>
+                </div>
+                <div class="screenshot-image">
+                  <img src="https://cdn.qwiklabs.com/9o3xwlTjCWnoyd9fEEgInAHYJbCQHiU5JIYIN8rU9KY%3D"
+                       width="1000"
+                       class="center-block img-fluid"
+                       alt="Example1"
+                       loading="lazy">
+                </div>
+              </div>
+
+              <p>But you will begin with a simpler version.</p>
+
+              <h2>Task 4. Begin building a multi-agent system with a SequentialAgent</h2>
+              <p>The <code>SequentialAgent</code> executes its sub-agents in a linear sequence. Each sub-agent in its <code>sub_agents</code> list is run, one after the other, in the
+                order they are defined.</p>
+              <p>This is ideal for workflows where tasks must be performed in a specific order, and the output of one task serves as the input for the next.</p>
+              <p>In this task, you will run a <code>SequentialAgent</code> to build a first version of your movie pitch-development multi-agent system. The first draft of your agent
+                will be structured like this:</p>
+              <div class="image-block">
+                <div class="expand-screenshot-image-btn border border-primary rounded">
+                  <span class="btn btn-link">Show Image <img src="./imgs/chevron-expand.svg" alt="Show Image Button"></span>
+                </div>
+                <div class="screenshot-image">
+                  <img src="https://cdn.qwiklabs.com/11WKiwk%2FNgK7dk%2F0K6tk%2FkzjH8tx%2BuxeJeS3fncHjDs%3D"
+                       width="1000"
+                       class="center-block img-fluid"
+                       alt="Example1"
+                       loading="lazy">
+                </div>
+              </div>
+
+              <ul>
+                <li>
+                  <p>A <strong>root_agent</strong> named <strong>greeter</strong> to welcome the user and request a historical character as a movie subject</p>
+                </li>
+                <li>
+                  <p>A <code>SequentialAgent</code> called <strong>film_concept_team</strong> will include:</p>
+                  <ul>
+                    <li>A <strong>researcher</strong> to learn more about the requested historical figure from Wikipedia, using a LangChain tool covered in the lab <em>Empower ADK
+                      agents with tools</em>. An agent can choose to call its tool(s) multiple times in succession, so the researcher can take multiple turns in a row if it
+                      determines it needs to do more research.
+                    </li>
+                    <li>A <strong>screenwriter</strong> to turn the research into a plot outline.</li>
+                    <li>A <strong>file_writer</strong> to title the resulting movie and write the results of the sequence to a file.</li>
+                  </ul>
+                </li>
+              </ul>
+              <ol>
+                <li>
+                  <p>In the <strong>Cloud Shell Editor</strong>, navigate to the directory <strong>adk_multiagent_systems/workflow_agents</strong>.</p>
+                </li>
+                <li>
+                  <p>Click on the <strong>agent.py</strong> file in the <strong>workflow_agents</strong> directory.</p>
+                </li>
+                <li>
+                  <p>Read through this agent definition file. Because sub-agents must be defined before they can be assigned to a parent, to read the file in the order of the
+                    conversational flow, you can read the agents from the bottom of the file to the top.</p>
+                </li>
+                <li>
+                  <p>You also have a function tool <strong>append_to_state</strong>. This function allows agents with the tool the ability to add content to a dictionary value in
+                    state. It is particularly useful for agents that might call a tool multiple times or act in multiple passes of a <code>LoopAgent</code>, so that each time they
+                    act their output is stored.</p>
+                </li>
+                <li>
+                  <p>Try out the current version of the agent by launching the web interface from the Cloud Shell Terminal. You will use the <code>--reload_agents</code> argument to
+                    enable live reloading of agents based on agent changes:</p>
+                  <code>cd ~/adk_multiagent_systems</code> <br>
+                  <code>adk web --allow_origins "regex:https://.*\.cloudshell\.dev" --reload_agents</code>
+                </li>
+                <li>
+                  <p>To view the web interface in a new tab, click the <strong>http://127.0.0.1:8000</strong> link in the Terminal output.</p>
+                </li>
+                <li>
+                  <p>A new browser tab will open with the ADK Dev UI.</p>
+                </li>
+                <li>
+                  <p>From the <strong>Select an agent</strong> dropdown on the left, select <strong>workflow_agents</strong>.</p>
+                </li>
+                <li>
+                  <p>Start the conversation with: <code>hello</code>. It may take a few moments for the agent to respond, but it should request you enter a historical figure to start
+                    your film plot generation.</p>
+                </li>
+                <li>
+                  <p>When prompted to enter a historical figure, you can enter one of your choice or use one of these examples:</p>
+                  <ul>
+                    <li>
+                      <code>Zhang Zhongjing</code> - a renowned Chinese physician from the 2nd Century CE.
+                    </li>
+                    <li>
+                      <code>Ada Lovelace</code> - an English mathematician and writer known for her work on early computers
+                    </li>
+                    <li>
+                      <code>Marcus Aurelius</code> - a Roman emperor known for his philosophical writings.
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <p>The agent should now call its agents one after the other as it executes the workflow and writes the plot outline file to your <strong>~/adk_multiagent_systems/movie_pitches</strong>
+                    directory. It should inform you when it has written the file to disk.</p>
+                  <p>If you don't see the agent reporting that it generated a file for you or want to try another character, you can click <strong>+ New Session</strong> in the upper
+                    right and try again.</p>
+                </li>
+                <li>
+                  <p>View the agent's output in the Cloud Shell Editor. (You may need to use the Cloud Shell Editor's menu to enable View &gt; Word Wrap to see the full text without
+                    lots of horizontal scrolling.)</p>
+                </li>
+                <li>
+                  <p>In the ADK Dev UI, <strong>click on one of the agent icons (
+                    <button class="js-img-container" aria-haspopup="true"><img alt="agent_icon" src="https://cdn.qwiklabs.com/0qmcUwc%2BaHGB6en11vU3HeZL1%2FsZuhC48PulduLYczg%3D">
+                    </button>
+                    )</strong> representing a turn of conversation to bring up the <strong>event view</strong>.
+                  </p>
+                </li>
+                <li>
+                  <p>The event view provides a visual representation of the tree of agents and tools used in this session. You may need to scroll in the event panel to see the full
+                    plot.</p>
+                </li>
+              </ol>
+              <div class="image-block">
+                <div class="expand-screenshot-image-btn border border-primary rounded">
+                  <span class="btn btn-link">Show Image <img src="./imgs/chevron-expand.svg" alt="Show Image Button"></span>
+                </div>
+                <div class="screenshot-image">
+                  <img src="https://cdn.qwiklabs.com/13FyRaWAhz%2B4P0TGiyaiGmU0IGRoARIfQlYcGasMy4o%3D"
+                       width="1000"
+                       class="center-block img-fluid"
+                       alt="Example1"
+                       loading="lazy">
+                </div>
+              </div>
+
+              <ol start="15">
+                <li>In addition to the graph view, you can click on the <strong>Request</strong> tab of the event to see the information this agent received as part of its request,
+                  including the conversation history.
+                </li>
+                <li>You can also click on the <strong>Response</strong> tab of the event to see what the agent returned.</li>
+                <b>Note:</b> While this system can produce interesting results, it is not intended to imply that instructions can be so brief or adding examples can be skipped. The
+                system's reliability would benefit greatly from the additional layer of adding more rigorous instructions and examples for each agent.
+              </ol>
+
+              <h2>Task 5. Add a LoopAgent for iterative work</h2>
+              <p>The <code>LoopAgent</code> executes its sub-agents in a defined sequence and then starts at the beginning of the sequence again without breaking for a user input. It
+                repeats the loop until a number of iterations has been reached or a call to exit the loop has been made by one of its sub-agents (usually by calling a built-in
+                <code>exit_loop</code> tool).</p>
+              <p>This is beneficial for tasks that require continuous refinement, monitoring, or cyclical workflows. Examples include:</p>
+              <ul>
+                <li>
+                  <strong>Iterative Refinement:</strong> Continuously improve a document or plan through repeated agent cycles.
+                </li>
+                <li>
+                  <strong>Continuous Monitoring:</strong> Periodically check data sources or conditions using a sequence of agents.
+                </li>
+                <li>
+                  <strong>Debate or Negotiation:</strong> Simulate iterative discussions between agents to reach a better outcome.
+                </li>
+              </ul>
+              <p>You will add a <code>LoopAgent</code> to your movie pitch agent to allow multiple rounds of research and iteration while crafting the story. In addition to refining
+                the script, this allows a user to start with a less specific input: instead of suggesting a specific historical figure, they might only know they want a story about
+                an ancient doctor, and a research-and-writing iteration loop will allow the agents to find a good candidate, then work on the story.</p>
+              <div class="image-block">
+                <div class="expand-screenshot-image-btn border border-primary rounded">
+                  <span class="btn btn-link">Show Image <img src="./imgs/chevron-expand.svg" alt="Show Image Button"></span>
+                </div>
+                <div class="screenshot-image">
+                  <img src="https://cdn.qwiklabs.com/gZKbLuj%2BZ6usxUe0wdEiFuOdbkWcOO98DEmL%2Fi8LGco%3D"
+                       width="1000"
+                       class="center-block img-fluid"
+                       alt="Example1"
+                       loading="lazy">
+                </div>
+              </div>
+
+              <p>Your revised agent will flow like this:</p>
+              <ul>
+                <li>The <strong>root_agent</strong> <strong>greeter</strong> will remain the same.</li>
+                <li>The <strong>film_concept_team</strong> <code>SequentialAgent</code> will now consist of:
+                  <ul>
+                    <li>A <strong>writers_room</strong> <code>LoopAgent</code> that will begin the sequence. It will consist of:
+                      <ul>
+                        <li>The <strong>researcher</strong> will be the same as before.</li>
+                        <li>The <strong>screenwriter</strong> will be similar to before.</li>
+                        <li>A <strong>critic</strong> that will offer critical feedback on the current draft to motivate the next round of research and improvement through the loop.
+                        </li>
+                      </ul>
+                    </li>
+                    <li>When the loop terminates, it will escalate control of the conversation back to the <strong>film_concept_team</strong> <code>SequentialAgent</code>, which will
+                      then pass control to the next agent in its sequence: the <strong>file_writer</strong> that will remain as before to give the movie a title and write the results
+                      of the sequence to a file.
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <p>To make these changes:</p>
+              <ol>
+                <li>
+                  <p>In the <strong>adk_multiagent_systems/workflow_agents/agent.py</strong> file, add this tool import so that you can provide an agent the ability to exit the loop
+                    when desired:</p>
+                  <pre><code class="language-python">
+from google.adk.tools import exit_loop
+from google.adk.models import Gemini
+</code></pre>
+                </li>
+                <li>
+                  <p>To determine when to exit the loop, add this <strong>critic</strong> agent to decide when the plot outline is ready. Paste the following new agent into the
+                    <strong>agent.py</strong> file under the <strong># Agents</strong> section header (without overwriting the existing agents). Note that it has the
+                    <code>exit_loop</code> tool as one of its tools and instructions on when to use it:</p>
+                  <pre><code class="language-python">
+critic = Agent(
+    name="critic",
+    model=Gemini(model=model_name, retry_options=RETRY_OPTIONS),
+    description="Reviews the outline so that it can be improved.",
+    instruction="""
+    INSTRUCTIONS:
+    Consider these questions about the PLOT_OUTLINE:
+    - Does it meet a satisfying three-act cinematic structure?
+    - Do the characters' struggles seem engaging?
+    - Does it feel grounded in a real time period in history?
+    - Does it sufficiently incorporate historical details from the RESEARCH?
+
+    If the PLOT_OUTLINE does a good job with these questions, exit the writing loop with your 'exit_loop' tool.
+    If significant improvements can be made, use the 'append_to_state' tool to add your feedback to the field 'CRITICAL_FEEDBACK'.
+    Explain your decision and briefly summarize the feedback you have provided.
+
+    PLOT_OUTLINE:
+    { PLOT_OUTLINE? }
+
+    RESEARCH:
+    { research? }
+    """,
+    before_model_callback=log_query_to_model,
+    after_model_callback=log_model_response,
+    tools=[append_to_state, exit_loop]
+)
+</code></pre>
+                </li>
+                <li>
+                  <p>Create a new <code>LoopAgent</code> called <strong>writers_room</strong> that creates the iterative loop of the researcher, screenwriter, and critic. Each pass
+                    through the loop will end with a critical review of the work so far, which will prompt improvements for the next round. Paste the following above the existing
+                    <strong>film_concept_team</strong> <code>SequentialAgent</code>.</p>
+                  <pre><code class="language-python">
+writers_room = LoopAgent(
+    name="writers_room",
+    description="Iterates through research and writing to improve a movie plot outline.",
+    sub_agents=[
+        researcher,
+        screenwriter,
+        critic
+    ],
+    max_iterations=5,
+)
+</code></pre>
+                </li>
+                <li>
+                  <p>Note that the <code>LoopAgent</code> creation includes a parameter for <code>max_iterations</code>. This defines how many times the loop will run before it ends.
+                    Even if you plan to interrupt the loop via another method, it is a good idea to include a cap on the total number of iterations.</p>
+                </li>
+                <li>
+                  <p>Update the <strong>film_concept_team</strong> <code>SequentialAgent</code> to replace the <strong>researcher</strong> and <strong>screenwriter</strong> with the
+                    <strong>writers_room</strong> <code>LoopAgent</code> you just created. The <strong>file_writer</strong> agent should remain at the end of the sequence. The
+                    <strong>film_concept_team</strong> should now look like this:</p>
+                  <pre><code class="language-python">
+film_concept_team = SequentialAgent(
+    name="film_concept_team",
+    description="Write a film plot outline and save it as a text file.",
+    sub_agents=[
+        writers_room,
+        file_writer
+    ],
+)
+</code></pre>
+                </li>
+                <li>
+                  <p>Return to the ADK Dev UI tab and click the <strong>+ New Session</strong> button in the upper right to start a new session.</p>
+                </li>
+                <li>
+                  <p>Begin a new conversation with: <code>hello</code></p>
+                </li>
+                <li>
+                  <p>When prompted to choose a kind of historical character, choose one that interests you. Some ideas include:</p>
+                  <ul>
+                    <li><code>an industrial designer who made products for the masses</code></li>
+                    <li><code>a cartographer (a map maker)</code></li>
+                    <li><code>that guy who made crops yield more food</code></li>
+                  </ul>
+                </li>
+                <li>
+                  <p>Once you have chosen a type of character, the agent should work its way through iterations of the loop and finally give the film a title and write the outline to
+                    a file.</p>
+                </li>
+                <li>
+                  <p>Using the Cloud Shell Editor, review the file generated, which should be saved in the <strong>adk_multiagent_systems/movie_pitches</strong> directory. (Once
+                    again, you may need to use the Editor's menu to enable View &gt; Word Wrap to see the full text without lots of horizontal scrolling.)</p>
+                </li>
+              </ol>
+
+
+              <h2>Task 6. Use a "fan out and gather" pattern for report generation with a ParallelAgent</h2>
+              <p>The <code>ParallelAgent</code> enables concurrent execution of its sub-agents. Each sub-agent operates in its own branch, and by default, they do not share
+                conversation history or state directly with each other during parallel execution.</p>
+              <p>This is valuable for tasks that can be divided into independent sub-tasks that can be processed simultaneously. Using a <code>ParallelAgent</code> can significantly
+                reduce the overall execution time for such tasks.</p>
+              <p>In this lab, you will add some supplemental reports -- some research on potential box office performance and some initial ideas on casting -- to enhance the pitch
+                for your new film.</p>
+              <div class="image-block">
+                <div class="expand-screenshot-image-btn border border-primary rounded">
+                  <span class="btn btn-link">Show Image <img src="./imgs/chevron-expand.svg" alt="Show Image Button"></span>
+                </div>
+                <div class="screenshot-image">
+                  <img src="https://cdn.qwiklabs.com/9o3xwlTjCWnoyd9fEEgInAHYJbCQHiU5JIYIN8rU9KY%3D"
+                       width="1000"
+                       class="center-block img-fluid"
+                       alt="Example1"
+                       loading="lazy">
+                </div>
+              </div>
+
+              <p>Your revised agent will flow like this:</p>
+              <ul>
+                <li>The <strong>greeter</strong> will the same.</li>
+                <li>The <strong>film_concept_team</strong> <code>SequentialAgent</code> will now consist of:
+                  <ul>
+                    <li>The <strong>writers_room</strong> <code>LoopAgent</code>, which will remain the same including:
+                      <ul>
+                        <li>The <strong>researcher</strong> agent</li>
+                        <li>The <strong>screenwriter</strong> agent</li>
+                        <li>The <strong>critic</strong> agent</li>
+                      </ul>
+                    </li>
+                    <li>Your new <strong>preproduction_team</strong> <code>ParallelAgent</code> will then act, consisting of:
+                      <ul>
+                        <li>A <strong>box_office_researcher</strong> agent to use historical box office data to generate a report on potential box office performance for this film
+                        </li>
+                        <li>A <strong>casting_agent</strong> agent to generate some initial ideas on casting based on actors who have starred in similar films</li>
+                      </ul>
+                    </li>
+                    <li>The <strong>file_writer</strong> that will remain as before to write the results of the sequence to a file.</li>
+                  </ul>
+                </li>
+              </ul>
+              <p>While much of this example demonstrates creative work that would be done by human teams, this workflow represents how a complex chain of tasks can be broken across
+                several sub-agents to produce drafts of complex documents which human team members can then edit and improve upon.</p>
+              <ol>
+                <li>
+                  <p>Paste the following new agents and <code>ParallelAgent</code> into your <strong>workflow_agents/agent.py</strong> file under the <code># Agents</code> header:
+                  </p>
+                  <pre><code class="language-python">
+box_office_researcher = Agent(
+    name="box_office_researcher",
+    model=Gemini(model=model_name, retry_options=RETRY_OPTIONS),
+    description="Considers the box office potential of this film",
+    instruction="""
+    PLOT_OUTLINE:
+    { PLOT_OUTLINE? }
+
+    INSTRUCTIONS:
+    Write a report on the box office potential of a movie like that described in PLOT_OUTLINE based on the reported box office performance of other recent films.
+    """,
+    output_key="box_office_report"
+)
+
+casting_agent = Agent(
+    name="casting_agent",
+    model=Gemini(model=model_name, retry_options=RETRY_OPTIONS),
+    description="Generates casting ideas for this film",
+    instruction="""
+    PLOT_OUTLINE:
+    { PLOT_OUTLINE? }
+
+    INSTRUCTIONS:
+    Generate ideas for casting for the characters described in PLOT_OUTLINE
+    by suggesting actors who have received positive feedback from critics and/or
+    fans when they have played similar roles.
+    """,
+    output_key="casting_report"
+)
+
+preproduction_team = ParallelAgent(
+    name="preproduction_team",
+    sub_agents=[
+        box_office_researcher,
+        casting_agent
+    ]
+)
+</code></pre>
+                </li>
+                <li>
+                  <p>Update the existing <strong>film_concept_team</strong> agent's <strong>sub_agents</strong> list to include the <code>preproduction_team</code> between the
+                    <strong>writers_room</strong> and <strong>file_writer</strong>:</p>
+                  <pre><code class="language-python">
+film_concept_team = SequentialAgent(
+    name="film_concept_team",
+    description="Write a film plot outline and save it as a text file.",
+    sub_agents=[
+        writers_room,
+        preproduction_team,
+        file_writer
+    ],
+)
+</code></pre>
+                </li>
+                <li>
+                  <p>Update the <strong>file_writer</strong>'s <strong>instruction</strong> to:</p>
+                  <pre><code class="language-python">
+"""
+INSTRUCTIONS:
+- Create a marketable, contemporary movie title suggestion for the movie described in the PLOT_OUTLINE. If a title has been suggested in PLOT_OUTLINE, you can use it, or replace it with a better one.
+- Use your 'write_file' tool to create a new txt file with the following arguments:
+    - for a filename, use the movie title
+    - Write to the 'movie_pitches' directory.
+    - For the 'content' to write, include:
+        - The PLOT_OUTLINE
+        - The BOX_OFFICE_REPORT
+        - The CASTING_REPORT
+
+PLOT_OUTLINE:
+{ PLOT_OUTLINE? }
+
+BOX_OFFICE_REPORT:
+{ box_office_report? }
+
+CASTING_REPORT:
+{ casting_report? }
+"""
+</code></pre>
+                </li>
+                <li>
+                  <p><strong>Save</strong> the file.</p>
+                </li>
+                <li>
+                  <p>In the ADK Dev UI, click <strong>+ New Session</strong> in the upper right.</p>
+                </li>
+                <li>
+                  <p>Enter <code>hello</code> to start the conversation.</p>
+                </li>
+                <li>
+                  <p>When prompted, enter a new character idea that you are interested in. Some ideas include:</p>
+                  <ul>
+                    <li><code>that actress who invented the technology for wifi</code></li>
+                    <li><code>an exciting chef</code></li>
+                    <li><code>key players in the worlds fair exhibitions</code></li>
+                  </ul>
+                </li>
+                <li>
+                  <p>When the agent has completed its writing and report-generation, inspect the file it produced in the <strong>adk_multiagent_systems/movie_pitches</strong>
+                    directory. If a part of the process fails, click <strong>+ New session</strong> in the upper right and try again.</p>
+                </li>
+              </ol>
+
+
+              <h2>Custom workflow agents</h2>
+              <p>When the pre-defined workflow agents of <code>SequentialAgent</code>, <code>LoopAgent</code>, and <code>ParallelAgent</code> are insufficient for your needs, <code>CustomAgent</code>
+                provides the flexibility to implement new workflow logic. You can define patterns for flow control, conditional execution, or state management between sub-agents.
+                This is useful for complex workflows, stateful orchestrations, or integrating custom business logic into the framework's orchestration layer.</p>
+              <p>Creation of a <code>CustomAgent</code> is out of the scope of this lab, but it is good to know that it exists if you need it!</p>
+
+              <h2>Congratulations!</h2>
+              <p>In this lab, you've learned to create multiple agents and relate them to one another with parent to sub-agent relationships, add to the session state and read it in
+                agent instructions, and use workflow agents to pass the conversation between agents directly.</p>
+            </div>
+          </div>
+        </div>
+
       </div>
 
     </div>
