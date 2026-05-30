@@ -157,12 +157,15 @@
       <a class="index-column-entry" href="#VertexAI_Chapter1">Ch1: Course Introduction</a>
       <a class="index-column-entry" href="#VertexAI_Chapter2">Ch2: Introducing the Agent Development Kit</a>
       <a class="index-column-entry" href="#VertexAI_Chapter3">Ch3: Develop Agents with ADK</a>
-      <a class="index-column-entry" href="#VertexAI_Chapter3.1">Ch3.1: Get Started with ADK Lab</a>
-      <a class="index-column-entry" href="#VertexAI_Chapter3.2">Ch3.2: Empower ADK Agents with tools Lab</a>
+      <a class="index-column-entry" href="#VertexAI_Chapter3.1">Ch3.1: Lab: Get Started with ADK</a>
+      <a class="index-column-entry" href="#VertexAI_Chapter3.2">Ch3.2: Lab: Empower ADK Agents with tools</a>
       <a class="index-column-entry" href="#VertexAI_Chapter4">Ch4: Build multi-agent systems with ADK</a>
       <a class="index-column-entry" href="#VertexAI_Chapter4.1">Ch4.1: Build multi-agent systems with ADK</a>
       <a class="index-column-entry" href="#VertexAI_Chapter4.2">Ch4.2: Callbacks</a>
       <a class="index-column-entry" href="#VertexAI_Chapter4.3">Ch4.3: Lab: Build multi-agent systems with ADK</a>
+      <a class="index-column-entry" href="#VertexAI_Chapter5">Ch5: Deploy ADK Agents to Agent Engine</a>
+      <a class="index-column-entry" href="#VertexAI_Chapter5.1">Ch5.1: Theory: Deploy ADK Agents to Agent Engine</a>
+      <a class="index-column-entry" href="#VertexAI_Chapter5.2">Ch5.2: Lab: Deploy ADK Agents to Agent Engine</a>
     </div>
   </div>
   <div class="content-column">
@@ -335,19 +338,15 @@
           and send telemetry data to Cloud Logging. <br>
           - Lab Instructions copied over from lesson:
 
-          <div class="markdown-lab-instructions js-markdown-instructions" id="markdown-lab-instructions">
-            <h2 id="step2">Overview</h2>
+          <div class="sub-section">
+            <h2>Overview</h2>
             <p>Building complex agentic applications often requires coordinating multiple specialized models, managing tool integrations, and debugging execution traces—all of
               which can be manually intensive and difficult to scale.</p>
             <p><a href="https://docs.cloud.google.com/agent-builder/agent-development-kit/overview" target="_blank">Agent Development Kit (ADK)</a> solves these challenges by
               providing a modular framework to build, test, and deploy multi-agent systems. It allows you to compose specialized agents into a hierarchy, equip them with pre-built
               or custom tools, and orchestrate workflows using both predictable pipelines and dynamic LLM-driven routing.</p>
-            <p>In this lab, you use ADK to build a research assistant that leverages
-              <ql-variable disablehighlight="" key="project_0.startup_script.gemini_flash_model_name" placeholder="model_name">
-                <template shadowrootmode="open"><!----><code class=" default "><!--?lit$583449698$-->model_name</code></template>
-              </ql-variable>
-              to analyze data and generate structured reports. You explore how to manage these dependencies dynamically to ensure your agentic workflows remain robust as new models
-              are released.
+            <p>In this lab, you use ADK to build a research assistant that leverages <code>model_name</code> to analyze data and generate structured reports. You explore how to
+              manage these dependencies dynamically to ensure your agentic workflows remain robust as new models are released.
             </p>
             <h3>Objectives</h3>
             <p>In this lab, you learn how to perform the following tasks:</p>
@@ -357,7 +356,8 @@
               <li>Define agents with dynamic models and custom tool access.</li>
               <li>Execute and inspect agents using the ADK browser UI, Python code, and the CLI chat interface.</li>
             </ul>
-            <h2 id="step3">Benefits of ADK</h2>
+
+            <h2>Benefits of ADK</h2>
             <p>ADK offers several key advantages for developers building agentic applications:</p>
             <ul>
               <li>
@@ -380,30 +380,24 @@
               </li>
             </ul>
             <p>While other SDKs allow you to query models, ADK provides a higher-level framework that handles the complex coordination between multiple models for you.</p>
-            <h2 id="step4">Setup and requirements</h2>
+            <h2>Setup and requirements</h2>
 
-            <h2 id="step5">Task 1. Install ADK and set up your environment</h2>
+            <h2>Task 1. Install ADK and set up your environment</h2>
             <p>In this task, you configure the Cloud Shell Editor, initialize your project, and install the Agent Development Kit (ADK) to prepare your environment for building and
               testing agentic applications.</p>
+
             <h3>Enable recommended APIs</h3>
             <p>In this lab environment, the <strong>Agent Platform API</strong> and <strong>Telemetry API</strong> have been enabled for you. In your own projects, you will want to
               enable them in order to query models and send telemetry data to Cloud Logging.</p>
+
             <h3>Prepare a Cloud Shell Editor tab</h3>
             <ol>
               <li>
                 <p>Click <strong>Activate Cloud Shell</strong> (
                   <button class="js-img-container" aria-haspopup="true"><img alt="Activate Cloud Shell" height="24"
-                                                                             src="https://cdn.qwiklabs.com/0R1bagVsqDIuRxFoBFZDlx4p2FrWrR8pyIX90XlMIMo%3D"></button>
+                                                                             src="./imgs/VertexAI/LectureImages/CloudShellBtn.png"></button>
                   ) in the Google Cloud console title bar.
                 </p>
-                <ql-infobox>
-                  <template shadowrootmode="open"><!---->
-                    <aside part="aside">
-                      <slot></slot>
-                    </aside>
-                  </template>
-                  <strong>Note: </strong>Alternatively, select the console browser tab and press G then S to open the Cloud Shell terminal.
-                </ql-infobox>
               </li>
               <li>
                 <p>Click <strong>Continue</strong>.</p>
@@ -413,22 +407,22 @@
               </li>
               <li>
                 <p>In the Cloud Shell Terminal action bar, click <strong>Open in new window</strong>
-                  <button class="js-img-container" aria-haspopup="true"><img alt="Open in new window button" height="24"
-                                                                             src="https://cdn.qwiklabs.com/g4I7jXdmqqSAUtXFvEv%2BUVPf%2FJ7v3AbMmd4cSeruvGI%3D"></button>
+                  <button class="js-img-container" aria-haspopup="true"><img alt="Open in new window button" height="24" src="./imgs/VertexAI/LectureImages/OpenInNewWindowBtn.png">
+                  </button>
                   .
                 </p>
               </li>
               <li>
                 <p>Click <strong>Open Editor</strong> (
                   <button class="js-img-container" aria-haspopup="true"><img alt="Edit pencil icon" height="24"
-                                                                             src="https://cdn.qwiklabs.com/YEEoKikL4fSWKcfxpPyP%2BEEfg4619SPb9eIPTGG9QsA%3D"></button>
+                                                                             src="./imgs/VertexAI/LectureImages/OpenEditorBtn.png"></button>
                   ) on the Cloud Shell Editor action bar, to view files.
                 </p>
               </li>
               <li>
                 <p>Click <strong>Explorer</strong> (
                   <button class="js-img-container" aria-haspopup="true"><img alt="Explorer icon" height="24"
-                                                                             src="https://cdn.qwiklabs.com/uOCsAsS9JuxOrJdQGBEaNhnUhKZ%2FB0SCCY2Jbb7tBEo%3D"></button>
+                                                                             src="./imgs/VertexAI/LectureImages/FileExplorerBtn.png"></button>
                   ) in the left pane to open your file explorer.
                 </p>
               </li>
@@ -447,78 +441,16 @@
             <ol>
               <li>
                 <p>Paste the following command into the Cloud Shell Terminal to copy a project directory with code for this lab from a Cloud Storage bucket:</p>
-                <code-block language="bash" nowrap="" templated="">
-                  <template shadowrootmode="open"><!---->
-                    <div class=" container light-theme ">
-                      <pre class="bash hljs">gcloud storage cp -r gs://YOUR_GCP_PROJECT_ID-bucket/* .</pre>
-                    </div>
-
-                  </template>
-                  gcloud storage cp -r gs://{{{project_0.project_id| YOUR_GCP_PROJECT_ID}}}-bucket/* .
-                </code-block>
+                <code>gcloud storage cp -r gs://YOUR_GCP_PROJECT_ID-bucket/* .</code>
               </li>
               <li>
                 <p>Update your <code>PATH</code> environment variable to include your user's local environment and install ADK, including the OpenTelemetry (OTel) plugin for
                   logging &amp; telemetry, and other lab requirements by running the following commands in the Cloud Shell Terminal:</p>
-                <code-block nowrap="" templated="" language="routeros">
-                  <template shadowrootmode="open"><!---->
-                    <div class=" container light-theme ">
-        <pre class="hljs routeros"><span class="hljs-builtin-name">export</span> <span class="hljs-attribute">PATH</span>=<span class="hljs-variable">$PATH</span>:"/home/${USER}/.local/bin<span
-          class="hljs-string">"
-python3 -m pip install google-adk[otel-gcp]==1.30.0 -r adk_project/requirements.txt</span></pre>
-                    </div>
-                    <!--?lit$583449698$-->
-                    <div class="copy-container"> <!--?lit$583449698$-->
-                      <span class="copied-message" aria-hidden="true" role="alert" aria-label="Copied!">
-        <!--?lit$583449698$-->Copied!
-      </span>
-                      <!--?lit$583449698$-->
-                      <ql-icon-button class="copy-button" label="Copy" title="Copy" aria-label="Copy export PATH=$PATH:&quot;/home/${USER}/.local/bin&quot;
-python3 -m pip install google-adk[otel-gcp]==1.30.0 -r adk_project/requirements.txt" translate="no" type="button">
-                        <template shadowrootmode="open"><!----> <!--?lit$583449698$-->
-                          <div class="buttonContainer" aria-disabled="false">
-                            <!--?lit$583449698$-->
-                            <md-icon-button class=" ql-icon-button " data-aria-label="Copy" data-aria-busy="false" value="">
-                              <template shadowrootmode="open" shadowrootdelegatesfocus=""><!---->
-                                <button id="button" class="icon-button  standard " aria-label="Copy">
-                                  <!--?lit$583449698$-->
-                                  <md-focus-ring part="focus-ring" for="button" aria-hidden="true">
-                                    <template shadowrootmode="open"><!----></template>
-                                  </md-focus-ring>
-                                  <!--?lit$583449698$-->
-                                  <md-ripple aria-hidden="true">
-                                    <template shadowrootmode="open"><!---->
-                                      <div class="surface   "></div>
-                                    </template>
-                                  </md-ripple>
-                                  <!--?lit$583449698$--><span class="icon"><slot></slot></span>
-                                  <!--?lit$583449698$-->
-                                  <!--?lit$583449698$--><span class="touch"></span>
-                                </button>
-                              </template>
-                              <!--?lit$583449698$-->
-                              <ql-icon translate="no">
-                                <template shadowrootmode="open"><!---->
-                                  <span aria-hidden="true" class=" google-symbols " style="font-size: inherit;">
-        <slot><!--?lit$583449698$--></slot>
-      </span>
-                                  <!--?lit$583449698$--><!--?-->
-                                </template><!--?lit$583449698$-->
-                                <slot></slot>
-                              </ql-icon>
-                            </md-icon-button>
-                          </div>
-                          <!--?lit$583449698$--> </template>
-                        content_copy
-                      </ql-icon-button>
-                    </div>
-
-                  </template>
-                  export PATH=$PATH:"/home/${USER}/.local/bin"
-                  python3 -m pip install google-adk[otel-gcp]==1.30.0 -r adk_project/requirements.txt
-                </code-block>
+                <code>export PATH=$PATH:"/home/${USER}/.local/bin"</code> <br>
+                <code>python3 -m pip install google-adk[otel-gcp]==1.30.0 -r adk_project/requirements.txt</code>
               </li>
             </ol>
+
             <h2 id="step6">Task 2. Review the core concepts and structure of ADK project directories</h2>
             <p>Explore the core concepts and fundamental building blocks of ADK, including agents, tools, and orchestration patterns, to understand the principles used to design
               effective and flexible multi-agent systems:</p>
@@ -558,14 +490,7 @@ python3 -m pip install google-adk[otel-gcp]==1.30.0 -r adk_project/requirements.
               </li>
               <li>
                 <p>Click <strong>my_google_search_agent</strong> to explore an agent directory.</p>
-                <ql-infobox>
-                  <template shadowrootmode="open"><!---->
-                    <aside part="aside">
-                      <slot></slot>
-                    </aside>
-                  </template>
-                  <strong>Note: </strong>Make sure you are in the <code>adk_project/my_google_search_agent</code> directory at this point.
-                </ql-infobox>
+                <strong>Note: </strong>Make sure you are in the <code>adk_project/my_google_search_agent</code> directory at this point.
               </li>
               <li>
                 <p>Click <strong>init.py</strong> to view its contents and notice that the directory also contains an <code>agent.py</code> file.</p>
@@ -573,15 +498,7 @@ python3 -m pip install google-adk[otel-gcp]==1.30.0 -r adk_project/requirements.
               <li>
                 <p>Notice that the <code>init.py</code> file contains a single line, which imports from the <code>agent.py</code> file. ADK uses this to identify this directory as
                   an agent package:</p>
-                <code-block language="python" output="">
-                  <template shadowrootmode="open"><!---->
-                    <div class=" container dark-theme ">
-                      <pre class="python wrap hljs"><span class="hljs-keyword">from</span> . <span class="hljs-keyword">import</span> agent</pre>
-                    </div>
-                    <!--?lit$583449698$-->
-                  </template>
-                  from . import agent
-                </code-block>
+                <pre><code class="language-python">from . import agent</code></pre>
               </li>
               <li>
                 <p>Click <strong>agent.py</strong> to view the code for a simple agent equipped with the Google Search tool.</p>
@@ -593,59 +510,7 @@ python3 -m pip install google-adk[otel-gcp]==1.30.0 -r adk_project/requirements.
               <li>
                 <p>To use the imported <code>google_search</code> tool, it needs to be passed to the agent. Paste the following line into the <code>agent.py</code> file around line
                   34, where indicated at the end of the <code>Agent</code> object creation:</p>
-                <code-block language="python" templated="">
-                  <template shadowrootmode="open"><!---->
-                    <div class=" container light-theme ">
-                      <pre class="python wrap hljs">    tools=[google_search]</pre>
-                    </div>
-                    <!--?lit$583449698$-->
-                    <div class="copy-container"> <!--?lit$583449698$-->
-                      <span class="copied-message" aria-hidden="true" role="alert" aria-label="Copied!">
-        <!--?lit$583449698$-->Copied!
-      </span>
-                      <!--?lit$583449698$-->
-                      <ql-icon-button class="copy-button" label="Copy" title="Copy" aria-label="Copy     tools=[google_search]" translate="no" type="button">
-                        <template shadowrootmode="open"><!----> <!--?lit$583449698$-->
-                          <div class="buttonContainer" aria-disabled="false">
-                            <!--?lit$583449698$-->
-                            <md-icon-button class=" ql-icon-button " data-aria-label="Copy" data-aria-busy="false" value="">
-                              <template shadowrootmode="open" shadowrootdelegatesfocus=""><!---->
-                                <button id="button" class="icon-button  standard " aria-label="Copy">
-                                  <!--?lit$583449698$-->
-                                  <md-focus-ring part="focus-ring" for="button" aria-hidden="true">
-                                    <template shadowrootmode="open"><!----></template>
-                                  </md-focus-ring>
-                                  <!--?lit$583449698$-->
-                                  <md-ripple aria-hidden="true">
-                                    <template shadowrootmode="open"><!---->
-                                      <div class="surface   "></div>
-                                    </template>
-                                  </md-ripple>
-                                  <!--?lit$583449698$--><span class="icon"><slot></slot></span>
-                                  <!--?lit$583449698$-->
-                                  <!--?lit$583449698$--><span class="touch"></span>
-                                </button>
-                              </template>
-                              <!--?lit$583449698$-->
-                              <ql-icon translate="no">
-                                <template shadowrootmode="open"><!---->
-                                  <span aria-hidden="true" class=" google-symbols " style="font-size: inherit;">
-        <slot><!--?lit$583449698$--></slot>
-      </span>
-                                  <!--?lit$583449698$--><!--?-->
-                                </template><!--?lit$583449698$-->
-                                <slot></slot>
-                              </ql-icon>
-                            </md-icon-button>
-                          </div>
-                          <!--?lit$583449698$--> </template>
-                        content_copy
-                      </ql-icon-button>
-                    </div>
-
-                  </template>
-                  tools=[google_search]
-                </code-block>
+                <code>tools=[google_search]</code>
               </li>
               <li>
                 <p>Save the <code>agent.py</code> file.</p>
@@ -654,63 +519,33 @@ python3 -m pip install google-adk[otel-gcp]==1.30.0 -r adk_project/requirements.
             <p>Tools enable an agent to perform actions beyond generating text. In this case, the <code>google_search</code> tool allows the agent to decide when it would like more
               information than it already has from its training data. It can then write a search query, use Google Search to search the web, and then base its response to the user
               on the results.</p>
-            <p>When a model bases its response on additional information that it retrieves, it is called "grounding," and this overall process is known as "retrieval-augmented
-              generation" or "RAG."</p>
+            <p class="highlight-text">When a model bases its response on additional information that it retrieves, it is called "grounding," and this overall process is known as
+              "retrieval-augmented generation" or "RAG."</p>
+
             <h2 id="step7">Task 3. Run the agent using the ADK Dev UI</h2>
             <p>ADK includes a development UI designed to run locally to help you develop and test your agents. It can help you visualize what each agent is doing and how multiple
               agents interact with one another. In this task, you explore this interface.</p>
-            <ql-infobox>
-              <template shadowrootmode="open"><!---->
-                <aside part="aside">
-                  <slot></slot>
-                </aside>
-              </template>
-              <p><strong>Note: </strong>When you run an agent, ADK needs to know who is requesting the model API calls. You can provide this information in one of two ways:</p>
-              <ol>
-                <li>Provide a <a href="https://aistudio.google.com/apikey" target="_blank">Gemini API key</a>.</li>
-                <li>Authenticate your environment with Google Cloud credentials and associate your model API calls with an Agent Platform project and location.</li>
-              </ol>
-              <p>In this lab, you take the Agent Platform approach.</p>
-            </ql-infobox>
+            <p><strong>Note: </strong>When you run an agent, ADK needs to know who is requesting the model API calls. You can provide this information in one of two ways:</p>
+            <ol>
+              <li>Provide a <a href="https://aistudio.google.com/apikey" target="_blank">Gemini API key</a>.</li>
+              <li>Authenticate your environment with Google Cloud credentials and associate your model API calls with an Agent Platform project and location.</li>
+            </ol>
+            <p>In this lab, you take the Agent Platform approach.</p>
             <ol>
               <li>
                 <p>In the Cloud Shell Terminal, run the following commands to write an <code>.env</code> file to set your environment variables instructing the agent to use your
                   project and the global endpoint:</p>
-                <code-block nowrap="" templated="" language="routeros">
-                  <template shadowrootmode="open"><!---->
-                    <div class=" container light-theme ">
-        <pre class="hljs routeros">cd ~/adk_project
-cat &lt;&lt; EOF &gt; my_google_search_agent/.env
-<span class="hljs-attribute">GOOGLE_GENAI_USE_VERTEXAI</span>=<span class="hljs-literal">TRUE</span>
-<span class="hljs-attribute">GOOGLE_CLOUD_PROJECT</span>=YOUR_GCP_PROJECT_ID
-<span class="hljs-attribute">GOOGLE_CLOUD_LOCATION</span>=global
-<span class="hljs-attribute">MODEL</span>=gemini_flash_model_id
-<span class="hljs-attribute">OTEL_SERVICE_NAME</span>=adk-agent
-<span class="hljs-attribute">OTEL_PYTHON_LOGGING_AUTO_INSTRUMENTATION_ENABLED</span>=<span class="hljs-literal">true</span>
-<span class="hljs-attribute">OTEL_INSTRUMENTATION_GENAI_CAPTURE_MESSAGE_CONTENT</span>=<span class="hljs-literal">true</span>
-EOF</pre>
-                    </div>
-                    <!--?lit$583449698$-->
-                    <div class="copy-container"> <!--?lit$583449698$-->
-                      <span class="copied-message" aria-hidden="true" role="alert" aria-label="Copied!">
-        <!--?lit$583449698$-->Copied!
-      </span>
-                      <!--?lit$583449698$-->
+                <code>cd ~/adk_project</code> <br>
+                <code>cat << EOF > my_google_search_agent/.env</code> <br>
+                <code>GOOGLE_GENAI_USE_VERTEXAI=TRUE</code> <br>
+                <code>GOOGLE_CLOUD_PROJECT=YOUR_GCP_PROJECT_ID</code> <br>
+                <code>GOOGLE_CLOUD_LOCATION=global</code> <br>
+                <code>MODEL=gemini_flash_model_id</code> <br>
+                <code>OTEL_SERVICE_NAME=adk-agent</code> <br>
+                <code>OTEL_PYTHON_LOGGING_AUTO_INSTRUMENTATION_ENABLED=true</code> <br>
+                <code>OTEL_INSTRUMENTATION_GENAI_CAPTURE_MESSAGE_CONTENT=true</code> <br>
+                <code>EOF</code> <br>
 
-                    </div>
-
-                  </template>
-                  cd ~/adk_project
-                  cat &lt;&lt; EOF &gt; my_google_search_agent/.env
-                  GOOGLE_GENAI_USE_VERTEXAI=TRUE
-                  GOOGLE_CLOUD_PROJECT={{{project_0.project_id| YOUR_GCP_PROJECT_ID}}}
-                  GOOGLE_CLOUD_LOCATION=global
-                  MODEL={{{project_0.startup_script.gemini_flash_model_id | gemini_flash_model_id}}}
-                  OTEL_SERVICE_NAME=adk-agent
-                  OTEL_PYTHON_LOGGING_AUTO_INSTRUMENTATION_ENABLED=true
-                  OTEL_INSTRUMENTATION_GENAI_CAPTURE_MESSAGE_CONTENT=true
-                  EOF
-                </code-block>
                 <p>These variables serve the following roles:</p>
                 <ul>
                   <li>
@@ -734,83 +569,18 @@ EOF</pre>
               </li>
               <li>
                 <p>In the Cloud Shell Terminal, ensure you are in the <strong>adk_project</strong> directory where your agent subdirectories are located by running:</p>
-                <code-block language="jboss-cli">
-                  <template shadowrootmode="open"><!---->
-                    <div class=" container light-theme ">
-                      <pre class="wrap hljs jboss-cli"><span class="hljs-keyword">cd</span> ~<span class="hljs-string">/adk_project</span></pre>
-                    </div>
-                    <!--?lit$583449698$-->
-                    <div class="copy-container"> <!--?lit$583449698$-->
-                      <span class="copied-message" aria-hidden="true" role="alert" aria-label="Copied!">
-        <!--?lit$583449698$-->Copied!
-      </span>
-                      <!--?lit$583449698$-->
-
-                    </div>
-
-                  </template>
-                  cd ~/adk_project
-                </code-block>
+                <code>cd ~/adk_project</code>
               </li>
               <li>
-                <p>Launch the ADK Dev UI with the following command with some useful flags. This command will:</p>
+                <p>Launch the ADK Dev UI with the following command with some useful flags: <br>
+                  <code>adk web --allow_origins "regex:https://.*\.cloudshell\.dev" --otel_to_cloud --reload_agents</code> <br>
+                  This command will:</p>
                 <ul>
                   <li>Launch a Fast API web server with the ADK Dev UI</li>
                   <li>Allow the Cloud Shell web preview to query your agent</li>
                   <li>Send telemetry data to Cloud Logging</li>
                   <li>Reload agents when code changes are detected</li>
                 </ul>
-                <code-block language="haml">
-                  <template shadowrootmode="open"><!---->
-                    <div class=" container light-theme ">
-        <pre class="wrap hljs haml">adk web \
--<span class="ruby">-allow_origins <span class="hljs-string">"regex:https://.*\.cloudshell\.dev"</span> \
-</span>-<span class="ruby">-otel_to_cloud \
-</span>-<span class="ruby">-reload_agents</span></pre>
-                    </div>
-                    <!--?lit$583449698$-->
-                    <div class="copy-container"> <!--?lit$583449698$-->
-                      <span class="copied-message" aria-hidden="true" role="alert" aria-label="Copied!">
-        <!--?lit$583449698$-->Copied!
-      </span>
-                      <!--?lit$583449698$-->
-
-                    </div>
-
-                  </template>
-                  adk web \
-                  --allow_origins "regex:https://.*\.cloudshell\.dev" \
-                  --otel_to_cloud \
-                  --reload_agents
-                </code-block>
-                <p><strong>Output</strong></p>
-                <code-block language="plaintext" nowrap="" output="">
-                  <template shadowrootmode="open"><!---->
-                    <div class=" container dark-theme ">
-        <pre class="plaintext hljs">INFO:     Started server process [2434]
-INFO:     Waiting for application startup.
-+-------------------------------------------------------+
-| ADK Web Server started                                |
-|                                                       |
-| For local testing, access at http://localhost:8000.   |
-+-------------------------------------------------------+
-
-INFO: Application startup complete.
-INFO: Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)</pre>
-                    </div>
-                    <!--?lit$583449698$-->
-                  </template>
-                  INFO: Started server process [2434]
-                  INFO: Waiting for application startup.
-                  +-------------------------------------------------------+
-                  | ADK Web Server started |
-                  | |
-                  | For local testing, access at http://localhost:8000. |
-                  +-------------------------------------------------------+
-
-                  INFO: Application startup complete.
-                  INFO: Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
-                </code-block>
                 <p>The result is the ADK Dev UI URL is displayed, as the DEV UI is currently running.</p>
               </li>
               <li>
@@ -821,50 +591,34 @@ INFO: Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)</pre>
                 <p>From the <strong>Select an agent</strong> menu options on the left, select <strong>my_google_search_agent</strong>.</p>
               </li>
               <li>
-                <p>To prompt the agent to use its Google Search tool, enter the question:</p>
-                <code-block templated="" language="applescript">
-                  <template shadowrootmode="open"><!---->
-                    <div class=" container light-theme ">
-                      <pre class="wrap hljs applescript">I know <span class="hljs-keyword">the</span> Summer olympics are happening <span class="hljs-keyword">in</span> <span
-                        class="hljs-number">2028</span>, please <span class="hljs-keyword">tell</span> <span class="hljs-keyword">me</span> which countries are participating <span
-                        class="hljs-keyword">and</span> what events will be held.</pre>
-                    </div>
-                    <!--?lit$583449698$-->
-                    <div class="copy-container"> <!--?lit$583449698$-->
-                      <span class="copied-message" aria-hidden="true" role="alert" aria-label="Copied!">
-        <!--?lit$583449698$-->Copied!
-      </span>
-                      <!--?lit$583449698$-->
-
-                    </div>
-
-                  </template>
-                  I know the Summer olympics are happening in 2028, please tell me which countries are participating and what events will be held.
-                </code-block>
+                <p>To prompt the agent to use its Google Search tool, enter the question: <i>I know the Summer olympics are happening in 2028, please tell me which countries are
+                  participating and what events will be held.</i></p>
                 <p>Notice the agent uses Google Search to retrieve real-time information, bypassing the knowledge cutoff of its pre-trained model.</p>
-                <ql-infobox>
-                  <template shadowrootmode="open"><!---->
-                    <aside part="aside">
-                      <slot></slot>
-                    </aside>
-                  </template>
-                  <strong>Note: </strong>A response using grounding with Google search includes ready-to-display HTML "Search Suggestions" like those you see at the bottom of the
-                  agent's response. When you use grounding with Google Search, you are <a
-                  href="https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/grounding-search-suggestions" target="_blank">required to display these suggestions</a>,
-                  which help users follow up on the information the model used for its response.
-                </ql-infobox>
+                <strong>Note: </strong>A response using grounding with Google search includes ready-to-display HTML "Search Suggestions" like those you see at the bottom of the
+                agent's response. When you use grounding with Google Search, you are <a
+                href="https://cloud.google.com/vertex-ai/generative-ai/docs/multimodal/grounding-search-suggestions" target="_blank">required to display these suggestions</a>,
+                which help users follow up on the information the model used for its response.
               </li>
               <li>
-                <p>Notice that in the left pane, you are in the <strong>Trace</strong> tab by default. Click on your last query text (<code>I know the Summer olympics are happening
-                  in 2028, please tell me which countries are participating and what events will be held.</code>) to see a trace of how long different parts of your query took to
-                  execute.</p>
+                <p>Notice that in the left pane, you are in the <strong>Trace</strong> tab by default. Click on your last query text (<i>I know the Summer olympics...</i>) to see a
+                  trace of how long different parts of your query took to execute.</p>
                 <p>You can use this to debug more complex executions involving tool calls to understand how various processes contribute to the latency of your responses.</p>
-                <button class="js-img-container" aria-haspopup="true"><img alt="Trace of the Agent call" height="300"
-                                                                           src="https://cdn.qwiklabs.com/k6U7ldQvtjQBlUWL%2B3HgYm1tDKCwPKa4wphFOUUbyWA%3D"></button>
+                <div class="image-block">
+                  <div class="expand-screenshot-image-btn border border-primary rounded">
+                    <span class="btn btn-link">Show Image <img src="./imgs/chevron-expand.svg" alt="Show Image Button"></span>
+                  </div>
+                  <div class="screenshot-image">
+                    <img src="./imgs/VertexAI/LectureImages/TraceOfAgentCall.png"
+                         width="400"
+                         class="center-block img-fluid"
+                         alt="Example1"
+                         loading="lazy">
+                  </div>
+                </div>
               </li>
               <li>
                 <p>Return to the chat discussion section of the window, and click the agent icon (
-                  <button class="js-img-container" aria-haspopup="true"><img alt="agent_icon" src="https://cdn.qwiklabs.com/0qmcUwc%2BaHGB6en11vU3HeZL1%2FsZuhC48PulduLYczg%3D">
+                  <button class="js-img-container" aria-haspopup="true"><img alt="agent_icon" src="./imgs/VertexAI/LectureImages/AgentBtn.png">
                   </button>
                   ) next to the agent's response in the right pane to inspect the event returned by the agent. This event includes the <code>content</code> returned to the user and
                   <code>groundingMetadata</code> detailing the search results that the response was based on.
@@ -880,38 +634,7 @@ INFO: Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)</pre>
                 <p>Press CTRL+C to stop the web server.</p>
               </li>
             </ol>
-            <p>Click <strong>Check my progress</strong> to verify the objective.
-              <ql-activity-tracking step="1">
-                <template shadowrootmode="open"><!---->
-                  <ql-assessment aria-label="">
-                    <template shadowrootmode="open"><!---->
-                      <div class="assessment-left">
-                        <ql-assessment-status>
-                          <template shadowrootmode="open"><!---->
-                            <div class="status" role="progressbar" aria-live="assertive" status="uninitialized" tooltip="Start lab to track your progress." aria-hidden="true"
-                                 aria-valuenow="0" aria-label=""><!--?lit$583449698$--></div>
-                          </template>
-                        </ql-assessment-status>
-                      </div>
 
-                      <div class="assessment-right">
-                        <div class="assessment-content">
-                          <slot></slot>
-                        </div>
-
-                        <!--?lit$583449698$-->
-                      </div>
-                    </template>
-                    <p>
-                      <slot><!--?lit$583449698$-->I completed this step.</slot>
-                    </p>
-
-
-                  </ql-assessment>
-                </template>
-                Run the agent using the ADK Web UI.
-              </ql-activity-tracking>
-            </p>
             <h2 id="step8">Task 4. Run an agent programmatically</h2>
             <p>While the ADK Dev UI is great for testing and debugging, it is not suitable for presenting your agent to multiple users in production.</p>
             <p>To run an agent as part of a larger application, you need to include a few additional components in your <code>agent.py</code> script that the web app handled for
@@ -2288,11 +2011,13 @@ adk web \
           </div>
         </div>
       </div>
+
+
       <hr>
       <div id="VertexAI_Chapter4" class="chapter">Chapter 4: Build multi-agent systems with ADK</div>
       <hr>
       <div class="textual-content">
-        <div id="VertexAI_Chapter4.1" class="sub-heading">Build multi-agent systems with ADK</div>
+        <div id="VertexAI_Chapter4.1" class="sub-heading">Theory: Build multi-agent systems with ADK</div>
         <div>
           - <a href="https://codelabs.developers.google.com/multi-agent-app-with-adk#0">Somewhat relevant Codelab</a>. <br>
           - In this section we will see how to build multi-agent systems with Google's ADK. <br>
@@ -2536,52 +2261,45 @@ adk web \
             </div>
           </div>
 
-          To understand how the ADK lifecycle functions, let’s trace a hypothetical request: **"Check my flight status and email me the arrival time."**
-
-          ### 1. Request Start & Agent Initialization
-
-          The **User Input** enters the system. The `before_agent_callback` is triggered immediately, where the system might authenticate the user or load their profile from
-          **Memory**. The **Agent** (Manager) receives the intent.
-
-          ### 2. Decision-Making (Reasoning & Planning)
-
-          The Agent assesses the goal: it needs to (a) find the flight status and (b) send an email. It reasons that it needs an external tool.
-
-          * **Model Hook:** Before reaching out to the LLM to process the flight search, the `before_model_callback` fires, perhaps to check if the request contains PII (Personally
-          Identifiable Information) that needs masking. The LLM then generates the necessary tool call.
-
-          ### 3. Tool Execution
-
-          The system now pivots to **Tool Execution** to get real-time flight data.
-
-          * **Tool Hook:** The `before_tool_callback` triggers, allowing the system to verify if the Agent has the necessary permissions to access the Flight API. The API is
-          called.
-          * **After-Tool Hook:** Once the flight data returns (e.g., "Flight UA123 arrives at 5:00 PM"), the `after_tool_callback` fires, allowing the system to reformat the raw
-          JSON response into a cleaner format for the LLM to read.
-
-          ### 4. Planning & Iteration (The Loop)
-
-          The agent now has the information. It looks at the second part of the goal: "Email the arrival time." It decides to invoke an Email tool.
-
-          * The system repeats the **Tool Hook** cycle for the Email API.
-
-          ### 5. Finalize Output
-
-          Once all tools have successfully executed, the Agent consolidates the gathered info into a final human-readable response: *"Your flight UA123 arrives at 5:00 PM, and I
-          have sent those details to your email."*
-
-          ### 6. Response End
-
-          * **After-Agent Callback:** Before the final text is displayed to the user, the `after_agent_callback` is triggered. This is the final safety gate—the system might
-          perform a "toxicity check" to ensure the tone is professional, or log the entire conversation to the **Artifact/Trace** database for future debugging.
-
-          ---
-
-          ### Key Takeaway on the Flow
-
-          This path is **non-linear**. Depending on what the model reasons, it could loop back to the **Agent Processing** phase multiple times (e.g., if the flight was canceled,
-          it might need to restart the planning phase to find a rebooking option). The callback triggers act as **fixed checkpoints** regardless of how many times the agent loops,
-          ensuring that your security, logging, and data formatting rules are applied consistently every single time.
+          <div class="sub-section">
+            Question: Explain the diagram with an example - tracing it from start to the end. <br>
+            Response: <br>
+            To understand how the ADK lifecycle functions, let's trace a hypothetical request: <i>Check my flight status and email me the arrival time.</i> <br>
+            <ol>
+              <li>
+                Request Start & Agent Initialization: The <i>User Input</i> enters the system. The <code>before_agent_callback</code> is triggered immediately, where the system
+                might authenticate the user or load their profile from <i>Memory</i>. The <i>Agent</i> (Manager) receives the intent.
+              </li>
+              <li>
+                Decision-Making (Reasoning & Planning): The Agent assesses the goal: it needs to (a) find the flight status and (b) send an email. It reasons that it needs an
+                external tool. Before reaching out to the LLM to process the flight search, the <code>before_model_callback</code> fires, perhaps to check if the request contains
+                PII
+                (Personally Identifiable Information) that needs masking. The LLM then generates the necessary tool call.
+              </li>
+              <li>
+                Tool Execution: The system now pivots to Tool Execution to get real-time flight data. The <code>before_tool_callback</code> triggers, allowing the system to verify
+                if
+                the Agent has the necessary permissions to access the Flight API. The API is called. Once the flight data returns (e.g., "Flight UA123 arrives at 5:00 PM"), the
+                <code>after_tool_callback</code> fires, allowing the system to reformat the raw JSON response into a cleaner format for the LLM to read.
+              </li>
+              <li>
+                Planning & Iteration (The Loop): The agent now has the information. It looks at the second part of the goal: "Email the arrival time." It decides to invoke an Email
+                tool. The system repeats the <i>Tool Hook</i> cycle for the Email API.
+              </li>
+              <li>
+                Finalize Output: Once all tools have successfully executed, the Agent consolidates the gathered info into a final human-readable response: <i>Your flight UA123
+                arrives
+                at 5:00 PM, and I have sent those details to your email.</i>
+              </li>
+              <li>
+                After-Agent Callback: Before the final text is displayed to the user, the <code>after_agent_callback</code> is triggered. This is the final safety gate—the system
+                might perform a "toxicity check" to ensure the tone is professional, or log the entire conversation to the <i>Artifact/Trace</i> database for future debugging.
+              </li>
+            </ol>
+            - Key Takeaway on the Flow: This path is non-linear. Depending on what the model reasons, it could loop back to the Agent Processing phase multiple times (e.g.,
+            if the flight was canceled, it might need to restart the planning phase to find a rebooking option). The callback triggers act as fixed checkpoints regardless of how
+            many times the agent loops, ensuring that your security, logging, and data formatting rules are applied consistently every single time.
+          </div>
         </div>
 
         <div id="VertexAI_Chapter4.3" class="sub-heading">Lab: Build multi-agent systems with ADK</div>
@@ -2595,7 +2313,8 @@ adk web \
           <br>
           <br>
 
-          - Lab copied over from the tutorial.
+          - Lab copied over from the tutorial. <br>
+          - Code repo in private repo: <a href="https://github.com/rgbk21/adk_multiagent_systems">On Github</a>. br
           <div class="sub-section">
             <div>
               <h2>Overview</h2>
@@ -2618,7 +2337,8 @@ adk web \
                   <strong>Organization:</strong> Dividing the workflow into distinct agents allows for a more organized, and therefor easier to think about, approach.
                 </li>
                 <li>
-                  <strong>Improvability and maintainability:</strong> It is easier to improve or fix a specialized component rather than make changes to a complex agent that may fix
+                  <strong>Improvability and maintainability:</strong> It is easier to improve or fix a specialized component rather than make changes to a complex agent that may
+                  fix
                   one behavior but might impact others.
                 </li>
                 <li>
@@ -2632,27 +2352,30 @@ adk web \
                   <span class="btn btn-link">Show Image <img src="./imgs/chevron-expand.svg" alt="Show Image Button"></span>
                 </div>
                 <div class="screenshot-image">
-                  <img src="https://cdn.qwiklabs.com/hc9s%2BOp9Z7JMMXEZLxYoHF%2Bi6Zm1aSaRgjeWOc%2BO7oY%3D"
-                       width="800"
+                  <img src="./imgs/VertexAI/LectureImages/HierarchicalAgentTree.png"
+                       width="1000"
                        class="center-block img-fluid"
                        alt="Example1"
                        loading="lazy">
                 </div>
               </div>
 
-              <p>In Agent Development Kit, you organize your agents in a tree-like structure. This helps limit the options for transfers for each agent in the tree, making it easier
+              <p>In Agent Development Kit, you organize your agents in a tree-like structure. This helps limit the options for transfers for each agent in the tree, making it
+                easier
                 to control and predict the possible routes the conversation can take through the tree. Benefits of the hierarchical structure include:</p>
               <ul>
                 <li>It draws <strong>inspiration from real-world collaborative teams</strong>, making it easier to design and reason about the behavior of the multi-agent system.
                 </li>
                 <li>It is <strong>intuitive for developers</strong>, as it mirrors common software development patterns.</li>
-                <li>It provides <strong>greater control over the flow</strong> of information and task delegation within the system, making it easier to understand possible pathways
+                <li>It provides <strong>greater control over the flow</strong> of information and task delegation within the system, making it easier to understand possible
+                  pathways
                   and debug the system. For example, if a system has two report-generation agents at different parts of its flow with similar descriptions, the tree structure makes
                   it easier to ensure that the correct one is invoked.
                 </li>
               </ul>
 
-              <p>The structure always begins with the agent defined in the <strong>root_agent</strong> variable (although it may have a different user-facing <strong>name</strong> to
+              <p>The structure always begins with the agent defined in the <strong>root_agent</strong> variable (although it may have a different user-facing <strong>name</strong>
+                to
                 identify itself). The <code>root_agent</code> may act as a <strong>parent</strong> to one or more <strong>sub-agents</strong>. Each sub-agent agent may have its own
                 sub-agents.</p>
 
@@ -2665,24 +2388,24 @@ adk web \
                 <li>With your Google Cloud console window selected, open Cloud Shell by pressing the G key and then the S key on your keyboard. Alternatively, you can click the
                   Activate Cloud Shell button (
                   <button class="js-img-container" aria-haspopup="true"><img alt="Activate Cloud Shell" height="24"
-                                                                             src="https://cdn.qwiklabs.com/4VN7LZSIdFTyYDAsU9S9rLW42Uc1xJb90mZnNQQCKec%3D"></button>
+                                                                             src="./imgs/VertexAI/LectureImages/CloudShellBtn.png"></button>
                   ) in the upper right of the Cloud console.
                 </li>
                 <li>Click <strong>Continue</strong>.</li>
                 <li>When prompted to authorize Cloud Shell, click <strong>Authorize</strong>.</li>
                 <li>In the upper right corner of the Cloud Shell Terminal panel, click the <strong>Open in new window</strong> button
                   <button class="js-img-container" aria-haspopup="true"><img alt="Open in new window button" height="24"
-                                                                             src="https://cdn.qwiklabs.com/0YM9CoxqcCKGEd4zWU%2B4%2BI%2FLNhKzdahTCRN5Apwtz0U%3D"></button>
+                                                                             src="./imgs/VertexAI/LectureImages/OpenInNewWindowBtn.png"></button>
                   .
                 </li>
                 <li>Click the <strong>Open Editor</strong> pencil icon (
                   <button class="js-img-container" aria-haspopup="true"><img alt="Edit pencil icon" height="24"
-                                                                             src="https://cdn.qwiklabs.com/7POoHpdERMUIBWA%2FjMozxLQrvj9vq8%2BetEiAFcG7syk%3D"></button>
+                                                                             src="./imgs/VertexAI/LectureImages/OpenEditorBtn.png"></button>
                   ) at the top of the pane to view files.
                 </li>
                 <li>At the top of the left-hand navigation menu, click the Explorer icon (
                   <button class="js-img-container" aria-haspopup="true"><img alt="Explorer icon" height="24"
-                                                                             src="https://cdn.qwiklabs.com/zkcm4nnyMsWyDaX7wNePcmAE5cFI9OqQKeR9tgbZSZo%3D"></button>
+                                                                             src="./imgs/VertexAI/LectureImages/FileExplorerBtn.png"></button>
                   ) to open your file explorer.
                 </li>
                 <li>Click the <strong>Open Folder</strong> button.</li>
@@ -2709,7 +2432,8 @@ adk web \
               <p>The conversation always begins with the agent defined as the <strong>root_agent</strong> variable.</p>
               <p>The default behavior of a parent agent is to understand the <strong>description</strong> of each sub-agent and determine if control of the conversation should be
                 transferred to a sub-agent at any point.</p>
-              <p>You can help guide those transfers in the parent's <code>instruction</code> by referring to the sub-agents by name (the values of their <code>name</code> parameter,
+              <p>You can help guide those transfers in the parent's <code>instruction</code> by referring to the sub-agents by name (the values of their <code>name</code>
+                parameter,
                 not their variable names). Try an example:</p>
               <ol>
                 <li>
@@ -2732,7 +2456,8 @@ adk web \
                 </li>
                 <li>
                   <p>Click on the <strong>agent.py</strong> file to open it.</p>
-                  <strong>Tip:</strong> Because Python code requires that we define our sub-agents before we can add them to an agent, in order to read an agent.py file in the order
+                  <strong>Tip:</strong> Because Python code requires that we define our sub-agents before we can add them to an agent, in order to read an agent.py file in the
+                  order
                   of
                   the conversation flow, you may want to start reading with the bottom agent and work back towards the top.
                 </li>
@@ -2752,7 +2477,8 @@ adk web \
                   </ul>
                 </li>
                 <li>
-                  <p>Make <strong>travel_brainstormer</strong> and <strong>attractions_planner</strong> sub-agents of the <strong>root_agent</strong> by adding the following line to
+                  <p>Make <strong>travel_brainstormer</strong> and <strong>attractions_planner</strong> sub-agents of the <strong>root_agent</strong> by adding the following line
+                    to
                     the creation of the <strong>root_agent</strong>:</p>
 
                   <pre><code class="language-python">sub_agents=[travel_brainstormer, attractions_planner]</code></pre>
@@ -2761,7 +2487,8 @@ adk web \
                   <p><strong>Save</strong> the file.</p>
                 </li>
                 <li>
-                  <p>Note that you don't add a corresponding <em>parent</em> parameter to the sub-agents. The hierarchical tree is defined only by specifying <code>sub_agents</code>
+                  <p>Note that you don't add a corresponding <em>parent</em> parameter to the sub-agents. The hierarchical tree is defined only by specifying
+                    <code>sub_agents</code>
                     when creating parent agents.</p>
                 </li>
                 <li>
@@ -2791,7 +2518,8 @@ adk web \
                 <li>
                   <p>You can also provide your agent more detailed instructions about when to transfer to a sub-agent as part of its <code>instructions</code>. In the
                     <strong>agent.py</strong> file, add the following lines to the <strong>root_agent</strong>'s <code>instruction</code>:</p>
-                  <code>If they need help deciding, send them to 'travel_brainstormer'. If they know what country they'd like to visit, send them to the 'attractions_planner'.</code>
+                  <code>If they need help deciding, send them to 'travel_brainstormer'. If they know what country they'd like to visit, send them to the
+                    'attractions_planner'.</code>
                 </li>
                 <li>
                   <p><strong>Save</strong> the file.</p>
@@ -2824,13 +2552,15 @@ adk web \
                 <li>
                   <p>At the user prompt, type <code>exit</code> to end the session.</p>
                 </li>
-                <b>Step-by-step pattern:</b> If you are interested in an agent that guides a user through a process step-by-step, one useful pattern can be to make the first step the
+                <b>Step-by-step pattern:</b> If you are interested in an agent that guides a user through a process step-by-step, one useful pattern can be to make the first step
+                the
                 <code>root_agent</code> with the second step agent its only sub-agent, and continue with each additional step being the only sub-agent of the previous step's agent.
               </ol>
 
               <h2>Task 3. Use session state to store and retrieve specific information</h2>
               <p>Each conversation in ADK is contained within a <code>Session</code> that all agents involved in the conversation can access. A session includes the conversation
-                history, which agents read as part of the context used to generate a response. The session also includes a <strong>session state</strong> dictionary that you can use
+                history, which agents read as part of the context used to generate a response. The session also includes a <strong>session state</strong> dictionary that you can
+                use
                 to take greater control over the most important pieces of information you would like to highlight and how they are accessed.</p>
               <p>This can be particularly helpful to pass information between agents or to maintain a simple data structure, like a list of tasks, over the course of a conversation
                 with a user.</p>
@@ -2891,7 +2621,8 @@ tools=[save_attractions_to_state]
                 </li>
                 <li>
                   <p>Notice the section in curly braces: <code>{ attractions? }</code>. This ADK feature, <a
-                    href="https://google.github.io/adk-docs/sessions/state/#using-key-templating" target="_blank">key templating</a>, loads the value of the <code>attractions</code>
+                    href="https://google.github.io/adk-docs/sessions/state/#using-key-templating" target="_blank">key templating</a>, loads the value of the
+                    <code>attractions</code>
                     key from the state dictionary. The question mark after the <code>attractions</code> key prevents this from erroring if the field is not yet present.</p>
                 </li>
                 <li>
@@ -2939,7 +2670,7 @@ tools=[save_attractions_to_state]
                       <span class="btn btn-link">Show Image <img src="./imgs/chevron-expand.svg" alt="Show Image Button"></span>
                     </div>
                     <div class="screenshot-image">
-                      <img src="https://cdn.qwiklabs.com/ILEPEgsj0jm36NlN1fZKw06%2BbOgoKvdm2lSOrWfP2GE%3D"
+                      <img src="./imgs/VertexAI/LectureImages/StateChange.png"
                            width="600"
                            class="center-block img-fluid"
                            alt="Example1"
@@ -2955,7 +2686,8 @@ tools=[save_attractions_to_state]
                   <p>It should return your list formatted as a bulleted list according to its <code>instruction</code>.</p>
                 </li>
                 <li>
-                  <p>When you are finished experimenting with the agent, close the web browser tab and press <strong>CTRL + C</strong> in the Cloud Shell Terminal to stop the server.
+                  <p>When you are finished experimenting with the agent, close the web browser tab and press <strong>CTRL + C</strong> in the Cloud Shell Terminal to stop the
+                    server.
                   </p>
                   <p>Later in this lab, you will demonstrate how to use state to communicate between agents.</p>
                   <p>Instead of saving small pieces of information, if you would like to store your agent's entire text response in the state dictionary, you can set an
@@ -2969,18 +2701,21 @@ tools=[save_attractions_to_state]
                 scenarios when you might use workflow agents include when you would like your agents to:</p>
               <ul>
                 <li>
-                  <strong>Plan and Execute:</strong> When you want to have one agent prepare a list of items, and then have other agents use that list to perform follow-up tasks, for
+                  <strong>Plan and Execute:</strong> When you want to have one agent prepare a list of items, and then have other agents use that list to perform follow-up tasks,
+                  for
                   example writing sections of a document
                 </li>
                 <li>
-                  <strong>Research and Write:</strong> When you want to have one agent call functions to collect contextual information from Google Search or other data sources, then
+                  <strong>Research and Write:</strong> When you want to have one agent call functions to collect contextual information from Google Search or other data sources,
+                  then
                   another agent use that information to produce some output.
                 </li>
                 <li>
                   <strong>Draft and Revise:</strong> When you want to have one agent prepare a draft of a document, and then have other agents check the work and iterate on it
                 </li>
               </ul>
-              <p>To accomplish these kinds of tasks, <strong>workflow agents</strong> have sub-agents and guarantee that each of their sub-agents acts. Agent Development Kit provides
+              <p>To accomplish these kinds of tasks, <strong>workflow agents</strong> have sub-agents and guarantee that each of their sub-agents acts. Agent Development Kit
+                provides
                 three built-in workflow agents and the opportunity to define your own:</p>
               <ul>
                 <li><code>SequentialAgent</code></li>
@@ -2998,7 +2733,7 @@ tools=[save_attractions_to_state]
                   <span class="btn btn-link">Show Image <img src="./imgs/chevron-expand.svg" alt="Show Image Button"></span>
                 </div>
                 <div class="screenshot-image">
-                  <img src="https://cdn.qwiklabs.com/9o3xwlTjCWnoyd9fEEgInAHYJbCQHiU5JIYIN8rU9KY%3D"
+                  <img src="./imgs/VertexAI/LectureImages/MultiAgentSystem.png"
                        width="1000"
                        class="center-block img-fluid"
                        alt="Example1"
@@ -3009,17 +2744,19 @@ tools=[save_attractions_to_state]
               <p>But you will begin with a simpler version.</p>
 
               <h2>Task 4. Begin building a multi-agent system with a SequentialAgent</h2>
-              <p>The <code>SequentialAgent</code> executes its sub-agents in a linear sequence. Each sub-agent in its <code>sub_agents</code> list is run, one after the other, in the
+              <p>The <code>SequentialAgent</code> executes its sub-agents in a linear sequence. Each sub-agent in its <code>sub_agents</code> list is run, one after the other, in
+                the
                 order they are defined.</p>
               <p>This is ideal for workflows where tasks must be performed in a specific order, and the output of one task serves as the input for the next.</p>
-              <p>In this task, you will run a <code>SequentialAgent</code> to build a first version of your movie pitch-development multi-agent system. The first draft of your agent
+              <p>In this task, you will run a <code>SequentialAgent</code> to build a first version of your movie pitch-development multi-agent system. The first draft of your
+                agent
                 will be structured like this:</p>
               <div class="image-block">
                 <div class="expand-screenshot-image-btn border border-primary rounded">
                   <span class="btn btn-link">Show Image <img src="./imgs/chevron-expand.svg" alt="Show Image Button"></span>
                 </div>
                 <div class="screenshot-image">
-                  <img src="https://cdn.qwiklabs.com/11WKiwk%2FNgK7dk%2F0K6tk%2FkzjH8tx%2BuxeJeS3fncHjDs%3D"
+                  <img src="./imgs/VertexAI/LectureImages/SequentialAgentSystem.png"
                        width="1000"
                        class="center-block img-fluid"
                        alt="Example1"
@@ -3060,7 +2797,8 @@ tools=[save_attractions_to_state]
                     act their output is stored.</p>
                 </li>
                 <li>
-                  <p>Try out the current version of the agent by launching the web interface from the Cloud Shell Terminal. You will use the <code>--reload_agents</code> argument to
+                  <p>Try out the current version of the agent by launching the web interface from the Cloud Shell Terminal. You will use the <code>--reload_agents</code> argument
+                    to
                     enable live reloading of agents based on agent changes:</p>
                   <code>cd ~/adk_multiagent_systems</code> <br>
                   <code>adk web --allow_origins "regex:https://.*\.cloudshell\.dev" --reload_agents</code>
@@ -3075,7 +2813,8 @@ tools=[save_attractions_to_state]
                   <p>From the <strong>Select an agent</strong> dropdown on the left, select <strong>workflow_agents</strong>.</p>
                 </li>
                 <li>
-                  <p>Start the conversation with: <code>hello</code>. It may take a few moments for the agent to respond, but it should request you enter a historical figure to start
+                  <p>Start the conversation with: <code>hello</code>. It may take a few moments for the agent to respond, but it should request you enter a historical figure to
+                    start
                     your film plot generation.</p>
                 </li>
                 <li>
@@ -3095,11 +2834,13 @@ tools=[save_attractions_to_state]
                 <li>
                   <p>The agent should now call its agents one after the other as it executes the workflow and writes the plot outline file to your <strong>~/adk_multiagent_systems/movie_pitches</strong>
                     directory. It should inform you when it has written the file to disk.</p>
-                  <p>If you don't see the agent reporting that it generated a file for you or want to try another character, you can click <strong>+ New Session</strong> in the upper
+                  <p>If you don't see the agent reporting that it generated a file for you or want to try another character, you can click <strong>+ New Session</strong> in the
+                    upper
                     right and try again.</p>
                 </li>
                 <li>
-                  <p>View the agent's output in the Cloud Shell Editor. (You may need to use the Cloud Shell Editor's menu to enable View &gt; Word Wrap to see the full text without
+                  <p>View the agent's output in the Cloud Shell Editor. (You may need to use the Cloud Shell Editor's menu to enable View &gt; Word Wrap to see the full text
+                    without
                     lots of horizontal scrolling.)</p>
                 </li>
                 <li>
@@ -3119,7 +2860,7 @@ tools=[save_attractions_to_state]
                   <span class="btn btn-link">Show Image <img src="./imgs/chevron-expand.svg" alt="Show Image Button"></span>
                 </div>
                 <div class="screenshot-image">
-                  <img src="https://cdn.qwiklabs.com/13FyRaWAhz%2B4P0TGiyaiGmU0IGRoARIfQlYcGasMy4o%3D"
+                  <img src="./imgs/VertexAI/LectureImages/VisualRepresentationOfTreeOfAgents.png"
                        width="1000"
                        class="center-block img-fluid"
                        alt="Example1"
@@ -3137,7 +2878,8 @@ tools=[save_attractions_to_state]
               </ol>
 
               <h2>Task 5. Add a LoopAgent for iterative work</h2>
-              <p>The <code>LoopAgent</code> executes its sub-agents in a defined sequence and then starts at the beginning of the sequence again without breaking for a user input. It
+              <p>The <code>LoopAgent</code> executes its sub-agents in a defined sequence and then starts at the beginning of the sequence again without breaking for a user input.
+                It
                 repeats the loop until a number of iterations has been reached or a call to exit the loop has been made by one of its sub-agents (usually by calling a built-in
                 <code>exit_loop</code> tool).</p>
               <p>This is beneficial for tasks that require continuous refinement, monitoring, or cyclical workflows. Examples include:</p>
@@ -3152,7 +2894,8 @@ tools=[save_attractions_to_state]
                   <strong>Debate or Negotiation:</strong> Simulate iterative discussions between agents to reach a better outcome.
                 </li>
               </ul>
-              <p>You will add a <code>LoopAgent</code> to your movie pitch agent to allow multiple rounds of research and iteration while crafting the story. In addition to refining
+              <p>You will add a <code>LoopAgent</code> to your movie pitch agent to allow multiple rounds of research and iteration while crafting the story. In addition to
+                refining
                 the script, this allows a user to start with a less specific input: instead of suggesting a specific historical figure, they might only know they want a story about
                 an ancient doctor, and a research-and-writing iteration loop will allow the agents to find a good candidate, then work on the story.</p>
               <div class="image-block">
@@ -3160,7 +2903,7 @@ tools=[save_attractions_to_state]
                   <span class="btn btn-link">Show Image <img src="./imgs/chevron-expand.svg" alt="Show Image Button"></span>
                 </div>
                 <div class="screenshot-image">
-                  <img src="https://cdn.qwiklabs.com/gZKbLuj%2BZ6usxUe0wdEiFuOdbkWcOO98DEmL%2Fi8LGco%3D"
+                  <img src="./imgs/VertexAI/LectureImages/LoopAgentSystem.png"
                        width="1000"
                        class="center-block img-fluid"
                        alt="Example1"
@@ -3177,12 +2920,15 @@ tools=[save_attractions_to_state]
                       <ul>
                         <li>The <strong>researcher</strong> will be the same as before.</li>
                         <li>The <strong>screenwriter</strong> will be similar to before.</li>
-                        <li>A <strong>critic</strong> that will offer critical feedback on the current draft to motivate the next round of research and improvement through the loop.
+                        <li>A <strong>critic</strong> that will offer critical feedback on the current draft to motivate the next round of research and improvement through the
+                          loop.
                         </li>
                       </ul>
                     </li>
-                    <li>When the loop terminates, it will escalate control of the conversation back to the <strong>film_concept_team</strong> <code>SequentialAgent</code>, which will
-                      then pass control to the next agent in its sequence: the <strong>file_writer</strong> that will remain as before to give the movie a title and write the results
+                    <li>When the loop terminates, it will escalate control of the conversation back to the <strong>film_concept_team</strong> <code>SequentialAgent</code>, which
+                      will
+                      then pass control to the next agent in its sequence: the <strong>file_writer</strong> that will remain as before to give the movie a title and write the
+                      results
                       of the sequence to a file.
                     </li>
                   </ul>
@@ -3191,7 +2937,8 @@ tools=[save_attractions_to_state]
               <p>To make these changes:</p>
               <ol>
                 <li>
-                  <p>In the <strong>adk_multiagent_systems/workflow_agents/agent.py</strong> file, add this tool import so that you can provide an agent the ability to exit the loop
+                  <p>In the <strong>adk_multiagent_systems/workflow_agents/agent.py</strong> file, add this tool import so that you can provide an agent the ability to exit the
+                    loop
                     when desired:</p>
                   <pre><code class="language-python">
 from google.adk.tools import exit_loop
@@ -3249,11 +2996,13 @@ writers_room = LoopAgent(
 </code></pre>
                 </li>
                 <li>
-                  <p>Note that the <code>LoopAgent</code> creation includes a parameter for <code>max_iterations</code>. This defines how many times the loop will run before it ends.
+                  <p>Note that the <code>LoopAgent</code> creation includes a parameter for <code>max_iterations</code>. This defines how many times the loop will run before it
+                    ends.
                     Even if you plan to interrupt the loop via another method, it is a good idea to include a cap on the total number of iterations.</p>
                 </li>
                 <li>
-                  <p>Update the <strong>film_concept_team</strong> <code>SequentialAgent</code> to replace the <strong>researcher</strong> and <strong>screenwriter</strong> with the
+                  <p>Update the <strong>film_concept_team</strong> <code>SequentialAgent</code> to replace the <strong>researcher</strong> and <strong>screenwriter</strong> with
+                    the
                     <strong>writers_room</strong> <code>LoopAgent</code> you just created. The <strong>file_writer</strong> agent should remain at the end of the sequence. The
                     <strong>film_concept_team</strong> should now look like this:</p>
                   <pre><code class="language-python">
@@ -3282,7 +3031,8 @@ film_concept_team = SequentialAgent(
                   </ul>
                 </li>
                 <li>
-                  <p>Once you have chosen a type of character, the agent should work its way through iterations of the loop and finally give the film a title and write the outline to
+                  <p>Once you have chosen a type of character, the agent should work its way through iterations of the loop and finally give the film a title and write the outline
+                    to
                     a file.</p>
                 </li>
                 <li>
@@ -3295,7 +3045,8 @@ film_concept_team = SequentialAgent(
               <h2>Task 6. Use a "fan out and gather" pattern for report generation with a ParallelAgent</h2>
               <p>The <code>ParallelAgent</code> enables concurrent execution of its sub-agents. Each sub-agent operates in its own branch, and by default, they do not share
                 conversation history or state directly with each other during parallel execution.</p>
-              <p>This is valuable for tasks that can be divided into independent sub-tasks that can be processed simultaneously. Using a <code>ParallelAgent</code> can significantly
+              <p>This is valuable for tasks that can be divided into independent sub-tasks that can be processed simultaneously. Using a <code>ParallelAgent</code> can
+                significantly
                 reduce the overall execution time for such tasks.</p>
               <p>In this lab, you will add some supplemental reports -- some research on potential box office performance and some initial ideas on casting -- to enhance the pitch
                 for your new film.</p>
@@ -3304,7 +3055,7 @@ film_concept_team = SequentialAgent(
                   <span class="btn btn-link">Show Image <img src="./imgs/chevron-expand.svg" alt="Show Image Button"></span>
                 </div>
                 <div class="screenshot-image">
-                  <img src="https://cdn.qwiklabs.com/9o3xwlTjCWnoyd9fEEgInAHYJbCQHiU5JIYIN8rU9KY%3D"
+                  <img src="./imgs/VertexAI/LectureImages/FanOutAndGatherSystem.png"
                        width="1000"
                        class="center-block img-fluid"
                        alt="Example1"
@@ -3446,17 +3197,1521 @@ CASTING_REPORT:
 
 
               <h2>Custom workflow agents</h2>
-              <p>When the pre-defined workflow agents of <code>SequentialAgent</code>, <code>LoopAgent</code>, and <code>ParallelAgent</code> are insufficient for your needs, <code>CustomAgent</code>
+              <p>When the pre-defined workflow agents of <code>SequentialAgent</code>, <code>LoopAgent</code>, and <code>ParallelAgent</code> are insufficient for your needs,
+                <code>CustomAgent</code>
                 provides the flexibility to implement new workflow logic. You can define patterns for flow control, conditional execution, or state management between sub-agents.
                 This is useful for complex workflows, stateful orchestrations, or integrating custom business logic into the framework's orchestration layer.</p>
               <p>Creation of a <code>CustomAgent</code> is out of the scope of this lab, but it is good to know that it exists if you need it!</p>
 
               <h2>Congratulations!</h2>
-              <p>In this lab, you've learned to create multiple agents and relate them to one another with parent to sub-agent relationships, add to the session state and read it in
+              <p>In this lab, you've learned to create multiple agents and relate them to one another with parent to sub-agent relationships, add to the session state and read it
+                in
                 agent instructions, and use workflow agents to pass the conversation between agents directly.</p>
             </div>
           </div>
         </div>
+      </div>
+
+      <hr>
+      <div id="VertexAI_Chapter5" class="chapter">Chapter 5: Deploy ADK Agents to Agent Engine</div>
+      <hr>
+      <div class="textual-content">
+        <div id="VertexAI_Chapter5.1" class="sub-heading">Theory: Deploy ADK Agents to Agent Engine</div>
+        <div>
+          - Agent Engine enables Gen AI developers to develop, deploy, query, and manage Gen AI apps using Agent Development Kit (or other open source frameworks). <br>
+          <div class="image-block">
+            <div class="expand-screenshot-image-btn border border-primary rounded">
+              <span class="btn btn-link">Show Image <img src="./imgs/chevron-expand.svg" alt="Show Image Button"></span>
+            </div>
+            <div class="screenshot-image">
+              <img src="./imgs/VertexAI/Chapter5/AgentEngine.jpg"
+                   width="700"
+                   class="center-block img-fluid"
+                   alt="Example1"
+                   loading="lazy">
+            </div>
+          </div>
+
+          - Agent Engine is the keystone that connects all of the capabilities required to develop, observe, evaluate and deploy your agent solutions. <br>
+          - The process involves developing, monitoring, evaluating and testing agents, registering and deploying them, and then querying them. <br>
+          - Agent Engine aims to provide the shortest path to success by reducing friction from various areas like timeout requests, model choices, security, and CICD.
+          <div class="image-block">
+            <div class="expand-screenshot-image-btn border border-primary rounded">
+              <span class="btn btn-link">Show Image <img src="./imgs/chevron-expand.svg" alt="Show Image Button"></span>
+            </div>
+            <div class="screenshot-image">
+              <img src="./imgs/VertexAI/Chapter5/DevelopAndDeployAgents.jpg"
+                   width="1000"
+                   class="center-block img-fluid"
+                   alt="Example1"
+                   loading="lazy">
+            </div>
+          </div>
+        </div>
+
+        <div id="VertexAI_Chapter5.2" class="sub-heading">Lab: Build multi-agent systems with ADK</div>
+        <div>
+          - Code in a <a href="https://github.com/rgbk21/adk_to_agent_engine">private Github repo here</a>. <br>
+          - In this lab, you will learn to deploy ADK agents to Agent Engine for a scalable, fully managed environment for your agentic workflows. This allows you to focus on the
+          agents' logic while infrastructure is allocated and scaled for you. <br>
+          - In this lab, you will learn: <br>
+          a) The benefits of deploying agents to Agent Engine <br>
+          b) How to grant required roles to the Reasoning Engine Service Agent <br>
+          c) How to deploy an agent to Agent Engine using the ADK command line interface <br>
+          d) How to query an agent deployed to Agent Engine <br>
+          e) How to monitor your deployed agents <br>
+          f) How to delete agents <br>
+
+          Lab Steps copied over here: <br>
+          <div class="sub-section">
+            <div class="markdown-lab-instructions js-markdown-instructions" id="markdown-lab-instructions">
+
+              <h2 id="step1">GENAI107</h2>
+
+              <h2 id="step2">Overview</h2>
+              <p>In this lab, you will learn to deploy ADK agents to Agent Engine for a scalable, fully managed environment for your agentic workflows.</p>
+              <p>This allows you to focus on the agents' logic while infrastructure is allocated and scaled for you.</p>
+              <h2 id="step3">Objective</h2>
+              <p>In this lab you will learn:</p>
+              <ul>
+                <li>The benefits of deploying agents to Agent Engine</li>
+                <li>How to grant required roles to the Reasoning Engine Service Agent</li>
+                <li>How to deploy an agent to Agent Engine using the ADK command line interface</li>
+                <li>How to query an agent deployed to Agent Engine</li>
+                <li>How to monitor your deployed agents</li>
+                <li>How to delete agents</li>
+              </ul>
+              <h2 id="step4">Setup and requirements</h2>
+              <h3>Before you click the Start Lab button</h3>
+              <p>Read these instructions. Labs are timed and you cannot pause them. The timer, which starts when you click <strong>Start Lab</strong>, shows how long Google Cloud resources are made available to you.</p>
+              <p>This hands-on lab lets you do the lab activities in a real cloud environment, not in a simulation or demo environment. It does so by giving you new, temporary credentials you use to sign in and access Google Cloud for the duration of the lab.</p>
+              <p>To complete this lab, you need:</p>
+              <ul>
+                <li>Access to a standard internet browser (Chrome browser recommended).</li>
+              </ul>
+              <ql-warningbox><template shadowrootmode="open"><!---->
+                <aside>
+                  <slot></slot>
+                </aside>
+              </template>
+                <strong>Note:</strong> Use an Incognito (recommended) or private browser window to run this lab. This prevents conflicts between your personal account and the student account, which may cause extra charges incurred to your personal account.
+              </ql-warningbox>
+              <ul>
+                <li>Time to complete the lab—remember, once you start, you cannot pause a lab.</li>
+              </ul>
+              <ql-warningbox><template shadowrootmode="open"><!---->
+                <aside>
+                  <slot></slot>
+                </aside>
+              </template>
+                <strong>Note:</strong> Use only the student account for this lab. If you use a different Google Cloud account, you may incur charges to that account.
+              </ql-warningbox>
+
+              <h3>How to start your lab and sign in to the Google Cloud console</h3>
+              <ol>
+                <li>
+                  <p>Click the <strong>Start Lab</strong> button. If you need to pay for the lab, a dialog opens for you to select your payment method.
+                    On the left is the Lab Details pane with the following:</p>
+                  <ul>
+                    <li>The Open Google Cloud console button</li>
+                    <li>Time remaining</li>
+                    <li>The temporary credentials that you must use for this lab</li>
+                    <li>Other information, if needed, to step through this lab</li>
+                  </ul>
+                </li>
+                <li>
+                  <p>Click <strong>Open Google Cloud console</strong> (or right-click and select <strong>Open Link in Incognito Window</strong> if you are running the Chrome browser).</p>
+                  <p>The lab spins up resources, and then opens another tab that shows the Sign in page.</p>
+                  <p><strong><em>Tip:</em></strong> Arrange the tabs in separate windows, side-by-side.</p>
+                  <ql-infobox><template shadowrootmode="open"><!---->
+                    <aside part="aside">
+                      <slot></slot>
+                    </aside>
+                  </template>
+                    <strong>Note: </strong>If you see the <strong>Choose an account</strong> dialog, click <strong>Use Another Account</strong>.
+                  </ql-infobox>
+                </li>
+                <li>
+                  <p>If necessary, copy the <strong>Username</strong> below and paste it into the <strong>Sign in</strong> dialog.</p>
+                  <ql-code-block nowrap="" templated="" language="cpp"><template shadowrootmode="open"><!---->
+                    <div class=" container light-theme ">
+                      <pre class="hljs cpp"><span class="hljs-string">"Username"</span></pre>
+                    </div>
+                    <!--?lit$741867748$-->
+                    <div class="copy-container"> <!--?lit$741867748$-->
+                      <span class="copied-message" aria-hidden="true" role="alert" aria-label="Copied!">
+        <!--?lit$741867748$-->Copied!
+      </span>
+                      <!--?lit$741867748$-->
+                      <ql-icon-button class="copy-button" label="Copy" title="Copy" aria-label="Copy &quot;Username&quot;" translate="no" type="button"><template shadowrootmode="open"><!----> <!--?lit$741867748$-->
+                        <div class="buttonContainer" aria-disabled="false">
+                          <!--?lit$741867748$-->
+                          <md-icon-button class=" ql-icon-button " data-aria-label="Copy" data-aria-busy="false" value=""><template shadowrootmode="open" shadowrootdelegatesfocus=""><!----><button id="button" class="icon-button  standard " aria-label="Copy">
+                            <!--?lit$741867748$--><md-focus-ring part="focus-ring" for="button" aria-hidden="true"><template shadowrootmode="open"><!----></template></md-focus-ring>
+                            <!--?lit$741867748$--><md-ripple aria-hidden="true"><template shadowrootmode="open"><!----><div class="surface   "></div></template></md-ripple>
+                            <!--?lit$741867748$--><span class="icon"><slot></slot></span>
+                            <!--?lit$741867748$-->
+                            <!--?lit$741867748$--><span class="touch"></span>
+                          </button></template>
+                            <!--?lit$741867748$--><ql-icon translate="no"><template shadowrootmode="open"><!---->
+                              <span aria-hidden="true" class=" google-symbols " style="font-size: inherit;">
+        <slot><!--?lit$741867748$--></slot>
+      </span>
+                              <!--?lit$741867748$--><!--?-->
+                            </template><!--?lit$741867748$--><slot></slot></ql-icon>
+                          </md-icon-button>
+                        </div>
+                        <!--?lit$741867748$--> </template>
+                        content_copy
+                      </ql-icon-button>
+                    </div>
+
+                  </template>
+                    {{{user_0.username | "Username"}}}
+                  </ql-code-block>
+                  <p>You can also find the Username in the Lab Details pane.</p>
+                </li>
+                <li>
+                  <p>Click <strong>Next</strong>.</p>
+                </li>
+                <li>
+                  <p>Copy the <strong>Password</strong> below and paste it into the <strong>Welcome</strong> dialog.</p>
+                  <ql-code-block nowrap="" templated="" language="cpp"><template shadowrootmode="open"><!---->
+                    <div class=" container light-theme ">
+                      <pre class="hljs cpp"><span class="hljs-string">"Password"</span></pre>
+                    </div>
+                    <!--?lit$741867748$-->
+                    <div class="copy-container"> <!--?lit$741867748$-->
+                      <span class="copied-message" aria-hidden="true" role="alert" aria-label="Copied!">
+        <!--?lit$741867748$-->Copied!
+      </span>
+                      <!--?lit$741867748$-->
+                      <ql-icon-button class="copy-button" label="Copy" title="Copy" aria-label="Copy &quot;Password&quot;" translate="no" type="button"><template shadowrootmode="open"><!----> <!--?lit$741867748$-->
+                        <div class="buttonContainer" aria-disabled="false">
+                          <!--?lit$741867748$-->
+                          <md-icon-button class=" ql-icon-button " data-aria-label="Copy" data-aria-busy="false" value=""><template shadowrootmode="open" shadowrootdelegatesfocus=""><!----><button id="button" class="icon-button  standard " aria-label="Copy">
+                            <!--?lit$741867748$--><md-focus-ring part="focus-ring" for="button" aria-hidden="true"><template shadowrootmode="open"><!----></template></md-focus-ring>
+                            <!--?lit$741867748$--><md-ripple aria-hidden="true"><template shadowrootmode="open"><!----><div class="surface   "></div></template></md-ripple>
+                            <!--?lit$741867748$--><span class="icon"><slot></slot></span>
+                            <!--?lit$741867748$-->
+                            <!--?lit$741867748$--><span class="touch"></span>
+                          </button></template>
+                            <!--?lit$741867748$--><ql-icon translate="no"><template shadowrootmode="open"><!---->
+                              <span aria-hidden="true" class=" google-symbols " style="font-size: inherit;">
+        <slot><!--?lit$741867748$--></slot>
+      </span>
+                              <!--?lit$741867748$--><!--?-->
+                            </template><!--?lit$741867748$--><slot></slot></ql-icon>
+                          </md-icon-button>
+                        </div>
+                        <!--?lit$741867748$--> </template>
+                        content_copy
+                      </ql-icon-button>
+                    </div>
+
+                  </template>
+                    {{{user_0.password | "Password"}}}
+                  </ql-code-block>
+                  <p>You can also find the Password in the Lab Details pane.</p>
+                </li>
+                <li>
+                  <p>Click <strong>Next</strong>.</p>
+                  <ql-infobox><template shadowrootmode="open"><!---->
+                    <aside part="aside">
+                      <slot></slot>
+                    </aside>
+                  </template>
+                    <strong>Important: </strong>You must use the credentials the lab provides you. Do not use your Google Cloud account credentials.
+                  </ql-infobox>
+                  <ql-warningbox><template shadowrootmode="open"><!---->
+                    <aside>
+                      <slot></slot>
+                    </aside>
+                  </template>
+                    <strong>Note: </strong>Using your own Google Cloud account for this lab may incur extra charges.
+                  </ql-warningbox>
+                </li>
+                <li>
+                  <p>Click through the subsequent pages:</p>
+                  <ul>
+                    <li>Accept the terms and conditions.</li>
+                    <li>Do not add recovery options or two-factor authentication (because this is a temporary account).</li>
+                    <li>Do not sign up for free trials.</li>
+                  </ul>
+                </li>
+              </ol>
+              <p>After a few moments, the Google Cloud console opens in this tab.</p>
+              <ql-infobox><template shadowrootmode="open"><!---->
+                <aside part="aside">
+                  <slot></slot>
+                </aside>
+              </template>
+                <strong>Note:</strong> To access Google Cloud products and services, click the <strong>Navigation menu</strong> or type the service or product name in the <strong>Search</strong> field.
+                <button class="js-img-container" aria-haspopup="true"><img alt="Navigation menu icon and Search field" src="https://cdn.qwiklabs.com/9Fk8NYFp3quE9mF%2FilWF6%2FlXY9OUBi3UWtb2Ne4uXNU%3D"></button>
+              </ql-infobox>
+
+              <h2 id="step5">Agent Engine</h2>
+              <p><strong>Vertex AI Agent Engine</strong> (formerly known as LangChain on Vertex AI or Vertex AI Reasoning Engine) is a fully managed Google Cloud service enabling developers to deploy, manage, and scale AI agents in production.</p>
+              <p>You can learn more about its benefits in the <a href="https://cloud.google.com/vertex-ai/generative-ai/docs/agent-engine/overview" target="_blank">Vertex AI Agent Engine documentation</a>.</p>
+              <h2 id="step6">Task 1. Install ADK and set up your environment</h2>
+              <ql-infobox><template shadowrootmode="open"><!---->
+                <aside part="aside">
+                  <slot></slot>
+                </aside>
+              </template>
+                <b>Note:</b> Using an Incognito browser window is recommended for most Qwiklabs to avoid confusion between your Qwiklabs student account and other accounts logged into Google Cloud. If you are using Chrome, the easiest way to accomplish this is to close any Incognito windows, then right click on the <strong>Open Google Cloud console</strong> button at the top of this lab and select <strong>Open link in Incognito window</strong>.
+              </ql-infobox>
+              <h3>Enable Vertex AI recommended APIs</h3>
+              <ol>
+                <li>In this lab environment, the <strong>Vertex AI API has been enabled for you</strong>. If you were to follow these steps in your own project, you could enable it by navigating to Vertex AI and following the prompt to enable it.</li>
+              </ol>
+              <h3>Prepare a Cloud Shell Editor tab</h3>
+              <ol>
+                <li>With your Google Cloud console window selected, open Cloud Shell by pressing the G key and then the S key on your keyboard. Alternatively, you can click the Activate Cloud Shell button (<button class="js-img-container" aria-haspopup="true"><img alt="Activate Cloud Shell" height="24" src="https://cdn.qwiklabs.com/0R1bagVsqDIuRxFoBFZDlx4p2FrWrR8pyIX90XlMIMo%3D"></button>) in the upper right of the Cloud console.</li>
+                <li>Click <strong>Continue</strong>.</li>
+                <li>When prompted to authorize Cloud Shell, click <strong>Authorize</strong>.</li>
+                <li>In the upper right corner of the Cloud Shell Terminal panel, click the <strong>Open in new window</strong> button <button class="js-img-container" aria-haspopup="true"><img alt="Open in new window button" height="24" src="https://cdn.qwiklabs.com/g4I7jXdmqqSAUtXFvEv%2BUVPf%2FJ7v3AbMmd4cSeruvGI%3D"></button>.</li>
+                <li>Click the <strong>Open Editor</strong> pencil icon (<button class="js-img-container" aria-haspopup="true"><img alt="Edit pencil icon" height="24" src="https://cdn.qwiklabs.com/YEEoKikL4fSWKcfxpPyP%2BEEfg4619SPb9eIPTGG9QsA%3D"></button>) at the top of the pane to view files.</li>
+                <li>At the top of the left-hand navigation menu, click the Explorer icon (<button class="js-img-container" aria-haspopup="true"><img alt="Explorer icon" height="24" src="https://cdn.qwiklabs.com/uOCsAsS9JuxOrJdQGBEaNhnUhKZ%2FB0SCCY2Jbb7tBEo%3D"></button>) to open your file explorer.</li>
+                <li>Click the <strong>Open Folder</strong> button.</li>
+                <li>In the Open Folder dialog that opens, click <strong>OK</strong> to select your Qwiklab student account's home folder.</li>
+                <li>Close any additional tutorial or Gemini panels that appear on the right side of the screen to save more of your window for your code editor.</li>
+                <li>Throughout the rest of this lab, you can work in this window as your IDE with the Cloud Shell Editor and Cloud Shell Terminal.</li>
+              </ol>
+              <h3>Download and install ADK and code samples for this lab</h3>
+              <ol>
+                <li>
+                  <p>Paste the following commands into the Cloud Shell Terminal to copy a file from a Cloud Storage bucket, and unzip it, creating a project directory with code for this lab:</p>
+                  <ql-code-block language="bash" nowrap="" templated=""><template shadowrootmode="open"><!---->
+                    <div class=" container light-theme ">
+                      <pre class="bash hljs">gcloud storage cp -r gs://YOUR_GCP_PROJECT_ID-bucket/adk_to_agent_engine .</pre>
+                    </div>
+                    <!--?lit$741867748$-->
+                    <div class="copy-container"> <!--?lit$741867748$-->
+                      <span class="copied-message" aria-hidden="true" role="alert" aria-label="Copied!">
+        <!--?lit$741867748$-->Copied!
+      </span>
+                      <!--?lit$741867748$-->
+                      <ql-icon-button class="copy-button" label="Copy" title="Copy" aria-label="Copy gcloud storage cp -r gs://YOUR_GCP_PROJECT_ID-bucket/adk_to_agent_engine ." translate="no" type="button"><template shadowrootmode="open"><!----> <!--?lit$741867748$-->
+                        <div class="buttonContainer" aria-disabled="false">
+                          <!--?lit$741867748$-->
+                          <md-icon-button class=" ql-icon-button " data-aria-label="Copy" data-aria-busy="false" value=""><template shadowrootmode="open" shadowrootdelegatesfocus=""><!----><button id="button" class="icon-button  standard " aria-label="Copy">
+                            <!--?lit$741867748$--><md-focus-ring part="focus-ring" for="button" aria-hidden="true"><template shadowrootmode="open"><!----></template></md-focus-ring>
+                            <!--?lit$741867748$--><md-ripple aria-hidden="true"><template shadowrootmode="open"><!----><div class="surface   "></div></template></md-ripple>
+                            <!--?lit$741867748$--><span class="icon"><slot></slot></span>
+                            <!--?lit$741867748$-->
+                            <!--?lit$741867748$--><span class="touch"></span>
+                          </button></template>
+                            <!--?lit$741867748$--><ql-icon translate="no"><template shadowrootmode="open"><!---->
+                              <span aria-hidden="true" class=" google-symbols " style="font-size: inherit;">
+        <slot><!--?lit$741867748$--></slot>
+      </span>
+                              <!--?lit$741867748$--><!--?-->
+                            </template><!--?lit$741867748$--><slot></slot></ql-icon>
+                          </md-icon-button>
+                        </div>
+                        <!--?lit$741867748$--> </template>
+                        content_copy
+                      </ql-icon-button>
+                    </div>
+
+                  </template>
+                    gcloud storage cp -r gs://{{{project_0.project_id| YOUR_GCP_PROJECT_ID}}}-bucket/adk_to_agent_engine .
+                  </ql-code-block>
+                </li>
+                <li>
+                  <p>Update your <code>PATH</code> environment variable and <strong>install ADK</strong> by running the following commands in the Cloud Shell Terminal.</p>
+                  <ql-code-block language="bash" nowrap="" templated=""><template shadowrootmode="open"><!---->
+                    <div class=" container light-theme ">
+        <pre class="bash hljs"><span class="hljs-built_in">export</span> PATH=<span class="hljs-variable">$PATH</span>:<span class="hljs-string">"/home/<span class="hljs-variable">${USER}</span>/.local/bin"</span>
+python3 -m pip install -r adk_to_agent_engine/requirements.txt</pre>
+                    </div>
+                    <!--?lit$741867748$-->
+                    <div class="copy-container"> <!--?lit$741867748$-->
+                      <span class="copied-message" aria-hidden="true" role="alert" aria-label="Copied!">
+        <!--?lit$741867748$-->Copied!
+      </span>
+                      <!--?lit$741867748$-->
+                      <ql-icon-button class="copy-button" label="Copy" title="Copy" aria-label="Copy export PATH=$PATH:&quot;/home/${USER}/.local/bin&quot;
+python3 -m pip install -r adk_to_agent_engine/requirements.txt" translate="no" type="button"><template shadowrootmode="open"><!----> <!--?lit$741867748$-->
+                        <div class="buttonContainer" aria-disabled="false">
+                          <!--?lit$741867748$-->
+                          <md-icon-button class=" ql-icon-button " data-aria-label="Copy" data-aria-busy="false" value=""><template shadowrootmode="open" shadowrootdelegatesfocus=""><!----><button id="button" class="icon-button  standard " aria-label="Copy">
+                            <!--?lit$741867748$--><md-focus-ring part="focus-ring" for="button" aria-hidden="true"><template shadowrootmode="open"><!----></template></md-focus-ring>
+                            <!--?lit$741867748$--><md-ripple aria-hidden="true"><template shadowrootmode="open"><!----><div class="surface   "></div></template></md-ripple>
+                            <!--?lit$741867748$--><span class="icon"><slot></slot></span>
+                            <!--?lit$741867748$-->
+                            <!--?lit$741867748$--><span class="touch"></span>
+                          </button></template>
+                            <!--?lit$741867748$--><ql-icon translate="no"><template shadowrootmode="open"><!---->
+                              <span aria-hidden="true" class=" google-symbols " style="font-size: inherit;">
+        <slot><!--?lit$741867748$--></slot>
+      </span>
+                              <!--?lit$741867748$--><!--?-->
+                            </template><!--?lit$741867748$--><slot></slot></ql-icon>
+                          </md-icon-button>
+                        </div>
+                        <!--?lit$741867748$--> </template>
+                        content_copy
+                      </ql-icon-button>
+                    </div>
+
+                  </template>
+                    export PATH=$PATH:"/home/${USER}/.local/bin"
+                    python3 -m pip install -r adk_to_agent_engine/requirements.txt
+                  </ql-code-block>
+                </li>
+                <li>
+                  <p>Run the following commands to create a <strong>.env</strong> file in the <strong>adk_to_agent_engine</strong> directory. (Note: To view a hidden file beginning with a period, you can use the Cloud Shell Editor menus to enable <strong>View &gt; Toggle Hidden Files</strong>):</p>
+                  <ql-code-block language="bash" nowrap="" templated=""><template shadowrootmode="open"><!---->
+                    <div class=" container light-theme ">
+        <pre class="bash hljs"><span class="hljs-built_in">cd</span> ~/adk_to_agent_engine
+cat &lt;&lt; <span class="hljs-string">EOF &gt; .env
+GOOGLE_GENAI_USE_VERTEXAI=TRUE
+GOOGLE_CLOUD_PROJECT=YOUR_GCP_PROJECT_ID
+GOOGLE_CLOUD_LOCATION=us-central1
+MODEL=gemini_flash_model_id
+EOF</span></pre>
+                    </div>
+                    <!--?lit$741867748$-->
+                    <div class="copy-container"> <!--?lit$741867748$-->
+                      <span class="copied-message" aria-hidden="true" role="alert" aria-label="Copied!">
+        <!--?lit$741867748$-->Copied!
+      </span>
+                      <!--?lit$741867748$-->
+                      <ql-icon-button class="copy-button" label="Copy" title="Copy" aria-label="Copy cd ~/adk_to_agent_engine
+cat &lt;&lt; EOF &gt; .env
+GOOGLE_GENAI_USE_VERTEXAI=TRUE
+GOOGLE_CLOUD_PROJECT=YOUR_GCP_PROJECT_ID
+GOOGLE_CLOUD_LOCATION=us-central1
+MODEL=gemini_flash_model_id
+EOF" translate="no" type="button"><template shadowrootmode="open"><!----> <!--?lit$741867748$-->
+                        <div class="buttonContainer" aria-disabled="false">
+                          <!--?lit$741867748$-->
+                          <md-icon-button class=" ql-icon-button " data-aria-label="Copy" data-aria-busy="false" value=""><template shadowrootmode="open" shadowrootdelegatesfocus=""><!----><button id="button" class="icon-button  standard " aria-label="Copy">
+                            <!--?lit$741867748$--><md-focus-ring part="focus-ring" for="button" aria-hidden="true"><template shadowrootmode="open"><!----></template></md-focus-ring>
+                            <!--?lit$741867748$--><md-ripple aria-hidden="true"><template shadowrootmode="open"><!----><div class="surface   "></div></template></md-ripple>
+                            <!--?lit$741867748$--><span class="icon"><slot></slot></span>
+                            <!--?lit$741867748$-->
+                            <!--?lit$741867748$--><span class="touch"></span>
+                          </button></template>
+                            <!--?lit$741867748$--><ql-icon translate="no"><template shadowrootmode="open"><!---->
+                              <span aria-hidden="true" class=" google-symbols " style="font-size: inherit;">
+        <slot><!--?lit$741867748$--></slot>
+      </span>
+                              <!--?lit$741867748$--><!--?-->
+                            </template><!--?lit$741867748$--><slot></slot></ql-icon>
+                          </md-icon-button>
+                        </div>
+                        <!--?lit$741867748$--> </template>
+                        content_copy
+                      </ql-icon-button>
+                    </div>
+
+                  </template>
+                    cd ~/adk_to_agent_engine
+                    cat &lt;&lt; EOF &gt; .env
+                    GOOGLE_GENAI_USE_VERTEXAI=TRUE
+                    GOOGLE_CLOUD_PROJECT={{{project_0.project_id| YOUR_GCP_PROJECT_ID}}}
+                    GOOGLE_CLOUD_LOCATION=us-central1
+                    MODEL={{{project_0.startup_script.gemini_flash_model_id | gemini_flash_model_id}}}
+                    EOF
+                  </ql-code-block>
+                </li>
+                <li>
+                  <p>Copy the .env file to the <strong>agent directory</strong> to provide your agent necessary authentication configurations once it is deployed:</p>
+                  <ql-code-block language="bash" templated=""><template shadowrootmode="open"><!---->
+                    <div class=" container light-theme ">
+                      <pre class="bash wrap hljs">cp .env transcript_summarization_agent/.env</pre>
+                    </div>
+                    <!--?lit$741867748$-->
+                    <div class="copy-container"> <!--?lit$741867748$-->
+                      <span class="copied-message" aria-hidden="true" role="alert" aria-label="Copied!">
+        <!--?lit$741867748$-->Copied!
+      </span>
+                      <!--?lit$741867748$-->
+                      <ql-icon-button class="copy-button" label="Copy" title="Copy" aria-label="Copy cp .env transcript_summarization_agent/.env" translate="no" type="button"><template shadowrootmode="open"><!----> <!--?lit$741867748$-->
+                        <div class="buttonContainer" aria-disabled="false">
+                          <!--?lit$741867748$-->
+                          <md-icon-button class=" ql-icon-button " data-aria-label="Copy" data-aria-busy="false" value=""><template shadowrootmode="open" shadowrootdelegatesfocus=""><!----><button id="button" class="icon-button  standard " aria-label="Copy">
+                            <!--?lit$741867748$--><md-focus-ring part="focus-ring" for="button" aria-hidden="true"><template shadowrootmode="open"><!----></template></md-focus-ring>
+                            <!--?lit$741867748$--><md-ripple aria-hidden="true"><template shadowrootmode="open"><!----><div class="surface   "></div></template></md-ripple>
+                            <!--?lit$741867748$--><span class="icon"><slot></slot></span>
+                            <!--?lit$741867748$-->
+                            <!--?lit$741867748$--><span class="touch"></span>
+                          </button></template>
+                            <!--?lit$741867748$--><ql-icon translate="no"><template shadowrootmode="open"><!---->
+                              <span aria-hidden="true" class=" google-symbols " style="font-size: inherit;">
+        <slot><!--?lit$741867748$--></slot>
+      </span>
+                              <!--?lit$741867748$--><!--?-->
+                            </template><!--?lit$741867748$--><slot></slot></ql-icon>
+                          </md-icon-button>
+                        </div>
+                        <!--?lit$741867748$--> </template>
+                        content_copy
+                      </ql-icon-button>
+                    </div>
+
+                  </template>
+                    cp .env transcript_summarization_agent/.env
+                  </ql-code-block>
+                </li>
+              </ol>
+              <h2 id="step7">Task 2. Deploy to Agent Engine using the command line deploy method</h2>
+              <p>ADK's command line interface provides shortcuts to deploy agents to Agent Engine, Cloud Run, and Google Kubernetes Engine (GKE). You can use the following base commands to deploy to each of these services:</p>
+              <ul>
+                <li>
+                  <a href="https://github.com/google/adk-python/blob/c52f9564330f0c00d82338cc58df28cb22400b6f/src/google/adk/cli/cli_tools_click.py#L1037" target="_blank"><code>adk deploy agent_engine</code></a> (with its command line args described under the <code>@deploy.command("agent_engine")</code> decorator)</li>
+                <li>
+                  <a href="https://github.com/google/adk-python/blob/c52f9564330f0c00d82338cc58df28cb22400b6f/src/google/adk/cli/cli_tools_click.py#L861" target="_blank"><code>adk deploy cloud_run</code></a> (with its command line args described under the <code>@deploy.command("cloud_run")</code> decorator)</li>
+                <li>
+                  <a href="https://github.com/google/adk-python/blob/c52f9564330f0c00d82338cc58df28cb22400b6f/src/google/adk/cli/cli_tools_click.py#L1192" target="_blank"><code>adk deploy gke</code></a> (with its command line args described under the <code>@deploy.command("gke")</code> decorator)</li>
+              </ul>
+              <p>The <code>adk deploy agent_engine</code> command wraps your agent in a <a href="https://cloud.google.com/python/docs/reference/vertexai/latest/vertexai.preview.reasoning_engines.AdkApp#vertexai_preview_reasoning_engines_AdkApp" target="_blank">reasoning_engines.AdkApp</a> class and deploys this app to Agent Engine's managed runtime, ready to receive agentic queries.</p>
+              <p>When an <code>AdkApp</code> is deployed to Agent Engine, it automatically uses a <a href="https://google.github.io/adk-docs/sessions/session/#sessionservice-implementations" target="_blank"><code>VertexAiSessionService</code></a> for persistent, managed session state. This provides multi-turn conversational memory without any additional configuration. For local testing, the application defaults to a temporary, <code>InMemorySessionService</code>.</p>
+              <p>To deploy an Agent Engine app using <code>adk deploy agent_engine</code>, complete the following steps:</p>
+              <ol>
+                <li>
+                  <p>In the <strong>adk_to_agent_engine/transcript_summarization_agent</strong> directory, click on the <strong>agent.py</strong> file to <strong>review the instructions</strong> of this simple summarization agent.</p>
+                </li>
+                <li>
+                  <p>To deploy an agent, you must provide its requirements. In Cloud Shell Editor, right-click on the <strong>transcript_summarization_agent</strong> directory. (You may need to click <strong>Allow</strong> to enable the right-click menu.)</p>
+                </li>
+                <li>
+                  <p>Select <strong>New File...</strong></p>
+                </li>
+                <li>
+                  <p>Name the file like a standard Python requirements file: <strong>requirements.txt</strong></p>
+                </li>
+                <li>
+                  <p>Paste the following into the file:</p>
+                  <ql-code-block language="bash"><template shadowrootmode="open"><!---->
+                    <div class=" container light-theme ">
+                      <pre class="bash wrap hljs">google-cloud-aiplatform[agent_engines,adk]&gt;=1.112</pre>
+                    </div>
+                    <!--?lit$741867748$-->
+                    <div class="copy-container"> <!--?lit$741867748$-->
+                      <span class="copied-message" aria-hidden="true" role="alert" aria-label="Copied!">
+        <!--?lit$741867748$-->Copied!
+      </span>
+                      <!--?lit$741867748$-->
+                      <ql-icon-button class="copy-button" label="Copy" title="Copy" aria-label="Copy google-cloud-aiplatform[agent_engines,adk]&gt;=1.112" translate="no" type="button"><template shadowrootmode="open"><!----> <!--?lit$741867748$-->
+                        <div class="buttonContainer" aria-disabled="false">
+                          <!--?lit$741867748$-->
+                          <md-icon-button class=" ql-icon-button " data-aria-label="Copy" data-aria-busy="false" value=""><template shadowrootmode="open" shadowrootdelegatesfocus=""><!----><button id="button" class="icon-button  standard " aria-label="Copy">
+                            <!--?lit$741867748$--><md-focus-ring part="focus-ring" for="button" aria-hidden="true"><template shadowrootmode="open"><!----></template></md-focus-ring>
+                            <!--?lit$741867748$--><md-ripple aria-hidden="true"><template shadowrootmode="open"><!----><div class="surface   "></div></template></md-ripple>
+                            <!--?lit$741867748$--><span class="icon"><slot></slot></span>
+                            <!--?lit$741867748$-->
+                            <!--?lit$741867748$--><span class="touch"></span>
+                          </button></template>
+                            <!--?lit$741867748$--><ql-icon translate="no"><template shadowrootmode="open"><!---->
+                              <span aria-hidden="true" class=" google-symbols " style="font-size: inherit;">
+        <slot><!--?lit$741867748$--></slot>
+      </span>
+                              <!--?lit$741867748$--><!--?-->
+                            </template><!--?lit$741867748$--><slot></slot></ql-icon>
+                          </md-icon-button>
+                        </div>
+                        <!--?lit$741867748$--> </template>
+                        content_copy
+                      </ql-icon-button>
+                    </div>
+
+                  </template>
+                    google-cloud-aiplatform[agent_engines,adk]&gt;=1.112
+                  </ql-code-block>
+                </li>
+                <li>
+                  <p><strong>Save</strong> the file.</p>
+                </li>
+                <li>
+                  <p>In the Cloud Shell Terminal, run the deploy command:</p>
+                  <ql-code-block language="bash" templated=""><template shadowrootmode="open"><!---->
+                    <div class=" container light-theme ">
+        <pre class="bash wrap hljs">adk deploy agent_engine transcript_summarization_agent \
+--display_name <span class="hljs-string">"Transcript Summarizer"</span> \
+--region us-central1 \
+--staging_bucket gs://YOUR_GCP_PROJECT_ID-bucket</pre>
+                    </div>
+                    <!--?lit$741867748$-->
+                    <div class="copy-container"> <!--?lit$741867748$-->
+                      <span class="copied-message" aria-hidden="true" role="alert" aria-label="Copied!">
+        <!--?lit$741867748$-->Copied!
+      </span>
+                      <!--?lit$741867748$-->
+                      <ql-icon-button class="copy-button" label="Copy" title="Copy" aria-label="Copy adk deploy agent_engine transcript_summarization_agent \
+--display_name &quot;Transcript Summarizer&quot; \
+--region us-central1 \
+--staging_bucket gs://YOUR_GCP_PROJECT_ID-bucket" translate="no" type="button"><template shadowrootmode="open"><!----> <!--?lit$741867748$-->
+                        <div class="buttonContainer" aria-disabled="false">
+                          <!--?lit$741867748$-->
+                          <md-icon-button class=" ql-icon-button " data-aria-label="Copy" data-aria-busy="false" value=""><template shadowrootmode="open" shadowrootdelegatesfocus=""><!----><button id="button" class="icon-button  standard " aria-label="Copy">
+                            <!--?lit$741867748$--><md-focus-ring part="focus-ring" for="button" aria-hidden="true"><template shadowrootmode="open"><!----></template></md-focus-ring>
+                            <!--?lit$741867748$--><md-ripple aria-hidden="true"><template shadowrootmode="open"><!----><div class="surface   "></div></template></md-ripple>
+                            <!--?lit$741867748$--><span class="icon"><slot></slot></span>
+                            <!--?lit$741867748$-->
+                            <!--?lit$741867748$--><span class="touch"></span>
+                          </button></template>
+                            <!--?lit$741867748$--><ql-icon translate="no"><template shadowrootmode="open"><!---->
+                              <span aria-hidden="true" class=" google-symbols " style="font-size: inherit;">
+        <slot><!--?lit$741867748$--></slot>
+      </span>
+                              <!--?lit$741867748$--><!--?-->
+                            </template><!--?lit$741867748$--><slot></slot></ql-icon>
+                          </md-icon-button>
+                        </div>
+                        <!--?lit$741867748$--> </template>
+                        content_copy
+                      </ql-icon-button>
+                    </div>
+
+                  </template>
+                    adk deploy agent_engine transcript_summarization_agent \
+                    --display_name "Transcript Summarizer" \
+                    --region us-central1 \
+                    --staging_bucket gs://{{{project_0.project_id| YOUR_GCP_PROJECT_ID}}}-bucket
+                  </ql-code-block>
+                  <p>You can follow the status from the log file that will be linked from the command's output. During deployment, the following steps are occurring:</p>
+                  <ol>
+                    <li>A bundle of artifacts is generated locally, comprising:
+                      <ul>
+                        <li>
+                          <code>*.pkl</code>: a pickle file corresponding to local_agent.</li>
+                        <li>
+                          <code>requirements.txt</code>: this file from the agent folder defining <a href="https://cloud.google.com/vertex-ai/generative-ai/docs/agent-engine/deploy#package-requirements" target="_blank">package requirements</a>.</li>
+                        <li>
+                          <code>dependencies.tar.gz</code>: a tar file containing any <a href="https://cloud.google.com/vertex-ai/generative-ai/docs/agent-engine/deploy#extra-packages" target="_blank">extra packages</a>.</li>
+                      </ul>
+                    </li>
+                    <li>The bundle is uploaded to Cloud Storage (using a defined <a href="https://cloud.google.com/vertex-ai/generative-ai/docs/agent-engine/deploy#gcs-directory" target="_blank">directory</a> if specified) for staging the artifacts.</li>
+                    <li>The Cloud Storage URIs for the respective artifacts are specified in the <a href="https://cloud.google.com/vertex-ai/generative-ai/docs/reference/rest/v1/projects.locations.reasoningEngines#PackageSpec" target="_blank">PackageSpec</a>.</li>
+                    <li>The Vertex AI Agent Engine service receives the request and builds containers and spins up HTTP servers on the backend.</li>
+                  </ol>
+                  <p><strong>Note:</strong> Deployment should take about 10 minutes, but you can continue with this lab while it deploys.</p>
+                  <h4>Quiz While Your Agent is Deploying</h4>
+                  <p>Each of the <code>adk deploy ...</code> commands requires certain arguments to be set. For the most up-to-date arguments, click the linked commands in the list at the top of this task and look for the arguments marked as "Required".</p>
+                  <p>Some required arguments, like <a href="https://github.com/google/adk-python/blob/c52f9564330f0c00d82338cc58df28cb22400b6f/src/google/adk/cli/cli_tools_click.py#L1042" target="_blank"><code>--project</code></a> and <a href="https://github.com/google/adk-python/blob/c52f9564330f0c00d82338cc58df28cb22400b6f/src/google/adk/cli/cli_tools_click.py#L1050" target="_blank"><code>--region</code></a> from the <code>adk deploy agent_engine</code> deployment can load their values from the agent's <code>.env</code> file if present.</p>
+                  <p>Answer the following questions based on the arguments for <a href="https://github.com/google/adk-python/blob/c52f9564330f0c00d82338cc58df28cb22400b6f/src/google/adk/cli/cli_tools_click.py#L1037" target="_blank"><code>adk deploy agent_engine</code></a>:</p>
+                  <ql-true-false-probe answer="true" stem="The `--agent_engine_id` argument allows you to update an existing Agent Engine instance."><template shadowrootmode="open"><!---->
+                    <ql-assessment aria-label=""><template shadowrootmode="open"><!---->
+                      <div class="assessment-left">
+                        <ql-assessment-status><template shadowrootmode="open"><!---->
+                          <div class="status" role="progressbar" aria-live="assertive" status="complete" tooltip="Start lab to track your progress." aria-hidden="false" aria-valuenow="100" aria-label="Successful."><!--?lit$741867748$--></div>
+                        </template>
+                        </ql-assessment-status>
+                      </div>
+
+                      <div class="assessment-right">
+                        <div class="assessment-content">
+                          <slot></slot>
+                        </div>
+
+                        <!--?lit$741867748$-->
+                      </div>
+                    </template>
+                      <div class="item-container"> <!--?lit$741867748$-->
+                        <ql-true-false-item><template shadowrootmode="open"><!---->
+                          <fieldset>
+                            <legend>
+                              <ql-item-stem><template shadowrootmode="open"><!----> <slot></slot> </template> <!--?lit$741867748$--><!--?lit$741867748$-->The `--agent_engine_id` argument allows you to update an existing Agent Engine instance.<!--?--> </ql-item-stem>
+                            </legend>
+                            <!--?lit$741867748$-->
+                            <!--?lit$741867748$-->
+                            <ql-choice class="option" aria-label="True"><template shadowrootmode="open"><!---->
+                              <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+                              <div tabindex="0" role="radio" class=" mdc-form-field answer container " aria-checked="true">
+                                <ql-icon aria-hidden="true" class="icon" translate="no"><template shadowrootmode="open"><!---->
+                                  <span aria-hidden="true" class=" google-symbols " style="font-size: inherit;">
+        <slot><!--?lit$741867748$--></slot>
+      </span>
+                                  <!--?lit$741867748$--><!--?-->
+                                </template>
+                                  <!--?lit$741867748$-->check
+                                </ql-icon>
+                                <span hidden="" aria-hidden="false"><!--?lit$741867748$-->Correct::</span>
+                                <span class="choice-title"><!--?lit$741867748$--><!--?lit$741867748$-->True<!--?--></span>
+                              </div>
+                            </template>
+                            </ql-choice>
+
+                            <!--?lit$741867748$-->
+                            <div class="option" aria-label="False">
+                              <md-radio name="radios" role="radio" id="radio-false" disabled="" aria-checked="false" aria-label="False" tabindex="0"><template shadowrootmode="open"><!---->
+                                <div aria-hidden="true" class="container   ">
+                                  <md-ripple part="ripple" disabled="" aria-hidden="true"><template shadowrootmode="open"><!----><div class="surface   "></div></template></md-ripple>
+                                  <md-focus-ring part="focus-ring" aria-hidden="true"><template shadowrootmode="open"><!----></template></md-focus-ring>
+                                  <svg class="icon" viewBox="0 0 20 20">
+                                    <mask id="cutout2">
+                                      <rect width="100%" height="100%" fill="white"></rect>
+                                      <circle cx="10" cy="10" r="8" fill="black"></circle>
+                                    </mask>
+                                    <circle class="outer circle" cx="10" cy="10" r="10" mask="url(#cutout2)"></circle>
+                                    <circle class="inner circle" cx="10" cy="10" r="5"></circle>
+                                  </svg>
+
+                                  <div class="touch-target"></div>
+                                </div>
+                              </template>
+                              </md-radio>
+                              <label class="radio-label" for="radio-false">
+                                <!--?lit$741867748$--><!--?lit$741867748$-->False<!--?-->
+                              </label>
+                            </div>
+
+                            <!--?lit$741867748$-->
+                          </fieldset>
+                        </template>
+                        </ql-true-false-item>
+                      </div>
+
+                      <!--?lit$741867748$-->
+                    </ql-assessment>
+                  </template>
+                  </ql-true-false-probe>
+                  <ql-true-false-probe answer="false" stem="The `--trace_to_cloud` argument has a default value of True."><template shadowrootmode="open"><!---->
+                    <ql-assessment aria-label=""><template shadowrootmode="open"><!---->
+                      <div class="assessment-left">
+                        <ql-assessment-status><template shadowrootmode="open"><!---->
+                          <div class="status" role="progressbar" aria-live="assertive" status="complete" tooltip="Start lab to track your progress." aria-hidden="false" aria-valuenow="100" aria-label="Successful."><!--?lit$741867748$--></div>
+                        </template>
+                        </ql-assessment-status>
+                      </div>
+
+                      <div class="assessment-right">
+                        <div class="assessment-content">
+                          <slot></slot>
+                        </div>
+
+                        <!--?lit$741867748$-->
+                      </div>
+                    </template>
+                      <div class="item-container"> <!--?lit$741867748$-->
+                        <ql-true-false-item><template shadowrootmode="open"><!---->
+                          <fieldset>
+                            <legend>
+                              <ql-item-stem><template shadowrootmode="open"><!----> <slot></slot> </template> <!--?lit$741867748$--><!--?lit$741867748$-->The `--trace_to_cloud` argument has a default value of True.<!--?--> </ql-item-stem>
+                            </legend>
+                            <!--?lit$741867748$-->
+                            <!--?lit$741867748$-->
+                            <div class="option" aria-label="True">
+                              <md-radio name="radios" role="radio" id="radio-true" disabled="" aria-checked="false" aria-label="True" tabindex="0"><template shadowrootmode="open"><!---->
+                                <div aria-hidden="true" class="container   ">
+                                  <md-ripple part="ripple" disabled="" aria-hidden="true"><template shadowrootmode="open"><!----><div class="surface   "></div></template></md-ripple>
+                                  <md-focus-ring part="focus-ring" aria-hidden="true"><template shadowrootmode="open"><!----></template></md-focus-ring>
+                                  <svg class="icon" viewBox="0 0 20 20">
+                                    <mask id="cutout3">
+                                      <rect width="100%" height="100%" fill="white"></rect>
+                                      <circle cx="10" cy="10" r="8" fill="black"></circle>
+                                    </mask>
+                                    <circle class="outer circle" cx="10" cy="10" r="10" mask="url(#cutout3)"></circle>
+                                    <circle class="inner circle" cx="10" cy="10" r="5"></circle>
+                                  </svg>
+
+                                  <div class="touch-target"></div>
+                                </div>
+                              </template>
+                              </md-radio>
+                              <label class="radio-label" for="radio-true">
+                                <!--?lit$741867748$--><!--?lit$741867748$-->True<!--?-->
+                              </label>
+                            </div>
+
+                            <!--?lit$741867748$-->
+                            <ql-choice class="option" aria-label="False"><template shadowrootmode="open"><!---->
+                              <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+                              <div tabindex="0" role="radio" class=" mdc-form-field answer container " aria-checked="true">
+                                <ql-icon aria-hidden="true" class="icon" translate="no"><template shadowrootmode="open"><!---->
+                                  <span aria-hidden="true" class=" google-symbols " style="font-size: inherit;">
+        <slot><!--?lit$741867748$--></slot>
+      </span>
+                                  <!--?lit$741867748$--><!--?-->
+                                </template>
+                                  <!--?lit$741867748$-->check
+                                </ql-icon>
+                                <span hidden="" aria-hidden="false"><!--?lit$741867748$-->Correct::</span>
+                                <span class="choice-title"><!--?lit$741867748$--><!--?lit$741867748$-->False<!--?--></span>
+                              </div>
+                            </template>
+                            </ql-choice>
+
+                            <!--?lit$741867748$-->
+                          </fieldset>
+                        </template>
+                        </ql-true-false-item>
+                      </div>
+
+                      <!--?lit$741867748$-->
+                    </ql-assessment>
+                  </template>
+                  </ql-true-false-probe>
+                  <p><ql-multiple-choice-probe answerindex="1" optiontitles="[
+&quot;Creates app files for you to edit.&quot;,
+&quot;Accepts a filename to define an ADK app.&quot;,
+&quot;Is required.&quot;,
+&quot;Defaults to use your agent.py file.&quot;
+]" shuffle="" stem="Which of the following is true about the `--adk_app` argument?"><template shadowrootmode="open"><!---->
+                    <ql-assessment aria-label=""><template shadowrootmode="open"><!---->
+                      <div class="assessment-left">
+                        <ql-assessment-status><template shadowrootmode="open"><!---->
+                          <div class="status" role="progressbar" aria-live="assertive" status="complete" tooltip="Start lab to track your progress." aria-hidden="false" aria-valuenow="100" aria-label="Successful."><!--?lit$741867748$--></div>
+                        </template>
+                        </ql-assessment-status>
+                      </div>
+
+                      <div class="assessment-right">
+                        <div class="assessment-content">
+                          <slot></slot>
+                        </div>
+
+                        <!--?lit$741867748$-->
+                      </div>
+                    </template>
+                      <div class="item-container"> <!--?lit$741867748$-->
+                        <ql-multiple-choice-item><template shadowrootmode="open"><!---->
+                          <fieldset>
+                            <legend>
+                              <ql-item-stem><template shadowrootmode="open"><!----> <slot></slot> </template>
+                                <span hidden="" aria-hidden="false">
+              <!--?lit$741867748$-->Multiple Choice Question:
+            </span>
+                                <!--?lit$741867748$--><!--?lit$741867748$-->Which of the following is true about the `--adk_app` argument?<!--?-->
+                              </ql-item-stem>
+                            </legend>
+                            <!--?lit$741867748$--><!---->
+                            <div class="option unchosen">
+                              <md-radio role="radio" id="radio-2" name="radios for 2461167414" disabled="" aria-label="Is required." aria-checked="false" tabindex="0"><template shadowrootmode="open"><!---->
+                                <div aria-hidden="true" class="container   ">
+                                  <md-ripple part="ripple" disabled="" aria-hidden="true"><template shadowrootmode="open"><!----><div class="surface   "></div></template></md-ripple>
+                                  <md-focus-ring part="focus-ring" aria-hidden="true"><template shadowrootmode="open"><!----></template></md-focus-ring>
+                                  <svg class="icon" viewBox="0 0 20 20">
+                                    <mask id="cutout5">
+                                      <rect width="100%" height="100%" fill="white"></rect>
+                                      <circle cx="10" cy="10" r="8" fill="black"></circle>
+                                    </mask>
+                                    <circle class="outer circle" cx="10" cy="10" r="10" mask="url(#cutout5)"></circle>
+                                    <circle class="inner circle" cx="10" cy="10" r="5"></circle>
+                                  </svg>
+
+                                  <div class="touch-target"></div>
+                                </div>
+                              </template>
+                              </md-radio>
+                              <label class="radio-label" for="radio-2">
+                                <!--?lit$741867748$--><!--?lit$741867748$-->Is required.<!--?-->
+                              </label>
+                            </div>
+                            <!----><!---->
+                            <div class="option unchosen">
+                              <md-radio role="radio" id="radio-3" name="radios for 2461167414" disabled="" aria-label="Defaults to use your agent.py file." aria-checked="false" tabindex="0"><template shadowrootmode="open"><!---->
+                                <div aria-hidden="true" class="container   ">
+                                  <md-ripple part="ripple" disabled="" aria-hidden="true"><template shadowrootmode="open"><!----><div class="surface   "></div></template></md-ripple>
+                                  <md-focus-ring part="focus-ring" aria-hidden="true"><template shadowrootmode="open"><!----></template></md-focus-ring>
+                                  <svg class="icon" viewBox="0 0 20 20">
+                                    <mask id="cutout6">
+                                      <rect width="100%" height="100%" fill="white"></rect>
+                                      <circle cx="10" cy="10" r="8" fill="black"></circle>
+                                    </mask>
+                                    <circle class="outer circle" cx="10" cy="10" r="10" mask="url(#cutout6)"></circle>
+                                    <circle class="inner circle" cx="10" cy="10" r="5"></circle>
+                                  </svg>
+
+                                  <div class="touch-target"></div>
+                                </div>
+                              </template>
+                              </md-radio>
+                              <label class="radio-label" for="radio-3">
+                                <!--?lit$741867748$--><!--?lit$741867748$-->Defaults to use your agent.py file.<!--?-->
+                              </label>
+                            </div>
+                            <!----><!---->
+                            <div class="option unchosen">
+                              <md-radio role="radio" id="radio-0" name="radios for 2461167414" disabled="" aria-label="Creates app files for you to edit." aria-checked="false" tabindex="0"><template shadowrootmode="open"><!---->
+                                <div aria-hidden="true" class="container   ">
+                                  <md-ripple part="ripple" disabled="" aria-hidden="true"><template shadowrootmode="open"><!----><div class="surface   "></div></template></md-ripple>
+                                  <md-focus-ring part="focus-ring" aria-hidden="true"><template shadowrootmode="open"><!----></template></md-focus-ring>
+                                  <svg class="icon" viewBox="0 0 20 20">
+                                    <mask id="cutout7">
+                                      <rect width="100%" height="100%" fill="white"></rect>
+                                      <circle cx="10" cy="10" r="8" fill="black"></circle>
+                                    </mask>
+                                    <circle class="outer circle" cx="10" cy="10" r="10" mask="url(#cutout7)"></circle>
+                                    <circle class="inner circle" cx="10" cy="10" r="5"></circle>
+                                  </svg>
+
+                                  <div class="touch-target"></div>
+                                </div>
+                              </template>
+                              </md-radio>
+                              <label class="radio-label" for="radio-0">
+                                <!--?lit$741867748$--><!--?lit$741867748$-->Creates app files for you to edit.<!--?-->
+                              </label>
+                            </div>
+                            <!----><!---->
+                            <input type="radio" hidden="" aria-hidden="false" aria-checked="true" disabled="" name="radios for 2461167414">
+                            <ql-choice class="option"><template shadowrootmode="open"><!---->
+                              <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+                              <div tabindex="0" role="radio" class=" mdc-form-field answer container " aria-checked="true">
+                                <ql-icon aria-hidden="true" class="icon" translate="no"><template shadowrootmode="open"><!---->
+                                  <span aria-hidden="true" class=" google-symbols " style="font-size: inherit;">
+        <slot><!--?lit$741867748$--></slot>
+      </span>
+                                  <!--?lit$741867748$--><!--?-->
+                                </template>
+                                  <!--?lit$741867748$-->check
+                                </ql-icon>
+                                <span hidden="" aria-hidden="false"><!--?lit$741867748$-->Correct::</span>
+                                <span class="choice-title"><!--?lit$741867748$--><!--?lit$741867748$-->Accepts a filename to define an ADK app.<!--?--></span>
+                              </div>
+                            </template>
+                            </ql-choice>
+                            <!---->
+                            <!--?lit$741867748$-->
+                          </fieldset>
+                        </template>
+                        </ql-multiple-choice-item>
+                      </div>
+
+                      <!--?lit$741867748$-->
+                      <ql-button aria-label="Submit" type="button" disabled=""><template shadowrootmode="open"><!----> <!--?lit$741867748$-->
+                        <div class="buttonContainer" aria-disabled="true">
+                          <!--?lit$741867748$-->
+                          <md-filled-button part="button" class=" ql-button disabled default filled size--small " disabled="" data-aria-busy="false" value="" data-aria-label="Submit"><template shadowrootmode="open" shadowrootdelegatesfocus=""><!---->
+                            <!--?lit$741867748$--><md-elevation part="elevation" aria-hidden="true"><template shadowrootmode="open"><!----><span class="shadow"></span></template></md-elevation>
+                            <div class="background"></div>
+                            <md-focus-ring part="focus-ring" for="button" aria-hidden="true"><template shadowrootmode="open"><!----></template></md-focus-ring>
+                            <md-ripple part="ripple" for="button" disabled="" aria-hidden="true"><template shadowrootmode="open"><!----><div class="surface   "></div></template></md-ripple>
+                            <!--?lit$741867748$--><button id="button" class="button" disabled="" aria-label="Submit">
+                              <!--?lit$741867748$-->
+                              <span class="touch"></span>
+                              <!--?lit$741867748$--><slot name="icon"></slot>
+                              <span class="label"><slot></slot></span>
+                              <!--?lit$741867748$-->
+
+                            </button>
+                          </template>
+                            <!--?lit$741867748$--><!--?lit$741867748$--> <!--?lit$741867748$--><!--?lit$741867748$--><slot></slot><!--?--><!--?-->
+                          </md-filled-button>
+                        </div>
+                        <!--?lit$741867748$--> </template>
+                        <!--?lit$741867748$-->Submit
+                      </ql-button>
+
+                    </ql-assessment>
+                  </template>
+                  </ql-multiple-choice-probe></p>
+                  <p><strong>Highlights from Expected Output:</strong></p>
+                  <ql-code-block language="plaintext" output=""><template shadowrootmode="open"><!---->
+                    <div class=" container dark-theme ">
+        <pre class="plaintext wrap hljs">Copying agent source code...
+Copying agent source code complete.
+Initializing Vertex AI...
+[...]
+Creating AgentEngine
+Create AgentEngine backing LRO: projects/430282503153/locations/us-central1/reasoningEngines/2902138951282196480/operations/2777364189918789632
+View progress and logs at https://console.cloud.google.com/logs/query?project=qwiklabs-gcp-04-f71a2270bd79
+AgentEngine created. Resource name: projects/430282503153/locations/us-central1/reasoningEngines/2902138951282196480
+To use this AgentEngine in another session:
+agent_engine = vertexai.agent_engines.get('projects/430282503153/locations/us-central1/reasoningEngines/2902138951282196480')
+Cleaning up the temp folder: /tmp/agent_engine_deploy_src/20250813_175223</pre>
+                    </div>
+                    <!--?lit$741867748$-->
+                  </template>
+                    Copying agent source code...
+                    Copying agent source code complete.
+                    Initializing Vertex AI...
+                    [...]
+                    Creating AgentEngine
+                    Create AgentEngine backing LRO: projects/430282503153/locations/us-central1/reasoningEngines/2902138951282196480/operations/2777364189918789632
+                    View progress and logs at https://console.cloud.google.com/logs/query?project=qwiklabs-gcp-04-f71a2270bd79
+                    AgentEngine created. Resource name: projects/430282503153/locations/us-central1/reasoningEngines/2902138951282196480
+                    To use this AgentEngine in another session:
+                    agent_engine = vertexai.agent_engines.get('projects/430282503153/locations/us-central1/reasoningEngines/2902138951282196480')
+                    Cleaning up the temp folder: /tmp/agent_engine_deploy_src/20250813_175223
+                  </ql-code-block>
+                </li>
+              </ol>
+              <p>Click <strong>Check my progress</strong> to verify the objective.
+                <ql-activity-tracking step="1"><template shadowrootmode="open"><!---->
+                  <ql-assessment aria-label=""><template shadowrootmode="open"><!---->
+                    <div class="assessment-left">
+                      <ql-assessment-status><template shadowrootmode="open"><!---->
+                        <div class="status" role="progressbar" aria-live="assertive" status="uninitialized" tooltip="Start lab to track your progress." aria-hidden="true" aria-valuenow="0" aria-label=""><!--?lit$741867748$--></div>
+                      </template>
+                      </ql-assessment-status>
+                    </div>
+
+                    <div class="assessment-right">
+                      <div class="assessment-content">
+                        <slot></slot>
+                      </div>
+
+                      <!--?lit$741867748$-->
+                    </div>
+                  </template>
+                    <p>
+                      <slot><!--?lit$741867748$-->I completed this step.</slot>
+                    </p>
+
+                    <ql-button aria-label="Check my progress" type="button" disabled=""><template shadowrootmode="open"><!----> <!--?lit$741867748$-->
+                      <div class="buttonContainer" aria-disabled="true">
+                        <!--?lit$741867748$-->
+                        <md-filled-button part="button" class="ql-button default filled size--small disabled" data-aria-busy="false" value="" data-aria-label="Check my progress" disabled=""><template shadowrootmode="open" shadowrootdelegatesfocus=""><!---->
+                          <!--?lit$741867748$--><md-elevation part="elevation" aria-hidden="true"><template shadowrootmode="open"><!----><span class="shadow"></span></template></md-elevation>
+                          <div class="background"></div>
+                          <md-focus-ring part="focus-ring" for="button" aria-hidden="true"><template shadowrootmode="open"><!----></template></md-focus-ring>
+                          <md-ripple part="ripple" for="button" aria-hidden="true" disabled=""><template shadowrootmode="open"><!----><div class="surface   "></div></template></md-ripple>
+                          <!--?lit$741867748$--><button id="button" class="button" aria-label="Check my progress" disabled="">
+                            <!--?lit$741867748$-->
+                            <span class="touch"></span>
+                            <!--?lit$741867748$--><slot name="icon"></slot>
+                            <span class="label"><slot></slot></span>
+                            <!--?lit$741867748$-->
+
+                          </button>
+                        </template>
+                          <!--?lit$741867748$--><!--?lit$741867748$--> <!--?lit$741867748$--><!--?lit$741867748$--><slot></slot><!--?--><!--?-->
+                        </md-filled-button>
+                      </div>
+                      <!--?lit$741867748$--> </template>
+                      <!--?lit$741867748$-->Check my progress
+                    </ql-button>
+                  </ql-assessment>
+                </template>
+                  Deploy your agent.
+                </ql-activity-tracking></p>
+              <h2 id="step8">Task 3. Get and query an agent deployed to Agent Engine</h2>
+              <p>To query the agent, you must first grant it the authorization to call models via Vertex AI.</p>
+              <ol>
+                <li>
+                  <p>To see the service agent and its assigned role, navigate to <strong>IAM</strong> in the console.</p>
+                </li>
+                <li>
+                  <p>Click the checkbox to <strong>Include Google-provided role grants</strong>.</p>
+                </li>
+                <li>
+                  <p>Find the <strong>AI Platform Reasoning Engine Service Agent</strong> (<code>service-PROJECT_NUMBER@gcp-sa-aiplatform-re.iam.gserviceaccount.com</code>), and click the edit pencil icon in this service agent's row.</p>
+                </li>
+                <li>
+                  <p>Click <strong>+ Add another role</strong>.</p>
+                </li>
+                <li>
+                  <p>In the <strong>Select a role</strong> field, enter <strong>Vertex AI User</strong>. If you deploy an agent that uses tools to access other data, you would grant access to those systems to this service agent as well.</p>
+                </li>
+                <li>
+                  <p><strong>Save</strong> your changes.</p>
+                </li>
+                <li>
+                  <p>Back in the Cloud Shell Editor, within the <strong>adk_to_agent_engine</strong> directory, open the file <strong>query_agent_engine.py</strong>.</p>
+                </li>
+                <li>
+                  <p>Review the code and comments to notice what it is doing.</p>
+                  <p><ql-multiple-select-probe answerindices="[0, 2, 3, 4, 6]" optiontitles="[
+&quot;Establish a logging client&quot;,
+&quot;Create a Cloud Storage client&quot;,
+&quot;Initialize Vertex AI&quot;,
+&quot;Load Agent Engine apps, filtering by display name&quot;,
+&quot;Create a session&quot;,
+&quot;Use Gemini to generate a new transcript&quot;,
+&quot;Query the summarizer agent&quot;
+]" stem="What does the code in this file do? Select all that apply."><template shadowrootmode="open"><!---->
+                    <ql-assessment aria-label=""><template shadowrootmode="open"><!---->
+                      <div class="assessment-left">
+                        <ql-assessment-status><template shadowrootmode="open"><!---->
+                          <div class="status" role="progressbar" aria-live="assertive" status="complete" tooltip="Start lab to track your progress." aria-hidden="false" aria-valuenow="100" aria-label="Successful."><!--?lit$741867748$--></div>
+                        </template>
+                        </ql-assessment-status>
+                      </div>
+
+                      <div class="assessment-right">
+                        <div class="assessment-content">
+                          <slot></slot>
+                        </div>
+
+                        <!--?lit$741867748$-->
+                      </div>
+                    </template>
+                      <div class="item-container"> <!--?lit$741867748$-->
+                        <ql-multiple-select-item><template shadowrootmode="open"><!---->
+                          <fieldset>
+                            <legend>
+                              <ql-item-stem><template shadowrootmode="open"><!----> <slot></slot> </template><!--?lit$741867748$--><!--?lit$741867748$-->What does the code in this file do? Select all that apply.<!--?--></ql-item-stem>
+                            </legend>
+                            <!--?lit$741867748$--> <!--?lit$741867748$--><!---->
+                            <div class="choice">
+                              <ql-choice class="option"><template shadowrootmode="open"><!---->
+                                <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+                                <div tabindex="0" role="radio" class=" mdc-form-field answer container " aria-checked="true">
+                                  <ql-icon aria-hidden="true" class="icon" translate="no"><template shadowrootmode="open"><!---->
+                                    <span aria-hidden="true" class=" google-symbols " style="font-size: inherit;">
+        <slot><!--?lit$741867748$--></slot>
+      </span>
+                                    <!--?lit$741867748$--><!--?-->
+                                  </template>
+                                    <!--?lit$741867748$-->check
+                                  </ql-icon>
+                                  <span hidden="" aria-hidden="false"><!--?lit$741867748$-->Correct::</span>
+                                  <span class="choice-title"><!--?lit$741867748$--><!--?lit$741867748$-->Establish a logging client<!--?--></span>
+                                </div>
+                              </template>
+                              </ql-choice>
+
+                              <!--?lit$741867748$-->
+                            </div>
+                            <!----><!---->
+                            <ql-checkbox class="option unchosen"><template shadowrootmode="open"><!---->
+                              <md-checkbox id="checkbox" name="" disabled="" data-aria-label="
+         Create a Cloud Storage client
+      "><template shadowrootmode="open" shadowrootdelegatesfocus=""><!---->
+                                <div class="container  disabled unselected prev-unselected prev-disabled ">
+                                  <input type="checkbox" id="input" aria-label="
+         Create a Cloud Storage client
+      " disabled="">
+
+                                  <div class="outline"></div>
+                                  <div class="background"></div>
+                                  <md-focus-ring part="focus-ring" for="input" aria-hidden="true"><template shadowrootmode="open"><!----></template></md-focus-ring>
+                                  <md-ripple for="input" disabled="" aria-hidden="true"><template shadowrootmode="open"><!----><div class="surface   "></div></template></md-ripple>
+                                  <svg class="icon" viewBox="0 0 18 18" aria-hidden="true">
+                                    <rect class="mark short"></rect>
+                                    <rect class="mark long"></rect>
+                                  </svg>
+                                </div>
+                              </template>
+                              </md-checkbox>
+                              <label class="checkbox-label" for="checkbox">
+                                <slot></slot>
+                              </label>
+                            </template>
+                              <!--?lit$741867748$--><!--?lit$741867748$-->Create a Cloud Storage client<!--?-->
+                            </ql-checkbox>
+                            <!----><!---->
+                            <div class="choice">
+                              <ql-choice class="option"><template shadowrootmode="open"><!---->
+                                <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+                                <div tabindex="0" role="radio" class=" mdc-form-field answer container " aria-checked="true">
+                                  <ql-icon aria-hidden="true" class="icon" translate="no"><template shadowrootmode="open"><!---->
+                                    <span aria-hidden="true" class=" google-symbols " style="font-size: inherit;">
+        <slot><!--?lit$741867748$--></slot>
+      </span>
+                                    <!--?lit$741867748$--><!--?-->
+                                  </template>
+                                    <!--?lit$741867748$-->check
+                                  </ql-icon>
+                                  <span hidden="" aria-hidden="false"><!--?lit$741867748$-->Correct::</span>
+                                  <span class="choice-title"><!--?lit$741867748$--><!--?lit$741867748$-->Initialize Vertex AI<!--?--></span>
+                                </div>
+                              </template>
+                              </ql-choice>
+
+                              <!--?lit$741867748$-->
+                            </div>
+                            <!----><!---->
+                            <div class="choice">
+                              <ql-choice class="option"><template shadowrootmode="open"><!---->
+                                <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+                                <div tabindex="0" role="radio" class=" mdc-form-field answer container " aria-checked="true">
+                                  <ql-icon aria-hidden="true" class="icon" translate="no"><template shadowrootmode="open"><!---->
+                                    <span aria-hidden="true" class=" google-symbols " style="font-size: inherit;">
+        <slot><!--?lit$741867748$--></slot>
+      </span>
+                                    <!--?lit$741867748$--><!--?-->
+                                  </template>
+                                    <!--?lit$741867748$-->check
+                                  </ql-icon>
+                                  <span hidden="" aria-hidden="false"><!--?lit$741867748$-->Correct::</span>
+                                  <span class="choice-title"><!--?lit$741867748$--><!--?lit$741867748$-->Load Agent Engine apps, filtering by display name<!--?--></span>
+                                </div>
+                              </template>
+                              </ql-choice>
+
+                              <!--?lit$741867748$-->
+                            </div>
+                            <!----><!---->
+                            <div class="choice">
+                              <ql-choice class="option"><template shadowrootmode="open"><!---->
+                                <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+                                <div tabindex="0" role="radio" class=" mdc-form-field answer container " aria-checked="true">
+                                  <ql-icon aria-hidden="true" class="icon" translate="no"><template shadowrootmode="open"><!---->
+                                    <span aria-hidden="true" class=" google-symbols " style="font-size: inherit;">
+        <slot><!--?lit$741867748$--></slot>
+      </span>
+                                    <!--?lit$741867748$--><!--?-->
+                                  </template>
+                                    <!--?lit$741867748$-->check
+                                  </ql-icon>
+                                  <span hidden="" aria-hidden="false"><!--?lit$741867748$-->Correct::</span>
+                                  <span class="choice-title"><!--?lit$741867748$--><!--?lit$741867748$-->Create a session<!--?--></span>
+                                </div>
+                              </template>
+                              </ql-choice>
+
+                              <!--?lit$741867748$-->
+                            </div>
+                            <!----><!---->
+                            <ql-checkbox class="option unchosen"><template shadowrootmode="open"><!---->
+                              <md-checkbox id="checkbox" name="" disabled="" data-aria-label="
+         Use Gemini to generate a new transcript
+      "><template shadowrootmode="open" shadowrootdelegatesfocus=""><!---->
+                                <div class="container  disabled unselected prev-unselected prev-disabled ">
+                                  <input type="checkbox" id="input" aria-label="
+         Use Gemini to generate a new transcript
+      " disabled="">
+
+                                  <div class="outline"></div>
+                                  <div class="background"></div>
+                                  <md-focus-ring part="focus-ring" for="input" aria-hidden="true"><template shadowrootmode="open"><!----></template></md-focus-ring>
+                                  <md-ripple for="input" disabled="" aria-hidden="true"><template shadowrootmode="open"><!----><div class="surface   "></div></template></md-ripple>
+                                  <svg class="icon" viewBox="0 0 18 18" aria-hidden="true">
+                                    <rect class="mark short"></rect>
+                                    <rect class="mark long"></rect>
+                                  </svg>
+                                </div>
+                              </template>
+                              </md-checkbox>
+                              <label class="checkbox-label" for="checkbox">
+                                <slot></slot>
+                              </label>
+                            </template>
+                              <!--?lit$741867748$--><!--?lit$741867748$-->Use Gemini to generate a new transcript<!--?-->
+                            </ql-checkbox>
+                            <!----><!---->
+                            <div class="choice">
+                              <ql-choice class="option"><template shadowrootmode="open"><!---->
+                                <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+                                <div tabindex="0" role="radio" class=" mdc-form-field answer container " aria-checked="true">
+                                  <ql-icon aria-hidden="true" class="icon" translate="no"><template shadowrootmode="open"><!---->
+                                    <span aria-hidden="true" class=" google-symbols " style="font-size: inherit;">
+        <slot><!--?lit$741867748$--></slot>
+      </span>
+                                    <!--?lit$741867748$--><!--?-->
+                                  </template>
+                                    <!--?lit$741867748$-->check
+                                  </ql-icon>
+                                  <span hidden="" aria-hidden="false"><!--?lit$741867748$-->Correct::</span>
+                                  <span class="choice-title"><!--?lit$741867748$--><!--?lit$741867748$-->Query the summarizer agent<!--?--></span>
+                                </div>
+                              </template>
+                              </ql-choice>
+
+                              <!--?lit$741867748$-->
+                            </div>
+                            <!---->
+                          </fieldset>
+                        </template>
+                        </ql-multiple-select-item>
+                      </div>
+
+                      <!--?lit$741867748$-->
+                      <ql-button aria-label="Submit" type="button" disabled=""><template shadowrootmode="open"><!----> <!--?lit$741867748$-->
+                        <div class="buttonContainer" aria-disabled="true">
+                          <!--?lit$741867748$-->
+                          <md-filled-button part="button" class=" ql-button disabled default filled size--small " disabled="" data-aria-busy="false" value="" data-aria-label="Submit"><template shadowrootmode="open" shadowrootdelegatesfocus=""><!---->
+                            <!--?lit$741867748$--><md-elevation part="elevation" aria-hidden="true"><template shadowrootmode="open"><!----><span class="shadow"></span></template></md-elevation>
+                            <div class="background"></div>
+                            <md-focus-ring part="focus-ring" for="button" aria-hidden="true"><template shadowrootmode="open"><!----></template></md-focus-ring>
+                            <md-ripple part="ripple" for="button" disabled="" aria-hidden="true"><template shadowrootmode="open"><!----><div class="surface   "></div></template></md-ripple>
+                            <!--?lit$741867748$--><button id="button" class="button" disabled="" aria-label="Submit">
+                              <!--?lit$741867748$-->
+                              <span class="touch"></span>
+                              <!--?lit$741867748$--><slot name="icon"></slot>
+                              <span class="label"><slot></slot></span>
+                              <!--?lit$741867748$-->
+
+                            </button>
+                          </template>
+                            <!--?lit$741867748$--><!--?lit$741867748$--> <!--?lit$741867748$--><!--?lit$741867748$--><slot></slot><!--?--><!--?-->
+                          </md-filled-button>
+                        </div>
+                        <!--?lit$741867748$--> </template>
+                        <!--?lit$741867748$-->Submit
+                      </ql-button>
+
+                    </ql-assessment>
+                  </template>
+                  </ql-multiple-select-probe></p>
+                </li>
+                <li>
+                  <p>Review the transcript passed to the agent, so that you can evaluate if it's generating an adequate summary.</p>
+                </li>
+                <li>
+                  <p>In the Cloud Shell Terminal, run the file from the <strong>adk_to_agent_engine</strong> directory with:</p>
+                  <ql-code-block language="bash" templated=""><template shadowrootmode="open"><!---->
+                    <div class=" container light-theme ">
+        <pre class="bash wrap hljs"><span class="hljs-built_in">cd</span> ~/adk_to_agent_engine/transcript_summarization_agent
+python3 query_agent_engine.py</pre>
+                    </div>
+                    <!--?lit$741867748$-->
+                    <div class="copy-container"> <!--?lit$741867748$-->
+                      <span class="copied-message" aria-hidden="true" role="alert" aria-label="Copied!">
+        <!--?lit$741867748$-->Copied!
+      </span>
+                      <!--?lit$741867748$-->
+                      <ql-icon-button class="copy-button" label="Copy" title="Copy" aria-label="Copy cd ~/adk_to_agent_engine/transcript_summarization_agent
+python3 query_agent_engine.py" translate="no" type="button"><template shadowrootmode="open"><!----> <!--?lit$741867748$-->
+                        <div class="buttonContainer" aria-disabled="false">
+                          <!--?lit$741867748$-->
+                          <md-icon-button class=" ql-icon-button " data-aria-label="Copy" data-aria-busy="false" value=""><template shadowrootmode="open" shadowrootdelegatesfocus=""><!----><button id="button" class="icon-button  standard " aria-label="Copy">
+                            <!--?lit$741867748$--><md-focus-ring part="focus-ring" for="button" aria-hidden="true"><template shadowrootmode="open"><!----></template></md-focus-ring>
+                            <!--?lit$741867748$--><md-ripple aria-hidden="true"><template shadowrootmode="open"><!----><div class="surface   "></div></template></md-ripple>
+                            <!--?lit$741867748$--><span class="icon"><slot></slot></span>
+                            <!--?lit$741867748$-->
+                            <!--?lit$741867748$--><span class="touch"></span>
+                          </button></template>
+                            <!--?lit$741867748$--><ql-icon translate="no"><template shadowrootmode="open"><!---->
+                              <span aria-hidden="true" class=" google-symbols " style="font-size: inherit;">
+        <slot><!--?lit$741867748$--></slot>
+      </span>
+                              <!--?lit$741867748$--><!--?-->
+                            </template><!--?lit$741867748$--><slot></slot></ql-icon>
+                          </md-icon-button>
+                        </div>
+                        <!--?lit$741867748$--> </template>
+                        content_copy
+                      </ql-icon-button>
+                    </div>
+
+                  </template>
+                    cd ~/adk_to_agent_engine/transcript_summarization_agent
+                    python3 query_agent_engine.py
+                  </ql-code-block>
+                  <p><strong>Example output (yours results may be a little different):</strong></p>
+                  <ql-code-block language="plaintext" output=""><template shadowrootmode="open"><!---->
+                    <div class=" container dark-theme ">
+                      <pre class="plaintext wrap hljs">[remote response] The user wants to buy a boat, and after being asked about the size, inquires how much boat $50,000 will purchase. The Virtual Agent responds that $50,000 will get a "very nice boat," to which the user agrees to proceed.</pre>
+                    </div>
+                    <!--?lit$741867748$-->
+                  </template>
+                    [remote response] The user wants to buy a boat, and after being asked about the size, inquires how much boat $50,000 will purchase. The Virtual Agent responds that $50,000 will get a "very nice boat," to which the user agrees to proceed.
+                  </ql-code-block>
+                </li>
+              </ol>
+              <p>Click <strong>Check my progress</strong> to verify the objective.
+                <ql-activity-tracking step="2"><template shadowrootmode="open"><!---->
+                  <ql-assessment aria-label=""><template shadowrootmode="open"><!---->
+                    <div class="assessment-left">
+                      <ql-assessment-status><template shadowrootmode="open"><!---->
+                        <div class="status" role="progressbar" aria-live="assertive" status="uninitialized" tooltip="Start lab to track your progress." aria-hidden="true" aria-valuenow="0" aria-label=""><!--?lit$741867748$--></div>
+                      </template>
+                      </ql-assessment-status>
+                    </div>
+
+                    <div class="assessment-right">
+                      <div class="assessment-content">
+                        <slot></slot>
+                      </div>
+
+                      <!--?lit$741867748$-->
+                    </div>
+                  </template>
+                    <p>
+                      <slot><!--?lit$741867748$-->I completed this step.</slot>
+                    </p>
+
+                    <ql-button aria-label="Check my progress" type="button" disabled=""><template shadowrootmode="open"><!----> <!--?lit$741867748$-->
+                      <div class="buttonContainer" aria-disabled="true">
+                        <!--?lit$741867748$-->
+                        <md-filled-button part="button" class="ql-button default filled size--small disabled" data-aria-busy="false" value="" data-aria-label="Check my progress" disabled=""><template shadowrootmode="open" shadowrootdelegatesfocus=""><!---->
+                          <!--?lit$741867748$--><md-elevation part="elevation" aria-hidden="true"><template shadowrootmode="open"><!----><span class="shadow"></span></template></md-elevation>
+                          <div class="background"></div>
+                          <md-focus-ring part="focus-ring" for="button" aria-hidden="true"><template shadowrootmode="open"><!----></template></md-focus-ring>
+                          <md-ripple part="ripple" for="button" aria-hidden="true" disabled=""><template shadowrootmode="open"><!----><div class="surface   "></div></template></md-ripple>
+                          <!--?lit$741867748$--><button id="button" class="button" aria-label="Check my progress" disabled="">
+                            <!--?lit$741867748$-->
+                            <span class="touch"></span>
+                            <!--?lit$741867748$--><slot name="icon"></slot>
+                            <span class="label"><slot></slot></span>
+                            <!--?lit$741867748$-->
+
+                          </button>
+                        </template>
+                          <!--?lit$741867748$--><!--?lit$741867748$--> <!--?lit$741867748$--><!--?lit$741867748$--><slot></slot><!--?--><!--?-->
+                        </md-filled-button>
+                      </div>
+                      <!--?lit$741867748$--> </template>
+                      <!--?lit$741867748$-->Check my progress
+                    </ql-button>
+                  </ql-assessment>
+                </template>
+                  Query an agent.
+                </ql-activity-tracking></p>
+              <h2 id="step9">Task 4. View and delete agents deployed to Agent Engine</h2>
+              <ol>
+                <li>
+                  <p>When your agent has completed its deployment, return to a browser tab showing the Cloud Console and navigate to <strong>Agent Engine</strong> by searching for it and selecting it at the top of the Console.</p>
+                </li>
+                <li>
+                  <p>In the <strong>Region</strong> dropdown, make sure the Region <strong>us-central1</strong> is selected.</p>
+                </li>
+                <li>
+                  <p>You will see your deployed agent's display name. Click on it to enter its monitoring dashboard.</p>
+                </li>
+                <li>
+                  <p>Notice tabs for <strong>Runtime Metrics</strong>, <strong>Traces</strong>, <strong>Sessions</strong>, which can give you insights into how your agent is being used.</p>
+                </li>
+                <li>
+                  <p>Notice the <strong>Playground</strong> which will let you chat with your deployed agent.</p>
+                </li>
+                <li>
+                  <p>When you are ready to delete your agent, select <strong>Service Configuration</strong> at the top of the Agent Engine console, and then the <strong>Deployment details</strong> tab.</p>
+                </li>
+                <li>
+                  <p>Back in your browser tab running the Cloud Shell Terminal, paste the following command, <em>but don't run it yet</em>:</p>
+                  <ql-code-block language="vim"><template shadowrootmode="open"><!---->
+                    <div class=" container light-theme ">
+        <pre class="wrap hljs vim"><span class="hljs-keyword">cd</span> ~/adk_to_agent_engine
+<span class="hljs-keyword">python3</span> agent_engine_utils.<span class="hljs-keyword">py</span> <span class="hljs-keyword">delete</span> REPLACE_WITH_AE_ID</pre>
+                    </div>
+                    <!--?lit$741867748$-->
+                    <div class="copy-container"> <!--?lit$741867748$-->
+                      <span class="copied-message" aria-hidden="true" role="alert" aria-label="Copied!">
+        <!--?lit$741867748$-->Copied!
+      </span>
+                      <!--?lit$741867748$-->
+                      <ql-icon-button class="copy-button" label="Copy" title="Copy" aria-label="Copy cd ~/adk_to_agent_engine
+python3 agent_engine_utils.py delete REPLACE_WITH_AE_ID" translate="no" type="button"><template shadowrootmode="open"><!----> <!--?lit$741867748$-->
+                        <div class="buttonContainer" aria-disabled="false">
+                          <!--?lit$741867748$-->
+                          <md-icon-button class=" ql-icon-button " data-aria-label="Copy" data-aria-busy="false" value=""><template shadowrootmode="open" shadowrootdelegatesfocus=""><!----><button id="button" class="icon-button  standard " aria-label="Copy">
+                            <!--?lit$741867748$--><md-focus-ring part="focus-ring" for="button" aria-hidden="true"><template shadowrootmode="open"><!----></template></md-focus-ring>
+                            <!--?lit$741867748$--><md-ripple aria-hidden="true"><template shadowrootmode="open"><!----><div class="surface   "></div></template></md-ripple>
+                            <!--?lit$741867748$--><span class="icon"><slot></slot></span>
+                            <!--?lit$741867748$-->
+                            <!--?lit$741867748$--><span class="touch"></span>
+                          </button></template>
+                            <!--?lit$741867748$--><ql-icon translate="no"><template shadowrootmode="open"><!---->
+                              <span aria-hidden="true" class=" google-symbols " style="font-size: inherit;">
+        <slot><!--?lit$741867748$--></slot>
+      </span>
+                              <!--?lit$741867748$--><!--?-->
+                            </template><!--?lit$741867748$--><slot></slot></ql-icon>
+                          </md-icon-button>
+                        </div>
+                        <!--?lit$741867748$--> </template>
+                        content_copy
+                      </ql-icon-button>
+                    </div>
+
+                  </template>
+                    cd ~/adk_to_agent_engine
+                    python3 agent_engine_utils.py delete REPLACE_WITH_AE_ID
+                  </ql-code-block>
+                </li>
+                <li>
+                  <p>From the Agent Engine <strong>Deployment details</strong> panel, copy the <strong>Resource name</strong> field, which will have a format like: <code>projects/qwiklabs-gcp-02-76ce2eed15a5/locations/us-central1/reasoningEngines/1467742469964693504</code>.</p>
+                </li>
+                <li>
+                  <p>Return to the Cloud Shell Terminal and replace the end of the command <code>REPLACE_WITH_AE_ID</code> with the resource name you've copied.</p>
+                </li>
+                <li>
+                  <p>Press <strong>Return</strong> to run the deletion command.</p>
+                  <p><strong>Example Output:</strong></p>
+                  <ql-code-block language="bash" output=""><template shadowrootmode="open"><!---->
+                    <div class=" container dark-theme ">
+        <pre class="bash wrap hljs">Deleting AgentEngine resource: projects/1029886909158/locations/us-central1/reasoningEngines/1456078850617245696
+Delete AgentEngine backing LRO: projects/1029886909158/locations/us-central1/operations/2884525977596067840
+AgentEngine resource deleted: projects/1029886909158/locations/us-central1/reasoningEngines/1456078850617245696</pre>
+                    </div>
+                    <!--?lit$741867748$-->
+                  </template>
+                    Deleting AgentEngine resource: projects/1029886909158/locations/us-central1/reasoningEngines/1456078850617245696
+                    Delete AgentEngine backing LRO: projects/1029886909158/locations/us-central1/operations/2884525977596067840
+                    AgentEngine resource deleted: projects/1029886909158/locations/us-central1/reasoningEngines/1456078850617245696
+                  </ql-code-block>
+                </li>
+                <li>
+                  <p>In the Cloud Console, return to the <strong>Agent Engine</strong> dashboard to see that the agent has been deleted.</p>
+                </li>
+                <li>
+                  <p>To view the simple Python SDK code to list and delete agents, view the contents of the file <strong>adk_to_agent_engine/agent_engine_utils.py</strong>.</p>
+                </li>
+              </ol>
+              <p>Click <strong>Check my progress</strong> to verify the objective.
+                <ql-activity-tracking step="3"><template shadowrootmode="open"><!---->
+                  <ql-assessment aria-label=""><template shadowrootmode="open"><!---->
+                    <div class="assessment-left">
+                      <ql-assessment-status><template shadowrootmode="open"><!---->
+                        <div class="status" role="progressbar" aria-live="assertive" status="uninitialized" tooltip="Start lab to track your progress." aria-hidden="true" aria-valuenow="0" aria-label=""><!--?lit$741867748$--></div>
+                      </template>
+                      </ql-assessment-status>
+                    </div>
+
+                    <div class="assessment-right">
+                      <div class="assessment-content">
+                        <slot></slot>
+                      </div>
+
+                      <!--?lit$741867748$-->
+                    </div>
+                  </template>
+                    <p>
+                      <slot><!--?lit$741867748$-->I completed this step.</slot>
+                    </p>
+
+                    <ql-button aria-label="Check my progress" type="button" disabled=""><template shadowrootmode="open"><!----> <!--?lit$741867748$-->
+                      <div class="buttonContainer" aria-disabled="true">
+                        <!--?lit$741867748$-->
+                        <md-filled-button part="button" class="ql-button default filled size--small disabled" data-aria-busy="false" value="" data-aria-label="Check my progress" disabled=""><template shadowrootmode="open" shadowrootdelegatesfocus=""><!---->
+                          <!--?lit$741867748$--><md-elevation part="elevation" aria-hidden="true"><template shadowrootmode="open"><!----><span class="shadow"></span></template></md-elevation>
+                          <div class="background"></div>
+                          <md-focus-ring part="focus-ring" for="button" aria-hidden="true"><template shadowrootmode="open"><!----></template></md-focus-ring>
+                          <md-ripple part="ripple" for="button" aria-hidden="true" disabled=""><template shadowrootmode="open"><!----><div class="surface   "></div></template></md-ripple>
+                          <!--?lit$741867748$--><button id="button" class="button" aria-label="Check my progress" disabled="">
+                            <!--?lit$741867748$-->
+                            <span class="touch"></span>
+                            <!--?lit$741867748$--><slot name="icon"></slot>
+                            <span class="label"><slot></slot></span>
+                            <!--?lit$741867748$-->
+
+                          </button>
+                        </template>
+                          <!--?lit$741867748$--><!--?lit$741867748$--> <!--?lit$741867748$--><!--?lit$741867748$--><slot></slot><!--?--><!--?-->
+                        </md-filled-button>
+                      </div>
+                      <!--?lit$741867748$--> </template>
+                      <!--?lit$741867748$-->Check my progress
+                    </ql-button>
+                  </ql-assessment>
+                </template>
+                  List and delete agents.
+                </ql-activity-tracking></p>
+              <h2 id="step10">Congratulations!</h2>
+              <p>In this lab, you’ve learned:</p>
+              <ul>
+                <li>The benefits of deploying agents to Agent Engine</li>
+                <li>How to grant required roles to the Reasoning Engine Service Agent</li>
+                <li>How to deploy an agent to Agent Engine using the ADK command line interface</li>
+                <li>How to query an agent deployed to Agent Engine</li>
+                <li>How to monitor your deployed agents</li>
+                <li>How to delete agents</li>
+              </ul>
+              <h2 id="step11">Next Steps</h2>
+              <p>You can learn more about building agents with Agent Development Kit from other labs in this series:</p>
+              <ul>
+                <li>Empower ADK agents with tools</li>
+                <li>Build multi-agent systems with ADK</li>
+                <li>Deploy ADK agents to Agent Engine</li>
+              </ul>
+              <h3>Google Cloud training and certification</h3>
+              <p>...helps you make the most of Google Cloud technologies. <a href="https://cloud.google.com/training" target="_blank">Our classes</a> include technical skills and best practices to help you get up to speed quickly and continue your learning journey. We offer fundamental to advanced level training, with on-demand, live, and virtual options to suit your busy schedule. <a href="https://cloud.google.com/certification/" target="_blank">Certifications</a> help you validate and prove your skill and expertise in Google Cloud technologies.</p>
+
+              <p><strong>Manual Last Updated February 10, 2026</strong></p>
+              <p><strong>Lab Last Tested February 10, 2026</strong></p>
+              <p>Copyright 2026 Google LLC. All rights reserved. Google and the Google logo are trademarks of Google LLC. All other company and product names may be trademarks of the respective companies with which they are associated.</p>
+            </div>
+          </div>
+
+        </div>
+
 
       </div>
 
