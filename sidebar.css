@@ -45,6 +45,10 @@
   font-size: 1.2em; /* Make icon a bit larger */
 }
 
+a.index-column-entry.active {
+  background-color: lightblue;
+}
+
 /* Overlay for when the sidebar is open on small screens */
 #sidebarOverlay {
   position: fixed;

@@ -64,3 +64,50 @@ function handleSidebarResponsive() {
 // Initial call and event listener for resize
 window.addEventListener('resize', handleSidebarResponsive);
 handleSidebarResponsive(); // Call on load to set initial state
+
+// 1. Grab all the target content elements and the index links
+const contentTargets = document.querySelectorAll('.content-column .index-column-link');
+const indexEntries = document.querySelectorAll('.index-column-entry');
+
+// 2. Identify the scrolling container
+// If the right column itself has the scrollbar (overflow-y: auto), use it as the root.
+// If the entire webpage scrolls as one unit, change this to: root: null
+const scrollContainer = document.querySelector('.content-column');
+
+// If the whole web page scrolls as one big unit (i.e., the scrollbar is on the edge of the screen/browser window,
+// not tightly bound inside the right column),
+// then .content-column isn't actually scrolling—the window is.
+// Because the elements aren't moving inside .content-column, the observer never triggers.
+const observerOptions = {
+  // root: scrollContainer,
+  root: null, // Watch the entire browser window scroll
+  // Creates a tight trigger zone near the top of the container
+  rootMargin: '-5% 0px -85% 0px',
+  threshold: 0
+};
+
+
+// 3. Define what happens when an element enters the trigger zone
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    // Only trigger when the element is entering the top zone
+    if (entry.isIntersecting) {
+
+      // Remove the active class from all index entries
+      indexEntries.forEach(link => link.classList.remove('active'));
+
+      // Get the ID of the currently visible chapter/sub-heading
+      const currentId = entry.target.getAttribute('id');
+
+      // Find the matching sidebar link using the href attribute
+      const matchingIndexEntry = document.querySelector(`.index-column-entry[href="#${currentId}"]`);
+
+      if (matchingIndexEntry) {
+        matchingIndexEntry.classList.add('active');
+      }
+    }
+  });
+}, observerOptions);
+
+// 4. Start tracking all chapters and sub-headings
+contentTargets.forEach(target => observer.observe(target));
