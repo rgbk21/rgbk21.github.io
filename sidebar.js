@@ -9,6 +9,39 @@ const body = document.body;
 const sidebarWidth = 250; // Must match the width defined in CSS for .index-column
 const breakpointLg = 991.98; // Bootstrap's 'lg' breakpoint
 
+// 1. Grab all the target content elements and the index links
+const contentTargets = document.querySelectorAll('.content-column .index-column-link');
+const indexEntries = document.querySelectorAll('.index-column-entry');
+
+/**
+ * Force-updates the active sidebar link based on what is currently on screen.
+ * Fixes: Scroll on mobile, reopen the sidebar, the highlighted entry in the index is not updated.
+ */
+function syncSidebarActiveItem() {
+  if (contentTargets.length === 0) return;
+
+  let activeTarget = contentTargets[0];
+  // Define a trigger line 20% down from the top of the viewport
+  const triggerPoint = window.innerHeight * 0.2;
+
+  // Find the last element that has scrolled past our trigger line
+  contentTargets.forEach(target => {
+    const rect = target.getBoundingClientRect();
+    if (rect.top <= triggerPoint) {
+      activeTarget = target;
+    }
+  });
+
+  if (activeTarget) {
+    const currentId = activeTarget.getAttribute('id');
+    indexEntries.forEach(link => link.classList.remove('active'));
+    const matchingIndexEntry = document.querySelector(`.index-column-entry[href="#${currentId}"]`);
+    if (matchingIndexEntry) {
+      matchingIndexEntry.classList.add('active');
+    }
+  }
+}
+
 function toggleSidebar() {
   const isOpen = indexColumn.classList.contains('open');
   if (isOpen) {
@@ -17,6 +50,7 @@ function toggleSidebar() {
     indexColumn.classList.add('open');
     sidebarOverlay.classList.add('active');
     body.classList.add('sidebar-open'); // This will add the transform to body
+    syncSidebarActiveItem();
   }
 }
 
@@ -64,10 +98,6 @@ function handleSidebarResponsive() {
 // Initial call and event listener for resize
 window.addEventListener('resize', handleSidebarResponsive);
 handleSidebarResponsive(); // Call on load to set initial state
-
-// 1. Grab all the target content elements and the index links
-const contentTargets = document.querySelectorAll('.content-column .index-column-link');
-const indexEntries = document.querySelectorAll('.index-column-entry');
 
 // 2. Identify the scrolling container
 // If the right column itself has the scrollbar (overflow-y: auto), use it as the root.
