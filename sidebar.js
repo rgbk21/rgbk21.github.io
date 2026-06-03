@@ -1,3 +1,8 @@
+// In order for the sidebar to highlight the entries properly
+// All the anchor links at the top should have class as index-column-entry
+// And the href that they link to should have one of the class as index-column-link.
+// See AI.html for working exmaple.
+
 'use strict';
 
 // --- New Sidebar/Index Toggle Logic ---

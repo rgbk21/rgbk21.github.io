@@ -156,6 +156,8 @@
     <div class="index-entries-container">
       <a class="index-column-entry" href="#CompleteReference_Chapter1">Ch1: The History and Evolution of Java</a>
       <a class="index-column-entry" href="#CompleteReference_Chapter2">Ch2: An Overview of Java</a>
+      <a class="index-column-entry" href="#CompleteReference_Chapter2_1">Ch2.1: OOP</a>
+      <a class="index-column-entry" href="#CompleteReference_Chapter2_2">Ch2.2: Java and File Naming</a>
     </div>
   </div>
   <div class="content-column">
@@ -176,19 +178,19 @@
 
 
       <hr>
-      <div id="CompleteReference_Chapter1" class="chapter">Chapter 1: The History and Evolution of Java</div>
+      <div id="CompleteReference_Chapter1" class="chapter index-column-link">Chapter 1: The History and Evolution of Java</div>
       <hr>
       <div class="textual-content">
         <div class="sub-heading">Java's Magic: The Bytecode</div>
         <div>
           - Bytecode is a highly optimized set of instructions designed to be executed by what is called the Java Virtual Machine (JVM), which is part of the Java Runtime
-          Environment (JRE). JVM was initially designed as an <i>interpreter for bytecode. </i> <br>
+          Environment (JRE). JVM was initially designed as an <i>interpreter </i> for bytecode. <br>
           - Translating a Java program into bytecode makes it much easier to run a program in a wide variety of environments because only the JVM needs to be implemented for each
           platform. Once a JRE exists for a given system, any Java program can run on it. <br>
           <p class="inline-heading">Compiled Code</p>: The programmer writes the code, a different program called the <i>Compiler</i> translates that into <i>machine code</i>
           (instructions specific to that CPU in the computer) before the programmer written code ever runs. Think of an <code>.exe</code> file. The pro is that since the computer
           can execute the instructions instantaneously, it is incredibly fast. The con being that it becomes platform-specific. The same .exe file won't run on a Mac and you would
-          have to re-translate the original program. The same .exe file won't run on a Mac and you would have to re-translate the original program again. <br>
+          have to re-translate the original program again. <br>
           <p class="inline-heading">Interpreted Code</p>: In a purely interpreted language (like Python or early Ruby), there is no pre-translation. Instead, a program called an
           <i>Interpreter</i> reads your code line-by-line while the program is running, converts it into machine code, and then the machine runs it. The pro is that the same
           programmer-written code can now run on any computer as long as that computer has the right interpreter installed. The con is that it is slower. The computer has to
@@ -208,21 +210,68 @@
       </div>
 
       <hr>
-      <div id="CompleteReference_Chapter2" class="chapter">Chapter 2: An Overview of Java</div>
+      <div id="CompleteReference_Chapter2" class="chapter index-column-link">Chapter 2: An Overview of Java</div>
       <hr>
       <div class="textual-content">
-        <div class="sub-heading">Object-Oriented Programming</div>
+        <div id="CompleteReference_Chapter2_1" class="sub-heading index-column-link">Object-Oriented Programming</div>
         <div>
           - An object-oriented program can be characterized as data controlling access to code. The data is wrapped in a protective shell, and it "owns" the code that is allowed to
           touch it. For instance, the data says, "I am a BankAccount object. I contain a private 'Balance.' If you want to change me, you must use my specific deposit() or
           withdraw() methods. You cannot touch the balance directly."
           - The three OOP principles are: <br>
-          a) <p class="inline-heading">Encapsulation</p>: bundle data and the methods that operate on that data together within a single unit - the Class, hiding the internal state
-          from the outside world. <br>
+          a) <p class="inline-heading">Polymorphism</p>: Meaning 'many forms', this is the ability for objects of different classes to be treated as objects of a common superclass,
+          allowing a single action (like a method call) to be performed in different ways depending on the object's actual type. <br>
           b) <p class="inline-heading">Inheritance</p>: A mechanism that allows a new class (the subclass) to acquire the properties and behaviors of an existing class (the
-          superclass), promoting code reuse and establishing a hierarchy of objects.
-          c) <p class="inline-heading">Polymorphism</p>: Meaning 'many forms', this is the ability for objects of different classes to be treated as objects of a common superclass,
-          allowing a single action (like a method call) to be performed in different ways depending on the object's actual type.
+          superclass), promoting code reuse and establishing a hierarchy of objects. <br>
+          c) <p class="inline-heading">Encapsulation</p>: bundle data and the methods that operate on that data together within a single unit - the Class, hiding the internal state
+          from the outside world. <br>
+        </div>
+
+        <div id="CompleteReference_Chapter2_2" class="sub-heading index-column-link">Java and File Naming</div>
+        <div>
+          - For some computer languages, the name of the file that holds the source code to a program is immaterial. However, this is not the case with Java. The first thing that
+          you must learn about Java is that the name you give to a source file is very important. <br>
+          - In Java, a source file is officially called a <i>compilation unit</i>. The Java compiler requires that a source file use the <code>.java</code> filename extension. It
+          is a text file that contains (among other things) one or more class definitions. <br>
+          - You are allowed at max one <code>public</code> class per .java file and, if the <code>public</code> class is present, then the name of the .java file <i>must</i> match
+          the name of the <code>public</code> class. Because of this rule, the compiler can instantly locate the source code for a class (e.g., ProcessPayload will always be in
+          ProcessPayload.java), drastically speeding up compilation times for large projects. <br>
+          - <p class="inline-heading">Compile the program</p>: <code>javac Example.java</code>. This creates a file called <code>Example.class</code> that contains the compiled
+          bytecode. <br>
+          - <p class="inline-heading">Run the Program</p>: <code>java Example</code>. Invokes the JVM to execute the bytecode. Note that you are passing the class name, and not the
+          file name. ie you are not using <code>java Example.class</code>. <br>
+          - Java also has Nested classes, where a class can have another class. In this case too java will create a separate <code>.class</code> file for every single inner class.
+          Because they don't have unique top-level names, Java names them using a <code>$</code> symbol: <br>
+          <ul>
+            <li><code>Outer.class</code></li>
+            <li><code>Outer$Inner.class</code> (For member inner classes)</li>
+            <li><code>Outer$1LocalInner.class</code> (For local/anonymous classes, using a number to distinguish them)</li>
+          </ul>
+          <pre><code class="language-java">
+// Saved in a file named Outer.java
+class Outer {
+    // 1. Member Inner Class
+    // Compiles to: Outer$Inner.class
+    class Inner {
+        void display() {
+            System.out.println("Inside member inner class.");
+        }
+    }
+
+    void someMethod() {
+        // 2. Local Inner Class inside a method
+        // Compiles to: Outer$1LocalInner.class
+        class LocalInner {
+            void print() {
+                System.out.println("Inside local inner class.");
+            }
+        }
+        // Instantiating and using the local class within the method
+        LocalInner local = new LocalInner();
+        local.print();
+    }
+}
+</code></pre>
         </div>
       </div>
 
