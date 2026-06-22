@@ -1,5 +1,9 @@
+.words-container {
+  display: flex;
+}
 .single-word-container {
   margin-bottom: 8px;
+  border: lightcyan 1px solid;
 }
 
 .hidden {
