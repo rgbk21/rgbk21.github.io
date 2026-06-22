@@ -3014,3 +3014,5 @@
 /node_modules/wildcard/README.md
 /node_modules/wildcard/yarn.lock
 /node_modules/.package-lock.json
+/.venv/
+/Lectures/Polish/venv/
