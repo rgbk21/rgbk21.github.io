@@ -1,9 +1,14 @@
-.words-container {
+.all-basic-words-container, .all-words-container, .all-verbs-container {
   display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
 }
 .single-word-container {
+  border: darkcyan 1px solid;
+  border-radius: 8px;
+  background-color: lightcyan;
   margin-bottom: 8px;
-  border: lightcyan 1px solid;
+  padding: 8px;
 }
 
 .hidden {

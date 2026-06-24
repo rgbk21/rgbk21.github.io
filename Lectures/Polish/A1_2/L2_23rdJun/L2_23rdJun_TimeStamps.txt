@@ -1,0 +1,2331 @@
+[00:00.000 --> 00:03.100]  Zadanie domowe, homework w porządku?
+[00:03.100 --> 00:04.100]  Tak.
+[00:04.100 --> 00:06.100]  Tak? Jest skomplikowane?
+[00:06.100 --> 00:07.100]  Nie.
+[00:07.100 --> 00:08.100]  Nie?
+[00:08.100 --> 00:09.100]  Nie.
+[00:09.100 --> 00:10.100]  Tak sobie, tak sobie.
+[00:10.100 --> 00:11.100]  Tak sobie.
+[00:11.100 --> 00:13.100]  Tak sobie, ok. Dobrze, dobrze.
+[00:13.100 --> 00:16.100]  Zweryfikujemy, zweryfikujemy.
+[00:16.100 --> 00:22.100]  I co tutaj projektor jest?
+[00:22.100 --> 00:29.100]  Temperatura jest ok, czy redukcja?
+[00:29.100 --> 00:32.100]  Redukcja? Czy ok?
+[00:32.100 --> 00:33.100]  Dla mnie jest ok.
+[00:33.100 --> 00:36.100]  Dla mnie jest ok, tak? Też?
+[00:36.100 --> 00:41.100]  Dobra, dobra. Ok. No to mamy zadanie.
+[00:41.100 --> 00:47.100]  I zadanie na start minimalnie gramatyczne.
+[00:47.100 --> 00:51.100]  Koordynacja, to jest jeść.
+[00:51.100 --> 00:52.100]  A co to jest?
+[00:52.100 --> 00:56.100]  To jest biernik, plus biernik.
+[00:56.100 --> 00:57.100]  Gess?
+[00:57.100 --> 00:58.100]  Gess?
+[00:58.100 --> 00:59.100]  Polish guess?
+[00:59.100 --> 01:04.100]  Tak, tak, tak, tak. To jest gramatyka, case, tak jak accusative.
+[01:04.100 --> 01:06.100]  Tak? To jest biernik.
+[01:06.100 --> 01:10.100]  Na przykład, lubię dobrą pizzę.
+[01:10.100 --> 01:11.100]  Tak?
+[01:11.100 --> 01:14.100]  Lubię wodę kokosową. Tak?
+[01:14.100 --> 01:19.100]  Wodę kokosową, to jest forma gramatyczna biernika.
+[01:19.100 --> 01:21.100]  Cześć, dzień dobry, kawa.
+[01:21.100 --> 01:22.100]  Kawa.
+[01:22.100 --> 01:23.100]  I to jest biernik.
+[01:23.100 --> 01:24.100]  A to jest biernik.
+[01:24.100 --> 01:25.100]  Tak?
+[01:25.100 --> 01:26.100]  Tak, tak.
+[01:26.100 --> 01:27.100]  To jest biernik.
+[01:27.100 --> 01:28.100]  A to biernik.
+[01:28.100 --> 01:29.100]  A to biernik.
+[01:29.100 --> 01:30.100]  Tak, tak, tak.
+[01:30.100 --> 01:31.100]  Dobra, dziękuję.
+[01:31.100 --> 01:32.100]  Dobra.
+[01:32.100 --> 01:33.100]  Ok, ok.
+[01:33.100 --> 01:34.100]  Tak, dziękuję.
+[01:34.100 --> 01:35.100]  Ok, ok.
+[01:35.100 --> 01:36.100]  I koordynacja, tak?
+[01:36.100 --> 01:37.100]  Jest ja, jem.
+[01:37.100 --> 01:38.100]  Tak?
+[01:38.100 --> 01:39.100]  Jest m, a ty?
+[01:39.100 --> 01:40.100]  Jesz.
+[01:40.100 --> 01:41.100]  Jesz, super, bardzo dobrze.
+[01:41.100 --> 01:42.100]  Tak?
+[01:42.100 --> 01:43.100]  To jest koordynacja, m, esz.
+[01:43.100 --> 01:44.100]  Ja, jem.
+[01:44.100 --> 01:45.100]  M.
+[01:45.100 --> 01:46.100]  Ja, jem.
+[01:46.100 --> 01:47.100]  Tak?
+[01:47.100 --> 01:48.100]  Tak, tak, tak.
+[01:48.100 --> 01:49.100]  I to jest biernik, tak?
+[01:49.100 --> 01:50.100]  Tak?
+[01:50.100 --> 01:51.100]  Tak, tak.
+[01:51.100 --> 01:55.100]  Ja wiem, ty jesz. W porządku?
+[01:55.100 --> 02:04.100]  Dobra. Ok. Tutaj redukcja, minimalna forma. On, ona, to, jemy.
+[02:04.100 --> 02:09.100]  If you cut this, you have five more forms.
+[02:09.100 --> 02:14.100]  Super. No dobra, mamy my, jemy.
+[02:14.100 --> 02:17.100]  Typowa forma tutaj my.
+[02:17.100 --> 02:22.100]  Wy jecie. Super, bardzo dobrze.
+[02:22.100 --> 02:26.100]  Jecie. Typowa forma to cie.
+[02:26.100 --> 02:29.100]  Tutaj cie. Ok.
+[02:29.100 --> 02:35.100]  I oni, one, tu jest trochę nieregularnie.
+[02:35.100 --> 02:40.100]  Super, bardzo dobrze. Jedzą. Tak, to jest jedzą.
+[02:40.100 --> 02:46.100]  Normalnie, typowo, standardowo jest opcja ją.
+[02:46.100 --> 02:51.100]  Ale to jest, to, it working like exception.
+[02:51.100 --> 02:56.100]  Because normally at this time we could give je ją.
+[02:56.100 --> 02:59.100]  But not this example. Jedzą.
+[02:59.100 --> 03:06.100]  Jedzą. Super. Ok. W porządku?
+[03:06.100 --> 03:12.100]  To mamy pije. Pić, pić super regularnie.
+[03:12.100 --> 03:14.100]  Ja piję.
+[03:14.100 --> 03:18.100]  Typ konjugacji tutaj jest eu.
+[03:18.100 --> 03:23.100]  A ty? Pijesz. Pijesz. Fantastycznie.
+[03:23.100 --> 03:30.100]  Pijesz, pijesz. Konjugacja eu i esz.
+[03:34.100 --> 03:38.100]  Forma minimalistyczna pije.
+[03:38.100 --> 03:42.100]  One, two, three. On, ona, on pije.
+[03:42.100 --> 03:46.100]  Forma my identyczna.
+[03:46.100 --> 03:50.100]  Jemy. Pijemy. Pijemy. Bardzo dobrze.
+[03:50.100 --> 03:57.100]  Jemy, pijemy. Wy jecie. Pijecie.
+[03:57.100 --> 04:01.100]  Tak. Cie, cie, cie. I oni, one.
+[04:01.100 --> 04:05.100]  Piją. Piją. Bardzo dobrze. Piją.
+[04:05.100 --> 04:08.100]  And when we have this type of conjunction.
+[04:08.100 --> 04:10.100]  First and last will be similar.
+[04:10.100 --> 04:12.100]  First and last will be similar.
+[04:12.100 --> 04:15.100]  Eu and always o.
+[04:15.100 --> 04:20.100]  Pije. Piją. Robię. Robią.
+[04:20.100 --> 04:24.100]  Taka analogia. To dobrze.
+[04:24.100 --> 04:30.100]  And as you can see jeść and pić always will be connected with biernik, accusative.
+[04:30.100 --> 04:35.100]  So every time when we would like to talk what we like to eat or what we like to drink
+[04:35.100 --> 04:38.100]  or what we drink in for example in our routine.
+[04:38.100 --> 04:40.100]  We will activate this grammar.
+[04:40.100 --> 04:42.100]  So we will use some endings.
+[04:42.100 --> 04:44.100]  Like pije sok. No endings.
+[04:44.100 --> 04:47.100]  Because sok maskiwinoł not allow nothing to change.
+[04:47.100 --> 04:52.100]  But for example with feminine we have to change.
+[04:52.100 --> 04:58.100]  Like pije or jem zupę pomidorową.
+[04:58.100 --> 05:00.100]  Tak. Not zupa pomidorowa.
+[05:00.100 --> 05:03.100]  Zupę. We will practice today.
+[05:03.100 --> 05:06.100]  I temat jedzenie.
+[05:06.100 --> 05:08.100]  Aktywujemy.
+[05:08.100 --> 05:15.100]  You can solve this especially with this task from homework.
+[05:15.100 --> 05:20.100]  That after z we activate instrumental.
+[05:20.100 --> 05:26.100]  Narzędnik. That's why we have army, musztarda or something like that.
+[05:26.100 --> 05:28.100]  Let's try to check.
+[05:28.100 --> 05:30.100]  To jest egzamin. Przykład.
+[05:30.100 --> 05:35.100]  Pan Kowalski jedna obiad kotlet z frytkami.
+[05:35.100 --> 05:37.100]  Plural always.
+[05:37.100 --> 05:38.100]  Ami, ami, ami.
+[05:38.100 --> 05:40.100]  Frytkami.
+[05:40.100 --> 05:45.100]  A co proponujecie proszę kurczaka z...
+[05:45.100 --> 05:47.100]  With.
+[05:47.100 --> 05:48.100]  Z ziemniakami.
+[05:48.100 --> 05:49.100]  O dobra opcja.
+[05:49.100 --> 05:51.100]  Z ziemniakami. Tak.
+[05:51.100 --> 05:54.100]  Z ziemniakami.
+[05:54.100 --> 05:58.100]  A kurczak z frytkami ok?
+[05:58.100 --> 05:59.100]  No tak.
+[05:59.100 --> 06:01.100]  Też. Też naturalna decyzja.
+[06:05.100 --> 06:09.100]  Z ziemniakami. Fantastycznie.
+[06:09.100 --> 06:12.100]  To mamy punkt B.
+[06:12.100 --> 06:15.100]  Na śniadanie. Śniadanie ok.
+[06:15.100 --> 06:17.100]  Dobrze.
+[06:17.100 --> 06:22.100]  Lubię tradycyjny chleb z...
+[06:22.100 --> 06:25.100]  Co proponujecie?
+[06:25.100 --> 06:27.100]  Masłem.
+[06:27.100 --> 06:30.100]  O dobrze, dobrze. Tak. Z masłem.
+[06:30.100 --> 06:33.100]  Lub.
+[06:33.100 --> 06:35.100]  Z margaryną.
+[06:35.100 --> 06:37.100]  No bardzo dobra gramatyka.
+[06:37.100 --> 06:39.100]  Z margaryną.
+[06:39.100 --> 06:41.100]  Opcja. Tak.
+[06:41.100 --> 06:44.100]  Z masłem. M, m, m.
+[06:44.100 --> 06:47.100]  Tak jak dziennikarzem.
+[06:47.100 --> 06:50.100]  Tak jak rolnikiem.
+[06:50.100 --> 06:52.100]  Etcetera.
+[06:52.100 --> 06:55.100]  To jest narzędnik. M. Męski.
+[06:55.100 --> 06:57.100]  I margaryną. O.
+[06:57.100 --> 06:59.100]  Seminatywne.
+[06:59.100 --> 07:01.100]  Co to jest? Lub.
+[07:01.100 --> 07:03.100]  Or.
+[07:03.100 --> 07:05.100]  Tak. Bardzo dobrze. To jest jak or.
+[07:05.100 --> 07:07.100]  Tak. Decyzja.
+[07:07.100 --> 07:12.100]  Chleb z masłem lub margaryną.
+[07:17.100 --> 07:19.100]  No dobrze. To jest Maria.
+[07:19.100 --> 07:25.100]  Maria lubi pić zieloną herbatę z...
+[07:25.100 --> 07:26.100]  Miodem.
+[07:26.100 --> 07:29.100]  Z miodem. Dobrze. No.
+[07:29.100 --> 07:31.100]  No. Coś ekstra.
+[07:31.100 --> 07:33.100]  Lub z.
+[07:33.100 --> 07:35.100]  No z cukrem.
+[07:35.100 --> 07:39.100]  No z cukrem. Tak. Cukier minimalnie nieregularny.
+[07:39.100 --> 07:42.100]  We can say cukierem.
+[07:42.100 --> 07:44.100]  Z cukrem. Tak.
+[07:44.100 --> 07:45.100]  Z cukrem.
+[07:45.100 --> 07:47.100]  Z cukrem.
+[07:47.100 --> 07:49.100]  Tak. Cukier, cukrem.
+[07:52.100 --> 07:54.100]  Miód. Not miódem.
+[07:54.100 --> 07:56.100]  Miodem. Tak.
+[07:56.100 --> 07:58.100]  Dobrze.
+[07:58.100 --> 08:00.100]  Lubić się zieloną herbatę.
+[08:01.100 --> 08:02.100]  Tak. Lubię.
+[08:02.100 --> 08:04.100]  Lubię. Dobrze. No dobrze.
+[08:08.100 --> 08:10.100]  No dobrze. To jest D.
+[08:10.100 --> 08:15.100]  Jest Jarek. Jarek jest student. Typowy student.
+[08:15.100 --> 08:17.100]  I lubi frytki z zyrem.
+[08:19.100 --> 08:20.100]  Z ketchupem.
+[08:20.100 --> 08:23.100]  Z ketchupem. Klasycznie. Tak.
+[08:23.100 --> 08:28.100]  Z ketchupem. Super. Ok.
+[08:29.100 --> 08:30.100]  I.
+[08:30.100 --> 08:34.100]  Pan Tomasz często je kiełbasę z czym?
+[08:34.100 --> 08:36.100]  Musztardą.
+[08:36.100 --> 08:43.100]  Musztardą. Może być opcja z ketchupem. To popularne w Polsce. Tak.
+[08:43.100 --> 08:45.100]  Z musztardą.
+[08:47.100 --> 08:50.100]  A co preferujecie?
+[08:52.100 --> 08:57.100]  Kiełbasę z musztardą czy z ketchupem? Czy z majonezem?
+[08:57.100 --> 08:58.100]  Ketchup.
+[08:58.100 --> 09:00.100]  Ketchup. Klasycznie.
+[09:00.100 --> 09:02.100]  Okra i majonez.
+[09:02.100 --> 09:05.100]  A razem tak? O, dobrze, dobrze. To też dobry miks.
+[09:05.100 --> 09:06.100]  Mhm.
+[09:06.100 --> 09:13.100]  Ok. A tutaj punkt F. Lubisz jeść płatki śniadaniowe z?
+[09:14.100 --> 09:15.100]  Mlekiem.
+[09:15.100 --> 09:18.100]  Super. Z mlekiem. Bardzo dobrze.
+[09:19.100 --> 09:23.100]  Płatki śniadaniowe? Co to?
+[09:23.100 --> 09:24.100]  Mlekiem.
+[09:24.100 --> 09:26.100]  Mhm. Jak mógł zliczyć. Dzień dobry.
+[09:26.100 --> 09:28.100]  Dzień dobry. Jak musli.
+[09:29.100 --> 09:32.100]  A co to było? O, to są płatki śniadaniowe.
+[09:32.100 --> 09:33.100]  Płatki śniadaniowe.
+[09:33.100 --> 09:34.100]  Aha, serio?
+[09:34.100 --> 09:42.100]  Tak. Dokładnie. Też jak takie cold flakes czasem. A może być też kompozycja musli.
+[09:42.100 --> 09:46.100]  A musli zwykle musli, a płatki jak cold flakesy.
+[09:48.100 --> 09:54.100]  O, jest aromat. Czujecie? Kawy. Tak? Aromat kawy.
+[09:54.100 --> 09:55.100]  Dobrze. I mamy.
+[09:55.100 --> 09:57.100]  Proszę o kawę z?
+[10:02.100 --> 10:03.100]  Mlekiem.
+[10:03.100 --> 10:09.100]  Może być z mlekiem. Tak. Co ekstra może być?
+[10:09.100 --> 10:10.100]  Z cukrem.
+[10:10.100 --> 10:17.100]  Z cukrem. Bardzo dobrze. Z mlekiem, z cukrem. Tak.
+[10:18.100 --> 10:24.100]  I bardzo typowe, popularne ekstremalnie w Polsce. Pivo z?
+[10:24.100 --> 10:26.100]  Pivo with something.
+[10:26.100 --> 10:27.100]  Sokiem.
+[10:27.100 --> 10:34.100]  Sokiem. Tak. To standard w Polsce. Tak? Pivo z sokiem. Tak? Jest.
+[10:34.100 --> 10:47.100]  Juicy. Tak. To jest taki juice, ale to jest niedużo, minimalnie. Tak jak glass of vodka. Tak? I automatycznie do piwa. Tak?
+[10:47.100 --> 10:49.100]  It's separated and you can add.
+[10:49.100 --> 10:53.100]  Pivo jest beer, right?
+[10:53.100 --> 10:54.100]  Yes.
+[10:54.100 --> 10:57.100]  So yes, I know this is weird, but we do it this way.
+[10:57.100 --> 11:02.100]  Sometimes people do mix all of that stuff. I have seen that.
+[11:02.100 --> 11:06.100]  Tak, to prawda. Kiedy?
+[11:06.100 --> 11:08.100]  To słowa.
+[11:08.100 --> 11:09.100]  Jeszcze raz.
+[11:09.100 --> 11:11.100]  To słowa.
+[11:11.100 --> 11:20.100]  Tutaj, grosze is complete sentences with, nie jest it words.
+[11:20.100 --> 11:21.100]  Words.
+[11:21.100 --> 11:22.100]  Words. Słowa.
+[11:22.100 --> 11:24.100]  Słowa.
+[11:24.100 --> 11:25.100]  Breakfast is.
+[11:25.100 --> 11:26.100]  O, tu jest śniadanie.
+[11:26.100 --> 11:27.100]  Breakfast.
+[11:27.100 --> 11:28.100]  Śniadanie.
+[11:28.100 --> 11:29.100]  Śniadanie.
+[11:29.100 --> 11:30.100]  Śniadanie. Tak.
+[11:30.100 --> 11:43.100]  Tak bardzo popularny, typowy bar, pub w Krakowie oferuje ekstra sok do piwa. Standard to wiśnia. Co to wiśnia?
+[11:43.100 --> 11:44.100]  Cherry.
+[11:44.100 --> 11:50.100]  Cherry. Tak, bardzo dobrze. Co ekstra? Może być jabłko, może być banan, może być wszystko.
+[11:50.100 --> 12:08.100]  Every type of juice you can have. Proszę piwo z sokiem. No dobrze. Jest też ekstra informacja, jak konstruujemy without. Bez to jest without.
+[12:08.100 --> 12:17.100]  Herbata bez cukru. Zero cukru. Kawa bez mleka. Zero mleka. I laktozy.
+[12:17.100 --> 12:18.100]  Is this just an example?
+[12:18.100 --> 12:19.100]  Mhm.
+[12:20.100 --> 12:27.100]  Is it a rule to say without something you use u and a? Or is it just?
+[12:27.100 --> 12:36.100]  My favorite question. We will see this soon. Why? To jest bez, we activate genitive case. To jest dopełniacz.
+[12:36.100 --> 12:37.100]  Wow.
+[12:37.100 --> 12:47.100]  Tak. O, you heard about that. Tak. To jest minimalnie masakra, ale nothing scared, don't worry. Why it's not regular?
+[12:47.100 --> 12:50.100]  We have some rules about when we give it.
+[12:50.100 --> 13:01.100]  We give it u when we give it a. But in real life also Polish people not always know how to manage this topic when it's a and when it's u.
+[13:01.100 --> 13:10.100]  It's like calculation 50-50% of every ending. And mostly of course in the classes we will learn that topic.
+[13:10.100 --> 13:18.100]  But mostly you will learn this at the, you know, daily life, a beauty when you're going to shopping.
+[13:18.100 --> 13:27.100]  Because nobody know how to, you know, not how to teach this because exist, we have some rules, but it's really not regular.
+[13:27.100 --> 13:37.100]  But not all of the genitive case, dopełniacz, but just this both ending, a and u, only that. Another will be really regular.
+[13:37.100 --> 13:47.100]  So sometimes we have u, sometimes a. We have for example rules that some liquids not always working, but mostly, like mleko, we giving a.
+[13:47.100 --> 13:55.100]  But when you have something hard to count, like sugar, we giving u. Some rules exist, yeah?
+[13:55.100 --> 13:59.100]  So we are also weird with this type of grammar.
+[13:59.100 --> 14:07.100]  But genitive will be extremely useful for you because not only in area of products or cuisine or some shopping,
+[14:07.100 --> 14:16.100]  but also when you would like to say I don't like something, just negation of accusative unique, you activate genitive.
+[14:17.100 --> 14:21.100]  So many occasions to using that.
+[14:21.100 --> 14:26.100]  No dobrze. No chyba tak jest. Cukru, kawa bez mleku. W porządku?
+[14:26.100 --> 14:33.100]  No dobrze. To kontynuujemy.
+[14:33.100 --> 14:45.100]  I minimalny check, tak? Tylko minimalny. To jest strona, page startowa, tak? Proszę ratunek.
+[14:45.100 --> 14:47.100]  I have to cover for you.
+[14:47.100 --> 14:53.100]  Ok, I will. I will. I promise to someone will give you the paper. Sorry for that.
+[14:53.100 --> 15:03.100]  To jest strona startowa. Tu jest uwaga. Co to jest uwaga?
+[15:03.100 --> 15:04.100]  Attention.
+[15:04.100 --> 15:15.100]  Focus, duży focus, tak. I to jest taki ekspresowy check, tak? Mamy informacje, to nie to samo.
+[15:15.100 --> 15:16.100]  It's not the same. Tak?
+[15:17.100 --> 15:23.100]  I sałata to nie jest sałatka. Co to sałata?
+[15:23.100 --> 15:27.100]  Salad? Salad. Tak. A sałatka?
+[15:27.100 --> 15:28.100]  Leves.
+[15:28.100 --> 15:32.100]  Something going to the salad, please.
+[15:32.100 --> 15:38.100]  Tak. To jest, sałata to jest warzywo, vegetable. Sałatka to jest mix.
+[15:38.100 --> 15:45.100]  Może być sałatka, co? Pomidor, ogórek, oliwa, mix. Tak?
+[15:45.100 --> 15:56.100]  Może być sałatka owocowa, owoce, fruits, jabłko, banan, śmietana, cream i mix. Tak? To jest to.
+[15:56.100 --> 15:59.100]  Sałatka jest tutaj, tak? To jest mix.
+[15:59.100 --> 16:00.100]  So it's a mixed salad?
+[16:00.100 --> 16:05.100]  Mix of vegetable or fruits. Tak? To jest to. To jest sałatka.
+[16:09.100 --> 16:14.100]  Sałatka owocowa, sałatka warzywna, bardzo popularne. Tak?
+[16:15.100 --> 16:18.100]  So what is lettuce or just basic salad?
+[16:18.100 --> 16:27.100]  Just a basic salad, also lettuce. General carbone. I ciasto. Ciasto, ciastko.
+[16:31.100 --> 16:36.100]  And then ciastko is cookies. Tak. Exactly. Dokładnie.
+[16:36.100 --> 16:41.100]  Exactly to jest dokładnie. Tak? Dokładnie.
+[16:41.100 --> 16:44.100]  Ciasto, na przykład sernik.
+[16:45.100 --> 16:56.100]  Tak? Szałatka, sernik, cheesecake. Tak? Szałatka, amobaj. A ciastko, na przykład oreo. Tak? Oreo. Lubicie oreo?
+[16:56.100 --> 16:57.100]  Tak.
+[16:57.100 --> 16:59.100]  So it's cake versus cookies?
+[16:59.100 --> 17:00.100]  Tak.
+[17:00.100 --> 17:01.100]  Aha.
+[17:01.100 --> 17:02.100]  To jest to dokładnie?
+[17:02.100 --> 17:08.100]  Exactly. Exactly. Dokładnie. Dokładnie.
+[17:08.100 --> 17:09.100]  Dokładnie.
+[17:09.100 --> 17:11.100]  W porządku.
+[17:11.100 --> 17:13.100]  Dobrze.
+[17:15.100 --> 17:20.100]  Ok. Mamy tu ekstra elementy.
+[17:20.100 --> 17:25.100]  Something, I think, which you already know.
+[17:25.100 --> 17:31.100]  Maybe here we have something new or not new. Pieprz i sól.
+[17:31.100 --> 17:33.100]  Taka klasyka.
+[17:33.100 --> 17:36.100]  Tak? Pieprz i sól.
+[17:36.100 --> 17:41.100]  Tak. I co mamy ekstra?
+[17:41.100 --> 18:06.100]  Ekstra to jest pozycja 52. 52. Tak? Jest propozycja 2. To jest element bardzo komunikacyjny. Komunikacja. Tak? Mamy dwie kategorie. Kategoria numer jeden. Co jesz? Kategoria dwa. Co pijesz? Tak.
+[18:06.100 --> 18:09.100]  We have some rules how to express that question in Polish language.
+[18:09.100 --> 18:18.100]  For example you can look on the left side. Lewa pozycja. Co jesz na śniadanie? Jaki kontekst? Co to znaczy?
+[18:18.100 --> 18:21.100]  What do we eat for breakfast?
+[18:21.100 --> 18:36.100]  For breakfast. Tak, tak, tak. Bardzo dobrze. Co jesz na śniadanie? To jest taki typowy timing u Polaków. Tak typowo. Co jesz na śniadanie? But of course it's up to, you know, more and more.
+[18:36.100 --> 18:37.100]  To jest typowa sytuacja.
+[18:37.100 --> 18:43.100]  No, morning routine, working time, or something like that. But like basically working like that.
+[18:43.100 --> 18:53.100]  I reakcja. You can look because here you have repeated your, how to say, preposition.
+[18:53.100 --> 18:59.100]  So if we tak, co jesz na śniadanie? We can answer it with na śniadanie.
+[18:59.100 --> 19:04.100]  Prepozycja, identyczna preposition. Na śniadanie jemy.
+[19:04.100 --> 19:05.100]  I to jest to.
+[19:05.100 --> 19:17.100]  And when you would like to answer for it, you will see that we have to activate exactly wiernik accusative case.
+[19:17.100 --> 19:21.100]  That's why letter. Nothing to change. Sir as well.
+[19:21.100 --> 19:27.100]  And szynkę we should give el. Because of feminine form.
+[19:27.100 --> 19:33.100]  Szynkę, wodę, herbatę. Feminum will take el.
+[19:33.100 --> 19:34.100]  Do śniadania.
+[19:34.100 --> 19:35.100]  Do śniadania.
+[19:35.100 --> 19:37.100]  I w ogóle, szynkę i ser.
+[19:37.100 --> 19:42.100]  Pytanie minimalnie identyczne.
+[19:42.100 --> 19:45.100]  Co jesz na kolację?
+[19:45.100 --> 19:48.100]  This is the analogy of first one.
+[19:48.100 --> 19:50.100]  Na śniadanie i na kolację.
+[19:50.100 --> 19:52.100]  Co to kolacja?
+[19:52.100 --> 19:53.100]  Dinner.
+[19:53.100 --> 19:58.100]  Dinner, for Polish people it's like the last one, like supper time.
+[19:58.100 --> 20:04.100]  I don't know, that's a cultural element, so we can eat like we want.
+[20:04.100 --> 20:08.100]  So kolacja dinner time. Osiemnasta, dziewiętnasta.
+[20:08.100 --> 20:13.100]  I identycznie na kolację jemy.
+[20:13.100 --> 20:15.100]  I we have here bukę.
+[20:15.100 --> 20:18.100]  That's accusative wiernik.
+[20:18.100 --> 20:19.100]  Right?
+[20:19.100 --> 20:27.100]  But you can see that after preposition z, we must to activate narzędnik.
+[20:27.100 --> 20:28.100]  Right?
+[20:28.100 --> 20:33.100]  That's why you can find another function of that case.
+[20:33.100 --> 20:35.100]  Cases z masłem.
+[20:35.100 --> 20:37.100]  Pomidorem.
+[20:37.100 --> 20:40.100]  Tu jest narzędnik.
+[20:40.100 --> 20:43.100]  Zielony kolor.
+[20:43.100 --> 20:47.100]  A tu jest dziernik niebieski kolor.
+[20:47.100 --> 20:48.100]  Ok?
+[20:48.100 --> 20:52.100]  I pytanie centrum.
+[20:52.100 --> 20:55.100]  Co lubisz jeść na obiad?
+[20:55.100 --> 20:58.100]  Jaki kontekst? Co to znaczy?
+[20:58.100 --> 21:00.100]  What do you want to eat for lunch?
+[21:00.100 --> 21:01.100]  What do you like to eat?
+[21:01.100 --> 21:02.100]  What do you like to eat?
+[21:02.100 --> 21:04.100]  Co lubisz jeść?
+[21:04.100 --> 21:06.100]  Co lubisz jeść na obiad?
+[21:06.100 --> 21:11.100]  I identyczna strategia, identyczna propozycja, reakcja.
+[21:11.100 --> 21:14.100]  Na obiad lubię jeść.
+[21:14.100 --> 21:17.100]  After to like, you can give infinitive.
+[21:17.100 --> 21:19.100]  That's why we have jeść.
+[21:19.100 --> 21:20.100]  Lubię jeść.
+[21:20.100 --> 21:21.100]  Lubię pić.
+[21:21.100 --> 21:23.100]  Lubię spacerować.
+[21:23.100 --> 21:24.100]  Etcetera.
+[21:24.100 --> 21:28.100]  I tutaj mamy wiernik, accusative.
+[21:28.100 --> 21:30.100]  And we can, it's visible here.
+[21:30.100 --> 21:33.100]  And then three places.
+[21:33.100 --> 21:35.100]  Zupę pomidorową.
+[21:35.100 --> 21:38.100]  So, e for feminine.
+[21:38.100 --> 21:41.100]  And for noun.
+[21:41.100 --> 21:44.100]  And for adjective will be all.
+[21:44.100 --> 21:46.100]  Here no narzędnik.
+[21:46.100 --> 21:50.100]  We don't have preposition z.
+[21:50.100 --> 21:54.100]  So it's only jernik?
+[21:54.100 --> 21:56.100]  Sorry, I missed the last one.
+[21:56.100 --> 21:58.100]  Nie ma problemu.
+[21:58.100 --> 21:59.100]  To jest...
+[22:00.100 --> 22:03.100]  I we will do revision today, so no worries.
+[22:03.100 --> 22:07.100]  Last time we didn't started that, so that's ok.
+[22:07.100 --> 22:10.100]  This is something, new function for you.
+[22:10.100 --> 22:19.100]  When we talking about something to eat, mostly after jeść, pić, verbs,
+[22:19.100 --> 22:24.100]  we must to have activate biernik, accusative.
+[22:24.100 --> 22:28.100]  That's why you see this two endings especially in feminine.
+[22:28.100 --> 22:32.100]  Because mostly neutral and masculine.
+[22:32.100 --> 22:34.100]  Nothing to change.
+[22:34.100 --> 22:39.100]  It stay the same mostly because products, eating, not alive.
+[22:39.100 --> 22:43.100]  So we don't need to carry that mostly.
+[22:43.100 --> 22:48.100]  But of course jeść, pić, biernik.
+[22:48.100 --> 22:55.100]  But if you have preposition z, after this preposition we activate another case.
+[22:55.100 --> 22:57.100]  It should not like narzędnik.
+[22:57.100 --> 23:00.100]  That's why we have two types of endings.
+[23:00.100 --> 23:02.100]  We won't practice this today.
+[23:02.100 --> 23:03.100]  Thank you.
+[23:03.100 --> 23:09.100]  Co jesz na śniadanie? Co jesz na obiad? Co jesz na kolację?
+[23:09.100 --> 23:14.100]  I jest następna sekcja, to jest co pijesz?
+[23:14.100 --> 23:20.100]  You can hear that a little bit we changing the preposition.
+[23:20.100 --> 23:26.100]  Because here will be not for drinking na śniadanie, will be do.
+[23:26.100 --> 23:32.100]  Co pijesz do śniadania? Do śniadania.
+[23:32.100 --> 23:37.100]  We can of course say pije.
+[23:37.100 --> 23:41.100]  Kawę, to jest ending of biernik.
+[23:41.100 --> 23:43.100]  Pije kawę.
+[23:43.100 --> 23:48.100]  And after preposition z, we activate narzędnik.
+[23:48.100 --> 23:53.100]  Pije kawę z lekiem albo herbatę.
+[23:53.100 --> 23:57.100]  And herbatę we're going back to biernik.
+[23:57.100 --> 24:03.100]  Because it's not connected now with preposition with z.
+[24:03.100 --> 24:09.100]  Is this the rule for the z? Is that only in this context?
+[24:09.100 --> 24:12.100]  So anytime you say kawa, zło, kawa.
+[24:12.100 --> 24:15.100]  Tak. And always will be narzędnik after z.
+[24:15.100 --> 24:20.100]  Always. It will be like super working, regular in the woods.
+[24:20.100 --> 24:21.100]  Pije kawę.
+[24:21.100 --> 24:29.100]  Pije kawa z lekiem albo, here it should be also like pije herbatę.
+[24:29.100 --> 24:33.100]  Pije herbatę.
+[24:33.100 --> 24:36.100]  Because it's like another part of sentence.
+[24:36.100 --> 24:40.100]  Albo to jest also working like orm.
+[24:40.100 --> 24:43.100]  Albo herbatę.
+[24:43.100 --> 24:47.100]  Mi się proszę mam pytanie.
+[24:47.100 --> 24:49.100]  So what does the word...
+[24:49.100 --> 24:52.100]  What does the word do mean?
+[24:52.100 --> 24:54.100]  Do means from, right?
+[24:54.100 --> 24:56.100]  This is also, also.
+[24:56.100 --> 24:59.100]  But here it's like for breakfast.
+[24:59.100 --> 25:03.100]  So here will be for and for also as well.
+[25:03.100 --> 25:06.100]  But difference is based on our grammar.
+[25:06.100 --> 25:12.100]  So if you have connection with drink for breakfast, something.
+[25:12.100 --> 25:15.100]  In Polish you activate for each do.
+[25:15.100 --> 25:19.100]  But here for eating, to eat, it's just do.
+[25:19.100 --> 25:22.100]  So meaning stays the same.
+[25:22.100 --> 25:25.100]  But just we switching preposition.
+[25:25.100 --> 25:29.100]  So sometimes in like addresses, like we have from and do, right?
+[25:29.100 --> 25:32.100]  So there from and do they will use.
+[25:32.100 --> 25:33.100]  Yeah, yeah, yeah.
+[25:33.100 --> 25:42.100]  If you would like to know the one meaning of some one preposition, not possible.
+[25:42.100 --> 25:48.100]  Because it's mostly communicating knowledge that connected with some rules.
+[25:48.100 --> 25:50.100]  Of course we have rules.
+[25:50.100 --> 25:52.100]  But as you can see we switch this many times.
+[25:52.100 --> 26:00.100]  It's do for some addresses, do for doing something, do for drinking.
+[26:00.100 --> 26:03.100]  So now it's just about like some...
+[26:03.100 --> 26:06.100]  Just you have to know the context and then you know what it means.
+[26:06.100 --> 26:07.100]  Context, yeah.
+[26:07.100 --> 26:08.100]  A lot of context.
+[26:08.100 --> 26:11.100]  So now I'm showing you a part of this do.
+[26:11.100 --> 26:12.100]  But don't worry.
+[26:12.100 --> 26:15.100]  We will have for sure a class with all of the preposition.
+[26:15.100 --> 26:23.100]  And after period of material you will see that it's easier to compare and finding some analogies.
+[26:23.100 --> 26:29.100]  Because now it's like a part of something, a part of something and we dig so big as a whole bunch.
+[26:29.100 --> 26:34.100]  So is it like incorrect to say sop, pieś, nasz, śmietania?
+[26:34.100 --> 26:35.100]  Is that incorrect or like...
+[26:35.100 --> 26:39.100]  In grammatical area it's a bit incorrect.
+[26:39.100 --> 26:41.100]  But to be honest with you,
+[26:41.100 --> 26:45.100]  many Polish people saying exactly.
+[26:45.100 --> 26:46.100]  This way.
+[26:46.100 --> 26:48.100]  So we also doing this mistake.
+[26:48.100 --> 26:53.100]  So in our communication nobody will say oh my god what did she say.
+[26:53.100 --> 26:57.100]  So this is not big problem.
+[26:57.100 --> 26:59.100]  Co pijesz do śniadania?
+[26:59.100 --> 27:01.100]  Co pijesz na śniadanie?
+[27:01.100 --> 27:04.100]  So is z always with?
+[27:04.100 --> 27:06.100]  Z? What do you mean?
+[27:06.100 --> 27:07.100]  Z.
+[27:07.100 --> 27:09.100]  Is it like with?
+[27:09.100 --> 27:10.100]  With.
+[27:10.100 --> 27:12.100]  Is that kind of always the case?
+[27:12.100 --> 27:13.100]  No.
+[27:13.100 --> 27:14.100]  No.
+[27:14.100 --> 27:15.100]  No.
+[27:15.100 --> 27:16.100]  No.
+[27:16.100 --> 27:17.100]  Always.
+[27:17.100 --> 27:18.100]  Always.
+[27:18.100 --> 27:19.100]  No.
+[27:19.100 --> 27:20.100]  Always.
+[27:20.100 --> 27:21.100]  Always.
+[27:21.100 --> 27:22.100]  Always.
+[27:22.100 --> 27:23.100]  No.
+[27:23.100 --> 27:24.100]  No.
+[27:24.100 --> 27:25.100]  No.
+[27:25.100 --> 27:26.100]  From?
+[27:26.100 --> 27:27.100]  When you saying jestem z Polski it will be like from.
+[27:27.100 --> 27:28.100]  But in this area you have with.
+[27:28.100 --> 27:29.100]  And will be connected with people, with eating, with products, with places, with many
+[27:29.100 --> 27:30.100]  things.
+[27:30.100 --> 27:31.100]  Because you can say idę na spacer z psem, with dog.
+[27:31.100 --> 27:32.100]  So also...
+[27:32.100 --> 27:33.100]  Ok, ok.
+[27:33.100 --> 27:35.100]  One of the first question, which you learn it was like you said...
+[27:35.100 --> 27:36.100]  Skąd jestesz?
+[27:36.100 --> 27:37.100]  Skąd jestem?
+[27:37.100 --> 27:38.100]  Jestem ze...
+[27:38.100 --> 27:39.100]  Skąd jesteś?
+[27:39.100 --> 27:40.100]  Jestem ze...
+[27:40.100 --> 27:41.100]  Z...
+[27:41.100 --> 27:42.100]  Z...
+[27:42.100 --> 27:43.100]  Z...
+[27:43.100 --> 27:44.100]  Z...
+[27:44.100 --> 27:46.100]  Z tym ze?
+[27:46.100 --> 27:48.100]  Ale Wy powiedzieliście z pivem?
+[27:48.100 --> 27:50.100]  Z pivem
+[27:50.100 --> 27:52.100]  Z pivem, z pivem
+[27:52.100 --> 27:54.100]  Z psem
+[27:54.100 --> 27:56.100]  Z psem
+[27:56.100 --> 27:58.100]  Z psem
+[27:58.100 --> 28:00.100]  Tak, z psem
+[28:00.100 --> 28:02.100]  Tak, instrumentalnie
+[28:02.100 --> 28:08.100]  Tak, ale jak ma Pani pytanie o skok, to to nie jest instrumentalne
+[28:08.100 --> 28:10.100]  To jest genetyczne
+[28:10.100 --> 28:12.100]  Ok
+[28:12.100 --> 28:18.100]  I co pijesz do obiadu?
+[28:18.100 --> 28:26.100]  Piję wodę mineralną, biernik.
+[28:26.100 --> 28:31.100]  Albo sok pomarańczowy, biernik.
+[28:31.100 --> 28:37.100]  Nic do tego nie da.
+[28:37.100 --> 28:42.100]  I co lubisz pić do kolacji?
+[28:42.100 --> 28:47.100]  Lubię pić herbatę z cytryną.
+[28:47.100 --> 28:51.100]  Tutaj mamy narzędzik.
+[28:51.100 --> 28:58.100]  No dobrze, to robimy praktykę.
+[28:58.100 --> 29:05.100]  Chciałem zapytać, herbatę z cytryną wygląda trochę jak zupę pomodorową.
+[29:05.100 --> 29:07.100]  Ale są inne.
+[29:07.100 --> 29:09.100]  To jest bardzo dobry komentarz, Daniel.
+[29:09.100 --> 29:11.100]  Good comment. Why?
+[29:11.100 --> 29:16.100]  Because if you compare biernik with narzędnik, we have some similarities.
+[29:16.100 --> 29:22.100]  For example, we can say...
+[29:22.100 --> 29:24.100]  Interesuję się...
+[29:24.100 --> 29:26.100]  To jest po prostu about narzędnik.
+[29:26.100 --> 29:32.100]  Interesuję się zupą pomidorową.
+[29:32.100 --> 29:35.100]  To jest narzędnik.
+[29:35.100 --> 29:37.100]  Lubię...
+[29:37.100 --> 29:39.100]  I like...
+[29:39.100 --> 29:42.100]  Zupę pomidorową.
+[29:42.100 --> 29:45.100]  So if we compare...
+[29:45.100 --> 29:52.100]  So you can see that adjective between those two cases will be exactly the same in feminine.
+[29:52.100 --> 29:53.100]  In feminine only.
+[29:53.100 --> 29:55.100]  So if it's masculine, then I want to change for the lubię, right?
+[29:55.100 --> 29:57.100]  Tak.
+[29:57.100 --> 29:59.100]  Because of list of the verbs.
+[29:59.100 --> 30:02.100]  Lubię, kocham, widzę, znam.
+[30:02.100 --> 30:05.100]  It's still working with biernik.
+[30:05.100 --> 30:06.100]  Lubię.
+[30:06.100 --> 30:21.100]  So differences in area of feminine will be with nouns zupą, narzędnik, wodą, herbatą, but biernik, zupę, herbatę, wodę.
+[30:21.100 --> 30:24.100]  No dobrze.
+[30:24.100 --> 30:28.100]  To mamy trochę praktyki.
+[30:28.100 --> 30:31.100]  Jest trochę praktyki interaktywnej.
+[30:31.100 --> 30:34.100]  At first if we can...
+[30:34.100 --> 30:39.100]  To revision with narzędnik.
+[30:39.100 --> 30:41.100]  Then with biernik.
+[30:41.100 --> 30:42.100]  You don't have that.
+[30:42.100 --> 30:44.100]  This is like I will send you.
+[30:44.100 --> 30:46.100]  Z czym oni jedzą kanapkę?
+[30:46.100 --> 30:49.100]  With what they eating?
+[30:49.100 --> 30:50.100]  Kanapka.
+[30:50.100 --> 30:58.100]  I mamy tu elementy i to jest tylko, only, narzędnik.
+[30:58.100 --> 31:02.100]  No, we have some, a little bit we have biernik.
+[31:02.100 --> 31:04.100]  But that's good.
+[31:04.100 --> 31:06.100]  I will show you when it will be like that.
+[31:06.100 --> 31:11.100]  But you will see for sure because here mostly we have a lot of examples with z.
+[31:11.100 --> 31:13.100]  I jest uwe.
+[31:13.100 --> 31:16.100]  Uwe je chleb z.
+[31:16.100 --> 31:18.100]  Jest masło.
+[31:18.100 --> 31:20.100]  Masło.
+[31:20.100 --> 31:21.100]  Masło.
+[31:21.100 --> 31:23.100]  No masło, bardzo dobrze.
+[31:23.100 --> 31:25.100]  I will add you capital letter for ending.
+[31:25.100 --> 31:27.100]  What is uwe?
+[31:27.100 --> 31:29.100]  Uwe to jest imię.
+[31:29.100 --> 31:30.100]  To jest imię.
+[31:30.100 --> 31:31.100]  This is a name.
+[31:31.100 --> 31:33.100]  Uwe.
+[31:33.100 --> 31:34.100]  Uwe.
+[31:34.100 --> 31:36.100]  Jeszcze znasz.
+[31:36.100 --> 31:39.100]  Ale nie słowiańskie imię.
+[31:39.100 --> 31:40.100]  To jest Slavik.
+[31:40.100 --> 31:42.100]  To tam nie jest niemieckie.
+[31:42.100 --> 31:43.100]  Uwe.
+[31:43.100 --> 31:44.100]  A to nie jest...
+[31:44.100 --> 31:45.100]  Niemieckie.
+[31:45.100 --> 31:48.100]  Niemieckie, japońskie?
+[31:48.100 --> 31:49.100]  Nie.
+[31:49.100 --> 31:51.100]  Japońskie, ale...
+[31:51.100 --> 31:52.100]  Szwedzkie.
+[31:52.100 --> 31:54.100]  Jakie to imię?
+[31:54.100 --> 31:55.100]  Skąd?
+[31:55.100 --> 31:57.100]  I will show up.
+[31:57.100 --> 32:00.100]  A, gratulacje.
+[32:00.100 --> 32:01.100]  Uwe.
+[32:01.100 --> 32:02.100]  Uwe.
+[32:02.100 --> 32:03.100]  Uwe.
+[32:03.100 --> 32:04.100]  Germańskie, tak.
+[32:04.100 --> 32:05.100]  Jestem w szoku.
+[32:05.100 --> 32:10.100]  But you can say germańskie for the language?
+[32:10.100 --> 32:13.100]  For general, this biggest area jest weekend.
+[32:13.100 --> 32:14.100]  Germańskie.
+[32:14.100 --> 32:15.100]  Germańskie.
+[32:15.100 --> 32:19.100]  To jest tak literacko, literatura germańska.
+[32:19.100 --> 32:21.100]  Wow, jestem w szoku.
+[32:21.100 --> 32:22.100]  Bardzo dobre dane.
+[32:22.100 --> 32:23.100]  Super.
+[32:23.100 --> 32:24.100]  How you know that?
+[32:24.100 --> 32:25.100]  It sounds like German.
+[32:25.100 --> 32:26.100]  It sounds like German.
+[32:26.100 --> 32:28.100]  I don't know if I've ever heard of it.
+[32:28.100 --> 32:29.100]  Uwe, it sounds like it.
+[32:29.100 --> 32:30.100]  Uwe, bardzo dobrze.
+[32:30.100 --> 32:31.100]  Dobrze, dobrze.
+[32:31.100 --> 32:32.100]  Tak.
+[32:32.100 --> 32:33.100]  Szoku.
+[32:33.100 --> 32:34.100]  Uwe jest z Niemiec, tak.
+[32:34.100 --> 32:35.100]  Imię germańskie, niemieckie.
+[32:35.100 --> 32:36.100]  Je chleb z masłem, musztarda.
+[32:36.100 --> 32:37.100]  Musztarda.
+[32:37.100 --> 32:38.100]  Oh, we could guess from product that he's German.
+[32:38.100 --> 32:39.100]  Tak, pytania?
+[32:39.100 --> 32:40.100]  Kierbasą, I think.
+[32:40.100 --> 32:41.100]  Oh, I think it's important.
+[32:41.100 --> 32:42.100]  No.
+[32:42.100 --> 32:43.100]  Product, tak.
+[32:43.100 --> 32:44.100]  Z masłem, z masłem.
+[32:44.100 --> 32:45.100]  No.
+[32:45.100 --> 32:46.100]  No.
+[32:46.100 --> 32:47.100]  No.
+[32:47.100 --> 32:48.100]  No.
+[32:48.100 --> 32:49.100]  No.
+[32:49.100 --> 32:50.100]  No.
+[32:50.100 --> 32:51.100]  No.
+[32:51.100 --> 32:52.100]  No.
+[32:52.100 --> 32:53.100]  No.
+[32:53.100 --> 32:54.100]  No.
+[32:54.100 --> 32:55.100]  No.
+[32:55.100 --> 32:56.100]  No.
+[32:56.100 --> 32:57.100]  No.
+[32:57.100 --> 32:58.100]  No.
+[32:58.100 --> 32:59.100]  No.
+[32:59.100 --> 33:00.100]  No.
+[33:00.100 --> 33:01.100]  Tak.
+[33:01.100 --> 33:02.100]  Z masłem.
+[33:02.100 --> 33:03.100]  Ją mi masą.
+[33:03.100 --> 33:04.100]  Tak.
+[33:04.100 --> 33:05.100]  Musztarda.
+[33:05.100 --> 33:06.100]  Musztarda o, fantastycznie.
+[33:06.100 --> 33:07.100]  I echtSec logistics , illegal toast...
+[33:07.100 --> 33:08.100]  I kitchen.
+[33:08.100 --> 33:09.100]  D anterior.
+[33:09.100 --> 33:10.100]  Protection.
+[33:10.100 --> 33:11.100]  A d потом fertile.
+[33:11.100 --> 33:12.100]  Iktion.
+[33:12.100 --> 33:13.100]  tercer...
+[33:13.100 --> 33:14.100]  Thank you.
+[33:14.100 --> 33:15.100]  Tratum, bardzo.
+[33:15.100 --> 33:16.100]  Bardzo dobrze.
+[33:16.100 --> 33:17.100]  Czy to jest dobre śniadanie?
+[33:17.100 --> 33:18.100]  Takie sobie.
+[33:18.100 --> 33:19.100]  Takiez sobie.
+[33:19.100 --> 33:20.100]  Takiez sobie.
+[33:20.100 --> 33:21.100]  Pójdź 然後.
+[33:21.100 --> 33:22.100]  Tak.
+[33:22.100 --> 33:23.100]  Z.
+[33:23.100 --> 33:24.100]  Tak, z.
+[33:24.100 --> 33:25.100]  Bardzo dobrze.
+[33:25.100 --> 33:27.100]  To jest neutralnym i mecki narzędzkiem.
+[33:27.100 --> 33:28.100]  Tak.
+[33:28.100 --> 33:29.100]  Brothers.
+[33:29.100 --> 33:32.100]  A tutaj feminatywne.
+[33:32.100 --> 33:39.100]  To jest Angela. Angela je chleb z ser żółtym.
+[33:39.100 --> 33:42.100]  Ser z żółtym.
+[33:42.100 --> 33:46.100]  Serem i żółtym.
+[33:46.100 --> 33:48.100]  Adjektyw tym, tym, tym.
+[33:48.100 --> 33:50.100]  Z serem, żółtym.
+[33:50.100 --> 33:52.100]  Głównie.
+[33:52.100 --> 33:54.100]  Czy możesz wyjaśnić, co to znaczy?
+[33:54.100 --> 33:56.100]  Dlaczego zmieniliśmy?
+[33:56.100 --> 33:59.100]  Adjektywem musimy zmienić wszystkie.
+[33:59.100 --> 34:02.100]  Na przykład ser, kielbasa.
+[34:02.100 --> 34:06.100]  Ale jeśli chcielibyśmy porozmawiać o typie ciśnienia,
+[34:06.100 --> 34:09.100]  o typie kielbasy, kolorze czegoś,
+[34:09.100 --> 34:11.100]  mamy grupę adjektywów.
+[34:11.100 --> 34:15.100]  I dlatego też dajemy końcówkę.
+[34:15.100 --> 34:18.100]  Niestety nie będzie to samo.
+[34:18.100 --> 34:22.100]  Ale nasze adjektywy mają też konkretne końcówki.
+[34:22.100 --> 34:26.100]  Na przykład masculin i dendron będą dynami.
+[34:26.100 --> 34:29.100]  Serem, żółtym.
+[34:29.100 --> 34:34.100]  Czy adjektyw zawsze ma inną końcówkę?
+[34:34.100 --> 34:35.100]  Tak.
+[34:35.100 --> 34:38.100]  I jaka jest reguła na kontynuowanie tej końcówki?
+[34:38.100 --> 34:40.100]  To jest tak, że...
+[34:40.100 --> 34:42.100]  Pokażę Ci to.
+[34:42.100 --> 34:44.100]  To działa tutaj.
+[34:44.100 --> 34:46.100]  O, to jest biernik.
+[34:46.100 --> 34:48.100]  Tak.
+[34:48.100 --> 34:50.100]  A kiedy mamy...
+[34:50.100 --> 34:52.100]  Kiedy mamy to...
+[34:52.100 --> 34:54.100]  To jest jedna końcówka.
+[34:54.100 --> 34:56.100]  Gdzie jest biernik?
+[34:56.100 --> 34:58.100]  Gdzie jest...
+[34:58.100 --> 35:00.100]  Za, za, za, za.
+[35:00.100 --> 35:02.100]  Tak, tak, tak.
+[35:02.100 --> 35:04.100]  O, tutaj.
+[35:04.100 --> 35:05.100]  Klasa 3.
+[35:05.100 --> 35:07.100]  O, jest.
+[35:07.100 --> 35:09.100]  Jest, jest.
+[35:09.100 --> 35:10.100]  O, tak.
+[35:10.100 --> 35:11.100]  To jest...
+[35:11.100 --> 35:13.100]  Więc w adjektywie, przydzięcznik,
+[35:13.100 --> 35:18.100]  w większości, 90%, 90% sytuacji.
+[35:18.100 --> 35:20.100]  To samo z dynami.
+[35:20.100 --> 35:21.100]  Niejaki.
+[35:21.100 --> 35:24.100]  Ale kiedy mamy kod,
+[35:24.100 --> 35:25.100]  my...
+[35:25.100 --> 35:27.100]  Zrobimy to mniejsze.
+[35:27.100 --> 35:28.100]  Tak.
+[35:28.100 --> 35:29.100]  Dlatego mamy im.
+[35:29.100 --> 35:30.100]  Im, im, im.
+[35:30.100 --> 35:33.100]  I z terminem grzeńskim nie ma problemu.
+[35:33.100 --> 35:35.100]  Tak? Bo jest oł.
+[35:35.100 --> 35:36.100]  I oł.
+[35:36.100 --> 35:37.100]  Oł, oł.
+[35:37.100 --> 35:38.100]  Ok.
+[35:38.100 --> 35:40.100]  Więc to jest zupełnie inna,
+[35:40.100 --> 35:42.100]  jak lubi, jak zróbmy to do...
+[35:42.100 --> 35:44.100]  Grammatycznie, tak.
+[35:44.100 --> 35:46.100]  Tak, mamy trochę podobności,
+[35:46.100 --> 35:48.100]  ale nie z męskimi,
+[35:48.100 --> 35:50.100]  męskimi i niejaki.
+[35:50.100 --> 35:51.100]  Tak, tak.
+[35:51.100 --> 35:52.100]  Tak.
+[35:52.100 --> 35:54.100]  A tu jest jeszcze biernik.
+[35:54.100 --> 35:56.100]  Biernik, biernik, biernik.
+[35:56.100 --> 35:57.100]  I biernik.
+[35:57.100 --> 35:58.100]  Generalnie nie ma problemu.
+[35:58.100 --> 35:59.100]  It looks like mianownik.
+[35:59.100 --> 36:00.100]  Like nominative,
+[36:00.100 --> 36:01.100]  original form,
+[36:01.100 --> 36:02.100]  so no ending.
+[36:02.100 --> 36:03.100]  Only if you have a life.
+[36:03.100 --> 36:04.100]  So for example,
+[36:04.100 --> 36:05.100]  you can say
+[36:05.100 --> 36:06.100]  I have good doctor.
+[36:06.100 --> 36:07.100]  Mam dobrego lekarza.
+[36:07.100 --> 36:08.100]  Doktora, kardiologa.
+[36:08.100 --> 36:09.100]  Nie ma problemu.
+[36:09.100 --> 36:10.100]  I biernik.
+[36:10.100 --> 36:11.100]  I biernik.
+[36:11.100 --> 36:12.100]  I biernik.
+[36:12.100 --> 36:13.100]  I biernik.
+[36:13.100 --> 36:14.100]  I biernik.
+[36:14.100 --> 36:15.100]  I biernik.
+[36:15.100 --> 36:16.100]  I biernik.
+[36:16.100 --> 36:17.100]  I biernik.
+[36:17.100 --> 36:18.100]  I biernik.
+[36:18.100 --> 36:19.100]  I biernik.
+[36:19.100 --> 36:20.100]  I biernik.
+[36:20.100 --> 36:21.100]  I biernik.
+[36:21.100 --> 36:22.100]  I biernik.
+[36:22.100 --> 36:23.100]  I biernik.
+[36:23.100 --> 36:24.100]  I biernik.
+[36:24.100 --> 36:25.100]  I biernik.
+[36:25.100 --> 36:26.100]  I biernik.
+[36:26.100 --> 36:27.100]  I biernik.
+[36:27.100 --> 36:28.100]  I biernik.
+[36:28.100 --> 36:29.100]  I biernik.
+[36:29.100 --> 36:30.100]  Ok.
+[36:30.100 --> 36:31.100]  No dobra.
+[36:31.100 --> 36:32.100]  Co mamy tu?
+[36:32.100 --> 36:33.100]  I mamy z serem żółtym.
+[36:33.100 --> 36:34.100]  No dobra.
+[36:34.100 --> 36:35.100]  Pomidorem.
+[36:35.100 --> 36:36.100]  Pomidorem.
+[36:36.100 --> 36:37.100]  Świetnie.
+[36:37.100 --> 36:38.100]  Pomidorem.
+[36:38.100 --> 36:39.100]  Szynka.
+[36:39.100 --> 36:40.100]  Szynką.
+[36:40.100 --> 36:41.100]  I szynką.
+[36:41.100 --> 36:42.100]  No dobrze.
+[36:42.100 --> 36:43.100]  Jakie śniadanie
+[36:43.100 --> 36:44.100]  prezentujecie?
+[36:44.100 --> 36:45.100]  Szynka.
+[36:45.100 --> 36:46.100]  Szynka.
+[36:46.100 --> 36:47.100]  Szynka.
+[36:47.100 --> 36:48.100]  Szynka.
+[36:48.100 --> 36:49.100]  Szynka.
+[36:49.100 --> 36:50.100]  Szynka.
+[36:50.100 --> 36:51.100]  Szynka.
+[36:51.100 --> 36:52.100]  Szynka.
+[36:52.100 --> 36:53.100]  Szynka.
+[36:53.100 --> 36:57.100]  Angela, styl Angeli, styl Uwe.
+[36:57.100 --> 37:00.100]  Bili, masz opcję.
+[37:00.100 --> 37:04.100]  Angela, Uwe, co dobre, co preferujesz?
+[37:04.100 --> 37:05.100]  Angela.
+[37:05.100 --> 37:06.100]  Angela, dobra, dobra.
+[37:06.100 --> 37:08.100]  Coś jadamy?
+[37:08.100 --> 37:12.100]  No, chyba tak, prawdopodobnie, prawdopodobnie, tak, jadanie.
+[37:12.100 --> 37:16.100]  No, tam chleb, może być też kolacja?
+[37:16.100 --> 37:20.100]  Co preferujesz? Kolacja, last, maybe, kolacja?
+[37:20.100 --> 37:22.100]  For Polish, yes.
+[37:22.100 --> 37:24.100]  We can eat a lot of bread.
+[37:24.100 --> 37:27.100]  I like Uwe.
+[37:27.100 --> 37:29.100]  You know I like kielbasa.
+[37:29.100 --> 37:32.100]  To tak, to jest kielbasa, Daniel, Ty mówisz, że Ty lubisz kielbasę.
+[37:32.100 --> 37:34.100]  I I like the kielbasa.
+[37:34.100 --> 37:36.100]  Super, no dobrze.
+[37:36.100 --> 37:40.100]  I'm too close to this hollow tartar, I'm starting to sink it.
+[37:40.100 --> 37:42.100]  O, to masz kielbasa z Nyski.
+[37:42.100 --> 37:46.100]  To jest bardzo popularna kielbasa w Krakowie, tak, bardzo.
+[37:46.100 --> 37:51.100]  I, muszę wyląc ten, kielbasa z Nyski.
+[37:51.100 --> 37:57.100]  Bardzo popularne miejsce, bardzo dobra kielbasa.
+[37:57.100 --> 38:08.100]  Tak, to jest pan, I'm not sure that is still, we have the same men, but for sure the same car, the same style.
+[38:08.100 --> 38:11.100]  I bardzo dobra kielbasa.
+[38:11.100 --> 38:13.100]  Bardzo dobra.
+[38:13.100 --> 38:15.100]  So to znaczy Nyski?
+[38:15.100 --> 38:19.100]  O, z Nyski, it's from name of place.
+[38:19.100 --> 38:21.100]  To jest kielbasa, to jest miejsce.
+[38:21.100 --> 38:23.100]  To jest samochód?
+[38:23.100 --> 38:25.100]  O, ok, ok.
+[38:25.100 --> 38:27.100]  To nie jest samochód, to jest Nyski.
+[38:27.100 --> 38:29.100]  Niemiec, miejsce.
+[38:29.100 --> 38:32.100]  To znaczy, to jest miejsce w Polsce?
+[38:32.100 --> 38:36.100]  Tak, to jest, to jest, więc tutaj jest funkcja jak przed.
+[38:36.100 --> 38:40.100]  O, to jest, to jest, dobre pytanie.
+[38:40.100 --> 38:42.100]  Kielbasa z Nyski.
+[38:42.100 --> 38:46.100]  O, wygląda jak tutaj, ale to jest typowe.
+[38:46.100 --> 38:48.100]  No dobrze.
+[38:49.100 --> 38:54.100]  To mamy śniadanie, czyli teraz jest Karolina.
+[38:54.100 --> 38:58.100]  I Karolina je, to jest opcja bułka.
+[38:58.100 --> 39:00.100]  Buką.
+[39:00.100 --> 39:05.100]  No, but preposition ze will be later, so here, we can give moment bułkę.
+[39:05.100 --> 39:07.100]  Bukę.
+[39:07.100 --> 39:11.100]  Because bułka is directly after word to eat, so biednik.
+[39:11.100 --> 39:13.100]  Biednik, actually second time.
+[39:13.100 --> 39:16.100]  Karolina je bułkę, tak.
+[39:16.100 --> 39:18.100]  So it's the, it's the one that's directly after,
+[39:18.100 --> 39:21.100]  not the one that's like the now or the more important one.
+[39:21.100 --> 39:24.100]  So directly it will be after jeść, pić verbs,
+[39:24.100 --> 39:29.100]  but narzędnik will be only after preposition ze.
+[39:29.100 --> 39:36.100]  So you can say Karolina je serbiałe ze bułką.
+[39:36.100 --> 39:37.100]  Ze bułką.
+[39:37.100 --> 39:39.100]  So just switch it.
+[39:39.100 --> 39:42.100]  Tak, so for example, it can be like that.
+[39:42.100 --> 39:46.100]  Karolina je bułkę.
+[39:46.100 --> 39:51.100]  Chleb i bagietkę.
+[39:51.100 --> 39:53.100]  Here only biednik.
+[39:53.100 --> 39:59.100]  No preposition ze, so only biednik.
+[39:59.100 --> 40:02.100]  Co ekstra?
+[40:02.100 --> 40:09.100]  Paweł pije zwykle, usually.
+[40:09.100 --> 40:12.100]  Wodę mineralną.
+[40:12.100 --> 40:15.100]  Herbatę zieloną.
+[40:15.100 --> 40:17.100]  I piwo.
+[40:17.100 --> 40:23.100]  To też jest only biednik, tylko biednik.
+[40:23.100 --> 40:26.100]  But also you can mix,
+[40:26.100 --> 40:31.100]  when we will a little bit change the sentences.
+[40:31.100 --> 40:38.100]  Karolina je bułkę z.
+[40:38.100 --> 40:44.100]  Z masłem, chlebem, bo bułka położa salatą.
+[40:44.100 --> 40:48.100]  Szybko i obidorem.
+[40:48.100 --> 40:54.100]  So after this moment we have narzędnik.
+[40:54.100 --> 40:56.100]  It's only if they're like tied to the z.
+[40:56.100 --> 41:01.100]  Like could you also just say Karolina je bułkę z masłem
+[41:01.100 --> 41:04.100]  and then just say salata?
+[41:04.100 --> 41:09.100]  Tak, so one z working with all of the sentence.
+[41:09.100 --> 41:12.100]  Only if you for example say or,
+[41:12.100 --> 41:16.100]  she eat bread with something,
+[41:16.100 --> 41:18.100]  we should stop.
+[41:18.100 --> 41:21.100]  But here because this is like continuation,
+[41:21.100 --> 41:25.100]  all of the next words were working with narzędnik.
+[41:25.100 --> 41:28.100]  Tak samo tutaj.
+[41:28.100 --> 41:34.100]  Paweł.
+[41:34.100 --> 41:40.100]  Paweł pije wodę mineralną z cytryną.
+[41:40.100 --> 41:42.100]  I miętą.
+[41:42.100 --> 41:43.100]  Mięta?
+[41:43.100 --> 41:44.100]  Mynt.
+[41:44.100 --> 41:45.100]  Mynt.
+[41:45.100 --> 41:46.100]  Tak.
+[41:46.100 --> 41:49.100]  Z cytryną i miętą we have the same situation still.
+[41:49.100 --> 41:50.100]  Narzędnik.
+[41:50.100 --> 41:52.100]  But here biednik.
+[41:52.100 --> 41:54.100]  Tu jest biednik.
+[41:54.100 --> 42:00.100]  I tu też jest biednik.
+[42:00.100 --> 42:04.100]  W porządku?
+[42:04.100 --> 42:06.100]  Ok.
+[42:06.100 --> 42:08.100]  I to jest biednik.
+[42:08.100 --> 42:10.100]  Ok?
+[42:10.100 --> 42:12.100]  No dobrze.
+[42:12.100 --> 42:17.100]  To mamy dalej kontynuację co to?
+[42:17.100 --> 42:19.100]  Karolina je bułkę.
+[42:19.100 --> 42:21.100]  Tu jest biednik.
+[42:21.100 --> 42:25.100]  I propozycja z standard narzędnik.
+[42:25.100 --> 42:26.100]  Masłem.
+[42:26.100 --> 42:28.100]  Bananstyczny z masłem.
+[42:28.100 --> 42:30.100]  Ser biały.
+[42:30.100 --> 42:34.100]  Serem biało.
+[42:34.100 --> 42:36.100]  Biało, feminatywny.
+[42:36.100 --> 42:37.100]  A maskelinum?
+[42:37.100 --> 42:38.100]  Serem biało.
+[42:38.100 --> 42:39.100]  Białym.
+[42:39.100 --> 42:40.100]  Białym.
+[42:40.100 --> 42:41.100]  Białym.
+[42:41.100 --> 42:42.100]  Białym.
+[42:42.100 --> 42:43.100]  Ser biały.
+[42:43.100 --> 42:44.100]  Ser biały.
+[42:44.100 --> 42:45.100]  Working line.
+[42:45.100 --> 42:46.100]  Serem żółtym.
+[42:46.100 --> 42:47.100]  Żółtym.
+[42:47.100 --> 42:48.100]  Białym.
+[42:48.100 --> 42:49.100]  Białym.
+[42:49.100 --> 42:50.100]  Białym.
+[42:50.100 --> 42:51.100]  Białym.
+[42:51.100 --> 42:52.100]  Białym.
+[42:52.100 --> 42:53.100]  Białym.
+[42:53.100 --> 42:54.100]  Białym.
+[42:54.100 --> 42:55.100]  Białym.
+[42:55.100 --> 42:56.100]  Białym.
+[42:56.100 --> 42:57.100]  Ser białym.
+[42:57.100 --> 42:58.100]  Dżemem?
+[42:58.100 --> 42:59.100]  Dżemem?
+[42:59.100 --> 43:00.100]  Dżemem.
+[43:00.100 --> 43:01.100]  Bardzo dobrze.
+[43:01.100 --> 43:02.100]  Dżemem.
+[43:02.100 --> 43:03.100]  I miód?
+[43:03.100 --> 43:04.100]  Miodem.
+[43:04.100 --> 43:05.100]  Miodem.
+[43:05.100 --> 43:06.100]  Fantastycznie.
+[43:06.100 --> 43:07.100]  Miodem?
+[43:07.100 --> 43:08.100]  Miodem.
+[43:08.100 --> 43:10.100]  I jest ja.
+[43:10.100 --> 43:14.100]  Mamy takie menu, taką opcję.
+[43:14.100 --> 43:16.100]  Ja jem mucha.
+[43:16.100 --> 43:17.100]  Mówi akcent.
+[43:17.100 --> 43:19.100]  Czy to jest ja tutaj?
+[43:19.100 --> 43:28.100]  Nie musisz to powiedzieć, ale pokażę ci różnice między tym osobą i wyrażam to ja.
+[43:28.100 --> 43:31.100]  Ale normalnie ludzie mówią jem.
+[43:31.100 --> 43:36.100]  Ale to my chcielibyśmy wyrażać, że to jest o nas, możemy.
+[43:36.100 --> 43:38.100]  Jem bułka.
+[43:38.100 --> 43:39.100]  Błonka.
+[43:39.100 --> 43:40.100]  Błonka.
+[43:40.100 --> 43:41.100]  Super.
+[43:41.100 --> 43:42.100]  Błonka.
+[43:42.100 --> 43:43.100]  Ok.
+[43:43.100 --> 43:44.100]  Jajko.
+[43:44.100 --> 43:45.100]  Jajkiem.
+[43:45.100 --> 43:46.100]  Dobrze.
+[43:46.100 --> 43:47.100]  Because of kejk, we're giving extra sauterie.
+[43:47.100 --> 43:48.100]  Jajkiem.
+[43:48.100 --> 43:49.100]  Jajkiem.
+[43:49.100 --> 43:50.100]  Wędlina.
+[43:50.100 --> 43:51.100]  Wędlina.
+[43:51.100 --> 43:52.100]  Wędlina.
+[43:52.100 --> 43:53.100]  Super.
+[43:53.100 --> 43:54.100]  I musztarda.
+[43:54.100 --> 43:55.100]  Musztarda.
+[43:55.100 --> 43:56.100]  Musztarda.
+[43:56.100 --> 43:57.100]  Bardzo dobrze.
+[43:57.100 --> 43:58.100]  Gratulacje.
+[43:58.100 --> 43:59.100]  Jak jest wędlino?
+[43:59.100 --> 44:00.100]  Wędlino.
+[44:00.100 --> 44:01.100]  Co to znaczy?
+[44:01.100 --> 44:02.100]  To znaczy, że to jest wędlino.
+[44:02.100 --> 44:03.100]  Wędlino.
+[44:03.100 --> 44:04.100]  Wędlino.
+[44:04.100 --> 44:05.100]  Wędlino.
+[44:05.100 --> 44:06.100]  Wędlino.
+[44:06.100 --> 44:07.100]  Wędlino.
+[44:07.100 --> 44:11.780]  Wędlino, to jest.
+[44:11.780 --> 44:17.100]  A wędlina, to jest jak szynka.
+[44:17.100 --> 44:18.100]  Aaa.
+[44:18.100 --> 44:21.100]  Tak to jest wędlina, to jest owszynka.
+[44:21.100 --> 44:22.100]  To dobrze.
+[44:22.100 --> 44:23.100]  Okej.
+[44:23.100 --> 44:24.100]  Super.
+[44:24.100 --> 44:26.100]  No mamy taką propozycję, dwa c.
+[44:26.100 --> 44:32.160]  To jest komunikacja, co jemy na śniadanie, na obiad, na kolację.
+[44:32.160 --> 44:33.160]  Konvez Rhód.
+[44:33.160 --> 44:34.160]  Tak.
+[44:34.160 --> 44:35.480] Ą
+[44:35.480 --> 44:37.080] etics mouse.
+[44:37.100 --> 44:47.100]  Kiedy szukamy tego składu, widzimy strategię używania dwóch przypadków.
+[44:47.100 --> 44:59.100]  Na lewej stronie mamy na śniadanie, na obiad, na kolację, na śniadanie jem, na obiad jem, na kolację jem.
+[44:59.100 --> 45:08.100]  Na lewej stronie mamy na śniadanie, na śniadanie jem, na obiad jem, na kolację jem.
+[45:08.100 --> 45:13.100]  Nie musimy szukać odpowiednich form, bo już jest to zrobione.
+[45:13.100 --> 45:19.100]  Wybieramy tylko to, co chcemy zjeść, co chcemy zjeść, co chcemy zjeść,
+[45:19.100 --> 45:23.100]  i trochę rozmowy z praktyką tych form.
+[45:23.100 --> 45:28.100]  Mamy jedno, jest chleb, bukę, kanapkę. Kanapkę, ok?
+[45:28.100 --> 45:29.100]  Tak.
+[45:29.100 --> 45:30.100]  Super.
+[45:30.100 --> 45:33.100]  Musli, płatki, a kotlet? Co to kotlet?
+[45:33.100 --> 45:36.100]  To są kotlety, prawda?
+[45:36.100 --> 45:38.100]  Tak, mięso, mięso, tak?
+[45:38.100 --> 45:42.100]  Takie też typowe, tradycyjny obiad polski, tak?
+[45:42.100 --> 45:43.100]  Ma kotlet.
+[45:43.100 --> 45:48.100]  Jest orczaka, rybę, w porządku?
+[45:48.100 --> 45:51.100]  Zupę pomidorową, ryż.
+[45:51.100 --> 45:53.100]  Ryż, ryż, ryż.
+[45:53.100 --> 45:55.100]  A gorąco, tak.
+[45:55.100 --> 45:56.100]  Super.
+[45:56.100 --> 45:58.100]  I mamy narzędnik z czym?
+[45:58.100 --> 46:01.100]  Narzędnik z czym? So it means with what?
+[46:01.100 --> 46:02.100]  Tak.
+[46:02.100 --> 46:03.100]  With what?
+[46:03.100 --> 46:12.100]  I mamy opcje z masłem, z pomidorem, z szynką, z serem, ogórkiem, nutello, z jogurtem, dżemem.
+[46:12.100 --> 46:14.100]  And another something new?
+[46:14.100 --> 46:18.100]  Or basically have you heard of those things?
+[46:18.100 --> 46:20.100]  No, same thing.
+[46:20.100 --> 46:22.100]  Ziemniaka.
+[46:22.100 --> 46:24.100]  Ziemniakami?
+[46:24.100 --> 46:25.100]  Ziemniaki.
+[46:25.100 --> 46:27.100]  Ziemniaki to frytki, finalnie.
+[46:27.100 --> 46:29.100]  Ziemniaki, wadona?
+[46:29.100 --> 46:31.100]  Oh, potatoes.
+[46:31.100 --> 46:38.100]  Tak, bardzo dobrze. To są ziemniaki z warzywami vegetables i z makaronem?
+[46:38.100 --> 46:39.100]  Makaron.
+[46:39.100 --> 46:40.100]  Masa.
+[46:40.100 --> 46:42.100]  Masa, tak. Super.
+[46:42.100 --> 46:44.100]  No dobra, sekcja numer dwa.
+[46:44.100 --> 46:47.100]  Mamy coś do picia, drinks.
+[46:47.100 --> 46:53.100]  Hawę, te waty, wodę, mleko, sok, piwo, wódkę.
+[46:53.100 --> 46:55.100]  Coś nowego?
+[46:55.100 --> 46:56.100]  Tutaj?
+[46:57.100 --> 47:01.100]  Nie.
+[47:01.100 --> 47:03.100]  Nie, tak, jest ok, dobra.
+[47:03.100 --> 47:06.100]  I opcje with what?
+[47:06.100 --> 47:10.100]  Z jajkiem, z cukrem, z cytryną, z lodem, z lodem, z sokiem.
+[47:10.100 --> 47:13.100]  Tak, w porządku.
+[47:13.100 --> 47:16.100]  No dobra, to ekstra.
+[47:16.100 --> 47:20.100]  To teraz minimalnie pytania, tak.
+[47:20.100 --> 47:21.100]  How we can print?
+[47:21.100 --> 47:25.100]  We can compare this with last question from previous tasks.
+[47:25.100 --> 47:28.100]  To will be co pijesz?
+[47:28.100 --> 47:34.100]  Co jesz na śniadanie, obiad, kolację?
+[47:34.100 --> 47:42.100]  Or we also can create co lubisz jeść na śniadanie, obiad, kolację?
+[47:42.100 --> 47:54.100]  About the drink will be co pijesz do śniadania, obiadu, kolacji?
+[47:54.100 --> 47:59.100]  I co lubisz pić do?
+[47:59.100 --> 48:10.100]  Tutaj będzie śniadanie, obiadu, kolacji.
+[48:10.100 --> 48:18.100]  Śniadanie, obiad, kolację.
+[48:18.100 --> 48:26.100]  Śniadanie, obiad, kolacja.
+[48:35.100 --> 48:37.100]  W porządku?
+[48:37.100 --> 48:40.100]  Dobrze, super.
+[48:40.100 --> 48:45.100]  No dobra, to Chyla, czy mogę do ciebie pytanie?
+[48:45.100 --> 48:46.100]  Tak.
+[48:46.100 --> 48:48.100]  To moje pytanie do ciebie.
+[48:48.100 --> 48:54.100]  Co zwykle generalnie jesz na śniadanie? Co lubisz?
+[48:54.100 --> 48:59.100]  Może być opcja from here, może być your own option?
+[48:59.100 --> 49:01.100]  I will do it from this, but it can't be.
+[49:05.100 --> 49:08.100]  Jem na śniadanie...
+[49:11.100 --> 49:13.100]  Knawkę z...
+[49:18.100 --> 49:20.100]  Warzywami.
+[49:20.100 --> 49:22.100]  A, okej, to tak zdrowo, super.
+[49:22.100 --> 49:24.100]  Knawkę z warzywami, okej.
+[49:24.100 --> 49:28.100]  A co pijesz do śniadania?
+[49:28.100 --> 49:30.100]  Herbatę.
+[49:30.100 --> 49:32.100]  Herbatę z mlekiem.
+[49:32.100 --> 49:34.100]  A, herbatę z mlekiem, u, super.
+[49:34.100 --> 49:37.100]  No to dobrze, ja testowałam, to jest dobra.
+[49:37.100 --> 49:43.100]  A lubisz wodę z cytryną, czy nie bardzo?
+[49:43.100 --> 49:44.100]  Nie.
+[49:44.100 --> 49:46.100]  Nie, rozumiemy.
+[49:46.100 --> 49:48.100]  Dobrze.
+[49:48.100 --> 49:53.100]  To Mami, czy ty możesz zdecydować kto następny?
+[49:53.100 --> 49:55.100]  And what kind of question, jakie pytanie?
+[49:55.100 --> 49:56.100]  Czy something...
+[49:56.100 --> 49:58.100]  A mi?
+[50:01.100 --> 50:04.100]  Co jesz na śniadanie?
+[50:06.100 --> 50:07.100]  Co jesz na śniadanie?
+[50:10.100 --> 50:12.100]  Na śniadanie...
+[50:12.100 --> 50:13.100]  Jem...
+[50:14.100 --> 50:15.100]  Chleb z...
+[50:16.100 --> 50:18.100]  Jem...
+[50:18.100 --> 50:20.100]  Z masłem...
+[50:20.100 --> 50:23.100]  I z nutella.
+[50:23.100 --> 50:26.100]  Dobrze, dobrze.
+[50:26.100 --> 50:28.100]  Z nutello.
+[50:28.100 --> 50:30.100]  Z nutello.
+[50:30.100 --> 50:32.100]  Wszystko czy ty?
+[50:32.100 --> 50:34.100]  Dobrze, Ami, twoja?
+[50:38.100 --> 50:39.100]  I forgot.
+[50:39.100 --> 50:40.100]  A ja no.
+[50:40.100 --> 50:41.100]  A ja no.
+[50:41.100 --> 50:42.100]  A ja no.
+[50:42.100 --> 50:43.100]  A ja no.
+[50:43.100 --> 50:44.100]  A ja no.
+[50:44.100 --> 50:45.100]  You say it correct?
+[50:45.100 --> 50:46.100]  A ja no.
+[50:46.100 --> 50:47.100]  A ja no?
+[50:47.100 --> 50:48.100]  Ja no.
+[50:48.100 --> 50:49.100]  A ja no.
+[50:49.100 --> 50:50.100]  Ja no.
+[50:50.100 --> 50:51.100]  A ja no.
+[50:51.100 --> 50:52.100]  Ja no.
+[50:52.100 --> 51:01.100]  A, okej, okej, super.
+[51:01.100 --> 51:02.100]  Dobrze.
+[51:02.100 --> 51:10.100]  Co lubisz pić do obiadu?
+[51:10.100 --> 51:20.100]  Wodę mineralną. Klasyczną i zdrową.
+[51:20.100 --> 51:30.100]  Wodę mineralną. A lubisz, preferujesz wodę z cytryną?
+[51:30.100 --> 51:41.100]  O, teraz. Ok, ja wiem, twoja ludzka. Kto następny?
+[51:41.100 --> 51:51.100]  Adne, Miri, jest Amin, jest Himak, jest Daniel i jest Rafał.
+[51:51.100 --> 51:54.100]  Miri.
+[51:54.100 --> 51:59.100]  Miri, tak. No dobrze, to Miri.
+[51:59.100 --> 52:00.100]  Tak, dobrze.
+[52:00.100 --> 52:04.100]  Co lubisz?
+[52:04.100 --> 52:09.100]  Je.
+[52:09.100 --> 52:10.100]  Dobrze.
+[52:10.100 --> 52:12.100]  Co lubisz jeść?
+[52:12.100 --> 52:13.100]  Jeść.
+[52:13.100 --> 52:17.100]  Jeść na śniadanie.
+[52:17.100 --> 52:26.100]  Lubię śniadanie. Chleb z nutella.
+[52:26.100 --> 52:29.100]  O, bardzo dobre. Chleb z nutella. Fantastycznie.
+[52:29.100 --> 52:30.100]  Tak samo.
+[52:30.100 --> 52:37.100]  Tak samo, ja też tak samo mogę. To jest dobre śniadanie.
+[52:37.100 --> 52:39.100]  Ok, i twoje pytanie.
+[52:39.100 --> 52:41.100]  Daniel?
+[52:41.100 --> 52:51.100]  Co lubisz, I'm sorry, co jeść na obiad?
+[52:51.100 --> 52:53.100]  Jeść na obiad. Obiad, tak jak obiad.
+[52:53.100 --> 52:54.100]  Tak, tak, tak.
+[52:54.100 --> 52:55.100]  Tak, tak.
+[52:55.100 --> 52:59.100]  Obiad, ok, obiad.
+[52:59.100 --> 53:17.100]  Obiad, jem, jem, jem macaroni z sosem pomidorowym.
+[53:17.100 --> 53:19.100]  O, z sosem pomidorowym.
+[53:19.100 --> 53:20.100]  Z sosem pomidorowym.
+[53:20.100 --> 53:22.100]  Dobrze, to też tak dobre, smaczne.
+[53:22.100 --> 53:24.100]  To jest tak jak spaghetti bolognese.
+[53:24.100 --> 53:27.100]  Spaghetti bolognese czy sos pomidorowy?
+[53:27.100 --> 53:29.100]  Spaghetti bolognese.
+[53:29.100 --> 53:30.100]  O, bardzo dobre.
+[53:30.100 --> 53:31.100]  Dobre.
+[53:31.100 --> 53:33.100]  Ja też, dobre.
+[53:33.100 --> 53:34.100]  Dobre.
+[53:34.100 --> 53:35.100]  Robię, robię.
+[53:35.100 --> 53:39.100]  Aha, robię, super, bardzo fajnie.
+[53:39.100 --> 53:42.100]  No dobrze, Daniel, twoje pytanie.
+[53:42.100 --> 53:43.100]  I'm sorry, I forgot your name.
+[53:43.100 --> 53:44.100]  Yeah, Gorov.
+[53:44.100 --> 53:45.100]  Gorov.
+[53:45.100 --> 53:47.100]  Yeah, yeah, Gorov.
+[53:47.100 --> 53:48.100]  No, that's fine, yeah, yeah.
+[53:48.100 --> 53:49.100]  Gorov.
+[53:49.100 --> 53:50.100]  Gorov, yeah.
+[53:50.100 --> 53:53.100]  Ok, ok, Gorov.
+[53:54.100 --> 53:56.100]  Dobrze, dziękuję bardzo.
+[53:56.100 --> 54:03.100]  Lubisz pić do śniadania?
+[54:03.100 --> 54:07.100]  Lubię…pijesz…pije?
+[54:07.100 --> 54:20.100]  Lubię…pije kawę bez mlekiem, mleko.
+[54:20.100 --> 54:23.100]  A, bez mleka, bez mleka, dobrze.
+[54:23.100 --> 54:25.100]  Bez mleku?
+[54:25.100 --> 54:27.100]  We'll create that option. Bardzo dobrze.
+[54:27.100 --> 54:29.100]  Kawa bez mleka.
+[54:29.100 --> 54:31.100]  Intensyta kawa.
+[54:31.100 --> 54:33.100]  Mocna kawa.
+[54:33.100 --> 54:35.100]  Mocna kawa, tak.
+[54:35.100 --> 54:37.100]  Dobrze.
+[54:37.100 --> 54:39.100]  If someone says, lubię,
+[54:39.100 --> 54:41.100]  the answer will be a pitch.
+[54:41.100 --> 54:43.100]  This is also my point for you.
+[54:43.100 --> 54:45.100]  Yes, when you have first question,
+[54:45.100 --> 54:47.100]  co jesz na śniadanie,
+[54:47.100 --> 54:49.100]  you can say, jem, directly.
+[54:49.100 --> 54:51.100]  The same will be with co pijesz.
+[54:51.100 --> 54:53.100]  So we can say directly, piję.
+[54:53.100 --> 54:55.100]  When you have a question
+[54:55.100 --> 54:57.100]  with two like
+[54:57.100 --> 54:59.100]  and after that
+[54:59.100 --> 55:01.100]  infinitive,
+[55:01.100 --> 55:03.100]  we can say, we can repeat,
+[55:03.100 --> 55:05.100]  lubię,
+[55:05.100 --> 55:07.100]  pić.
+[55:07.100 --> 55:09.100]  So after lubię,
+[55:09.100 --> 55:11.100]  of course we can give infinitive.
+[55:11.100 --> 55:13.100]  Lubię pić wodę.
+[55:13.100 --> 55:15.100]  Lubię pić herbatę.
+[55:15.100 --> 55:17.100]  Lubię pić co ekstra.
+[55:17.100 --> 55:19.100]  I to jest to.
+[55:19.100 --> 55:21.100]  I to jest to.
+[55:21.100 --> 55:23.100]  Lubię wino.
+[55:23.100 --> 55:25.100]  Wino, etc.
+[55:25.100 --> 55:27.100]  Identycznie tutaj, co lubisz jeść?
+[55:27.100 --> 55:29.100]  Lubię jeść.
+[55:29.100 --> 55:31.100]  Lubię jeść
+[55:31.100 --> 55:33.100]  itze wargę.
+[55:33.100 --> 55:35.100]  etc.
+[55:35.100 --> 55:37.100]  Tutaj pierwsze pytanie
+[55:37.100 --> 55:39.100]  basic, we just giving, jem.
+[55:39.100 --> 55:41.100]  A tutaj
+[55:41.100 --> 55:43.100]  I like to eat
+[55:43.100 --> 55:45.100]  because it was about that
+[55:45.100 --> 55:47.100]  this question.
+[55:47.100 --> 55:49.100]  W porządku? Mam pytanie.
+[55:49.100 --> 55:51.100]  So is it correct
+[55:51.100 --> 55:53.100]  to say that after lubię
+[55:53.100 --> 55:55.100]  the verb will always be in the
+[55:55.100 --> 55:57.100]  nominative, sorry, in the
+[55:57.100 --> 55:59.100]  nominative, right? Basic form, yeah?
+[55:59.100 --> 56:01.100]  For example, after lubię
+[56:01.100 --> 56:03.100]  you can also skip jeść.
+[56:03.100 --> 56:05.100]  And you can
+[56:05.100 --> 56:07.100]  say lubię kanapkę
+[56:07.100 --> 56:09.100]  z ogórkiem. Lubię chleb
+[56:09.100 --> 56:11.100]  z masłem. It's also possible
+[56:11.100 --> 56:13.100]  shorter way because we are distant
+[56:13.100 --> 56:15.100]  from context. No, so for example
+[56:15.100 --> 56:17.100]  what I was trying to ask is like
+[56:17.100 --> 56:19.100]  we have lubię, we are not saying lubię jem.
+[56:19.100 --> 56:21.100]  We are saying lubię jeść. No, lubię jem.
+[56:21.100 --> 56:23.100]  Not correct. Because this is
+[56:23.100 --> 56:25.100]  rule about what we
+[56:25.100 --> 56:27.100]  doing after verb to like
+[56:27.100 --> 56:29.100]  and you giving form. It would
+[56:29.100 --> 56:31.100]  some really weird in English. It's like
+[56:31.100 --> 56:33.100]  I like, I
+[56:33.100 --> 56:35.100]  like, I eat.
+[56:35.100 --> 56:37.100]  Or I like eat. Yes.
+[56:37.100 --> 56:39.100]  Tak, tak, tak. Yeah, it's the same thing.
+[56:39.100 --> 56:41.100]  Yeah, exactly. Like with
+[56:41.100 --> 56:43.100]  modern verbs. Yeah? So also
+[56:43.100 --> 56:45.100]  especially in Polish working
+[56:45.100 --> 56:47.100]  like with modern verbs like that.
+[56:47.100 --> 56:49.100]  So do not repeat two types of
+[56:49.100 --> 56:51.100]  verbs. To see they are
+[56:51.100 --> 56:53.100]  version of verbs we just give
+[56:53.100 --> 56:55.100]  to infinitive. It will be really useful
+[56:55.100 --> 56:57.100]  for us especially when we start
+[56:57.100 --> 56:59.100]  the future tense because
+[56:59.100 --> 57:01.100]  future tense totally looking like
+[57:01.100 --> 57:03.100]  I like to do something.
+[57:03.100 --> 57:05.100]  Because we give it to be and then
+[57:05.100 --> 57:07.100]  every time will be infinite.
+[57:07.100 --> 57:09.100]  Yeah? So very easy
+[57:09.100 --> 57:11.100]  to learn.
+[57:11.100 --> 57:13.100]  No dobrze. Super. Bardzo dziękuję.
+[57:13.100 --> 57:15.100]  I mam
+[57:15.100 --> 57:17.100]  też takie pytanie.
+[57:17.100 --> 57:19.100]  To jest propozycja
+[57:19.100 --> 57:21.100]  2D. 2D.
+[57:21.100 --> 57:23.100]  Propozycja 2D. Tu
+[57:23.100 --> 57:25.100]  decydujemy
+[57:25.100 --> 57:27.100]  co nie jest
+[57:27.100 --> 57:29.100]  ok. Sorry.
+[57:29.100 --> 57:31.100]  Co pasuje. What is ok. Tak?
+[57:31.100 --> 57:33.100]  Co pasuje. Eliminujemy
+[57:33.100 --> 57:35.100]  masakra opcje.
+[57:35.100 --> 57:37.100]  Tak? Przykład.
+[57:37.100 --> 57:39.100]  Proszę
+[57:39.100 --> 57:41.100]  nieświeżą
+[57:41.100 --> 57:43.100]  or krakowską kiełbasę.
+[57:43.100 --> 57:45.100]  We don't want nieświeżą. Co to jest
+[57:45.100 --> 57:47.100]  nieświeżą? Not fresh.
+[57:47.100 --> 57:49.100]  Not fresh. Tak.
+[57:49.100 --> 57:51.100]  So krakowską
+[57:51.100 --> 57:53.100]  we can highlight
+[57:53.100 --> 57:55.100]  because this is just
+[57:55.100 --> 57:57.100]  krakowska stary kiełbasa.
+[57:57.100 --> 57:59.100]  Right? Like
+[57:59.100 --> 58:01.100]  kiełbaska z nyski.
+[58:01.100 --> 58:03.100]  Right? Co pasuje.
+[58:03.100 --> 58:05.100]  What is correct.
+[58:05.100 --> 58:07.100]  What is correct.
+[58:07.100 --> 58:09.100]  We should analyze this like
+[58:09.100 --> 58:11.100]  this like that. Co pasuje.
+[58:11.100 --> 58:13.100]  Tak.
+[58:13.100 --> 58:15.100]  Co pasuje.
+[58:15.100 --> 58:17.100]  No dobrze.
+[58:17.100 --> 58:19.100]  To jest ok.
+[58:19.100 --> 58:21.100]  To mamy punkt A.
+[58:21.100 --> 58:23.100]  Proszę. Zimną
+[58:23.100 --> 58:25.100]  zieloną wodę
+[58:25.100 --> 58:27.100]  i na randku.
+[58:27.100 --> 58:29.100]  Zimną. Zimną. Tak?
+[58:29.100 --> 58:31.100]  Nie preferujemy zielonej.
+[58:31.100 --> 58:33.100]  Tak? No dobrze.
+[58:33.100 --> 58:35.100]  Czyli zimną.
+[58:35.100 --> 58:37.100]  Tak? Jest perfekcyjnie.
+[58:39.100 --> 58:41.100]  Zieloną może być butelkę
+[58:41.100 --> 58:43.100]  wodą. Tak?
+[58:43.100 --> 58:45.100]  Albo wodę zieloną.
+[58:45.100 --> 58:47.100]  Nieświeża.
+[58:47.100 --> 58:49.100]  Nieświeża.
+[58:49.100 --> 58:51.100]  Zimna.
+[58:51.100 --> 58:53.100]  Tak.
+[58:53.100 --> 58:55.100]  Radiowaktywna.
+[58:55.100 --> 58:57.100]  Radiowaktywna.
+[58:57.100 --> 58:59.100]  Zieloną butelkę?
+[58:59.100 --> 59:01.100]  To może być butelka zielonej wody.
+[59:01.100 --> 59:03.100]  Tak?
+[59:03.100 --> 59:05.100]  I butelka.
+[59:05.100 --> 59:07.100]  Butelka.
+[59:07.100 --> 59:09.100]  Teraz butelka
+[59:09.100 --> 59:11.100]  to jest ultra
+[59:11.100 --> 59:13.100]  ważne
+[59:13.100 --> 59:15.100]  bardzo ważne
+[59:15.100 --> 59:17.100]  temat. Topic
+[59:17.100 --> 59:19.100]  to jest butelka, kaucja.
+[59:19.100 --> 59:21.100]  Tak?
+[59:21.100 --> 59:23.100]  Tak.
+[59:23.100 --> 59:25.100]  Wszyscy to sami
+[59:25.100 --> 59:27.100]  to sami zbieramy.
+[59:27.100 --> 59:29.100]  I idziemy do naszej maszyny.
+[59:29.100 --> 59:31.100]  Kaucjomat.
+[59:31.100 --> 59:33.100]  Kaucjomat.
+[59:33.100 --> 59:35.100]  Ok.
+[59:35.100 --> 59:37.100]  To.
+[59:37.100 --> 59:39.100]  Proszę. Czarną gazowaną kawę.
+[59:39.100 --> 59:41.100]  Uuu.
+[59:41.100 --> 59:43.100]  Fermentacja.
+[59:43.100 --> 59:45.100]  Czarną.
+[59:45.100 --> 59:47.100]  Gazowaną kawę to bardzo
+[59:47.100 --> 59:49.100]  niedobrze. Uuu.
+[59:49.100 --> 59:51.100]  Strasznie.
+[59:51.100 --> 59:53.100]  Tak.
+[59:53.100 --> 59:55.100]  Czarną kawę.
+[59:55.100 --> 59:59.100]  I mamy C.
+[59:59.100 --> 01:00:01.100]  Proszę. Ciemny
+[01:00:01.100 --> 01:00:03.100]  tłusty chleb.
+[01:00:03.100 --> 01:00:05.100]  Co to znaczy tłusty?
+[01:00:05.100 --> 01:00:07.100]  To jest
+[01:00:07.100 --> 01:00:09.100]  kiedy jest dużo
+[01:00:09.100 --> 01:00:11.100]  kalorii. Like fat.
+[01:00:11.100 --> 01:00:13.100]  Fat. To jest tłuszcz fat.
+[01:00:13.100 --> 01:00:15.100]  Tłusty. Tak?
+[01:00:15.100 --> 01:00:17.100]  Może być tłusty ser biały.
+[01:00:17.100 --> 01:00:19.100]  Może być tłusty
+[01:00:19.100 --> 01:00:21.100]  tłuste mięso.
+[01:00:21.100 --> 01:00:23.100]  Bit. Tak?
+[01:00:23.100 --> 01:00:25.100]  Ale chleb? Nie.
+[01:00:25.100 --> 01:00:27.100]  To zjemny chleb.
+[01:00:27.100 --> 01:00:29.100]  Tak. Ciemny.
+[01:00:29.100 --> 01:00:31.100]  Ciemny. A ciemny? Co to jest ciemny?
+[01:00:31.100 --> 01:00:33.100]  O. Tak. Tak.
+[01:00:33.100 --> 01:00:35.100]  W klasie teraz jest ciemno.
+[01:00:35.100 --> 01:00:37.100]  Nie ma słońca.
+[01:00:37.100 --> 01:00:39.100]  To jest ciemno.
+[01:00:39.100 --> 01:00:41.100]  I ciemny chleb.
+[01:00:41.100 --> 01:00:43.100]  Mmm.
+[01:00:43.100 --> 01:00:45.100]  Super. Ok.
+[01:00:45.100 --> 01:00:47.100]  I opcja D.
+[01:00:47.100 --> 01:00:49.100]  Dietetyczną, niegazowaną
+[01:00:49.100 --> 01:00:51.100]  kolę.
+[01:00:51.100 --> 01:00:53.100]  Dietetyczną
+[01:00:53.100 --> 01:00:55.100]  kolę.
+[01:00:55.100 --> 01:00:57.100]  Tak. Nie ma niegazowanej
+[01:00:57.100 --> 01:00:59.100]  koli. Ok?
+[01:00:59.100 --> 01:01:01.100]  To jest dziwne.
+[01:01:01.100 --> 01:01:03.100]  To jest
+[01:01:03.100 --> 01:01:05.100]  o co?
+[01:01:05.100 --> 01:01:07.100]  Dziwne. O. This is like
+[01:01:07.100 --> 01:01:09.100]  weird. Bizarre.
+[01:01:09.100 --> 01:01:11.100]  Dziwne. Dziwne. To jest dziwne.
+[01:01:11.100 --> 01:01:13.100]  Niegazowana
+[01:01:13.100 --> 01:01:15.100]  kola.
+[01:01:15.100 --> 01:01:17.100]  To jest dziwne.
+[01:01:17.100 --> 01:01:19.100]  Tylko peoples.
+[01:01:19.100 --> 01:01:21.100]  To jest dziwne?
+[01:01:21.100 --> 01:01:23.100]  Tak. Wykłada się to jako dziwne.
+[01:01:23.100 --> 01:01:25.100]  Do tego dalej.
+[01:01:25.100 --> 01:01:27.100]  Umieramy,
+[01:01:27.100 --> 01:01:29.100]  tak jak dla nas.
+[01:01:29.100 --> 01:01:31.100]  Dziwne.
+[01:01:31.100 --> 01:01:33.100]  Dziwne.
+[01:01:33.100 --> 01:01:35.100]  Dziwne, dziwne.
+[01:01:35.100 --> 01:01:37.100]  Tak?
+[01:01:37.100 --> 01:01:39.100]  Dziwne.
+[01:01:39.100 --> 01:01:41.100]  Tak.
+[01:01:41.100 --> 01:01:43.100]  Dziwne, dziwne.
+[01:01:43.100 --> 01:01:47.100]  Dietetyczna to diet.
+[01:01:47.100 --> 01:01:49.100]  Tak, jak dieta.
+[01:01:49.100 --> 01:01:55.100]  Dietetyczna cola to cola zero, tak?
+[01:01:55.100 --> 01:01:57.100]  Tak.
+[01:01:57.100 --> 01:01:59.100]  Ta cola zero też ma cukier.
+[01:01:59.100 --> 01:02:03.100]  Alternatywny, ale jest.
+[01:02:03.100 --> 01:02:05.100]  Dietetyczna, niedietetyczna.
+[01:02:05.100 --> 01:02:10.100]  Proszę, świeże, stare pomidory.
+[01:02:10.100 --> 01:02:12.100]  Świeże pomidory.
+[01:02:12.100 --> 01:02:14.100]  Świeże, absolutnie.
+[01:02:14.100 --> 01:02:16.100]  A jest to też takie świeże.
+[01:02:16.100 --> 01:02:23.100]  Tak, a stare czasem, żabka, biedronka,
+[01:02:23.100 --> 01:02:28.100]  my widzimy, że nie wszystko jest w porządku z tą pomidorem.
+[01:02:28.100 --> 01:02:35.100]  Może nie stare, ale jakieś inne nie są idealne.
+[01:02:35.100 --> 01:02:38.100]  Stare pomidory, świeże, świeże.
+[01:02:38.100 --> 01:02:39.100]  Ok.
+[01:02:39.100 --> 01:02:40.100]  Tutaj sól.
+[01:02:40.100 --> 01:02:42.100]  Tutaj są lody waniliowe.
+[01:02:42.100 --> 01:02:44.100]  Kaloryczne, małe.
+[01:02:44.100 --> 01:02:46.100]  Kaloryczne.
+[01:02:46.100 --> 01:02:48.100]  Kaloryczne.
+[01:02:48.100 --> 01:02:51.100]  Co to jest kaloryczne?
+[01:02:51.100 --> 01:02:53.100]  To znaczy kalory?
+[01:02:53.100 --> 01:02:54.100]  Tak.
+[01:02:54.100 --> 01:02:56.100]  To jest energia, kaloria.
+[01:02:56.100 --> 01:02:57.100]  Tak.
+[01:02:57.100 --> 01:02:58.100]  Kaloryczne.
+[01:02:58.100 --> 01:02:59.100]  Czy małe.
+[01:02:59.100 --> 01:03:01.100]  Co brakujemy?
+[01:03:01.100 --> 01:03:02.100]  Kaloryczne.
+[01:03:02.100 --> 01:03:04.100]  Kaloryczne, czyli duże lody, tak?
+[01:03:04.100 --> 01:03:06.100]  Duże lody.
+[01:03:06.100 --> 01:03:08.100]  Ok.
+[01:03:08.100 --> 01:03:09.100]  Nie wiem.
+[01:03:09.100 --> 01:03:12.100]  My możemy zostać z otwartej odpowiedzi.
+[01:03:12.100 --> 01:03:13.100]  Tak.
+[01:03:13.100 --> 01:03:15.100]  Kaloryczne, duże.
+[01:03:15.100 --> 01:03:19.100]  Możemy też powiedzieć duża porcja, czyli duże.
+[01:03:19.100 --> 01:03:20.100]  Duże.
+[01:03:20.100 --> 01:03:21.100]  Tak.
+[01:03:21.100 --> 01:03:23.100]  Albo średnie.
+[01:03:23.100 --> 01:03:24.100]  Co to jest średnie?
+[01:03:24.100 --> 01:03:25.100]  Milion.
+[01:03:25.100 --> 01:03:26.100]  Tak.
+[01:03:26.100 --> 01:03:28.100]  Takie nie duże, nie małe.
+[01:03:28.100 --> 01:03:29.100]  Tak.
+[01:03:29.100 --> 01:03:32.100]  Dobra.
+[01:03:32.100 --> 01:03:36.100]  I pomarańczowe, zimne piwo soki.
+[01:03:36.100 --> 01:03:37.100]  Piwo soki.
+[01:03:37.100 --> 01:03:39.100]  Nie?
+[01:03:40.100 --> 01:03:41.100]  Duzuobione.
+[01:03:41.100 --> 01:03:43.100]  Duzuobione, dobrze.
+[01:03:43.100 --> 01:03:46.100]  Someone said, co otrzymała…
+[01:03:46.100 --> 01:03:48.100]  TechNOW, to takie kawałek zimnej piwo.
+[01:03:48.100 --> 01:03:50.600]  Oto pomarańczowy soku, które to jest tarnychtki,
+[01:03:50.600 --> 01:03:55.100]  ale jest ukryty jakauc 서łąstwię.
+[01:03:55.100 --> 01:03:56.100]  Ok, tak.
+[01:03:56.100 --> 01:04:06.320]  By
+[01:04:07.100 --> 01:04:12.420]  To jest też akcyzatywne, bo to jest akcyzatywne.
+[01:04:12.420 --> 01:04:24.760]  To działa z proszę, poproszę, lubię, mam, kupuję, kupuję, znać i tak dalej.
+[01:04:24.760 --> 01:04:37.540]  Możecie napisać do Lagi Lion i ja wam odsłonię wszystkie prezentacje, jak działa to wideo.
+[01:04:37.540 --> 01:04:43.100]  Możecie napisać do każdej religii.
+[01:04:43.100 --> 01:04:44.260]  Mogę zapytać krótką pytanie?
+[01:04:44.260 --> 01:04:52.280]  Jeśli dobrze rozumiem, czarna jest podstawowym słowem, a jest konwertyzowane w czarno.
+[01:04:52.280 --> 01:04:53.700]  Ale czemne?
+[01:04:53.700 --> 01:04:54.760]  Czemna jest także...
+[01:04:54.760 --> 01:04:56.760]  To jest podstawowy słówko, prawda?
+[01:04:56.760 --> 01:04:58.760]  Czemna, prawda?
+[01:04:58.760 --> 01:05:04.760]  Tak, ale różnica jest w tym, że możemy zmienić do czemnogu, czarnoherbatę, czarnoherbatę.
+[01:05:04.760 --> 01:05:07.760]  Ale tutaj nie zmieniliśmy, dlaczego?
+[01:05:07.760 --> 01:05:10.760]  Bo chleb jest masycylany.
+[01:05:10.760 --> 01:05:14.760]  Jest masycylany i czemna jest też masycylana, więc nie możemy nic zrobić.
+[01:05:14.760 --> 01:05:20.760]  Więc z artyką jedzenia i akcyzatywami w Biednach nie musimy się o to załatwić,
+[01:05:20.760 --> 01:05:24.760]  ponieważ w większości wyjdziemy z różnicami na temat feminizmu.
+[01:05:24.760 --> 01:05:28.760]  Ale pascyliny, neutro, nie zmieniają się za dużo.
+[01:05:28.760 --> 01:05:33.760]  Czasami, kiedy mamy na przykład kurczaka, to my zmieniamy kurczaka.
+[01:05:33.760 --> 01:05:34.760]  Tak, może tak.
+[01:05:34.760 --> 01:05:36.760]  Ale nie dużo.
+[01:05:36.760 --> 01:05:37.760]  Więc to jest akcyza.
+[01:05:37.760 --> 01:05:38.760]  Tak, akcyza.
+[01:05:38.760 --> 01:05:40.760]  No dobrze.
+[01:05:40.760 --> 01:05:49.760]  I minimalna informacja z mlekiem może być opcja bez mleka.
+[01:05:49.760 --> 01:05:52.760]  Ja będę się o tym obawiała, ponieważ...
+[01:05:52.760 --> 01:05:57.760]  Nie mamy jeszcze tych gradykowych spraw.
+[01:05:57.760 --> 01:05:59.760]  Bez mleka, genityw.
+[01:05:59.760 --> 01:06:00.760]  Z mlekiem bez mleka.
+[01:06:00.760 --> 01:06:05.760]  Z cukrem bez cukru.
+[01:06:05.760 --> 01:06:09.760]  Z cytryną bez cytryny.
+[01:06:09.760 --> 01:06:13.760]  Z miodem bez miodu.
+[01:06:13.760 --> 01:06:16.760]  Z lodem bez lodu.
+[01:06:16.760 --> 01:06:18.760]  Kola bez lodu.
+[01:06:18.760 --> 01:06:21.760]  I z sokiem, piwo bez soku.
+[01:06:22.760 --> 01:06:24.760]  Soku, fantastycznie.
+[01:06:24.760 --> 01:06:31.760]  Bez mleka, cukru, cytryny, miodu, soku, lodu.
+[01:06:31.760 --> 01:06:33.760]  Co to jest bez lodu?
+[01:06:33.760 --> 01:06:35.760]  Oh, bez jajka.
+[01:06:35.760 --> 01:06:41.760]  Z lodem bez jajka i bez.
+[01:06:41.760 --> 01:06:43.760]  To jest mleko bez lodu.
+[01:06:43.760 --> 01:06:44.760]  Tak.
+[01:06:44.760 --> 01:06:49.760]  Lody to jest generalnie jajko, ale...
+[01:06:49.760 --> 01:06:51.760]  Lód może być też tylko...
+[01:06:51.760 --> 01:06:53.760]  Może być też tylko generalnie jajko.
+[01:06:53.760 --> 01:06:55.760]  Na przykład jadłeś coś takiego jak...
+[01:06:55.760 --> 01:06:57.760]  Sok z lodem.
+[01:06:57.760 --> 01:06:59.760]  Lody z lodem.
+[01:06:59.760 --> 01:07:00.760]  Jajko z lodem.
+[01:07:00.760 --> 01:07:03.760]  Lód tylko z jajka.
+[01:07:03.760 --> 01:07:06.760]  Więc na przykład, kiedy masz coś do jadania,
+[01:07:06.760 --> 01:07:08.760]  będziesz mówić...
+[01:07:08.760 --> 01:07:11.760]  Sernik z lodami.
+[01:07:11.760 --> 01:07:14.760]  Cały czas będzie to jajko bez lodu.
+[01:07:14.760 --> 01:07:16.760]  Nigdy jedno.
+[01:07:16.760 --> 01:07:20.760]  Ale kiedy chcesz wyrazić, że jadłeś coś,
+[01:07:20.760 --> 01:07:21.760]  to będziesz mówić...
+[01:07:21.760 --> 01:07:22.760]  Sok z lodem.
+[01:07:22.760 --> 01:07:24.760]  Cały czas będzie to jajko bez lodu.
+[01:07:24.760 --> 01:07:25.760]  Cały czas będzie to jajko bez lodu.
+[01:07:25.760 --> 01:07:34.760]  To jest strategia, jak wiedzieć, że to jest jajko bez lodu, a to jest jajko.
+[01:07:34.760 --> 01:07:36.760]  Sernik to co jeszcze?
+[01:07:36.760 --> 01:07:37.760]  Oh, czeski.
+[01:07:37.760 --> 01:07:39.760]  Aaa, soki.
+[01:07:39.760 --> 01:07:43.760]  Tak, sernik z lodami i sok z lodem.
+[01:07:43.760 --> 01:07:44.760]  Ok.
+[01:07:44.760 --> 01:07:45.760]  Dobrze.
+[01:07:45.760 --> 01:07:46.760]  Ok.
+[01:07:46.760 --> 01:07:47.760]  To jest jajko bez lodu.
+[01:07:47.760 --> 01:07:48.760]  Tak.
+[01:07:48.760 --> 01:07:49.760]  Ok.
+[01:07:49.760 --> 01:07:50.760]  No to co?
+[01:07:50.760 --> 01:07:51.760]  To mamy coś takiego.
+[01:07:51.760 --> 01:07:52.760]  To jest, to jest.
+[01:07:52.760 --> 01:07:53.760]  I would like to show you also this.
+[01:07:53.760 --> 01:07:54.760]  We don't have this in our book plus, but it could be also useful for you.
+[01:07:54.760 --> 01:07:55.760]  We have smak.
+[01:07:55.760 --> 01:07:56.760]  You know what does it mean smak?
+[01:07:56.760 --> 01:07:57.760]  It's a taste.
+[01:07:57.760 --> 01:07:58.760]  It's a taste.
+[01:07:58.760 --> 01:07:59.760]  Bardzo dobrze.
+[01:07:59.760 --> 01:08:00.760]  I mamy listę smaków.
+[01:08:00.760 --> 01:08:01.760]  Jest smak słodki, lody.
+[01:08:01.760 --> 01:08:02.760]  Generalnie słodki jest smak słodki.
+[01:08:02.760 --> 01:08:03.760]  Słody.
+[01:08:03.760 --> 01:08:04.760]  Słody.
+[01:08:04.760 --> 01:08:05.760]  Słody.
+[01:08:05.760 --> 01:08:06.760]  Słody.
+[01:08:06.760 --> 01:08:07.760]  Słody.
+[01:08:07.760 --> 01:08:08.760]  Słody.
+[01:08:08.760 --> 01:08:09.760]  Słody.
+[01:08:09.760 --> 01:08:10.760]  Słody.
+[01:08:10.760 --> 01:08:11.760]  Słody.
+[01:08:11.760 --> 01:08:12.760]  Słody.
+[01:08:12.760 --> 01:08:13.760]  Słody.
+[01:08:13.760 --> 01:08:14.760]  Słody.
+[01:08:14.760 --> 01:08:15.760]  Słody.
+[01:08:15.760 --> 01:08:16.760]  Słody.
+[01:08:16.760 --> 01:08:17.760]  Słody.
+[01:08:17.760 --> 01:08:18.760]  Słody.
+[01:08:19.760 --> 01:08:20.760]  Słody.
+[01:08:20.760 --> 01:08:21.760]  Jak się nazywa?
+[01:08:21.760 --> 01:08:22.760]  Słody.
+[01:08:22.760 --> 01:08:23.760]  Słody.
+[01:08:23.760 --> 01:08:24.760]  Słody.
+[01:08:24.760 --> 01:08:29.760]  Słody nie musi, chyba wiele osób, tylko kilku z nich nie ma tego słodka.
+[01:08:29.760 --> 01:08:32.780]  K BOŚEH S vibrers along ko wo.
+[01:08:32.780 --> 01:08:42.460]  A�� uconscious EK fue 모 wichhere jako za g马 w literce.
+[01:08:42.460 --> 01:08:47.120]  Jak ono jest muszę dost technical.
+[01:08:47.120 --> 01:08:49.340]  łem i po hombres.
+[01:08:49.340 --> 01:08:52.220]  Tak, i jelly, żelki, tak?
+[01:08:52.220 --> 01:08:54.380]  Żelki często...
+[01:08:54.380 --> 01:08:55.380]  Słodkie te.
+[01:08:55.380 --> 01:08:59.380]  O tak, to może być słodkie, kwaśne, tak?
+[01:08:59.380 --> 01:09:01.380]  Żelki kwaśne.
+[01:09:01.380 --> 01:09:03.380]  Czy lubicie żelki?
+[01:09:03.380 --> 01:09:04.380]  Nie.
+[01:09:04.380 --> 01:09:05.380]  Żelki?
+[01:09:05.380 --> 01:09:08.380]  Nie, nie mam, nie, totalnie nie mam, tak?
+[01:09:08.380 --> 01:09:10.380]  Żelki, tak?
+[01:09:10.380 --> 01:09:11.380]  I mean...
+[01:09:11.380 --> 01:09:13.380]  Słodko-kwaśne, tak?
+[01:09:14.380 --> 01:09:15.380]  Słodkie.
+[01:09:15.380 --> 01:09:16.380]  Tak, słodkie.
+[01:09:16.380 --> 01:09:17.380]  Nie, nie słodkie.
+[01:09:17.380 --> 01:09:19.380]  Ale w większości...
+[01:09:21.380 --> 01:09:24.380]  I mean, I wouldn't go out of my way to buy.
+[01:09:24.380 --> 01:09:25.380]  Yeah, absolutely.
+[01:09:25.380 --> 01:09:29.380]  If a friend of mine just brings it, I want to share.
+[01:09:29.380 --> 01:09:31.380]  Very specific.
+[01:09:31.380 --> 01:09:33.380]  Specyficzne, tak?
+[01:09:33.380 --> 01:09:35.380]  Dobrze.
+[01:09:35.380 --> 01:09:39.380]  Słodki, smak, kwaśny, jak żelki.
+[01:09:39.380 --> 01:09:41.380]  Słony.
+[01:09:41.380 --> 01:09:42.380]  Słony.
+[01:09:42.380 --> 01:09:43.380]  Salty.
+[01:09:43.380 --> 01:09:46.380]  Co preferujecie? Co jest słone?
+[01:09:46.380 --> 01:09:47.380]  Słone.
+[01:09:47.380 --> 01:09:49.380]  Co lubicie takiego słonego?
+[01:09:49.380 --> 01:09:50.380]  Oliwki.
+[01:09:50.380 --> 01:09:51.380]  Chrupki.
+[01:09:51.380 --> 01:09:52.380]  Oliwki.
+[01:09:52.380 --> 01:09:53.380]  Oliwki.
+[01:09:53.380 --> 01:09:57.380]  Oliwki, o, oliwki. Rozumiem. Oliwki też są.
+[01:09:57.380 --> 01:10:01.380]  Chrupki. Co to są chrupki?
+[01:10:04.380 --> 01:10:05.380]  Fry's, right?
+[01:10:05.380 --> 01:10:15.380]  Chrupki. To są chrupki. It's not like typical chips like Lacey, ale jak Cheetosy, na przykład, jak te Starks.
+[01:10:15.380 --> 01:10:20.380]  To są jakieś polskie i to są takie typowe chrupki.
+[01:10:20.380 --> 01:10:22.380]  What is that one?
+[01:10:22.380 --> 01:10:23.380]  The corn chips?
+[01:10:23.380 --> 01:10:25.380]  Tak, kukurydza, corn chips.
+[01:10:25.380 --> 01:10:26.380]  Like coffee.
+[01:10:26.380 --> 01:10:29.380]  Is Doritos a chrupki?
+[01:10:29.380 --> 01:10:32.380]  Doritos? We have Doritos here?
+[01:10:32.380 --> 01:10:35.380]  Doritos will be like chips mostly?
+[01:10:35.380 --> 01:10:41.380]  O, to też jest chrupki, tak? W Finland classic one.
+[01:10:41.380 --> 01:10:44.380]  A Doritos? Let's check Doritos.
+[01:10:44.380 --> 01:10:47.380]  Chrupki. It should be like chips, on the whole.
+[01:10:47.380 --> 01:10:49.380]  O, this is like chipsy. Chipsy.
+[01:10:49.380 --> 01:10:51.380]  Chipsy, tak, totalnie.
+[01:10:53.380 --> 01:10:54.380]  I chipsy?
+[01:10:54.380 --> 01:10:56.380]  Chipsy.
+[01:10:56.380 --> 01:10:57.380]  Chipsy.
+[01:10:57.380 --> 01:11:01.380]  No, jak Lacey, takie typowe, klasyczne, nie? Chipsy.
+[01:11:03.380 --> 01:11:04.380]  No dobra.
+[01:11:04.380 --> 01:11:11.380]  A, lubicie Polacy, młodzieżka jest, często jedzą paluszki.
+[01:11:11.380 --> 01:11:13.380]  To jest popularne w Polsce.
+[01:11:13.380 --> 01:11:14.380]  O, paluszki.
+[01:11:14.380 --> 01:11:15.380]  Tak?
+[01:11:15.380 --> 01:11:17.380]  Jesteś Polakiem.
+[01:11:18.380 --> 01:11:21.380]  Lubicie? Albo krakersy?
+[01:11:21.380 --> 01:11:22.380]  Krakersy.
+[01:11:22.380 --> 01:11:23.380]  Krakersy.
+[01:11:23.380 --> 01:11:24.380]  Krakersy.
+[01:11:24.380 --> 01:11:25.380]  Tak, krakersy.
+[01:11:25.380 --> 01:11:30.380]  Because most of the time our vending machines in the rest of the world used to have this thing like every day.
+[01:11:30.380 --> 01:11:36.380]  So we think whenever we would have like this to our brain we would take paluszki, we would flicker.
+[01:11:36.380 --> 01:11:40.380]  Tak, tak, tak. To jest bardzo typowe w Polsce, tak?
+[01:11:40.380 --> 01:11:43.380]  Impreza, every party, paluszki typowo.
+[01:11:43.380 --> 01:11:46.380]  Paluszki krótkie, bardzo typowe.
+[01:11:46.380 --> 01:11:49.380]  No dobra, super.
+[01:11:49.380 --> 01:11:53.380]  To mamy słodki, kwaśny, słody, gorzki.
+[01:11:53.380 --> 01:11:54.380]  Gorzki.
+[01:11:54.380 --> 01:11:55.380]  Gorzki.
+[01:11:55.380 --> 01:11:56.380]  Gorzki.
+[01:11:56.380 --> 01:12:00.380]  Przykład, czekolada 85%.
+[01:12:00.380 --> 01:12:01.380]  Tak, bitter.
+[01:12:01.380 --> 01:12:02.380]  Gorzki.
+[01:12:02.380 --> 01:12:03.380]  Gorzki.
+[01:12:03.380 --> 01:12:04.380]  To nie jest słody.
+[01:12:04.380 --> 01:12:05.380]  Bitter.
+[01:12:05.380 --> 01:12:06.380]  Bitter, tak.
+[01:12:06.380 --> 01:12:08.380]  80-90%.
+[01:12:08.380 --> 01:12:11.380]  Preferujecie, lubicie gorzką czekoladę?
+[01:12:11.380 --> 01:12:12.380]  Tak.
+[01:12:12.380 --> 01:12:14.380]  Tak, mam identycznie jak w tym filmie.
+[01:12:14.380 --> 01:12:15.380]  Tak.
+[01:12:15.380 --> 01:12:20.380]  A ktoś lubi sam warunek gorzki?
+[01:12:20.380 --> 01:12:21.380]  Tak.
+[01:12:21.380 --> 01:12:22.380]  W Danii tak.
+[01:12:22.380 --> 01:12:25.380]  Tak, gorzka kawa.
+[01:12:25.380 --> 01:12:27.380]  Gorzka kawa.
+[01:12:27.380 --> 01:12:28.380]  A mój respekt.
+[01:12:28.380 --> 01:12:29.380]  Czekolada.
+[01:12:29.380 --> 01:12:30.380]  Czekolada.
+[01:12:30.380 --> 01:12:31.380]  I tak.
+[01:12:31.380 --> 01:12:32.380]  Tak.
+[01:12:32.380 --> 01:12:34.380]  A Nutella.
+[01:12:34.380 --> 01:12:35.380]  Tak.
+[01:12:35.380 --> 01:12:36.380]  Dla słodko.
+[01:12:36.380 --> 01:12:37.380]  Dla słodko.
+[01:12:37.380 --> 01:12:38.380]  Dla tego gorzki.
+[01:12:38.380 --> 01:12:39.380]  Słody.
+[01:12:39.380 --> 01:12:41.380]  Teraz popularne jest.
+[01:12:41.380 --> 01:12:43.380]  Robić miks.
+[01:12:43.380 --> 01:12:45.380]  Trochę słodki, trochę gorzki i słody.
+[01:12:45.380 --> 01:12:46.380]  Chipsy z czekoladą.
+[01:12:46.380 --> 01:12:47.380]  I miks.
+[01:12:47.380 --> 01:12:48.380]  Albo czekoladowe chipsy.
+[01:12:48.380 --> 01:12:49.380]  Próbujesz?
+[01:12:49.380 --> 01:12:50.380]  Tak.
+[01:12:50.380 --> 01:12:51.380]  Chipsy z czekoladą.
+[01:12:51.380 --> 01:12:52.380]  To brzmi dziwnie.
+[01:12:52.380 --> 01:12:53.380]  To też brzmi dziwnie.
+[01:12:53.380 --> 01:12:54.380]  To jest...
+[01:12:54.380 --> 01:12:55.380]  To...
+[01:12:55.380 --> 01:12:56.380]  To jest dobra kompozycja, bo jest trochę słone.
+[01:12:56.380 --> 01:12:57.380]  I nie ma.
+[01:12:57.380 --> 01:12:58.380]  Ale wyraźnie.
+[01:12:58.380 --> 01:12:59.380]  A jak to wygląda?
+[01:12:59.380 --> 01:13:00.380]  Wyraźnie.
+[01:13:00.380 --> 01:13:01.380]  Jak się to robi?
+[01:13:01.380 --> 01:13:02.380]  To jest w ogóle.
+[01:13:02.380 --> 01:13:03.380]  To jest jak...
+[01:13:03.380 --> 01:13:04.380]  To jest taki...
+[01:13:04.380 --> 01:13:05.380]  To jest taki chłodny.
+[01:13:05.380 --> 01:13:06.380]  Tak.
+[01:13:06.380 --> 01:13:07.380]  A mówi, że tak.
+[01:13:07.380 --> 01:13:08.380]  To jest taki chłodny.
+[01:13:08.380 --> 01:13:09.380]  Nie ma nic takiego.
+[01:13:09.380 --> 01:13:10.380]  Nie ma nic takiego.
+[01:13:10.380 --> 01:13:12.380]  Słodkie i trochę słodkie.
+[01:13:12.380 --> 01:13:16.380]  Jeśli iż preferujecie taki styl.
+[01:13:16.380 --> 01:13:18.380]  Popcorn też.
+[01:13:18.380 --> 01:13:20.380]  Tak, tak, tak. Popcorn.
+[01:13:20.380 --> 01:13:25.380]  Multikino Cinema City ma popcorn chyba karmelony?
+[01:13:25.380 --> 01:13:26.380]  Karmelony.
+[01:13:26.380 --> 01:13:27.380]  Słodki.
+[01:13:27.380 --> 01:13:28.380]  Słodki.
+[01:13:28.380 --> 01:13:29.380]  Tak, tak.
+[01:13:29.380 --> 01:13:35.380]  I mean if you had that and then the salted ones at the same time, that's not too bad.
+[01:13:35.380 --> 01:13:40.380]  It's not too bad compared to chips with chocolate.
+[01:13:40.380 --> 01:13:42.380]  Tak, tak.
+[01:13:42.380 --> 01:13:46.380]  No, tak. No to gorzki mamy. Ostry.
+[01:13:46.380 --> 01:13:48.380]  Spicy.
+[01:13:48.380 --> 01:13:51.380]  Spicy, tak. Kto lubi spicy? Kulak.
+[01:13:51.380 --> 01:13:55.380]  No, no, no, dobrze, dobrze. Bardzo dużo ostry.
+[01:13:55.380 --> 01:14:01.380]  Co lubicie, preferujecie, co jecie ostrego?
+[01:14:01.380 --> 01:14:03.380]  Ostrego ketchup.
+[01:14:03.380 --> 01:14:05.380]  Ketchup, a, ostry ketchup.
+[01:14:05.380 --> 01:14:06.380]  Dobra, dobra.
+[01:14:06.380 --> 01:14:09.380]  Mamy identycznie, tak, pikantny.
+[01:14:09.380 --> 01:14:12.380]  Is pikantny same as ostry?
+[01:14:12.380 --> 01:14:13.380]  Tak.
+[01:14:13.380 --> 01:14:16.380]  Sosem? Ostry sos?
+[01:14:16.380 --> 01:14:18.380]  O, ostry sos, ostry sos.
+[01:14:18.380 --> 01:14:22.380]  Ostry sos to jaki? What kind of? Ostry?
+[01:14:22.380 --> 01:14:24.380]  Sriracha?
+[01:14:24.380 --> 01:14:26.380]  Sriracha, ostry, tak.
+[01:14:26.380 --> 01:14:27.380]  Tabasco?
+[01:14:27.380 --> 01:14:29.380]  Tabasco, tak.
+[01:14:29.380 --> 01:14:32.380]  Amerykański nieostry.
+[01:14:32.380 --> 01:14:33.380]  In Poland.
+[01:14:33.380 --> 01:14:34.380]  I don't know.
+[01:14:34.380 --> 01:14:35.380]  No.
+[01:14:35.380 --> 01:14:37.380]  No, Amerykański sos.
+[01:14:37.380 --> 01:14:39.380]  Tabasco, yeah.
+[01:14:39.380 --> 01:14:41.380]  Tabasco.
+[01:14:41.380 --> 01:14:44.380]  I Sriracha faktycznie, popularny sos.
+[01:14:44.380 --> 01:14:46.380]  Yeah, yeah.
+[01:14:48.380 --> 01:14:50.380]  A chipsy ostre?
+[01:14:52.380 --> 01:15:01.380]  W Polsce, popularne ostre chipsy to lacy ostre, tak.
+[01:15:01.380 --> 01:15:03.380]  To.
+[01:15:03.380 --> 01:15:09.420]  To nie jest ekstremalnie ostre, ale jest tak dobrze ostre.
+[01:15:09.420 --> 01:15:10.560]  Co to jest?
+[01:15:10.560 --> 01:15:11.280]  Churro?
+[01:15:11.280 --> 01:15:12.020]  Churro?
+[01:15:12.020 --> 01:15:12.780]  Churro?
+[01:15:12.780 --> 01:15:13.620]  Nie, to...
+[01:15:13.620 --> 01:15:14.680]  To? To jest?
+[01:15:14.680 --> 01:15:16.680]  Tak. Co to jest?
+[01:15:16.680 --> 01:15:17.320]  To jest...
+[01:15:17.320 --> 01:15:18.020]  To jest...
+[01:15:18.020 --> 01:15:18.520]  Churro.
+[01:15:18.520 --> 01:15:19.120]  Oh, tak.
+[01:15:19.120 --> 01:15:19.620]  Churro.
+[01:15:19.620 --> 01:15:20.420]  Churro.
+[01:15:20.420 --> 01:15:21.160]  Wygląda dobrze.
+[01:15:21.160 --> 01:15:21.760]  Tak.
+[01:15:21.760 --> 01:15:22.260]  O!
+[01:15:23.060 --> 01:15:23.560]  Tak.
+[01:15:23.560 --> 01:15:25.300]  To nie jest zbyt złe.
+[01:15:25.300 --> 01:15:29.060]  To jest dobre, ale Churro jest lepsze, jeśli będę szczerze mówić.
+[01:15:29.060 --> 01:15:30.060]  Tak, tak, tak, tak.
+[01:15:30.060 --> 01:15:32.060]  Ale to nie jest ekstremalnie ostre.
+[01:15:32.060 --> 01:15:33.240]  Tak, ale to jest...
+[01:15:33.240 --> 01:15:34.100]  To jest ostre.
+[01:15:34.100 --> 01:15:36.100]  To jest nie ostre.
+[01:15:36.100 --> 01:15:37.000]  To jest...
+[01:15:37.000 --> 01:15:40.640]  To jest nie ostre, ale ma smak.
+[01:15:40.640 --> 01:15:41.140]  To jest to.
+[01:15:41.140 --> 01:15:41.640]  Tak, tak.
+[01:15:41.640 --> 01:15:42.640]  To jest smak.
+[01:15:42.640 --> 01:15:43.640]  Ma smak.
+[01:15:43.640 --> 01:15:44.640]  No, to prawda.
+[01:15:44.640 --> 01:15:46.640]  Churro jest z świetaną.
+[01:15:46.640 --> 01:15:48.640]  O, ze świetaną.
+[01:15:48.640 --> 01:15:49.640]  To też dobre.
+[01:15:49.640 --> 01:15:51.640]  To też dobra kompozycja.
+[01:15:51.640 --> 01:15:52.640]  Mhm.
+[01:15:52.640 --> 01:15:53.640]  Ok.
+[01:15:53.640 --> 01:15:55.640]  No dobrze.
+[01:15:55.640 --> 01:15:57.640]  To co mamy ekstra?
+[01:15:57.640 --> 01:15:59.640]  Jest delikatny.
+[01:15:59.640 --> 01:16:01.640]  Delikatnie.
+[01:16:01.640 --> 01:16:02.640]  Deliki.
+[01:16:02.640 --> 01:16:03.640]  Delikatnie.
+[01:16:03.640 --> 01:16:04.640]  Czy to...
+[01:16:04.640 --> 01:16:06.640]  O, nie o smaku.
+[01:16:06.640 --> 01:16:07.640]  Mild?
+[01:16:07.640 --> 01:16:08.640]  Mild.
+[01:16:08.640 --> 01:16:09.640]  Może być tak.
+[01:16:09.640 --> 01:16:10.640]  Tak.
+[01:16:10.640 --> 01:16:16.640]  Nie jest to super specjalny smak.
+[01:16:16.640 --> 01:16:21.640]  To nie jest jak umami, ale po prostu słodki.
+[01:16:21.640 --> 01:16:22.640]  Mhm.
+[01:16:22.640 --> 01:16:26.640]  I to widzisz, że jest naprawdę delikatny.
+[01:16:26.640 --> 01:16:27.640]  Delikatny.
+[01:16:27.640 --> 01:16:31.640]  Co ma delikatny smak dla Ciebie?
+[01:16:32.640 --> 01:16:36.640]  Minimalny, delikatny smak.
+[01:16:36.640 --> 01:16:40.640]  Może jakiś sen biały, krem?
+[01:16:40.640 --> 01:16:41.640]  Mhm.
+[01:16:41.640 --> 01:16:44.640]  Minimalny, delikatny.
+[01:16:44.640 --> 01:16:48.640]  I oczywiście powinniśmy dać umami.
+[01:16:48.640 --> 01:16:49.640]  Tak.
+[01:16:49.640 --> 01:16:50.640]  Tak.
+[01:16:50.640 --> 01:16:52.640]  Specyficzny.
+[01:16:52.640 --> 01:16:53.640]  Delikatny.
+[01:16:53.640 --> 01:16:54.640]  No dobra.
+[01:16:54.640 --> 01:16:55.640]  Co to jest kształt?
+[01:16:55.640 --> 01:16:56.640]  Kształt?
+[01:16:56.640 --> 01:16:57.640]  Kształt.
+[01:16:57.640 --> 01:16:58.640]  Sześć.
+[01:16:58.640 --> 01:16:59.640]  Sześć.
+[01:16:59.640 --> 01:17:00.640]  Sześć.
+[01:17:00.640 --> 01:17:01.640]  Aha.
+[01:17:01.640 --> 01:17:02.640]  Kształt?
+[01:17:02.640 --> 01:17:03.640]  Kształt?
+[01:17:03.640 --> 01:17:04.640]  Okrągłe.
+[01:17:04.640 --> 01:17:05.640]  Co jest okrągłe?
+[01:17:05.640 --> 01:17:06.640]  Sześć.
+[01:17:06.640 --> 01:17:07.640]  Koło.
+[01:17:07.640 --> 01:17:08.640]  Koło, tak.
+[01:17:08.640 --> 01:17:09.640]  A jaki produkt okrągły?
+[01:17:09.640 --> 01:17:10.640]  Ciastko.
+[01:17:10.640 --> 01:17:11.640]  Ciastko, tak.
+[01:17:11.640 --> 01:17:12.640]  A takie duże, Włochy, Italia?
+[01:17:12.640 --> 01:17:13.640]  Pizza.
+[01:17:13.640 --> 01:17:14.640]  Pizza okrągła, tak.
+[01:17:14.640 --> 01:17:15.640]  Okrągła pizza.
+[01:17:15.640 --> 01:17:16.640]  Coś ekstra?
+[01:17:16.640 --> 01:17:17.640]  Omlet.
+[01:17:17.640 --> 01:17:18.640]  Omlet.
+[01:17:18.640 --> 01:17:19.640]  Omlet.
+[01:17:19.640 --> 01:17:20.640]  Jako dobrze.
+[01:17:20.640 --> 01:17:21.640]  Bardzo dobrze.
+[01:17:21.640 --> 01:17:22.640]  Może jakoby, jakoby.
+[01:17:22.640 --> 01:17:23.640]  Jakoby.
+[01:17:23.640 --> 01:17:24.640]  Jakoby.
+[01:17:24.640 --> 01:17:25.640]  Jakoby.
+[01:17:25.640 --> 01:17:26.640]  Jakoby.
+[01:17:26.640 --> 01:17:27.640]  Jakoby.
+[01:17:27.640 --> 01:17:28.640]  Jakoby.
+[01:17:28.640 --> 01:17:29.640]  Jakoby.
+[01:17:29.640 --> 01:17:30.640]  Jakoby.
+[01:17:30.640 --> 01:17:31.640]  Jakoby.
+[01:17:31.640 --> 01:17:32.640]  Jakoby n reperto irx.
+[01:17:32.640 --> 01:17:33.640]  Jak gelej mush acne.
+[01:17:33.640 --> 01:17:34.640]  D總 grandpa.
+[01:17:34.640 --> 01:17:35.720]  Pod co wplecie się a co aura na tej końcu że ja tylko jak endurance.
+[01:17:35.720 --> 01:17:38.720]  No to może być eating.
+[01:17:39.120 --> 01:17:40.120]  Jak to było?
+[01:17:40.120 --> 01:17:53.040]  A jaoc to Quiet C psychology will say waria wfive to w JOSHAT soir wrists kuchnia.
+[01:17:53.040 --> 01:17:57.200]  IJC PIS着 attitude Peru i listening
+[01:17:57.200 --> 01:17:59.320]  hic artwork opisał.
+[01:17:59.320 --> 01:18:00.320]  Owal***.
+[01:18:00.320 --> 01:18:01.680]  Tak.
+[01:18:01.680 --> 01:18:03.680]  Po dłużny.
+[01:18:03.680 --> 01:18:05.520]  Który?
+[01:18:05.520 --> 01:18:07.520]  Okrągły.
+[01:18:07.520 --> 01:18:11.600]  Zamiast wszystkich można powiedzieć tylko, że okrągły.
+[01:18:11.600 --> 01:18:13.600]  Okrągły.
+[01:18:13.600 --> 01:18:15.600]  Tak.
+[01:18:15.600 --> 01:18:17.600]  Co to po dłużny?
+[01:18:17.600 --> 01:18:19.600]  To jak pizza to piastanie.
+[01:18:19.600 --> 01:18:21.600]  To jest trochę dłuższy...
+[01:18:21.600 --> 01:18:23.600]  ... jak to powiedzieć?
+[01:18:23.600 --> 01:18:25.600]  Rekonkluzjań?
+[01:18:25.600 --> 01:18:27.600]  Rekonkluzjań.
+[01:18:27.600 --> 01:18:29.600]  To jest perfektywne.
+[01:18:29.600 --> 01:18:31.600]  Podłużny.
+[01:18:31.600 --> 01:18:35.600]  Pizza Topia ma podłużną pizzę.
+[01:18:35.600 --> 01:18:37.600]  Tak?
+[01:18:37.600 --> 01:18:39.600]  To jest totalnie...
+[01:18:39.600 --> 01:18:41.600]  To jest podłużny, trochę owalny.
+[01:18:41.600 --> 01:18:43.600]  Powalny.
+[01:18:43.600 --> 01:18:45.600]  Pizza Topia.
+[01:18:49.600 --> 01:18:51.600]  O, tu jakaś duża pizza.
+[01:18:51.600 --> 01:18:53.600]  Duża perspektywa.
+[01:18:53.600 --> 01:18:55.600]  Tak. To w porządku?
+[01:18:55.600 --> 01:18:57.600]  Tak.
+[01:18:57.600 --> 01:18:59.600]  Jak cukier.
+[01:18:59.600 --> 01:19:01.600]  Kwaśny jak cytryna.
+[01:19:01.600 --> 01:19:03.600]  Słony jak sól.
+[01:19:03.600 --> 01:19:05.600]  Ostry jak chili.
+[01:19:05.600 --> 01:19:07.600]  Gorzki jak kawa.
+[01:19:07.600 --> 01:19:09.600]  I bez cukru.
+[01:19:09.600 --> 01:19:11.600]  Coś takiego mamy.
+[01:19:11.600 --> 01:19:13.600]  Ok.
+[01:19:13.600 --> 01:19:15.600]  Przepraszam, przepraszam.
+[01:19:15.600 --> 01:19:17.600]  So, what...
+[01:19:17.600 --> 01:19:19.600]  Gorski jak kawa.
+[01:19:19.600 --> 01:19:21.600]  It's like S.
+[01:19:21.600 --> 01:19:23.600]  Sorry, like coffee.
+[01:19:23.600 --> 01:19:25.600]  So, for example,
+[01:19:25.600 --> 01:19:27.600]  spicy like chili.
+[01:19:27.600 --> 01:19:29.600]  Są takie...
+[01:19:29.600 --> 01:19:31.600]  Są takie...
+[01:19:31.600 --> 01:19:33.600]  Jak, including how,
+[01:19:33.600 --> 01:19:35.600]  including some words.
+[01:19:35.600 --> 01:19:37.600]  You're describing something.
+[01:19:37.600 --> 01:19:39.600]  Yeah, you're describing,
+[01:19:39.600 --> 01:19:41.600]  but also working like question words.
+[01:19:41.600 --> 01:19:43.600]  Jak się masz?
+[01:19:43.600 --> 01:19:45.600]  Jak się masz?
+[01:19:45.600 --> 01:19:47.600]  So, it's like how is this thing.
+[01:19:47.600 --> 01:19:49.600]  So, when you use again jak,
+[01:19:49.600 --> 01:19:51.600]  it's something is like this.
+[01:19:51.600 --> 01:19:53.600]  So, if you're comparing something with something,
+[01:19:53.600 --> 01:19:55.600]  it's perfect to use jak.
+[01:19:55.600 --> 01:19:57.600]  So, like
+[01:19:57.600 --> 01:19:59.600]  gorzki podobne kawa, that would be wrong?
+[01:19:59.600 --> 01:20:01.600]  Gorzki jak...
+[01:20:01.600 --> 01:20:03.600]  Podobne, podobne means similar, right?
+[01:20:03.600 --> 01:20:05.600]  Similar, right?
+[01:20:05.600 --> 01:20:07.600]  But what did you...
+[01:20:07.600 --> 01:20:09.600]  This is the like to mean similar.
+[01:20:09.600 --> 01:20:11.600]  This is like an example.
+[01:20:11.600 --> 01:20:13.600]  And this is also really useful.
+[01:20:13.600 --> 01:20:15.600]  You can use this not only in area of
+[01:20:15.600 --> 01:20:17.600]  eating, because for example
+[01:20:17.600 --> 01:20:19.600]  using something
+[01:20:19.600 --> 01:20:21.600]  what you said,
+[01:20:21.600 --> 01:20:23.600]  it will be like
+[01:20:23.600 --> 01:20:25.600]  na przykład, the glądasz.
+[01:20:25.600 --> 01:20:27.600]  You're looking like...
+[01:20:27.600 --> 01:20:29.600]  Wyglądasz jak twoja mama.
+[01:20:29.600 --> 01:20:31.600]  For example.
+[01:20:31.600 --> 01:20:33.600]  So, we can do description with everything.
+[01:20:33.600 --> 01:20:35.600]  You're looking like twoja mama or something.
+[01:20:35.600 --> 01:20:37.600]  Wyglądasz...
+[01:20:37.600 --> 01:20:39.600]  You're looking.
+[01:20:39.600 --> 01:20:41.600]  You're looking.
+[01:20:41.600 --> 01:20:43.600]  Wyglądasz.
+[01:20:43.600 --> 01:20:45.600]  It comes from wyglądać.
+[01:20:45.600 --> 01:20:47.600]  Wyglądać.
+[01:20:47.600 --> 01:20:49.600]  From ogłęb.
+[01:20:49.600 --> 01:20:51.600]  Family speech.
+[01:20:51.600 --> 01:20:53.600]  Typical.
+[01:20:53.600 --> 01:20:55.600]  Po polsku bardzo typowo.
+[01:20:55.600 --> 01:20:57.600]  Po polsku bardzo typowo.
+[01:20:57.600 --> 01:20:59.600]  Tak.
+[01:20:59.600 --> 01:21:01.600]  Tak, ale...
+[01:21:01.600 --> 01:21:03.600]  No, a ty dalej.
+[01:21:03.600 --> 01:21:05.600]  No dobra.
+[01:21:05.600 --> 01:21:07.600]  I tu też jest element, przykład.
+[01:21:07.600 --> 01:21:09.600]  Co to jest?
+[01:21:09.600 --> 01:21:11.600]  Truskowskie.
+[01:21:11.600 --> 01:21:13.600]  Truska. Super, dobra.
+[01:21:13.600 --> 01:21:15.600]  I truska jest mała.
+[01:21:15.600 --> 01:21:17.600]  Czerwona.
+[01:21:17.600 --> 01:21:19.600]  Czerwona. I słodka.
+[01:21:19.600 --> 01:21:21.600]  Trochę.
+[01:21:21.600 --> 01:21:23.600]  Trochę, tak to mówić.
+[01:21:23.600 --> 01:21:25.600]  Podłużna.
+[01:21:25.600 --> 01:21:27.600]  Trochę.
+[01:21:27.600 --> 01:21:29.600]  I miękka.
+[01:21:29.600 --> 01:21:31.600]  Co to jest miękka?
+[01:21:31.600 --> 01:21:33.600]  Nie twarda.
+[01:21:33.600 --> 01:21:35.600]  Nie twarda.
+[01:21:35.600 --> 01:21:37.600]  Inteligencja.
+[01:21:37.600 --> 01:21:39.600]  Miękka, soft.
+[01:21:39.600 --> 01:21:41.600]  Soft.
+[01:21:41.600 --> 01:21:43.600]  Miękka.
+[01:21:43.600 --> 01:21:45.600]  A twardy?
+[01:21:45.600 --> 01:21:47.600]  Hard.
+[01:21:47.600 --> 01:21:49.600]  Miękki, twardy.
+[01:21:49.600 --> 01:21:51.600]  Jest podłużna i miękka.
+[01:21:51.600 --> 01:21:53.600]  Jest dobra z cukrem.
+[01:21:53.600 --> 01:21:55.600]  Jest dobra z cukrem.
+[01:21:55.600 --> 01:21:57.600]  I ze śmietaną.
+[01:21:57.600 --> 01:21:59.600]  Jest dobra z cukrem i z mąki.
+[01:21:59.600 --> 01:22:01.600]  Jest dobra z cukrem i z mąki.
+[01:22:01.600 --> 01:22:03.600]  Jest dobra z cukrem i z mąki.
+[01:22:03.600 --> 01:22:05.600]  Co to znaczy?
+[01:22:05.600 --> 01:22:07.600]  Ze?
+[01:22:07.600 --> 01:22:09.600]  Bardzo dobre pytanie.
+[01:22:09.600 --> 01:22:11.600]  Ze, działa dokładnie tak samo jak z.
+[01:22:11.600 --> 01:22:13.600]  Więc mamy z,
+[01:22:13.600 --> 01:22:15.600]  ale jest do kolejnego słowa
+[01:22:15.600 --> 01:22:17.600]  po z.
+[01:22:17.600 --> 01:22:19.600]  Więc na przykład
+[01:22:19.600 --> 01:22:21.600]  jemy chleb
+[01:22:21.600 --> 01:22:23.600]  z mąki.
+[01:22:23.600 --> 01:22:25.600]  I jemy chleb
+[01:22:25.600 --> 01:22:27.600]  z cukrem.
+[01:22:27.600 --> 01:22:29.600]  I chleb
+[01:22:29.600 --> 01:22:31.600]  ze śmietaną.
+[01:22:31.600 --> 01:22:33.600]  I chleb ze śmietaną.
+[01:22:33.600 --> 01:22:35.600]  Dlaczego mamy tutaj to
+[01:22:35.600 --> 01:22:37.600]  i tutaj to?
+[01:22:37.600 --> 01:22:39.600]  Bo po ze
+[01:22:39.600 --> 01:22:41.600]  już ze
+[01:22:41.600 --> 01:22:43.600]  mamy kombinację
+[01:22:43.600 --> 01:22:45.600]  konsonantów.
+[01:22:45.600 --> 01:22:47.600]  Więc jest łatwiej
+[01:22:47.600 --> 01:22:49.600]  powiedzieć ze
+[01:22:49.600 --> 01:22:51.600]  jest mękka niż ze śmietaną.
+[01:22:51.600 --> 01:22:53.600]  Więc dlatego
+[01:22:53.600 --> 01:22:55.600]  czasami też
+[01:22:55.600 --> 01:22:57.600]  możemy to zobaczyć
+[01:22:57.600 --> 01:22:59.600]  z pytania, z jakiego strony jesteś.
+[01:22:59.600 --> 01:23:01.600]  Skąd jesteś?
+[01:23:01.600 --> 01:23:03.600]  Po przykład ze Polski.
+[01:23:03.600 --> 01:23:05.600]  Ale ze
+[01:23:05.600 --> 01:23:07.600]  Szwajcarii.
+[01:23:07.600 --> 01:23:09.600]  Bo tutaj mamy kombinację
+[01:23:09.600 --> 01:23:11.600]  konsonantów.
+[01:23:11.600 --> 01:23:13.600]  I jest łatwiej powiedzieć to.
+[01:23:13.600 --> 01:23:15.600]  Najczęściej
+[01:23:15.600 --> 01:23:17.600]  utrzymujemy to słowo.
+[01:23:17.600 --> 01:23:19.600]  Czasami jesteśmy dziwni.
+[01:23:19.600 --> 01:23:21.600]  I nie
+[01:23:21.600 --> 01:23:23.600]  zbyt często
+[01:23:23.600 --> 01:23:25.600]  to tracimy.
+[01:23:25.600 --> 01:23:27.600]  Jestem ze Krakowa.
+[01:23:27.600 --> 01:23:29.600]  Ale
+[01:23:29.600 --> 01:23:31.600]  ze Lwowa.
+[01:23:31.600 --> 01:23:33.600]  I to wciąż nie...
+[01:23:33.600 --> 01:23:35.600]  Ze Krakowa mamy też
+[01:23:35.600 --> 01:23:37.600]  kombinację.
+[01:23:37.600 --> 01:23:39.600]  Ale ze Lwowa
+[01:23:39.600 --> 01:23:41.600]  mamy identyczną kombinację.
+[01:23:41.600 --> 01:23:43.600]  I nie
+[01:23:43.600 --> 01:23:45.600]  tracimy tego.
+[01:23:45.600 --> 01:23:47.600]  To działa jak wyjątkowo.
+[01:23:47.600 --> 01:23:49.600]  Ponieważ w większości
+[01:23:49.600 --> 01:23:51.600]  chcemy to utrzymać.
+[01:23:51.600 --> 01:23:53.600]  To co wymyśliliśmy.
+[01:23:53.600 --> 01:23:55.600]  Tak?
+[01:23:55.600 --> 01:23:57.600]  No dobrze.
+[01:23:57.600 --> 01:23:59.600]  Ok.
+[01:23:59.600 --> 01:24:01.600]  Z cukrem i ze świetaną. Tu w porządku?
+[01:24:01.600 --> 01:24:03.600]  Co jest miękkie?
+[01:24:03.600 --> 01:24:05.600]  Jakie produkty są miękkie?
+[01:24:05.600 --> 01:24:07.600]  Jajko.
+[01:24:07.600 --> 01:24:09.600]  Gotowane.
+[01:24:09.600 --> 01:24:11.600]  Nie gotowane też.
+[01:24:11.600 --> 01:24:13.600]  Jest delikatne.
+[01:24:13.600 --> 01:24:15.600]  Ser.
+[01:24:15.600 --> 01:24:17.600]  Ser biały.
+[01:24:21.600 --> 01:24:23.600]  I forgot peach.
+[01:24:23.600 --> 01:24:25.600]  O brzoskwinia.
+[01:24:25.600 --> 01:24:27.600]  Brzoskwinia.
+[01:24:27.600 --> 01:24:29.600]  Truskawa.
+[01:24:29.600 --> 01:24:31.600]  Truskawka.
+[01:24:31.600 --> 01:24:33.600]  If we say truskawa
+[01:24:33.600 --> 01:24:35.600]  it sounds in Polish like hyper big.
+[01:24:35.600 --> 01:24:37.600]  No, I like it.
+[01:24:37.600 --> 01:24:39.600]  Truskawa.
+[01:24:39.600 --> 01:24:41.600]  Tak.
+[01:24:41.600 --> 01:24:43.600]  Tak.
+[01:24:43.600 --> 01:24:45.600]  Truskawka. Ok.
+[01:24:45.600 --> 01:24:47.600]  A twarde?
+[01:24:47.600 --> 01:24:49.600]  Twarde.
+[01:24:49.600 --> 01:24:51.600]  Twarde.
+[01:24:51.600 --> 01:24:53.600]  Jabłko.
+[01:24:53.600 --> 01:24:55.600]  Tak.
+[01:24:55.600 --> 01:24:57.600]  Jabłko jest twarde.
+[01:24:57.600 --> 01:24:59.600]  Truskawka miękka.
+[01:25:01.600 --> 01:25:03.600]  Siemiaki.
+[01:25:03.600 --> 01:25:05.600]  Tak.
+[01:25:05.600 --> 01:25:07.600]  Jabłki są twarde.
+[01:25:07.600 --> 01:25:09.600]  Chyba, że mamy...
+[01:25:09.600 --> 01:25:11.600]  Co to jest?
+[01:25:11.600 --> 01:25:13.600]  Co to jest?
+[01:25:13.600 --> 01:25:15.600]  Kierunek.
+[01:25:15.600 --> 01:25:17.600]  Markiwka.
+[01:25:17.600 --> 01:25:19.600]  Markiwka jest bardzo twarda.
+[01:25:19.600 --> 01:25:21.600]  Tak.
+[01:25:21.600 --> 01:25:23.600]  To jest dobry przykład.
+[01:25:23.600 --> 01:25:25.600]  Ok.
+[01:25:25.600 --> 01:25:27.600]  I can you use it for objects too?
+[01:25:27.600 --> 01:25:29.600]  Like Bjorka?
+[01:25:29.600 --> 01:25:31.600]  Bardzo twarde.
+[01:25:31.600 --> 01:25:33.600]  Nie rekomendujemy do jedzenia.
+[01:25:33.600 --> 01:25:35.600]  Tak. Bardzo twarde.
+[01:25:35.600 --> 01:25:37.600]  No dobrze. W porządku.
+[01:25:37.600 --> 01:25:39.600]  To jest ok?
+[01:25:39.600 --> 01:25:41.600]  To jest logiczne? Dobra.
+[01:25:41.600 --> 01:25:43.600]  I piłka finalna.
+[01:25:43.600 --> 01:25:45.600]  Finalna postać.
+[01:25:45.600 --> 01:25:47.600]  I will check.
+[01:25:49.600 --> 01:25:51.600]  I will check.
+[01:25:51.600 --> 01:25:53.600]  To jest informacja.
+[01:25:53.600 --> 01:25:55.600]  To jest 10a.
+[01:25:55.600 --> 01:25:57.600]  10a.
+[01:25:57.600 --> 01:25:59.600]  10a.
+[01:25:59.600 --> 01:26:01.600]  10a.
+[01:26:01.600 --> 01:26:03.600]  O nie ma.
+[01:26:03.600 --> 01:26:05.600]  Dobra. To nie ma problemu.
+[01:26:05.600 --> 01:26:07.600]  Ale no.
+[01:26:07.600 --> 01:26:09.600]  I will check it for next time.
+[01:26:09.600 --> 01:26:11.600]  I will check it for next time.
+[01:26:11.600 --> 01:26:13.600]  I will check it for next time.
+[01:26:13.600 --> 01:26:15.600]  I will check it for next time.
+[01:26:15.600 --> 01:26:17.600]  Co to jest?
+[01:26:17.600 --> 01:26:19.600]  To jest taka mikrosytuacja komunikacyjna.
+[01:26:19.600 --> 01:26:21.600]  Proszę dopasować tekst do ilustracji.
+[01:26:21.600 --> 01:26:23.600]  Proszę dopasować tekst do ilustracji.
+[01:26:23.600 --> 01:26:25.600]  We have some matching.
+[01:26:25.600 --> 01:26:27.600]  Text with grafika.
+[01:26:27.600 --> 01:26:29.600]  I what kind of situation.
+[01:26:29.600 --> 01:26:31.600]  I mamy sytuację A.
+[01:26:31.600 --> 01:26:33.600]  I mamy sytuację A.
+[01:26:33.600 --> 01:26:35.600]  Smacznego.
+[01:26:35.600 --> 01:26:37.600]  Dziękuję nawzajem.
+[01:26:37.600 --> 01:26:39.600]  Co to znaczy?
+[01:26:39.600 --> 01:26:41.600]  Enjoy.
+[01:26:41.600 --> 01:26:43.600]  Dziękuję nawzajem.
+[01:26:43.600 --> 01:26:45.600]  You too.
+[01:26:45.600 --> 01:26:47.600]  This is our you too.
+[01:26:47.600 --> 01:26:49.600]  I would like to show you that we
+[01:26:49.600 --> 01:26:51.600]  have two category of people in Poland.
+[01:26:51.600 --> 01:26:53.600]  We have two category of people in Poland.
+[01:26:53.600 --> 01:26:55.600]  50% say nawzajem.
+[01:26:55.600 --> 01:26:57.600]  50% say nawzajem.
+[01:26:57.600 --> 01:26:59.600]  But second say wzajemnie.
+[01:26:59.600 --> 01:27:01.600]  But second say wzajemnie.
+[01:27:01.600 --> 01:27:03.600]  You can hear all of this.
+[01:27:03.600 --> 01:27:05.600]  This is like total synonym.
+[01:27:05.600 --> 01:27:07.600]  Zajemnie, nawzajem.
+[01:27:07.600 --> 01:27:09.600]  Zajemnie it's more Slavic.
+[01:27:09.600 --> 01:27:11.600]  And other countries also using this.
+[01:27:11.600 --> 01:27:13.600]  And other countries also using this.
+[01:27:13.600 --> 01:27:15.600]  Nawzajem more Polish.
+[01:27:15.600 --> 01:27:17.600]  But no matter how you will say it's totally the same.
+[01:27:17.600 --> 01:27:19.600]  Nawzajem, wzajemnie.
+[01:27:19.600 --> 01:27:21.600]  You too.
+[01:27:21.600 --> 01:27:23.600]  Nawzajem, wzajemnie.
+[01:27:23.600 --> 01:27:25.600]  I to jest sytuacja A.
+[01:27:25.600 --> 01:27:27.600]  Dwe. Smacznego.
+[01:27:27.600 --> 01:27:29.600]  A sytuacja dwa.
+[01:27:29.600 --> 01:27:31.600]  Czy można tu palić?
+[01:27:31.600 --> 01:27:33.600]  Nie.
+[01:27:33.600 --> 01:27:35.600]  Tu nie wolno palić.
+[01:27:35.600 --> 01:27:37.600]  Co to znaczy?
+[01:27:37.600 --> 01:27:39.600]  Can I smoke here?
+[01:27:39.600 --> 01:27:41.600]  Can I smoke here?
+[01:27:41.600 --> 01:27:43.600]  Here or it's possible to smoke here?
+[01:27:43.600 --> 01:27:45.600]  Można.
+[01:27:45.600 --> 01:27:47.600]  Można.
+[01:27:47.600 --> 01:27:49.600]  Nie można.
+[01:27:49.600 --> 01:27:51.600]  Można.
+[01:27:51.600 --> 01:27:53.600]  To nie można.
+[01:27:53.600 --> 01:27:55.600]  To można.
+[01:27:55.600 --> 01:27:57.600]  To możliwe.
+[01:27:57.600 --> 01:27:59.600]  Możliwe.
+[01:27:59.600 --> 01:28:01.600]  Nie to nie wolno.
+[01:28:01.600 --> 01:28:03.600]  To prohibited.
+[01:28:03.600 --> 01:28:05.600]  Nie wolno.
+[01:28:05.600 --> 01:28:07.600]  Nie wolno to not free.
+[01:28:07.600 --> 01:28:09.600]  Nie wolno to not free.
+[01:28:09.600 --> 01:28:11.600]  Nie wolno to not free.
+[01:28:11.600 --> 01:28:13.600]  Nie wolny to...
+[01:28:13.600 --> 01:28:15.600]  Sometimes people will ask
+[01:28:15.600 --> 01:28:17.600]  if this bench free.
+[01:28:17.600 --> 01:28:19.600]  Tak jest tutaj wolne.
+[01:28:19.600 --> 01:28:21.600]  It's free.
+[01:28:21.600 --> 01:28:23.600]  But here with negation we mostly not saying
+[01:28:23.600 --> 01:28:25.600]  like it's not free.
+[01:28:25.600 --> 01:28:27.600]  We mostly saying
+[01:28:27.600 --> 01:28:29.600]  zajęty.
+[01:28:29.600 --> 01:28:31.600]  So for example
+[01:28:31.600 --> 01:28:33.600]  in an area of
+[01:28:33.600 --> 01:28:35.600]  free place or something
+[01:28:35.600 --> 01:28:37.600]  it's more natural to say
+[01:28:37.600 --> 01:28:39.600]  the opposite meaning.
+[01:28:39.600 --> 01:28:41.600]  Like taken.
+[01:28:41.600 --> 01:28:43.600]  So this way we can translate
+[01:28:43.600 --> 01:28:45.600]  that like you said.
+[01:28:45.600 --> 01:28:47.600]  But speaking not...
+[01:28:47.600 --> 01:28:49.600]  We're not using this type of
+[01:28:49.600 --> 01:28:51.600]  sentence.
+[01:28:51.600 --> 01:28:53.600]  Like we have taken something
+[01:28:53.600 --> 01:28:55.600]  a seat place or something like that.
+[01:28:55.600 --> 01:28:57.600]  It's forbidden.
+[01:28:57.600 --> 01:28:59.600]  It's here it's forbidden.
+[01:28:59.600 --> 01:29:01.600]  So if you'd like to ask
+[01:29:01.600 --> 01:29:03.600]  if it's a free place or something
+[01:29:03.600 --> 01:29:05.600]  you can for example
+[01:29:05.600 --> 01:29:07.600]  ask directly
+[01:29:07.600 --> 01:29:09.600]  Czy to wolne miejsce?
+[01:29:09.600 --> 01:29:11.600]  Czy to wolne miejsce?
+[01:29:11.600 --> 01:29:13.600]  It's free place.
+[01:29:13.600 --> 01:29:15.600]  Czy to zajęte miejsce?
+[01:29:15.600 --> 01:29:17.600]  Czy to zajęte miejsce?
+[01:29:17.600 --> 01:29:19.600]  Czy to zajęte miejsce?
+[01:29:19.600 --> 01:29:21.600]  Nie wolne.
+[01:29:21.600 --> 01:29:23.600]  Nie wolne.
+[01:29:23.600 --> 01:29:25.600]  This is not our way of express that.
+[01:29:25.600 --> 01:29:27.600]  You can ask zajęte
+[01:29:27.600 --> 01:29:29.600]  taken or wolne.
+[01:29:29.600 --> 01:29:31.600]  Nie wolne
+[01:29:31.600 --> 01:29:33.600]  not working.
+[01:29:33.600 --> 01:29:35.600]  Because it's forbidden to say.
+[01:29:35.600 --> 01:29:37.600]  It sounds weird.
+[01:29:37.600 --> 01:29:39.600]  Dziwnie.
+[01:29:39.600 --> 01:29:41.600]  Dziwnie.
+[01:29:41.600 --> 01:29:43.600]  Czy można walić?
+[01:29:43.600 --> 01:29:45.600]  Gdzie to jest?
+[01:29:45.600 --> 01:29:47.600]  Jaka sytuacja?
+[01:29:47.600 --> 01:29:49.600]  A, B, C, D, E, F, G?
+[01:29:49.600 --> 01:29:51.600]  D.
+[01:29:51.600 --> 01:29:53.600]  D.
+[01:29:53.600 --> 01:29:55.600]  Jest D.
+[01:29:55.600 --> 01:29:57.600]  OK.
+[01:29:57.600 --> 01:29:59.600]  I mamy też sytuację
+[01:29:59.600 --> 01:30:01.600]  komunikacyjną.
+[01:30:01.600 --> 01:30:03.600]  Czy jest wolny stolik
+[01:30:03.600 --> 01:30:05.600]  na cztery osoby?
+[01:30:05.600 --> 01:30:07.600]  Co to znaczy?
+[01:30:07.600 --> 01:30:09.600]  Do you have free table
+[01:30:09.600 --> 01:30:11.600]  for four people?
+[01:30:11.600 --> 01:30:13.600]  Tak, bardzo dobrze. Super.
+[01:30:13.600 --> 01:30:15.600]  Alebo stolik
+[01:30:15.600 --> 01:30:17.600]  na cztery osoby.
+[01:30:17.600 --> 01:30:19.600]  Tak?
+[01:30:19.600 --> 01:30:21.600]  Proszę na prawo.
+[01:30:21.600 --> 01:30:23.600]  Please to the right.
+[01:30:23.600 --> 01:30:25.600]  Gdzie to jest?
+[01:30:25.600 --> 01:30:27.600]  C. Tak, bardzo dobrze.
+[01:30:27.600 --> 01:30:29.600]  To jest C.
+[01:30:29.600 --> 01:30:31.600]  Super.
+[01:30:31.600 --> 01:30:33.600]  I kontekst cztery.
+[01:30:33.600 --> 01:30:35.600]  Przepraszam.
+[01:30:35.600 --> 01:30:37.600]  Gdzie jest to?
+[01:30:37.600 --> 01:30:39.600]  Tam, na lewo.
+[01:30:39.600 --> 01:30:41.600]  E.
+[01:30:41.600 --> 01:30:43.600]  Tak, to jest E.
+[01:30:43.600 --> 01:30:45.600]  OK.
+[01:30:45.600 --> 01:30:47.600]  Jaka toaleta dla kogo?
+[01:30:47.600 --> 01:30:49.600]  Gdzie kobieta, gdzie mężczyzna?
+[01:30:49.600 --> 01:30:51.600]  Masakra.
+[01:30:51.600 --> 01:30:53.600]  Masakra.
+[01:30:53.600 --> 01:30:55.600]  Masakra.
+[01:30:55.600 --> 01:30:57.600]  Masakra.
+[01:30:57.600 --> 01:30:59.600]  I'm also not sure.
+[01:30:59.600 --> 01:31:01.600]  Lewo kobieta, mężczyzna prawo.
+[01:31:01.600 --> 01:31:03.600]  No, I think it's the opposite.
+[01:31:03.600 --> 01:31:05.600]  No, no, no.
+[01:31:05.600 --> 01:31:07.600]  Masakra, let's check.
+[01:31:07.600 --> 01:31:09.600]  The down triangle is like the shoulders of the woman.
+[01:31:09.600 --> 01:31:11.600]  It's like when they do the exercise.
+[01:31:11.600 --> 01:31:13.600]  Oh.
+[01:31:13.600 --> 01:31:15.600]  I think they draw a little stickman.
+[01:31:15.600 --> 01:31:17.600]  Kółko.
+[01:31:17.600 --> 01:31:19.600]  Tak.
+[01:31:19.600 --> 01:31:21.600]  Circle. Kobiety.
+[01:31:21.600 --> 01:31:23.600]  Kobiety. Trójkąt mężczyzny.
+[01:31:23.600 --> 01:31:25.600]  O, masakra.
+[01:31:25.600 --> 01:31:27.600]  It could be anything.
+[01:31:27.600 --> 01:31:29.600]  Dobrze, dobrze.
+[01:31:29.600 --> 01:31:31.600]  Sometimes it's an up triangle for women.
+[01:31:31.600 --> 01:31:33.600]  Tak, tak.
+[01:31:33.600 --> 01:31:35.600]  Maybe someone just can work it.
+[01:31:35.600 --> 01:31:37.600]  It doesn't make any sense.
+[01:31:37.600 --> 01:31:39.600]  I'm glad I'm not causing many pollings like that yet.
+[01:31:39.600 --> 01:31:41.600]  I'm glad I'm not causing many pollings like that yet.
+[01:31:41.600 --> 01:31:43.600]  Dobrze.
+[01:31:43.600 --> 01:31:45.600]  No dobrze.
+[01:31:45.600 --> 01:31:47.600]  At least you have the clear stickman drawing
+[01:31:47.600 --> 01:31:49.600]  just like a bag.
+[01:31:49.600 --> 01:31:51.600]  And then a woman with like a triangle
+[01:31:51.600 --> 01:31:53.600]  that indicates it.
+[01:31:53.600 --> 01:31:55.600]  But if it's a simplified version,
+[01:31:55.600 --> 01:31:57.600]  so up triangle is like a dress.
+[01:31:57.600 --> 01:31:59.600]  No, no.
+[01:31:59.600 --> 01:32:01.600]  Toaleta, yes.
+[01:32:01.600 --> 01:32:03.600]  Or they just have the text immediately.
+[01:32:03.600 --> 01:32:05.600]  Teraz, w sumie, mogę prosić,
+[01:32:05.600 --> 01:32:07.600]  can I ask about,
+[01:32:07.600 --> 01:32:09.600]  can I drink salt?
+[01:32:09.600 --> 01:32:11.600]  Proszę bardzo.
+[01:32:11.600 --> 01:32:13.600]  Proszę bardzo.
+[01:32:13.600 --> 01:32:15.600]  B.
+[01:32:15.600 --> 01:32:17.600]  B jest, sól.
+[01:32:17.600 --> 01:32:19.600]  Mogę prosić sól.
+[01:32:19.600 --> 01:32:21.600]  Opcja B.
+[01:32:21.600 --> 01:32:23.600]  Tak, proszę bardzo.
+[01:32:23.600 --> 01:32:25.600]  I sytuacja sześć.
+[01:32:25.600 --> 01:32:27.600]  Płaci.
+[01:32:27.600 --> 01:32:29.600]  Kartą czy gotówką?
+[01:32:29.600 --> 01:32:31.600]  O, cash or card.
+[01:32:31.600 --> 01:32:33.600]  Cash or card, tak.
+[01:32:33.600 --> 01:32:35.600]  Card or cash.
+[01:32:35.600 --> 01:32:37.600]  Gotówką.
+[01:32:37.600 --> 01:32:39.600]  Gotówką.
+[01:32:39.600 --> 01:32:41.600]  Cash or card.
+[01:32:41.600 --> 01:32:43.600]  Card or.
+[01:32:43.600 --> 01:32:45.600]  Cash.
+[01:32:45.600 --> 01:32:47.600]  I gdzie to jest?
+[01:32:47.600 --> 01:32:49.600]  F.
+[01:32:49.600 --> 01:32:51.600]  F, tak.
+[01:32:51.600 --> 01:32:53.600]  Bardzo dobrze.
+[01:32:53.600 --> 01:32:55.600]  I pytanie siedem.
+[01:32:55.600 --> 01:32:57.600]  Jesteś głodny?
+[01:32:57.600 --> 01:32:59.600]  To znaczy głodny.
+[01:32:59.600 --> 01:33:01.600]  Hungry.
+[01:33:01.600 --> 01:33:03.600]  Naturalnie, głodny.
+[01:33:03.600 --> 01:33:05.600]  Jesteś głodny?
+[01:33:05.600 --> 01:33:07.600]  Tak, tak, bardzo chce mi się jeść i pić.
+[01:33:07.600 --> 01:33:09.600]  I tutaj mamy,
+[01:33:09.600 --> 01:33:11.600]  o, tu jest dużo jedzenia.
+[01:33:11.600 --> 01:33:13.600]  Bardzo dużo jedzenia jest.
+[01:33:13.600 --> 01:33:15.600]  Wszystko.
+[01:33:15.600 --> 01:33:17.600]  Jakiś fioletowy napłonik.
+[01:33:17.600 --> 01:33:19.600]  Co to jest?
+[01:33:19.600 --> 01:33:21.600]  Lavender.
+[01:33:21.600 --> 01:33:23.600]  Lavendowy, tak.
+[01:33:23.600 --> 01:33:25.600]  Opcja G?
+[01:33:25.600 --> 01:33:27.600]  G.
+[01:33:27.600 --> 01:33:29.600]  G, to jest G.
+[01:33:29.600 --> 01:33:31.600]  I'm sorry, ale jesteś,
+[01:33:31.600 --> 01:33:33.600]  why is it not with a Z?
+[01:33:33.600 --> 01:33:35.600]  Jesteś, are you, tak?
+[01:33:35.600 --> 01:33:37.600]  This is ending of you, she.
+[01:33:37.600 --> 01:33:39.600]  Jesteś.
+[01:33:39.600 --> 01:33:41.600]  Especially for to be,
+[01:33:41.600 --> 01:33:43.600]  which is irregular in Polish.
+[01:33:43.600 --> 01:33:45.600]  Jestem, jesteś.
+[01:33:45.600 --> 01:33:47.600]  Jestem, jesteś.
+[01:33:47.600 --> 01:33:49.600]  It's I want.
+[01:33:49.600 --> 01:33:51.600]  I want.
+[01:33:51.600 --> 01:33:53.600]  Mi.
+[01:33:53.600 --> 01:33:55.600]  Mi, it's my.
+[01:33:55.600 --> 01:33:57.600]  This is our really sloppy construction.
+[01:33:57.600 --> 01:33:59.600]  I will show you this next time.
+[01:33:59.600 --> 01:34:01.600]  Especially when we need something,
+[01:34:01.600 --> 01:34:03.600]  when we express our emotions,
+[01:34:03.600 --> 01:34:05.600]  we use this construction.
+[01:34:05.600 --> 01:34:07.600]  Bardzo chce mi się jeść.
+[01:34:07.600 --> 01:34:09.600]  Bardzo chce mi się pić.
+[01:34:09.600 --> 01:34:11.600]  This is typical Polish construction.
+[01:34:11.600 --> 01:34:13.600]  This means I really want to.
+[01:34:13.600 --> 01:34:15.600]  I really want or I really need.
+[01:34:15.600 --> 01:34:17.600]  This is our way.
+[01:34:17.600 --> 01:34:19.600]  Dobrze.
+[01:34:19.600 --> 01:34:21.600]  To bardzo dziękuję.
+[01:34:21.600 --> 01:34:23.600]  I will give you something from lexical stuff.
+[01:34:23.600 --> 01:34:25.600]  It will be something also with
+[01:34:25.600 --> 01:34:27.600]  maybe like a homework.
+[01:34:27.600 --> 01:34:29.600]  But we can give your
+[01:34:29.600 --> 01:34:31.600]  knowledge in vocabulary.
+[01:34:31.600 --> 01:34:33.600]  Oh, that's good.
+[01:34:33.600 --> 01:34:35.600]  Waszywa owoce.
+[01:34:35.600 --> 01:34:37.600]  Tu jest kolor, a mi.
+[01:34:37.600 --> 01:34:39.600]  Tu jest kolor.
+[01:34:39.600 --> 01:34:41.600]  Rozumiem.
+[01:34:41.600 --> 01:34:43.600]  Rozumiem.
+[01:34:43.600 --> 01:34:45.600]  Ja też. Kolor jest dobry.
+[01:34:45.600 --> 01:34:47.600]  This is good for starting the class.
+[01:34:47.600 --> 01:34:49.600]  Starting the class.
+[01:34:49.600 --> 01:34:51.600]  You're going with partner and partner.
+[01:34:51.600 --> 01:34:53.600]  Yeah.
+[01:34:53.600 --> 01:34:55.600]  How many of you are here?
+[01:34:55.600 --> 01:34:57.600]  Oh, everyone here.
+[01:34:57.600 --> 01:34:59.600]  Make sure that's all.
+[01:34:59.600 --> 01:35:01.600]  Proszę.
+[01:35:01.600 --> 01:35:03.600]  Wszyscy.
+[01:35:03.600 --> 01:35:05.600]  Everybody.
+[01:35:05.600 --> 01:35:07.600]  Super.
+[01:35:07.600 --> 01:35:09.600]  Macie dzisiaj tykany.
+[01:35:09.600 --> 01:35:11.600]  Quick question.
+[01:35:11.600 --> 01:35:13.600]  What is the version of like
+[01:35:13.600 --> 01:35:15.600]  you are welcome over here?
+[01:35:15.600 --> 01:35:17.600]  Like someone says thank you.
+[01:35:17.600 --> 01:35:19.600]  Nie ma za co.
+[01:35:19.600 --> 01:35:21.600]  I can write it down.
+[01:35:21.600 --> 01:35:23.600]  This is also a question.
+[01:35:23.600 --> 01:35:25.600]  There are two of you.
+[01:35:25.600 --> 01:35:27.600]  Nie ma za co.
+[01:35:27.600 --> 01:35:29.600]  Nie ma problemu.
+[01:35:29.600 --> 01:35:31.600]  Nie ma problemu.
+[01:35:31.600 --> 01:35:33.600]  I can say proszę as well.
+[01:35:33.600 --> 01:35:35.600]  Proszę as well.
+[01:35:35.600 --> 01:35:37.600]  Also what he's saying.
+[01:35:37.600 --> 01:35:39.600]  And also
+[01:35:39.600 --> 01:35:41.600]  many people says
+[01:35:41.600 --> 01:35:43.600]  Ja też dziękuję.
+[01:35:43.600 --> 01:35:45.600]  So sometimes I've heard like dziękuję
+[01:35:45.600 --> 01:35:47.600]  then they reply with dziękuję.
+[01:35:47.600 --> 01:35:49.600]  Dziękuję.
+[01:35:49.600 --> 01:35:51.600]  Ja not no.
+[01:35:51.600 --> 01:35:53.600]  No, no, no.
+[01:35:53.600 --> 01:35:55.600]  It would be grammatical
+[01:35:55.600 --> 01:35:57.600]  I'll correct the next time.
+[01:35:57.600 --> 01:35:59.600]  Or it sounds like
+[01:35:59.600 --> 01:36:01.600]  you know
+[01:36:01.600 --> 01:36:03.600]  Huh?
+[01:36:03.600 --> 01:36:05.600]  Tak, tak, tak.
+[01:36:05.600 --> 01:36:07.600]  Like mix of language.
+[01:36:07.600 --> 01:36:09.600]  Dziękuję, dziękuję.
+[01:36:09.600 --> 01:36:11.600]  To dobrze.
+[01:36:11.600 --> 01:36:13.600]  Ja też dziękuję i do czwartku.
+[01:36:13.600 --> 01:36:15.600]  I mean I will take
+[01:36:15.600 --> 01:36:17.600]  take two answers.
+[01:36:17.600 --> 01:36:19.600]  Dziękuję.
