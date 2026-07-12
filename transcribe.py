@@ -13,7 +13,7 @@ result = model.transcribe(
 )
 
 # Define where you want to save the text file
-output_file_path = r"Lectures/Polish/A1_2/L5_5thJuly/L5_5th_July.txt"
+output_file_path = r"Lectures/Polish/A1_2/L5_5thJuly/L5_5th_July_2.txt"
 
 # Open the file in write mode ('w') with UTF-8 encoding and save the text
 with open(output_file_path, "w", encoding="utf-8") as f:
