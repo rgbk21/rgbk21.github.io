@@ -5,7 +5,7 @@ model = whisper.load_model("large-v3")
 
 # Transcribe the audio with a mixed-language prompt
 result = model.transcribe(
-    r"C:\MY_BACKUP\LearningStuff\Udemy Full Stack\newGithubHostedSite\rgbk21.github.io\rgbk21.github.io\Lectures\Polish\A1_2\L5_5thJuly\L5_9thJuly.mp3",
+    r"C:\MY_BACKUP\LearningStuff\Udemy Full Stack\newGithubHostedSite\rgbk21.github.io\rgbk21.github.io\Lectures\Polish\A1_2\L6_14thJuly\Lecture6_14thJuly.mp3",
     task="transcribe",
     # Priming the model with both languages activates both dictionaries
     prompt="Ta lekcja jest po polsku and partly in English to explain technical concepts smoothly.",
@@ -13,7 +13,7 @@ result = model.transcribe(
 )
 
 # Define where you want to save the text file
-output_file_path = r"Lectures/Polish/A1_2/L5_5thJuly/L5_5th_July_2.txt"
+output_file_path = r"Lectures/Polish/A1_2/L6_14thJuly/L6_14thJuly.txt"
 
 # Open the file in write mode ('w') with UTF-8 encoding and save the text
 with open(output_file_path, "w", encoding="utf-8") as f:
