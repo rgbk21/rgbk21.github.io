@@ -1,0 +1,2276 @@
+"C:\MY_BACKUP\LearningStuff\Udemy Full Stack\newGithubHostedSite\rgbk21.github.io\rgbk21.github.io\.venv\Scripts\python.exe" "C:\MY_BACKUP\LearningStuff\Udemy Full Stack\newGithubHostedSite\rgbk21.github.io\rgbk21.github.io\transcribe.py"
+C:\MY_BACKUP\LearningStuff\Udemy Full Stack\newGithubHostedSite\rgbk21.github.io\rgbk21.github.io\.venv\Lib\site-packages\whisper\transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+[00:00.000 --> 00:07.000]  Tak, większość osób gra w naszą klasę, ale nie weszły w klasę i potem po raz kolejny wyjeżdżają.
+[00:07.000 --> 00:15.000]  Super, nowy etap w Twoim życiu, życiu studentów. Super, bardzo dobrze.
+[00:15.000 --> 00:22.000]  Masz teraz grupę na Facebooku, albo jeszcze nie stworzyli?
+[00:22.000 --> 00:32.000]  Jest to bardzo popularne w Polsce, kiedy jesteś studentem, wszyscy stworzyli grupę na komunikację.
+[00:32.000 --> 00:39.000]  Tak, kiedy zaczęliśmy studiować i wszystko to, to spotkaliśmy się i wtedy to wszystko się stało.
+[00:39.000 --> 00:46.000]  Super, dobrze. W porządku. Już tutaj robimy.
+[00:46.000 --> 00:51.000]  Mili, co do tego, co słyszać?
+[00:51.000 --> 00:52.000]  Co słyszałaś?
+[00:52.000 --> 00:55.000]  Nic dobrego.
+[00:55.000 --> 00:56.000]  Nic dobrego, tak?
+[00:56.000 --> 00:57.000]  Nic dobrego, tak?
+[00:57.000 --> 00:58.000]  Nic dobrego.
+[00:58.000 --> 00:59.000]  Nic dobrego.
+[00:59.000 --> 01:01.000]  Nie, ok, rozumiem. Bo mama, co o Tobie?
+[01:01.000 --> 01:02.000]  Jesteś dobry?
+[01:02.000 --> 01:03.000]  Dobrze, dobrze.
+[01:03.000 --> 01:04.000]  Dobrze, dobrze.
+[01:04.000 --> 01:05.000]  Ty?
+[01:05.000 --> 01:06.000]  Też jest ok.
+[01:06.000 --> 01:07.000]  A Twój przyjaciel?
+[01:07.000 --> 01:14.000]  No, to jest ok, to jest dwa tygodnie później, więc mam nadzieję, że będzie lepiej.
+[01:14.000 --> 01:18.000]  Ale to jest, wiesz, tylko zniszczenie, więc musisz być pacjentny, bo to...
+[01:18.000 --> 01:21.000]  To wymaga czasu, więcej niż głowa.
+[01:21.000 --> 01:22.000]  Tak.
+[01:22.000 --> 01:25.000]  Tak, ale wciąż jedna noga, noc.
+[01:25.000 --> 01:26.000]  Tak, tak.
+[01:26.000 --> 01:31.000]  Jak to się... jak się mówi w polsku, jak się to zniszczyło?
+[01:31.000 --> 01:32.000]  Jak to zrobiłaś?
+[01:32.000 --> 01:36.000]  Ja Ci napiszę. Jak to zrobiłam?
+[01:36.000 --> 01:39.000]  W głupi sposób.
+[01:39.000 --> 01:44.000]  Napisałam w sklepie, i niestety, znowu wróciłam do sklepu.
+[01:44.000 --> 01:49.000]  I niestety, moja noga zniszczyła się, i dlatego.
+[01:49.000 --> 01:50.000]  Tak?
+[01:50.000 --> 01:51.000]  Tak, tak.
+[01:51.000 --> 01:54.000]  Ale to jest doświadczenie, więc może następnym razem...
+[01:54.000 --> 01:56.000]  Tak, tak. Znów wróciłam do sklepu, i tak się zniszczyłam.
+[01:56.000 --> 01:57.000]  O mój Boże.
+[01:57.000 --> 01:59.000]  To jest... to jest...
+[01:59.000 --> 02:02.000]  Wiem, wiem, ale wciąż nie jest to ok, tak?
+[02:02.000 --> 02:03.000]  Tak.
+[02:03.000 --> 02:04.000]  Bo nie czekasz na to, tak?
+[02:04.000 --> 02:05.000]  Tak.
+[02:05.000 --> 02:06.000]  Tylko nie chcesz się zniszczyć.
+[02:06.000 --> 02:07.000]  Tak, tak.
+[02:07.000 --> 02:12.000]  Więc ja tu się podążam, więc było ciemno, a na dół było czarny zimno.
+[02:12.000 --> 02:13.000]  O mój Boże.
+[02:13.000 --> 02:14.000]  Tak.
+[02:14.000 --> 02:15.000]  O, nie.
+[02:15.000 --> 02:17.000]  To nie jest tak, nawet tak, to było takie...
+[02:17.000 --> 02:18.000]  Tak, wiem, ale to...
+[02:18.000 --> 02:20.000]  Tak, wiem, ale to...
+[02:20.000 --> 02:23.000]  Nigdy nie jest dobry sposób, żeby coś zrobić dla siebie, tak?
+[02:23.000 --> 02:24.000]  Tak, tak.
+[02:24.000 --> 02:26.000]  Ale myślę, że się podążam.
+[02:26.000 --> 02:27.000]  O mój Boże.
+[02:27.000 --> 02:28.000]  Byłam martwiona, że ktoś...
+[02:28.000 --> 02:38.000]  Tak, i to... nie wiem, jak to jest w takiej sytuacji, ponieważ na przykład ja też mam takie...
+[02:38.000 --> 02:45.000]  Że myślę, że to nic, bo zdecydowanie nic, bo zdecydowanie, po zniszczeniu nogi,
+[02:45.000 --> 02:48.000]  będę iść na łóżki, i tak dalej.
+[02:48.000 --> 02:51.000]  Więc ja jakbym szła, iż się podążam, i to wszystko będzie lepiej.
+[02:51.000 --> 02:52.000]  To będzie...
+[02:52.000 --> 02:53.000]  No, no, no.
+[02:53.000 --> 02:54.000]  Więc jest, nie wiem...
+[02:54.000 --> 02:55.000]  To jest...
+[02:55.000 --> 02:56.000]  No, to jest zły sposób, nie?
+[02:56.000 --> 02:57.000]  Współczesny.
+[02:57.000 --> 02:58.000]  Współczesny.
+[02:58.000 --> 02:59.000]  Ok, to dobrze.
+[02:59.000 --> 03:00.000]  Dlaczego projektor?
+[03:00.000 --> 03:01.000]  Projektor nie pracuje.
+[03:01.000 --> 03:02.000]  Ale...
+[03:02.000 --> 03:03.000]  Nie, nie mam klucza dla tego.
+[03:03.000 --> 03:04.000]  No, nie mam klucza dla tego.
+[03:04.000 --> 03:05.000]  No, nie mam klucza dla tego.
+[03:05.000 --> 03:06.000]  No, nie mam klucza dla tego.
+[03:06.000 --> 03:07.000]  Ok.
+[03:07.000 --> 03:08.000]  Ok, to jest dobrze.
+[03:08.000 --> 03:09.000]  Ok, to jest dobrze.
+[03:09.000 --> 03:10.000]  No, no.
+[03:10.000 --> 03:11.000]  Ok.
+[03:11.000 --> 03:12.000]  Możesz.
+[03:12.000 --> 03:13.000]  No, nie, nie.
+[03:13.000 --> 03:14.000]  No, nie.
+[03:14.000 --> 03:15.000]  No, nie, nie.
+[03:15.000 --> 03:16.000]  Ale...
+[03:16.000 --> 03:17.000]  No, nie.
+[03:17.000 --> 03:19.000]  i możesz mi powiedzieć jak powinno być
+[03:19.000 --> 03:20.000]  tak
+[03:20.000 --> 03:22.000]  i Gavro, nie zapytałam Cię
+[03:22.000 --> 03:23.000]  co z Tobą?
+[03:23.000 --> 03:25.000]  nic nowego, wszystko dobrze
+[03:25.000 --> 03:26.000]  wszystko dobrze, tak?
+[03:26.000 --> 03:29.000]  ale słyszałam, że miałeś klasę
+[03:29.000 --> 03:31.000]  z jakimiś nauczycielami
+[03:31.000 --> 03:34.000]  i co zrobiłeś ostatnio?
+[03:34.000 --> 03:36.000]  słyszałam o czasie
+[03:36.000 --> 03:38.000]  który jest godzina
+[03:38.000 --> 03:40.000]  o super
+[03:40.000 --> 03:42.000]  która jest godzina?
+[03:42.000 --> 03:44.000]  mamy godzinę
+[03:44.000 --> 03:46.000]  o, ok
+[03:46.000 --> 03:48.000]  tylko ten czas
+[03:48.000 --> 03:50.000]  rozumiem
+[03:50.000 --> 03:53.000]  oficjalnie i nieoficjalnie
+[03:53.000 --> 03:56.000]  czy tylko jedna sprawa
+[03:56.000 --> 03:58.000]  godziny ekspresowej?
+[03:58.000 --> 04:00.000]  bo mamy język angielski
+[04:00.000 --> 04:03.000]  w polskim będzie 24 godziny
+[04:03.000 --> 04:05.000]  system oficjalny
+[04:05.000 --> 04:07.000]  a nieoficjalny
+[04:07.000 --> 04:09.000]  będzie z propozycją
+[04:09.000 --> 04:11.000]  po...
+[04:11.000 --> 04:13.000]  nie, zrobimy oficjalną
+[04:13.000 --> 04:15.000]  super, bo to jest najwyższa
+[04:15.000 --> 04:17.000]  i jest łatwiejsze
+[04:17.000 --> 04:19.000]  i jest tak jak mówimy dzisiaj
+[04:19.000 --> 04:20.000]  tak?
+[04:20.000 --> 04:21.000]  ok
+[04:21.000 --> 04:23.000]  ale na co czas?
+[04:23.000 --> 04:25.000]  nie zrobiłeś tego pytania?
+[04:25.000 --> 04:27.000]  czy tylko godzina?
+[04:27.000 --> 04:28.000]  nie, nie
+[04:28.000 --> 04:29.000]  nie, nie
+[04:29.000 --> 04:30.000]  o, ok
+[04:30.000 --> 04:31.000]  więc dwa pytania
+[04:31.000 --> 04:32.000]  nie
+[04:32.000 --> 04:33.000]  robiliśmy to na godzinę
+[04:33.000 --> 04:35.000]  godzina, godzina, godzina, godzina
+[04:35.000 --> 04:36.000]  ok
+[04:36.000 --> 04:37.000]  znaczy
+[04:37.000 --> 04:39.000]  możesz zobaczyć co robimy
+[04:39.000 --> 04:40.000]  a, ok
+[04:40.000 --> 04:41.000]  bo mam na przykład
+[04:41.000 --> 04:42.000]  takie podpisanie
+[04:42.000 --> 04:43.000]  o, dobrze
+[04:43.000 --> 04:44.000]  mam inne materiałe
+[04:44.000 --> 04:46.000]  więc będzie to idealne
+[04:46.000 --> 04:47.000]  ok
+[04:47.000 --> 04:48.000]  to zrobiłeś
+[04:48.000 --> 04:49.000]  albo to masz
+[04:49.000 --> 04:50.000]  to też jest dobre materiał
+[04:50.000 --> 04:51.000]  super
+[04:51.000 --> 04:52.000]  ale co z
+[04:52.000 --> 04:53.000]  rutyną
+[04:53.000 --> 04:54.000]  pokażę Ci
+[04:54.000 --> 04:55.000]  bo to będzie też
+[04:55.000 --> 04:56.000]  użyteczne dla Ciebie
+[04:56.000 --> 04:57.000]  aby wyrazić
+[04:57.000 --> 04:58.000]  więcej rzeczy
+[04:58.000 --> 04:59.000]  nie zrobiłeś tego?
+[04:59.000 --> 05:01.000]  nie, nie robił
+[05:01.000 --> 05:02.000]  o, idealnie
+[05:02.000 --> 05:03.000]  to możemy zrobić
+[05:03.000 --> 05:04.000]  daję Ci wszystkie
+[05:04.000 --> 05:06.000]  wszystkie lekcje
+[05:06.000 --> 05:07.000]  to jest
+[05:07.000 --> 05:08.000]  o rutynie
+[05:08.000 --> 05:10.000]  o
+[05:10.000 --> 05:11.000]  trochę
+[05:11.000 --> 05:12.000]  rzeczy do odbycia
+[05:12.000 --> 05:13.000]  które używamy
+[05:13.000 --> 05:15.000]  kiedy mamy coś
+[05:15.000 --> 05:16.000]  takie jak rutynę
+[05:16.000 --> 05:17.000]  i kiedy idziesz
+[05:17.000 --> 05:18.000]  czasami tylko raz
+[05:18.000 --> 05:20.000]  nie robimy regularnie
+[05:20.000 --> 05:21.000]  także tutaj mamy
+[05:21.000 --> 05:22.000]  godziny
+[05:22.000 --> 05:23.000]  i
+[05:23.000 --> 05:24.000]  czasami z łóżkiem
+[05:24.000 --> 05:25.000]  więc miksujemy
+[05:25.000 --> 05:26.000]  z wszystkimi
+[05:26.000 --> 05:27.000]  proszę, proszę, proszę
+[05:27.000 --> 05:28.000]  dzisiaj mamy dużo materiału
+[05:28.000 --> 05:29.000]  tak
+[05:29.000 --> 05:30.000]  proszę
+[05:30.000 --> 05:31.000]  Idzio
+[05:31.000 --> 05:32.000]  przyjdź
+[05:32.000 --> 05:33.000]  o proszę
+[05:33.000 --> 05:34.000]  proszę, proszę
+[05:34.000 --> 05:35.000]  proszę
+[05:35.000 --> 05:36.000]  proszę
+[05:36.000 --> 05:37.000]  proszę
+[05:37.000 --> 05:38.000]  proszę
+[05:38.000 --> 05:39.000]  proszę
+[05:39.000 --> 05:40.000]  proszę
+[05:40.000 --> 05:41.000]  proszę
+[05:41.000 --> 05:42.000]  proszę
+[05:42.000 --> 05:43.000]  proszę
+[05:43.000 --> 05:44.000]  proszę
+[05:44.000 --> 05:45.000]  proszę
+[05:45.000 --> 05:46.000]  dobrze
+[05:46.000 --> 05:47.000]  dobrze
+[05:47.000 --> 05:48.000]  nie ma
+[05:48.000 --> 05:49.000]  nie ma
+[05:49.000 --> 05:50.000]  problemu
+[05:50.000 --> 05:53.000]  i
+[05:53.000 --> 05:54.000]  co to jest?
+[05:54.000 --> 06:08.000]  a dzuge
+[06:08.000 --> 06:09.200]  K Capital
+[06:09.200 --> 06:16.200]  Dobrze, to jest temat, co dzisiaj robisz. Co to znaczy, co dzisiaj robisz?
+[06:16.200 --> 06:19.200]  Do you know what's the meaning of this?
+[06:19.200 --> 06:21.200]  What do you do today?
+[06:21.200 --> 06:25.200]  What do you do today? Dzisiaj.
+[06:25.200 --> 06:32.200]  I think you also know another word for today, like dziś.
+[06:32.200 --> 06:38.200]  This is synonym, we use it like, you know, just with switching, this is synonym totally.
+[06:38.200 --> 06:43.200]  Dziś, dzisiaj, but dziś it's shorter, but still meaning the same, today.
+[06:43.200 --> 06:52.200]  Co dzisiaj robisz? I to jest materiał trochę gramatyczny, trochę leksyka.
+[06:52.200 --> 07:00.200]  Lexical stuff, but also grammar, where grammar, because here we can do biggest religion about conjunction of verb,
+[07:00.200 --> 07:07.200]  what's the ending of every person, but firstly we will get the meaning of it.
+[07:07.200 --> 07:08.200]  OK?
+[07:08.200 --> 07:15.200]  Gratulacje, this is big level, a big step for you. I see that you did it a lot, so good.
+[07:15.200 --> 07:22.200]  I to jest Kowalski, Kowalski, co robi pan Kowalski? What's Kowalski doing?
+[07:22.200 --> 07:31.200]  Pan Kowalski to jest bardzo popularne nazwisko, bardzo typowe, stereotypowe, tak?
+[07:31.200 --> 07:36.200]  Kowalski first place would be Nowak. You heard about Nowak?
+[07:36.200 --> 07:37.200]  Of course.
+[07:37.200 --> 07:43.200]  So you see that this is popular. Nowak, Kowalski, the most popular service.
+[07:43.200 --> 07:49.200]  I Kowalski to jest budziciel, tak? Budziciel. Co to jest budziciel?
+[07:49.200 --> 07:51.200]  To wake up.
+[07:51.200 --> 07:58.200]  Wake up, exactly, budziciel. Here you can see firstly what's the type of conjunction.
+[07:58.200 --> 08:06.200]  Don't worry now, this is just for introduce you, but we will practice every type of verb to see this ending.
+[08:06.200 --> 08:18.200]  Budziciel, budziciel. Budzę się, budzisz się. First one for first person, second ish for second of course,
+[08:18.200 --> 08:25.200]  but just for let you know, but we will analyze this more down here.
+[08:25.200 --> 08:34.200]  Dobra, budziciel, wake up. To jest wstawać, wstawać.
+[08:34.200 --> 08:37.200]  Wstawać? Co to wstawać?
+[08:37.200 --> 08:38.200]  Jałanie?
+[08:38.200 --> 08:39.200]  Hm?
+[08:39.200 --> 08:40.200]  Jałanie?
+[08:40.200 --> 08:44.200]  No, wstawać to jest get up, wake up and then get up.
+[08:44.200 --> 08:46.200]  Firstly wake up, then get up.
+[08:46.200 --> 08:49.200]  You can wake up, but you can still laying on the bed.
+[08:49.200 --> 08:55.200]  To jest wstawać, he decided to get up.
+[08:55.200 --> 08:59.200]  So wstawać would be used only in context of getting out from bed?
+[08:59.200 --> 09:00.200]  Yes, exactly.
+[09:00.200 --> 09:02.200]  Like standing up won't be wstawać?
+[09:02.200 --> 09:07.200]  No, when you deciding that ok, I'm not laying, I need to get up and doing something.
+[09:07.200 --> 09:11.200]  So this is like decision that ok, I'm not staying here.
+[09:11.200 --> 09:15.200]  But budziciel, wstawać.
+[09:15.200 --> 09:25.200]  And here you see that we have staje, so we have ending l, and then stajesz, we have ending esz.
+[09:25.200 --> 09:28.200]  No, but just to write for that.
+[09:28.200 --> 09:31.200]  Potem następna aktywność, that's after.
+[09:31.200 --> 09:32.200]  Potem następna aktywność, that's after.
+[09:32.200 --> 09:35.200]  To jest brać prysznic.
+[09:35.200 --> 09:36.200]  Prysznic.
+[09:36.200 --> 09:38.200]  Prysznic to jest dusz.
+[09:38.200 --> 09:42.200]  Brać to take, to take a shower.
+[09:42.200 --> 09:44.200]  Brać prysznic.
+[09:44.200 --> 09:46.200]  Brać prysznic.
+[09:46.200 --> 09:54.200]  Which type of bath you prepare like typical bath or shower?
+[09:54.200 --> 09:57.200]  Prysznic.
+[09:57.200 --> 09:59.200]  Prysznic.
+[09:59.200 --> 10:00.200]  Prysznic.
+[10:00.200 --> 10:01.200]  Prysznic.
+[10:01.200 --> 10:05.200]  If you have another way of this, it will be kąpiel.
+[10:05.200 --> 10:06.200]  Brać kąpiel.
+[10:06.200 --> 10:07.200]  Brać kąpiel.
+[10:07.200 --> 10:10.200]  If we don't have shower, we have different.
+[10:10.200 --> 10:11.200]  So kąpiel.
+[10:11.200 --> 10:12.200]  Just.
+[10:12.200 --> 10:14.200]  Show you differences.
+[10:14.200 --> 10:16.200]  Typically brać prysznic.
+[10:16.200 --> 10:18.200]  Brać prysznic.
+[10:18.200 --> 10:22.200]  To jest eko opcja, tak?
+[10:22.200 --> 10:24.200]  Brać prysznic.
+[10:24.200 --> 10:25.200]  W porządku?
+[10:25.200 --> 10:26.200]  Tak.
+[10:26.200 --> 10:30.200]  I jest ja biorę, ty bierzesz.
+[10:30.200 --> 10:33.200]  We will analyze this word a little bit more later.
+[10:33.200 --> 10:34.200]  Why?
+[10:34.200 --> 10:38.200]  Because it works a little bit like irregular.
+[10:38.200 --> 10:43.200]  Not a lot, but some letters changing.
+[10:43.200 --> 10:47.200]  That's why we will think more.
+[10:47.200 --> 10:52.200]  Następna aktywność to jest myć zęby.
+[10:52.200 --> 10:55.200]  Co to jest myć zęby?
+[10:55.200 --> 10:58.200]  To brush.
+[10:58.200 --> 10:59.200]  To brush.
+[10:59.200 --> 11:01.200]  Just a brush.
+[11:01.200 --> 11:07.200]  To jest jakieś polwate, oralbe or something like that.
+[11:07.200 --> 11:12.200]  To jest po polsku pasta do zębów.
+[11:12.200 --> 11:14.200]  Pasta do zębów.
+[11:14.200 --> 11:16.200]  A to, you heard about that.
+[11:16.200 --> 11:17.200]  This is really polish word.
+[11:17.200 --> 11:19.200]  A lot of szcz.
+[11:19.200 --> 11:21.200]  Szczoteczka.
+[11:21.200 --> 11:23.200]  Szczoteczka.
+[11:23.200 --> 11:24.200]  Tak.
+[11:24.200 --> 11:25.200]  Szczoteczka.
+[11:25.200 --> 11:26.200]  Szczoteczka.
+[11:26.200 --> 11:27.200]  Szczo.
+[11:27.200 --> 11:28.200]  Szczo.
+[11:28.200 --> 11:29.200]  Szczoteczka.
+[11:29.200 --> 11:30.200]  Szczoteczka.
+[11:30.200 --> 11:31.200]  Szczoteczka.
+[11:31.200 --> 11:32.200]  Szczoteczka.
+[11:32.200 --> 11:33.200]  Szczoteczka.
+[11:33.200 --> 11:34.200]  Szczoteczka.
+[11:34.200 --> 11:35.200]  A tutaj?
+[11:35.200 --> 11:36.200]  Zęby.
+[11:36.200 --> 11:37.200]  Zęby.
+[11:37.200 --> 11:38.200]  Bardzo dobrze.
+[11:38.200 --> 11:39.200]  Zęby.
+[11:39.200 --> 11:40.200]  Pasta do zębów.
+[11:40.200 --> 11:41.200]  Szczoteczka.
+[11:41.200 --> 11:42.200]  Szczoteczka.
+[11:42.200 --> 11:43.200]  Szczoteczka.
+[11:43.200 --> 11:44.200]  No dobrze.
+[11:44.200 --> 11:46.200]  To jest myć zęby.
+[11:46.200 --> 11:47.200]  Myję.
+[11:47.200 --> 11:48.200]  Myjesz.
+[11:48.200 --> 11:49.200]  Ok.
+[11:49.200 --> 11:50.200]  Tu jest garderoba.
+[11:50.200 --> 11:51.200]  Tu jest garderoba.
+[11:51.200 --> 11:52.200]  Tu jest garderoba, tak.
+[11:52.200 --> 11:53.200]  Tu są klucy.
+[11:53.200 --> 11:55.200]  Do you know how to describe clothes in Polish?
+[11:55.200 --> 11:56.200]  A.
+[11:56.200 --> 11:57.200]  Spod.
+[11:57.200 --> 11:58.200]  Spodemki.
+[11:58.200 --> 11:59.200]  Spodemki.
+[11:59.200 --> 12:00.200]  Spodemki.
+[12:00.200 --> 12:01.200]  Spodemki.
+[12:01.200 --> 12:02.200]  Like shorts.
+[12:02.200 --> 12:03.200]  Tak.
+[12:03.200 --> 12:04.200]  Shorts.
+[12:04.200 --> 12:05.200]  Ubrania.
+[12:05.200 --> 12:06.200]  Ubrania.
+[12:06.200 --> 12:07.200]  Bardzo dobrze.
+[12:07.200 --> 12:08.200]  Świetnie.
+[12:08.200 --> 12:09.200]  Ubrania to jest general category of clothes.
+[12:09.200 --> 12:10.200]  Tak.
+[12:10.200 --> 12:11.200]  Ubrania.
+[12:11.200 --> 12:12.200]  Tak.
+[12:12.200 --> 12:13.200]  I mamy ubrania.
+[12:13.200 --> 12:14.200]  Kowalski.
+[12:14.200 --> 12:15.200]  I verb ubierać się.
+[12:15.200 --> 12:16.200]  Co to ubierać się?
+[12:16.200 --> 12:17.200]  To wear.
+[12:17.200 --> 12:18.200]  To wear.
+[12:18.200 --> 12:19.200]  To dress.
+[12:19.200 --> 12:20.200]  Tak.
+[12:20.200 --> 12:21.200]  Tak.
+[12:21.200 --> 12:22.200]  Obierać się.
+[12:22.200 --> 12:23.200]  Obierać się.
+[12:23.200 --> 12:24.200]  Obierać się.
+[12:24.200 --> 12:25.200]  Obierać się.
+[12:25.200 --> 12:26.200]  Obierać się.
+[12:26.200 --> 12:27.200]  Obierać się.
+[12:27.200 --> 12:29.200]  To jest pytanie dla wymogarz.
+[12:29.200 --> 12:31.200]  To uberać się?
+[12:31.200 --> 12:32.200]  I uberać się?
+[12:32.200 --> 12:33.200]  Oh.
+[12:33.200 --> 12:34.200]  The best, best question.
+[12:34.200 --> 12:41.200]  When you see a something with E at the end, all the time we have one word we never.
+[12:41.200 --> 12:42.200]  We can say shell, LLL.
+[12:42.200 --> 12:43.200]  We should say SE.
+[12:43.200 --> 12:44.200]  SE, right?
+[12:44.200 --> 12:45.200]  So we can imagine that we have just E here.
+[12:45.200 --> 12:46.200]  This is the best way.
+[12:46.200 --> 12:47.200]  Of course we unfortunately must write that.
+[12:47.200 --> 12:48.200]  Write, write, write.
+[12:48.200 --> 12:49.200]  Write.
+[12:49.200 --> 12:50.200]  Write, write.
+[12:50.200 --> 12:51.200]  Write.
+[12:51.200 --> 12:52.200]  Write, write.
+[12:52.200 --> 12:53.200]  Write.
+[12:53.200 --> 12:54.200]  Write.
+[12:54.200 --> 12:55.200]  But we...
+[12:55.200 --> 12:56.200]  The best way of...
+[12:56.200 --> 12:57.200]  Write, write.
+[12:57.200 --> 13:00.260]  To jest słowo, które jest w języku polskim.
+[13:00.260 --> 13:01.260]  Ubierać się.
+[13:01.260 --> 13:04.020]  Ja ubieram się.
+[13:04.020 --> 13:06.620]  Ty ubierasz się.
+[13:06.620 --> 13:10.320]  O, tutaj ma nogi.
+[13:10.320 --> 13:11.620]  Lewo, prawo.
+[13:11.620 --> 13:16.800]  No dobrze, wiemy jak to opisывать.
+[13:16.800 --> 13:19.380]  Pijama w polsku będzie podobne.
+[13:19.380 --> 13:24.760]  Pijama?
+[13:24.760 --> 13:26.500]  Pijama, dobrze.
+[13:26.500 --> 13:30.020]  To jest bardzo dobry słów.
+[13:30.020 --> 13:34.920]  Kolejny, może nie pijama.
+[13:34.920 --> 13:36.980]  Pijama, pijama.
+[13:36.980 --> 13:41.020]  Pijama, pijama.
+[13:41.020 --> 13:43.860]  Pijama, pijama.
+[13:43.860 --> 13:46.100]  Pijama, pijama, pijama.
+[13:46.100 --> 13:54.720]  Tak, studenki nocne.
+[13:54.720 --> 13:56.220]  Tak, studenki nocne.
+[13:56.220 --> 14:05.220]  Bardzo przyjemne.
+[14:05.220 --> 14:13.620]  Wydaje mi się, że simplisticznie mamy to określone jako pijama.
+[14:13.620 --> 14:14.820]  Tak więc czasami mówimy..., o studenki.
+[14:14.820 --> 14:15.820]  O koszulu.
+[14:15.820 --> 14:16.980]  Studenki, o.
+[14:16.980 --> 14:18.900]  Tak.
+[14:18.900 --> 14:20.740]  Studenki to też dobry słów kita, bo to może być na środku tego pijama i także, jeśli
+[14:20.740 --> 14:21.740]  masz ikony.
+[14:21.740 --> 14:22.740]  Jed록 Ci się rzeczywiście lubię w willstroby fiscal действującego 다니ela i z klatkiki,
+[14:22.740 --> 14:23.740]  i innego tajemnicu.
+[14:23.740 --> 14:24.740]  Tak.
+[14:24.740 --> 14:28.740]  Socks, skarpetki.
+[14:28.740 --> 14:30.740]  Skarpetki, skarpetki.
+[14:30.740 --> 14:40.740]  I tu jest koszula, marynarka, trousers, spodnie.
+[14:40.740 --> 14:44.740]  Jeans, but we don't see them at the gala.
+[14:44.740 --> 14:48.740]  Ok. No dobrze.
+[14:48.740 --> 14:51.740]  I mamy ubierać się.
+[14:51.740 --> 14:54.740]  Jest następna aktywność.
+[14:54.740 --> 14:56.740]  Co to jest?
+[14:56.740 --> 15:00.740]  To chyba duża kawa, tak?
+[15:00.740 --> 15:02.740]  Pić.
+[15:02.740 --> 15:04.740]  Glowing on.
+[15:04.740 --> 15:06.740]  No, ok.
+[15:06.740 --> 15:08.740]  I thought like that.
+[15:08.740 --> 15:10.740]  Like gorąco.
+[15:10.740 --> 15:12.740]  This is, yes, yes, yes.
+[15:12.740 --> 15:14.740]  Dmuchać.
+[15:14.740 --> 15:17.740]  But don't worry, this is be wild on the verb.
+[15:17.740 --> 15:19.740]  Yes.
+[15:19.740 --> 15:20.740]  Dmuchać.
+[15:20.740 --> 15:21.740]  Tak.
+[15:21.740 --> 15:24.740]  Proszę, proszę.
+[15:24.740 --> 15:25.740]  Dzień dobry.
+[15:25.740 --> 15:26.740]  Dzień dobry.
+[15:26.740 --> 15:27.740]  Hej.
+[15:27.740 --> 15:31.740]  O, for you, onso, proszę.
+[15:31.740 --> 15:33.740]  Jest duża kawa.
+[15:33.740 --> 15:34.740]  Ok. To pić.
+[15:34.740 --> 15:35.740]  Co pić?
+[15:35.740 --> 15:38.740]  To drink?
+[15:38.740 --> 15:39.740]  Pić.
+[15:39.740 --> 15:40.740]  Pić jest aktywność.
+[15:40.740 --> 15:41.740]  Kogo, co?
+[15:41.740 --> 15:43.740]  So kawa.
+[15:43.740 --> 15:45.740]  We should change one lever.
+[15:45.740 --> 15:46.740]  Kawa.
+[15:46.740 --> 15:47.740]  Pić kawę.
+[15:47.740 --> 15:48.740]  Bardzo dobrze.
+[15:48.740 --> 15:50.740]  Pić kawę.
+[15:50.740 --> 15:54.740]  Pić kawę. Może herbatę.
+[15:54.740 --> 15:56.740]  Tak sam ty chodź.
+[15:56.740 --> 15:57.740]  Jeszcze.
+[15:57.740 --> 16:00.740]  Pić kawę, herbatę.
+[16:00.740 --> 16:01.740]  Super.
+[16:01.740 --> 16:02.740]  Dobra.
+[16:02.740 --> 16:03.740]  A co tutaj jest?
+[16:03.740 --> 16:05.740]  Co to?
+[16:05.740 --> 16:07.740]  Jem.
+[16:07.740 --> 16:08.740]  Jem.
+[16:08.740 --> 16:09.740]  Jem.
+[16:09.740 --> 16:10.740]  Ja jem.
+[16:10.740 --> 16:11.740]  A generalnie?
+[16:11.740 --> 16:12.740]  A jeść.
+[16:12.740 --> 16:13.740]  Jeść.
+[16:13.740 --> 16:14.740]  Bardzo dobrze.
+[16:14.740 --> 16:15.740]  Super.
+[16:15.740 --> 16:16.740]  Jeść.
+[16:16.740 --> 16:17.740]  Co jeść?
+[16:17.740 --> 16:18.740]  Do you remember breakfast?
+[16:18.740 --> 16:19.740]  Śniadanie.
+[16:19.740 --> 16:20.740]  Śniadanie. Bardzo dobrze.
+[16:20.740 --> 16:21.740]  Jeść śniadanie.
+[16:21.740 --> 16:23.740]  Jeść śniadanie.
+[16:23.740 --> 16:26.740]  No.
+[16:26.740 --> 16:28.740]  Jeść śniadanie.
+[16:28.740 --> 16:29.740]  Co to jest?
+[16:29.740 --> 16:31.740]  To jest jajko?
+[16:31.740 --> 16:33.740]  What weird.
+[16:33.740 --> 16:34.740]  Pop, pop.
+[16:34.740 --> 16:37.740]  I don't even know what that is actually.
+[16:37.740 --> 16:39.740]  It's like...
+[16:42.740 --> 16:43.740]  Tak.
+[16:43.740 --> 16:44.740]  To coś nietypowego.
+[16:44.740 --> 16:45.740]  Antypiko.
+[16:45.740 --> 16:47.740]  Jeść śniadanie.
+[16:47.740 --> 16:48.740]  Ok.
+[16:48.740 --> 16:50.740]  Bardzo dobrze.
+[16:50.740 --> 16:52.740]  O, i jest Kowalski.
+[16:52.740 --> 16:54.740]  On jest smutny.
+[16:54.740 --> 16:55.740]  Sad.
+[16:55.740 --> 16:56.740]  He is sad.
+[16:56.740 --> 16:57.740]  Why?
+[16:57.740 --> 16:58.740]  Co on robi?
+[17:00.740 --> 17:01.740]  Na zdrowie.
+[17:04.740 --> 17:06.740]  He going somewhere.
+[17:06.740 --> 17:07.740]  Leje.
+[17:07.740 --> 17:08.740]  Pracować.
+[17:08.740 --> 17:09.740]  Pracować.
+[17:09.740 --> 17:12.740]  And we can express that he going to work.
+[17:12.740 --> 17:13.740]  So it will be...
+[17:13.740 --> 17:14.740]  Iść.
+[17:14.740 --> 17:15.740]  Bardzo dobrze.
+[17:15.740 --> 17:16.740]  Iść do pracy.
+[17:16.740 --> 17:17.740]  Tak.
+[17:17.740 --> 17:18.740]  Iść do pracy.
+[17:18.740 --> 17:19.740]  Going.
+[17:19.740 --> 17:20.740]  Iść do pracy.
+[17:20.740 --> 17:23.740]  On jest bardzo smutny.
+[17:23.740 --> 17:25.740]  Mam pytania?
+[17:25.740 --> 17:26.740]  So...
+[17:26.740 --> 17:34.740]  What's the difference between iść do pracy and chodzić do pracy?
+[17:34.740 --> 17:37.740]  This is also really good question.
+[17:37.740 --> 17:40.740]  One, we will also have this part of material.
+[17:40.740 --> 17:45.740]  The difference based on that, that iść is just ide.
+[17:45.740 --> 17:46.740]  Also.
+[17:46.740 --> 17:47.740]  To walk.
+[17:47.740 --> 17:48.740]  You just walk to work.
+[17:48.740 --> 17:49.740]  Yes.
+[17:49.740 --> 17:52.740]  But this is also iść and chodzić this is to go.
+[17:52.740 --> 17:55.740]  So we can think that this is the same meaning.
+[17:55.740 --> 17:59.740]  But difference is that chodzić you use it when you doing something regularly.
+[17:59.740 --> 18:00.740]  Oh yes.
+[18:00.740 --> 18:01.740]  Yeah.
+[18:01.740 --> 18:04.740]  But chodzić you can say for example that one time you go.
+[18:04.740 --> 18:05.740]  Chodzić do góry.
+[18:05.740 --> 18:06.740]  Tak.
+[18:06.740 --> 18:07.740]  Tak.
+[18:07.740 --> 18:08.740]  Iść do pracy.
+[18:08.740 --> 18:10.740]  Here we have this not regular one.
+[18:10.740 --> 18:13.740]  Like just I'm going for example today.
+[18:13.740 --> 18:15.740]  Because we will talk about today, about routine.
+[18:15.740 --> 18:23.740]  But of course you will see probably next class or maybe today iść chodzić and jechać jeździć.
+[18:23.740 --> 18:26.740]  To go but it's in some way of transport.
+[18:26.740 --> 18:34.740]  And we have the same case that you can say for example jadę taksówką do pracy.
+[18:34.740 --> 18:39.740]  And it means one time today for example because I'm sick and I need it.
+[18:39.740 --> 18:43.740]  And you can say jeżdżę do pracy taksówką.
+[18:43.740 --> 18:49.740]  So it means I decided to do this way to take the transport every day.
+[18:49.740 --> 18:50.740]  Yeah.
+[18:50.740 --> 18:51.740]  Like regularly.
+[18:51.740 --> 18:52.740]  This will be about.
+[18:52.740 --> 18:53.740]  Iść do pracy.
+[18:53.740 --> 18:54.740]  Do uszy.
+[18:54.740 --> 18:55.740]  O a tutaj.
+[18:55.740 --> 18:56.740]  Kim agiłysem pracę?
+[18:56.740 --> 18:57.740]  O jest pracować.
+[18:57.740 --> 18:58.740]  Pracować.
+[18:58.740 --> 18:59.740]  Pracować.
+[18:59.740 --> 19:00.740]  That is working good.
+[19:00.740 --> 19:01.740]  Pracować.
+[19:01.740 --> 19:02.740]  Pracować.
+[19:02.740 --> 19:03.740]  Jest chowarski, jest fotel, jest biurko.
+[19:03.740 --> 19:04.740]  A co to jest białe?
+[19:04.740 --> 19:05.740]  To jest białe.
+[19:05.740 --> 19:06.740]  To jest białe.
+[19:06.740 --> 19:07.740]  To jest białe.
+[19:07.740 --> 19:08.740]  To jest białe.
+[19:08.740 --> 19:09.740]  To jest białe.
+[19:09.740 --> 19:10.740]  To jest białe.
+[19:10.740 --> 19:11.740]  To jest białe.
+[19:11.740 --> 19:12.740]  To jest białe.
+[19:12.740 --> 19:13.740]  To jest białe.
+[19:13.740 --> 19:14.740]  To jest białe.
+[19:14.740 --> 19:15.740]  To jest białe.
+[19:15.740 --> 19:16.740]  To jest białe.
+[19:16.740 --> 19:17.740]  To jest białe.
+[19:17.740 --> 19:18.740]  A co to małe element?
+[19:18.740 --> 19:19.740]  Strono?
+[19:19.740 --> 19:20.740]  Papier.
+[19:20.740 --> 19:21.740]  Papier.
+[19:21.740 --> 19:22.740]  Papier.
+[19:22.740 --> 19:23.740]  Papier, tak.
+[19:23.740 --> 19:24.740]  Papier dokumenty.
+[19:24.740 --> 19:25.740]  Biurokracja.
+[19:25.740 --> 19:26.740]  Tak.
+[19:26.740 --> 19:27.740]  Super.
+[19:27.740 --> 19:28.740]  Mamy pracować.
+[19:28.740 --> 19:29.740]  Jest też coś takiego.
+[19:29.740 --> 19:30.740]  Co to?
+[19:30.740 --> 19:31.740]  Wieżowie.
+[19:31.740 --> 19:32.740]  Wieżowie?
+[19:32.740 --> 19:33.740]  Wieżowie.
+[19:33.740 --> 19:34.740]  Wieżowie.
+[19:34.740 --> 19:35.740]  Wieszowie.
+[19:35.740 --> 19:36.740]  Wieżowie?
+[19:36.740 --> 19:37.740]  Wieżowie.
+[19:37.740 --> 19:38.740]  Wieżowie.
+[19:38.740 --> 19:39.740]  Wieżowie.
+[19:39.740 --> 19:40.740]  I wieżowie.
+[19:40.740 --> 19:41.740]  Wieżowie.
+[19:41.740 --> 19:42.740]  Wieżowie.
+[19:42.740 --> 19:43.740]  Wieżowie?
+[19:43.740 --> 19:47.740]  Jeść obiad. Bardzo dobrze. Jeść obiad, jeść lajz.
+[19:47.740 --> 19:49.740]  Jeść obiad.
+[19:49.740 --> 19:52.740]  Co obiad?
+[19:52.740 --> 19:56.740]  Kurczę.
+[19:56.740 --> 19:58.740]  Jakieś mięso.
+[19:58.740 --> 20:00.740]  A to białe?
+[20:00.740 --> 20:03.740]  Ziemniaki.
+[20:03.740 --> 20:05.740]  Ziemniaki, tak.
+[20:05.740 --> 20:07.740]  Jajko.
+[20:07.740 --> 20:10.740]  Jajko może i coś zielone. Jakaś sałata.
+[20:10.740 --> 20:14.740]  Coś takiego. O, a co on pije?
+[20:14.740 --> 20:15.740]  Wino.
+[20:15.740 --> 20:17.740]  Wino, czerwone wino, tak.
+[20:17.740 --> 20:20.740]  Może on jest Francuzem, tak?
+[20:20.740 --> 20:24.740]  No właśnie, jeść obiad.
+[20:24.740 --> 20:27.740]  Dobra. Okej.
+[20:27.740 --> 20:29.740]  I mamy następną aktywność.
+[20:29.740 --> 20:30.740]  Dzień dobry.
+[20:30.740 --> 20:31.740]  Dzień dobry.
+[20:31.740 --> 20:32.740]  Cześć.
+[20:32.740 --> 20:35.740]  O, Daniel, twoje oto. O, proszę, proszę.
+[20:35.740 --> 20:39.740]  I co on robi?
+[20:39.740 --> 20:41.740]  Produkty.
+[20:41.740 --> 20:42.740]  Zakupy.
+[20:42.740 --> 20:43.740]  Zakupy, zakupy, tak.
+[20:43.740 --> 20:48.740]  I jest robić zakupy, robić zakupy. Tak.
+[20:48.740 --> 20:53.740]  Bardzo dobrze.
+[20:53.740 --> 20:55.740]  Co to jest?
+[20:55.740 --> 20:58.740]  Ten element.
+[20:58.740 --> 21:00.740]  Market.
+[21:00.740 --> 21:07.740]  I on also was thinking about that, but it's simply big and this shape is weird for Carlos, yeah?
+[21:07.740 --> 21:08.740]  No, no, no.
+[21:08.740 --> 21:12.740]  I just like, ziemniaki.
+[21:12.740 --> 21:15.740]  Marketki, marketki GMO, tak?
+[21:15.740 --> 21:18.740]  Tak.
+[21:18.740 --> 21:21.740]  Someone apparently made a hybrid of it.
+[21:21.740 --> 21:23.740]  Jakaś hybryda, tak?
+[21:23.740 --> 21:25.740]  Hybryda marketki.
+[21:25.740 --> 21:28.740]  Dobrze, tu jakieś banany, tak? To?
+[21:28.740 --> 21:29.740]  Ziemniaki.
+[21:29.740 --> 21:30.740]  Ziemniaki, to?
+[21:30.740 --> 21:31.740]  Ziemniaki.
+[21:31.740 --> 21:32.740]  Następne ziemniaki.
+[21:32.740 --> 21:34.740]  Tak.
+[21:34.740 --> 21:36.740]  I bataty chyba.
+[21:36.740 --> 21:37.740]  Bataty?
+[21:37.740 --> 21:39.740]  I bataty, heard about bataty?
+[21:39.740 --> 21:40.740]  Sweet potato.
+[21:40.740 --> 21:41.740]  Yes.
+[21:41.740 --> 21:43.740]  Tak. Popularne.
+[21:43.740 --> 21:45.740]  No jakieś mleko coś tam.
+[21:45.740 --> 21:57.740]  How to describe this item? For example, when you have wheels, like kind of this, it's the same name when you have hand place for shopping.
+[21:57.740 --> 21:58.740]  Torba?
+[21:58.740 --> 22:05.740]  Torba, it will be like material or plastic one or paper.
+[22:05.740 --> 22:10.740]  I this, which you can use for, you know, doing something biggest, it will be like koszyk.
+[22:10.740 --> 22:11.740]  Koszyk.
+[22:11.740 --> 22:13.740]  Koszyk, this is for hand.
+[22:13.740 --> 22:14.740]  Tak.
+[22:14.740 --> 22:18.740]  But with wheels like that, it will be wózek.
+[22:18.740 --> 22:19.740]  Wózek.
+[22:19.740 --> 22:20.740]  Wózek.
+[22:20.740 --> 22:23.740]  Wózek, this is it.
+[22:23.740 --> 22:24.740]  Tak.
+[22:24.740 --> 22:27.740]  Koszyk, this is for hand, just for keeping.
+[22:27.740 --> 22:28.740]  No.
+[22:28.740 --> 22:33.740]  Dobrze.
+[22:33.740 --> 22:34.740]  No.
+[22:34.740 --> 22:36.740]  I robic zerkutuj.
+[22:36.740 --> 22:37.740]  No dobrze.
+[22:37.740 --> 22:42.740]  Tu Kowalski jest szczęśliwy.
+[22:42.740 --> 22:44.540]  He trying to smite.
+[22:44.540 --> 22:45.740]  A on more.
+[22:45.740 --> 22:46.740]  Co on robi?
+[22:46.740 --> 22:47.740]  Otwiera drzwi.
+[22:47.740 --> 22:48.740]  Otwiera drzwi, tak.
+[22:48.740 --> 22:49.740]  Opening the door, tak.
+[22:49.740 --> 22:50.740]  How to express going back to home.
+[22:50.740 --> 23:01.740]  You can look for some proposal from frame or try to go back to home.
+[23:01.740 --> 23:02.740]  Ok.
+[23:02.740 --> 23:03.740]  Ok.
+[23:03.740 --> 23:05.740]  Jak się odbierasz z bramki, to znajdziesz...
+[23:05.740 --> 23:07.740]  Wracać do domu.
+[23:07.740 --> 23:09.740]  Tak, wracać do domu.
+[23:09.740 --> 23:11.740]  Wracając do domu.
+[23:11.740 --> 23:16.740]  Ale teraz to jest wracać do domu, a nie idzie do domu.
+[23:16.740 --> 23:18.740]  Jak to? Nie do domu?
+[23:18.740 --> 23:20.740]  Dlaczego? Dlaczego nie do domu?
+[23:20.740 --> 23:23.740]  Spójrzmy, możemy analizować drzwi.
+[23:23.740 --> 23:26.740]  Spójrzmy, wygląda to podobnie.
+[23:26.740 --> 23:28.740]  Pewnie to jest jego dom.
+[23:28.740 --> 23:30.740]  To jest jego dom.
+[23:30.740 --> 23:38.740]  Iść do pracy, on idzie, pracuje, jadł, robi trochę zakupów i wraca.
+[23:38.740 --> 23:40.740]  Wracać do domu.
+[23:40.740 --> 23:42.740]  To jest jego dom.
+[23:42.740 --> 23:45.740]  Wracać. Wracać do domu.
+[23:45.740 --> 23:48.740]  I...
+[23:48.740 --> 23:52.740]  Mili, zapytałaś o torbę.
+[23:52.740 --> 23:54.740]  On ma torbę.
+[23:54.740 --> 23:57.740]  Teraz tak, torba.
+[23:57.740 --> 24:02.740]  A to co to jest?
+[24:02.740 --> 24:07.740]  Na zdrowie.
+[24:07.740 --> 24:09.740]  To jest torba.
+[24:09.740 --> 24:13.740]  To jest torba, tylko taka work one.
+[24:13.740 --> 24:15.740]  Torma.
+[24:15.740 --> 24:17.740]  Daniel ma plecak.
+[24:17.740 --> 24:19.740]  Tak?
+[24:19.740 --> 24:21.740]  Dobrze.
+[24:21.740 --> 24:23.740]  Wracać do domu.
+[24:23.740 --> 24:25.740]  Ok.
+[24:25.740 --> 24:26.740]  To jest...
+[24:26.740 --> 24:27.740]  To jest...
+[24:27.740 --> 24:29.740]  To jest torba w zdrowie.
+[24:29.740 --> 24:31.740]  O, jak to powiedzieć?
+[24:31.740 --> 24:33.740]  Koncert od śnieżnika.
+[24:33.740 --> 24:35.740]  W pobytku niejyskim.
+[24:35.740 --> 24:37.740]  Tak.
+[24:37.740 --> 24:39.740]  No dobrze, tutaj jest relaks.
+[24:39.740 --> 24:41.740]  Co on robi?
+[24:41.740 --> 24:42.740]  Oglądać.
+[24:42.740 --> 24:44.740]  Oglądać telewizję.
+[24:44.740 --> 24:47.740]  Tak, to jest jakaś minimalistyczna telewizja.
+[24:47.740 --> 24:49.740]  No jak mikro.
+[24:49.740 --> 24:52.740]  Ok. Oglądać telewizję.
+[24:52.740 --> 24:55.740]  Super.
+[24:57.740 --> 25:02.740]  A następna opcja to co to jest?
+[25:02.740 --> 25:03.740]  Czytać.
+[25:03.740 --> 25:04.740]  Super.
+[25:04.740 --> 25:05.740]  Czytać.
+[25:05.740 --> 25:06.740]  Co czytasz?
+[25:06.740 --> 25:07.740]  Czytać książkę.
+[25:07.740 --> 25:08.740]  Czytać książkę. Bardzo dobrze.
+[25:08.740 --> 25:11.740]  Czytać książkę.
+[25:11.740 --> 25:20.740]  Tak. Potem jest jeść kolację. Tak.
+[25:20.740 --> 25:25.740]  Jest czerwone wino. I jeszcze raz.
+[25:25.740 --> 25:27.740]  I jeszcze raz.
+[25:27.740 --> 25:28.740]  Co on je?
+[25:28.740 --> 25:35.740]  O, on je takie typowo co Polak. Typical at this time from Polish.
+[25:35.740 --> 25:36.740]  Yeah?
+[25:36.740 --> 25:38.740]  You see what can be here?
+[25:38.740 --> 25:43.740]  Like parówki. Parówki?
+[25:43.740 --> 25:44.740]  Parówki.
+[25:44.740 --> 25:45.740]  Tak? Klasyka.
+[25:45.740 --> 25:47.740]  Śniadanie, kolacja, parówki.
+[25:47.740 --> 25:48.740]  Parówki, you know?
+[25:48.740 --> 25:50.740]  I will show you.
+[25:50.740 --> 25:51.740]  Parówki.
+[25:51.740 --> 25:53.740]  For show, you know?
+[25:53.740 --> 25:54.740]  Oh, this is it.
+[25:54.740 --> 25:57.740]  Parówki. Klasyka. Bardzo typowe.
+[25:57.740 --> 25:58.740]  Tak.
+[25:58.740 --> 26:01.740]  Berlinki, krakus, inne.
+[26:01.740 --> 26:06.740]  No dobrze. Jeść kolację.
+[26:06.740 --> 26:09.740]  A tutaj co on robi?
+[26:09.740 --> 26:12.740]  Spacer?
+[26:12.740 --> 26:18.740]  Spacer, tak. And we have two ways for express walking with dog.
+[26:18.740 --> 26:23.740]  We can say spacerować, so walking with dog. Spacerować z psem.
+[26:23.740 --> 26:30.740]  The easiest way, but also you can say going for a walk with dog.
+[26:30.740 --> 26:37.740]  So iść na spacer z psem.
+[26:37.740 --> 26:38.740]  Right?
+[26:38.740 --> 26:40.740]  Longer one.
+[26:40.740 --> 26:47.740]  At the same time. Spacerować z psem or iść na spacer z psem.
+[26:47.740 --> 26:48.740]  O!
+[26:48.740 --> 26:49.740]  Ma duże.
+[26:49.740 --> 26:51.740]  O pies ma duże.
+[26:51.740 --> 26:55.740]  O pies ma duże oczy. Big eyes.
+[26:55.740 --> 26:56.740]  Tak?
+[27:01.740 --> 27:03.740]  Spacerować z psem.
+[27:03.740 --> 27:04.740]  W porządku?
+[27:04.740 --> 27:06.740]  No dobrze.
+[27:06.740 --> 27:10.740]  Ok. To jest następna sytuacja. Co to jest?
+[27:14.740 --> 27:15.740]  Spotkać.
+[27:15.740 --> 27:18.740]  Super. Tak. To jest spotykać się.
+[27:18.740 --> 27:20.740]  Spotykać się.
+[27:20.740 --> 27:21.740]  Spotykać się.
+[27:21.740 --> 27:26.740]  And we can add something extra. Spotykać się z.
+[27:26.740 --> 27:27.740]  Z kolegą.
+[27:27.740 --> 27:33.740]  Tak. Z kolegą. Bardzo ładnie. Koleżanką. Tak?
+[27:33.740 --> 27:42.740]  Może być opcja z partnerem. Tak? Kobieta z partnerką. Tak?
+[27:42.740 --> 27:44.740]  Z żoną.
+[27:44.740 --> 27:46.740]  Z żoną?
+[27:46.740 --> 27:48.740]  With a wife.
+[27:48.740 --> 27:50.740]  A husband?
+[27:50.740 --> 27:51.740]  Mężem.
+[27:51.740 --> 27:57.740]  Mężem. Bardzo dobrze. Spotykać się z mężem.
+[27:57.740 --> 28:02.740]  And when you would like to express plural of your friends for example.
+[28:02.740 --> 28:09.740]  We will a little bit change this z. Because we should give ze. Ze znajomymi. Tak?
+[28:09.740 --> 28:10.740]  Ze znajomymi.
+[28:10.740 --> 28:14.740]  Albo ze kolegami. Tak?
+[28:14.740 --> 28:16.740]  We can write here.
+[28:16.740 --> 28:17.740]  Z kolegami.
+[28:17.740 --> 28:18.740]  Z kolegami.
+[28:18.740 --> 28:19.740]  W porządku?
+[28:19.740 --> 28:20.740]  Mhm.
+[28:20.740 --> 28:23.740]  No dobrze. Co oni robią?
+[28:23.740 --> 28:25.740]  Piją piwo.
+[28:25.740 --> 28:29.740]  Piją piwo. Tak. Piją piwo. Mają piwo. Aha. Tak.
+[28:29.740 --> 28:33.740]  I konwersują. Jakaś konwersacja. Tak?
+[28:33.740 --> 28:34.740]  Tak.
+[28:34.740 --> 28:38.740]  No dobrze. A tutaj Kowalski. Co on robi?
+[28:40.740 --> 28:43.740]  Ogląda. Sorry. Słuchać.
+[28:43.740 --> 28:46.740]  Słucha. Somebody. Tak. But how do you say?
+[28:46.740 --> 28:49.740]  Calling. Talking on phone.
+[28:49.740 --> 28:52.740]  On phone?
+[28:52.740 --> 28:55.740]  Rozmawiać przez telefon.
+[28:55.740 --> 29:03.740]  Bardzo dobrze. Bardzo dobrze. Tak. Rozmawiać. Talking on phone. Przez telefon. Tak?
+[29:03.740 --> 29:10.740]  Also you can see that some Polish saying using dzwonić. Dzwonić. This is like to call.
+[29:10.740 --> 29:13.740]  Just calling. But really common word.
+[29:13.740 --> 29:15.740]  And also if you would like to...
+[29:15.740 --> 29:19.740]  support yourself using some international words also.
+[29:19.740 --> 29:22.740]  We using telefonować.
+[29:22.740 --> 29:25.740]  Telefonować.
+[29:25.740 --> 29:27.740]  Three options.
+[29:27.740 --> 29:30.740]  Most common rozmawiać and dzwonić.
+[29:30.740 --> 29:35.740]  Rozmawiać przez telefon. Dzwonić. Telefonować. Ok?
+[29:35.740 --> 29:38.740]  No dobrze.
+[29:38.740 --> 29:43.740]  Do you know what mostly Polish people saying at the first second when we answer a question?
+[29:43.740 --> 29:45.740]  No dobrze. Do you know what mostly Polish people saying at the first second when we answer a question?
+[29:45.740 --> 29:47.740]  During the phone?
+[29:47.740 --> 29:52.740]  Dzień dobry. Dzień dobry, tak. But it's something more common.
+[29:52.740 --> 29:58.740]  Halo, halo. Halo, halo. This is the second place, the first place we saying...
+[29:58.740 --> 30:01.740]  Zucham. Zucham. Zucham.
+[30:01.740 --> 30:04.740]  Zucham. Zucham. Zucham.
+[30:04.740 --> 30:08.740]  And also if we don't know... Kto mówi? Kto mówi?
+[30:08.740 --> 30:11.740]  Telemarketer. Telemarketer.
+[30:11.740 --> 30:13.740]  Telemarketer.
+[30:13.740 --> 30:20.740]  Ok, no dobra. No to tutaj jest chaos. Co to jest ta sytuacja?
+[30:26.740 --> 30:28.740]  We had ubierać się.
+[30:31.740 --> 30:36.740]  And we had something similar, but not fully.
+[30:36.740 --> 30:43.740]  Rozbierać się. Bardzo dobrze. To jest rozbierać się.
+[30:43.740 --> 30:53.740]  Rozbierać się. Rozbierać się. We going back to pijama. Rozbierać się.
+[30:57.740 --> 31:04.740]  W porządku? Dobra. I jest rutyna wieczór.
+[31:04.740 --> 31:06.740]  Co oglądasz?
+[31:06.740 --> 31:09.740]  Mycie. Co to jest mycie?
+[31:12.740 --> 31:13.740]  Mycie.
+[31:13.740 --> 31:15.740]  Włoż się. Włoż się.
+[31:15.740 --> 31:17.740]  Włoż się z góry.
+[31:17.740 --> 31:20.740]  Mycie. Mycie.
+[31:23.740 --> 31:25.740]  To jest mycie.
+[31:25.740 --> 31:29.740]  I finalna albo sprawna sytuacja.
+[31:29.740 --> 31:31.740]  Iść spać.
+[31:31.740 --> 31:33.740]  Iść spać. Tak.
+[31:33.740 --> 31:36.740]  Iść spać to jest jak gołym.
+[31:36.740 --> 31:38.740]  Iść spać to jest jak gołym.
+[31:38.740 --> 31:40.740]  But final it will be just sleep.
+[31:40.740 --> 31:41.740]  Spac.
+[31:41.740 --> 31:42.740]  Tak.
+[31:42.740 --> 31:43.740]  Spac.
+[31:43.740 --> 31:45.740]  Tutaj spać z psem.
+[31:45.740 --> 31:46.740]  Tutaj spać z psem.
+[31:49.740 --> 31:51.740]  Iść spać i spać.
+[31:53.740 --> 31:54.740]  W porządku?
+[31:54.740 --> 31:55.740]  Tak.
+[31:55.740 --> 31:57.740]  No dobra.
+[31:57.740 --> 32:02.740]  To analizujemy. Jest interaktywna gra.
+[32:02.740 --> 32:04.740]  Decydujemy co to jest.
+[32:04.740 --> 32:07.740]  Decydujemy co to jest.
+[32:07.740 --> 32:09.740]  Już sekunda, sekunda.
+[32:09.740 --> 32:24.740]  I mamy karty.
+[32:24.740 --> 32:26.740]  Karty do gry.
+[32:26.740 --> 32:28.740]  Decydujemy co to jest.
+[32:28.740 --> 32:30.740]  Jaka aktywność.
+[32:30.740 --> 32:32.740]  What kind of activity?
+[32:32.740 --> 32:35.740]  Oh, we have something like going to work.
+[32:35.740 --> 32:39.740]  But I will say something extra to be late.
+[32:39.740 --> 32:41.740]  And to be on time.
+[32:41.740 --> 32:42.740]  It can be useful.
+[32:42.740 --> 32:45.740]  But going to work. How we can express?
+[32:45.740 --> 32:47.740]  Iść do pracy.
+[32:47.740 --> 32:49.740]  Bardzo dobrze.
+[32:49.740 --> 32:50.740]  Iść do pracy.
+[32:50.740 --> 32:51.740]  I chodzić do pracy.
+[32:51.740 --> 32:54.740]  I chodzić do pracy. Tak. Naturalnie.
+[32:54.740 --> 32:58.740]  Iść, chodzić do pracy. Tak.
+[32:58.740 --> 33:00.740]  Chodzić regularnie. Tak.
+[33:00.740 --> 33:01.740]  Rutyna.
+[33:01.740 --> 33:03.740]  Rutyna.
+[33:03.740 --> 33:10.740]  Tak. Być albo we can say być spóźnionym. Tak?
+[33:10.740 --> 33:12.740]  Being late. Tak?
+[33:12.740 --> 33:20.740]  You can say jestem spóźniony. A kobieta spóźniona. Tak?
+[33:20.740 --> 33:24.740]  And also being on time.
+[33:24.740 --> 33:29.740]  You have some suspect. How can be? Być?
+[33:29.740 --> 33:30.740]  Późnionym?
+[33:30.740 --> 33:32.740]  Spóźnionym.
+[33:32.740 --> 33:33.740]  Spóźnionym.
+[33:33.740 --> 33:34.740]  Spóźnionym.
+[33:34.740 --> 33:35.740]  Spóźnionym being late.
+[33:35.740 --> 33:36.740]  Spóźniony.
+[33:36.740 --> 33:37.740]  Spóźniony.
+[33:37.740 --> 33:38.740]  Ok. Ok.
+[33:38.740 --> 33:39.740]  Nie, nie.
+[33:39.740 --> 33:42.740]  This is like for, but on time will be być na, like on, czas.
+[33:42.740 --> 33:43.740]  Time.
+[33:43.740 --> 33:44.740]  Be on time.
+[33:44.740 --> 33:45.740]  Tak?
+[33:45.740 --> 33:46.740]  Punktualnie.
+[33:46.740 --> 33:47.740]  Być spóźnionym.
+[33:47.740 --> 33:48.740]  Być na czas.
+[33:48.740 --> 33:49.740]  Jestem.
+[33:49.740 --> 33:50.740]  No, czas.
+[33:50.740 --> 33:51.740]  Albo jestem.
+[33:51.740 --> 33:52.740]  Punktualnie.
+[33:52.740 --> 33:53.740]  No, czas.
+[33:53.740 --> 33:54.740]  Albo jestem.
+[33:54.740 --> 33:55.740]  Punktualnie.
+[33:55.740 --> 33:56.740]  No, czas.
+[33:56.740 --> 33:57.740]  No, czas.
+[33:57.740 --> 33:58.740]  No, czas.
+[33:58.740 --> 33:59.740]  No, czas.
+[33:59.740 --> 34:01.740]  Ej, jutaj, jaka ustaść?
+[34:01.740 --> 34:02.740] pic acknowledging that big man is not allowed here and that Alita just needs to sleep.
+[34:03.740 --> 34:26.740] kurczę
+[34:29.740 --> 34:41.740]  Ok, a tutaj co to jest?
+[34:41.740 --> 34:48.740]  Może być gotować, może być też robić jedzenie.
+[34:48.740 --> 34:53.740]  Robić coś, robić jedzenie. To też taka alternatywa popularna.
+[34:53.740 --> 35:03.740]  Gotować, może być robić jedzenie. Jedzenie, like eating general.
+[35:03.740 --> 35:09.740]  I robić coś, we can say also w kuchni.
+[35:09.740 --> 35:16.740]  I will extend you from now so, because you are very good, so we can easily do this.
+[35:16.740 --> 35:22.740]  Robić coś, coś, something. Robić coś w kuchni.
+[35:22.740 --> 35:25.740]  Robić coś w kuchni.
+[35:25.740 --> 35:30.740]  Ok?
+[35:30.740 --> 35:35.740]  Dobrze, o klasyka. Co to jest?
+[35:35.740 --> 35:40.740]  Sprysznicz.
+[35:40.740 --> 35:46.740]  Brać sprysznicz, bardzo dobrze. Dużo wody.
+[35:46.740 --> 35:49.740]  Tak?
+[35:49.740 --> 35:51.740]  O!
+[35:51.740 --> 35:53.740]  Myć zęby.
+[35:53.740 --> 35:57.740]  Myć zęby, tak jest. Szczoteczka. Myć zęby.
+[35:57.740 --> 36:01.740]  A tutaj? Biedronka.
+[36:01.740 --> 36:03.740]  Robić zakupy.
+[36:03.740 --> 36:07.740]  Robić zakupy, bardzo dobrze. Robić zakupy, tak.
+[36:07.740 --> 36:10.740]  Siłownię.
+[36:10.740 --> 36:16.740]  Tak, siłownia. Chodzić na siłownię. Może być też robić trening.
+[36:16.740 --> 36:20.740]  Robić trening, trenować. Tak?
+[36:20.740 --> 36:23.740]  Robić gimnastykę. Tak?
+[36:23.740 --> 36:25.740]  Różne opcje.
+[36:25.740 --> 36:30.740]  Robić trening, trenować.
+[36:30.740 --> 36:33.740]  Gimnastykować się.
+[36:33.740 --> 36:37.740]  Chodzić na siłownię. Tak?
+[36:37.740 --> 36:39.740]  Tak.
+[36:39.740 --> 36:42.740]  No i tu?
+[36:42.740 --> 36:44.740]  Tak.
+[36:44.740 --> 36:46.740]  Tak.
+[36:46.740 --> 36:48.740]  Tak.
+[36:48.740 --> 36:52.740]  Dobrze.
+[36:52.740 --> 36:55.740]  W porządku?
+[36:55.740 --> 36:56.740]  Tak.
+[36:56.740 --> 36:58.740]  Dobrze.
+[36:58.740 --> 37:00.740]  Dobrze.
+[37:00.740 --> 37:02.740]  Dobrze.
+[37:02.740 --> 37:04.740]  Dobrze.
+[37:04.740 --> 37:06.740]  Dobrze.
+[37:06.740 --> 37:11.740]  Ok. To jest następny aktywist. O! Szczęśliwy Pan.
+[37:11.740 --> 37:12.740]  Pracować.
+[37:12.740 --> 37:16.740]  Pracować, tak. Pracować na komputerze.
+[37:16.740 --> 37:17.740]  No.
+[37:17.740 --> 37:18.740]  A tutaj?
+[37:18.740 --> 37:19.740]  Spać.
+[37:19.740 --> 37:21.740]  Spać. Spać.
+[37:21.740 --> 37:23.740]  Co to jest?
+[37:23.740 --> 37:24.740]  Wyglą.
+[37:24.740 --> 37:27.740]  Zegar. A taki zegar plus alarm?
+[37:27.740 --> 37:29.740]  Budzik. Budzik.
+[37:29.740 --> 37:33.740]  It comes from budzić się, so wake up. Tak?
+[37:33.740 --> 37:37.740]  To jest budzik. Budzik. Budzik.
+[37:37.740 --> 37:39.740]  We understand alarm.
+[37:39.740 --> 37:44.740]  Yeah? But alarm, it's tricky because we have various type of alarm.
+[37:44.740 --> 37:45.740]  It can be the same.
+[37:45.740 --> 37:48.740]  Like SOS alarm and both alarm.
+[37:48.740 --> 37:50.740]  Yeah? So it's tricky word.
+[37:50.740 --> 37:52.740]  Budzik is just one meaning.
+[37:52.740 --> 37:53.740]  Budzik.
+[37:53.740 --> 37:54.740]  No dobrze.
+[37:54.740 --> 37:56.740]  To następne foto to jest?
+[37:56.740 --> 37:57.740]  Jeść śniadanie.
+[37:57.740 --> 37:59.740]  Jeść śniadanie.
+[37:59.740 --> 38:00.740]  Tutaj chyba pić sok. Tak?
+[38:00.740 --> 38:01.740]  A tutaj?
+[38:01.740 --> 38:02.740]  Gazetę.
+[38:02.740 --> 38:03.740]  Czytać gazetę.
+[38:03.740 --> 38:04.740]  Czytać gazetę.
+[38:04.740 --> 38:05.740]  Tak.
+[38:05.740 --> 38:06.740]  Tak.
+[38:06.740 --> 38:07.740]  Tak.
+[38:07.740 --> 38:08.740]  Tak.
+[38:08.740 --> 38:09.740]  Tak.
+[38:09.740 --> 38:10.740]  Tak.
+[38:10.740 --> 38:11.740]  Tak.
+[38:11.740 --> 38:12.740]  Tak.
+[38:12.740 --> 38:13.740]  Tak.
+[38:13.740 --> 38:14.740]  Tak.
+[38:14.740 --> 38:15.740]  Tak.
+[38:15.740 --> 38:16.740]  Czytać gazetę.
+[38:16.740 --> 38:17.740]  Bardzo dobrze.
+[38:17.740 --> 38:18.740]  Tak.
+[38:18.740 --> 38:19.740]  Aktywność.
+[38:19.740 --> 38:21.740]  Roweru. Chodzić do roweru.
+[38:21.740 --> 38:25.740]  Chodzić will be like, like on foot.
+[38:25.740 --> 38:28.740]  But here will be second to go.
+[38:28.740 --> 38:30.740]  So will be jeździć.
+[38:30.740 --> 38:31.740]  Jeździć na rowerze.
+[38:31.740 --> 38:33.740]  Tak. Bardzo dobrze.
+[38:33.740 --> 38:35.740]  Jeździć na rowerze.
+[38:35.740 --> 38:37.740]  Czytać.
+[38:37.740 --> 38:38.740]  Czytać.
+[38:38.740 --> 38:42.740]  You know how to say laying also?
+[38:42.740 --> 38:43.740]  On the bed?
+[38:43.740 --> 38:44.740]  Leżeć.
+[38:44.740 --> 38:45.740]  Leżeć.
+[38:45.740 --> 38:46.740]  Leżeć.
+[38:46.740 --> 38:47.740]  Tak?
+[38:47.740 --> 38:48.740]  Czytać i leżeć.
+[38:48.740 --> 38:49.740]  Leję.
+[38:49.740 --> 38:50.740]  Leżeć.
+[38:50.740 --> 38:51.740]  OK.
+[38:51.740 --> 38:52.740]  Tu też relaks.
+[38:52.740 --> 38:53.740]  Słuchać.
+[38:53.740 --> 38:54.740]  Słuchać.
+[38:54.740 --> 38:55.740]  Słuchać.
+[38:55.740 --> 38:56.740]  Słuchać muzyki.
+[38:56.740 --> 38:57.740]  Może podcastu.
+[38:57.740 --> 38:58.740]  Tak?
+[38:58.740 --> 38:59.740]  Słuchać.
+[38:59.740 --> 39:00.740]  OK.
+[39:00.740 --> 39:01.740]  Tak.
+[39:01.740 --> 39:02.740]  Tak.
+[39:02.740 --> 39:03.740]  Tak.
+[39:03.740 --> 39:04.740]  Tak.
+[39:04.740 --> 39:05.740]  Tak.
+[39:05.740 --> 39:06.740]  Tak.
+[39:06.740 --> 39:07.740]  Tak.
+[39:07.740 --> 39:08.740]  Tak.
+[39:08.740 --> 39:09.740]  Tak.
+[39:09.740 --> 39:10.740]  Tak.
+[39:10.740 --> 39:11.740]  Tak.
+[39:11.740 --> 39:12.740]  Tak.
+[39:12.740 --> 39:13.740]  Tak.
+[39:13.740 --> 39:14.740]  Tak.
+[39:14.740 --> 39:15.740]  Tak.
+[39:15.740 --> 39:16.740]  Tak.
+[39:16.740 --> 39:17.740]  Wstawać.
+[39:17.740 --> 39:18.740]  Wstawać.
+[39:18.740 --> 39:19.740]  Bardzo dobrze.
+[39:19.740 --> 39:20.740]  Wstawać.
+[39:20.740 --> 39:21.740]  Tutaj...
+[39:21.740 --> 39:25.740]  A tu też słychać muzyki, leżeć, tak?
+[39:25.740 --> 39:27.740]  Relaksować się w naturze.
+[39:27.740 --> 39:28.740]  Tak?
+[39:28.740 --> 39:30.740]  O!
+[39:30.740 --> 39:31.740]  Rozmawiać.
+[39:31.740 --> 39:33.740]  Rozmawiać przez telefon.
+[39:35.740 --> 39:36.740]  Rozmawiać.
+[39:36.740 --> 39:40.740]  Also can be like for example we are here...
+[39:40.740 --> 39:42.740]  Rozmawiać są rozmawiane.
+[39:42.740 --> 39:44.740]  Tak, rozmawiamy, tak?
+[39:44.740 --> 39:47.740]  So we can be also talking, but out of calling to somebody.
+[39:47.740 --> 39:52.740]  So if you say przez telefon, to like we are something, tak?
+[39:52.740 --> 39:54.740]  Rozmawiać przez telefon. Dobrze.
+[39:54.740 --> 39:58.740]  O, tutaj też telefonować, pracować.
+[39:58.740 --> 40:01.740]  How to say writing something?
+[40:01.740 --> 40:02.740]  Pisać.
+[40:02.740 --> 40:05.740]  Pisać coś, tak. Pisać coś.
+[40:05.740 --> 40:07.740]  Ok.
+[40:07.740 --> 40:09.740]  Ludzić się.
+[40:09.740 --> 40:11.740]  Ludzić się, tak.
+[40:12.740 --> 40:14.740]  Oglądać telewizję.
+[40:14.740 --> 40:16.740]  Oglądać telewizję, tak.
+[40:16.740 --> 40:19.740]  Sport mundial, tak, etc.
+[40:19.740 --> 40:21.740]  Piłka nożna.
+[40:21.740 --> 40:24.740]  Aha. I finalnie?
+[40:24.740 --> 40:29.740]  Spotykać się z...
+[40:29.740 --> 40:31.740]  Z kolegami.
+[40:31.740 --> 40:35.740]  Z kolegami, pić coś, jeść coś, rozmawiać.
+[40:35.740 --> 40:37.740]  Bardzo dobrze. To jest ok?
+[40:37.740 --> 40:39.740]  Ok, super.
+[40:39.740 --> 40:42.740]  So now I want to have for you again.
+[40:42.740 --> 40:44.740]  I will share with what you are.
+[40:44.740 --> 40:45.740]  And what we have here.
+[40:45.740 --> 40:48.740]  Here we will have first form of all of the verbs.
+[40:48.740 --> 40:50.740]  Not all of, but some of.
+[40:50.740 --> 40:53.740]  And we should choose the best form, ok?
+[40:53.740 --> 40:57.740]  Connecting with the meaning of the list of verbs.
+[40:57.740 --> 41:00.740]  So for example where we have jemy śniadanie, ok?
+[41:00.740 --> 41:02.740]  And like that. Ok.
+[41:02.740 --> 41:04.740]  What we are going to do?
+[41:04.740 --> 41:06.740]  We will check if working.
+[41:06.740 --> 41:09.740]  I saw that yesterday we had some problem with word wall.
+[41:09.740 --> 41:10.740]  Word wall.
+[41:10.740 --> 41:13.740]  Ok, so maybe we can install this today.
+[41:22.740 --> 41:23.740]  Mogi?
+[41:23.740 --> 41:24.740]  Yes.
+[41:24.740 --> 41:25.740]  O, super.
+[41:33.740 --> 41:36.740]  Jak się mówi po polsku to stand or to sit?
+[41:36.740 --> 41:38.740]  To stand.
+[41:38.740 --> 41:39.740]  To stand.
+[41:39.740 --> 41:43.740]  To jest stać.
+[41:43.740 --> 41:44.740]  Stać.
+[41:44.740 --> 41:45.740]  And to sitem?
+[41:45.740 --> 41:46.740]  Siadać.
+[41:46.740 --> 41:47.740]  Siadać.
+[41:47.740 --> 41:48.740]  Tak?
+[41:48.740 --> 41:51.740]  And you can say stoję, ja.
+[41:51.740 --> 41:52.740]  Tak?
+[41:52.740 --> 41:55.740]  This is also a little bit like a two plus.
+[41:55.740 --> 42:05.740]  Because it's harder to find some connections between infinity and form of first person for example.
+[42:05.740 --> 42:06.740]  Tak?
+[42:06.740 --> 42:07.740]  Siadać it's regular.
+[42:07.740 --> 42:08.740]  So it will be siadanie.
+[42:08.740 --> 42:09.740]  Siadam.
+[42:09.740 --> 42:10.740]  Siadam.
+[42:10.740 --> 42:11.740]  Siadam, siadasz.
+[42:11.740 --> 42:12.740]  Siadam, etc.
+[42:12.740 --> 42:13.740]  This will be regular.
+[42:13.740 --> 42:14.740]  Dziękuję.
+[42:14.740 --> 42:15.740]  Stoję, stoisz.
+[42:15.740 --> 42:16.740]  Stoję.
+[42:16.740 --> 42:17.740]  Yes.
+[42:17.740 --> 42:18.740]  Not working?
+[42:18.740 --> 42:19.740]  Not working?
+[42:19.740 --> 42:20.740]  Oh my god.
+[42:20.740 --> 42:21.740]  I have a sign.
+[42:21.740 --> 42:22.740]  Yes.
+[42:22.740 --> 42:23.740]  It's something happened with this word wall.
+[42:23.740 --> 42:24.740]  Ok.
+[42:24.740 --> 42:25.740]  So if it's working like that we can try together.
+[42:25.740 --> 42:26.740]  And we can try to do it.
+[42:26.740 --> 42:27.740]  I think it's ok.
+[42:27.740 --> 42:28.740]  I think it's ok.
+[42:28.740 --> 42:29.740]  I think it's ok.
+[42:29.740 --> 42:30.740]  I think it's ok.
+[42:30.740 --> 42:31.740]  I think it's ok.
+[42:31.740 --> 42:32.740]  I think it's ok.
+[42:32.740 --> 42:33.740]  I think it's ok.
+[42:33.740 --> 42:34.740]  I think it's ok.
+[42:34.740 --> 42:35.740]  I think it's ok.
+[42:35.740 --> 42:36.740]  I think it's ok.
+[42:36.740 --> 42:37.740]  I think it's ok.
+[42:37.740 --> 42:38.740]  I'm going to show you what we have.
+[42:38.740 --> 42:39.740]  And what we have.
+[42:39.740 --> 42:40.740]  I jem śniadanie.
+[42:40.740 --> 42:41.740]  Co proponujecie?
+[42:41.740 --> 42:42.740]  A, B, C?
+[42:42.740 --> 42:43.740]  Or kolor?
+[42:43.740 --> 42:44.740]  Czerwony.
+[42:44.740 --> 42:45.740]  Czerwony kolor.
+[42:45.740 --> 42:46.740]  Czerwony.
+[42:46.740 --> 42:47.740]  Czerwony.
+[42:47.740 --> 42:48.740]  Tu jest dziewczynka.
+[42:48.740 --> 42:49.740]  Ona je.
+[42:49.740 --> 42:50.740]  Co to jest?
+[42:50.740 --> 42:51.740]  Łatki śniadanie.
+[42:51.740 --> 42:52.740]  Łatki śniadanie.
+[42:52.740 --> 42:53.740]  Bardzo dobrze.
+[42:53.740 --> 42:54.740]  Łatki śniadanie.
+[42:54.740 --> 42:55.740]  Dobra.
+[42:55.740 --> 42:56.740]  Pracuje.
+[42:56.740 --> 42:57.740]  A.
+[42:57.740 --> 42:58.740]  A.
+[42:58.740 --> 42:59.740]  Czerwony.
+[42:59.740 --> 43:00.740]  Kolor zielony.
+[43:00.740 --> 43:01.740]  A.
+[43:01.740 --> 43:02.740]  Zielony.
+[43:02.740 --> 43:03.740]  A.
+[43:03.740 --> 43:04.740]  Zielony.
+[43:04.740 --> 43:05.740]  Zielony.
+[43:05.740 --> 43:06.740]  Dobra.
+[43:06.740 --> 43:07.740]  Ale czerwona koszula.
+[43:07.740 --> 43:09.740]  Małżowa, something like that.
+[43:09.740 --> 43:13.740]  Ok. Tu jest spotykam się z kolegami.
+[43:16.740 --> 43:20.740]  A, D i kolor?
+[43:20.740 --> 43:22.740]  Ja mam niebieski.
+[43:22.740 --> 43:24.740]  Tak.
+[43:24.740 --> 43:26.740]  Idę do pracy.
+[43:26.740 --> 43:28.740]  Czerwony.
+[43:28.740 --> 43:30.740]  Czerwony, bardzo dobrze.
+[43:32.740 --> 43:34.740]  Rozmawiam przez telefon.
+[43:37.740 --> 43:39.740]  Różowy?
+[43:39.740 --> 43:41.740]  Różowy, tak.
+[43:43.740 --> 43:45.740]  Robię zakupy.
+[43:45.740 --> 43:47.740]  Zielony.
+[43:47.740 --> 43:49.740]  Zielony, świetnie.
+[43:51.740 --> 43:53.740]  Oglądam telewizję.
+[43:53.740 --> 43:55.740]  Niebieski.
+[43:55.740 --> 43:57.740]  Niebieski, bardzo dobrze.
+[43:57.740 --> 43:59.740]  Biorę prysznic.
+[44:01.740 --> 44:03.740]  Czerwony.
+[44:03.740 --> 44:05.740]  Czerwony, definitywnie, tak.
+[44:05.740 --> 44:07.740]  I pstaję.
+[44:07.740 --> 44:08.740]  Różowy.
+[44:08.740 --> 44:10.740]  Różowy, świetnie.
+[44:10.740 --> 44:12.740]  To jest ok, w porządku?
+[44:12.740 --> 44:13.740]  Ok, dobrze.
+[44:13.740 --> 44:15.740]  I will send to this of course.
+[44:15.740 --> 44:20.740]  We don't have this place for it from roots, but it's good to repeat.
+[44:20.740 --> 44:29.740]  How this conjunction working for mostly all of the verbs, which you have in your copy.
+[44:29.740 --> 44:34.740]  So I open some Google documents.
+[44:34.740 --> 44:37.740]  We can try to fill in some words.
+[44:37.740 --> 44:39.740]  I will also show you this.
+[44:39.740 --> 44:41.740]  I will try to show you that.
+[44:41.740 --> 44:43.740]  Ok, we can try to fill in.
+[44:43.740 --> 44:45.740]  And we have budzić się like a first.
+[44:45.740 --> 44:47.740]  And we see that budzić się, this is el-ish.
+[44:47.740 --> 44:49.740]  So how this el-ish working?
+[44:49.740 --> 44:51.740]  What's the conjunction style?
+[44:51.740 --> 44:53.740]  Ok, we can close that.
+[44:53.740 --> 44:55.740]  And we see that this is it.
+[44:55.740 --> 44:57.740]  Oh, sorry.
+[44:57.740 --> 44:59.740]  Like that.
+[44:59.740 --> 45:01.740]  Ok, so now we have to fill in.
+[45:01.740 --> 45:03.740]  And we see that this is it.
+[45:03.740 --> 45:05.740]  Oh, sorry.
+[45:05.740 --> 45:07.740]  Ok, we can close that.
+[45:07.740 --> 45:11.740]  Ok, we have ja budzę się.
+[45:11.740 --> 45:13.740]  This is el-ish.
+[45:13.740 --> 45:16.740]  Next option is ish.
+[45:16.740 --> 45:18.740]  What do you suggest?
+[45:18.740 --> 45:20.740]  Budzisz się.
+[45:20.740 --> 45:22.740]  Budzisz się, very good.
+[45:22.740 --> 45:26.740]  Forma number three is minimalistic.
+[45:26.740 --> 45:27.740]  Reduction.
+[45:27.740 --> 45:29.740]  Budzisz się.
+[45:29.740 --> 45:31.740]  Budzisz się, yes.
+[45:31.740 --> 45:33.740]  There is no el-ish, no sh-ish.
+[45:33.740 --> 45:35.740]  Ok, basic.
+[45:35.740 --> 45:36.740]  Ok, good.
+[45:36.740 --> 45:39.740]  Plural is extremely regular.
+[45:39.740 --> 45:41.740]  Budzimy się.
+[45:41.740 --> 45:43.740]  Budzimy się, very good.
+[45:43.740 --> 45:45.740]  Typical is my.
+[45:45.740 --> 45:47.740]  It will be in every line.
+[45:47.740 --> 45:49.740]  It will be in every line.
+[45:49.740 --> 45:51.740]  Then is budzicie się.
+[45:51.740 --> 45:53.740]  Then is budzicie się.
+[45:53.740 --> 45:55.740]  And when you have every another type of conjunction done,
+[45:55.740 --> 45:57.740]  And when you have every another type of conjunction done,
+[45:57.740 --> 45:59.740]  m-esh,
+[45:59.740 --> 46:01.740]  first person of the time will be el-u.
+[46:01.740 --> 46:03.740]  First person of the time will be el-u.
+[46:03.740 --> 46:05.740]  But first person of the time will be el-u.
+[46:05.740 --> 46:07.740]  But last of her.
+[46:07.740 --> 46:09.740]  So two Polish typical vowels.
+[46:09.740 --> 46:11.740]  Budzę się.
+[46:11.740 --> 46:13.740]  Oni budzą się.
+[46:13.740 --> 46:15.740]  W porządku.
+[46:15.740 --> 46:19.740]  But something similar, I will a little bit switch to show you similarities as well.
+[46:19.740 --> 46:21.740]  We should have el-ish.
+[46:21.740 --> 46:23.740]  Yes, we have spać also.
+[46:23.740 --> 46:25.740]  The same type of conjunction.
+[46:25.740 --> 46:27.740]  Spać is a bit irregular.
+[46:27.740 --> 46:29.740]  But it will be ja śpię.
+[46:29.740 --> 46:31.740]  But it will be ja śpię.
+[46:31.740 --> 46:33.740]  No, we know that we have ish.
+[46:33.740 --> 46:35.740]  No, we know that we have ish.
+[46:35.740 --> 46:37.740]  Co dalej, co następne? Ty.
+[46:37.740 --> 46:39.740]  Śpisz.
+[46:39.740 --> 46:41.740]  Śpisz. Bardzo dobrze.
+[46:41.740 --> 46:43.740]  Śpisz.
+[46:43.740 --> 46:45.740]  Baza nie ma el, nie ma esz.
+[46:45.740 --> 46:47.740]  Baza nie ma el, nie ma esz.
+[46:47.740 --> 46:49.740]  Śpię.
+[46:49.740 --> 46:51.740]  Śpię.
+[46:51.740 --> 46:53.740]  Śpię.
+[46:53.740 --> 46:55.740]  Śpię.
+[46:55.740 --> 46:57.740]  A wy?
+[46:57.740 --> 46:59.740]  Śpię.
+[46:59.740 --> 47:01.740]  Śpię.
+[47:01.740 --> 47:03.740]  Śpię.
+[47:03.740 --> 47:05.740]  Ja śpię, oni śpią.
+[47:05.740 --> 47:07.740]  Ja śpię, oni śpią.
+[47:07.740 --> 47:09.740]  W porządku?
+[47:09.740 --> 47:11.740]  Dobre.
+[47:11.740 --> 47:13.740]  Ok, we have something with el-ish.
+[47:13.740 --> 47:15.740]  Let's check.
+[47:15.740 --> 47:17.740]  We don't have.
+[47:17.740 --> 47:19.740]  So we can go back to our order.
+[47:19.740 --> 47:21.740]  And we have also el-esz.
+[47:21.740 --> 47:23.740]  And we have also el-esz.
+[47:23.740 --> 47:25.740]  I el-esz, really similar.
+[47:25.740 --> 47:27.740]  Because it's working almost like el-pisz.
+[47:27.740 --> 47:29.740]  Because it's working almost like el-pisz.
+[47:29.740 --> 47:31.740]  Mamy wstawać.
+[47:31.740 --> 47:33.740]  Ja wstaję.
+[47:33.740 --> 47:35.740]  Ty wstajesz.
+[47:35.740 --> 47:37.740]  Ty wstajesz.
+[47:37.740 --> 47:39.740]  Baza, redukcja.
+[47:39.740 --> 47:41.740]  Baza, redukcja.
+[47:41.740 --> 47:43.740]  Wstaję.
+[47:43.740 --> 47:45.740]  Prótym, projekcją tego typu jest,
+[47:45.740 --> 47:47.740]  że kiedy mamy el-esz,
+[47:47.740 --> 47:49.740]  więc widzicie, że pierwsza osoba
+[47:49.740 --> 47:51.740]  i trzecia,
+[47:51.740 --> 47:53.740]  to prawie to samo.
+[47:53.740 --> 47:55.740]  To samo, kiedy używamy,
+[47:55.740 --> 47:57.740]  kiedy mówimy to.
+[47:57.740 --> 47:59.740]  Ale kiedy piszemy, widzicie,
+[47:59.740 --> 48:01.740]  że tutaj jest bez el.
+[48:01.740 --> 48:03.740]  To jest coś takiego, co jest,
+[48:03.740 --> 48:05.740]  bo mamy prawie dwa w jednym.
+[48:05.740 --> 48:07.740]  Wstaję, wstajesz, wstaję,
+[48:07.740 --> 48:09.740]  wstajemy.
+[48:09.740 --> 48:11.740]  Wstajemy.
+[48:11.740 --> 48:13.740]  Potem wstajecie.
+[48:13.740 --> 48:15.740]  Wstajecie.
+[48:15.740 --> 48:17.740]  Bardzo dobrze.
+[48:17.740 --> 48:19.740]  I finalnie wstaję, wstają.
+[48:19.740 --> 48:21.740]  Para.
+[48:21.740 --> 48:23.740]  Jest ok?
+[48:23.740 --> 48:25.740]  No dobrze. Mamy el-esz.
+[48:25.740 --> 48:27.740]  Następne el-esz,
+[48:27.740 --> 48:29.740]  to jest brać prysznic.
+[48:29.740 --> 48:31.740]  Minimalnie.
+[48:31.740 --> 48:33.740]  Tu jest bioro.
+[48:33.740 --> 48:35.740]  Tu jest nieregularne.
+[48:35.740 --> 48:37.740]  Tu jest ja.
+[48:37.740 --> 48:39.740]  Tu jest bioro.
+[48:39.740 --> 48:41.740]  Tu jest super.
+[48:41.740 --> 48:43.740]  Tu jest bioro.
+[48:43.740 --> 48:45.740]  Bo jeśli znacie ostatni,
+[48:45.740 --> 48:47.740]  to możecie kopiować,
+[48:47.740 --> 48:49.740]  napisać i po prostu zmienić
+[48:49.740 --> 48:51.740]  jedną letę tutaj.
+[48:51.740 --> 48:53.740]  Tu jest nieregularne.
+[48:53.740 --> 48:55.740]  Tu jest bierzesz.
+[48:55.740 --> 48:57.740]  Tu jest bierzesz.
+[48:57.740 --> 48:59.740]  Kopiujemy to,
+[48:59.740 --> 49:01.740]  i możemy napisać
+[49:01.740 --> 49:03.740]  na średnią letę.
+[49:03.740 --> 49:05.740]  Bierzesz.
+[49:05.740 --> 49:07.740]  Bierzesz.
+[49:07.740 --> 49:09.740]  I teraz łatwo jest
+[49:09.740 --> 49:11.740]  wymyślić prywatny.
+[49:11.740 --> 49:13.740]  Bierzemy.
+[49:13.740 --> 49:15.740]  Bardzo dobrze.
+[49:15.740 --> 49:17.740]  I bierzecie.
+[49:17.740 --> 49:19.740]  Bierzecie.
+[49:19.740 --> 49:21.740]  W porządku?
+[49:21.740 --> 49:23.740]  Więc nieregularne miejsce
+[49:23.740 --> 49:25.740]  będzie tutaj.
+[49:25.740 --> 49:27.740]  Bo cały czas,
+[49:27.740 --> 49:29.740]  wciąż kopiujesz formę
+[49:29.740 --> 49:31.740]  od drugiej opcji.
+[49:31.740 --> 49:33.740]  Ale tutaj druga wygląda
+[49:33.740 --> 49:35.740]  trochę inaczej.
+[49:35.740 --> 49:37.740]  Biorę. Biorą.
+[49:37.740 --> 49:39.740]  Bierzesz. Bierze.
+[49:39.740 --> 49:41.740]  Bierzemy. Bierzecie.
+[49:41.740 --> 49:43.740]  I następne,
+[49:43.740 --> 49:45.740]  identyczne, to jest iść.
+[49:45.740 --> 49:47.740]  Mam pytanie.
+[49:47.740 --> 49:49.740]  Brać
+[49:49.740 --> 49:51.740]  prysznyć.
+[49:51.740 --> 49:53.740]  To brać...
+[49:53.740 --> 49:55.740]  Co to znaczy?
+[49:55.740 --> 49:57.740]  To znaczy to wziąć.
+[49:57.740 --> 49:59.740]  To wziąć.
+[49:59.740 --> 50:01.740]  Biorę kredyt.
+[50:01.740 --> 50:03.740]  Biorę Airbnb.
+[50:03.740 --> 50:05.740]  I wiele innych
+[50:05.740 --> 50:07.740]  kontekstów, bo to znaczy
+[50:07.740 --> 50:09.740]  wziąć.
+[50:09.740 --> 50:11.740]  Więc część piwnicy to tylko prysznyć.
+[50:11.740 --> 50:13.740]  Brać jest wziąć co tylko.
+[50:13.740 --> 50:15.740]  Biorę komputer.
+[50:15.740 --> 50:17.740]  Biorę telefon.
+[50:17.740 --> 50:19.740]  Biorę subskrybcję Netflixa.
+[50:19.740 --> 50:21.740]  To jest bardzo ważne.
+[50:21.740 --> 50:23.740]  Ale ta struktura to jest wziąć piwnię.
+[50:23.740 --> 50:25.740]  Bo to jest piwnica.
+[50:25.740 --> 50:27.740]  Super.
+[50:27.740 --> 50:29.740]  Identyczna koniugacja EOR.
+[50:29.740 --> 50:31.740]  To jest iść do pracy.
+[50:31.740 --> 50:33.740]  Mamy idą.
+[50:33.740 --> 50:35.740]  A numer jeden?
+[50:35.740 --> 50:37.740]  Idę.
+[50:37.740 --> 50:39.740]  Idę. Fantastyczne. Idę.
+[50:39.740 --> 50:41.740]  A forma ty?
+[50:41.740 --> 50:43.740]  Idziesz.
+[50:43.740 --> 50:45.740]  Super. Idziesz.
+[50:45.740 --> 50:47.740]  Idziesz. Ty idziesz.
+[50:47.740 --> 50:49.740]  W.
+[50:49.740 --> 50:51.740]  Ok. Co następne?
+[50:51.740 --> 50:53.740]  Idzie. Idzie. Ekstra.
+[50:53.740 --> 50:55.740]  Idzie. Nie ma esz, nie ma eł.
+[50:55.740 --> 50:57.740]  Idzie. Super.
+[50:57.740 --> 50:59.740]  Plural, intuicyjnie.
+[50:59.740 --> 51:01.740]  Idzie. Idziemy, idziemy.
+[51:01.740 --> 51:03.740]  Tak.
+[51:03.740 --> 51:05.740]  A potem? Idziecie.
+[51:05.740 --> 51:07.740]  Idziecie. Fajnie.
+[51:07.740 --> 51:09.740]  I will highlight you later endings.
+[51:09.740 --> 51:11.740]  I idą.
+[51:11.740 --> 51:13.740]  W porządku?
+[51:13.740 --> 51:15.740]  No to tak.
+[51:15.740 --> 51:17.740]  I następne EOR.
+[51:17.740 --> 51:19.740]  Popularna koniugacja.
+[51:19.740 --> 51:21.740]  Telefonować.
+[51:21.740 --> 51:23.740]  For sure you remember this
+[51:23.740 --> 51:25.740]  obać conjunction.
+[51:25.740 --> 51:27.740]  Which is the most logical type of
+[51:27.740 --> 51:29.740]  in Polish.
+[51:29.740 --> 51:31.740]  Because if you have obać,
+[51:31.740 --> 51:33.740]  you can throw out obać.
+[51:33.740 --> 51:35.740]  You can have it, just forget about it.
+[51:35.740 --> 51:37.740]  And you have telefon.
+[51:37.740 --> 51:39.740]  Telefon.
+[51:39.740 --> 51:41.740]  You giving uj.
+[51:41.740 --> 51:43.740]  Always it will be with uj.
+[51:43.740 --> 51:45.740]  And you giving regular ending.
+[51:45.740 --> 51:47.740]  Telefonuję.
+[51:47.740 --> 51:49.740]  Pracuję. Maluję.
+[51:49.740 --> 51:51.740]  I następne to będzie
+[51:51.740 --> 51:53.740]  telefon, uj
+[51:53.740 --> 51:55.740]  and esz.
+[51:55.740 --> 51:57.740]  Telefonuję. Telefonuję.
+[51:57.740 --> 51:59.740]  Tutaj telefonuję.
+[51:59.740 --> 52:01.740]  Tutaj telefonuję.
+[52:01.740 --> 52:03.740]  A potem?
+[52:03.740 --> 52:05.740]  Telefonujemy.
+[52:05.740 --> 52:07.740]  Telefonujemy idealnie i?
+[52:07.740 --> 52:09.740]  Telefonujecie.
+[52:09.740 --> 52:11.740]  Idziecie tam.
+[52:11.740 --> 52:13.740]  Telefonujecie.
+[52:13.740 --> 52:15.740]  Idziecie.
+[52:15.740 --> 52:17.740]  Ubity.
+[52:17.740 --> 52:19.740]  Idziecie.
+[52:19.740 --> 52:21.740]  I telefonują.
+[52:21.740 --> 52:23.740]  Je
+[52:23.740 --> 52:25.740]  i oł.
+[52:25.740 --> 52:27.740]  Telefonują.
+[52:27.740 --> 52:29.740]  No dobrze.
+[52:29.740 --> 52:31.740]  I czy mamy jeszcze
+[52:31.740 --> 52:33.740]  eu, esz?
+[52:33.740 --> 52:35.740]  Mamy.
+[52:35.740 --> 52:37.740]  Mamy eu, esz, pracować,
+[52:37.740 --> 52:39.740]  spacerować
+[52:39.740 --> 52:41.740]  i myć się.
+[52:41.740 --> 52:43.740]  I pracować, obać
+[52:43.740 --> 52:45.740]  identycznie.
+[52:45.740 --> 52:47.740]  I ja co robię?
+[52:47.740 --> 52:49.740]  Pracuję.
+[52:49.740 --> 52:51.740]  Pracuję.
+[52:51.740 --> 52:53.740]  So we have prac plus uj plus eu.
+[52:53.740 --> 52:55.740]  Super.
+[52:55.740 --> 52:57.740]  A ty? Pracujesz.
+[52:57.740 --> 52:59.740]  Bardzo dobrze.
+[52:59.740 --> 53:01.740]  Baza redukcja. Pracuję.
+[53:01.740 --> 53:03.740]  Pracuję ekstra.
+[53:03.740 --> 53:05.740]  Pracujemy. Pracujemy.
+[53:05.740 --> 53:07.740]  Pracujecie. Pracujecie.
+[53:07.740 --> 53:09.740]  Jak pracuję?
+[53:09.740 --> 53:11.740]  Oni pracują.
+[53:11.740 --> 53:13.740]  Oni pracują.
+[53:13.740 --> 53:15.740]  We have one line ekstra.
+[53:15.740 --> 53:17.740]  I wracać do domu
+[53:17.740 --> 53:19.740]  we have an esz, so we will skip.
+[53:19.740 --> 53:21.740]  We will wait with it.
+[53:21.740 --> 53:23.740]  I we have spacerować, also obać.
+[53:23.740 --> 53:25.740]  Spacer plus uj plus eu.
+[53:25.740 --> 53:27.740]  Spacer plus uj plus eu.
+[53:27.740 --> 53:29.740]  Spaceruję.
+[53:29.740 --> 53:31.740]  Spaceruję.
+[53:31.740 --> 53:33.740]  Spacerujesz.
+[53:33.740 --> 53:35.740]  Spacerujesz, pracujesz.
+[53:35.740 --> 53:37.740]  Spacerujesz.
+[53:37.740 --> 53:39.740]  Pracuję.
+[53:39.740 --> 53:41.740]  Spaceruję.
+[53:41.740 --> 53:43.740]  Spaceruję. Bardzo dobrze.
+[53:43.740 --> 53:45.740]  Pracujemy.
+[53:45.740 --> 53:47.740]  Spacerujemy.
+[53:47.740 --> 53:49.740]  Spacerujemy ekstra.
+[53:49.740 --> 53:51.740]  I pracujecie.
+[53:51.740 --> 53:53.740]  Spacerujecie.
+[53:53.740 --> 53:55.740]  I pracujemy.
+[53:55.740 --> 53:57.740]  Times ujów.
+[53:57.740 --> 53:59.740]  Spaceruję.
+[53:59.740 --> 54:01.740]  Spaceruję.
+[54:01.740 --> 54:03.740]  Porządku?
+[54:03.740 --> 54:05.740]  Dobra.
+[54:05.740 --> 54:07.740]  I ekstra jest też eu esz mycie.
+[54:07.740 --> 54:09.740]  Mycie.
+[54:09.740 --> 54:11.740]  I jest myję się.
+[54:11.740 --> 54:13.740]  I jest myję się.
+[54:13.740 --> 54:15.740]  Wieam Lihat.
+[54:15.740 --> 54:17.740]  Czym?
+[54:17.740 --> 54:19.740]  Myję się.
+[54:19.740 --> 54:21.740]  Myję się.
+[54:21.740 --> 54:23.740]  A ty?
+[54:23.740 --> 54:25.740]  Myjesz się.
+[54:25.740 --> 54:33.060]  Sze, to będzie ważne, bo kiedy skończysz się, sze będzie tylko na czynienie,
+[54:33.060 --> 54:36.220]  a możesz powiedzieć myje coś, coś.
+[54:36.220 --> 54:42.080]  Na przykład myje okno, myje biurko, ale sze jest dla nas.
+[54:42.080 --> 54:44.080]  Tak? Myje się.
+[54:44.080 --> 54:50.720]  Myje się, baza, redukcja, identyczna do pierwszego.
+[54:50.720 --> 54:55.320]  Myje się, tak.
+[54:55.320 --> 54:58.320]  Plural.
+[54:58.320 --> 55:01.960]  Myje się, ekstra.
+[55:01.960 --> 55:07.200]  Myje się, super. I finalnie?
+[55:07.200 --> 55:11.200]  Myją się.
+[55:11.200 --> 55:13.200]  Bardzo dobrze.
+[55:13.200 --> 55:18.200]  Mam pytanie? Tak.
+[55:18.200 --> 55:20.200]  So for cleaning we also have the word
+[55:20.200 --> 55:26.800]  sprzątać, tak? So they are synonymous basically.
+[55:26.800 --> 55:30.800]  Yes, it's more different because sprzątać to cleaning is like cleaning,
+[55:30.800 --> 55:34.800]  but general so included. Included for example using water,
+[55:34.800 --> 55:38.800]  using vacuum cleaner, all of the system of cleaning.
+[55:38.800 --> 55:42.800]  But niche shell, it would be for example when niche like car,
+[55:42.800 --> 55:46.800]  for example when you are using some detergent water and you have this
+[55:46.800 --> 55:49.800]  you know, process with water. So this is this.
+[55:49.800 --> 55:52.400]  Myć, tak? Water.
+[55:52.400 --> 55:56.400]  The same with this type of cleaning, washing, prawda?
+[55:56.400 --> 56:00.400]  Also with water. So all the time working like that.
+[56:00.400 --> 56:05.400]  So sprzątać domu, but myć se twarz.
+[56:05.400 --> 56:08.400]  Myć twarz, tak? Myć twarz.
+[56:08.400 --> 56:15.400]  But also you can say myć samochód, myć auto, myć okno, myć biurko.
+[56:15.400 --> 56:18.400]  So it means you're going to bathroom for water,
+[56:18.400 --> 56:21.400]  you have some paper or something and you're doing this.
+[56:21.400 --> 56:27.400]  But it's like smallest type of cleaning, just a part of.
+[56:27.400 --> 56:35.400]  Ok, no dobrze, super. Mamy 10% extra left.
+[56:35.400 --> 56:41.400]  Konjugacja, ms. So your first type of conjunction which you learned.
+[56:41.400 --> 56:44.400]  I mamy opcję poubierać się.
+[56:44.400 --> 56:46.400]  I'm looking for something different here.
+[56:46.400 --> 56:47.400]  M.S.
+[56:48.400 --> 56:51.400]  Tak, tak. Ubierać się. M.S.
+[56:51.400 --> 56:56.400]  And this is also easy one, because when you cut from infinitive C,
+[56:56.400 --> 56:58.400]  you have almost final form.
+[56:58.400 --> 57:02.400]  So ubieram plus M. Ubieram się.
+[57:02.400 --> 57:04.400]  Ok?
+[57:04.400 --> 57:06.400]  Ubieram się.
+[57:06.400 --> 57:09.400]  And here also this is reflecting, it's important,
+[57:09.400 --> 57:14.400]  because when you will skip, you can say ubieram and wearing somebody.
+[57:14.400 --> 57:16.400]  And somebody with it.
+[57:16.400 --> 57:17.400]  So it would be, for example,
+[57:17.400 --> 57:20.400]  ubieram mamę, tak? Moją mamę.
+[57:20.400 --> 57:24.400]  Or you can say this also, like I wear, ubieram buty.
+[57:24.400 --> 57:30.400]  So you can give them something, but mostly like cover, like shoes,
+[57:30.400 --> 57:32.400]  like kurtka, jacket, only like that.
+[57:32.400 --> 57:34.400]  Tak?
+[57:34.400 --> 57:37.400]  Ubieram się. Ubierasz się.
+[57:37.400 --> 57:38.400]  I baza.
+[57:38.400 --> 57:39.400]  M.S. Ubieram się.
+[57:39.400 --> 57:42.400]  Ubierasz się. Extra plural.
+[57:42.400 --> 57:43.400]  M.S. Ubieramy się.
+[57:43.400 --> 57:45.400]  M.S. Ubieramy się. Bardzo dobrze.
+[57:45.400 --> 57:46.400]  M.S. Ubieram się.
+[57:47.400 --> 57:49.400]  M.S. Ubieracie się. Też ekstra.
+[57:49.400 --> 57:50.400]  I...
+[57:50.400 --> 57:52.400]  M.S. I bieram.
+[57:52.400 --> 57:53.400]  M.S. Obierają się.
+[57:53.400 --> 57:56.400]  M.S. Here we have not o, we have ją.
+[57:56.400 --> 57:57.400]  M.S. Tak.
+[57:57.400 --> 57:59.400]  M.S. Ubierają się.
+[57:59.400 --> 58:01.400]  M.S. Bardzo dobrze.
+[58:01.400 --> 58:04.400]  M.S. And you see that this time, the first and last,
+[58:04.400 --> 58:06.400]  not showing similarities.
+[58:06.400 --> 58:08.400]  Only this time of conjunction.
+[58:08.400 --> 58:11.400]  Ok. Brawo. To mamy ubieramy.
+[58:11.400 --> 58:14.400]  We have last to finish.
+[58:14.400 --> 58:17.400]  Wracać do domu. Też. M.S.
+[58:17.400 --> 58:20.400]  I ja co robię?
+[58:20.400 --> 58:21.400]  Wracam.
+[58:21.400 --> 58:23.400]  Wracam. Bardzo dobrze.
+[58:23.400 --> 58:25.400]  M.S. Ty?
+[58:25.400 --> 58:27.400]  M.S. Wracasz do domu.
+[58:27.400 --> 58:29.400]  M.S. Wracasz do domu. Tak.
+[58:29.400 --> 58:31.400]  M.S. W baza.
+[58:31.400 --> 58:33.400]  M.S. Wracam.
+[58:33.400 --> 58:34.400]  M.S. Wraca.
+[58:34.400 --> 58:36.400]  M.S. I liczba w nogach.
+[58:36.400 --> 58:37.400]  Góra.
+[58:37.400 --> 58:38.400]  M.S. Wracamy.
+[58:38.400 --> 58:39.400]  M.S. Wracamy.
+[58:39.400 --> 58:40.400]  M.S. Wracamy.
+[58:40.400 --> 58:41.400]  M.S. Wracamy.
+[58:41.400 --> 58:42.400]  M.S. Wracamy.
+[58:42.400 --> 58:43.400]  M.S. Wracamy.
+[58:43.400 --> 58:44.400]  I wracam ją.
+[58:44.400 --> 58:45.400]  M.S. Bardzo dobrze.
+[58:45.400 --> 58:46.400]  M.S. Wracamy.
+[58:46.400 --> 58:50.400]  M.S. I finalnie mamy rozbierać się w piżamach.
+[58:50.400 --> 58:52.400]  M.S. I ja co robię?
+[58:52.400 --> 58:54.400]  M.S. Rozbieram.
+[58:54.400 --> 58:57.400]  M.S. Rozbieram się świetnie.
+[58:57.400 --> 58:58.400]  M.S. Ty?
+[58:58.400 --> 59:00.400]  M.S. Rozbieram się.
+[59:00.400 --> 59:03.400]  M.S. Rozbierasz się ekstra.
+[59:03.400 --> 59:04.400]  M.S. I baza?
+[59:04.400 --> 59:05.400]  M.S. Rozbieram.
+[59:05.400 --> 59:08.400]  M.S. Rozbiera się świetnie. I teraz izi.
+[59:08.400 --> 59:10.400]  M.S. Rozbieramy.
+[59:10.400 --> 59:11.400]  M.S. Rozbieramy się.
+[59:11.400 --> 59:13.400]  M.S. Rozbieracie się.
+[59:13.400 --> 59:15.400]  M.S. Rozbieracie się ekstra.
+[59:15.400 --> 59:16.400]  M.S. I rozmówimy.
+[59:16.400 --> 59:25.400]  I rozbierają się. Bardzo dobrze. Gratulacje. Bardzo dobra robota.
+[59:25.400 --> 59:28.400]  I może trochę tu.
+[59:28.400 --> 59:32.400]  Ale to dobrze. Jak się czujesz?
+[59:32.400 --> 59:34.400]  Jest ok?
+[59:34.400 --> 59:36.400]  Dużo gramatyki.
+[59:36.400 --> 59:49.400]  No dobra. To możemy potestować. Damy test. Taka aktywność. Decydujemy jaka to jest forma. Jaka gramatyka.
+[59:49.400 --> 59:53.400]  I will you have something to do or not?
+[59:53.400 --> 59:58.400]  But no we have only this what you can find on your paper.
+[59:58.400 --> 01:00:02.400]  And what we will do? For example we can do lottery.
+[01:00:02.400 --> 01:00:05.400]  Of course we will choose myć. Myć się.
+[01:00:05.400 --> 01:00:07.400]  Oni?
+[01:00:07.400 --> 01:00:15.400]  Myją. Myją. Bardzo dobrze. Myją. Tak. Terminujemy.
+[01:00:15.400 --> 01:00:18.400]  Mamy coś następnego.
+[01:00:18.400 --> 01:00:25.400]  Jest wracasz. Wracasz. Wracasz. Bardzo dobrze.
+[01:00:25.400 --> 01:00:29.400]  Jest wracasz. Tak.
+[01:00:29.400 --> 01:00:34.400]  Tu jest ubierać się my.
+[01:00:34.400 --> 01:00:36.400]  Ubieramy się.
+[01:00:36.400 --> 01:00:38.400]  Ubieramy się.
+[01:00:38.400 --> 01:00:40.400]  Bardzo dobrze. Ubieramy się.
+[01:00:40.400 --> 01:00:42.400]  Tak.
+[01:00:48.400 --> 01:00:50.400]  O. Spotykać się.
+[01:00:50.400 --> 01:00:52.400]  Spotykać się.
+[01:00:52.400 --> 01:00:54.400]  Spotykasz się. Bardzo dobrze.
+[01:00:54.400 --> 01:00:57.400]  Tak. Bardzo dobrze.
+[01:00:57.400 --> 01:00:59.400]  Brać oni.
+[01:00:59.400 --> 01:01:01.400]  Brać oni.
+[01:01:01.400 --> 01:01:03.400]  Biorą. Biorą.
+[01:01:03.400 --> 01:01:17.400]  To jest nieregularna lokacja. Tak biorą. Biorą. Oni biorą. Ja biorę. Tak? Super.
+[01:01:17.400 --> 01:01:19.400]  O. Wstawać.
+[01:01:19.400 --> 01:01:21.400]  Wstawać.
+[01:01:21.400 --> 01:01:24.400]  A little bit shorter.
+[01:01:24.400 --> 01:01:29.400]  We can cut. Wstać. Wstają. Wstają. Bardzo dobrze.
+[01:01:29.400 --> 01:01:31.400]  Bójmy prawa dbać.
+[01:01:31.400 --> 01:01:33.400]  Super.
+[01:01:33.400 --> 01:01:36.400]  W.
+[01:01:36.400 --> 01:01:39.400]  I spotykać się.
+[01:01:39.400 --> 01:01:41.400]  Spotykać się.
+[01:01:41.400 --> 01:01:45.400]  Spotykać się. Tak. Spotykać się.
+[01:01:45.400 --> 01:01:47.400]  Extra. Extra.
+[01:01:47.400 --> 01:01:53.400]  I mamy wracać.
+[01:01:53.400 --> 01:01:55.400]  Wracać się. Wracać się.
+[01:01:55.400 --> 01:01:57.400]  Wracać się. Super.
+[01:01:57.400 --> 01:01:59.400]  Wracać się.
+[01:01:59.400 --> 01:02:05.400]  I brać oni.
+[01:02:05.400 --> 01:02:07.400]  I het. To jest?
+[01:02:07.400 --> 01:02:09.400]  Biorą. Biorą.
+[01:02:09.400 --> 01:02:15.400]  Dobrze. Dobrze. Biorą. Biorą. Bardzo dobrze. Ja biorę. Oni biorą.
+[01:02:15.400 --> 01:02:22.400]  Telefonować.
+[01:02:22.400 --> 01:02:26.400]  Telefonuje. Telefonuje.
+[01:02:26.400 --> 01:02:28.400]  Telefonuje. Because of this uj.
+[01:02:28.400 --> 01:02:37.400]  Like Uniwersytet Jagielloński. UJ. Uj, uj, uj. Telefonuje. Bardzo dobrze.
+[01:02:37.400 --> 01:02:40.400]  Ok. What's more we have?
+[01:02:44.400 --> 01:02:45.400]  To jest? Wstawać ona.
+[01:02:45.400 --> 01:02:47.400]  Wstawać.
+[01:02:47.400 --> 01:02:49.400]  W. A jak to nam?
+[01:02:49.400 --> 01:02:51.400]  Staje.
+[01:02:51.400 --> 01:02:54.400]  Staje. Similar to first person.
+[01:02:54.400 --> 01:02:55.400]  Staje.
+[01:02:55.400 --> 01:02:57.400]  I she also wstaje.
+[01:02:57.400 --> 01:02:58.400]  Tak.
+[01:02:58.400 --> 01:03:04.400]  Nie martwcie się o tym, że nie pamiętacie o końcu.
+[01:03:04.400 --> 01:03:07.400]  Masz dużo, więc to jest proces.
+[01:03:07.400 --> 01:03:09.400]  Brać, ja.
+[01:03:09.400 --> 01:03:12.400]  Biorę.
+[01:03:12.400 --> 01:03:14.400]  Dobrze, biorę, biorę, biorę.
+[01:03:14.400 --> 01:03:16.400]  Oni biorą, ja biorę.
+[01:03:16.400 --> 01:03:18.400]  To jest po prostu nieograniczone.
+[01:03:20.400 --> 01:03:22.400]  Ale mamy jeszcze dużo brać.
+[01:03:24.400 --> 01:03:26.400]  Wracać.
+[01:03:28.400 --> 01:03:33.400]  Wracają z pracy.
+[01:03:33.400 --> 01:03:35.400]  Bardzo dobrze.
+[01:03:35.400 --> 01:03:37.400]  Wracają z pracy.
+[01:03:37.400 --> 01:03:39.400]  Super.
+[01:03:39.400 --> 01:03:45.400]  I mamy ty, brać.
+[01:03:45.400 --> 01:03:48.400]  Bior, bioresz.
+[01:03:48.400 --> 01:03:53.400]  I tu nie jest bior, tu jest bierzesz.
+[01:03:53.400 --> 01:03:55.400]  Bierzesz.
+[01:03:55.400 --> 01:03:57.400]  Dobra.
+[01:03:57.400 --> 01:03:58.400]  Dobra.
+[01:03:58.400 --> 01:04:01.400]  I brać ono, dziecko.
+[01:04:07.400 --> 01:04:09.400]  Similarity second.
+[01:04:09.400 --> 01:04:11.400]  Biorą.
+[01:04:11.400 --> 01:04:13.400]  Biorą, they.
+[01:04:13.400 --> 01:04:16.400]  Bierze, bierze, bierze.
+[01:04:16.400 --> 01:04:20.400]  I finalnie myć się, ja.
+[01:04:25.400 --> 01:04:27.400]  Myje się.
+[01:04:27.400 --> 01:04:28.400]  Myje się.
+[01:04:28.400 --> 01:04:29.400]  Bardzo dobrze.
+[01:04:29.400 --> 01:04:34.400]  I will prepare something for next time also to repeat all of that.
+[01:04:34.400 --> 01:04:39.400]  Maybe something from our books, so don't worry about that.
+[01:04:39.400 --> 01:04:41.400]  And what we have here?
+[01:04:41.400 --> 01:04:54.400]  Here I have for you a small game, which is also about routine, about Tome and his brother and something, including time.
+[01:04:54.400 --> 01:04:56.400]  I know that this world is not working so well.
+[01:04:56.400 --> 01:05:02.400]  So we can try together, yeah, and brainstorm what can be here.
+[01:05:02.400 --> 01:05:08.400]  And you will see that we have jem, we have jem dwa, jem trzy.
+[01:05:08.400 --> 01:05:13.400]  This numbers is only for keeping the order, because when we will switch game with,
+[01:05:13.400 --> 01:05:21.400]  keep this like incorrect, just, you know, for, for correct answer.
+[01:05:21.400 --> 01:05:25.400]  And also we have, I see, a word like odpoczywają.
+[01:05:25.400 --> 01:05:27.400]  Odpoczywają, odpoczywać.
+[01:05:27.400 --> 01:05:30.400]  Do you know, do you remember what's the meaning of odpoczywać?
+[01:05:30.400 --> 01:05:31.400]  Nie.
+[01:05:31.400 --> 01:05:32.400]  Nie.
+[01:05:32.400 --> 01:05:33.400]  No.
+[01:05:33.400 --> 01:05:34.400]  I will show you.
+[01:05:34.400 --> 01:05:39.400]  Odpoczywać to jest synonim relaksować się.
+[01:05:39.400 --> 01:05:42.400]  Odpoczywać, relaksować się.
+[01:05:42.400 --> 01:05:46.400]  Relaksować się to jest internacjonalne, tak?
+[01:05:46.400 --> 01:05:49.400]  A odpoczywać, sławik, tak?
+[01:05:49.400 --> 01:05:50.400]  Odpoczywać.
+[01:05:52.400 --> 01:05:53.400]  Odpoczywam.
+[01:05:53.400 --> 01:05:54.400]  Odpoczywam.
+[01:05:55.400 --> 01:05:56.400]  Odpoczywasz, tak?
+[01:05:56.400 --> 01:05:57.400]  El, esz.
+[01:05:57.400 --> 01:05:58.400]  Odpoczywasz.
+[01:05:58.400 --> 01:05:59.400]  Odpoczywasz, tak?
+[01:05:59.400 --> 01:06:00.400]  El, esz.
+[01:06:00.400 --> 01:06:01.400]  Odpoczywasz.
+[01:06:01.400 --> 01:06:02.400]  El, esz.
+[01:06:02.400 --> 01:06:03.400]  Odpoczywasz, tak?
+[01:06:03.400 --> 01:06:04.400]  El, esz.
+[01:06:04.400 --> 01:06:05.400]  Jest OK, po prostu?
+[01:06:05.400 --> 01:06:06.400]  Dobrze.
+[01:06:06.400 --> 01:06:07.400]  I tutaj mamy kontekst, jest mój brat Tomek codziennie.
+[01:06:07.400 --> 01:06:08.400]  Widzisz się?
+[01:06:08.400 --> 01:06:09.400]  No, tak.
+[01:06:09.400 --> 01:06:10.400]  Widzisz się?
+[01:06:10.400 --> 01:06:11.400]  No, tak.
+[01:06:11.400 --> 01:06:17.400]  Chodzi o to, jak on jest w domu.
+[01:06:17.400 --> 01:06:19.400]  Czy jest w domu?
+[01:06:19.400 --> 01:06:20.400]  Tak, tak.
+[01:06:20.400 --> 01:06:21.400]  Tak.
+[01:06:21.400 --> 01:06:22.400]  Tak, tak.
+[01:06:22.400 --> 01:06:23.400]  Chodzi o to, jak on jest w domu.
+[01:06:23.400 --> 01:06:24.400]  Tak, tak.
+[01:06:24.400 --> 01:06:29.400]  Budzi się o której godzinie?
+[01:06:29.400 --> 01:06:32.400]  Siódma.
+[01:06:32.400 --> 01:06:37.400]  Siódma, a. I I will introduce you to this question at what time.
+[01:06:37.400 --> 01:06:43.400]  Also because when you know która jest godzina, you can say jest siódma.
+[01:06:43.400 --> 01:06:45.400]  Siódma.
+[01:06:45.400 --> 01:06:51.400]  But when you have at what time, your knowledge is based on this która jest godzina,
+[01:06:51.400 --> 01:06:56.400]  but you're switching a letter from the end for ending a.
+[01:06:56.400 --> 01:06:59.400]  So o siódmej.
+[01:06:59.400 --> 01:07:00.400]  Siódmej.
+[01:07:00.400 --> 01:07:05.400]  And all the time like the rules will be a, a, a, a, a.
+[01:07:05.400 --> 01:07:06.400]  O siódmej.
+[01:07:06.400 --> 01:07:08.400]  Budzi się o siódmej.
+[01:07:08.400 --> 01:07:15.400]  On zęby myje.
+[01:07:15.400 --> 01:07:17.400]  Myje zęby.
+[01:07:17.400 --> 01:07:20.400]  Myje zęby i śniadanie.
+[01:07:20.400 --> 01:07:22.400]  No i je śniadanie.
+[01:07:22.400 --> 01:07:27.400]  Je śniadanie. We don't have a roll-in, so here you teach.
+[01:07:27.400 --> 01:07:30.400]  Ja zawsze.
+[01:07:30.400 --> 01:07:35.400]  It was about Tomek, about brother.
+[01:07:35.400 --> 01:07:37.400]  Tutaj it's me.
+[01:07:37.400 --> 01:07:39.400]  Ja zawsze.
+[01:07:39.400 --> 01:07:41.400]  Budzi się.
+[01:07:41.400 --> 01:07:43.400]  Budzi się. Bardzo dobrze.
+[01:07:43.400 --> 01:07:46.400]  O której godzinie?
+[01:07:46.400 --> 01:07:49.400]  Ósmej trzydzieści.
+[01:07:49.400 --> 01:07:50.400]  Ósmej trzydzieści.
+[01:07:50.400 --> 01:07:52.400]  Bardzo dobrze. Ej, ej, ej. Ósma.
+[01:07:52.400 --> 01:07:53.400]  Ósmej.
+[01:07:53.400 --> 01:07:56.400]  Tak. O ósmej minuty normalnie.
+[01:07:56.400 --> 01:07:59.400]  You did it also, including minutes. Super.
+[01:07:59.400 --> 01:08:02.400]  O ósmej trzydzieści.
+[01:08:02.400 --> 01:08:06.400]  I?
+[01:08:06.400 --> 01:08:11.400]  Staje o ósmej strycz pięć.
+[01:08:11.400 --> 01:08:16.400]  Bardzo dobrze. Tak. So he lay fifteen minutes in bed still, right?
+[01:08:16.400 --> 01:08:17.400]  After wake up.
+[01:08:17.400 --> 01:08:18.400]  He slept a little.
+[01:08:18.400 --> 01:08:19.400]  Tak.
+[01:08:20.400 --> 01:08:24.400]  Wstaje o ósmej. Ej, ej. Czterdzieści pięć.
+[01:08:24.400 --> 01:08:28.400]  To dobrze. Coś nowego? Codziennie, zawsze?
+[01:08:28.400 --> 01:08:30.400]  Co to znaczy zawsze?
+[01:08:30.400 --> 01:08:33.400]  O zawsze. Zawsze to jest always.
+[01:08:33.400 --> 01:08:36.400]  Zawsze to jest always.
+[01:08:36.400 --> 01:08:38.400]  I will write you.
+[01:08:38.400 --> 01:08:40.400]  Zawsze.
+[01:08:40.400 --> 01:08:42.400]  Always.
+[01:08:42.400 --> 01:08:44.400]  A nigdy?
+[01:08:44.400 --> 01:08:46.400]  Never.
+[01:08:46.400 --> 01:08:48.400]  Never.
+[01:08:48.400 --> 01:08:52.400]  Nigdy nie. Never know. Tak?
+[01:08:52.400 --> 01:08:55.400]  A codziennie?
+[01:08:55.400 --> 01:08:56.400]  Everyday.
+[01:08:56.400 --> 01:08:57.400]  Everyday.
+[01:08:57.400 --> 01:08:58.400]  Everyday.
+[01:08:58.400 --> 01:09:02.400]  This is literally everyday. Co dziennie.
+[01:09:06.400 --> 01:09:10.400]  The same you can do with co weekend. Tak?
+[01:09:10.400 --> 01:09:14.400]  It will be the same similar construction. So every weekend for example.
+[01:09:14.400 --> 01:09:17.400]  Or co tydzień.
+[01:09:18.400 --> 01:09:20.400]  Every week.
+[01:09:20.400 --> 01:09:26.400]  So this is helping with keeping the same way of working.
+[01:09:26.400 --> 01:09:28.400]  Working work.
+[01:09:36.400 --> 01:09:38.400]  Dobre.
+[01:09:38.400 --> 01:09:41.400]  Ok. I tutaj mamy tak.
+[01:09:41.400 --> 01:09:45.400]  I ja nigdy nie jem śniadanie.
+[01:09:45.400 --> 01:09:46.400]  Nie jem.
+[01:09:46.400 --> 01:09:48.400]  Nigdy nie jem. Tak.
+[01:09:48.400 --> 01:09:51.400]  Jecie śniadanie regularnie?
+[01:09:51.400 --> 01:09:52.400]  Tak.
+[01:09:52.400 --> 01:09:53.400]  Tak?
+[01:09:53.400 --> 01:09:55.400]  Everybody?
+[01:09:55.400 --> 01:09:59.400]  No. O. To mam identycznie tak samo.
+[01:09:59.400 --> 01:10:06.400]  Nigdy nie jem śniadania, ale zwykle lunch w pracy.
+[01:10:06.400 --> 01:10:08.400]  Robię.
+[01:10:08.400 --> 01:10:10.400]  Jemy. Jemy numer dwa. Tak?
+[01:10:10.400 --> 01:10:12.400]  Co to jest zwykle?
+[01:10:12.400 --> 01:10:14.400]  Often.
+[01:10:14.400 --> 01:10:16.400]  Ciepło, ciepło.
+[01:10:16.400 --> 01:10:17.400]  Usually.
+[01:10:17.400 --> 01:10:18.400]  Usually.
+[01:10:18.400 --> 01:10:19.400]  Zwykle.
+[01:10:19.400 --> 01:10:20.400]  Zwykle.
+[01:10:38.400 --> 01:10:40.400]  Ok. I mamy.
+[01:10:40.400 --> 01:10:43.400]  Zwykle jem lunch w pracy.
+[01:10:43.400 --> 01:10:45.400]  At work. Tak?
+[01:10:45.400 --> 01:10:47.400]  I teraz nowy kontekst.
+[01:10:47.400 --> 01:10:49.400]  Siostra.
+[01:10:49.400 --> 01:10:51.400]  Moja siostra jest studentką.
+[01:10:51.400 --> 01:10:53.400]  Ona zawsze rano.
+[01:10:53.400 --> 01:10:55.400]  Prysznic.
+[01:11:00.400 --> 01:11:01.400]  Bierze.
+[01:11:01.400 --> 01:11:03.400]  Bierze. Bardzo dobrze.
+[01:11:03.400 --> 01:11:06.400]  Taking shower. Tak. Bierze prysznic.
+[01:11:06.400 --> 01:11:10.400]  I autobusem na uniwersytet.
+[01:11:10.400 --> 01:11:11.400]  Jedzie.
+[01:11:11.400 --> 01:11:12.400]  Jedzie. Tak?
+[01:11:12.400 --> 01:11:16.400]  Jedzie autobusem na uniwersytet.
+[01:11:16.400 --> 01:11:18.400]  I ja. I going back. Tak?
+[01:11:18.400 --> 01:11:20.400]  Ja codziennie.
+[01:11:20.400 --> 01:11:22.400]  Pracuję.
+[01:11:22.400 --> 01:11:24.400]  Dobrze. Pracuję. Tak?
+[01:11:24.400 --> 01:11:26.400]  To jest długi period.
+[01:11:26.400 --> 01:11:28.400]  Od której godziny?
+[01:11:28.400 --> 01:11:29.400]  A, A, A ending?
+[01:11:29.400 --> 01:11:31.400]  Trzy.
+[01:11:31.400 --> 01:11:34.400]  Dziesiątej.
+[01:11:34.400 --> 01:11:35.400]  Dobrze. Tak.
+[01:11:35.400 --> 01:11:36.400]  Dziesiąta.
+[01:11:36.400 --> 01:11:38.400]  That's why we're switching for A.
+[01:11:38.400 --> 01:11:40.400]  Od dziesiątej. Tak? Bardzo dobrze.
+[01:11:40.400 --> 01:11:41.400]  Do?
+[01:11:41.400 --> 01:11:43.400]  Do?
+[01:11:43.400 --> 01:11:46.400]  A...
+[01:11:46.400 --> 01:11:47.400]  Osiemnastej.
+[01:11:47.400 --> 01:11:49.400]  Osiemnastej. Ekstra.
+[01:11:49.400 --> 01:11:51.400]  Od dziesiątej do osiemnastej.
+[01:11:51.400 --> 01:11:53.400]  Mhm.
+[01:11:53.400 --> 01:11:55.400]  Moi przyjaciele.
+[01:11:55.400 --> 01:11:57.400]  My best friends. Tak?
+[01:11:57.400 --> 01:11:59.400]  My. Moi.
+[01:11:59.400 --> 01:12:01.400]  Moi przyjaciele. Nigdy nie.
+[01:12:01.400 --> 01:12:03.400]  Mhm.
+[01:12:03.400 --> 01:12:05.400]  Do osiemnastej.
+[01:12:09.400 --> 01:12:11.400]  I'm walking like that. Tak?
+[01:12:11.400 --> 01:12:13.400]  Do osiemnastej. Never.
+[01:12:13.400 --> 01:12:15.400]  No.
+[01:12:15.400 --> 01:12:17.400]  Są...
+[01:12:17.400 --> 01:12:19.400]  Są...
+[01:12:19.400 --> 01:12:21.400]  Dobrze. Super. Nigdy nie pracują do osiemnastej.
+[01:12:21.400 --> 01:12:23.400]  Ja tak? Oni nie. Tak?
+[01:12:23.400 --> 01:12:25.400]  Oni zwykle.
+[01:12:25.400 --> 01:12:27.400]  Oni zwykle.
+[01:12:27.400 --> 01:12:29.400]  No.
+[01:12:29.400 --> 01:12:31.400]  A, przepraszam?
+[01:12:31.400 --> 01:12:33.400]  A, nie rozumiem. Moi przyjaciele nigdy nie pracują do...
+[01:12:33.400 --> 01:12:39.400]  A, my best friends never working till this time. Tak?
+[01:12:39.400 --> 01:12:41.400]  Do osiemnastej. Tak?
+[01:12:41.400 --> 01:12:43.400]  Never worked like that.
+[01:12:43.400 --> 01:12:47.400]  So, I'm working like this time, but they not.
+[01:12:47.400 --> 01:12:49.400]  Ok.
+[01:12:49.400 --> 01:12:51.400]  This is this context. Moi przyjaciele. My best friend.
+[01:12:51.400 --> 01:12:53.400]  Ok.
+[01:12:53.400 --> 01:12:55.400]  I mamy oni zwykle.
+[01:12:55.400 --> 01:12:57.400]  They usually...
+[01:12:57.400 --> 01:12:59.400]  do domu o...
+[01:12:59.400 --> 01:13:01.400]  Wracają do domu. Wracają.
+[01:13:01.400 --> 01:13:05.400]  Mhm. Oni zwykle wracają do domu o której?
+[01:13:05.400 --> 01:13:07.400]  Sześćnastej.
+[01:13:07.400 --> 01:13:09.400]  Sześćnastej.
+[01:13:09.400 --> 01:13:11.400]  Sześćnastej. Dobrze. Sześćnastej.
+[01:13:11.400 --> 01:13:13.400]  I to jest...
+[01:13:13.400 --> 01:13:15.400]  W nieformalnej formie,
+[01:13:15.400 --> 01:13:17.400]  dwudziestego godziny,
+[01:13:17.400 --> 01:13:19.400]  można powiedzieć o czwartym dniu.
+[01:13:19.400 --> 01:13:21.400]  O czwartym dniu. Tak?
+[01:13:21.400 --> 01:13:23.400]  Więc to również...
+[01:13:23.400 --> 01:13:25.400]  To może działać jak język angielski,
+[01:13:25.400 --> 01:13:27.400]  więc mamy, wiesz, część tego stylu.
+[01:13:27.400 --> 01:13:29.400]  Ale powinniśmy dodać
+[01:13:29.400 --> 01:13:31.400]  ekspresję,
+[01:13:31.400 --> 01:13:33.400]  ekspresję czasu,
+[01:13:33.400 --> 01:13:35.400]  jak w południu, na przykład.
+[01:13:35.400 --> 01:13:37.400]  Bo możemy również
+[01:13:37.400 --> 01:13:39.400]  naprawdę w górę.
+[01:13:39.400 --> 01:13:41.400]  Tak.
+[01:13:41.400 --> 01:13:43.400]  O czwartej po południu.
+[01:13:43.400 --> 01:13:45.400]  Ok. Potem. Co to jest potem?
+[01:13:45.400 --> 01:13:47.400]  Next.
+[01:13:47.400 --> 01:13:49.400]  Later. Tak, tak, tak.
+[01:13:49.400 --> 01:13:51.400]  Potem. Potem.
+[01:13:51.400 --> 01:13:53.400]  You can...
+[01:13:53.400 --> 01:13:55.400]  You can see in Polish.
+[01:13:55.400 --> 01:13:57.400]  Potem i później.
+[01:13:57.400 --> 01:13:59.400]  It works like later.
+[01:13:59.400 --> 01:14:01.400]  Tak?
+[01:14:05.400 --> 01:14:07.400]  A co to jest zaraz?
+[01:14:09.400 --> 01:14:11.400]  Jest teraz.
+[01:14:11.400 --> 01:14:13.400]  Now. I zaraz.
+[01:14:13.400 --> 01:14:15.400]  Earlier?
+[01:14:15.400 --> 01:14:17.400]  Earlier will be wcześniej.
+[01:14:17.400 --> 01:14:19.400]  Wcześniej. Zaraz.
+[01:14:19.400 --> 01:14:21.400]  Wcześniej.
+[01:14:21.400 --> 01:14:23.400]  Like...
+[01:14:23.400 --> 01:14:25.400]  This is also like
+[01:14:25.400 --> 01:14:27.400]  later or soon.
+[01:14:27.400 --> 01:14:29.400]  But in Polish culture
+[01:14:29.400 --> 01:14:31.400]  when somebody is saying you that
+[01:14:31.400 --> 01:14:33.400]  I will do something zaraz,
+[01:14:33.400 --> 01:14:35.400]  so it can take time
+[01:14:35.400 --> 01:14:37.400]  from one minute
+[01:14:37.400 --> 01:14:39.400]  to one minute.
+[01:14:39.400 --> 01:14:41.400]  To one year.
+[01:14:41.400 --> 01:14:43.400]  So it's better to say później
+[01:14:43.400 --> 01:14:45.400]  because it's more
+[01:14:45.400 --> 01:14:47.400]  realistic to do.
+[01:14:47.400 --> 01:14:49.400]  When you say zaraz it can be never.
+[01:14:49.400 --> 01:14:51.400]  One year.
+[01:14:51.400 --> 01:14:53.400]  Zaraz.
+[01:14:53.400 --> 01:14:55.400]  Teraz. Now.
+[01:14:55.400 --> 01:14:57.400]  Proszę pisać słowo dla earlier.
+[01:14:57.400 --> 01:14:59.400]  Of course.
+[01:14:59.400 --> 01:15:01.400]  To jest wcześniej.
+[01:15:01.400 --> 01:15:03.400]  This is earlier.
+[01:15:03.400 --> 01:15:05.400]  But early will be wcześniej.
+[01:15:05.400 --> 01:15:07.400]  Without one letter.
+[01:15:07.400 --> 01:15:09.400]  Ok?
+[01:15:09.400 --> 01:15:11.400]  Tak.
+[01:15:11.400 --> 01:15:13.400]  Tak.
+[01:15:13.400 --> 01:15:15.400]  At the same time
+[01:15:15.400 --> 01:15:17.400]  what you would like to say
+[01:15:17.400 --> 01:15:19.400]  later you see
+[01:15:19.400 --> 01:15:21.400]  that this później
+[01:15:21.400 --> 01:15:23.400]  including something
+[01:15:23.400 --> 01:15:25.400]  a bit similar ending.
+[01:15:25.400 --> 01:15:27.400]  Tak?
+[01:15:27.400 --> 01:15:29.400]  Wcześniej i późno.
+[01:15:29.400 --> 01:15:31.400]  So early and late.
+[01:15:31.400 --> 01:15:33.400]  Późno.
+[01:15:37.400 --> 01:15:39.400]  Na przykład jest
+[01:15:39.400 --> 01:15:41.400]  dużo.
+[01:15:41.400 --> 01:15:43.400]  Jest late.
+[01:15:43.400 --> 01:15:45.400]  Jest wcześnie.
+[01:15:49.400 --> 01:15:51.400]  No.
+[01:15:51.400 --> 01:15:53.400]  Mamy kontynuację
+[01:15:53.400 --> 01:15:55.400]  i mamy potem
+[01:15:55.400 --> 01:15:57.400]  oni z psem
+[01:15:57.400 --> 01:15:59.400]  idą na spacer
+[01:15:59.400 --> 01:16:01.400]  z psem.
+[01:16:01.400 --> 01:16:03.400]  Idą na spacer z psem.
+[01:16:03.400 --> 01:16:05.400]  Tak.
+[01:16:05.400 --> 01:16:07.400]  Zakupy?
+[01:16:07.400 --> 01:16:09.400]  Robi.
+[01:16:09.400 --> 01:16:11.400]  Robią bardzo dobrze.
+[01:16:11.400 --> 01:16:13.400]  Robią zakupy i
+[01:16:13.400 --> 01:16:15.400]  odpoczywają.
+[01:16:15.400 --> 01:16:17.400]  I odpoczywają.
+[01:16:17.400 --> 01:16:19.400]  Tak.
+[01:16:19.400 --> 01:16:21.400]  Relaksują się.
+[01:16:21.400 --> 01:16:23.400]  Tak.
+[01:16:23.400 --> 01:16:25.400]  Ja wieczorem. Wieczorem?
+[01:16:25.400 --> 01:16:27.400]  Dobry wieczór.
+[01:16:27.400 --> 01:16:29.400]  Ja wieczorem jestem
+[01:16:29.400 --> 01:16:31.400]  zwykle bardzo
+[01:16:31.400 --> 01:16:33.400]  zmęczony.
+[01:16:33.400 --> 01:16:35.400]  Znacie? Zmęczony?
+[01:16:35.400 --> 01:16:37.400]  Bardzo zmęczony.
+[01:16:37.400 --> 01:16:39.400]  Tired. Tired.
+[01:16:39.400 --> 01:16:41.400]  Bardzo zmęczony.
+[01:16:41.400 --> 01:16:43.400]  I telewizję oglądam.
+[01:16:43.400 --> 01:16:45.400]  Oglądam.
+[01:16:45.400 --> 01:16:47.400]  Oglądam. Świetnie.
+[01:16:47.400 --> 01:16:49.400]  Kolacje.
+[01:16:49.400 --> 01:16:51.400]  Mieję kolacje. A potem?
+[01:16:51.400 --> 01:16:53.400]  And then? And later?
+[01:16:53.400 --> 01:16:55.400]  Słucham.
+[01:16:55.400 --> 01:16:57.400]  I śpię.
+[01:16:57.400 --> 01:16:59.400]  I śpię. Bardzo dobrze.
+[01:16:59.400 --> 01:17:01.400]  Weryfikujemy. Coś nowego?
+[01:17:01.400 --> 01:17:03.400]  Something you hear?
+[01:17:03.400 --> 01:17:05.400]  Tak sobie.
+[01:17:05.400 --> 01:17:07.400]  Tak sobie, ale nie ma masakry.
+[01:17:07.400 --> 01:17:09.400]  Tak? To dobrze. Dobrze.
+[01:17:09.400 --> 01:17:11.400]  Ok. Gratulacje.
+[01:17:11.400 --> 01:17:13.400]  Bardzo dobra robota.
+[01:17:13.400 --> 01:17:15.400]  And we can go back to
+[01:17:15.400 --> 01:17:17.400]  our book.
+[01:17:17.400 --> 01:17:19.400]  We have something like
+[01:17:19.400 --> 01:17:21.400]  structure next
+[01:17:21.400 --> 01:17:23.400]  to the next page.
+[01:17:23.400 --> 01:17:25.400]  Like task 1b.
+[01:17:25.400 --> 01:17:27.400]  Tak? Zadanie 1b.
+[01:17:27.400 --> 01:17:29.400]  I tam jest nowa
+[01:17:29.400 --> 01:17:31.400]  konstrukcja.
+[01:17:31.400 --> 01:17:33.400]  Co jest konstrukcja?
+[01:17:33.400 --> 01:17:35.400]  Co zwykle robisz?
+[01:17:35.400 --> 01:17:37.400]  Jak się z tym zorganizujesz?
+[01:17:37.400 --> 01:17:39.400]  Jak się z tym zorganizujesz?
+[01:17:39.400 --> 01:17:41.400]  Na IPF.
+[01:17:41.400 --> 01:17:43.400]  Co zwykle robisz?
+[01:17:43.400 --> 01:17:45.400]  Co zwykle?
+[01:17:45.400 --> 01:17:47.400]  What do you do usually?
+[01:17:47.400 --> 01:17:49.400]  What do you do usually?
+[01:17:49.400 --> 01:17:51.400]  Firstly, this is your first activity.
+[01:17:51.400 --> 01:17:53.400]  Firstly, this is your first activity.
+[01:17:53.400 --> 01:17:55.400]  So for example, you can imagine that you
+[01:17:55.400 --> 01:17:57.400]  have a morning
+[01:17:57.400 --> 01:17:59.400]  and firstly for example
+[01:17:59.400 --> 01:18:01.400]  you need to wake up
+[01:18:01.400 --> 01:18:03.400]  and then get up.
+[01:18:03.400 --> 01:18:05.400]  So after you are doing some activities.
+[01:18:05.400 --> 01:18:07.400]  So zwykle robisz na IPF.
+[01:18:07.400 --> 01:18:09.400]  So zwykle robisz na IPF.
+[01:18:09.400 --> 01:18:11.400]  And when somebody asks you
+[01:18:11.400 --> 01:18:13.400]  about your activity
+[01:18:13.400 --> 01:18:15.400]  or morning activity
+[01:18:15.400 --> 01:18:17.400]  or another part of the day.
+[01:18:17.400 --> 01:18:19.400]  You can say zwykle na IPF.
+[01:18:19.400 --> 01:18:21.400]  So usually firstly I am doing
+[01:18:21.400 --> 01:18:23.400]  this and later
+[01:18:23.400 --> 01:18:25.400]  or and then I am doing
+[01:18:25.400 --> 01:18:27.400]  something another.
+[01:18:27.400 --> 01:18:29.400]  This is about that.
+[01:18:29.400 --> 01:18:31.400]  We can do this construction
+[01:18:31.400 --> 01:18:33.400]  repeat
+[01:18:33.400 --> 01:18:35.400]  some
+[01:18:35.400 --> 01:18:37.400]  conjectures, some verbs, some things.
+[01:18:37.400 --> 01:18:39.400]  Some sentences, how to
+[01:18:39.400 --> 01:18:41.400]  talk about our routines.
+[01:18:41.400 --> 01:18:43.400]  I
+[01:18:43.400 --> 01:18:45.400]  to zwykle robisz na IPF.
+[01:18:45.400 --> 01:18:47.400]  Zwykle na IPF.
+[01:18:47.400 --> 01:18:49.400]  For example, piję kawę,
+[01:18:49.400 --> 01:18:51.400]  a potem
+[01:18:51.400 --> 01:18:53.400]  biorę kresztyn.
+[01:18:53.400 --> 01:18:55.400]  So we can list with some proposal.
+[01:18:55.400 --> 01:18:57.400]  And we can choose our
+[01:18:57.400 --> 01:18:59.400]  order.
+[01:18:59.400 --> 01:19:01.400]  And question it will be according to you.
+[01:19:01.400 --> 01:19:03.400]  So second person.
+[01:19:03.400 --> 01:19:05.400]  So when we answering
+[01:19:05.400 --> 01:19:07.400]  we should modify this
+[01:19:07.400 --> 01:19:09.400]  for first.
+[01:19:09.400 --> 01:19:11.400]  So zwykle robisz na IPF.
+[01:19:11.400 --> 01:19:13.400]  Bierzesz
+[01:19:13.400 --> 01:19:15.400]  prysznic.
+[01:19:15.400 --> 01:19:17.400]  Czy jesz śniadanie.
+[01:19:17.400 --> 01:19:19.400]  I will tell you about me.
+[01:19:19.400 --> 01:19:21.400]  Zwykle na IPF nie jem
+[01:19:21.400 --> 01:19:23.400]  śniadania, a biorę
+[01:19:23.400 --> 01:19:25.400]  prysznic.
+[01:19:25.400 --> 01:19:27.400]  Like that.
+[01:19:27.400 --> 01:19:29.400]  Tak samo.
+[01:19:29.400 --> 01:19:31.400]  Zwykle ubierasz się
+[01:19:31.400 --> 01:19:33.400]  czy jesz śniadanie.
+[01:19:33.400 --> 01:19:35.400]  Zwykle na IPF
+[01:19:35.400 --> 01:19:37.400]  jemy śniadanie.
+[01:19:37.400 --> 01:19:39.400]  A potem
+[01:19:39.400 --> 01:19:41.400]  ubieram się.
+[01:19:41.400 --> 01:19:43.400]  We can try.
+[01:19:43.400 --> 01:19:45.400]  Daniel, question to you.
+[01:19:45.400 --> 01:19:47.400]  First dot.
+[01:19:47.400 --> 01:19:49.400]  Zwykle najpierw pijesz kawę,
+[01:19:49.400 --> 01:19:51.400]  herbatę, czy bierzesz prysznic?
+[01:19:51.400 --> 01:19:53.400]  Depends.
+[01:19:53.400 --> 01:19:55.400]  Depends.
+[01:19:55.400 --> 01:19:57.400]  To zależy.
+[01:19:57.400 --> 01:19:59.400]  To zależy.
+[01:19:59.400 --> 01:20:01.400]  To zależy.
+[01:20:01.400 --> 01:20:03.400]  It depends.
+[01:20:03.400 --> 01:20:05.400]  Usually I drink
+[01:20:05.400 --> 01:20:07.400]  beer.
+[01:20:07.400 --> 01:20:09.400]  Pysznie.
+[01:20:09.400 --> 01:20:11.400]  Zwykle najpierw.
+[01:20:11.400 --> 01:20:13.400]  You can use this.
+[01:20:13.400 --> 01:20:15.400]  Biorę.
+[01:20:15.400 --> 01:20:17.400]  Biorę.
+[01:20:17.400 --> 01:20:19.400]  Pysznie.
+[01:20:19.400 --> 01:20:21.400]  A potem?
+[01:20:21.400 --> 01:20:23.400]  A potem pijem
+[01:20:23.400 --> 01:20:25.400]  kawę. Super.
+[01:20:25.400 --> 01:20:27.400]  Tak.
+[01:20:27.400 --> 01:20:29.400]  Bardzo dobrze Daniel.
+[01:20:29.400 --> 01:20:31.400]  So when we ask her, we should adapt
+[01:20:31.400 --> 01:20:33.400]  to first person. Biorę
+[01:20:33.400 --> 01:20:35.400]  i piję.
+[01:20:35.400 --> 01:20:37.400]  And we can follow in this
+[01:20:37.400 --> 01:20:39.400]  structure. Zwykle najpierw.
+[01:20:39.400 --> 01:20:41.400]  Usually firstly I'm doing
+[01:20:41.400 --> 01:20:43.400]  this and then I'm doing
+[01:20:43.400 --> 01:20:45.400]  this. No dobrze.
+[01:20:45.400 --> 01:20:47.400]  To może Himal.
+[01:20:47.400 --> 01:20:49.400]  Lat dot.
+[01:20:49.400 --> 01:20:51.400]  Co robisz
+[01:20:51.400 --> 01:20:53.400]  najpierw? Jesz obiad,
+[01:20:53.400 --> 01:20:55.400]  czy idziesz na zakupy?
+[01:20:55.400 --> 01:20:57.400]  O!
+[01:20:57.400 --> 01:20:59.400]  Hmm.
+[01:20:59.400 --> 01:21:01.400]  A to zależy.
+[01:21:01.400 --> 01:21:03.400]  To zależy. A tak statystycznie?
+[01:21:03.400 --> 01:21:05.400]  Statistical
+[01:21:05.400 --> 01:21:07.400]  answer? Statystycznie?
+[01:21:07.400 --> 01:21:09.400]  Hmm.
+[01:21:09.400 --> 01:21:11.400]  Hmm.
+[01:21:11.400 --> 01:21:13.400]  40% do
+[01:21:13.400 --> 01:21:15.400]  60%.
+[01:21:15.400 --> 01:21:17.400]  Hmm.
+[01:21:17.400 --> 01:21:19.400]  Dobra. A co 60%
+[01:21:19.400 --> 01:21:21.400]  zakupy?
+[01:21:21.400 --> 01:21:23.400]  Hmm. A dobrze. To tak racjonalnie.
+[01:21:23.400 --> 01:21:25.400]  Bardzo dobrze.
+[01:21:25.400 --> 01:21:27.400]  Czyli zwykle najpierw idę
+[01:21:27.400 --> 01:21:29.400]  na zakupy.
+[01:21:29.400 --> 01:21:31.400]  Hmm. I jedziem na zakupy.
+[01:21:31.400 --> 01:21:33.400]  A potem idziem po mnie.
+[01:21:33.400 --> 01:21:35.400]  Super. Bardzo dobrze.
+[01:21:35.400 --> 01:21:37.400]  Okej. Himal czy ty możesz
+[01:21:37.400 --> 01:21:39.400]  zacznieć pytanie do kolegi,
+[01:21:39.400 --> 01:21:41.400]  koleżanki?
+[01:21:41.400 --> 01:21:43.400]  Hmm.
+[01:21:43.400 --> 01:21:45.400]  Czy coś znamy?
+[01:21:45.400 --> 01:21:47.400]  Hmm.
+[01:21:47.400 --> 01:21:49.400]  Hmm.
+[01:21:49.400 --> 01:21:51.400]  Hmm.
+[01:21:51.400 --> 01:21:53.400]  I don't know.
+[01:21:53.400 --> 01:21:55.400]  Jesz nie dam jeszcze
+[01:21:55.400 --> 01:21:57.400]  i 10%.
+[01:21:57.400 --> 01:21:59.400]  O! Albo 16%.
+[01:21:59.400 --> 01:22:01.400]  A.
+[01:22:01.400 --> 01:22:03.400]  No dobrze.
+[01:22:03.400 --> 01:22:05.400]  Wypilnę.
+[01:22:05.400 --> 01:22:09.400]  A. Nie mogę tu
+[01:22:09.400 --> 01:22:11.080]  zapisać zegara
+[01:22:11.080 --> 01:22:11.400]  Bo....
+[01:22:11.400 --> 01:22:12.360]  deep
+[01:22:12.360 --> 01:22:13.560]  Gdybym
+[01:22:13.560 --> 01:22:15.400]  był naszym
+[01:22:15.400 --> 01:22:17.400]  władzikiem
+[01:22:17.400 --> 01:22:18.920]  żebym
+[01:22:18.920 --> 01:22:20.280]  znowu
+[01:22:20.680 --> 01:22:22.640]  i
+[01:22:30.640 --> 01:22:33.240]  accordance
+[01:22:33.240 --> 01:22:35.240]  sprób 듣 Dann nicht
+[01:22:35.240 --> 01:22:37.240]  Nie.
+[01:22:41.240 --> 01:22:43.240]  Nie?
+[01:22:43.240 --> 01:22:45.240]  Jak to jest...
+[01:22:45.240 --> 01:22:47.240]  Nie też?
+[01:22:47.240 --> 01:22:49.240]  Nie też. Tak.
+[01:22:49.240 --> 01:22:51.240]  Myślę, że już to zapomniałem.
+[01:22:51.240 --> 01:22:53.240]  Nie też, ale nie pamiętam.
+[01:22:53.240 --> 01:22:55.240]  Nie też.
+[01:22:55.240 --> 01:22:57.240]  Nie też albo...
+[01:23:05.240 --> 01:23:09.240]  Czytam w telefonu.
+[01:23:09.240 --> 01:23:11.240]  A, w telefonie czytasz. OK.
+[01:23:11.240 --> 01:23:15.240]  Tak modernistyczna, tak standard, tak aktualna, no.
+[01:23:15.240 --> 01:23:23.240]  Mohamed, uwierasz się, że jesz śniadanie?
+[01:23:27.240 --> 01:23:31.240]  Zobacz, jak się spodziewasz i zjesz śniadanie.
+[01:23:35.240 --> 01:23:55.240]  Kto z Was zrezygnował na to, żeby weźmieć pośrodki i jeść?
+[01:23:55.240 --> 01:23:57.240]  Jeść lub pośrodki?
+[01:23:57.240 --> 01:23:59.240]  To?
+[01:23:59.240 --> 01:24:01.240]  Nie?
+[01:24:01.240 --> 01:24:03.240]  Co z Was zrezygnowało?
+[01:24:03.240 --> 01:24:05.240]  Jeść lub pośrodki?
+[01:24:05.240 --> 01:24:07.240]  Tak.
+[01:24:13.240 --> 01:24:15.240]  Można też w piśmie.
+[01:24:23.240 --> 01:24:29.240]  Można na przykład tak jak zwykle najpierw ubieram się.
+[01:24:29.240 --> 01:24:35.240]  I też można być zwykle najpierw jemy śniadanie.
+[01:24:35.240 --> 01:24:39.240]  To czy to. To może być najpierw, albo może być najpierw.
+[01:24:39.240 --> 01:24:42.240]  To wskazuje na twoje preferencje.
+[01:24:42.240 --> 01:24:44.240]  I to się nie zmieni.
+[01:24:44.240 --> 01:24:49.240]  Tak, zwykle najpierw musisz powiedzieć, a potem musisz zdecydować,
+[01:24:49.240 --> 01:24:52.240]  ubieram się, albo jemy.
+[01:24:52.240 --> 01:24:53.240]  Tak.
+[01:24:55.240 --> 01:24:59.240]  Tak, tak. Zwykle najpierw ubieram się, a potem jemy śniadanie.
+[01:24:59.240 --> 01:25:04.240]  No dobrze, Miri.
+[01:25:04.240 --> 01:25:07.240]  Co zwykle robisz najpierw?
+[01:25:07.240 --> 01:25:12.240]  Pijesz kawę, czy bierzesz prysznic?
+[01:25:12.240 --> 01:25:17.240]  Najpierw...
+[01:25:17.240 --> 01:25:18.240]  Najpierw...
+[01:25:18.240 --> 01:25:19.240]  Najpierw...
+[01:25:19.240 --> 01:25:20.240]  Dobrze.
+[01:25:20.240 --> 01:25:22.240]  Piję kawę.
+[01:25:22.240 --> 01:25:24.240]  Pijesz kawę, super.
+[01:25:24.240 --> 01:25:28.240]  A potem biorę prysznic.
+[01:25:28.240 --> 01:25:29.240]  Tak.
+[01:25:29.240 --> 01:25:30.240]  A potem biorę prysznic.
+[01:25:30.240 --> 01:25:31.240]  Tak, tak.
+[01:25:31.240 --> 01:25:32.240]  A potem biorę prysznic.
+[01:25:32.240 --> 01:25:33.240]  Dobrze.
+[01:25:33.240 --> 01:25:34.240]  A potem piję kawę.
+[01:25:34.240 --> 01:25:35.240]  Super.
+[01:25:35.240 --> 01:25:36.240]  Bardzo dobrze.
+[01:25:36.240 --> 01:25:37.240]  Ok.
+[01:25:37.240 --> 01:25:38.240]  Ale kawa jest bardzo ważna.
+[01:25:38.240 --> 01:25:39.240]  Bardzo, bardzo ważna.
+[01:25:39.240 --> 01:25:40.240]  Ok.
+[01:25:40.240 --> 01:25:41.240]  No dobrze.
+[01:25:41.240 --> 01:25:42.240]  Guys, so I would like to also give you something to...
+[01:25:42.240 --> 01:25:43.240]  For our audience.
+[01:25:43.240 --> 01:25:44.240]  To jest...
+[01:25:44.240 --> 01:25:45.240]  To jest...
+[01:25:45.240 --> 01:25:46.240]  To jest...
+[01:25:46.240 --> 01:25:47.240]  To jest...
+[01:25:47.240 --> 01:25:48.240]  To jest...
+[01:25:48.240 --> 01:25:49.240]  To jest...
+[01:25:49.240 --> 01:25:50.240]  To jest...
+[01:25:50.240 --> 01:25:51.240]  To jest...
+[01:25:51.240 --> 01:25:52.240]  To jest...
+[01:25:52.240 --> 01:25:53.240]  To jest...
+[01:25:53.240 --> 01:25:54.240]  To jest...
+[01:25:54.240 --> 01:25:55.240]  To jest...
+[01:25:55.240 --> 01:25:56.240]  To jest...
+[01:25:56.240 --> 01:25:57.240]  To jest...
+[01:25:57.240 --> 01:25:58.240]  To jest...
+[01:25:58.240 --> 01:25:59.240]  To jest...
+[01:25:59.240 --> 01:26:00.240]  To jest...
+[01:26:00.240 --> 01:26:01.240]  To jest...
+[01:26:01.240 --> 01:26:02.240]  To jest...
+[01:26:02.240 --> 01:26:03.240]  To jest...
+[01:26:03.240 --> 01:26:04.240]  To jest...
+[01:26:04.240 --> 01:26:05.240]  A Straight-up starek pokazanie totalnie parakolorowe plasku.
+[01:26:05.240 --> 01:26:06.240]  Split faces môreko precz natuurlijk to jest over accord.
+[01:26:06.240 --> 01:26:07.240]  Those five stars safari...
+[01:26:07.240 --> 01:26:08.240]  Ogromna None.
+[01:26:08.240 --> 01:26:09.240]  Hi hi hi.
+[01:26:09.240 --> 01:26:10.240]  No.
+[01:26:10.240 --> 01:26:11.240]  Hello, how are you guys?
+[01:26:11.240 --> 01:26:12.240]  And especially in И히potχara anüyšę.
+[01:26:12.240 --> 01:26:13.240]  You will have a little bit of time or it will be hard during this
+[01:26:13.240 --> 01:26:14.560]  They are on
+[01:26:14.560 --> 01:26:15.560]  You will have a little bit of time or it will be hard during this
+[01:26:15.560 --> 01:26:16.560]  I will...
+[01:26:16.560 --> 01:26:17.560]  euu...
+[01:26:17.560 --> 01:26:18.560]  Thanks.
+[01:26:18.560 --> 01:26:19.560]  It's fine?
+[01:26:19.560 --> 01:26:20.560]  It's fine?
+[01:26:20.560 --> 01:26:21.560]  Claudiu I will give you something también.
+[01:26:21.560 --> 01:26:22.560]  Maybe to do.
+[01:26:22.560 --> 01:26:23.560]  Ok.
+[01:26:23.560 --> 01:26:24.560]  Firstly, I will give you.
+[01:26:24.560 --> 01:26:29.560]  I teraz powiem, jaką pracę możesz spróbować.
+[01:26:29.560 --> 01:26:31.560]  Ok, proszę bardzo.
+[01:26:41.560 --> 01:26:44.560]  Możesz spróbować jeden wers.
+[01:26:44.560 --> 01:26:46.560]  Jeden wers.
+[01:26:46.560 --> 01:26:48.560]  Masz kilka słów.
+[01:26:48.560 --> 01:26:53.560]  I musisz znaleźć, co to jest słowo, czy wers.
+[01:26:53.560 --> 01:26:58.560]  Czasami będzie to prysznic, czasami...
+[01:26:58.560 --> 01:27:03.560]  To jest szczególnie z obszaru wersów.
+[01:27:03.560 --> 01:27:06.560]  Budzić się, mieć się, etc.
+[01:27:06.560 --> 01:27:09.560]  Mówić, śpić, coś takiego.
+[01:27:09.560 --> 01:27:11.560]  Coś z pierwszego obszaru.
+[01:27:11.560 --> 01:27:13.560]  Jeden wers.
+[01:27:13.560 --> 01:27:17.560]  Jeśli będziesz miał czas, możesz spróbować tylko dla swoich umiejętności.
+[01:27:17.560 --> 01:27:20.560]  Która jest godzina?
+[01:27:20.560 --> 01:27:21.560]  To jest to, co zrobiłaś.
+[01:27:21.560 --> 01:27:25.560]  Ale nie oficjalnie, bo nie zaczęliśmy tego.
+[01:27:25.560 --> 01:27:27.560]  Możesz spróbować tylko oficjalnie.
+[01:27:27.560 --> 01:27:30.560]  Próbujemy i będę Cię rozwiązywał.
+[01:27:30.560 --> 01:27:33.560]  Która jest druga wersja i w jaki czas.
+[01:27:33.560 --> 01:27:38.560]  I może, jeśli nie jest dla Ciebie za dużo,
+[01:27:38.560 --> 01:27:44.560]  możesz spróbować z wypadków 6 tylko punkt A.
+[01:27:44.560 --> 01:27:47.560]  Punkt A to jest pracowanie z koreografii.
+[01:27:47.560 --> 01:27:56.560]  Pracowanie z tym, co jest do śpienia, do idzie, do robienia, do waszania i tak dalej.
+[01:27:56.560 --> 01:27:57.560]  Ok?
+[01:27:57.560 --> 01:28:00.560]  Przedstawię Cię także do Las Lion.
+[01:28:00.560 --> 01:28:04.560]  Z tym obrazem, z każdym końcem konjunktury.
+[01:28:04.560 --> 01:28:07.560]  Więc to, co mamy razem, to to.
+[01:28:07.560 --> 01:28:11.560]  To może być dla Ciebie użyteczne, by skończyć wszystkie te prace.
+[01:28:11.560 --> 01:28:14.560]  Możesz też przesłać lekcję,
+[01:28:14.560 --> 01:28:16.560]  te kodowanie, gdzie napisałaś słowa.
+[01:28:17.560 --> 01:28:18.560]  To Ty to mówisz?
+[01:28:18.560 --> 01:28:20.560]  Oczywiście, oczywiście.
+[01:28:20.560 --> 01:28:22.560]  Mamy tutaj dużo z tego.
+[01:28:22.560 --> 01:28:23.560]  Oczywiście.
+[01:28:23.560 --> 01:28:24.560]  No dobrze.
+[01:28:24.560 --> 01:28:26.560]  Czy macie pytania dzisiaj?
+[01:28:26.560 --> 01:28:27.560]  Nie.
+[01:28:27.560 --> 01:28:28.560]  Nie?
+[01:28:28.560 --> 01:28:30.560]  No dobrze, to dziękuję bardzo.
+[01:28:30.560 --> 01:28:31.560]  Miło Was widzieć.
+[01:28:31.560 --> 01:28:32.560]  Nice to see you.
+[01:28:32.560 --> 01:28:34.560]  I do wtorku.
+[01:28:34.560 --> 01:28:37.560]  Wtorek tradycyjnie normalny.
+[01:28:37.560 --> 01:28:40.560]  Jak się mówi po polsku get well soon?
+[01:28:40.560 --> 01:28:43.560]  You can say dużo zdrowia.
+[01:28:43.560 --> 01:28:45.560]  Wracaj do zdrowia.
+[01:28:45.560 --> 01:28:46.560]  Go back to Poland.
+[01:28:46.560 --> 01:28:48.560]  To jest coś podobnego.
+[01:28:48.560 --> 01:28:49.560]  Wracaj.
+[01:28:49.560 --> 01:28:50.560]  Dziękuję bardzo.
+[01:28:50.560 --> 01:28:52.560]  Dziękuję ślicznie.
+[01:28:52.560 --> 01:28:53.560]  OK.

@@ -151,7 +151,7 @@
     <h4>Index</h4>
     <div class="index-entries-container">
       <a class="index-column-entry" href="#InterestingLinks">Interesting Links</a>
-      <a class="index-column-entry" href="#Chapter2">Chapter 4: Entities And Relationships</a>
+      <a class="index-column-entry" href="#Chapter4">Chapter 4: Entities And Relationships</a>
 
 
     </div>
@@ -183,13 +183,86 @@
       </div>
 
       <hr>
-      <div id="Chapter2" class="chapter index-column-link">Chapter 4: Entities And Relationships</div>
+      <div id="Chapter4" class="chapter index-column-link">Chapter 4: Entities And Relationships</div>
       <hr>
 
       <div class="textual-content">
-        <div class="sub-heading">Books, Blogs, and Blah</div>
+        <div class="sub-heading">Introduction</div>
         <div>
-          -
+          - A <i>data model</i> is how we express data relationships in a Database Management System (DBMS). <br>
+          - Relational, NoSQL, Graph, Key-Value are all examples of data models that a DBMS might use.
+        </div>
+
+        <div class="sub-heading">Entities and their Attributes</div>
+        <div>
+          - <i>Entity</i>: Something about which we store data. Eg. customer, item, a doctor's appointment. <br>
+          - <i>Attributes</i>: Data that describes the entity. Eg. a customer will be described by their name, address, phone number etc. <br>
+          - Each group of attributes that describes a single real-world occurrence of an entity represents an <i>instance</i> of an entity. <br>
+          - The attributes of an entity must be single-valued. This means every single intersection of a row and a column must contain exactly one piece of data. So no lists, arrays, or multiple
+          entries are allowed inside a single database cell. Why? If you don't follow this, querying the data becomes expensive. For eg. if a cell stores the languages that a dev knows as an array,
+          then querying the DB for which devs know Python becomes very expensive. <br>
+          - <i>Entity-relationship (ER) diagrams (ERDs) </i> provide a way to document the entities in a database along with the attributes that describe them. <br>
+          - There are different ways that you can do this. We will be using UML diagramming style. <br>
+        </div>
+
+        <div class="sub-heading">Domains</div>
+        <div>
+          - Each <i>attribute</i> has a <i>domain</i> which is the permissible values for that <i>attribute</i>. <br>
+          - Thus, a domain controls what values can actually be input in a particular cell of a column. <br>
+
+          <div class="sub-section">
+            Question: What are some common gotchas that can arise when deciding on a domain for a column? <br>
+            Answer: <br>
+            a) <p class="inline-heading">Numbers That Aren't Numbers</p>: Storing identifiers like Zip codes, phone numbers, or social security numbers as numeric types (INT, BIGINT etc). You lose
+            leading zeros. A zip code like 02134 (Boston) becomes the integer 2134. Furthermore, phone numbers often require international plus signs (+1) or extensions, which instantly break numeric
+            columns. <br>
+            - The Rule: If you aren't going to perform mathematical operations on it (adding, subtracting, averaging), it’s not a number. Store it as a string. <br>
+
+            b) <p class="inline-heading">Using Floating-Point for finances</p>: Floating-point numbers are designed for scientific calculations where speed matters more than absolute precision. They
+            use
+            binary fractional approximations, which introduces rounding errors. 0.1 + 0.2 might end up as 0.30000000000000004, which will throw off your financial balancing. <br>
+            - The Rule: For money, always use DECIMAL (or NUMERIC), where you explicitly state the exact precision (e.g., DECIMAL(13, 4) to store up to 9 billion with 4 decimal places for fractional
+            cents). <br>
+
+            c) <p class="inline-heading">Using ENUMs</p>: Using native database ENUM types for fields that seem fixed, like order_status ('pending', 'shipped', 'delivered'). When you inevitably need
+            to add 'returned', 'cancelled', or 'partially_refunded', updating an ENUM type can require a heavy schema migration. <br>
+            - The Rule: Use a Foreign Key lookup table instead of an ENUM. <br>
+
+            d) <p class="inline-heading">Using text length limits</p>: Setting arbitrary limits like VARCHAR(50) for names or VARCHAR(255) for URLs. <br>
+            - The Rule: Use native unbounded TEXT types if your specific DBMS handles them without a performance penalty. <br>
+
+            e) <p class="inline-heading">Not enforcing Timezones</p>: Storing dates and times using a generic TIMESTAMP or DATETIME without enforcing a timezone domain. The database will default to
+            the
+            server's local time. If your server is in New York (EST) and you migrate your database to a cloud server running on Coordinated Universal Time (UTC), or if your app scales to users across
+            the globe, all your historical timestamps will suddenly be offset by hours. <br>
+            - The Rule: Always use TIMESTAMP WITH TIME ZONE (or store everything strictly as UTC integers).
+          </div>
+        </div>
+
+        <div class="sub-heading">Basic Data Relationships: One-to-One Relationship</div>
+        <div>
+          - For a relationship to be one-to-one, two conditions must be true at the same time: <br>
+          a) Any instance of A (A<sub>i</sub>) can only connect to zero or one instance of entity B. <br>
+          b) Any instance of B (B<sub>i</sub>) can only connect to zero or one instance of entity A. <br>
+          - Eg. A Spouse (A<sub>i</sub>) can have zero or one Partner (B<sub>i</sub>). A Partner (B<sub>i</sub>) can have zero or one Spouse (A<sub>i</sub>). If either person tries to add a second
+          connection, the system breaks. <br>
+          - Note: If you think you are dealing with a one-to-one relationship, look at it very carefully. Be sure that you are not really dealing with a special case of a one to-many relationship or
+          two entities that should really be one (meaning they should be two columns within the same table) <br>
+        </div>
+
+        <div class="sub-heading">Basic Data Relationships: One-to-Many Relationship</div>
+        <div>
+          - For a relationship to be one-to-many, two conditions must be true at the same time: <br>
+          a) Any instance of A (A<sub>i</sub>) can connect to zero, one, or more instances of entity B. <br>
+          b) Any instance of B (B<sub>i</sub>) can only connect to zero or one instance of entity A. (same as one-to-one relationship) <br>
+          Eg. A woman may have zero, one, or more biological daughters; a daughter can have only one biological mother.
+        </div>
+
+        <div class="sub-heading">Basic Data Relationships: Many-to-Many Relationship</div>
+        <div>
+          - For a relationship to be many-to-many, two conditions must be true at the same time: <br>
+          a) Any instance of A (A<sub>i</sub>) can connect to zero, one, or more instances of entity B. <br>
+          b) Any instance of B (B<sub>i</sub>) can connect to zero, one, or more instances of entity A. <br>
         </div>
 
       </div>
