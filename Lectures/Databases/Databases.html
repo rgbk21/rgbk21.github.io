@@ -26,6 +26,11 @@
       gtag('js', new Date());
       gtag('config', 'G-9QJ5D3X353');
   </script>
+  <!-- Style for inline code blocks start -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-sql.min.js"></script>
+  <!-- Style for inline code blocks end -->
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
@@ -168,7 +173,7 @@
       </div>
 
       <p id="index_A1_1">Index for notes A1.1:</p>
-      Lecture 1: <a href="#Chapter2">Chapter 4: Entities And Relationships</a><br>
+      Lecture 1: <a href="#Chapter4">Chapter 4: Entities And Relationships</a><br>
 
       <hr>
       <div id="InterestingLinks" class="chapter index-column-link">Interesting Links</div>
@@ -265,6 +270,92 @@
           b) Any instance of B (B<sub>i</sub>) can connect to zero, one, or more instances of entity A. <br>
         </div>
 
+        <div class="sub-heading">Weak Entities and Mandatory Relationships</div>
+        <div>
+          - <i>Mandatory Relationship</i> occurs when the existence of an entity dictates that it <i>must</i> be associated with at least one instance of another entity. <br>
+          - In the context of a DB, this would mean that the record requires a <code>NOT NULL</code> foreign key value. <br>
+          - For eg. an <i>Order</i> entity cannot exist without a <i>Customer</i> entity. An <i>Order</i> entity must have a link to one <i>Customer</i> entity. This makes it a mandatory
+          relationship. <br>
+          - And in this case, the <i>Order</i> entity would be an example of a <i>Weak Entity</i>. It does not possess a true primary key of its own. It requires the parent's primary key just to form
+          its own primary key. The <i>Customer</i> is the strong entity in this scenario and the Order entity would use the primary key of the Customer to form its own primary key. <br>
+          - Putting it together, <i>a weak entity always implies a mandatory relationship with its identifying strong entity</i>. Deleting the strong entity means that the weak entity should also
+          be deleted. <br>
+          - But do note that the inverse is not true, ie, <i>a mandatory relationship does not imply a weak relationship</i>. For eg. an employee must be associated with a department, but an
+          Employee has its own primary key, making it a strong entity.
+        </div>
+
+        <div class="sub-heading">UML Diagram Example</div>
+        <div>
+          - To understand the relationship of one entity to another, you need to look at the symbols at the ends of the connecting line. <br>
+          - Base Symbols: <br>
+          <ul>
+            <li>Line <code>|</code>: Represents "One"</li>
+            <li>Circle (<code>o</code> or <code>0</code>): Represents "Zero/Optional"</li>
+            <li>Crow's foot (<code>&lt;</code> or <code>&gt;</code> or <code>}</code>): Represents "Many"</li>
+          </ul>
+          - Then there are some combined symbols: <br>
+          <ul>
+            <li><code>||</code>: Mandatory. Exactly one instance must exist.</li>
+            <li><code>|o</code>: Zero or One. Optional. Can exist, but max of one. </li>
+            <li><code>&gt;|</code>: One or many. Mandatory. Must have atleast one, but can be infinite.</li>
+            <li><code>&gt;o</code>: Zero or many. Optional. Can have none, one, or infinite.</li>
+          </ul>
+
+          - Below is an example of a UML diagram and how to read the various relationships.
+          <div class="image-block">
+            <div class="expand-screenshot-image-btn border border-primary rounded">
+              <span class="btn btn-link">Show Image <img src="./imgs/chevron-expand.svg" alt="Show Image Button"></span>
+            </div>
+            <div class="screenshot-image">
+              <img src="./imgs/DB_Book/Chapter4/ER_Diagram.jpg"
+                   width="1000"
+                   class="center-block img-fluid"
+                   alt="Image for image"
+                   loading="lazy">
+            </div>
+          </div>
+        </div>
+
+        <div class="sub-heading">Dealing with Many-to-Many Relationships</div>
+        <div>
+          - RDBMS (Relational DBMS) cannot natively implement direct many-to-many relationships. Relational models rely on Foreign Keys pointing to Primary Keys to establish links. If you try to
+          directly link two entities in an M:N relationship, you would need to store multiple foreign key values in a single column, which violates the First Normal Form (1NF) of database
+          normalization. <br>
+          - To solve this you introduce what is known as a <i>Composite Entity</i> in the middle. <br>
+          - A composite entity has the following characteristics: <br>
+          <ul>
+            <li>
+              Foreign Keys: It must contain atl least two foreign keys, which reference the rpimary keys of the two entities it connects.
+            </li>
+            <li>
+              Composite Primary Key: Often, the primary key of this new entity is a combination of those two foreign keys (a composite key).
+            </li>
+            <li>
+              Payload Attributes: It can contain its own attributes that describe the relationship itself, rather than describing the individual parent entities.
+            </li>
+          </ul>
+
+          <div class="code-block">
+            <div class="expand-code-snip-btn border border-primary rounded">
+              <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+            </div>
+            <div class="code-snippet">
+              <script src="https://gist.github.com/rgbk21/1800a0773b5c6dfa1469e531d92af567.js"></script>
+            </div>
+          </div>
+
+          - There is nothing stopping us from connecting 3 or more independent entities into a single relationship record. <br>
+          - For eg. consider <i>Doctor</i>, <i>Patient</i>, <i>Drug</i> entities. Doctor A treats Patient B. Patient B takes Drug C. Doctor A is authorized to prescribe Drug C. We are losing
+          context if Doctor A was the one who actually prescribed Drug C to Patient B. To solve this, we introduce a <i>Prescription</i> entity.
+          <div class="code-block">
+            <div class="expand-code-snip-btn border border-primary rounded">
+              <span class="btn btn-link">Expand Gist <img src="imgs/chevron-expand.svg" alt="Expand Code Snippet"></span>
+            </div>
+            <div class="code-snippet">
+              <script src="https://gist.github.com/rgbk21/8745ace307584c8bf730636a95465264.js"></script>
+            </div>
+          </div>
+        </div>
       </div>
 
     </div>
