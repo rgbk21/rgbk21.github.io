@@ -150,15 +150,16 @@
 <!-- Overlay for when the sidebar is open on small screens -->
 <div id="sidebarOverlay" class="d-lg-none"></div>
 <div class="two-column-layout">
+
+  <!-- Sidebar Index Starts -------------------------------------------------------------------------------------------------- -->
   <div class="index-column">
 
-    <!-- Sidebar Index Starts -------------------------------------------------------------------------------------------------- -->
     <h4>Index</h4>
     <div class="index-entries-container">
       <a class="index-column-entry" href="#InterestingLinks">Interesting Links</a>
       <a class="index-column-entry" href="#Chapter4">Chapter 4: Entities And Relationships</a>
-
-
+      <a class="index-column-entry" href="#Chapter5">Chapter 5: Relational Data Model</a>
+      <a class="index-column-entry" href="#Chapter6">Chapter 6: Relational Algebra</a>
     </div>
   </div>
   <!-- Sidebar Index Ends -------------------------------------------------------------------------------------------------- -->
@@ -256,7 +257,7 @@
           two entities that should really be one (meaning they should be two columns within the same table) <br>
         </div>
 
-        <div class="sub-heading">Basic Data Relationships: One-to-Many Relationship</div>
+        <div id="Chapter4_OneToMany" class="sub-heading">Basic Data Relationships: One-to-Many Relationship</div>
         <div>
           - For a relationship to be one-to-many, two conditions must be true at the same time: <br>
           a) Any instance of A (A<sub>i</sub>) can connect to zero, one, or more instances of entity B. <br>
@@ -297,7 +298,7 @@
           - Then there are some combined symbols: <br>
           <ul>
             <li><code>||</code>: Mandatory. Exactly one instance must exist.</li>
-            <li><code>|o</code>: Zero or One. Optional. Can exist, but max of one. </li>
+            <li><code>|o</code>: Zero or One. Optional. Can exist, but max of one.</li>
             <li><code>&gt;|</code>: One or many. Mandatory. Must have atleast one, but can be infinite.</li>
             <li><code>&gt;o</code>: Zero or many. Optional. Can have none, one, or infinite.</li>
           </ul>
@@ -358,6 +359,120 @@
           </div>
         </div>
       </div>
+
+
+      <hr>
+      <div id="Chapter5" class="chapter index-column-link">Chapter 5: Relational Data Model</div>
+      <hr>
+
+      <div class="textual-content">
+        <div class="sub-heading">The "Relation" part of a Relational Database</div>
+        <div>
+          - In mathematical set theory, a <i>relation</i> is the definition of a table with columns (<i>attributes</i>) and rows (<i>tuples</i>)
+          <table class="table table-bordered table-sm">
+            <thead>
+            <tr>
+              <th>Relational Model Term</th>
+              <th>SQL Term</th>
+              <th>What It Represents</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td>Domain</td>
+              <td>Data Type</td>
+              <td>The pool of valid values an attribute can hold (e.g., integers, dates).</td>
+            </tr>
+            <tr>
+              <td>Attribute</td>
+              <td>Column</td>
+              <td>A named property describing the tuple.</td>
+            </tr>
+            <tr>
+              <td>Tuple</td>
+              <td>Row</td>
+              <td>A single entity or entry within the relation.</td>
+            </tr>
+            <tr>
+              <td>Relation</td>
+              <td>Table</td>
+              <td>A structured set of tuples sharing the same attributes.</td>
+            </tr>
+            </tbody>
+          </table>
+
+          - For a table that looks like below, the <i>relation</i> would be written like <code>customer(customer_numb, first_name, last_name, phone)</code>. <br>
+          - The preceding expression is a true relation, an expression of the structure of a relation. It correctly does not contain any data. When data are included, you have an instance of a
+          relation.
+          <div class="image-block">
+            <div class="expand-screenshot-image-btn border border-primary rounded">
+              <span class="btn btn-link">Show Image <img src="./imgs/chevron-expand.svg" alt="Show Image Button"></span>
+            </div>
+            <div class="screenshot-image">
+              <img src="./imgs/DB_Book/Chapter5/SampleTable.jpg"
+                   width="400"
+                   class="center-block img-fluid"
+                   alt="Image for image"
+                   loading="lazy">
+            </div>
+          </div>
+        </div>
+
+
+        <div class="sub-heading">Primary Keys</div>
+        <div>
+          - Desirable qualities of primary keys: <br>
+          a) Every value must uniquely identify a single row in the table.
+          b) The key value should never be null. <br>
+          b) The key value should never change. (It should be immutable.) <br>
+          c) A primary key should avoid using meaningful data. Meaningful data, like using a user's email id, ssn, for example, can change. <br>
+          d) When using a Composite Key (primary key created by combining columns), the key should be made up of the smallest number of columns necessary to ensure the uniqueness of the
+          primary key. Composite keys can grow clunky when referenced as foreign keys across multiple child tables. <br>
+          e) The key should use small, fixed-length data types (like integers) to minimize index size and accelerate JOIN performance.
+        </div>
+
+        <div class="sub-heading">Primary Keys and Foreign Keys</div>
+        <div>
+          - When a table contains a column (or concatenation of columns) that is the same as the primary key of some table in the database, the column is called a <i>foreign key</i>. <br>
+          - Consider the following relations: <br>
+          <code>customer (customer_numb (PK), first_name, last_name, phone)</code> <br>
+          <code>order (order_numb (PK), customer_numb, order_date)</code> <br>
+          - The <i>customer_numb</i> column in the <i>order</i> table is a foreign key that matches the primary key of the <i>customer</i> table. It represents a one-to-many relationship between
+          customers and the orders that they place. Why? <br>
+          - In the <a href="#Chapter4_OneToMany">section in One-to-Many relationship</a>, we saw that a relationship should satisfy two rules. The <i>customer_numb</i> is the Primary Key in the
+          <i>customer</i> table, however it is not the PK in the <i>order</i> table. This means that multiple records in the <i>order</i> table can have the same value for <i>customer_numb</i>.
+          This forms the "many" side, ie, One Customer &rarr; Many Orders. Rule A satisfied: One customer (A<sub>i</sub>) can link to zero, one, or many orders. <br>
+          - Second, when we look at each record in the <i>order</i> table, we see that the <i>customer_numb</i> field is a single entry, ie. one single record in the order table can only be
+          associated with a single <i>customer_numb</i>. The <i>customer_numb</i> field in <i>order</i> cannot hold two different ids. This completes the part 2 of the rule, the "one" side of the
+          relation, ie, One Order &rarr; One Customer. Rule B satisfied: One order (B<sub>i</sub>) can link back to only one customer. <br>
+          - Rule of thumb: Whenever you take the Primary Key of Table A and drop it as a Foreign Key into Table B, you automatically create a 1:M relationship from Table A to Table B. <br>
+          - This relational data model enforces a constraint called <i>referential integrity</i>, which states that every nonnull foreign key value must match an existing primary key value.
+        </div>
+
+        <div class="sub-heading">Foreign Keys that reference the Primary Key of their own table</div>
+        <div>
+          - Foreign keys do not necessarily need to reference a primary key in a different table; they need only reference a primary key. <br>
+          - As an example, consider the following employee relation: <br>
+          <code>employee(employee_id (PK), first_name, last_name, department, manager_id)</code> <br>
+          - A manager is also an employee. Therefore, the manager ID, although named differently from the employee ID, is actually a foreign key that references the primary key of its own table.
+          The DBMS will, therefore, always ensure that whenever a user enters a manager ID, that manager already exists in the table as an employee.
+        </div>
+      </div>
+
+      <hr>
+      <div id="Chapter6" class="chapter index-column-link">Chapter 6: Relational Algebra</div>
+      <hr>
+
+      <div class="textual-content">
+        <div class="sub-heading">The "Relation" part of a Relational Database</div>
+        <div>
+          -
+
+        </div>
+
+
+      </div>
+
 
     </div>
   </div>
