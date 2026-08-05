@@ -25,6 +25,9 @@
   padding-top: 8px;
   padding-bottom: 8px;
 }
+.index-entries-container .index-column-entry:last-child {
+  margin-bottom: 32px;
+}
 
 .content-column {
   flex: 0 0 85%;
