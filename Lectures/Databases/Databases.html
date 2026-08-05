@@ -471,8 +471,34 @@
           - When we use SQL to manipulate data in a database, we are actually using something known as the <i>relational calculus</i>, a method for using a single command to instruct the DBMS to
           perform one or more actions. <br>
           - The DBMS internally then breaks down the SQL statement into a set of operations that it can perform one after the other to produce the requested result. Each of these operations is
-          taken from <i>Relational Algebra</i>.
+          taken from <i>Relational Algebra</i>. <br>
+          - In this chapter we will look at seven relational algebra operations. The first five - <code>restrict</code>, <code>project</code>, <code>join</code>, <code>union</code>, and
+          <code>difference</code> - are fundamental to SQL and database design operations. In fact, any DBMS that supports them is said to be relationally complete. The remaining operations
+          (<code>product</code> and <code>intersect</code>) are useful for helping us understand how SQL processes queries. <br>
+          - The most important thing to understand about relational algebra is that each operation does one thing and one thing only. For example, one operation extracts columns while another
+          extracts rows. The DBMS must do the operations one at a time, in a step-by-step sequence. We therefore say that relational algebra is <i>procedural</i>. <br>
+          - SQL, on the other hand, lets us formulate our queries in a logical way, without necessarily specifying the order in which relational operations should be performed. SQL is, therefore,
+          <i>non-procedural</i>.
+        </div>
 
+
+        <div class="sub-heading">Making Vertical Subsets: <code>Project</code></div>
+        <div>
+          - A <i>projection</i> of a relation is a new relation created by copying one or more of the columns from the source relation into a new table. <br>
+          - Syntax for relational algebra looks like this: <code>OPERATION parameters FROM source_table_name(s) GIVING result_table_name</code> <br>
+          - Projection command looks like this: <code>PROJECT customer_numb, first_name, last_name FROM customer GIVING names_and_numbers</code> <br>
+          - The order of the <i>columns</i> in the result table is based on the order in which the column names appear in the project statement; the order in which they are defined in the source
+          table has no effect on the result. <br>
+          - Rows appear in the order in which they are stored in the source table; project does not include sorting or ordering the data in any way. What this means is that rows have no inherent
+          order. Relational algebra does not define or guarantee row order. <br>
+          - As with all relational algebra operations, duplicate rows are removed. What this means is that if you create a projection without the primary key, duplicates will be removed. For example,
+          projecting only first_name from a 500-row table might return only 50 rows because duplicate names collapse into single rows. <br>
+          - It is important to keep in mind that relational algebra is first and foremost a set of theoretical operations. A DBMS may not implement an operation the same way that it is described in
+          theory. For example, most DBMSs don't remove duplicate rows from result tables unless the user requests it explicitly. <br>
+          - There is one issue with project with which you need to be concerned. A DBMS will project any columns that you request. It makes no judgment as to whether the selected columns produce a
+          meaningful result. For example, consider the following operation: <br>
+          <code>PROJECT sale_total_amt, exp_month FROM sale GIVING invalid</code>. <br>
+          There is no inherent meaning in linking the dollar amount of the sale with the expiry month of the card. But the DBMS will return it anyway.
         </div>
 
 
