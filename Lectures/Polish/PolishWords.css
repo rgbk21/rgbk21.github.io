@@ -1,4 +1,4 @@
-.all-basic-words-container, .all-words-container, .all-verbs-container {
+.all-basic-words-container, .all-words-container, .all-verbs-container, .all-prepositions-container {
   display: flex;
   flex-wrap: wrap;
   gap: 24px;

@@ -136,3 +136,71 @@ onlyHideAllVerbsBtn?.addEventListener('click', function (e) {
 function _hideAllVerbs() {
     document.querySelectorAll('#verbs-container .answer').forEach(elmnt => elmnt.classList.add('hidden'));
 }
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/// Methods handling the visibility of the words in the Prepositions section
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/** @type {HTMLButtonElement} */
+const showAllPrepositionsBtn = document.querySelector('#show-all-prepositions-button');
+/** @type {HTMLButtonElement} */
+const hideAndRandomizeAllPrepositionsBtn = document.querySelector('#hide-and-randomize-all-prepositions-button');
+/** @type {HTMLButtonElement} */
+const onlyHideAllPrepositionsBtn = document.querySelector('#only-hide-all-prepositions-button');
+/** @type {HTMLButtonElement} */
+const swapWordsAndMeaningsBtn = document.querySelector('#swap-word-meaning-button');
+
+/// Show all words in the Prepositions sections if they are hidden
+showAllPrepositionsBtn?.addEventListener('click', function (e) {
+    document.querySelectorAll('#prepositions-container .answer').forEach(elmnt => elmnt.classList.remove('hidden'));
+    showAllPrepositionsBtn.blur();
+});
+
+/// Hides all the words that are present in the Prepositions section and then randomizes them.
+hideAndRandomizeAllPrepositionsBtn?.addEventListener('click', function (e) {
+    _hideAllPrepositions();
+    hideAndRandomizeAllPrepositionsBtn.blur();
+
+    // Shuffle the divs inside the single-word-container
+    // https://stackoverflow.com/a/62713103/8742428
+    const allSingleWordsContainers = document.querySelectorAll('#prepositions-container .single-word-container');
+    let shuffle = [...allSingleWordsContainers];
+    const getRandomValue = (i, N) => Math.floor(Math.random() * (N - i) + i);
+    shuffle.forEach( (elem, i, arr, j = getRandomValue(i, arr.length)) => [arr[i], arr[j]] = [arr[j], arr[i]] );
+
+    const allWordsContainer = document.querySelector('#prepositions-container .all-prepositions-container');
+    allWordsContainer.innerHTML = '';
+
+    allWordsContainer.append(...shuffle);
+});
+
+/// Only hides (does not randomize) all the words that are present in the Prepositions section.
+onlyHideAllPrepositionsBtn?.addEventListener('click', function (e) {
+    _hideAllPrepositions();
+    onlyHideAllPrepositionsBtn.blur();
+});
+
+function _hideAllPrepositions() {
+    document.querySelectorAll('#prepositions-container .answer').forEach(elmnt => elmnt.classList.add('hidden'));
+}
+
+/// Swap the word and the meaning values in the Preposition section
+document.getElementById('swap-word-meaning-button').addEventListener('click', () => {
+    // Select all the containers holding the individual words and answers
+    const wordContainers = document.querySelectorAll('.single-word-container');
+
+    // Loop through each container one by one
+    wordContainers.forEach(container => {
+        // Find the word and meaning elements within the current container
+        const wordElement = container.querySelector('.word-name');
+        const meaningElement = container.querySelector('.meaning');
+
+        // Make sure both elements exist before trying to swap
+        if (wordElement && meaningElement) {
+            // Swap the HTML content using array destructuring
+            [wordElement.innerHTML, meaningElement.innerHTML] = [meaningElement.innerHTML, wordElement.innerHTML];
+        }
+
+        _hideAllPrepositions();
+        swapWordsAndMeaningsBtn.blur();
+    });
+});
