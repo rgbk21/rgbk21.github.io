@@ -106,6 +106,6 @@ a.index-column-entry.active {
   /* The URL bar takes up space in browsers which causes the last entry in scrollbar to get hidden behind the URL bar. */
   /* Add padding at the bottom to avoid the last entry in the scroll bar to disappear behind the URL bar. */
   .index-entries-container {
-    padding-bottom: 40px;
+    padding-bottom: 48px;
   }
 }
