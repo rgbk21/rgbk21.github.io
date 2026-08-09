@@ -100,9 +100,15 @@ function _hideAllWords() {
 /// Methods handling the visibility of the words in the verbs section.
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+/** @type {HTMLButtonElement} */
 const showAllVerbsBtn = document.querySelector('#show-all-verbs-button');
+/** @type {HTMLButtonElement} */
 const hideAndRandomizeAllVerbsBtn = document.querySelector('#hide-and-randomize-all-verbs-button');
+/** @type {HTMLButtonElement} */
 const onlyHideAllVerbsBtn = document.querySelector('#only-hide-all-verbs-button');
+/** @type {HTMLButtonElement} */
+const swapWordsAndMeaningsVerbsBtn = document.querySelector('#swap-word-meaning-verbs-button');
+
 /// Show all words in the Words and Adjectives sections if they are hidden
 showAllVerbsBtn?.addEventListener('click', function (e) {
     document.querySelectorAll('#verbs-container .answer').forEach(elmnt => elmnt.classList.remove('hidden'));
@@ -137,6 +143,31 @@ function _hideAllVerbs() {
     document.querySelectorAll('#verbs-container .answer').forEach(elmnt => elmnt.classList.add('hidden'));
 }
 
+/// Swap the word and the meaning values in the Verbs section
+swapWordsAndMeaningsVerbsBtn.addEventListener('click', () => {
+    // Select all the containers holding the individual words and answers
+    const wordContainers = document.querySelectorAll('#verbs-container .single-word-container');
+
+    // Loop through each container one by one
+    wordContainers.forEach(container => {
+        // Find the word and meaning elements within the current container
+        const wordElement = container.querySelector('.word-name');
+        // Remove the <a> tag from the word name so that the spoiler does not show it.
+        const extractedWord = wordElement.textContent.trim();
+        const meaningElement = container.querySelector('.meaning');
+
+        // Make sure both elements exist before trying to swap
+        if (wordElement && meaningElement) {
+            // Swap the HTML content using array destructuring
+            [wordElement.innerHTML, meaningElement.innerHTML] = [meaningElement.innerHTML, extractedWord];
+        }
+
+        _hideAllVerbs();
+        swapWordsAndMeaningsVerbsBtn.blur();
+    });
+});
+
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 /// Methods handling the visibility of the words in the Prepositions section
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -147,7 +178,7 @@ const hideAndRandomizeAllPrepositionsBtn = document.querySelector('#hide-and-ran
 /** @type {HTMLButtonElement} */
 const onlyHideAllPrepositionsBtn = document.querySelector('#only-hide-all-prepositions-button');
 /** @type {HTMLButtonElement} */
-const swapWordsAndMeaningsBtn = document.querySelector('#swap-word-meaning-button');
+const swapWordsAndMeaningsPrepositionsBtn = document.querySelector('#swap-word-meaning-prepositions-button');
 
 /// Show all words in the Prepositions sections if they are hidden
 showAllPrepositionsBtn?.addEventListener('click', function (e) {
@@ -184,9 +215,9 @@ function _hideAllPrepositions() {
 }
 
 /// Swap the word and the meaning values in the Preposition section
-document.getElementById('swap-word-meaning-button').addEventListener('click', () => {
+swapWordsAndMeaningsPrepositionsBtn.addEventListener('click', () => {
     // Select all the containers holding the individual words and answers
-    const wordContainers = document.querySelectorAll('.single-word-container');
+    const wordContainers = document.querySelectorAll('#prepositions-container .single-word-container');
 
     // Loop through each container one by one
     wordContainers.forEach(container => {
@@ -201,6 +232,6 @@ document.getElementById('swap-word-meaning-button').addEventListener('click', ()
         }
 
         _hideAllPrepositions();
-        swapWordsAndMeaningsBtn.blur();
+        swapWordsAndMeaningsPrepositionsBtn.blur();
     });
 });
