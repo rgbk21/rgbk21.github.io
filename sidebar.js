@@ -11,7 +11,6 @@ const indexColumn = document.querySelector('.index-column');
 const sidebarOverlay = document.getElementById('sidebarOverlay');
 const body = document.body;
 
-const sidebarWidth = 250; // Must match the width defined in CSS for .index-column
 const breakpointLg = 991.98; // Bootstrap's 'lg' breakpoint
 
 // 1. Grab all the target content elements and the index links

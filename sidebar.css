@@ -72,16 +72,15 @@ a.index-column-entry.active {
 
   .index-column {
     position: fixed;
-    top: 0; /* Start from the very top */
-    left: -250px; /* Initially hide it off-screen (must match sidebarWidth in JS) */
-    width: 250px; /* Fixed width for the sidebar */
+    top: 49px; /* Height of the main navbar */
+    left: -82vw; /* Initially hide it off-screen. Just a little bit to the left to remove the box shadow. */
+    width: 80vw; /* Fixed width for the sidebar */
     height: 100vh; /* Full viewport height */
     background-color: #f8f9fa; /* Light background for the sidebar */
     z-index: 1050; /* Above content, below toggle button */
     transition: left 0.3s ease-in-out; /* Smooth slide animation */
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
     border-right: none; /* Remove border from large screen style */
-    padding-top: 80px; /* Push content below the fixed navbar */
   }
 
   .index-column.open {
