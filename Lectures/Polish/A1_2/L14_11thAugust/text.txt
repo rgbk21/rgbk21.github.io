@@ -1,0 +1,2235 @@
+"C:\MY_BACKUP\LearningStuff\Udemy Full Stack\newGithubHostedSite\rgbk21.github.io\rgbk21.github.io\.venv\Scripts\python.exe" "C:\MY_BACKUP\LearningStuff\Udemy Full Stack\newGithubHostedSite\rgbk21.github.io\rgbk21.github.io\transcribe.py"
+C:\MY_BACKUP\LearningStuff\Udemy Full Stack\newGithubHostedSite\rgbk21.github.io\rgbk21.github.io\.venv\Lib\site-packages\whisper\transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+[00:00.000 --> 00:04.000]  What do you call cleaning?
+[00:04.000 --> 00:06.000]  Cleaning.
+[00:06.000 --> 00:08.000]  Cleaning.
+[00:08.000 --> 00:10.000]  Clean.
+[00:10.000 --> 00:12.000]  Sprzątać.
+[00:12.000 --> 00:14.000]  Sprzątać.
+[00:14.000 --> 00:16.000]  Sprzątałam.
+[00:16.000 --> 00:18.000]  Ja sprzątam.
+[00:18.000 --> 00:20.000]  Sprzątam.
+[00:20.000 --> 00:22.000]  To jest...
+[00:24.000 --> 00:26.000]  Sprzątać.
+[00:26.000 --> 00:28.000]  Sprzątać.
+[00:28.000 --> 00:30.000]  Ja sprzątam.
+[00:30.000 --> 00:32.000]  Ja sprzątam.
+[00:32.000 --> 00:34.000]  Sprzątam.
+[00:38.000 --> 00:40.000]  Sprzątam.
+[00:44.000 --> 00:46.000]  A kiedy pani sprząta?
+[00:46.000 --> 00:48.000]  O której godzinie?
+[00:48.000 --> 00:50.000]  O której godzinie?
+[00:54.000 --> 00:56.000]  Zdaję.
+[00:58.000 --> 01:02.000]  Czy od 9 do 12?
+[01:02.000 --> 01:04.000]  Od 9?
+[01:04.000 --> 01:06.000]  Od 9 do 12?
+[01:12.000 --> 01:14.000]  Od 9 albo 12.
+[01:14.000 --> 01:16.000]  Od 9 do 12?
+[01:16.000 --> 01:18.000]  Od 9 do 12.
+[01:18.000 --> 01:20.000]  Od 9 do 12?
+[01:20.000 --> 01:22.000]  Tak.
+[01:22.000 --> 01:24.000]  Rano.
+[01:24.000 --> 01:26.000]  Rano.
+[01:26.000 --> 01:28.000]  Rano, południe.
+[01:28.000 --> 01:32.000]  Wiktorek. Wiktorek, jem obiad.
+[01:32.000 --> 01:34.000]  O której?
+[01:34.000 --> 01:40.000]  O dwunastej.
+[01:40.000 --> 01:44.000]  Piję kawę.
+[01:44.000 --> 01:48.000]  Piję kawę.
+[01:56.000 --> 01:58.000]  Czternasta.
+[01:58.000 --> 02:00.000]  O czternastej.
+[02:02.000 --> 02:04.000]  A w środę co Pani robi?
+[02:04.000 --> 02:12.000]  W środę spaceruję z synem.
+[02:12.000 --> 02:14.000]  Z synem?
+[02:14.000 --> 02:16.000]  Z synem.
+[02:18.000 --> 02:20.000]  Jem kolasy.
+[02:24.000 --> 02:26.000]  A gdzie Pani...
+[02:26.000 --> 02:32.000]  Ojcze moje dzieci.
+[02:32.000 --> 02:34.000]  Jedno dziecko?
+[02:34.000 --> 02:36.000]  Tu.
+[02:36.000 --> 02:38.000]  Dzieci.
+[02:38.000 --> 02:40.000]  A gdzie Pani spaceruje?
+[02:40.000 --> 02:42.000]  Spaceruję...
+[02:44.000 --> 02:46.000]  W środę.
+[02:46.000 --> 02:48.000]  O, w środę.
+[02:48.000 --> 02:50.000]  W środę.
+[02:50.000 --> 02:52.000]  W parku?
+[02:52.000 --> 02:54.000]  W lasie?
+[02:54.000 --> 02:56.000]  Nie wiem.
+[02:56.000 --> 02:58.000]  Nie wiem.
+[02:58.000 --> 03:00.000]  Ok.
+[03:00.000 --> 03:02.000]  A co Pan robi w czartek?
+[03:02.000 --> 03:04.000]  Co?
+[03:04.000 --> 03:06.000]  Czartek.
+[03:06.000 --> 03:08.000]  Czartek.
+[03:08.000 --> 03:10.000]  Czartek.
+[03:10.000 --> 03:12.000]  Wystaje...
+[03:12.000 --> 03:14.000]  Czartek.
+[03:14.000 --> 03:16.000]  Wystaje...
+[03:16.000 --> 03:18.000]  Kogo...
+[03:18.000 --> 03:20.000]  Wszuczte.
+[03:20.000 --> 03:22.000]  Wszuczte.
+[03:22.000 --> 03:24.000]  Wszuczte.
+[03:24.000 --> 03:26.000]  Ok. Co robię?
+[03:26.000 --> 03:28.000]  Wystaje kogo wszuczte.
+[03:28.000 --> 03:36.000]  Czartek mam lekcja dla język polskiego.
+[03:36.000 --> 03:38.000]  Mam...
+[03:38.000 --> 03:40.000]  Ja, przepraszam. Wiem, wiem, wiem.
+[03:40.000 --> 03:42.000]  Wiem, wiem, wiem.
+[03:42.000 --> 03:44.000]  Lekcja.
+[03:44.000 --> 03:46.000]  Lekcja.
+[03:46.000 --> 03:48.000]  Czego?
+[03:48.000 --> 03:50.000]  Jaki to przykład?
+[03:50.000 --> 03:52.000]  Lekcja...
+[03:52.000 --> 03:54.000]  Czego to będzie?
+[03:54.000 --> 03:56.000]  Dopilniacz.
+[03:56.000 --> 03:58.000]  Polskie...
+[03:58.000 --> 04:00.000]  Język polski.
+[04:00.000 --> 04:02.000]  Język to jest nazwa.
+[04:02.000 --> 04:04.000]  Język to jest...
+[04:04.000 --> 04:06.000]  Język...
+[04:06.000 --> 04:08.000]  K.
+[04:08.000 --> 04:10.000]  Przepraszam.
+[04:10.000 --> 04:12.000]  Dopilniacz to jest...
+[04:12.000 --> 04:14.000]  Wiem, wiem, wiem.
+[04:14.000 --> 04:16.000]  Ok.
+[04:16.000 --> 04:18.000]  Język...
+[04:18.000 --> 04:20.000]  Język polski.
+[04:20.000 --> 04:22.000]  Języka...
+[04:22.000 --> 04:24.000]  Języka...
+[04:24.000 --> 04:26.000]  Języka...
+[04:26.000 --> 04:28.000]  Polskiego.
+[04:28.000 --> 04:30.000]  Tak.
+[04:30.000 --> 04:32.000]  Najpierw to, potem to.
+[04:32.000 --> 04:34.000]  Języka polskiego, języka angielskiego,
+[04:34.000 --> 04:36.000]  języka niemieckiego,
+[04:36.000 --> 04:38.000]  cokolwiek. Języka, potem
+[04:38.000 --> 04:40.000]  przymiotki. Dobra?
+[04:40.000 --> 04:42.000]  Języka polskiego.
+[04:42.000 --> 04:44.000]  Wracam do domu
+[04:44.000 --> 04:46.000]  w pół do jedenastej.
+[04:46.000 --> 04:48.000]  W pół do jedenastej.
+[04:48.000 --> 04:50.000]  W pół do jedenastej jesteśmy tutaj.
+[04:50.000 --> 04:52.000]  W pół do jedenastej.
+[04:52.000 --> 04:54.000]  Robić...
+[04:54.000 --> 04:56.000]  Robić.
+[04:56.000 --> 04:58.000]  Przygotowuję i jem,
+[04:58.000 --> 05:00.000]  je,
+[05:00.000 --> 05:02.000]  robię,
+[05:02.000 --> 05:04.000]  robię,
+[05:04.000 --> 05:06.000]  robię,
+[05:06.000 --> 05:08.000]  robię,
+[05:08.000 --> 05:10.000]  robię,
+[05:10.000 --> 05:12.000]  jem, jem kolację.
+[05:12.000 --> 05:14.000]  jem, jem kolację.
+[05:14.000 --> 05:16.000]  A w której?
+[05:16.000 --> 05:18.000]  O dwunastej.
+[05:18.000 --> 05:20.000]  O dwunastej.
+[05:20.000 --> 05:22.000]  W południe.
+[05:22.000 --> 05:24.000]  Nie jem
+[05:24.000 --> 05:26.000]  śniadanie.
+[05:26.000 --> 05:28.000]  Albo...
+[05:28.000 --> 05:30.000]  Albo...
+[05:30.000 --> 05:32.000]  Jestem godny.
+[05:32.000 --> 05:34.000]  Koło
+[05:34.000 --> 05:36.000]  dwunastej.
+[05:36.000 --> 05:38.000]  I co Pani od dwunastej?
+[05:38.000 --> 05:40.000]  Przepraszam, proszę
+[05:40.000 --> 05:42.000]  poprosić?
+[05:42.000 --> 05:44.000]  Co Pan je od dwunastej?
+[05:44.000 --> 05:46.000]  O, co Pan je?
+[05:46.000 --> 05:48.000]  Kolację?
+[05:48.000 --> 05:50.000]  Kolację, tak.
+[05:50.000 --> 05:52.000]  Na pewno?
+[05:52.000 --> 05:54.000]  Tak, tak. Na pewno.
+[05:54.000 --> 05:56.000]  Co Pan je wieczorem?
+[05:56.000 --> 05:58.000]  Nie je wieczorem.
+[05:58.000 --> 06:00.000]  Like, jem
+[06:00.000 --> 06:02.000]  posił.
+[06:02.000 --> 06:04.000]  No.
+[06:04.000 --> 06:06.000]  Jem
+[06:06.000 --> 06:08.000]  dinner was...
+[06:08.000 --> 06:10.000]  No, obiad was lunch.
+[06:10.000 --> 06:12.000]  Sorry, ok, obiad, obiad, sorry.
+[06:12.000 --> 06:14.000]  Jem obiad, obiad.
+[06:14.000 --> 06:16.000]  Jem obiad
+[06:16.000 --> 06:18.000]  dwunastej. Tak, jeszcze raz.
+[06:18.000 --> 06:20.000]  Tak, tak, ok, ok.
+[06:20.000 --> 06:22.000]  I see what you're saying.
+[06:22.000 --> 06:24.000]  Jem obiad
+[06:24.000 --> 06:26.000]  w dwunastej.
+[06:26.000 --> 06:28.000]  Nie jem, o dwunastej
+[06:28.000 --> 06:30.000]  nie jem kolację.
+[06:30.000 --> 06:32.000]  Not so, right?
+[06:32.000 --> 06:34.000]  You still weren't so?
+[06:34.000 --> 06:36.000]  Ok, let's see.
+[06:36.000 --> 06:38.000]  So,
+[06:38.000 --> 06:40.000]  lubię je zdrowe
+[06:40.000 --> 06:42.000]  jeszcz.
+[06:42.000 --> 06:44.000]  O, tak, tak. Lubię jeszcz zdrowe
+[06:44.000 --> 06:46.000]  jezanie.
+[06:46.000 --> 06:48.000]  Jem salad.
+[06:48.000 --> 06:50.000]  Sawatkę.
+[06:50.000 --> 06:52.000]  Sawatka?
+[06:52.000 --> 06:54.000]  Sawatkę.
+[06:54.000 --> 06:56.000]  It's a mixture.
+[06:56.000 --> 06:58.000]  Jak się mówi?
+[06:58.000 --> 07:00.000]  Mixture?
+[07:00.000 --> 07:02.000]  Mieszana.
+[07:02.000 --> 07:04.000]  Mieszana, kurczak,
+[07:04.000 --> 07:06.000]  jajko,
+[07:06.000 --> 07:08.000]  jajko, jajko.
+[07:08.000 --> 07:10.000]  Cebula,
+[07:10.000 --> 07:12.000]  cebula, ser,
+[07:12.000 --> 07:14.000]  pomidor,
+[07:14.000 --> 07:16.000]  pomidor,
+[07:16.000 --> 07:18.000]  ze sosem,
+[07:18.000 --> 07:20.000]  ze
+[07:20.000 --> 07:22.000]  z kukurydzą,
+[07:22.000 --> 07:24.000]  z kukurydzą, tak?
+[07:24.000 --> 07:26.000]  So, mix,
+[07:26.000 --> 07:28.000]  miszą, mix
+[07:28.000 --> 07:30.000]  and jem.
+[07:30.000 --> 07:32.000]  A czego pan nigdy nie je na obiad?
+[07:32.000 --> 07:34.000]  A czego pan nigdy nie je na obiad?
+[07:34.000 --> 07:36.000]  Czego ma pan
+[07:36.000 --> 07:38.000]  nigdy nie je?
+[07:38.000 --> 07:40.000]  Nigdy nie ma pan na obiad.
+[07:40.000 --> 07:42.000]  Nie, tak,
+[07:42.000 --> 07:44.000]  nic,
+[07:44.000 --> 07:46.000]  nic,
+[07:46.000 --> 07:48.000]  nic,
+[07:48.000 --> 07:50.000]  nic,
+[07:50.000 --> 07:52.000]  jak się może poprosić o coś,
+[07:52.000 --> 07:54.000]  coś, coś, co jest
+[07:54.000 --> 07:56.000]  ciężkie, tak?
+[07:56.000 --> 07:58.000]  Tak.
+[07:58.000 --> 08:00.000]  Tak, ciężkie,
+[08:00.000 --> 08:02.000]  tak, ciężkie,
+[08:02.000 --> 08:04.000]  nie, nie,
+[08:04.000 --> 08:06.000]  nie, nie,
+[08:06.000 --> 08:08.000]  no takie stỏi typing.
+[08:08.000 --> 08:10.000]  It is,
+[08:10.000 --> 08:12.000]  to tamév,
+[08:12.000 --> 08:14.000]  to tamév,
+[08:14.000 --> 08:16.000]  to tamev,
+[08:16.000 --> 08:18.000]  to tamev.
+[08:18.000 --> 08:20.000] 片,
+[08:20.000 --> 08:22.000]  to tamév.
+[08:22.000 --> 08:26.000]  insane,
+[08:26.000 --> 08:30.000]  insane,
+[08:30.000 --> 08:32.000] áocko jest tam,
+[08:32.000 --> 08:34.000]  to tam tapesy,
+[08:34.000 --> 08:40.000]  Ale nie wiem czy to jest rzecz.
+[08:40.000 --> 08:46.000]  Warzywa, owoce, grzyby, mięso, ciasta, ciastka.
+[08:46.000 --> 08:55.000]  Substancje płynne.
+[08:55.000 --> 09:17.000]  Ale wydrukowałam też, żeby każdy miał na dzisiaj, ale jak ktoś potierze na nagranie, to samo.
+[09:17.000 --> 09:20.000]  To samo oprócz ostatniej strony.
+[09:20.000 --> 09:24.000]  Dobra, a co Pan robi w piątek?
+[09:24.000 --> 09:25.000]  Piątek.
+[09:25.000 --> 09:33.000]  W piątek o 10 do 11.
+[09:33.000 --> 09:35.000]  Od 10?
+[09:35.000 --> 09:40.000]  Nie, od 10 do 11.
+[09:40.000 --> 09:47.000]  Odkrzyżę dom.
+[09:47.000 --> 09:48.000]  Kurs?
+[09:48.000 --> 09:50.000]  Vacuuming the house.
+[09:50.000 --> 09:52.000]  Okej, prawie.
+[09:52.000 --> 09:54.000]  Prawie.
+[09:55.000 --> 10:05.000]  Czasownik.
+[10:05.000 --> 10:07.000]  Odkurzać.
+[10:07.000 --> 10:08.000]  A, odkurz.
+[10:08.000 --> 10:10.000]  Ja...
+[10:10.000 --> 10:12.000]  Odkurzam.
+[10:12.000 --> 10:14.000]  Odkurzam.
+[10:14.000 --> 10:15.000]  A, odkurzam dom.
+[10:15.000 --> 10:17.000]  What does it mean?
+[10:17.000 --> 10:20.000]  Tutaj mamy kurz.
+[10:20.000 --> 10:23.000]  Kurz means dust.
+[10:23.000 --> 10:25.000]  Od.
+[10:25.000 --> 10:27.000]  We remove the dust.
+[10:27.000 --> 10:28.000]  Odkurzać.
+[10:28.000 --> 10:29.000]  Okej.
+[10:29.000 --> 10:32.000]  Ja odkurzam i vacuum.
+[10:32.000 --> 10:35.000]  Odkurzam i...
+[10:35.000 --> 10:37.000]  O...
+[10:37.000 --> 10:39.000]  O...
+[10:39.000 --> 10:41.000]  O...
+[10:41.000 --> 10:43.000]  O...
+[10:43.000 --> 10:45.000]  Z 13 do 15.
+[10:45.000 --> 10:46.000]  Mhm.
+[10:46.000 --> 10:47.000]  Idę na szybą mnie.
+[10:47.000 --> 10:48.000]  Mhm.
+[10:48.000 --> 10:49.000]  I...
+[10:49.000 --> 10:50.000]  Od...
+[10:50.000 --> 10:52.000]  Eee...
+[10:52.000 --> 10:53.000]  Cz...
+[10:53.000 --> 10:54.000]  Nie wiem.
+[10:54.000 --> 10:55.000]  Eee...
+[10:55.000 --> 10:56.000]  17 do 18.
+[10:56.000 --> 10:57.000]  Użyczę kursy i od...
+[10:57.000 --> 10:58.000]  O...
+[10:58.000 --> 10:59.000]  Od...
+[10:59.000 --> 11:00.000]  20 do...
+[11:00.000 --> 11:01.000]  20 do...
+[11:01.000 --> 11:02.000]  22...
+[11:02.000 --> 11:03.000]  I...
+[11:03.000 --> 11:04.000]  O...
+[11:04.000 --> 11:05.000]  O...
+[11:05.000 --> 11:06.000]  My...
+[11:06.000 --> 11:07.000]  To jest kurs...
+[11:07.000 --> 11:08.000]  Właśnie...
+[11:08.000 --> 11:09.000]  To jest kurs...
+[11:09.000 --> 11:10.000]  I...
+[11:10.000 --> 11:11.000]  To jest kurs...
+[11:11.000 --> 11:12.000]  To jest kurs...
+[11:12.000 --> 11:13.000]  Właśnie...
+[11:13.000 --> 11:14.000]  Właśnie...
+[11:14.000 --> 11:15.000]  To jest kurs...
+[11:15.000 --> 11:16.000]  To jest kurs...
+[11:16.000 --> 11:17.000]  Ta...
+[11:17.000 --> 11:18.000]  To jest kurs...
+[11:18.000 --> 11:22.000]  Od dwudziesty jedenasty
+[11:22.000 --> 11:32.000]  Ok, od dwudziesty, tak, do?
+[11:32.000 --> 11:39.000]  Od dwudziesty dwudziesty
+[11:39.000 --> 11:45.000]  Nie, od dwudziesty jedenasty
+[11:45.000 --> 11:48.000]  Pierwszej, przepraszam
+[11:48.000 --> 11:50.000]  Pierwszej
+[11:50.000 --> 11:52.000]  Nie
+[11:52.000 --> 11:54.000]  Tak
+[11:54.000 --> 11:56.000]  Tak
+[11:56.000 --> 12:01.000]  Czyli od dwudziesty do wpół do dwudziestej pierwszej
+[12:01.000 --> 12:05.000]  Inaczej do wpół do dziewiątej
+[12:05.000 --> 12:08.000]  Inaczej od dwudziestej do dwudziestej trzydzieści
+[12:08.000 --> 12:10.000]  Ok, mamy
+[12:10.000 --> 12:15.000]  Je kolację z rodzicami
+[12:15.000 --> 12:17.000]  Kto je?
+[12:17.000 --> 12:18.000]  Kolację
+[12:18.000 --> 12:19.000]  Kto?
+[12:19.000 --> 12:20.000]  Z rodzicami
+[12:20.000 --> 12:22.000]  Ale kto je?
+[12:22.000 --> 12:26.000]  Kto je?
+[12:26.000 --> 12:28.000]  Ale ja się nie zgadzam, co ja jem
+[12:28.000 --> 12:31.000]  Kto? Kto z nich?
+[12:31.000 --> 12:33.000]  Ja
+[12:33.000 --> 12:35.000]  Ty powiedziałeś, że jem kolację
+[12:35.000 --> 12:37.000]  Jem kolację, o
+[12:37.000 --> 12:39.000]  O, jem kolację, ok
+[12:39.000 --> 12:41.000]  Jem kolację, ok
+[12:41.000 --> 12:43.000]  Czyli ja jem, ok, kolacja dobra
+[12:43.000 --> 12:45.000]  A bo ja jem kolację dobra
+[12:45.000 --> 12:47.000]  To ja jem kolację do dwudziesty jedenasty
+[12:47.000 --> 12:48.000]  Ok
+[12:48.000 --> 12:50.000]  Suggestia, pogodnia?
+[12:50.000 --> 12:51.000]  Wszystko
+[12:51.000 --> 12:53.000]  Mogę pytać jeszcze?
+[12:53.000 --> 12:54.000]  Proszę
+[12:54.000 --> 12:56.000]  No, nie, nie, nie
+[12:56.000 --> 12:57.000]  Tak, tak
+[12:57.000 --> 13:01.000]  Czyli jakby, jakby chciałem powiedzieć, że robię coś na pół godziny
+[13:01.000 --> 13:04.000]  Nie chcę powiedzieć, że robię to całe, o, dwudziesty
+[13:04.000 --> 13:06.000]  Chcę tylko powiedzieć, że robię
+[13:06.000 --> 13:08.000]  Nie wiem, jakby
+[13:08.000 --> 13:10.000]  Chwileczkę
+[13:10.000 --> 13:12.000]  Na pół godziny
+[13:12.000 --> 13:14.000]  Jak to powiedzieć, że robię to na pół godziny?
+[13:14.000 --> 13:16.000]  Wiesz co mówię?
+[13:16.000 --> 13:17.000]  Tak, tak
+[13:17.000 --> 13:20.000]  Więc, jeśli chcę powiedzieć, że robię coś na 90 minut
+[13:20.000 --> 13:22.000]  Ok, więc
+[13:22.000 --> 13:24.000]  Nie chcę powiedzieć, że robię to na kilkudziesiąt minut
+[13:24.000 --> 13:26.000]  Chcę powiedzieć, że robię to na pół godziny
+[13:26.000 --> 13:27.000]  Mhm
+[13:27.000 --> 13:28.000]  Więc
+[13:28.000 --> 13:33.000]  I, i, a, gojina i wupu, pu?
+[13:33.000 --> 13:35.000]  Mhm, ok
+[13:35.000 --> 13:37.000]  Szasz?
+[13:37.000 --> 13:41.000]  Hmm
+[13:41.000 --> 13:42.000]  Ok
+[13:42.000 --> 13:45.000]  Czy to jest słowo, które ludzie nie używają normalnie tutaj?
+[13:45.000 --> 13:46.000]  Nie używamy, ale jest tak
+[13:46.000 --> 13:48.000]  O, w przedszkolach? Ok
+[13:48.000 --> 13:52.000]  Nie, nie mówię, że w przedszkolach, ale nie wiem, czy masz to, może to później
+[13:52.000 --> 13:54.000]  Przesnaga
+[13:57.000 --> 14:02.000]  Półtorej godziny
+[14:04.000 --> 14:06.000]  To znaczy
+[14:08.000 --> 14:09.000]  Ale
+[14:09.000 --> 14:11.000]  Używamy tego końca tylko
+[14:12.000 --> 14:14.000]  Po rodzaju żeńskim
+[14:14.000 --> 14:16.000]  Po rodzaju
+[14:16.000 --> 14:18.000]  Hmm
+[14:22.000 --> 14:24.000]  Półtora
+[14:24.000 --> 14:28.000]  Rodzaj męski i rodzaj nijaki
+[14:31.000 --> 14:33.000]  Półtorej
+[14:33.000 --> 14:35.000]  Rodzaj żeński
+[14:35.000 --> 14:37.000]  Na przykład
+[14:39.000 --> 14:40.000]  Ok
+[14:40.000 --> 14:41.000]  Jeśli ja bym
+[14:41.000 --> 14:43.000]  Zmienił jedną całą i pół
+[14:43.000 --> 14:45.000]  To jest półtorej butelki
+[14:45.000 --> 14:47.000]  Ponieważ to jest butelka, tak?
+[14:47.000 --> 14:48.000]  Rodzaj żeński
+[14:48.000 --> 14:49.000]  Półtorej
+[14:49.000 --> 14:50.000]  Godzina
+[14:50.000 --> 14:52.000]  Półtorej godziny
+[14:52.000 --> 14:54.000]  Minuta
+[14:54.000 --> 14:56.000]  Półtorej minuty
+[14:56.000 --> 14:58.000]  Dzień
+[14:58.000 --> 15:00.000]  Półtora
+[15:00.000 --> 15:02.000]  Półtora czego?
+[15:02.000 --> 15:05.000]  Dzienna?
+[15:05.000 --> 15:06.000]  No?
+[15:06.000 --> 15:07.000]  Dnia, ok
+[15:07.000 --> 15:10.000]  Półtora dnia
+[15:10.000 --> 15:29.000]  Półtora dnia
+[15:29.000 --> 15:34.000]  Półtora dnia
+[15:34.000 --> 15:35.000]  Tak, mam półtora
+[15:35.000 --> 15:36.000]  Półtora miesiąca
+[15:36.000 --> 15:38.000]  Na przykład
+[15:38.000 --> 15:39.000]  Półtora miesiąca?
+[15:39.000 --> 15:41.000]  Mięsiać i pół miesięcy.
+[15:41.000 --> 15:42.000]  O, ok.
+[15:42.000 --> 15:45.000]  Więc na przykład, mamy, myślę,
+[15:45.000 --> 15:50.000]  pół miesięcy z tej klasy.
+[15:50.000 --> 15:52.000]  Tak, tak, tak. Ok, ok.
+[15:52.000 --> 15:54.000]  Więc półtora miesiąca.
+[15:54.000 --> 15:59.000]  Nasze zajęcia, nasza lekcja trwają półtorej godziny.
+[15:59.000 --> 16:01.000]  Ok?
+[16:01.000 --> 16:03.000]  Zrobimy to.
+[16:03.000 --> 16:06.000]  Czyli co? Trening trwa półtorej godziny.
+[16:06.000 --> 16:08.000]  Pan ćwiczy przez półtorej godziny.
+[16:08.000 --> 16:12.000]  Tak, tak, tak.
+[16:12.000 --> 16:16.000]  Możemy jechać, gdzieś, nasza podróż.
+[16:16.000 --> 16:18.000]  Travel.
+[16:18.000 --> 16:22.000]  Dobra.
+[16:22.000 --> 16:26.000]  Ok. Jeszcze jakieś pytania?
+[16:26.000 --> 16:27.000]  Nie.
+[16:27.000 --> 16:29.000]  Dobrze. A co Pani robi w sobotę?
+[16:29.000 --> 16:31.000]  Co Pani robi?
+[16:31.000 --> 16:37.000]  Dziewiętnastu, w sobotę od dziewiętnastu...
+[16:37.000 --> 16:41.000]  Od dziewiątej do dwunastej.
+[16:41.000 --> 16:42.000]  Mhm.
+[16:42.000 --> 16:44.000]  Czyli do dwunastej.
+[16:44.000 --> 16:47.000]  Tak samo. Od dziewiątej do dwunastej.
+[16:47.000 --> 16:51.000]  Od dziewiątej lekcja ceramika.
+[16:51.000 --> 16:52.000]  Mhm.
+[16:52.000 --> 16:56.000]  I dwunastej do...
+[16:56.000 --> 17:01.000]  ...dziewiętnastej.
+[17:01.000 --> 17:03.000]  Czwarty.
+[17:03.000 --> 17:05.000]  Czwarty.
+[17:05.000 --> 17:06.000]  Jeszcze...
+[17:06.000 --> 17:07.000]  Czwarty.
+[17:07.000 --> 17:08.000]  Od dziewiętnasty...
+[17:08.000 --> 17:09.000]  Od dziewiętnasty...
+[17:09.000 --> 17:10.000]  Od dziewiętnasty do...
+[17:10.000 --> 17:11.000]  Od obiadu.
+[17:11.000 --> 17:12.000]  No, obiad.
+[17:12.000 --> 17:13.000]  Czyli Pani je obiad. Jem obiad?
+[17:13.000 --> 17:14.000]  Jem obiad.
+[17:14.000 --> 17:15.000]  Mhm.
+[17:15.000 --> 17:18.000]  I...
+[17:18.000 --> 17:19.000]  ...dwunastu.
+[17:19.000 --> 17:20.000]  Od szesnasty...
+[17:20.000 --> 17:25.000]  Od dziesnasty do...
+[17:25.000 --> 17:27.000]  ...dwunastu...
+[17:27.000 --> 17:29.000]  Dwunastu...
+[17:29.000 --> 17:31.000]  Dwunasto drugi.
+[17:31.000 --> 17:32.000]  Mhm.
+[17:32.000 --> 17:33.000]  Od szesnasty...
+[17:33.000 --> 17:34.000]  ...dwunastu...
+[17:34.000 --> 17:46.000]  Do dwudziestej drugiej.
+[17:46.000 --> 17:48.000]  Tak.
+[17:48.000 --> 17:52.000]  Pływam tak szybko.
+[17:52.000 --> 17:54.000]  Ok.
+[17:54.000 --> 17:56.000]  Na zaciągku. Ok. Pływam. Dobra.
+[17:56.000 --> 17:58.000]  Tak długo?
+[17:58.000 --> 18:00.000]  Tak, tak. Trzy godziny.
+[18:00.000 --> 18:02.000]  Ojej.
+[18:02.000 --> 18:04.000]  Nie wiem, co chodzi tam.
+[18:04.000 --> 18:06.000]  Tam też, ok.
+[18:06.000 --> 18:10.000]  O której Pani je kolację?
+[18:10.000 --> 18:14.000]  To...
+[18:14.000 --> 18:20.000]  ...
+[18:20.000 --> 18:22.000]  ...
+[18:22.000 --> 18:24.000]  ...dwudziestej.
+[18:24.000 --> 18:26.000]  O dwudziestej? Tak. Ok.
+[18:26.000 --> 18:28.000]  ...
+[18:28.000 --> 18:30.000]  ...
+[18:30.000 --> 18:32.000]  ...
+[18:32.000 --> 18:34.000]  ...
+[18:34.000 --> 18:36.000]  Po dwudziestej drugiej.
+[18:36.000 --> 18:38.000]  ...
+[18:38.000 --> 18:40.000]  ...
+[18:40.000 --> 18:42.000]  ...
+[18:42.000 --> 18:44.000]  ...
+[18:44.000 --> 18:46.000]  ...
+[18:46.000 --> 18:48.000]  ...
+[18:48.000 --> 18:50.000]  ...
+[18:50.000 --> 18:52.000]  ...
+[18:52.000 --> 18:54.000]  ...
+[18:54.000 --> 18:56.000]  ...
+[18:56.000 --> 18:58.000]  ...
+[18:58.000 --> 19:00.000]  Ok.
+[19:00.000 --> 19:02.000]  Czyli tak. Co? Język polski.
+[19:02.000 --> 19:04.000]  Lubię. Co lubię?
+[19:04.000 --> 19:06.000]  ...
+[19:06.000 --> 19:08.000]  Tak. Język polski.
+[19:08.000 --> 19:10.000]  Język polski. A nie lubię?
+[19:10.000 --> 19:12.000]  Język polski.
+[19:12.000 --> 19:14.000]  Nie lubię.
+[19:14.000 --> 19:16.000]  ...
+[19:16.000 --> 19:18.000]  ...
+[19:18.000 --> 19:20.000]  ...
+[19:20.000 --> 19:22.000]  Dobra, ale szybciej uzupełnimy.
+[19:22.000 --> 19:24.000]  Dobra, ok. Czyli tak. Co lubię?
+[19:24.000 --> 19:26.000]  Lubię język polski. Nie lubię czego?
+[19:26.000 --> 19:28.000]  ...
+[19:28.000 --> 19:30.000]  Języka polskiego. Potem głos.
+[19:30.000 --> 19:32.000]  Co lubię?
+[19:32.000 --> 19:34.000]  Lubię język polski.
+[19:34.000 --> 19:36.000]  ...
+[19:36.000 --> 19:38.000]  ...
+[19:38.000 --> 19:40.000]  ...
+[19:40.000 --> 19:42.000]  ...
+[19:42.000 --> 19:44.000]  ...
+[19:44.000 --> 19:46.000]  ...
+[19:46.000 --> 19:48.000]  ...
+[19:48.000 --> 19:50.000]  ...
+[19:50.000 --> 19:52.000]  ...
+[19:52.000 --> 19:54.000]  ...
+[19:54.000 --> 19:56.000]  ...
+[19:56.000 --> 19:58.000]  ...
+[19:58.000 --> 20:00.000]  ...
+[20:00.000 --> 20:02.000]  ...
+[20:02.000 --> 20:06.000]  ...
+[20:06.000 --> 20:08.000]  ...
+[20:30.000 --> 20:32.000]  Dobrze. Pomyśl co?
+[20:32.000 --> 20:35.000]  zorganizować, żeby było po kolei mniej ręcznych chociaż.
+[20:35.000 --> 20:37.000]  Dobra.
+[20:37.000 --> 20:40.000]  To wiemy, do tego wracamy.
+[20:41.000 --> 20:43.000]  I mamy tak.
+[20:43.000 --> 21:05.000]  I ustaliliśmy, że tak. Co robię?
+[21:05.000 --> 21:09.000]  Język polski jest tak samo.
+[21:09.000 --> 21:12.000]  O, wiem, co to jest.
+[21:12.000 --> 21:13.000]  No dobrze.
+[21:13.000 --> 21:15.000]  Język polski. Dobra.
+[21:15.000 --> 21:17.000]  I mówiliśmy, że co lubię?
+[21:17.000 --> 21:20.000]  Język polski.
+[21:20.000 --> 21:23.000]  A czego nie lubię?
+[21:23.000 --> 21:25.000]  Języka polskiego.
+[21:25.000 --> 21:26.000]  Tak.
+[21:26.000 --> 21:31.000]  Języka polskiego.
+[21:31.000 --> 21:33.000]  I teraz zrobię tak.
+[21:33.000 --> 21:36.000]  Boks. Co lubię?
+[21:36.000 --> 21:37.000]  Boks.
+[21:37.000 --> 21:39.000]  Boks. Tak samo. Czego nie lubię?
+[21:39.000 --> 21:40.000]  Boksu.
+[21:40.000 --> 21:41.000]  Boksu.
+[21:41.000 --> 21:42.000]  Boksu.
+[21:42.000 --> 21:43.000]  Boks.
+[21:44.000 --> 21:45.000]  Boksu.
+[21:45.000 --> 21:48.000]  A więc mamy dalej teatr.
+[21:48.000 --> 21:49.000]  Co lubię?
+[21:49.000 --> 21:50.000]  Teatr.
+[21:50.000 --> 21:51.000]  Teatr.
+[21:51.000 --> 21:52.000]  To tak samo.
+[21:52.000 --> 21:53.000]  Czego nie lubię?
+[21:53.000 --> 21:54.000]  Teatr.
+[21:54.000 --> 21:55.000]  Teatr.
+[21:55.000 --> 21:56.000]  Aha.
+[21:56.000 --> 21:57.000]  No dobrze.
+[21:57.000 --> 21:59.000]  Dobra.
+[21:59.000 --> 22:00.000]  Co lubię?
+[22:00.000 --> 22:01.000]  Głoski makaron.
+[22:04.000 --> 22:06.000]  Czego nie lubię?
+[22:06.000 --> 22:07.000]  Co lubię?
+[22:07.000 --> 22:11.000]  Głoski makaron.
+[22:11.000 --> 22:14.000]  Makaron. Czego nie lubię?
+[22:14.000 --> 22:16.000]  Polskiego makaronu.
+[22:16.000 --> 22:23.000]  Aha. Polskiego makaronu. Dobra.
+[22:23.000 --> 22:28.000]  Co dalej? Co to jest? Ciemny ryż. Co lubię?
+[22:28.000 --> 22:32.000]  Posłuchaj. To samo.
+[22:32.000 --> 22:38.000]  Czyli to jest tak samo jak mianownik. Czego nie lubię?
+[22:38.000 --> 22:41.000]  Ciemnego ryżu.
+[22:41.000 --> 22:47.000]  Ciemnego ryżu.
+[22:47.000 --> 22:53.000]  Japońska kuchnia. Co lubię?
+[22:53.000 --> 22:56.000]  Japońską kuchnię.
+[22:56.000 --> 23:07.000]  Aha. Japońską kuchnię. To jest jajnik. Czego nie lubię?
+[23:07.000 --> 23:10.000]  Japońskiej kuchni.
+[23:10.000 --> 23:15.000]  Japońskiej kuchni.
+[23:15.000 --> 23:20.000]  Muzyka jazzowa.
+[23:20.000 --> 23:23.000]  Co lubię?
+[23:23.000 --> 23:26.000]  Muzykę jazzową.
+[23:26.000 --> 23:28.000]  Tak.
+[23:28.000 --> 23:34.000]  Muzyka jazzową. Czego nie lubię?
+[23:34.000 --> 23:37.000]  Muzykę jazzową.
+[23:37.000 --> 23:40.000]  Tak.
+[23:40.000 --> 23:42.000]  Muzyka jazzowa.
+[23:42.000 --> 23:48.000]  Muzykę jazzową. Ok. Dobra.
+[23:48.000 --> 23:54.000]  Publiczna telewizja.
+[23:54.000 --> 23:57.000]  Co lubię?
+[23:57.000 --> 24:00.000]  Publisza telewizja.
+[24:00.000 --> 24:02.000]  Tak.
+[24:02.000 --> 24:05.000]  Publiszna...
+[24:05.000 --> 24:09.000]  Telewizję. A czego nie lubię?
+[24:09.000 --> 24:13.000]  Koniecznej telewizji.
+[24:13.000 --> 24:17.000]  Telewizji.
+[24:17.000 --> 24:21.000]  Potem mamy zupę pomidorową.
+[24:21.000 --> 24:27.000]  Lubię zupę pomidorową.
+[24:27.000 --> 24:33.000]  I nie lubię zupy pomidorowej.
+[24:33.000 --> 24:35.000]  Zupę pomidorową.
+[24:35.000 --> 24:37.000]  Jeszcze raz, jaki?
+[24:37.000 --> 24:39.000]  Zupę pomidorową.
+[24:39.000 --> 24:41.000]  Pomidorowej.
+[24:41.000 --> 24:43.000]  Pomidorowej.
+[24:43.000 --> 24:45.000]  Ok.
+[24:45.000 --> 24:47.000]  Dobra.
+[24:47.000 --> 24:49.000]  Wieszczą tutaj.
+[24:49.000 --> 24:53.000]  Woda mineralna.
+[24:53.000 --> 24:55.000]  Co lubię?
+[24:55.000 --> 24:59.000]  Wodę mineralną.
+[24:59.000 --> 25:02.000]  Wodę mineralną.
+[25:02.000 --> 25:03.000]  Czego nie lubię?
+[25:03.000 --> 25:05.000]  Czego nie lubię?
+[25:05.000 --> 25:07.000]  Wodę mineralną.
+[25:07.000 --> 25:09.000]  Mhm.
+[25:09.000 --> 25:13.000]  Dobra. I...
+[25:13.000 --> 25:15.000]  Czarna kawa.
+[25:15.000 --> 25:17.000]  Co lubię?
+[25:17.000 --> 25:21.000]  Czarną kawę.
+[25:21.000 --> 25:23.000]  Mhm.
+[25:23.000 --> 25:25.000]  Czarną.
+[25:25.000 --> 25:27.000]  Nie lubię czarnej kawy.
+[25:27.000 --> 25:29.000]  Ok.
+[25:29.000 --> 25:31.000]  No.
+[25:31.000 --> 25:33.000]  No.
+[25:33.000 --> 25:35.000]  No.
+[25:35.000 --> 25:37.000]  Ok.
+[25:37.000 --> 25:39.000]  No.
+[25:39.000 --> 25:41.000]  No.
+[25:41.000 --> 25:43.000]  No.
+[25:43.000 --> 25:45.000]  No.
+[25:45.000 --> 25:47.000]  No.
+[25:47.000 --> 25:49.000]  No.
+[25:49.000 --> 25:51.000]  No.
+[25:51.000 --> 25:53.000]  No.
+[25:53.000 --> 25:55.000]  No.
+[25:55.000 --> 25:57.000]  No.
+[25:57.000 --> 25:59.000]  No.
+[25:59.000 --> 26:01.000]  To jest...
+[26:01.000 --> 26:03.000]  Wiemieckiego piwa.
+[26:06.000 --> 26:07.000]  Dobra.
+[26:08.000 --> 26:10.000]  Polskie kino.
+[26:12.000 --> 26:13.000]  Posole.
+[26:15.000 --> 26:16.000]  Czekaj, nie lubię.
+[26:16.000 --> 26:18.000]  Polskie kino.
+[26:18.000 --> 26:19.000]  Tak.
+[26:23.000 --> 26:25.000]  Francuskie wino.
+[26:26.000 --> 26:27.000]  To samo.
+[26:27.000 --> 26:28.000]  Mhm.
+[26:31.000 --> 26:32.000]  Czego nie lubię?
+[26:32.000 --> 26:34.000]  Francuskiego wina.
+[26:34.000 --> 26:35.000]  Ok.
+[26:39.000 --> 26:41.000]  I ostatnie.
+[26:41.000 --> 26:43.000]  Mięso.
+[26:44.000 --> 26:45.000]  To samo.
+[26:45.000 --> 26:46.000]  Mhm.
+[26:46.000 --> 26:47.000]  Czego nie lubię?
+[26:47.000 --> 26:48.000]  Mięso.
+[26:48.000 --> 26:49.000]  Mięso, dobra.
+[26:49.000 --> 26:51.000]  I co tutaj widzimy?
+[26:52.000 --> 26:53.000]  Mięso.
+[26:53.000 --> 26:56.000]  Kiedy jest tak samo, kiedy jest inaczej?
+[26:57.000 --> 26:59.000]  To rodzaj męski.
+[27:00.000 --> 27:01.000]  Mhm.
+[27:01.000 --> 27:02.000]  Rodzaj męski.
+[27:02.000 --> 27:03.000]  Rodzaj męski.
+[27:03.000 --> 27:04.000]  Rodzaj męski.
+[27:05.000 --> 27:06.000]  Męski.
+[27:07.000 --> 27:09.000]  Tu mamy rodzaj męski.
+[27:10.000 --> 27:17.000]  Rodzaju męskim jest wiernik taki sam jak mianownik.
+[27:18.000 --> 27:20.000]  A tutaj mamy rodzaj nijaki.
+[27:20.000 --> 27:21.000]  Rodzaj nijaki.
+[27:22.000 --> 27:23.000]  Rodzaj męski.
+[27:24.000 --> 27:25.000]  Rodzaj męski.
+[27:26.000 --> 27:29.000]  A tu mamy wszystko rodzaj żeński.
+[27:29.000 --> 27:38.000]  I tu się zmienia w końcówki i w dopełniaczu i w pierniku.
+[27:38.000 --> 27:45.000]  Ok. Jeszcze będziemy sobie świecić dopełniacz.
+[27:45.000 --> 27:48.000]  I to było zadanie domowe.
+[27:48.000 --> 27:52.000]  I teraz tak, uwaga.
+[27:52.000 --> 28:07.000]  Udało mi się w środku nocy...
+[28:07.000 --> 28:11.000]  Udało mi się przygotować wszystko, co jest potrzebne.
+[28:20.000 --> 28:21.000]  Ok.
+[28:21.000 --> 28:24.000]  Na początek mamy przypomnienie.
+[28:24.000 --> 28:29.000]  Tutaj na górze jest liczba pojedyncza.
+[28:29.000 --> 28:34.000]  Na dole tego kółka jest liczba mnoga.
+[28:34.000 --> 28:37.000]  Na razie robimy tylko liczbę pojedynczą.
+[28:37.000 --> 28:45.000]  I mamy tutaj wszystkie końcówki przykładowe w liczbie pojedynczej, w liczbie mnogiej na pierwszej stronie.
+[28:45.000 --> 28:47.000]  Tutaj jest najważniejsze.
+[28:47.000 --> 28:49.000]  Ale teraz dalej.
+[28:49.000 --> 28:51.000]  Uwaga.
+[28:51.000 --> 28:54.000]  Kiedy używamy dopełniacza?
+[28:54.000 --> 28:56.000]  When use dopełniacz?
+[28:56.000 --> 29:08.000]  Tutaj mamy wszystkie, prawie wszystkie, nie wiem, sytuacje, kiedy używamy dopełniacza.
+[29:08.000 --> 29:13.000]  Here we have nearly every situation when use dopełniacz.
+[29:13.000 --> 29:17.000]  Na przykład, gdy mówimy o cenie.
+[29:17.000 --> 29:20.000]  Coś kosztuje pięć czego?
+[29:20.000 --> 29:22.000]  Złotych.
+[29:22.000 --> 29:25.000]  Kiedy mówimy o wieku?
+[29:25.000 --> 29:27.000]  When we talk about age.
+[29:27.000 --> 29:29.000]  Ona ma dwanaście lat.
+[29:29.000 --> 29:32.000]  Lat, dopełniacz, kogo czego lat.
+[29:32.000 --> 29:34.000]  Pochodzenie, skąd jestem?
+[29:34.000 --> 29:36.000]  Jestem z czego?
+[29:36.000 --> 29:38.000]  Z Polski.
+[29:38.000 --> 29:40.000]  Kiedy...
+[29:40.000 --> 29:41.000]  Tak.
+[29:41.000 --> 29:43.000]  Ona ma...
+[29:43.000 --> 29:45.000]  Ona ma, he has.
+[29:45.000 --> 29:47.000]  Ona ma, tak?
+[29:47.000 --> 29:49.000]  Ma, masz, tak?
+[29:49.000 --> 29:53.000]  Masz, biernik, tak?
+[29:53.000 --> 29:55.000]  I have, what?
+[29:55.000 --> 29:58.000]  That, shouldn't that be biernik?
+[29:58.000 --> 30:01.000]  Ona ma, like ona ma telefon.
+[30:01.000 --> 30:03.000]  To, telefon would be...
+[30:03.000 --> 30:05.000]  It won't change in telephone, but...
+[30:05.000 --> 30:07.000]  Ona ma, so...
+[30:07.000 --> 30:09.000]  Ona ma...
+[30:09.000 --> 30:11.000]  Co?
+[30:11.000 --> 30:13.000]  Dwanaście czego?
+[30:13.000 --> 30:14.000]  Lat.
+[30:14.000 --> 30:17.000]  So the number is the same biernik, but lat is in the dopełniacz.
+[30:17.000 --> 30:22.000]  We use it only when we talk about age.
+[30:22.000 --> 30:23.000]  Ok.
+[30:23.000 --> 30:26.000]  Ona ma telefon, ona ma kubek, ona ma komputer, cokolwiek.
+[30:26.000 --> 30:30.000]  Biernik, ona ma dwanaście, dwadzieścia, czterdzieści lat.
+[30:30.000 --> 30:32.000]  Dopełniacz.
+[30:32.000 --> 30:37.000]  So dwanaście in that case, the number would be biernik?
+[30:37.000 --> 30:38.000]  Technik, yes.
+[30:38.000 --> 30:39.000]  Ale...
+[30:39.000 --> 30:41.000]  Technik.
+[30:41.000 --> 30:43.000]  Ok, ok.
+[30:43.000 --> 30:45.000]  I'm not asking any questions.
+[30:45.000 --> 30:46.000]  Ok, and...
+[30:47.000 --> 30:51.000]  Lat would still remain the same?
+[30:51.000 --> 30:54.000]  No, it changes for the two, three, four thing.
+[30:54.000 --> 30:56.000]  It changes into lata.
+[30:56.000 --> 31:01.000]  No, that is, I know what you're talking about, but I'm saying that ona ma...
+[31:01.000 --> 31:05.000]  This is still, this is dopełniacz, right? Ona ma...
+[31:05.000 --> 31:10.000]  Let's focus about lat, not how many, because lat is in dopełniacz.
+[31:10.000 --> 31:13.000]  But lat is the base word, right?
+[31:13.000 --> 31:14.000]  Base word.
+[31:14.000 --> 31:15.000]  Yeah.
+[31:15.000 --> 31:17.000]  So shouldn't that become lata?
+[31:17.000 --> 31:18.000]  Ona ma...
+[31:18.000 --> 31:23.000]  Or lat, ok, what he said, ok, ok, ok, ok, alright, alright, ok.
+[31:23.000 --> 31:37.000]  Jeden rok, tak, a baby, jeden rok, dwa, trzy, cztery lata, pięć, sześć, siedem lat.
+[31:37.000 --> 31:39.000]  Tak, tak, tak.
+[31:39.000 --> 31:41.000]  Ile to ma lat?
+[31:41.000 --> 31:43.000]  Ma...
+[31:45.000 --> 31:46.000]  Jestem stary.
+[31:46.000 --> 31:48.000]  Ok, ok.
+[31:48.000 --> 31:51.000]  Sześćdziesci sześć, sześćdziesci sześć.
+[31:51.000 --> 31:53.000]  Czterdzieści sześć?
+[31:53.000 --> 31:58.000]  Nie, nie, nie, not cztery, sześćdziesci sześć, trady sześć, ja.
+[31:58.000 --> 32:00.000]  Sześćdziesci sześć?
+[32:00.000 --> 32:03.000]  No, no, sześćdziesci, sześćdziesci, sześć, sześć.
+[32:03.000 --> 32:04.000]  Szydzieści?
+[32:04.000 --> 32:05.000]  Ha, ha, sześćdziesci sześć.
+[32:05.000 --> 32:06.000]  Szydzieści sześć?
+[32:06.000 --> 32:07.000]  Ok.
+[32:07.000 --> 32:08.000]  Szydzieści sześć?
+[32:08.000 --> 32:10.000]  This is cheating, man.
+[32:10.000 --> 32:11.000]  This is cheating.
+[32:11.000 --> 32:13.000]  You ask that question to everyone, no.
+[32:13.000 --> 32:14.000]  No.
+[32:14.000 --> 32:15.000]  No, no.
+[32:15.000 --> 32:16.000]  Not fair.
+[32:16.000 --> 32:17.000]  Not fair.
+[32:17.000 --> 32:18.000]  Not fair.
+[32:18.000 --> 32:21.000]  It's not all about the same.
+[32:21.000 --> 32:22.000]  Not fair.
+[32:22.000 --> 32:23.000]  It's ok.
+[32:23.000 --> 32:25.000]  This is not for this one.
+[32:25.000 --> 32:27.000]  This is not a stereotype.
+[32:27.000 --> 32:33.000]  Dobrze, potem będziemy pytać, co inne osoby mylą, a nie?
+[32:33.000 --> 32:36.000]  Dobra, i jeszcze brak negacja brytyjna.
+[32:36.000 --> 32:41.000]  To jest to, co robiliśmy, czyli biernik mamy, jeśli chcemy zaprzec,
+[32:41.000 --> 32:44.000]  and we want to negate this, like I don't like, I don't have,
+[32:44.000 --> 32:46.000]  I don't something, something.
+[32:46.000 --> 32:49.000]  A she'll do 제대로 położenie.
+[32:49.000 --> 32:52.000]  Bo poczekam, żeby avete-kgnac lip친 furnace.
+[32:52.000 --> 32:53.000]  Dobra.
+[32:53.000 --> 32:54.000]  Dobra.
+[32:54.000 --> 32:55.000]  Dobra.
+[32:55.000 --> 32:56.000]  Dobra.
+[32:56.000 --> 32:57.000]  Czuwam chyba.
+[32:57.000 --> 32:58.000]  Wy mondo profesjonalnego piosenka, z că GSAI Sustainable Development Policy investigating
+[32:58.000 --> 33:15.160]  or左 over 2 million experiments andо
+[33:15.160 --> 33:26.160]  O i ostatnie, na samym dole, dopełnienie po przyimkach, czyli na przykład piję kawę bez czego? Cukru.
+[33:26.160 --> 33:29.160]  Albo piję kawę bez mleka.
+[33:29.160 --> 33:33.160]  Albo... co jeszcze?
+[33:35.160 --> 33:38.160]  Ten obiad jest bez soli.
+[33:38.160 --> 33:40.160]  Ten obiad ma sól.
+[33:40.160 --> 33:43.160]  Ale, uwaga, mamy kilka wyjątków.
+[33:43.160 --> 33:46.160]  Pewnie jest ich więcej.
+[33:50.160 --> 33:52.160]  Ok, sorry.
+[33:52.160 --> 33:55.160]  No, no, no, wyjątkowo z pierwszych.
+[33:55.160 --> 33:57.160]  Ok, next...
+[33:57.160 --> 33:59.160]  Exceptions.
+[33:59.160 --> 34:05.160]  Ok, next we have when we use ending.
+[34:05.160 --> 34:06.160]  Which ending?
+[34:06.160 --> 34:13.160]  In rodzaj męski mamy a, na przykład Krakowa, chłopca, brata.
+[34:13.160 --> 34:15.160]  Syna.
+[34:15.160 --> 34:17.160]  Mleka.
+[34:17.160 --> 34:19.160]  To jest rodzaj nijaki akurat.
+[34:19.160 --> 34:21.160]  Kurczaka.
+[34:21.160 --> 34:30.160]  Albo u, na przykład klubu, teatru, jogurtu i tak dalej, i tak dalej.
+[34:30.160 --> 34:33.160]  Tutaj mamy chyba, no nie wiem czy wszystkie.
+[34:33.160 --> 34:37.160]  Starałam się dać najbardziej popularne kategorie.
+[34:37.160 --> 34:40.160]  So here I put like the most common categories.
+[34:40.160 --> 34:42.160]  Na przykład miesiące.
+[34:42.160 --> 34:43.160]  Miesiące.
+[34:43.160 --> 34:45.160]  Sporty i gry.
+[34:45.160 --> 34:46.160]  Tańce.
+[34:46.160 --> 34:48.160]  Naczynia.
+[34:48.160 --> 34:49.160]  Sztućce.
+[34:49.160 --> 34:51.160]  Aha.
+[34:51.160 --> 34:52.160]  Co jeszcze?
+[34:52.160 --> 34:53.160]  Warzywa, owoce.
+[34:53.160 --> 34:54.160]  O, to jest ważne.
+[34:54.160 --> 34:55.160]  Mięso.
+[34:55.160 --> 34:56.160]  To jest ważne.
+[34:56.160 --> 34:58.160]  Będziemy później mówić też o jedzeniu.
+[34:58.160 --> 35:01.160]  Będziemy powtarzać jedzenie z dopełniaczem.
+[35:01.160 --> 35:04.160]  Co jeszcze?
+[35:04.160 --> 35:07.160]  No, marki samochodów, marki papierosów.
+[35:07.160 --> 35:09.160]  Może to nie jest najbardziej ważne.
+[35:09.160 --> 35:11.160]  Maybe that's not the most important, but ok.
+[35:11.160 --> 35:19.160]  Tak i kiedy używamy u?
+[35:19.160 --> 35:25.160]  Na przykład środki transportu, czyli w Krakowie.
+[35:25.160 --> 35:29.160]  O, nie wszystkie środki transportu.
+[35:29.160 --> 35:33.160]  Ok, there is also a lot of exceptions in this.
+[35:33.160 --> 35:40.160]  For example, w Krakowie nie ma czego metra, which is terminal transport.
+[35:40.160 --> 35:42.160]  It is their vehicle, kind of.
+[35:42.160 --> 35:45.160]  But wheels are not u, I don't know why.
+[35:45.160 --> 35:47.160]  Ok, now it's ok.
+[35:47.160 --> 35:58.160]  Nie ma czego autobusu, nie ma roweru, nie ma...
+[35:58.160 --> 36:00.160]  A, ok.
+[36:00.160 --> 36:02.160]  Samochodu.
+[36:02.160 --> 36:04.160]  Samochodu, na przykład.
+[36:04.160 --> 36:06.160]  Mhm.
+[36:06.160 --> 36:07.160]  Rowerów.
+[36:07.160 --> 36:08.160]  Ale...
+[36:08.160 --> 36:10.160]  Czy ja to dobrze robię?
+[36:10.160 --> 36:12.160]  Tak, tak, tak.
+[36:12.160 --> 36:17.160]  Tak, ponieważ to jest rodzaj męski.
+[36:17.160 --> 36:20.160]  Ok, so we supply only to rodzaj męski.
+[36:20.160 --> 36:22.160]  W liczbie pojedynczej.
+[36:22.160 --> 36:23.160]  Mhm.
+[36:23.160 --> 36:24.160]  Ponieważ na przykład...
+[36:24.160 --> 36:25.160]  Na przykład co?
+[36:25.160 --> 36:27.160]  No, kulajnoga to jest rodzaj żeński, nie ma czego kulajnoga.
+[36:27.160 --> 36:28.160]  Dobrze.
+[36:28.160 --> 36:31.160]  Mamy też kiedy używamy jakich końcówek w rodzaju żeńskim i w jakich jest rodzaj męski.
+[36:31.160 --> 36:32.160]  Tak, tak, tak.
+[36:32.160 --> 36:33.160]  Tak, tak.
+[36:33.160 --> 36:34.160]  No, to jest rodzaj męski.
+[36:34.160 --> 36:35.160]  No, to jest rodzaj męski.
+[36:35.160 --> 36:36.160]  No, to jest rodzaj męski.
+[36:36.160 --> 36:37.160]  No, to jest rodzaj męski.
+[36:37.160 --> 36:38.160]  No, to jest rodzaj męski.
+[36:38.160 --> 36:39.160]  Nie ma czego do tego.
+[36:39.160 --> 36:40.160]  Tak, tak.
+[36:40.160 --> 36:41.160]  To jest rodzaj męski.
+[36:41.160 --> 36:42.160]  Tak, tak, tak.
+[36:42.160 --> 36:43.160]  No, to jest rodzaj męski.
+[36:43.160 --> 36:44.160]  No, to jest rodzaj męski.
+[36:44.160 --> 36:45.160]  Tak.
+[36:45.160 --> 36:47.160]  Ile jest końcówek w rodzaju żeńskim i w rodzaju...
+[36:47.160 --> 36:48.160]  Widzimy nogi, ale liczmy noga później.
+[36:48.160 --> 36:49.160]  W rodzaju żeńskim to wiemy, że i albo y.
+[36:49.160 --> 36:50.160]  Jest też kilka wyjątków, oczywiście, jak zawsze.
+[36:50.160 --> 36:51.160]  W języku polskim zawsze są wyjątki.
+[36:51.160 --> 36:52.160]  But let's say that the general information is, everything is here.
+[36:52.160 --> 36:53.160]  Your time will be from...
+[36:53.160 --> 36:54.160]  Sorry?
+[36:54.160 --> 36:55.160]  From.
+[36:55.160 --> 36:56.160]  Tram?
+[36:56.160 --> 36:57.160]  Tram, why?
+[36:57.160 --> 36:58.160]  Tram, bo...
+[36:58.160 --> 36:59.160]  Mhm.
+[36:59.160 --> 37:00.160]  I co?
+[37:00.160 --> 37:01.160]  I co?
+[37:01.160 --> 37:02.160]  Tram.
+[37:02.160 --> 37:03.160]  Tram, bo...
+[37:03.160 --> 37:15.160]  Sorry? Tram. Tramwaj. Tramwaj. I co? Nie ma czego tramwaju. Tramwaju. Tramwaju. Roweru. Roweru.
+[37:15.160 --> 37:35.160]  Samolotu na przykład. Dobra. Nie tak. Rodzaj męski, rodzaj nijaki. Okej. I teraz wracamy tu do wyjątków.
+[37:35.160 --> 37:42.160]  Na przykład jest chłopiec, ale tego czego nie ma chłopca. Chłopiec z bojem.
+[37:42.160 --> 37:44.160]  Albo tak jak mówiliśmy dzień.
+[37:44.160 --> 37:45.160]  Półtorej.
+[37:45.160 --> 37:47.160]  Półtora czego? Dnia.
+[37:47.160 --> 37:49.160]  So we have...
+[37:53.160 --> 38:04.160]  Okej. Jeden tydzień. Półtora czego? Tygodnia. One and a half week. Półtora tygodnia.
+[38:04.160 --> 38:07.160]  So there is a small change inside of the word.
+[38:12.160 --> 38:13.160]  Rozumiemy?
+[38:14.160 --> 38:15.160]  Na pewno.
+[38:15.160 --> 38:16.160]  Tak.
+[38:16.160 --> 38:17.160]  Jest to.
+[38:17.160 --> 38:18.160]  Tak.
+[38:18.160 --> 38:19.160]  Tak.
+[38:19.160 --> 38:20.160]  Tak.
+[38:20.160 --> 38:21.160]  So there is a few that end with i.
+[38:21.160 --> 38:22.160]  Mhm.
+[38:22.160 --> 38:23.160]  Laci, g, m, c.
+[38:23.160 --> 38:24.160]  Mhm.
+[38:24.160 --> 38:30.160]  But maybe let's focus more about what is changing inside of the word.
+[38:30.160 --> 38:31.160]  For example.
+[38:31.160 --> 38:32.160]  Dzień.
+[38:32.160 --> 38:33.160]  Dnia.
+[38:33.160 --> 38:34.160]  Mhm.
+[38:34.160 --> 38:35.160]  Dnia.
+[38:35.160 --> 38:36.160]  Dzień.
+[38:36.160 --> 38:37.160]  Dnia.
+[38:37.160 --> 38:38.160]  Dzień.
+[38:38.160 --> 38:39.160]  Dnia.
+[38:39.160 --> 38:40.160]  Dzień.
+[38:40.160 --> 38:41.160]  Dnia.
+[38:41.160 --> 38:42.160]  Dnia.
+[38:42.160 --> 38:43.160]  Mhm.
+[38:43.160 --> 38:44.160]  Dnia.
+[38:44.160 --> 38:45.160]  Nie.
+[38:45.160 --> 38:47.160]  So where is the N kingdom?
+[38:47.160 --> 38:48.160]  I don't know.
+[38:48.160 --> 38:50.160]  Where is the Z?
+[38:50.160 --> 38:55.160]  So that's just how this word works in the package, ok?
+[38:55.160 --> 38:57.160]  Or for example...
+[38:57.160 --> 39:02.160]  brat, jeden brat, ale nie mam czego.
+[39:02.160 --> 39:04.160]  Braci, żadnych braci.
+[39:04.160 --> 39:08.160]  Tu mamy ty, tu mamy cy, czyli ty zmienia się do cy.
+[39:08.160 --> 39:10.160]  Very good.
+[39:10.160 --> 39:16.160]  Albo tydzień.
+[39:21.160 --> 39:28.160]  Nie mam wolnego tygodnia.
+[39:36.160 --> 39:39.160]  Tydzień, tygodnia.
+[39:39.160 --> 39:40.160]  Ok?
+[39:40.160 --> 39:43.160]  So the base word is tydzień, not...
+[39:43.160 --> 39:44.160]  Jeden tydzień.
+[39:44.160 --> 39:45.160]  Jeden tydzień.
+[39:45.160 --> 39:50.160]  Ale półtora tygodnia.
+[39:50.160 --> 39:54.160]  So it's wrong to say jeden tygodnia.
+[39:54.160 --> 39:55.160]  Jeden tydzień.
+[39:55.160 --> 39:57.160]  Jeden tydzień, right?
+[39:57.160 --> 39:58.160]  Mhm.
+[40:05.160 --> 40:07.160]  W mianowniku jeden tydzień.
+[40:07.160 --> 40:09.160]  W dotoniaczu tygodnia.
+[40:09.160 --> 40:10.160]  Tygodnia.
+[40:10.160 --> 40:11.160]  Co jeszcze umiemy?
+[40:11.160 --> 40:12.160]  Jednik.
+[40:12.160 --> 40:13.160]  Kogo? Co?
+[40:13.160 --> 40:14.160]  Tydzień.
+[40:14.160 --> 40:15.160]  Narzędnik.
+[40:15.160 --> 40:16.160]  Ty... tydżyn.
+[40:16.160 --> 40:17.160]  Narzędnik.
+[40:17.160 --> 40:18.160]  Tydżyn.
+[40:18.160 --> 40:19.160]  Tygodniem.
+[40:19.160 --> 40:20.160]  Z tygodniem.
+[40:20.160 --> 40:21.160]  Tygodniem.
+[40:21.160 --> 40:22.160]  Tydżyn.
+[40:22.160 --> 40:23.160]  Tydżyn.
+[40:23.160 --> 40:24.160]  Męski, tak?
+[40:24.160 --> 40:25.160]  Tak.
+[40:25.160 --> 40:26.160]  A męski nie ma w żywo...
+[40:26.160 --> 40:27.160]  No change?
+[40:27.160 --> 40:28.160]  Nie ma zmian.
+[40:28.160 --> 40:29.160]  Nie ma zmian.
+[40:29.160 --> 40:30.160]  Nie ma zmian.
+[40:30.160 --> 40:31.160]  Nie ma zmian.
+[40:31.160 --> 40:32.160]  Nie ma zmian.
+[40:32.160 --> 40:33.160]  Nie ma zmian.
+[40:33.160 --> 40:34.160]  Nie ma zmian.
+[40:34.160 --> 40:35.160]  Nie ma zmian.
+[40:35.160 --> 40:36.160]  Nie ma zmian.
+[40:36.160 --> 40:37.160]  Nie ma zmian.
+[40:37.160 --> 40:38.160]  Nie ma zmian.
+[40:38.160 --> 40:39.160]  Nie ma zmian.
+[40:39.160 --> 40:40.160]  Nie ma zmian.
+[40:40.160 --> 40:41.160]  Nie ma zmian.
+[40:41.160 --> 40:42.160]  Nie ma zmian.
+[40:42.160 --> 40:43.160]  Niew�ляются nasty najczęściej.
+[40:43.160 --> 40:44.160]  Zaraz wy noun 급aluję.
+[40:44.160 --> 40:45.160]  Więc wy nouny acabasz.
+[40:45.160 --> 40:46.160]  Ja byłbym zaczynałem na kolejny wydział.
+[40:46.160 --> 40:47.160]  Nie wiesz co типа criarz.
+[40:47.160 --> 40:48.160]  Nie wiedziałem co to znaczy dwinking.
+[40:48.160 --> 40:49.160]  Niew Chinese saying twulig.
+[40:49.160 --> 40:50.160]  Nie wiedziałem co to znaczy twulig.
+[40:50.160 --> 40:51.160]  Nie wiedziałem co to znaczy twulig.
+[40:51.160 --> 40:52.160] Narzec choose �ta z Keepkan.
+[40:52.160 --> 40:53.160]  Ok.
+[40:53.160 --> 40:54.160]  Z ApplicationCC np muszę się coisas zleหนiffsidac.
+[40:54.160 --> 40:55.160]  I wojna jest rDeone.
+[40:55.160 --> 40:56.160]  Nie-.,-кіścś.
+[40:56.160 --> 40:57.160]  hutBstage.
+[40:57.160 --> 40:58.160]  Wsrained ability.
+[40:58.160 --> 40:59.160]  C 무엇 is to 반� cups for the 24th.
+[40:59.160 --> 41:00.160]  darajmy eradik.
+[41:00.160 --> 41:03.960]  Na MT z celownikiem, wiernik.
+[41:05.080 --> 41:07.080]  Tydzień, tak samo.
+[41:09.720 --> 41:11.720]  I coś wymiemy na rzecznik.
+[41:13.820 --> 41:15.820]  Ok, przepraszam, myślę, że...
+[41:16.960 --> 41:18.960]  Tygodniem.
+[41:20.560 --> 41:22.560]  To jest chyba z brekiem.
+[41:23.220 --> 41:23.720]  Przepraszam?
+[41:23.720 --> 41:25.720]  Z brekiem.
+[41:25.720 --> 41:27.720]  Przepraszam, przepraszam.
+[41:28.960 --> 41:30.960]  To jest dla miarki.
+[41:30.960 --> 41:32.960]  Z leku jest neutral.
+[41:36.400 --> 41:37.400]  Na rękę?
+[41:37.400 --> 41:37.900]  Nie.
+[41:37.900 --> 41:38.900]  Na ścianie.
+[41:38.900 --> 41:40.900]  To jest na rękę.
+[41:40.900 --> 41:42.900]  To jest na rzędki, tak.
+[41:42.900 --> 41:44.900]  Tak samo jak na przykład jestem...
+[41:44.900 --> 41:46.900]  Nie wiem kim jestem.
+[41:46.900 --> 41:48.900]  Kim jestem?
+[41:48.900 --> 41:50.900]  Miejmy na zawody?
+[41:50.900 --> 41:52.900]  Wiemy, kto to jest lekarz?
+[41:52.900 --> 41:53.900]  Nie wiem, który lekarz jest.
+[41:53.900 --> 41:54.400]  Doktor.
+[41:54.400 --> 41:55.400]  Jestem kim?
+[41:55.400 --> 41:56.400]  Jestem kim?
+[41:56.400 --> 41:57.400]  Lekarzem.
+[41:57.400 --> 41:58.400]  Tak? Tak samo.
+[41:58.400 --> 41:59.400]  Na rzędnik.
+[41:59.400 --> 42:01.400]  Albo jestem kim?
+[42:01.400 --> 42:03.400]  Francuzem.
+[42:03.400 --> 42:05.400]  Tak samo.
+[42:05.400 --> 42:07.400]  Z czym tygodniem?
+[42:07.400 --> 42:09.400]  To the most important part.
+[42:09.400 --> 42:11.400]  Tydzień, g, z, n.
+[42:11.400 --> 42:13.400]  Ok.
+[42:13.400 --> 42:15.400]  Ok.
+[42:15.400 --> 42:22.400]  Sorry, but I feel like I see tygodnia and mia a lot more than tydzień and dżin.
+[42:22.400 --> 42:24.400]  Is that true?
+[42:24.400 --> 42:25.200]  Could be.
+[42:25.200 --> 42:26.200]  What is it about?
+[42:26.200 --> 42:29.200]  But when do you use tygodnia in this tense?
+[42:29.200 --> 42:30.200]  Do tygodnia?
+[42:30.200 --> 42:31.200]  Yeah.
+[42:31.200 --> 42:32.200]  Mhm.
+[42:44.200 --> 42:45.200]  Ok.
+[42:45.200 --> 42:47.200]  So it's because of do probably.
+[42:47.200 --> 42:48.200]  Mhm.
+[42:48.200 --> 42:50.200]  Do końca.
+[42:50.200 --> 42:51.200]  Czego?
+[42:51.200 --> 42:52.200]  Ok.
+[42:52.200 --> 42:53.200]  Tygodnia.
+[42:53.200 --> 42:55.200]  By the end of the week.
+[42:55.200 --> 42:56.200]  This is usually.
+[42:56.200 --> 42:59.200]  Albo zajęcia trwają ile?
+[42:59.200 --> 43:02.200]  Mówiliśmy na początku.
+[43:02.200 --> 43:07.200]  Kółtora tygodnia.
+[43:07.200 --> 43:09.200]  Kółtora means one and a half.
+[43:09.200 --> 43:10.200]  One and a half.
+[43:10.200 --> 43:11.200]  Mhm.
+[43:11.200 --> 43:15.200]  Czego?
+[43:15.200 --> 43:16.200]  Tygodnia.
+[43:16.200 --> 43:19.200]  O i tak samo się zmienia, nie tak samo.
+[43:19.200 --> 43:21.200]  Podobnie, tak?
+[43:21.200 --> 43:22.200]  Tak.
+[43:22.200 --> 43:23.200]  Czyli to jest tak samo.
+[43:23.200 --> 43:24.200]  To jest tak samo.
+[43:24.200 --> 43:25.200]  Tak.
+[43:25.200 --> 43:26.200]  Dzień, tygodnia, dzień, tygodnia.
+[43:26.200 --> 43:27.200]  Mhm.
+[43:27.200 --> 43:28.200]  Dzień będzie działał tak samo.
+[43:28.200 --> 43:29.200]  Będziemy mieli tylko inne początki.
+[43:29.200 --> 43:30.200]  Bo jest tygodnia i dzień.
+[43:30.200 --> 43:31.200]  Więc jeśli mówisz później w dniu.
+[43:31.200 --> 43:32.200]  Później w dniu.
+[43:32.200 --> 43:33.200]  Mhm.
+[43:33.200 --> 43:34.200]  Używasz tygodni.
+[43:34.200 --> 43:35.200]  Mhm.
+[43:35.200 --> 43:36.200]  Tak.
+[43:36.200 --> 43:37.200]  Albo.
+[43:37.200 --> 43:38.200]  Albo.
+[43:38.200 --> 43:39.200]  Albo.
+[43:39.200 --> 43:40.200]  Albo.
+[43:40.200 --> 43:41.200]  Albo.
+[43:41.200 --> 43:42.200]  Albo.
+[43:42.200 --> 43:43.200]  Albo.
+[43:43.200 --> 43:44.200]  Albo.
+[43:44.200 --> 43:45.200]  Albo.
+[43:45.200 --> 43:46.200]  Albo.
+[43:46.200 --> 43:47.200]  Albo.
+[43:47.200 --> 43:48.200]  Albo.
+[43:48.200 --> 43:49.200]  Albo.
+[43:49.200 --> 43:50.200]  Albo.
+[43:50.200 --> 43:51.200]  Albo.
+[43:51.200 --> 43:52.200]  Albo.
+[43:52.200 --> 43:53.200]  Albo.
+[43:53.200 --> 43:54.200]  Albo.
+[43:54.200 --> 43:55.200]  Albo.
+[43:55.200 --> 43:56.200]  Albo.
+[43:56.200 --> 43:57.200]  Albo.
+[43:57.200 --> 43:58.200]  Albo.
+[43:58.200 --> 43:59.200]  Albo.
+[43:59.200 --> 44:00.200]  Albo.
+[44:00.200 --> 44:01.200]  Albo.
+[44:01.200 --> 44:02.200]  Albo.
+[44:02.200 --> 44:03.200]  Albo.
+[44:03.200 --> 44:04.200]  Albo.
+[44:04.200 --> 44:05.200]  Albo.
+[44:05.200 --> 44:06.200]  Albo.
+[44:06.200 --> 44:07.200]  Albo.
+[44:07.200 --> 44:08.200]  Albo...
+[44:08.200 --> 44:09.200]  Albo.
+[44:09.200 --> 44:10.200]  Albo.
+[44:10.200 --> 44:11.200]  Albo.
+[44:11.200 --> 44:12.200]  Albo.
+[44:12.200 --> 44:13.200]  Albo.
+[44:13.200 --> 44:14.200]  Albo...
+[44:14.200 --> 44:15.200]  Albo...
+[44:15.200 --> 44:16.200]  Albo...
+[44:16.200 --> 44:17.200]  Albo çıkar cada Email.
+[44:17.200 --> 44:18.200]  Anak z filmuonga.
+[44:18.200 --> 44:20.200]  Tak.
+[44:20.200 --> 44:22.200]  Ok.
+[44:22.200 --> 44:29.200]  So, miłego dnia, to są słowa, prawda?
+[44:29.200 --> 44:31.200]  Miłego dnia.
+[44:31.200 --> 44:33.200]  Tak.
+[44:33.200 --> 44:39.200]  Miłego czego? Miłego posiłku, miłego czegoś tam.
+[44:39.200 --> 44:42.200]  Miłego dnia, miłego tygodnia, miłego miesiąca.
+[44:42.200 --> 44:44.200]  To też będzie dopełniacz.
+[44:44.200 --> 44:48.200]  Dobra.
+[44:48.200 --> 44:50.200]  O, tak.
+[44:50.200 --> 44:53.200]  I też będą miłego dnia, to są życzenia, tak?
+[44:53.200 --> 44:55.200]  My życzymy komuś.
+[44:55.200 --> 44:58.200]  We wish someone a good day, good week.
+[44:58.200 --> 45:02.200]  Tak samo, nowego, szczęśliwego nowego roku.
+[45:02.200 --> 45:07.200]  So, like, merry, happy new year, tak?
+[45:07.200 --> 45:11.200]  Szczęśliwego czego? Nowego roku.
+[45:11.200 --> 45:13.200]  No dobrze.
+[45:13.200 --> 45:14.200]  I to jest to.
+[45:14.200 --> 45:18.200]  To są końcówki i to są też końcówki.
+[45:18.200 --> 45:20.200]  Ok.
+[45:20.200 --> 45:24.200]  Dobra.
+[45:24.200 --> 45:29.200]  Tak, mieliśmy końcówki w rodzaju żeńskie, w rodzaju mnijaki.
+[45:29.200 --> 45:31.200]  Mamy też zaimki tutaj.
+[45:31.200 --> 45:35.200]  I zaimki będziemy robić dzisiaj albo na następnych dniach, tak?
+[45:35.200 --> 45:37.200]  Może dzisiaj możemy.
+[45:37.200 --> 45:40.200]  Tak, mówiliśmy zaimki w prąd.
+[45:40.200 --> 45:43.200]  Mieliśmy ostatnio zaimki na żywniku.
+[45:43.200 --> 45:48.200]  Na przykład spotykam się z nią, spotykam się z kim?
+[45:48.200 --> 45:49.200]  Z nimi.
+[45:49.200 --> 45:52.200]  Teraz mamy zaimki w dopełniaczu.
+[45:52.200 --> 45:53.200]  Tak.
+[45:53.200 --> 45:58.200]  Mhm, tak.
+[45:58.200 --> 46:00.200]  Dobra.
+[46:00.200 --> 46:04.200]  To będziemy za chwilę robić.
+[46:04.200 --> 46:09.200]  Mamy jeszcze kiedy używamy dopełniacza, po jakich czasownikach.
+[46:09.200 --> 46:11.200]  Here we have a lot of verbs that comes with dopełniacza.
+[46:11.200 --> 46:17.200]  For example, nienawidzić.
+[46:17.200 --> 46:19.200]  Nienawidzić means hate.
+[46:19.200 --> 46:21.200]  To hate something, someone.
+[46:21.200 --> 46:23.200]  Nienawidzić kogo? Nienawidzić czego?
+[46:23.200 --> 46:27.200]  Albo na przykład potrzebować.
+[46:27.200 --> 46:29.200]  Co znaczy potrzebować?
+[46:29.200 --> 46:32.200]  What does it mean potrzebować?
+[46:32.200 --> 46:34.200]  To need something.
+[46:34.200 --> 46:36.200]  I need kogo?
+[46:36.200 --> 46:37.200]  Kto potrzebuje?
+[46:37.200 --> 46:39.200]  Potrzebuje, nie wiem co.
+[46:39.200 --> 46:40.200]  Potrzebuje wody.
+[46:40.200 --> 46:43.200]  Potrzebuje jedzenia.
+[46:43.200 --> 46:45.200]  Albo słuchać.
+[46:45.200 --> 46:46.200]  Słuchać czego?
+[46:46.200 --> 46:48.200]  To listen.
+[46:48.200 --> 46:49.200]  Czego możemy słuchać?
+[46:49.200 --> 46:51.200]  Słuchać.
+[46:51.200 --> 46:54.200]  What we can listen?
+[46:54.200 --> 46:55.200]  Muzyka.
+[46:55.200 --> 46:56.200]  Muzyka.
+[46:56.200 --> 46:57.200]  Muzyki.
+[46:57.200 --> 46:59.200]  Słucham muzyki.
+[46:59.200 --> 47:03.200]  Słucham...
+[47:03.200 --> 47:08.200]  What else can we listen?
+[47:08.200 --> 47:09.200]  Radia.
+[47:09.200 --> 47:10.200]  Radia.
+[47:10.200 --> 47:11.200]  Słucham radia.
+[47:11.200 --> 47:14.200]  Teraz słucham podcastu.
+[47:14.200 --> 47:16.200]  Na przykład, tu jest podcast.
+[47:16.200 --> 47:20.200]  Słucham nauczyciela.
+[47:20.200 --> 47:22.200]  I listen to the teacher.
+[47:22.200 --> 47:24.200]  Albo na przykład...
+[47:24.200 --> 47:25.200]  Proszę, proszę.
+[47:25.200 --> 47:26.200]  Tak.
+[47:26.200 --> 47:28.200]  Can I close the window?
+[47:28.200 --> 47:33.200]  Mam pytania.
+[47:33.200 --> 47:37.200]  I think I'm having trouble understanding the difference.
+[47:37.200 --> 47:39.200]  So like słucham muzyki.
+[47:39.200 --> 47:42.200]  To jest dopeniaj.
+[47:42.200 --> 47:49.200]  Ale tak, jem kolację to jest biernik.
+[47:49.200 --> 47:57.200]  Więc biernik jest używany, jeśli jest działacz, który interaktywuje z obiektem.
+[47:57.200 --> 47:58.200]  Tak?
+[47:58.200 --> 47:59.200]  Tak.
+[47:59.200 --> 48:01.200]  Tak.
+[48:01.200 --> 48:07.200]  Więc jak... co to jest preferencja?
+[48:07.200 --> 48:08.200]  Jest tam preferencja?
+[48:08.200 --> 48:12.200]  Można wycrić po ogólny z Millennium School Tonight i...
+[48:12.200 --> 48:14.200]  Tak, oczywiście, bo czytamy wszystko反ulowanie.
+[48:15.200 --> 48:16.200]  E Spr май toch겨ć...
+[48:16.200 --> 48:18.000]  By xxxxxxxxx.
+[48:18.000 --> 48:19.000]  $workers pare.
+[48:19.000 --> 48:20.000]  To Bill basics...
+[48:20.000 --> 48:21.000]  Gracias mira xtras.
+[48:21.000 --> 48:30.640]  Nie zaczynam głowy do Kitty'sabulos
+[48:30.640 --> 48:32.720]  Nieángán laughing magnesium Rodriguez.
+[48:32.720 --> 48:33.720]  Wrocław delia.
+[48:33.720 --> 48:34.720]  Growing merci갈prüię.
+[48:34.720 --> 48:37.720]  Często to jest kuatek po hajarze.
+[48:37.720 --> 48:40.920]  Wszystko jest dotyczące czasownika, wyrazu.
+[48:40.920 --> 48:46.220]  Bo jest długa lista wyrazu, po której, po tym wyrazu, używasz
+[48:46.220 --> 48:53.220]  giernik, inny list wyrazu, i po innym wyrazie używasz dopełniacz.
+[48:53.220 --> 48:58.220]  Masz też inny list wyrazu, po którym używasz celownik.
+[48:58.220 --> 48:59.220]  I respektowo...
+[48:59.220 --> 49:02.220]  I gramatycznie to się zachowuje tak samo.
+[49:02.220 --> 49:05.220]  Więc używasz czegoś w korelacji z czymś.
+[49:05.220 --> 49:14.220]  Ale jeśli patrzysz na tekst, na obiekt, na coś, to są podobne.
+[49:14.220 --> 49:18.220]  Ale musisz wiedzieć znaczenie tego...
+[49:18.220 --> 49:21.220]  To są podobne, nie rozumiem tego.
+[49:21.220 --> 49:28.220]  Czyli masz obiekt, obiekt, korelację, więc powinniśmy używać, na przykład,
+[49:28.220 --> 49:30.220]  z jadącym, tak?
+[49:30.220 --> 49:32.220]  Jem kogo? Co?
+[49:32.220 --> 49:33.220]  Giernik.
+[49:35.220 --> 49:40.220]  Tak samo mamy, na przykład, słucham kogo? Czego? Muzyki.
+[49:40.220 --> 49:45.220]  So, grammatically, in the sentence, they are the same.
+[49:45.220 --> 49:46.220]  Tak, tak, tak.
+[49:46.220 --> 49:49.220]  Ja słucham czego? I'm there.
+[49:51.220 --> 49:54.220]  But I'm... like, why does słucham become...
+[49:54.220 --> 49:55.220]  Ok, I think it's...
+[49:55.220 --> 49:58.220]  I guess it's like... it's the dough, right?
+[49:58.220 --> 50:01.220]  Can't I use, like, słucham what? What I mean?
+[50:01.220 --> 50:03.220]  Słucham sól, right?
+[50:03.220 --> 50:05.220]  So, like, is it wrong to use sól?
+[50:05.220 --> 50:07.220]  Like, why can't I use sól?
+[50:07.220 --> 50:09.220]  Suham, why does... suham...
+[50:09.220 --> 50:12.220]  Like, jem sól. Tak, that was the trigger for biernik.
+[50:12.220 --> 50:13.220]  Co, so, what?
+[50:13.220 --> 50:14.220]  Oh, so, so.
+[50:14.220 --> 50:15.220]  So, so.
+[50:15.220 --> 50:16.220]  Oh, because...
+[50:16.220 --> 50:19.220]  That doesn't... I don't know how to understand.
+[50:19.220 --> 50:21.220]  Co, so, so.
+[50:21.220 --> 50:22.220]  Jem sól.
+[50:22.220 --> 50:23.220]  Jem sól.
+[50:23.220 --> 50:24.220]  Am I saying it wrong?
+[50:24.220 --> 50:25.220]  No, sól.
+[50:25.220 --> 50:26.220]  What am I saying?
+[50:26.220 --> 50:27.220]  Sól.
+[50:27.220 --> 50:29.220]  What am I saying?
+[50:29.220 --> 50:32.220]  I think it's just that his... I was hearing, like, S-O.
+[50:32.220 --> 50:33.220]  Yeah, me too.
+[50:33.220 --> 50:34.220]  Oh, ok.
+[50:34.220 --> 50:36.220]  So, so, so.
+[50:36.220 --> 50:37.220]  So, ok.
+[50:37.220 --> 50:38.220]  Aha.
+[50:38.220 --> 50:39.220]  Aha.
+[50:39.220 --> 50:41.220]  I think that maybe it's like in English when you do this.
+[50:41.220 --> 50:49.220]  Because, ok, the problem is that in English when you have these cases, so, biernik is co?
+[50:49.220 --> 50:51.220]  Zupełniacz is czego?
+[50:51.220 --> 50:53.220]  Biernik is co?
+[50:53.220 --> 50:54.220]  Czym?
+[50:54.220 --> 50:56.220]  I tak dalej and so on.
+[50:56.220 --> 50:59.220]  But in English everything is what, what, what and what.
+[50:59.220 --> 51:00.220]  You know what I mean?
+[51:00.220 --> 51:03.220]  Yeah, but we say to, like, when we say listen to music, or we say eat anything,
+[51:03.220 --> 51:09.220]  we say eat a pastry, there's some difference there and like, I think it's a similar distinction.
+[51:09.220 --> 51:15.220]  Although it's not every taste it seems like, because like I don't like this, it's like I don't like this.
+[51:15.220 --> 51:21.220]  So the way to think about this would be then to look, to not look at the sentence structure,
+[51:21.220 --> 51:29.220]  like if I was trying to form a sentence, I would not look at is it a subject, object, I would look at the verb,
+[51:29.220 --> 51:31.220]  I would first look at the verb that I'm using.
+[51:31.220 --> 51:32.220]  Yes.
+[51:32.220 --> 51:40.220]  So for example, we have this, what I like, język polski, what I don't like, język polski.
+[51:40.220 --> 51:45.220]  Like in the English, we translate directly, I like, I don't like, the same.
+[51:45.220 --> 51:53.220]  But in Polish we have język polski, czego języka polskiego, because I don't like is a whole verb,
+[51:53.220 --> 51:57.220]  and this whole verb is always in the language.
+[51:57.220 --> 52:00.220]  So don't like, ok.
+[52:00.220 --> 52:03.220]  So it's not just the, my god.
+[52:03.220 --> 52:06.220]  Yeah, because our negation is a big part of this.
+[52:06.220 --> 52:07.220]  Right.
+[52:07.220 --> 52:09.220]  A lot of them are negations.
+[52:09.220 --> 52:13.220]  Oh, I don't have my fancy flashcards for kids.
+[52:17.220 --> 52:28.220]  Like to summarize this completely, let's say that if you want to know which case you need to use,
+[52:28.220 --> 52:30.220]  you need to look at the verb.
+[52:30.220 --> 52:34.220]  Because, for example, let's give some examples.
+[52:34.220 --> 52:43.220]  I mean, we have this list here, these are the lists of the types of verbs.
+[52:43.220 --> 52:47.220]  Yes, and here you have exactly the list of verbs.
+[52:47.220 --> 52:54.220]  Of course, not all of the verbs, that's the verb you can probably know most of them at your level.
+[52:54.220 --> 52:56.220]  So for example,
+[52:58.220 --> 53:01.220]  …
+[53:25.220 --> 53:26.220]  Ok.
+[53:26.220 --> 53:27.220]  Let us say.
+[53:28.220 --> 53:31.220]  Słuchać. Jaki przypadek?
+[53:32.720 --> 53:33.720]  Dopełniać.
+[53:35.220 --> 53:36.220]  Czego?
+[53:36.720 --> 53:38.220]  Mhm, czyli?
+[53:38.720 --> 53:41.220]  Dopełniacz. Słuchać czego?
+[53:41.220 --> 53:45.220]  Słuchać muzyki, słuchać radia, słuchać podcastu na przykład.
+[53:45.720 --> 53:46.720]  Mówić.
+[53:48.720 --> 53:49.720]  Dopełniacz?
+[53:50.220 --> 53:51.220]  Czy ja...
+[53:51.220 --> 53:52.220]  What?
+[53:52.220 --> 53:53.220]  Biernika?
+[53:53.220 --> 53:54.220]  Mhm.
+[53:55.220 --> 53:56.220]  Mianownik?
+[53:56.220 --> 53:57.220]  Mianownik.
+[53:58.220 --> 53:59.220]  Czego?
+[53:59.220 --> 54:00.220]  Nothing changes.
+[54:00.220 --> 54:01.220]  Co?
+[54:01.220 --> 54:02.220]  Mhm.
+[54:02.220 --> 54:03.220]  Na przykład mówić...
+[54:06.220 --> 54:07.220]  Ok, nie mianownik.
+[54:07.220 --> 54:08.220]  Nie będzie biernik.
+[54:09.220 --> 54:11.220]  Mówić... co mogę mówić?
+[54:13.220 --> 54:14.220]  Zdanie.
+[54:14.220 --> 54:16.220]  Like I tell the sentence.
+[54:17.220 --> 54:18.220]  Mhm.
+[54:18.220 --> 54:21.220]  Ale mogę mówić historię.
+[54:21.220 --> 54:22.220]  Like I tell the story.
+[54:22.220 --> 54:23.220]  So biernik.
+[54:24.220 --> 54:25.220]  Czytać.
+[54:26.220 --> 54:27.220]  Biernik.
+[54:27.220 --> 54:28.220]  No.
+[54:28.220 --> 54:29.220]  Mhm.
+[54:29.220 --> 54:30.220]  Co?
+[54:30.220 --> 54:33.220]  Na przykład czytać książkę.
+[54:33.220 --> 54:35.220]  Czytać gazetę.
+[54:35.220 --> 54:36.220]  For example.
+[54:38.220 --> 54:43.220]  But we can introduce in many...
+[54:43.220 --> 54:48.220]  Ok, you can use multiple cases.
+[54:48.220 --> 54:50.220]  Depends what you want to say.
+[54:50.220 --> 54:51.220]  For example.
+[54:51.220 --> 54:54.220]  You can czytać co?
+[54:55.220 --> 54:56.220]  Książkę.
+[54:56.220 --> 54:57.220]  But you can read to someone.
+[54:57.220 --> 54:58.220]  For example.
+[54:58.220 --> 54:59.220]  That's different case.
+[54:59.220 --> 55:00.220]  Jeść.
+[55:00.220 --> 55:01.220]  Biernik.
+[55:01.220 --> 55:02.220]  Biernik.
+[55:02.220 --> 55:03.220]  Mhm.
+[55:03.220 --> 55:04.220]  Jeść co?
+[55:04.220 --> 55:05.220]  Kolację.
+[55:05.220 --> 55:06.220]  Kolację, włoski makaron, ciemny ryż i tak dalej.
+[55:06.220 --> 55:07.220]  Nie lubić.
+[55:07.220 --> 55:08.220]  Dopełniasz.
+[55:08.220 --> 55:09.220]  Dopełniasz.
+[55:09.220 --> 55:10.220]  Mhm.
+[55:10.220 --> 55:11.220]  Nie lubić...
+[55:11.220 --> 55:12.220]  Zupy pomidorowe i wody mineralnej.
+[55:12.220 --> 55:13.220]  Na przykład.
+[55:13.220 --> 55:14.220]  Tańczyć.
+[55:14.220 --> 55:15.220]  Tańczyć.
+[55:15.220 --> 55:16.220]  Tańczyć.
+[55:16.220 --> 55:17.220]  Tańczyć.
+[55:17.220 --> 55:18.220]  Tańczyć.
+[55:18.220 --> 55:19.220]  Tańczyć.
+[55:19.220 --> 55:20.220]  Tańczyć.
+[55:20.220 --> 55:21.220]  Tańczyć.
+[55:21.220 --> 55:22.220]  Tańczyć.
+[55:22.220 --> 55:23.220]  Tańczyć.
+[55:23.220 --> 55:24.220]  Tańczyć.
+[55:24.220 --> 55:25.220]  Tańczyć.
+[55:25.220 --> 55:26.220]  Tańczyć.
+[55:26.220 --> 55:27.220]  Tańczyć.
+[55:27.220 --> 55:28.220]  Dobra, jadę.
+[55:28.220 --> 55:29.220]  Możesz tańczyć?
+[55:29.220 --> 55:30.220]  To tańczysz?
+[55:30.220 --> 55:31.220]  To tańczę.
+[55:31.220 --> 55:32.220]  To tańczę.
+[55:32.220 --> 55:33.220]  To tańczę.
+[55:33.220 --> 55:34.220]  To co?
+[55:34.220 --> 55:35.220]  Pielę sali.
+[55:35.220 --> 55:36.220]  Pielę sali.
+[55:36.220 --> 55:37.220]  Po wino.
+[55:37.220 --> 55:38.220]  To tańczysz, co?
+[55:38.220 --> 55:39.220]  Co?
+[55:39.220 --> 55:40.220]  Pielę sali.
+[55:40.220 --> 55:41.220]  To też będzie biernik.
+[55:41.220 --> 55:42.220]  Na przykład tańczyć co?
+[55:42.220 --> 55:43.220]  Tango.
+[55:43.220 --> 55:44.220]  Tańczyć...
+[55:44.220 --> 55:45.220]  Salsę.
+[55:45.220 --> 55:46.220]  Tańczyć...
+[55:46.220 --> 55:47.220]  Inne rzeczy.
+[55:47.220 --> 55:48.220]  OK.
+[55:48.220 --> 55:49.220]  So, it doesn't matter.
+[55:49.220 --> 55:52.220]  In the sentence they will look only at the word.
+[55:52.220 --> 55:53.220]  No, no, no, no.
+[55:53.220 --> 55:54.220]  No, no...
+[55:54.220 --> 55:55.220]  No, no, no...
+[55:55.220 --> 55:56.220]  No, no, no...
+[55:56.220 --> 55:59.420]  Wszystko wygląda tak samo, obiekty, obiekt, wszystko.
+[55:59.420 --> 56:04.220]  Musisz patrzeć na wersję i...
+[56:06.220 --> 56:07.220]  Tak, tak.
+[56:07.220 --> 56:09.220]  Gdy mówisz, że czytasz...
+[56:09.220 --> 56:15.220]  Czy musisz czytać przez kogoś, czy musisz powiedzieć, że czytam do?
+[56:15.220 --> 56:17.220]  Nie, ale to jest później.
+[56:17.220 --> 56:19.220]  To tylko kontekst?
+[56:19.220 --> 56:21.220]  Tak, to jest kontekst.
+[56:21.220 --> 56:23.220]  Hmm...
+[56:23.220 --> 56:26.220]  Czemu to się wydarzyło?
+[56:26.220 --> 56:31.220]  Tak, to jest kolejny wypadek, który nie wiesz.
+[56:31.220 --> 56:33.220]  O, okej.
+[56:36.220 --> 56:42.220]  Mam z tobą problem, bo wiesz, że masz puzzle, ale...
+[56:42.220 --> 56:45.220]  Jeśli powiesz, że jeden dzień to będzie sens, to zrozumię.
+[56:45.220 --> 56:49.220]  Nie, ale też są jakieś puzzle, które jeszcze nie masz,
+[56:49.220 --> 56:51.220]  ale czujesz je wewnątrz.
+[56:51.220 --> 56:53.220]  Ale jest coś nieznane i chcesz to zrozumieć.
+[56:53.220 --> 56:54.220]  To w porządku.
+[56:54.220 --> 56:55.220]  To będzie dobrze.
+[56:55.220 --> 56:56.220]  Będzie dobrze.
+[56:56.220 --> 56:57.220]  Jeden dzień.
+[56:58.220 --> 56:59.220]  Rozumiemy.
+[56:59.220 --> 57:00.220]  Okej.
+[57:00.220 --> 57:01.220]  Okej.
+[57:03.220 --> 57:04.220]  No dobrze.
+[57:07.220 --> 57:08.220]  To co, próbujemy.
+[57:08.220 --> 57:10.220]  Może w praktyce zobaczymy, co tu mamy.
+[57:10.220 --> 57:12.220]  Aha, i na końcu jeszcze...
+[57:12.220 --> 57:14.220]  To jest takie dodatkowe trochę...
+[57:14.220 --> 57:15.220]  Alternacje.
+[57:15.220 --> 57:17.220]  Takie alteracje.
+[57:17.220 --> 57:20.220]  Więc jak te słowa się zmieniają.
+[57:20.220 --> 57:21.220]  Na przykład tutaj.
+[57:21.220 --> 57:22.220]  Czyli mamy alternacje.
+[57:22.220 --> 57:25.220]  G, G, G i coś, coś.
+[57:25.220 --> 57:27.220]  To jest bardziej...
+[57:27.220 --> 57:29.220]  Chciałabym powiedzieć, że to jest nadzwyczajne, ale...
+[57:29.220 --> 57:30.220]  Powiedzmy, że to jest na lepszym poziomie.
+[57:30.220 --> 57:33.220]  Ale to jest dobre, tylko w przypadku przyszłości.
+[57:33.220 --> 57:34.220]  I coś.
+[57:34.220 --> 57:35.220]  Okej?
+[57:35.220 --> 57:37.220]  Więc na przykład tutaj.
+[57:37.220 --> 57:38.220]  To, ona, to.
+[57:38.220 --> 57:39.220]  To też jest alternacja.
+[57:39.220 --> 57:43.220]  Więc kiedy masz to na końcu słowa.
+[57:43.220 --> 57:47.220]  To jest wielka możliwość, że to zmieni się.
+[57:47.220 --> 57:49.220]  Zobaczysz w innym przypadku.
+[57:49.220 --> 57:50.220]  Więc ja wybrałam tę ostatnią salę.
+[57:50.220 --> 57:51.220]  Tę ostatnią salę.
+[57:51.220 --> 57:52.220]  Dobra.
+[57:52.220 --> 57:53.220]  Dobra.
+[57:53.220 --> 57:54.220]  Okej.
+[57:54.220 --> 57:55.220]  Czy mogę zapytać...
+[57:55.220 --> 57:56.220]  Niezależne...
+[57:56.220 --> 57:57.220]  Słowa szybkie.
+[57:57.220 --> 57:58.220]  Przepraszam.
+[57:58.220 --> 57:59.220]  Więc jeśli daję przykład.
+[57:59.220 --> 58:00.220]  Dobra.
+[58:00.220 --> 58:01.220]  Więc czy mają...
+[58:01.220 --> 58:02.220]  To jest ten wersja.
+[58:02.220 --> 58:03.220]  Powiedz mi, w jakim przypadku to powinno być.
+[58:03.220 --> 58:04.220]  Czy mam tez...
+[58:04.220 --> 58:05.220]  Wszystkie...
+[58:05.220 --> 58:06.220]  Wariacje tego.
+[58:06.220 --> 58:07.220]  To jest pytanie.
+[58:07.220 --> 58:08.220]  Zobaczmy tutaj drugie.
+[58:08.220 --> 58:09.220]  To jest zadanie, które mogłoby być na egzaminie.
+[58:09.220 --> 58:10.220]  To jest zadanie, które mogłoby być na egzaminie.
+[58:10.220 --> 58:11.220]  To jest zadanie, które mogłoby być na egzaminie.
+[58:11.220 --> 58:12.220]  To jest zadanie, które mogłoby być na egzaminie.
+[58:12.220 --> 58:13.220]  To jest zadanie, które mogłoby być na egzaminie.
+[58:20.220 --> 58:28.200]  To jest zadanie, które mogłoby być na egzaminie.
+[58:28.200 --> 58:41.820]  Natomiast tutaj, zatem, iki z letters to do corresponds to to?
+[58:41.820 --> 58:43.960]  Doanken z tego...
+[58:43.960 --> 58:45.720]  ... até zato Louisiana?
+[58:45.720 --> 58:47.200]  Czy tak?
+[58:47.200 --> 58:49.200]  Włośnie tak mielikerze?
+[58:49.200 --> 58:50.200]  Tak.
+[58:50.200 --> 58:54.200]  To znaczy, że nie jem mięsa.
+[59:06.200 --> 59:08.200]  Czego jeszcze?
+[59:08.200 --> 59:10.200]  Sera.
+[59:14.200 --> 59:20.200]  Sera, a nie produktów z mleka.
+[59:20.200 --> 59:26.200]  Nie zawsze mamy z, bo to narzędnik.
+[59:26.200 --> 59:38.200]  Produktów z mleka.
+[59:38.200 --> 59:40.200]  Nie z mleka.
+[59:46.200 --> 59:48.200]  To nie jest kopiarka.
+[59:48.200 --> 59:50.200]  To nie jest kopiarka.
+[59:50.200 --> 59:52.200]  To jest jedyny.
+[59:52.200 --> 59:54.200]  To jest jedyny.
+[59:54.200 --> 59:56.200]  To jest mleko.
+[59:56.200 --> 59:58.200]  Powiedzmy, że tutaj w każdym gapie musimy użyć dopełniacza.
+[59:58.200 --> 01:00:00.200]  Powiedzmy, że tutaj w każdym gapie musimy użyć dopełniacza.
+[01:00:00.200 --> 01:00:02.200]  Myślę, że on miał dopełniacz.
+[01:00:04.200 --> 01:00:06.200]  Nie jem mięsa, sera, ani produktów z mleka.
+[01:00:06.200 --> 01:00:08.200]  Nie jem mięsa, sera, ani produktów z mleka.
+[01:00:12.200 --> 01:00:14.200]  Jestem pilotem polskich linii lotniczych LOT
+[01:00:14.200 --> 01:00:16.200]  Jestem pilotem polskich linii lotniczych LOT
+[01:00:16.200 --> 01:00:18.200]  i regularnie podróżuję do Francji.
+[01:00:18.200 --> 01:00:20.200]  i regularnie podróżuję do Francji.
+[01:00:20.200 --> 01:00:22.200]  i regularnie podróżuję do Francji.
+[01:00:22.200 --> 01:00:24.200]  i regularnie podróżuję do Francji.
+[01:00:24.200 --> 01:00:26.200]  I napiszemy do końcówki.
+[01:00:26.200 --> 01:00:28.200]  I napiszemy do końcówki.
+[01:00:44.200 --> 01:00:46.200]  Do czego jeszcze?
+[01:00:46.200 --> 01:00:48.200]  Do czego jeszcze?
+[01:00:48.200 --> 01:00:50.200]  Do Hiszpanii.
+[01:00:50.200 --> 01:00:52.200]  Do Hiszpanii.
+[01:00:54.200 --> 01:00:56.200]  Do Hiszpanii.
+[01:00:56.200 --> 01:00:58.200]  Do Portugalii.
+[01:00:58.200 --> 01:01:00.200]  Do Portugalii.
+[01:01:02.200 --> 01:01:04.200]  Dwa razy w miesiącu lakham do?
+[01:01:04.200 --> 01:01:06.200]  Dwa razy w miesiącu lakham do?
+[01:01:10.200 --> 01:01:12.200]  Ameryki.
+[01:01:16.200 --> 01:01:18.200]  A raz w miesiącu do?
+[01:01:18.200 --> 01:01:20.200]  Australia.
+[01:01:20.200 --> 01:01:22.200]  Tak.
+[01:01:22.200 --> 01:01:24.200]  Australia.
+[01:01:24.200 --> 01:01:26.200]  I to jest wszystko rodzaj
+[01:01:26.200 --> 01:01:28.200]  żeński.
+[01:01:28.200 --> 01:01:30.200]  Tak.
+[01:01:30.200 --> 01:01:32.200]  Autokarami
+[01:01:32.200 --> 01:01:34.200]  tej firmy możesz
+[01:01:34.200 --> 01:01:36.200]  pojechać z...
+[01:01:36.200 --> 01:01:38.200]  Gdańsku.
+[01:01:42.200 --> 01:01:44.200]  Gdańska.
+[01:01:44.200 --> 01:01:46.200]  Gdańska.
+[01:01:46.200 --> 01:01:48.200]  Ok.
+[01:01:48.200 --> 01:01:50.200]  To jest dół na tą stronę?
+[01:01:52.200 --> 01:01:54.200]  Jest tam ruch, który mówi,
+[01:01:54.200 --> 01:01:56.200]  że jeśli obiekt jest w życiu,
+[01:01:56.200 --> 01:01:58.200]  zawsze wklej A.
+[01:02:02.200 --> 01:02:04.200]  W życiu?
+[01:02:04.200 --> 01:02:06.200]  Tak.
+[01:02:06.200 --> 01:02:08.200]  To nie jest pierwsza strona.
+[01:02:08.200 --> 01:02:10.200]  Nie w tej, tylko w tej.
+[01:02:10.200 --> 01:02:12.200]  W tej? Tak.
+[01:02:12.200 --> 01:02:14.200]  Jeśli obiekt jest w życiu, to...
+[01:02:14.200 --> 01:02:16.200]  Tak.
+[01:02:16.200 --> 01:02:18.200]  To jest dół na tą stronę.
+[01:02:18.200 --> 01:02:20.200]  Tak.
+[01:02:20.200 --> 01:02:22.200]  Tak.
+[01:02:22.200 --> 01:02:24.200]  Tak.
+[01:02:24.200 --> 01:02:26.200]  Tak.
+[01:02:26.200 --> 01:02:28.200]  Tak.
+[01:02:28.200 --> 01:02:30.200]  Tak.
+[01:02:30.200 --> 01:02:32.200]  Tak.
+[01:02:32.200 --> 01:02:34.200]  Tak.
+[01:02:34.200 --> 01:02:36.200]  Tak.
+[01:02:36.200 --> 01:02:38.200]  Tak.
+[01:02:38.200 --> 01:02:40.200]  Tak.
+[01:02:40.200 --> 01:02:42.200]  Tak.
+[01:02:42.200 --> 01:02:44.200]  Tak.
+[01:02:44.200 --> 01:02:46.200]  Tak.
+[01:02:46.200 --> 01:02:50.200]  Tak.
+[01:02:50.200 --> 01:02:52.200]  Tak.
+[01:02:52.200 --> 01:02:54.200]  Tak.
+[01:02:54.200 --> 01:02:56.200]  Yeah.
+[01:02:56.200 --> 01:02:58.200]  Tak.
+[01:02:58.200 --> 01:03:00.200]  Tak.
+[01:03:00.200 --> 01:03:02.200]  Yeah.
+[01:03:02.200 --> 01:03:04.200]  Tak.
+[01:03:04.200 --> 01:03:06.200]  Tak.
+[01:03:06.200 --> 01:03:08.200]  Tak.
+[01:03:08.200 --> 01:03:10.200]  Ok.
+[01:03:10.200 --> 01:03:12.200]  Dziękuję.
+[01:03:12.200 --> 01:03:14.200]  To jest poeta.
+[01:03:14.200 --> 01:03:16.200]  You are the one,
+[01:03:16.200 --> 01:03:19.200]  więc nie możemy mieć poeta, bo to jest męskie.
+[01:03:19.200 --> 01:03:21.200]  Tak, to jest powodem tego ruchu.
+[01:03:21.200 --> 01:03:22.200]  To jest powodem tego.
+[01:03:22.200 --> 01:03:24.200]  Ale czy to inny powód?
+[01:03:24.200 --> 01:03:26.200]  Co?
+[01:03:26.200 --> 01:03:27.200]  Przepraszam, co?
+[01:03:27.200 --> 01:03:29.200]  Myślę, że to po prostu po prostu coś, co żyje.
+[01:03:29.200 --> 01:03:31.200]  Do pełni us, tak?
+[01:03:31.200 --> 01:03:34.200]  Więc mówimy poeta.
+[01:03:37.200 --> 01:03:40.200]  Tak, nie lube, tak?
+[01:03:40.200 --> 01:03:43.200]  Poeta to mówi o konkretnej osobie,
+[01:03:43.200 --> 01:03:44.200]  ponieważ żyje.
+[01:03:44.200 --> 01:03:47.200]  Dlatego mówimy poeta.
+[01:03:47.200 --> 01:03:49.200]  Myślę.
+[01:03:49.200 --> 01:03:54.200]  Bo poeta to męskie.
+[01:03:54.200 --> 01:03:55.200]  Tak.
+[01:03:55.200 --> 01:03:58.200]  Więc to będzie podstępem.
+[01:03:58.200 --> 01:04:00.200]  A co z kolegą?
+[01:04:00.200 --> 01:04:02.200]  Bo to jest kolejka,
+[01:04:02.200 --> 01:04:06.200]  która jest współpracownikiem męskiego.
+[01:04:06.200 --> 01:04:08.200]  Więc to tylko czas.
+[01:04:08.200 --> 01:04:12.200]  I to kończy się w "-g".
+[01:04:12.200 --> 01:04:14.200]  Nie można mieć "-g",
+[01:04:14.200 --> 01:04:16.200]  bo to jest "-i".
+[01:04:16.200 --> 01:04:17.200]  Więc to jest "-i".
+[01:04:17.200 --> 01:04:18.200]  Tak, to jest "-i".
+[01:04:18.200 --> 01:04:22.200]  Ale w większości przypadków to kończy się z "-a".
+[01:04:22.200 --> 01:04:24.200]  W obu przypadkach.
+[01:04:24.200 --> 01:04:26.200]  Czy żyją czy nie.
+[01:04:26.200 --> 01:04:28.200]  Jak tu jest powiedziane, Puzina.
+[01:04:28.200 --> 01:04:30.200]  No, możesz powiedzieć majoritet.
+[01:04:30.200 --> 01:04:32.200]  Nie wiem, czy to jest majoritet.
+[01:04:32.200 --> 01:04:34.200]  Myślę, że tak.
+[01:04:34.200 --> 01:04:36.200]  Zdecydowanie tak.
+[01:04:36.200 --> 01:04:41.200]  Tylko wyjątkowo tutaj jest powiedziane Puzina, prawda?
+[01:04:41.200 --> 01:04:43.200]  Więc to jest to samo jak Krakova.
+[01:04:43.200 --> 01:04:44.200]  Tak.
+[01:04:44.200 --> 01:04:46.200]  I to jest poety.
+[01:04:46.200 --> 01:04:47.200]  Tak.
+[01:04:47.200 --> 01:04:48.200]  To tylko dlatego.
+[01:04:48.200 --> 01:04:50.200]  Jaki jest mianownik?
+[01:04:50.200 --> 01:04:53.200]  Dopełniacz jest poety.
+[01:04:53.200 --> 01:04:54.200]  Tak.
+[01:04:54.200 --> 01:04:55.200]  Poety.
+[01:04:55.200 --> 01:04:57.200]  Dopełniacz.
+[01:04:57.200 --> 01:04:58.200]  Poety.
+[01:04:58.200 --> 01:05:00.200]  Nie lubię tego poety.
+[01:05:00.200 --> 01:05:02.200]  A jaki jest mianownik?
+[01:05:02.200 --> 01:05:03.200]  Poeta.
+[01:05:03.200 --> 01:05:04.200]  Poeta.
+[01:05:04.200 --> 01:05:05.200]  Poeta.
+[01:05:05.200 --> 01:05:06.200]  Poeta.
+[01:05:06.200 --> 01:05:07.200]  Tak.
+[01:05:07.200 --> 01:05:10.200]  Więc to jest tylko w tym wypadku,
+[01:05:10.200 --> 01:05:11.200]  gdzie jest "-a".
+[01:05:11.200 --> 01:05:12.200]  A dla męża.
+[01:05:12.200 --> 01:05:13.200]  Tak.
+[01:05:13.200 --> 01:05:14.200]  Tak.
+[01:05:14.200 --> 01:05:15.200]  Ok.
+[01:05:15.200 --> 01:05:16.200]  Ale...
+[01:05:16.200 --> 01:05:17.200]  Tak, robiliśmy to ostatni raz.
+[01:05:17.200 --> 01:05:18.200]  Nie mam pojęcia co to jest.
+[01:05:18.200 --> 01:05:19.200]  To jest tylko...
+[01:05:19.200 --> 01:05:22.200]  To zawsze nas zaskoczy, myślę,
+[01:05:22.200 --> 01:05:24.200]  albo mnie, albo kogoś.
+[01:05:24.200 --> 01:05:25.200]  Bo ta wyjątkowość...
+[01:05:25.200 --> 01:05:27.200]  Ale było coś o Puzinie.
+[01:05:27.200 --> 01:05:32.200]  Puzina jest...
+[01:05:32.200 --> 01:05:33.200]  Puzina jest kawałek.
+[01:05:33.200 --> 01:05:34.200]  Tak.
+[01:05:34.200 --> 01:05:35.200]  Więc to jest Puzina.
+[01:05:35.200 --> 01:05:36.200]  Tak.
+[01:05:36.200 --> 01:05:40.200]  To jest normalny męski.
+[01:05:40.200 --> 01:05:41.200]  Tak.
+[01:05:41.200 --> 01:05:42.200]  Puzina.
+[01:05:42.200 --> 01:05:43.200]  Tak.
+[01:05:43.200 --> 01:05:45.200]  I to jest po tej tej pustce,
+[01:05:45.200 --> 01:05:46.200]  to jest "-a".
+[01:05:46.200 --> 01:05:47.200]  Tak.
+[01:05:47.200 --> 01:05:48.200]  Ok, to jest po prostu...
+[01:05:48.200 --> 01:05:49.200]  Ja też się z tym zaskoczę.
+[01:05:49.200 --> 01:05:50.200]  Tak.
+[01:05:50.200 --> 01:05:51.200]  Tak.
+[01:05:51.200 --> 01:05:52.200]  Tak.
+[01:05:52.200 --> 01:05:53.200]  Tak.
+[01:05:53.200 --> 01:05:54.200]  Tak.
+[01:05:54.200 --> 01:05:55.200]  Tak.
+[01:05:55.200 --> 01:05:56.200]  Tak.
+[01:05:56.200 --> 01:05:57.200]  Tak.
+[01:05:57.200 --> 01:05:58.200]  Tak.
+[01:05:58.200 --> 01:05:59.200]  Tak.
+[01:05:59.200 --> 01:06:00.200]  Tak.
+[01:06:00.200 --> 01:06:01.200]  Tak.
+[01:06:01.200 --> 01:06:02.200]  Tak.
+[01:06:02.200 --> 01:06:03.200]  Tak.
+[01:06:03.200 --> 01:06:04.200]  Tak.
+[01:06:04.200 --> 01:06:05.200]  Tak.
+[01:06:05.200 --> 01:06:06.200]  Tak.
+[01:06:06.200 --> 01:06:07.200]  Tak.
+[01:06:07.200 --> 01:06:08.200]  Tak.
+[01:06:08.200 --> 01:06:09.200]  Tak.
+[01:06:09.200 --> 01:06:10.200]  Tak.
+[01:06:10.200 --> 01:06:11.200]  Tak.
+[01:06:11.200 --> 01:06:12.200]  Tak.
+[01:06:12.200 --> 01:06:13.340]  Tak.
+[01:06:13.660 --> 01:06:15.060]  Bo wiecie Paliście z ré gwazlighta,
+[01:06:15.060 --> 01:06:16.960]  między M ils i Christem Dalskatem.
+[01:06:16.960 --> 01:06:18.200]  Tak.
+[01:06:18.200 --> 01:06:20.200]  MO longer Vou crawl w 1941 roku po obiekcie
+[01:06:20.200 --> 01:06:21.200]  Góra Bielskich
+[01:06:22.200 --> 01:06:26.200]  Wkażą awaken wojska wiz accountable
+[01:06:26.200 --> 01:06:31.020]  i
+[01:06:33.200 --> 01:06:35.200]  Uh perfect
+[01:06:35.200 --> 01:06:37.200]  Wypuszczali to
+[01:06:37.200 --> 01:06:39.200]  Beżko
+[01:06:39.200 --> 01:06:45.200]  Nie czytam jeszcze tabel z A do U.
+[01:06:45.200 --> 01:06:51.200]  Zobaczmy mapę polska, znajdę więcej miast.
+[01:06:51.200 --> 01:07:09.200]  Ok, myślę, że wiem.
+[01:07:09.200 --> 01:07:20.200]  Myślę, że są tu pewne konkretne kody, po których masz A,
+[01:07:20.200 --> 01:07:21.200]  i po których masz U.
+[01:07:21.200 --> 01:07:26.200]  Ponieważ koło Gdańska,
+[01:07:26.200 --> 01:07:27.200]  Gdańsk,
+[01:07:27.200 --> 01:07:30.200]  right next to Gdańsk is Sopot, so smaller city.
+[01:07:30.200 --> 01:07:36.200]  But nie ma czego Gdańska and Sopotu.
+[01:07:46.200 --> 01:07:50.200]  That's why I cannot say that there is always a rule that cities are something
+[01:07:50.200 --> 01:07:51.200]  and something that is also a city.
+[01:07:51.200 --> 01:07:57.200]  I if it was a random city that nobody really knows, how would you decide?
+[01:07:57.200 --> 01:08:03.200]  I would just use the ending that I think sounds better.
+[01:08:03.200 --> 01:08:07.200]  Kind of randomly I'm doing this.
+[01:08:07.200 --> 01:08:11.200]  So people don't really regulate this, it's not like a huge...
+[01:08:11.200 --> 01:08:16.200]  The problem with Polish language is that if you are teaching the language,
+[01:08:16.200 --> 01:08:20.200]  you know the rules, some of the rules, but if you are not a teacher,
+[01:08:20.200 --> 01:08:26.200]  like you know, university level education something, something,
+[01:08:26.200 --> 01:08:31.200]  you are just normal Polish guy, you have no idea why something happens.
+[01:08:31.200 --> 01:08:37.200]  Would you necessarily know if somebody said like Timbuktu, it's a hard one, but like...
+[01:08:37.200 --> 01:08:38.200]  Timbuktu?
+[01:08:38.200 --> 01:08:45.200]  Yeah. Would you know how to conjugate that, like here, like would it be Timbukta or something?
+[01:08:45.200 --> 01:08:46.200]  It's still Timbuktu.
+[01:08:46.200 --> 01:08:48.200]  Well, that's an easy one because it has a few...
+[01:08:48.200 --> 01:08:49.200]  .
+[01:08:49.200 --> 01:08:51.200]  Like Nepal, for example.
+[01:08:51.200 --> 01:08:52.200]  Nepal?
+[01:08:52.200 --> 01:08:55.200]  Yeah, Nepal, or Nepal.
+[01:08:55.200 --> 01:08:56.200]  Nepal.
+[01:08:56.200 --> 01:08:58.200]  Everybody knows this?
+[01:08:58.200 --> 01:09:00.200]  Yeah. But you don't know why?
+[01:09:00.200 --> 01:09:01.200]  You just know that...
+[01:09:01.200 --> 01:09:03.200]  .
+[01:09:03.200 --> 01:09:05.200]  It just comes from a...
+[01:09:05.200 --> 01:09:06.200]  .
+[01:09:06.200 --> 01:09:07.200]  .
+[01:09:07.200 --> 01:09:08.200]  .
+[01:09:08.200 --> 01:09:09.200]  .
+[01:09:09.200 --> 01:09:10.200]  I think what you are asking...
+[01:09:10.200 --> 01:09:11.200]  Okay, I understand what you are asking.
+[01:09:11.200 --> 01:09:16.200]  So you are asking like, suppose it was like a name in a book, like a Game of Thrones book,
+[01:09:16.200 --> 01:09:17.200]  for example, right?
+[01:09:17.200 --> 01:09:18.200]  .
+[01:09:18.200 --> 01:09:21.200]  .
+[01:09:21.200 --> 01:09:22.200]  .
+[01:09:22.200 --> 01:09:23.200]  .
+[01:09:23.200 --> 01:09:24.200]  .
+[01:09:24.200 --> 01:09:25.200]  .
+[01:09:25.200 --> 01:09:26.200]  .
+[01:09:26.200 --> 01:09:27.200]  .
+[01:09:27.200 --> 01:09:28.200]  .
+[01:09:28.200 --> 01:09:29.200]  .
+[01:09:29.200 --> 01:09:30.200]  .
+[01:09:30.200 --> 01:09:31.200]  .
+[01:09:31.200 --> 01:09:32.200]  .
+[01:09:32.200 --> 01:09:33.200]  .
+[01:09:33.200 --> 01:09:34.200]  .
+[01:09:34.200 --> 01:09:35.200]  .
+[01:09:35.200 --> 01:09:36.200]  .
+[01:09:36.200 --> 01:09:37.200]  .
+[01:09:37.200 --> 01:09:38.200]  .
+[01:09:38.200 --> 01:09:39.200]  .
+[01:09:39.200 --> 01:09:40.200]  I don't know, like give me a name of a place in Game of Thrones.
+[01:09:40.200 --> 01:09:41.200]  Right?
+[01:09:41.200 --> 01:09:42.200]  .
+[01:09:42.200 --> 01:09:43.200]  .
+[01:09:43.200 --> 01:09:44.200]  .
+[01:09:44.200 --> 01:09:45.200]  .
+[01:09:45.200 --> 01:09:46.200]  .
+[01:09:46.200 --> 01:09:50.200]  Sauron to mordor.
+[01:09:50.200 --> 01:09:52.200]  Zrozumiesz co pytam?
+[01:09:52.200 --> 01:09:56.200]  Nie wiesz naturalnie co to znaczy?
+[01:09:56.200 --> 01:09:58.200]  Mordora?
+[01:09:58.200 --> 01:10:00.200]  Myślę, że to są moje brzuchy.
+[01:10:00.200 --> 01:10:04.200]  Co czujesz w brzuchach? Mordora?
+[01:10:04.200 --> 01:10:06.200]  Mordoru.
+[01:10:06.200 --> 01:10:08.200]  Ok.
+[01:10:08.200 --> 01:10:11.200]  To jest część języka, która jest bardzo...
+[01:10:11.200 --> 01:10:12.200]  Wibra.
+[01:10:12.200 --> 01:10:14.200]  Wibra.
+[01:10:16.200 --> 01:10:20.200]  Dobre jest, że nie ma ruchów,
+[01:10:20.200 --> 01:10:22.200]  że nie możesz ich rozgrzać.
+[01:10:22.200 --> 01:10:26.200]  Możesz powiedzieć co tylko chcesz i będzie to odpowiednie.
+[01:10:26.200 --> 01:10:29.200]  Moje brzuchy są inaczej niż twoje.
+[01:10:29.200 --> 01:10:31.200]  Myślę, że moje brzuchy są jak mordoru.
+[01:10:31.200 --> 01:10:34.200]  Co ty mówisz? To jest nie tak.
+[01:10:38.200 --> 01:10:42.200]  Chociaż mówię, że bez ludzi szkół to nie rozumiem.
+[01:10:42.200 --> 01:10:44.200]  Oczywiście.
+[01:10:44.200 --> 01:10:46.200]  To jest to, co ja chciałem zapytać.
+[01:10:46.200 --> 01:10:48.200]  Bo masz...
+[01:10:48.200 --> 01:10:50.200]  Nie, nie.
+[01:10:50.200 --> 01:10:52.200]  Nie mówię tego.
+[01:10:52.200 --> 01:10:54.200]  To za dużo.
+[01:11:00.200 --> 01:11:02.200]  Ok.
+[01:11:02.200 --> 01:11:06.200]  Jestem bardzo szczęśliwa, że odpowiadam na wszystkie nasze pytania.
+[01:11:06.200 --> 01:11:10.200]  Ale czuję, że nie jestem wystarczająco przygotowana do tego.
+[01:11:10.200 --> 01:11:14.200]  Zazwyczaj nauczam się C1.
+[01:11:14.200 --> 01:11:16.200]  Jak?
+[01:11:16.200 --> 01:11:18.200]  Jestem bardzo głęboka.
+[01:11:18.200 --> 01:11:22.200]  I tutaj muszę pamiętać, bo chcę coś powiedzieć.
+[01:11:22.200 --> 01:11:24.200]  Ale nie wiesz tego i tego i tego.
+[01:11:24.200 --> 01:11:26.200]  Bo to jest jak w książce, w 9.
+[01:11:26.200 --> 01:11:28.200]  A my jesteśmy w 8.
+[01:11:28.200 --> 01:11:30.200]  Czy to jest pierwszy raz, kiedy pracujesz na takim niskim poziomie?
+[01:11:30.200 --> 01:11:32.200]  Może.
+[01:11:34.200 --> 01:11:36.200]  Bo miałaś w ogóle dwa klaski,
+[01:11:36.200 --> 01:11:38.200]  jak w C1.
+[01:11:38.200 --> 01:11:40.200]  Ale...
+[01:11:40.200 --> 01:11:44.200]  Jestem dużo lepsza na C1.9.
+[01:11:44.200 --> 01:11:46.200]  I tam...
+[01:11:46.200 --> 01:11:48.200]  15 lat.
+[01:11:48.200 --> 01:11:50.200]  Tak, tak.
+[01:11:50.200 --> 01:11:52.200]  Ok, mój szybki student
+[01:11:52.200 --> 01:11:54.200]  osiągnął C1
+[01:11:54.200 --> 01:11:56.200]  w 7 miesiącach.
+[01:11:56.200 --> 01:11:58.200]  Co? Słowackie czy nie?
+[01:11:58.200 --> 01:12:00.200]  Słowackie.
+[01:12:00.200 --> 01:12:02.200]  O, chodź, chodź.
+[01:12:02.200 --> 01:12:04.200]  Ale zaczął od słów,
+[01:12:04.200 --> 01:12:06.200]  bo nie mógł...
+[01:12:06.200 --> 01:12:10.200]  Ale miał generalny rozum języka, prawda?
+[01:12:10.200 --> 01:12:12.200]  Tak.
+[01:12:12.200 --> 01:12:14.200]  Ale wiele słów jest słowackich.
+[01:12:14.200 --> 01:12:16.200]  Ale tak.
+[01:12:16.200 --> 01:12:18.200]  Ok, jaka jest twoja najszybsza klaska na słowacku?
+[01:12:18.200 --> 01:12:20.200]  O, nie pamiętam,
+[01:12:20.200 --> 01:12:22.200]  kiedy ostatnio nie miałam klaski na słowacku.
+[01:12:22.200 --> 01:12:24.200]  O, ty też uczysz tylko na słowacku.
+[01:12:24.200 --> 01:12:26.200]  Nie tylko, ale zwykle.
+[01:12:26.200 --> 01:12:28.200]  Miałam jednego z kolei z Korei.
+[01:12:28.200 --> 01:12:30.200]  I też zaczęliśmy z słów.
+[01:12:34.200 --> 01:12:36.200]  Ok, nasz klaska
+[01:12:36.200 --> 01:12:38.200]  była wybrana
+[01:12:38.200 --> 01:12:40.200]  na poziom B1.
+[01:12:40.200 --> 01:12:42.200]  Więc to nam to przydało.
+[01:12:42.200 --> 01:12:44.200]  To było może 14-15 miesięcy.
+[01:12:44.200 --> 01:12:46.200]  Ok.
+[01:12:46.200 --> 01:12:48.200]  Z słów.
+[01:12:48.200 --> 01:12:50.200]  Z tego jak to jest, jak to jest.
+[01:12:50.200 --> 01:12:52.200]  Do B1 14 miesięcy?
+[01:12:52.200 --> 01:12:54.200]  Tak.
+[01:12:54.200 --> 01:12:56.200]  Tak, tak, nie ma problemu.
+[01:12:56.200 --> 01:12:58.200]  Ok.
+[01:12:58.200 --> 01:13:00.200]  Ok, to koniec.
+[01:13:00.200 --> 01:13:02.200]  Eeeem...
+[01:13:02.200 --> 01:13:04.200]  Dobra, mamy Gdańska.
+[01:13:04.200 --> 01:13:06.200]  Ok. Z Gdańska.
+[01:13:06.200 --> 01:13:08.200]  Do.
+[01:13:08.200 --> 01:13:10.200]  Novi Targu.
+[01:13:10.200 --> 01:13:12.200]  Prawie.
+[01:13:12.200 --> 01:13:14.200]  Ale...
+[01:13:14.200 --> 01:13:16.200]  Is it...
+[01:13:16.200 --> 01:13:18.200]  Novi Targu?
+[01:13:18.200 --> 01:13:20.200]  Targu jest dobrze. Co jeszcze?
+[01:13:20.200 --> 01:13:22.200]  Nowego.
+[01:13:22.200 --> 01:13:24.200]  That's normal.
+[01:13:24.200 --> 01:13:26.200]  It's the...
+[01:13:26.200 --> 01:13:28.200]  Nowego.
+[01:13:28.200 --> 01:13:30.200]  Nowego, tak.
+[01:13:30.200 --> 01:13:32.200]  Z?
+[01:13:32.200 --> 01:13:34.200]  Poznania.
+[01:13:34.200 --> 01:13:36.200]  Poznania.
+[01:13:36.200 --> 01:13:38.200]  No.
+[01:13:38.200 --> 01:13:40.200]  Poznania, ok.
+[01:13:40.200 --> 01:13:42.200]  Tutaj, tutaj, tutaj, tutaj, tutaj.
+[01:13:42.200 --> 01:13:44.200]  Mamy tutaj uwaga.
+[01:13:44.200 --> 01:13:46.200]  Mamy w zdaniu poznani.
+[01:13:46.200 --> 01:13:48.200]  Poznań.
+[01:13:48.200 --> 01:13:50.200]  When we have NI na końcu,
+[01:13:50.200 --> 01:13:52.200]  bardzo często zmienia się do NY.
+[01:13:52.200 --> 01:13:54.200]  That's
+[01:13:54.200 --> 01:13:56.200]  what's probably here
+[01:13:56.200 --> 01:13:58.200]  in this last table.
+[01:13:58.200 --> 01:14:00.200]  So when you have this
+[01:14:00.200 --> 01:14:02.200]  tricky letters
+[01:14:02.200 --> 01:14:04.200]  at the end,
+[01:14:04.200 --> 01:14:06.200]  usually they are changed into something else.
+[01:14:06.200 --> 01:14:08.200]  At the beginning, I think.
+[01:14:08.200 --> 01:14:10.200]  At the beginning, I think.
+[01:14:10.200 --> 01:14:12.200]  Yes.
+[01:14:16.200 --> 01:14:18.200]  Dobra.
+[01:14:18.200 --> 01:14:20.200]  Ok.
+[01:14:20.200 --> 01:14:22.200]  Z poznania do?
+[01:14:22.200 --> 01:14:24.200]  Dokąd?
+[01:14:24.200 --> 01:14:26.200]  Częstochowa.
+[01:14:26.200 --> 01:14:28.200]  O, częstochowa
+[01:14:28.200 --> 01:14:30.200]  female, sorry.
+[01:14:30.200 --> 01:14:32.200]  Częstochow...
+[01:14:36.200 --> 01:14:38.200]  Y.
+[01:14:38.200 --> 01:14:40.200]  Tak jak wody, zupy.
+[01:14:40.200 --> 01:14:42.200]  Kawy.
+[01:14:42.200 --> 01:14:44.200]  Częstochowy.
+[01:14:44.200 --> 01:14:46.200]  Częstochowy.
+[01:14:46.200 --> 01:14:48.200]  Dobra.
+[01:14:48.200 --> 01:14:50.200]  Z? Co dalej?
+[01:14:52.200 --> 01:14:54.200]  Warszawy.
+[01:14:54.200 --> 01:14:56.200]  Warszawy. Na końcu.
+[01:14:56.200 --> 01:14:58.200]  Do?
+[01:14:58.200 --> 01:15:00.200]  Zamok.
+[01:15:00.200 --> 01:15:02.200]  Zamoka.
+[01:15:02.200 --> 01:15:04.200]  Zamoku.
+[01:15:04.200 --> 01:15:06.200]  Bons, bons, yes.
+[01:15:06.200 --> 01:15:08.200]  Bons, all right.
+[01:15:08.200 --> 01:15:10.200]  Let's go.
+[01:15:10.200 --> 01:15:12.200]  What's not better for you?
+[01:15:12.200 --> 01:15:14.200]  Zamoka or zamoku?
+[01:15:14.200 --> 01:15:16.200]  Zamoku actually sounds a bit like...
+[01:15:16.200 --> 01:15:18.200]  Zamoku is like a zamoku.
+[01:15:18.200 --> 01:15:20.200]  Zamoku is like a zamoku.
+[01:15:20.200 --> 01:15:22.200]  For me it's not very Asian.
+[01:15:22.200 --> 01:15:24.200]  Like I don't want to offend anyone.
+[01:15:24.200 --> 01:15:26.200]  Maybe that's why I...
+[01:15:26.200 --> 01:15:28.200]  It sounded like an Asian.
+[01:15:28.200 --> 01:15:30.200]  Ok, so what you choose?
+[01:15:30.200 --> 01:15:32.200]  Zamoka.
+[01:15:32.200 --> 01:15:34.200]  Zamoka jest polski...
+[01:15:34.200 --> 01:15:36.200]  Zamoka jest polski...
+[01:15:36.200 --> 01:15:38.200]  That's a Polish place?
+[01:15:38.200 --> 01:15:40.200]  Tak. To jest...
+[01:15:40.200 --> 01:15:46.200]  To jest miejsce na południu Polski blisko granicy z Ukrainą.
+[01:15:46.200 --> 01:15:48.200]  So it's close to Ukrainian border.
+[01:15:48.200 --> 01:15:50.200]  Ok.
+[01:15:54.200 --> 01:15:56.200]  Ok.
+[01:15:56.200 --> 01:15:58.200]  Co mamy dalej?
+[01:15:58.200 --> 01:16:00.200]  Zamoka.
+[01:16:00.200 --> 01:16:02.200]  Są też autobusy do?
+[01:16:02.200 --> 01:16:04.200]  Są.
+[01:16:04.200 --> 01:16:06.200]  Polina.
+[01:16:06.200 --> 01:16:08.200]  Polina.
+[01:16:08.200 --> 01:16:10.200]  To pan jeszcze.
+[01:16:10.200 --> 01:16:12.200]  Praga.
+[01:16:12.200 --> 01:16:14.200]  Praga.
+[01:16:14.200 --> 01:16:16.200]  Praga.
+[01:16:16.200 --> 01:16:18.200]  Praga.
+[01:16:18.200 --> 01:16:20.200]  Praga.
+[01:16:20.200 --> 01:16:22.200]  Praga. Tak. Bo tu mamy i.
+[01:16:22.200 --> 01:16:24.200]  Jeśli mamy...
+[01:16:24.200 --> 01:16:26.200]  G.
+[01:16:26.200 --> 01:16:28.200]  Tak.
+[01:16:28.200 --> 01:16:30.200]  Do Praga. Dokąd jeszcze?
+[01:16:30.200 --> 01:16:32.200]  Paryża.
+[01:16:32.200 --> 01:16:34.200]  Paryża. Dobrze.
+[01:16:34.200 --> 01:16:36.200]  Paryża.
+[01:16:36.200 --> 01:16:38.200]  Londynu.
+[01:16:38.200 --> 01:16:40.200]  Czy czujemy to w kościach, czy to wiemy?
+[01:16:40.200 --> 01:16:42.200]  Do we feel it in the bones or we know already?
+[01:16:42.200 --> 01:16:44.200]  We know.
+[01:16:44.200 --> 01:16:46.200]  Londynu I've heard.
+[01:16:46.200 --> 01:16:48.200]  At the airport.
+[01:16:48.200 --> 01:16:50.200]  Ok. I dokąd? Budapesztu.
+[01:16:50.200 --> 01:16:52.200]  Budapesztu. Ok.
+[01:16:52.200 --> 01:16:54.200]  That's like a 50-50
+[01:16:54.200 --> 01:16:56.200]  answer.
+[01:16:56.200 --> 01:16:58.200]  Yeah.
+[01:16:58.200 --> 01:17:00.200]  Yeah, I got this too.
+[01:17:00.200 --> 01:17:02.200]  Dobra. Co sobie zaraz?
+[01:17:02.200 --> 01:17:04.200]  To, to, to tam.
+[01:17:04.200 --> 01:17:06.200]  To jest to.
+[01:17:06.200 --> 01:17:08.200]  To.
+[01:17:08.200 --> 01:17:10.200]  Sorry dzisiaj.
+[01:17:10.200 --> 01:17:12.200]  Zobaczmy jak zadanie pierwsze.
+[01:17:12.200 --> 01:17:14.200]  Zobaczmy jak zadanie pierwsze.
+[01:17:16.200 --> 01:17:18.200]  Tutaj mamy przyimki.
+[01:17:18.200 --> 01:17:20.200]  Przyimki to usually short words.
+[01:17:20.200 --> 01:17:22.200]  Przyimki to usually short words.
+[01:17:22.200 --> 01:17:24.200]  Do.
+[01:17:24.200 --> 01:17:26.200]  Za.
+[01:17:26.200 --> 01:17:28.200]  Od. Do.
+[01:17:28.200 --> 01:17:30.200]  Przed. We know some of them.
+[01:17:30.200 --> 01:17:32.200]  And here we need to use
+[01:17:32.200 --> 01:17:34.200]  And here we need to use
+[01:17:34.200 --> 01:17:36.200]  this przyimki that we have.
+[01:17:36.200 --> 01:17:38.200]  The.
+[01:17:38.200 --> 01:17:40.200]  The exercise.
+[01:17:40.200 --> 01:17:42.200]  The exercise.
+[01:17:42.200 --> 01:17:44.200]  The exercise.
+[01:17:48.200 --> 01:17:50.200]  Ok. Przykład.
+[01:17:50.200 --> 01:17:52.200]  Idę na kawę do kawiarki.
+[01:17:52.200 --> 01:17:54.200]  Idę na kawę do kawiarki.
+[01:17:54.200 --> 01:17:56.200]  Też w zadaniu domowym.
+[01:17:56.200 --> 01:17:58.200]  Też w zadaniu domowym.
+[01:17:58.200 --> 01:18:00.200]  Jadę.
+[01:18:00.200 --> 01:18:02.200]  Do Gdańska.
+[01:18:02.200 --> 01:18:04.200]  Super.
+[01:18:04.200 --> 01:18:06.200]  Mam bilety na. Mam bilety na.
+[01:18:06.200 --> 01:18:08.200]  Na klucze.
+[01:18:08.200 --> 01:18:10.200]  Wracam do domu.
+[01:18:10.200 --> 01:18:12.200]  Wracam do domu.
+[01:18:12.200 --> 01:18:14.200]  Od.
+[01:18:14.200 --> 01:18:16.200]  Do.
+[01:18:16.200 --> 01:18:18.200]  Do.
+[01:18:18.200 --> 01:18:20.200]  I return to. Wracam do.
+[01:18:20.200 --> 01:18:22.200]  Wracam do.
+[01:18:22.200 --> 01:18:24.200]  Do.
+[01:18:24.200 --> 01:18:26.200]  Do.
+[01:18:26.200 --> 01:18:28.200]  Na. Do.
+[01:18:28.200 --> 01:18:30.200]  Co jeszcze?
+[01:18:30.200 --> 01:18:32.200]  Co dalej?
+[01:18:32.200 --> 01:18:34.200]  O.
+[01:18:34.200 --> 01:18:36.200]  Is it wrong? No.
+[01:18:36.200 --> 01:18:38.200]  Co mamy dalej?
+[01:18:38.200 --> 01:18:40.200]  Jaka jest godzina?
+[01:18:40.200 --> 01:18:42.200]  Piętnaście szósta.
+[01:18:42.200 --> 01:18:44.200]  Piętnaście szósta.
+[01:18:44.200 --> 01:18:46.200]  Coś tam.
+[01:18:46.200 --> 01:18:48.200]  Coś tam. Piętnaście.
+[01:18:48.200 --> 01:18:50.200]  Piętnaście szósta.
+[01:18:50.200 --> 01:18:52.200]  Czyli piętnaście.
+[01:18:52.200 --> 01:18:54.200]  Czyli piętnaście.
+[01:18:54.200 --> 01:18:56.200]  Z.
+[01:18:56.200 --> 01:18:58.200]  Za.
+[01:18:58.200 --> 01:19:00.200]  Za.
+[01:19:00.200 --> 01:19:02.200]  Piętnaście szósta.
+[01:19:02.200 --> 01:19:04.200]  To jest ten przykód.
+[01:19:04.200 --> 01:19:06.200]  Jak?
+[01:19:06.200 --> 01:19:08.200]  O.
+[01:19:08.200 --> 01:19:10.200]  Sześć piętnaście.
+[01:19:10.200 --> 01:19:12.200]  Sześć piętnaście.
+[01:19:12.200 --> 01:19:14.200]  Piętnaście szósta.
+[01:19:14.200 --> 01:19:16.200]  Sześć piętnaście.
+[01:19:16.200 --> 01:19:18.200]  To jest.
+[01:19:18.200 --> 01:19:20.200]  To jest.
+[01:19:20.200 --> 01:19:22.200]  Nie, nie.
+[01:19:22.200 --> 01:19:24.200]  Jeśli ja tylko powiedziałbym.
+[01:19:24.200 --> 01:19:26.200]  Piętnaście szósta.
+[01:19:26.200 --> 01:19:28.200]  Piętnaście szósta.
+[01:19:28.200 --> 01:19:30.200]  Piętnaście.
+[01:19:30.200 --> 01:19:32.200]  Nie możemy powiedzieć piętnaście szósta.
+[01:19:32.200 --> 01:19:34.200]  Możesz powiedzieć szósta piętnaście.
+[01:19:34.200 --> 01:19:36.200]  Nie.
+[01:19:36.200 --> 01:19:38.200]  Można powiedzieć
+[01:19:38.200 --> 01:19:40.200]  za piętnaście szósta.
+[01:19:40.200 --> 01:19:42.200]  Co obiekt.
+[01:19:42.200 --> 01:19:44.200]  Do piętnaście szósta.
+[01:19:44.200 --> 01:19:46.200]  Do piętnaście szósta.
+[01:19:46.200 --> 01:19:48.200]  Za szósta piętnaście.
+[01:19:48.200 --> 01:19:50.200]  Za.
+[01:19:50.200 --> 01:19:52.200]  Piętnaście szósta.
+[01:19:52.200 --> 01:19:54.200]  Za piętnaście szósta.
+[01:19:54.200 --> 01:19:56.200]  Ale.
+[01:19:56.200 --> 01:19:58.200]  Do szósta piętnaście.
+[01:19:58.200 --> 01:20:00.200]  Od.
+[01:20:00.200 --> 01:20:02.200]  Do.
+[01:20:02.200 --> 01:20:04.200]  Szóstej.
+[01:20:04.200 --> 01:20:06.200]  Jaka jest godzina?
+[01:20:06.200 --> 01:20:08.200]  Szósta piętnaście.
+[01:20:08.200 --> 01:20:10.200]  Nie do.
+[01:20:10.200 --> 01:20:12.200]  Której jest godzina?
+[01:20:12.200 --> 01:20:14.200]  Szósta piętnaście.
+[01:20:14.200 --> 01:20:16.200]  O której?
+[01:20:16.200 --> 01:20:18.200]  O szóstej piętnaście.
+[01:20:18.200 --> 01:20:20.200]  Zajęcia trwają do szóstej piętnaście.
+[01:20:20.200 --> 01:20:22.200]  Na przykład.
+[01:20:22.200 --> 01:20:26.200]  Film zaczyna się o szóstej piętnaście.
+[01:20:30.200 --> 01:20:32.200]  Szóstej piętnaście jest w czeskowicach.
+[01:20:32.200 --> 01:20:34.200]  Kiedy to mówi.
+[01:20:34.200 --> 01:20:36.200]  Piętnaście szósta.
+[01:20:36.200 --> 01:20:38.200]  Piętnaście szósta.
+[01:20:38.200 --> 01:20:40.200]  To mówi, że to jest piętnaście minut.
+[01:20:40.200 --> 01:20:42.200]  Do szóstej.
+[01:20:42.200 --> 01:20:44.200]  Ale to nie jest.
+[01:20:44.200 --> 01:20:46.200]  Tak, to jest.
+[01:20:46.200 --> 01:20:48.200]  Ale jeśli mówisz, że to jest do szóstej.
+[01:20:48.200 --> 01:20:50.200]  To to jest.
+[01:20:50.200 --> 01:20:52.200]  Za szóstej.
+[01:20:52.200 --> 01:20:54.200]  Mhm.
+[01:20:54.200 --> 01:20:56.200]  Od.
+[01:20:56.200 --> 01:20:58.200]  Do.
+[01:20:58.200 --> 01:21:00.200]  Do szóstej.
+[01:21:00.200 --> 01:21:02.200]  Do szóstej.
+[01:21:02.200 --> 01:21:04.200]  Szósta.
+[01:21:04.200 --> 01:21:06.200]  O której godzinie?
+[01:21:06.200 --> 01:21:08.200]  O której?
+[01:21:08.200 --> 01:21:10.200]  Aha.
+[01:21:10.200 --> 01:21:12.200]  Aha. O?
+[01:21:12.200 --> 01:21:14.200]  Szóstej.
+[01:21:14.200 --> 01:21:16.200]  Wracam do domu o szóstej.
+[01:21:16.200 --> 01:21:18.200]  Czy tylko powiedziałeś
+[01:21:18.200 --> 01:21:20.200]  sześć?
+[01:21:20.200 --> 01:21:22.200]  Nie.
+[01:21:22.200 --> 01:21:24.200]  Nie.
+[01:21:24.200 --> 01:21:26.200]  Ale to było dwa sposoby mówienia.
+[01:21:26.200 --> 01:21:28.200]  Czasami powiedziałeś tylko
+[01:21:28.200 --> 01:21:30.200]  numer.
+[01:21:30.200 --> 01:21:32.200]  Nie, nie było sześciu.
+[01:21:32.200 --> 01:21:34.200]  Nie, nie było sześciu.
+[01:21:34.200 --> 01:21:36.200]  Możesz liczyć. 1, 2, 3, 4, 5, 6.
+[01:21:36.200 --> 01:21:38.200]  To jest oryginalne i kardynałe.
+[01:21:38.200 --> 01:21:40.200]  Bo tutaj, jeśli nie jesteś pewien,
+[01:21:40.200 --> 01:21:42.200]  spróbuj włożyć w twój
+[01:21:42.200 --> 01:21:44.200]  wyobraźnią brakiet
+[01:21:44.200 --> 01:21:46.200]  minutę lub godzinę.
+[01:21:46.200 --> 01:21:48.200]  O godzinie.
+[01:21:48.200 --> 01:21:50.200]  Włoż tą godzinę w
+[01:21:50.200 --> 01:21:52.200]  twoją wyobraźnię.
+[01:21:52.200 --> 01:21:54.200]  W brakiet.
+[01:21:54.200 --> 01:21:56.200]  Więc skup się na tym.
+[01:21:56.200 --> 01:21:58.200]  Mamy jeszcze o godzinach.
+[01:21:58.200 --> 01:22:00.200]  Ok.
+[01:22:00.200 --> 01:22:01.720]  Napisz alsz Dayち prawie.
+[01:22:09.400 --> 01:22:11.400]  Never words of love
+[01:22:11.400 --> 01:22:12.280]  interfered the
+[01:22:12.280 --> 01:22:13.160]  truth of both
+[01:22:13.160 --> 01:22:14.280]  the
+[01:22:14.280 --> 01:22:15.320]  past
+[01:22:15.320 --> 01:22:17.320]  used to
+[01:22:17.320 --> 01:22:19.320]  to
+[01:22:19.320 --> 01:22:21.240]  exist
+[01:22:21.240 --> 01:22:22.600]  these
+[01:22:22.600 --> 01:22:23.400]  up
+[01:22:23.400 --> 01:22:25.800]  he
+[01:22:25.800 --> 01:22:27.800]  they
+[01:22:27.800 --> 01:22:29.400]  are
+[01:22:29.400 --> 01:22:30.120]  these
+[01:22:30.120 --> 01:22:32.120]  and what at what hour?
+[01:22:34.120 --> 01:22:34.680]  Dobra.
+[01:22:35.100 --> 01:22:36.880]  To chyba do tego wrócimy w takim razie.
+[01:22:37.440 --> 01:22:39.980]  Czyli tak, wracam do domu za 15.06.
+[01:22:40.140 --> 01:22:40.920]  Numer 4.
+[01:22:42.600 --> 01:22:43.660]  Mam przerwę.
+[01:22:44.540 --> 01:22:46.040]  O, do, do.
+[01:22:48.180 --> 01:22:48.780]  Do?
+[01:22:49.140 --> 01:22:51.820]  Tak. O, w pół, do, drugiej.
+[01:22:52.260 --> 01:22:53.400]  Czyli jesteśmy tutaj.
+[01:22:53.720 --> 01:22:55.320]  O której godzinie mam przerwę?
+[01:22:55.680 --> 01:22:58.420]  O, w pół, do, drugiej.
+[01:22:59.180 --> 01:22:59.880]  Numer 4.
+[01:22:59.880 --> 01:23:00.120]  Ok.
+[01:23:00.880 --> 01:23:02.780]  Dobra. Pracuję. Numer 5.
+[01:23:04.000 --> 01:23:04.960]  Pracuję od
+[01:23:04.960 --> 01:23:07.660]  9 do
+[01:23:07.660 --> 01:23:08.880]  17.
+[01:23:09.140 --> 01:23:11.400]  Super. Od 9 do 17. Tak.
+[01:23:12.180 --> 01:23:13.800]  6. Krzysztof
+[01:23:13.800 --> 01:23:14.460]  idzie
+[01:23:14.460 --> 01:23:17.460]  z Moniką,
+[01:23:17.520 --> 01:23:18.140]  z Monika,
+[01:23:18.300 --> 01:23:21.160]  do kina, tak.
+[01:23:23.160 --> 01:23:23.880]  Fantastycznie.
+[01:23:23.880 --> 01:23:26.340]  Z Moniką do kina
+[01:23:26.340 --> 01:23:27.160]  na premier.
+[01:23:27.840 --> 01:23:28.720]  Numer 7.
+[01:23:29.880 --> 01:23:30.920]  S blir?
+[01:23:31.000 --> 01:23:31.520]  Seboty.
+[01:23:31.580 --> 01:23:32.680]  Mmhmm.
+[01:23:32.720 --> 01:23:33.300]  Soboty. Namar.
+[01:23:33.300 --> 01:23:34.360]  Soboty zetko to ty.
+[01:23:34.420 --> 01:23:35.940]  Soboty, piątek,chanty.
+[01:23:35.940 --> 01:23:37.700]  In grip właśnie?
+[01:23:37.700 --> 01:23:39.400]  Kunden ich masz czas.
+[01:23:39.460 --> 01:23:40.400]  Jeszcze raz.
+[01:23:40.400 --> 01:23:41.100]  Ochjo, który masz
+[01:23:41.460 --> 01:23:42.040]  czas?
+[01:23:42.080 --> 01:23:42.800]  O której masz czas?
+[01:23:42.840 --> 01:23:43.340]  ?
+[01:23:43.620 --> 01:23:44.660]  O której?
+[01:23:44.660 --> 01:23:48.540]  Godzinie pedals, Ilari Godzina.
+[01:23:48.560 --> 01:23:50.480]  Robię w której godzinie?
+[01:23:50.620 --> 01:23:52.240]  Masz czas?
+[01:23:52.240 --> 01:23:52.740]  Dobrze.
+[01:23:52.880 --> 01:23:53.760]  To są pytania.
+[01:23:57.680 --> 01:23:58.280]  Ok.
+[01:23:59.880 --> 01:24:05.520]  Zadanie do mowy. Zadanie 3 z tej kartki.
+[01:24:05.520 --> 01:24:09.520]  Czyli trzeba napisać co oni piją.
+[01:24:09.520 --> 01:24:15.520]  We have some people and we have what they like to drink or what they don't like to drink.
+[01:24:15.520 --> 01:24:17.520]  Ok.
+[01:24:17.520 --> 01:24:26.520]  Jeśli mamy x, when we have this x here, that means that this people, they don't drink this.
+[01:24:26.520 --> 01:24:32.520]  Dobra. Numer 3 i numer 6.
+[01:24:32.520 --> 01:24:38.520]  Musimy napisać jak wygląda weekend Kasi.
+[01:24:38.520 --> 01:24:42.520]  Mamy takie plany, co Kasia chce zrobić.
+[01:24:42.520 --> 01:24:44.520]  What Kasia wants to do during the weekend.
+[01:24:44.520 --> 01:24:48.520]  But Kasia is sick. Ona jest chora.
+[01:24:48.520 --> 01:24:50.520]  So she cannot do this things.
+[01:24:50.520 --> 01:24:54.520]  So we just need to like transform this.
+[01:24:54.520 --> 01:24:56.520]  Her plans into...
+[01:24:56.520 --> 01:24:58.520]  Dogełniacz.
+[01:24:58.520 --> 01:25:00.520]  Because of negation.
+[01:25:00.520 --> 01:25:02.520]  Rozumiemy?
+[01:25:02.520 --> 01:25:04.520]  Dobra. Czyli 3 i 6.
+[01:25:04.520 --> 01:25:06.520]  Czy jeszcze jakieś pytania?
+[01:25:06.520 --> 01:25:08.520]  Any questions?
+[01:25:10.520 --> 01:25:12.520]  Ok.
+[01:25:14.520 --> 01:25:16.520]  No dobrze.
+[01:25:16.520 --> 01:25:18.520]  Daliśmy radę.
+[01:25:18.520 --> 01:25:20.520]  Przetrwaliśmy.
+[01:25:20.520 --> 01:25:22.520]  Dysłuchajcie.
+[01:25:26.520 --> 01:25:52.520]  1&ッ$e
+[01:25:52.520 --> 01:25:54.520]  What?
+[01:25:54.520 --> 01:25:56.520]  To jest bardzo przyjemne.
+[01:25:56.520 --> 01:25:58.520]  Może, może nie.
+[01:25:58.520 --> 01:26:00.520]  Czy masz coś innego?
+[01:26:00.520 --> 01:26:02.520]  Tak.
+[01:26:02.520 --> 01:26:04.520]  Czy chcesz, żebym ci coś napisał?
+[01:26:04.520 --> 01:26:06.520]  Nie tak naprawdę, ale
+[01:26:06.520 --> 01:26:08.520]  możesz mi coś napisać,
+[01:26:08.520 --> 01:26:10.520]  które może być dla mnie
+[01:26:10.520 --> 01:26:12.520]  przyjemne do praktyki?
+[01:26:12.520 --> 01:26:14.520]  Yyy...
+[01:26:14.520 --> 01:26:16.520]  Tak.
+[01:26:16.520 --> 01:26:18.520]  Pokażę ci coś.
+[01:26:18.520 --> 01:26:20.520]  Mogę ci może
+[01:26:20.520 --> 01:26:22.520]  zaprosić do książek,
+[01:26:22.520 --> 01:26:24.520]  i może, może...
+[01:26:30.520 --> 01:26:32.520]  Kiedy zaczynają się twoje klaski?
+[01:26:32.520 --> 01:26:34.520]  W sierpniu.
+[01:26:34.520 --> 01:26:36.520]  I masz...
+[01:26:36.520 --> 01:26:38.520]  To jest jak w niedzielę dla ciebie?
+[01:26:38.520 --> 01:26:40.520]  Tak.
+[01:26:40.520 --> 01:26:42.520]  Ok, więc na przykład
+[01:26:42.520 --> 01:26:44.520]  jest taka seria książek.
+[01:26:44.520 --> 01:26:46.520]  I na przykład
+[01:26:46.520 --> 01:26:48.520]  z tej serii jest taka
+[01:26:48.520 --> 01:26:50.520]  trzecia część.
+[01:26:50.520 --> 01:26:52.520]  Nie jest perfekcyjna,
+[01:26:52.520 --> 01:26:54.520]  ale w niektórych przypadkach jest dobrze.
+[01:26:54.520 --> 01:26:56.520]  I tutaj masz trzy poziomy.
+[01:26:56.520 --> 01:26:58.520]  A1, A2 i B1.
+[01:26:58.520 --> 01:27:00.520]  I tutaj
+[01:27:00.520 --> 01:27:02.520]  są tylko wersje.
+[01:27:02.520 --> 01:27:04.520]  Tutaj jest
+[01:27:04.520 --> 01:27:06.520]  coś innego.
+[01:27:06.520 --> 01:27:08.520]  I tutaj jest też coś.
+[01:27:08.520 --> 01:27:10.520]  Nie wiem nawet, jak
+[01:27:10.520 --> 01:27:12.520]  jest rozdzielone w tych książkach.
+[01:27:12.520 --> 01:27:14.520]  Ale na przykład
+[01:27:14.520 --> 01:27:16.520]  tutaj mamy to. To jest dopełniacz.
+[01:27:16.520 --> 01:27:18.520]  I masz w zasadzie...
+[01:27:20.520 --> 01:27:22.520]  Ok, masz dopełniacz.
+[01:27:22.520 --> 01:27:24.520]  A1, dopełniacz A2,
+[01:27:24.520 --> 01:27:26.520]  dopełniacz B1.
+[01:27:26.520 --> 01:27:28.520]  I masz 50 piosenek
+[01:27:28.520 --> 01:27:30.520]  dopełniacza.
+[01:27:30.520 --> 01:27:32.520]  O!
+[01:27:32.520 --> 01:27:34.520]  I też
+[01:27:34.520 --> 01:27:35.520]  te
+[01:27:35.520 --> 01:27:37.520]  treści, które zrobiliśmy
+[01:27:37.520 --> 01:27:39.520]  i które już zrobiliśmy, są również
+[01:27:39.520 --> 01:27:41.520]  tutaj.
+[01:27:41.520 --> 01:27:43.520]  Tak jak ten, na przykład.
+[01:27:43.520 --> 01:27:44.520]  Tak.
+[01:27:44.520 --> 01:27:46.520]  Więc jest rozdzielony w
+[01:27:46.520 --> 01:27:48.520]  niekiedy, ale w siedmiu księgach.
+[01:27:48.520 --> 01:27:50.520]  Więc bardziej księgi,
+[01:27:50.520 --> 01:27:52.520]  coś, coś.
+[01:27:52.520 --> 01:27:54.520]  Ale trudna rzecz jest, że
+[01:27:54.520 --> 01:27:58.520]  czasami też używają innych miejsc,
+[01:27:58.520 --> 01:28:00.520]  których jeszcze nie znamy.
+[01:28:00.520 --> 01:28:01.520]  Tak.
+[01:28:01.520 --> 01:28:02.520]  Więc nie jest to
+[01:28:02.520 --> 01:28:03.520]  idealne.
+[01:28:03.520 --> 01:28:04.520]  Nie jest to idealne, ale
+[01:28:04.520 --> 01:28:05.520]  musisz tylko
+[01:28:05.520 --> 01:28:07.520]  mieć w myśli, co jest tam,
+[01:28:07.520 --> 01:28:08.520]  a co nie.
+[01:28:08.520 --> 01:28:09.520]  Tak.
+[01:28:09.520 --> 01:28:11.520]  I cała książka jest w polskim.
+[01:28:11.520 --> 01:28:12.520]  Tak.
+[01:28:12.520 --> 01:28:14.520]  Tak, musisz ją przetłumaczyć.
+[01:28:14.520 --> 01:28:16.520]  Nie, to łatwe.
+[01:28:16.520 --> 01:28:17.520]  To łatwe. To nie jest łatwe.
+[01:28:17.520 --> 01:28:19.520]  Powiem ci, próbowałem to zrobić.
+[01:28:19.520 --> 01:28:20.520]  To nie jest łatwe.
+[01:28:20.520 --> 01:28:21.520]  Ja użyłem...
+[01:28:21.520 --> 01:28:22.520]  Nie, wy através.
+[01:28:22.520 --> 01:28:23.920]  No, jak, jak jesteś,
+[01:28:23.920 --> 01:28:24.920]  jak…
+[01:28:24.920 --> 01:28:26.920]  Ale ty powinieneś to przeprowadzić.
+[01:28:26.920 --> 01:28:35.460]  Gwiek, no—
+[01:28:37.460 --> 01:28:40.020]  Mam całkowicie pełną conc Aggiesza,
+[01:28:40.020 --> 01:28:41.520]  mam Vieona�k mayoría desse.
+[01:28:41.520 --> 01:28:42.520]  Oh.
+[01:28:42.520 --> 01:28:44.520]  Więc, mogę to sprzedawać,
+[01:28:44.520 --> 01:28:45.520]  flah, flah.
+[01:28:45.520 --> 01:28:47.520]  готов� w ciągu czasu, jeśli chcesz.
+[01:28:47.520 --> 01:28:49.520]  Jeżeli ty jesteś zmęczony z mar installations.
+[01:28:49.520 --> 01:28:50.520]  No.
+
+Success! Transcription saved to: Lectures/Polish/A1_2/L14_11thAugust/L14_11thAugust.txt
+
+Process finished with exit code 0
