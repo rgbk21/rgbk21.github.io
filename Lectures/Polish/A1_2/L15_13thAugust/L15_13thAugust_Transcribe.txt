@@ -1,0 +1,2031 @@
+"C:\MY_BACKUP\LearningStuff\Udemy Full Stack\newGithubHostedSite\rgbk21.github.io\rgbk21.github.io\.venv\Scripts\python.exe" "C:\MY_BACKUP\LearningStuff\Udemy Full Stack\newGithubHostedSite\rgbk21.github.io\rgbk21.github.io\transcribe.py"
+C:\MY_BACKUP\LearningStuff\Udemy Full Stack\newGithubHostedSite\rgbk21.github.io\rgbk21.github.io\.venv\Lib\site-packages\whisper\transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+[00:00.000 --> 00:03.000]  Wina. Czego jeszcze nie piję?
+[00:13.000 --> 00:17.000]  Wody mineralne. Kazowane.
+[00:18.000 --> 00:23.000]  Ale jaka końcówka? Wody... jakiej?
+[00:23.000 --> 00:28.000]  Wody iła.
+[00:31.000 --> 00:37.000]  To jest woda. Mianowicie, do pełniaczu nie piję czego? Wody. Jakiej wody?
+[00:40.000 --> 00:43.000]  Mineralnej. Mineralnej.
+[00:44.000 --> 00:47.000]  Uwaga, żeby na końcu była końcówka.
+[00:48.000 --> 00:51.000]  Mineralnej.
+[00:51.000 --> 00:54.000]  Mineralnej. Mineralnej. Kazowanej.
+[00:54.000 --> 00:56.000]  Czego jeszcze nie piję?
+[00:58.000 --> 01:01.000]  Lemoniady. Lemoniady. I?
+[01:02.000 --> 01:04.000]  Kawę bez mleka. Bez mleka. Super.
+[01:05.000 --> 01:07.000]  Dobra. A czego nie piję Magda?
+[01:08.000 --> 01:12.000]  A się koczą? Kawę bez mleka i mleki.
+[01:13.000 --> 01:16.000]  Bez mleka. Bez mleka.
+[01:16.000 --> 01:20.000]  Mleka. Mianownik jest mleko, tak? Tak.
+[01:20.000 --> 01:23.000]  O tak. Przepraszam. Przepraszam. Przepraszam.
+[01:23.000 --> 01:26.000]  Tu też jest do pełniaczu. Bez czego? Bez mleka.
+[01:27.000 --> 01:30.000]  Dobra. A Magda czego nie pije?
+[01:31.000 --> 01:34.000]  Blaszkę.
+[01:35.000 --> 01:38.000]  Magda nie pije niczego bez mleka.
+[01:38.000 --> 01:40.000]  Nie.
+[01:40.000 --> 01:41.000]  Nie.
+[01:41.000 --> 01:42.000]  Nie.
+[01:42.000 --> 01:43.000]  Nie.
+[01:43.000 --> 01:44.000]  Nie.
+[01:44.000 --> 01:46.000]  Nie.
+[01:46.000 --> 01:47.000]  Nie.
+[01:47.000 --> 01:48.000]  Nie.
+[01:48.000 --> 01:49.000]  Nie.
+[01:49.000 --> 01:50.000]  Magda nie pije czerwone mleka.
+[01:50.000 --> 01:51.000]  Nie.
+[01:51.000 --> 01:52.000]  Nie.
+[01:52.000 --> 01:53.000]  Nie.
+[01:53.000 --> 01:54.000]  Nie.
+[01:54.000 --> 01:55.000]  Nie.
+[01:55.000 --> 01:56.000]  Nie.
+[01:56.000 --> 01:57.000]  Nie.
+[01:57.000 --> 01:58.000]  Nie pije mleka, dobra. I?
+[01:59.000 --> 02:00.000]  Gorzkie wiarka.
+[02:00.000 --> 02:01.000]  Super. Gorzkie.
+[02:01.000 --> 02:02.000]  Gorące czepionki.
+[02:02.000 --> 02:03.000]  Tak.
+[02:03.000 --> 02:04.000]  I.
+[02:04.000 --> 02:05.000]  I polski wodno.
+[02:05.000 --> 02:06.000]  Wodkę.
+[02:06.000 --> 02:07.000]  Wódkę.
+[02:07.000 --> 02:08.000]  I.
+[02:08.000 --> 02:09.000]  Polskie wódki.
+[02:09.000 --> 02:10.000]  Polskie wódki.
+[02:10.000 --> 02:11.000]  Wódki.
+[02:11.000 --> 02:12.000]  Wódki, tak.
+[02:12.000 --> 02:13.000]  I.
+[02:13.000 --> 02:15.000]  Bo to jest rodzaj żeński też.
+[02:16.000 --> 02:18.000]  Polski, wódki.
+[02:23.000 --> 02:26.000]  A Kacper czego nie pije?
+[02:33.000 --> 02:35.000]  Czerwonego wina.
+[02:36.000 --> 02:39.000]  Soku pomidorowego.
+[02:39.000 --> 02:42.000]  Piwa imbirowego.
+[02:44.000 --> 02:46.000]  I polskie wódki.
+[02:48.000 --> 02:50.000]  A Piotr czego nie pije?
+[02:54.000 --> 02:56.000]  Gorzkie herbaty.
+[02:56.000 --> 02:59.000]  Wódki generalnie gazowane.
+[03:02.000 --> 03:07.000]  Gorące czekolady i kawiarek bez mleka.
+[03:08.000 --> 03:09.000]  I ostatni.
+[03:09.000 --> 03:11.000]  Czerwony wina.
+[03:13.000 --> 03:15.000]  Soku pomidorowego.
+[03:18.000 --> 03:21.000]  Woda generalnie gazowana.
+[03:22.000 --> 03:23.000]  To pije.
+[03:24.000 --> 03:25.000]  Dzień dobry.
+[03:25.000 --> 03:27.000]  Pije wodę.
+[03:30.000 --> 03:31.000]  I to pije.
+[03:32.000 --> 03:33.000]  I to pije.
+[03:34.000 --> 03:35.000]  I to pije.
+[03:36.000 --> 03:37.000]  I to pije.
+[03:37.000 --> 03:43.000]  Piwa imbaratynko?
+[03:44.000 --> 03:46.000]  Piwa imbirowego.
+[03:46.000 --> 03:48.000]  Tak i czego jeszcze?
+[03:50.000 --> 03:51.000]  Démoniato.
+[03:51.000 --> 03:52.000]  Démoniato.
+[03:56.000 --> 03:58.000]  Czy wszystkie słowa tutaj rozumiemy?
+[03:58.000 --> 04:00.000]  Doj adresen aduhootz.
+[04:02.000 --> 04:04.000]  Nato zadanie szóste.
+[04:04.000 --> 04:13.000]  Widzieliśmy, że Kasia robi plany na weekend, chce zrobić wiele rzeczy, ale Kasia jest chora, więc nie może.
+[04:13.000 --> 04:15.000]  Tak, ona jest skoszona.
+[04:15.000 --> 04:19.000]  Więc mamy, że Aneta pije kawę bez mleka, tak?
+[04:19.000 --> 04:20.000]  Bez mleka?
+[04:20.000 --> 04:21.000]  Bez mleka.
+[04:21.000 --> 04:22.000]  Mhm.
+[04:26.000 --> 04:27.000]  To była kwestia?
+[04:28.000 --> 04:31.000]  Jakie są najważniejsze przypadki, które używają się w lesie?
+[04:31.000 --> 04:33.000]  To jest...
+[04:35.000 --> 04:37.000]  Tak, to jest właśnie moja kwestia.
+[04:37.000 --> 04:39.000]  Myślę, że po lecie tylko mleko.
+[04:41.000 --> 04:48.000]  Więc, jeśli Aneta pije kawę, to kawa będzie w bierniku.
+[04:48.000 --> 04:49.000]  W bierniku.
+[04:49.000 --> 04:50.000]  Pije, tak.
+[04:50.000 --> 04:53.000]  Ale... nie, nie pije.
+[04:53.000 --> 04:54.000]  Kawa.
+[04:54.000 --> 04:55.000]  Aneta pije kawę.
+[04:55.000 --> 04:56.000]  Mhm.
+[04:56.000 --> 04:58.000]  Kawa jest w bierniku, tak?
+[04:58.000 --> 04:59.000]  Tak.
+[04:59.000 --> 05:00.000]  Ale Aneta nie pije...
+[05:00.000 --> 05:01.000]  Tak.
+[05:01.000 --> 05:02.000]  To jest dopewniać.
+[05:02.000 --> 05:03.000]  Mhm.
+[05:03.000 --> 05:04.000]  Pije.
+[05:04.000 --> 05:05.000]  Pije.
+[05:05.000 --> 05:06.000]  Pije.
+[05:06.000 --> 05:07.000]  Kawa.
+[05:07.000 --> 05:08.000]  Bez mleka.
+[05:08.000 --> 05:09.000]  Kawa.
+[05:09.000 --> 05:10.000]  Bez mleka.
+[05:10.000 --> 05:11.000]  No, no, no, no.
+[05:11.000 --> 05:12.000]  Użyj bez.
+[05:12.000 --> 05:13.000]  Pije kawę.
+[05:13.000 --> 05:14.000]  Bez mleka.
+[05:14.000 --> 05:15.000]  Bez mleka.
+[05:15.000 --> 05:16.000]  Dobra.
+[05:16.000 --> 05:17.000]  Pije kogo co?
+[05:17.000 --> 05:18.000]  Biernik.
+[05:18.000 --> 05:19.000]  Bez mleka kogo czego?
+[05:19.000 --> 05:20.000]  Dopewniać.
+[05:20.000 --> 05:21.000]  I forgot.
+[05:21.000 --> 05:22.000]  I forgot.
+[05:22.000 --> 05:23.000]  I forgot.
+[05:23.000 --> 05:24.000]  I forgot.
+[05:24.000 --> 05:25.000]  I forgot.
+[05:25.000 --> 05:26.000]  I forgot.
+[05:26.000 --> 05:27.000]  I forgot.
+[05:27.000 --> 05:28.000]  I forgot.
+[05:28.000 --> 05:29.000]  I forgot.
+[05:29.000 --> 05:30.000]  I forgot.
+[05:30.000 --> 05:31.000]  I forgot.
+[05:31.000 --> 05:32.000]  Aneta nie pije...
+[05:32.000 --> 05:33.000]  Aneta...
+[05:33.000 --> 05:34.000]  I forgot and...
+[05:34.000 --> 05:35.000]  W tym szerocy...
+[05:35.000 --> 05:36.000]  Ale mógł by się zimnej zakończyć.
+[05:36.000 --> 05:37.000]  ...leko jest znów...
+[05:37.000 --> 05:38.000]  Aneta nie pije...
+[05:38.000 --> 05:39.000]  Kawy.
+[05:39.000 --> 05:40.000]  ...aneta...
+[05:40.000 --> 05:41.000]  Ja drauf na cosplay, tak?
+[05:41.000 --> 05:42.000]  Bez mleka.
+[05:42.000 --> 05:43.000]  Bez mleka.
+[05:43.000 --> 05:44.000]  Kawy?
+[05:44.000 --> 05:45.000]  Dopewniać.
+[05:45.000 --> 05:46.000]  Dopewniasz?
+[05:46.000 --> 05:47.000]  Bez mleka?
+[05:47.000 --> 05:48.000]  Dopewniać.
+[05:48.000 --> 05:49.000]  Dopewniać.
+[05:49.000 --> 05:50.000]  Dopewniać.
+[05:50.000 --> 05:51.000]  Okay.
+[05:55.000 --> 05:56.000]  Aneta nie pije...
+[05:58.000 --> 05:59.000]  Bez...
+[05:59.000 --> 06:05.000]  kawy z mlekiem
+[06:05.000 --> 06:09.000]  nie piję kawy
+[06:09.000 --> 06:11.000]  to pewnie
+[06:11.000 --> 06:13.000]  kogo czego? z mlekiem?
+[06:13.000 --> 06:15.000]  na żelnik
+[06:15.000 --> 06:17.000]  na żelnik, mhm
+[06:19.000 --> 06:21.000]  czy to było pytanie?
+[06:21.000 --> 06:23.000]  hmm
+[06:23.000 --> 06:27.000]  to może nie być dokładnie pytanie
+[06:27.000 --> 06:31.000]  ale jak działa dwu negatywowe?
+[06:31.000 --> 06:33.000]  nie piję
+[06:33.000 --> 06:35.000]  nie piję
+[06:35.000 --> 06:37.000]  nie piję mleka
+[06:37.000 --> 06:39.000]  tak
+[06:39.000 --> 06:41.000]  czyli piję
+[06:41.000 --> 06:43.000]  to znaczy, że pijesz kawę
+[06:43.000 --> 06:47.000]  to znaczy, że pijesz kawę, ale z mlekiem?
+[06:47.000 --> 06:49.000]  tak
+[06:49.000 --> 06:51.000]  nie piję kawy bez mleka
+[06:51.000 --> 06:53.000]  zawsze piję kawy z mlekiem
+[06:53.000 --> 06:55.000]  ok, ok, ok
+[06:55.000 --> 06:57.000]  ok, ok, ok
+[06:57.000 --> 06:59.000]  tak, ok
+[06:59.000 --> 07:01.000]  więc w tym przypadku
+[07:01.000 --> 07:03.000]  część kawy jest bez mleka
+[07:03.000 --> 07:05.000]  jest inna od kawy
+[07:05.000 --> 07:07.000]  nie jest jedna
+[07:07.000 --> 07:09.000]  rzecz
+[07:09.000 --> 07:11.000]  ponieważ
+[07:11.000 --> 07:13.000]  jeśli patrzysz na to
+[07:13.000 --> 07:15.000]  i na to inne rzeczy
+[07:15.000 --> 07:17.000]  więc jest wyjątkowo
+[07:17.000 --> 07:19.000]  ponieważ
+[07:19.000 --> 07:21.000]  jeśli pijesz żelnik
+[07:21.000 --> 07:23.000]  kawa ma
+[07:23.000 --> 07:25.000]  jaka jest
+[07:25.000 --> 07:27.000]  kawa
+[07:27.000 --> 07:29.000]  to jest jedna rzecz
+[07:29.000 --> 07:31.000]  a jak pijesz kawę bez mleka
+[07:31.000 --> 07:33.000]  to jest jedna rzecz
+[07:33.000 --> 07:35.000]  to jest jedna rzecz
+[07:35.000 --> 07:37.000]  tak?
+[07:37.000 --> 07:39.000]  tak
+[07:39.000 --> 07:41.000]  tak, tak
+[07:41.000 --> 07:43.000]  tak, tak
+[07:43.000 --> 07:45.000]  tak
+[07:45.000 --> 07:47.000]  tak
+[07:47.000 --> 07:49.000]  tak
+[07:49.000 --> 07:51.000]  tak
+[07:51.000 --> 07:53.000]  tak
+[07:53.000 --> 07:55.000]  tak
+[07:55.000 --> 08:07.000]  tak
+[08:07.000 --> 08:09.000]  tak
+[08:09.000 --> 08:11.000]  tak
+[08:11.000 --> 08:13.000]  tak
+[08:13.000 --> 08:15.000]  tak
+[08:15.000 --> 08:17.000]  tak
+[08:17.000 --> 08:19.000]  tak
+[08:19.000 --> 08:21.000]  tak
+[08:21.000 --> 08:23.000]  tak
+[08:23.000 --> 08:25.000]  To jest trzeci krok.
+[08:25.000 --> 08:28.000]  Ta część tego słowa,
+[08:28.000 --> 08:31.000]  końcówka, jest zbędna na wersji.
+[08:31.000 --> 08:34.000]  Tutaj mamy nie pije,
+[08:34.000 --> 08:37.000]  więc wiemy, że jest dopełniacz.
+[08:37.000 --> 08:40.000]  Tutaj mamy pije, więc wiemy, że jest biedny.
+[08:40.000 --> 08:42.000]  I tak samo tutaj dopełniacz.
+[08:42.000 --> 08:45.000]  A ta część
+[08:48.000 --> 08:50.000]  jest do tego słowa.
+[08:50.000 --> 08:53.000]  Nie do czasownika, tylko do tego słowa.
+[08:53.000 --> 08:55.000]  Czyli...
+[09:16.000 --> 09:18.000]  Nie. Tutaj.
+[09:18.000 --> 09:20.000]  Zobaczmy tak.
+[09:20.000 --> 09:22.000]  Ok.
+[09:22.000 --> 09:24.000]  Aneta
+[09:24.000 --> 09:26.000]  pije.
+[09:26.000 --> 09:29.000]  Więc mamy...
+[09:29.000 --> 09:31.000]  Subject?
+[09:31.000 --> 09:34.000]  Tak, tak. Subject, object.
+[09:34.000 --> 09:37.000]  Czy wiemy coś więcej o Anetce?
+[09:37.000 --> 09:39.000]  Czy nie wiemy czegoś o Anetce?
+[09:39.000 --> 09:40.000]  Nie.
+[09:40.000 --> 09:42.000]  Ok. Ale wiemy, co pije.
+[09:42.000 --> 09:44.000]  Co ona pije?
+[09:44.000 --> 09:46.000]  Kawę.
+[09:46.000 --> 09:48.000]  Pije kawę.
+[09:48.000 --> 09:50.000]  Czyli to słowo
+[09:50.000 --> 09:52.000]  jest do czasownika.
+[09:52.000 --> 09:54.000]  I teraz jaka ta kawa może być?
+[09:54.000 --> 09:56.000]  Kawa może być na przykład
+[09:56.000 --> 09:58.000]  gorąca,
+[09:58.000 --> 10:00.000]  może być z mlekiem,
+[10:00.000 --> 10:02.000]  może być
+[10:02.000 --> 10:04.000]  w kubku.
+[10:04.000 --> 10:06.000]  Na przykład kawa.
+[10:06.000 --> 10:08.000]  W kubku.
+[10:08.000 --> 10:10.000]  I wszystkie te słowa są do kawy.
+[10:12.000 --> 10:14.000]  I teraz tak. Jaka będzie kolejność?
+[10:16.000 --> 10:18.000]  What will be the order?
+[10:18.000 --> 10:20.000]  Usually we have one order.
+[10:20.000 --> 10:22.000]  Usually.
+[10:22.000 --> 10:24.000]  Sometimes we can mix.
+[10:24.000 --> 10:26.000]  Czyli na przykład
+[10:26.000 --> 10:28.000]  Aneta pije gorącą
+[10:28.000 --> 10:30.000]  kawę z mlekiem
+[10:30.000 --> 10:32.000]  w kubku.
+[10:32.000 --> 10:34.000]  To będzie ta kolejność.
+[10:34.000 --> 10:36.000]  Aneta pije gorącą
+[10:36.000 --> 10:38.000]  kawę
+[10:38.000 --> 10:40.000]  z mlekiem
+[10:40.000 --> 10:42.000]  w kubku. Na przykład.
+[10:42.000 --> 10:44.000]  Albo pije gorącą
+[10:44.000 --> 10:46.000]  kawę
+[10:46.000 --> 10:48.000]  z mlekiem.
+[10:48.000 --> 10:50.000]  Ponieważ inna kolejność
+[10:50.000 --> 10:52.000]  może zmienić sens.
+[10:52.000 --> 10:54.000]  So when we put the different order
+[10:54.000 --> 10:56.000]  that will change the
+[10:56.000 --> 10:58.000]  sense of the sentence.
+[10:58.000 --> 11:00.000]  Zdobył pytania?
+[11:00.000 --> 11:02.000]  Thank you.
+[11:02.000 --> 11:04.000]  Yeah, but I guess I was saying gorąca.
+[11:04.000 --> 11:06.000]  What would the ending be?
+[11:06.000 --> 11:08.000]  It would just be gorąca.
+[11:08.000 --> 11:10.000]  In this sentence Aneta pije gorącą kawę.
+[11:10.000 --> 11:12.000]  Pije gorącą.
+[11:12.000 --> 11:14.000]  Gorącą.
+[11:14.000 --> 11:16.000]  Tak, ponieważ ta końcówka
+[11:16.000 --> 11:18.000]  jest do tej końcówki.
+[11:18.000 --> 11:20.000]  No, no.
+[11:20.000 --> 11:22.000]  Tak, to jest jedyny.
+[11:22.000 --> 11:24.000]  Pije gorącą
+[11:24.000 --> 11:26.000]  kawę.
+[11:26.000 --> 11:28.000]  Tak. Jaką?
+[11:28.000 --> 11:30.000]  Co?
+[11:30.000 --> 11:32.000]  Pije.
+[11:32.000 --> 11:34.000]  Co pije?
+[11:34.000 --> 11:36.000]  Kawę gorącą.
+[11:36.000 --> 11:38.000]  Tutaj będzie
+[11:38.000 --> 11:40.000]  narzędnik.
+[11:40.000 --> 11:42.000]  A tu?
+[11:42.000 --> 11:44.000]  Ok.
+[11:44.000 --> 11:46.000]  Tak, więc to jest jedyny.
+[11:46.000 --> 11:48.000]  To jest adjektyw.
+[11:48.000 --> 11:50.000]  Adjektyw jest wstrzymywany od
+[11:50.000 --> 11:52.000]  kogoś.
+[11:52.000 --> 11:54.000]  Wstrzymywany od obiektu.
+[11:54.000 --> 11:56.000]  I obiekt wstrzymywany od kogoś.
+[11:56.000 --> 11:58.000]  Gorąca kawa to jedna rzecz.
+[11:58.000 --> 12:00.000]  A gorąca kawa to inna rzecz.
+[12:00.000 --> 12:02.000]  Tak samo na przykład
+[12:02.000 --> 12:04.000]  czarną kawę, białą kawę,
+[12:04.000 --> 12:06.000]  zimną kawę.
+[12:06.000 --> 12:08.000]  Tak.
+[12:08.000 --> 12:10.000]  Czyli
+[12:10.000 --> 12:12.000]  opisujemy kawę. Chcemy opisować kawę.
+[12:12.000 --> 12:14.000]  To jest słowo, które opisuje kawę.
+[12:14.000 --> 12:16.000]  I tu jest klucz, że
+[12:16.000 --> 12:18.000]  zimna kawa jest inna
+[12:18.000 --> 12:20.000]  z powodu zera.
+[12:20.000 --> 12:22.000]  Tak. To też jest
+[12:22.000 --> 12:24.000]  wskazane, że kawa to jest kawa.
+[12:24.000 --> 12:26.000]  Ale...
+[12:26.000 --> 12:28.000]  Tak. Jest zera, więc
+[12:28.000 --> 12:30.000]  jest inna.
+[12:30.000 --> 12:32.000]  Tak. To był mój pytanek.
+[12:32.000 --> 12:34.000]  Dobrze.
+[12:34.000 --> 12:36.000]  Co to jest w kokku?
+[12:36.000 --> 12:38.000]  W kubku?
+[12:38.000 --> 12:40.000]  Co to jest kubek?
+[12:40.000 --> 12:42.000]  To jest kubek, prawda?
+[12:42.000 --> 12:44.000]  O, w kubku.
+[12:44.000 --> 12:46.000]  W kubku, tak. To jest kubek.
+[12:46.000 --> 12:48.000]  W kubku.
+[12:48.000 --> 12:50.000]  To jest kubek.
+[12:50.000 --> 12:52.000]  Tak, tak.
+[12:52.000 --> 12:54.000]  Nie wiem, czy powinienem teraz
+[12:54.000 --> 12:56.000]  czy później zapytać, ale
+[12:56.000 --> 12:58.000]  jeśli chodzi o słowo,
+[12:58.000 --> 13:00.000]  jak to wiesz?
+[13:00.000 --> 13:02.000]  W jakim przypadku się to pojawia?
+[13:02.000 --> 13:04.000]  I jak to wiesz?
+[13:04.000 --> 13:06.000]  Znaczy, kiedy wiesz, co to ma związek z tym,
+[13:06.000 --> 13:08.000]  jak to wiesz?
+[13:08.000 --> 13:10.000]  W jakim przypadku się to pojawia?
+[13:10.000 --> 13:12.000]  Na przykład,
+[13:12.000 --> 13:14.000]  mamy P.A.
+[13:14.000 --> 13:16.000]  Tak.
+[13:16.000 --> 13:18.000]  .
+[13:18.000 --> 13:20.000]  .
+[13:20.000 --> 13:22.000]  .
+[13:22.000 --> 13:24.000]  .
+[13:24.000 --> 13:26.000]  .
+[13:26.000 --> 13:28.000]  .
+[13:28.000 --> 13:30.000]  .
+[13:30.000 --> 13:32.000]  .
+[13:32.000 --> 13:34.000]  .
+[13:34.000 --> 13:36.000]  .
+[13:36.000 --> 13:38.000]  .
+[13:38.000 --> 13:40.000]  Tak, tak.
+[13:40.000 --> 13:42.000]  Tak jak mówiliśmy ostatnio,
+[13:42.000 --> 13:44.000]  mogę się tutaj przyłączyć?
+[13:44.000 --> 13:47.000]  Tutaj mamy w którymś miejscu...
+[13:51.000 --> 13:53.000]  O tak, tutaj.
+[13:53.000 --> 13:56.000]  Użycie dopełniacza po czasownikach.
+[13:56.000 --> 14:00.000]  Czyli po tych czasownikach zawsze będzie dopełniacz.
+[14:02.000 --> 14:06.000]  Jest jeszcze więcej czasowników, o których będzie dopełniacz.
+[14:06.000 --> 14:10.000]  But with this, they usually remember the list of this.
+[14:10.000 --> 14:15.000]  So with this verb is always dopełniacz, or with this verb is always jednik,
+[14:15.000 --> 14:18.000]  with this verb is always narzędnik, something like that.
+[14:18.000 --> 14:20.000]  Just need to remember.
+[14:24.000 --> 14:26.000]  To wszystko?
+[14:26.000 --> 14:28.000]  Dobra, to idziemy dalej.
+[14:28.000 --> 14:30.000]  Czyli...
+[14:31.000 --> 14:33.000]  Aha, czyli jest za mnie sześć, tak?
+[14:33.000 --> 14:37.000]  Kasia chce gotować zupę pomidorową,
+[14:37.000 --> 14:39.000]  ale jest chora, dlatego...
+[14:40.000 --> 14:42.000]  Nie gotuje czego?
+[14:42.000 --> 14:43.000]  Zupy pomidorowej.
+[14:43.000 --> 14:47.000]  Mamy tutaj negację, więc dopełnić.
+[14:51.000 --> 14:55.000]  Dobra, Kasia chce sprzątać mieszkanie,
+[14:55.000 --> 14:58.000]  ale jest chora, więc...
+[14:59.000 --> 15:00.000]  Ona...
+[15:00.000 --> 15:02.000]  Nie sprząta mieszkania.
+[15:02.000 --> 15:05.000]  Super, nie sprząta mieszkania.
+[15:05.000 --> 15:07.000]  Tak.
+[15:10.000 --> 15:14.000]  Ona chce pisać e-maile do klientów,
+[15:14.000 --> 15:17.000]  ale jest chora, więc...
+[15:17.000 --> 15:23.000]  Nie pisze e-mail do klientów.
+[15:23.000 --> 15:26.000]  Do klientów, aha, clients.
+[15:26.000 --> 15:28.000]  Aha, nie pisze, nie pisze.
+[15:28.000 --> 15:30.000]  O matko.
+[15:31.000 --> 15:33.000]  Dobra, to jest tylko jedna z tych rozmów.
+[15:33.000 --> 15:36.000]  Czyli ona nie pisze e-maili...
+[15:37.000 --> 15:38.000]  Dobra, na co to pominiemy?
+[15:38.000 --> 15:39.000]  Ok.
+[15:39.000 --> 15:43.000]  Ona chce malować portret Marcina,
+[15:43.000 --> 15:45.000]  ale jest chora, więc...
+[15:49.000 --> 15:53.000]  Nie maluje portreta Marciniego.
+[15:55.000 --> 15:58.000]  Nie jestem pewien, jaki jest obiekt i jaki jest świat.
+[15:59.000 --> 16:02.000]  Więc malować portret Marcina.
+[16:02.000 --> 16:03.000]  Tak.
+[16:03.000 --> 16:05.000]  Nie chce malować...
+[16:05.000 --> 16:07.000]  Nie maluje.
+[16:07.000 --> 16:08.000]  Nie maluje.
+[16:08.000 --> 16:12.000]  Czyli portret to jest obiekt?
+[16:12.000 --> 16:13.000]  Tak.
+[16:13.000 --> 16:15.000]  Potret to jest potreta?
+[16:15.000 --> 16:16.000]  Tak.
+[16:16.000 --> 16:17.000]  Portretu?
+[16:17.000 --> 16:18.000]  Tak, portretu.
+[16:18.000 --> 16:19.000]  Ok.
+[16:19.000 --> 16:20.000]  Portretu.
+[16:20.000 --> 16:23.000]  Marcina to jest obiekt, więc...
+[16:23.000 --> 16:24.000]  To jest imię?
+[16:24.000 --> 16:26.000]  To jest imię, ale jakby...
+[16:28.000 --> 16:29.000]  Kogo?
+[16:29.000 --> 16:31.000]  Portret kogo?
+[16:31.000 --> 16:32.000]  Kogo?
+[16:32.000 --> 16:34.000]  Więc to jest kogoś?
+[16:34.000 --> 16:35.000]  Nazwa?
+[16:35.000 --> 16:36.000]  Biernik?
+[16:36.000 --> 16:37.000]  Nie.
+[16:37.000 --> 16:39.000]  Kogo co?
+[16:39.000 --> 16:40.000]  Kogo czego?
+[16:40.000 --> 16:41.000]  Kogo co narzędek?
+[16:41.000 --> 16:42.000]  Kogo czego?
+[16:42.000 --> 16:43.000]  Depełniacz?
+[16:43.000 --> 16:44.000]  Kogo czego?
+[16:44.000 --> 16:45.000]  Depełniacz.
+[16:45.000 --> 16:46.000]  Mhm.
+[16:47.000 --> 16:48.000]  Dobra.
+[16:48.000 --> 16:49.000]  Tak, tak.
+[16:49.000 --> 16:50.000]  No, tak.
+[16:50.000 --> 16:52.000]  Nie musisz przejść po wszystkim, co już rozmawiałaś wcześniej.
+[16:52.000 --> 16:53.000]  Przepraszam.
+[16:53.000 --> 16:54.000]  To jest imię?
+[16:55.000 --> 16:56.000]  Marcin.
+[16:56.000 --> 16:57.000]  Tak, tak.
+[16:57.000 --> 16:58.000]  To jest imię?
+[16:58.000 --> 16:59.000]  Tak.
+[16:59.000 --> 17:00.000]  A jest portret kogo?
+[17:01.000 --> 17:02.000]  Marcina.
+[17:02.000 --> 17:03.000]  Tutaj już jest Depełniacz.
+[17:03.000 --> 17:04.000]  O, już.
+[17:05.000 --> 17:06.000]  O.
+[17:06.000 --> 17:15.000]  Czyli ona nie maluje portretu... czego? Portretu? Kogo? Marcina. Czyli Marcina to też jest dopełniacz.
+[17:19.000 --> 17:27.000]  Dobra. Ona chce oglądać mecz koszykówki. Ale jest chora, więc...
+[17:28.000 --> 17:29.000]  Mam pytanie.
+[17:29.000 --> 17:30.000]  Tak.
+[17:30.000 --> 17:37.000]  Dlaczego nie ma portretu Marcina?
+[17:44.000 --> 17:46.000]  Portretu Marcina?
+[17:48.000 --> 17:56.000]  Czy Marcin nie jest adrektem?
+[17:57.000 --> 17:58.000]  Nie.
+[17:58.000 --> 18:00.000]  Nie. Marcin to jest osoba.
+[18:00.000 --> 18:03.000]  To jest portret kogo?
+[18:04.000 --> 18:07.000]  Nie łączy się z wersją, tylko z portretem.
+[18:07.000 --> 18:14.000]  Tak samo jak tutaj. Czyli Kasia maluje portret kogo? Marcina.
+[18:14.000 --> 18:18.000]  Czyli Marcina będzie doportret, a nie domaluje.
+[18:18.000 --> 18:19.000]  Marcina?
+[18:20.000 --> 18:23.000]  Tak. Więc ona maluje portret Marcina.
+[18:24.000 --> 18:28.000]  Ale to nie jest piornik. To jest coś podobnego.
+[18:28.000 --> 18:30.000]  Nie, to jest jak bezmyślny.
+[18:30.000 --> 18:31.000]  To jest coś podobnego.
+[18:31.000 --> 18:32.000]  To jest coś podobnego.
+[18:32.000 --> 18:33.000]  Tak.
+[18:33.000 --> 18:34.000]  Tak.
+[18:34.000 --> 18:36.000]  To jest dopełniacz też. Marcina, kogo czego?
+[18:36.000 --> 18:37.000]  Kogo czego?
+[18:37.000 --> 18:38.000]  Tak.
+[18:38.000 --> 18:40.000]  To jest coś podobnego.
+[18:40.000 --> 18:43.000]  No i to nie ma łączenia.
+[18:46.000 --> 18:54.000]  Dobra. Ona chce oglądać mecz koszykówki. Ale jest chora, więc...
+[18:54.000 --> 18:55.000]  Nie oglądała.
+[18:55.000 --> 18:56.000]  Nie oglądała.
+[18:56.000 --> 18:57.000]  Nie oglądała.
+[18:57.000 --> 18:58.000]  Nie oglądała.
+[18:58.000 --> 19:08.000]  Nie oglądała meczu koszykówki.
+[19:08.000 --> 19:13.000]  Koszykówki. To też jest rzeczownik. Wiemy co to jest koszykówka?
+[19:13.000 --> 19:14.000]  Przepraszam jeszcze raz?
+[19:14.000 --> 19:16.000]  Wiemy co to koszykówka.
+[19:16.000 --> 19:17.000]  Wiemy co to jest...
+[19:17.000 --> 19:20.000]  Tak. Woli... Sorry. Woli bol, tak?
+[19:20.000 --> 19:21.000]  Basketbol.
+[19:21.000 --> 19:23.000]  Basketbol. Tak. Ok.
+[19:23.000 --> 19:26.000]  Meczu koszykówki.
+[19:26.000 --> 19:27.000]  Kieł.
+[19:27.000 --> 19:28.000]  Kieł.
+[19:28.000 --> 19:29.000]  Kieł.
+[19:29.000 --> 19:31.000]  Tak samo jak Marcin. To nie jest rzeczownik.
+[19:31.000 --> 19:38.000]  O, ok, ok. Bo to już jest w... Ok, więc to był mój błąd na dwa.
+[19:38.000 --> 19:46.000]  Czy koszykówki czasami stają się... Ok, więc oba są rzeczownikami.
+[19:46.000 --> 19:48.000]  Tak.
+[19:48.000 --> 19:49.000]  Tak.
+[19:49.000 --> 19:51.000]  I to się zmieniło.
+[19:51.000 --> 19:55.000]  Koszykówki też się zmieniły.
+[19:55.000 --> 19:59.000]  Więc powinno być koszykówka.
+[19:59.000 --> 20:01.000]  W mianowniku? Tak.
+[20:01.000 --> 20:05.000]  Bo tutaj koszykówki to już jest dopełniacz.
+[20:05.000 --> 20:09.000]  Tak samo jak Marcin.
+[20:09.000 --> 20:12.000]  Portret kogo czego, Marcina, dopełniacz.
+[20:12.000 --> 20:14.000]  Lecz kogo czego koszykówki.
+[20:14.000 --> 20:19.000]  Bo podstawowa słowa to koszykówka.
+[20:19.000 --> 20:22.000]  Przepraszam.
+[20:22.000 --> 20:24.000]  Koszykówki.
+[20:24.000 --> 20:31.000]  Więc to nie jest maskiwne, bo męcz to męski.
+[20:31.000 --> 20:35.000]  Męcz to męski, ale to nie ma zbyt dobrego powodu.
+[20:35.000 --> 20:39.000]  Koszykówka to jest żeński.
+[20:39.000 --> 20:43.000]  Dobra, ale jak mamy na przykład...
+[20:44.000 --> 20:48.000]  piłka nożna.
+[20:48.000 --> 20:52.000]  To będzie mecz czego?
+[20:52.000 --> 20:57.000]  We have a sport.
+[20:57.000 --> 20:58.000]  Piłka nożna.
+[20:58.000 --> 20:59.000]  But mecz?
+[20:59.000 --> 21:04.000]  Piłki nożne.
+[21:04.000 --> 21:08.000]  Piłki nożne.
+[21:08.000 --> 21:10.000]  Nożne.
+[21:10.000 --> 21:11.000]  Nożne.
+[21:11.000 --> 21:12.000]  Nożne.
+[21:12.000 --> 21:13.000]  Nożne.
+[21:13.000 --> 21:16.000]  To jest taki typ piłki nożnej.
+[21:16.000 --> 21:17.000]  Tak?
+[21:17.000 --> 21:18.000]  Tak.
+[21:18.000 --> 21:19.000]  Ale nożna...
+[21:19.000 --> 21:21.000]  Change to nożny because?
+[21:21.000 --> 21:23.000]  Because jest dopełniacz.
+[21:23.000 --> 21:30.000]  Tak samo jak gorącej kawy.
+[21:30.000 --> 21:32.000]  Am I saying something stupid?
+[21:32.000 --> 21:34.000]  Like should I already know this?
+[21:34.000 --> 21:36.000]  Am I asking a wrong question?
+[21:36.000 --> 21:38.000]  Am I forgetting something?
+[21:38.000 --> 21:39.000]  Ok.
+[21:39.000 --> 21:41.000]  We're forgetting a lot.
+[21:41.000 --> 21:43.000]  Pijuki nożna.
+[21:43.000 --> 21:48.000]  So both of them would change do peniaż, tak?
+[21:48.000 --> 21:56.000]  Pijuka nożna is the same year like gorąca kawa.
+[21:56.000 --> 21:58.000]  Like the same pattern.
+[21:58.000 --> 22:06.000]  Pijuka nożna, so piłka is rzeczownik, kawa is rzeczownik, nożna jest śmietnik, gorąca is śmietnik.
+[22:06.000 --> 22:08.000]  So piłka nożna both are not nouns.
+[22:08.000 --> 22:10.000]  No rzeczownik.
+[22:10.000 --> 22:14.000]  To jest rzeczownik piłka. Nożna jest przymiotnik.
+[22:14.000 --> 22:18.000]  Ok, to jest noga.
+[22:18.000 --> 22:20.000]  Ok, ok, ok.
+[22:20.000 --> 22:22.000]  Tu masz, no no no.
+[22:22.000 --> 22:26.000]  Let's forget about this.
+[22:29.000 --> 22:34.000]  Dobra, ale może zrobimy jeszcze odrębę z pracy domową z języka angielskiego.
+[22:34.000 --> 22:36.000]  Praca domowa, wiemy.
+[22:36.000 --> 22:38.000]  Zadań domowa.
+[22:38.000 --> 22:40.000]  Work at home.
+[22:40.000 --> 22:41.000]  Homework.
+[22:41.000 --> 22:42.000]  Oh, yeah.
+[22:42.000 --> 22:44.000]  Jestem angielski, wiemy.
+[22:44.000 --> 22:54.000]  Dobra, czyli ona chce odrabiać, inaczej robić, so do, pracę domową z języka angielskiego, ale nie może, bo jest chora, więc...
+[22:58.000 --> 23:00.000]  It's just not a work, will be odrabia.
+[23:00.000 --> 23:03.000]  Mhm, nie odrabia. Czego?
+[23:04.000 --> 23:06.000]  Dopełniacz.
+[23:06.000 --> 23:07.000]  Ok.
+[23:07.000 --> 23:09.000]  Nie odrabia.
+[23:09.000 --> 23:13.000]  Pracę.
+[23:13.000 --> 23:15.000]  Inna...
+[23:15.000 --> 23:17.000]  Nie odrabia.
+[23:17.000 --> 23:19.000]  Praca.
+[23:19.000 --> 23:21.000]  Oh, sorry, pracę.
+[23:21.000 --> 23:23.000]  Praca.
+[23:23.000 --> 23:25.000]  Praca.
+[23:25.000 --> 23:27.000]  Prace.
+[23:27.000 --> 23:29.000]  Nie odrabia pracy. Jakiej?
+[23:29.000 --> 23:35.000]  Domowej.
+[23:35.000 --> 23:36.000]  Domowej.
+[23:36.000 --> 23:38.000]  domowej
+[23:41.000 --> 23:44.000]  i z języka angielskiego same the same
+[23:44.000 --> 23:46.000]  tak no te kłyłote sentence
+[23:49.000 --> 23:53.000]  dobra, a ona chce ćwiczyć jogę
+[23:57.000 --> 24:01.000]  ona chce ćwiczyć kogo co, to jest piernik
+[24:01.000 --> 24:03.000]  jogę
+[24:03.000 --> 24:06.000]  ale jest chora, więc nie
+[24:13.000 --> 24:15.000]  ćwiczy?
+[24:15.000 --> 24:17.000]  ćwiczy
+[24:18.000 --> 24:20.000]  czego?
+[24:20.000 --> 24:22.000]  jogę
+[24:25.000 --> 24:27.000]  jogi
+[24:27.000 --> 24:29.000]  nie ćwiczy
+[24:29.000 --> 24:31.000]  jogi
+[24:31.000 --> 24:33.000]  tak jak
+[24:33.000 --> 24:35.000]  bo mamy tu
+[24:35.000 --> 24:37.000]  zakończył z i
+[24:37.000 --> 24:39.000]  no dobra
+[24:50.000 --> 24:53.000]  dobra, na tej karcie
+[24:53.000 --> 24:55.000]  na tej, którą dałam ostatnio
+[24:55.000 --> 24:59.000]  tam jest taka tabelka z
+[24:59.000 --> 25:01.000]  z zaimkanej
+[25:01.000 --> 25:03.000]  zaimkanej
+[25:03.000 --> 25:05.000]  to sobie zaraz zobaczymy
+[25:05.000 --> 25:07.000]  zaimki, zaimki
+[25:10.000 --> 25:12.000]  a dobra
+[25:12.000 --> 25:15.000]  tak to jest trzeca, piąta strona
+[25:17.000 --> 25:19.000]  czyli o przedprost
+[25:22.000 --> 25:24.000]  dziękuję, dzień dobry
+[25:25.000 --> 25:29.000]  dobra i mamy tam tabelkę z zaimkami w dopełniaczu
+[25:29.000 --> 25:32.000]  pamiętamy jakie są z zaimki w
+[25:32.000 --> 25:34.000]  w narzędniku
+[25:34.000 --> 25:35.000]  żeges Mikey
+[25:35.000 --> 25:48.000]  zak Niteli
+[25:48.000 --> 25:50.000]  The
+[25:50.000 --> 25:52.200]  number zurück
+[25:52.200 --> 25:54.000]  trzy
+[25:54.000 --> 25:56.000]  dwa
+[25:56.000 --> 25:58.000]  trzy
+[25:58.000 --> 26:00.000]  anticipating
+[26:00.000 --> 26:28.100]  I teraz
+[26:28.100 --> 26:30.920]  w mianowniku.
+[26:31.280 --> 26:31.580]  Mamy
+[26:31.580 --> 26:33.760]  ja, ty,
+[26:34.660 --> 26:35.320]  on,
+[26:36.160 --> 26:37.040]  ona,
+[26:38.260 --> 26:39.100]  ono,
+[26:39.820 --> 26:40.580]  my,
+[26:41.080 --> 26:43.900]  wy, oni,
+[26:45.780 --> 26:46.120]  one.
+[26:46.360 --> 26:48.420]  Tak to jest mianownik.
+[26:49.340 --> 26:50.020]  Tu mamy
+[26:50.020 --> 26:51.540]  liczbę dogrą.
+[26:52.800 --> 26:53.620]  A jak będzie
+[26:53.620 --> 26:55.220]  w narzędniku?
+[26:56.980 --> 26:57.820]  Na przykład
+[26:57.820 --> 27:00.020]  spotykam się z kim?
+[27:04.420 --> 27:05.540]  I'm meeting with you.
+[27:05.660 --> 27:07.480]  Spotykam się z...
+[27:07.480 --> 27:08.380]  z tobą.
+[27:08.520 --> 27:09.240]  Z tobą.
+[27:09.240 --> 27:11.240]  Z nim.
+[27:14.120 --> 27:15.340]  Spotykam się z nim.
+[27:15.400 --> 27:16.360]  I'm meeting with him.
+[27:18.380 --> 27:18.960]  Z nią.
+[27:19.260 --> 27:20.720]  Z nią. Dobrze.
+[27:23.160 --> 27:24.100]  Tutaj będzie z nim.
+[27:27.380 --> 27:27.740]  Dobrze.
+[27:27.820 --> 27:30.300]  Z mną.
+[27:32.000 --> 27:32.460]  Ok.
+[27:32.720 --> 27:34.840]  Liwą nogą spotykam się z...
+[27:34.840 --> 27:35.460]  Nimi.
+[27:36.420 --> 27:36.840]  Nami.
+[27:37.120 --> 27:37.680]  Nami.
+[27:40.340 --> 27:41.100]  Nimi.
+[27:42.980 --> 27:43.740]  Wami.
+[27:44.060 --> 27:45.420]  Z wami. Tak.
+[27:48.420 --> 27:49.220]  I...
+[27:49.220 --> 27:49.660]  Nimi.
+[27:49.820 --> 27:50.680]  Nimi. Tak.
+[27:51.940 --> 27:53.740]  No dobrze. To jest narzędnik.
+[27:53.740 --> 27:56.860]  Na tej tabelce,
+[27:56.960 --> 27:57.760]  o której mówiłam,
+[27:57.820 --> 27:59.120]  mamy biedny nimi dynik.
+[27:59.120 --> 27:59.960]  Dopełniacz.
+[28:02.960 --> 28:04.120]  Dopełniacz.
+[28:04.120 --> 28:04.240]  Dopełniacz.
+[28:08.240 --> 28:10.480]  Kiedy używamy
+[28:10.480 --> 28:12.400]  tego dopełniacza?
+[28:13.280 --> 28:14.060]  Na przykład
+[28:14.060 --> 28:15.900]  mieliśmy
+[28:15.900 --> 28:17.820]  czasownik słuchać.
+[28:18.720 --> 28:20.120]  Można słuchać
+[28:21.320 --> 28:22.120]  czekam...
+[28:22.960 --> 28:23.760]  muzyki.
+[28:24.920 --> 28:26.160]  For example, I can listen
+[28:26.160 --> 28:26.980]  to music.
+[28:27.820 --> 28:30.820]  But I can also listen to someone.
+[28:30.820 --> 28:33.820]  Mogę też słuchać kogoś.
+[28:33.820 --> 28:35.820]  Na przykład...
+[28:47.820 --> 28:49.820]  W drugiej osobie.
+[28:49.820 --> 28:51.820]  Kogo słucham?
+[28:53.820 --> 28:55.820]  Idziemy w tabelce? Gdzie jesteśmy?
+[28:55.820 --> 28:56.820]  Cierwie.
+[28:56.820 --> 28:57.820]  Cierwie. Mhm.
+[28:57.820 --> 28:58.320]  On.
+[28:58.320 --> 28:59.320]  Chciał.
+[28:59.320 --> 29:00.320]  Albo.
+[29:00.320 --> 29:01.820]  Ciebie.
+[29:01.820 --> 29:03.820]  Dobra.
+[29:03.820 --> 29:05.820]  On.
+[29:05.820 --> 29:07.820]  Mogę słuchać.
+[29:07.820 --> 29:09.820]  Jego.
+[29:09.820 --> 29:11.820]  Mhm.
+[29:11.820 --> 29:12.820]  Bo.
+[29:12.820 --> 29:13.820]  Jego.
+[29:13.820 --> 29:15.820]  Ona.
+[29:15.820 --> 29:17.820]  Jej.
+[29:17.820 --> 29:19.820]  Jej.
+[29:19.820 --> 29:21.820]  Jej.
+[29:21.820 --> 29:23.820]  Wait. Ok. So only one of these is the correct answer?
+[29:23.820 --> 29:25.820]  No. Both. Both, right?
+[29:25.820 --> 29:27.820]  Depends on the context. Ok.
+[29:27.820 --> 29:29.820]  Jej.
+[29:29.820 --> 29:31.820]  Mhm. Albo niej.
+[29:31.820 --> 29:33.820]  Nie go.
+[29:33.820 --> 29:39.820]  Ok. Ono. Na przykład to dziecko.
+[29:39.820 --> 29:42.820]  Go. Jego.
+[29:42.820 --> 29:45.820]  Tak samo jak on.
+[29:45.820 --> 29:51.820]  Czyli go. Jego. Nie go.
+[29:51.820 --> 29:52.820]  Mhm.
+[29:52.820 --> 29:54.820]  Dobra. Potem mamy my.
+[29:54.820 --> 29:55.820]  Nos.
+[29:55.820 --> 29:56.820]  Mhm.
+[29:56.820 --> 29:58.820]  Nas.
+[29:58.820 --> 30:01.820]  Na przykład proszę, słuchajcie nas.
+[30:01.820 --> 30:03.820]  To jest listę tu as. Mhm.
+[30:03.820 --> 30:04.820]  Wy.
+[30:04.820 --> 30:06.820]  Was.
+[30:06.820 --> 30:07.820]  Was.
+[30:07.820 --> 30:08.820]  Was.
+[30:08.820 --> 30:09.820]  Aha.
+[30:09.820 --> 30:10.820]  Was.
+[30:10.820 --> 30:12.820]  I oni, one?
+[30:12.820 --> 30:13.820]  Nie. Nie.
+[30:13.820 --> 30:14.820]  Mhm.
+[30:14.820 --> 30:15.820]  Ich.
+[30:15.820 --> 30:16.820]  Ich.
+[30:16.820 --> 30:17.820]  Albo.
+[30:17.820 --> 30:18.820]  Ich.
+[30:18.820 --> 30:20.820]  Ok. A jeszcze ja?
+[30:20.820 --> 30:21.820]  Nie.
+[30:21.820 --> 30:22.820]  Nie.
+[30:22.820 --> 30:23.820]  Nie.
+[30:23.820 --> 30:24.820]  Nie.
+[30:24.820 --> 30:25.820]  Nie.
+[30:25.820 --> 30:29.820]  Mamy jeszcze inne. Na przykład.
+[30:29.820 --> 30:33.820]  Nienawidzić. Mieliśmy ostatnio. Co znaczy nienawidzić?
+[30:33.820 --> 30:35.820]  Bo da z nim nienawidzić?
+[30:35.820 --> 30:38.820]  I could not see? Mhm.
+[30:38.820 --> 30:41.820]  I do not know? Mhm.
+[30:41.820 --> 30:44.820]  I do not know.
+[30:44.820 --> 30:47.820]  Ktoś pytał o to ostatnio.
+[30:47.820 --> 30:49.820]  Someone asked about this last time.
+[30:49.820 --> 30:50.820]  Please repeat the question.
+[30:50.820 --> 30:51.820]  Was.
+[30:51.820 --> 30:52.820]  Nienawidzić.
+[30:52.820 --> 30:53.820]  Nie. Na. Wiedzieć.
+[30:53.820 --> 30:54.820]  Nie. Nienawidzić.
+[30:54.820 --> 30:55.820]  Nie. To nie. Widzieć.
+[30:55.820 --> 30:56.820]  Ok.
+[30:56.820 --> 30:57.820]  Nienawidzić.
+[30:57.820 --> 30:58.820]  So to know, right?
+[30:58.820 --> 30:59.820]  Mhm. To jest wiedzieć. Ok.
+[30:59.820 --> 31:00.820]  A word in question.
+[31:00.820 --> 31:01.820]  Nie. Na. Wiedzić.
+[31:01.820 --> 31:02.820]  O, it's one word.
+[31:02.820 --> 31:03.820]  Dzić. Tak.
+[31:03.820 --> 31:04.820]  Widzieć.
+[31:04.820 --> 31:05.820]  Si?
+[31:05.820 --> 31:06.820]  Mhm.
+[31:06.820 --> 31:07.820]  Widzieć.
+[31:07.820 --> 31:08.820]  Si?
+[31:08.820 --> 31:09.820]  Mhm.
+[31:09.820 --> 31:10.820]  Si?
+[31:10.820 --> 31:11.820]  Si?
+[31:11.820 --> 31:12.820]  Si?
+[31:12.820 --> 31:13.820]  Si?
+[31:13.820 --> 31:14.820]  Si?
+[31:14.820 --> 31:15.820]  Si?
+[31:15.820 --> 31:16.820]  Si?
+[31:16.820 --> 31:17.820]  Si?
+[31:17.820 --> 31:18.820]  Si?
+[31:18.820 --> 31:19.820]  Si?
+[31:19.820 --> 31:20.820]  Si?
+[31:20.820 --> 31:21.820]  Si?
+[31:21.820 --> 31:22.820]  Si?
+[31:22.820 --> 31:23.820]  Si?
+[31:23.820 --> 31:24.820]  Si?
+[31:24.820 --> 31:25.820]  Si?
+[31:25.820 --> 31:26.820]  Wiedzieć.
+[31:26.820 --> 31:27.820]  Wiedzieć.
+[31:27.820 --> 31:28.820]  Wiedzieć.
+[31:28.820 --> 31:29.820]  Wiedzieć.
+[31:29.820 --> 31:30.820]  No. Wiedzieć.
+[31:30.820 --> 31:31.820]  Wiedzieć.
+[31:31.820 --> 31:32.820]  Mhm.
+[31:32.820 --> 31:33.820]  Aha. No.
+[31:33.820 --> 31:34.820]  Widzimy.
+[31:34.820 --> 31:35.820]  Tu mamy e.
+[31:35.820 --> 31:36.820]  Tu mamy e.
+[31:36.820 --> 31:37.820]  Wiedzieć.
+[31:37.820 --> 31:38.820]  Wiedzieć.
+[31:38.820 --> 31:39.820]  Wiedzieć.
+[31:39.820 --> 31:40.820]  Wiedzieć.
+[31:40.820 --> 31:41.820]  Wiedzieć.
+[31:41.820 --> 31:42.820]  No.
+[31:42.820 --> 31:43.820]  Widzieć.
+[31:43.820 --> 31:44.820]  Widzieć.
+[31:44.820 --> 31:45.820]  Si?
+[31:45.820 --> 31:46.820]  Nienawidzić.
+[31:46.820 --> 31:47.820]  Nienawidzić.
+[31:47.820 --> 31:48.820]  I don't see, I know.
+[31:48.820 --> 31:49.820]  It's not related to this.
+[31:49.820 --> 31:50.820]  Ok.
+[31:50.820 --> 31:51.820]  Nie.
+[31:51.820 --> 31:52.820]  Nie wiem.
+[31:52.820 --> 31:53.820]  Nie wiem.
+[31:53.820 --> 31:54.820]  Nie wiem.
+[31:54.820 --> 31:55.820]  Nie wiem.
+[31:55.820 --> 31:56.820]  Wiedzieć.
+[31:56.820 --> 31:57.820]  Wiedzieć.
+[31:57.820 --> 31:58.820]  Oh.
+[31:58.820 --> 31:59.820]  Mhm.
+[31:59.820 --> 32:00.820]  Mhm.
+[32:00.820 --> 32:01.820]  Pamiętamy?
+[32:01.820 --> 32:02.820]  Coś było?
+[32:02.820 --> 32:03.820]  Yeah, yeah.
+[32:03.820 --> 32:04.820]  Wiem.
+[32:04.820 --> 32:05.820]  Wiem, że coś było.
+[32:05.820 --> 32:06.820]  Jak nas rozmawia.
+[32:06.820 --> 32:07.820]  Hmm.
+[32:07.820 --> 32:08.820]  Wiem, że coś było.
+[32:08.820 --> 32:09.820]  Mhm.
+[32:09.820 --> 32:10.820]  Dobra.
+[32:10.820 --> 32:11.820]  Ok.
+[32:11.820 --> 32:15.820]  Czyli na przykład mogę powiedzieć Ja nienawidzę ich.
+[32:15.820 --> 32:16.820]  I hate them.
+[32:16.820 --> 32:17.820]  Mhm.
+[32:17.820 --> 32:19.300]  Nienawidzę kogo, czego.
+[32:19.300 --> 32:20.300]  Ich, dem.
+[32:20.300 --> 32:21.300]  Nie.
+[32:21.300 --> 32:22.300]  Nie.
+[32:22.300 --> 32:23.300]  Nie.
+[32:23.300 --> 32:24.300]  Będzie.
+[32:24.300 --> 32:26.300]  albo
+[32:38.300 --> 32:40.300]  Co znaczy szukać?
+[32:40.300 --> 32:42.300]  Szukać
+[32:42.300 --> 32:44.300]  Szukać
+[32:44.300 --> 32:46.300]  Szukać
+[32:46.300 --> 32:48.300]  Ja szukam
+[32:48.300 --> 32:50.300]  Was
+[32:50.300 --> 32:52.300]  I'm searching for you
+[32:52.300 --> 32:54.300]  Szukam was
+[32:54.300 --> 32:56.300]  Na przykład
+[33:00.300 --> 33:02.300]  Ja słucham
+[33:02.300 --> 33:04.300]  Tak?
+[33:04.300 --> 33:06.300]  Słucham
+[33:06.300 --> 33:08.300]  Ciebie
+[33:08.300 --> 33:10.300]  Ty mówisz
+[33:10.300 --> 33:12.300]  Ja ciebie słucham
+[33:14.300 --> 33:16.300]  Czy ty słuchasz mnie?
+[33:16.300 --> 33:18.300]  Czy ty słuchasz mnie?
+[33:18.300 --> 33:20.300]  Czy ty słuchasz mnie?
+[33:20.300 --> 33:22.300]  Ok
+[33:22.300 --> 33:24.300]  To są wszystkie zajęcia w dopełniaczu
+[33:24.300 --> 33:26.300]  Ale
+[33:26.300 --> 33:28.300]  Kiedy używamy tego?
+[33:28.300 --> 33:30.300]  Kiedy tego?
+[33:30.300 --> 33:32.300]  A kiedy tego?
+[33:32.300 --> 33:34.300]  When do we use this?
+[33:34.300 --> 33:36.300]  When do we use this?
+[33:36.300 --> 33:38.300]  It depends
+[33:38.300 --> 33:40.300]  Zazwyczaj
+[33:40.300 --> 33:42.300]  Jego
+[33:42.300 --> 33:44.300]  Usually we use this
+[33:44.300 --> 33:46.300]  Let's say longer form
+[33:46.300 --> 33:48.300]  Bo jego cię ciebie
+[33:48.300 --> 33:50.300]  At the beginning or
+[33:50.300 --> 33:52.300]  At the end of the sentence
+[33:52.300 --> 33:54.300]  Czyli zazwyczaj
+[33:54.300 --> 33:56.300]  Nie zawsze
+[33:56.300 --> 33:58.300]  Jego, ciebie, niej
+[33:58.300 --> 34:00.300]  Dłuższą formę
+[34:00.300 --> 34:02.300]  Używamy na początku
+[34:02.300 --> 34:04.300]  Zdania
+[34:04.300 --> 34:06.300]  Albo na końcu
+[34:06.300 --> 34:08.300]  Zdania
+[34:08.300 --> 34:10.300]  Hmm
+[34:10.300 --> 34:12.300]  Hmm
+[34:12.300 --> 34:14.300]  Hmm
+[34:14.300 --> 34:16.300]  Ok
+[34:16.300 --> 34:18.300]  Ok
+[34:18.300 --> 34:20.300]  Tej formy
+[34:20.300 --> 34:22.300]  Która zaczyna się na N
+[34:22.300 --> 34:24.300]  Używamy zawsze
+[34:24.300 --> 34:26.300]  Ten słowem
+[34:26.300 --> 34:28.300]  Ten słowem bez
+[34:28.300 --> 34:30.300]  So for example
+[34:30.300 --> 34:32.300]  Idę do szkoły
+[34:32.300 --> 34:34.300]  Bez niego
+[34:34.300 --> 34:36.300]  I go to school without him
+[34:36.300 --> 34:38.300]  Mhm
+[34:38.300 --> 34:40.300]  Albo jesteśmy w kinie
+[34:40.300 --> 34:42.300]  Bez nich
+[34:42.300 --> 34:44.300]  We are in the cinema without them
+[34:44.300 --> 34:46.300]  Ok
+[34:46.300 --> 34:48.300]  Dobra
+[34:48.300 --> 34:50.300]  To to jest najważniejsza
+[34:50.300 --> 34:52.300]  Rzecz
+[34:52.300 --> 34:54.300]  I pozostaje
+[34:54.300 --> 34:56.340]  Lemon
+[34:56.340 --> 34:59.620]  To te
+[34:59.620 --> 35:01.180]  No
+[35:01.180 --> 35:03.180]  electric
+[35:03.180 --> 35:03.300] シャт
+[35:03.300 --> 35:04.220] 콨
+[35:04.220 --> 35:05.100]  Na
+[35:05.100 --> 35:09.100]  .
+[35:09.100 --> 35:13.100]  .
+[35:13.100 --> 35:14.320]  hardest
+[35:14.320 --> 35:14.780]  zadań
+[35:14.780 --> 35:16.260]  Ne
+[35:16.260 --> 35:17.700]  AAA
+[35:17.700 --> 35:19.100]  Chciałabym
+[35:19.100 --> 35:19.600]  To co
+[35:19.700 --> 35:21.800]  Od allí
+[35:21.800 --> 35:27.300]  I tutaj mamy zdania, które musimy uzupełnić zainkami.
+[35:27.300 --> 35:29.800]  We just fill the sentences with...
+[35:32.300 --> 35:33.800]  with zainki.
+[35:36.800 --> 35:42.800]  I chyba wszystkie zainki chyba są w dopełniaczu.
+[35:51.800 --> 35:55.800]  I mam te wspólne poznawanie.
+[35:55.800 --> 36:00.300]  Ja jestem przeciwnikiem...
+[36:00.800 --> 36:04.300]  będzieBlackroom, jak to tylko.
+[36:04.300 --> 36:07.800]  Ja mam to głupi publiczna zomplowanie...
+[36:07.800 --> 36:10.800]  to jest slop widokowy z jakiegoś typumanuelu.
+[36:10.800 --> 36:13.800]  Tylko klienta bez zauważenia się oluyor,
+[36:14.300 --> 36:18.800]  człowiek będzie mógł to skopiować.
+[36:19.800 --> 36:20.800]  No weź Waldemar.
+[36:21.800 --> 36:23.800]  Dziękuję.
+[36:51.800 --> 36:53.800]  Dziękuję.
+[37:21.800 --> 37:42.240]  Mam pytanie.
+[37:42.240 --> 37:48.480]  Co to jest różnica między przeproszę i proszę?
+[37:51.800 --> 37:57.320]  Proszę to jest...
+[37:57.320 --> 37:59.320]  Prosze?
+[37:59.320 --> 38:01.320]  Tak.
+[38:01.320 --> 38:03.320]  Przeprosić to jest to, że powiem przepraszam.
+[38:03.320 --> 38:06.320]  O! To jest przepraszam?
+[38:06.320 --> 38:08.320]  Aha.
+[38:08.320 --> 38:14.320]  Przepraszam to jest podstawowy słówko, który jest przeprosić.
+[38:14.320 --> 38:19.320]  Ja przepraszam, ty przepraszasz, tak.
+[38:19.320 --> 38:21.320]  Ale bezokojnie.
+[38:21.320 --> 38:23.320]  Bezokojnicznie przeprosić.
+[38:51.320 --> 38:54.780]  Ale bezokojnie.
+[38:54.780 --> 38:55.780]  I tak dalej.
+[38:55.780 --> 38:56.320]  I prawo przeprosić.
+[38:56.320 --> 39:01.320]  Tak.
+[39:01.320 --> 39:11.320]  Czyli beryczący tekst grabbed demasiado dużo peur Shaun w katist aquela jedno木ko.
+[39:11.320 --> 39:13.320]  Postanawia to sprawdzić i Ohio onwardować mi keyboard.
+[39:13.320 --> 39:15.320]  Kinie zaprasza jaworliwie.
+[39:15.320 --> 39:16.320]  My nie możemy, że chemi li foreコー.
+[39:16.320 --> 39:17.320]  Teraz mówię, że白m yap long.
+[39:17.320 --> 39:18.320]  Nie dорд się opowiadać.
+[39:18.320 --> 39:19.320]  Rob Consumer.
+[39:19.320 --> 39:20.320]  Chemi восп BrandMed.
+[39:20.320 --> 39:22.320]  Dziękuję.
+[39:50.320 --> 39:52.320]  Dziękuję.
+[40:20.320 --> 40:22.320]  Dziękuję.
+[40:50.320 --> 40:52.320]  Powinniśmy wiedzieć.
+[41:06.320 --> 41:08.320]  Nie wiem nawet, co to jest najlepsze słowo.
+[41:08.320 --> 41:10.320]  Czy to widzieliście?
+[41:20.320 --> 41:22.320]  Czy widzieliście?
+[41:28.320 --> 41:30.320]  Wy widzieliście?
+[41:36.320 --> 41:38.320]  Widzieć. Ja widzę. Wy widzicie.
+[41:38.320 --> 41:40.320]  Widzieliście.
+[41:40.320 --> 41:42.320]  To jest w zasadzie
+[41:42.320 --> 41:44.320]  poprzedni ten.
+[41:44.320 --> 41:46.320]  Ale mamy
+[41:46.320 --> 41:48.320]  jakieś poprzednie.
+[41:48.320 --> 41:50.320]  Będziemy mieli więcej.
+[41:50.320 --> 41:52.320]  Może ten.
+[41:54.320 --> 41:56.320]  Trudno jest wymyślić ten egzercizm
+[41:56.320 --> 41:58.320]  bez
+[41:58.320 --> 42:00.320]  wyprzedzenia wszystkiego.
+[42:00.320 --> 42:02.320]  Nie, to jest dobre.
+[42:02.320 --> 42:04.320]  To daje coś.
+[42:04.320 --> 42:06.320]  Nie widzimy wszystko.
+[42:06.320 --> 42:08.320]  To jest nowe.
+[42:08.320 --> 42:10.320]  Jeśli widzimy to w danym
+[42:10.320 --> 42:12.320]  odcinku, to jest wszystko, co widzimy.
+[42:12.320 --> 42:14.320]  W ten sposób.
+[42:14.320 --> 42:16.320]  Widzimy trochę, a potem...
+[42:16.320 --> 42:18.320]  Ale to się wydarzy.
+[42:18.320 --> 42:20.320]  To niemożliwe.
+[42:20.320 --> 42:22.320]  Nie wiem, czy wy nauczycie się języków.
+[42:22.320 --> 42:24.320]  Nie wiem.
+[42:26.320 --> 42:28.320]  Czy możemy już?
+[42:28.320 --> 42:30.320]  Możemy.
+[42:30.320 --> 42:32.320]  Dobra.
+[42:32.320 --> 42:34.320]  Dobra, czyli pierwsze.
+[42:34.320 --> 42:36.320]  Nigdy Ciebie tam nie spotkałam.
+[42:36.320 --> 42:38.320]  Ok.
+[42:38.320 --> 42:40.320]  Dwa, trzy. Masz tę książkę.
+[42:42.320 --> 42:44.320]  Jej? Nie mam jej.
+[42:44.320 --> 42:46.320]  Nie mam jej.
+[42:46.320 --> 42:48.320]  Przeprosisz kolegę.
+[42:48.320 --> 42:50.320]  Nie.
+[42:50.320 --> 42:52.320]  Przepraszam.
+[42:52.320 --> 42:54.320]  Why nie?
+[42:54.320 --> 42:56.320]  Why jej?
+[42:56.320 --> 42:58.320]  Why jej?
+[42:58.320 --> 43:00.320]  Why jej?
+[43:00.320 --> 43:02.320]  And not niej?
+[43:02.320 --> 43:04.320]  You said bigger form at the end of the sentence.
+[43:04.320 --> 43:06.320]  Yeah, usually.
+[43:06.320 --> 43:08.320]  And how did we decide that this is not?
+[43:08.320 --> 43:10.320]  Ok. At the beginning of the sentence
+[43:10.320 --> 43:12.320]  always niej.
+[43:12.320 --> 43:14.320]  Na początku zdania zawsze niej.
+[43:14.320 --> 43:16.320]  Na początku zdania zawsze niej.
+[43:16.320 --> 43:18.320]  Na początku zdania zawsze niej.
+[43:18.320 --> 43:20.320]  Jeśli chcemy podkreślić, zaakcentować.
+[43:20.320 --> 43:22.320]  Jeśli chcemy podkreślić, zaakcentować.
+[43:22.320 --> 43:24.320]  We want to accent.
+[43:24.320 --> 43:26.320]  Her. Not anyone else.
+[43:26.320 --> 43:28.320]  Her. Not anyone else.
+[43:28.320 --> 43:30.320]  Her. That's my accent.
+[43:30.320 --> 43:32.320]  Also niej.
+[43:32.320 --> 43:34.320]  So we can put also this in the middle of sentence when we want to accent something.
+[43:34.320 --> 43:36.320]  The longer form.
+[43:36.320 --> 43:38.320]  Tak, w drugą formę.
+[43:38.320 --> 43:40.320]  A na końcu zdania?
+[43:40.320 --> 43:42.320]  Hmm.
+[43:42.320 --> 43:44.320]  But this would be a good time to stress.
+[43:44.320 --> 43:46.320]  But this would be a good time to stress.
+[43:46.320 --> 43:48.320]  Like I'm stressing that I don't have that book.
+[43:48.320 --> 43:50.320]  Like I'm stressing that I don't have that book.
+[43:50.320 --> 43:52.320]  Like I'm stressing that I don't have that book.
+[43:52.320 --> 43:54.320]  It depends on your stress.
+[43:54.320 --> 43:56.320]  Ok. I don't have this.
+[43:56.320 --> 43:58.320]  Or I don't have this.
+[43:58.320 --> 44:00.320]  Mhm.
+[44:00.320 --> 44:02.320]  Mhm.
+[44:02.320 --> 44:04.320]  Hmm.
+[44:04.320 --> 44:06.320]  Tutaj lepsza forma będzie jej.
+[44:06.320 --> 44:08.320]  Sorry, but you use it for books too?
+[44:08.320 --> 44:10.320]  Sorry, but you use it for books too?
+[44:10.320 --> 44:12.320]  Sorry, but you use it for books too?
+[44:12.320 --> 44:14.320]  Tak. Bo książka to jest rodzaj żeński ona.
+[44:14.320 --> 44:16.320]  Tak, książka.
+[44:16.320 --> 44:18.320]  Tak, tak, tak.
+[44:18.320 --> 44:20.320]  Tak, tak, tak.
+[44:20.320 --> 44:22.320]  Wszystkie słowa w rodzaju żeńskim.
+[44:22.320 --> 44:24.320]  Wszystkie słowa w rodzaju żeńskim.
+[44:24.320 --> 44:26.320]  It doesn't matter if it's a person or a person.
+[44:26.320 --> 44:28.320]  It doesn't matter if it's a person or a person.
+[44:28.320 --> 44:30.320]  So pronouns just have the same kind of pronoun.
+[44:30.320 --> 44:32.320]  So pronouns just have the same kind of pronoun.
+[44:32.320 --> 44:34.320]  And to that question I thought it would be nie,
+[44:34.320 --> 44:36.320]  also nie mam nie.
+[44:36.320 --> 44:38.320]  Because it's a negation.
+[44:38.320 --> 44:40.320]  Oh.
+[44:40.320 --> 44:42.320]  Oh.
+[44:42.320 --> 44:44.320]  What, what, what?
+[44:44.320 --> 44:46.320]  Nie mam nie.
+[44:46.320 --> 44:48.320]  Ok, that's interesting.
+[44:48.320 --> 44:50.320]  I thought that's what you said,
+[44:50.320 --> 44:52.320]  is that when it's like bez or negation,
+[44:52.320 --> 44:54.320]  then it's sort of...
+[44:54.320 --> 44:56.320]  No, but...
+[44:56.320 --> 44:58.320]  Bez is a negation.
+[44:58.320 --> 45:00.320]  Like it is kind of, but you just need to focus on your word.
+[45:00.320 --> 45:02.320]  If you have this word,
+[45:02.320 --> 45:04.320]  this exact word.
+[45:04.320 --> 45:06.320]  So...
+[45:06.320 --> 45:08.320]  Nie mam nie.
+[45:08.320 --> 45:10.320]  Nie mam nie.
+[45:10.320 --> 45:12.320]  But there are other times when you use
+[45:12.320 --> 45:14.320]  niego nie.
+[45:14.320 --> 45:16.320]  Other times.
+[45:16.320 --> 45:18.320]  Other times.
+[45:18.320 --> 45:20.320]  But for now we need to write down
+[45:20.320 --> 45:22.320]  the most important...
+[45:22.320 --> 45:24.320]  Can you repeat your question?
+[45:24.320 --> 45:26.320]  I was wondering if it should be nie mam nie.
+[45:26.320 --> 45:28.320]  Nie mam nie.
+[45:28.320 --> 45:30.320]  Nie mam nie.
+[45:30.320 --> 45:32.320]  Like that one?
+[45:32.320 --> 45:34.320]  Because it says nie mam.
+[45:34.320 --> 45:36.320]  Like I don't have it.
+[45:36.320 --> 45:38.320]  Like that, but
+[45:38.320 --> 45:40.320]  what is the correct answer?
+[45:40.320 --> 45:42.320]  Nie.
+[45:42.320 --> 45:44.320]  Nie mam nie.
+[45:44.320 --> 45:46.320]  Nie mam nie.
+[45:46.320 --> 45:48.320]  dear.
+[45:48.320 --> 45:50.320]  I mean...
+[45:56.320 --> 45:58.320]  Nie mam nie.
+[45:58.320 --> 46:00.320]  Nie mam nie.
+[46:00.320 --> 46:02.320]  Ja nie mam het.
+[46:02.320 --> 46:04.320]  Nie mam het.
+[46:04.320 --> 46:06.320]  I wasn't et.
+[46:06.320 --> 46:08.320]  Nie mam het oct.
+[46:08.320 --> 46:10.320]  Nie mam het наших właściwie.
+[46:10.320 --> 46:12.320]  I wasn't airport ocha.
+[46:12.320 --> 46:18.480]  Ta forma, ta forma, ta forma i ta forma jest zawsze z bez.
+[46:18.480 --> 46:19.080]  Right.
+[46:19.080 --> 46:20.080]  Always with bez.
+[46:20.080 --> 46:30.680]  But at the beginning of sentence it can be ta forma or ta forma, ta, ta or ta and ta.
+[46:30.680 --> 46:35.680]  So even if there's no bez, you can use jego at the beginning of sentence.
+[46:35.680 --> 46:36.280]  No, no.
+[46:36.280 --> 46:36.780]  No.
+[46:36.780 --> 46:39.780]  These all pronouns are for do, pe, mi, a, cz, by, tr, u, p, r, i, n.
+[46:39.780 --> 46:43.340]  You cannot put jego and bez.
+[46:43.340 --> 46:43.840]  No.
+[46:43.840 --> 46:49.440]  Only bez words starting with n.
+[46:49.440 --> 46:51.440]  With this word bez.
+[46:51.440 --> 46:57.440]  But the longer form is this or this.
+[46:57.440 --> 46:57.940]  Okay.
+[46:57.940 --> 47:03.940]  But for example here the longer form we have only one.
+[47:03.940 --> 47:05.940]  I don't know if this just makes sense.
+[47:05.940 --> 47:06.440]  Kind of.
+[47:06.440 --> 47:06.940]  Kind of.
+[47:06.940 --> 47:07.440]  I'm not, no.
+[47:07.440 --> 47:08.440]  So even, so that.
+[47:08.440 --> 47:08.940]  No, no, no.
+[47:08.940 --> 47:09.440]  I think I'm, I'm.
+[47:09.440 --> 47:11.440]  I'm mixing something.
+[47:11.440 --> 47:13.440]  Not mixing but.
+[47:13.440 --> 47:15.440]  Okay.
+[47:15.440 --> 47:16.440]  Again.
+[47:16.440 --> 47:19.440]  With word bez.
+[47:19.440 --> 47:20.440]  Use.
+[47:20.440 --> 47:26.440]  Only this word that starts with n.
+[47:26.440 --> 47:28.440]  Okay.
+[47:28.440 --> 47:29.440]  Tak?
+[47:29.440 --> 47:30.440]  To mamy.
+[47:30.440 --> 47:31.440]  Yeah.
+[47:31.440 --> 47:33.440]  To słowo, te słowa.
+[47:33.440 --> 47:39.440]  Ale na początku zdania są formy dłuższe.
+[47:39.440 --> 47:40.440]  Tak.
+[47:40.440 --> 47:43.440]  Na początku zdania dłuższe.
+[47:43.440 --> 47:46.440]  Nie krótsze, dłuższe.
+[47:46.440 --> 47:50.440]  Ale na przykład tutaj jest ten.
+[47:50.440 --> 47:51.440]  Dłuższy form.
+[47:51.440 --> 47:52.440]  Dłuższy form.
+[47:52.440 --> 47:54.440]  Zaczyna z n, ale nie ma znaczenia.
+[47:54.440 --> 48:02.440]  Ale używasz tego, ale wtedy, więc używasz, powiedzmy w tym samym typie zdania, jeśli jest mężczyzna albo kobieta, albo mężczyzna,
+[48:02.440 --> 48:04.440]  używasz jego i nie.
+[48:04.440 --> 48:06.440]  To ma dokładnie samo znaczenie.
+[48:06.440 --> 48:07.440]  Jego.
+[48:07.440 --> 48:08.440]  Mhm.
+[48:08.440 --> 48:09.440]  Nie.
+[48:09.440 --> 48:10.440]  Nie.
+[48:10.440 --> 48:11.440]  Niej.
+[48:11.440 --> 48:12.440]  Niej.
+[48:12.440 --> 48:13.440]  Aha.
+[48:13.440 --> 48:14.440]  Zaczyna z tego.
+[48:14.440 --> 48:15.440]  Tak.
+[48:15.440 --> 48:16.440]  I ma to samo znaczenie.
+[48:16.440 --> 48:17.440]  Mhm.
+[48:17.440 --> 48:18.440]  Okej.
+[48:18.440 --> 48:19.440]  Bo myślałem, że nie jest dokładnie tak jak niego.
+[48:19.440 --> 48:20.440]  Jego and niego.
+[48:20.440 --> 48:21.440]  Nie.
+[48:21.440 --> 48:22.440]  Niej.
+[48:22.440 --> 48:23.440]  Yeah.
+[48:23.440 --> 48:24.440]  And niego.
+[48:24.440 --> 48:25.440]  Yeah.
+[48:25.440 --> 48:26.440]  I to samo.
+[48:26.440 --> 48:27.440]  Tak.
+[48:27.440 --> 48:28.440]  Do jednego.
+[48:28.440 --> 48:29.440]  Do jednego.
+[48:29.440 --> 48:30.440]  Jeśli byłbyś mężczyzną, zaczniesz z jego.
+[48:30.440 --> 48:31.440]  Tak.
+[48:31.440 --> 48:32.440]  Nie.
+[48:32.440 --> 48:33.440]  Nie.
+[48:33.440 --> 48:34.440]  Nie.
+[48:34.440 --> 48:35.440]  Nie.
+[48:35.440 --> 48:36.440]  Nie.
+[48:36.440 --> 48:37.440]  Nie.
+[48:37.440 --> 48:38.440]  Tak.
+[48:38.440 --> 48:39.440]  Ten jest jakiś stereotyp ten.
+[48:39.440 --> 48:40.440]  Ale ja nie wierzę w biologa.
+[48:40.440 --> 48:41.440]  Nie.
+[48:41.440 --> 48:42.440]  Nie.
+[48:42.440 --> 48:43.440]  Nie.
+[48:43.440 --> 48:44.440]  To jest taki taki.
+[48:44.440 --> 48:45.440]  Jest to takie to.
+[48:45.440 --> 48:46.440]  Tak.
+[48:46.440 --> 48:47.440]  Proszę tik cuello jakisterla.
+[48:47.440 --> 48:48.440]  Nie.
+[48:48.440 --> 48:49.440]  Nie.
+[48:49.440 --> 48:50.440]  Ok.
+[48:50.440 --> 48:53.440]  Patrying of they get the first sentence will take the second time.
+[48:53.440 --> 48:54.440]  Tak.
+[48:54.440 --> 48:55.600]  I that is one of the, if we get old one I was with children where some people need to
+[48:55.600 --> 48:56.840]  build one they will use it.
+[48:56.840 --> 48:57.760]  Pchpirbyt to help, brzymi unde one sometimes we have this one.
+[48:57.760 --> 48:59.000]  Ale czyian Pan z время, więc to jest sprzęt kiedy morbidym i niesamowitą i i nasz
+[48:59.000 --> 49:02.000]  cafes jak to jest, jakby do koniec.
+[49:02.000 --> 49:03.440]  I, I surely now.
+[49:03.440 --> 49:04.460]  Tak.
+[49:04.460 --> 49:05.440]  Bardzo dzernen.
+[49:05.440 --> 49:06.440]  I, II deserve this.
+[49:06.440 --> 49:11.440]  Myślę, że to jest sprawa skomplikowania, ale czasami mówisz, że nie jest tak.
+[49:11.440 --> 49:15.440]  Tak. Ale na przykład tutaj, w tych przypadkach...
+[49:15.440 --> 49:17.440]  Tutaj też nie jest tak.
+[49:17.440 --> 49:18.440]  W dwie ramy.
+[49:18.440 --> 49:19.440]  Tak.
+[49:19.440 --> 49:21.440]  Bo nie ma tam innych form.
+[49:21.440 --> 49:27.440]  Więc w tym samym miejscu, zawsze jest w dół i zawsze na początku samego dłuższego.
+[49:27.440 --> 49:29.440]  Bo nie ma dłuższego ruchu.
+[49:29.440 --> 49:30.440]  Ok.
+[49:31.440 --> 49:34.440]  Przepraszam, nie wiem czy to w sensie.
+[49:34.440 --> 49:36.440]  Wiesz, rozumiem.
+[49:36.440 --> 49:38.440]  Próbuję wszystko, przepraszam.
+[49:38.440 --> 49:39.440]  Nie wiem.
+[49:39.440 --> 49:41.440]  Byłam przesadzona.
+[49:41.440 --> 49:43.440]  Nie, rozumiem.
+[49:43.440 --> 49:45.440]  To tylko zaskoczenie.
+[49:47.440 --> 49:49.440]  Ale to w porządku.
+[49:54.440 --> 49:55.440]  Wszystko w porządku.
+[49:55.440 --> 49:57.440]  To jest w sensie...
+[49:57.440 --> 49:59.440]  To jest w sensie...
+[49:59.440 --> 50:00.440]  To jest w sensie...
+[50:00.440 --> 50:01.440]  Nie.
+[50:01.440 --> 50:02.440]  To jest w sensie...
+[50:02.440 --> 50:03.440]  To jest w sensie...
+[50:03.440 --> 50:04.440]  To jest w sensie...
+[50:34.440 --> 50:35.360]  To jest w sensie...
+[50:36.440 --> 50:37.440]  Professor Ingo Niego for the Nie case.
+[50:37.440 --> 50:39.440]  To jest już jakby bardziej�iezzo.
+[50:39.440 --> 50:42.000]  Mam trochę zaskoczenie healthy teamed, ale New Yorker, splashy,
+[50:44.000 --> 50:46.460]  No, no.
+[50:46.460 --> 50:51.440]  Ok, to waking up to art to build a beautiful little nephew of archeology but I will do
+[50:51.440 --> 50:56.640]  do luxemitoshát stack hogy questãour ne olur o dup稱 z Message So,
+[50:56.640 --> 50:59.140]  tak ceasedź jest jed Mateusz był na dólei,
+[50:59.140 --> 50:59.980]  więc to przed nami een istotneiven, że jest przynajmniej
+[50:59.980 --> 51:03.440]  co od domu chyba wyyne그 buyer the lever
+[51:03.440 --> 51:11.440]  To było interesujące.
+[51:11.440 --> 51:15.440]  Tak.
+[51:15.440 --> 51:19.440]  Ok.
+[51:19.440 --> 51:27.440]  To było pierwsze. Nie mogli jeść.
+[51:27.440 --> 51:29.440]  To ustaliliśmy. Numer 3.
+[51:29.440 --> 51:33.440]  Przeprosisz kolegę albo idąc przeprosisz nic.
+[51:33.440 --> 51:35.440]  Ja proszę.
+[51:35.440 --> 51:38.440]  Nie, nie przeproszę.
+[51:38.440 --> 51:39.440]  Jego.
+[51:39.440 --> 51:41.440]  Może gdzie go? Albo?
+[51:41.440 --> 51:43.440]  Go.
+[51:43.440 --> 51:53.440]  4. Nie spotkałem go.
+[51:53.440 --> 51:55.440]  Bo to jest w środku zdania.
+[51:55.440 --> 51:57.440]  To jest in the middle of sentence.
+[51:57.440 --> 51:59.440]  Czyli zawsze krótki.
+[51:59.440 --> 52:01.440]  Krótka formuła.
+[52:01.440 --> 52:04.440]  Dobra. 5. Nie widzieliście...
+[52:04.440 --> 52:05.440]  Mnie.
+[52:05.440 --> 52:08.440]  Mnie. Wczoraj wieczorem.
+[52:08.440 --> 52:15.440]  Spotkaliście Marka. Nie, nie spotkaliśmy.
+[52:15.440 --> 52:17.440]  Jego.
+[52:17.440 --> 52:20.440]  Lepsze będzie go.
+[52:20.440 --> 52:21.440]  Jego.
+[52:21.440 --> 52:28.440]  Here in this 5 or 6 specific questions the better will be short and formal in the end.
+[52:28.440 --> 52:30.440]  So, Jego or go?
+[52:30.440 --> 52:31.440]  Go.
+[52:31.440 --> 52:32.440]  Go.
+[52:32.440 --> 52:38.440]  Ok. 7. Dlaczego?
+[52:38.440 --> 52:41.440]  Bo was nie lubią. Super.
+[52:41.440 --> 52:48.440]  8. Nikt nas nie odwiedza.
+[52:48.440 --> 52:52.440]  Znasz Adama i Marka? Nie, nie znam ich.
+[52:52.440 --> 52:54.440]  Ich.
+[52:54.440 --> 52:56.440]  Mhm.
+[52:56.440 --> 53:00.440]  Marysia i Kasia nie przyjdą, bo...
+[53:00.440 --> 53:01.440]  Ich.
+[53:01.440 --> 53:03.440]  Ich nie zaprosiłam tutaj.
+[53:03.440 --> 53:05.440]  Ale, pośpowie nam.
+[53:05.440 --> 53:06.440]  Jeszcze raz.
+[53:06.440 --> 53:07.440]  Bo.
+[53:07.440 --> 53:08.440]  Because.
+[53:08.440 --> 53:09.440]  Because. Ok.
+[53:09.440 --> 53:11.440]  Because. Ok.
+[53:13.440 --> 53:19.440]  Następny. Numer 5.
+[53:19.440 --> 53:24.440]  Mamy zdania, gdzie musimy też uzupełnić zaimki.
+[53:26.440 --> 53:35.440]  Kto z josio-kami pracuje z pom millions amis?
+[53:35.440 --> 53:38.440]  Czy jest jak pozostała k politiczart?
+[53:38.440 --> 53:40.440]  यी.
+[53:40.440 --> 53:43.560]  Jego poka, może tu nie abym hebben.
+[53:43.560 --> 53:48.440]  Nie ho Toyota I各位 ludzie jeżeli chcecie mieć pelvisaked i deixa na interconnect balloon hoarding.
+[53:48.440 --> 53:50.440]  filthy idea comment.
+[53:50.440 --> 53:51.440]  Thank you.
+[53:51.440 --> 53:52.440]  Aja dookogeben.
+[53:52.440 --> 53:54.440]  I Bitcoin bo to thirty percent for showing it to the world had the attraction.
+[53:54.440 --> 53:56.440]  Dziękuję.
+[54:24.440 --> 54:26.440]  Dziękuję.
+[54:54.440 --> 54:56.440]  Dziękuję.
+[55:24.440 --> 55:26.440]  Dziękuję.
+[55:54.440 --> 55:56.440]  Dziękuję.
+[56:24.440 --> 56:26.440]  Dziękuję.
+[56:32.440 --> 56:34.440]  No dobrze, spróbujmy.
+[56:34.440 --> 56:36.440]  Ok, pierwszy.
+[56:36.440 --> 56:38.440]  Lubisz Beatę.
+[56:38.440 --> 56:40.440]  Tak, kto opowiada?
+[56:40.440 --> 56:42.440]  Kulac.
+[56:42.440 --> 56:44.440]  Lubię Beatę.
+[56:50.440 --> 56:52.440]  Ja nie lubię jej,
+[56:52.440 --> 56:54.440]  bo
+[56:54.440 --> 56:56.440]  ona nigdy nie ma
+[56:56.440 --> 56:58.440]  dla mnie czasu.
+[56:58.440 --> 57:00.440]  Super, nie lubię jej,
+[57:00.440 --> 57:02.440]  dla mnie czasu.
+[57:02.440 --> 57:04.440]  Masz spotkanie z państwem
+[57:04.440 --> 57:06.440]  do obok w poniedziałek.
+[57:06.440 --> 57:08.440]  Nie, ponieważ...
+[57:10.440 --> 57:12.440]  Ich.
+[57:12.440 --> 57:14.440]  Tak, mówię.
+[57:14.440 --> 57:16.440]  Są zakupane.
+[57:16.440 --> 57:18.440]  Idę do ich
+[57:18.440 --> 57:20.440]  są.
+[57:24.440 --> 57:26.440]  Tak, to jest
+[57:26.440 --> 57:28.440]  w takim razie nam się pojawia kolejna rzecz.
+[57:28.440 --> 57:30.440]  Czy pamiętamy, co to są przyimki?
+[57:30.440 --> 57:32.440]  To pamiętajmy, bo teraz przyimek mi nic.
+[57:32.440 --> 57:34.440]  Przyimek.
+[57:34.440 --> 57:36.440]  Proposition.
+[57:36.440 --> 57:38.440]  Proposition.
+[57:38.440 --> 57:40.440]  Proposition.
+[57:40.440 --> 57:42.440]  Jakie znamy przyimki?
+[57:46.440 --> 57:48.440]  Mówisz przyimki dominowe.
+[57:48.440 --> 57:50.440]  Proposition.
+[57:50.440 --> 57:52.440]  Do.
+[57:52.440 --> 57:54.440]  Do, tak.
+[57:54.440 --> 57:56.440]  Chodzi o takie, co?
+[57:56.440 --> 57:58.440]  Od, z, do, o, dla,
+[57:58.440 --> 58:00.440]  z, go, za.
+[58:00.440 --> 58:02.440]  To jest b?
+[58:02.440 --> 58:04.440]  Z, zę.
+[58:04.440 --> 58:06.440]  Zez, zez,
+[58:06.440 --> 58:08.440]  szed.
+[58:08.440 --> 58:10.440]  Szed?
+[58:10.440 --> 58:12.440]  Szed, szed.
+[58:12.440 --> 58:14.440]  Tak, z przodu, tak.
+[58:14.440 --> 58:18.440]  Tak, tak, z przodu, na.
+[58:18.440 --> 58:20.440]  na.
+[58:20.440 --> 58:22.440]  po.
+[58:22.440 --> 58:24.440]  o. za.
+[58:24.440 --> 58:25.440]  Za.
+[58:26.620 --> 58:28.040]  Is nam one?
+[58:28.540 --> 58:29.540]  Nam?
+[58:30.700 --> 58:31.700]  Nam?
+[58:31.700 --> 58:32.700]  Yeah.
+[58:33.200 --> 58:34.200]  No.
+[58:34.200 --> 58:35.200]  Nie mam.
+[58:35.200 --> 58:36.200]  Jeszcze.
+[58:36.940 --> 58:37.940]  Ok.
+[58:38.600 --> 58:39.600]  Dobra.
+[58:41.380 --> 58:42.480]  This.
+[58:43.480 --> 58:45.480]  To są przyimki.
+[58:45.480 --> 58:46.480]  Teraz uwaga.
+[58:49.320 --> 58:51.200]  Po przyimkach,
+[58:51.760 --> 58:53.760]  after preposition,
+[58:53.760 --> 58:55.760]  we have
+[58:55.760 --> 58:57.760]  this word with and.
+[58:57.760 --> 58:59.760]  Tak samo jak bez.
+[58:59.760 --> 59:01.760]  Przyimki plus.
+[59:03.760 --> 59:05.760]  Nim.
+[59:07.760 --> 59:09.760]  Niego.
+[59:09.760 --> 59:11.760]  Nich.
+[59:11.760 --> 59:13.760]  I tak dalej.
+[59:13.760 --> 59:15.760]  Czyli te formy z nim.
+[59:15.760 --> 59:17.760]  Czyli bez
+[59:17.760 --> 59:19.760]  niego,
+[59:19.760 --> 59:21.760]  na przykład,
+[59:21.760 --> 59:23.760]  idę do
+[59:23.760 --> 59:25.760]  niego.
+[59:25.760 --> 59:27.760]  Do niego.
+[59:33.760 --> 59:35.760]  I spotykam się
+[59:35.760 --> 59:37.760]  z.
+[59:41.760 --> 59:43.760]  Nie, to nie to przyjmę.
+[59:43.760 --> 59:45.760]  Nie.
+[59:45.760 --> 59:47.760]  Sam zadałem słowo, które byłby pełniacz.
+[59:47.760 --> 59:49.760]  Kogo trzeba.
+[59:49.760 --> 59:51.760]  Dlaczego. Na kogo.
+[59:51.760 --> 59:53.760]  Ok.
+[59:53.760 --> 59:55.760]  Kupuję prezent
+[59:55.760 --> 59:57.760]  dla.
+[59:59.760 --> 01:00:00.760]  Go.
+[01:00:00.760 --> 01:00:01.760]  Niego.
+[01:00:01.760 --> 01:00:02.760]  Dla niego.
+[01:00:02.760 --> 01:00:03.760]  Niego.
+[01:00:03.760 --> 01:00:04.760]  Mamy dla.
+[01:00:04.760 --> 01:00:05.760]  Dla kogo.
+[01:00:05.760 --> 01:00:07.760]  Ehm.
+[01:00:07.760 --> 01:00:08.760]  Ok.
+[01:00:17.760 --> 01:00:18.760]  Ok.
+[01:00:18.760 --> 01:00:20.760]  Czekam na.
+[01:00:20.760 --> 01:00:24.760]  Oni, one.
+[01:00:24.760 --> 01:00:25.760]  Nie.
+[01:00:25.760 --> 01:00:27.760]  Czekam na nich.
+[01:00:27.760 --> 01:00:29.760]  I'm waiting for them.
+[01:00:29.760 --> 01:00:30.760]  Dobra.
+[01:00:30.760 --> 01:00:32.760]  Czyli po przyimkach też będzie
+[01:00:32.760 --> 01:00:34.760]  to.
+[01:00:34.760 --> 01:00:36.760]  Imaj zaczynających na
+[01:00:36.760 --> 01:00:38.760]  nie.
+[01:00:38.760 --> 01:00:40.760]  Czyli tak. Jesteśmy w.
+[01:00:40.760 --> 01:00:42.760]  Ok.
+[01:00:42.760 --> 01:00:44.760]  Oni nie ma ich w Krakowie.
+[01:00:44.760 --> 01:00:46.760]  Są w Zakopanem. Idę do.
+[01:00:46.760 --> 01:00:47.760]  Nie.
+[01:00:47.760 --> 01:00:49.760]  Do nich w sobotę.
+[01:00:49.760 --> 01:00:51.760]  Dokonaj.
+[01:00:51.760 --> 01:00:53.760]  Dobra. Numer trzy.
+[01:00:53.760 --> 01:01:00.760]  Idziesz do Adama na imprezę w sobotę.
+[01:01:00.760 --> 01:01:01.760]  Tak. Idę.
+[01:01:01.760 --> 01:01:02.760]  Niego.
+[01:01:02.760 --> 01:01:03.760]  Tak. Idę do.
+[01:01:03.760 --> 01:01:04.760]  Niego.
+[01:01:04.760 --> 01:01:05.760]  Niego.
+[01:01:05.760 --> 01:01:07.760]  Subotu.
+[01:01:07.760 --> 01:01:09.760]  I have a question about this side of the story.
+[01:01:09.760 --> 01:01:10.760]  Tak.
+[01:01:10.760 --> 01:01:12.760]  Bo nie ma ich w Krakowie.
+[01:01:12.760 --> 01:01:14.760]  That means like they're not in Krakow.
+[01:01:14.760 --> 01:01:15.760]  Tak.
+[01:01:15.760 --> 01:01:17.760]  So it's like Krakow doesn't have that.
+[01:01:17.760 --> 01:01:20.760]  Because who doesn't have?
+[01:01:20.760 --> 01:01:21.760]  Nie ma.
+[01:01:21.760 --> 01:01:23.760]  Is Krakow?
+[01:01:23.760 --> 01:01:24.760]  Or is it them?
+[01:01:24.760 --> 01:01:25.760]  Oni.
+[01:01:25.760 --> 01:01:26.760]  Oni.
+[01:01:26.760 --> 01:01:33.760]  But ma is a, isn't ma for first person?
+[01:01:33.760 --> 01:01:35.760]  For one person?
+[01:01:35.760 --> 01:01:37.760]  Technically.
+[01:01:37.760 --> 01:01:39.760]  So it's just a, it's just a way to say.
+[01:01:39.760 --> 01:01:41.760]  Tak. Kogoś nie ma.
+[01:01:41.760 --> 01:01:42.760]  Like someone.
+[01:01:42.760 --> 01:01:43.760]  It's missing.
+[01:01:43.760 --> 01:01:44.760]  Let's say.
+[01:01:44.760 --> 01:01:45.760]  Kogoś nie ma?
+[01:01:45.760 --> 01:01:46.760]  Mhm.
+[01:01:46.760 --> 01:01:47.760]  Nie ma.
+[01:01:47.760 --> 01:01:52.760]  Ja jestem tutaj, ale teraz nie mam mnie w domu.
+[01:01:52.760 --> 01:01:58.760]  My jesteśmy tutaj, ale nie ma nas.
+[01:01:58.760 --> 01:02:05.760]  So it doesn't like, it doesn't, it's not about like I own something, I have something,
+[01:02:05.760 --> 01:02:06.760]  possess something.
+[01:02:06.760 --> 01:02:07.760]  Mhm.
+[01:02:07.760 --> 01:02:10.760]  It's like nie ma nas.
+[01:02:10.760 --> 01:02:13.760]  It doesn't mean that we don't have this.
+[01:02:13.760 --> 01:02:16.760]  Just we are not someone.
+[01:02:16.760 --> 01:02:20.760]  And it's always nie ma, no matter what.
+[01:02:20.760 --> 01:02:21.760]  Tak.
+[01:02:21.760 --> 01:02:25.760]  Nie ma mnie, nie ma ciebie, nie ma ich, nie ma nas, nie ma was.
+[01:02:25.760 --> 01:02:26.760]  Mhm.
+[01:02:26.760 --> 01:02:28.760]  So we are not somewhere.
+[01:02:28.760 --> 01:02:30.760]  Ok.
+[01:02:30.760 --> 01:02:32.760]  Dobra.
+[01:02:32.760 --> 01:02:35.760]  Numer cztery.
+[01:02:35.760 --> 01:02:38.760]  Idziesz do Beaty na imprezę w piątek?
+[01:02:38.760 --> 01:02:42.760]  Idę do niej.
+[01:02:42.760 --> 01:02:43.760]  Mhm.
+[01:02:43.760 --> 01:02:44.760]  Tak, idź do niej.
+[01:02:44.760 --> 01:02:45.760]  Basiu.
+[01:02:45.760 --> 01:02:49.760]  Jest list do?
+[01:02:49.760 --> 01:02:50.760]  Ciebie.
+[01:02:50.760 --> 01:02:51.760]  Ciebie.
+[01:02:51.760 --> 01:02:52.760]  Mhm.
+[01:02:52.760 --> 01:02:53.760]  Do mnie.
+[01:02:53.760 --> 01:02:54.760]  In that case we use the lower form.
+[01:02:54.760 --> 01:02:55.760]  Ciebie.
+[01:02:55.760 --> 01:02:57.760]  Do ciebie jest coś.
+[01:02:57.760 --> 01:03:00.760]  So it's for you.
+[01:03:00.760 --> 01:03:03.760]  I Basia odpowiada do?
+[01:03:03.760 --> 01:03:04.760]  Do mnie.
+[01:03:04.760 --> 01:03:05.760]  A odchodzą.
+[01:03:05.760 --> 01:03:08.760]  Mhm.
+[01:03:08.760 --> 01:03:13.760]  Lubisz kuzyna Damiana?
+[01:03:13.760 --> 01:03:14.760]  Jego.
+[01:03:14.760 --> 01:03:15.760]  Jego.
+[01:03:15.760 --> 01:03:17.760]  Początek zdania.
+[01:03:17.760 --> 01:03:18.760]  Mhm.
+[01:03:18.760 --> 01:03:20.760]  Jego nie lubię, ale lubię Josie.
+[01:03:20.760 --> 01:03:21.760]  Dobrze.
+[01:03:21.760 --> 01:03:25.760]  To jeszcze sobie zobaczmy, jeszcze jedno.
+[01:03:25.760 --> 01:03:29.760]  Strona 77.
+[01:03:29.760 --> 01:03:31.760]  To powinno być.
+[01:03:31.760 --> 01:03:33.760]  Gradyzm, opis.
+[01:03:33.760 --> 01:03:34.760]  Jest tu.
+[01:03:34.760 --> 01:03:35.760]  Aha.
+[01:03:35.760 --> 01:03:37.760]  Zadanie 9b.
+[01:03:37.760 --> 01:03:42.760]  77, 9b.
+[01:03:42.760 --> 01:03:44.760]  I kwiat?
+[01:03:44.760 --> 01:03:45.760]  Tak.
+[01:03:45.760 --> 01:03:46.760]  Tak.
+[01:03:46.760 --> 01:04:02.760]  I zrobimy jeszcze na razie ostatnie zadanie na zainki.
+[01:04:02.760 --> 01:04:07.760]  So that will be the last exercise for zainki for today.
+[01:04:07.760 --> 01:04:10.760]  Mhm.
+[01:04:10.760 --> 01:04:12.760]  Widzę, że idzie coraz lepiej.
+[01:04:12.760 --> 01:04:13.760]  Tak.
+[01:04:13.760 --> 01:04:14.760]  Dobra, to zakończę.
+[01:04:14.760 --> 01:04:15.760]  Tak, a ty?
+[01:04:15.760 --> 01:04:16.760]  Tak, tak.
+[01:04:16.760 --> 01:04:17.760]  Tak, tak, tak.
+[01:04:17.760 --> 01:04:18.760]  I teraz wejdźmy.
+[01:04:18.760 --> 01:04:19.760]  W porządku?
+[01:04:19.760 --> 01:04:20.760]  Tak.
+[01:04:20.760 --> 01:04:21.760]  Tak.
+[01:04:21.760 --> 01:04:22.760]  No to już się wypracujemy.
+[01:04:22.760 --> 01:04:23.760]  Tak.
+[01:04:23.760 --> 01:04:24.760]  Do widzenia.
+[01:04:24.760 --> 01:04:25.760]  Tak.
+[01:04:25.760 --> 01:04:26.760]  Tak.
+[01:04:26.760 --> 01:04:27.760]  Dziękuję.
+[01:04:27.760 --> 01:04:28.760]  Dziękuję.
+[01:04:28.760 --> 01:04:29.760]  Dziękuję.
+[01:04:29.760 --> 01:04:30.760]  Dziękuję.
+[01:04:30.760 --> 01:04:31.760]  Dziękuję.
+[01:04:31.760 --> 01:04:32.760]  Dzięki.
+[01:04:32.760 --> 01:04:33.760]  Dzięki.
+[01:04:33.760 --> 01:04:34.760]  Dziękuję.
+[01:04:34.760 --> 01:04:35.760]  Dziękuję.
+[01:04:35.760 --> 01:04:36.760]  Dzięki.
+[01:04:36.760 --> 01:04:37.760]  Dziękuję.
+[01:04:37.760 --> 01:04:38.760]  Dziękuję.
+[01:04:38.760 --> 01:04:39.760]  Dziękuję.
+[01:04:39.760 --> 01:04:40.760]  Dziękuję.
+[01:04:40.760 --> 01:04:41.760]  Dziękuję.
+[01:04:41.760 --> 01:05:11.740]  Zobaczcie, jak to wygląda.
+[01:05:11.760 --> 01:05:13.760]  Dobra.
+[01:05:41.760 --> 01:05:43.760]  Dobra.
+[01:06:11.760 --> 01:06:13.760]  Dobra.
+[01:06:41.760 --> 01:06:43.760]  Dobra.
+[01:07:11.760 --> 01:07:13.760]  Dobra.
+[01:07:41.760 --> 01:07:43.760]  Dobra.
+[01:08:11.760 --> 01:08:13.760]  Dobra.
+[01:08:41.760 --> 01:08:43.760]  Dobra.
+[01:08:45.760 --> 01:08:47.760]  No dobrze, spróbujmy.
+[01:08:53.760 --> 01:08:55.760]  Dobra.
+[01:08:55.760 --> 01:08:57.760]  Co będzie
+[01:08:57.760 --> 01:08:59.760]  w przykładzie A?
+[01:08:59.760 --> 01:09:01.760]  To spróbuję.
+[01:09:03.760 --> 01:09:05.760]  I jego.
+[01:09:05.760 --> 01:09:07.760]  I jego.
+[01:09:07.760 --> 01:09:09.760]  Czy u niego?
+[01:09:09.760 --> 01:09:11.760]  Czy u niego.
+[01:09:11.760 --> 01:09:13.760]  On go nie lubi.
+[01:09:13.760 --> 01:09:18.260]  Bo go... ponieważ jest to w środku zdania, innymi losami.
+[01:09:18.260 --> 01:09:20.260]  On go nie lubi.
+[01:09:20.260 --> 01:09:22.260]  Mhm.
+[01:09:22.260 --> 01:09:24.260]  Dlaczego ty...
+[01:09:27.260 --> 01:09:29.260]  Go nie lubisz.
+[01:09:29.260 --> 01:09:31.260]  Go nie lubisz, tak samo w środku zdania.
+[01:09:31.260 --> 01:09:33.260]  Mhm.
+[01:09:33.260 --> 01:09:35.260]  Oni...
+[01:09:37.260 --> 01:09:38.260]  Ich.
+[01:09:38.260 --> 01:09:40.260]  Nie znają ich.
+[01:09:40.260 --> 01:09:41.260]  Mhm.
+[01:09:41.260 --> 01:09:43.260]  Oni ich...
+[01:09:43.260 --> 01:09:45.260]  Nie znają.
+[01:09:45.260 --> 01:09:47.260]  One is plural.
+[01:09:47.260 --> 01:09:49.260]  Tak.
+[01:09:49.260 --> 01:09:51.260]  To jest tutaj. Oni, one jest taka sama forma.
+[01:09:51.260 --> 01:09:53.260]  Mhm.
+[01:09:53.260 --> 01:09:55.260]  Dem.
+[01:09:55.260 --> 01:09:57.260]  Ich.
+[01:09:57.260 --> 01:09:59.260]  No.
+[01:09:59.260 --> 01:10:01.260]  Oni ich nie znają.
+[01:10:01.260 --> 01:10:03.260]  Dem.
+[01:10:03.260 --> 01:10:05.260]  Nie rozumiem.
+[01:10:05.260 --> 01:10:07.260]  Ciebie.
+[01:10:07.260 --> 01:10:09.260]  Może być cie, może być ciebie.
+[01:10:09.260 --> 01:10:11.260]  Depends what what you like.
+[01:10:11.260 --> 01:10:13.260]  Mhm.
+[01:10:13.260 --> 01:10:15.260]  Eee...
+[01:10:15.260 --> 01:10:17.260]  Ona...
+[01:10:17.260 --> 01:10:19.260]  Ich.
+[01:10:19.260 --> 01:10:21.260]  Nie lubi. Tak.
+[01:10:21.260 --> 01:10:23.260]  On nie czyta gazet.
+[01:10:27.260 --> 01:10:29.260]  On nigdy...
+[01:10:29.260 --> 01:10:31.260]  Jej?
+[01:10:31.260 --> 01:10:33.260]  Go.
+[01:10:33.260 --> 01:10:35.260]  Niech go.
+[01:10:35.260 --> 01:10:37.260]  Co go?
+[01:10:37.260 --> 01:10:39.260]  Gazeta, tak?
+[01:10:39.260 --> 01:10:41.260]  No, gazeta.
+[01:10:41.260 --> 01:10:43.260]  To jest gazeta.
+[01:10:43.260 --> 01:10:45.260]  Jedna gazeta?
+[01:10:45.260 --> 01:10:47.260]  A.
+[01:10:47.260 --> 01:10:49.260]  O.
+[01:10:49.260 --> 01:10:51.260]  O, man.
+[01:10:51.260 --> 01:10:53.260]  Jej.
+[01:10:53.260 --> 01:10:55.260]  ...
+[01:10:55.260 --> 01:10:57.260]  ...
+[01:10:57.260 --> 01:10:59.260]  ...
+[01:10:59.260 --> 01:11:01.260]  ...
+[01:11:01.260 --> 01:11:03.260]  ...
+[01:11:03.260 --> 01:11:05.260]  ...
+[01:11:05.260 --> 01:11:07.260]  Aha. Kogo czego nie ma?
+[01:11:07.260 --> 01:11:09.260]  Wypełniacz?
+[01:11:09.260 --> 01:11:11.260]  Gazety.
+[01:11:11.260 --> 01:11:13.260]  A tu mamy...
+[01:11:13.260 --> 01:11:15.260]  ...gazet.
+[01:11:15.260 --> 01:11:17.260]  ...
+[01:11:17.260 --> 01:11:19.260]  Więc liczba mnoga.
+[01:11:19.260 --> 01:11:21.260]  ...
+[01:11:21.260 --> 01:11:23.260]  Bo gdyby była liczba, liczba pojedyncza,
+[01:11:23.260 --> 01:11:25.260]  byłaby końcówka "-y".
+[01:11:25.260 --> 01:11:27.260]  Mhm.
+[01:11:27.260 --> 01:11:29.260]  A jest inna końcówka.
+[01:11:29.260 --> 01:11:31.260]  Więc to nie jest liczba pojedyncza, nie jest jedna gazeta.
+[01:11:31.260 --> 01:11:33.260]  Okej.
+[01:11:33.260 --> 01:11:35.260]  A jaki to jest rodzaj?
+[01:11:35.260 --> 01:11:37.260]  Żeński.
+[01:11:37.260 --> 01:11:39.260]  Rodzaj żeński. Rodzaj żeński, liczba mnoga.
+[01:11:39.260 --> 01:11:41.260]  O, one.
+[01:11:41.260 --> 01:11:43.260]  Te gazety.
+[01:11:43.260 --> 01:11:45.260]  Jego?
+[01:11:45.260 --> 01:11:47.260]  Ich.
+[01:11:47.260 --> 01:11:49.260]  Mhm.
+[01:11:49.260 --> 01:11:51.260]  ...
+[01:11:51.260 --> 01:11:53.260]  ...
+[01:11:53.260 --> 01:11:55.260]  ...
+[01:11:55.260 --> 01:11:57.260]  ...
+[01:11:57.260 --> 01:11:59.260]  ...
+[01:11:59.260 --> 01:12:01.260]  ...
+[01:12:01.260 --> 01:12:03.260]  ...
+[01:12:03.260 --> 01:12:05.260]  Jedna gazeta.
+[01:12:05.260 --> 01:12:07.260]  Tak.
+[01:12:07.260 --> 01:12:09.260]  Wiema czego? Gazety.
+[01:12:09.260 --> 01:12:11.260]  ...
+[01:12:11.260 --> 01:12:13.260]  ...
+[01:12:13.260 --> 01:12:15.260]  ...
+[01:12:15.260 --> 01:12:16.540]  ...
+[01:12:16.540 --> 01:12:17.420]  ...
+[01:12:17.420 --> 01:12:19.420]  ...
+[01:12:19.420 --> 01:12:21.420]  ...
+[01:12:21.420 --> 01:12:23.420]  ...
+[01:12:23.420 --> 01:12:25.420]  Tak.
+[01:12:25.420 --> 01:12:27.460]  W lorsku, natomiast objawy nie beautificaruje.
+[01:12:27.460 --> 01:12:29.460]  Czy mogę zadać sk♥***張t?
+[01:12:29.460 --> 01:12:32.380]  Zgadza się.
+[01:12:32.380 --> 01:12:34.380]  Czyli...
+[01:12:34.380 --> 01:12:36.380]  Gazeta...
+[01:12:36.380 --> 01:12:37.180]  practicing zeros z의
+[01:12:37.180 --> 01:12:39.180]  Tak.
+[01:12:39.260 --> 01:12:41.260]  To się zmieniło do gazety pluralnej.
+[01:12:41.260 --> 01:12:42.260]  Tak.
+[01:12:42.260 --> 01:12:44.260]  I to się zmieniło do...
+[01:12:44.260 --> 01:12:46.260]  To jest męskie, tak?
+[01:12:46.260 --> 01:12:48.260]  To nie jest męskie, tak?
+[01:12:48.260 --> 01:12:50.260]  Gazeta to jest...
+[01:12:50.260 --> 01:12:52.260]  Gazeta to jest...
+[01:12:52.260 --> 01:12:54.260]  Gazeta to jest podstawowa, to jest męskie.
+[01:12:54.260 --> 01:12:56.260]  I wtedy robisz to w podstawowej.
+[01:12:56.260 --> 01:12:58.260]  W podstawowej.
+[01:12:58.260 --> 01:13:00.260]  Myślałem, że to się zmieniło do męskiego, nie?
+[01:13:00.260 --> 01:13:01.260]  Nie.
+[01:13:01.260 --> 01:13:02.260]  Musimy się nauczyć pluralu?
+[01:13:02.260 --> 01:13:03.260]  Nie.
+[01:13:03.260 --> 01:13:04.260]  Więc to jest dziwne.
+[01:13:04.260 --> 01:13:06.260]  To jest po prostu z książki.
+[01:13:06.260 --> 01:13:09.260]  I książka myśli, że powinieneś nauczyć się pluralu następnie.
+[01:13:09.260 --> 01:13:12.260]  Ale nie wiem dlaczego wypracowałaś ten egzersyj, jeśli nie wiesz pluralu.
+[01:13:12.260 --> 01:13:14.260]  No, no, nie może być łatwo.
+[01:13:14.260 --> 01:13:16.260]  Ale jak to się zna?
+[01:13:16.260 --> 01:13:19.260]  Nie wiedzieliśmy, co to jest.
+[01:13:19.260 --> 01:13:20.260]  Tak, ale wiesz gazetę.
+[01:13:20.260 --> 01:13:22.260]  Ale wiemy podstawową formę.
+[01:13:22.260 --> 01:13:23.260]  Tak, wiesz bazę.
+[01:13:23.260 --> 01:13:24.260]  Tak.
+[01:13:24.260 --> 01:13:28.260]  Więc zawsze musisz wiedzieć podstawową formę w języku.
+[01:13:28.260 --> 01:13:32.260]  I jeśli wiesz podstawową formę w języku, możesz zrobić wszystko, co jest w języku.
+[01:13:32.260 --> 01:13:35.260]  I wiesz bezokolicznik, który jest podstawową formą...
+[01:13:35.260 --> 01:13:39.260]  Jeżeli wiesz podstawową formę w języku, możesz zrobić wszystko, co jest w języku.
+[01:13:39.260 --> 01:13:41.260]  Tylko musisz wiedzieć podstawową formę.
+[01:13:41.260 --> 01:13:42.260]  Ok.
+[01:13:42.260 --> 01:13:43.260]  To jest trudne.
+[01:13:43.260 --> 01:13:44.260]  Nie, przepraszam.
+[01:13:44.260 --> 01:13:45.260]  Nie, przepraszam.
+[01:13:45.260 --> 01:13:50.260]  Dobra, czyli wiemy, że w gazetce on nigdy ich nie kupuje.
+[01:13:50.260 --> 01:13:51.260]  Ok.
+[01:13:51.260 --> 01:13:52.260]  Ja nie lubię tego wina.
+[01:13:52.260 --> 01:13:53.260]  On to wie.
+[01:13:53.260 --> 01:13:54.260]  Nigdy...
+[01:13:54.260 --> 01:13:55.260]  Go.
+[01:13:55.260 --> 01:13:56.260]  ...go nie pije.
+[01:13:56.260 --> 01:13:57.260]  Tak.
+[01:13:57.260 --> 01:13:58.260]  Wino, rodzaj nijaki.
+[01:13:58.260 --> 01:13:59.260]  To wino.
+[01:13:59.260 --> 01:14:00.260]  I have a question about Tego.
+[01:14:00.260 --> 01:14:01.260]  Tego.
+[01:14:01.260 --> 01:14:02.260]  Tego.
+[01:14:02.260 --> 01:14:03.260]  Tego.
+[01:14:03.260 --> 01:14:04.260]  Tego.
+[01:14:04.260 --> 01:14:05.260]  Tego.
+[01:14:05.260 --> 01:14:06.260]  Tego.
+[01:14:06.260 --> 01:14:07.260]  I Tego, czy też to�oa tak writerz.
+[01:14:07.260 --> 01:14:08.260]  Tam, że...
+[01:14:08.260 --> 01:14:09.260]  To też wider...
+[01:14:09.260 --> 01:14:10.260]  To unbelievably...
+[01:14:10.260 --> 01:14:11.260]  Bardzo...
+[01:14:11.260 --> 01:14:12.260]  Fajnie jest.
+[01:14:12.260 --> 01:14:13.260]  Jest dopalmiac如果你...
+[01:14:13.260 --> 01:14:14.260]  To jest w zanimaku.
+[01:14:14.260 --> 01:14:15.260]  To jest wettsą wprowadn�ę.
+[01:14:15.260 --> 01:14:34.260]  To jest jak to...
+[01:14:34.260 --> 01:14:41.140]  Czyli masz te, te, te, te, takie?
+[01:14:41.140 --> 01:14:42.540]  To jest to samo, ale...
+[01:14:42.540 --> 01:14:44.940]  Czy to jest tego, bo nie lubię?
+[01:14:44.940 --> 01:14:46.940]  Tak, bo to ja.
+[01:14:46.940 --> 01:14:48.940]  Czy to jest lubię? Co to będzie?
+[01:14:48.940 --> 01:14:52.440]  Lubię to.
+[01:14:52.440 --> 01:14:54.440]  To wino.
+[01:14:54.440 --> 01:14:59.780]  Lubię to wino, nie lubię tego wina.
+[01:14:59.780 --> 01:15:01.780]  Rozumiem, tak.
+[01:15:01.780 --> 01:15:05.780]  Dlaczego nie lubisz tego?
+[01:15:05.780 --> 01:15:07.780]  Dlaczego nie lubisz tego?
+[01:15:07.780 --> 01:15:09.780]  Dlaczego nie lubisz tego?
+[01:15:09.780 --> 01:15:11.780]  Nigdy go nie piję.
+[01:15:11.780 --> 01:15:13.780]  Dobra.
+[01:15:13.780 --> 01:15:15.780]  My...
+[01:15:15.780 --> 01:15:17.780]  Was nie lubimy.
+[01:15:17.780 --> 01:15:19.780]  Was nie lubimy.
+[01:15:19.780 --> 01:15:21.780]  I...
+[01:15:21.780 --> 01:15:23.780]  Wy...
+[01:15:23.780 --> 01:15:25.780]  Wy nas nie lubicie.
+[01:15:25.780 --> 01:15:27.780]  Wy nas nie lubicie.
+[01:15:27.780 --> 01:15:29.780]  Ok, mamy ile?
+[01:15:29.780 --> 01:15:31.780]  8 minut, nie za dużo.
+[01:15:31.780 --> 01:15:33.780]  No, to teraz tak.
+[01:15:37.780 --> 01:15:39.780]  One crystal.
+[01:15:39.780 --> 01:15:41.780]  Tak. Wino.
+[01:15:41.780 --> 01:15:43.780]  Tak.
+[01:15:43.780 --> 01:15:45.780]  What is this, wino?
+[01:15:55.780 --> 01:15:57.780]  O!
+[01:15:57.780 --> 01:15:59.780]  Eee...
+[01:15:59.780 --> 01:16:01.780]  To jest piernik.
+[01:16:01.780 --> 01:16:03.780]  Tak.
+[01:16:03.780 --> 01:16:05.780]  Mamy piernik? Nie wiem, czy ten jest piernik.
+[01:16:05.780 --> 01:16:07.780]  Dobra.
+[01:16:09.780 --> 01:16:11.780]  Dobra, jeszcze sobie włożę piernik, przyjmę czas się.
+[01:16:11.780 --> 01:16:13.780]  I co?
+[01:16:13.780 --> 01:16:15.780]  Ale...
+[01:16:15.780 --> 01:16:17.780]  Ale lubię...
+[01:16:17.780 --> 01:16:19.780]  Ale lubię...
+[01:16:19.780 --> 01:16:21.780]  Which one?
+[01:16:21.780 --> 01:16:23.780]  Which number?
+[01:16:23.780 --> 01:16:25.780]  You know the one square?
+[01:16:25.780 --> 01:16:27.780]  It says...
+[01:16:27.780 --> 01:16:29.780]  Ale...
+[01:16:29.780 --> 01:16:31.780]  Nie było tego kiedyś?
+[01:16:31.780 --> 01:16:33.780]  Because I know that you read the piernik before me, so...
+[01:16:33.780 --> 01:16:35.780]  Eee...
+[01:16:35.780 --> 01:16:37.780]  Ale no, ja go nie lubię, ale...
+[01:16:37.780 --> 01:16:39.780]  Dobra. No to piernik.
+[01:16:39.780 --> 01:16:41.780]  ...lubię go.
+[01:16:41.780 --> 01:16:43.780]  Kogo, co...
+[01:16:43.780 --> 01:16:45.780]  Hmm...
+[01:16:45.780 --> 01:16:47.780]  ...
+[01:16:47.780 --> 01:16:49.780]  Chwilunia, sprawdzimy, czy gdzieś tu było.
+[01:16:49.780 --> 01:16:51.780]  ...
+[01:16:51.780 --> 01:16:53.780]  Zajmki też, czy nie ma wód.
+[01:16:53.780 --> 01:16:55.780]  Czy nie?
+[01:16:55.780 --> 01:16:57.780]  Piernik.
+[01:16:57.780 --> 01:16:59.780]  Ok.
+[01:16:59.780 --> 01:17:01.780]  ...
+[01:17:01.780 --> 01:17:03.780]  ...
+[01:17:03.780 --> 01:17:05.780]  Dobra.
+[01:17:05.780 --> 01:17:07.780]  To widzę, że była lekcja...
+[01:17:07.780 --> 01:17:09.780]  ...4, Chapter 4, so...
+[01:17:09.780 --> 01:17:11.780]  ...
+[01:17:11.780 --> 01:17:13.780]  ...
+[01:17:13.780 --> 01:17:15.780]  ...
+[01:17:15.780 --> 01:17:17.780]  ...
+[01:17:17.780 --> 01:17:19.780]  ...
+[01:17:19.780 --> 01:17:21.780]  ...
+[01:17:21.780 --> 01:17:23.780]  ...
+[01:17:23.780 --> 01:17:25.780]  ...
+[01:17:25.780 --> 01:17:27.780]  ...
+[01:17:27.780 --> 01:17:29.780]  ...
+[01:17:29.780 --> 01:17:31.780]  ...
+[01:17:31.780 --> 01:17:33.780]  ...
+[01:17:33.780 --> 01:17:35.780]  ...
+[01:17:35.780 --> 01:17:37.780]  ...
+[01:17:37.780 --> 01:17:39.780]  ...
+[01:17:39.780 --> 01:17:41.780]  ...
+[01:17:41.780 --> 01:17:43.780]  ...
+[01:17:43.780 --> 01:17:46.440]  Gdzie ty офekt � luxem orau Consultant Mechanings,
+[01:17:46.440 --> 01:17:47.780]  Która 활동uje tutaj?
+[01:17:47.780 --> 01:17:49.780]  ...
+[01:17:49.780 --> 01:17:51.780]  ...
+[01:17:51.780 --> 01:17:53.780]  ...
+[01:17:53.780 --> 01:17:55.780]  ...
+[01:17:55.780 --> 01:17:57.780]  ...
+[01:17:57.780 --> 01:18:08.780]  I nie, nie. Czyli na przykład rodzaj męski jest taki sam jak dopełniacz.
+[01:18:08.780 --> 01:18:18.780]  Ty jest taki sam, ja tak samo. Tutaj jest trochę inaczej. To this party different.
+[01:18:18.780 --> 01:18:36.780]  A potem jest nas, was, ich, nich i je, nie. Czyli tak samo. Nas tak samo jak dopełniacz, was tak samo jak dopełniacz.
+[01:18:36.780 --> 01:18:47.780]  No i tutaj jest trochę różnica, bo oni, na przykład ci mężczyźni, nie ma ich, one, te kobiety.
+[01:18:47.780 --> 01:18:48.780]  W sumie widać to.
+[01:18:48.780 --> 01:18:55.780]  To będzie rodzaj męski, a to będzie rodzaj żeński. Ok?
+[01:18:55.780 --> 01:19:01.780]  Dobra. Czyli, no to w takim razie nie wiem. To było.
+[01:19:01.780 --> 01:19:05.780]  I co to jest strona, numer?
+[01:19:05.780 --> 01:19:07.780]  39.
+[01:19:13.780 --> 01:19:14.780]  39?
+[01:19:14.780 --> 01:19:17.780]  Mhm. 39.
+[01:19:17.780 --> 01:19:18.780]  Nie wiedzę co to jest.
+[01:19:27.780 --> 01:19:28.780]  Dobra.
+[01:19:34.780 --> 01:19:37.780] whatever that was a Str Foi erm test.
+[01:19:39.780 --> 01:19:42.780]  Pytamあぁe badania, jaje abbę rady?
+[01:19:42.780 --> 01:19:43.780] 起 Balenia.
+[01:19:43.780 --> 01:19:45.780]  Przed 부�bymarczym ty��cym jest właśnie to.
+[01:19:45.780 --> 01:19:48.780]  Na pierwszej stronie mamy to, co jest tutaj.
+[01:19:48.780 --> 01:19:53.780]  To brat mojego. Nie byłem pewien dlaczego to się zmieniło.
+[01:19:53.780 --> 01:19:55.780]  To się zmieniło?
+[01:19:55.780 --> 01:19:59.780]  Adam to brat moja.
+[01:19:59.780 --> 01:20:02.780]  Moja się zmieniła do mojego.
+[01:20:02.780 --> 01:20:05.780]  Mój.
+[01:20:05.780 --> 01:20:10.780]  Mój jest pronomen, prawda?
+[01:20:10.780 --> 01:20:13.780]  To brat moi dziadka.
+[01:20:13.780 --> 01:20:17.780]  Adam jest brat mojego dziadka.
+[01:20:17.780 --> 01:20:23.780]  Mój to jest mianownik, mojego to jest wypełniacz.
+[01:20:23.780 --> 01:20:33.780]  Ego jest dodane do adjektywów.
+[01:20:33.780 --> 01:20:37.780]  Czy mówisz, że to jest adjektyw?
+[01:20:37.780 --> 01:20:40.780]  Mój to adjektyw?
+[01:20:40.780 --> 01:20:43.780]  Tak, ale w piosence jest to adjektyw.
+[01:20:43.780 --> 01:20:45.780]  Ale to jest adjektyw.
+[01:20:45.780 --> 01:20:47.780]  Ale to jest adjektyw.
+[01:20:47.780 --> 01:20:49.780]  To jest adjektyw.
+[01:20:49.780 --> 01:20:52.780]  To jest adjektyw.
+[01:20:52.780 --> 01:20:55.780]  Ok, więc to nie jest pronomen. To nie jest pronomen.
+[01:20:55.780 --> 01:20:58.780]  To nie jest pronomen.
+[01:20:58.780 --> 01:21:00.780]  Zajmki.
+[01:21:00.780 --> 01:21:02.780]  Mój i ty.
+[01:21:02.780 --> 01:21:04.780]  To jest zajm.
+[01:21:04.780 --> 01:21:06.780]  To jest zajm, prawda?
+[01:21:06.780 --> 01:21:08.780]  Ale to jest odprawienie jako adjektyw.
+[01:21:08.780 --> 01:21:10.780]  Tak.
+[01:21:10.780 --> 01:21:11.780]  Tak.
+[01:21:11.780 --> 01:21:16.780]  To jest odprawienie jako adjektyw.
+[01:21:16.780 --> 01:21:17.780]  Tak.
+[01:21:17.780 --> 01:21:20.780]  Ale to jest propozycja.
+[01:21:20.780 --> 01:21:21.780]  Jako adjektyw.
+[01:21:21.780 --> 01:21:23.780]  Jako adjektyw.
+[01:21:23.780 --> 01:21:24.780]  Tak.
+[01:21:24.780 --> 01:21:25.780]  Tak.
+[01:21:25.780 --> 01:21:26.780]  Tak.
+[01:21:26.780 --> 01:21:27.780]  Tak.
+[01:21:27.780 --> 01:21:28.780]  Tak.
+[01:21:28.780 --> 01:21:29.780]  Tak.
+[01:21:29.780 --> 01:21:30.780]  Tak.
+[01:21:30.780 --> 01:21:31.780]  Tak.
+[01:21:31.780 --> 01:21:32.780]  Tak.
+[01:21:32.780 --> 01:21:33.780]  Tak.
+[01:21:33.780 --> 01:21:34.780]  Tak.
+[01:21:34.780 --> 01:21:35.780]  Tak.
+[01:21:35.780 --> 01:21:36.780]  Tak.
+[01:21:36.780 --> 01:21:37.780]  Tak.
+[01:21:37.780 --> 01:21:38.780]  Tak.
+[01:21:38.780 --> 01:21:39.780]  Tak.
+[01:21:39.780 --> 01:21:41.780]  Bo jest w dół.
+[01:21:41.780 --> 01:21:43.780]  Ale to jest też preposicja, prawda?
+[01:21:43.780 --> 01:21:45.780]  Pronoms, przepraszam.
+[01:21:45.780 --> 01:21:47.780]  Tak, pronoms.
+[01:21:49.780 --> 01:21:51.780]  Czuję się podobnie.
+[01:21:51.780 --> 01:21:53.780]  To było trochę zaskoczywające.
+[01:21:53.780 --> 01:21:55.780]  Myślałem, że to jest Marcin Rego.
+[01:21:55.780 --> 01:21:57.780]  Myślałem, że to jest poświęcenie portretu.
+[01:21:57.780 --> 01:21:59.780]  Portret Marcina.
+[01:21:59.780 --> 01:22:01.780]  Portretu Marcina.
+[01:22:03.780 --> 01:22:05.780]  Bo są bardzo podobne.
+[01:22:05.780 --> 01:22:07.780]  Portretu Marcina.
+[01:22:09.780 --> 01:22:11.780]  Portret mojego ojca.
+[01:22:11.780 --> 01:22:13.780]  Wygląda na trochę podobny.
+[01:22:13.780 --> 01:22:15.780]  To jest tak...
+[01:22:15.780 --> 01:22:17.780]  Wydaje mi się, że...
+[01:22:17.780 --> 01:22:19.780]  Tak, tak.
+[01:22:19.780 --> 01:22:21.780]  Wygląda na coś takiego.
+[01:22:21.780 --> 01:22:23.780]  Więc jeśli ja...
+[01:22:23.780 --> 01:22:25.780]  Jeśli to jest tekst, prawda?
+[01:22:25.780 --> 01:22:27.780]  Adam to brat mojego dziadka.
+[01:22:27.780 --> 01:22:29.780]  Czy to nie jest nieprzyjemne, żeby powiedzieć Adam to brat
+[01:22:29.780 --> 01:22:31.780]  Mnie
+[01:22:31.780 --> 01:22:33.780]  Dziadka?
+[01:22:33.780 --> 01:22:35.780]  Bo Mnie to byłoby...
+[01:22:37.780 --> 01:22:39.780]  Mnie to jest mi.
+[01:22:39.780 --> 01:22:41.780]  I mój to jest moje.
+[01:22:43.780 --> 01:22:45.780]  To jest poświęcenie.
+[01:22:45.780 --> 01:22:47.780]  To nie jest ja, to jest coś, co jest moje.
+[01:22:47.780 --> 01:22:49.780]  Tak.
+[01:22:49.780 --> 01:22:51.780]  Dziadka do mnie.
+[01:22:55.780 --> 01:22:57.780]  Dziadka od mnie.
+[01:22:59.780 --> 01:23:01.780]  To jest trochę jak...
+[01:23:01.780 --> 01:23:03.780]  Sesja?
+[01:23:03.780 --> 01:23:05.780]  Sesja.
+[01:23:05.780 --> 01:23:07.780]  Coś jest moje.
+[01:23:07.780 --> 01:23:09.780]  Ta butelka jest moja.
+[01:23:09.780 --> 01:23:11.780]  To jest moja.
+[01:23:11.780 --> 01:23:13.780]  Mhm.
+[01:23:13.780 --> 01:23:15.780]  Jestem zbyt zaskoczony
+[01:23:15.780 --> 01:23:17.780]  z tym, co się dzieje z portretem Marcina.
+[01:23:17.780 --> 01:23:19.780]  Bo to jest tak...
+[01:23:19.780 --> 01:23:21.780]  Dziadka do mnie to wygląda na to, że powinna być Marciniego.
+[01:23:21.780 --> 01:23:23.780]  Mhm.
+[01:23:23.780 --> 01:23:25.780]  Bo to wygląda na to, że powinna być z nim.
+[01:23:25.780 --> 01:23:27.780]  Mhm.
+[01:23:27.780 --> 01:23:29.780]  I te wszystkie rzeczy są...
+[01:23:29.780 --> 01:23:31.780]  My używamy...
+[01:23:31.780 --> 01:23:33.780]  Z nim? To jest jak adżyt, prawda?
+[01:23:33.780 --> 01:23:35.780]  Ale nie, to jest z nim.
+[01:23:35.780 --> 01:23:37.780]  Ale dlatego jest zaskocznie.
+[01:23:37.780 --> 01:23:39.780]  Bo wtedy to jest...
+[01:23:39.780 --> 01:23:41.780]  Tak, ale Marcin
+[01:23:41.780 --> 01:23:43.780]  nie jest takim słowem, które używa się
+[01:23:43.780 --> 01:23:45.780]  do opisania portretu.
+[01:23:45.780 --> 01:23:47.780]  To nie jest duży portret, nie jest stary portret,
+[01:23:47.780 --> 01:23:49.780]  nie jest coś innego niż portret.
+[01:23:49.780 --> 01:23:51.780]  To jest jego portret.
+[01:23:51.780 --> 01:23:53.780]  To jest jego portret.
+[01:23:53.780 --> 01:23:55.780]  Tak.
+[01:23:55.780 --> 01:23:57.780]  To jest o tym,
+[01:23:57.780 --> 01:23:59.780]  kim jest ten portret,
+[01:23:59.780 --> 01:24:01.780]  a nie o tym typie...
+[01:24:01.780 --> 01:24:03.780]  Myślę, że ta zaskoczność
+[01:24:03.780 --> 01:24:05.780]  pochodzi z tego, że my zmieniamy imię.
+[01:24:05.780 --> 01:24:07.780]  Czasami w teatrach filmowych
+[01:24:07.780 --> 01:24:09.780]  mamy dyrektora
+[01:24:09.780 --> 01:24:11.780]  dyrektora Christophera Arnolana,
+[01:24:11.780 --> 01:24:13.780]  prawda? Tak.
+[01:24:13.780 --> 01:24:15.780]  Więc oni zmieniają imię.
+[01:24:15.780 --> 01:24:17.780]  To jest film przez Christophera Arnolana,
+[01:24:17.780 --> 01:24:19.780]  ale oni zmieniają go
+[01:24:19.780 --> 01:24:21.780]  przez Christophera Arnolana, więc oni
+[01:24:21.780 --> 01:24:23.780]  zmieniają...
+[01:24:23.780 --> 01:24:25.780]  Więc Marcin nie zmieni,
+[01:24:25.780 --> 01:24:27.780]  ale Christophera Arnolana...
+[01:24:27.780 --> 01:24:29.780]  Marcin zmienił się.
+[01:24:29.780 --> 01:24:31.780]  To jest...
+[01:24:31.780 --> 01:24:33.780]  To jest sama kwestia.
+[01:24:33.780 --> 01:24:35.780]  Tak. Ja tylko...
+[01:24:35.780 --> 01:24:37.780]  Oh, bo zostałem Marcinem. Ok.
+[01:24:37.780 --> 01:24:39.780]  Ok, to jest sama kwestia.
+[01:24:39.780 --> 01:24:41.780]  To jest inna idea dla mnie.
+[01:24:41.780 --> 01:24:43.780]  Marcin.
+[01:24:47.780 --> 01:24:49.780]  Jak to się nazywa?
+[01:24:49.780 --> 01:24:51.780]  Femalien.
+[01:24:51.780 --> 01:24:53.780]  Tak.
+[01:24:53.780 --> 01:24:55.780]  Nie, nie, nie.
+[01:24:55.780 --> 01:24:57.780]  To nie jest tak, że jest to
+[01:24:57.780 --> 01:24:59.780]  femalien, ale ja wiem,
+[01:24:59.780 --> 01:25:01.780]  że to jest femalien.
+[01:25:01.780 --> 01:25:03.780]  Ale jeśli wiesz imię Martin,
+[01:25:03.780 --> 01:25:05.780]  i wiesz, że Martin w menu
+[01:25:05.780 --> 01:25:07.780]  jest...
+[01:25:07.780 --> 01:25:09.780]  Coś podobnego.
+[01:25:09.780 --> 01:25:11.780]  Tak, możesz...
+[01:25:11.780 --> 01:25:13.780]  Z informacją możesz powiedzieć, że to jest imię męża,
+[01:25:13.780 --> 01:25:15.780]  i to zostało zrozumiałe przez
+[01:25:15.780 --> 01:25:17.780]  Lopiowiczę, ale
+[01:25:17.780 --> 01:25:19.780]  może jest tam inna imię,
+[01:25:19.780 --> 01:25:21.780]  i nie wiesz.
+[01:25:21.780 --> 01:25:23.780]  Lopiowicz będzie mówił,
+[01:25:23.780 --> 01:25:25.780]  o nie, to jest
+[01:25:25.780 --> 01:25:27.780]  Rodzajewski.
+[01:25:27.780 --> 01:25:29.780]  Bo ma na końcu...
+[01:25:29.780 --> 01:25:31.780]  Tak.
+[01:25:31.780 --> 01:25:33.780]  Co jest przeciwko temu,
+[01:25:33.780 --> 01:25:35.780]  ponieważ mężczyźni mają A na końcu,
+[01:25:35.780 --> 01:25:37.780]  to jest to, co jest przeciwko temu,
+[01:25:37.780 --> 01:25:39.780]  że mężczyzna ma A na końcu,
+[01:25:39.780 --> 01:25:41.780]  a nie A na końcu.
+[01:25:41.780 --> 01:25:43.780]  Tak?
+[01:25:43.780 --> 01:25:45.780]  Mhm.
+[01:25:45.780 --> 01:25:47.780]  Ale to nie jest tak, że...
+[01:25:47.780 --> 01:25:49.780]  Ale to nie jest tak, że...
+[01:25:49.780 --> 01:25:51.780]  Myślę, że by było za zaskocznie,
+[01:25:51.780 --> 01:25:53.780]  jeśli mężczyzna miałby dwa A na końcu,
+[01:25:53.780 --> 01:25:55.780]  albo coś takiego.
+[01:25:55.780 --> 01:25:57.780]  Może.
+[01:25:57.780 --> 01:25:59.780]  Czy my zaskoczyliśmy cię?
+[01:25:59.780 --> 01:26:01.780]  Co się dzieje?
+[01:26:01.780 --> 01:26:03.780]  Bo myślałam, że znam Krawarza,
+[01:26:03.780 --> 01:26:05.780]  ale potem zapytasz pytania,
+[01:26:05.780 --> 01:26:07.780]  a ja nie wiem.
+[01:26:07.780 --> 01:26:09.780]  Czy to coś, czego nie miałam?
+[01:26:09.780 --> 01:26:11.780]  Nie, po prostu to było zaskoczenie.
+[01:26:11.780 --> 01:26:13.780]  Wiem, że to jest zaskoczenie.
+[01:26:13.780 --> 01:26:15.780]  I też nauczam innych
+[01:26:15.780 --> 01:26:17.780]  języków latynoskich,
+[01:26:17.780 --> 01:26:19.780]  i próbuję nie zmieszać tych rzeczy.
+[01:26:19.780 --> 01:26:21.780]  Jakich innych języków?
+[01:26:21.780 --> 01:26:23.780]  Słowenii.
+[01:26:23.780 --> 01:26:25.780]  To jest trochę podobne,
+[01:26:25.780 --> 01:26:27.780]  ale języki są...
+[01:26:27.780 --> 01:26:29.780]  Inne.
+[01:26:29.780 --> 01:26:31.780]  Ok, koniec.
+[01:26:31.780 --> 01:26:33.780]  Koniec.
+[01:26:33.780 --> 01:26:35.780]  Uwaga!
+[01:26:35.780 --> 01:26:37.780]  Uwaga!
+[01:26:37.780 --> 01:26:39.780]  Strona 78.
+[01:26:45.780 --> 01:26:47.780]  9C.
+[01:26:47.780 --> 01:26:49.780]  9C.
+[01:26:49.780 --> 01:26:51.780]  10A.
+[01:26:53.780 --> 01:26:55.780]  Tak, czyli to.
+[01:26:55.780 --> 01:26:57.780]  Tutaj mamy pytanie.
+[01:26:57.780 --> 01:26:59.780]  Musimy wymyśleć odpowiedź.
+[01:27:03.780 --> 01:27:05.780]  So we have the question,
+[01:27:05.780 --> 01:27:07.780]  we need to write any answer.
+[01:27:07.780 --> 01:27:09.780]  Like you can...
+[01:27:09.780 --> 01:27:11.780]  I don't know. Whatever is your imagination.
+[01:27:11.780 --> 01:27:13.780]  To tutaj 10C.
+[01:27:13.780 --> 01:27:15.780]  Tutaj wpisujemy polskie znaki.
+[01:27:15.780 --> 01:27:17.780]  Tutaj wpisujemy polskie znaki.
+[01:27:17.780 --> 01:27:19.780]  We need to put the Polish signs.
+[01:27:19.780 --> 01:27:21.780]  So like she,
+[01:27:21.780 --> 01:27:23.780]  ni, wy, u.
+[01:27:23.780 --> 01:27:25.780]  All of this.
+[01:27:25.780 --> 01:27:27.780]  Ok? Like we have the text message
+[01:27:27.780 --> 01:27:29.780]  and we need to fill it with this.
+[01:27:29.780 --> 01:27:31.780]  With this Polish signs.
+[01:27:31.780 --> 01:27:33.780]  Ok? So also
+[01:27:33.780 --> 01:27:35.780]  on, el and everything like that.
+[01:27:35.780 --> 01:27:37.780]  And also
+[01:27:37.780 --> 01:27:39.780]  the next page
+[01:27:39.780 --> 01:27:41.780]  here in this very small table
+[01:27:41.780 --> 01:27:43.780]  tu,
+[01:27:43.780 --> 01:27:45.780]  na niebieskiej części
+[01:27:45.780 --> 01:27:47.780]  mamy słowa.
+[01:27:47.780 --> 01:27:49.780]  Proszę sobie sprawdzić,
+[01:27:49.780 --> 01:27:51.780]  co te słowa znaczą.
+[01:27:51.780 --> 01:27:53.780]  Please translate these words in this.
+[01:27:53.780 --> 01:27:55.780]  Ok?
+[01:27:55.780 --> 01:27:57.780]  Because we will start to talk about travels.
+[01:27:57.780 --> 01:27:59.780]  Translate.
+[01:27:59.780 --> 01:28:01.780]  Translate.
+[01:28:01.780 --> 01:28:03.780]  So you will know what does it mean. Ok.
+[01:28:03.780 --> 01:28:05.780]  Czy jakieś pytania?
+[01:28:05.780 --> 01:28:07.780]  Aha.
+[01:28:07.780 --> 01:28:09.780]  Tutaj
+[01:28:09.780 --> 01:28:11.780]  w 10A
+[01:28:11.780 --> 01:28:13.780]  tylko tą część.
+[01:28:13.780 --> 01:28:15.780]  Nie bez tej drugiej.
+[01:28:15.780 --> 01:28:17.780]  Czyli tylko to. To nie.
+[01:28:17.780 --> 01:28:19.780]  Only this white part.
+[01:28:27.780 --> 01:28:29.780]  Czy to wszystko?
+[01:28:29.780 --> 01:28:31.780]  Tak.
+[01:28:33.780 --> 01:28:35.780]  Tak.
+[01:29:03.780 --> 01:29:05.780]  Dziękuje.
+
+Success! Transcription saved to: Lectures/Polish/A1_2/L15_13thAugust/L15_13thAugust.txt
+
+Process finished with exit code 0
