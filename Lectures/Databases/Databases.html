@@ -424,7 +424,7 @@
         <div class="sub-heading">Primary Keys</div>
         <div>
           - Desirable qualities of primary keys: <br>
-          a) Every value must uniquely identify a single row in the table.
+          a) Every value must uniquely identify a single row in the table. <br>
           b) The key value should never be null. <br>
           b) The key value should never change. (It should be immutable.) <br>
           c) A primary key should avoid using meaningful data. Meaningful data, like using a user's email id, ssn, for example, can change. <br>
@@ -503,7 +503,16 @@
 
         <div class="sub-heading">Making Horizontal Subsets: <code>Restrict</code></div>
         <div>
-          -
+          - The <code>restrict</code> operation asks a DBMS to choose rows that meet some logical criteria. It does this with the help of a logical operation known as the <i>predicate</i>. <br>
+          - Note that Restrict copies all attributes. It has no way to specify which attributes should be included in the result table. <br>
+          - The syntax looks like this: <br>
+          <code>RESTRICT FROM source_table_name WHERE PREDICATE GIVING result_table_name</code> <br>
+          - Example: <code>RESTRICT FROM customer WHERE zip_postcode = "111" GIVING one_zip</code>
+        </div>
+
+        <div class="sub-heading">Choosing Columns and Rows: <code>RESTRICT</code> then <code>PROJECT</code></div>
+        <div>
+          - Suppose
         </div>
 
 
