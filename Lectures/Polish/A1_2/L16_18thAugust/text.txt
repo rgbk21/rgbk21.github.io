@@ -1,0 +1,1885 @@
+"C:\MY_BACKUP\LearningStuff\Udemy Full Stack\newGithubHostedSite\rgbk21.github.io\rgbk21.github.io\.venv\Scripts\python.exe" "C:\MY_BACKUP\LearningStuff\Udemy Full Stack\newGithubHostedSite\rgbk21.github.io\rgbk21.github.io\transcribe.py"
+C:\MY_BACKUP\LearningStuff\Udemy Full Stack\newGithubHostedSite\rgbk21.github.io\rgbk21.github.io\.venv\Lib\site-packages\whisper\transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+[00:00.000 --> 00:29.980]  Dzień dobry.
+[00:30.000 --> 00:59.980]  Dzień dobry.
+[01:00.000 --> 01:02.060]  Super dobrze.
+[01:03.740 --> 01:04.500]  Tak, tak.
+[01:04.720 --> 01:05.460]  Tak sobie.
+[01:06.340 --> 01:06.920]  Tak sobie.
+[01:07.200 --> 01:07.560]  Czemu?
+[01:11.920 --> 01:12.600]  Właśnie,
+[01:12.860 --> 01:14.600]  a lot of furniture work in the house.
+[01:14.900 --> 01:15.120]  That's it.
+[01:15.460 --> 01:17.500]  A lot of furniture work in the house.
+[01:22.120 --> 01:22.760]  Ok.
+[01:23.900 --> 01:24.320]  No to,
+[01:24.980 --> 01:25.940]  rozumiem.
+[01:25.940 --> 01:25.980]  Tak.
+[01:29.580 --> 01:29.980]  Tak.
+[01:30.000 --> 01:31.620]  Co my dzisiaj mamy?
+[01:33.060 --> 01:33.880]  Mamy dwa zadania,
+[01:34.120 --> 01:34.680]  trzy właściwie.
+[01:35.420 --> 01:38.200]  Potem kończymy do pełnia, czyli bym pojedynczej.
+[01:38.620 --> 01:39.760]  Potem idziemy do pojedynczego.
+[01:40.700 --> 01:41.780]  Zobaczymy, co się uda.
+[01:42.340 --> 01:44.160]  Na początek żydanko, oczywiście.
+[01:44.720 --> 01:46.060]  9 C było
+[01:46.060 --> 01:47.740]  i 10 A. Tak?
+[01:48.200 --> 01:50.220]  Tak. Dobrze. No to 9 C.
+[01:50.980 --> 01:52.260]  Czy zna pan
+[01:52.260 --> 01:53.560]  profesora Bobińskiego?
+[01:54.980 --> 01:55.860]  Nie znam go.
+[01:55.860 --> 01:57.860]  Bo się ma osobiste.
+[01:57.860 --> 01:58.860]  Wieszcie.
+[01:59.860 --> 02:01.860]  Czy znasz moją koleżankę Anię?
+[02:01.860 --> 02:05.860]  Nie znam jej.
+[02:05.860 --> 02:07.860]  Ale wiem, że razem
+[02:07.860 --> 02:09.860]  pracuję.
+[02:09.860 --> 02:11.860]  Pracuję w Czech.
+[02:11.860 --> 02:12.860]  Super. Nie znam jej.
+[02:12.860 --> 02:14.860]  Czy znasz tego poetę?
+[02:16.860 --> 02:18.860]  Nie, nie znam go.
+[02:18.860 --> 02:20.860]  Jest Polakiem.
+[02:20.860 --> 02:22.860]  Nie... Czechem.
+[02:22.860 --> 02:24.860]  Czechem. Czechem.
+[02:24.860 --> 02:26.860]  Kto to jest Czech?
+[02:26.860 --> 02:27.420]  Kto to jest?
+[02:27.420 --> 02:28.420]  Kto to jest?
+[02:28.420 --> 02:29.420]  Kto to jest?
+[02:29.420 --> 02:30.420]  Kto to jest?
+[02:30.420 --> 02:31.420]  Kto to jest?
+[02:31.420 --> 02:32.420]  Kto to jest?
+[02:32.420 --> 02:33.420]  Poeta...
+[02:33.420 --> 02:34.420]  Poet...
+[02:34.420 --> 02:35.420]  Poeta...
+[02:35.420 --> 02:36.420]  Co to znaczy?
+[02:36.420 --> 02:37.420]  Czech.
+[02:37.420 --> 02:39.420]  To jest z Czechosłowacji.
+[02:39.420 --> 02:41.420]  Przepraszam. Czechia.
+[02:41.420 --> 02:42.420]  Tak.
+[02:42.420 --> 02:43.420]  Czechia.
+[02:44.420 --> 02:45.420]  Tak. Nie znam Ciebie.
+[02:45.420 --> 02:47.420]  Tak. Tak. Przepraszam.
+[02:49.420 --> 02:51.420]  Czy znasz tego artystę?
+[02:52.420 --> 02:54.420]  Nie. Nie znam go.
+[02:54.420 --> 02:58.420]  Jest bardzo utalentowany.
+[02:58.420 --> 03:01.420]  Czy znasz Dorotę Todwilską?
+[03:01.420 --> 03:04.420]  Myślę, że nie. Też studiuję biologię.
+[03:04.420 --> 03:06.420]  Nie, nie znam jej.
+[03:06.420 --> 03:09.420]  Jej. Czy znacie pana Kowalskiego?
+[03:09.420 --> 03:12.420]  To ten wysoki i szczupień?
+[03:12.420 --> 03:15.420]  Nie. Nie znam jego.
+[03:15.420 --> 03:17.420]  Nie znam go.
+[03:17.420 --> 03:19.420]  Go. Tak.
+[03:19.420 --> 03:22.420]  Czy zna Pani osobiście dyrektora szkoły?
+[03:22.420 --> 03:24.420]  Nie. Nie znam jego.
+[03:24.420 --> 03:25.540]  Ma, nie.
+[03:25.540 --> 03:27.520]  Czy znasz filmy od prezesa lat?
+[03:46.980 --> 03:47.420]  Co się stało...
+[03:47.420 --> 03:48.420]  W porządku?
+[03:48.420 --> 03:50.420]  W porządku.
+[03:50.420 --> 03:51.660]  Cieie... Co Québeco to?
+[03:51.660 --> 03:53.660]  Czyli wyścigamy.
+[03:53.660 --> 03:58.160]  Ok. Nie, nie lubię go. Jest bardzo nudny.
+[03:58.160 --> 04:00.160]  Tak. Nie lubię go.
+[04:00.160 --> 04:03.660]  Czy znasz tę książkę?
+[04:06.160 --> 04:08.660]  Nie, nie znam jej. Jest dobra?
+[04:08.660 --> 04:11.160]  Nie znam. Jeszcze raz?
+[04:11.160 --> 04:12.660]  Jej. Jej.
+[04:12.660 --> 04:13.660]  Nie znam jej. Dobrze.
+[04:13.660 --> 04:16.660]  Czy umiesz robić omlet?
+[04:16.660 --> 04:21.660]  Nie umiem go. Nie jestem dobrym klerzem.
+[04:21.660 --> 04:26.660]  Kto umie? Jeszcze raz. Nie...
+[04:30.660 --> 04:31.660]  Nie.
+[04:31.660 --> 04:34.660]  Nie umiem robić go. Umiem.
+[04:34.660 --> 04:36.660]  Umiem. Nie umiem. Umiem.
+[04:36.660 --> 04:39.660]  Robić? Tak jest tak?
+[04:39.660 --> 04:46.660]  Nie, nie umiem robić go. Albo lepiej nie, nie umiem go robić.
+[04:46.660 --> 04:47.660]  Nie.
+[04:47.660 --> 04:48.660]  O, to widać.
+[04:48.660 --> 04:52.660]  Czy rozumiesz ten tekst?
+[04:54.660 --> 04:56.660]  Nie, nie rozumiem go.
+[04:56.660 --> 04:57.660]  Super.
+[04:57.660 --> 04:58.660]  Jest bardzo nudny.
+[04:58.660 --> 04:59.660]  Tak.
+[04:59.660 --> 05:02.660]  Czy idziesz dzisiaj do państwa Nowaków?
+[05:06.660 --> 05:08.660]  Nie, nie idę do nich.
+[05:09.660 --> 05:11.660]  Nie mam dzisiaj czasu.
+[05:11.660 --> 05:13.660]  Do nich, tak.
+[05:13.660 --> 05:14.660]  Dlaczego do nich?
+[05:14.660 --> 05:16.660]  Bo potem propozycja będzie...
+[05:16.660 --> 05:18.660]  To znaczy, że nie będziemy używać długiej formy.
+[05:18.660 --> 05:19.660]  Tak.
+[05:19.660 --> 05:20.660]  Tak.
+[05:20.660 --> 05:22.660]  Albo może formę z n.
+[05:22.660 --> 05:23.660]  Nie.
+[05:23.660 --> 05:24.660]  W tym przypadku.
+[05:24.660 --> 05:25.660]  Tak.
+[05:25.660 --> 05:26.660]  Super.
+[05:26.660 --> 05:29.660]  Czy wracasz od babci?
+[05:30.660 --> 05:31.660]  Nie, nie wracam.
+[05:31.660 --> 05:32.660]  Niej.
+[05:32.660 --> 05:34.660]  Wracam od koleżanki.
+[05:34.660 --> 05:35.660]  Jeszcze raz.
+[05:35.660 --> 05:36.660]  Nie wracam...
+[05:36.660 --> 05:37.660]  Nie.
+[05:37.660 --> 05:38.660]  Coś się dzieje.
+[05:38.660 --> 05:39.660]  Niej.
+[05:39.660 --> 05:40.660]  Od.
+[05:40.660 --> 05:41.660]  Od.
+[05:41.660 --> 05:42.660]  A, od niej.
+[05:42.660 --> 05:43.660]  Tak, tak.
+[05:43.660 --> 05:44.660]  Ale znowu.
+[05:44.660 --> 05:45.660]  Tak.
+[05:45.660 --> 05:47.660]  Nie wracam od niej.
+[05:47.660 --> 05:48.660]  Super.
+[05:48.660 --> 05:49.660]  Wracam od koleżanki.
+[05:49.660 --> 05:50.660]  Ok.
+[05:50.660 --> 05:51.660]  I jeszcze było 10a.
+[05:51.660 --> 05:52.660]  Tak?
+[05:52.660 --> 05:53.660]  Dobra.
+[05:53.660 --> 05:54.660]  Uwaga.
+[05:54.660 --> 05:55.660]  Zróbmy tak.
+[05:55.660 --> 05:56.660]  Ktoś to pisze?
+[05:56.660 --> 05:57.660]  Średnio.
+[05:57.660 --> 05:58.660]  A czy to pisze?
+[05:58.660 --> 05:59.660]  Proszę bardzo.
+[05:59.660 --> 06:00.660]  To jest Marko Zawara.
+[06:00.660 --> 06:01.660]  To jest Marko Zawara.
+[06:01.660 --> 06:02.660]  Proszę bardzo.
+[06:02.660 --> 06:03.660]  Nie, nie, nie.
+[06:03.660 --> 06:04.660]  Nie, nie.
+[06:04.660 --> 06:05.660]  Nie, nie.
+[06:05.660 --> 06:06.660]  Nie, nie.
+[06:06.660 --> 06:07.660]  Nie, nie.
+[06:07.660 --> 06:08.660]  Nie, nie.
+[06:08.660 --> 06:09.660]  Nie, nie.
+[06:09.660 --> 06:10.660]  Nie, nie.
+[06:10.660 --> 06:11.660]  Nie, nie.
+[06:11.660 --> 06:12.660]  Nie, nie.
+[06:12.660 --> 06:13.660]  Nie, nie.
+[06:13.660 --> 06:14.660]  Nie, nie.
+[06:14.660 --> 06:15.660]  Proszę bardzo.
+[06:15.660 --> 06:16.660]  Proszę.
+[06:16.660 --> 06:17.660]  Proszę bardzo.
+[06:17.660 --> 06:18.660]  Jakich masz lady?
+[06:18.660 --> 06:19.660]  Yyy, nie wiem deepestu.
+[06:19.660 --> 06:20.660]  Dokładnie.
+[06:20.660 --> 06:21.660]  Jakieś high lents, tak?
+[06:22.660 --> 06:23.660]  Nie no.
+[06:23.660 --> 06:24.660]  Dziękuję bardzo.
+[06:24.660 --> 06:25.660]  Proszę bardzo.
+[06:25.660 --> 06:26.580] argailare.
+[06:26.580 --> 06:31.660]  overly.
+[06:31.660 --> 06:32.660]  I teraz tak.
+[06:32.660 --> 06:33.660]  Kto jest quase father?
+[06:34.660 --> 06:35.660]  Aha.
+[06:35.660 --> 06:35.760]  A kto jest
+[06:35.760 --> 06:36.260]  empowered?
+[06:36.260 --> 06:37.100]  I zobaczymy,
+[06:37.100 --> 06:37.660]  co kedyn ale zrobrous.
+[06:37.660 --> 06:39.720]  Th Th Th
+[06:39.720 --> 06:40.860]  I Now
+[06:40.860 --> 06:41.860]  node.
+[06:41.860 --> 06:42.900]  I think they will be late because
+[06:42.900 --> 06:43.380]  there's kind of a
+[06:43.380 --> 06:44.380]  Uh, ひ政治
+[06:44.380 --> 06:44.600]  Gra 기억ną,
+[07:14.660 --> 07:44.640]  Dzień dobry.
+[07:44.660 --> 08:14.640]  Dzień dobry.
+[08:14.660 --> 08:44.640]  Dzień dobry.
+[08:44.660 --> 08:46.660]  Dzień dobry.
+[08:46.660 --> 08:48.660]  Dzień dobry.
+[08:48.660 --> 08:50.660]  Dzień dobry.
+[08:50.660 --> 08:52.660]  Dzień dobry.
+[08:52.660 --> 08:54.660]  No dobrze.
+[08:54.660 --> 08:56.660]  Co my tu mamy?
+[09:00.660 --> 09:02.660]  Ok. Musimy troszkę poprawiać te...
+[09:02.660 --> 09:04.660]  Co to za te litery?
+[09:04.660 --> 09:06.660]  O, te takie.
+[09:06.660 --> 09:08.660]  Tak.
+[09:08.660 --> 09:10.660]  Mhm.
+[09:10.660 --> 09:12.660]  Mhm.
+[09:12.660 --> 09:14.660]  Bo to wygląda...
+[09:14.660 --> 09:16.660]  To wygląda jak to.
+[09:16.660 --> 09:18.660]  Tak, tak, tak.
+[09:18.660 --> 09:20.660]  Czyli to wygląda jak całkowicie inna litera.
+[09:20.660 --> 09:22.660]  To jest mała rzecz, ale...
+[09:22.660 --> 09:24.660]  Ja wiem, co powinno być napisane,
+[09:24.660 --> 09:26.660]  ale jak ktoś nie wie, no to mu nie będzie wiedziało.
+[09:26.660 --> 09:28.660]  Dobra.
+[09:32.660 --> 09:34.660]  Ok. I tutaj się poprawiamy.
+[09:34.660 --> 09:36.660]  Nie prawek.
+[09:36.660 --> 09:38.660]  Nie i prawek.
+[09:38.660 --> 09:40.660]  Coś trzeba zmienić.
+[09:40.660 --> 09:42.660]  Coś trzeba zmienić.
+[09:42.660 --> 09:44.660]  Dlaczego mówisz, jak to się zmieni?
+[09:44.660 --> 09:46.660]  Często.
+[09:46.660 --> 09:48.660]  Mhm.
+[09:48.660 --> 09:50.660]  Ok.
+[09:50.660 --> 09:52.660]  Często.
+[09:52.660 --> 09:54.660]  Planuję przyjechać do Krakowa w piątek.
+[09:54.660 --> 09:56.660]  Czy mam czas?
+[09:56.660 --> 09:58.660]  Może pójdę do kawiarni.
+[09:58.660 --> 10:00.660]  Alfa na koncert.
+[10:00.660 --> 10:02.660]  Dobra.
+[10:02.660 --> 10:04.660]  Ok.
+[10:04.660 --> 10:06.660]  A tutaj?
+[10:06.660 --> 10:08.660]  Mhm.
+[10:08.660 --> 10:10.660]  Mhm.
+[10:10.660 --> 10:12.660]  Mhm.
+[10:12.660 --> 10:14.660]  Ok.
+[10:14.660 --> 10:16.660]  Super.
+[10:16.660 --> 10:18.660]  Czyli wszystkie polskie znaki są,
+[10:18.660 --> 10:20.660]  ale jedna rzecz.
+[10:20.660 --> 10:22.660]  Hmm.
+[10:22.660 --> 10:24.660]  Troszkę pasowałoby popracować nad długimi.
+[10:24.660 --> 10:26.660]  Tak jak mówiłeś ostatnio,
+[10:26.660 --> 10:28.660]  żeby było widać,
+[10:28.660 --> 10:30.660]  o są długie.
+[10:30.660 --> 10:32.660]  I tak samo na przykład tutaj.
+[10:32.660 --> 10:34.660]  Kraków to jest.
+[10:34.660 --> 10:36.660]  Duża litera musi być.
+[10:36.660 --> 10:38.660]  Ok.
+[10:38.660 --> 10:40.660]  Super. Czyli w deta iść na radę.
+[10:40.660 --> 10:42.660]  So I have a question.
+[10:42.660 --> 10:44.660]  So what is the difference?
+[10:44.660 --> 10:46.660]  How do I write capital K and small k?
+[10:46.660 --> 10:48.660]  Ok. How do I write like this?
+[10:48.660 --> 10:50.660]  This is capital, this is...
+[10:50.660 --> 10:52.660]  Ok. So here is like...
+[10:52.660 --> 10:54.660]  This part need to be...
+[10:54.660 --> 10:56.660]  Smaller.
+[10:56.660 --> 10:58.660]  Mhm.
+[10:58.660 --> 11:00.660]  And this higher.
+[11:00.660 --> 11:02.660]  Ok. So if you see something like this...
+[11:02.660 --> 11:04.660]  Tak.
+[11:04.660 --> 11:06.660]  So this would be like...
+[11:06.660 --> 11:08.660]  Czyli to małe k jest jakby w tej części,
+[11:08.660 --> 11:10.660]  a to długie k jest...
+[11:10.660 --> 11:12.660]  Tak.
+[11:12.660 --> 11:14.660]  Mhm. Ok.
+[11:14.660 --> 11:16.660]  Dobra. Super.
+[11:16.660 --> 11:18.660]  Tak samo jeszcze może p.
+[11:18.660 --> 11:20.660]  Mhm.
+[11:20.660 --> 11:22.660]  P powinna być trochę dłuższe, bo to będzie duże p,
+[11:24.660 --> 11:26.660]  a to będzie małe p.
+[11:26.660 --> 11:28.660]  Tak?
+[11:28.660 --> 11:30.660]  Mhm.
+[11:30.660 --> 11:32.660]  Dobrze. Super. Dajesz mi radę.
+[11:40.660 --> 11:42.660]  Dobra.
+[11:42.660 --> 11:44.660]  No to po raz tak.
+[11:44.660 --> 11:48.660]  Może spróbujemy na tego sms odpowiedzieć.
+[11:48.660 --> 11:52.660]  We will try to reply to this text message.
+[11:52.660 --> 11:56.660]  Czyli tak. Adam pisze do Kasi.
+[11:56.660 --> 11:58.660]  Cześć Kasiu.
+[11:58.660 --> 12:02.660]  I pyta ją, czy pójdą do kawiarni albo na koncert.
+[12:02.660 --> 12:04.660]  I teraz.
+[12:04.660 --> 12:06.660]  Co Kasia może odpowiedzieć?
+[12:06.660 --> 12:08.660]  What Kasia can answer?
+[12:08.660 --> 12:10.660]  Proszę napisać.
+[12:10.660 --> 12:12.660]  Co Kasia może odpowiedzieć?
+[12:12.660 --> 12:14.660]  Powiedz.
+[12:14.660 --> 12:16.660]  Dzień dobry.
+[12:42.660 --> 13:12.640]  Dzień dobry.
+[13:12.660 --> 13:42.640]  Dzień dobry.
+[13:42.660 --> 13:43.580]  Może być tak.
+[14:12.660 --> 14:42.640]  Dzień dobry.
+[14:42.660 --> 15:12.640]  Dzień dobry.
+[15:12.660 --> 15:42.640]  Dzień dobry.
+[15:42.660 --> 15:46.160]  Czy to jest pytanie?
+[15:47.160 --> 15:48.120]  Kiedy jest koncert?
+[15:49.880 --> 15:50.380]  O tak.
+[15:50.720 --> 15:51.300]  Pytanie.
+[15:51.720 --> 15:52.040]  Dobra.
+[15:53.820 --> 15:55.380]  I czy to też jest pytanie, czy nie?
+[15:55.980 --> 15:56.820]  Nie pytanie.
+[15:57.900 --> 15:58.540]  Dobra.
+[16:01.940 --> 16:02.620]  Próbuję
+[16:02.620 --> 16:06.460]  mówić, mówię
+[16:06.460 --> 16:07.900]  like I'll see you there.
+[16:08.760 --> 16:10.380]  Like we can meet there.
+[16:10.380 --> 16:12.460]  So like spotykamy się tam.
+[16:12.660 --> 16:13.940]  We can meet there.
+[16:13.940 --> 16:15.380]  Dobra.
+[16:21.880 --> 16:22.840]  Spotkamy
+[16:22.840 --> 16:24.280]  the same words
+[16:24.280 --> 16:26.180]  but they are different.
+[16:26.180 --> 16:27.440]  This is a different aspect
+[16:27.440 --> 16:29.240]  So without why
+[16:29.240 --> 16:31.860]  sιά
+[16:31.860 --> 16:33.140]  Przepraszam tak więc
+[16:33.140 --> 16:34.820]  OK, może być.
+[16:34.820 --> 16:37.860]  Ewa.
+[16:37.860 --> 16:40.080]  Premuż prawie?
+[16:40.080 --> 16:41.420]  Sił nie tak.
+[16:41.420 --> 16:43.420]  Nie prawie? Nie.
+[16:43.420 --> 16:45.420]  No dobra.
+[17:03.420 --> 17:05.420]  Ale dziś...
+[17:11.420 --> 17:13.420]  ...
+[17:21.420 --> 17:23.420]  Hmm, ok.
+[17:23.420 --> 17:25.420]  Tak samo. Spotkamy.
+[17:25.420 --> 17:27.420]  Ok, to jest coś nowego.
+[17:27.420 --> 17:29.420]  To jest coś nowego.
+[17:29.420 --> 17:31.420]  Spotkamy.
+[17:31.420 --> 17:33.420]  A jeszcze o co chodzi z tym?
+[17:33.420 --> 17:35.420]  Planuję.
+[17:35.420 --> 17:37.420]  Kto planuje?
+[17:39.420 --> 17:41.420]  Tak, a ja ile z planem?
+[17:41.420 --> 17:43.420]  Ok.
+[17:43.420 --> 17:45.420]  Hmm.
+[17:47.420 --> 17:49.420]  Może podoba mi się ten plan?
+[17:49.420 --> 17:51.420]  Bo on planuje coś.
+[17:51.420 --> 17:53.420]  Więc on...
+[17:53.420 --> 17:55.420]  ...
+[17:55.420 --> 17:57.420]  Może...
+[18:05.420 --> 18:07.420]  Hmm.
+[18:07.420 --> 18:09.420]  Może podoba mi się?
+[18:09.420 --> 18:11.420]  To jest coś, co mi się podoba.
+[18:11.420 --> 18:13.420]  Może podoba mi się coś.
+[18:13.420 --> 18:15.420]  Pięknie.
+[18:15.420 --> 18:17.420]  Bo to...
+[18:17.420 --> 18:19.420]  ...
+[18:19.420 --> 18:21.420]  ...
+[18:21.420 --> 18:23.420]  ...
+[18:23.420 --> 18:25.420]  ...
+[18:25.420 --> 18:27.420]  ...
+[18:27.420 --> 18:29.420]  No dobrze.
+[18:29.420 --> 18:31.420]  Dajmy radę.
+[18:31.420 --> 18:33.420]  I jeszcze mieliśmy się dowiedzieć, co znaczą te słowa w niebieskiej ramce.
+[18:33.420 --> 18:35.420]  I jeszcze mieliśmy się dowiedzieć, co znaczą te słowa w niebieskiej ramce.
+[18:35.420 --> 18:37.420]  I jeszcze mieliśmy się dowiedzieć, co znaczą te słowa w niebieskiej ramce.
+[18:37.420 --> 18:39.420]  Ok.
+[18:39.420 --> 18:41.420]  Co to jest pociąg ekspresowy?
+[18:41.420 --> 18:43.420]  Co to jest pociąg ekspresowy?
+[18:43.420 --> 18:45.420]  ...
+[18:45.420 --> 18:47.420]  ...
+[18:47.420 --> 18:49.420]  ...
+[18:49.420 --> 18:51.420]  ...
+[18:51.420 --> 18:53.420]  ...
+[18:53.420 --> 18:55.420]  ...
+[18:55.420 --> 18:57.420]  Dobra. Bilet budowy?
+[18:57.420 --> 18:59.420]  ...
+[18:59.420 --> 19:01.420]  ...
+[19:01.420 --> 19:03.420]  Dla kogo jest bilet budowy?
+[19:03.420 --> 19:05.420]  Dla kogo jest bilet budowy?
+[19:05.420 --> 19:07.420]  Dla starej osoby.
+[19:07.420 --> 19:09.420]  Kto?
+[19:09.420 --> 19:11.420]  Womenski tysiąc.
+[19:11.420 --> 19:13.420]  Więc nievirtualista.
+[19:13.420 --> 19:15.420]  Więc nievirtualisty.
+[19:17.420 --> 19:19.420]  ...
+[19:19.420 --> 19:21.420]  Jakie słowo w niebieskiej ramce to jest?
+[19:21.420 --> 19:23.420]  W jeżeli w nono partners.
+[19:23.420 --> 19:25.420]  Ok
+[19:25.420 --> 19:27.420]  Ok.
+[19:27.420 --> 19:29.420]  Chodzi o .
+[19:29.420 --> 19:31.420]  Dla i δεν w representacji.
+[19:31.420 --> 19:33.420]  D rivals.
+[19:33.420 --> 19:35.420]  Ok.
+[19:35.420 --> 19:37.420]  W drugim klasie.
+[19:45.420 --> 19:47.420]  W drugim klasie.
+[20:05.420 --> 20:07.420]  Ile kosztuje?
+[20:07.420 --> 20:09.420]  Co to znaczy?
+[20:09.420 --> 20:11.420]  Omoż to jest koszt.
+[20:11.420 --> 20:13.420]  Z rezerwacją.
+[20:15.420 --> 20:17.420]  Możemy mieć na przykład bilet
+[20:17.420 --> 20:19.420]  z rezerwacją miejsc.
+[20:23.420 --> 20:25.420]  Miejsce przy oknie.
+[20:29.420 --> 20:31.420]  Dobra, tu jest nasza window.
+[20:33.420 --> 20:35.420]  Tu jest coś.
+[20:35.420 --> 20:37.420]  Jedno miejsce, drugie miejsce, trzecie miejsce.
+[20:37.420 --> 20:39.420]  To jest miejsce
+[20:39.420 --> 20:41.420]  przy oknie.
+[20:41.420 --> 20:43.420]  A to miejsce jest jakie?
+[20:45.420 --> 20:47.420]  Między?
+[20:49.420 --> 20:51.420]  Inne widok?
+[20:55.420 --> 20:57.420]  W środku.
+[20:57.420 --> 20:59.420]  To miejsce jest w środku.
+[20:59.420 --> 21:01.420]  A to?
+[21:03.420 --> 21:05.420]  Tu jest korytarz.
+[21:05.420 --> 21:07.420]  Korytarz.
+[21:07.420 --> 21:09.420]  Korytarz.
+[21:09.420 --> 21:11.420]  Kory...
+[21:11.420 --> 21:13.420]  ...tarz?
+[21:17.420 --> 21:19.420]  Przy albo w
+[21:19.420 --> 21:21.420]  korytarzu.
+[21:23.420 --> 21:25.420]  To jest jak w oknie.
+[21:25.420 --> 21:27.420]  Takie.
+[21:27.420 --> 21:29.420]  Przy korytarzu.
+[21:31.420 --> 21:33.420]  Dobra.
+[21:33.420 --> 21:35.420]  Czyli takie mamy.
+[21:35.420 --> 21:37.420]  Mamy tylko przy oknie, tak?
+[21:37.420 --> 21:39.420]  Tak.
+[21:39.420 --> 21:41.420]  Czyli tu może być też miejsce przy środku albo miejsce przy korytarzu.
+[21:41.420 --> 21:43.420]  Dobra.
+[21:43.420 --> 21:45.420]  Bilet w jedną stronę.
+[21:45.420 --> 21:47.420]  Tak.
+[21:47.420 --> 21:49.420]  One way.
+[21:49.420 --> 21:51.420]  I bilet w dwie strony.
+[21:51.420 --> 21:53.420]  Tak.
+[21:53.420 --> 21:55.420]  I bilet w dwie strony.
+[21:55.420 --> 21:57.420]  Tak.
+[21:57.420 --> 21:59.420]  Tak.
+[21:59.420 --> 22:01.420]  Tak.
+[22:01.420 --> 22:03.420]  I bilet w dwie strony.
+[22:03.420 --> 22:05.420]  Tak.
+[22:05.420 --> 22:07.420]  Tak.
+[22:07.420 --> 22:09.420]  Tak.
+[22:09.420 --> 22:11.420]  Pytania?
+[22:11.420 --> 22:13.420]  Yeah, I was confused why strono...
+[22:13.420 --> 22:15.420]  strono...
+[22:15.420 --> 22:17.420]  strone.
+[22:17.420 --> 22:19.420]  Mhm.
+[22:19.420 --> 22:21.420]  I bilet w jedną stronę.
+[22:21.420 --> 22:23.420]  I bilet w dwie...
+[22:23.420 --> 22:25.420]  strone.
+[22:25.420 --> 22:27.420]  Mhm.
+[22:27.420 --> 22:29.420]  Mhm.
+[22:29.420 --> 22:31.420]  Mhm.
+[22:31.420 --> 22:33.420]  Mhm.
+[22:33.420 --> 22:35.420]  Mhm.
+[22:35.420 --> 22:37.420]  Mhm.
+[22:37.420 --> 22:39.420]  Mhm.
+[22:39.420 --> 22:41.420]  Ok.
+[22:41.420 --> 22:43.420]  Pomyślmy, że to jest trochę coś podobnego,
+[22:43.420 --> 22:45.420]  jak mamy tak.
+[22:45.420 --> 22:47.420]  Jak mamy tak.
+[22:47.420 --> 22:49.420]  Jeden rok.
+[22:49.420 --> 22:51.420]  Dwa, trzy, cztery lata.
+[22:51.420 --> 22:53.420]  Dwa, trzy, cztery lata.
+[22:53.420 --> 22:55.420]  Pięć, sześć i tak dalej lat.
+[22:55.420 --> 22:57.420]  Pięć, sześć i tak dalej lat.
+[22:57.420 --> 22:59.420]  Let's say something similar.
+[22:59.420 --> 23:01.420]  Ok?
+[23:01.420 --> 23:03.420]  Ok.
+[23:03.420 --> 23:05.420]  Ok.
+[23:05.420 --> 23:07.420]  Czyli w jedną stronę,
+[23:07.420 --> 23:09.420]  tak jak jeden rok,
+[23:09.420 --> 23:11.420]  i w dwie strony.
+[23:11.420 --> 23:13.420]  I w dwie strony.
+[23:13.420 --> 23:15.420]  I w dwie strony.
+[23:15.420 --> 23:17.420]  Tak.
+[23:17.420 --> 23:19.420]  Tak.
+[23:19.420 --> 23:21.420]  Dwie, trzy, cztery strony.
+[23:21.420 --> 23:23.420]  Dwie, trzy, cztery strony.
+[23:23.420 --> 23:25.420]  Pięć, sześć, siedem, osiem strony.
+[23:25.420 --> 23:27.420]  Pięć, sześć, siedem, osiem strony.
+[23:27.420 --> 23:29.420]  Tak to będzie wyglądało.
+[23:29.420 --> 23:31.420]  Tak.
+[23:31.420 --> 23:35.420]  Czyli odmiana jest podobna jak
+[23:35.420 --> 23:37.420]  rok, lata,
+[23:37.420 --> 23:39.420]  tylko mamy po prostu inne końcówki.
+[23:39.420 --> 23:41.420]  What about the part about the jedną?
+[23:41.420 --> 23:43.420]  Jedną. Tak.
+[23:43.420 --> 23:45.420]  Why isn't it, I don't know,
+[23:45.420 --> 23:47.420]  jeden or...
+[23:47.420 --> 23:49.420]  Strona. Jaki to rodzaj?
+[23:49.420 --> 23:51.420]  It's like the...
+[23:51.420 --> 23:53.420]  Way?
+[23:53.420 --> 23:55.420]  Mhm. But what's the...
+[23:55.420 --> 23:57.420]  Gender?
+[23:57.420 --> 23:59.420]  Gender. Mhm.
+[23:59.420 --> 24:01.420]  Strona.
+[24:01.420 --> 24:03.420]  Tak. To rodzaj żeński. Mhm.
+[24:03.420 --> 24:05.420]  Więc w jedną stronę.
+[24:05.420 --> 24:07.420]  To jest...
+[24:07.420 --> 24:09.420]  Jedna jest for...
+[24:09.420 --> 24:11.420]  Tak.
+[24:11.420 --> 24:13.420]  To jest...
+[24:13.420 --> 24:15.420]  So it's jedna i nil.
+[24:15.420 --> 24:17.420]  Strona is always żeński.
+[24:17.420 --> 24:19.420]  So jedna strona, dwie strony też żeński,
+[24:19.420 --> 24:21.420]  pięć stron też żeński.
+[24:21.420 --> 24:23.420]  Więc...
+[24:23.420 --> 24:25.420]  Mmm...
+[24:25.420 --> 24:27.420]  Jedną, dwie, pięć.
+[24:27.420 --> 24:29.420]  To tutaj...
+[24:29.420 --> 24:31.420]  numer dopasowujemy do rodzaju.
+[24:31.420 --> 24:33.420]  Mhm.
+[24:33.420 --> 24:35.420]  Number stick to a gender.
+[24:35.420 --> 24:37.420]  What would it...
+[24:37.420 --> 24:39.420]  What is the equivalent for
+[24:39.420 --> 24:41.420]  jeński, for jedną?
+[24:41.420 --> 24:43.420]  I to jest...
+[24:43.420 --> 24:45.420]  To by jedno
+[24:45.420 --> 24:47.420]  for jeński, a number?
+[24:47.420 --> 24:49.420]  Jeden.
+[24:49.420 --> 24:51.420]  Mmm...
+[24:59.420 --> 25:01.420]  Harry Potter.
+[25:01.420 --> 25:03.420]  I to by jedna...
+[25:03.420 --> 25:05.420]  Mmm...
+[25:05.420 --> 25:07.420]  Dwa...
+[25:07.420 --> 25:09.420]  Pięć.
+[25:09.420 --> 25:11.420]  Ok. So for example.
+[25:11.420 --> 25:13.420]  We are sitting in one train.
+[25:13.420 --> 25:15.420]  Jesteśmy wy jednym pociągu.
+[25:15.420 --> 25:17.420]  We are going...
+[25:17.420 --> 25:19.420]  Dwóch.
+[25:19.420 --> 25:21.420]  Jesteśmy wy dwóch.
+[25:21.420 --> 25:23.420]  Ok. We are in two trains.
+[25:23.420 --> 25:25.420]  Wy dwóch.
+[25:25.420 --> 25:27.420]  That's the question?
+[25:27.420 --> 25:29.420]  Mhm.
+[25:29.420 --> 25:37.420]  ale problem jest w tym, że te liczebniki są nazwane liczebniki.
+[25:37.420 --> 25:41.420]  Wiemy, że są to liczebniki, wiemy, że są to liczebniki,
+[25:41.420 --> 25:44.420]  takie jak jeden, dwa, pięć, dziesięć, piętnaście.
+[25:44.420 --> 25:47.420]  Mamy też jakieś bardziej prędkość,
+[25:47.420 --> 25:51.420]  takie jak o szóstej, o piątej, o piętnastej.
+[25:51.420 --> 25:55.420]  Wiemy, że są to prędkości, wiemy, że są to prędkości,
+[25:55.420 --> 25:57.420]  ale to są takie liczebniki.
+[25:57.420 --> 26:01.420]  To jest trochę...
+[26:15.420 --> 26:19.420]  Dobra, czyli tak, w jednoosobie na dwie sekundy wiemy.
+[26:19.420 --> 26:21.420]  Jeszcze jedna rzecz.
+[26:23.420 --> 26:26.420]  Czy wiemy, co to jest pociąg osobowy?
+[26:27.420 --> 26:31.420]  Mamy tutaj.
+[26:33.420 --> 26:35.420]  Pociąg osobowy.
+[26:41.420 --> 26:43.420]  Lokalny tren?
+[26:43.420 --> 26:45.420]  Lokalny tren?
+[26:45.420 --> 26:49.420]  Osoby to znaczy dla ludzi, prawda?
+[26:49.420 --> 26:52.420]  Więc pociąg osobowy to będzie tren dla ludzi?
+[26:52.420 --> 26:53.420]  Tak.
+[26:53.420 --> 26:55.420]  Wszystkie treny są dla ludzi, prawda?
+[26:55.420 --> 26:56.420]  Tak.
+[26:56.420 --> 26:58.420]  Jest trochę pociągu?
+[26:58.420 --> 27:00.420]  O, dobre, ok, pociąg osobowy.
+[27:00.420 --> 27:01.420]  Ok, ok, zrozumiałem.
+[27:01.420 --> 27:02.420]  O, taki.
+[27:02.420 --> 27:03.420]  Tak, taki.
+[27:03.420 --> 27:05.420]  To znaczy pociąg osobowy.
+[27:05.420 --> 27:07.420]  To znaczy.
+[27:07.420 --> 27:09.420]  Ja mówię, dlaczego byś...
+[27:09.420 --> 27:16.420]  To jest pociąg osobowy w formie osoby.
+[27:16.420 --> 27:18.420]  Co to jest za różnica?
+[27:18.420 --> 27:20.420]  Między tym i...
+[27:20.420 --> 27:23.420]  Pospiesznym.
+[27:23.420 --> 27:25.420]  Co znaczy pospieszny? Kto wie?
+[27:25.420 --> 27:26.420]  Pociąg.
+[27:26.420 --> 27:27.420]  Pociąg elektryczny?
+[27:27.420 --> 27:33.420]  Pociąg pospieszny to jest coś podobnego jak pociąg ekspresowy.
+[27:33.420 --> 27:35.420]  Ok.
+[27:35.420 --> 27:36.420]  Czyli?
+[27:36.420 --> 27:38.420]  Pociąg ekspresowy, prawda?
+[27:38.420 --> 27:40.420]  Tak, pociąg szybki.
+[27:40.420 --> 27:41.420]  Tak.
+[27:41.420 --> 27:45.420]  Więc na przykład... Czy ktoś jeździ pociągiem po Krakowie?
+[27:45.420 --> 27:46.420]  Nie.
+[27:46.420 --> 27:48.420]  Więc tutaj mamy ten pociąg.
+[27:48.420 --> 27:49.420]  Tam?
+[27:49.420 --> 27:51.420]  Podłóżę, myślę.
+[27:51.420 --> 27:52.420]  Tak.
+[27:52.420 --> 27:54.420]  Więc z tym pociągiem, z tej stacji, możesz iść...
+[27:54.420 --> 27:56.420]  I pójść gdzieś w Krakowie.
+[27:56.420 --> 28:01.420]  I kiedy pociąg jest pospieszny, to znaczy, że jest szybki.
+[28:01.420 --> 28:05.420]  Więc w zwyczaju nie jest to pociąg, który jest w każdej stacji pociągu.
+[28:05.420 --> 28:07.420]  To jest szybki.
+[28:07.420 --> 28:09.420]  Więc pospieszny to znaczy szybki.
+[28:11.420 --> 28:14.420]  Aha, ok. Pociąg osobowy. A jaki może być jeszcze?
+[28:17.420 --> 28:18.420]  Towarowy.
+[28:18.420 --> 28:20.420]  To znaczy chargowy.
+[28:20.420 --> 28:21.420]  To.
+[28:21.420 --> 28:22.420]  To chargowy.
+[28:22.420 --> 28:23.420]  To chargowy.
+[28:23.420 --> 28:24.420]  To chargowy.
+[28:24.420 --> 28:25.420]  To chargowy.
+[28:25.420 --> 28:26.420]  To chargowy.
+[28:26.420 --> 28:31.420]  No dobrze. To wiemy. I będziemy trochę o tych pociągach dzisiaj mówić.
+[28:31.420 --> 28:40.420]  Zobaczmy zadanie 10b.
+[28:40.420 --> 28:42.420]  To jest tutaj.
+[28:42.420 --> 28:49.420]  We are going to listen. Posłuchamy krótkiego nagrania i musimy uzupełnić.
+[28:49.420 --> 28:51.420]  Do tej tłuszczu listami.
+[28:51.420 --> 28:52.420]  Dobrze.
+[28:52.420 --> 28:54.420]  To jest strona 78.
+[28:54.420 --> 28:56.420]  Dobra.
+[28:56.420 --> 29:00.420]  To proszę teraz przeczytać te zdania.
+[29:00.420 --> 29:02.420]  Ja będę szukać.
+[29:22.420 --> 29:34.420]  Dobra.
+[29:34.420 --> 29:41.420]  Dobra.
+[29:41.420 --> 29:42.420]  Dobra.
+[29:42.420 --> 29:43.420]  Tak.
+[29:43.420 --> 29:44.420]  Dobra.
+[29:44.420 --> 29:46.420]  Dobra.
+[29:46.420 --> 29:49.420]  No to.
+[29:49.420 --> 29:50.420]  Dobra.
+[29:50.420 --> 30:04.820]  Tutaj chcemy usłyszeć godzinę.
+[30:04.820 --> 30:08.220]  Uwaga, będę puszczać, zobaczymy.
+[30:34.820 --> 30:41.320]  Dobra, jeszcze raz.
+[31:04.820 --> 31:18.560]  Dobra, mamy?
+[31:18.560 --> 31:19.220]  Tak?
+[31:20.820 --> 31:21.120]  Dobra.
+[31:26.120 --> 31:28.980]  Czyli pospieszny to jest
+[31:28.980 --> 31:29.960]  faster,
+[31:30.560 --> 31:31.840]  ekspresowy to jest
+[31:31.840 --> 31:34.540]  express train, Intercity to Intercity,
+[31:34.820 --> 31:39.620]  dobra, rano o której godzinie jest począt?
+[31:39.620 --> 31:42.020]  Siódmą?
+[31:42.020 --> 31:42.920]  O siódmej.
+[31:42.920 --> 31:45.720]  Potem o?
+[31:45.720 --> 31:48.920]  Trzeciej?
+[31:48.920 --> 31:52.220]  Mhm, o trzeciej po południu.
+[31:52.220 --> 31:54.320]  I jeden o?
+[31:58.320 --> 31:59.420]  Dziewiątej.
+[31:59.420 --> 32:01.320]  Dziewiątej wieczora, super.
+[32:01.320 --> 32:03.920]  Są jeszcze dwa ekspresowe.
+[32:03.920 --> 32:04.720]  Jeden o?
+[32:04.720 --> 32:06.120]  Jedenasta.
+[32:06.120 --> 32:07.020]  Jedenasta, tak?
+[32:07.020 --> 32:08.920]  I drugi o?
+[32:08.920 --> 32:10.320]  Osiemnasty, osiemnasty?
+[32:10.320 --> 32:12.120]  Osiemnasty, tak.
+[32:12.120 --> 32:13.120]  Ładnie, tak.
+[32:13.120 --> 32:14.420]  I ile kosztuje bilet?
+[32:14.420 --> 32:15.120]  Niewiele.
+[32:15.120 --> 32:19.120]  No i teraz tak, teraz już tutaj mówi jakiś Adam, tak?
+[32:19.120 --> 32:23.120]  On dzwonił i teraz on już chce kupić ten bilet.
+[32:32.320 --> 32:33.520]  I teraz on już chce kupić ten bilet.
+[32:34.720 --> 32:52.220]  On idzie do kasy i pyta o bilet. Wiemy co to jest bilet normalny, wiemy co to jest bilet długowy, wiemy co to jest miejsce przy oknie.
+[32:52.220 --> 32:54.220]  A co to jest gotówka?
+[32:54.220 --> 32:56.220]  Cash.
+[32:56.220 --> 32:58.220]  Czyli wszystko wiemy.
+[32:58.220 --> 33:02.220]  To ma lepa, to jest numer 58.
+[33:04.720 --> 33:13.720]  Tutaj musimy zaznaczyć czy to co jest napisane to jest prawda czy nieprawda z tym co usłyszymy.
+[33:22.720 --> 33:25.720]  Lekcja 8 Ćwiczenie 10D.
+[33:28.720 --> 33:32.720]  Dzień dobry, proszę jeden długowy stópecki na intercity do Krakowa.
+[33:32.720 --> 33:33.720]  Na kiedy?
+[33:33.720 --> 33:34.720]  Na wiątek.
+[33:34.720 --> 33:36.720]  Ok, to jest około 10.30.
+[33:36.720 --> 33:39.720]  To jest pociąg z rezerwacją miejsc. Które miejsce?
+[33:39.720 --> 33:40.720]  Przy oknie.
+[33:40.720 --> 33:42.720]  Proszę, 70 złotych.
+[33:42.720 --> 33:43.720]  Mogę zapłacić kartą?
+[33:43.720 --> 33:47.720]  Tak, oczywiście. Proszę PIN i zielony.
+[33:50.720 --> 33:51.720]  Dziękuję, do widzenia.
+[33:51.720 --> 33:52.720]  Do widzenia.
+[33:54.720 --> 33:57.720]  Ok, to szybko proszę, jeszcze raz.
+[34:02.720 --> 34:03.720]  Lekcja 8 Ćwiczenie 10D.
+[34:03.720 --> 34:07.720]  Tutaj musimy zaznaczyć czy to jest naprawdę prawda czy nieprawda z tym co jest napisane.
+[34:07.720 --> 34:09.720]  Lekcja 8 Ćwiczenie 10D.
+[34:09.720 --> 34:12.720]  Dzień dobry, proszę jeden długowy stópecki na intercity do Krakowa.
+[34:12.720 --> 34:13.720]  Na kiedy?
+[34:13.720 --> 34:15.720]  Na wiątek. Ok, to jest około 10.30.
+[34:15.720 --> 34:18.720]  To jest pociąg z rezerwacją miejsc. Które miejsce?
+[34:18.720 --> 34:19.720]  Przy oknie.
+[34:19.720 --> 34:21.720]  Proszę, 70 złotych.
+[34:21.720 --> 34:23.720]  Mogę zapłacić kartą?
+[34:23.720 --> 34:26.720]  Tak, oczywiście. Proszę PIN i zielony.
+[34:26.720 --> 34:27.720]  Tak, oczywiście. Proszę PIN i zielony.
+[34:27.720 --> 34:28.720]  Tak, oczywiście. Proszę PIN i zielony.
+[34:28.720 --> 34:29.720]  Tak, oczywiście. Proszę PIN i zielony.
+[34:29.720 --> 34:31.720]  Dziękuję, do widzenia.
+[34:31.720 --> 34:32.720]  Do widzenia.
+[34:32.720 --> 34:33.720]  Do widzenia.
+[34:36.720 --> 34:37.720]  Mamy?
+[34:38.720 --> 34:39.720]  Jeszcze raz?
+[34:39.720 --> 34:40.720]  Jeszcze raz.
+[34:40.720 --> 34:43.720]  Dobra, jeszcze raz. To będziemy może po jakimś czasie stopować.
+[34:45.720 --> 34:47.720]  Lekcja 8 Ćwiczenie 10D.
+[34:50.720 --> 34:54.720]  Dzień dobry, proszę jeden kwiatunkowy stópecki na intercity do Krakowa.
+[34:54.720 --> 34:55.720]  Na.
+[34:57.720 --> 34:59.720]  Stópecki na intercity do Krakowa.
+[35:00.720 --> 35:01.720]  Dzień dobry, na wiątek.
+[35:01.720 --> 35:02.720]  Na wiątek pociąg o 10.30.
+[35:02.720 --> 35:03.720]  Na wiątek pociąg o 10.30.
+[35:03.720 --> 35:04.720]  To...
+[35:04.720 --> 35:05.720]  Jest pociąg z rezerwacją miejsc. Które miejsce?
+[35:05.720 --> 35:06.720]  Przy oknie.
+[35:06.720 --> 35:07.720]  Proszę, 70 złotych.
+[35:07.720 --> 35:08.720]  Mogę zapłacić kartą?
+[35:08.720 --> 35:09.720]  Tak, oczywiście. Proszę PIN i zielony.
+[35:09.720 --> 35:10.720]  Tak, oczywiście. Proszę PIN i zielony.
+[35:10.720 --> 35:11.720]  Dziękuję, do widzenia.
+[35:11.720 --> 35:12.720]  Do widzenia.
+[35:12.720 --> 35:13.720]  Dzień dobry, proszę jeden kwiatunkowy stópecki na intercity do Krakowa.
+[35:13.720 --> 35:14.720]  Na wiątek pociąg o 10.30.
+[35:14.720 --> 35:15.720]  To...
+[35:15.720 --> 35:16.720]  Jest pociąg z rezerwacją miejsc. Które miejsce?
+[35:16.720 --> 35:17.720]  Przy oknie.
+[35:17.720 --> 35:18.720]  Proszę, 70 złotych.
+[35:18.720 --> 35:19.720]  Mogę zapłacić kartą?
+[35:19.720 --> 35:20.720]  Tak, oczywiście. Proszę PIN i zielony.
+[35:20.720 --> 35:21.720]  Tak, oczywiście. Proszę PIN i zielony.
+[35:21.720 --> 35:22.720]  Dziękuję, do widzenia.
+[35:22.720 --> 35:23.720]  Do widzenia.
+[35:23.720 --> 35:24.720]  Aha, dobra.
+[35:24.720 --> 35:25.720]  Czy Adam kupuje bilet normalny?
+[35:25.720 --> 35:26.720]  Nie.
+[35:26.720 --> 35:27.720]  Nie?
+[35:27.720 --> 35:28.720]  W jaki bilet kupuje?
+[35:28.720 --> 35:29.720]  Udolny.
+[35:29.720 --> 35:30.720]  Udolny, studencki.
+[35:30.720 --> 35:31.720]  Udolny.
+[35:31.720 --> 35:32.720]  Czy kupuje bilet na pociąg ekspresowy?
+[35:32.720 --> 35:33.720]  Nie.
+[35:33.720 --> 35:34.720]  No jak na jakich pociągach kupuje?
+[35:34.720 --> 35:35.720]  Na pociągie.
+[35:35.720 --> 35:36.720]  Nie.
+[35:36.720 --> 35:37.720]  Nie.
+[35:37.720 --> 35:38.720]  Nie?
+[35:38.720 --> 35:39.720]  Nie.
+[35:39.720 --> 35:40.720]  Nie.
+[35:40.720 --> 35:41.720]  Nie.
+[35:41.720 --> 35:42.720]  Nie.
+[35:42.720 --> 35:43.720]  Nie.
+[35:43.720 --> 35:44.720]  Nie.
+[35:44.720 --> 35:45.720]  Nie.
+[35:45.720 --> 35:46.720]  Nie.
+[35:46.720 --> 35:47.720]  Nie.
+[35:47.720 --> 35:48.720]  Nie.
+[35:48.720 --> 35:49.720]  Nie.
+[35:49.720 --> 35:51.720]  Intercity.
+[35:51.720 --> 35:53.720]  Pociąg jest od pół do jedenastej?
+[35:53.720 --> 35:55.720]  Nie, tak.
+[36:01.720 --> 36:03.720]  On powiedział coś w taki sposób, że dziesiąte siedziastu i tak.
+[36:03.720 --> 36:05.720]  Więc nie jedenaste.
+[36:05.720 --> 36:07.720]  Czekaj.
+[36:07.720 --> 36:09.720]  Dziesiątej.
+[36:09.720 --> 36:11.720]  Prawda.
+[36:11.720 --> 36:13.720]  Owszem.
+[36:13.720 --> 36:15.720]  Tak, od dziesiątej trzydzieści, czyli?
+[36:15.720 --> 36:17.720]  Od dziesiątej do jedenastej.
+[36:17.720 --> 36:19.720]  Miejsce 30.
+[36:19.720 --> 36:21.720]  O, kurde.
+[36:21.720 --> 36:23.720]  Nie, to już było.
+[36:25.720 --> 36:27.720]  Czyli tak, czyli prawda.
+[36:27.720 --> 36:29.720]  Adam wybiera miejsce przy oknie.
+[36:29.720 --> 36:31.720]  Prawda.
+[36:31.720 --> 36:33.720]  Prawda.
+[36:33.720 --> 36:35.720]  Bilet kosztuje 60 złotych.
+[36:35.720 --> 36:37.720]  Prawda.
+[36:37.720 --> 36:39.720]  Owszem.
+[36:39.720 --> 36:41.720]  Nie.
+[36:41.720 --> 36:43.720]  Troszkę więcej.
+[36:43.720 --> 36:45.720]  Czyli to jest 70?
+[36:45.720 --> 36:47.720]  70, czyli nieprawda.
+[36:47.720 --> 36:49.720]  Bilet kosztuje 70 złotych.
+[36:49.720 --> 36:51.720]  Adam płaci gotówką.
+[36:51.720 --> 36:53.720]  Nie.
+[36:53.720 --> 36:55.720]  Jak płaci?
+[36:55.720 --> 36:57.720]  Kartą.
+[36:57.720 --> 36:59.720]  Super. No i dobra, daliśmy radę.
+[36:59.720 --> 37:01.720]  Eee...
+[37:01.720 --> 37:03.720]  Dobra.
+[37:03.720 --> 37:05.720]  Uwaga.
+[37:05.720 --> 37:07.720]  Zadanie 10e.
+[37:07.720 --> 37:09.720]  Chciałabym teraz, żeby każdy z Państwa napisał taki dialog.
+[37:09.720 --> 37:11.720]  Kasia.
+[37:11.720 --> 37:13.720]  Czyli.
+[37:13.720 --> 37:15.720]  Ktoś idzie do kasy,
+[37:15.720 --> 37:17.720]  a ona ma kasy.
+[37:17.720 --> 37:19.720]  I chce kupić bilet na pociąg.
+[37:19.720 --> 37:21.720]  Tutaj mamy różne rodzaje pociągów.
+[37:21.720 --> 37:23.720]  Znamy też polskie miasta.
+[37:23.720 --> 37:25.720]  Znamy godziny.
+[37:25.720 --> 37:27.720]  Wiemy, czy płacimy kartą,
+[37:27.720 --> 37:29.720]  czy gotówką.
+[37:29.720 --> 37:31.720]  Ok?
+[37:31.720 --> 37:33.720]  Ok.
+[37:33.720 --> 37:35.720]  Czyli tak.
+[37:35.720 --> 37:37.720]  Dokąd jedziemy?
+[37:37.720 --> 37:39.720]  O której godzinie jedziemy?
+[37:39.720 --> 37:41.720]  Jaka jest cena biletu?
+[37:41.720 --> 37:43.720]  Czy to jest bilet normalny, czy ulgowy?
+[37:43.720 --> 37:45.720]  Wszyscy jeszcze?
+[37:45.720 --> 37:47.720]  Nie. Chyba to wszystko. Ok?
+[37:47.720 --> 37:49.720]  Więc co musimy zrobić?
+[37:49.720 --> 37:51.720]  Musimy napisać dialog.
+[37:51.720 --> 37:53.720]  Ktoś kupuje bilet.
+[37:53.720 --> 37:55.720]  Gdzie idzie?
+[37:55.720 --> 37:57.720]  W jaką godzinę?
+[37:57.720 --> 37:59.720]  I ile płaci?
+[37:59.720 --> 38:01.720]  I jak długo jest bilet?
+[38:01.720 --> 38:03.720]  To wszystko.
+[38:03.720 --> 38:05.720]  Czyli próbujemy napisać dialog.
+[38:13.720 --> 38:15.720]  Dialog dla między...
+[38:15.720 --> 38:19.720]  kasier i osobę.
+[38:45.720 --> 38:47.720]  Ok?
+[38:47.720 --> 38:49.720]  Nie.
+[38:49.720 --> 38:51.720]  Trzeba.
+[38:51.720 --> 38:53.720]  Znów.
+[38:53.720 --> 38:55.720]  Nie.
+[38:55.720 --> 38:57.720]  Czemu można...
+[38:57.720 --> 38:59.720]  Niedawno.
+[38:59.720 --> 39:01.720]  Kiedy...
+[39:01.720 --> 39:03.720]  Kiedy...
+[39:03.720 --> 39:05.720]  Kiedy...
+[39:05.720 --> 39:07.720]  Kiedy...
+[39:07.720 --> 39:09.720]  Kiedy...
+[39:09.720 --> 39:11.720]  Kiedy...
+[39:11.720 --> 39:13.720]  Kiedy...
+[39:13.720 --> 39:15.720]  Kiedy...
+[39:15.720 --> 39:45.700]  Dzień dobry.
+[39:45.720 --> 40:15.700]  Dzień dobry.
+[40:15.720 --> 40:45.700]  Dzień dobry.
+[40:45.720 --> 41:15.700]  Dzień dobry.
+[41:15.720 --> 41:45.700]  Dzień dobry.
+[41:45.720 --> 42:15.700]  Dzień dobry.
+[42:15.720 --> 42:45.700]  Dzień dobry.
+[42:45.720 --> 43:15.700]  Dzień dobry.
+[43:15.720 --> 43:45.700]  Dzień dobry.
+[43:45.720 --> 44:15.700]  Dzień dobry.
+[44:15.720 --> 44:36.300]  Dobra, czy mamy?
+[44:37.500 --> 44:38.280]  Czyli jeszcze nie?
+[44:38.280 --> 44:40.320]  Jeszcze nie.
+[44:45.720 --> 45:15.700]  Jeszcze nie.
+[45:15.720 --> 45:17.720]  Jeszcze nie.
+[45:45.720 --> 45:47.720]  Jeszcze nie.
+[46:15.720 --> 46:17.720]  Jeszcze nie.
+[46:45.720 --> 47:13.720]  Jeszcze nie.
+[47:15.720 --> 47:17.720]  Jeszcze nie.
+[47:17.720 --> 47:19.720]  Jeszcze nie.
+[47:19.720 --> 47:21.720]  Jeszcze nie.
+[47:21.720 --> 47:23.720]  Jeszcze nie.
+[47:23.720 --> 47:25.720]  Jeszcze nie.
+[47:25.720 --> 47:27.720]  Jeszcze nie.
+[47:27.720 --> 47:29.720]  Co znaczy płacić?
+[47:29.720 --> 47:31.720]  Co znaczy płacić?
+[47:31.720 --> 47:33.720]  Kupimy.
+[47:33.720 --> 47:35.720]  Kupimy.
+[47:35.720 --> 47:37.720]  Czyli płacimy dopiero później, tak?
+[47:37.720 --> 47:39.720]  Czyli płacimy dopiero później, tak?
+[47:39.720 --> 47:41.720]  Kiedy dajemy go kilka albo karty płacimy.
+[47:41.720 --> 47:43.720]  A co on chce najpierw zrobić?
+[47:43.720 --> 47:45.720]  A co on chce najpierw zrobić?
+[47:45.720 --> 47:47.720]  Nie rozumiem.
+[47:47.720 --> 47:49.720]  Tutaj mamy płacić.
+[47:49.720 --> 47:53.720]  I to słowo powinniśmy zmienić na inny czasownik.
+[47:53.720 --> 47:55.720]  I to słowo powinniśmy zmienić na inny czasownik.
+[47:55.720 --> 47:57.720]  I to słowo powinniśmy zmienić na inny czasownik.
+[47:57.720 --> 47:59.720]  Proszę o to.
+[47:59.720 --> 48:05.720]  On powiedział, że chcemy zapłacić za to, co chcemy.
+[48:05.720 --> 48:09.720]  Ale myślę, że w końcu zapłacimy, kiedy znamy cenę.
+[48:09.720 --> 48:11.720]  Więc jak idziemy do...
+[48:11.720 --> 48:13.720]  Chciałem powiedzieć, że chcę kupić ten bilet.
+[48:13.720 --> 48:15.720]  Chciałem powiedzieć, że chcę kupić ten bilet.
+[48:15.720 --> 48:17.720]  A, tak?
+[48:17.720 --> 48:19.720]  O, przepraszam, kupić.
+[48:19.720 --> 48:21.720]  Chciałem powiedzieć, że chcę kupić ten bilet.
+[48:21.720 --> 48:23.720]  Kiedy ten bilet skąd?
+[48:23.720 --> 48:25.720]  Kiedy ten bilet skąd?
+[48:25.720 --> 48:27.720]  Kiedy ten bilet skąd?
+[48:27.720 --> 48:29.720]  W Intercity.
+[48:29.720 --> 48:31.720]  W Intercity?
+[48:31.720 --> 48:33.720]  W Intercity.
+[48:33.720 --> 48:35.720]  A, ok.
+[48:35.720 --> 48:37.720]  Z...
+[48:37.720 --> 48:39.720]  Z KKW.
+[48:39.720 --> 48:41.720]  Z KKW.
+[48:41.720 --> 48:43.720]  Kiedy...
+[48:43.720 --> 48:45.720]  Kiedy chcesz iść?
+[48:45.720 --> 48:47.720]  Kiedy chcesz iść?
+[48:47.720 --> 48:49.720]  Kiedy chcesz iść?
+[48:49.720 --> 48:51.720]  Iść na kuchni.
+[48:51.720 --> 48:53.720]  Ok. Więc to będzie...
+[48:53.720 --> 48:55.720]  Jeść.
+[48:55.720 --> 48:57.720]  Jeździć.
+[48:57.720 --> 48:59.720]  Kiedy jeździć?
+[48:59.720 --> 49:01.720]  Kiedy jechać?
+[49:01.720 --> 49:03.720]  Kiedy jechać?
+[49:03.720 --> 49:05.720]  Tak.
+[49:05.720 --> 49:07.720]  Ok.
+[49:07.720 --> 49:09.720]  Jechać.
+[49:09.720 --> 49:11.720]  Ok.
+[49:11.720 --> 49:13.720]  Nie wiem, czy to...
+[49:13.720 --> 49:15.720]  Nie czytamy tego po polsku?
+[49:15.720 --> 49:17.720]  Nie.
+[49:17.720 --> 49:19.720]  Więc jak to czytamy?
+[49:19.720 --> 49:21.720]  Po polsku?
+[49:21.720 --> 49:23.720]  Jeśli wyszłaś na ten numer, to wiesz, że to jest ten bilet.
+[49:23.720 --> 49:25.720]  Ok, ok, ok.
+[49:25.720 --> 49:27.720]  Więc to nie jest pozwalone po polsku.
+[49:27.720 --> 49:29.720]  Ok, ok, ok.
+[49:29.720 --> 49:31.720]  Super, super.
+[49:31.720 --> 49:33.720]  O 6 i 15, o 6.
+[49:33.720 --> 49:35.720]  Dobra.
+[49:35.720 --> 49:37.720]  Sprawy perfekcyjne.
+[49:37.720 --> 49:39.720]  Dziękuję.
+[49:39.720 --> 49:41.720]  Kto jeszcze z końca?
+[49:41.720 --> 49:43.720]  Kto jeszcze z końca?
+[49:43.720 --> 49:45.720]  Zobaczmy.
+[49:47.720 --> 49:49.720]  Dobra, kupić.
+[49:51.720 --> 49:53.720]  Z...
+[49:53.720 --> 49:55.720]  Warszawy.
+[49:55.720 --> 49:57.720]  A dokąd?
+[49:57.720 --> 49:59.720]  A do?
+[49:59.720 --> 50:01.720]  Dokąd?
+[50:01.720 --> 50:03.720]  From Warsaw, but where?
+[50:03.720 --> 50:05.720]  No, I want to go to Warsaw.
+[50:05.720 --> 50:07.720]  So I'm taking one flight to to Warsaw.
+[50:07.720 --> 50:09.720]  Aha, do Warszawy.
+[50:09.720 --> 50:11.720]  Do Warszawy.
+[50:11.720 --> 50:13.720]  No, to jest po której?
+[50:13.720 --> 50:15.720]  Mhm.
+[50:15.720 --> 50:17.720]  Nie są, tylko jest.
+[50:17.720 --> 50:19.720]  To jest jeden pociąg ekspresowy, so similar.
+[50:19.720 --> 50:21.720]  Rano o pół do...
+[50:21.720 --> 50:23.720]  Rano o pół do 18.
+[50:23.720 --> 50:25.720]  Rano o pół do 18.
+[50:25.720 --> 50:27.720]  Rano o pół do 18.
+[50:27.720 --> 50:29.720]  18.
+[50:29.720 --> 50:31.720]  O, 8.
+[50:31.720 --> 50:33.720]  O, 8.
+[50:33.720 --> 50:35.720]  O, do 8.
+[50:35.720 --> 50:37.720]  8, ok.
+[50:37.720 --> 50:39.720]  8?
+[50:39.720 --> 50:41.720]  Mhm.
+[50:41.720 --> 50:43.720]  O, o, o, o.
+[50:43.720 --> 50:45.720]  O, o, o, o, o.
+[50:45.720 --> 50:47.720]  Drugiej. Mhm.
+[50:47.720 --> 50:49.720]  O, takiej półce dziesiększa.
+[50:49.720 --> 50:51.720]  O, takiej półce dziesiększa.
+[50:51.720 --> 50:53.720]  Ósmej to jest pociąg.
+[50:53.720 --> 50:55.720]  Ósmej.
+[50:55.720 --> 50:57.720]  Takie u.
+[50:57.720 --> 50:59.720]  Aha.
+[50:59.720 --> 51:01.720]  Druga klasa, miejsce przy oknie na pociągi czołgów.
+[51:01.720 --> 51:03.720]  Ile kosztuje?
+[51:03.720 --> 51:05.720]  O, jest też niedrogo.
+[51:05.720 --> 51:07.720]  Dobrze, w jedną stronę tak.
+[51:07.720 --> 51:09.720]  Super, dobrze, dobrze, dobra.
+[51:09.720 --> 51:11.720]  Dobra, w samą? Prawie?
+[51:11.720 --> 51:13.720]  Już? Mhm.
+[51:13.720 --> 51:15.720]  Dobrze, to dotyczymy.
+[51:15.720 --> 51:17.720]  Dzień do, proszę, drugie.
+[51:17.720 --> 51:19.720]  Widziałem normalny na
+[51:19.720 --> 51:21.720]  do Warszawy od
+[51:21.720 --> 51:23.720]  2.30. No, w tym nie tak.
+[51:23.720 --> 51:25.720]  To jest, to jest, to jest 75.
+[51:25.720 --> 51:27.720]  No, dobra. Kartą czy
+[51:27.720 --> 51:29.720]  gotówką? Ok, kartą.
+[51:29.720 --> 51:31.720]  Proszę wpisać film.
+[51:31.720 --> 51:33.720]  Hmm, może wpisać.
+[51:33.720 --> 51:35.720]  Tak, wpisać. Mhm.
+[51:35.720 --> 51:37.720]  Wpisać. Ok.
+[51:37.720 --> 51:39.720]  Dziękuję. Super.
+[51:39.720 --> 51:41.720]  Pani?
+[51:41.720 --> 51:43.720]  Hmm, no...
+[51:43.720 --> 51:45.720]  Szef?
+[51:45.720 --> 51:47.720]  Proszę, co?
+[51:47.720 --> 51:49.720]  Mówię, co? Biednik.
+[51:49.720 --> 51:51.720]  To jest biednik.
+[51:51.720 --> 51:53.720]  Hmm, bilet normalny na pociąg ekspresowy
+[51:53.720 --> 51:55.720]  do Krakowa, po której
+[51:55.720 --> 51:57.720]  są pociągi do Krakowa.
+[51:57.720 --> 51:59.720]  Rano o
+[51:59.720 --> 52:01.720]  hmm,
+[52:01.720 --> 52:03.720]  dziewiątej.
+[52:03.720 --> 52:05.720]  Potem o
+[52:05.720 --> 52:07.720]  10. Ile kosztuje bilet?
+[52:07.720 --> 52:09.720]  40 złotych
+[52:09.720 --> 52:11.720]  na drugą klasę, tak?
+[52:11.720 --> 52:13.720]  Na drugą.
+[52:13.720 --> 52:15.720]  Druga.
+[52:15.720 --> 52:17.720]  Klase.
+[52:17.720 --> 52:19.720]  Hmm...
+[52:19.720 --> 52:21.720]  A tu?
+[52:21.720 --> 52:23.720]  60 złotych.
+[52:23.720 --> 52:25.720]  A, 60 złotych. Ok, 60 złotych.
+[52:25.720 --> 52:27.720]  Aha, ok. Czyli 40 złotych
+[52:27.720 --> 52:29.720]  tu i 60 złotych. Ok, super.
+[52:29.720 --> 52:31.720]  Tutaj też jest klasa.
+[52:31.720 --> 52:33.720]  Dobrze, mogę powiedzieć drugą.
+[52:33.720 --> 52:35.720]  Hmm...
+[52:35.720 --> 52:37.720]  Klasę.
+[52:37.720 --> 52:39.720]  Ok, 10.
+[52:39.720 --> 52:41.720]  Pięknie.
+[52:41.720 --> 52:43.720]  Hmm...
+[52:43.720 --> 52:45.720]  A czy pan ma coś?
+[52:45.720 --> 52:47.720]  Nic.
+[52:47.720 --> 52:49.720]  Nic?
+[52:49.720 --> 52:51.720]  Nic? No dobra. Ok.
+[52:51.720 --> 52:53.720]  No to...
+[52:53.720 --> 52:55.720]  Dobrze. Co, jakie nieźle.
+[52:55.720 --> 52:57.720]  Czyli tak, czyli wiemy,
+[52:57.720 --> 52:59.720]  już jakby ktoś chciał iść kupić bilet na pociąg
+[52:59.720 --> 53:01.720]  w Polsce, to jak najbardziej.
+[53:01.720 --> 53:03.720]  Zobaczmy jeszcze tutaj
+[53:03.720 --> 53:05.720]  jedną rzecz.
+[53:05.720 --> 53:09.720]  I to proszę dalej.
+[53:09.720 --> 53:11.720]  I to też
+[53:11.720 --> 53:13.720]  troszkę dalej.
+[53:13.720 --> 53:15.720]  Dobra. Tutaj mamy powtórzenie
+[53:15.720 --> 53:17.720]  dopełniacza.
+[53:17.720 --> 53:19.720]  Czyli tak, kiedy używamy
+[53:19.720 --> 53:21.720]  dopełniacza, dopełniacza
+[53:21.720 --> 53:23.720]  używamy z takimi przyimkami
+[53:23.720 --> 53:25.720]  jak do, od,
+[53:25.720 --> 53:27.720]  z, u i dla.
+[53:27.720 --> 53:29.720]  Na przykład teraz
+[53:29.720 --> 53:31.720]  pisaliśmy, że jedziemy
+[53:31.720 --> 53:33.720]  pociągiem dokąd?
+[53:33.720 --> 53:35.720]  Do Warszawy, do Wrocławia, do Krakowa.
+[53:35.720 --> 53:37.720]  Hmm.
+[53:37.720 --> 53:39.720]  Ten pociąg jedzie
+[53:39.720 --> 53:41.720]  z... Kąd?
+[53:41.720 --> 53:43.720]  Jedzie z Krakowa, z Warszawy,
+[53:43.720 --> 53:45.720]  z Wrocławia. Hmm. Czyli też to wszystko
+[53:45.720 --> 53:47.720]  będą konstrukcje
+[53:47.720 --> 53:49.720]  z dopełniacza.
+[53:49.720 --> 53:51.720]  Ok. Dokąd możemy
+[53:51.720 --> 53:53.720]  iść? We are going...
+[53:53.720 --> 53:55.720]  Where?
+[53:55.720 --> 53:57.720]  Do kogoś.
+[53:57.720 --> 53:59.720]  Do kolegi, do mamy,
+[53:59.720 --> 54:01.720]  do babci. Hmm.
+[54:01.720 --> 54:03.720]  Tak. Czyli na przykład
+[54:03.720 --> 54:05.720]  tutaj ktoś idzie
+[54:05.720 --> 54:07.720]  do marka na imprezy
+[54:07.720 --> 54:09.720]  albo do Beaty na kolację.
+[54:09.720 --> 54:11.720]  So we are going to
+[54:11.720 --> 54:13.720]  this person.
+[54:15.720 --> 54:17.720]  Ok. Skąd wracamy?
+[54:17.720 --> 54:19.720]  We are coming back from
+[54:19.720 --> 54:21.720]  where? Od marka
+[54:21.720 --> 54:23.720]  na imprezy albo od
+[54:23.720 --> 54:25.720]  Beaty na kolację.
+[54:25.720 --> 54:27.720]  Czyli też mamy dopełniacza.
+[54:27.720 --> 54:29.720]  No ok.
+[54:29.720 --> 54:31.720]  A gdzie byliśmy?
+[54:31.720 --> 54:33.720]  Figurę, like where
+[54:33.720 --> 54:35.720]  I have been.
+[54:35.720 --> 54:37.720]  We were at someone's place.
+[54:37.720 --> 54:39.720]  Czyli u Jacka, u Kasi.
+[54:39.720 --> 54:41.720]  Byliśmy u babci,
+[54:41.720 --> 54:43.720]  u mamy, u...
+[54:43.720 --> 54:45.720]  u lekarna, tak?
+[54:45.720 --> 54:47.720]  So we were at
+[54:47.720 --> 54:49.720]  some place.
+[54:49.720 --> 54:51.720]  Hmm. Dopłniacza
+[54:51.720 --> 54:53.720]  urwamy też, gdy
+[54:53.720 --> 54:55.720]  mówimy o czasie.
+[54:55.720 --> 54:57.720]  So also when we talk
+[54:57.720 --> 54:59.720]  about time.
+[54:59.720 --> 55:01.720]  For example, how long are
+[55:01.720 --> 55:03.720]  in Kraków? Od kiedy jesteś
+[55:03.720 --> 55:05.720]  w Krakowie? Od
+[55:05.720 --> 55:07.720]  miesiąca.
+[55:07.720 --> 55:09.720]  Albo od października.
+[55:09.720 --> 55:11.720]  Hmm. Albo od
+[55:11.720 --> 55:13.720]  pięciu lat.
+[55:13.720 --> 55:15.720]  Od dziesięciu lat.
+[55:15.720 --> 55:17.720]  Od pół
+[55:17.720 --> 55:19.720]  roku na przykład. To też jest dopełniacza.
+[55:19.720 --> 55:21.720]  Jak długo pan jest w Krakowie?
+[55:21.720 --> 55:23.720]  Od kiedy?
+[55:23.720 --> 55:25.720]  Cztery lata.
+[55:25.720 --> 55:27.720]  Od czterech lat?
+[55:27.720 --> 55:29.720]  Cztery lata.
+[55:29.720 --> 55:31.720]  Dobra. A pani, jak długo pani jest w Krakowie?
+[55:31.720 --> 55:33.720]  Eee...
+[55:33.720 --> 55:35.720]  Dobrze.
+[55:35.720 --> 55:37.720]  Od kiedy? Od...
+[55:37.720 --> 55:39.720]  Od...
+[55:39.720 --> 55:41.720]  Od...
+[55:41.720 --> 55:43.720]  Od...
+[55:43.720 --> 55:45.720]  ...
+[55:45.720 --> 55:47.720]  ...
+[55:47.720 --> 55:49.720]  ...
+[55:49.720 --> 55:51.720]  ...
+[55:51.720 --> 55:53.720]  ...
+[55:53.720 --> 55:55.720]  Od dwóch lat.
+[55:55.720 --> 55:57.720]  Od dwóch lat.
+[55:57.720 --> 55:59.720]  Od dwóch lat.
+[55:59.720 --> 56:01.720]  A pani, jak długo jest w Krakowie?
+[56:01.720 --> 56:03.720]  Od sześć lat.
+[56:03.720 --> 56:05.720]  Cztery?
+[56:05.720 --> 56:07.720]  Cztery?
+[56:07.720 --> 56:09.720]  Co się nie mówi?
+[56:09.720 --> 56:11.720]  Czy to jest...
+[56:11.720 --> 56:13.720]  Czy?
+[56:13.720 --> 56:15.720]  Czy?
+[56:15.720 --> 56:17.720]  No to cztery jest zupełnie inny.
+[56:17.720 --> 56:19.720]  Tak, cztery.
+[56:19.720 --> 56:21.720]  Co się nie mówi?
+[56:21.720 --> 56:23.720]  Czy to jest nie...
+[56:23.720 --> 56:25.720]  Tak?
+[56:25.720 --> 56:27.720]  Tak.
+[56:27.720 --> 56:29.720]  Tak.
+[56:29.720 --> 56:31.720]  Tak.
+[56:31.720 --> 56:33.720]  Więc kiedy mówię, że to się mówi, to to brzmi jak...
+[56:33.720 --> 56:35.720]  ...
+[56:35.720 --> 56:37.720]  ...
+[56:37.720 --> 56:39.720]  Czy mógłbyś odkryć...
+[56:39.720 --> 56:41.720]  ...
+[56:41.720 --> 56:43.720]  ...
+[56:43.720 --> 56:45.720]  ...
+[56:45.720 --> 56:47.720]  ...
+[56:47.720 --> 56:49.720]  ...
+[56:49.720 --> 56:51.720]  ...
+[56:51.720 --> 56:53.720]  ...
+[56:53.720 --> 56:55.720]  ...
+[56:55.720 --> 56:57.720]  ...
+[56:57.720 --> 56:59.720]  ...
+[56:59.720 --> 57:01.720]  ...
+[57:01.720 --> 57:03.720]  ...
+[57:03.720 --> 57:05.720]  ...
+[57:05.720 --> 57:06.720]  Ok.
+[57:06.720 --> 57:07.720]  Cz.
+[57:07.720 --> 57:08.720]  Cz.
+[57:08.720 --> 57:09.720]  Cz.
+[57:09.720 --> 57:10.720]  Cz.
+[57:10.720 --> 57:11.720]  Cz.
+[57:11.720 --> 57:12.720]  Cz.
+[57:12.720 --> 57:13.720]  Ok.
+[57:13.720 --> 57:14.720]  To jest miks.
+[57:14.720 --> 57:19.720]  Czy to jest tylko krakówczyk, czy to jest normalne, że ludzie w innych miejscach to też
+[57:19.720 --> 57:20.720]  nazywają?
+[57:20.720 --> 57:23.720]  Myślę, że Krakówczyk jest akcentem krakówczykim.
+[57:23.720 --> 57:28.720]  Jest znany za to, że kiedy masz ty, rzy, to brzmi jak cz.
+[57:28.720 --> 57:29.720]  O, ok.
+[57:29.720 --> 57:36.720]  Czy nawet sy, ty, rzy brzmi jak sz.
+[57:36.720 --> 57:37.720]  Szczyczy.
+[57:37.720 --> 57:44.720]  Ale to będzie jeszcze, ten pierwszy, obcy, sz, hdrz, będzie jeszcze być prononcowany
+[57:44.720 --> 57:45.720]  jak sz, prawda?
+[57:45.720 --> 57:48.720]  Czy to nie jest prawie prawa, polska prononcacja?
+[57:48.720 --> 57:50.720]  To powinno być strz.
+[57:50.720 --> 57:51.720]  Strz.
+[57:51.720 --> 57:52.720]  Strz.
+[57:52.720 --> 57:53.720]  Strz.
+[57:53.720 --> 57:56.720]  Na przykład strzela.
+[57:56.720 --> 57:58.720]  Nie, jak pozar, strz.
+[57:58.720 --> 57:59.720]  Pozar.
+[57:59.720 --> 58:00.720]  To nie jest prawo, to powinno być strzelać.
+[58:00.720 --> 58:01.720]  Strzelać.
+[58:01.720 --> 58:02.720]  Ale ja osobiście, ok, nie jestem z Kraków, ale powiem strzelać.
+[58:02.720 --> 58:03.720]  Ale jak rozmawiam z kimś, kto zna moich uczniów, to powiem strzelać.
+[58:03.720 --> 58:04.720]  Ale jak rozmawiam z moimi uczniami, to próbuję być super czysto.
+[58:04.720 --> 58:05.720]  I powiem strzelać.
+[58:05.720 --> 58:06.720]  Ale tak, czasami nie jestem pewna.
+[58:06.720 --> 58:07.720]  Ok.
+[58:07.720 --> 58:08.720]  Co mówisz?
+[58:08.720 --> 58:23.720]  Ok, czyli od ilu lat, od kilku lat, od kilku lat, od kilku lat, od kilku lat, od kilku
+[58:23.720 --> 58:28.720]  lat, od kilku lat, od kilku lat, od kilku lat, od kilku lat, od kilku lat, od kilku lat, od kilku
+[58:28.720 --> 58:29.720]  lat.
+[58:29.720 --> 58:30.720]  Od kilku lat?
+[58:30.720 --> 58:31.720]  No, come on.
+[58:31.720 --> 58:32.720]  Strz.
+[58:32.720 --> 58:33.720]  Strz.
+[58:33.720 --> 58:34.720]  Mhm.
+[58:34.720 --> 58:35.720]  Od trzech.
+[58:35.720 --> 58:36.720]  Od trzech lat.
+[58:36.720 --> 58:45.720]  But this is not, we don't need to do this right now, right?
+[58:45.720 --> 58:51.720]  Or you said that this was the one level, like changing.
+[58:51.720 --> 58:52.720]  Yeah.
+[58:52.720 --> 58:57.720]  And so we can say strz lat right now, right?
+[58:57.720 --> 58:58.720]  We don't need to get into that.
+[58:58.720 --> 58:59.720]  Ok.
+[58:59.720 --> 59:00.720]  I don't need to change.
+[59:00.720 --> 59:01.720]  Ok.
+[59:01.720 --> 59:02.720]  Ok.
+[59:02.720 --> 59:03.720]  Dobrze.
+[59:03.720 --> 59:04.720]  A Pan jak był bez Krakowa?
+[59:04.720 --> 59:05.720]  Od sześć miesięcy.
+[59:05.720 --> 59:06.720]  Od sześciu miesięcy, ok.
+[59:06.720 --> 59:07.720]  Czyli kiedy Pan przyjechał?
+[59:07.720 --> 59:08.720]  W jakim miesiącu Pan przyjechał?
+[59:08.720 --> 59:09.720]  Which month, you're right?
+[59:09.720 --> 59:10.720]  Długi.
+[59:10.720 --> 59:11.720]  Długi.
+[59:11.720 --> 59:12.720]  Ok.
+[59:12.720 --> 59:13.720]  Czyli od...
+[59:13.720 --> 59:14.720]  Od...
+[59:14.720 --> 59:15.720]  Od...
+[59:15.720 --> 59:16.720]  Od...
+[59:16.720 --> 59:17.720]  Od...
+[59:17.720 --> 59:18.720]  Od...
+[59:18.720 --> 59:19.720]  Od...
+[59:19.720 --> 59:20.720]  Od...
+[59:20.720 --> 59:21.720]  Od...
+[59:21.720 --> 59:22.720]  Od...
+[59:22.720 --> 59:23.720]  Od...
+[59:23.720 --> 59:24.720]  Od...
+[59:24.720 --> 59:25.720]  Od...
+[59:25.720 --> 59:26.720]  Od...
+[59:26.720 --> 59:27.720]  Od...
+[59:27.720 --> 59:28.720]  Od...
+[59:28.720 --> 59:29.720]  Od...
+[59:29.720 --> 59:30.720]  Od...
+[59:30.720 --> 59:31.720]  Od...
+[59:31.720 --> 59:32.720]  Od...
+[59:32.720 --> 59:33.720]  Od...
+[59:33.720 --> 59:34.720]  Od...
+[59:34.720 --> 59:35.720]  Od lutego.
+[59:35.720 --> 59:36.720]  Ok, because lute is actually...
+[59:36.720 --> 59:37.720]  Adjective or adverb?
+[59:37.720 --> 59:38.720]  I don't know.
+[59:38.720 --> 59:39.720]  Adjective.
+[59:39.720 --> 59:40.720]  Adjective.
+[59:40.720 --> 59:41.720]  Ok, so adjective.
+[59:41.720 --> 59:42.720]  So, actually lute is the name of the month.
+[59:42.720 --> 59:43.720]  It's actually adjective.
+[59:43.720 --> 59:44.720]  Ok, czyli od lutego.
+[59:44.720 --> 59:45.720]  No dobrze.
+[59:45.720 --> 59:46.720]  Aha, dobra.
+[59:46.720 --> 59:52.720]  I jeszcze mam kilka sytuacji, ale może takich mniej ważnych.
+[59:52.720 --> 59:53.720]  No, dobra.
+[59:53.720 --> 59:54.720]  No, dobra.
+[59:54.720 --> 59:55.720]  Ok, dobra.
+[59:55.720 --> 59:56.720]  I jeszcze mam kilka sytuacji, ale może takich mniej ważnych.
+[59:56.720 --> 59:57.720]  Ok, dobra.
+[59:57.720 --> 59:58.720]  No, do teatru.
+[59:58.720 --> 59:59.720]  Do Philharmonii.
+[59:59.720 --> 01:00:00.720]  Idę do kina.
+[01:00:00.720 --> 01:00:01.720]  Idę do restauracji.
+[01:00:01.720 --> 01:00:02.720]  Do baru, do parku i tak dalej, i tak dalej.
+[01:00:02.720 --> 01:00:03.720]  Hmm.
+[01:00:03.720 --> 01:00:04.720]  Ja idę dokąd?
+[01:00:04.720 --> 01:00:05.720]  To city, to place.
+[01:00:05.720 --> 01:00:08.720]  Ja idę do Londynu, do Madrytu, do Warszawy, and many many more.
+[01:00:08.720 --> 01:00:09.720]  Ok.
+[01:00:09.720 --> 01:00:10.720]  Trans-u.
+[01:00:10.720 --> 01:00:11.720]  U?
+[01:00:11.720 --> 01:00:12.720]  Hmm.
+[01:00:12.720 --> 01:00:13.720]  Hmm.
+[01:00:13.720 --> 01:00:14.720]  I would think we could translate the direction like I've been at someone's place.
+[01:00:14.720 --> 01:00:15.720]  I think we can translate it like I've been at someone's place.
+[01:00:15.720 --> 01:00:16.720]  To go to the city.
+[01:00:16.720 --> 01:00:17.720]  To the city.
+[01:00:17.720 --> 01:00:18.720]  To the place.
+[01:00:18.720 --> 01:00:19.720]  To the city.
+[01:00:19.720 --> 01:00:20.720]  To the place.
+[01:00:20.720 --> 01:00:21.720]  To the city.
+[01:00:21.720 --> 01:00:22.720]  To the city.
+[01:00:22.720 --> 01:00:23.720]  To the place.
+[01:00:23.720 --> 01:00:24.720]  I think we can translate the direction like I've been at someone's place.
+[01:00:24.720 --> 01:00:27.400]  Czyli tak, I've been at someone's place.
+[01:00:28.400 --> 01:00:29.400]  Jestem u grata.
+[01:00:29.400 --> 01:00:29.900]  I guess.
+[01:00:29.900 --> 01:00:30.400]  Mhm.
+[01:00:30.400 --> 01:00:30.900]  Mhm.
+[01:00:32.400 --> 01:00:38.400]  And as for your current word, like, I jestem u grata.
+[01:00:38.400 --> 01:00:40.400]  I'm currently at my brother's place.
+[01:00:41.400 --> 01:00:44.400]  Tak, because jestem is present tense.
+[01:00:44.400 --> 01:00:44.900]  Yeah.
+[01:00:44.900 --> 01:00:45.400]  Mhm.
+[01:00:45.400 --> 01:00:45.900]  Mhm.
+[01:00:46.900 --> 01:00:47.400]  Mhm.
+[01:00:47.400 --> 01:00:52.900]  Ok, so I'm at my brother's place, but I'm going to my brother's place.
+[01:00:52.900 --> 01:00:56.900]  Czyli idę do, ale jestem u.
+[01:00:58.900 --> 01:00:59.400]  Mhm.
+[01:00:59.900 --> 01:01:02.900]  I wracam, so I'm coming back from.
+[01:01:02.900 --> 01:01:03.400]  Mhm.
+[01:01:03.400 --> 01:01:04.400]  Mhm, dobra.
+[01:01:04.900 --> 01:01:08.400]  Ok, no to jak to mamy, to jeszcze patrzymy dalej.
+[01:01:08.900 --> 01:01:09.400]  Ok.
+[01:01:11.400 --> 01:01:16.400]  Ok, zobaczmy tutaj, jesteśmy, strona 80.
+[01:01:17.900 --> 01:01:20.400]  No i zadanie 11.
+[01:01:22.900 --> 01:01:23.900]  Przyszliśmy.
+[01:01:28.400 --> 01:01:28.900]  Questions?
+[01:01:29.900 --> 01:01:30.900]  Jakieś pytania?
+[01:01:31.900 --> 01:01:32.400]  Nie.
+[01:01:32.400 --> 01:01:32.900]  Nie?
+[01:01:32.900 --> 01:01:33.400]  Dobra.
+[01:01:33.900 --> 01:01:34.400]  Ok.
+[01:01:34.400 --> 01:01:37.400]  Tutaj mamy w rozkład, so we have this.
+[01:01:38.900 --> 01:01:39.900]  Thank you.
+[01:01:39.900 --> 01:01:40.400]  Thank you.
+[01:01:40.400 --> 01:01:40.900]  Thank you.
+[01:01:40.900 --> 01:01:41.400]  Thank you.
+[01:01:41.400 --> 01:01:41.900]  It's safe.
+[01:01:41.900 --> 01:01:42.400]  Ok.
+[01:01:43.900 --> 01:01:47.900]  Pociągi z Krakowa do Warszawy.
+[01:01:47.900 --> 01:01:51.900]  So every train is going from Kraków to Warsaw.
+[01:01:51.900 --> 01:01:53.900]  Here we have przesiadki.
+[01:01:53.900 --> 01:01:55.900]  Co to jest przesiadka?
+[01:01:55.900 --> 01:01:56.900]  Platform?
+[01:01:58.900 --> 01:01:59.900]  No.
+[01:02:01.900 --> 01:02:03.900]  Oh no, platform is different.
+[01:02:03.900 --> 01:02:04.900]  No.
+[01:02:07.900 --> 01:02:08.900]  No, maybe.
+[01:02:08.900 --> 01:02:09.900]  Przesiadka?
+[01:02:10.900 --> 01:02:11.900]  It's confusing.
+[01:02:12.900 --> 01:02:13.900]  Wait.
+[01:02:14.900 --> 01:02:15.900]  Some platform.
+[01:02:16.900 --> 01:02:17.900]  What is platform?
+[01:02:17.900 --> 01:02:18.900]  Platform is.
+[01:02:18.900 --> 01:02:19.900]  Platform is.
+[01:02:21.900 --> 01:02:23.900]  Platform is platform.
+[01:02:23.900 --> 01:02:24.900]  Oh.
+[01:02:24.900 --> 01:02:25.900]  Platform is platform.
+[01:02:25.900 --> 01:02:26.900]  Platform is platform.
+[01:02:26.900 --> 01:02:27.900]  Platform is platform.
+[01:02:27.900 --> 01:02:28.900]  Ok.
+[01:02:28.900 --> 01:02:29.900]  Przesiadka.
+[01:02:29.900 --> 01:02:38.900]  So when we have not direct train, we need to go somewhere and then change the train and then go to our place.
+[01:02:38.900 --> 01:02:39.900]  So this is przesiadka.
+[01:02:39.900 --> 01:02:41.900]  Czyli tutaj mamy ile przesiadek.
+[01:02:41.900 --> 01:02:45.900]  So how many times we need to change the train to other train.
+[01:02:45.900 --> 01:02:46.900]  Ok.
+[01:02:46.900 --> 01:02:49.900]  Czyli some times 0, that means that the train is direct.
+[01:02:49.900 --> 01:02:50.900]  Mhm.
+[01:02:50.900 --> 01:02:52.900]  pociąg bezpośredni.
+[01:02:52.900 --> 01:02:54.900]  Direct train.
+[01:02:54.900 --> 01:02:56.900]  Dobrze. Odjazd.
+[01:02:56.900 --> 01:02:58.900]  Co znaczy odjazd?
+[01:02:58.900 --> 01:03:00.900]  Depożer.
+[01:03:00.900 --> 01:03:02.900]  Przyjazd.
+[01:03:02.900 --> 01:03:04.900]  I czas podróży.
+[01:03:04.900 --> 01:03:06.900]  Czas podróży.
+[01:03:06.900 --> 01:03:08.900]  Tak. Czyli jak
+[01:03:08.900 --> 01:03:10.900]  długo jedziemy.
+[01:03:10.900 --> 01:03:12.900]  How long is the trip?
+[01:03:12.900 --> 01:03:14.900]  No i uwaga. Mamy tutaj
+[01:03:14.900 --> 01:03:16.900]  osiem
+[01:03:16.900 --> 01:03:18.900]  sytuacji.
+[01:03:18.900 --> 01:03:20.900]  Musimy przeczytać
+[01:03:20.900 --> 01:03:22.900]  tę sytuację.
+[01:03:22.900 --> 01:03:24.900]  Przeczytać
+[01:03:24.900 --> 01:03:26.900]  rozkład jazdy
+[01:03:26.900 --> 01:03:28.900]  i znaleźć odpowiedź.
+[01:03:28.900 --> 01:03:30.900]  Na przykład
+[01:03:30.900 --> 01:03:32.900]  mamy pytanie. O której godzinie
+[01:03:32.900 --> 01:03:34.900]  jest pierwszy pociąg
+[01:03:34.900 --> 01:03:36.900]  bez przesiadki
+[01:03:36.900 --> 01:03:38.900]  do Warszawy? Czyli patrzymy.
+[01:03:38.900 --> 01:03:40.900]  Wszystkie są do Warszawy.
+[01:03:40.900 --> 01:03:42.900]  Patrzymy, które są bez przesiadki.
+[01:03:42.900 --> 01:03:44.900]  Czyli we are looking for direct train.
+[01:03:44.900 --> 01:03:46.900]  I który jest
+[01:03:46.900 --> 01:03:48.900]  pierwszy. So which one is the first in the train?
+[01:03:48.900 --> 01:03:50.900]  Tutaj.
+[01:03:50.900 --> 01:03:52.900]  No to uwaga. Czytamy,
+[01:03:52.900 --> 01:03:54.900]  szukamy i zaraz będziemy
+[01:03:54.900 --> 01:03:56.900]  mówić.
+[01:04:12.900 --> 01:04:14.900]  So when the question
+[01:04:14.900 --> 01:04:16.900]  says o której godzinie
+[01:04:16.900 --> 01:04:18.900]  even though
+[01:04:18.900 --> 01:04:20.900]  it just says godzinie, which means
+[01:04:20.900 --> 01:04:22.900]  the hour, we would still mention
+[01:04:22.900 --> 01:04:24.900]  hour and minutes as well, right?
+[01:04:24.900 --> 01:04:26.900]  Like the question asks
+[01:04:26.900 --> 01:04:28.900]  o której godzinie?
+[01:04:28.900 --> 01:04:30.900]  But it does not say o której.
+[01:04:30.900 --> 01:04:32.900]  So even if it says o której
+[01:04:32.900 --> 01:04:34.900]  godzinie, it's not
+[01:04:34.900 --> 01:04:36.900]  just asking about the godzina,
+[01:04:36.900 --> 01:04:38.900]  it's asking about the minute as well.
+[01:04:38.900 --> 01:04:40.900]  Tak? Or not?
+[01:04:42.900 --> 01:04:44.900]  Godzina is like time in general.
+[01:04:44.900 --> 01:04:46.900]  So
+[01:04:46.900 --> 01:04:48.900]  but even though it's saying
+[01:04:48.900 --> 01:04:50.900]  at what hour,
+[01:04:50.900 --> 01:04:52.900]  it's still implicitly
+[01:04:52.900 --> 01:04:54.900]  asking
+[01:04:54.900 --> 01:04:56.900]  like the time.
+[01:04:56.900 --> 01:04:58.900]  Like the exact time.
+[01:04:58.900 --> 01:05:00.900]  Not just the hour, right?
+[01:05:00.900 --> 01:05:02.900]  Jeśli mamy pociąg na przykład o dziesiątej
+[01:05:02.900 --> 01:05:04.900]  piętnaście. Tak.
+[01:05:04.900 --> 01:05:06.900]  I mamy pytanie o której godzinie?
+[01:05:06.900 --> 01:05:08.900]  Tak, mówimy o dziesiątej.
+[01:05:08.900 --> 01:05:10.900]  O dziesiątej.
+[01:05:10.900 --> 01:05:12.900]  O dziesiątej.
+[01:05:12.900 --> 01:05:14.900]  But
+[01:05:14.900 --> 01:05:16.900]  we would say dziesiątej
+[01:05:16.900 --> 01:05:18.900]  piętnaście.
+[01:05:18.900 --> 01:05:20.900]  Tak. Tak? Even though it's just
+[01:05:20.900 --> 01:05:22.900]  asking godzina. Tak.
+[01:05:22.900 --> 01:05:24.900]  Tak, tak, tak.
+[01:05:24.900 --> 01:05:26.900]  Because godzina is both.
+[01:05:26.900 --> 01:05:28.900]  Not only godzina.
+[01:05:28.900 --> 01:05:30.900]  Not just godzina. Godzina and minute.
+[01:05:30.900 --> 01:05:32.900]  Mhm.
+[01:05:44.900 --> 01:05:48.640]  Tak? Masz do czy ACC i Bffiti mi.
+[01:05:48.640 --> 01:05:54.140]  Mamy z zł solltaniej.
+[01:05:54.140 --> 01:05:56.520]  Tak? Tak!
+[01:05:56.520 --> 01:05:58.400]  Tak, tak.
+[01:06:02.400 --> 01:06:07.040]  Czy elo i sanity jest kiedyś zamy
+[01:06:07.040 --> 01:06:09.580]  apostleán?
+[01:06:09.580 --> 01:06:12.180]  Alko como Rash làm szukać
+[01:06:12.180 --> 01:06:13.860]  referee團 It damn it.
+[01:06:13.860 --> 01:06:13.880] oly eccentriczny.
+[01:06:13.880 --> 01:06:14.420]  J Stone talvez z curse orgbatą właśnie z trop Danish.
+[01:06:14.420 --> 01:06:14.600]  jakaś coś, nächsten liegen partir z Map Kwang Orgi z adopciиком lançobyma ballistic.
+[01:06:14.600 --> 01:06:14.880]  Jashots diarrity iELTRA lam spray ile babies a nexunistance a nagra na sto 자�wonę crimmal,
+[01:06:14.880 --> 01:06:44.860]  Dzień dobry.
+[01:06:44.880 --> 01:07:14.860]  Dzień dobry.
+[01:07:14.880 --> 01:07:44.860]  Dzień dobry.
+[01:07:44.880 --> 01:08:14.860]  Dzień dobry.
+[01:08:14.880 --> 01:08:44.860]  Dzień dobry.
+[01:08:44.880 --> 01:09:14.860]  Dzień dobry.
+[01:09:14.880 --> 01:09:44.860]  Dzień dobry.
+[01:09:44.880 --> 01:10:14.860]  Dzień dobry.
+[01:10:14.880 --> 01:10:18.480]  Dzień dobry.
+[01:10:34.580 --> 01:10:43.780]  Dzień dobry.
+[01:10:43.780 --> 01:10:44.840]  Dzień dobry.
+[01:10:44.880 --> 01:11:14.860]  Dzień dobry.
+[01:11:14.880 --> 01:11:44.860]  Dzień dobry.
+[01:11:44.880 --> 01:12:14.860]  Dzień dobry.
+[01:12:14.880 --> 01:12:44.860]  Dzień dobry.
+[01:12:44.880 --> 01:12:46.880]  Dzień dobry.
+[01:12:46.880 --> 01:12:52.880]  Dzień dobry.
+[01:12:52.880 --> 01:12:58.880]  Dzień dobry.
+[01:13:14.880 --> 01:13:22.880]  Dzień dobry.
+[01:13:22.880 --> 01:13:38.880]  Dzień dobry.
+[01:13:38.880 --> 01:13:40.880]  Dzień dobry.
+[01:13:40.880 --> 01:13:41.400]  Dzień dobry.
+[01:13:44.880 --> 01:13:46.880]  Tak.
+[01:13:46.880 --> 01:13:48.880]  Tak.
+[01:13:48.880 --> 01:13:50.880]  Co to znaczy?
+[01:13:50.880 --> 01:13:54.880]  Po jahacz, jahacz to coś w taki sposób,
+[01:13:54.880 --> 01:14:02.880]  ale jahacz to to, że w akcji,
+[01:14:02.880 --> 01:14:05.880]  że wciąż jesteś jahaczem,
+[01:14:05.880 --> 01:14:08.880]  wciąż jesteś w procesie jahaczem.
+[01:14:08.880 --> 01:14:12.880]  Po jahacz to znaczy, że skończyłeś jahacz.
+[01:14:12.880 --> 01:14:14.880]  Więc dotarłeś do tego.
+[01:14:14.880 --> 01:14:15.880]  Tak.
+[01:14:15.880 --> 01:14:16.880]  Nie?
+[01:14:16.880 --> 01:14:18.880]  To jest...
+[01:14:18.880 --> 01:14:21.880]  Jehacz to proces odbycia,
+[01:14:21.880 --> 01:14:25.880]  a jeśli skończyłeś jahacz, to dotarłeś...
+[01:14:25.880 --> 01:14:26.880]  Nie?
+[01:14:26.880 --> 01:14:27.880]  Nie.
+[01:14:27.880 --> 01:14:30.880]  Jest różnica w języku samemu?
+[01:14:30.880 --> 01:14:31.880]  Tak.
+[01:14:31.880 --> 01:14:32.880]  Naprawdę?
+[01:14:32.880 --> 01:14:36.880]  Jahacz to znaczy, że idziesz, ale z czymś.
+[01:14:36.880 --> 01:14:38.880]  Więc co jest między po jahaczem i...
+[01:14:38.880 --> 01:14:41.880]  Jeśli bym chciał powiedzieć po...
+[01:14:41.880 --> 01:14:42.880]  Więc mówisz, że jest jeszcze
+[01:14:42.880 --> 01:14:44.880]  inna faza po po jahaczu, prawda?
+[01:14:44.880 --> 01:14:45.880]  Co to jest?
+[01:14:45.880 --> 01:14:48.880]  O mój Boże, czy jesteś serio?
+[01:14:48.880 --> 01:14:50.880]  Naprawdę?
+[01:14:52.880 --> 01:14:53.880]  Czekaj.
+[01:14:56.880 --> 01:14:58.880]  Nie, no, no, no.
+[01:14:58.880 --> 01:15:00.880]  No, no, no.
+[01:15:00.880 --> 01:15:02.880]  Ok, więc...
+[01:15:02.880 --> 01:15:04.880]  Dokładnie.
+[01:15:04.880 --> 01:15:06.880]  To znaczy, że...
+[01:15:06.880 --> 01:15:09.880]  Ok, to znaczy, że dojdziesz.
+[01:15:09.880 --> 01:15:10.880]  Naprawdę?
+[01:15:10.880 --> 01:15:11.880]  Tak, bo to jest przyjazd.
+[01:15:11.880 --> 01:15:15.880]  Więc wiemy, że jest przyjazd, po przykładzie, do dojścia.
+[01:15:15.880 --> 01:15:20.880]  Dojechać, też, w jakiś sposób, dojdzie.
+[01:15:20.880 --> 01:15:23.880]  Ok, ok.
+[01:15:23.880 --> 01:15:26.880]  Nie mogę wyjaśnić różnicy między przyjechać i dojechać.
+[01:15:26.880 --> 01:15:27.880]  Ok.
+[01:15:27.880 --> 01:15:29.880]  Co możesz wyjaśnić?
+[01:15:29.880 --> 01:15:31.880]  To znaczy, że...
+[01:15:31.880 --> 01:15:37.880]  To jest bardziej o tym, że...
+[01:15:37.880 --> 01:15:40.880]  To nie tylko o dojściu,
+[01:15:40.880 --> 01:15:44.880]  ale to jest bardziej o tym, że jesteś już na pojechaniu.
+[01:15:44.880 --> 01:15:47.880]  Więc zaczynasz drogę.
+[01:15:47.880 --> 01:15:49.880]  Zaczynasz podróż.
+[01:15:49.880 --> 01:15:52.880]  Ale nie jesteś pewien, czy dojdziesz.
+[01:15:52.880 --> 01:15:55.880]  Więc możesz wyjechać,
+[01:15:55.880 --> 01:16:00.880]  ale to nie znaczy, że nie dojdziesz bezpiecznie.
+[01:16:00.880 --> 01:16:02.880]  Ok.
+[01:16:02.880 --> 01:16:05.880]  Więc jeśli jestem... Ok.
+[01:16:05.880 --> 01:16:07.880]  Więc to co to jest?
+[01:16:07.880 --> 01:16:08.880]  Wyjechać.
+[01:16:08.880 --> 01:16:09.880]  Mhm.
+[01:16:09.880 --> 01:16:15.880]  Wyjechać to znaczy, że dojdziesz do jakiegoś konkretnego miejsca.
+[01:16:15.880 --> 01:16:18.880]  Więc możesz, na przykład, dojechać na parkingu.
+[01:16:18.880 --> 01:16:20.880]  Dojechać do parkingu.
+[01:16:20.880 --> 01:16:22.880]  Parkingu.
+[01:16:22.880 --> 01:16:23.880]  Sport?
+[01:16:23.880 --> 01:16:24.880]  Sport, sport.
+[01:16:24.880 --> 01:16:29.880]  Bo, na przykład, pociąg może wjechać na teren.
+[01:16:29.880 --> 01:16:31.880]  Więc dojechać do platformy.
+[01:16:31.880 --> 01:16:35.880]  To znaczy, że dojechać do tego miejsca.
+[01:16:35.880 --> 01:16:38.880]  Więc ta pytanie tutaj...
+[01:16:38.880 --> 01:16:40.880]  Tak?
+[01:16:40.880 --> 01:16:41.880]  Tak?
+[01:16:41.880 --> 01:16:42.880]  Pięć.
+[01:16:42.880 --> 01:16:43.880]  Pięć?
+[01:16:43.880 --> 01:16:44.880]  It says...
+[01:16:44.880 --> 01:16:47.880]  Ok, które...
+[01:16:47.880 --> 01:16:48.880]  ...koniec...
+[01:16:48.880 --> 01:16:49.880]  Musi...
+[01:16:49.880 --> 01:16:51.880]  What is musi?
+[01:16:51.880 --> 01:16:52.880]  Must.
+[01:16:52.880 --> 01:16:53.880]  Ok, must?
+[01:16:53.880 --> 01:16:54.880]  Pojechać...
+[01:16:54.880 --> 01:16:56.880]  O, what I wanna see.
+[01:16:56.880 --> 01:16:57.880]  Must...
+[01:16:57.880 --> 01:16:59.880]  So in number five,
+[01:16:59.880 --> 01:17:03.880]  pojechać not necessarily mean what time you arrive.
+[01:17:03.880 --> 01:17:04.880]  You need to...
+[01:17:04.880 --> 01:17:06.880]  Like what time you need to start the journey.
+[01:17:06.880 --> 01:17:07.880]  Oh, really?
+[01:17:07.880 --> 01:17:08.880]  When...
+[01:17:08.880 --> 01:17:09.880]  Pojechać means...
+[01:17:09.880 --> 01:17:13.880]  Ok, when you're in the train.
+[01:17:13.880 --> 01:17:15.880]  And the train just leaving the platform.
+[01:17:15.880 --> 01:17:18.880]  You start already, so it's pojechać.
+[01:17:18.880 --> 01:17:19.880]  Oh, I see.
+[01:17:19.880 --> 01:17:20.880]  But you are not starting to arrive.
+[01:17:20.880 --> 01:17:21.880]  Ok.
+[01:17:21.880 --> 01:17:22.880]  Oh.
+[01:17:22.880 --> 01:17:23.880]  Pojechać.
+[01:17:23.880 --> 01:17:24.880]  Oh, wow.
+[01:17:24.880 --> 01:17:25.880]  Ok.
+[01:17:25.880 --> 01:17:26.880]  Ok.
+[01:17:26.880 --> 01:17:27.880]  Let's...
+[01:17:27.880 --> 01:17:28.880]  Let's try.
+[01:17:28.880 --> 01:17:29.880]  So, ok.
+[01:17:29.880 --> 01:17:30.880]  Sorry.
+[01:17:30.880 --> 01:17:31.880]  So, sorry.
+[01:17:31.880 --> 01:17:32.880]  So, just so I understand.
+[01:17:32.880 --> 01:17:34.880]  So, I am going to Warszawa.
+[01:17:34.880 --> 01:17:35.880]  The trip is broken down.
+[01:17:35.880 --> 01:17:36.880]  So, I...
+[01:17:36.880 --> 01:17:37.880]  Pojechać.
+[01:17:37.880 --> 01:17:38.880]  I...
+[01:17:38.880 --> 01:17:39.880]  Jezom.
+[01:17:39.880 --> 01:17:40.880]  I...
+[01:17:40.880 --> 01:17:41.880]  Jaude.
+[01:17:41.880 --> 01:17:42.880]  Jaade.
+[01:17:42.880 --> 01:17:43.880]  I want to...
+[01:17:43.880 --> 01:17:44.880]  Hase.
+[01:17:44.880 --> 01:17:45.880]  Jaade.
+[01:17:45.880 --> 01:17:46.880]  Ja...
+[01:17:46.880 --> 01:17:47.880]  Jehać.
+[01:17:47.880 --> 01:17:48.880]  Warszawa.
+[01:17:48.880 --> 01:17:49.880]  Ok?
+[01:17:49.880 --> 01:17:50.880]  So, that is...
+[01:17:50.880 --> 01:17:51.880]  That is correct?
+[01:17:51.880 --> 01:17:52.880]  Do Warszawa.
+[01:17:52.880 --> 01:17:53.880]  Do Warszawa.
+[01:17:53.880 --> 01:17:54.880]  Ok?
+[01:17:54.880 --> 01:17:55.880]  I get into the train.
+[01:17:55.880 --> 01:17:56.880]  Poje...
+[01:17:56.880 --> 01:17:57.880]  Ha...
+[01:17:57.880 --> 01:17:58.880]  Poje...
+[01:17:58.880 --> 01:17:59.880]  Ha...
+[01:17:59.880 --> 01:18:00.880]  Ham.
+[01:18:00.880 --> 01:18:01.880]  Ok.
+[01:18:01.880 --> 01:18:02.880]  Pojeham.
+[01:18:02.880 --> 01:18:03.880]  Ok.
+[01:18:03.880 --> 01:18:04.880]  Whatever.
+[01:18:04.880 --> 01:18:05.880]  Pojechać.
+[01:18:05.880 --> 01:18:06.880]  Pojechać.
+[01:18:06.880 --> 01:18:07.880]  The train arrives at Warszawa.
+[01:18:07.880 --> 01:18:08.880]  Do Jehać, Warszawa.
+[01:18:08.880 --> 01:18:09.880]  Do Warszawy.
+[01:18:09.880 --> 01:18:10.880]  Do...
+[01:18:10.880 --> 01:18:11.880]  Do Jehać, do Warszawy.
+[01:18:11.880 --> 01:18:12.880]  Tak.
+[01:18:12.880 --> 01:18:13.880]  Wie...
+[01:18:13.880 --> 01:18:14.880]  Wiehać was like the train is arriving into the station.
+[01:18:14.880 --> 01:18:15.880]  Tak.
+[01:18:15.880 --> 01:18:16.880]  So, like I would say Wiehać...
+[01:18:16.880 --> 01:18:17.880]  Pociąg.
+[01:18:17.880 --> 01:18:18.880]  Pociąg.
+[01:18:18.880 --> 01:18:19.880]  Wie...
+[01:18:19.880 --> 01:18:20.880]  Wiehao.
+[01:18:20.880 --> 01:18:21.880]  I...
+[01:18:21.880 --> 01:18:22.880]  I have do Jehać, Warszawa.
+[01:18:22.880 --> 01:18:23.880]  Tak.
+[01:18:23.880 --> 01:18:24.880]  And then...
+[01:18:24.880 --> 01:18:25.880]  Sieje...
+[01:18:25.880 --> 01:18:26.880]  Siejehać would be like when?
+[01:18:26.880 --> 01:18:27.880]  Siejehać and Dojechać would be the same.
+[01:18:27.880 --> 01:18:28.880]  It means the same.
+[01:18:28.880 --> 01:18:29.880]  Ok.
+[01:18:29.880 --> 01:18:30.880]  Thank you.
+[01:18:30.880 --> 01:18:31.880]  Ok.
+[01:18:31.880 --> 01:18:32.880]  Ok.
+[01:18:32.880 --> 01:18:33.880]  Ok.
+[01:18:33.880 --> 01:18:34.880]  Ok.
+[01:18:34.880 --> 01:18:35.880]  Thank you.
+[01:18:35.880 --> 01:18:36.880]  Ok.
+[01:18:36.880 --> 01:18:37.880]  Ok.
+[01:18:37.880 --> 01:18:38.880]  Interesting.
+[01:18:38.880 --> 01:18:39.880]  Very interesting.
+[01:18:39.880 --> 01:18:40.880]  Ok.
+[01:18:40.880 --> 01:18:41.880]  Ok.
+[01:18:41.880 --> 01:18:43.880]  Is this just Jehać thing or like is this like this...
+[01:18:43.880 --> 01:18:44.880]  Ok.
+[01:18:44.880 --> 01:18:45.880]  This is not actually...
+[01:18:45.880 --> 01:18:46.880]  There is both of them.
+[01:18:46.880 --> 01:18:47.880]  Yeah.
+[01:18:47.880 --> 01:18:48.880]  Recent...
+[01:18:48.880 --> 01:18:49.880]  For example, you know Robic.
+[01:18:49.880 --> 01:18:50.880]  Aha.
+[01:18:50.880 --> 01:18:51.880]  Makes something.
+[01:18:51.880 --> 01:18:52.880]  To makes something.
+[01:18:52.880 --> 01:18:53.880]  So, like two weeks ago...
+[01:18:53.880 --> 01:18:54.880]  Oh.
+[01:18:54.880 --> 01:18:55.880]  Ok.
+[01:18:55.880 --> 01:18:56.880]  So, I have started preparing...
+[01:18:56.880 --> 01:18:57.880]  I have started preparing the cake.
+[01:18:57.880 --> 01:18:58.880]  I have prepared the cake.
+[01:18:58.880 --> 01:18:59.880]  Yes.
+[01:18:59.880 --> 01:19:00.880]  Yes.
+[01:19:00.880 --> 01:19:01.880]  And then what?
+[01:19:01.880 --> 01:19:02.880]  Or the same with Kiszt.
+[01:19:02.880 --> 01:19:03.880]  Dojc, Kuiszt, Bez.
+[01:19:03.880 --> 01:19:04.880]  Ok.
+[01:19:04.880 --> 01:19:05.880]  Przejść, wyjść.
+[01:19:05.880 --> 01:19:06.880]  O, ja pojeździ.
+[01:19:06.880 --> 01:19:07.880]  The preposition means like...
+[01:19:07.880 --> 01:19:08.880]  Oh.
+[01:19:08.880 --> 01:19:09.880]  Exactly.
+[01:19:09.880 --> 01:19:10.880]  So, yeah.
+[01:19:10.880 --> 01:19:17.880]  Like I spent recently like I think two hours with my C1 level group only with this Robic
+[01:19:17.880 --> 01:19:18.880]  words.
+[01:19:18.880 --> 01:19:21.880]  Like dorobić, przerobić, podrobić, wyrobić and everything.
+[01:19:21.880 --> 01:19:22.880]  So, yeah.
+[01:19:22.880 --> 01:19:23.880]  It's like...
+[01:19:23.880 --> 01:19:24.880]  It's fun.
+[01:19:24.880 --> 01:19:25.880]  It's fun.
+[01:19:25.880 --> 01:19:26.880]  Ok.
+[01:19:26.880 --> 01:19:27.880]  Jeden.
+[01:19:27.880 --> 01:19:33.880]  O której godzinie jest pierwszy pociąg bez przesiadki do Warszawy?
+[01:19:33.880 --> 01:19:34.880]  Trzynaście cztery.
+[01:19:34.880 --> 01:19:35.880]  Czy to jest język polski?
+[01:19:35.880 --> 01:19:36.880]  Jeszcze raz.
+[01:19:36.880 --> 01:19:37.880]  O której?
+[01:19:37.880 --> 01:19:38.880]  Pierwszy.
+[01:19:38.880 --> 01:19:39.880]  O której?
+[01:19:39.880 --> 01:19:40.880]  Tak.
+[01:19:40.880 --> 01:19:41.880]  Cztery.
+[01:19:41.880 --> 01:19:42.880]  Zawiasowa.
+[01:19:42.880 --> 01:19:43.880]  What is the first train?
+[01:19:43.880 --> 01:19:44.880]  O pierwszy czternaście, tak?
+[01:19:44.880 --> 01:19:45.880]  To jest pierwszy pociąg?
+[01:19:45.880 --> 01:19:46.880]  Nie.
+[01:19:46.880 --> 01:19:47.880]  Nie.
+[01:19:47.880 --> 01:19:48.880]  Zesz...
+[01:19:48.880 --> 01:19:49.880]  O pierwszy?
+[01:19:49.880 --> 01:19:50.880]  Trześć?
+[01:19:50.880 --> 01:19:51.880]  Trzec?
+[01:19:51.880 --> 01:19:52.880]  Trzec?
+[01:19:52.880 --> 01:19:53.880]  Trzec?
+[01:19:53.880 --> 01:19:54.880]  Trzec?
+[01:19:54.880 --> 01:19:55.880]  Trzec?
+[01:19:55.880 --> 01:19:56.880]  Trzec?
+[01:19:56.880 --> 01:19:57.880]  Trzec?
+[01:19:57.880 --> 01:19:58.880]  Trzec?
+[01:19:58.880 --> 01:19:59.880]  Trzec?
+[01:19:59.880 --> 01:20:00.880]  Trzec?
+[01:20:00.880 --> 01:20:01.880]  Trzec?
+[01:20:01.880 --> 01:20:02.880]  Trzec?
+[01:20:02.880 --> 01:20:03.880]  Trzec?
+[01:20:03.880 --> 01:20:04.880]  Trzec?
+[01:20:04.880 --> 01:20:05.880]  Trzec?
+[01:20:05.880 --> 01:20:06.880]  Trzec?
+[01:20:06.880 --> 01:20:07.880]  Trzech.
+[01:20:07.880 --> 01:20:08.880]  Trzech?
+[01:20:08.880 --> 01:20:22.240]  Ter
+[01:20:30.880 --> 01:20:31.900]  Stay in fullИ
+[01:20:31.900 --> 01:20:32.880]  Because you're using
+[01:20:32.880 --> 01:20:39.880]  Po północy, po 12.00.
+[01:20:39.880 --> 01:20:43.880]  44 minuty po północy.
+[01:20:43.880 --> 01:20:48.880]  Czy możesz powiedzieć, że jest to po północy?
+[01:20:48.880 --> 01:20:51.880]  Nie. 44 co?
+[01:20:51.880 --> 01:20:53.880]  Musimy mieć informację o czym?
+[01:20:53.880 --> 01:20:55.880]  To jest godzina.
+[01:20:55.880 --> 01:20:58.880]  Tak, myślę, że to jest godzina, bo to jest godzina.
+[01:20:58.880 --> 01:21:04.880]  Nie musisz być bardzo specyficzny, ale muszę wiedzieć o czym jest 44.
+[01:21:04.880 --> 01:21:06.880]  Tak, tak.
+[01:21:06.880 --> 01:21:10.880]  Czy mogę użyć 24?
+[01:21:10.880 --> 01:21:18.880]  Może być, tutaj. Po 24? O to chodzi? Może być.
+[01:21:18.880 --> 01:21:23.880]  Myślę, że 44 minuty po 24.
+[01:21:23.880 --> 01:21:28.880]  Nie, ale 24 to też oznacza 12.44, prawda?
+[01:21:28.880 --> 01:21:31.880]  Tak, ale to jest to samo.
+[01:21:31.880 --> 01:21:36.880]  Ale to będzie oficjalna sytuacja, prawda?
+[01:21:36.880 --> 01:21:42.880]  Myślę, że 98% ludzi po połowie po polsku będzie mówić...
+[01:21:42.880 --> 01:21:46.880]  Tę albo tę. Może tę.
+[01:21:46.880 --> 01:21:49.880]  44 po północy.
+[01:21:49.880 --> 01:21:52.880]  Albo za 16.01.
+[01:21:52.880 --> 01:21:56.880]  Ok?
+[01:21:56.880 --> 01:21:57.880]  Ok.
+[01:21:57.880 --> 01:21:59.880]  Po 24 też może być.
+[01:21:59.880 --> 01:22:01.880]  No, bo nie.
+[01:22:01.880 --> 01:22:03.880]  Ok. Dobra.
+[01:22:03.880 --> 01:22:06.880]  Numer 2.
+[01:22:06.880 --> 01:22:12.880]  Mieszka pan, pani w Krakowie i ma konferencję w Warszawie o 13.
+[01:22:12.880 --> 01:22:15.880]  O której jest ostatni pociąg do Warszawy?
+[01:22:15.880 --> 01:22:18.880]  So we need to be in Warsaw at 1 pm.
+[01:22:18.880 --> 01:22:19.880]  O 9?
+[01:22:19.880 --> 01:22:20.880]  O 9.
+[01:22:20.880 --> 01:22:24.880]  Tak, o 9. Super.
+[01:22:24.880 --> 01:22:25.880]  Numer 3.
+[01:22:25.880 --> 01:22:34.880]  Mieszka pani w Warszawie, pan, pani, ale dziś spędza jeden dzień w Krakowie. O której jest ostatni pociąg do domu?
+[01:22:34.880 --> 01:22:36.880]  Do domu, czyli do Warszawy.
+[01:22:36.880 --> 01:22:40.880]  O 20.
+[01:22:40.880 --> 01:22:46.880]  O 21.10.
+[01:22:46.880 --> 01:22:47.880]  Dobra.
+[01:22:47.880 --> 01:22:50.880]  O 21.10.
+[01:22:50.880 --> 01:22:53.880]  Albo, jakie nasze typowiemy?
+[01:22:53.880 --> 01:22:54.880]  10 minut po...
+[01:22:54.880 --> 01:22:57.880]  Jak inaczej?
+[01:22:57.880 --> 01:23:01.880]  22?
+[01:23:01.880 --> 01:23:03.880]  Nie, po 21.
+[01:23:03.880 --> 01:23:04.880]  Albo?
+[01:23:04.880 --> 01:23:05.880]  21. Tak?
+[01:23:05.880 --> 01:23:06.880]  Albo?
+[01:23:06.880 --> 01:23:07.880]  Albo?
+[01:23:07.880 --> 01:23:08.880]  O 9.
+[01:23:08.880 --> 01:23:09.880]  Po 9.
+[01:23:09.880 --> 01:23:17.880]  Czyli o 21.10 albo 10 minut po 9, 10 minut po 21.
+[01:23:17.880 --> 01:23:18.880]  Ok, ok.
+[01:23:18.880 --> 01:23:19.880]  Numer 4.
+[01:23:19.880 --> 01:23:21.880]  O, tutaj jest...
+[01:23:21.880 --> 01:23:22.880]  Ja nie wiem.
+[01:23:22.880 --> 01:23:23.880]  Mieszka pan, pani w Krakowie.
+[01:23:23.880 --> 01:23:32.880]  Mieszka pan, pani w Krakowie i ma samolot z Warszawy do Frankfurtu o 9. O który musi pan, pani pojechać do Warszawy?
+[01:23:32.880 --> 01:23:35.880]  Drugi. O 7.
+[01:23:35.880 --> 01:23:36.880]  7?
+[01:23:36.880 --> 01:23:37.880]  Yeah, I think so.
+[01:23:37.880 --> 01:23:42.880]  O 1.40.
+[01:23:42.880 --> 01:23:45.880]  Because you have to be there 3 hours before the flight.
+[01:23:45.880 --> 01:23:47.880]  3 hours? No, come on.
+[01:23:47.880 --> 01:23:48.880]  I 40.
+[01:23:48.880 --> 01:23:51.880]  What are you saying? Which one? 1.40?
+[01:23:51.880 --> 01:23:53.880]  A, 14.
+[01:23:53.880 --> 01:23:54.880]  14, ok.
+[01:23:54.880 --> 01:24:00.880]  Moja propozycja to jest ten pierwszy pociąg, czyli ten.
+[01:24:00.880 --> 01:24:03.880]  That's my proposition. That's my...
+[01:24:03.880 --> 01:24:04.880]  That's a quote.
+[01:24:04.880 --> 01:24:10.880]  Because, ok, Warszawa Centralna, that is the main train station in Warsaw.
+[01:24:10.880 --> 01:24:13.880]  So we need to somehow reach also airport.
+[01:24:13.880 --> 01:24:14.880]  So that's an hour.
+[01:24:14.880 --> 01:24:18.880]  You should be at the airport maybe 2 hours before.
+[01:24:18.880 --> 01:24:19.880]  So that's 3 hours.
+[01:24:19.880 --> 01:24:20.880]  3 hours, 3 hours.
+[01:24:20.880 --> 01:24:27.880]  I think, if, if the plane is at 9, I think that in Warsaw you have to be at 6.
+[01:24:27.880 --> 01:24:28.880]  Yeah.
+[01:24:28.880 --> 01:24:31.880]  But 6.15 can be late.
+[01:24:31.880 --> 01:24:38.880]  So I think that to be on a 9-hour plane you have to leave Krakow at 4.15.
+[01:24:38.880 --> 01:24:39.880]  I will give you an example.
+[01:24:39.880 --> 01:24:41.880]  But it makes sense to.
+[01:24:41.880 --> 01:24:43.880]  I would take the 1.14 train.
+[01:24:43.880 --> 01:24:44.880]  Ok.
+[01:24:44.880 --> 01:24:47.880]  Because you spent 5 hours on the train, you sleep on the train.
+[01:24:47.880 --> 01:24:51.880]  You probably can make it 6.15 to the airport.
+[01:24:51.880 --> 01:24:53.880]  That early in the morning it's pretty easy.
+[01:24:53.880 --> 01:24:59.880]  And probably you will make, like you will, you can go from main station to airport in less than hour.
+[01:24:59.880 --> 01:25:01.880]  Hopefully.
+[01:25:01.880 --> 01:25:03.880]  I think so, usually.
+[01:25:03.880 --> 01:25:07.880]  And it's a short flight to Frankfurt, so.
+[01:25:07.880 --> 01:25:09.880]  Ok. Czyli który z tych dwóch?
+[01:25:09.880 --> 01:25:15.880]  Czyli nasza propozycja to moja propozycja 0.44 albo pierwsza 14.
+[01:25:15.880 --> 01:25:17.880]  Dobra.
+[01:25:17.880 --> 01:25:18.880]  Numer 5.
+[01:25:18.880 --> 01:25:22.880]  Kolega organizuje przyjęcie w Warszawie.
+[01:25:22.880 --> 01:25:25.880]  Przyjęcie zaczyna się o 21.
+[01:25:25.880 --> 01:25:28.880]  O której trzeba pojechać do Warszawy?
+[01:25:28.880 --> 01:25:37.880]  18.
+[01:25:37.880 --> 01:25:39.880]  Też wydaje mi się, że 18.
+[01:25:39.880 --> 01:25:41.880]  Czemu 18?
+[01:25:41.880 --> 01:25:45.880]  Możemy jechać następnym pociągiem.
+[01:25:45.880 --> 01:25:47.880]  Możemy jechać następnym pociągiem?
+[01:25:47.880 --> 01:25:48.880]  Nie.
+[01:25:48.880 --> 01:25:53.880]  Bo wtedy będziemy w Warszawie jak przyjęcie już się zacznie.
+[01:25:53.880 --> 01:25:55.880]  Będziemy późni od partii.
+[01:25:55.880 --> 01:25:57.880]  Przyjęcie jest party, tak?
+[01:25:57.880 --> 01:25:58.880]  Tak.
+[01:25:58.880 --> 01:26:02.880]  Ale to jest bardziej, jakby, party pensyjne.
+[01:26:02.880 --> 01:26:05.880]  Impreza jest party dla biednych.
+[01:26:05.880 --> 01:26:09.880]  To bardziej sytuacja, jaka jest w crazy disco.
+[01:26:09.880 --> 01:26:12.880]  Przyjęcie jest bardziej, jakby, pensyjne.
+[01:26:12.880 --> 01:26:13.880]  Dobra.
+[01:26:13.880 --> 01:26:14.880]  Numer 6.
+[01:26:14.880 --> 01:26:22.880]  Jedzie Pan Pani pociągiem z Krakowa do Warszawy o 1.14.
+[01:26:22.880 --> 01:26:25.880]  Ile godzin spędzi Pan Pani w pociągu?
+[01:26:25.880 --> 01:26:26.880]  5 godzin.
+[01:26:26.880 --> 01:26:27.880]  5 godzin.
+[01:26:27.880 --> 01:26:30.880]  5 godzin i 1 minuta.
+[01:26:30.880 --> 01:26:34.880]  5 godzin i 1 minuta.
+[01:26:34.880 --> 01:26:38.880]  Dobra.
+[01:26:38.880 --> 01:26:42.880]  Numer 7.
+[01:26:42.880 --> 01:26:50.880]  Jedzie Pan Pani pociągiem z Krakowa o 11.00. O której jest Pan Pani w Warszawie?
+[01:26:50.880 --> 01:27:02.880]  13.65. O 16.60.
+[01:27:02.880 --> 01:27:04.880]  O 11.00 jedziemy.
+[01:27:04.880 --> 01:27:06.880]  What am I saying? Oh, sorry.
+[01:27:06.880 --> 01:27:08.880]  11.00.
+[01:27:08.880 --> 01:27:10.880]  Jedziemy o 11.00.
+[01:27:10.880 --> 01:27:12.880]  Jesteśmy o 13.00 ile?
+[01:27:12.880 --> 01:27:14.880]  13.00...
+[01:27:14.880 --> 01:27:17.880]  11.00.
+[01:27:17.880 --> 01:27:20.880]  19.00.
+[01:27:20.880 --> 01:27:22.880]  19.00.
+[01:27:22.880 --> 01:27:25.880]  OK. Czy tam jest przesiadka?
+[01:27:25.880 --> 01:27:30.880]  Nie ma przesiadki.
+[01:27:30.880 --> 01:27:32.880]  Bez przesiadki.
+[01:27:32.880 --> 01:27:36.880]  Bez przesiadki.
+[01:27:36.880 --> 01:27:38.880]  Co to jest przesiadka?
+[01:27:38.880 --> 01:27:39.880]  Przesiadki.
+[01:27:39.880 --> 01:27:41.880]  Przesiadki.
+[01:27:41.880 --> 01:27:43.880]  Przesiadki.
+[01:27:43.880 --> 01:27:44.880]  Przesiadki.
+[01:27:44.880 --> 01:27:45.880]  Przesiadki.
+[01:27:45.880 --> 01:27:46.880]  No.
+[01:27:46.880 --> 01:27:47.880] ralne przerwy ...
+[01:27:47.880 --> 01:27:52.880]  Czyli jedziemy ze Krakowa do Warszawy,
+[01:27:52.880 --> 01:27:58.880]  ale nie ma bezpośredniego, więc tu musimy mieć jakiś stop i potem należy.
+[01:27:58.880 --> 01:27:59.880]  Dobra.
+[01:27:59.880 --> 01:28:00.880]  Numer 7.
+[01:28:00.880 --> 01:28:03.880]  I ostatni numer 8.
+[01:28:03.880 --> 01:28:07.880]  Jest Pan Pani w Warszawie o 15.35.
+[01:28:07.880 --> 01:28:08.880]  O której...
+[01:28:08.880 --> 01:28:11.380]  który odjechał pociąg z Krakowa.
+[01:28:14.620 --> 01:28:16.620]  O 11.40.
+[01:28:17.620 --> 01:28:19.620]  Super. O 11.40.
+[01:28:20.620 --> 01:28:22.620]  Czy mogę zapytać o pytanie?
+[01:28:22.620 --> 01:28:24.620]  Tak.
+[01:28:24.620 --> 01:28:26.620]  Odjechał z...
+[01:28:32.620 --> 01:28:34.620]  Super.
+[01:28:34.620 --> 01:28:36.620]  Czy zapomniałeś coś?
+[01:28:36.620 --> 01:28:38.620]  Odjechać i...
+[01:28:38.620 --> 01:28:40.620]  Tak to mówimy.
+[01:28:40.620 --> 01:28:42.620]  Odjazd i przyjazd.
+[01:28:42.620 --> 01:28:44.620]  Tak?
+[01:28:44.620 --> 01:28:46.620]  Tak samo odlot, przylot.
+[01:28:50.620 --> 01:28:52.620]  Dobra. Czy jakieś pytania?
+[01:28:52.620 --> 01:28:54.620]  Dobra.
+[01:28:54.620 --> 01:28:56.620]  Tak.
+[01:29:04.620 --> 01:29:06.620]  Przesiadka do pełniaczki.
+[01:29:06.620 --> 01:29:08.620]  To jest do pełniaczki.
+[01:29:08.620 --> 01:29:10.620]  Dobra. Uwaga, uwaga.
+[01:29:10.620 --> 01:29:12.620]  Zadaję nowe.
+[01:29:12.620 --> 01:29:14.620]  To będzie trudne. Ja sama nie jestem pewna.
+[01:29:14.620 --> 01:29:16.620]  Zadanie 12. Mamy tutaj bilet.
+[01:29:16.620 --> 01:29:18.620]  Czy ktoś kiedyś jechał pociągiem z Krakowa?
+[01:29:18.620 --> 01:29:20.620]  W Polsce?
+[01:29:22.620 --> 01:29:24.620]  Tak?
+[01:29:24.620 --> 01:29:26.620]  Możemy kupić bilet przez internet, ale możemy kupić bilet z Saki.
+[01:29:26.620 --> 01:29:28.620]  Mamy bilet i musimy odpowiedzieć na pytania.
+[01:29:30.620 --> 01:29:32.620]  So we need to check bilet very carefully and then answer.
+[01:29:32.620 --> 01:29:34.620]  I we need to check bilet very carefully and then answer.
+[01:29:34.620 --> 01:29:36.620]  So we need to check bilet very carefully and then answer.
+[01:29:36.620 --> 01:29:38.620]  to jest pytanie. Prawie czy nie?
+[01:29:38.620 --> 01:29:40.620]  I...
+[01:29:40.620 --> 01:29:42.620]  Uwaga, uwaga...
+[01:29:42.620 --> 01:29:44.620]  Zaczynamy rozdział dziewięć.
+[01:29:44.620 --> 01:29:46.620]  O, dziękuję.
+[01:29:46.620 --> 01:29:48.620]  O, dziękuję.
+[01:29:48.620 --> 01:29:50.620]  O, dziękuję.
+[01:29:50.620 --> 01:29:52.620]  I mamy...
+[01:29:52.620 --> 01:29:54.620]  I uwaga, uwaga...
+[01:29:54.620 --> 01:29:56.620]  Jeszcze zadanie jeden.
+[01:29:56.620 --> 01:29:58.620]  Tutaj mamy
+[01:29:58.620 --> 01:30:00.620]  różne produkty.
+[01:30:00.620 --> 01:30:02.620]  Mamy kilka produktów i musimy wiedzieć,
+[01:30:02.620 --> 01:30:04.620]  gdzie, w jakiej sklepie
+[01:30:04.620 --> 01:30:06.620]  są złożone te produkty.
+[01:30:06.620 --> 01:30:08.620]  Czyli zadanie jeden
+[01:30:08.620 --> 01:30:10.620]  oraz
+[01:30:10.620 --> 01:30:12.620]  zadanie trzy.
+[01:30:12.620 --> 01:30:14.620]  Czyli jeden i trzy stąd
+[01:30:14.620 --> 01:30:16.620]  i dwanaście
+[01:30:16.620 --> 01:30:18.620]  z tego drugiego.
+[01:30:18.620 --> 01:30:20.620]  Dobra?
+[01:30:20.620 --> 01:30:22.620]  Dobra.
+[01:30:22.620 --> 01:30:24.620]  I...
+[01:30:24.620 --> 01:30:26.620]  I...
+[01:30:26.620 --> 01:30:28.620]  I...
+[01:30:28.620 --> 01:30:30.620]  I...
+[01:30:30.620 --> 01:30:32.620]  I...
+[01:30:32.620 --> 01:30:34.620]  I...
+[01:30:34.620 --> 01:30:36.620]  Wy mapping.
+[01:30:36.620 --> 01:30:38.620]  I, tak...
+[01:30:38.620 --> 01:30:40.620]  Tutaj,
+[01:30:40.620 --> 01:30:42.620]  tutaj trzeba
+[01:30:42.620 --> 01:30:44.620] �
+[01:31:02.580 --> 01:31:04.580]  Chwila Marie!
+[01:31:04.620 --> 01:31:34.600]  Dziękuje za uwagę.
+
+Success! Transcription saved to: Lectures/Polish/A1_2/L16_18thAugust/L16_18thAugust.txt
+
+Process finished with exit code 0

@@ -6,7 +6,7 @@ model = whisper.load_model("large-v3")
 
 # Transcribe the audio with a mixed-language prompt
 result = model.transcribe(
-    r"C:\MY_BACKUP\LearningStuff\Polish\A1_2\Recordings\Lecture15_13thAugust\Lecture15_13thAugust.mp3",
+    r"C:\MY_BACKUP\LearningStuff\Polish\A1_2\Recordings\Lecture16_18thAugust\Lecture16_18thAugust.mp3",
     task="transcribe",
     language="pl",  # FORCE POLISH: Stops Whisper from auto-detecting English and translating everything
     # Priming the model with both languages activates both dictionaries
@@ -15,7 +15,7 @@ result = model.transcribe(
 )
 
 # Define where you want to save the text file
-output_file_path = r"Lectures/Polish/A1_2/L15_13thAugust/L15_13thAugust.txt"
+output_file_path = r"Lectures/Polish/A1_2/L16_18thAugust/L16_18thAugust.txt"
 
 # Open the file in write mode ('w') with UTF-8 encoding and save the text
 with open(output_file_path, "w", encoding="utf-8") as f:
