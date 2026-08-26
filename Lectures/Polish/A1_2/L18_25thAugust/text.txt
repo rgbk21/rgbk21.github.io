@@ -1,0 +1,2111 @@
+"C:\MY_BACKUP\LearningStuff\Udemy Full Stack\newGithubHostedSite\rgbk21.github.io\rgbk21.github.io\.venv\Scripts\python.exe" "C:\MY_BACKUP\LearningStuff\Udemy Full Stack\newGithubHostedSite\rgbk21.github.io\rgbk21.github.io\transcribe.py"
+C:\MY_BACKUP\LearningStuff\Udemy Full Stack\newGithubHostedSite\rgbk21.github.io\rgbk21.github.io\.venv\Lib\site-packages\whisper\transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+[00:00.000 --> 00:09.300]  Ogląda się to w 맞아요 po真terze www.youtube.com
+[00:18.320 --> 00:22.180]  ZeORVNiG-en
+[00:30.000 --> 00:36.740]  ...
+[00:39.860 --> 00:40.540]  Wystarczający...
+[00:40.900 --> 00:41.500]  Jeszcze raz?
+[00:41.560 --> 00:42.060]  Wystarczający!
+[00:43.360 --> 00:44.040]  Tak tak.
+[00:45.360 --> 00:45.800]  Od razu nam
+[00:46.160 --> 00:47.640]  ricze sobie znaleźć
+[00:47.940 --> 00:50.140]  dosegum
+[01:00.000 --> 01:06.000]  No dobra, mieliśmy dopełniać liczbę mnoga.
+[01:06.000 --> 01:11.000]  I mieliśmy zadania takie proste.
+[01:11.000 --> 01:13.000]  No dobrze.
+[01:13.000 --> 01:15.000]  No to co z tym zadaniem?
+[01:15.000 --> 01:24.000]  Czyli tak, mamy mianownik ser żółty, biernik też żółty i dopełniacz sera żółtego. Co dalej?
+[01:24.000 --> 01:38.000]  Jogurt owocowy.
+[01:38.000 --> 01:42.000]  Następne.
+[01:42.000 --> 01:47.000]  Majonez, to samo.
+[01:47.000 --> 01:51.000]  Majonezu.
+[01:51.000 --> 01:53.000]  Dżem pomarańczowy.
+[01:53.000 --> 01:55.000]  To samo.
+[01:55.000 --> 02:02.000]  Dżem pomarańczowy i dżemu pomarańczowego.
+[02:02.000 --> 02:04.000]  Chleb.
+[02:04.000 --> 02:12.000]  To samo chleb i chleba.
+[02:12.000 --> 02:15.000]  Sok jabłkowy.
+[02:15.000 --> 02:16.000]  To samo.
+[02:16.000 --> 02:21.000]  Sok jabłkowy, soku jabłkowego.
+[02:21.000 --> 02:22.000]  Kawa naturalna.
+[02:22.000 --> 02:24.000]  Kawa naturalna.
+[02:24.000 --> 02:26.000]  Kawe naturalno.
+[02:26.000 --> 02:28.000]  Jeszcze raz.
+[02:28.000 --> 02:31.000]  Kawe naturalno.
+[02:31.000 --> 02:32.000]  Kawe.
+[02:32.000 --> 02:33.000]  Kawe.
+[02:33.000 --> 02:39.000]  Kawe naturalnie.
+[02:39.000 --> 02:41.000]  Nie je.
+[02:41.000 --> 02:42.000]  Tak.
+[02:42.000 --> 02:43.000]  Nie?
+[02:43.000 --> 02:44.000]  Dopełniasz?
+[02:44.000 --> 02:45.000]  Tak.
+[02:45.000 --> 02:47.000]  Kawe naturalnie.
+[02:47.000 --> 02:49.000]  Aha.
+[02:49.000 --> 02:50.000]  Kawe.
+[02:50.000 --> 02:51.000]  Kawe.
+[02:51.000 --> 02:52.000]  Kawe.
+[02:52.000 --> 02:54.000]  Naturalnie.
+[02:54.000 --> 02:55.000]  No.
+[02:55.000 --> 03:00.000]  O, wiesz.
+[03:00.000 --> 03:02.000]  Jest dobre?
+[03:02.000 --> 03:05.000]  Pusta.
+[03:05.000 --> 03:06.000]  Uff.
+[03:06.000 --> 03:09.000]  Może będzie do tej ptaki.
+[03:09.000 --> 03:10.000]  Dobra.
+[03:10.000 --> 03:12.000]  Kawe naturalne.
+[03:12.000 --> 03:15.000]  Kawe naturalnie. Okej. Co dalej?
+[03:15.000 --> 03:19.000]  Mmm...
+[03:19.000 --> 03:25.000]  Woda mineralna.
+[03:25.000 --> 03:29.000]  Wode mineralna.
+[03:29.000 --> 03:33.000]  I wode mineralnie.
+[03:33.000 --> 03:35.000]  I teraz.
+[03:35.000 --> 03:37.000]  Dopędzasz.
+[03:37.000 --> 03:39.000]  Dopędzasz? Wode mineral...
+[03:39.000 --> 03:41.000]  O tylko nie.
+[03:41.000 --> 03:43.000]  Ok.
+[03:43.000 --> 03:45.000]  Nie, nie. Ok.
+[03:45.000 --> 03:47.000]  Wode...
+[03:47.000 --> 03:49.000]  Wode...
+[03:49.000 --> 03:51.000]  Wode...
+[03:51.000 --> 03:53.000]  Wode mineralnie.
+[03:53.000 --> 03:57.000]  Wode mineralnie.
+[03:57.000 --> 03:59.000]  Woda...
+[04:03.000 --> 04:05.000]  I...
+[04:05.000 --> 04:07.000]  Harbaty o co?
+[04:07.000 --> 04:09.000]  Harbaty o co?
+[04:09.000 --> 04:13.000]  I dopiędniaż harbaty o co?
+[04:13.000 --> 04:15.000]  Harbaty o co?
+[04:15.000 --> 04:17.000]  Harbaty o co?
+[04:17.000 --> 04:19.000]  Harbaty jakiej?
+[04:19.000 --> 04:21.000]  Harbaty jakiej?
+[04:21.000 --> 04:23.000]  Jaki... Koncówka?
+[04:23.000 --> 04:25.000]  Tak.
+[04:25.000 --> 04:27.000]  A co dalej?
+[04:27.000 --> 04:29.000]  Owocowe.
+[04:29.000 --> 04:31.000]  Owocowe.
+[04:31.000 --> 04:33.000]  Bo ja słyszę...
+[04:33.000 --> 04:35.000]  Owocowe.
+[04:35.000 --> 04:37.000]  O, ok.
+[04:37.000 --> 04:39.000]  A ma być owocowe.
+[04:39.000 --> 04:41.000]  Ok, ok. Rozumiem.
+[04:43.000 --> 04:45.000]  Paprika.
+[04:45.000 --> 04:47.000]  Paprika.
+[04:47.000 --> 04:57.000]  Paprika.
+[04:57.000 --> 04:59.000]  Dobrze.
+[04:59.000 --> 05:01.000]  Co taka u fana?
+[05:01.000 --> 05:03.000]  Mleko czy mleko i dopiędnia jest mleko.
+[05:03.000 --> 05:05.000]  Młody źemniek...
+[05:05.000 --> 05:07.000]  Młody żemniek i biedny.
+[05:07.000 --> 05:09.000]  Młody żemniek i biedny.
+[05:09.000 --> 05:11.000]  I...
+[05:11.000 --> 05:13.000]  I dopiędnia jes młody...
+[05:13.000 --> 05:15.000]  Żem domny.
+[05:15.000 --> 05:24.000]  Polski pomidor jest polskie pomidory.
+[05:24.000 --> 05:29.000]  I dobrym znakiem jest polskich pomidorów.
+[05:29.000 --> 05:34.000]  Jeszcze raz. Polskich pomidorów.
+[05:34.000 --> 05:38.000]  Dobra. Tylko polskich, nie polskich.
+[05:38.000 --> 05:41.000]  Bardziej chy. Dobra?
+[05:41.000 --> 05:52.000]  Ekologiczne ogólki. Jest ekologiczne ogólki dla wiernych.
+[05:52.000 --> 06:03.000]  I to w wiernych jest ekologicznek ogólki.
+[06:03.000 --> 06:10.000]  Nie, nie, nie. Inna kancuzka.
+[06:10.000 --> 06:17.000]  Wiernych.
+[06:17.000 --> 06:21.000]  Ogólków.
+[06:21.000 --> 06:24.000]  Ogólków. Prawda.
+[06:24.000 --> 06:30.000]  Zazwyczaj jest końcówka "-ów".
+[06:30.000 --> 06:34.000]  Chyba, że są wyjątki. To mieliśmy kilka wyjątków.
+[06:34.000 --> 06:37.000]  Ale zazwyczaj jest "-ów".
+[06:37.000 --> 06:39.000]  Kudumski.
+[06:39.000 --> 06:40.000]  Kudumski.
+[06:40.000 --> 06:45.000]  Kolumbijski banany jest kolumbijski banany dla wiernych.
+[06:45.000 --> 06:51.000]  I dobrym znakiem jest kolumbski bananów.
+[06:51.000 --> 06:53.000]  Kolumbijski.
+[06:53.000 --> 06:55.000]  Kolumbijski.
+[06:55.000 --> 06:59.000]  Małe frytki jest małe frytki dla wiernych.
+[06:59.000 --> 07:03.000]  I dobrym znakiem jest mały frytek.
+[07:03.000 --> 07:05.000]  Dobra.
+[07:05.000 --> 07:08.000]  Hiszpański sardynki jest...
+[07:08.000 --> 07:12.000]  Hiszpański sardynki dla wiernych.
+[07:12.000 --> 07:14.000]  I...
+[07:14.000 --> 07:18.000]  również jest hiszpański sardynek.
+[07:18.000 --> 07:21.000]  Mhm.
+[07:21.000 --> 07:28.000]  Ekologiczne jajka dla wiernych jest ekologiczne jaj...
+[07:28.000 --> 07:30.000]  jajka. Nie wiem...
+[07:30.000 --> 07:31.000]  Jajka.
+[07:31.000 --> 07:32.000]  Czy nie?
+[07:32.000 --> 07:37.000]  Nie, tak samo. Ekologiczne jajka.
+[07:37.000 --> 07:42.000]  Wypewnia się, jest to owiecznik jajków.
+[07:44.000 --> 07:46.000]  A jajko, jaki to jest rodzaj?
+[07:46.000 --> 07:49.000]  A, miaki.
+[07:52.000 --> 07:54.000]  Jaki jest?
+[07:56.000 --> 07:57.000]  Jajek.
+[07:57.000 --> 07:59.000]  Jajek, tak.
+[07:59.000 --> 08:03.000]  Jajek, też jabłek na przykład.
+[08:03.000 --> 08:13.000]  Czastka czekolodowy jest czastka czekolodowy.
+[08:13.000 --> 08:21.000]  I drugi rzecz jest czastek czekolodowy.
+[08:21.000 --> 08:24.000]  Dobrze, czastek czekolodowy.
+[08:24.000 --> 08:31.000]  I ostatnie, polskie jabłka jest polskie jabłka.
+[08:31.000 --> 08:33.000]  Zawiernie.
+[08:33.000 --> 08:37.000]  I to znaczy jest płycki jabłek.
+[08:37.000 --> 08:39.000]  Super.
+[08:39.000 --> 08:45.000]  Ok, zawiernie, bo mamy słowo dla.
+[08:45.000 --> 08:47.000]  To jest obie.
+[08:47.000 --> 08:49.000]  Dla kogo, czego, to dobrze.
+[08:49.000 --> 08:53.000]  Dobrze, no to co, w takim razie idziemy dalej.
+[08:57.000 --> 08:59.000]  Co dzisiaj?
+[09:01.000 --> 09:02.000]  Dobra.
+[09:02.000 --> 09:06.000]  Dzisiaj będziemy mówić o ubraniach, o odzież.
+[09:06.000 --> 09:10.000]  Ok, czyli trochę tam już wiemy.
+[09:10.000 --> 09:14.000]  Ostatnio pojawiło się na przykład słowo dżinsy.
+[09:14.000 --> 09:15.000]  Pamiętamy.
+[09:15.000 --> 09:17.000]  Ktoś chciał kupić dżinsy.
+[09:17.000 --> 09:21.000]  Albo ktoś chciał kupić buty chyba jakieś.
+[09:21.000 --> 09:24.000]  Dobrze, więc dzisiaj będziemy zaczynać z ubrania.
+[09:24.000 --> 09:30.000]  Będziemy opisywać tak, patrzę co panowie są ubrani, ale całkiem dobrze będzie to opisywać.
+[09:30.000 --> 09:32.000]  No dobra, na początek.
+[09:36.000 --> 09:39.000]  Czy panowie zają kolory po polsku?
+[09:39.000 --> 09:41.000]  Tak, tak.
+[09:41.000 --> 09:42.000]  Tak, tak?
+[09:42.000 --> 09:43.000]  Kolory tak.
+[09:43.000 --> 09:44.000]  Wszystkie, wszystkie?
+[09:44.000 --> 09:45.000]  Tak.
+[09:45.000 --> 09:46.000]  Kolory tak?
+[09:46.000 --> 09:47.000]  Tak, tak, tak.
+[09:47.000 --> 09:48.000]  Dobra.
+[09:48.000 --> 09:49.000]  Ok.
+[09:49.000 --> 09:50.000]  Ok.
+[09:50.000 --> 09:51.000]  Wielka nauka.
+[09:51.000 --> 09:52.000]  Dobra.
+[09:52.000 --> 09:55.000]  To zaraz sobie sprawdzimy.
+[09:55.000 --> 09:57.000]  Dobra, kolory.
+[09:57.000 --> 09:58.000]  A jeśli chodzi o ubrania.
+[09:58.000 --> 09:59.000]  Jakie ubrania?
+[09:59.000 --> 10:01.000]  Jakie ubrania panowie znają?
+[10:01.000 --> 10:16.000]  Spalunki, skarpetki, koszulka i buty.
+[10:16.000 --> 10:17.000]  Dzień dobry.
+[10:17.000 --> 10:18.000]  Dzień dobry.
+[10:18.000 --> 10:20.000]  I...
+[10:20.000 --> 10:21.000]  I...
+[10:21.000 --> 10:22.000]  I...
+[10:22.000 --> 10:23.000]  I...
+[10:23.000 --> 10:24.000]  I...
+[10:24.000 --> 10:25.000]  I don't know.
+[10:25.000 --> 10:26.000]  I don't know.
+[10:26.000 --> 10:27.000]  I don't know.
+[10:27.000 --> 10:28.000]  I don't know.
+[10:29.000 --> 10:30.000]  I don't know.
+[10:30.000 --> 10:31.000]  I don't know.
+[10:31.000 --> 10:32.000]  Punkt pieszy...
+[10:32.000 --> 10:33.000]  Bo jagh.
+[10:33.000 --> 10:35.000]  Bo jak jego aussie st shouting z紙 d な��cong, to madał.
+[10:35.000 --> 10:36.000]  On nicас bakał.
+[10:36.000 --> 10:37.000]  Fals gibt mich nie.
+[10:37.000 --> 10:38.000]  To na pewno wymaga krok od pozwalania się jeśli kum Mom nosotros dairy,
+[10:38.000 --> 10:39.000]  então ale...
+[10:39.000 --> 10:40.000]  I to tutaj mamy...
+[10:40.000 --> 10:41.000]  tyle komm um nam.
+[10:41.000 --> 10:42.000]  To della..
+[10:42.000 --> 10:43.000]  Tak, tutaj mamy t ubrania.
+[10:43.000 --> 10:44.000]  Takie, najpopularniejsze, najczęstsze, które możemy zobaczyć często.
+[10:44.000 --> 10:45.000]  Ale ją więcej.
+[10:45.000 --> 10:46.000]  Oczywiście, że nigdzie nie takie szlesne yellow.
+[10:46.000 --> 10:47.000]  Tak, i teraz tak.
+[10:47.000 --> 10:48.000]  Spróbujemy sobie osob textov od encounters.
+[10:48.000 --> 10:49.000]  Jakiej był ten każdy pierwszy ps.
+[10:49.000 --> 10:49.500]  Wyglądał i..."V chị radzi действительно zaczęte
+[10:49.500 --> 10:50.000]  czy tietki."
+[10:50.000 --> 10:58.000]  Dobrze, i teraz tak, spróbujemy sobie...
+[10:58.000 --> 11:02.000]  Dlaczego tych kolorów? Tak, dlatego mam oczywiście...
+[11:02.000 --> 11:06.000]  ...nie było problemów.
+[11:06.000 --> 11:09.000]  Green, yes, or green?
+[11:09.000 --> 11:10.000]  Zielony.
+[11:10.000 --> 11:12.000]  Zielony, dobra.
+[11:12.000 --> 11:15.000]  Czarny?
+[11:15.000 --> 11:17.000]  Brązowy?
+[11:17.000 --> 11:18.000]  Brązowy, dobra.
+[11:18.000 --> 11:21.000]  Zastanawiam się, żeby było te kolory wiar widoczne.
+[11:26.000 --> 11:27.000]  Niebieskie?
+[11:27.000 --> 11:28.000]  Nie.
+[11:28.000 --> 11:30.000]  O, grey?
+[11:40.000 --> 11:41.000]  Czarny.
+[11:41.000 --> 11:42.000]  Czarny.
+[11:42.000 --> 11:43.000]  Dobra.
+[11:43.000 --> 11:45.000]  Czarny, zimny, zimny.
+[11:45.000 --> 11:46.000]  Czarny.
+[11:46.000 --> 11:47.000]  Czarny.
+[11:47.000 --> 11:48.000]  Niebieski.
+[11:48.000 --> 11:49.000]  Niebieski.
+[11:49.000 --> 11:50.000]  To fioletowy?
+[11:50.000 --> 11:51.000]  Fioletowy.
+[11:51.000 --> 11:52.000]  Fioletowy.
+[11:52.000 --> 11:53.000]  O różu.
+[11:53.000 --> 11:54.000]  róż, róż.
+[11:54.000 --> 11:55.000]  Różowy.
+[11:55.000 --> 11:56.000]  Czerwony.
+[11:56.000 --> 11:57.000]  Czerwony.
+[11:57.000 --> 11:58.000]  A, czerwony.
+[11:58.000 --> 11:59.000]  Właśnie.
+[11:59.000 --> 12:00.000]  O, czerwony.
+[12:00.000 --> 12:01.000]  No, to jest żedna.
+[12:01.000 --> 12:02.000]  A, to jest żen Serba.
+[12:02.000 --> 12:03.000]  O, a wyczerpał .
+[12:03.000 --> 12:04.000]  A, to jest żen serba.
+[12:04.000 --> 12:05.000]  O, to jest żen serba, tak.
+[12:05.000 --> 12:06.000]  Nie wiem, nie wiem, nie wiem.
+[12:06.000 --> 12:07.000]  A, to jest żena.
+[12:07.000 --> 12:08.000]  youngster.
+[12:08.000 --> 12:09.000]  No, no, no, to jest żena, no.
+[12:09.000 --> 12:10.000]  A, to jest żena.
+[12:10.000 --> 12:11.000]  On, to jest żena, no.
+[12:11.000 --> 12:12.000]  No, to jest żena.
+[12:12.000 --> 12:14.000]  Na noc.
+[12:14.000 --> 12:16.000]  A, oręczowy.
+[12:16.000 --> 12:18.000]  Czy oręczowy?
+[12:20.000 --> 12:22.000]  Żółty.
+[12:22.000 --> 12:24.000]  Żółty.
+[12:24.000 --> 12:26.000]  Dobra.
+[12:26.000 --> 12:28.000]  Biały.
+[12:28.000 --> 12:30.000]  Biały.
+[12:30.000 --> 12:32.000]  Dobra, teraz trudniej, że coś.
+[12:32.000 --> 12:36.000]  Nie widać tego aż tak dobrze tutaj.
+[12:36.000 --> 12:38.000]  Czy jest różnica?
+[12:38.000 --> 12:40.000]  Nie wiem.
+[12:40.000 --> 12:44.000]  To był szary, ale to nie jest szary.
+[12:44.000 --> 12:48.000]  Nie wiem, czy to jest różnica.
+[12:48.000 --> 12:50.000]  Nie wiem, czy to jest różnica.
+[12:50.000 --> 12:52.000]  Nie wiem, czy to jest różnica.
+[12:52.000 --> 12:54.000]  Nie wiem, czy to jest różnica.
+[12:54.000 --> 12:56.000]  Nie wiem, czy to jest różnica.
+[12:56.000 --> 12:58.000]  To było takie blin-bling.
+[12:58.000 --> 13:00.000]  To był straszny.
+[13:00.000 --> 13:02.000]  Ale laminowałam go, a potem laminowałam.
+[13:02.000 --> 13:04.000]  To było silne.
+[13:04.000 --> 13:06.000]  To było silne.
+[13:06.000 --> 13:08.000]  Może ten?
+[13:08.000 --> 13:10.000]  To był swat.
+[13:10.000 --> 13:12.000]  To był złoty.
+[13:12.000 --> 13:14.000]  To był silny.
+[13:14.000 --> 13:16.000]  To był złoty.
+[13:16.000 --> 13:18.000]  To był srebrny.
+[13:18.000 --> 13:20.000]  Srebrny.
+[13:20.000 --> 13:22.000]  Dobra, i jakiś wzór.
+[13:22.000 --> 13:24.000]  Dobra, i jakiś wzór.
+[13:24.000 --> 13:26.000]  Patrny.
+[13:26.000 --> 13:28.000]  Dobra, patrny.
+[13:28.000 --> 13:30.000]  Diagonal?
+[13:30.000 --> 13:32.000]  Diagonal?
+[13:32.000 --> 13:34.000]  Paski.
+[13:34.000 --> 13:36.000]  Paski.
+[13:36.000 --> 13:38.000]  Jeden pasek.
+[13:38.000 --> 13:40.000]  Jeden pasek to strif.
+[13:40.000 --> 13:42.000]  To jest paski in plural.
+[13:42.000 --> 13:44.000]  To jest paski in plural.
+[13:44.000 --> 13:46.000]  O, okej.
+[13:48.000 --> 13:50.000]  Dobra, to jest wypaski.
+[13:50.000 --> 13:52.000]  Dobra, to jest wypaski.
+[13:56.000 --> 13:58.000]  I już mam...
+[13:58.000 --> 14:00.000]  I już mam...
+[14:00.000 --> 14:02.000]  W kratkę.
+[14:02.000 --> 14:04.000]  W kratkę.
+[14:04.000 --> 14:06.000]  W kratkę.
+[14:06.000 --> 14:08.000]  Okej.
+[14:08.000 --> 14:10.000]  I już mam...
+[14:10.000 --> 14:12.000]  I już mam...
+[14:12.000 --> 14:14.000]  Okej.
+[14:14.000 --> 14:16.000]  Mamy zdanie.
+[14:16.000 --> 14:18.000]  Mamy zdanie.
+[14:18.000 --> 14:20.000]  Co jest na końcu?
+[14:20.000 --> 14:22.000]  Kropka.
+[14:22.000 --> 14:24.000]  Kropki.
+[14:24.000 --> 14:26.000]  No dobra.
+[14:26.000 --> 14:28.000]  Okej, daliśmy radę.
+[14:28.000 --> 14:30.000]  To zrobimy teraz tak.
+[14:30.000 --> 14:32.000]  Pani weźma z dół.
+[14:32.000 --> 14:34.000]  Pani weźma z dół.
+[14:38.000 --> 14:40.000]  Pani weźma z dół.
+[15:02.000 --> 15:04.000]  Dobra.
+[15:04.000 --> 15:06.000]  Będę bliżej.
+[15:06.000 --> 15:08.000]  To jest...
+[15:08.000 --> 15:10.000]  To jest...
+[15:10.000 --> 15:12.000]  Czyli tak, tu mieliśmy nasze kolory.
+[15:12.000 --> 15:14.000]  Dlatego sobie zaczniemy.
+[15:14.000 --> 15:16.000]  Dlatego sobie zaczniemy.
+[15:30.000 --> 15:32.000]  Okej.
+[15:32.000 --> 15:34.000]  No dobra, niewiele różnicy.
+[15:34.000 --> 15:36.000]  Ale było.
+[15:36.000 --> 15:38.000]  Ale było.
+[15:38.000 --> 15:40.000]  Ale było.
+[15:40.000 --> 15:42.000]  No dobra.
+[15:42.000 --> 15:44.000]  To są nasze kolory i wzory.
+[15:44.000 --> 15:46.000]  Czyli w taki sposób możemy opisać ubrania.
+[15:46.000 --> 15:48.000]  Czyli w taki sposób możemy opisać ubrania.
+[15:48.000 --> 15:50.000]  To jest tak, jak możemy opisać ubrania.
+[15:50.000 --> 15:52.000]  To jest tak, jak możemy opisać ubrania.
+[15:52.000 --> 15:54.000]  O mój Boże.
+[15:54.000 --> 15:56.000]  O mój Boże.
+[15:56.000 --> 15:58.000]  Kim przygotowała.
+[15:58.000 --> 16:00.000]  Okej.
+[16:00.000 --> 16:02.000]  No.
+[16:02.000 --> 16:04.000]  Czy wiemy o ubraniach?
+[16:04.000 --> 16:06.000]  Może.
+[16:06.000 --> 16:08.000]  No.
+[16:08.000 --> 16:10.000]  I spróbujemy tak.
+[16:10.000 --> 16:12.000]  Tylko patrzcie.
+[16:22.000 --> 16:24.000]  Dobra.
+[16:24.000 --> 16:26.000]  Może posunę trochę na bok.
+[16:26.000 --> 16:28.000]  I zrobimy tak.
+[16:30.000 --> 16:32.000]  Mamy tutaj
+[16:32.000 --> 16:34.000]  różne ubrania.
+[16:34.000 --> 16:36.000]  I teraz tak.
+[16:36.000 --> 16:38.000]  Chcę żebyśmy podzielili
+[16:38.000 --> 16:40.000]  te ubrania,
+[16:40.000 --> 16:42.000]  a właściwie nazwy tych ubrań
+[16:42.000 --> 16:44.000]  na
+[16:44.000 --> 16:46.000]  trzy kategorie.
+[16:46.000 --> 16:48.000]  Rodzaj męski,
+[16:48.000 --> 16:50.000]  rodzaj żeński
+[16:50.000 --> 16:52.000]  i liczba mnoga.
+[16:52.000 --> 16:54.000]  Okej.
+[16:54.000 --> 16:56.000]  Więc musimy rozmiarować te słowa
+[16:56.000 --> 16:58.000]  w trzy kategorie.
+[16:58.000 --> 17:00.000]  Rodzaj męski, żeński i liczba mnoga.
+[17:00.000 --> 17:02.000]  Bo po tym
+[17:02.000 --> 17:04.000]  musimy wiedzieć jak
+[17:04.000 --> 17:06.000]  to jest.
+[17:06.000 --> 17:08.000]  Dobra.
+[17:08.000 --> 17:10.000]  To zrobimy tak.
+[17:10.000 --> 17:12.000]  Różowy to będzie męski,
+[17:12.000 --> 17:14.000]  żeński takie, takie,
+[17:14.000 --> 17:16.000]  a to niech będzie żółty.
+[17:16.000 --> 17:18.000]  Będzie liczba mnoga.
+[17:18.000 --> 17:20.000]  Dobra.
+[17:20.000 --> 17:22.000]  Kapelusz.
+[17:22.000 --> 17:24.000]  Jaki to jest rodzaj?
+[17:24.000 --> 17:26.000]  Męski.
+[17:26.000 --> 17:28.000]  Męski. Oczywiście.
+[17:28.000 --> 17:30.000]  Czapka z daszkiem.
+[17:30.000 --> 17:32.000]  Żeński?
+[17:32.000 --> 17:34.000]  Tak, czapka.
+[17:34.000 --> 17:36.000]  Jak jest A na końcu, to jest na pewno.
+[17:36.000 --> 17:38.000]  Co to jest? Daszki.
+[17:38.000 --> 17:40.000]  To jest daszek.
+[17:40.000 --> 17:42.000]  Nie.
+[17:42.000 --> 17:44.000]  This part. To jest czapka
+[17:44.000 --> 17:46.000]  and this is daszek.
+[17:46.000 --> 17:48.000]  Dach.
+[17:48.000 --> 17:50.000]  That came from this word dach.
+[17:50.000 --> 17:52.000]  Dach is roof.
+[17:52.000 --> 17:54.000]  Sorry, what? Roof.
+[17:54.000 --> 17:56.000]  Oh.
+[17:56.000 --> 17:58.000]  Cap with a roof.
+[17:58.000 --> 18:00.000]  Tak, czyli czapka, rodzaj żeński.
+[18:00.000 --> 18:02.000]  Rękawiczki.
+[18:02.000 --> 18:04.000]  Mnoga.
+[18:04.000 --> 18:06.000]  Mnoga, oczywiście. Tak. A jedna?
+[18:06.000 --> 18:08.000]  Ręka. No ręka jest hand, tak?
+[18:08.000 --> 18:10.000]  Tak.
+[18:10.000 --> 18:12.000]  To rękawiczka.
+[18:12.000 --> 18:14.000]  Rękawiczka.
+[18:14.000 --> 18:16.000]  Jedna rękawiczka.
+[18:16.000 --> 18:18.000]  Liczba mnoga, rękawiczki. Dobra.
+[18:18.000 --> 18:20.000]  Szalik.
+[18:20.000 --> 18:22.000]  Męski. Męski.
+[18:22.000 --> 18:24.000]  Oczywiście. Krawat.
+[18:24.000 --> 18:26.000]  Męski. Męski. Oczywiście.
+[18:26.000 --> 18:28.000]  Skarpetki. Liczba mnoga.
+[18:28.000 --> 18:30.000]  Liczba mnoga.
+[18:30.000 --> 18:32.000]  Jeden skarpetka.
+[18:32.000 --> 18:34.000]  Skarpetka. Jedna skarpetka. Tak.
+[18:34.000 --> 18:36.000]  To będzie jedna rodzaj żeński.
+[18:36.000 --> 18:38.000]  Mamy liczbę mnogą.
+[18:38.000 --> 18:40.000]  Santa.
+[18:40.000 --> 18:42.000]  Liczba mnoga.
+[18:42.000 --> 18:44.000]  Liczba mnoga, tak.
+[18:44.000 --> 18:46.000]  Trampki.
+[18:46.000 --> 18:48.000]  Trampki.
+[18:48.000 --> 18:50.000]  Nie jest w ogóle.
+[18:50.000 --> 18:52.000]  Liczba mnoga.
+[18:52.000 --> 18:54.000]  Liczba mnoga, a jeden? Trampka.
+[18:54.000 --> 18:56.000]  Trampek.
+[18:56.000 --> 18:58.000]  Tak jak...
+[18:58.000 --> 19:00.000]  To będzie rodzaj męski, liczby pojedynczej, ale to liczba mnoga.
+[19:00.000 --> 19:02.000]  Trampki.
+[19:02.000 --> 19:04.000]  Liczba mnoga.
+[19:04.000 --> 19:06.000]  Męski.
+[19:06.000 --> 19:08.000]  Chyba, a także większość tych słów jest tutaj.
+[19:08.000 --> 19:10.000]  Tutaj.
+[19:10.000 --> 19:12.000]  Tutaj.
+[19:12.000 --> 19:14.000]  Masz większość tych słów.
+[19:14.000 --> 19:16.000]  Hmm.
+[19:16.000 --> 19:18.000]  Dobra. To idziemy dalej.
+[19:18.000 --> 19:20.000]  Sukiety.
+[19:20.000 --> 19:22.000]  Sukiety.
+[19:22.000 --> 19:24.000]  Żeński.
+[19:24.000 --> 19:26.000]  Tak. Konkretnie.
+[19:26.000 --> 19:28.000]  Czapka.
+[19:28.000 --> 19:30.000]  Swodzieński.
+[19:30.000 --> 19:32.000]  Spodnie.
+[19:32.000 --> 19:34.000]  Spodnie.
+[19:34.000 --> 19:36.000]  Liczba mnoga.
+[19:36.000 --> 19:38.000]  Dobra.
+[19:38.000 --> 19:40.000]  Why is that?
+[19:40.000 --> 19:42.000]  Like pants?
+[19:42.000 --> 19:44.000]  It's like you're calling them pants or jeans.
+[19:44.000 --> 19:46.000]  Sorry.
+[19:46.000 --> 19:48.000]  Kind of like that.
+[19:48.000 --> 19:50.000]  Spodnie.
+[19:50.000 --> 19:52.000]  Spodnie.
+[19:52.000 --> 19:54.000]  Like trousers.
+[19:54.000 --> 19:56.000]  Liczba mnoga.
+[19:56.000 --> 19:58.000]  Czyli to są spodnie długie.
+[19:58.000 --> 20:00.000]  This is just shorter version.
+[20:00.000 --> 20:02.000]  Why is plural?
+[20:02.000 --> 20:04.000]  I don't know.
+[20:04.000 --> 20:06.000]  But there is a group of words,
+[20:06.000 --> 20:08.000]  which are usually plural
+[20:08.000 --> 20:10.000]  in nearly every language.
+[20:10.000 --> 20:12.000]  Also in English.
+[20:12.000 --> 20:14.000]  Jeans, for example.
+[20:14.000 --> 20:16.000]  Trousers.
+[20:16.000 --> 20:18.000]  Shorts.
+[20:18.000 --> 20:20.000]  They are always plural.
+[20:20.000 --> 20:22.000]  Tak samo tutaj.
+[20:22.000 --> 20:24.000]  To jest zawsze liczba mnoga.
+[20:24.000 --> 20:26.000]  No dobra.
+[20:28.000 --> 20:30.000]  Kurtka.
+[20:30.000 --> 20:32.000]  Jezioro.
+[20:32.000 --> 20:34.000]  But.
+[20:34.000 --> 20:36.000]  Liczba mnoga.
+[20:36.000 --> 20:38.000]  Sandały to też są buty.
+[20:38.000 --> 20:40.000]  Tramki to też są buty.
+[20:40.000 --> 20:42.000]  To jest po prostu
+[20:42.000 --> 20:44.000]  szosy w ogóle.
+[20:44.000 --> 20:46.000]  To jest buty.
+[20:46.000 --> 20:48.000]  Dobra.
+[20:48.000 --> 20:50.000]  Can I ask a quick question?
+[20:50.000 --> 20:52.000]  So spodnie,
+[20:52.000 --> 20:54.000]  there will be no singular,
+[20:54.000 --> 20:56.000]  like there is no singular.
+[20:56.000 --> 20:58.000]  There is no singular form.
+[20:58.000 --> 21:00.000]  It does not exist at all.
+[21:00.000 --> 21:02.000]  So then what is like,
+[21:02.000 --> 21:04.000]  every noun is supposed to have a gender, right?
+[21:04.000 --> 21:06.000]  Tak.
+[21:06.000 --> 21:08.000]  To spodnie,
+[21:08.000 --> 21:10.000]  what will be the gender of spodnie?
+[21:10.000 --> 21:12.000]  Hmm.
+[21:12.000 --> 21:14.000]  Or it is not important?
+[21:14.000 --> 21:16.000]  It should be męski,
+[21:16.000 --> 21:18.000]  if you think about it, but still.
+[21:18.000 --> 21:20.000]  Why will it be męski?
+[21:20.000 --> 21:22.000]  Technically,
+[21:22.000 --> 21:24.000]  technically you should be męski.
+[21:24.000 --> 21:26.000]  But the problem is that
+[21:26.000 --> 21:28.000]  actually in plural
+[21:28.000 --> 21:30.000]  you have two genders.
+[21:30.000 --> 21:32.000]  Męskoosobowy
+[21:32.000 --> 21:34.000]  and niemęskoosobowy.
+[21:34.000 --> 21:36.000]  Niemęskoosobowy, tak.
+[21:36.000 --> 21:38.000]  So spodnie is niemęskoosobowy.
+[21:38.000 --> 21:40.000]  So plurals have their own genders
+[21:40.000 --> 21:42.000]  is what you are saying?
+[21:42.000 --> 21:44.000]  Hmm.
+[21:44.000 --> 21:46.000]  No, kind of.
+[21:46.000 --> 21:48.000]  No, not exactly.
+[21:48.000 --> 21:50.000]  Because, ok.
+[21:50.000 --> 21:52.000]  You know męskoosobowy.
+[21:52.000 --> 21:54.000]  Tak, like
+[21:54.000 --> 21:56.000]  all the plurals we have been looking at so far
+[21:56.000 --> 21:58.000]  they are niemęskie osoby.
+[21:58.000 --> 22:00.000]  They are not related to males, I think.
+[22:00.000 --> 22:02.000]  Męskoosobowy is only
+[22:02.000 --> 22:04.000]  males, human beings.
+[22:04.000 --> 22:06.000]  Yeah, so all the things
+[22:06.000 --> 22:08.000]  that we have been looking at, they are inanimate.
+[22:08.000 --> 22:10.000]  Niezywotne, tak?
+[22:10.000 --> 22:12.000]  Tak.
+[22:12.000 --> 22:14.000]  So that was, I know a little bit.
+[22:14.000 --> 22:16.000]  So technically spodenki
+[22:16.000 --> 22:18.000]  and spodnie
+[22:18.000 --> 22:20.000]  are niemęskoosobowe
+[22:20.000 --> 22:22.000]  because they are not male,
+[22:22.000 --> 22:24.000]  they are not human.
+[22:24.000 --> 22:26.000]  Tak, tak, tak.
+[22:26.000 --> 22:28.000]  No.
+[22:28.000 --> 22:30.000]  I don't,
+[22:30.000 --> 22:32.000]  I don't think I understood.
+[22:32.000 --> 22:34.000]  So no singular word, so they don't have a gender then?
+[22:34.000 --> 22:36.000]  Or the plural, ok.
+[22:36.000 --> 22:38.000]  Plurals have their own gender.
+[22:38.000 --> 22:40.000]  Tak.
+[22:40.000 --> 22:42.000]  Plurals have their, so
+[22:42.000 --> 22:44.000]  plural have, there is no like female,
+[22:44.000 --> 22:46.000]  sorry, zęski or nijaki
+[22:46.000 --> 22:48.000]  in case of plurals then.
+[22:48.000 --> 22:50.000]  Or like,
+[22:50.000 --> 22:52.000]  is it even important for grammar?
+[22:52.000 --> 22:54.000]  Yeah, it is, but I don't know now.
+[22:54.000 --> 22:56.000]  Ok.
+[22:56.000 --> 23:00.000]  Męskoosobowy
+[23:00.000 --> 23:02.000]  niemęskoosobowy.
+[23:02.000 --> 23:04.000]  Niemęskoosobowy.
+[23:04.000 --> 23:06.000]  Niemęskoosobowy.
+[23:06.000 --> 23:08.000]  Ok, czyli męskoosobowy
+[23:08.000 --> 23:10.000]  wiemy, że to jest,
+[23:10.000 --> 23:12.000]  to są mężczyźni, tak?
+[23:12.000 --> 23:14.000]  Mhm.
+[23:14.000 --> 23:16.000]  We have an example?
+[23:16.000 --> 23:18.000]  Nauczyciela.
+[23:18.000 --> 23:20.000]  Kolega, kolegami.
+[23:20.000 --> 23:22.000]  Koledzy.
+[23:22.000 --> 23:24.000]  Koledzy, sorry.
+[23:24.000 --> 23:26.000]  Co tam jeszcze mieliśmy ostatnio?
+[23:26.000 --> 23:28.000]  Nie wiem.
+[23:28.000 --> 23:30.000]  Jeden brat.
+[23:30.000 --> 23:32.000]  Bracia.
+[23:32.000 --> 23:34.000]  Dziadek, do you know dziadek?
+[23:34.000 --> 23:36.000]  Grandfather, tak?
+[23:36.000 --> 23:38.000]  Tak, dziadkowie.
+[23:38.000 --> 23:40.000]  So this is like human beings.
+[23:40.000 --> 23:42.000]  Male.
+[23:42.000 --> 23:44.000]  And here everything else.
+[23:44.000 --> 23:46.000]  So that will be
+[23:46.000 --> 23:48.000]  woman.
+[23:48.000 --> 23:50.000]  And that will be
+[23:50.000 --> 23:52.000]  kids.
+[23:52.000 --> 23:54.000]  And, I don't know,
+[23:54.000 --> 23:56.000]  animals.
+[23:56.000 --> 23:58.000]  And plants.
+[23:58.000 --> 24:00.000]  Everything.
+[24:00.000 --> 24:02.000]  Also clothing.
+[24:02.000 --> 24:04.000]  Everything that is not human being.
+[24:04.000 --> 24:06.000]  Male.
+[24:12.000 --> 24:14.000]  Możesz coś powiedzieć?
+[24:14.000 --> 24:16.000]  No, let's move on.
+[24:16.000 --> 24:18.000]  Ok, idziemy dalej.
+[24:18.000 --> 24:20.000]  Pyjama.
+[24:20.000 --> 24:22.000]  Pyjama can be a set.
+[24:22.000 --> 24:24.000]  Służy w jednym, w jednym.
+[24:24.000 --> 24:26.000]  Służy w eski.
+[24:26.000 --> 24:28.000]  Kośula.
+[24:28.000 --> 24:30.000]  Kośula.
+[24:30.000 --> 24:32.000]  Kośula, żeńska.
+[24:32.000 --> 24:34.000]  Dobra, koszula, żeński.
+[24:34.000 --> 24:36.000]  Kośula.
+[24:36.000 --> 24:38.000]  Żeński.
+[24:38.000 --> 24:40.000]  What's the difference?
+[24:40.000 --> 24:42.000]  Like we can see the difference, but the name is pretty similar.
+[24:42.000 --> 24:44.000]  Kośula is like a shirt?
+[24:44.000 --> 24:46.000]  Tak.
+[24:46.000 --> 24:48.000]  Usually with buttons, but you are wearing a shirt.
+[24:48.000 --> 24:50.000]  Kośula.
+[24:50.000 --> 24:52.000]  More like a t-shirt, yes.
+[24:52.000 --> 24:54.000]  Mhm.
+[24:54.000 --> 24:56.000]  Płaszcz.
+[24:56.000 --> 24:58.000]  Płaszcz.
+[24:58.000 --> 25:00.000]  Płaszcz.
+[25:00.000 --> 25:02.000]  Jak to jest? Kot?
+[25:02.000 --> 25:04.000]  Jak kot. Kot in general.
+[25:04.000 --> 25:06.000]  Płaszcz. Mhm.
+[25:06.000 --> 25:08.000]  Męski. Męski.
+[25:12.000 --> 25:14.000]  Marynarka.
+[25:16.000 --> 25:18.000]  Żeńska. Żeński. Mhm.
+[25:18.000 --> 25:20.000]  Dobra.
+[25:20.000 --> 25:22.000]  A jeśli mamy marynarka
+[25:22.000 --> 25:24.000]  i spodnie,
+[25:24.000 --> 25:26.000]  both. Mhm.
+[25:26.000 --> 25:28.000]  That is?
+[25:28.000 --> 25:30.000]  Garnitur.
+[25:30.000 --> 25:32.000]  Garnitur.
+[25:32.000 --> 25:34.000]  What is garnitur?
+[25:34.000 --> 25:36.000]  Three piece suit like kind of?
+[25:36.000 --> 25:38.000]  I don't know if
+[25:38.000 --> 25:40.000]  necessarily three piece, but yeah.
+[25:40.000 --> 25:42.000]  Mhm.
+[25:42.000 --> 25:44.000]  Marynarka i spodnie garnitur.
+[25:44.000 --> 25:46.000]  Czyli wiemy, że spodnie liczba
+[25:46.000 --> 25:48.000]  mnoga. Marynarka
+[25:48.000 --> 25:50.000]  rodzaj żeński, a garnitur
+[25:50.000 --> 25:52.000]  rodzaj męski. Męski.
+[25:52.000 --> 25:54.000]  Dobra. Dobra.
+[25:54.000 --> 25:56.000]  Sweter, sweter jest
+[25:56.000 --> 25:58.000]  męski.
+[25:58.000 --> 26:00.000]  Sweter.
+[26:00.000 --> 26:02.000]  A ja jeźdzę. Mhm.
+[26:04.000 --> 26:06.000]  Hmm.
+[26:06.000 --> 26:08.000]  Czyli że
+[26:08.000 --> 26:10.000]  liczba mnoga.
+[26:10.000 --> 26:12.000]  Mhm. Because it's...
+[26:12.000 --> 26:14.000]  I don't know.
+[26:14.000 --> 26:16.000]  Ok. No, never mind.
+[26:18.000 --> 26:20.000]  Spodnica.
+[26:20.000 --> 26:22.000]  Spodnica. Żeński.
+[26:22.000 --> 26:24.000]  Mhm.
+[26:24.000 --> 26:26.000]  Ale ja jeźdzę.
+[26:26.000 --> 26:28.000]  Mhm.
+[26:28.000 --> 26:30.000]  Wait.
+[26:30.000 --> 26:32.000]  Mhm.
+[26:32.000 --> 26:34.000]  Mhm.
+[26:34.000 --> 26:36.000]  Mhm.
+[26:36.000 --> 26:38.000]  Mhm.
+[26:38.000 --> 26:40.000]  Mhm.
+[26:40.000 --> 26:42.000]  Mhm.
+[26:42.000 --> 26:44.000]  Mhm.
+[26:44.000 --> 26:46.000]  Mhm.
+[26:46.000 --> 26:48.000]  Mhm.
+[26:48.000 --> 26:50.000]  Mhm.
+[26:50.000 --> 26:52.000]  Mhm.
+[26:52.000 --> 26:54.000]  Mhm. Mhm.
+[26:54.000 --> 26:56.000]  Mhm.
+[26:56.000 --> 26:58.000]  Mhm.
+[26:58.000 --> 27:00.160]  Mhm.
+[27:00.160 --> 27:02.000]  Mhm.
+[27:02.000 --> 27:04.000]  Mhm.
+[27:04.000 --> 27:06.000]  Mhm.
+[27:06.000 --> 27:08.000]  Okulary.
+[27:08.000 --> 27:10.000]  Zwykła i.
+[27:10.000 --> 27:12.000]  Tak.
+[27:12.000 --> 27:14.000]  Liczba mnoga. Okulary zwykła i.
+[27:16.000 --> 27:18.000]  Co to będzie?
+[27:20.000 --> 27:22.000]  Mhm. ,,Cańkle zespat".
+[27:22.000 --> 27:24.500]  Przeciw słoneczne.
+[27:24.500 --> 27:27.640]  Tak, w tym słowie mamy przeciwsłoneczne, które to znaczy...
+[27:27.640 --> 27:29.640]  ...protekcja od słońca.
+[27:29.640 --> 27:32.300]  Przeciw to znaczy protekcja.
+[27:46.220 --> 27:50.060]  Czy to torba? Torba jest inna od torebki?
+[27:50.060 --> 27:50.820]  Tak.
+[27:50.820 --> 27:53.760]  Torebka to jest głównie...
+[27:53.760 --> 27:56.760]  ...czoś dla kobiet.
+[27:56.760 --> 27:59.960]  Ale torba może być w ogóle jak bag.
+[27:59.960 --> 28:01.960]  Jak i bag na podróż.
+[28:01.960 --> 28:02.960]  Ok.
+[28:02.960 --> 28:07.160]  Ale torebka, szczególnie w tej formie...
+[28:07.160 --> 28:10.160]  ...to jest dla kobiet.
+[28:10.160 --> 28:14.660]  Więc torebka i torba są podobne, ale trochę inaczej.
+[28:14.660 --> 28:16.660]  Szpilki.
+[28:16.660 --> 28:17.660]  Szpilki.
+[28:17.660 --> 28:19.660]  Lidzka milona.
+[28:19.660 --> 28:20.660]  Tak, tak.
+[28:20.660 --> 28:21.660]  Tak, tak.
+[28:21.660 --> 28:23.660]  No dobrze, daliśmy radę. Ok.
+[28:23.660 --> 28:25.660]  No i teraz tak.
+[28:25.660 --> 28:29.660]  Czy masz zainteresowanie, jeśli zrobię krótkie zdjęcie?
+[28:29.660 --> 28:30.660]  Tak.
+[28:30.660 --> 28:31.660]  Kupiłam...
+[28:31.660 --> 28:33.660]  ...do 4 godziny dzisiaj, więc...
+[28:33.660 --> 28:35.660]  ...niezrozumiałam.
+[28:35.660 --> 28:37.660]  Proszę, użyj to.
+[28:37.660 --> 28:39.660]  Niezrozumiałam.
+[28:48.660 --> 28:49.660]  Ok.
+[28:49.660 --> 28:50.660]  Dziękuję.
+[28:50.660 --> 28:51.660]  Dziękuję.
+[28:51.660 --> 28:52.660]  Dziękuję.
+[29:10.660 --> 29:11.660]  No dobra.
+[29:11.660 --> 29:13.660]  I teraz tak.
+[29:13.660 --> 29:16.660]  Skoro wiemy, jaki mamy rodzaj...
+[29:18.660 --> 29:19.660]  ...to teraz...
+[29:19.660 --> 29:26.660]  Dobrze by było, żebyśmy wiedzieli, jak to można opisać.
+[29:26.660 --> 29:52.660]  Rodzaj męski. Jakie ma końcówki w wymianowniku?
+[29:52.660 --> 29:55.660]  Mi się chodzi o przymiotnik.
+[29:55.660 --> 29:56.660]  Tak.
+[29:56.660 --> 30:05.660]  I jak będzie czarny?
+[30:05.660 --> 30:07.660]  Czarny co?
+[30:07.660 --> 30:09.660]  Kawek.
+[30:09.660 --> 30:11.660]  No czarny jest.
+[30:11.660 --> 30:14.660]  Pasek.
+[30:14.660 --> 30:16.660]  Pasek, belt.
+[30:16.660 --> 30:21.660]  Jak będzie czarny pasek, czyli mamy taką końcówkę.
+[30:21.660 --> 30:25.660]  Jeśli chodzi o rodzaj żeński,
+[30:25.660 --> 30:28.660]  jaka jest końcówka przymiotnika?
+[30:28.660 --> 30:30.660]  Tak.
+[30:30.660 --> 30:35.660]  Na przykład niech będzie...
+[30:35.660 --> 30:37.660]  Zielona sukienka.
+[30:37.660 --> 30:40.660]  Super.
+[30:40.660 --> 30:48.660]  Zielona sukienka.
+[30:48.660 --> 30:52.660]  Jeśli chodzi o liczbę logon,
+[30:52.660 --> 30:56.660]  to mamy na przykład co?
+[30:56.660 --> 30:59.660]  Niech będą...
+[30:59.660 --> 31:02.660]  Brązowe buty.
+[31:02.660 --> 31:04.660]  Ok.
+[31:04.660 --> 31:09.660]  Brązowe buty.
+[31:09.660 --> 31:11.660]  Jak możemy o to zapytać?
+[31:11.660 --> 31:17.660]  How we can ask?
+[31:17.660 --> 31:20.660]  We can ask.
+[31:20.660 --> 31:24.660]  Jaki? Jaki jest pasek?
+[31:24.660 --> 31:26.660]  Pasek jest czarny.
+[31:26.660 --> 31:29.660]  Jaka? Jaka jest sukienka?
+[31:29.660 --> 31:31.660]  Sukienka jest zielona.
+[31:31.660 --> 31:32.660]  Jaki?
+[31:32.660 --> 31:33.660]  Jaki.
+[31:33.660 --> 31:34.660]  Super.
+[31:34.660 --> 31:38.660]  Jakie są buty? Buty są brązowe.
+[31:38.660 --> 31:40.660]  To wiemy.
+[31:40.660 --> 31:48.660]  Why was the brązowe there for boots?
+[31:48.660 --> 31:52.660]  I what is the brązowe?
+[31:52.660 --> 31:54.660]  Bo to jest mianownik.
+[31:54.660 --> 31:57.660]  Because it's least magnum.
+[31:57.660 --> 32:00.660]  Is that what you do? You put it in neutral?
+[32:00.660 --> 32:02.660]  Yeah.
+[32:02.660 --> 32:03.660]  I don't know...
+[32:03.660 --> 32:05.660]  Yeah, but this is...
+[32:05.660 --> 32:08.660]  To jest mianownik.
+[32:08.660 --> 32:11.660]  For beginning. That is mianownik.
+[32:11.660 --> 32:13.660]  Mianownik like the noun?
+[32:13.660 --> 32:15.660]  Like the first case.
+[32:15.660 --> 32:18.660]  Problem of that is the mianownik.
+[32:18.660 --> 32:23.660]  Mianownik.
+[32:23.660 --> 32:27.660]  Mianownik możemy zapytać.
+[32:27.660 --> 32:32.660]  Co to jest?
+[32:32.660 --> 32:35.660]  To jest pasek.
+[32:35.660 --> 32:37.660]  Jaki? Czarny.
+[32:37.660 --> 32:41.660]  Zawsze będzie końcówka "-y".
+[32:41.660 --> 32:42.660]  Co to jest?
+[32:42.660 --> 32:44.660]  To jest sukienka.
+[32:44.660 --> 32:47.660]  Jaka?
+[32:47.660 --> 32:49.660]  Zielona.
+[32:49.660 --> 32:52.660]  A jak możemy zapytać o jedną nogą?
+[32:55.660 --> 32:57.660]  Co to są?
+[32:57.660 --> 33:00.660]  To są buty.
+[33:00.660 --> 33:02.660]  Jakie?
+[33:02.660 --> 33:05.660]  Ok? Zaraz to jest mianownik.
+[33:05.660 --> 33:07.660]  Jak to?
+[33:07.660 --> 33:08.660]  Ja ja...
+[33:08.660 --> 33:10.660]  So...
+[33:10.660 --> 33:12.660]  Isn't...
+[33:12.660 --> 33:14.660]  As per plural...
+[33:14.660 --> 33:16.660]  Plural rules for...
+[33:16.660 --> 33:18.660]  Mianownik.
+[33:18.660 --> 33:19.660]  For neutral.
+[33:19.660 --> 33:22.660]  Shouldn't they change the same way as męski?
+[33:22.660 --> 33:25.660]  Or am I wrong?
+[33:25.660 --> 33:28.660]  Like shouldn't it be bramso y buty?
+[33:28.660 --> 33:31.660]  Because I think...
+[33:31.660 --> 33:36.660]  Neutral changes the same way as męski, tak?
+[33:36.660 --> 33:38.660]  Buty?
+[33:38.660 --> 33:40.660]  Like nowy sześć swa.
+[33:40.660 --> 33:41.660]  I don't know.
+[33:41.660 --> 33:44.660]  Like in my notes I have like the neutral changes to e.
+[33:44.660 --> 33:46.660]  Like adjective gets e all...
+[33:46.660 --> 33:47.660]  Ok, wait.
+[33:47.660 --> 33:48.660]  Adjective did get e.
+[33:48.660 --> 33:49.660]  Do pełniac?
+[33:49.660 --> 33:50.660]  Whatever.
+[33:50.660 --> 33:52.660]  No, we are... mianownik.
+[33:52.660 --> 33:54.660]  So this is no longer do pełniac.
+[33:54.660 --> 33:55.660]  No, no, no.
+[33:55.660 --> 33:56.660]  No, no, no.
+[33:56.660 --> 33:58.660]  That's just mianownik.
+[33:58.660 --> 33:59.660]  No, no, it's ok.
+[33:59.660 --> 34:03.660]  But the noun is do pełniac.
+[34:03.660 --> 34:06.660]  Like the buty and sukienka.
+[34:06.660 --> 34:08.660]  No, no, no.
+[34:08.660 --> 34:09.660]  No, no, no.
+[34:09.660 --> 34:10.660]  No, no, no.
+[34:10.660 --> 34:11.660]  We need to do it do pełniac.
+[34:11.660 --> 34:12.660]  Do pełniac będzie potem.
+[34:12.660 --> 34:13.660]  Za chwilę.
+[34:14.660 --> 34:15.660]  Za chwilę.
+[34:15.660 --> 34:16.660]  Ok.
+[34:16.660 --> 34:17.660]  No dobrze.
+[34:17.660 --> 34:18.660]  Jaki jest ten szalik?
+[34:18.660 --> 34:19.660]  Czerwony.
+[34:19.660 --> 34:20.660]  Ten szalik jest czerwony.
+[34:20.660 --> 34:21.660]  Dobra.
+[34:21.660 --> 34:22.660]  A jaki jest ten plecak?
+[34:22.660 --> 34:23.660]  Czarny.
+[34:23.660 --> 34:24.660]  Czarny.
+[34:24.660 --> 34:25.660]  Dobra.
+[34:25.660 --> 34:26.660]  A jaka jest ta koszula?
+[34:26.660 --> 34:27.660]  Niebieska.
+[34:27.660 --> 34:28.660]  Niebieska.
+[34:28.660 --> 34:29.660]  A ta sukienka?
+[34:29.660 --> 34:30.660]  Czerwona.
+[34:30.660 --> 34:31.660]  Czerwona.
+[34:31.660 --> 34:32.660]  Ok.
+[34:32.660 --> 34:33.660]  I to jest czerwona.
+[34:33.660 --> 34:34.660]  Tak.
+[34:34.660 --> 34:35.660]  I to jest czerwona.
+[34:35.660 --> 34:36.660]  Tak.
+[34:36.660 --> 34:37.660]  Tak.
+[34:37.660 --> 34:38.660]  Tak.
+[34:38.660 --> 34:39.660]  Tak.
+[34:39.660 --> 34:40.660]  Tak.
+[34:40.660 --> 34:41.660]  Tak.
+[34:41.660 --> 34:42.660]  Tak.
+[34:42.660 --> 34:43.660]  Tak.
+[34:43.660 --> 34:44.660]  Tak.
+[34:44.660 --> 34:45.700]  A ta bluzka?
+[34:45.700 --> 34:46.700]  Różowa.
+[34:46.700 --> 34:47.700]  A ta bluza?
+[34:47.700 --> 34:48.700]  Pomarańczowa.
+[34:48.700 --> 34:49.700]  A ta kurtka?
+[34:49.700 --> 34:50.700]  Biała.
+[34:50.700 --> 34:51.700]  Biała.
+[34:51.700 --> 34:54.700]  A jakie są te tramki?
+[34:54.700 --> 34:55.700]  One czarne.
+[34:55.700 --> 34:56.700]  Czarne.
+[34:56.700 --> 34:57.700]  A te spodenki?
+[34:57.700 --> 34:58.700]  Niebieskie.
+[34:58.700 --> 34:59.700]  A te sandały?
+[34:59.700 --> 35:00.700]  Niebieskie.
+[35:00.700 --> 35:01.700]  Niebieskie.
+[35:01.700 --> 35:02.700]  Niebieskie.
+[35:02.700 --> 35:03.700]  Niebieskie.
+[35:03.700 --> 35:04.700]  Niebieskie.
+[35:04.700 --> 35:05.700]  Mówię.
+[35:05.700 --> 35:06.700]  Niebieskie.
+[35:06.700 --> 35:07.700]  To to jest czerwone.
+[35:07.700 --> 35:08.700]  I to to jest czerwone?
+[35:08.700 --> 35:09.700]  Tak.
+[35:09.700 --> 35:10.700]  I to to jest czerwone.
+[35:10.700 --> 35:11.700]  Niebieskie.
+[35:11.700 --> 35:12.700]  Niebieskie.
+[35:12.700 --> 35:13.700]  Jakie z tej tradycji?
+[35:13.700 --> 35:15.700]  A te sandały?
+[35:18.600 --> 35:20.600]  Czerne?
+[35:20.600 --> 35:22.600]  Tak.
+[35:22.600 --> 35:24.600]  Tak.
+[35:24.600 --> 35:26.600]  Tak.
+[35:26.600 --> 35:28.600]  Tak.
+[35:28.600 --> 35:30.600]  Tak.
+[35:30.600 --> 35:32.600]  Tak.
+[35:32.600 --> 35:34.600]  Tak.
+[35:34.600 --> 35:36.600]  Tak.
+[35:36.600 --> 35:38.600]  Tak.
+[35:38.600 --> 35:40.600]  Tak.
+[35:40.600 --> 35:42.600]  Tak.
+[36:12.600 --> 36:14.600]  Tak.
+[36:19.600 --> 36:21.600]  Tak, więc tu wszystko jest w języku męskim.
+[36:27.600 --> 36:29.600]  Tak.
+[36:29.600 --> 36:31.600]  Wtedy mamy I i N.
+[36:31.600 --> 36:33.600]  Tak.
+[36:33.600 --> 36:35.600]  Kiedy zmieniasz się na język męski, włączasz A.
+[36:35.600 --> 36:37.600]  Wszystko jest w języku męskim.
+[36:37.600 --> 36:39.600]  Tak.
+[36:39.600 --> 36:41.600]  Dlaczego mamy E?
+[36:41.600 --> 36:45.600]  Before E you have K, not Y.
+[36:45.600 --> 36:49.600]  But when you will have G, for example, you will also have K.
+[36:49.600 --> 36:52.600]  So this is the rule.
+[36:52.600 --> 36:56.600]  Apply usually after K you have E, not Y.
+[36:56.600 --> 36:59.600]  Ok.
+[36:59.600 --> 37:02.600]  Dobra, no to wiemy.
+[37:02.600 --> 37:05.600]  Ok, a ten krawat jest jaki?
+[37:05.600 --> 37:08.600]  Pask.
+[37:08.600 --> 37:11.600]  Wypaski.
+[37:11.600 --> 37:13.600]  Tak.
+[37:13.600 --> 37:15.600]  Wypaski.
+[37:15.600 --> 37:19.600]  To są paski, ale coś jest. Wypaski.
+[37:19.600 --> 37:22.600]  Dobra, a ta priżama?
+[37:22.600 --> 37:27.600]  Wykrawkę.
+[37:27.600 --> 37:29.600]  Ok.
+[37:29.600 --> 37:36.600]  Myślałam, że są kropki, ale to jest mango.
+[37:36.600 --> 37:38.600]  A wykrawkę?
+[37:38.600 --> 37:41.600]  Czy to jest forma masyjna?
+[37:41.600 --> 37:45.600]  Tutaj, wykrawka? Czy to jest forma masyjna?
+[37:45.600 --> 37:46.600]  Nie.
+[37:46.600 --> 37:52.600]  Właściwie w kratka jest żeński, bo kratka to żeński.
+[37:52.600 --> 37:56.600]  Ale to jest jedna, jedyna kratka.
+[37:56.600 --> 38:01.600]  I kropki, jedna jedyna kropka to też żeński.
+[38:01.600 --> 38:03.600]  Ale to jest kropki w plurale.
+[38:03.600 --> 38:08.600]  Więc zawsze używasz pluralu, gdy mówisz wykratka lub kropki.
+[38:08.600 --> 38:12.600]  Plural, plural, singular.
+[38:12.600 --> 38:19.600]  Bo paski mają wiele kropków, kropki mają wiele kropków, ale kratka to jedna.
+[38:19.600 --> 38:22.600]  Więc piżama to jest żeńska?
+[38:22.600 --> 38:26.600]  Piżama to jest, bo to jest, po polsku to jest singular.
+[38:26.600 --> 38:30.600]  Piżama to jest żeńska, a kropka to jest wykratka.
+[38:30.600 --> 38:31.600]  Kratka.
+[38:31.600 --> 38:32.600]  Tak.
+[38:32.600 --> 38:33.600]  Wykratka.
+[38:33.600 --> 38:36.600]  I to jest singularne?
+[38:36.600 --> 38:37.600]  Tak.
+[38:37.600 --> 38:42.600]  Ale bez względu na to, czy obiekt był mężczyzną, mężczyzną lub pluralną, to są te same?
+[38:42.600 --> 38:43.600]  Jak wykratki?
+[38:43.600 --> 38:47.600]  Jak, powiedzmy, dżinty, wykratki?
+[38:47.600 --> 38:55.600]  Jeśli uważamy to jako dotyki, wykratki, możemy powiedzieć skarpetki, które są pluralne.
+[38:55.600 --> 38:56.600]  Wykratki.
+[38:56.600 --> 38:59.600]  Wykratki, które są też pluralne, ponieważ wykratki są pluralne.
+[38:59.600 --> 39:01.600]  Bo nie ma się jednej wykratki.
+[39:01.600 --> 39:02.600]  Tak.
+[39:02.600 --> 39:04.600]  Więc te są aktywne.
+[39:04.600 --> 39:05.600]  To są kolory.
+[39:05.600 --> 39:06.600]  Tak.
+[39:06.600 --> 39:07.600]  Stradują się.
+[39:07.600 --> 39:08.600]  Tak.
+[39:08.600 --> 39:09.600]  Właśnie.
+[39:09.600 --> 39:10.600]  Dokładnie.
+[39:10.600 --> 39:11.600]  Do ówego wynika.
+[39:11.600 --> 39:12.600]  concாd copied
+[39:12.600 --> 39:13.600]  Dobra.
+[39:13.600 --> 39:14.600]  Daliśmy radę?
+[39:23.600 --> 39:24.600]  Dobrze.
+[39:25.600 --> 39:28.600]  Jeśli ma points제 reviewed nanim už maintenant ze zlikwidowanym�리 Eggsоки.
+[39:28.600 --> 39:29.600]  thru pykte
+[39:29.600 --> 39:30.600]  Come on!
+[39:31.600 --> 39:32.600]  Przeży Prince.
+[39:32.600 --> 39:33.600]  Come on!
+[39:33.600 --> 39:34.600]  I'm coming now!
+[39:34.600 --> 39:35.600]  Sometimes unknown.
+[39:35.600 --> 39:37.600]  Ja bym nie wiedziała, że to jest syfro.
+[39:42.600 --> 39:45.600]  Powiedziałaś, że to jest indywidualne, ale to jest kropka.
+[39:46.600 --> 39:47.600]  Kropka?
+[39:48.600 --> 39:50.600]  Czy to jest tak, że nie wiedzieliście o tym?
+[39:51.600 --> 39:53.600]  Czy możesz mieć jedną kropkę?
+[39:54.600 --> 39:55.600]  Potem.
+[39:56.600 --> 40:03.600]  Jeśli masz jedną kropkę na bluzce, to to będzie bluzka w pasce.
+[40:03.600 --> 40:04.600]  Pasek.
+[40:04.600 --> 40:08.600]  Bo jedna jest pasek, a druga jest paski.
+[40:08.600 --> 40:10.600]  Czy mamy coś z paskiem?
+[40:11.600 --> 40:12.600]  Mamy jedną paskę.
+[40:12.600 --> 40:14.600]  O, masz. Pasek to pasek.
+[40:14.600 --> 40:15.600]  O, naprawdę?
+[40:15.600 --> 40:16.600]  Tak.
+[40:16.600 --> 40:17.600]  To interesujące.
+[40:22.600 --> 40:23.600]  Przynajmniej to ma sens.
+[40:24.600 --> 40:25.600]  To nasz, prawda?
+[40:26.600 --> 40:27.600]  Próbuję to zrobić.
+[40:28.600 --> 40:29.600]  Rozumiem.
+[40:32.600 --> 40:33.600]  Zastanawiałem się.
+[40:33.600 --> 40:36.600]  Nie wiem, czy można powiedzieć, że są takie słowa, bo są na podstawie paska.
+[40:39.600 --> 40:41.600]  Tak, masz jedną paskę.
+[40:42.600 --> 40:47.600]  Ale jeśli masz jedną kropkę, to to będzie kropka.
+[40:48.600 --> 40:49.600]  Rozumiem.
+[40:50.600 --> 40:54.600]  Zasadniczo mój punkt jest taki, że kolory mając gender, nie mają.
+[40:55.600 --> 40:58.600]  Ale jeśli mówisz, że coś jest, to nie ma.
+[40:59.600 --> 41:00.600]  Więc to różnica.
+[41:00.600 --> 41:01.600]  Dokładnie.
+[41:02.600 --> 41:06.600]  Podajmy tu dwa kolory i wyczulemy je.
+[41:06.600 --> 41:19.280]  Więc tutaj taki kolor
+[41:19.280 --> 41:21.600]  trzyma się z...
+[41:21.600 --> 41:22.620]  Nliau.
+[41:22.620 --> 41:23.620]  Tak.
+[41:23.620 --> 41:28.600]  Ogromnym rzeczą w Polsce jest to, że kulturarz często wyświegaβα n filoskoCome,
+[41:28.600 --> 41:29.600]  albo...
+[41:29.600 --> 41:32.600]  Kiedy używamy tego adjekta, musimy używać tego samego genderu.
+[41:32.600 --> 41:34.600]  Nie jestem pewien, czy to jest tak.
+[41:34.600 --> 41:41.600]  Dlatego te kolory się zmieniają, bo te kolory są adjektywami dla tych nazwisk, więc zawsze trzeba się zmieniać.
+[41:41.600 --> 41:51.600]  Możesz mieć czerwony szalik, czerwona sutnika, czerwone rękawiczki.
+[41:51.600 --> 41:54.600]  Masz ten sam kolor, trzy różne...
+[41:54.600 --> 41:56.600]  ...kołówki.
+[41:56.600 --> 41:58.600]  Tak, kołówki.
+[41:58.600 --> 42:01.600]  Nie, tylko trochę presji.
+[42:05.600 --> 42:07.600]  Czy powinniśmy dodać coś?
+[42:07.600 --> 42:09.600]  Czy jeszcze nie?
+[42:09.600 --> 42:11.600]  Tak, chodźmy dalej.
+[42:15.600 --> 42:19.600]  Dodajemy jakieś adjekty.
+[42:19.600 --> 42:21.600]  Nigdy nie znam adjekty, czy inne.
+[42:21.600 --> 42:22.600]  Ok, myślę, że jest adjektyw.
+[42:22.600 --> 42:23.600]  Adjektyw.
+[42:23.600 --> 42:24.600]  Prawdopodobnie.
+[42:24.600 --> 42:25.600]  Adjektyw jest...
+[42:26.600 --> 42:32.600]  Więc, tak, wielka słowa to jest ważna słowa, która opisuje nazwisko, więc nie wiem, czy to ma sens.
+[42:32.600 --> 42:35.600]  Odpowiedź jest, że opisujesz słowo.
+[42:35.600 --> 42:36.600]  Tak.
+[42:36.600 --> 42:39.600]  A adjektyw opisuje najważniejsze adjekty.
+[42:41.600 --> 42:42.600]  Dobrze.
+[42:43.600 --> 42:44.600]  Spróbujemy.
+[42:45.600 --> 42:47.600]  Zmęczonym potosowaniem.
+[42:50.600 --> 42:51.600]  Ok.
+[42:51.600 --> 42:54.600]  I teraz mamy, myślę, 12 więcej adjektyw.
+[42:54.600 --> 42:59.600]  Myślę, że niektóre są łatwe, a niektóre będą trochę trudniejsze.
+[42:59.600 --> 43:00.600]  Ale zobaczymy.
+[43:01.600 --> 43:03.600]  Dobra, to są nasze kolory.
+[43:03.600 --> 43:08.600]  Do tego będziemy wracać, więc nie będę tego składać, tylko trochę to przesuniemy.
+[43:09.600 --> 43:10.600]  I tu są...
+[43:13.600 --> 43:15.600]  Tu są nasze ubrania.
+[43:15.600 --> 43:22.600]  Gówno po musicianom, po muzykom, w hotelu, po allemie sucho to wszyscy spiderwebку.
+[43:22.600 --> 43:24.600]  Powiedzmy, dzisiaj się hey, to Badaas.
+[43:25.600 --> 43:26.600]  No, tak moodle tam!
+[43:26.600 --> 43:27.600]  Idziemy do typu.
+[43:27.600 --> 43:28.600] ìn
+[43:28.760 --> 43:29.720]  Finans gars.
+[43:29.720 --> 43:36.600]  Nie wiem, czy possa pan comenzarledge, ale pokaż dish yes slaves.
+[43:37.600 --> 43:38.600]  Amen.
+[43:38.600 --> 43:39.600]  Tak, tak, tak.
+[43:39.600 --> 43:40.600]  Ale gibi, jakby wychowсон.
+[43:40.600 --> 43:41.600]  Okej.
+[43:41.600 --> 43:42.600]  Proszę bardzo.
+[43:42.600 --> 43:43.600]  Proszę bardzo.
+[43:43.600 --> 43:51.600]  Mamy tutaj różne słowa, którymi możemy opisać ubrania.
+[44:13.600 --> 44:28.600]  Módlne, niemodlne, eleganckie, modne.
+[44:28.600 --> 44:40.600]  Sportowe, eleganckie, modne, niemodne, tanie, drogie, małe, duże, długie, krótkie, szerokie, wąskie.
+[44:40.600 --> 44:42.600]  Super, no i mamy wszystko.
+[44:42.600 --> 44:43.600]  Super.
+[44:43.600 --> 44:45.600]  Dobrze.
+[44:45.600 --> 44:48.600]  Ok, nie wiem czemu...
+[44:57.600 --> 45:02.600]  Ok, tutaj mamy końcówki, które nie są takie samo jak tutaj, ale to w porządku.
+[45:11.600 --> 45:12.600]  Dobrze.
+[45:13.600 --> 45:15.600]  Ok, to jest szpilka.
+[45:15.600 --> 45:18.600]  Czy szpilki są sportowe, czy eleganckie?
+[45:18.600 --> 45:19.600]  Eleganckie.
+[45:19.600 --> 45:20.600]  Raczej eleganckie.
+[45:20.600 --> 45:21.600]  Ok.
+[45:21.600 --> 45:22.600]  Hmm...
+[45:22.600 --> 45:23.600]  Hmm...
+[45:23.600 --> 45:24.600]  Hmm?
+[45:24.600 --> 45:25.600]  A czy...
+[45:25.600 --> 45:27.600]  No to w sumie tyle, co mam pomysłów.
+[45:27.600 --> 45:28.600]  Eee...
+[45:28.600 --> 45:31.600]  Ok, te spodnie.
+[45:31.600 --> 45:35.600]  Czy one są szerokie, czy wąskie?
+[45:35.600 --> 45:37.600]  Szerokie.
+[45:37.600 --> 45:39.600]  Raczej szerokie, dobra.
+[45:39.600 --> 45:41.600]  Ta spódnica.
+[45:41.600 --> 45:44.600]  Czy ona jest krótka, czy długa?
+[45:44.600 --> 45:45.600]  Krótko.
+[45:45.600 --> 45:47.600]  Raczej krótka.
+[45:47.600 --> 45:48.600]  Hmm...
+[45:48.600 --> 45:49.600]  Hmm...
+[45:49.600 --> 45:50.600]  What are those?
+[45:50.600 --> 45:52.600]  Krótkie, długie?
+[45:52.600 --> 45:53.600]  Yeah.
+[45:53.600 --> 45:54.600]  Long, short.
+[45:54.600 --> 45:55.600]  Ok.
+[45:55.600 --> 45:56.600]  Tak samo spodenki.
+[45:56.600 --> 45:59.600]  Czy one są krótkie, czy długie?
+[45:59.600 --> 46:00.600]  Krótkie.
+[46:00.600 --> 46:01.600]  Krótkie.
+[46:01.600 --> 46:02.600]  Mhm.
+[46:02.600 --> 46:03.600]  Krótkie.
+[46:03.600 --> 46:04.600]  Hmm...
+[46:04.600 --> 46:05.600]  Dobra.
+[46:05.600 --> 46:06.600]  How to describe it?
+[46:06.600 --> 46:07.600]  How to describe it?
+[46:07.600 --> 46:08.600]  How to describe it?
+[46:08.600 --> 46:09.600]  How to describe it?
+[46:09.600 --> 46:11.600]  How to describe it?
+[46:11.600 --> 46:12.600]  How to describe it?
+[46:12.600 --> 46:13.600]  I gotta be honest.
+[46:13.600 --> 46:14.600]  I gotta be honest.
+[46:14.600 --> 46:15.600]  Okay, but do we understand all of the words?
+[46:15.600 --> 46:16.600]  Okay, but do we understand all of the words?
+[46:16.600 --> 46:17.600]  Yeah.
+[46:17.600 --> 46:18.600]  Tanie, drogie.
+[46:18.600 --> 46:19.600]  Rozumiemy.
+[46:19.600 --> 46:20.600]  Yeah.
+[46:20.600 --> 46:21.600]  Tanie, drogie.
+[46:21.600 --> 46:22.600]  Rozumiemy.
+[46:22.600 --> 46:23.600]  Maybe expensive.
+[46:23.600 --> 46:24.600]  Maybe expensive.
+[46:24.600 --> 46:25.600]  Maybe expensive.
+[46:25.600 --> 46:26.600]  Małe, duże.
+[46:26.600 --> 46:27.600]  Yeah.
+[46:27.600 --> 46:28.600]  Small and big, let's say.
+[46:28.600 --> 46:29.600]  Modne, niemodne.
+[46:29.600 --> 46:30.600]  Fashionable, unfashionable.
+[46:30.600 --> 46:31.600]  Exactly.
+[46:31.600 --> 46:32.600]  That's all, I think.
+[46:32.600 --> 46:33.600]  No dobra.
+[46:33.600 --> 46:34.600]  One skier za tak.
+[46:34.600 --> 46:35.600]  Tak.
+[46:35.600 --> 46:36.600]  One skier za tak.
+[46:36.600 --> 46:37.600]  Tak.
+[46:37.600 --> 46:38.600]  Tak.
+[46:38.600 --> 46:39.600]  Plus.
+[46:39.600 --> 46:40.600]  I laund.
+[46:40.600 --> 46:41.600]  Plus.
+[46:41.600 --> 46:42.600]  Plus.
+[46:42.600 --> 46:43.600]  Plus.
+[46:43.600 --> 46:44.600] ca
+[46:47.600 --> 46:48.600]  Dobra, no to co?
+[46:48.600 --> 46:53.600]  Jak teraz próbujemy opisać?
+[46:53.600 --> 46:54.600]  Dobra.
+[46:54.600 --> 47:00.600]  Czy mamy tutaj to takie, tą kartkę?
+[47:00.600 --> 47:02.600]  Mamy kartkę?
+[47:02.600 --> 47:05.600]  Finally we have the test brush.
+[47:05.600 --> 47:06.600]  You have this or this.
+[47:06.600 --> 47:07.600]  Yes, you have.
+[47:07.600 --> 47:18.600]  Czyli tu mamy pierwsze, to są krótkie, szerokie schodnie.
+[47:18.600 --> 47:21.600]  Co jest na tym obrazie?
+[47:21.600 --> 47:35.600]  Niebieski krawat.
+[47:35.600 --> 47:38.600]  A tutaj?
+[47:38.600 --> 47:41.600]  Czerwony sweter.
+[47:41.600 --> 47:43.600]  Może być czerwony.
+[47:43.600 --> 47:44.600]  Czerwony?
+[47:44.600 --> 47:46.600]  Gorącowy.
+[47:46.600 --> 47:47.600]  Lub rosowy.
+[47:47.600 --> 47:49.600]  Pomarańczowy.
+[47:53.600 --> 47:55.600]  Dobra.
+[47:55.600 --> 47:56.600]  O, zielony.
+[47:56.600 --> 47:58.600]  Jak jeszcze możemy opisać ten sweter?
+[47:58.600 --> 48:01.600]  Co jest mnożeniem?
+[48:05.600 --> 48:11.600]  Czerwona składnica.
+[48:11.600 --> 48:12.600]  Nie czerwona.
+[48:12.600 --> 48:14.600]  Czerwona.
+[48:14.600 --> 48:15.600]  Czerwona.
+[48:15.600 --> 48:17.600]  Jaka jeszcze jest ta składnica?
+[48:17.600 --> 48:19.600]  Krótka.
+[48:19.600 --> 48:22.600]  Jaka jeszcze może być?
+[48:22.600 --> 48:26.600]  Czy ona jest szeroka czy wąska?
+[48:26.600 --> 48:30.600]  Szeroka.
+[48:30.600 --> 48:32.600]  Szeroka czy wąska?
+[48:32.600 --> 48:33.600]  Szeroka.
+[48:33.600 --> 48:34.600]  Szeroka.
+[48:34.600 --> 48:36.600]  Tak, raczej szeroka.
+[48:36.600 --> 48:38.600]  Krótka, dobra.
+[48:48.600 --> 48:50.600]  A co mamy tutaj, na tym środkowym?
+[48:50.600 --> 48:53.600]  Czerwona.
+[48:53.600 --> 48:58.600]  Czerwona koszulka.
+[48:58.600 --> 49:04.600]  Czy ta koszulka jest droga czy tania?
+[49:04.600 --> 49:05.600]  Tania?
+[49:05.600 --> 49:06.600]  Tania?
+[49:06.600 --> 49:07.600]  Tania.
+[49:07.600 --> 49:08.600]  Tania, mhm.
+[49:08.600 --> 49:09.600]  Mhm.
+[49:09.600 --> 49:10.600]  Dobra, a tutaj co mamy?
+[49:10.600 --> 49:14.600]  Czarne buty.
+[49:14.600 --> 49:16.600]  Czarne buty.
+[49:16.600 --> 49:19.600]  Czy to są buty sportowe czy eleganckie?
+[49:19.600 --> 49:20.600]  Eleganckie.
+[49:20.600 --> 49:21.600]  Mhm.
+[49:21.600 --> 49:23.600]  One są raczej eleganckie.
+[49:23.600 --> 49:27.600]  Czarne buty.
+[49:27.600 --> 49:28.600]  Mhm.
+[49:28.600 --> 49:30.600]  To co mamy tutaj?
+[49:30.600 --> 49:32.600]  Dobra.
+[49:32.600 --> 49:36.600]  I teraz tak.
+[49:36.600 --> 49:38.600]  Let me see here.
+[49:38.600 --> 49:39.600]  Number ten.
+[49:39.600 --> 49:42.600]  Co masz na sobie?
+[49:42.600 --> 49:44.600]  Like what are you wearing?
+[49:44.600 --> 49:46.600]  Mhm.
+[49:46.600 --> 49:47.600]  Można powiedzieć.
+[49:47.600 --> 49:49.600]  Dzisiaj mam na sobie...
+[49:49.600 --> 49:50.600]  Mhm, mhm.
+[49:50.600 --> 49:51.600]  Biernik.
+[49:51.600 --> 49:52.600]  Biernik.
+[49:52.600 --> 49:53.600]  Na przykład.
+[49:53.600 --> 49:56.600]  Ja dzisiaj mam na sobie...
+[49:56.600 --> 49:58.600]  Co mam na sobie?
+[49:58.600 --> 50:00.600]  Czarną bluzkę.
+[50:00.600 --> 50:01.600]  Tak?
+[50:01.600 --> 50:02.600]  Tak.
+[50:02.600 --> 50:03.600]  Czarną bluzkę.
+[50:03.600 --> 50:04.600]  Mhm.
+[50:04.600 --> 50:05.600]  Czarne szerokie spodnie.
+[50:05.600 --> 50:06.600]  Mhm.
+[50:06.600 --> 50:07.600]  I białe sportowe tramki.
+[50:07.600 --> 50:08.600]  Mhm.
+[50:08.600 --> 50:09.600]  Mhm.
+[50:09.600 --> 50:10.600]  Dobra.
+[50:10.600 --> 50:11.600]  No to teraz tak.
+[50:11.600 --> 50:12.600]  Przepraszam.
+[50:12.600 --> 50:13.600]  To znaczy sobie?
+[50:13.600 --> 50:14.600]  Na sobie.
+[50:14.600 --> 50:15.600]  So like it literally means...
+[50:15.600 --> 50:16.600]  On myself.
+[50:16.600 --> 50:17.600]  O, sobie jest zawsze.
+[50:17.600 --> 50:18.600]  Ok, no.
+[50:18.600 --> 50:19.600]  Mhm.
+[50:19.600 --> 50:20.600]  Tak.
+[50:20.600 --> 50:21.600]  Tak.
+[50:21.600 --> 50:22.600]  Tak.
+[50:22.600 --> 50:23.600]  Tak.
+[50:23.600 --> 50:24.600]  Tak.
+[50:24.600 --> 50:25.600]  Tak.
+[50:25.600 --> 50:26.600]  Tak.
+[50:26.600 --> 50:27.600]  Tak.
+[50:27.600 --> 50:28.600]  Tak.
+[50:28.600 --> 50:29.600]  Tak.
+[50:29.600 --> 50:30.600]  Tak.
+[50:30.600 --> 50:31.600]  Tak.
+[50:31.600 --> 50:32.600]  Tak.
+[50:32.600 --> 50:33.600]  Sobie, so of the version of...
+[50:33.600 --> 50:34.600]  Sobie, ok.
+[50:34.600 --> 50:35.600]  So mosh...
+[50:35.600 --> 50:36.600]  Sobie is one of the version of...
+[50:36.600 --> 50:37.600]  OK.
+[50:37.600 --> 50:38.600]  So...
+[50:38.600 --> 50:39.600]  What do you have on you?
+[50:39.600 --> 50:40.600]  OK.
+[50:40.600 --> 50:41.600]  Exactly.
+[50:41.600 --> 50:42.600]  Oh, OK.
+[50:42.600 --> 50:43.600]  Like on you.
+[50:43.600 --> 50:44.600]  Mhm.
+[50:44.600 --> 50:45.600]  That is how you ask like what are you wearing?
+[50:45.600 --> 50:46.600]  Like what do you have on?
+[50:46.600 --> 50:47.600]  Tak.
+[50:47.600 --> 50:48.600]  Można powiedzieć...
+[50:48.600 --> 50:49.600]  Mhm.
+[50:49.600 --> 50:50.600]  Co mam na sobie?
+[50:50.600 --> 50:52.600]  Albo możemy złożyć tutaj co noszę.
+[50:52.600 --> 50:56.600]  Like, literally what I need, like what I need na sobie, albo...
+[50:56.600 --> 50:59.600]  Jak trying to speak, like...
+[50:59.600 --> 51:00.600]  I can do it.
+[51:00.600 --> 51:02.600]  To jest po prostu to, co ja weźmę.
+[51:02.600 --> 51:04.600]  Pięknie.
+[51:04.600 --> 51:08.600]  Noszę jest...
+[51:08.600 --> 51:10.600]  Czasownik?
+[51:10.600 --> 51:12.600]  Tak, nosić.
+[51:12.600 --> 51:14.600]  Ja noszę coś.
+[51:18.600 --> 51:20.600]  No dobra, to zobaczmy to dziesiąte.
+[51:20.600 --> 51:27.600]  Proszę, żeby Państwo napisali, co mają na sobie teraz.
+[51:27.600 --> 51:30.600]  Co teraz weźmiesz?
+[51:30.600 --> 51:34.600]  Czyli dzisiaj mam na sobie...
+[51:34.600 --> 51:36.600]  Mamy kolory.
+[51:36.600 --> 51:39.600]  Mamy inne słowa do opisywania.
+[51:39.600 --> 51:41.600]  Mamy różne ubrania.
+[51:41.600 --> 51:45.600]  Mamy też wzory, paski, kropki.
+[51:57.600 --> 52:00.600]  Ś congregation.
+[52:00.600 --> 52:02.600]  Możeısı dla nich.
+[52:02.600 --> 52:04.600]  Muszę poruszyć swoja uczortionke.
+[52:04.600 --> 52:07.600]  Może Christine.
+[52:07.600 --> 52:11.600]  Moję uczortionkę queste zenia zbieg Sister Charlesa.
+[52:11.600 --> 52:14.600]  Mars ribet.
+[52:14.600 --> 52:19.600] ester childines halobyrespon.
+[52:19.600 --> 52:23.600]  Deszty gj inlet .
+[52:23.600 --> 52:25.600]  Estes taj hetotytt.
+[52:25.600 --> 52:26.600]  To jest dziesiąty kommervaluation.
+[52:26.600 --> 52:27.600]  Te Sho lá tygnest ten.
+[52:27.600 --> 52:57.580]  Dzień dobry.
+[52:57.600 --> 53:27.580]  Dzień dobry.
+[53:27.600 --> 53:57.580]  Dzień dobry.
+[53:57.600 --> 54:27.580]  Dzień dobry.
+[54:27.600 --> 54:57.580]  Dzień dobry.
+[54:57.600 --> 55:27.580]  Dzień dobry.
+[55:27.600 --> 55:29.280]  Dzień dobry.
+[55:29.280 --> 55:32.780]  Dzień dobry.
+[55:32.780 --> 55:34.900]  Dzień dobry.
+[55:35.000 --> 55:37.360]  Dzień dobry.
+[55:42.940 --> 55:43.980]  Dzień dobry.
+[55:43.980 --> 55:44.480]  Dzień dobry.
+[55:44.480 --> 55:44.600]  Dzień dobry.
+[55:46.300 --> 55:55.880]  Dzień dobry.
+[55:57.600 --> 56:02.600]  Ciemno.
+[56:02.600 --> 56:17.600]  Pat. To jest jedno słowo. Na przykład ciemno... co? Ciemno... niebieski. Nie wiem. Ciemno-niebieski sweter.
+[56:17.600 --> 56:32.600]  Ciemno-niebieska koszula. Na przykład jasno... jasno-zielony. Na przykład jasno-zielony... co? Coś tam.
+[56:32.600 --> 56:36.600]  Albo jasno-zielona. To jest jedno słowo.
+[56:47.600 --> 57:07.600]  Jak związać się z pluralem, gdy używamy słowa?
+[57:07.600 --> 57:09.600]  Mhm.
+[57:09.600 --> 57:13.600]  O, to był absolutny przykład.
+[57:13.600 --> 57:15.600]  O, był absolutny przykład, więc... ok.
+[57:15.600 --> 57:16.600]  Co to było?
+[57:16.600 --> 57:17.600]  Co to było?
+[57:17.600 --> 57:20.600]  Niebieskie buty.
+[57:20.600 --> 57:21.600]  Tak.
+[57:21.600 --> 57:23.600]  Wszystko jeszcze jest w bierniku.
+[57:23.600 --> 57:27.600]  Ta tylko nie jest w bierniku, prawda? Czy to prawda?
+[57:30.600 --> 57:33.600]  Niebieskie buty to też jest biernik.
+[57:33.600 --> 57:35.600]  To jest?
+[57:35.600 --> 57:36.600]  Mhm.
+[57:36.600 --> 57:41.600]  Wszystko tu jest w bierniku. Białą bluzkę. Kogo? Co? Białą bluzkę.
+[57:41.600 --> 57:43.600]  Szarą spódnicę. Niebieskie buty.
+[57:43.600 --> 57:44.600]  Mhm.
+[57:44.600 --> 57:46.600]  Ponieważ mianownik i biernik...
+[57:46.600 --> 57:59.600]  I biernik w rodzaju męskim, w rodzaju nijakim i czasami w liczbie mnogiej jest taki sam.
+[57:59.600 --> 58:01.600]  Taki sam?
+[58:01.600 --> 58:02.600]  Mhm.
+[58:02.600 --> 58:09.600]  I to rodzaj buty to rodzaj męski?
+[58:09.600 --> 58:10.600]  Mhm.
+[58:10.600 --> 58:11.600]  Jeden but.
+[58:11.600 --> 58:12.600]  But.
+[58:12.600 --> 58:13.600]  Mhm.
+[58:13.600 --> 58:15.600]  Rodzaj męski, tak. Buty.
+[58:15.600 --> 58:22.600]  Buty. Czyli mianownik co? Buty. Biernik co? Buty. Tak samo.
+[58:22.600 --> 58:26.600]  Mhm. Buty. Buty.
+[58:26.600 --> 58:28.600]  Buty.
+[58:28.600 --> 58:31.600]  And...
+[58:31.600 --> 58:32.600]  I have a...
+[58:32.600 --> 58:33.600]  I have a...
+[58:33.600 --> 58:34.600]  Ja mam żałski.
+[58:34.600 --> 58:35.600]  Mhm.
+[58:35.600 --> 58:36.600]  So...
+[58:36.600 --> 58:38.600]  Co może być?
+[58:38.600 --> 58:39.600]  Koszulka.
+[58:39.600 --> 58:41.600]  Koszulka. Mhm.
+[58:41.600 --> 58:42.600]  Parwa.
+[58:42.600 --> 58:44.600]  Koszulkę. Biernik.
+[58:45.600 --> 58:46.600]  Koszulka.
+[58:46.600 --> 58:48.600]  Co? Koszulka. Mhm.
+[58:48.600 --> 58:49.600]  Mhm.
+[58:49.600 --> 58:54.600]  So it's only for male and nijaki.
+[58:54.600 --> 58:55.600]  I plural.
+[58:55.600 --> 58:56.600]  That it's the same.
+[58:56.600 --> 58:57.600]  I plural.
+[58:57.600 --> 58:58.600]  It's actually the same.
+[58:58.600 --> 58:59.600]  Tak.
+[58:59.600 --> 59:02.600]  That the plural is the same.
+[59:02.600 --> 59:03.600]  Mhm.
+[59:03.600 --> 59:04.600]  As the...
+[59:04.600 --> 59:05.600]  Mhm.
+[59:05.600 --> 59:06.600]  So we need to change...
+[59:06.600 --> 59:07.600]  Żeński.
+[59:07.600 --> 59:09.600]  Biernik i żeński.
+[59:09.600 --> 59:11.600]  Biernik i żeński.
+[59:11.600 --> 59:13.600]  We need to also...
+[59:13.600 --> 59:14.600]  Pocielka.
+[59:14.600 --> 59:15.600]  Pocielka.
+[59:15.600 --> 59:16.600]  Pocielka.
+[59:16.600 --> 59:17.600]  Mhm.
+[59:17.600 --> 59:20.600]  Technically I would say that this is blusa.
+[59:20.600 --> 59:21.600]  Blusa.
+[59:21.600 --> 59:24.600]  Because blusa can be with hoodie or without.
+[59:24.600 --> 59:25.600]  Mhm.
+[59:25.600 --> 59:26.600]  I would say it's more...
+[59:26.600 --> 59:27.600]  Like what are you wearing is more blusa.
+[59:27.600 --> 59:28.600]  Mhm.
+[59:28.600 --> 59:29.600]  No to co?
+[59:29.600 --> 59:30.600]  Próbujemy.
+[59:30.600 --> 59:31.600]  Mhm.
+[59:31.600 --> 59:32.600]  Proszę.
+[59:32.600 --> 59:33.600]  Dziś nie mam na sobie nic do wymyślać.
+[59:33.600 --> 59:34.600]  Nie.
+[59:34.600 --> 59:35.600]  Nie.
+[59:35.600 --> 59:36.600]  Nie.
+[59:36.600 --> 59:37.600]  Nie.
+[59:37.600 --> 59:38.600]  Nie.
+[59:38.600 --> 59:39.600]  Nie.
+[59:39.600 --> 59:40.600]  Nie.
+[59:40.600 --> 59:41.600]  Nie.
+[59:41.600 --> 59:42.600]  Nie.
+[59:42.600 --> 59:43.600]  Nie.
+[59:43.600 --> 59:44.600]  Nie.
+[59:44.600 --> 59:45.600]  Nie.
+[59:45.600 --> 59:46.600]  Nie.
+[59:46.600 --> 59:47.600]  Nie.
+[59:47.600 --> 59:48.600]  Mamy, mamy na sobie mało białą koszulkę i czarno-czarne szerokie skodynki.
+[59:48.600 --> 59:49.600]  Dobra.
+[59:49.600 --> 59:50.600]  I sportowe czarne buty.
+[59:50.600 --> 59:51.600]  Super.
+[59:51.600 --> 59:52.600]  Ok, dobrze.
+[59:52.600 --> 59:53.600]  Wszystko dobrze.
+[59:53.600 --> 59:54.600]  Dziękuję.
+[59:54.600 --> 59:55.600]  Dzisiaj mam na sobie czarne dużo bluzy i ja mam też blusa, ale blusa.
+[59:55.600 --> 59:56.600]  No, to dobra.
+[59:56.600 --> 59:57.600]  Dobra.
+[59:57.600 --> 59:58.600]  Tak.
+[59:58.600 --> 59:59.600]  Dobrze.
+[59:59.600 --> 01:00:00.600]  No, to dobra.
+[01:00:00.600 --> 01:00:01.600]  Dobra.
+[01:00:01.600 --> 01:00:02.600]  Bo to dobrze.
+[01:00:02.600 --> 01:00:03.600]  Dobra.
+[01:00:03.600 --> 01:00:04.600]  No, to dobrze.
+[01:00:04.600 --> 01:00:05.600]  No, to dobrze.
+[01:00:05.600 --> 01:00:06.600]  Rozum prestige.
+[01:00:06.600 --> 01:00:07.600]  No, to dobrze.
+[01:00:07.600 --> 01:00:08.600]  No, to dobrze.
+[01:00:08.600 --> 01:00:09.600]  No, to dobrze.
+[01:00:09.600 --> 01:00:10.600]  No, to dobrze.
+[01:00:10.600 --> 01:00:11.600]  Paniًa, czy nie ma na sobie wiatru?
+[01:00:11.600 --> 01:00:26.600]  To gruze i szerokie, spodnie i z podłej palówki.
+[01:00:26.600 --> 01:00:32.600]  Aha, okej. Żółte, sportowe. Dobra, okej.
+[01:00:32.600 --> 01:00:35.600]  Mhm, dobra. Co Pan?
+[01:00:35.600 --> 01:00:49.600]  Mam na sobie niebieską koszulę.
+[01:00:49.600 --> 01:00:53.600]  A ta koszula jest jasna czy ciemna? Ciemna.
+[01:00:53.600 --> 01:01:04.600]  Ciemno-niebieską. Ciemno-niebieską koszulę i czarne dżince i czarne buty.
+[01:01:04.600 --> 01:01:05.600]  Super.
+[01:01:05.600 --> 01:01:08.600]  Super. Dobrze. Dobrze.
+[01:01:08.600 --> 01:01:10.600]  A co Pan ma?
+[01:01:12.600 --> 01:01:14.600]  Co Pan ma na sobie?
+[01:01:14.600 --> 01:01:21.600]  Mam na sobie... co Pan napisał? Napisał Pan coś?
+[01:01:21.600 --> 01:01:24.600]  Pan napisał? No. Okej.
+[01:01:24.600 --> 01:01:26.600]  A to Pan co ma na sobie?
+[01:01:26.600 --> 01:01:30.600]  Dzisiaj mam na sobie koszulkę.
+[01:01:30.600 --> 01:01:34.600]  Mhm. Koszulką, to jest narzędnik.
+[01:01:34.600 --> 01:01:43.600]  Koszul... no. Koszuk... koszukum?
+[01:01:43.600 --> 01:01:44.600]  Koszukę.
+[01:01:44.600 --> 01:01:45.600]  Koszukę.
+[01:01:45.600 --> 01:01:46.600]  Koszukę.
+[01:01:46.600 --> 01:01:47.600]  Koszukę.
+[01:01:47.600 --> 01:01:49.600]  Koszukę żelną.
+[01:01:49.600 --> 01:01:55.600]  Spodnie... sary...
+[01:01:55.600 --> 01:01:56.600]  Spodnie sary.
+[01:01:56.600 --> 01:01:57.600]  Szary.
+[01:01:57.600 --> 01:01:59.600]  Szary, sportowe.
+[01:01:59.600 --> 01:02:00.600]  Mhm.
+[01:02:00.600 --> 01:02:02.600]  Spodnie...
+[01:02:02.600 --> 01:02:07.600]  I brązowe buty.
+[01:02:07.600 --> 01:02:08.600]  Super.
+[01:02:08.600 --> 01:02:14.600]  Okej, uwaga. Lepsza kolejność. Najpierw przymiotnik, potem rzecz.
+[01:02:14.600 --> 01:02:18.600]  Czyli szare, sportowe spodnie.
+[01:02:18.600 --> 01:02:19.600]  A.
+[01:02:19.600 --> 01:02:24.600]  Czerwone, eleganckie buty. Coś tam, coś tam ubranie.
+[01:02:24.600 --> 01:02:28.600]  To najpierw przymiotnik, potem rzecz.
+[01:02:28.600 --> 01:02:31.600]  Dobra. Czas. Dobrze.
+[01:02:31.600 --> 01:02:32.600]  Zobaczmy.
+[01:02:32.600 --> 01:02:33.600]  Prowadzimy.
+[01:02:33.600 --> 01:02:34.600]  Tak?
+[01:02:34.600 --> 01:02:35.600]  Tak.
+[01:02:35.600 --> 01:02:36.600]  Tak.
+[01:02:36.600 --> 01:02:37.600]  Ok.
+[01:02:37.600 --> 01:02:38.600]  Teraz zobaczmy.
+[01:02:38.600 --> 01:02:39.600]  Co mamy teraz?
+[01:02:39.600 --> 01:02:40.600]  Teraz mamy lato.
+[01:02:40.600 --> 01:02:41.600]  Tak?
+[01:02:41.600 --> 01:02:42.600]  Same.
+[01:02:42.600 --> 01:02:43.600]  Mhm.
+[01:02:43.600 --> 01:02:44.600]  A co będzie, jak jest grudzień, stycznia, lutym?
+[01:02:44.600 --> 01:02:45.600]  Zima.
+[01:02:45.600 --> 01:02:46.600]  Zima.
+[01:02:46.600 --> 01:02:47.600]  Zima.
+[01:02:47.600 --> 01:02:48.600]  Dobra.
+[01:02:48.600 --> 01:02:49.600]  To teraz proszę napisać, co Państwo lubili.
+[01:02:49.600 --> 01:02:50.600]  Jakie jest swoje miejsce?
+[01:02:50.600 --> 01:02:51.600]  Jakie jest...
+[01:02:51.600 --> 01:02:52.600]  Jakie jest...
+[01:02:52.600 --> 01:02:53.600]  Jak się nazywa?
+[01:02:53.600 --> 01:02:54.600]  Jak się nazywa?
+[01:02:54.600 --> 01:02:55.600]  Jak się nazywa?
+[01:02:55.600 --> 01:02:56.600]  Jak się nazywa?
+[01:02:56.600 --> 01:02:57.600]  Jak się nazywa?
+[01:02:57.600 --> 01:02:58.600]  Jak się nazywa?
+[01:02:58.600 --> 01:02:59.600]  Jak się nazywa?
+[01:02:59.600 --> 01:03:00.600]  Jak się nazywa?
+[01:03:00.600 --> 01:03:01.600]  Jak się nazywa?
+[01:03:01.600 --> 01:03:02.600]  Jak jest?
+[01:03:02.600 --> 01:03:03.600]  Czy jest?
+[01:03:03.600 --> 01:03:04.600]  Czy jest?
+[01:03:04.600 --> 01:03:05.600]  Czy jest?
+[01:03:05.600 --> 01:03:06.600]  Czy jest?
+[01:03:06.600 --> 01:03:07.600]  Czy jest?
+[01:03:07.600 --> 01:03:08.600]  Czy jest?
+[01:03:08.600 --> 01:03:09.600]  Czy jest?
+[01:03:09.600 --> 01:03:10.600]  Czyli w latu.
+[01:03:10.600 --> 01:03:11.600]  Czyli...
+[01:03:11.600 --> 01:03:12.600]  W ...
+[01:03:12.600 --> 01:03:13.600]  W zimę.
+[01:03:13.600 --> 01:03:14.220]  W zimę.
+[01:03:14.220 --> 01:03:15.220]  W zimę.
+[01:03:15.220 --> 01:03:16.220]  Zimą raginę wasze pan.
+[01:03:16.220 --> 01:03:17.220]  No tak.
+[01:03:17.220 --> 01:03:18.220]  Co Państwo noszą zazwyczaj w lato?
+[01:03:18.220 --> 01:03:19.220]  Co idiotów mensy tooth existed?
+[01:03:19.220 --> 01:03:20.220]  Aso ad kat pań ynig?
+[01:03:20.220 --> 01:03:21.220]  Pro agent mała vostwy?
+[01:03:21.220 --> 01:03:22.220]  Czy osobi stu'?
+[01:03:22.220 --> 01:03:23.220]  Akoffard stu wyskuk JACIN bay'r je country'r was del.
+[01:03:23.220 --> 01:03:24.220]  Co kw��ła twa waś, outla dejar?
+[01:03:24.220 --> 01:03:26.220]  Jeśli yüzälle, jako�� 남자 od rany pracuję im .
+[01:03:26.220 --> 01:03:35.220]  o akcesoriach, na przykład rękawiczki, czapka, blady coś słoneczne.
+[01:03:56.220 --> 01:03:58.220]  Tak.
+[01:04:26.220 --> 01:04:28.220]  Tak.
+[01:04:56.220 --> 01:04:57.220]  Tak.
+[01:05:21.220 --> 01:05:23.220]  Myślę, że jestem trochę zaskoczony.
+[01:05:23.220 --> 01:05:24.220]  Tak.
+[01:05:24.220 --> 01:05:25.220]  Więc...
+[01:05:25.220 --> 01:05:26.220]  Niektóre słowa nie mają generalnego słowa.
+[01:05:26.220 --> 01:05:28.220]  Kiedy mówimy o pluralizacji.
+[01:05:28.220 --> 01:05:31.220]  Czyli spodenki nie ma generalnego słowa?
+[01:05:31.220 --> 01:05:33.220]  Nie, spodenki jest tylko pluralizacja.
+[01:05:33.220 --> 01:05:38.220]  Każdy noun w polonii ma generalnego słowa.
+[01:05:40.220 --> 01:05:42.220]  Więc jaki jest generalny słów spodenki?
+[01:05:42.220 --> 01:05:46.220]  Nie... nie... nie... niemiecki nie...
+[01:05:46.220 --> 01:05:49.220]  Okej, więc jest 5 generalnych słów w pewnym sensie.
+[01:05:49.220 --> 01:05:51.220]  Mogę powiedzieć technicznie?
+[01:05:51.220 --> 01:05:52.220]  Tak, technicznie.
+[01:05:52.220 --> 01:05:53.220]  Jest 5 generalnych słów? Okej.
+[01:05:53.220 --> 01:05:55.220]  Więc spodenki, ale...
+[01:05:55.220 --> 01:05:59.220]  Ale te pięć genderów,
+[01:05:59.220 --> 01:06:06.220]  ja bym powiedziała, że to tylko się przywiera do tych specjalnych form,
+[01:06:06.220 --> 01:06:09.220]  jak spodenki, spodnie, okulary,
+[01:06:09.220 --> 01:06:13.220]  bo są tylko w pluralnym.
+[01:06:13.220 --> 01:06:17.220]  Ale na przykład buty.
+[01:06:17.220 --> 01:06:19.220]  To jest pluralne, ale nie zawsze.
+[01:06:19.220 --> 01:06:21.220]  Bo można mieć tylko jedną but.
+[01:06:21.220 --> 01:06:23.220]  Rękawiczka też.
+[01:06:23.220 --> 01:06:25.220]  Możesz mieć tylko jedną rękawiczkę.
+[01:06:25.220 --> 01:06:27.220]  Możesz mieć tylko jedną but.
+[01:06:27.220 --> 01:06:29.220]  Ale nie możesz mieć jednego jeansu.
+[01:06:29.220 --> 01:06:31.220]  Możesz mieć tylko jednego...
+[01:06:31.220 --> 01:06:33.220]  Jak to się nazywa?
+[01:06:33.220 --> 01:06:35.220]  Słup.
+[01:06:35.220 --> 01:06:37.220]  Ale tutaj jest również słup?
+[01:06:37.220 --> 01:06:38.220]  Nie.
+[01:06:38.220 --> 01:06:39.220]  Dęk.
+[01:06:39.220 --> 01:06:41.220]  Nie ma słowa na angielsku.
+[01:06:41.220 --> 01:06:43.220]  Czy jest w angielsku słowo?
+[01:06:43.220 --> 01:06:45.220]  Dęk.
+[01:06:45.220 --> 01:06:46.220]  Dęk, dęk.
+[01:06:46.220 --> 01:06:48.220]  Ręki są słupami, ale nie ma wyjątkowych słów.
+[01:06:48.220 --> 01:06:50.220]  Ok, bo w polskim jest.
+[01:06:50.220 --> 01:06:52.220]  Więc masz ten kółek.
+[01:06:52.220 --> 01:06:53.220]  Aha.
+[01:06:53.220 --> 01:06:54.220]  Tak, tak, tak.
+[01:06:54.220 --> 01:06:56.220]  Ale możesz mieć tylko jedną but.
+[01:06:56.220 --> 01:06:57.220]  Czy inna but.
+[01:06:57.220 --> 01:06:58.220]  Ok.
+[01:06:58.220 --> 01:07:00.220]  Tak jak to, kiedy podesz łokcie.
+[01:07:00.220 --> 01:07:01.220]  Tak, tak, tak.
+[01:07:01.220 --> 01:07:02.220]  Tak.
+[01:07:02.220 --> 01:07:08.220]  Więc możesz mieć tylko jedną lub dwie, ale w generalności słowo jeansu jest zawsze pluralne.
+[01:07:08.220 --> 01:07:10.220]  Więc...
+[01:07:10.220 --> 01:07:12.220]  Mamy więcej takich słów.
+[01:07:12.220 --> 01:07:14.220]  Ale na razie...
+[01:07:14.220 --> 01:07:16.220]  Więc wtedy...
+[01:07:16.220 --> 01:07:17.220]  Wiesz co?
+[01:07:17.220 --> 01:07:20.220]  Myślę, że nie rozumiałem czegoś wtedy.
+[01:07:20.220 --> 01:07:22.220]  Więc czego nie rozumiałem?
+[01:07:22.220 --> 01:07:24.220]  To co nie rozumiałem, to...
+[01:07:24.220 --> 01:07:27.220]  Jeśli mówię o butie, prawda?
+[01:07:27.220 --> 01:07:32.220]  Więc adjektywem zawsze będzie mowa o genderczności słowa.
+[01:07:32.220 --> 01:07:34.220]  W tym przypadku jest to bute.
+[01:07:34.220 --> 01:07:38.220]  Bute, ale teraz bute jest jak nie męsko.
+[01:07:38.220 --> 01:07:40.220]  Nie...
+[01:07:42.220 --> 01:07:44.220]  Ale powiedziałeś, że bute...
+[01:07:44.220 --> 01:07:47.220]  Powiedziałeś, że zawsze używamy bronzowego.
+[01:07:47.220 --> 01:07:51.220]  Tak, zawsze będzie to e, ponieważ jest w mnogu.
+[01:07:52.220 --> 01:07:53.220]  Tak.
+[01:07:53.220 --> 01:07:56.220]  Czy to jest w sensie?
+[01:07:56.220 --> 01:07:58.220]  Nie, myślę, że...
+[01:07:58.220 --> 01:08:00.220]  Myślę, że...
+[01:08:00.220 --> 01:08:01.220]  Rozumiem, co mówisz.
+[01:08:01.220 --> 01:08:04.220]  Myślę, że rozumiem, ale jak nie jesteś pewien, to też nie jestem pewien.
+[01:08:04.220 --> 01:08:05.220]  Ok.
+[01:08:05.220 --> 01:08:10.220]  Więc bute jest nie męsko, osoby.
+[01:08:10.220 --> 01:08:11.220]  Tak.
+[01:08:11.220 --> 01:08:13.220]  Tak, to jest pluralne.
+[01:08:13.220 --> 01:08:18.220]  Więc nie przychodzi do naszego standardu męski, gęski, nijaki, gender.
+[01:08:18.220 --> 01:08:19.220]  Bute.
+[01:08:19.220 --> 01:08:20.220]  Bute.
+[01:08:20.220 --> 01:08:21.220]  Ale jeden but jest męski.
+[01:08:21.220 --> 01:08:22.220]  Tak.
+[01:08:22.220 --> 01:08:27.220]  Ale jeśli wymyślam bute, wymyślam, że weźmę, mam na sobie bute,
+[01:08:27.220 --> 01:08:29.220]  więc potrzebuję teraz adjektyw.
+[01:08:29.220 --> 01:08:33.220]  Teraz technicznie ten adjektyw powinien podążać za genderem bute.
+[01:08:33.220 --> 01:08:35.220]  Tak?
+[01:08:35.220 --> 01:08:36.220]  Tak.
+[01:08:36.220 --> 01:08:38.220]  Więc...
+[01:08:39.220 --> 01:08:42.220]  Więc bute jest nie męsko, osoby.
+[01:08:42.220 --> 01:08:44.220]  Więc dlatego...
+[01:08:44.220 --> 01:08:47.220]  Jak zdecydowaliśmy, że bronzowe powinno mieć...
+[01:08:47.220 --> 01:08:49.220]  Powinno się zmienić na e, myślę.
+[01:08:51.220 --> 01:08:52.220]  Na końcu?
+[01:08:52.220 --> 01:08:53.220]  Tak.
+[01:08:53.220 --> 01:08:54.220]  Nie?
+[01:08:54.220 --> 01:08:55.220]  E będzie w męsku, obok.
+[01:08:55.220 --> 01:08:56.220]  Ok.
+[01:08:56.220 --> 01:08:57.220]  Na końcu e, albo kiedy będzie po k lub g.
+[01:08:57.220 --> 01:08:58.220]  Kiedy będzie po k lub g. Ok.
+[01:08:58.220 --> 01:08:59.220]  Będziesz mieć e.
+[01:08:59.220 --> 01:09:00.220]  Bo na razie nie masz słów, żeby wymyślić męską, obok, jakby człowieka, ludzkość, męską.
+[01:09:00.220 --> 01:09:01.220]  Ok, ale bute nie jest męską, obok, prawda?
+[01:09:01.220 --> 01:09:02.220]  Nie.
+[01:09:02.220 --> 01:09:03.220]  Nie.
+[01:09:03.220 --> 01:09:04.220]  Nie.
+[01:09:04.220 --> 01:09:05.220]  Nie.
+[01:09:05.220 --> 01:09:06.220]  Nie.
+[01:09:06.220 --> 01:09:07.220]  Nie.
+[01:09:07.220 --> 01:09:08.220]  Nie.
+[01:09:08.220 --> 01:09:09.220]  Nie.
+[01:09:09.220 --> 01:09:10.220]  Nie.
+[01:09:10.220 --> 01:09:11.220]  Nie.
+[01:09:11.220 --> 01:09:12.220]  Nie.
+[01:09:12.220 --> 01:09:13.220]  Nie.
+[01:09:13.220 --> 01:09:14.220]  Nie.
+[01:09:14.220 --> 01:09:15.220]  Nie.
+[01:09:15.220 --> 01:09:16.220]  Nie.
+[01:09:16.220 --> 01:09:17.220]  Nie.
+[01:09:17.220 --> 01:09:18.220]  Nie.
+[01:09:18.220 --> 01:09:19.220]  Nie.
+[01:09:19.220 --> 01:09:20.220]  Nie.
+[01:09:20.220 --> 01:09:21.220]  Nie.
+[01:09:21.220 --> 01:09:22.220]  Nie.
+[01:09:22.220 --> 01:09:23.220]  Nie.
+[01:09:23.220 --> 01:09:24.220]  Nie.
+[01:09:24.220 --> 01:09:25.220]  I mamy po prostu podobieństwo.
+[01:09:25.220 --> 01:09:26.220]  Raz, dwa, trzy.
+[01:09:26.220 --> 01:09:27.220]  Męskiètres to voulais, loureau-to.
+[01:09:27.220 --> 01:09:28.220]  Męskiiert, xochlant, xochlant- LEDs, brytyckie.
+[01:09:28.220 --> 01:09:29.220]  Mysłpl.
+[01:09:29.220 --> 01:09:30.220]  Myligtилось między poalystką tak milliont.
+[01:09:30.220 --> 01:09:31.220]  Braszkup ostateki.
+[01:09:31.220 --> 01:09:32.220]  Roz komplikor하는데 o CBS-ie.
+[01:09:32.220 --> 01:09:33.220]  Nie?
+[01:09:33.220 --> 01:09:34.220]  Nie?
+[01:09:34.220 --> 01:09:35.220]  Jest niesteschiedni.
+[01:09:35.220 --> 01:09:36.220]  Ye.
+[01:09:36.220 --> 01:09:37.220]  Tam jest wy sud Macie.
+[01:09:37.220 --> 01:09:38.220]  Kanyak tu kindolegów później?
+[01:09:38.220 --> 01:09:39.220]  Pentamilury.
+[01:09:39.220 --> 01:09:40.220]  Sygnał zigentahlski.
+[01:09:40.220 --> 01:09:44.620]  UANCZW istedił um 10 uwagę na wy odsłowni w Masku.
+[01:09:44.620 --> 01:09:45.620] y
+[01:09:45.880 --> 01:09:46.880]  Tak.
+[01:09:46.880 --> 01:09:48.380]  Zrobię każde.
+[01:09:48.380 --> 01:09:49.780]  W adresie.
+[01:09:50.220 --> 01:09:52.220]  Rozajmęski.
+[01:09:52.220 --> 01:09:56.220]  Rozajmęski, tak jak w formie dyksjonarnej, tak?
+[01:09:56.220 --> 01:09:58.220]  Bo to jest w rozajmęsku.
+[01:09:58.220 --> 01:10:06.220]  Tak, to jest w rozajmęsku, bo mamy słowo w rozajmęsku, ale w innym końcu.
+[01:10:06.220 --> 01:10:08.220]  Ale w dyksjonarze widzimy to w rozajmęsku.
+[01:10:08.220 --> 01:10:12.220]  Rozajmęski, tak? Więc to jest słowo w rozajmęsku.
+[01:10:12.220 --> 01:10:14.220]  Więc to jest bronzowe z y.
+[01:10:14.220 --> 01:10:23.220]  Teraz, jeśli chcę to zmienić, chcę to przyłączyć do buty, jak to się zmieni? Jak to wygląda? Jak zdecyduję, jak powinien być ten zynek?
+[01:10:25.220 --> 01:10:30.220]  Bo zynek zawsze jest końcem. To jest końcem, to jest końcem, to jest końcem.
+[01:10:30.220 --> 01:10:37.220]  Zajmijmy się tylko mnogą. Buty nie mają swojego rodzaju. To jest niemęskie słowo. Tak?
+[01:10:37.220 --> 01:10:40.220]  Buty. Tak? Niemęskie słowo. Tak.
+[01:10:40.220 --> 01:10:44.220]  Ale jak mówimy o brązowym, to jest adjektyw.
+[01:10:44.220 --> 01:10:51.220]  Jak będzie brązowe zmienić? Znaczy, wiemy, jak brązowe powinno się zmienić w zależności od męski, jenski i miyaki, tak?
+[01:10:51.220 --> 01:10:55.220]  Znaczy, że to będzie brązowe, brązowa i brązowe znowu.
+[01:10:55.220 --> 01:10:56.220]  Dobra.
+[01:10:56.220 --> 01:10:57.220]  Dla męski, jenski, miyaki.
+[01:10:57.220 --> 01:10:58.220]  Dobra.
+[01:10:58.220 --> 01:11:04.220]  Ale jeśli chcemy zmienić to samo adjektyw do nie, męski i sobe, jak zdecydujemy, jak to się zmieni?
+[01:11:04.220 --> 01:11:07.220]  Bo zakończenie jest to samo.
+[01:11:07.220 --> 01:11:09.220]  To samo do czego?
+[01:11:09.220 --> 01:11:11.220]  W plurale.
+[01:11:11.220 --> 01:11:12.220]  Ok.
+[01:11:12.220 --> 01:11:13.220]  Więc to będzie plura.
+[01:11:13.220 --> 01:11:14.220]  Tak.
+[01:11:14.220 --> 01:11:16.220]  To jest dla męski i sobe?
+[01:11:16.220 --> 01:11:17.220]  Tak.
+[01:11:17.220 --> 01:11:19.220]  Plura, mianownik zawsze się zmieni.
+[01:11:19.220 --> 01:11:20.220]  Tak.
+[01:11:20.220 --> 01:11:24.220]  Dla niemęskich osób.
+[01:11:24.220 --> 01:11:26.220]  Zawsze, przepraszam, nie zawsze.
+[01:11:26.220 --> 01:11:27.220]  Tak, tak, tak.
+[01:11:27.220 --> 01:11:28.220]  Zazwyczaj. Zazwyczaj.
+[01:11:28.220 --> 01:11:29.220]  Zazwyczaj.
+[01:11:29.220 --> 01:11:30.220]  Zazwyczaj. Zazwyczaj.
+[01:11:30.220 --> 01:11:31.220]  Zazwyczaj.
+[01:11:31.220 --> 01:11:32.220]  Ok.
+[01:11:32.220 --> 01:11:33.220]  Ok.
+[01:11:33.220 --> 01:11:34.220]  Ok.
+[01:11:34.220 --> 01:11:35.220]  Ok.
+[01:11:35.220 --> 01:11:36.220]  Możesz siedzieć.
+[01:11:36.220 --> 01:11:37.220]  Mam pytanie.
+[01:11:37.220 --> 01:11:38.220]  Jeśli mówimy, że dramaturga, to jest to, co się zmienia.
+[01:11:38.220 --> 01:11:39.220]  Tak.
+[01:11:39.220 --> 01:11:40.220]  Tak.
+[01:11:40.220 --> 01:11:41.220]  Tak.
+[01:11:41.220 --> 01:11:42.220]  Tak.
+[01:11:42.220 --> 01:11:43.220]  Tak.
+[01:11:43.220 --> 01:11:44.220]  Ale jak...
+[01:11:44.220 --> 01:11:45.700]  Ile lat się liczyło i jakemitism jaką bankier through j眼 dy sculpt on a
+[01:11:45.700 --> 01:11:49.540]  godzinę preszył na jedną z fakty z gry.
+[01:11:49.540 --> 01:11:51.020]  Ja to.
+[01:11:51.020 --> 01:11:52.020]  Sam.
+[01:11:52.020 --> 01:11:53.020]  Tak.
+[01:11:53.020 --> 01:11:54.020]  Słyszaeś kręcić.
+[01:11:54.020 --> 01:11:55.020]  Na pewno kupiłem.
+[01:11:55.020 --> 01:11:56.020]  Cieku...
+[01:11:56.020 --> 01:11:57.020]  Ale masz proshu wielka dosłownieiem.
+[01:11:57.020 --> 01:11:58.020]  Ile lat?
+[01:11:58.020 --> 01:11:59.020]  Cała假ło.
+[01:11:59.020 --> 01:12:01.820]  Jakasma daddy girl to d ceasedies t dating.
+[01:12:01.820 --> 01:12:03.380]  I connection.
+[01:12:03.380 --> 01:12:04.460]  No, nie.
+[01:12:04.460 --> 01:12:05.940]  Crooks.
+[01:12:05.940 --> 01:12:06.940]  No.
+[01:12:06.940 --> 01:12:10.100]  God damn it got 15 da chaos.
+[01:12:10.100 --> 01:12:11.100]  Dob leaked.
+[01:12:11.100 --> 01:12:12.100]  Nie m tới.
+[01:12:12.100 --> 01:12:13.100]  Jo dois meets.
+[01:12:13.220 --> 01:12:22.220]  To nie jest tak, że w zimie, w zimie w relatu, nie zawsze jest t-shirt, jak koszulka.
+[01:12:22.220 --> 01:12:24.220]  Możesz wybrać.
+[01:12:24.220 --> 01:12:29.220]  Jeśli chcesz. Bo cały zimie je podaję, t-shirt, wszystko w zimie.
+[01:12:29.220 --> 01:12:37.220]  Możesz to zrozumieć tak, że w zwykłym zimie, w zimie, ja podam coś.
+[01:12:37.220 --> 01:12:41.220]  Ale może być i tak, prawda?
+[01:12:41.220 --> 01:12:55.220]  Tak, tak. Więc jeśli chcę zrobić koszulkę, to jest koszulka, koszulki, koszulki, bo jest k w końcu, więc jest w koszulki.
+[01:12:55.220 --> 01:12:57.220]  Koszulki.
+[01:13:01.220 --> 01:13:05.220]  I wtedy powiem wąskę.
+[01:13:11.220 --> 01:13:13.220]  Dobra, próbujemy.
+[01:13:13.220 --> 01:13:17.220]  Co jest winter shoes?
+[01:13:17.220 --> 01:13:19.220]  Buty zimowe.
+[01:13:19.220 --> 01:13:21.220]  Buty zimowe.
+[01:13:29.220 --> 01:13:31.220]  Dobra, to co, Pan zaczyna.
+[01:13:31.220 --> 01:13:39.220]  I also wąskę, yeah, so what, what tense is that? I mean, what case is that in?
+[01:13:39.220 --> 01:13:41.220]  What case is that in?
+[01:13:41.220 --> 01:13:43.220]  Wąskie.
+[01:13:43.220 --> 01:13:47.220]  What case? Mianownik.
+[01:13:47.220 --> 01:13:49.220]  So if I want to use...
+[01:13:49.220 --> 01:13:51.220]  But mianownik i dwie wyniki the same.
+[01:13:51.220 --> 01:13:53.220]  I wyrodzę meski i dniaki.
+[01:13:53.220 --> 01:14:01.220]  And so I'm using it to, for a plural, for koszulki.
+[01:14:01.220 --> 01:14:03.220]  So it's the same as it looks there, wąskie.
+[01:14:03.220 --> 01:14:05.220]  Or do wąskie?
+[01:14:05.220 --> 01:14:07.220]  Do wąska, because koszulka jest jedna.
+[01:14:07.220 --> 01:14:09.220]  Jest jedna, ale liczby mnoga.
+[01:14:09.220 --> 01:14:13.220]  Wąskie koszulki, because it's also in plural.
+[01:14:13.220 --> 01:14:15.220]  So if I want to say...
+[01:14:15.220 --> 01:14:17.220]  E, plural.
+[01:14:17.220 --> 01:14:19.220]  So wąskie.
+[01:14:19.220 --> 01:14:21.220]  Tak.
+[01:14:21.220 --> 01:14:25.220]  Dobra, to Pan próbuje pierwszy.
+[01:14:25.220 --> 01:14:33.220]  Aha, w latach ja noszę spodenki.
+[01:14:33.220 --> 01:14:35.220]  Spodenki.
+[01:14:35.220 --> 01:14:37.220]  Wąskie.
+[01:14:37.220 --> 01:14:41.220]  Wąskie kaszulki.
+[01:14:41.220 --> 01:14:43.220]  Koszulki.
+[01:14:43.220 --> 01:14:45.220]  Wąskie koszulki.
+[01:14:45.220 --> 01:14:51.220]  I sandali albo klamki.
+[01:14:51.220 --> 01:14:53.220]  Super.
+[01:14:53.220 --> 01:14:57.220]  I okulary przez słoneczne.
+[01:14:57.220 --> 01:14:59.220]  Super. I okulary przez słoneczne.
+[01:14:59.220 --> 01:15:01.220]  Ok, dobrze.
+[01:15:01.220 --> 01:15:03.220]  A w zimę?
+[01:15:03.220 --> 01:15:05.220]  Buty?
+[01:15:05.220 --> 01:15:07.220]  W zimę?
+[01:15:07.220 --> 01:15:11.220]  W zimę noszę buty.
+[01:15:11.220 --> 01:15:13.220]  Spody.
+[01:15:13.220 --> 01:15:15.220]  Spody.
+[01:15:15.220 --> 01:15:17.220]  I...
+[01:15:17.220 --> 01:15:19.220]  I...
+[01:15:19.220 --> 01:15:21.220]  I...
+[01:15:21.220 --> 01:15:23.220]  I...
+[01:15:23.220 --> 01:15:25.220]  I...
+[01:15:25.220 --> 01:15:27.220]  I...
+[01:15:27.220 --> 01:15:29.220]  I...
+[01:15:29.220 --> 01:15:31.220]  I...
+[01:15:31.220 --> 01:15:33.220]  I...
+[01:15:33.220 --> 01:15:35.220]  I...
+[01:15:35.220 --> 01:15:37.220]  i wytykamy to.
+[01:15:37.220 --> 01:15:39.220]  Zbyt lewą zimę mam sobie szerokie dżтя.
+[01:15:39.220 --> 01:15:41.220]  Zbyt lewą zimę mam sobie szerokie dżta.
+[01:15:41.220 --> 01:15:43.220]  I mało koszulki.
+[01:15:43.220 --> 01:15:45.220]  I mało koszulki.
+[01:15:45.220 --> 01:15:47.220]  Mało bluszek.
+[01:15:47.220 --> 01:15:49.220]  Mało bluszek.
+[01:15:49.220 --> 01:15:51.220]  Mało małe swetek.
+[01:15:51.220 --> 01:15:53.220]  Mało małe swetek.
+[01:15:53.220 --> 01:15:55.220]  Mam ściany mało...
+[01:15:55.220 --> 01:15:57.220]  Mam ściany mało...
+[01:15:57.220 --> 01:15:59.220]  Mam ściany mało...
+[01:15:59.220 --> 01:16:01.220]  Mało małe.
+[01:16:01.220 --> 01:16:03.220]  Długi czy krótki?
+[01:16:03.220 --> 01:16:05.220]  Długi?
+[01:16:05.220 --> 01:16:12.020]  Długi twarz czy długą kurtkę i buty zimowe.
+[01:16:12.020 --> 01:16:14.420]  Super, dobra. A pani?
+[01:16:14.420 --> 01:16:24.020]  Często noszę skręciarkę i sandal w lato.
+[01:16:24.020 --> 01:16:40.020]  Zwykle noszę rękawiczki, spodnie i sweter.
+[01:16:40.020 --> 01:16:44.020]  I buty zimowe w zimie.
+[01:16:44.020 --> 01:16:50.020]  Super. A w lecie nosi pani krótkie czy długie sukienki?
+[01:16:50.020 --> 01:16:52.020]  Długie.
+[01:16:52.020 --> 01:16:54.020]  Długie sukienki, ok. Dobra, dziękuję.
+[01:16:54.020 --> 01:16:56.020]  A w lato?
+[01:16:56.020 --> 01:17:06.020]  W lato długie noszeć.
+[01:17:06.020 --> 01:17:22.020]  Noszeć krótkie sukienki i bez ręka koszulka.
+[01:17:22.020 --> 01:17:24.020]  Aha.
+[01:17:24.020 --> 01:17:26.020]  I...
+[01:17:26.020 --> 01:17:28.020]  Ok, koszulka bez rękawów.
+[01:17:28.020 --> 01:17:30.020]  Bez rękawów.
+[01:17:30.020 --> 01:17:32.020]  Bez rękawów.
+[01:17:32.020 --> 01:17:34.020]  Bez rękawów.
+[01:17:44.020 --> 01:17:46.020]  Rękawów.
+[01:17:46.020 --> 01:17:48.020]  Aha.
+[01:17:48.020 --> 01:17:50.020]  I...
+[01:17:50.020 --> 01:17:52.020]  Aha.
+[01:17:52.020 --> 01:17:54.020]  I sandal.
+[01:17:54.020 --> 01:17:56.020]  I sandal. Ok.
+[01:17:56.020 --> 01:17:58.020]  I sandal. Ok.
+[01:17:58.020 --> 01:18:00.020]  A w zimę?
+[01:18:00.020 --> 01:18:10.020]  W zimę lubię nosić zimne buty.
+[01:18:10.020 --> 01:18:12.020]  Zimowe.
+[01:18:12.020 --> 01:18:14.020]  Zimowe buty.
+[01:18:14.020 --> 01:18:16.020]  I got lost after that.
+[01:18:16.020 --> 01:18:18.020]  Nie mam...
+[01:18:18.020 --> 01:18:20.020]  Dobra.
+[01:18:20.020 --> 01:18:22.020]  Sweater. Sweater.
+[01:18:22.020 --> 01:18:24.020]  Sweater. Sweater.
+[01:18:24.020 --> 01:18:26.020]  I...
+[01:18:26.020 --> 01:18:28.020]  Thick.
+[01:18:28.020 --> 01:18:30.020]  Like...
+[01:18:30.020 --> 01:18:32.020]  Thick. Grube. Grube.
+[01:18:32.020 --> 01:18:34.020]  Grube.
+[01:18:34.020 --> 01:18:36.020]  Like...
+[01:18:36.020 --> 01:18:38.020]  Lower. Not exactly pajama, but like lower.
+[01:18:38.020 --> 01:18:40.020]  Not jeans, like lower.
+[01:18:40.020 --> 01:18:42.020]  You want... Like athletic...
+[01:18:42.020 --> 01:18:44.020]  Sportowe, lower.
+[01:18:44.020 --> 01:18:46.020]  Sportowe, lower.
+[01:18:46.020 --> 01:18:48.020]  Aha.
+[01:18:48.020 --> 01:18:50.020]  Ok.
+[01:18:50.020 --> 01:18:52.020]  Like...
+[01:18:52.020 --> 01:18:54.020]  Nie je jeansy, but like...
+[01:18:54.020 --> 01:18:56.020]  Jeansy.
+[01:18:56.020 --> 01:18:58.020]  Dobra.
+[01:18:58.020 --> 01:19:00.020]  Ok.
+[01:19:00.020 --> 01:19:02.020]  Pod jeansy?
+[01:19:02.020 --> 01:19:04.020]  Nie. Like...
+[01:19:04.020 --> 01:19:06.020]  Like...
+[01:19:06.020 --> 01:19:08.020]  Something like...
+[01:19:08.020 --> 01:19:10.020]  How do you... Like... It's not jeans,
+[01:19:10.020 --> 01:19:12.020]  it's not pajama, like it's lower.
+[01:19:12.020 --> 01:19:14.020]  Podnie?
+[01:19:14.020 --> 01:19:16.020]  Is that a lower? Ok, ja sport nie je.
+[01:19:16.020 --> 01:19:18.020]  Just pants. Just pants?
+[01:19:18.020 --> 01:19:20.020]  Ja?
+[01:19:20.020 --> 01:19:22.020]  Spodnie. Spodnie.
+[01:19:22.020 --> 01:19:24.020]  Ok, ok. Spodnie.
+[01:19:24.020 --> 01:19:26.020]  Trousers.
+[01:19:26.020 --> 01:19:28.020]  Trousers are like formal or...
+[01:19:28.020 --> 01:19:30.020]  No. No, right? Ok, to spodnie.
+[01:19:30.020 --> 01:19:32.020]  Spodnie.
+[01:19:32.020 --> 01:19:34.020]  Spodnie.
+[01:19:34.020 --> 01:19:36.020]  We can say eleganckie spodnie.
+[01:19:36.020 --> 01:19:38.020]  That would be formal.
+[01:19:38.020 --> 01:19:40.020]  But just...
+[01:19:40.020 --> 01:19:42.020]  Aha. Ok.
+[01:19:42.020 --> 01:19:44.020]  Spodnie.
+[01:19:44.020 --> 01:19:46.020]  Proszę.
+[01:19:46.020 --> 01:19:48.020]  Dobra.
+[01:19:48.020 --> 01:19:50.020]  Co pan ma? Co pan nosi?
+[01:19:50.020 --> 01:19:52.020]  Zimę albo lato?
+[01:19:52.020 --> 01:19:54.020]  Sądzę, że nie.
+[01:19:54.020 --> 01:19:56.020]  Dobra. No to zobaczmy. Idziemy dalej.
+[01:19:56.020 --> 01:19:58.020]  Tam nie będziemy, jak rozłożymy.
+[01:19:58.020 --> 01:20:00.020]  Ok. Czyli mamy tak.
+[01:20:00.020 --> 01:20:02.020]  Co zwykle nosimy? Zimę albo lato?
+[01:20:02.020 --> 01:20:04.020]  Co mamy na sobie teraz? Dobra.
+[01:20:04.020 --> 01:20:06.020]  Zobaczmy dwunaste.
+[01:20:06.020 --> 01:20:08.020]  Mamy tutaj cały rozpisany
+[01:20:08.020 --> 01:20:10.020]  czasownik nosić.
+[01:20:12.020 --> 01:20:14.020]  Ok. Co znaczy nosić?
+[01:20:18.020 --> 01:20:20.020]  Nosić.
+[01:20:20.020 --> 01:20:22.020]  Nosić.
+[01:20:22.020 --> 01:20:24.020]  Tu.
+[01:20:24.020 --> 01:20:26.020]  Tu.
+[01:20:26.020 --> 01:20:28.020]  Nosić.
+[01:20:28.020 --> 01:20:30.020]  Nosić.
+[01:20:30.020 --> 01:20:32.020]  Nosić.
+[01:20:32.020 --> 01:20:34.020]  Ok.
+[01:20:34.020 --> 01:20:36.020]  So nosić
+[01:20:36.020 --> 01:20:38.020]  to carry something.
+[01:20:38.020 --> 01:20:40.020]  Mhm.
+[01:20:40.020 --> 01:20:42.020]  No i tak.
+[01:20:42.020 --> 01:20:44.020]  Ja, już wiemy co robię.
+[01:20:44.020 --> 01:20:46.020]  Ja noszę.
+[01:20:46.020 --> 01:20:48.020]  Ja noszę spodnie, ja noszę kurtkę.
+[01:20:48.020 --> 01:20:50.020]  Dwa.
+[01:20:50.020 --> 01:20:52.020]  Ty co robisz?
+[01:20:52.020 --> 01:20:54.020]  Nosisz.
+[01:20:54.020 --> 01:20:56.020]  Nosisz.
+[01:21:02.020 --> 01:21:04.020]  Czyli tu mamy noszę.
+[01:21:04.020 --> 01:21:06.020]  Tu mamy nosisz.
+[01:21:06.020 --> 01:21:08.020]  Ok.
+[01:21:08.020 --> 01:21:10.020]  Trzy. On albo
+[01:21:10.020 --> 01:21:12.020]  ona?
+[01:21:12.020 --> 01:21:14.020]  Nosi.
+[01:21:14.020 --> 01:21:16.020]  Super.
+[01:21:16.020 --> 01:21:18.020]  Dwa.
+[01:21:18.020 --> 01:21:20.020]  I teraz liczba noga.
+[01:21:20.020 --> 01:21:22.020]  My.
+[01:21:22.020 --> 01:21:24.020]  Nosimy.
+[01:21:24.020 --> 01:21:26.020]  Nosimy. Super.
+[01:21:26.020 --> 01:21:28.020]  Nosimy.
+[01:21:28.020 --> 01:21:30.020]  Nosimy.
+[01:21:30.020 --> 01:21:32.020]  Wy.
+[01:21:32.020 --> 01:21:34.020]  Nosimy. Nosicie.
+[01:21:34.020 --> 01:21:36.020]  Nosicie.
+[01:21:36.020 --> 01:21:38.020]  Jeszcze raz.
+[01:21:38.020 --> 01:21:40.020]  Nosimy.
+[01:21:40.020 --> 01:21:42.020]  No.
+[01:21:42.020 --> 01:21:44.020]  Nosią. Dobra.
+[01:21:44.020 --> 01:21:46.020]  A wy?
+[01:21:46.020 --> 01:21:48.020]  Wy nosi. Nosi.
+[01:21:48.020 --> 01:21:50.020]  Nosicie.
+[01:21:50.020 --> 01:21:52.020]  Mhm. Ok. I oni albo one?
+[01:21:52.020 --> 01:21:54.020]  Noszą.
+[01:21:54.020 --> 01:21:56.020]  Noszą. Dobra.
+[01:22:00.020 --> 01:22:02.020]  No i coś.
+[01:22:02.020 --> 01:22:04.020]  Mamy 5 minut? Nie złożymy.
+[01:22:06.020 --> 01:22:08.020]  Nosimy. Nosicie.
+[01:22:08.020 --> 01:22:10.020]  Noszą. Ok.
+[01:22:14.020 --> 01:22:16.020]  Spójrzmy teraz tak. Wspólnymi siłami.
+[01:22:16.020 --> 01:22:18.020]  Spójrzmy bardzo szybko i razem.
+[01:22:22.020 --> 01:22:24.020]  Dobra. Co ona nosi?
+[01:22:24.020 --> 01:22:26.020]  Dobra. Co ona nosi?
+[01:22:26.020 --> 01:22:28.020]  Co ona ma na sobie?
+[01:22:28.020 --> 01:22:30.020]  Co ona ma na sobie?
+[01:22:30.020 --> 01:22:32.020]  Ona nosi...
+[01:22:34.020 --> 01:22:36.020]  Czerwona sukienka.
+[01:22:36.020 --> 01:22:38.020]  Czerwona.
+[01:22:38.020 --> 01:22:40.020]  Niebieska.
+[01:22:40.020 --> 01:22:42.020]  Ciemno-niebieską.
+[01:22:42.020 --> 01:22:44.020]  Ciemno-niebieską.
+[01:22:44.020 --> 01:22:46.020]  Jaka jest ta sukienka?
+[01:22:46.020 --> 01:22:48.020]  Młodna.
+[01:22:48.020 --> 01:22:50.020]  Młodna?
+[01:22:50.020 --> 01:22:52.020]  Młodna.
+[01:22:52.020 --> 01:22:54.020]  W kropki.
+[01:22:54.020 --> 01:22:56.020]  W kropki.
+[01:22:56.020 --> 01:22:58.020]  Czy to jest...
+[01:22:58.020 --> 01:23:00.020]  elegancka sukienka?
+[01:23:00.020 --> 01:23:02.020]  Trochę.
+[01:23:02.020 --> 01:23:04.020]  Co jeszcze ona ma?
+[01:23:04.020 --> 01:23:06.020]  Torebka.
+[01:23:06.020 --> 01:23:08.020]  Torebkę.
+[01:23:08.020 --> 01:23:10.020]  Jaką?
+[01:23:10.020 --> 01:23:12.020]  Czerwona.
+[01:23:12.020 --> 01:23:14.020]  Brązową.
+[01:23:14.020 --> 01:23:16.020]  Brązową.
+[01:23:16.020 --> 01:23:18.020]  Brązową torebkę.
+[01:23:18.020 --> 01:23:20.020]  Co ma na nogach?
+[01:23:20.020 --> 01:23:22.020]  Brązowe sandały.
+[01:23:22.020 --> 01:23:24.020]  Brązowe sandały.
+[01:23:24.020 --> 01:23:26.020]  Brązowe sandały.
+[01:23:26.020 --> 01:23:28.020]  Brązowe sandały. Ok.
+[01:23:28.020 --> 01:23:30.020]  Dobra.
+[01:23:30.020 --> 01:23:32.020]  A co on nosi?
+[01:23:32.020 --> 01:23:34.020]  A co on nosi?
+[01:23:36.020 --> 01:23:38.020]  Białą koszulkę.
+[01:23:38.020 --> 01:23:40.020]  Białą koszulkę.
+[01:23:40.020 --> 01:23:42.020]  Koszulkę?
+[01:23:42.020 --> 01:23:44.020]  Tak.
+[01:23:44.020 --> 01:23:46.020]  Czerwone...
+[01:23:46.020 --> 01:23:48.020]  Czerwone...
+[01:23:48.020 --> 01:23:50.020]  Czerwone bluze.
+[01:23:50.020 --> 01:23:52.020]  No.
+[01:23:52.020 --> 01:23:54.020]  Bluze?
+[01:23:54.020 --> 01:23:56.020]  Koszule.
+[01:23:56.020 --> 01:23:58.020]  Koszule.
+[01:23:58.020 --> 01:24:00.020]  W kropkę.
+[01:24:00.020 --> 01:24:02.020]  Czerwona koszula w kropkę.
+[01:24:02.020 --> 01:24:04.020]  Jeszcze?
+[01:24:04.020 --> 01:24:06.020]  Szerokie jeansy.
+[01:24:06.020 --> 01:24:08.020]  Nie jeansy.
+[01:24:08.020 --> 01:24:10.020]  A, a.
+[01:24:10.020 --> 01:24:12.020]  Spójrz.
+[01:24:12.020 --> 01:24:14.020]  Spodnie.
+[01:24:14.020 --> 01:24:16.020]  Spodnie.
+[01:24:16.020 --> 01:24:18.020]  Szerokie spodnie. Dobra. I?
+[01:24:20.020 --> 01:24:22.020]  Czyli było nieczerwone.
+[01:24:22.020 --> 01:24:24.020]  Nieczerwone?
+[01:24:24.020 --> 01:24:26.020]  Czerwone.
+[01:24:26.020 --> 01:24:28.020]  Czarne.
+[01:24:28.020 --> 01:24:30.020]  Czarne tramki.
+[01:24:30.020 --> 01:24:32.020]  Dobra. Ok.
+[01:24:34.020 --> 01:24:36.020]  Ok.
+[01:24:40.020 --> 01:24:42.020]  Ok.
+[01:24:42.020 --> 01:24:44.020]  Hmm.
+[01:24:44.020 --> 01:24:46.020]  Kapelusz.
+[01:24:46.020 --> 01:24:48.020]  Kapelusz. Mhm.
+[01:24:48.020 --> 01:24:54.020]  Białą koszulkę.
+[01:24:54.020 --> 01:24:56.020]  To nie jest koszulka i nie jest biała.
+[01:24:56.020 --> 01:24:58.020]  Granitur, tak?
+[01:24:58.020 --> 01:25:00.020]  Nie.
+[01:25:00.020 --> 01:25:02.020]  Koszula.
+[01:25:02.020 --> 01:25:04.020]  Koszula.
+[01:25:04.020 --> 01:25:06.020]  Jak jest ta koszula?
+[01:25:06.020 --> 01:25:08.020]  Różowa.
+[01:25:08.020 --> 01:25:10.020]  Różową koszulę.
+[01:25:10.020 --> 01:25:12.020]  Różową. Nie wiem czy to widać.
+[01:25:12.020 --> 01:25:14.020]  Różowa koszulka.
+[01:25:14.020 --> 01:25:16.020]  Paski. To jest równa paski.
+[01:25:16.020 --> 01:25:18.020]  Ok. Co jeszcze?
+[01:25:18.020 --> 01:25:20.020]  Co ma na szyi?
+[01:25:20.020 --> 01:25:22.020]  Krawat.
+[01:25:22.020 --> 01:25:24.020]  Krawat. Nie wiem jaki kolor.
+[01:25:24.020 --> 01:25:26.020]  Krawat. Nie wiem jaki kolor.
+[01:25:26.020 --> 01:25:28.020]  Dobra. Co jest na koszuli?
+[01:25:28.020 --> 01:25:30.020]  Co jest na koszuli?
+[01:25:30.020 --> 01:25:32.020]  Słuchaj.
+[01:25:32.020 --> 01:25:34.020]  Słuchaj.
+[01:25:34.020 --> 01:25:36.020]  Granitur.
+[01:25:36.020 --> 01:25:38.020]  Granitur.
+[01:25:38.020 --> 01:25:40.020]  Granitur jest jakby...
+[01:25:40.020 --> 01:25:42.020]  Wiesz.
+[01:25:42.020 --> 01:25:44.020]  Ok.
+[01:25:44.020 --> 01:25:46.020]  Czyli...
+[01:25:46.020 --> 01:25:48.020]  Marinarka.
+[01:25:48.020 --> 01:25:50.020]  Czyli szarą...
+[01:25:50.020 --> 01:25:52.020]  Marinarkę.
+[01:25:52.020 --> 01:25:54.020]  Szarą marinarkę.
+[01:25:54.020 --> 01:25:56.020]  Dobra.
+[01:25:56.020 --> 01:25:58.020]  Spodnie.
+[01:25:58.020 --> 01:26:00.020]  Spodnie.
+[01:26:00.020 --> 01:26:02.020]  Super.
+[01:26:02.020 --> 01:26:04.020]  Elegantne spodnie.
+[01:26:04.020 --> 01:26:06.020]  Może szarą, może granatowe.
+[01:26:06.020 --> 01:26:08.020]  Dobra. A co jeszcze ma?
+[01:26:08.020 --> 01:26:10.020]  Okulary.
+[01:26:10.020 --> 01:26:12.020]  Dobra. Jeszcze sobie jedno
+[01:26:12.020 --> 01:26:14.020]  tak szybciutko.
+[01:26:14.020 --> 01:26:16.020]  Jakieś wybierzemy.
+[01:26:18.020 --> 01:26:20.020]  Będzie ta wstupa.
+[01:26:28.020 --> 01:26:30.020]  Brudowa bluza.
+[01:26:30.020 --> 01:26:32.020]  Brul...
+[01:26:32.020 --> 01:26:34.020]  Nie wiem czy to bluza.
+[01:26:34.020 --> 01:26:36.020]  No dobra. Ok. Ale...
+[01:26:36.020 --> 01:26:38.020]  Brudki.
+[01:26:38.020 --> 01:26:40.020]  Sfeter. Różowy sweter.
+[01:26:40.020 --> 01:26:42.020]  Tak.
+[01:26:42.020 --> 01:26:44.020]  No bo ona nosi różową bluzę.
+[01:26:44.020 --> 01:26:46.020]  Co jeszcze?
+[01:26:46.020 --> 01:26:48.020]  Różowe spodnie.
+[01:26:48.020 --> 01:26:50.020]  Super.
+[01:26:50.020 --> 01:26:52.020]  Czarne buty.
+[01:26:52.020 --> 01:26:54.020]  Czarne buty.
+[01:26:54.020 --> 01:26:56.020]  Co ma na szyi?
+[01:26:56.020 --> 01:26:58.020]  Sza...
+[01:26:58.020 --> 01:27:00.020]  Szalik.
+[01:27:00.020 --> 01:27:02.020]  Szalik.
+[01:27:02.020 --> 01:27:04.020]  To jest w kratkę powiedzmy.
+[01:27:04.020 --> 01:27:06.020]  Dobra. Co jeszcze ma?
+[01:27:06.020 --> 01:27:08.020]  Hmm...
+[01:27:08.020 --> 01:27:10.020]  Czarną trupkę.
+[01:27:10.020 --> 01:27:12.020]  Super. I?
+[01:27:12.020 --> 01:27:14.020]  Czarne pasy.
+[01:27:14.020 --> 01:27:16.020]  Czarne pasy.
+[01:27:16.020 --> 01:27:18.020]  No i dobra. Daliśmy radę.
+[01:27:18.020 --> 01:27:22.020]  Pobawmy jeszcze na następny raz kilka osób.
+[01:27:22.020 --> 01:27:24.020]  Dobrze. I co?
+[01:27:24.020 --> 01:27:26.020]  Tę kodowę.
+[01:27:26.020 --> 01:27:28.020]  Dobrze.
+[01:27:28.020 --> 01:27:30.020]  I spróbujemy...
+[01:27:30.020 --> 01:27:32.020]  Tak.
+[01:27:32.020 --> 01:27:34.020]  Hmm...
+[01:27:34.020 --> 01:27:36.020]  ...
+[01:27:36.020 --> 01:27:38.020]  Zadanie dwunaste.
+[01:27:38.020 --> 01:27:40.020]  Dobre.
+[01:27:40.020 --> 01:27:44.020]  Tutaj w zadaniu dwunastym koło tabelki mamy kilka pytań.
+[01:27:44.020 --> 01:27:46.020]  Proszę odpowiedzieć na pytania.
+[01:27:46.020 --> 01:27:48.020]  Na przykład.
+[01:27:48.020 --> 01:27:50.020]  Jakie ubrania nosisz na oficjalne spotkania?
+[01:27:50.020 --> 01:27:52.020]  To jest to.
+[01:27:52.020 --> 01:27:54.020]  I zadanie piętnaste.
+[01:27:54.020 --> 01:27:56.020]  Hmm...
+[01:27:56.020 --> 01:27:58.020]  To są znaki,
+[01:27:58.020 --> 01:28:00.020]  które możemy zobaczyć na formie spotkania.
+[01:28:00.020 --> 01:28:02.020]  No.
+[01:28:02.020 --> 01:28:04.020]  I...
+[01:28:04.020 --> 01:28:08.020]  znaki, które możemy zobaczyć na przebraniach.
+[01:28:08.020 --> 01:28:12.020]  Co one znaczą?
+[01:28:12.020 --> 01:28:16.020]  I to wszystko.
+[01:28:16.020 --> 01:28:20.020]  Czy jakieś pytania?
+[01:28:20.020 --> 01:28:24.020]  Czyli w 12 i w 15.
+[01:28:34.020 --> 01:28:38.020]  Nie, nie, nie.
+[01:29:04.020 --> 01:29:14.020]  Czy jest to książka Daniela?
+[01:29:14.020 --> 01:29:16.020]  Pewnie nie moja.
+[01:29:34.020 --> 01:29:38.020]  To moja.
+[01:29:38.020 --> 01:29:40.020]  To moja?
+[01:29:40.020 --> 01:29:42.020]  Tak, to moja.
+[01:29:42.020 --> 01:29:44.020]  To moja.
+[01:29:44.020 --> 01:29:46.020]  To moja.
+[01:29:46.020 --> 01:29:48.020]  To moja.
+[01:29:48.020 --> 01:29:50.020]  To moja.
+[01:30:04.020 --> 01:30:06.020]  To moja.
+[01:30:30.020 --> 01:30:32.020]  To moja.
+[01:30:32.020 --> 01:30:34.020]  To moja.
+[01:30:34.020 --> 01:30:38.020]  To nie jest dokładnie związane z Polską.
+[01:30:38.020 --> 01:30:42.020]  Przepraszam, jeśli to jest zaskoczywające,
+[01:30:42.020 --> 01:30:44.020]  czy to jest za dużo, ale...
+[01:30:44.020 --> 01:30:46.020]  Nie wiem.
+[01:30:48.020 --> 01:30:50.020]  Bardzo się podobały te lektury.
+[01:30:50.020 --> 01:30:52.020]  Czy jest to ok...
+[01:30:52.020 --> 01:30:54.020]  Nie wiem.
+[01:30:54.020 --> 01:30:56.020]  Nie wiem, jeśli...
+[01:30:56.020 --> 01:30:58.020]  Nie wiem, czasami...
+[01:30:58.020 --> 01:31:00.020]  Nie?
+[01:31:00.020 --> 01:31:02.020]  Ok, nieważne.
+[01:31:02.020 --> 01:31:04.020]  Ok.
+[01:31:04.020 --> 01:31:06.020]  Nie?
+[01:31:06.020 --> 01:31:08.020]  Nie.
+[01:31:08.020 --> 01:31:10.020]  Przepraszam, to było...
+[01:31:10.020 --> 01:31:12.020]  Chyba...
+[01:31:12.020 --> 01:31:14.020]  Chyba się zastanawiałem, czy po lekturach,
+[01:31:14.020 --> 01:31:16.020]  czy chciałbyś kupić kawę.
+[01:31:16.020 --> 01:31:18.020]  Ok.
+[01:31:18.020 --> 01:31:20.020]  Ale myślę, że to jest za dużo.
+[01:31:20.020 --> 01:31:22.020]  To ciekawe, że tak.
+[01:31:22.020 --> 01:31:24.020]  Nie, nie, nie.
+[01:31:24.020 --> 01:31:26.020]  Ale jestem w Krakowie 3 tygodnie więcej.
+[01:31:26.020 --> 01:31:28.020]  Bo nie jestem w Krakowie.
+[01:31:28.020 --> 01:31:30.020]  I wracam.
+[01:31:30.020 --> 01:31:32.020]  Więc myślę, że się o to kłócę.
+[01:31:32.020 --> 01:31:34.020]  Ale to będzie możliwe.
+[01:31:34.020 --> 01:31:36.020]  Tak, tak. Przepraszam.
+
+Success! Transcription saved to: Lectures/Polish/A1_2/L18_25thAugust/L18_25thAugust.txt
+
+Process finished with exit code 0
