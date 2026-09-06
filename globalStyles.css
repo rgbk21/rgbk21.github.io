@@ -90,6 +90,9 @@ html {
   /* Be more forceful about breaking words */
   word-break: break-all;
 }
+.table thead tr {
+  background-color: #f2f2f2;
+}
 .code-snippet .gist .gist-file {
   margin-bottom: 0;
 }
