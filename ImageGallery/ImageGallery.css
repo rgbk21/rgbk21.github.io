@@ -1,66 +1,67 @@
-.hidden {
-  display: none;
-}
-
-.overlay {
-  /* To prevent the overlay from occupying
-   only the top portion of the screen */
+.modal-container {
+  display: flex;
+  flex-direction: column; /* Stack header and content vertically */
+  justify-content: flex-start;
+  align-items: center;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: 1040;
   background-color: rgba(0, 0, 0, 0.9);
   backdrop-filter: blur(3px);
-  /* Because the navbar already has a z-axis f 1030 */
-  z-index: 1035;
+}
+/* Two classes (0,2,0) beats .modal-container (0,1,0), so order doesn't matter */
+.modal-container.hidden {
+  display: none;
+}
+.modal-header-img {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end; /* Align buttons to the right */
+  box-sizing: border-box;
 }
 
 .my-modal {
-  position: fixed;
-  /*align-self: center;*/
-  top: 2.5%;
-  left: 12.5%;
-  /*right: 5%;*/
-  /*transform: translate(-50%, -50%);*/
-  width: 75%;
-  /*background-color: white;*/
-  padding-bottom: 2.5%;
-  /*border-radius: 5px;*/
-  /*box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);*/
-  z-index: 1040;
-  /* To add the scrollbar to images in y-axis*/
-  max-height: 100%;
-  overflow-y: auto;
-  outline: 0;
+  border: blue solid 1px;
+  width: 90%;
+  height: 90vh;
+  display: flex;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
 }
 
-.my-modal-fade {
-  /*transition: -webkit-transform 0.3s ease-out;*/
-  /*transition: transform 0.3s ease-out;*/
-  /*transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;*/
-  /*-webkit-transform: translate(0, -15%);*/
-  /*transform: translate(0%, 0%);*/
+.btn-container {
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
-
+.modal-btn {
+  color: rgba(255, 255, 255, 0.65);
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  transition: color 0.2s, opacity 0.2s;
+}
+.modal-btn:hover,
+.close-modal:hover {
+  color: #fff;
+}
+.modal-btn:focus-visible,
+.close-modal:focus-visible {
+  outline: 2px solid rgba(255, 255, 255, 0.8);
+  outline-offset: 4px;
+}
 #full-image {
+  border: red solid 5px;
   width: auto;
-  height: auto;
+  height: 100%;
   max-width: 100%;
   max-height: 100%;
   display: block;
-  /*align-self: auto;*/
-}
-
-.close-modal {
-  position: absolute;
-  top: 1.2rem;
-  right: 2rem;
-  font-size: 5rem;
-  color: #333;
-  cursor: pointer;
-  border: none;
-  background: none;
 }
 
 .jumbotron {
@@ -82,14 +83,15 @@
   opacity: 0.7;
 }
 
-.iframe-container{
+.iframe-container {
   padding-top: 10px;
   padding-bottom: 14px;
   margin: auto;
   width: 100%;
 }
-.iframe-container iframe{
-  top:0;
+
+.iframe-container iframe {
+  top: 0;
   left: 0;
   width: 100%;
 }

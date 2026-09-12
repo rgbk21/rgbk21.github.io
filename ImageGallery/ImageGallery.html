@@ -2,8 +2,7 @@
 <html>
 <head>
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
-        crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
   <link rel="stylesheet" type="text/css" href="../globalStyles.css">
   <link rel="stylesheet" type="text/css" href="ImageGallery.css">
   <meta name="author" content="Raj Gaurav Ballabh Kumar">
@@ -261,17 +260,42 @@
       <div class="col-lg-4 col-md-6 col-sm-6">
         <img class="img-fluid my-img" src="Optimized_Images/DSC_0001.jpg">
       </div>
-
-      <div class="my-modal my-modal-fade hidden">
-        <!--				<button class="close-modal">&times;</button>-->
-        <img id="full-image">
-      </div>
     </div>
   </div>
 
 </div>
 
-<div class="overlay hidden"></div>
+<div class="modal-container hidden">
+  <div class="modal-header-img">
+    <div class="btn-container">
+      <button class="modal-btn nav-prev-btn" aria-label="Previous image">
+        <i class="fas fa-angle-left"></i>
+      </button>
+      <button class="modal-btn nav-next-btn" aria-label="Next image">
+        <i class="fas fa-angle-right"></i>
+      </button>
+      <button class="modal-btn like-btn" aria-label="Like this image">
+        <i class="fas fa-thumbs-up"></i>
+      </button>
+      <button class="modal-btn exit-fullscreen-btn" aria-label="Exit full screen">
+        <i class="fas fa-compress-arrows-alt"></i>
+      </button>
+      <button class="modal-btn fullscreen-btn" aria-label="Enter full screen">
+        <i class="fas fa-expand-arrows-alt"></i>
+      </button>
+      <button class="modal-btn zoom-btn" aria-label="Zoom in">
+        <i class="fas fa-search-plus"></i>
+      </button>
+      <button class="modal-btn close-modal-btn" aria-label="Close">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+
+  </div>
+  <div class="my-modal">
+    <img id="full-image" alt="Full Sized Image">
+  </div>
+</div>
 
 <script src="script.js"></script>
 <script

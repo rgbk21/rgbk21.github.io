@@ -8,17 +8,15 @@
 // Using variables to store the elements so that we do not have to select the element every time
 const imgs = document.querySelectorAll('.my-img');
 const overlay = document.querySelector('.overlay');
-const modal = document.querySelector('.my-modal');
+const modalContainer = document.querySelector('.modal-container');
 const fullImage = document.querySelector('#full-image');
-// const closeModalBtn = document.querySelector('.close-modal');
+const closeModalBtn = document.querySelector('.close-modal-btn');
 
 const openFullImageOverlay = function () {
     // we are removing the 'hidden' class that will cause the element to appear on the viewport
     // Note: although we are removing the class 'hidden', we are passing in the args as 'hidden' and not '.hidden'
     // So there is no dot before the class name
-    overlay.classList.remove('hidden');
-    modal.classList.remove('hidden');
-    fullImage.classList.remove('hidden');
+    modalContainer.classList.remove('hidden');
 
     // Prevent scrolling of the background when modal is open
     document.body.style.overflowY = 'hidden';
@@ -28,16 +26,11 @@ const openFullImageOverlay = function () {
     let optimizedImgSrc = this.src;
     // console.log(`Optimized img: ${optimizedImgSrc}`);
     fullImage.src = optimizedImgSrc.replace('Optimized_I', 'i');
-    // console.log(fullImage.src);
-    // When it comes to removing or adding classes, we can add/removing multiple classes at the same time
-    // The list of classes is passed comma separated. Eg.
-    //     modal.classList.remove('hidden', 'class1', 'class2');
+    console.log(fullImage.src);
 };
 
 const closeFullImageOverlay = function () {
-    overlay.classList.add('hidden');
-    modal.classList.add('hidden');
-    fullImage.classList.add('hidden');
+    modalContainer.classList.add('hidden');
     // Remove the overflow class added to modal earlier to enable scrolling again
     document.body.style.overflowY = '';
 };
@@ -59,23 +52,14 @@ document.addEventListener('keydown', function (event) {
     // Note how we are checking if the classList contains a specific class here
     // In this case, we want to close the overlay, only if it is not currently hidden.
     // Also note how we are reading the key that was pressed by using the 'e.key' property
-    if (event.key === 'Escape' && !overlay.classList.contains('hidden')) {
+    if (event.key === 'Escape' && !modalContainer.classList.contains('hidden')) {
         closeFullImageOverlay();
     }
-
-    // Alternatively, we can also use. This method adds the class to the classlist if it is not present
-    // and removes the class from the classlist if it is present
-    // overlay.classList.toggle('hidden');
 
 
     //Just for reference:
     // console.log(event);
 });
 
-// Close the overlay when the user clicks outside the image
-overlay.addEventListener('click', closeFullImageOverlay);
-
-// Close the overlay when the user clicks the cross button
-// Cross button is removed from HTML because UGHH..
-// closeModalBtn.addEventListener('click', closeFullImageOverlay);
+closeModalBtn.addEventListener('click', closeFullImageOverlay);
 
