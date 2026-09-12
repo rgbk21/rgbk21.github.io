@@ -66,6 +66,18 @@ document.addEventListener('keydown', function (event) {
         closeFullImageOverlay();
     }
 
+    if (!modalContainer.classList.contains('hidden')) {
+        if (event.key === 'ArrowLeft') {
+            event.preventDefault();
+            showImageAt(currentImageIndex - 1);
+        }
+
+        if (event.key === 'ArrowRight') {
+            event.preventDefault();
+            showImageAt(currentImageIndex + 1);
+        }
+    }
+
 
     //Just for reference:
     // console.log(event);
