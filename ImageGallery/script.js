@@ -11,6 +11,18 @@ const overlay = document.querySelector('.overlay');
 const modalContainer = document.querySelector('.modal-container');
 const fullImage = document.querySelector('#full-image');
 const closeModalBtn = document.querySelector('.close-modal-btn');
+const previousImageBtn = document.querySelector('.nav-prev-btn');
+const nextImageBtn = document.querySelector('.nav-next-btn');
+let currentImageIndex = 0;
+
+const showImageAt = function (index) {
+    // Modulo keeps the gallery circular: previous from the first image shows the last,
+    // and next from the last image returns to the first.
+    currentImageIndex = (index + imgs.length) % imgs.length;
+    const thumbnail = imgs[currentImageIndex];
+    fullImage.src = thumbnail.src.replace('Optimized_I', 'i');
+    fullImage.alt = thumbnail.alt || 'Full sized image';
+};
 
 const openFullImageOverlay = function () {
     // we are removing the 'hidden' class that will cause the element to appear on the viewport
@@ -23,10 +35,8 @@ const openFullImageOverlay = function () {
 
     // Note how we are using 'this' to access the img element that has been clicked
     // console.log(this.src);
-    let optimizedImgSrc = this.src;
-    // console.log(`Optimized img: ${optimizedImgSrc}`);
-    fullImage.src = optimizedImgSrc.replace('Optimized_I', 'i');
-    console.log(fullImage.src);
+    currentImageIndex = Array.prototype.indexOf.call(imgs, this);
+    showImageAt(currentImageIndex);
 };
 
 const closeFullImageOverlay = function () {
@@ -62,4 +72,10 @@ document.addEventListener('keydown', function (event) {
 });
 
 closeModalBtn.addEventListener('click', closeFullImageOverlay);
+previousImageBtn.addEventListener('click', function () {
+    showImageAt(currentImageIndex - 1);
+});
+nextImageBtn.addEventListener('click', function () {
+    showImageAt(currentImageIndex + 1);
+});
 
