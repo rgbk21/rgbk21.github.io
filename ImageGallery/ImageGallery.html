@@ -267,7 +267,12 @@
 
 <div class="modal-container hidden">
   <div class="modal-header-img">
-    <p class="image-counter" aria-live="polite"></p>
+    <div class="image-status">
+      <p class="image-counter" aria-live="polite"></p>
+      <span class="image-loader" role="status" aria-label="Loading image">
+        <i class="fas fa-spinner fa-spin" aria-hidden="true"></i>
+      </span>
+    </div>
     <div class="btn-container">
       <button class="modal-btn nav-prev-btn" aria-label="Previous image">
         <i class="fas fa-angle-left"></i>

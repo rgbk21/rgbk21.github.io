@@ -12,6 +12,7 @@ const modalContainer = document.querySelector('.modal-container');
 const fullImage = document.querySelector('#full-image');
 const closeModalBtn = document.querySelector('.close-modal-btn');
 const imageCounter = document.querySelector('.image-counter');
+const imageLoader = document.querySelector('.image-loader');
 const previousImageBtns = document.querySelectorAll('.nav-prev-btn');
 const nextImageBtns = document.querySelectorAll('.nav-next-btn');
 let currentImageIndex = 0;
@@ -21,12 +22,29 @@ const showImageAt = function (index) {
     // and next from the last image returns to the first.
     currentImageIndex = (index + imgs.length) % imgs.length;
     const thumbnail = imgs[currentImageIndex];
+    imageLoader.classList.add('is-loading');
     fullImage.src = thumbnail.src.replace('Optimized_I', 'i');
     fullImage.alt = thumbnail.alt || 'Full sized image';
     imageCounter.textContent = `${currentImageIndex + 1}/${imgs.length}`;
+
+    // Cached images may already be complete before a new load event is dispatched.
+    if (fullImage.complete) {
+        imageLoader.classList.remove('is-loading');
+    }
 };
 
+fullImage.addEventListener('load', function () {
+    imageLoader.classList.remove('is-loading');
+});
+fullImage.addEventListener('error', function () {
+    imageLoader.classList.remove('is-loading');
+});
+
 const openFullImageOverlay = function () {
+    // Select the new image before displaying the modal so a previous image cannot flash.
+    currentImageIndex = Array.prototype.indexOf.call(imgs, this);
+    showImageAt(currentImageIndex);
+
     // we are removing the 'hidden' class that will cause the element to appear on the viewport
     // Note: although we are removing the class 'hidden', we are passing in the args as 'hidden' and not '.hidden'
     // So there is no dot before the class name
@@ -34,15 +52,12 @@ const openFullImageOverlay = function () {
 
     // Prevent scrolling of the background when modal is open
     document.body.style.overflowY = 'hidden';
-
-    // Note how we are using 'this' to access the img element that has been clicked
-    // console.log(this.src);
-    currentImageIndex = Array.prototype.indexOf.call(imgs, this);
-    showImageAt(currentImageIndex);
 };
 
 const closeFullImageOverlay = function () {
     modalContainer.classList.add('hidden');
+    fullImage.removeAttribute('src');
+    imageLoader.classList.remove('is-loading');
     // Remove the overflow class added to modal earlier to enable scrolling again
     document.body.style.overflowY = '';
 };
