@@ -63,17 +63,9 @@
   background: none;
 }
 
-/*.opt-img {*/
-/*	filter: blur(1px);*/
-/*}*/
-
-body {
-  padding-top: 70px;
-}
-
 .jumbotron {
+  margin-top: 2rem;
   color: black;
-  /*background: black;*/
 }
 
 .navbar-dark .navbar-brand {
@@ -100,26 +92,6 @@ body {
   top:0;
   left: 0;
   width: 100%;
-}
-
-#home_link:hover {
-  color: red;
-}
-
-#insta_link:hover {
-  color: red;
-}
-
-#fb_link:hover {
-  color: red;
-}
-
-#register_link:hover {
-  color: red;
-}
-
-#login_link:hover {
-  color: red;
 }
 
 
