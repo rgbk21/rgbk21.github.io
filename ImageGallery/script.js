@@ -12,8 +12,8 @@ const modalContainer = document.querySelector('.modal-container');
 const fullImage = document.querySelector('#full-image');
 const closeModalBtn = document.querySelector('.close-modal-btn');
 const imageCounter = document.querySelector('.image-counter');
-const previousImageBtn = document.querySelector('.nav-prev-btn');
-const nextImageBtn = document.querySelector('.nav-next-btn');
+const previousImageBtns = document.querySelectorAll('.nav-prev-btn');
+const nextImageBtns = document.querySelectorAll('.nav-next-btn');
 let currentImageIndex = 0;
 
 const showImageAt = function (index) {
@@ -79,17 +79,16 @@ document.addEventListener('keydown', function (event) {
             showImageAt(currentImageIndex + 1);
         }
     }
-
-
-    //Just for reference:
-    // console.log(event);
 });
 
 closeModalBtn.addEventListener('click', closeFullImageOverlay);
-previousImageBtn.addEventListener('click', function () {
-    showImageAt(currentImageIndex - 1);
+previousImageBtns.forEach(function (button) {
+    button.addEventListener('click', function () {
+        showImageAt(currentImageIndex - 1);
+    });
 });
-nextImageBtn.addEventListener('click', function () {
-    showImageAt(currentImageIndex + 1);
+nextImageBtns.forEach(function (button) {
+    button.addEventListener('click', function () {
+        showImageAt(currentImageIndex + 1);
+    });
 });
-

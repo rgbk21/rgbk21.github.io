@@ -75,6 +75,34 @@
   max-height: 100%;
   display: block;
 }
+.modal-footer-img {
+  display: none;
+  width: 100%;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 0.5rem 1rem;
+}
+@media (max-width: 575.98px) {
+  .modal-header-img .nav-prev-btn,
+  .modal-header-img .nav-next-btn {
+    display: none;
+  }
+
+  .modal-footer-img {
+    display: flex;
+  }
+
+  .modal-footer-img .modal-btn {
+    min-width: 5rem;
+    min-height: 3rem;
+  }
+
+  .my-modal {
+    height: auto;
+    flex: 1;
+    min-height: 0;
+  }
+}
 
 .jumbotron {
   margin-top: 2rem;
