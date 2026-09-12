@@ -44,7 +44,6 @@
 
 .my-modal {
   /*border: blue solid 1px;*/
-  width: 90%;
   height: 90vh;
   display: flex;
   align-items: center;
