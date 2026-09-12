@@ -11,6 +11,7 @@ const overlay = document.querySelector('.overlay');
 const modalContainer = document.querySelector('.modal-container');
 const fullImage = document.querySelector('#full-image');
 const closeModalBtn = document.querySelector('.close-modal-btn');
+const imageCounter = document.querySelector('.image-counter');
 const previousImageBtn = document.querySelector('.nav-prev-btn');
 const nextImageBtn = document.querySelector('.nav-next-btn');
 let currentImageIndex = 0;
@@ -22,6 +23,7 @@ const showImageAt = function (index) {
     const thumbnail = imgs[currentImageIndex];
     fullImage.src = thumbnail.src.replace('Optimized_I', 'i');
     fullImage.alt = thumbnail.alt || 'Full sized image';
+    imageCounter.textContent = `${currentImageIndex + 1}/${imgs.length}`;
 };
 
 const openFullImageOverlay = function () {

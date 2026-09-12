@@ -19,8 +19,14 @@
 .modal-header-img {
   width: 100%;
   display: flex;
-  justify-content: flex-end; /* Align buttons to the right */
+  justify-content: space-between;
+  align-items: center;
   box-sizing: border-box;
+}
+.image-counter {
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+  padding-left: 1rem;
 }
 
 .my-modal {
