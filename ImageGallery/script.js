@@ -10,6 +10,7 @@ const imgs = document.querySelectorAll('.my-img');
 const overlay = document.querySelector('.overlay');
 const modalContainer = document.querySelector('.modal-container');
 const modalFullscreenContent = document.querySelector('.modal-fullscreen-content');
+const modalHeader = document.querySelector('.modal-header-img');
 const fullImage = document.querySelector('#full-image');
 const closeModalBtn = document.querySelector('.close-modal-btn');
 const fullscreenBtn = document.querySelector('.fullscreen-btn');
@@ -19,6 +20,41 @@ const imageLoader = document.querySelector('.image-loader');
 const previousImageBtns = document.querySelectorAll('.nav-prev-btn');
 const nextImageBtns = document.querySelectorAll('.nav-next-btn');
 let currentImageIndex = 0;
+let fullscreenControlsTimer;
+let isPointerOverModalHeader = false;
+
+const updateFullscreenControls = function () {
+    const isGalleryFullscreen = document.fullscreenElement === modalFullscreenContent;
+    fullscreenBtn.hidden = isGalleryFullscreen;
+    exitFullscreenBtn.hidden = !isGalleryFullscreen;
+};
+
+const showFullscreenControls = function () {
+    if (document.fullscreenElement !== modalFullscreenContent) {
+        return;
+    }
+
+    modalFullscreenContent.classList.remove('controls-hidden');
+    clearTimeout(fullscreenControlsTimer);
+
+    if (!isPointerOverModalHeader) {
+        fullscreenControlsTimer = setTimeout(function () {
+            modalFullscreenContent.classList.add('controls-hidden');
+        }, 2000);
+    }
+};
+
+const handleFullscreenChange = function () {
+    updateFullscreenControls();
+
+    if (document.fullscreenElement === modalFullscreenContent) {
+        showFullscreenControls();
+    } else {
+        clearTimeout(fullscreenControlsTimer);
+        modalFullscreenContent.classList.remove('controls-hidden');
+        isPointerOverModalHeader = false;
+    }
+};
 
 const showImageAt = function (index) {
     // Modulo keeps the gallery circular: previous from the first image shows the last,
@@ -91,6 +127,13 @@ document.addEventListener('keydown', function (event) {
     }
 
     if (!modalContainer.classList.contains('hidden')) {
+        // Pressing F moves the image to FullScreen when the modal is open.
+        if (event.key.toLowerCase() === 'f' && !event.ctrlKey && !event.metaKey && !event.altKey &&
+            document.fullscreenElement !== modalFullscreenContent) {
+            event.preventDefault();
+            modalFullscreenContent.requestFullscreen();
+        }
+
         if (event.key === 'ArrowLeft') {
             event.preventDefault();
             showImageAt(currentImageIndex - 1);
@@ -111,6 +154,18 @@ exitFullscreenBtn.addEventListener('click', function () {
     if (document.fullscreenElement === modalFullscreenContent) {
         document.exitFullscreen();
     }
+});
+document.addEventListener('fullscreenchange', handleFullscreenChange);
+['pointermove', 'pointerdown', 'touchstart', 'wheel', 'keydown', 'focusin'].forEach(function (eventName) {
+    modalFullscreenContent.addEventListener(eventName, showFullscreenControls);
+});
+modalHeader.addEventListener('pointerenter', function () {
+    isPointerOverModalHeader = true;
+    showFullscreenControls();
+});
+modalHeader.addEventListener('pointerleave', function () {
+    isPointerOverModalHeader = false;
+    showFullscreenControls();
 });
 previousImageBtns.forEach(function (button) {
     button.addEventListener('click', function () {

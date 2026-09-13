@@ -93,6 +93,14 @@
 .modal-btn:focus-visible {
   outline: none;
 }
+/* Fade the buttons out in full screen on inactivity. */
+.modal-fullscreen-content .modal-header-img {
+  transition: opacity 0.25s ease;
+}
+.modal-fullscreen-content.controls-hidden .modal-header-img {
+  opacity: 0;
+  pointer-events: none;
+}
 #full-image {
   /*border: red solid 5px;*/
   width: auto;
