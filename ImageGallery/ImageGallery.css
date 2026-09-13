@@ -118,6 +118,11 @@
   padding: 0.5rem 1rem;
 }
 @media (max-width: 576px) {
+  .my-modal {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
   .fullscreen-btn {
     display: none;
   }
@@ -135,7 +140,6 @@
     min-width: 5rem;
     min-height: 3rem;
   }
-
 }
 
 .jumbotron {
