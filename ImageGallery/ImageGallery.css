@@ -16,6 +16,18 @@
 .modal-container.hidden {
   display: none;
 }
+.modal-fullscreen-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  width: 100%;
+  min-height: 0;
+}
+.modal-fullscreen-content:fullscreen {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+}
 .modal-header-img {
   width: 100%;
   display: flex;
@@ -44,7 +56,10 @@
 
 .my-modal {
   /*border: blue solid 1px;*/
-  height: 90vh;
+  flex: 1;
+  min-height: 0;
+  box-sizing: border-box;
+  padding: 0 1rem 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -109,11 +124,6 @@
     min-height: 3rem;
   }
 
-  .my-modal {
-    height: auto;
-    flex: 1;
-    min-height: 0;
-  }
 }
 
 .jumbotron {

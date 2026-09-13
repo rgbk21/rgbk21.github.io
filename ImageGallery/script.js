@@ -9,8 +9,11 @@
 const imgs = document.querySelectorAll('.my-img');
 const overlay = document.querySelector('.overlay');
 const modalContainer = document.querySelector('.modal-container');
+const modalFullscreenContent = document.querySelector('.modal-fullscreen-content');
 const fullImage = document.querySelector('#full-image');
 const closeModalBtn = document.querySelector('.close-modal-btn');
+const fullscreenBtn = document.querySelector('.fullscreen-btn');
+const exitFullscreenBtn = document.querySelector('.exit-fullscreen-btn');
 const imageCounter = document.querySelector('.image-counter');
 const imageLoader = document.querySelector('.image-loader');
 const previousImageBtns = document.querySelectorAll('.nav-prev-btn');
@@ -55,6 +58,10 @@ const openFullImageOverlay = function () {
 };
 
 const closeFullImageOverlay = function () {
+    if (document.fullscreenElement === modalFullscreenContent) {
+        document.exitFullscreen();
+    }
+
     modalContainer.classList.add('hidden');
     fullImage.removeAttribute('src');
     imageLoader.classList.remove('is-loading');
@@ -97,6 +104,14 @@ document.addEventListener('keydown', function (event) {
 });
 
 closeModalBtn.addEventListener('click', closeFullImageOverlay);
+fullscreenBtn.addEventListener('click', function () {
+    modalFullscreenContent.requestFullscreen();
+});
+exitFullscreenBtn.addEventListener('click', function () {
+    if (document.fullscreenElement === modalFullscreenContent) {
+        document.exitFullscreen();
+    }
+});
 previousImageBtns.forEach(function (button) {
     button.addEventListener('click', function () {
         showImageAt(currentImageIndex - 1);

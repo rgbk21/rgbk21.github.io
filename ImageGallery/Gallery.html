@@ -278,40 +278,43 @@
 </div>
 
 <div class="modal-container hidden">
-  <div class="modal-header-img">
-    <div class="image-status">
-      <p class="image-counter" aria-live="polite"></p>
-      <span class="image-loader" role="status" aria-label="Loading image">
-        <i class="fas fa-spinner fa-spin" aria-hidden="true"></i>
-      </span>
+  <!-- modal-fullscreen-content is the element passed to requestFullscreen(), because the API can fullscreen one element—not two separate siblings. -->
+  <div class="modal-fullscreen-content">
+    <div class="modal-header-img">
+      <div class="image-status">
+        <p class="image-counter" aria-live="polite"></p>
+        <span class="image-loader" role="status" aria-label="Loading image">
+          <i class="fas fa-spinner fa-spin" aria-hidden="true"></i>
+        </span>
+      </div>
+      <div class="btn-container">
+        <button class="modal-btn nav-prev-btn" aria-label="Previous image">
+          <i class="fas fa-angle-left"></i>
+        </button>
+        <button class="modal-btn nav-next-btn" aria-label="Next image">
+          <i class="fas fa-angle-right"></i>
+        </button>
+        <button class="modal-btn like-btn" aria-label="Like this image">
+          <i class="fas fa-thumbs-up"></i>
+        </button>
+        <button class="modal-btn exit-fullscreen-btn" aria-label="Exit full screen">
+          <i class="fas fa-compress-arrows-alt"></i>
+        </button>
+        <button class="modal-btn fullscreen-btn" aria-label="Enter full screen">
+          <i class="fas fa-expand-arrows-alt"></i>
+        </button>
+        <button class="modal-btn zoom-btn" aria-label="Zoom in">
+          <i class="fas fa-search-plus"></i>
+        </button>
+        <button class="modal-btn close-modal-btn" aria-label="Close">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
     </div>
-    <div class="btn-container">
-      <button class="modal-btn nav-prev-btn" aria-label="Previous image">
-        <i class="fas fa-angle-left"></i>
-      </button>
-      <button class="modal-btn nav-next-btn" aria-label="Next image">
-        <i class="fas fa-angle-right"></i>
-      </button>
-      <button class="modal-btn like-btn" aria-label="Like this image">
-        <i class="fas fa-thumbs-up"></i>
-      </button>
-      <button class="modal-btn exit-fullscreen-btn" aria-label="Exit full screen">
-        <i class="fas fa-compress-arrows-alt"></i>
-      </button>
-      <button class="modal-btn fullscreen-btn" aria-label="Enter full screen">
-        <i class="fas fa-expand-arrows-alt"></i>
-      </button>
-      <button class="modal-btn zoom-btn" aria-label="Zoom in">
-        <i class="fas fa-search-plus"></i>
-      </button>
-      <button class="modal-btn close-modal-btn" aria-label="Close">
-        <i class="fas fa-times"></i>
-      </button>
-    </div>
-  </div>
 
-  <div class="my-modal">
-    <img id="full-image" alt="Full Sized Image">
+    <div class="my-modal">
+      <img id="full-image" alt="Full Sized Image">
+    </div>
   </div>
 
   <div class="modal-footer-img">
