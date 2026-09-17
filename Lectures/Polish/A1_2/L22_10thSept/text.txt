@@ -1,0 +1,2009 @@
+"C:\MY_BACKUP\LearningStuff\Udemy Full Stack\newGithubHostedSite\rgbk21.github.io\rgbk21.github.io\.venv\Scripts\python.exe" "C:\MY_BACKUP\LearningStuff\Udemy Full Stack\newGithubHostedSite\rgbk21.github.io\rgbk21.github.io\transcribe.py"
+C:\MY_BACKUP\LearningStuff\Udemy Full Stack\newGithubHostedSite\rgbk21.github.io\rgbk21.github.io\.venv\Lib\site-packages\whisper\transcribe.py:132: UserWarning: FP16 is not supported on CPU; using FP32 instead
+  warnings.warn("FP16 is not supported on CPU; using FP32 instead")
+[00:00.000 --> 00:06.000]  Wszystkie słowa są jasne.
+[00:06.000 --> 00:16.480]  mekk 좁óżnia
+[00:32.480 --> 00:35.220]  Bardzo interrupting
+[00:36.000 --> 00:38.000]  poważny, seriozny
+[00:38.000 --> 00:41.500]  możemy też powiedzieć, że ktoś jest poważny
+[00:41.500 --> 00:44.900]  jak ktoś jest poważny, to znaczy, że jest bardzo seriozny
+[00:44.900 --> 00:45.900]  ok
+[00:45.900 --> 00:47.900]  a co jeszcze?
+[00:47.900 --> 00:52.900]  w zeszłym tygodniu
+[00:52.900 --> 00:58.900]  zeszłym to była pierwsza tygodnia, prawda?
+[00:58.900 --> 01:00.900]  tak, tygodnia przed
+[01:00.900 --> 01:02.900]  tygodnia przed
+[01:02.900 --> 01:08.900]  i pozdrawiam serdecznie
+[01:21.900 --> 01:23.900]  coś takiego jak
+[01:23.900 --> 01:25.900]  serdecznie, może
+[01:25.900 --> 01:27.900]  o, szczerym zaufaniem
+[01:27.900 --> 01:29.900]  coś takiego
+[01:29.900 --> 01:31.900]  nie wiem
+[01:31.900 --> 01:32.900]  kiedy my
+[01:32.900 --> 01:34.900]  poświęcamy
+[01:34.900 --> 01:36.900]  poświęcamy
+[01:36.900 --> 01:37.900]  czytanie
+[01:37.900 --> 01:38.900]  ok
+[01:38.900 --> 01:39.900]  ale bardziej informacyjne
+[01:39.900 --> 01:40.900]  bardziej przyjemne
+[01:40.900 --> 01:41.900]  ok
+[01:41.900 --> 01:42.900]  ok
+[01:42.900 --> 01:43.900]  ok
+[01:43.900 --> 01:45.900]  i wtedy chciałem tylko
+[01:45.900 --> 01:47.900]  zrozumieć coś
+[01:47.900 --> 01:48.900]  więc
+[01:48.900 --> 01:50.900]  kiedy dokładnie powinniśmy
+[01:50.900 --> 01:52.900]  używać słowa refleksywnych
+[01:52.900 --> 01:53.900]  ze słowa
+[01:53.900 --> 01:55.900]  ze słowa
+[01:55.900 --> 01:56.900]  więc, tak, używają
+[01:56.900 --> 01:58.900]  życzę
+[01:58.900 --> 01:59.900]  życzę
+[01:59.900 --> 02:00.900]  ale potem
+[02:00.900 --> 02:01.900]  życzę
+[02:01.900 --> 02:07.900]  radio
+[02:07.900 --> 02:08.900]  bardzo bardzo�
+[02:08.900 --> 02:09.900]  to teraz
+[02:09.900 --> 02:12.700]  chåt
+[02:12.700 --> 02:13.700]  lub
+[02:13.700 --> 02:14.700]  od razu
+[02:14.700 --> 02:15.780]  ły__
+[02:15.780 --> 02:17.500]  je
+[02:17.500 --> 02:18.500]  ride
+[02:18.500 --> 02:19.440]  można
+[02:19.440 --> 02:20.180]  그러니까
+[02:20.180 --> 02:20.900]  zawsze
+[02:20.900 --> 02:22.060]  zadają
+[02:22.060 --> 02:22.900]  co
+[02:22.900 --> 02:23.900]  nie
+[02:23.900 --> 02:24.960]  z Tschu je
+[02:24.960 --> 02:25.900]  I
+[02:25.900 --> 02:26.900] uki
+[02:28.540 --> 02:29.420]  pa
+[02:29.420 --> 02:30.300]  madness
+[02:30.300 --> 02:30.900]  here
+[02:30.900 --> 02:35.900]  I ja jeszcze nie wiem odpowiedzi.
+[02:35.900 --> 02:37.900]  Możemy powiedzieć
+[02:37.900 --> 02:39.900]  RELAKSOWACI SIĘŁ
+[02:39.900 --> 02:40.900]  czy
+[02:40.900 --> 02:42.900]  OSPOTRZEBAĆ
+[02:42.900 --> 02:44.900]  co oznacza to samo jak REST.
+[02:44.900 --> 02:48.900]  Ale nie mam pojęcia dlaczego jest RELAKSOWACI SIĘŁ
+[02:48.900 --> 02:51.900]  a dlaczego OSPOTRZEBAĆ nie jest OSPOTRZEBAĆ.
+[02:51.900 --> 02:55.900]  To będzie więc odpowiedź, żeby użyć obie.
+[02:55.900 --> 02:59.900]  W tym kontekście?
+[02:59.900 --> 03:02.900]  Tak, ale RELAKSOWACI SIĘŁ
+[03:02.900 --> 03:05.900]  czy coś innego bez SIĘŁ.
+[03:05.900 --> 03:09.900]  Przepraszam, czy możesz powtórzyć ostatnią odpowiedź?
+[03:09.900 --> 03:12.900]  RELAKSOWACI SIĘŁ
+[03:12.900 --> 03:14.900]  ale OSPOTRZEBAĆ
+[03:14.900 --> 03:16.900]  bez SIĘŁ.
+[03:16.900 --> 03:18.900]  Bo wiele słów,
+[03:18.900 --> 03:20.900]  wiele wersji
+[03:20.900 --> 03:26.900]  bo mamy jedno słowo
+[03:26.900 --> 03:28.900]  jak MYĆ SIĘŁ
+[03:28.900 --> 03:29.900]  UCZYĆ SIĘŁ
+[03:29.900 --> 03:31.900]  więc ty jesteś
+[03:31.900 --> 03:37.900]  jesteś tym, kto robi coś dla siebie.
+[03:37.900 --> 03:40.900]  Ale czasami RELAKSOWACI SIĘŁ
+[03:40.900 --> 03:42.900]  i OSPOTRZEBAĆ są dokładnie takie samo.
+[03:42.900 --> 03:44.900]  Więc nie mam pojęcia.
+[03:44.900 --> 03:47.900]  Ale nie wiem czy jest jakiś
+[03:47.900 --> 03:49.900]  specyficzny powód.
+[03:49.900 --> 03:53.900]  To jest tylko miejsce.
+[03:53.900 --> 03:55.900]  Nie wiem, dlaczego...
+[03:55.900 --> 03:57.900]  Ja nie wiem.
+[03:57.900 --> 03:58.900]  Nie wiem.
+[03:58.900 --> 04:00.900]  Dlaczego ja jestem jedynym?
+[04:00.900 --> 04:03.900]  Każdy z nas rozumie wszystko.
+[04:03.900 --> 04:05.900]  Nie, to znaczy...
+[04:05.900 --> 04:08.900]  Tak, masz rację, ale to jest to samo.
+[04:08.900 --> 04:10.900]  Uczyciel.
+[04:10.900 --> 04:12.900]  To po prostu istnieje.
+[04:12.900 --> 04:13.900]  Musisz to po prostu zdjąć.
+[04:13.900 --> 04:14.900]  Tak.
+[04:14.900 --> 04:15.900]  Uczyciel.
+[04:15.900 --> 04:16.900]  Udostępnić siebie.
+[04:16.900 --> 04:17.900]  Ok.
+[04:17.900 --> 04:19.900]  Nie mam innych pytań.
+[04:19.900 --> 04:22.900]  Dobrze.
+[04:22.900 --> 04:23.900]  Na stręście.
+[04:23.900 --> 04:25.900]  Wiesz co to znaczy?
+[04:25.900 --> 04:26.900]  Ok.
+[04:26.900 --> 04:27.900]  Na stręście.
+[04:27.900 --> 04:28.900]  Na stręście.
+[04:28.900 --> 04:29.900]  Na stręście.
+[04:29.900 --> 04:30.900]  Na stręście.
+[04:30.900 --> 04:31.900]  Ok.
+[04:31.900 --> 04:32.900]  Na stręście.
+[04:32.900 --> 04:33.900]  Ok.
+[04:33.900 --> 04:41.900]  Czy jeszcze jakieś nowe słowa?
+[04:41.900 --> 04:46.900]  Wiesz, wszystkie moje pytania są na temat
+[04:46.900 --> 04:49.900]  struktury, której nie chcę zapytać,
+[04:49.900 --> 04:51.900]  bo nie myślę, że zrozumiem,
+[04:51.900 --> 04:52.900]  jeśli wyjaśnisz.
+[04:52.900 --> 04:53.900]  Więc...
+[04:53.900 --> 04:54.900]  Więc...
+[04:54.900 --> 04:55.900]  Mogę spróbować,
+[04:55.900 --> 04:56.900]  ale czasami...
+[04:56.900 --> 05:01.900]  Nie, bo myślę, że nie wiesz, co nie wiemy, prawda?
+[05:01.900 --> 05:02.900]  Tak.
+[05:02.900 --> 05:09.900]  Więc może się coś wyjaśni, wierząc, że już wiemy ten koncept, ale w naszym głowie jesteśmy tak, co się stało, prawda?
+[05:09.900 --> 05:10.900]  Ok.
+[05:10.900 --> 05:11.900]  Ale możemy spróbować.
+[05:11.900 --> 05:13.900]  Bo zrobimy coś.
+[05:13.900 --> 05:16.900]  Nie wiem, co to jest?
+[05:16.900 --> 05:17.900]  Rela...
+[05:17.900 --> 05:18.900]  Rela...
+[05:18.900 --> 05:19.900]  Rela...
+[05:19.900 --> 05:20.900]  Rela...
+[05:20.900 --> 05:21.900]  Rela...
+[05:21.900 --> 05:22.900]  Rela...
+[05:22.900 --> 05:23.900]  Rela...
+[05:23.900 --> 05:24.900]  Rela...
+[05:24.900 --> 05:25.900]  Rela...
+[05:25.900 --> 05:26.900]  Rela...
+[05:26.900 --> 05:27.900]  Rela...
+[05:27.900 --> 05:28.900]  Budyicio...
+[05:28.900 --> 05:29.900]  Rela...
+[05:29.900 --> 05:30.900]  Rela...
+[05:30.900 --> 05:31.900]  Rela...
+[05:31.900 --> 05:32.900]  Rela...
+[05:32.900 --> 05:33.900]  Rela...
+[05:33.900 --> 05:34.900]  Rela...
+[05:34.900 --> 05:35.900]  Rela...
+[05:35.900 --> 05:38.900]  Dobra, to jeszcze.
+[05:39.900 --> 05:40.900]  Dziękuję.
+[05:40.900 --> 05:43.900]  Nie chcę pracować tak wiecznie.
+[05:43.900 --> 05:46.900]  A wiadomo, że zdarza zatem balansWilliam...
+[05:46.900 --> 05:49.900]  Jak pan mówił, że różnie Amber to lepiej wymyślić,
+[05:49.900 --> 05:50.900]  ale 얘�ken...
+[05:50.900 --> 05:53.700]  Może też nie mi żebym � worm competitor ale kiedy wymyślił...
+[05:53.700 --> 05:54.900]  Ten Buck trailer nie jestдо banker, jest za to.
+[05:54.900 --> 06:00.900]  Więc ta słowa zawsze mnie zaskakuje. Co to znaczy, że jest to już?
+[06:00.900 --> 06:09.900]  Jakoś czasami zapytasz coś i powiesz, czy jest to już, a ktoś odpowiada, że jest już.
+[06:09.900 --> 06:14.900]  Nie rozumiem tego słowa, jak to używać.
+[06:14.900 --> 06:19.900]  Kiedy to oglądam w dyktywach, to jest 20 różnych znaczeń.
+[06:19.900 --> 06:22.900]  Tak, dlatego jest to zaskakujące.
+[06:24.900 --> 06:32.900]  Z Tobą bym powiedział, że w sytuacji, kiedy zapytam, czy coś jest już, to jest już.
+[06:32.900 --> 06:36.900]  Już to znaczy, że już.
+[06:36.900 --> 06:42.900]  Teraz na szczęście już czyjeś jest objawy.
+[06:42.900 --> 06:45.900]  Już, zakończone.
+[06:45.900 --> 06:47.900]  W końcu?
+[06:47.900 --> 06:49.900]  W końcu.
+[06:49.900 --> 06:53.900]  Nie będę odpowiadał na takie kwestie.
+[06:53.900 --> 06:55.900]  Czy możesz coś z tym zrób?
+[06:55.900 --> 06:57.900]  Możesz.
+[06:57.900 --> 06:58.900]  Mogę?
+[06:58.900 --> 07:00.900]  Zależy od pytania.
+[07:00.900 --> 07:02.900]  Ok.
+[07:02.900 --> 07:11.900]  Kiedy ktoś zapyta, czy jesteś gotowy, bo nie żyjesz, możesz powiedzieć, że już, daj mi tylko 2 minutki, jestem już gotowa.
+[07:11.900 --> 07:15.900]  Ok, więc już to znaczy, że już jestem gotowa?
+[07:15.900 --> 07:17.900]  W niektórych sytuacjach, tak.
+[07:17.900 --> 07:18.900]  Ok.
+[07:18.900 --> 07:22.900]  Ja bym powiedziała, że już to jest w związku z czasem.
+[07:22.900 --> 07:30.900]  Kiedy coś jest gotowe, czy jest już gotowe, gotowy do pracy, gotowy do życia, gotowy do czegoś.
+[07:30.900 --> 07:36.900]  Kiedy zapytam, już, kiedy robisz jakiś egzercizm, zapytam go, czy już to jest już.
+[07:36.900 --> 07:38.900]  Ok, już.
+[07:38.900 --> 07:41.900]  Więc mamy też wytrzymać, już.
+[07:49.900 --> 07:50.900]  Która była Twoja pytanie?
+[07:50.900 --> 07:51.900]  Wytrzymać.
+[07:51.900 --> 07:59.900]  Kiedyś byłem w klasie dla Rosy, i samochód przychodzi, i ktoś mówi, że już, już, już.
+[07:59.900 --> 08:00.900]  Tak?
+[08:00.900 --> 08:01.900]  Tak.
+[08:08.900 --> 08:09.900]  Nie wiem.
+[08:09.900 --> 08:11.900]  Nie było takiego.
+[08:11.900 --> 08:14.900]  To było w kontekście.
+[08:14.900 --> 08:15.900]  W kontekście.
+[08:15.900 --> 08:16.900]  Tak.
+[08:16.900 --> 08:18.900]  Byłem pracując z...
+[08:18.900 --> 08:21.900]  Jeden z nas był za mną, rozmawiał z moim synem.
+[08:21.900 --> 08:22.900]  Tak.
+[08:22.900 --> 08:25.900]  Więc on był, tak, rąkając do Rosy, że...
+[08:25.900 --> 08:27.900]  Już, już, już.
+[08:27.900 --> 08:29.900]  I ona powiedziała, że już, już, już.
+[08:29.900 --> 08:30.900]  I pokazała mu ten samochód.
+[08:30.900 --> 08:31.900]  Tak.
+[08:31.900 --> 08:34.900]  Więc to jest dokładnie przeciwko temu, co...
+[08:34.900 --> 08:37.900]  Tak, więc ja rozumiem, że to jest coś, co się dzieje.
+[08:37.900 --> 08:38.900]  Tak, tak.
+[08:38.900 --> 08:40.900]  Tak, tak, rozumiem.
+[08:40.900 --> 08:41.900]  Uff.
+[08:42.900 --> 08:43.900]  Ok.
+[08:43.900 --> 08:48.900]  Ok, myślę, że to, co on mówił, to znaczy...
+[08:48.900 --> 08:49.900]  On mówił, że...
+[08:49.900 --> 08:53.900]  On powiedział mu, że już, tak...
+[08:53.900 --> 08:55.900]  Moja opinia...
+[08:55.900 --> 08:56.900]  Tak, tak.
+[08:56.900 --> 08:57.900]  Tak, tak.
+[08:57.900 --> 08:59.900]  Poczekaj trochę, a potem możesz iść.
+[08:59.900 --> 09:02.900]  Poczekaj, a potem później.
+[09:04.900 --> 09:08.900]  Ale to jest bardzo interesujące, ta sytuacja.
+[09:11.900 --> 09:13.900]  Tak, ja bym powiedziała, może, może poczekaj.
+[09:13.900 --> 09:14.900]  Poczekaj, poczekaj.
+[09:14.900 --> 09:17.900]  Poczekaj, a potem w końcu możesz coś zrobić.
+[09:17.900 --> 09:18.900]  Ale to jest bardzo...
+[09:18.900 --> 09:24.900]  Ale to jest bardzo ekstremalna sytuacja.
+[09:24.900 --> 09:26.900]  Ok, jedna ostatnia pytanie.
+[09:26.900 --> 09:27.900]  Tak?
+[09:27.900 --> 09:28.900]  Więc, tak...
+[09:28.900 --> 09:35.900]  Tak, to jest tylko z z z z z z z z z z z z z z z z z z z z z z z z z z z z z Z z z z e z z e z z e z e z z e z e z
+[09:35.900 --> 09:36.900]  na końcu na kontynuację, prawda?
+[09:36.900 --> 09:37.900]  Czy to jest inne słowo?
+[09:37.900 --> 09:38.900]  Tak.
+[09:38.900 --> 09:39.900]  Tak, tak.
+[09:39.900 --> 09:40.900]  Tak, tak, tak.
+[09:40.900 --> 09:41.900]  Tak.
+[09:41.900 --> 09:42.900]  Tak, tak.
+[09:42.900 --> 09:43.900]  Tak, tak.
+[09:43.900 --> 09:44.900]  Tak, tak.
+[09:44.900 --> 09:45.900]  Tak, tak, tak.
+[09:45.900 --> 09:46.900]  Tak, tak.
+[09:46.900 --> 09:47.900]  Tak, tak.
+[09:47.900 --> 09:51.900]  Jest to po prostu to samo E.
+[09:51.900 --> 09:55.900]  Czy to jest inna wersja niż Z?
+[09:55.900 --> 09:57.900]  Czy moja pytanie jest nieprawda?
+[09:57.900 --> 09:59.900]  Aha, myślę, że wiem.
+[09:59.900 --> 10:03.900]  Próbuję znaleźć tę pytaną.
+[10:03.900 --> 10:05.900]  Pierwsza linię.
+[10:05.900 --> 10:07.900]  Przepraszam, że tak długo. Pierwsza linię.
+[10:07.900 --> 10:09.900]  Okej.
+[10:09.900 --> 10:11.900]  Czekaj.
+[10:11.900 --> 10:13.900]  Czekaj.
+[10:13.900 --> 10:17.900]  Czekaj. Pytasz mnie, czy to jest to samo jak to?
+[10:17.900 --> 10:19.900]  Nie.
+[10:19.900 --> 10:21.900]  Nie? Nie.
+[10:21.900 --> 10:23.900]  To jest coś z kimś, z kimś,
+[10:23.900 --> 10:25.900]  i to jest to.
+[10:25.900 --> 10:27.900]  Więc...
+[10:27.900 --> 10:31.900]  Przepraszam, że nie zapomniałam.
+[10:31.900 --> 10:33.900]  Albo coś.
+[10:33.900 --> 10:35.900]  Przepraszam.
+[10:35.900 --> 10:37.900]  Przepraszam.
+[10:37.900 --> 10:39.900]  O, i ostatnia pytanie.
+[10:39.900 --> 10:41.900]  Pamiętam, że szukała nowej pracy.
+[10:41.900 --> 10:43.900]  Że byłeś tak...
+[10:43.900 --> 10:45.900]  Że ona była tak zbyt zbyt zbyt zbyt...
+[10:45.900 --> 10:47.900]  Więc to jest to.
+[10:49.900 --> 10:51.900]  Okej. To.
+[10:51.900 --> 10:53.900]  Aha.
+[10:53.900 --> 10:55.900]  Więc co... jest to... jest to słowo dla tego?
+[10:55.900 --> 10:57.900]  To było w ogóle?
+[10:57.900 --> 10:59.900]  To było w ogóle?
+[10:59.900 --> 11:01.900]  Jest słowo dla wszystkiego.
+[11:01.900 --> 11:03.900]  Oczywiście. Moja pytanie jest, jak byś...
+[11:03.900 --> 11:05.900]  jak byś przetłumaczył?
+[11:05.900 --> 11:07.900]  To jest...
+[11:07.900 --> 11:09.900]  to jest mój...
+[11:09.900 --> 11:11.900]  telefon.
+[11:11.900 --> 11:13.900]  Ten...
+[11:13.900 --> 11:15.900]  Ten!
+[11:15.900 --> 11:17.900]  Ten!
+[11:17.900 --> 11:19.900]  Tak tak. Ten!
+[11:19.900 --> 11:21.900]  Respect...
+[11:21.900 --> 11:23.900]  Można to mówić...
+[11:23.900 --> 11:25.720]  True.
+[11:25.720 --> 11:26.320]  Prawda.
+[11:26.320 --> 11:27.100]  Of brzm.
+[11:27.100 --> 11:29.100]  To jest...
+[11:29.100 --> 11:30.700]  hotel
+[11:30.700 --> 11:32.700]  A Wasza profesja jest właśnie oni sami.
+[11:32.700 --> 11:35.380]  Set oczy i kto i jak
+[11:35.380 --> 11:36.500]  measure
+[11:36.500 --> 11:40.500]  Takes that the piano
+[11:40.500 --> 11:42.500]  Byéez!
+[11:42.500 --> 11:46.500]  Nie wiem czy jest lepszy dyktyw.
+[11:46.500 --> 11:48.500]  Który używasz?
+[11:48.500 --> 11:50.500]  Diki.pl
+[11:50.500 --> 11:55.500]  Jest to przesłanie po polsku do angielskiego.
+[11:55.500 --> 11:57.500]  I nawet mają...
+[11:57.500 --> 12:00.500]  Nie wiem...
+[12:00.500 --> 12:04.500]  Nie mam kontaktu z nimi.
+[12:04.500 --> 12:06.500]  Tak, to jest rzecz.
+[12:06.500 --> 12:08.500]  Myślę, że nie mamy już kontaktu.
+[12:08.500 --> 12:10.500]  W każdym razie, przepraszam.
+[12:10.500 --> 12:12.500]  Czy ktoś ma pytania?
+[12:12.500 --> 12:13.500]  Kiedy?
+[12:13.500 --> 12:15.500]  Mam nadzieję, że teraz.
+[12:15.500 --> 12:17.500]  Ok.
+[12:17.500 --> 12:19.500]  Poza tym? Co to znaczy?
+[12:19.500 --> 12:21.500]  Poza tym?
+[12:25.500 --> 12:28.500]  Poza tym. Ok, więc...
+[12:32.500 --> 12:35.500]  Chociaż... w zależności od czegoś...
+[12:38.500 --> 12:40.500]  W zależności od tego,
+[12:40.500 --> 12:42.500]  wszystko jest w porządku.
+[12:42.500 --> 12:43.500]  Tak.
+[12:47.500 --> 12:49.500]  Poza tym.
+[12:49.500 --> 12:51.500]  Z czasami...
+[12:51.500 --> 12:52.500]  Jak to powiedzieć?
+[12:52.500 --> 12:54.500]  Z czasami.
+[12:54.500 --> 12:56.500]  Może.
+[13:00.500 --> 13:02.500]  Ok, to kolejna pytanie.
+[13:02.500 --> 13:06.500]  To znaczy, że idę do miejsca kogoś, prawda?
+[13:06.500 --> 13:08.500]  Tak.
+[13:08.500 --> 13:10.500]  Byłem w Babci.
+[13:10.500 --> 13:12.500]  Mówiłem o tym w Dupeniach, prawda?
+[13:12.500 --> 13:13.500]  Tak.
+[13:13.500 --> 13:14.500]  Więc...
+[13:14.500 --> 13:16.500]  Więc idę. Jestem.
+[13:16.500 --> 13:18.500]  Jestem. Tak, jestem.
+[13:18.500 --> 13:19.500]  Więc...
+[13:19.500 --> 13:20.500]  Jestem już tam.
+[13:20.500 --> 13:21.500]  Więc...
+[13:21.500 --> 13:22.500]  Więc...
+[13:22.500 --> 13:23.500]  Więc...
+[13:23.500 --> 13:25.500]  Jestem już tam.
+[13:25.500 --> 13:26.500]  Tak.
+[13:26.500 --> 13:28.500]  Jestem już tam.
+[13:28.500 --> 13:29.500]  Tak.
+[13:29.500 --> 13:31.500]  Więc...
+[13:31.500 --> 13:32.500]  Więc...
+[13:32.500 --> 13:33.500]  Więc...
+[13:33.500 --> 13:34.500]  Więc...
+[13:34.500 --> 13:35.500]  Więc...
+[13:35.500 --> 13:36.500]  Więc...
+[13:36.500 --> 13:37.500]  Więc...
+[13:37.500 --> 13:38.500]  Nie wiem, jak odpowiedzieć na tę pytanie.
+[13:38.500 --> 13:39.500]  Może...
+[13:39.500 --> 13:40.500]  Może...
+[13:40.500 --> 13:41.500]  Może...
+[13:41.500 --> 13:42.500]  Czy to jest nieprzyjemna pytanie?
+[13:42.500 --> 13:43.500]  Czy powinnam...
+[13:43.500 --> 13:44.500]  Nie, nie, nie.
+[13:44.500 --> 13:45.500]  To w porządku.
+[13:45.500 --> 13:46.500]  Hmm...
+[13:46.500 --> 13:47.500]  Hmm...
+[13:47.500 --> 13:48.500]  Hmm...
+[13:48.500 --> 13:49.500]  Hmm...
+[13:49.500 --> 13:50.500]  Hmm...
+[13:50.500 --> 13:51.500]  Hmm...
+[13:51.500 --> 13:52.500]  Ok, tak.
+[13:52.500 --> 13:55.500]  Wiesz, że w przypadku tego, że jesteś w miejscu kogoś,
+[13:55.500 --> 13:57.500]  i spotkasz się z kimś,
+[13:57.500 --> 13:59.500]  ale możesz również powiedzieć, że...
+[13:59.500 --> 14:00.500]  że...
+[14:00.500 --> 14:01.500]  że...
+[14:01.500 --> 14:02.500]  że...
+[14:02.500 --> 14:03.500]  że...
+[14:03.500 --> 14:04.500]  że...
+[14:04.500 --> 14:05.500]  że...
+[14:05.500 --> 14:06.500]  że...
+[14:06.500 --> 14:07.500]  że...
+[14:07.500 --> 14:10.500]  że...
+[14:10.500 --> 14:11.500]  że...
+[14:11.500 --> 14:12.500]  że...
+[14:12.500 --> 14:13.500]  żeby...
+[14:14.500 --> 14:14.940]  żeby...
+[14:14.940 --> 14:15.500]  żeby...
+[14:15.500 --> 14:16.500]  żeby...
+[14:16.500 --> 14:17.500]  który sposób...
+[14:17.500 --> 14:18.500]  kiedy by nie pozwala brać sposobu rozifiesz...
+[14:18.500 --> 14:19.300]  który sposób...
+[14:19.300 --> 14:19.500]  kiedy by nie pozwala brać sposobu roz fishes...
+[14:19.500 --> 14:20.500]  który sposób...
+[14:20.500 --> 14:21.500]  który sposób...
+[14:21.500 --> 14:28.500]  jakie dominantne możliwości ma 언�หนy
+[14:28.500 --> 14:29.920]  jesteśmy wifi,
+[14:29.920 --> 14:31.420]  weia instanty,
+[14:31.420 --> 14:32.960]  czyli...
+[14:32.960 --> 14:34.460]  jako system,
+[14:34.460 --> 14:35.780]  kogo jak...
+[14:35.780 --> 14:36.700]  kto kauaaa bangs...
+[14:36.700 --> 14:40.700]  Chcesz to teraz znać. I to jest naprawdę dobre, ale dla mnie to bardzo zaskoczyło.
+[14:41.700 --> 14:43.700]  Dobra, co jeszcze?
+[14:44.700 --> 14:46.700]  Czy są jeszcze pytania?
+[14:47.700 --> 14:51.700]  Co to ma do wydarzenia z Nioą w II Lainie?
+[14:53.700 --> 14:54.700]  Z nią?
+[14:55.700 --> 14:57.700]  Nie, nie, z nią.
+[14:57.700 --> 14:59.700]  Nie, nie, nie.
+[14:59.700 --> 15:01.700]  Aha, z nimi.
+[15:01.700 --> 15:02.700]  Aha.
+[15:02.700 --> 15:05.700]  Myślę, że to był cap. VIII.
+[15:05.700 --> 15:06.700]  Tak.
+[15:06.700 --> 15:09.700]  Albo cap. IX.
+[15:11.700 --> 15:12.700]  Ale tak.
+[15:12.700 --> 15:13.700]  Nie pamiętam.
+[15:13.700 --> 15:16.700]  Tak, to jest cap. IX.
+[15:16.700 --> 15:19.700]  To był cap. VII.
+[15:19.700 --> 15:20.700]  Właściwie.
+[15:20.700 --> 15:23.700]  To jest inkubacja tego słowa.
+[15:23.700 --> 15:24.700]  Pronoms w języku.
+[15:25.700 --> 15:27.700]  Dobra, co jeszcze?
+[15:32.700 --> 15:40.700]  To może za chwilę.
+[15:40.700 --> 15:43.700]  To spróbujmy zobaczyć zadanie VII.
+[15:43.700 --> 15:48.700]  Mieliśmy odpowiedzieć prawda lub nieprawda.
+[15:48.700 --> 15:50.700]  Dobra.
+[15:50.700 --> 15:56.700]  Niektóre pytania są takie.
+[15:56.700 --> 15:58.700]  Ja do końca nie wiem, jak je wypowiedzieć.
+[15:58.700 --> 15:59.700]  I'm not sure what answer is.
+[15:59.700 --> 16:00.700]  But we'll see.
+[16:00.700 --> 16:01.700]  Dobra, pierwsze.
+[16:01.700 --> 16:04.700]  Marta pisała raport roczny w styczniu.
+[16:04.700 --> 16:05.700]  Nieprawda.
+[16:05.700 --> 16:06.700]  Nieprawda.
+[16:06.700 --> 16:08.700]  Kiedy pisała raport roczny?
+[16:08.700 --> 16:09.700]  W lutym.
+[16:09.700 --> 16:10.700]  W lutym.
+[16:10.700 --> 16:12.700]  Ojciec Marty był chory w lutym.
+[16:15.700 --> 16:16.700]  Nieprawda.
+[16:16.700 --> 16:17.700]  Nieprawda.
+[16:17.700 --> 16:18.700]  Kiedy był chory?
+[16:18.700 --> 16:19.700]  Do marca.
+[16:19.700 --> 16:20.700]  W marcu.
+[16:20.700 --> 16:23.700]  Ojciec Marty leżał w szpitalu w kwietniu.
+[16:24.700 --> 16:25.700]  Prawda.
+[16:29.700 --> 16:30.700]  Leżał od marca do...
+[16:31.700 --> 16:33.700]  Do maja, czyli w kwietniu też.
+[16:33.700 --> 16:37.700]  Marta uczyła się do egzaminu z angielskiego w maju.
+[16:37.700 --> 16:44.700]  Prawda.
+[16:44.700 --> 16:45.700]  Nieprawda.
+[16:45.700 --> 16:46.700]  A, nieprawda.
+[16:46.700 --> 16:48.700]  Ile z egzaminu dzieje się?
+[16:48.700 --> 16:50.700]  Z kwietnia.
+[16:50.700 --> 16:53.700]  Egzamin był w czerwcu.
+[16:53.700 --> 16:56.700]  Ona uczyła się w kwietniu.
+[16:56.700 --> 16:59.700]  Czy mamy powiedziane, że w maju się uczyła lub nie uczyła?
+[16:59.700 --> 17:00.700]  Nie mamy.
+[17:00.700 --> 17:02.700]  Nie mamy informacji o tym egzaminie.
+[17:02.700 --> 17:08.700]  Możemy tylko zapytać, że może, jeśli uczyła się w kwietniu, może uczyła się w maju.
+[17:08.700 --> 17:10.700]  I egzamin był w czerwcu.
+[17:10.700 --> 17:12.700]  Ale nie jesteśmy pewni.
+[17:15.700 --> 17:18.700]  Egzamin z angielskiego był dwa miesiące temu.
+[17:18.700 --> 17:19.700]  Nieprawda.
+[17:19.700 --> 17:21.700]  Nieprawda. A kiedy był?
+[17:21.700 --> 17:24.700]  Dwa... dwa... dwa...
+[17:24.700 --> 17:26.700]  Dwa tygodnie temu.
+[17:26.700 --> 17:28.700]  Dwa tygodnie temu.
+[17:28.700 --> 17:29.700]  Dwa tygodnie temu. Okej.
+[17:30.700 --> 17:33.700]  Nazna była w czerwcu w górach.
+[17:33.700 --> 17:36.700]  Dlaczego?
+[17:36.700 --> 17:38.700]  Dlaczego nieprawda?
+[17:38.700 --> 17:40.700]  Nieprawda.
+[17:40.700 --> 17:42.700]  Dlaczego nieprawda?
+[17:42.700 --> 17:44.700]  Nieprawda.
+[17:44.700 --> 17:47.700]  Bo ona powiedziała coś takiego jak...
+[17:47.700 --> 17:50.700]  Był egzamin w...
+[17:50.700 --> 17:52.700]  ...kiedyś...
+[17:52.700 --> 17:56.700]  ...i dwa tygodnie później poszły do gór, prawda?
+[17:56.700 --> 17:58.700]  Tak, to znaczy, że to się stało w początku czerwca.
+[17:58.700 --> 18:01.700]  I to się stało w początku czerwca, a potem po dwóch tygodniach...
+[18:01.700 --> 18:02.700]  Tak, tak.
+[18:02.700 --> 18:04.700]  I to się stało w początku czerwca, a potem po dwóch tygodniach...
+[18:04.700 --> 18:06.700]  To było coś, o czym pamiętam.
+[18:06.700 --> 18:09.700]  Byłem robiąc coś, pewne kalkulacje.
+[18:09.700 --> 18:11.700]  Aha, tak.
+[18:11.700 --> 18:12.700]  Tak, tak, to było w czerwcu.
+[18:12.700 --> 18:14.700]  Może.
+[18:14.700 --> 18:16.700]  Ona powiedziała...
+[18:16.700 --> 18:20.700]  W zeszłym tygodniu byłam w Zakopane.
+[18:20.700 --> 18:22.700]  W zeszłym tygodniu.
+[18:22.700 --> 18:24.700]  Ona pisze ten e-mail...
+[18:24.700 --> 18:26.700]  Ona pisze ten e-mail...
+[18:26.700 --> 18:30.700]  ...12 lipca.
+[18:30.700 --> 18:36.700]  Więc w zeszły tydzień to nadal był lipiec.
+[18:36.700 --> 18:37.700]  W zeszłym tydzień, to nadal był lipiec.
+[18:37.700 --> 18:40.700]  Potem, ona pisze w 12 lipcu.
+[18:40.700 --> 18:42.700]  Że była tam w zeszłym tygodniu.
+[18:42.700 --> 18:44.700]  Więc w zeszłym tygodniu była...
+[18:44.700 --> 18:45.700]  ...w zeszłym tygodniu.
+[18:45.700 --> 18:47.700]  Czyli chyba...
+[18:47.700 --> 18:49.700]  Czyli chyba...
+[18:49.700 --> 18:51.700]  ...nieprawda.
+[18:51.700 --> 18:53.700]  Czyli nieprawda, bo ona była w lipcu.
+[18:53.700 --> 18:54.700]  Zakopane.
+[18:54.700 --> 18:55.700]  Marek i jej znajomi tylko rozmawiali...
+[18:55.700 --> 18:58.700]  A jej znajomi tylko rozmawiali i relacowali się.
+[18:58.700 --> 19:00.700]  Prawda.
+[19:00.700 --> 19:03.700]  Jacek uczył się do egzaminu z ekonomii.
+[19:03.700 --> 19:05.700]  Prawda.
+[19:05.700 --> 19:09.700]  Marta i Ania widziały się ostatnio we wrześniu.
+[19:09.700 --> 19:11.700]  Nieprawda.
+[19:11.700 --> 19:13.700]  Ania szukała nowej pracy.
+[19:13.700 --> 19:15.700]  Nieprawda.
+[19:15.700 --> 19:17.700]  A kiedy się ostatnio widziała mamna z Anią?
+[19:17.700 --> 19:19.700]  Prawda.
+[19:19.700 --> 19:21.700]  Ten był nieprawda, tak?
+[19:21.700 --> 19:23.700]  Prawda.
+[19:23.700 --> 19:27.700]  Ania nie szuka nowej pracy.
+[19:27.700 --> 19:29.700]  Jacek szuka nowej pracy.
+[19:29.700 --> 19:31.700]  Nie.
+[19:31.700 --> 19:33.700]  Nie.
+[19:33.700 --> 19:35.700]  A ty?
+[19:35.700 --> 19:37.700]  A ty?
+[19:37.700 --> 19:39.700]  Wydziałyście z Anii.
+[19:39.700 --> 19:41.700]  Tak.
+[19:41.700 --> 19:43.700]  Więc to było dawno.
+[19:43.700 --> 19:45.700]  Kiedy ostatnio widziałam cię?
+[19:45.700 --> 19:47.700]  Prawda.
+[19:47.700 --> 19:49.700]  Pracowałeś tam?
+[19:49.700 --> 19:51.700]  Gdzie pracowałeś?
+[19:51.700 --> 19:53.700]  Jeśli pamiętam dokładnie,
+[19:53.700 --> 19:55.700]  że ty byłeś...
+[19:55.700 --> 19:57.700]  O, szukała.
+[19:57.700 --> 19:59.700]  Pracuje.
+[19:59.700 --> 20:01.700]  Nie pracujesz.
+[20:01.700 --> 20:03.700]  Ona nie pyta Jacka.
+[20:03.700 --> 20:05.700]  Ona pyta...
+[20:05.700 --> 20:07.700]  Anię.
+[20:07.700 --> 20:09.700]  Nie. Kogo ona pyta?
+[20:09.700 --> 20:11.700]  Ona pyta o Anię.
+[20:11.700 --> 20:13.700]  Pytanie o Anię.
+[20:13.700 --> 20:15.700]  Pytanie o Anię.
+[20:15.700 --> 20:17.700]  Więc dlaczego ty wyrzuciłeś
+[20:17.700 --> 20:19.700]  A-T w środku?
+[20:19.700 --> 20:21.700]  A-T to znaczy i ty, prawda?
+[20:21.700 --> 20:23.700]  Myślę, że...
+[20:23.700 --> 20:25.700]  Marta pyta.
+[20:25.700 --> 20:27.700]  Marta pyta.
+[20:27.700 --> 20:29.700]  Jak się ma Ania?
+[20:29.700 --> 20:31.700]  Ja też dawno nie widziałam.
+[20:31.700 --> 20:33.700]  Ja też dawno nie widziałam.
+[20:33.700 --> 20:35.700]  Ja też dawno nie widziałam.
+[20:35.700 --> 20:37.700]  Marta pyta.
+[20:37.700 --> 20:39.700]  Co z Anią?
+[20:39.700 --> 20:41.700]  Nie widziałam jej od jakiegoś czasu.
+[20:41.700 --> 20:43.700]  A ty?
+[20:43.700 --> 20:45.700]  Widziałeś ją?
+[20:45.700 --> 20:47.700]  Nie.
+[20:47.700 --> 20:49.700]  Czyli Marta pyta Jacka.
+[20:49.700 --> 20:51.700]  Czyli Marta pyta Jacka.
+[20:51.700 --> 20:53.700]  Nie.
+[20:53.700 --> 20:55.700]  Czyli 10.
+[20:55.700 --> 20:57.700]  Ania szukała nowej pracy?
+[20:57.700 --> 20:59.700]  Nie.
+[20:59.700 --> 21:01.700]  A, prawda.
+[21:01.700 --> 21:03.700]  Marta i Ania widziały się ostatnio we wrześniu.
+[21:03.700 --> 21:05.700]  To wiemy, że to jest nieprawda.
+[21:05.700 --> 21:07.700]  Kiedy się widziała Marta i Ania ostatnio?
+[21:11.700 --> 21:13.700]  W listopadzie albo w grudniu.
+[21:13.700 --> 21:15.700]  W listopadzie albo w grudniu.
+[21:15.700 --> 21:17.700]  Super.
+[21:17.700 --> 21:19.700]  I jeszcze było jedno zadanie.
+[21:19.700 --> 21:21.700]  Zadanie pierwsze.
+[21:21.700 --> 21:23.700]  Co musisz zrobić, żeby wyjrzeć ćwiczenia?
+[21:23.700 --> 21:25.700]  Żeby wyjrzeć ćwiczenia.
+[21:25.700 --> 21:27.700]  Żeby wyjrzeć ćwiczenia.
+[21:27.700 --> 21:29.700]  Czy coś przegapić?
+[21:29.700 --> 21:31.700]  Jak to powinieneś wiedzieć?
+[21:31.700 --> 21:33.700]  Jak to zrobić?
+[21:33.700 --> 21:35.700]  Tak, są tu pytania.
+[21:35.700 --> 21:37.700]  Tak, są tutaj pytania.
+[21:37.700 --> 21:39.700]  Ok.
+[21:39.700 --> 21:41.700]  A, to jest tak.
+[21:41.700 --> 21:43.700]  Nie, nie, nie.
+[21:43.700 --> 21:45.700]  Nie, nie.
+[21:45.700 --> 21:47.700]  Nie, nie.
+[21:47.700 --> 21:49.700]  Nie, nie.
+[21:49.700 --> 21:51.700]  Nie, nie.
+[21:51.700 --> 21:53.700]  Nie, nie, nie.
+[21:53.700 --> 21:55.700]  To ty będzie to peska.
+[21:55.700 --> 21:57.700]  No to positivo.
+[21:57.700 --> 21:59.700]  Nie, nie.
+[21:59.700 --> 22:01.700]  Nie, nie.
+[22:01.700 --> 22:03.700]  Wслиpaj.
+[22:03.700 --> 22:05.700]  On dzięki temu Vera wyiss unloaduje.
+[22:13.700 --> 22:15.700]  W liksom upał.
+[22:15.700 --> 22:17.700]  I tak jakby mu doонаła sztuka.
+[22:17.700 --> 22:19.700]  Wie, to właśnie dokonała przez bramkę,
+[22:19.700 --> 22:21.700]  diye mi bella.
+[22:21.700 --> 22:38.700]  Czekamy.
+[22:38.700 --> 22:46.700]  Czekamy, bo to zadanie nie ma początku.
+[22:46.700 --> 22:55.700]  Nie wiem jak powinniśmy to wiedzieć, bo to jest tak rano.
+[22:55.700 --> 23:01.700]  Dobra, kiedy Marek obchodzi nowy rok?
+[23:01.700 --> 23:05.700]  Nie wiem.
+[23:05.700 --> 23:10.700]  Nie wiem.
+[23:10.700 --> 23:14.700]  Myślę, że to jest w porządku.
+[23:14.700 --> 23:15.700]  Tak, tak.
+[23:15.700 --> 23:21.700]  Nie potrzebujesz tekstu, możesz sobie to zobaczyć.
+[23:21.700 --> 23:24.700]  Tak, tak.
+[23:24.700 --> 23:25.700]  Ok, ok.
+[23:25.700 --> 23:27.700]  Dobra, 2 stycznia.
+[23:27.700 --> 23:29.700]  Jedziesz na latach?
+[23:29.700 --> 23:31.700]  Stycznię?
+[23:31.700 --> 23:33.700]  Może być stycznią.
+[23:33.700 --> 23:34.700]  Grudnią.
+[23:34.700 --> 23:35.700]  Może być grudnią.
+[23:35.700 --> 23:37.700]  Kiedy jeszcze?
+[23:37.700 --> 23:39.700]  Opozytywne.
+[23:39.700 --> 23:40.700]  Opozytywne.
+[23:40.700 --> 23:41.700]  Opozytywne.
+[23:41.700 --> 23:42.700]  Opozytywne.
+[23:42.700 --> 23:43.700]  Tak, tak.
+[23:43.700 --> 23:44.700]  Dobra.
+[23:44.700 --> 23:45.700]  Kiedy...
+[23:45.700 --> 23:51.700]  Kiedy są święta wielkanocne?
+[23:51.700 --> 23:54.700]  W kwietniu.
+[23:54.700 --> 23:56.700]  W kwietniu albo?
+[23:56.700 --> 23:57.700]  W marcu.
+[23:57.700 --> 23:59.700]  W marcu, aha.
+[23:59.700 --> 24:01.700]  Kiedy ma pryliz?
+[24:01.700 --> 24:02.700]  W kwietniu.
+[24:02.700 --> 24:04.700]  W kwietniu, aha.
+[24:04.700 --> 24:07.700]  Święto Konstytucji 3 maja?
+[24:07.700 --> 24:08.700]  W maju.
+[24:08.700 --> 24:12.700]  W najdłuższym zim roku?
+[24:12.700 --> 24:13.700]  W czerwcu.
+[24:13.700 --> 24:14.700]  W czerwcu.
+[24:14.700 --> 24:15.700]  W czerwcu.
+[24:15.700 --> 24:16.700]  W czerwcu.
+[24:16.700 --> 24:18.700]  Kiedy idziemy na wakacje?
+[24:18.700 --> 24:21.700]  W sierpniu.
+[24:21.700 --> 24:22.700]  W sierpniu.
+[24:22.700 --> 24:23.700]  W sierpniu.
+[24:23.700 --> 24:24.700]  W sierpniu.
+[24:24.700 --> 24:25.700]  I?
+[24:25.700 --> 24:26.700]  I?
+[24:26.700 --> 24:27.700]  I?
+[24:27.700 --> 24:28.700]  I?
+[24:28.700 --> 24:29.700]  I?
+[24:29.700 --> 24:30.700]  I?
+[24:30.700 --> 24:31.700]  I?
+[24:31.700 --> 24:32.700]  I?
+[24:32.700 --> 24:33.700]  I?
+[24:33.700 --> 24:34.700]  I?
+[24:34.700 --> 24:35.700]  I?
+[24:35.700 --> 24:36.700]  I?
+[24:36.700 --> 24:37.700]  I?
+[24:37.700 --> 24:38.700]  I?
+[24:38.700 --> 24:39.700]  I?
+[24:39.700 --> 24:40.700]  I?
+[24:40.700 --> 24:41.700]  I?
+[24:41.700 --> 24:42.700]  I?
+[24:42.700 --> 24:44.700]  I?
+[24:44.700 --> 24:45.700]  I?
+[24:45.700 --> 24:46.700]  I?
+[24:46.700 --> 24:48.700]  I?
+[24:50.700 --> 24:51.700]  I?
+[24:51.700 --> 24:52.700]  I?
+[24:52.700 --> 24:53.700]  I?
+[24:53.700 --> 24:54.700]  I?
+[24:54.700 --> 24:55.700]  I?
+[24:55.700 --> 24:56.700]  I?
+[24:56.700 --> 24:57.700]  I?
+[24:57.700 --> 24:58.700]  I?
+[24:58.700 --> 24:59.700]  I?
+[24:59.700 --> 25:00.700]  I?
+[25:00.700 --> 25:01.700]  I?
+[25:01.700 --> 25:02.700]  W lippcu.
+[25:02.700 --> 25:03.700]  W lippcu?
+[25:03.700 --> 25:04.700]  Mhm.
+[25:04.700 --> 25:05.700]  Kiedy Krzysztof uczył się do egzaminu?
+[25:05.700 --> 25:06.700]  W.
+[25:06.700 --> 25:07.700]  Prze...
+[25:07.700 --> 25:08.700]  Wrze.
+[25:08.700 --> 25:09.700]  Wrze.
+[25:09.700 --> 25:10.700]  Wrześniu.
+[25:10.700 --> 25:11.600]  We wrześniu,
+[25:11.600 --> 25:12.700]  Mhm.
+[25:12.700 --> 25:14.700]  We wrześniu.
+[25:27.700 --> 25:29.700]  Dlaczego studiował po egzaminie?
+[25:29.700 --> 25:31.700]  Bo to jest jedyny z nich.
+[25:33.700 --> 25:35.700]  Bo...
+[25:35.700 --> 25:37.700]  Tak.
+[25:37.700 --> 25:39.700]  No, no.
+[25:39.700 --> 25:41.700]  Ale zwykle...
+[25:41.700 --> 25:43.700]  Tak, tak, tak.
+[25:43.700 --> 25:45.700]  Polska kultura i twierdzi.
+[25:53.700 --> 25:56.700]  Więc zwykle masz normalny egzamin w czerwcu,
+[25:56.700 --> 25:59.700]  ale kiedy nie przejdziesz tego egzaminu,
+[25:59.700 --> 26:01.700]  musisz odnieść ten egzamin w sierpniu.
+[26:01.700 --> 26:03.700]  A, ok.
+[26:03.700 --> 26:05.700]  Więc Krzysztof musi przejść ten egzamin,
+[26:05.700 --> 26:07.700]  więc musisz odnieść go w sierpniu.
+[26:07.700 --> 26:09.700]  Tak, więc mam to samo w uniwersytecie,
+[26:09.700 --> 26:11.700]  bo...
+[26:11.700 --> 26:13.700]  Wiesz, mam to w calendrze.
+[26:13.700 --> 26:15.700]  Tak, tak.
+[26:15.700 --> 26:17.700]  Jeśli wyjdziem na egzamin, muszę odnieść ten egzamin.
+[26:17.700 --> 26:19.700]  Tak, tak.
+[26:19.700 --> 26:21.700]  Więc, a parę tych Krzysztof...
+[26:21.700 --> 26:23.700]  Fejchy z jedzami.
+[26:23.700 --> 26:25.700]  Dobra.
+[26:25.700 --> 26:27.700]  Kiedy zaczyna się rok akademicki?
+[26:27.700 --> 26:29.700]  To jest...
+[26:29.700 --> 26:31.700]  No...
+[26:31.700 --> 26:33.700]  Hałasierniku.
+[26:33.700 --> 26:35.700]  Hałasierniku, dobra.
+[26:35.700 --> 26:37.700]  Czyli niedługo.
+[26:37.700 --> 26:39.700]  Kiedy obchodzimy Narodowe Święto Niepodległości?
+[26:39.700 --> 26:41.700]  Listopadzie.
+[26:41.700 --> 26:43.700]  Listopadzie.
+[26:43.700 --> 26:45.700]  Kiedy listopadzie?
+[26:45.700 --> 26:47.700]  Kiedy?
+[26:47.700 --> 26:49.700]  Kto wie?
+[26:49.700 --> 26:51.700]  Kiedy?
+[26:51.700 --> 26:53.700]  Jedenastego.
+[26:53.700 --> 26:55.700]  Jedenastego listopadzie.
+[26:55.700 --> 26:57.700]  Dobra.
+[26:57.700 --> 26:59.700]  Kiedy obchodzimy Boże Narodzenie?
+[26:59.700 --> 27:01.700]  W grudniu.
+[27:01.700 --> 27:03.700]  W grudniu, dobra.
+[27:03.700 --> 27:05.700]  Kiedy ma jak Państwo urodziny?
+[27:05.700 --> 27:07.700]  W Aranii.
+[27:07.700 --> 27:09.700]  W grudniu.
+[27:09.700 --> 27:11.700]  W grudniu.
+[27:11.700 --> 27:13.700]  W grudniu.
+[27:13.700 --> 27:15.700]  Przed Boże Narodzeniem czy po?
+[27:15.700 --> 27:17.700]  Before Christmas or after Christmas?
+[27:17.700 --> 27:19.700]  After Christmas.
+[27:19.700 --> 27:21.700]  After Christmas?
+[27:21.700 --> 27:23.700]  When?
+[27:23.700 --> 27:25.700]  Dwa...
+[27:25.700 --> 27:27.700]  Dwa...
+[27:27.700 --> 27:29.700]  26?
+[27:29.700 --> 27:31.700]  Oh, I'm on 27.
+[27:31.700 --> 27:33.700]  Very close.
+[27:33.700 --> 27:35.700]  Very close.
+[27:35.700 --> 27:37.700]  It's a cool time.
+[27:37.700 --> 27:39.700]  I personally it's cool.
+[27:39.700 --> 27:43.700]  And also in Poland 26 is still a holiday.
+[27:43.700 --> 27:45.700]  Yeah, it's cool.
+[27:45.700 --> 27:47.700]  I will start the day off.
+[27:47.700 --> 27:49.700]  No worries.
+[27:49.700 --> 27:51.700]  A jaka jest jej urodzina?
+[27:51.700 --> 27:53.700]  A jaka jest jej urodzina?
+[27:53.700 --> 27:55.700]  Nie znam.
+[27:55.700 --> 27:57.700]  Sorry.
+[27:57.700 --> 27:59.700]  When is your birthday?
+[27:59.700 --> 28:01.700]  W piętniu.
+[28:01.700 --> 28:03.700]  W piętniu?
+[28:03.700 --> 28:05.700]  W piętniu? Ok.
+[28:05.700 --> 28:07.700]  Dobrze.
+[28:07.700 --> 28:09.700]  W końcu to powtórzyliśmy.
+[28:09.700 --> 28:11.700]  Co teraz?
+[28:11.700 --> 28:13.700]  Co teraz?
+[28:13.700 --> 28:15.700]  Co teraz?
+[28:15.700 --> 28:17.700]  Kolej godziny.
+[28:17.700 --> 28:19.700]  Kolej godziny.
+[28:19.700 --> 28:21.700]  Kolej godziny.
+[28:21.700 --> 28:23.700]  Co zrobiliśmy?
+[28:23.700 --> 28:25.700]  Co zrobiliśmy?
+[28:25.700 --> 28:27.700]  Co zrobiliśmy?
+[28:27.700 --> 28:29.700]  Kolej godziny.
+[28:29.700 --> 28:31.700]  I want to do as much as possible.
+[28:31.700 --> 28:33.700]  As many?
+[28:33.700 --> 28:35.700]  As much as possible today.
+[28:35.700 --> 28:39.700]  Probably we start the next chapter on this.
+[28:39.700 --> 28:41.700]  Dobra.
+[28:43.700 --> 28:45.700]  Może posłuchamy.
+[28:45.700 --> 28:47.700]  Maybe we will listen.
+[28:47.700 --> 28:49.700]  Maybe we will listen.
+[28:49.700 --> 28:51.700]  Zadanie 8.
+[28:51.700 --> 28:53.700]  Zadanie 8.
+[28:53.700 --> 28:55.700]  Tutaj też mamy prawda lub nieprawda.
+[28:55.700 --> 28:57.700]  Tutaj też mamy prawda lub nieprawda.
+[29:01.700 --> 29:03.700]  No.
+[29:03.700 --> 29:05.700]  O so.
+[29:05.700 --> 29:07.700]  Dезж爻ą primera op zas pas na,
+[29:07.700 --> 29:09.700]  To okej.
+[29:09.700 --> 29:11.700]  To okay.
+[29:11.700 --> 29:13.700]  OK.
+[29:13.700 --> 29:15.700]  To okay.
+[29:15.700 --> 29:17.700]  To okay.
+[29:17.700 --> 29:19.700]  January was the university in London.
+[29:19.700 --> 29:21.700]  To okay.
+[29:21.700 --> 29:23.700]  And January was the university in London.
+[29:23.700 --> 29:25.700]  To okay.
+[29:27.700 --> 29:29.700] erem roam to the University August.
+[29:29.700 --> 29:31.700]  I don't know language.
+[29:31.700 --> 29:33.700]  Membroken language.
+[29:33.700 --> 29:35.700]  Tak, to jest dialog, ale...
+[29:35.700 --> 29:39.700]  PTA, PTO...
+[29:39.700 --> 29:42.700]  Niektórzy nie wiedzą co to jest PTO.
+[29:42.700 --> 29:50.700]  Dobra, no to tak, będziemy słuchać co te osoby robiły.
+[29:50.700 --> 29:54.700]  To będzie rozmowa telefoniczna lub telefon.
+[29:54.700 --> 29:56.700]  Słuchaj, jak to jest numer?
+[29:56.700 --> 29:58.700]  Osiem.
+[30:03.700 --> 30:11.700]  Dzień dobry.
+[30:19.700 --> 30:30.700]  I teraz tak, będziemy słuchać dwa razy, może trzy, może cztery, bo...
+[30:30.700 --> 30:33.700]  Najpierw robimy to prawda-fałsz.
+[30:33.700 --> 30:37.700]  Ale to samo będzie w zadaniu dziewiątym.
+[30:37.700 --> 30:39.700]  To będzie to samo nagranie.
+[30:39.700 --> 30:41.700]  I w tym zadaniu dziewiątym.
+[30:41.700 --> 30:43.700]  Więc zrobimy to tak, jak dobrze.
+[30:43.700 --> 30:45.700]  Dobra, to uwaga, uwaga.
+[30:49.700 --> 30:52.700]  Lekcja dziesiąta, ćwiczenie sześć, a idę.
+[30:57.700 --> 30:59.700]  No cześć Magda, tu Tomek.
+[30:59.700 --> 31:01.700]  Możesz teraz rozmawiać, czy jesteś zajęta?
+[31:01.700 --> 31:02.700]  Tak, mogę.
+[31:02.700 --> 31:03.700]  Jak się masz?
+[31:03.700 --> 31:05.700]  Bardzo dawno nie rozmawialiśmy.
+[31:05.700 --> 31:07.700]  Chyba z pół roku temu, nie?
+[31:07.700 --> 31:09.700]  Nawet nie pamiętam dokładnie.
+[31:09.700 --> 31:11.700]  Chyba w marcu albo w kwietniu.
+[31:11.700 --> 31:13.700]  Jeszcze przed moim urlopem chyba.
+[31:13.700 --> 31:14.700]  A urlop miałem w maju.
+[31:14.700 --> 31:16.700]  Tak, pamiętam, że planowałeś urlop.
+[31:16.700 --> 31:18.700]  No i co, gdzie pojechałeś?
+[31:18.700 --> 31:19.700]  Do Hiszpanii.
+[31:19.700 --> 31:21.700]  No to fantastyczne wakacje.
+[31:21.700 --> 31:23.700]  Byłeś sam, czy z jakimiś znajomymi?
+[31:23.700 --> 31:25.700]  Byliśmy w cztery osoby.
+[31:25.700 --> 31:28.700]  Mój brat ze swoją dziewczyną, mój kolega ze studiów, no i ja.
+[31:28.700 --> 31:30.700]  Jak długo byliście?
+[31:30.700 --> 31:31.700]  Prawie miesiąc.
+[31:31.700 --> 31:33.700]  W czerwcu byliśmy już z powrotem w Warszawie.
+[31:33.700 --> 31:35.700]  Było naprawdę świetnie.
+[31:35.700 --> 31:36.700]  Optymalna pogoda.
+[31:36.700 --> 31:39.700]  Jeździliśmy po całej Hiszpanii samochodem.
+[31:39.700 --> 31:42.700]  Zwiedzaliśmy miasta, codziennie pływaliśmy albo biegaliśmy.
+[31:42.700 --> 31:44.700]  No a wieczorem?
+[31:44.700 --> 31:47.700]  Chodziliśmy na deskotekę albo po prostu do jakiegoś fajnego klubu.
+[31:47.700 --> 31:48.700]  Było super.
+[31:48.700 --> 31:50.700]  A gdzie jedliście?
+[31:50.700 --> 31:55.700]  Śniadania robiliśmy sami, a kolacje czy obiad jedliśmy z reguły w restauracji.
+[31:55.700 --> 31:57.700]  A ty miałaś już jakiś urlop?
+[31:57.700 --> 31:58.700]  Tak, tak.
+[31:58.700 --> 31:59.700]  Dwa miesiące temu, w lipcu.
+[31:59.700 --> 32:01.700]  Byłam na kursie językowym.
+[32:01.700 --> 32:02.700]  W Berlinie.
+[32:02.700 --> 32:04.700]  Aha, ale gdzie chodziłaś na lekcje?
+[32:04.700 --> 32:06.700]  To było na uniwersytecie czy...?
+[32:06.700 --> 32:10.700]  Nie, to był normalny kurs językowy w prywatnej szkole językowej.
+[32:10.700 --> 32:12.700]  Taka wakacyjna oferta.
+[32:12.700 --> 32:14.700]  W grupie było dziewięć osób.
+[32:14.700 --> 32:17.700]  Codziennie przed południem mieliśmy cztery lekcje.
+[32:17.700 --> 32:19.700]  Od dziewiątej do pół do pierwszej.
+[32:19.700 --> 32:22.700]  A po południu, czy wieczorem, spotykaliśmy się już prywatnie.
+[32:22.700 --> 32:26.700]  I nie wiem, na przykład chodziliśmy do kina, zwiedzaliśmy miasto,
+[32:26.700 --> 32:29.700]  albo po prostu rozmawialiśmy gdzieś w kawiarni.
+[32:29.700 --> 32:31.700]  No i musiałam się też dużo uczyć.
+[32:31.700 --> 32:34.700]  A gdzie mieszkałaś? W hotelu czy u kogoś znajomego?
+[32:34.700 --> 32:37.700]  Nie, to był zorganizowany kurs i mieszkanie też było zapewnione.
+[32:37.700 --> 32:39.700]  Mieszkałam u rodziny niemieckiej.
+[32:39.700 --> 32:43.700]  Aha, to znaczy, że cały czas musiałaś mówić tylko po niemiecku.
+[32:43.700 --> 32:45.700]  To nie było za trudne?
+[32:45.700 --> 32:49.700]  Wiesz co, na początku tak, ale potem się przyzwyczaiłam.
+[32:51.700 --> 32:52.700]  Okej.
+[32:52.700 --> 32:54.700]  I jak było?
+[32:54.700 --> 32:55.700]  Jeszcze raz.
+[32:55.700 --> 32:58.700]  I jak było? Dobrze? Trudno?
+[32:58.700 --> 32:59.700]  Tak sobie?
+[32:59.700 --> 33:00.700]  Tak.
+[33:00.700 --> 33:03.700]  Ale szedłem tylko na eksercjum nr 8.
+[33:03.700 --> 33:06.700]  Więc zapraszałem, przepraszam.
+[33:07.700 --> 33:08.700]  Jeszcze raz.
+[33:11.700 --> 33:12.700]  Co tam?
+[33:13.700 --> 33:14.700]  Na 8 lub 9 czytaliśmy?
+[33:14.700 --> 33:15.700]  Tak.
+[33:15.700 --> 33:16.700]  No?
+[33:16.700 --> 33:18.700]  Na 8 czy 9 czytaliśmy?
+[33:18.700 --> 33:20.700]  Przymówiliśmy się jeszcze raz.
+[33:20.700 --> 33:23.700]  Na 8, ale 9 jest to samo.
+[33:23.700 --> 33:26.700]  Więc teraz musimy się zmieniać.
+[33:26.700 --> 33:27.700]  Fokusem.
+[33:27.700 --> 33:29.700]  Czy masz jeszcze coś na 8?
+[33:30.700 --> 33:57.700]  concurrentny
+[33:57.700 --> 34:00.040]  konkretny
+[34:00.040 --> 34:04.240]  W kwietniu, jeszcze przed moim urlopem chyba. A urlop miałem w maju.
+[34:04.320 --> 34:08.080]  Tak, pamiętam, że planowałeś urlop. No i co? Gdzie pojechałeś?
+[34:08.260 --> 34:09.100]  Do Hiszpanii.
+[34:09.360 --> 34:13.040]  No to fantastyczne wakacje. Byłeś sam czy z jakimiś znajomymi?
+[34:13.400 --> 34:18.560]  Byliśmy w cztery osoby. Mój brat ze swoją dziewczyną, mój kolega ze studiów, no i ja.
+[34:18.660 --> 34:19.640]  Jak długo byliście?
+[34:19.640 --> 34:26.140]  Prawie miesiąc. W czerwcu byliśmy już z pogodem w Warszawie. Było naprawdę świetnie. Optymalna pogoda.
+[34:26.140 --> 34:32.140]  Jeździliśmy po całej Hiszpanii samochodem. Zwiedzaliśmy miasta, codziennie próbowaliśmy albo biegaliśmy.
+[34:32.140 --> 34:33.140]  No a wieczorem?
+[34:33.140 --> 34:38.140]  Chodziliśmy na deskotekę albo po prostu do jakiegoś fajnego klubu. Było super.
+[34:38.140 --> 34:39.140]  A gdzie jedliście?
+[34:39.140 --> 34:47.140]  Śniadania robiliśmy sami, a kolacje czy obiad jedliśmy z reguły w restauracji. A ty miałaś już jakiś urlop?
+[34:47.140 --> 34:51.140]  Tak, tak. Dwa miesiące temu, w lipcu. Byłam na kursie językowym w Berlinie.
+[34:51.140 --> 34:56.140]  Aha. Ale gdzie chodziłaś na lekcje? To było na uniwersytecie czy tam?
+[34:56.140 --> 35:04.140]  Nie, to był normalny kurs językowy w prywatnej szkole językowej. Taka wakacyjna oferta. W grupie było dziewięć osób.
+[35:04.140 --> 35:12.140]  Codziennie przed południem mieliśmy cztery lekcje. Od dziewiątej do pół do pierwszej. A po południu czy wieczorem spotykaliśmy się już prywatnie.
+[35:12.140 --> 35:21.140]  I nie wiem, na przykład chodziliśmy do kina, zwiedzaliśmy miasto albo po prostu rozmawialiśmy gdzieś w kawiarni. No i musiało się też dużo uczyć.
+[35:21.140 --> 35:24.140]  A gdzie mieszkałaś? W hotelu czy u kogoś znajomego?
+[35:24.140 --> 35:26.140]  Nie, to był zorganizowany kurs i mieszkaliśmy w kawiarni.
+[35:26.140 --> 35:29.140]  Mieszkanie też było zapewnione. Mieszkałam u rodziny niemieckiej.
+[35:29.140 --> 35:35.140]  Aha, to znaczy, że cały czas musiałaś mówić tylko po niemiecku. To nie było za trudne?
+[35:35.140 --> 35:38.140]  Wiesz co, na początku tak, ale potem się przyzwyczaiłam.
+[35:40.140 --> 35:45.140]  Okej. No to róbmy.
+[35:52.140 --> 35:55.140]  Tomek był na urlopie. Miał urlop w kwiecień.
+[35:56.140 --> 36:01.140]  Tak czy nie?
+[36:01.140 --> 36:02.140]  Nie.
+[36:02.140 --> 36:03.140]  Dlaczego?
+[36:03.140 --> 36:04.140]  W maju.
+[36:04.140 --> 36:10.140]  Super. Nie. No i? Miał urlop w maju. Osiem osób było w Hiszpanii.
+[36:10.140 --> 36:11.140]  Nieprawda.
+[36:11.140 --> 36:13.140]  Nieprawda. Ile było?
+[36:13.140 --> 36:14.140]  Cztery osoby.
+[36:14.140 --> 36:17.140]  Cztery osoby było. W Hiszpanii chodzili pieszo.
+[36:17.140 --> 36:19.140]  Nieprawda.
+[36:19.140 --> 36:20.140]  Nieprawda.
+[36:20.140 --> 36:21.140]  Samochodem.
+[36:21.140 --> 36:24.140]  Samochodem się przemieszczali. Co jeszcze?
+[36:24.140 --> 36:27.140]  Biegali.
+[36:27.140 --> 36:33.140]  Na pewno gdzieś chodzili, ale to nie był ich główny środek transportu.
+[36:33.140 --> 36:38.140]  Okej. Śniadania jedli w restauracji.
+[36:38.140 --> 36:40.140]  Nieprawda.
+[36:40.140 --> 36:41.140]  Nieprawda.
+[36:41.140 --> 36:44.140]  A gdzie jedli śniadania?
+[36:44.140 --> 36:45.140]  Nie.
+[36:45.140 --> 36:46.140]  Nie.
+[36:46.140 --> 36:47.140]  Nie.
+[36:47.140 --> 36:48.140]  Nie.
+[36:48.140 --> 36:49.140]  Nie.
+[36:49.140 --> 36:50.140]  Nie.
+[36:50.140 --> 36:51.140]  Nie.
+[36:51.140 --> 36:52.140]  Nie.
+[36:52.140 --> 36:53.140]  Nie.
+[36:53.140 --> 36:54.140]  Nie.
+[36:54.140 --> 36:55.140]  Na domu?
+[36:55.140 --> 36:56.640]  Domu robili sami.
+[36:56.640 --> 36:59.640]  A co jedli w restauracji?
+[37:01.140 --> 37:02.140]  Obety koledzy.
+[37:02.640 --> 37:04.140]  Obety koledzy, aha.
+[37:06.140 --> 37:09.140]  Magda była na kursie niemieckiego w Berlinie?
+[37:10.140 --> 37:11.140]  Prawda.
+[37:11.140 --> 37:13.640]  Prawda. Magda musiała się dużo uczyć?
+[37:14.140 --> 37:15.840]  Prawda.
+[37:15.840 --> 37:17.640]  Prawda. Magda mieszkała w hotelu?
+[37:17.640 --> 37:18.400]  Nieprawda.
+[37:18.400 --> 37:21.140]  Nieprawda. Gdzie mieszkała?
+[37:21.140 --> 37:23.140]  To jest rodzina niemiecka.
+[37:23.140 --> 37:25.140]  To jest rodzina niemiecka.
+[37:25.140 --> 37:27.140]  To jest rodzina niemiecka.
+[37:27.140 --> 37:29.140]  To jest rodzina niemiecka.
+[37:29.140 --> 37:31.140]  Chciałabym powiedzieć, że to jest mój ojciec.
+[37:31.140 --> 37:33.140]  Mój ojciec?
+[37:33.140 --> 37:35.140]  Mój ojciec.
+[37:35.140 --> 37:37.140]  Mój ojciec.
+[37:37.140 --> 37:39.140]  Mój ojciec.
+[37:39.140 --> 37:41.140]  To jest mój ojciec.
+[37:45.140 --> 37:47.140]  Musi się zrobić...
+[37:47.140 --> 37:49.140]  ...złapkę na ręce.
+[37:49.140 --> 37:51.140]  To jest ojciec.
+[37:51.140 --> 37:53.140]  Dobra.
+[37:53.140 --> 37:55.140]  Dobra.
+[37:55.140 --> 37:57.140]  Spróbujemy jeszcze raz.
+[37:57.140 --> 37:59.140]  Tym razem zadanie 9.
+[37:59.140 --> 38:01.140]  Tym razem zadanie 9.
+[38:01.140 --> 38:03.140]  Ja będę robić przerwę.
+[38:03.140 --> 38:05.140]  Ja będę robić przerwę.
+[38:05.140 --> 38:07.140]  Po każdym albo prawie każdemu zdaniu.
+[38:07.140 --> 38:09.140]  Po każdym albo prawie każdemu zdaniu.
+[38:09.140 --> 38:11.140]  Ale już wbijemy dużo, więc...
+[38:11.140 --> 38:13.140]  Ale już wbijemy dużo, więc...
+[38:13.140 --> 38:15.140]  Spróbuję.
+[38:15.140 --> 38:17.140]  Dobra.
+[38:19.140 --> 38:21.140]  Spróbuję.
+[38:21.140 --> 38:23.140]  Lekcja 10, ćwiczenie 6, a i d.
+[38:23.140 --> 38:25.140]  Lekcja 10, ćwiczenie 6, a i d.
+[38:45.140 --> 38:47.140]  sojuka
+[38:47.140 --> 38:49.540]  No i co? Gdzie pojechałeś?
+[38:49.700 --> 38:50.620]  Do Hiszpanii.
+[38:50.800 --> 38:54.500]  No to fantastyczne wakacje. Byłeś sam czy z jakimiś znajomymi?
+[38:54.880 --> 39:00.040]  Byliśmy w cztery osoby. Mój brat ze swoją dziewczyną, mój kolega ze studiów, no i ja.
+[39:00.120 --> 39:00.320]  Jak?
+[39:15.380 --> 39:16.440]  Długo byliście?
+[39:16.440 --> 39:17.440]  Prawie miesiąc.
+[39:28.260 --> 39:31.360]  W czerwcu byliśmy już z powrotem w Warszawie.
+[39:35.900 --> 39:41.720]  Ona prywatnie świetnie. Optymalna pogoda. Jeździliśmy po całej Hiszpanii samochodem.
+[39:41.800 --> 39:45.120]  Zwiedzaliśmy miasta, codziennie pływaliśmy albo biegaliśmy.
+[39:46.440 --> 39:58.660]  No a wieczorem?
+[39:58.960 --> 40:03.260]  Chodziliśmy na dyskutek albo po prostu do jakiegoś fajnego klubu. Było super.
+[40:03.640 --> 40:04.580]  A gdzie jedliście?
+[40:04.880 --> 40:09.580]  Śniadania robiliśmy sami, a kolację czy obiad jedliśmy z reguły w restauracji.
+[40:10.640 --> 40:12.220]  A ty miałaś już jakiś urlop?
+[40:12.300 --> 40:14.560]  Tak, tak. Dwa miesiące temu. W lipcu.
+[40:15.000 --> 40:15.180]  Był?
+[40:16.440 --> 40:17.440]  Tak.
+[40:18.700 --> 40:20.580]  A na kursie językowym w Berlinie.
+[40:20.760 --> 40:25.280]  Aha, ale gdzie chodziłaś na lekcje? To było na uniwersytecie czy...
+[40:25.280 --> 40:29.060]  Nie, to był normalny kurs językowy w prywatnej szkole językowej.
+[40:29.380 --> 40:32.640]  Taka wakacyjna oferta. W grupie było dziewięć osób.
+[40:40.480 --> 40:45.460]  Codziennie przed południem mieliśmy cztery lekcje. Od dziewiątej do pół do pierwszej.
+[40:45.460 --> 40:49.860]  A po południu czy wieczorem spotykaliśmy się już prywatnie. I... nie wiem.
+[40:50.080 --> 40:55.340]  Na przykład chodziliśmy do kina, zwiedzaliśmy miasto albo po prostu rozmawialiśmy gdzieś w kawiarni.
+[40:55.700 --> 40:57.280]  No i musiałam się też dużo uczyć.
+[40:57.380 --> 41:00.240]  A gdzie mieszkałaś? W hotelu czy u kogoś znajomego?
+[41:00.380 --> 41:03.780]  Nie, to był zorganizowany kurs i mieszkanie też było zapewnione.
+[41:04.100 --> 41:05.680]  Mieszkałam u rodziny niemieckiej.
+[41:05.940 --> 41:11.280]  Aha, to znaczy, że cały czas musiałaś mówić tylko po niemiecku. To nie było za trudne?
+[41:11.460 --> 41:14.700]  Wiesz co, na początku tak, ale potem się przyzwyczaiłam.
+[41:15.460 --> 41:19.820]  Dobra. Próbuję.
+[41:21.860 --> 41:23.860]  Ok, kto był w Hiszpanii?
+[41:25.180 --> 41:26.180]  W Ormaniu.
+[41:26.460 --> 41:27.460]  W Ormaniu?
+[41:28.220 --> 41:30.220]  Kto? Niekiedy.
+[41:36.060 --> 41:37.060]  Co znaczy kto?
+[41:38.240 --> 41:39.740]  Who? Where?
+[41:40.180 --> 41:41.180]  Mhm. Who?
+[41:42.380 --> 41:43.380]  Z bratem.
+[41:43.780 --> 41:44.780]  Mhm. Brat?
+[41:45.460 --> 41:47.460]  Tomek z dziewczyną.
+[41:47.460 --> 41:48.460]  Tak.
+[41:48.460 --> 41:50.460]  Kolega z studium.
+[41:50.460 --> 41:52.460]  Tak. I on.
+[41:52.460 --> 41:54.460]  Tak, i Tomek super. Czyli brat.
+[41:54.460 --> 41:56.460]  Last one, what was it?
+[41:56.460 --> 41:57.460]  On.
+[41:57.460 --> 41:58.460]  On?
+[41:58.460 --> 42:00.460]  On. Czyli Tomek.
+[42:02.460 --> 42:09.460]  Czyli w Hiszpanii był jego brat Tomka z dziewczyną, kolega ze studium, no i ten Tomek.
+[42:09.460 --> 42:13.460]  Dobra. Jak długo Tomek był w Hiszpanii?
+[42:15.460 --> 42:17.460]  Miesiąc.
+[42:17.460 --> 42:21.460]  Miesiąc. Mhm. Prawie miesiąc. Gdzie Tomek był w czerwcu?
+[42:21.460 --> 42:22.460]  W Warszawie.
+[42:22.460 --> 42:28.460]  Tak, z powrotem w Warszawie. Co robił w Hiszpanii?
+[42:30.460 --> 42:33.460]  Zwiedział miasto.
+[42:33.460 --> 42:34.460]  Mhm.
+[42:34.460 --> 42:39.460]  Codziennie bywałyśmy i bywałyśmy.
+[42:39.460 --> 42:43.460]  Mhm. Dobra. Pytanie mamy co Tomek robił?
+[42:43.460 --> 42:46.460]  O, przepraszam, przepraszam, przepraszam.
+[42:46.460 --> 42:53.460]  Pływał liście? Pływał li.
+[42:53.460 --> 42:55.460]  Tomek.
+[42:55.460 --> 42:58.460]  Pływał uj? Pływał, o mój Boże.
+[42:58.460 --> 43:01.460]  Sorry, sorry. Pływał.
+[43:01.460 --> 43:02.460]  Uj bał.
+[43:02.460 --> 43:03.460]  Mhm.
+[43:03.460 --> 43:04.460]  Uj bał.
+[43:04.460 --> 43:05.460]  Mhm.
+[43:05.460 --> 43:07.460]  But they, right?
+[43:07.460 --> 43:10.460]  They, but in question we have Tomek. In question we have just he.
+[43:10.460 --> 43:11.460]  Him.
+[43:11.460 --> 43:12.460]  Him.
+[43:13.460 --> 43:15.460]  Okay.
+[43:17.460 --> 43:18.460]  Okay, so technically...
+[43:18.460 --> 43:19.460]  Yeah, yeah, yeah.
+[43:19.460 --> 43:22.460]  Oh, no this was correct, but in the question we have only Tomek.
+[43:22.460 --> 43:23.460]  Dobra, czyli zwiedzał...
+[43:23.460 --> 43:25.460]  Przepraszam, ale, tylko pytanie.
+[43:25.460 --> 43:26.460]  Tak.
+[43:26.460 --> 43:27.460]  Co to znaczy?
+[43:27.460 --> 43:29.460]  Zwiedział? Zwiedział?
+[43:29.460 --> 43:31.460]  Sightseeing.
+[43:31.460 --> 43:32.460]  Zwiedział.
+[43:32.460 --> 43:34.460]  To jest forma zwiedzać.
+[43:34.460 --> 43:36.460]  Zwiedzać, tak.
+[43:36.460 --> 43:38.460]  Zwiedzać.
+[43:38.460 --> 43:39.460]  Zwiedzać.
+[43:39.460 --> 43:42.460]  Okay, czyli on zwiedzał miasto.
+[43:42.460 --> 43:44.460]  Codziennie pływał i...
+[43:44.460 --> 43:45.460]  Biegał.
+[43:45.460 --> 43:46.460]  Biegał.
+[43:46.460 --> 43:47.460]  Biegał.
+[43:47.460 --> 43:48.460]  Biegam.
+[43:48.460 --> 43:49.460]  Biegam.
+[43:49.460 --> 43:50.460]  I on biegał.
+[43:50.460 --> 43:51.460]  Mhm.
+[43:51.460 --> 43:52.460]  Kiedy Magda miała urlop?
+[43:52.460 --> 43:53.460]  Dwa miesiące temu.
+[43:53.460 --> 43:54.460]  Mhm, czyli?
+[43:54.460 --> 43:55.460]  W lipcu.
+[43:55.460 --> 43:56.460]  W lipcu, tak.
+[43:56.460 --> 43:57.460]  Gdzie było lekcje niemieckiego?
+[43:57.460 --> 43:58.460]  W Berlinie.
+[43:58.460 --> 43:59.460]  W Berlinie.
+[43:59.460 --> 44:00.460]  Mhm.
+[44:00.460 --> 44:01.460]  W...
+[44:01.460 --> 44:02.460]  Prywatnej szkole.
+[44:02.460 --> 44:03.460]  Super, w prywatnej szkole.
+[44:03.460 --> 44:04.460]  Prywatnej szkole.
+[44:04.460 --> 44:05.460]  Prywatnej szkole.
+[44:05.460 --> 44:06.460]  Prywatnej szkole.
+[44:06.460 --> 44:07.460]  Prywatnej szkole.
+[44:07.460 --> 44:08.460]  Prywatnej szkole.
+[44:08.460 --> 44:09.460]  Prywatnej szkole.
+[44:09.460 --> 44:10.460]  Prywatnej szkole.
+[44:10.460 --> 44:11.460]  Prywatnej szkole.
+[44:11.460 --> 44:12.460]  Super, w prywatnej szkole.
+[44:12.460 --> 44:13.460]  Mhm.
+[44:13.460 --> 44:14.460]  Ile było osób w grupie?
+[44:14.460 --> 44:15.460]  Dziewiąte?
+[44:15.460 --> 44:16.460]  Dziesiąte?
+[44:16.460 --> 44:17.460]  Dziesiąte?
+[44:17.460 --> 44:18.460]  Dziesiąte?
+[44:18.460 --> 44:19.460]  Dziesiąte?
+[44:19.460 --> 44:20.460]  Dobra.
+[44:20.460 --> 44:21.460]  No.
+[44:21.460 --> 44:22.460]  Jedy było osób?
+[44:22.460 --> 44:23.460]  Dwa gada gramatyka.
+[44:23.460 --> 44:24.460]  Dobra liczba, ale dwa gramatyka.
+[44:24.460 --> 44:25.460]  Ok.
+[44:25.460 --> 44:26.460]  Ile osób?
+[44:26.460 --> 44:27.460]  Dziewiąte?
+[44:27.460 --> 44:28.460]  Sorry, not dziewiąte.
+[44:28.460 --> 44:29.460]  Dziewiąte would be...
+[44:29.460 --> 44:30.460]  Dziewion...
+[44:30.460 --> 44:31.460]  O, nie.
+[44:31.460 --> 44:32.460]  Dziewiąte.
+[44:32.460 --> 44:33.460]  Dziewiąte.
+[44:33.460 --> 44:34.460]  Dziewiąte.
+[44:34.460 --> 44:35.460]  Dziewiąte.
+[44:35.460 --> 44:36.460]  Dziewiąte.
+[44:36.460 --> 44:37.460]  Dziewiąte.
+[44:37.460 --> 44:38.460]  Dziewiąte.
+[44:38.460 --> 44:39.460]  Dziewiąte.
+[44:39.460 --> 44:40.460]  Dziewiąte.
+[44:40.460 --> 44:41.460]  Dziewiąte.
+[44:41.460 --> 44:42.460]  Dziewiąte.
+[44:42.460 --> 44:43.460]  Dziewięć osób.
+[44:43.460 --> 44:44.460]  Tak.
+[44:44.460 --> 44:47.460]  Od której, do której godziny były lekcje?
+[44:47.460 --> 44:48.460]  Dziewiąte.
+[44:48.460 --> 44:49.460]  Piąte?
+[44:49.460 --> 44:50.460]  Od dziewiątej do...
+[44:50.460 --> 44:51.460]  I didn't know, but I see the difference.
+[44:51.460 --> 44:52.460]  Dobra.
+[44:52.460 --> 44:53.460]  A mamy ostatnie.
+[44:53.460 --> 44:54.460]  Mamy dziewiąte pytanie.
+[44:54.460 --> 44:55.460]  Co robiłeś z kolegami?
+[44:55.460 --> 44:56.460]  Tylko trochę szybko.
+[44:56.460 --> 44:57.460]  Nie wiem, nie wiem.
+[44:57.460 --> 44:58.460]  Nie wiem, nie wiem.
+[44:58.460 --> 44:59.460]  Nie wiem.
+[44:59.460 --> 45:00.460]  Nie wiem, nie wiem.
+[45:00.460 --> 45:01.460]  Nie wiem.
+[45:01.460 --> 45:02.460]  Nie wiem.
+[45:02.460 --> 45:03.460]  Nie wiem.
+[45:03.460 --> 45:04.460]  Nie wiem.
+[45:04.460 --> 45:05.460]  Nie wiem.
+[45:05.460 --> 45:06.460]  Nie wiem.
+[45:06.460 --> 45:07.460]  Nie wiem.
+[45:07.460 --> 45:08.460]  Nie wiem.
+[45:08.460 --> 45:09.460]  Nie wiem.
+[45:09.460 --> 45:10.460]  Nie wiem.
+[45:10.460 --> 45:11.460]  Próbujmy do tego wrócić.
+[45:11.460 --> 45:12.460]  Do tego wypukl으면ego.
+[45:12.460 --> 45:15.460]  Codziennie przed południem mieliśmy cztery lekcje.
+[45:15.460 --> 45:17.720]  Od dziewiątej do wpół do pierwszej.
+[45:17.720 --> 45:19.680]  Od dziewiątej to?
+[45:19.680 --> 45:24.020]  Współ do МУЗЫКА underscore two one.
+[45:24.020 --> 45:27.020]  Wyerszty recuer.
+[45:27.020 --> 45:34.020]  So, which one?
+[45:34.020 --> 45:37.020]  Two three.
+[45:37.020 --> 45:38.380]  Bitters...
+[45:38.380 --> 45:38.620]  Bitterswords.
+[45:38.620 --> 45:38.980]  Błyskup.
+[45:38.980 --> 45:39.180]  Jeden dziewięćdziesiąt jeden jedenitionalque.
+[45:39.180 --> 45:39.360] 九十一一一一一一一一一, jeden dziewięćdziesiąt jeden jed viene one?
+[45:39.360 --> 45:43.420]  12... 12.04?
+[45:43.420 --> 45:47.360]  12...
+[45:47.360 --> 45:55.260]  Pod 12.30...
+[45:55.260 --> 45:58.320]  Pod 12.30.
+[45:58.320 --> 46:01.000]  Hmm, no dobrze, to bardzo dalej.
+[46:01.000 --> 46:05.460]  W południu czy wieczorem spotykaliśmy się już prywatnie i... nie wiem,
+[46:05.460 --> 46:11.060]  na przykład chodziliśmy do kina, zwiedzaliśmy miasto, albo po prostu rozmawialiśmy gdzieś w kawiarni.
+[46:11.060 --> 46:13.060]  No i musiało się też dużo uczyć.
+[46:20.300 --> 46:21.300]  Okej.
+[46:24.300 --> 46:25.300]  Co robili?
+[46:27.800 --> 46:28.800]  Do kina?
+[46:28.800 --> 46:30.800]  Mhm, chodzili do kina, na pewno.
+[46:30.800 --> 46:31.800]  Chodzili do kina.
+[46:32.500 --> 46:33.500]  Co jeszcze?
+[46:33.500 --> 46:36.540]  Zwiedzali miasto.
+[46:36.540 --> 46:37.700]  Zwiedzali miasto.
+[46:37.700 --> 46:39.700]  Zwiedzali miasto.
+[46:39.700 --> 46:40.700]  Tak.
+[46:40.700 --> 46:50.700]  Rozmawiali w... Rozmawiali kolegami... kolegą w kawiarni.
+[46:50.700 --> 46:51.700]  Z kolegami?
+[46:51.700 --> 46:52.700]  Z kolegami.
+[46:52.700 --> 46:55.700]  Okej, dobra, rozmawialiśmy z kolegami w kawiarni.
+[46:55.700 --> 47:02.300]  I na początku? Pierwsza rzecz w zdaniu? Spotykaliśmy się prywatnie.
+[47:02.300 --> 47:03.300]  Tak, tak.
+[47:03.500 --> 47:04.500]  No dobrze.
+[47:04.500 --> 47:09.500]  Co to znaczy spotykanie się prywatnie?
+[47:09.500 --> 47:10.500]  Co znaczy spotykanie?
+[47:10.500 --> 47:15.500]  I mean, I understand spotykaczy, but prywatnie means private, right?
+[47:15.500 --> 47:16.500]  Mhm.
+[47:16.500 --> 47:17.500]  So spotykali...
+[47:17.500 --> 47:22.500]  It doesn't mean that they were meeting, but not in the classroom, they were meeting
+[47:22.500 --> 47:23.500]  outside the classroom.
+[47:23.500 --> 47:24.500]  In a private situation.
+[47:24.500 --> 47:26.500]  Not because of class.
+[47:26.500 --> 47:27.500]  Okej.
+[47:27.500 --> 47:28.500]  Dobrze.
+[47:28.500 --> 47:29.500]  Pytania?
+[47:29.500 --> 47:30.500]  Nie ma pytań.
+[47:30.500 --> 47:31.500]  Nie ma pytań.
+[47:31.500 --> 47:32.500]  Nie ma pytań.
+[47:32.500 --> 47:33.500]  Nie ma pytań.
+[47:33.500 --> 47:34.500]  Nie ma pytań.
+[47:34.500 --> 47:35.500]  No dobrze.
+[47:35.500 --> 47:38.500]  To zobaczmy na zadanie dziesiąte.
+[47:38.500 --> 47:41.500]  Bardzo proszę uzupełnić zdanie.
+[47:41.500 --> 47:44.500]  Czyli co Państwo robili w zeszłym roku?
+[47:44.500 --> 47:46.500]  Często, w zeszłym roku, codziennie.
+[47:46.500 --> 47:47.500]  W zeszłym roku rzadko.
+[47:47.500 --> 47:48.500]  Czy pamiętamy, co znaczy często, codziennie, rzadko?
+[47:48.500 --> 47:49.500]  Mhm.
+[47:49.500 --> 47:50.500]  Co znaczy często?
+[47:50.500 --> 47:51.500]  Of course.
+[47:51.500 --> 47:52.500]  Of course.
+[47:52.500 --> 47:53.500]  Sometimes.
+[47:53.500 --> 47:54.500]  Of course.
+[47:54.500 --> 47:55.500]  Of course.
+[47:55.500 --> 47:56.500]  Of course.
+[47:56.500 --> 47:57.500]  Of course.
+[47:57.500 --> 47:58.500]  Of course.
+[47:58.500 --> 47:59.500]  Of course.
+[47:59.500 --> 48:00.500]  Of course.
+[48:00.500 --> 48:05.500]  Codziennie.
+[48:05.500 --> 48:07.500]  Rzadko.
+[48:07.500 --> 48:11.500]  Od czasu do czasu.
+[48:11.500 --> 48:16.500]  Dobra.
+[48:16.500 --> 48:19.500]  No dobrze, to powiedz co Pan wziął.
+[48:19.500 --> 48:21.500]  Jeszcze raz, co to znaczy rzadko?
+[48:21.500 --> 48:23.500]  Rzadko.
+[48:23.500 --> 48:25.500]  Dokładnie.
+[48:30.500 --> 48:35.500]  No dobrze.
+[49:00.500 --> 49:10.500]  Dobra.
+[49:10.500 --> 49:12.500]  Przepraszam, mogę zapytać?
+[49:12.500 --> 49:14.500]  Tak.
+[49:14.500 --> 49:16.500]  Więc na ostatnie dwa razy,
+[49:16.500 --> 49:18.500]  rzadko to znaczy, że każdy?
+[49:18.500 --> 49:23.500]  Tak.
+[49:23.500 --> 49:26.500]  Czy...
+[49:26.500 --> 49:28.500]  Czy zapomniałem o czymś?
+[49:28.500 --> 49:30.500]  Tak, to było rzadko, prawda?
+[49:30.500 --> 49:32.500]  Tak.
+[49:32.500 --> 49:34.500]  To jest to samo słowo, prawda?
+[49:34.500 --> 49:36.500]  Tak.
+[49:36.500 --> 49:38.500]  Więc tutaj, to znaczy, że każdy?
+[49:38.500 --> 49:40.500]  Tak.
+[49:40.500 --> 49:42.500]  Co to za magia?
+[50:00.500 --> 50:02.500]  To jest to samo słowo, co i to co?
+[50:02.500 --> 50:04.500]  Tak.
+[50:04.500 --> 50:05.500]  Tak, więc, że każdy?
+[50:05.500 --> 50:06.500]  Tak.
+[50:06.500 --> 50:07.500]  Więc, jak...
+[50:07.500 --> 50:09.500]  Rzadko, to znaczy, że każdy?
+[50:09.500 --> 50:10.500]  Tak.
+[50:10.500 --> 50:12.500]  Więc, że każdy?
+[50:12.500 --> 50:14.500]  Tak, to znaczy, że każdy.
+[50:14.500 --> 50:15.500]  Rzadko, że każdy?
+[50:15.500 --> 50:16.500]  Tak.
+[50:16.500 --> 50:18.500]  No dobrze, to jest to samo słowo.
+[50:18.500 --> 50:20.500]  Tak.
+[50:20.500 --> 50:21.500]  No dobrze.
+[50:21.500 --> 50:22.500]  Więc, to znaczy, że każdy?
+[50:22.500 --> 50:23.500]  Tak.
+[50:23.500 --> 50:24.500]  No dobrze.
+[50:24.500 --> 50:25.500]  Tak.
+[50:25.500 --> 50:26.500]  Tak.
+[50:26.500 --> 50:27.500]  To jest to samo słowo, co ja, prawda?
+[50:27.500 --> 50:28.500]  Tak.
+[50:28.500 --> 50:29.500]  Tak.
+[50:29.500 --> 50:49.500]  Zobaczmy co robiliśmy w tym roku.
+[50:49.500 --> 50:57.500]  Możesz napisać co zrobiłeś w tym roku, ale przed sierpniem.
+[50:57.500 --> 51:01.500]  Użyj tylko jakiejś serii.
+[51:27.500 --> 51:37.500]  System一定要 znam grać od duszy i sngera.
+[51:37.500 --> 51:55.200]  W gabersku znajduje się wsparcie, ADHD
+[51:57.500 --> 52:27.480]  Dzień dobry.
+[52:27.500 --> 52:57.480]  Dzień dobry.
+[52:57.500 --> 53:27.480]  Dzień dobry.
+[53:27.500 --> 53:57.480]  Dzień dobry.
+[54:27.500 --> 54:57.480]  Dzień dobry.
+[54:57.500 --> 55:27.480]  Dzień dobry.
+[55:27.500 --> 55:57.480]  Dzień dobry.
+[55:57.500 --> 56:27.480]  Dzień dobry.
+[56:27.500 --> 56:57.480]  Dzień dobry.
+[56:57.500 --> 57:27.480]  Dzień dobry.
+[57:27.500 --> 57:57.480]  Dzień dobry.
+[57:57.500 --> 58:27.480]  Dzień dobry.
+[58:27.500 --> 58:57.480]  Dzień dobry.
+[58:57.500 --> 59:27.480]  Dzień dobry.
+[59:27.500 --> 59:29.320]  Dzień dobry.
+[59:40.440 --> 59:42.580]  Dobra. Już?
+[59:43.320 --> 59:44.200]  Tak, już.
+[59:45.080 --> 59:46.340]  Jak już?
+[59:47.580 --> 59:48.480]  Doskoczyć.
+[59:55.980 --> 59:57.080]  PiąOrce.
+[59:57.500 --> 01:00:00.500]  Pijemy kawę.
+[01:00:00.500 --> 01:00:02.500]  Kawa to jest E.
+[01:00:02.500 --> 01:00:04.500]  Pijemy kawę.
+[01:00:04.500 --> 01:00:05.500]  Kawę.
+[01:00:05.500 --> 01:00:06.500]  Kawę.
+[01:00:06.500 --> 01:00:07.500]  Tak, tak.
+[01:00:07.500 --> 01:00:09.500]  Pijemy kawę.
+[01:00:09.500 --> 01:00:10.500]  Pijemy kawę.
+[01:00:10.500 --> 01:00:11.500]  Zobaczmy.
+[01:00:15.500 --> 01:00:16.500]  Wyjechaliśmy, ok.
+[01:00:16.500 --> 01:00:21.500]  Wyjechaliśmy na granicę.
+[01:00:21.500 --> 01:00:23.500]  Na granicę, dobra.
+[01:00:23.500 --> 01:00:25.500]  Pijemy piwo.
+[01:00:25.500 --> 01:00:26.500]  Pijemy piwo, tak.
+[01:00:26.500 --> 01:00:27.500]  Pijemy piwo.
+[01:00:27.500 --> 01:00:28.500]  Pijemy piwo.
+[01:00:28.500 --> 01:00:29.500]  Za rok jak to.
+[01:00:29.500 --> 01:00:30.500]  Tak.
+[01:00:30.500 --> 01:00:33.500]  Pijemy piwo.
+[01:00:33.500 --> 01:00:35.500]  To nie zmienia się, bo jest mężczyzna.
+[01:00:35.500 --> 01:00:39.500]  Nie zmienia się, bo jest mężczyzna, więc jest to samo jak z mężem.
+[01:00:39.500 --> 01:00:43.500]  Poszedłem, poszedłem.
+[01:00:43.500 --> 01:00:46.500]  Dobrze.
+[01:00:49.500 --> 01:00:50.500]  Dobrze.
+[01:00:50.500 --> 01:00:52.500]  Poszedłem pobiegać, ok.
+[01:00:52.500 --> 01:00:54.500]  Ugotowałam obiad, ok.
+[01:00:54.500 --> 01:00:55.500]  Brałam ubrania, ok.
+[01:00:55.500 --> 01:00:56.500]  Cześć, dobra.
+[01:00:56.500 --> 01:00:57.500]  Dobra, już.
+[01:00:57.500 --> 01:00:58.500]  To dobrze.
+[01:00:58.500 --> 01:00:59.500]  Dobra, open już.
+[01:00:59.500 --> 01:01:00.500]  Sprawia.
+[01:01:00.500 --> 01:01:01.500]  Z.
+[01:01:01.500 --> 01:01:02.500]  Z.
+[01:01:02.500 --> 01:01:03.500]  O.
+[01:01:03.500 --> 01:01:04.500]  To jest kropka?
+[01:01:04.500 --> 01:01:05.500]  Czy to jest kropka?
+[01:01:05.500 --> 01:01:06.500]  Jest to dot?
+[01:01:06.500 --> 01:01:07.500]  O tak.
+[01:01:07.500 --> 01:01:08.500]  No, no.
+[01:01:08.500 --> 01:01:09.500]  Z.
+[01:01:09.500 --> 01:01:10.500]  Dostałem dot, dostałem kresa.
+[01:01:10.500 --> 01:01:11.500]  No nie?
+[01:01:11.500 --> 01:01:12.500]  No nie?
+[01:01:12.500 --> 01:01:13.500]  No nie?
+[01:01:13.500 --> 01:01:14.500]  No nie?
+[01:01:14.500 --> 01:01:15.500]  No nie?
+[01:01:15.500 --> 01:01:16.500]  No nie?
+[01:01:16.500 --> 01:01:17.500]  No nie?
+[01:01:17.500 --> 01:01:18.500]  No nie?
+[01:01:18.500 --> 01:01:19.500]  No nie?
+[01:01:19.500 --> 01:01:20.500]  No nie?
+[01:01:20.500 --> 01:01:21.500]  No nie?
+[01:01:21.500 --> 01:01:22.500]  No nie?
+[01:01:22.500 --> 01:01:23.500]  No nie?
+[01:01:23.500 --> 01:01:24.500]  No nie?
+[01:01:24.500 --> 01:01:25.500]  No nie?
+[01:01:25.500 --> 01:01:26.500]  No nie?
+[01:01:28.500 --> 01:01:29.500]  To tkwi.
+[01:01:29.500 --> 01:01:30.500]  To kropka.
+[01:01:30.500 --> 01:01:31.500]  M.
+[01:01:31.500 --> 01:01:32.500]  Więc bo kropka jest kropka, czy to roman willi.
+[01:01:32.500 --> 01:01:33.500]  When we've been in contact.
+[01:01:33.500 --> 01:01:34.500]  When we've been in contact.
+[01:01:34.500 --> 01:01:35.500]  I have to fill the lunchbox.
+[01:01:35.500 --> 01:01:36.500]  I fill the lunchbox.
+[01:01:36.500 --> 01:01:37.500]  Open the lunchbox, open the lunchbox, a rural system appears.
+[01:01:37.500 --> 01:01:38.500]  To smorgaków american means that the woman has a big stuff of social life.
+[01:01:38.500 --> 01:01:39.500]  Ordynacyjny.
+[01:01:39.500 --> 01:01:40.500]  Oni merasträ siedzę iщą.
+[01:01:40.500 --> 01:01:41.500]  Oni mera z倍ta godzinem może starać się.
+[01:01:41.500 --> 01:01:42.500]  Oni meraistrzę przed tobą.
+[01:01:42.500 --> 01:01:43.500]  Oni meraścią tej kos electro bunchwar então elas bl встр yiałabym się
+[01:01:43.500 --> 01:01:44.500]  dla opieki.
+[01:01:44.500 --> 01:01:45.500]  Leyla futuro.
+[01:01:45.500 --> 01:01:46.500]  Ono to .
+[01:01:46.500 --> 01:01:47.500]  Świetnie, takahan?
+[01:01:47.500 --> 01:01:49.500]  On?
+[01:01:49.500 --> 01:01:51.500]  Szedłem.
+[01:01:51.500 --> 01:01:53.500]  Szedłem.
+[01:01:53.500 --> 01:01:55.500]  Dobrze.
+[01:01:55.500 --> 01:01:57.500]  Dobrze.
+[01:01:57.500 --> 01:01:59.500]  Dobrze.
+[01:01:59.500 --> 01:02:01.500]  Dobra i przedwzoruj.
+[01:02:01.500 --> 01:02:03.500]  Ok.
+[01:02:17.500 --> 01:02:19.500]  Dobra.
+[01:02:25.500 --> 01:02:27.500]  Eeeem...
+[01:02:27.500 --> 01:02:29.500]  Co tutaj?
+[01:02:29.500 --> 01:02:31.500]  Fiorenta.
+[01:02:33.500 --> 01:02:35.500]  Po co mi to dałem?
+[01:02:35.500 --> 01:02:37.500]  Brałem. Dokładnie.
+[01:02:37.500 --> 01:02:39.500]  Ok.
+[01:02:43.500 --> 01:02:45.500]  Ok.
+[01:02:45.500 --> 01:02:47.500]  Hmm... pierwsze.
+[01:02:47.500 --> 01:02:49.500]  Spacerować.
+[01:02:49.500 --> 01:02:51.500]  Spacerowałem.
+[01:02:51.500 --> 01:02:53.500]  Czasownik jest dobrze.
+[01:02:53.500 --> 01:02:55.500]  Po mieście.
+[01:02:55.500 --> 01:02:57.500]  Teraz...
+[01:02:57.500 --> 01:02:59.500]  Po mieście. Jak to robi?
+[01:02:59.500 --> 01:03:01.500]  Po mieście.
+[01:03:01.500 --> 01:03:03.500]  Si.
+[01:03:03.500 --> 01:03:05.500]  Mhm.
+[01:03:05.500 --> 01:03:07.500]  To ten. Mhm.
+[01:03:07.500 --> 01:03:09.500]  Ci i e. Ok.
+[01:03:09.500 --> 01:03:11.500]  Eeeem...
+[01:03:11.500 --> 01:03:13.500]  Bardzo polsko słowo?
+[01:03:13.500 --> 01:03:15.500]  A, nie. Ok, dobra.
+[01:03:15.500 --> 01:03:17.500]  Eeeem...
+[01:03:17.500 --> 01:03:19.500]  Ok, we can say wybiegu.
+[01:03:19.500 --> 01:03:21.500]  Biegałem w wybiegu.
+[01:03:21.500 --> 01:03:23.500]  W zawodach.
+[01:03:23.500 --> 01:03:25.500]  Zawody?
+[01:03:25.500 --> 01:03:27.500]  Tak? Mhm. Zawody. Competition.
+[01:03:27.500 --> 01:03:29.500]  Albo wybiegu.
+[01:03:29.500 --> 01:03:31.500]  Jakichś...
+[01:03:31.500 --> 01:03:33.500]  Of something, something.
+[01:03:33.500 --> 01:03:35.500]  Dobra.
+[01:03:35.500 --> 01:03:37.500]  No dobrze.
+[01:03:37.500 --> 01:03:39.500]  Mamy ile?
+[01:03:39.500 --> 01:03:41.500]  To na danym działach?
+[01:03:41.500 --> 01:03:43.500]  20 minut? Dobra. Czas jest ok.
+[01:03:43.500 --> 01:03:45.500]  To teraz spróbujemy zrobić tak.
+[01:03:45.500 --> 01:03:47.500]  Eeeem...
+[01:03:47.500 --> 01:03:49.500]  Dobra.
+[01:03:49.500 --> 01:03:51.500]  Dobra.
+[01:03:51.500 --> 01:03:53.500]  Dobra.
+[01:03:53.500 --> 01:03:55.500]  Zapraszam wszystkich tutaj.
+[01:03:55.500 --> 01:03:57.500]  O. Zapraszam wszystkich.
+[01:03:57.500 --> 01:03:59.500]  No i?
+[01:03:59.500 --> 01:04:01.500]  I teraz tak.
+[01:04:01.500 --> 01:04:03.500]  I teraz tak.
+[01:04:03.500 --> 01:04:05.500]  O.
+[01:04:05.500 --> 01:04:07.500]  Si.
+[01:04:07.500 --> 01:04:09.500]  O.
+[01:04:09.500 --> 01:04:11.500]  O.
+[01:04:11.500 --> 01:04:13.500]  I teraz tak.
+[01:04:13.500 --> 01:04:15.500]  I teraz tak.
+[01:04:15.500 --> 01:04:17.500]  Eeeem...
+[01:04:17.500 --> 01:04:19.500]  Każdy ma
+[01:04:19.500 --> 01:04:21.500]  jedną część.
+[01:04:21.500 --> 01:04:23.500]  To będzie jedna osoba, druga osoba,
+[01:04:23.500 --> 01:04:25.500]  trzecia osoba, czwarta osoba.
+[01:04:25.500 --> 01:04:27.500]  I każdy dostanie czasownik.
+[01:04:27.500 --> 01:04:29.500]  Dobra. I teraz uwaga.
+[01:04:29.500 --> 01:04:31.500]  Najpierw
+[01:04:31.500 --> 01:04:33.500]  jeden czasownik
+[01:04:33.500 --> 01:04:35.500]  robimy rodzaj męski
+[01:04:35.500 --> 01:04:37.500]  i rodzaj męskoosobowy.
+[01:04:37.500 --> 01:04:39.500]  Rodzaj męski, męskoosobowy,
+[01:04:39.500 --> 01:04:41.500]  męski, męskoosobowy, męski
+[01:04:41.500 --> 01:04:43.500]  i męskoosobowy.
+[01:04:43.500 --> 01:04:45.500]  Drugi czasownik, rodzaj żeński,
+[01:04:45.500 --> 01:04:47.500]  nie męskoosobowy.
+[01:04:47.500 --> 01:04:49.500]  Ok?
+[01:04:49.500 --> 01:04:51.500]  Czyli tak. Najpierw każdy dostanie jeden czasownik.
+[01:04:51.500 --> 01:04:53.500]  Everyone will get one verb.
+[01:04:53.500 --> 01:04:55.500]  Ok?
+[01:04:55.500 --> 01:04:57.500]  I robimy rodzaj męski,
+[01:04:57.500 --> 01:04:59.500]  liczba pojedyncza,
+[01:04:59.500 --> 01:05:01.500]  rodzaj męski singular,
+[01:05:01.500 --> 01:05:03.500]  rodzaj męskoosobowy, liczba mnoga.
+[01:05:03.500 --> 01:05:05.500]  Czyli na przykład robiliśmy.
+[01:05:05.500 --> 01:05:07.500]  Robiliście.
+[01:05:07.500 --> 01:05:09.500]  Dobra.
+[01:05:09.500 --> 01:05:11.500]  Spróbujemy.
+[01:05:17.500 --> 01:05:19.500]  Dobra.
+[01:05:19.500 --> 01:05:21.500]  Możesz wybrać część.
+[01:05:21.500 --> 01:05:23.500]  You can choose your
+[01:05:23.500 --> 01:05:25.500]  part.
+[01:05:25.500 --> 01:05:27.500]  Board.
+[01:05:27.500 --> 01:05:29.500]  Męski, męskoosobowy,
+[01:05:29.500 --> 01:05:31.500]  męski, męskoosobowy, męski, męskoosobowy.
+[01:05:31.500 --> 01:05:33.500]  Hasn't has?
+[01:05:33.500 --> 01:05:35.500]  Hasn't has.
+[01:05:35.500 --> 01:05:37.500]  Good question.
+[01:05:37.500 --> 01:05:39.500]  I thought it was going to be easy.
+[01:05:47.500 --> 01:06:08.000]  Dziitos
+[01:06:17.500 --> 01:06:25.880]  Ok, możemy najpierw męski i męskosobowy.
+[01:06:26.820 --> 01:06:27.480]  Żeński będzie najwyższy.
+[01:06:27.480 --> 01:06:28.900]  Oh, we see the second verb.
+[01:06:29.060 --> 01:06:30.980]  Yeah, we will do this. Ok, znowu do mory, do powrotu.
+[01:06:40.480 --> 01:06:41.300]  Ale jest dobrze.
+[01:06:47.500 --> 01:07:01.360]  Ok, dobra, próbujemy drugi czopownik.
+[01:07:17.500 --> 01:07:42.040]  I jeszcze raz.
+[01:07:42.040 --> 01:07:43.540]  Second verb.
+[01:07:44.020 --> 01:07:44.700]  Second verb.
+[01:07:45.860 --> 01:07:46.460]  Second verb.
+[01:07:47.500 --> 01:07:48.500]  I second verb.
+[01:07:50.500 --> 01:07:51.000]  Przepraszam.
+[01:07:51.000 --> 01:07:51.500]  Czekaj.
+[01:07:52.900 --> 01:07:54.100]  No, to możemy...
+[01:07:54.600 --> 01:07:57.000]  ...dobre.
+[01:07:58.300 --> 01:07:59.200]  I second verb.
+[01:08:00.000 --> 01:08:01.700]  Czyli rodzaj żeński.
+[01:08:02.000 --> 01:08:02.500]  Ok.
+[01:08:17.500 --> 01:08:18.400]  Ok, macam nie Hundred日.
+[01:08:18.400 --> 01:08:18.900]  Tak?
+[01:08:19.500 --> 01:08:19.720]  Tak, proszę bardzo.
+[01:08:19.720 --> 01:08:20.800]  Zaj rezultatem był to��면 ten.
+[01:08:20.800 --> 01:08:23.800]  To nie chodził nam� hasty ב ciud Cafe , bo Tracy nie marque, bo ja teknologicznie już tam byłam.
+[01:08:23.800 --> 01:08:42.260]  Mówiłem, bo différentesuksy są bezdanowe, lecz nie każdy photobuffert, bo chosenujesz sobie
+[01:08:42.260 --> 01:08:44.860]  wyолет z Krakowa do Batyka na Krakowie.
+[01:08:44.860 --> 01:08:45.900]  Jak brushes responses.
+[01:08:45.900 --> 01:08:46.080]  Tak.
+[01:08:46.080 --> 01:08:46.720]  Kto to miał?
+[01:08:46.720 --> 01:08:47.100]  Ta?
+[01:08:47.100 --> 01:08:47.160]  No?
+[01:08:47.160 --> 01:08:47.340]  Tak.
+[01:08:47.340 --> 01:08:47.420]  Tak.
+[01:08:47.420 --> 01:08:47.480]  Tak.
+[01:08:47.500 --> 01:08:49.500]  Czy to było?
+[01:08:49.500 --> 01:08:51.500]  Mhm.
+[01:08:51.500 --> 01:08:53.500]  Super.
+[01:08:53.500 --> 01:08:55.500]  O,
+[01:08:55.500 --> 01:08:57.500]  bardzo dobrze.
+[01:08:57.500 --> 01:08:59.500]  No, super.
+[01:08:59.500 --> 01:09:01.500]  O,
+[01:09:01.500 --> 01:09:03.500]  czy...
+[01:09:03.500 --> 01:09:05.500]  czy chcesz spróbować innego wyraża?
+[01:09:05.500 --> 01:09:07.500]  Może?
+[01:09:07.500 --> 01:09:09.500]  To jest ok, ale...
+[01:09:09.500 --> 01:09:11.500]  Ok, jest ok, jest ok.
+[01:09:11.500 --> 01:09:13.500]  No dobra, no to próbujemy.
+[01:09:13.500 --> 01:09:15.500]  Czytałem, czytałem, czytam.
+[01:09:15.500 --> 01:09:17.500]  Dobra, czytaliśmy,
+[01:09:17.500 --> 01:09:19.500]  czytaliście, czytaliście.
+[01:09:19.500 --> 01:09:21.500]  To jest dobrze.
+[01:09:21.500 --> 01:09:23.500]  A tu? Czego tu brakuje?
+[01:09:23.500 --> 01:09:25.500]  Zobaczmy tutaj.
+[01:09:25.500 --> 01:09:27.500]  Tak.
+[01:09:27.500 --> 01:09:29.500]  Na pewno.
+[01:09:29.500 --> 01:09:31.500]  Ok.
+[01:09:35.500 --> 01:09:37.500]  Sekundę.
+[01:09:37.500 --> 01:09:39.500]  O, czekam, czekam, czekam.
+[01:09:45.500 --> 01:09:47.500]  Tamci liśm.
+[01:09:47.500 --> 01:09:49.500]  Nie wiem, czy to jest dobrze.
+[01:09:49.500 --> 01:09:51.500]  To może się spowiedzieć?
+[01:09:51.500 --> 01:09:53.500]  Tamci liśm.
+[01:09:53.500 --> 01:09:55.500]  Liśm.
+[01:09:55.500 --> 01:09:57.500]  Liśm.
+[01:09:57.500 --> 01:09:59.500]  Mówisz dobrze, ale piszesz.
+[01:09:59.500 --> 01:10:01.500]  Nie, to jest ok.
+[01:10:01.500 --> 01:10:03.500]  Tak, tak, tak.
+[01:10:03.500 --> 01:10:05.500]  Aha.
+[01:10:05.500 --> 01:10:07.500]  O,
+[01:10:07.500 --> 01:10:09.500]  o, ok.
+[01:10:09.500 --> 01:10:11.500]  O,
+[01:10:11.500 --> 01:10:13.500]  o, ok, ok.
+[01:10:13.500 --> 01:10:15.500]  Tak, tak, tak.
+[01:10:15.500 --> 01:10:17.500]  Ładnie.
+[01:10:17.500 --> 01:10:19.500]  Mhm.
+[01:10:19.500 --> 01:10:21.500]  Co się zmienia?
+[01:10:21.500 --> 01:10:23.500]  Tutaj mamy li.
+[01:10:23.500 --> 01:10:25.500]  A tu mamy co?
+[01:10:27.500 --> 01:10:29.500]  La, va, ve.
+[01:10:29.500 --> 01:10:31.500]  Ve.
+[01:10:31.500 --> 01:10:33.500]  Mhm.
+[01:10:33.500 --> 01:10:35.500]  Tamci, ve, tamci, ve.
+[01:10:35.500 --> 01:10:37.500]  O, to było dobrze.
+[01:10:37.500 --> 01:10:39.500]  Biegałyśmy, biegałyśmy.
+[01:10:39.500 --> 01:10:41.500]  I teraz tutaj mamy ręka.
+[01:10:41.500 --> 01:10:43.500]  Łaś, biegałaś, biegałaś.
+[01:10:43.500 --> 01:10:45.500]  Łaś, biegałaś.
+[01:10:45.500 --> 01:10:47.500]  Biegaliśmy.
+[01:10:47.500 --> 01:10:49.500]  Biegaliście.
+[01:10:49.500 --> 01:10:51.500]  Bie...
+[01:10:51.500 --> 01:10:53.500]  ga...li.
+[01:10:53.500 --> 01:10:55.500]  To jest dobrze.
+[01:10:55.500 --> 01:10:57.500]  Tańczyłam, tańczyłam, tańczyłam, tańczyłam.
+[01:10:57.500 --> 01:10:59.500]  Tańczyłyście, tańczyłyście, tańczyłyście.
+[01:10:59.500 --> 01:11:01.500]  Ok.
+[01:11:01.500 --> 01:11:03.500]  Piłem, piłeś, piłem.
+[01:11:03.500 --> 01:11:05.500]  Piliśmy, piliście, pili...
+[01:11:05.500 --> 01:11:07.500]  jadłyśmy, jadłyście.
+[01:11:07.500 --> 01:11:09.500]  Super.
+[01:11:09.500 --> 01:11:11.500]  Malowały, malowałyś, malowałyś.
+[01:11:11.500 --> 01:11:13.500]  Malowały.
+[01:11:13.500 --> 01:11:15.500]  Malowały.
+[01:11:15.500 --> 01:11:17.500]  Mamy...
+[01:11:19.500 --> 01:11:21.500]  Zmiana.
+[01:11:21.500 --> 01:11:23.500]  Czyli tutaj będzie
+[01:11:23.500 --> 01:11:25.500]  nie męskoosobowe, ale będzie męskoosobowe.
+[01:11:25.500 --> 01:11:27.500]  Tak, mam na to na połączenie.
+[01:11:27.500 --> 01:11:29.500]  Ok. Malowałyśmy, malowałyście, malowały.
+[01:11:29.500 --> 01:11:31.500]  Malowałyśmy.
+[01:11:31.500 --> 01:11:33.500]  To, to, to idzie do S.
+[01:11:33.500 --> 01:11:35.500]  To jest dobrze?
+[01:11:35.500 --> 01:11:37.500]  Czyli
+[01:11:37.500 --> 01:11:39.500]  SI, CI i
+[01:11:39.500 --> 01:11:41.500]  SI. Ok.
+[01:11:41.500 --> 01:11:43.500]  Słuchaliśmy, słuchaliście, słuchali.
+[01:11:43.500 --> 01:11:45.500]  Słuchałam, słuchała, słuchała.
+[01:11:45.500 --> 01:11:50.500]  No dobrze. Jeszcze jedno albo jeszcze więcej.
+[01:11:50.500 --> 01:11:53.500]  Dobra, to poproszę te czasowniki w jedno miejsce.
+[01:11:53.500 --> 01:12:00.500]  Dobra. I czasowniki.
+[01:12:00.500 --> 01:12:04.500]  O tutaj, dobra. To mamy dalej.
+[01:12:04.500 --> 01:12:07.500]  Jeszcze raz.
+[01:12:07.500 --> 01:12:11.500]  I jeszcze raz.
+[01:12:15.500 --> 01:12:20.500]  Dobra, tutaj robimy jednak węzło słabowe.
+[01:12:45.500 --> 01:12:49.500]  Dobra.
+[01:12:49.500 --> 01:12:50.500]  Z czuląg.
+[01:12:50.500 --> 01:12:53.500]  Z czuląg, dobra. To zrobię tak.
+[01:12:53.500 --> 01:12:57.500]  Dobra, tam też mam, przesuwają. Dobra.
+[01:13:15.500 --> 01:13:39.500]  Super.
+[01:13:39.500 --> 01:13:42.500]  To będzie drugi.
+[01:13:42.500 --> 01:13:44.500]  Może nie. Będzie ten.
+[01:13:44.500 --> 01:13:47.500]  Będzie ten.
+[01:13:47.500 --> 01:13:49.500]  Dobra, możemy zmienić czasownik?
+[01:13:49.500 --> 01:13:51.500]  Możemy inny czasownik dać?
+[01:13:51.500 --> 01:13:53.500]  Inny czasownik i będzie ten.
+[01:13:53.500 --> 01:13:54.500]  A, okej.
+[01:13:54.500 --> 01:13:56.500]  Okej.
+[01:13:56.500 --> 01:13:58.500]  Jeszcze raz.
+[01:14:14.500 --> 01:14:17.500]  Dobra, dam się raz.
+[01:14:17.500 --> 01:14:21.500]  I teraz Forum rasρów czystym.
+[01:14:23.500 --> 01:14:26.500]  No voudlimy palec.
+[01:14:26.500 --> 01:14:28.500]  No dobrze.
+[01:14:28.500 --> 01:14:30.500]  Decyzja ile?
+[01:14:30.500 --> 01:14:33.500]  Dold severed.
+[01:14:33.500 --> 01:14:36.500]  Na pewno.
+[01:14:36.500 --> 01:14:39.500]  Tu mamy bielka tomar.
+[01:14:42.500 --> 01:14:44.140]  Dobra.
+[01:14:44.500 --> 01:15:04.460]  Dobra, to jest dobrze.
+[01:15:14.500 --> 01:15:24.500]  Okej, prawie.
+[01:15:24.500 --> 01:15:34.500]  Czyli nie ły, tylko trochę liny.
+[01:15:34.500 --> 01:15:42.500]  Nie ły, tylko trochę liny.
+[01:15:42.500 --> 01:15:46.500]  Nie ły, tylko trochę liny.
+[01:16:12.500 --> 01:16:24.500]  Nie ły, tylko trochę liny.
+[01:16:24.500 --> 01:16:32.500]  Nie ły, tylko trochę liny.
+[01:16:32.500 --> 01:16:38.500]  Wszystko dobrze, dobrze.
+[01:16:38.500 --> 01:16:40.500]  Tak.
+[01:16:40.500 --> 01:16:42.500]  Dobrze, dobrze.
+[01:16:42.500 --> 01:16:51.180]  Prawie.
+[01:16:52.280 --> 01:16:53.120]  Tutaj nam brakuje.
+[01:16:53.400 --> 01:16:55.740]  Zmiany do ły.
+[01:16:56.740 --> 01:16:58.080]  Czyli tutaj mamy li,
+[01:16:58.280 --> 01:17:00.780]  a tutaj mamy ły.
+[01:17:01.080 --> 01:17:01.820]  To mamy dobrze.
+[01:17:02.100 --> 01:17:02.620]  To jest ok.
+[01:17:02.620 --> 01:17:03.680]  A tu?
+[01:17:05.500 --> 01:17:06.940]  Tutaj zmieniamy y.
+[01:17:08.700 --> 01:17:09.640]  A tutaj mamy y.
+[01:17:10.880 --> 01:17:11.800]  I dobrze.
+[01:17:11.800 --> 01:17:12.820]  To jest dobrze.
+[01:17:21.540 --> 01:17:22.180]  Dobra.
+[01:17:22.880 --> 01:17:24.060]  Super, udało się.
+[01:17:24.200 --> 01:17:24.780]  Zdaliśmy radę.
+[01:17:33.620 --> 01:17:35.300]  No i to wszystko na razie.
+[01:17:35.860 --> 01:17:38.320]  Możemy sobie usiąść i idziemy dalej.
+[01:17:41.800 --> 01:17:42.900]  Proszę o üstę.
+[01:17:49.900 --> 01:17:51.700]  Jak działem się hadą na przykład na imię Boga?
+[01:17:51.980 --> 01:17:53.300]  Muszę to taki taki...
+[01:17:53.560 --> 01:17:58.520]  I ja sam mam wątpienie jak tam nurse już się zdawal i nie wiem co tam że ja tam dostałam.
+[01:17:58.520 --> 01:17:59.620]  Damn!
+[01:18:00.160 --> 01:18:02.880] 音 podJul, słucham Jesteś taki dobry...
+[01:18:03.160 --> 01:18:05.560]  Jak pozwolnising raz nie绘اł sie chyt어나ć?
+[01:18:05.840 --> 01:18:07.740]  No to się fans där utrwiСТy losły,
+[01:18:07.740 --> 01:18:09.120]  Wielko dała się to poprawić,
+[01:18:09.620 --> 01:18:10.640]  sumki sono doskonali Mittospி Golf,
+[01:18:10.640 --> 01:18:11.320]  ale wydaje mi się, że tenaza Noise,
+[01:18:11.320 --> 01:18:11.800]  jest taki pięknie.
+[01:18:11.800 --> 01:18:13.800]  Mam nadzieję, że to jest nieco inny temat.
+[01:18:13.800 --> 01:18:15.800]  Wiem, że pamiętam, ale...
+[01:18:15.800 --> 01:18:17.800]  nigdy nie wiesz.
+[01:18:17.800 --> 01:18:19.800]  To o tym chodzi.
+[01:18:27.800 --> 01:18:29.800]  Zabrałam tylko nieodpłatne.
+[01:18:29.800 --> 01:18:31.800]  Nie, masz też
+[01:18:31.800 --> 01:18:33.800]  wskaz, co jest nieodpłatne.
+[01:18:33.800 --> 01:18:35.800]  Tak, okej.
+[01:18:35.800 --> 01:18:37.800]  Ale dałam to na papier, bo to zrobiliśmy.
+[01:18:37.800 --> 01:18:39.800]  Tak, oczywiście.
+[01:18:39.800 --> 01:18:41.800]  Ale nie mamy
+[01:18:43.800 --> 01:18:45.800]  bardzo rzadkich, nieodpłatnych
+[01:18:45.800 --> 01:18:47.800]  wskazów.
+[01:18:47.800 --> 01:18:49.800]  Na przykład 15.
+[01:18:49.800 --> 01:18:51.800]  O, 15.
+[01:18:51.800 --> 01:18:53.800]  No dobrze, daliśmy radę.
+[01:18:53.800 --> 01:18:55.800]  Czy wszystkie?
+[01:18:55.800 --> 01:18:57.800]  Wszystko dali?
+[01:18:57.800 --> 01:18:59.800]  Dobra, mamy 5 minut.
+[01:18:59.800 --> 01:19:01.800]  Korzystaj jeszcze z bożonek.
+[01:19:01.800 --> 01:19:03.800]  Wracamy tutaj
+[01:19:03.800 --> 01:19:05.800]  i wracamy
+[01:19:05.800 --> 01:19:07.800]  do zadania
+[01:19:07.800 --> 01:19:09.800]  12.
+[01:19:09.800 --> 01:19:11.800]  Zadanie 12.
+[01:19:13.800 --> 01:19:15.800]  Zadanie 12.
+[01:19:23.800 --> 01:19:25.800]  Okej.
+[01:19:25.800 --> 01:19:27.800]  Tu możemy
+[01:19:27.800 --> 01:19:29.800]  zobaczyć
+[01:19:29.800 --> 01:19:31.800]  w tej ramce,
+[01:19:31.800 --> 01:19:33.800]  jak długo
+[01:19:33.800 --> 01:19:35.800]  coś robiliśmy.
+[01:19:35.800 --> 01:19:37.800]  Okej, dobrze.
+[01:19:37.800 --> 01:19:39.800]  Mówiliśmy ostatnio,
+[01:19:39.800 --> 01:19:41.800]  kiedy używać
+[01:19:41.800 --> 01:19:43.800]  których form,
+[01:19:43.800 --> 01:19:45.800]  na przykład
+[01:19:45.800 --> 01:19:47.800]  chodzić, pójść.
+[01:19:47.800 --> 01:19:49.800]  Okej.
+[01:19:49.800 --> 01:19:51.800]  Dobrze.
+[01:19:51.800 --> 01:19:53.800]  Kiedy używamy
+[01:19:53.800 --> 01:19:55.800]  chodziłem,
+[01:19:55.800 --> 01:19:57.800]  a kiedy
+[01:19:57.800 --> 01:19:59.800]  używamy poszedłem?
+[01:19:59.800 --> 01:20:01.800]  Tryb i kończ.
+[01:20:01.800 --> 01:20:03.800]  Jeszcze raz.
+[01:20:03.800 --> 01:20:05.800]  Kiedy używamy
+[01:20:05.800 --> 01:20:07.800]  chodziłem,
+[01:20:07.800 --> 01:20:09.800]  a kiedy używamy
+[01:20:09.800 --> 01:20:11.800]  poszedłem?
+[01:20:11.800 --> 01:20:13.800]  I was going
+[01:20:13.800 --> 01:20:15.800]  and I went, right?
+[01:20:15.800 --> 01:20:17.800]  Okej.
+[01:20:17.800 --> 01:20:19.800]  Przykład?
+[01:20:19.800 --> 01:20:21.800]  Yesterday I was going...
+[01:20:21.800 --> 01:20:23.800]  Po polsku?
+[01:20:23.800 --> 01:20:25.800]  Sorry.
+[01:20:25.800 --> 01:20:27.800]  Po polsku.
+[01:20:27.800 --> 01:20:29.800]  Wczoraj chodziłem
+[01:20:29.800 --> 01:20:31.800]  do kina.
+[01:20:31.800 --> 01:20:33.800]  Na kina?
+[01:20:33.800 --> 01:20:35.800]  Do kinie.
+[01:20:35.800 --> 01:20:37.800]  Do kina, ale nie chodziłem.
+[01:20:37.800 --> 01:20:39.800]  Idę?
+[01:20:39.800 --> 01:20:41.800]  No.
+[01:20:41.800 --> 01:20:43.800]  No, not
+[01:20:43.800 --> 01:20:45.800]  czas przeszły.
+[01:20:45.800 --> 01:20:47.800]  Idę would be
+[01:20:47.800 --> 01:20:49.800]  pój, poszedłem.
+[01:20:49.800 --> 01:20:51.800]  Aha.
+[01:20:51.800 --> 01:20:53.800]  There is a more important
+[01:20:53.800 --> 01:20:55.800]  part that you
+[01:20:55.800 --> 01:20:57.800]  use poszedłem
+[01:20:57.800 --> 01:20:59.800]  when you're like
+[01:20:59.800 --> 01:21:01.800]  going there once
+[01:21:01.800 --> 01:21:03.800]  and then chodziłem is like
+[01:21:03.800 --> 01:21:05.800]  when you were going there like
+[01:21:05.800 --> 01:21:07.800]  to i ja bym ja dał to za
+[01:21:07.800 --> 01:21:09.800]  to i ja żebym ja dał to
+[01:21:09.800 --> 01:21:11.800]  to i ja bym ja dał to.
+[01:21:11.800 --> 01:21:13.800]  Tak?
+[01:21:13.800 --> 01:21:15.800]  Tak.
+[01:21:15.800 --> 01:21:17.800]  Tak.
+[01:21:17.800 --> 01:21:19.800]  Dobra.
+[01:21:19.800 --> 01:21:21.800]  Wczoraj
+[01:21:21.800 --> 01:21:23.800]  poszedłem.
+[01:21:23.800 --> 01:21:25.800]  To jest rodzaj męski.
+[01:21:25.800 --> 01:21:27.800]  A jak to jest, jak jest rodzaj
+[01:21:27.800 --> 01:21:29.800]  żecki od tego słowa?
+[01:21:29.800 --> 01:21:31.800]  Odszedła.
+[01:21:31.800 --> 01:21:33.800]  Poszłam.
+[01:21:33.800 --> 01:21:35.800]  Poszłam.
+[01:21:35.800 --> 01:21:37.800]  Dobra.
+[01:21:37.800 --> 01:21:39.800]  To było w tym.
+[01:21:39.800 --> 01:21:41.800]  To było gdzieś oczywiście.
+[01:21:41.800 --> 01:21:43.800]  To jest ważne.
+[01:21:43.800 --> 01:21:45.800]  Czyli wczoraj poszedłem do kina.
+[01:21:45.800 --> 01:21:47.800]  Once.
+[01:21:47.800 --> 01:21:49.800]  Wczoraj.
+[01:21:49.800 --> 01:21:51.800]  I went and back.
+[01:21:51.800 --> 01:21:53.800]  Mam pytanie.
+[01:21:53.800 --> 01:21:55.800]  Jeśli mówisz, że chcesz
+[01:21:55.800 --> 01:21:57.800]  gdzieś
+[01:21:57.800 --> 01:21:59.800]  powinieneś powiedzieć
+[01:21:59.800 --> 01:22:01.800]  jak tam poszedłeś?
+[01:22:01.800 --> 01:22:03.800]  Jakbyś powiedział, że chcę
+[01:22:03.800 --> 01:22:05.800]  poszedłem
+[01:22:05.800 --> 01:22:07.800]  do Tarnów.
+[01:22:07.800 --> 01:22:09.800]  Tak?
+[01:22:09.800 --> 01:22:11.800]  Czy to normalne, żeby powiedzieć
+[01:22:11.800 --> 01:22:13.800]  poszedłem do Tarnów?
+[01:22:13.800 --> 01:22:15.800]  Do Tarnów?
+[01:22:15.800 --> 01:22:17.800]  Do miasta?
+[01:22:17.800 --> 01:22:19.800]  Tak. Ale czy to dziwne?
+[01:22:19.800 --> 01:22:21.800]  Czy powinieneś powiedzieć
+[01:22:21.800 --> 01:22:23.800]  słowo, żebym
+[01:22:23.800 --> 01:22:25.800]  przyjechał na tren?
+[01:22:25.800 --> 01:22:27.800]  Tak, bo
+[01:22:27.800 --> 01:22:29.800]  nie myślę, że jest to fizyczne
+[01:22:29.800 --> 01:22:31.800]  żebym mógł iść do Tarnów.
+[01:22:31.800 --> 01:22:33.800]  Możesz iść, ale to będzie
+[01:22:33.800 --> 01:22:35.800]  trochę...
+[01:22:35.800 --> 01:22:37.800]  To znaczy, że to znaczy
+[01:22:37.800 --> 01:22:39.800]  chodzić.
+[01:22:39.800 --> 01:22:41.800]  Tak.
+[01:22:41.800 --> 01:22:43.800]  Poszedłem. To znaczy, że...
+[01:22:43.800 --> 01:22:45.800]  To jest tylko jak kolsko.
+[01:22:45.800 --> 01:22:47.800]  Tak.
+[01:22:47.800 --> 01:22:49.800]  A do Tarnów
+[01:22:49.800 --> 01:22:51.800]  jak? Pociągiem?
+[01:22:51.800 --> 01:22:53.800]  Pociągiem.
+[01:22:53.800 --> 01:22:55.800]  Pociągiem.
+[01:22:55.800 --> 01:22:57.800]  Po samochód?
+[01:22:57.800 --> 01:22:59.800]  Po samochód.
+[01:22:59.800 --> 01:23:01.800]  Ok, więc poszedłem.
+[01:23:01.800 --> 01:23:03.800]  Co mówisz?
+[01:23:03.800 --> 01:23:05.800]  Tak, zapomniałem
+[01:23:05.800 --> 01:23:07.800]  tego słowa.
+[01:23:07.800 --> 01:23:09.800]  Pojechałem.
+[01:23:09.800 --> 01:23:11.800]  Pojechałem.
+[01:23:11.800 --> 01:23:13.800]  Pojechałem.
+[01:23:13.800 --> 01:23:15.800]  Poszedłem. Zawsze w miejscu, gdzie chodzę.
+[01:23:15.800 --> 01:23:17.800]  Pojechałem. Zawsze
+[01:23:17.800 --> 01:23:19.800]  coś z...
+[01:23:19.800 --> 01:23:21.800]  Nie wiem.
+[01:23:21.800 --> 01:23:23.800]  Z drzwi, tak bym powiedziała.
+[01:23:23.800 --> 01:23:25.800]  Pojechałem na rowerze, pojechałem
+[01:23:25.800 --> 01:23:27.800]  pociągiem, pojechałem autobusem,
+[01:23:27.800 --> 01:23:29.800]  samochodem, tramwajem.
+[01:23:29.800 --> 01:23:31.800]  Samolotem?
+[01:23:31.800 --> 01:23:33.800]  Samolotem, tak. Bo ty pojechasz.
+[01:23:33.800 --> 01:23:35.800]  Czyli poleciałem.
+[01:23:35.800 --> 01:23:37.800]  Ok, proszę.
+[01:23:37.800 --> 01:23:39.800]  Dobra.
+[01:23:39.800 --> 01:23:41.800]  Ok, czyli wczoraj poszedłem
+[01:23:41.800 --> 01:23:43.800]  do kina, a
+[01:23:43.800 --> 01:23:45.800]  w zeszłym roku
+[01:23:45.800 --> 01:23:47.800]  w zeszłym
+[01:23:47.800 --> 01:23:49.800]  roku
+[01:23:49.800 --> 01:23:51.800]  w zeszłym
+[01:23:51.800 --> 01:23:53.800]  roku
+[01:23:53.800 --> 01:23:55.800]  co miesiąc
+[01:23:55.800 --> 01:23:57.800]  co miesiąc
+[01:23:57.800 --> 01:23:59.800]  do kina.
+[01:23:59.800 --> 01:24:01.800]  Chodziłem.
+[01:24:01.800 --> 01:24:03.800]  Chodziłem.
+[01:24:03.800 --> 01:24:05.800]  To jest nasza rytua,
+[01:24:05.800 --> 01:24:07.800]  że chcesz
+[01:24:07.800 --> 01:24:09.800]  odkupić to każdego miesiąca.
+[01:24:09.800 --> 01:24:11.800]  Chodziłem do kina.
+[01:24:11.800 --> 01:24:13.800]  Bo jest tak,
+[01:24:13.800 --> 01:24:15.800]  każdego miesiąca,
+[01:24:15.800 --> 01:24:17.800]  tak, repetytywna sytuacja.
+[01:24:17.800 --> 01:24:19.800]  Mhm.
+[01:24:19.800 --> 01:24:21.800]  Mhm.
+[01:24:21.800 --> 01:24:23.800]  Mhm.
+[01:24:23.800 --> 01:24:25.800]  Dobra.
+[01:24:25.800 --> 01:24:27.800]  No, my tu mamy tak samo,
+[01:24:27.800 --> 01:24:29.800]  jak to, co zrobiłem ostatnio
+[01:24:29.800 --> 01:24:31.800]  o złotym i o latach.
+[01:24:31.800 --> 01:24:33.800]  Tak.
+[01:24:33.800 --> 01:24:35.800]  Czyli na przykład.
+[01:24:35.800 --> 01:24:37.800]  Nie wiem.
+[01:24:37.800 --> 01:24:39.800]  Ktoś może
+[01:24:39.800 --> 01:24:41.800]  powiedzieć, że co?
+[01:24:41.800 --> 01:24:43.800]  O, dobra.
+[01:24:43.800 --> 01:24:45.800]  Zdążymy jeszcze szybciutko.
+[01:24:45.800 --> 01:24:47.800]  Jak długo?
+[01:24:49.800 --> 01:24:51.800]  Jak długo Pan
+[01:24:51.800 --> 01:24:53.800]  spał wczoraj?
+[01:24:55.800 --> 01:24:57.800]  Mhm.
+[01:24:57.800 --> 01:24:59.800]  Jeszcze raz. Spała?
+[01:24:59.800 --> 01:25:01.800]  Spał.
+[01:25:01.800 --> 01:25:03.800]  Spać.
+[01:25:03.800 --> 01:25:05.800]  Spać. Jak?
+[01:25:05.800 --> 01:25:07.800]  Jak długo?
+[01:25:07.800 --> 01:25:09.800]  Tak, jak długo?
+[01:25:09.800 --> 01:25:11.800]  Inne godziny.
+[01:25:11.800 --> 01:25:13.800]  Inne godziny.
+[01:25:13.800 --> 01:25:15.800]  Osiem godzin.
+[01:25:15.800 --> 01:25:17.800]  Mhm.
+[01:25:17.800 --> 01:25:19.800]  Jedną godzinę.
+[01:25:19.800 --> 01:25:21.800]  Godzinę.
+[01:25:21.800 --> 01:25:23.800]  Godzinę.
+[01:25:23.800 --> 01:25:25.800]  Tak.
+[01:25:25.800 --> 01:25:27.800]  Godzinę.
+[01:25:27.800 --> 01:25:29.800]  Jedną godziną.
+[01:25:29.800 --> 01:25:31.800]  Osiem.
+[01:25:31.800 --> 01:25:33.800]  Czyli ile?
+[01:25:33.800 --> 01:25:35.800]  Osiem czego?
+[01:25:35.800 --> 01:25:37.800]  Godzin.
+[01:25:37.800 --> 01:25:39.800]  Godzin. Dokładnie.
+[01:25:39.800 --> 01:25:41.800]  O, godzin.
+[01:25:41.800 --> 01:25:43.800]  Osiem godzin.
+[01:25:43.800 --> 01:25:45.800]  Dobra.
+[01:25:45.800 --> 01:25:47.800]  Okej.
+[01:25:47.800 --> 01:25:49.800]  A jak długo Pan jechał na zajęcia dzisiaj?
+[01:25:49.800 --> 01:25:51.800]  Albo szedł?
+[01:25:51.800 --> 01:25:53.800]  Jak długo Pan jechał na zajęcia dzisiaj rano?
+[01:25:53.800 --> 01:25:55.800]  Albo szedł?
+[01:25:55.800 --> 01:25:57.800]  Albo szedł?
+[01:25:57.800 --> 01:25:59.800]  Albo szedł?
+[01:25:59.800 --> 01:26:01.800]  Albo szedł?
+[01:26:01.800 --> 01:26:03.800]  Jak długo Pan...
+[01:26:03.800 --> 01:26:05.800]  Jak długo?
+[01:26:05.800 --> 01:26:07.800]  Jak długo?
+[01:26:07.800 --> 01:26:09.800]  Jak długo Pan...
+[01:26:09.800 --> 01:26:11.800]  Jak długo Pan...
+[01:26:11.800 --> 01:26:13.800]  Czy Pan jechał?
+[01:26:13.800 --> 01:26:15.800]  Czy pan jechał?
+[01:26:15.800 --> 01:26:17.800]  Czy?
+[01:26:17.800 --> 01:26:19.800]  Ok.
+[01:26:19.800 --> 01:26:21.800]  30 minut.
+[01:26:21.800 --> 01:26:23.800]  30 minut. Ok.
+[01:26:23.800 --> 01:26:25.800]  A jechał Pan autobusem, tramwajem?
+[01:26:25.800 --> 01:26:27.800]  Autobusem.
+[01:26:27.800 --> 01:26:29.800]  I tramwajem.
+[01:26:29.800 --> 01:26:31.800]  Czyli 30 minut, a to jest inaczej?
+[01:26:31.800 --> 01:26:33.800]  I tramwajem.
+[01:26:33.800 --> 01:26:35.800]  I tramwajem.
+[01:26:35.800 --> 01:26:37.800]  Pół godziny.
+[01:26:37.800 --> 01:26:39.800]  Pół godziny. Super.
+[01:26:39.800 --> 01:26:41.800]  Dobra.
+[01:26:41.800 --> 01:26:43.800]  A jak długo Pani dzisiaj spała?
+[01:26:43.800 --> 01:26:45.800]  Spała.
+[01:26:45.800 --> 01:26:47.800]  Spała.
+[01:26:47.800 --> 01:26:49.800]  Pała.
+[01:26:49.800 --> 01:26:51.800]  Pała.
+[01:26:51.800 --> 01:26:53.800]  Pała.
+[01:26:53.800 --> 01:26:55.800]  Pała.
+[01:26:55.800 --> 01:26:57.800]  Pała.
+[01:26:57.800 --> 01:26:59.800]  Pała.
+[01:26:59.800 --> 01:27:01.800]  Pięć?
+[01:27:01.800 --> 01:27:03.800]  Pięć czego?
+[01:27:03.800 --> 01:27:05.800]  Pięć...
+[01:27:05.800 --> 01:27:07.800]  Ołudzim.
+[01:27:07.800 --> 01:27:09.800]  Ołudzim?
+[01:27:09.800 --> 01:27:11.800]  Pięć godzin.
+[01:27:11.800 --> 01:27:13.800]  Pięć godzin.
+[01:27:13.800 --> 01:27:15.800]  Dobra.
+[01:27:15.800 --> 01:27:17.800]  A jakbyśmy chcieli powiedzieć
+[01:27:17.800 --> 01:27:19.800]  że ktoś na przykład spał jeszcze krócej
+[01:27:19.800 --> 01:27:21.800]  to spał 3?
+[01:27:21.800 --> 01:27:23.800]  Godziny.
+[01:27:23.800 --> 01:27:25.800]  Godziny.
+[01:27:25.800 --> 01:27:27.800]  Godziny.
+[01:27:27.800 --> 01:27:32.800]  Godziny. Ok. A jak długo Pan wczoraj pracował?
+[01:27:39.800 --> 01:27:42.800]  Dziewięć godzin.
+[01:27:44.800 --> 01:27:45.800]  Godzin.
+[01:27:45.800 --> 01:27:46.800]  Dziewięć?
+[01:27:48.800 --> 01:27:49.800]  Dziewięć?
+[01:27:49.800 --> 01:27:51.800]  Osiem, dziewięć, dziesięć.
+[01:27:51.800 --> 01:27:52.800]  Dziewięć.
+[01:27:52.800 --> 01:27:54.800]  Dziesięć godzin.
+[01:27:54.800 --> 01:27:55.800]  Godzin.
+[01:27:57.800 --> 01:28:00.800]  Dobra. A ile trwają nasze zajęcia?
+[01:28:02.800 --> 01:28:04.800]  Nasze zajęcia trwają?
+[01:28:06.800 --> 01:28:07.800]  Półtorej.
+[01:28:07.800 --> 01:28:08.800]  Półtorej godziny.
+[01:28:08.800 --> 01:28:09.800]  Półtorej godziny.
+[01:28:11.800 --> 01:28:13.800]  Półtorej godziny.
+[01:28:17.800 --> 01:28:21.800]  No dobrze. Czy mamy jakieś pytania?
+[01:28:24.800 --> 01:28:26.800]  Any questions?
+[01:28:27.800 --> 01:28:32.800]  No to tak. Uwaga.
+[01:28:32.800 --> 01:28:36.800]  Na zadanie domowe.
+[01:28:36.800 --> 01:28:47.800]  Nadlewne. Ok. Zrobiliśmy pierwsze i sprawialiśmy to dzisiaj. Ostatnie były drugie, trzecie i czwarte. No to robimy do końca.
+[01:28:47.800 --> 01:28:56.800]  Czyli pięć, sześć, siedem, osiem.
+[01:28:56.800 --> 01:28:58.800]  Dziękuję.
+[01:28:58.800 --> 01:28:59.800]  Dzięki.
+[01:28:59.800 --> 01:29:07.800]  Ok. Uwaga. Ja wyślę...
+[01:29:07.800 --> 01:29:09.800]  My mieliśmy siedem.
+[01:29:09.800 --> 01:29:12.800]  My tylko robiliśmy dwa, trzy i czwarte.
+[01:29:12.800 --> 01:29:14.800]  I jeden.
+[01:29:14.800 --> 01:29:16.800]  Pięć? Było pięć?
+[01:29:16.800 --> 01:29:17.800]  Nie, nie robiliśmy pięć.
+[01:29:17.800 --> 01:29:18.800]  Nie.
+[01:29:18.800 --> 01:29:19.800]  Ok.
+[01:29:19.800 --> 01:29:20.800]  O, zrobiłeś pięć.
+[01:29:20.800 --> 01:29:22.800]  Więc nie mamy.
+[01:29:22.800 --> 01:29:23.800]  I uwaga.
+[01:29:23.800 --> 01:29:25.800]  Ja wyślę odpowiedzi do wszystkich pytań.
+[01:29:25.800 --> 01:29:29.800]  Na Languagionie.
+[01:29:29.800 --> 01:29:31.800]  I wyślę odpowiedzi do wszystkich pytań.
+[01:29:31.800 --> 01:29:34.800]  Wszystkich z tych części ćwiczeń.
+[01:29:34.800 --> 01:29:35.800]  Ok?
+[01:29:35.800 --> 01:29:36.800]  Więc...
+[01:29:36.800 --> 01:29:38.800]  Zrobiliśmy pierwsze już.
+[01:29:38.800 --> 01:29:40.800]  Może wszystko.
+[01:29:40.800 --> 01:29:42.800]  Dobrze.
+[01:29:42.800 --> 01:29:44.800]  I...
+[01:29:44.800 --> 01:29:46.800]  To tyle.
+[01:29:46.800 --> 01:29:48.800]  To wszystko.
+[01:29:48.800 --> 01:29:49.800]  Ok.
+[01:29:49.800 --> 01:29:50.800]  To wszystko.
+[01:29:50.800 --> 01:29:51.800]  I uwaga.
+[01:29:51.800 --> 01:29:54.800]  We wtorek są zajęcia z kimś innym.
+[01:29:55.800 --> 01:29:56.800]  Ok.
+[01:29:56.800 --> 01:29:57.800]  Więc...
+[01:29:57.800 --> 01:30:01.800]  Od wczoraj będzie zajęcia z kimś innym.
+[01:30:01.800 --> 01:30:02.800]  O!
+[01:30:02.800 --> 01:30:03.800]  Więc to będzie nasz ostatni zajęcie.
+[01:30:03.800 --> 01:30:05.800]  Dziękuję za współpracę.
+[01:30:05.800 --> 01:30:08.800]  To wszystko.
+[01:30:08.800 --> 01:30:12.800]  Mam nadzieję, że następny zajęciu będzie bardziej...
+[01:30:12.800 --> 01:30:14.800]  Powiedziałbyś...
+[01:30:14.800 --> 01:30:17.800]  O, chodź.
+[01:30:17.800 --> 01:30:18.800]  Chodź.
+[01:30:18.800 --> 01:30:19.800]  Nie.
+[01:30:19.800 --> 01:30:20.800]  Nie.
+[01:30:20.800 --> 01:30:21.800]  Nie.
+[01:30:21.800 --> 01:30:22.800]  Nie.
+[01:30:22.800 --> 01:30:23.800]  Nie.
+[01:30:23.800 --> 01:30:24.800]  Nie.
+[01:30:25.800 --> 01:30:27.800]  Pr知道.
+[01:30:27.800 --> 01:30:28.800]  Nie, nie, nie.
+[01:30:28.800 --> 01:30:29.800]  Wszystkie Ci życzę.
+[01:30:29.800 --> 01:30:30.800]  Dziękuję na to.
+[01:30:30.800 --> 01:30:31.800]  Dziękuję i...
+[01:30:31.800 --> 01:30:37.920]  Dobrą i nową, a nie estjourd ow —
+[01:30:37.920 --> 01:30:44.920]  Gener escaloni, porter ortado.
+[01:30:45.800 --> 01:30:51.800]  Można się to powsmieżnie poznać z przyjaciół miperform,
+[01:30:51.800 --> 01:30:52.800]  czy...?
+[01:30:52.800 --> 01:30:53.800]  Może to lovera krawczania?
+[01:30:53.800 --> 01:30:55.800]  Wiem, że to będzie na pewno.
+[01:30:55.800 --> 01:30:57.800]  Ale...
+[01:30:57.800 --> 01:30:59.800]  Ale idę na zewnątrz.
+[01:30:59.800 --> 01:31:01.800]  W końcu.
+[01:31:01.800 --> 01:31:03.800]  W końcu.
+[01:31:03.800 --> 01:31:05.800]  Dziękuję i do widzenia.
+[01:31:05.800 --> 01:31:07.800]  Dziękuję bardzo.
+[01:31:23.800 --> 01:31:25.800]  Napisy by Jacek Makarewicz
+
+Success! Transcription saved to: Lectures/Polish/A1_2/L22_10thSept/L22_10thSept.txt
+
+Process finished with exit code 0

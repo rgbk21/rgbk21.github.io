@@ -1,2 +1,0 @@
-# ImageGallery
-Image Blog website
