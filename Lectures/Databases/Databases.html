@@ -228,8 +228,7 @@
             - The Rule: If you aren't going to perform mathematical operations on it (adding, subtracting, averaging), it’s not a number. Store it as a string. <br>
 
             b) <p class="inline-heading">Using Floating-Point for finances</p>: Floating-point numbers are designed for scientific calculations where speed matters more than absolute precision. They
-            use
-            binary fractional approximations, which introduces rounding errors. 0.1 + 0.2 might end up as 0.30000000000000004, which will throw off your financial balancing. <br>
+            use binary fractional approximations, which introduces rounding errors. 0.1 + 0.2 might end up as 0.30000000000000004, which will throw off your financial balancing. <br>
             - The Rule: For money, always use DECIMAL (or NUMERIC), where you explicitly state the exact precision (e.g., DECIMAL(13, 4) to store up to 9 billion with 4 decimal places for fractional
             cents). <br>
 
@@ -245,6 +244,11 @@
             server's local time. If your server is in New York (EST) and you migrate your database to a cloud server running on Coordinated Universal Time (UTC), or if your app scales to users across
             the globe, all your historical timestamps will suddenly be offset by hours. <br>
             - The Rule: Always use TIMESTAMP WITH TIME ZONE (or store everything strictly as UTC integers).
+            <br>
+
+            f) <p class="inline-heading">Numbers Stored as Strings</p>: Be careful when applying MAX or similar functions to a column that stores numbers but uses a STRING type. Values may be compared
+            as text rather than as numbers, so the result can be unpredictable; for example, "9" may sort after "10". <br>
+            - The Rule: Use a numeric column type when you need numeric ordering or calculations.
           </div>
         </div>
 

@@ -16,14 +16,14 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-9QJ5D3X353"></script>
   <script>
-    window.dataLayer = window.dataLayer || [];
+      window.dataLayer = window.dataLayer || [];
 
-    function gtag() {
-      dataLayer.push(arguments);
-    }
+      function gtag() {
+          dataLayer.push(arguments);
+      }
 
-    gtag('js', new Date());
-    gtag('config', 'G-9QJ5D3X353');
+      gtag('js', new Date());
+      gtag('config', 'G-9QJ5D3X353');
   </script>
   <!-- Style for inline code blocks start -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet"/>
@@ -184,7 +184,9 @@
       <div>
         This page contains my notes from the following: <br>
         a) Deploy Multi-Agent Systems with Agent Development Kit (ADK) and Agent Engine <br>
-        a) Deploy and Agent with Agent Development Kit (ADK)
+        b) Deploy and Agent with Agent Development Kit (ADK) <br>
+        c) <a href="https://anthropic-partners.skilljar.com/path/claude-certified-developer-foundations">Claude Certified Developer - Foundations Prep Course</a> <br>
+        d) <a href="#UseAgents">Use Agents to Build Agents</a> - Google Skills <br>
       </div>
 
       <br>
@@ -1049,7 +1051,8 @@ adk web \
                 various web products, and accomplish many things. Using community tools within ADK can save you rewriting a tool that someone has already created.</p>
               <ol>
                 <li>
-                  <p>Back in your browser tab displaying the Cloud Shell Editor, use the file explorer on the left-hand side to navigate to the directory <strong>adk_tools/langchain_tool_agent</strong>.
+                  <p>Back in your browser tab displaying the Cloud Shell Editor, use the file explorer on the left-hand side to navigate to the directory
+                    <strong>adk_tools/langchain_tool_agent</strong>.
                   </p>
                 </li>
                 <li>
@@ -1298,7 +1301,6 @@ adk web \
                   <p>In the Cloud Shell Terminal, from the <strong>adk_tools</strong> project directory, <strong>launch the command line interface</strong> with the following
                     command.
                   <p class="highlight-text">You'll include the <code>--reload_agents</code> flag so that the Dev UI reloads your agent when you make changes.</p>
-                  </p>
                   <code>adk web --allow_origins "regex:https://.*\.cloudshell\.dev" --reload_agents</code>
                 </li>
                 <li>
@@ -1996,8 +1998,7 @@ adk web \
                   <p>At the user prompt, type <code>exit</code> to end the session.</p>
                 </li>
                 <b>Step-by-step pattern:</b> If you are interested in an agent that guides a user through a process step-by-step, one useful pattern can be to make the first step
-                the
-                <code>root_agent</code> with the second step agent its only sub-agent, and continue with each additional step being the only sub-agent of the previous step's agent.
+                the <code>root_agent</code> with the second step agent its only sub-agent, and continue with each additional step being the only sub-agent of the previous step's agent.
               </ol>
 
               <h2>Task 3. Use session state to store and retrieve specific information</h2>
@@ -2043,7 +2044,8 @@ def save_attractions_to_state(
                   <p>In this code, notice:</p>
                   <ul>
                     <li>The session is passed to your tool function as <code>ToolContext</code>. All you need to do is assign a parameter to receive it, as you see here with the
-                      parameter named <code>tool_context</code>. You can then use <code>tool_context</code> to access session information like conversation history (through <code>tool_context.events</code>)
+                      parameter named <code>tool_context</code>. You can then use <code>tool_context</code> to access session information like conversation history (through
+                      <code>tool_context.events</code>)
                       and the session state dictionary (through <code>tool_context.state</code>). When the <code>tool_context.state</code> dictionary is modified by your tool
                       function, those changes will be reflected in the session's state after the tool finishes its execution.
                     </li>
@@ -2275,7 +2277,8 @@ tools=[save_attractions_to_state]
                   </ul>
                 </li>
                 <li>
-                  <p>The agent should now call its agents one after the other as it executes the workflow and writes the plot outline file to your <strong>~/adk_multiagent_systems/movie_pitches</strong>
+                  <p>The agent should now call its agents one after the other as it executes the workflow and writes the plot outline file to your
+                    <strong>~/adk_multiagent_systems/movie_pitches</strong>
                     directory. It should inform you when it has written the file to disk.</p>
                   <p>If you don't see the agent reporting that it generated a file for you or want to try another character, you can click <strong>+ New Session</strong> in the
                     upper
@@ -3209,7 +3212,6 @@ AgentEngine resource deleted: projects/1029886909158/locations/us-central1/reaso
                 </li>
                 <li>
                   <p>Click <strong>Close</strong> on the dialog box.</p>
-                  <p>
                   <div class="image-block">
                     <div class="expand-screenshot-image-btn border border-primary rounded">
                       <span class="btn btn-link">Show Image <img src="./imgs/chevron-expand.svg" alt="Show Image Button"></span>
@@ -3222,7 +3224,6 @@ AgentEngine resource deleted: projects/1029886909158/locations/us-central1/reaso
                            loading="lazy">
                     </div>
                   </div>
-                  </p>
                 </li>
               </ol>
 
@@ -4083,6 +4084,336 @@ illustration_agent = RemoteA2aAgent(
 
         </div>
       </div>
+
+      <br>
+      <p id="UseAgents"></p>Index: Use Agents to build Agents <br>
+      <br>
+      Chapter 1: <a href="#UseAgents_Ch1">Antigravity and agents-cli in the ADK development workflow</a> <br>
+      Chapter 2: <a href="#UseAgents_Ch2">Setting up agents-cli and the ADK skill set</a> <br>
+
+
+      <hr>
+      <div id="UseAgents_Links" class="chapter index-column-link">Links and Stuff</div>
+      <hr>
+
+      <div class="textual-content">
+        <div class="sub-heading">Resources</div>
+        <div>
+          - <a href="https://partner.skills.google/paths/3476">Use Agents to Build Agents</a> - Google Skills <br>
+        </div>
+      </div>
+
+
+      <hr>
+      <div id="UseAgents_Ch1" class="chapter index-column-link">Chapter 1: Antigravity and agents-cli in the ADK development workflow</div>
+      <hr>
+
+      <div class="textual-content">
+        <div class="sub-heading">Resources</div>
+        <div>
+          <a href="https://partner.skills.google/paths/3476/course_templates/1751/documents/633846">Link to Lecture</a>. <br>
+        </div>
+
+        <div class="sub-heading">Overview</div>
+        <div>
+          - Prepare an agentic coding environment to build agents faster and better.
+          - In this lesson, you'll learn how to utilize the local Agent Development Kit (ADK) 2.0 ecosystem. You'll leverage Antigravity, Google’s agentic IDE, alongside agents-cli, the
+          lifecycle toolchain. Together, these tools form a powerful local development platform that allows you to shift your focus away from wrestling with complex API syntax and toward designing
+          high-level agent logic.
+          <p>By the end of this lesson, you'll be able to:</p>
+          a) Explain how Antigravity and the agents-cli toolchain collaborate as your local ADK development platform. <br>
+          b) Describe the "vibecoding" model and your role as an architect in guiding agent generation through natural language. <br>
+          c) Design a formal agent blueprint using spec-driven development (SDD) and Gherkin scenarios to define expected behavior. <br>
+          d) Identify the core surfaces (editor view and manager surface) and artifact-tracking mechanisms of the Antigravity IDE. <br>
+        </div>
+
+        <div class="sub-heading">Building the expense report agent</div>
+        <div>
+          - Throughout the course, you'll work with an example of an ambient agent that handles expense reports. This agent routes each transaction, screens for risk before the LLM runs, and pauses
+          for human review when needed. Building this process requires juggling multiple elements simultaneously, including your design intent, the ADK API, a growing codebase, and a test harness. br
+          <br>
+          - For the expense agent, you describe the business rule and the routing outcome. Antigravity produces the corresponding graph structure edge conditions, the LLM agent node, and the
+          <code>RequestInput</code> human-in-the-loop step. <br>
+          - Prompt Example: <br>
+          "I'm building an ambient expense-approval agent as an ADK 2.0 graph workflow. An expense report arrives as a JSON event with amount, submitter, category, description, and date. Apply one
+          rule: under $100, auto-approve instantly with no LLM involved. At $100 or more, send to an LLM reviewer for risk analysis, then pause the workflow for a human to approve or reject. Keep
+          the dollar threshold and routing in Python code - the model is only for the risk judgment."
+        </div>
+
+        <div class="sub-heading">Spec-driven development (SDD)</div>
+        <div>
+          - Before writing any prompts, write a formal specification for the agent you're building. This practice is called spec-driven development (SDD), and reflects a fundamental shift in what the
+          developer's role actually is. Your job is to write high-quality blueprints; Antigravity's job is to turn those blueprints into code. <br>
+          - A production-grade spec for the expense agent covers four elements: <br>
+          a) Full technical design: The routing rules, state transitions, tool signatures, and security constraints. Be specific by naming the thresholds, branch outcomes, and which paths must bypass
+          the LLM entirely. <br>
+          b) Background: The "why" behind the design. When Antigravity knows the intent, it can reason forward to the next step without waiting for another prompt. <br>
+          c) Visual aids and version numbers: Include diagrams and pin every library version. Without explicit pins, the agent defaults to versions from its training cutoff. <br>
+          d) Scenarios: What correct behavior looks like, what failure looks like, and the edge cases.
+        </div>
+
+        <div class="sub-heading">Defining behavior with Gherkin scenarios</div>
+        <div>
+          - In SDD, your specification should include Gherkin scenarios. This provides Antigravity with a clear "Definition of Done" for the agent's logic. <br>
+          - Gherkin is a plain-language format from Behavior-Driven Development that structures each scenario as a <code>Scenario, Given, When, Then</code> block. <br>
+          - Using this format is highly effective because it: <br>
+          a) Clarifies state and action: It explicitly describes the starting state, the trigger, and the expected outcome, forcing "State &rarr; Action &rarr; Outcome" thinking. <br>
+          b) Eliminates ambiguity: It leaves no ambiguity about what correct behavior means. <br>
+          c) Creates instant test cases: The scenarios map directly to the evaluation dataset you will build in a later lesson - the same scenarios that guide Antigravity during the build become the
+          test cases that grade the agent once it is running. <br>
+          - Include the following scenarios within your <code>specs/expense-agent.md</code> file to ensure the agent logic handles thresholds and security requirements correctly:
+          <pre><code class="language-bash">
+Feature: Expense Report Processing
+
+  Scenario: Low-value expense auto-approval
+    Given an expense report with amount: 45
+    When the agent processes the report
+    Then it auto-approves with no LLM call
+
+  Scenario: High-value expense with PII in the description
+    Given an expense report with amount: 250 and an SSN in the description
+    When the agent processes the report
+    Then it redacts the SSN before the LLM reviewer sees it
+    And it routes to human approval after the LLM review
+</code></pre>
+          - These scenarios eliminate ambiguity about what correct behavior means, and they map directly to the evaluation dataset you will build in a later lesson. The same scenarios that guide
+          Antigravity during the build become the test cases that grade the agent once it is running.
+        </div>
+
+        <div class="sub-heading">Orchestrating the build and maintaining attention</div>
+        <div>
+          - Once your specification is complete, you will move to Antigravity to generate the code. At this stage, use the chat interface for high-level orchestration only (e.g., "Review
+          'specs/expense-agent.md' and implement Scenario 2. Confirm which files you changed."). The spec does the heavy lifting; the prompt is merely the pointer to it. <br>
+          - This gives you a stable reference to compare against Antigravity's output and prevents the most common failure mode in vibecoding: accepting generated code that is close to your intent but
+          not exactly right, and discovering the gap only after several more build steps have compounded on top of it. <br>
+          - The tradeoff is sustained attention, not less expertise. A misconfigured routing edge or a missing security node is easy to miss in generated code if you are not reading it as carefully as
+          you would code you wrote yourself. Therefore, read every response the LLM gives you, and when a detail is wrong, correct it specifically.
+        </div>
+
+        <div class="sub-heading">Agent CLI: The ADK lifecycle toolchain</div>
+        <div>
+          - The Antigravity workflow diagram illustrates this continuous development loop. It shows how your natural language specifications and Gherkin scenarios feed directly into Antigravity. <br>
+          - Empowered by the domain knowledge from agents-cli skills, Antigravity translates your design into correct ADK 2.0 code and outputs tangible Artifacts. You then review these Artifacts and
+          provide further direction, creating a seamless, iterative build cycle. <br>
+          - Solid arrows show active interactions. The dashed arrow shows the ADK skills loading into Antigravity automatically at startup.
+          <div class="image-block">
+            <div class="expand-screenshot-image-btn border border-primary rounded">
+              <span class="btn btn-link">Show Image <img src="./imgs/chevron-expand.svg" alt="Show Image Button"></span>
+            </div>
+            <div class="screenshot-image">
+              <img src="./imgs/UseAgents/ADK_lifecycle_toolchain.png"
+                   width="500"
+                   class="center-block img-fluid"
+                   alt="Image for image"
+                   loading="lazy">
+            </div>
+          </div>
+
+          - While Antigravity is a powerful agentic IDE, it requires specific domain knowledge to generate modern ADK 2.0 code effectively. The <code>agents-cli</code> toolchain bridges this gap by
+          equipping your coding assistants with the exact tools and context they need. <br>
+          <ul>
+            <li>
+              Recognize the domain knowledge gap: Out of the box, Antigravity can write general Python. However, it doesn't know the ADK 2.0 graph API, the <code>RequestInput</code> pattern for
+              human-in-the-loop steps, or the agents-cli project layout. Without that context, it produces syntactically correct code that uses the wrong API surface - often defaulting to the 1.x
+              <code>SequentialAgent</code> and <code>LlmAgent</code> patterns, which don't support the graph routing or session-based state management you need for an ambient agent.
+            </li>
+            <li>
+              Install domain-specific skills with agents-cli: Installing <code>agents-cli</code> loads the domain-specific skill files that fix this. agents-cli is the command-line toolchain for
+              building ADK agents and deploying them to the agent platform. Its most important function for Antigravity users is the skills system: A single setup command installs seven
+              domain-specific skill filesinto <code>~/.agents/skills/</code>.
+            </li>
+            <li>
+              Load skills automatically across your tools: Every supported coding agent on your machine scans that directory at startup and loads those files automatically. Because these generated
+              skills follow the standardized <i>agentskills.io spec</i>, they work not just in Antigravity, but in any compatible agent format, including Gemini CLI, Claude Code, Cursor, and 40+ other
+              products.
+            </li>
+          </ul>
+        </div>
+
+        <div class="sub-heading">Enforcing the ADK 2.0 surface</div>
+        <div>
+          - To ensure your agent uses the modern graph-based architecture rather than legacy code, the CLI strictly enforces the correct API references during generation. <br>
+          - ADK 2.0 introduced a graph Workflow API featuring function nodes, typed edges, and <code>RequestInput</code> for human-in-the-loop pauses. Without the installed skills, Antigravity
+          defaults to 1.x patterns whenever a prompt is ambiguous or session context is lost mid-build. The <code>google-agents-cli-adk-code</code> skill provides the exact 2.0 reference that keeps
+          generated code on the correct API surface throughout the entire build.
+        </div>
+
+
+      </div>
+
+
+      <hr>
+      <div id="UseAgents_Ch2" class="chapter index-column-link">Chapter 2: Setting up agents-cli and the ADK skill set</div>
+      <hr>
+
+      <div class="textual-content">
+        <div class="sub-heading">Resources</div>
+        <div>
+          - <a href="https://partner.skills.google/paths/3476/course_templates/1751/documents/633847">Link to Lecture</a>. <br>
+        </div>
+
+        <div class="sub-heading">Overview</div>
+        <div>
+          - Previously, you learned how the agents-cli toolchain provides the essential context your IDE needs to build on the ADK 2.0 API. In this lesson, you'll install and verify it in your local
+          environment. You'll walk through system prerequisites, configure authentication, and run the automated setup. <br>
+          - By establishing a reliable session-start pattern, you'll ensure Antigravity maintains its domain-specific skills throughout every build. <br>
+          - By the end of this lesson, you'll be able to: <br>
+          a) Configure and verify the prerequisites, authentication methods, and global installation of the <code>agents-cli</code> toolchain. <br>
+          b) Execute and distinguish core <code>agents-cli</code> commands across standalone development and AI-assisted workflows. <br>
+          c) Map the domain-specific skills to their specific phases in the ADK build lifecycle to maintain focused agent context. <br>
+          d) Implement the session-start pattern and maintenance commands to prevent API drift and keep local skill files synchronized.
+        </div>
+
+        <div class="sub-heading">Core CLI Commands</div>
+        <div>
+          - <code>agents-cli</code> works in two distinct paths: <br>
+          a) The coding-agent path: Where you prompt Antigravity to run commands during a build conversation. <br>
+          b) The standalone path: Where you run commands yourself in a terminal. <br>
+          - Both produce the same output. The skill files accelerate the coding-agent path by giving the IDE the ADK context it needs, while the CLI commands handle the mechanical steps either way.
+          <br>
+          - Here's a breakdown of the core commands you'll use to manage each phase of the development loop: <br>
+          a) <code>agents-cli scaffold create</code>: Scaffold a new ADK project from a template. <br>
+          b) <code>agents-cli install</code>: Sync Python dependencies via uv. <br>
+          c) <code>agents-cli lint</code>: Run Ruff code quality and formatting checks. <br>
+          d) <code>agents-cli playground</code>: Launch the interactive local dev UI with hot reload. <br>
+          e) <code>agents-cli run</code>: Run a quick single-turn inference from the terminal. <br>
+          f) <code>agents-cli eval generate</code>: Run test cases and capture execution traces. <br>
+          g) <code>agents-cli eval grade</code>: Score traces against LLM-as-judge metrics. <br>
+          h) <code>agents-cli scaffold enhance</code>: Add a deployment target to an existing project. <br>
+          i) <code>agents-cli deploy</code>: Package and deploy to Cloud Run or Agent Runtime. <br>
+        </div>
+
+        <div class="sub-heading">Prerequisites and authentication</div>
+        <div>
+          - Before you can run the setup command, you need to ensure your local machine meets the underlying system requirements and that you have established the correct authentication path. <br>
+          - <code>agents-cli</code> requires three underlying tools:
+          a) Python 3.11+ (<code>python3 --version</code>) <br>
+          b) uv (<code>uv --version</code>). If not installed, run: <code>curl -LsSf [https://astral.sh/uv/install.sh](https://astral.sh/uv/install.sh) | sh</code> and restart your shell (setup calls
+          <code>uv tool install</code> internally). <br>
+          c) Node.js 18+ (<code>node --version</code>) <br>
+          - Deployment phases will also require the Google Cloud SDK and Terraform, though neither is needed for the local development loop.
+        </div>
+
+        <div class="sub-heading">Run setup and verify installation</div>
+        <div>
+          - With your prerequisites and authentication configured, you are ready to install and verify the toolchain. <br>
+          - Run the following command to fetch and execute the tool in one step (no prior install needed): <code>uvx google-agents-cli setup</code> <br>
+          - The above command will: <br>
+          <ul>
+            <li>Verifies your credentials</li>
+            <li>Installs agents-cli globally via <code>uv tool install</code></li>
+            <li>Downloads all seven skill files into <code>~/.agents/skills/</code></li>
+          </ul>
+          - A successful run ends with all seven skills listed: <br>
+          <ul>
+            <li>google-agents-cli-adk-code</li>
+            <li>google-agents-cli-deploy</li>
+            <li>google-agents-cli-eval</li>
+            <li>google-agents-cli-observability</li>
+            <li>google-agents-cli-publish</li>
+            <li>google-agents-cli-scaffold</li>
+            <li>google-agents-cli-workflow</li>
+          </ul>
+
+          <p class="inline-heading">Verify the installation</p>: <br>
+          - Follow these steps to ensure your env is configured correctly: <br>
+          a) Verify the CLI path and version: <br>
+          - Run the following command to confirm that the <code>agents-cli</code> is correctly recognized by your system: <code>agents-cli --version</code>
+          Expected output: The installed version should be listed, for example: <i>agents-cli, version 0.1.2</i>. <br>
+
+          b) Verify the installed skills: <br>
+          - Run the following command to veirfy that all seven skills are correctly detected in your local env: <code>agents-cli info</code> <br>
+
+          c) Antigravity Check: <br>
+          - Before beginning your first build, perform a final validation directly in the Antigravity interface by prompting: "Run agents-cli info and tell me which skills are now available.
+        </div>
+
+        <div class="sub-heading">The ADK Skills breakdown</div>
+        <div>
+          - The skill files give the coding agent the ADK vocabulary, API patterns, and lifecycle conventions it needs without you having to explain them each session. The most effective pattern is to
+          load only the skills relevant to the current build phase, and re-load the eval or deploy skills when you move into those specific phases. This keeps the context focused and prevents the
+          agent from mixing guidance from different lifecycle phases. <br>
+          - Here's a detailed breakdown of what each skill file provides and exactly when you should load it:
+          <table class="table table-bordered table-sm">
+            <thead>
+            <tr>
+              <th>Skill</th>
+              <th>What it provides</th>
+              <th>Load it when...</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td>google-agents-cli-workflow</td>
+              <td>The end-to-end lifecycle, project conventions, model-selection and troubleshooting guidance — the big picture.</td>
+              <td>Always active</td>
+            </tr>
+            <tr>
+              <td>google-agents-cli-adk-code</td>
+              <td>The ADK 2.0 Python API: Agent types, tool definitions, the graph Workflow API, callbacks, and state management.</td>
+              <td>Writing or editing agent.py</td>
+            </tr>
+            <tr>
+              <td>google-agents-cli-scaffold</td>
+              <td>Project creation and enhancement — the create/enhance/upgrade commands, templates, and deploy targets.</td>
+              <td>Starting a project or adding a deploy target</td>
+            </tr>
+            <tr>
+              <td>google-agents-cli-eval</td>
+              <td>Evaluation — dataset structure, LLM-as-judge metrics, running grades, and reading the scores.</td>
+              <td>Building the evaluation harness</td>
+            </tr>
+            <tr>
+              <td>google-agents-cli-deploy</td>
+              <td>Deployment — container build, Artifact Registry, Cloud Run / Agent Runtime / GKE, IAM, and rollback.</td>
+              <td>Moving the agent off your laptop</td>
+            </tr>
+            </tbody>
+          </table>
+          - When you prompt Antigravity to load a skill explicitly (e.g., "Load your google-agents-cli-adk-code and google-agents-cli-workflow skills before we start"), it reads those files into its
+          active context for the session. The coding agent can then reference their contents when generating code or running commands.
+        </div>
+
+
+        <div class="sub-heading">The session-start pattern and toolchain maintenance</div>
+        <div>
+          - Building a reliable workflow requires establishing three key practices: <br>
+          a) Grounding the agent correctly at the start of every session. <br>
+          b) Keeping your local toolchain updated as the ecosystem evolves. <br>
+          c) Locking in version consistency for team environments. <br>
+
+          <br>
+          - Here's how to implement these habits to prevent API drift and minimize friction: <br>
+
+          <p class="inline-heading">The session-start prompt</p>: <br>
+          - Every Antigravity build session for an ADK project should start the exact same way: Confirm the ADK skills are loaded, confirm your credentials are in order, and tell Antigravity which API
+          surface you're building on. <br>
+          - Example session-start prompt: <br>
+          <i>Install the agents-cli toolchain and its ADK skills so you can help me build an ADK agent. Run uvx google-agents-cli setup, then confirm with agents-cli info and tell me which skills are
+            now available. Load your google-agents-cli-adk-code and google-agents-cli-workflow skills and confirm they're active. For this project we use ADK 2.0 (google-adk>=2.0.0a0), so use the new
+            graph Workflow API not the 1.x SequentialAgent or LlmAgent style. Then set up local authentication in a .env file using either a Google AI Studio API key or my Google Cloud project for
+            Agent Platform.</i> <br>
+          Tip: If Antigravity's output ever reverts to older patterns mid-session, a long context window has likely diluted its skill context. Re-issue the skill-loading prompt and explicitly state
+          the API surface again. This is much faster than debugging code that has diverged over several files. <br>
+
+          <p class="inline-heading">Keeping the toolchain current</p>: <br>
+          - The ADK API and agents-cli evolve together. Running outdated skills against a newer ADK version is a subtle failure mode where generated code is syntactically valid but uses deprecated
+          patterns. After a major ADK release, run these commands: <br>
+          1) <code>agents-cli update</code>: Replaces the files in ~/.agents/skills/ with the latest versions. <br>
+          2) <code>uv tool upgrade google-agents-cli </code>: Updates the binary itself. <br>
+          - Always restart your coding agent after updating so it picks up the new skill files from the disk. <br>
+
+          <p class="inline-heading">Team environments and version pinning</p>: <br>
+          - The safest approach for teams or when maintaining multiple projects is to document the exact versions used. <br>
+          - Pin the <code>google-adk</code> version in each project's <code>pyproject.toml</code>. <br>
+          - To pin a specific agents-cli version across a team, substitute the standard install command with: <code>uv tool install google-agents-cli==&lt;version&gt;</code>. Commit this version
+          number to your onboarding documentation.
+        </div>
+
+
+      </div>
+
+
     </div>
   </div>
 </div>
