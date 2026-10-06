@@ -4088,8 +4088,19 @@ illustration_agent = RemoteA2aAgent(
       <br>
       <p id="UseAgents"></p>Index: Use Agents to build Agents <br>
       <br>
+      Topic: Accelerate Agent Development with Antigravity and Agents CLI <br>
       Chapter 1: <a href="#UseAgents_Ch1">Antigravity and agents-cli in the ADK development workflow</a> <br>
       Chapter 2: <a href="#UseAgents_Ch2">Setting up agents-cli and the ADK skill set</a> <br>
+      Chapter 3: <a href="#UseAgents_Ch3">The local ADK Development Loop</a> <br>
+
+
+      <br>
+      <br>
+
+      Topic: Build with the Managed Agents API on Gemini Enterprise Agent Platform. <br>
+      Chapter 4: <a href="#UseAgents_Ch4">The Managed Agent Model</a> <br>
+      Chapter 5: <a href="#UseAgents_Ch5">Interaction with the agent in a sandbox</a> <br>
+      Chapter 6: <a href="#UseAgents_Ch6">Run and Operate the Agent</a> <br>
 
 
       <hr>
@@ -4116,10 +4127,10 @@ illustration_agent = RemoteA2aAgent(
 
         <div class="sub-heading">Overview</div>
         <div>
-          - Prepare an agentic coding environment to build agents faster and better.
+          - Prepare an agentic coding environment to build agents faster and better. <br>
           - In this lesson, you'll learn how to utilize the local Agent Development Kit (ADK) 2.0 ecosystem. You'll leverage Antigravity, Google’s agentic IDE, alongside agents-cli, the
           lifecycle toolchain. Together, these tools form a powerful local development platform that allows you to shift your focus away from wrestling with complex API syntax and toward designing
-          high-level agent logic.
+          high-level agent logic. br
           <p>By the end of this lesson, you'll be able to:</p>
           a) Explain how Antigravity and the agents-cli toolchain collaborate as your local ADK development platform. <br>
           b) Describe the "vibecoding" model and your role as an architect in guiding agent generation through natural language. <br>
@@ -4469,7 +4480,7 @@ agents-cli install
 </code></pre>
           - This runs <code>uv sync</code> to configure a local virtual environment with the exact dependency versions pinned in your <code>pyproject.toml</code>. <br>
           - Run this command immediately after scaffolding, and run it again whenever you add or remove a dependency - for example, when adding <code>fastapi</code> for the ambient agent's trigger
-          endpoint.
+          endpoint. <br>
           3) When you're ready to move from local testing to a production deployment, optionally add a deployment target without re-scaffolding by running:
           <code>agents-cli scaffold enhance --deployment-target cloud_run</code> <br>
           - This adds the files and configuration needed to deploy to Cloud Run without touching your existing app/agent.py or test setup. <br>
@@ -4677,6 +4688,285 @@ metrics:
         </div>
 
 
+      </div>
+
+      <hr>
+      <div id="UseAgents_Ch4" class="chapter index-column-link">Chapter 4: The Managed Agent Model</div>
+      <hr>
+
+      <div class="textual-content">
+        <div class="sub-heading">Resources</div>
+        <div>
+          - <a href="https://partner.skills.google/paths/3476/course_templates/1747/documents/633831">Link to Lecture</a>. <br>
+        </div>
+
+        <div class="sub-heading">Overview</div>
+        <div>
+          - In this course, you'll learn how to shift from a code-first approach to an infrastructure-first approach. By deploying enterprise agents within a secure, fully managed sandbox, you can
+          eliminate configuration drift, reduce operational risk, and drastically reduce deployment time. <br>
+          - The course guides you through the complete lifecycle of a managed agent across three main areas: <br>
+          <ul>
+            <li>
+              The Managed Agent Model: Understand the need for secure, isolated infrastructure.
+            </li>
+            <li>
+              The Control Plane (Agents API): Assembling the agent's definition, sandbox environment, mounted data, and tools.
+            </li>
+            <li>
+              The Data Plane (Interactions API): Executing the reason-act loop, managing state across turns, and securing the agent for production.
+            </li>
+          </ul>
+
+          - You'll put this managed agent model to work in a hands-on lab where you build, run, and harden a retail merchandising agent for Cymbal Retail, taking it from an empty project to a
+          production-shaped deployment. <br>
+          - Goals: <br>
+          <ul>
+            <li>Build managed, secure, isolated agents leveraging Google infrastructure using the Agents API.</li>
+            <li>Interact with the Agents API to manage the control plane and with the Interactions API to work with the data plane.</li>
+            <li>Extend agents with mounted data, skills, tools and MCP servers.</li>
+            <li>Run agents using background interactions, a streamed reason-act loop, resilient typed results, and multi-turn state.</li>
+            <li>Apply the security model and operational practices that secure an agent for production.</li>
+          </ul>
+        </div>
+
+        <div class="sub-heading">The need for an agent in a sandbox</div>
+        <div>
+          - Let's use an example scenario to learn the various concepts in this course. Imagine a category manager at Cymbal Retail asks: <br>
+          <i>Umbrella sales dropped 18% last quarter in the Northeast. Pull the Q3 sales, find the five worst-declining products, check current inventory, and tell me whether it's a demand problem or
+            a stock problem</i>. <br>
+          - Answering it means reading data from storage, running an analysis over it, and checking a live inventory system, each step depending on the one before. <br>
+          - To do that work the agent needs real infrastructure: <br>
+          a) Somewhere to run code <br>
+          b) Access to Cymbal's data <br>
+          c) A way to reach a live inventory system <br>
+          d) Credentials to use it <br>
+
+          - For an enterprise, each of these requirements imediately raises security questions: Where does the data sit? What can the agent touch? And what can it reach on the network? <br>
+          - This is the exact task you'll build an agent to solve in this course - and it is the primary reason the platform starts from secured infrastructure rather than from code.
+        </div>
+
+        <div class="sub-heading">From a developer framework to a managed runtime</div>
+        <div>
+          - When choosing how to build your AI applications, the decision largely depends on your starting point and organizational priorities:
+          <table class="table table-bordered table-sm">
+            <thead>
+            <tr>
+              <th>Approach</th>
+              <th>How it Works</th>
+              <th>Enterprise Priority</th>
+              <th>Choose When</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td>Code-first approach (Developer frameworks)</td>
+              <td>You start with code using frameworks such as the Agent Development Kit, building the application first and considering infrastructure later.</td>
+              <td>Offers full flexibility, allowing you to run and deploy the agent anywhere.</td>
+              <td>You want full control of the runtime and the freedom to deploy anywhere.</td>
+            </tr>
+            <tr>
+              <td>Infrastructure-first approach (Managed Agents API)</td>
+              <td>Inverts the order by starting with a standard, isolated Linux sandbox, allowing you to add the agent's logic on top.</td>
+              <td>Focuses on security first, requiring a secure environment to limit actions and access. Within this fully managed execution container, custom agents can reason, plan workflows,
+                execute bash commands, and read or write files out-of-the-box.
+              </td>
+              <td>You want a secure, isolated foundation and would rather add your agent's logic on top than build and operate that infrastructure yourself.</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="sub-heading">What the sandbox provides</div>
+        <div>
+          - Every sandbox environment provides the following core systems and controls: <br>
+          <ul>
+            <li>Persistent file system: Securely persists files, agent logic, and execution state across multi-turn interactions.</li>
+            <li>Bash Terminal: Provides a secure environment for executing terminal commands, running custom scripts, and processing local files.</li>
+            <li>Network Isolation: You can explicitly declare a network allowlist to let the agent access public internet resources or download external libraries.</li>
+            <li>Extensible Integrations: Supports importing custom capabilities dynamically, including standard web APIs, Model Context Protocol (MCP) servers.</li>
+            <li>MCP Credentials Scoping: Header configurations for MCP servers, which contain backend authentication tokens, are transmitted only when accessing the specific MCP endpoints defined in
+              your configuration.
+            </li>
+            <li>Data Scoping for Cloud Storage and Skill Registry Mounts: When you attach external data sources from Google Cloud Storage or Skill Registry, the environment is provided with downscoped
+              authorization tokens designed to access only the specific directories or skills specified in the agent configurations.
+            </li>
+            <li>Project Access: To run an interaction, a caller needs the right Identity and Access Management role on the project: the
+              <a href="https://docs.cloud.google.com/iam/docs/roles-permissions/aiplatform">aiplatform.user</a> role to run interactions,
+              and the <a href="https://docs.cloud.google.com/iam/docs/roles-permissions/aiplatform">aiplatform.admin</a> role to create, update, or delete agents.
+            </li>
+            <li>Preloaded ToolChain: The sandbox ships with Python 3.11 (including pandas, numpy, and the google-genai SDK), Node 20, and common command-line tools, so the agent can analyze data with
+              no setup. Any packages it installs at run time with pip or npm persist in the environment.
+            </li>
+          </ul>
+
+          - Here's a diagram illustrating how the Managed Agents API isolates your project, and securely connects to external resources.
+          <div class="image-block">
+            <div class="expand-screenshot-image-btn border border-primary rounded">
+              <span class="btn btn-link">Show Image <img src="./imgs/chevron-expand.svg" alt="Show Image Button"></span>
+            </div>
+            <div class="screenshot-image">
+              <img src="./imgs/UseAgents/ManagedAgentsAPI.png"
+                   width="1000"
+                   class="center-block img-fluid"
+                   alt="Image for image"
+                   loading="lazy">
+            </div>
+          </div>
+        </div>
+
+        <div class="sub-heading">The Security Boundary</div>
+        <div>
+          - The following diagram illustrates the security boundary. <br>
+          - Project IAM controls who can call, while the platform service account reads your data on your behalf using a downscoped token. <br>
+          - Meanwhile, the sandbox runs without its own credentials or network egress until you explicitly open it.
+          <div class="image-block">
+            <div class="expand-screenshot-image-btn border border-primary rounded">
+              <span class="btn btn-link">Show Image <img src="./imgs/chevron-expand.svg" alt="Show Image Button"></span>
+            </div>
+            <div class="screenshot-image">
+              <img src="./imgs/UseAgents/SecurityBoundary.png"
+                   width="800"
+                   class="center-block img-fluid"
+                   alt="Image for image"
+                   loading="lazy">
+            </div>
+          </div>
+
+          - The following standard parameters govern the sandbox execution and lifecycle: <br>
+          a) Sandbox Environment: Agents operate within a fully managed sandbox environment, utilizing the Antigravity harness for orchestration. <br>
+          b) Sandbox time to live (TTL): The sandbox environment has a standard time to live (TTL) of 7 days. Each new interaction automatically resets this timer to ensure active agents remain
+          available. <br>
+          c) Agent Configuration Persistence: The backend persistently stores agent configurations, which remain until an explicit <code>DELETE</code> request is sent to the Agents API. <br>
+          d) Agent Collaboration: Multiple agents can share the same environment when the same <code>env_id</code> is provided during interaction.
+        </div>
+
+      </div>
+
+
+      <hr>
+      <div id="UseAgents_Ch5" class="chapter index-column-link">Chapter 5: Interaction with the agent in a sandbox</div>
+      <hr>
+
+      <div class="textual-content">
+        <div class="sub-heading">Resources</div>
+        <div>
+          - <a href="https://partner.skills.google/paths/3476/course_templates/1747/documents/633834">Link to Lecture</a>. <br>
+        </div>
+
+        <div class="sub-heading">The Two Planes: Control and Data</div>
+        <div>
+          - There are two distinct APIs that divide the interaction with the agent. <br>
+          - The Agents API, which is responsible for creating and configuring the agent, and the Interactions API, which is responsible for managing the agent at runtime in a conversation. <br>
+
+          <p class="inline-heading">The Agents API</p>: <br>
+          - The Agents API is the control plane. You use it to define an agent once, as a durable cloud resource with a name. <br>
+
+          <div class="image-block">
+            <div class="expand-screenshot-image-btn border border-primary rounded">
+              <span class="btn btn-link">Show Image <img src="./imgs/chevron-expand.svg" alt="Show Image Button"></span>
+            </div>
+            <div class="screenshot-image">
+              <img src="./imgs/UseAgents/AgentsAPI.png"
+                   width="800"
+                   class="center-block img-fluid"
+                   alt="Image for image"
+                   loading="lazy">
+            </div>
+          </div>
+
+          - The definition holds the agent's persona, its tools, and its environment. It persists until you delete it, the way a virtual machine or a storage bucket persists. You create, read, update,
+          and delete agents here.
+          <pre><code class="language-bash">
+# Control plane: define the agent once.
+client.agents.create(id="cymbal-merch-analyst", base_agent=..., system_instruction=...)
+          </code></pre>
+
+          - Creating an agent doesn't return the agent immediately. It returns a long-running operation (LRO), a handle to work the platform is doing in the background. <br>
+          - You poll that handle until it reports done, then read the finished agent. Long-running operations appear whenever the platform performs complex tasks, so it helps to recognize the pattern
+          early. <br>
+
+
+          <p class="inline-heading">The Interactions API</p>: <br>
+          - The Interactions API is the data plane. You use it to run the agent. Each interaction references an agent by name, binds an environment, and drives the reason-act loop to completion. <br>
+          <div class="image-block">
+            <div class="expand-screenshot-image-btn border border-primary rounded">
+              <span class="btn btn-link">Show Image <img src="./imgs/chevron-expand.svg" alt="Show Image Button"></span>
+            </div>
+            <div class="screenshot-image">
+              <img src="./imgs/UseAgents/InteractionAPI.png"
+                   width="800"
+                   class="center-block img-fluid"
+                   alt="Image for image"
+                   loading="lazy">
+            </div>
+          </div>
+
+          - An interaction is ephemeral: It exists for one run. So you define an agent once on the control plane, then run it many times on the data plane. In code, those are two different calls
+          against the same named agent:
+          <pre><code class="language-bash">
+# Data plane: run it, as often as you like.
+client.interactions.create(agent="cymbal-merch-analyst", input="Umbrella sales dropped 18%...")
+          </code></pre>
+        </div>
+
+        <div class="sub-heading">What the platform runs for you</div>
+        <div>
+          - Executing the reason-act loop requires underlying infrastructure. Rather than building it yourself, the platform automatically provisions and manages the orchestrator, secure environment,
+          and access controls on your behalf. <br>
+          1) Orchestrator: <br>
+          - An orchestrator is essential for managing the steps of the reason-act loop and determining when to halt the process. <br>
+          - It ensures seamless coordination and decision-making throughout the workflow. <br>
+
+          2) Secure Sandbox: <br>
+          - A secure, stateful sandbox is necessary to execute code and store intermediate files safely. <br>
+          - This environment provides isolation and security for the operations performed by the agent. <br>
+
+          3) Credential Management: <br>
+          - Proper methods are required to securely provide credentials to the systems accessed by the agent. <br>
+          - This prevents unauthorized access and ensures the confidentiality of sensitive information. <br>
+
+          4) Network Control: <br>
+          - Controlling the agent's network access is crucial to limit its reach and ensure security. <br>
+          - Implementing restrictions helps mitigate potential risks and unauthorized activities.
+        </div>
+
+        <div class="sub-heading">The Managed Agents API: Structure and functionality</div>
+        <div>
+          - The Managed Agents API draws a clean boundary around your agent's workload. <br>
+          1) You provide the intent: You supply the system instructions (the persona and rules), the tools the agent is allowed to use, and the bounds of its environment (the data and network access
+          it is allowed). <br>
+
+          2) The platform provides the runtime: The platform provisions and tears down the sandbox, runs the reason-act loop, manages state, and dispatches each tool call. <br>
+
+          - The practical effect is that answering a complex business question - like the Cymbal Retail scenario - becomes a matter of configuration, not infrastructure. You describe the agent and the
+          data it can see, and the platform runs the loop that reads, computes, checks inventory, and decides. <br>
+          - The following diagram illustrates this capability stack, showing how your configured intent sits on top of the managed platform runtime.
+          <div class="image-block">
+            <div class="expand-screenshot-image-btn border border-primary rounded">
+              <span class="btn btn-link">Show Image <img src="./imgs/chevron-expand.svg" alt="Show Image Button"></span>
+            </div>
+            <div class="screenshot-image">
+              <img src="./imgs/UseAgents/ManagedAgentsAPI_Two.png"
+                   width="400"
+                   class="center-block img-fluid"
+                   alt="Image for image"
+                   loading="lazy">
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <hr>
+      <div id="UseAgents_Ch6" class="chapter index-column-link">Chapter 6: Run and Operate the Agent</div>
+      <hr>
+
+
+      <div class="textual-content">
+      <div class="sub-heading">Resources</div>
+      <div>
+        - <a href="https://partner.skills.google/paths/3476/course_templates/1747/documents/633835">Link to Lecture</a>. <br>
+      </div>
       </div>
 
 
