@@ -5205,6 +5205,261 @@ tools = [
           - <a href="https://partner.skills.google/paths/3476/course_templates/1747/documents/633838">Link to Lecture</a>. <br>
         </div>
 
+        <div class="sub-heading">Overview</div>
+        <div>
+          - In this module, you'll learn how an agent runs on the data plane, the part of the platform that actually executes the runs. You'll explore how a run executes, how to follow its reasoning,
+          how to get reliable typed results, how state carries across turns, and how to reshape and secure the agent for production. <br>
+          - The agent you assembled previously hasn't done anything yet. Now you run it. You'll discover why agent runs happen in the background, how the reason-act loop unfolds as a stream of steps,
+          and how one assembled agent is really a family of reusable blueprints. <br>
+          - By the end of this modeule you'll be able to: <br>
+          a) Perform synchronous background runs <br>
+          b) Create interactions with reliable, typed results <br>
+          c) Persist state across turns and create blueprints from a codebase <br>
+          d) Apply the security model and operational practices that secure an agent for production <br>
+        </div>
+
+        <div class="sub-heading">Execute the agent and handle results</div>
+        <div>
+          - In this lesson, you'll learn how to run your assembled agent on the platform's data plane, starting with the difference between synchronous model runs and required background agent
+          runs. <br>
+          - You'll then explore the reason-act loop, how to watch its stream of steps, and how to get reliable, typed, machine-readable results from the agent's final output.
+        </div>
+
+        <div class="sub-heading">Run the agent in the background</div>
+        <div>
+          - An agent run is asynchronous. Because an agent task can take minutes to complete (for example, while running a data analysis), a synchronous connection held open for that long would
+          drop. <br>
+          - The platform requires the background path; if you forget the background flag on an agent run, the platform rejects the call. <br>
+          - The call returns immediately with a status of in-progress and an identifier. You poll this identifier until the status becomes completed. <br>
+          - Two choices matter when you start the run: <br>
+          a) Capture the Identifier: The call returns an identifier, which is your only handle to the asynchronous run. <br>
+          b) Store the interaction: Storing the interaction makes the run retrievable by the identifier later. It also lets you chain the run into a multi-turn conversation, which the rest of this
+          lesson relies on. <br>
+          - Here's how you start a background run and capture its identifier:
+          <pre><code class="language-python">
+run = client.interactions.create(agent=AGENT, input=task, background=True, store=True)
+run_id = run.id          # your handle to the asynchronous run
+          </code></pre>
+        </div>
+
+        <div class="sub-heading">The reason-act loop and its events</div>
+        <div>
+          - Internally, every interaction you store is made up of a sequence of steps, and each step has a specific type: <br>
+          <ul>
+            <li>
+              <code>model-output</code> step: The agent reasoning and planning its next move.
+            </li>
+            <li>
+              <code>function-call</code> step: The agent choosing one tool and its arguments.
+            </li>
+            <li>
+              <code>function-result</code> step: The platform running that tool and feeding the output back into the agent's context. This "observe" step is exactly what makes this an agent and not a
+              fixed
+              pipeline.
+            </li>
+          </ul>
+
+          - The loop repeats - think, act, observe - until the task is resolved. The agent reads the sales file, runs a ranking computation, checks live inventory for the worst SKUs, classifies each
+          one, and creates the final verdict. You constrain which tools are available; the model owns the order it uses them in. <br>
+          - Here's a visual representation of how the reason-act loop resolves a task:
+          <div class="image-block">
+            <div class="expand-screenshot-image-btn border border-primary rounded">
+              <span class="btn btn-link">Show Image <img src="./imgs/chevron-expand.svg" alt="Show Image Button"></span>
+            </div>
+            <div class="screenshot-image">
+              <img src="./imgs/UseAgents/ReasonActLoop.png"
+                   width="800"
+                   class="center-block img-fluid"
+                   alt="Image for image"
+                   loading="lazy">
+            </div>
+          </div>
+
+          - The loop ends with the agent's final answer, which is the last model-output step that actually contains text. Reading the answer requires caution, because the run can end with an empty
+          step. Scan backward for the last non-empty one rather than trusting the final step without verification. <br>
+          - Here's how you safely scan backward through the steps to extract the final answer:
+          <pre><code class="language-python">
+for step in reversed(run.steps):
+    if step.type == "model_output" and step.content and step.content[0].text:
+        answer = step.content[0].text
+        break
+          </code></pre>
+
+          <p class="inline-heading">Stream the run</p>: <br>
+          - Rather than waiting for the entire run to finish, you can watch the reason-act loop unfold in real time by streaming the run. <br>
+          - Streaming returns server-sent events, a simple stream of messages the platform pushes as work happens:
+          <ul>
+            <li>The run opens with a created event that carries the identifier.</li>
+            <li>Each step brings a start event, then delta events that stream the content, then a stop event.</li>
+            <li>A final completed event ends the stream.</li>
+          </ul>
+
+          - A single consumer function can handle every event type, which is the one piece of streaming code you reuse everywhere.
+        </div>
+
+        <div class="sub-heading">Reliable, typed results</div>
+        <div>
+          - Because an agent run executes on the platform, not on your machine, it survives a dropped connection. The work continues server-side whether or not you're still connected. If you stored
+          the interaction, nothing is lost when a laptop sleeps or a proxy cuts the stream. <br>
+          - You have two ways to finish: Poll the run by its identifier until it reports completed, or reconnect the stream and re-attach to the same events. The pattern you ship in production tries
+          the live stream first and falls back to polling on any drop, because the run never stopped. <br>
+
+          <p class="inline-heading">Machine-readable Output</p>: <br>
+          - By default the agent returns prose, which a person can read but another system can't easily consume. When you pass a <code>response_format</code> (a typed schema for the output), the
+          platform constrains the final answer to valid structured data that matches your schema. You parse it directly into typed fields, so the verdict can drive a dashboard instead of sitting in a
+          paragraph. <br>
+          - Here's how you enforce a typed schema by passing a response format to the run:
+          <pre><code class="language-python">
+client.interactions.create(
+    agent=AGENT, input=task, background=True, store=True,
+    response_format=DeclineReport,   # a typed schema for the output
+)
+          </code></pre>
+
+          <p class="inline-heading">Tracking Usage</p>: <br>
+          - When you stream the run, its completed event carries a usage block: The total tokens it consumed, broken out by input and output. <br>
+          - It also includes a count of thought tokens, which measures how much the agent reasoned. This usage is attached to the streaming completed event, not the polled run, so capture it from
+          the stream. <br>
+          - On long investigations, watch the thought-token count, because it's a direct signal of cost.
+        </div>
+
+        <div class="sub-heading">State across turns and blueprints</div>
+        <div>
+          - In this lesson, you'll learn how to maintain state across multiple turns by reusing the conversation and workspace environment. <br>
+          - You'll also discover how to leverage a single agent definition to create a family of reusable blueprints by modifying its sources and tools.
+        </div>
+
+        <div class="sub-heading">Maintain state across turns</div>
+        <div>
+          - By default, each interaction starts completely new with a fresh conversation and an empty sandbox (the isolated file system the agent works in). <br>
+          - To continue a conversation and keep the same workspace, you pass two independent handles on the next run:
+          <ul>
+            <li>
+              Continue the conversation: You pass the previous interaction's identifier so the agent regains the dialogue so far, including earlier verdicts and found SKUs.
+            </li>
+            <li>
+              Resuse the workspace: You pass back the environment identifier captured from the first run so the agent re-attaches to the same sandbox. The mounted data, skills, and any intermediate
+              files remain intact.
+            </li>
+          </ul>
+
+          - Here's how you pass both independent handles to continue the conversation and reuse the workspace:
+          <pre><code class="language-python">
+client.interactions.create(
+    agent=AGENT, input=followup,
+    previous_interaction_id=prev_id,   # continue the conversation
+    environment=env_id,                # reuse the same workspace
+    background=True, store=True,
+)
+          </code></pre>
+
+          - Note: The classic multi-turn mistake is to pass a fresh environment routinely on the second turn. That gives the agent a new, empty sandbox, discards the first turn's work, and pays the
+          cost of provisioning again. To continue work, reuse the captured environment identifier rather than requesting a new environment.
+        </div>
+
+
+        <div class="sub-heading">The Three State Scopes</div>
+        <div>
+          - To manage state effectively, it helps to understand the three distinct scopes where state persists: <br>
+          a) Iteration Scope: The agent's working context for a single turn of the loop, which is transient and resets with each iteration. <br>
+          b) Interaction Scope: The sandbox file system used during a single run, where files written in one step are accessible in subsequent steps of the same run. <br>
+          c) Environment Scope: The outer workspace that persists across multiple runs, but only when the environment identifier is explicitly reused. <br>
+
+          - Here is a diagram showing how these three nested state scopes relate to one another:
+          <div class="image-block">
+            <div class="expand-screenshot-image-btn border border-primary rounded">
+              <span class="btn btn-link">Show Image <img src="./imgs/chevron-expand.svg" alt="Show Image Button"></span>
+            </div>
+            <div class="screenshot-image">
+              <img src="./imgs/UseAgents/StateScopes.png"
+                   width="800"
+                   class="center-block img-fluid"
+                   alt="Image for image"
+                   loading="lazy">
+            </div>
+          </div>
+        </div>
+
+        <div class="sub-heading">One codebase, many blueprints</div>
+        <div>
+          - Once you've assembled one agent, you've effectively built a group of related agents. <br>
+          - The body of the definition—the identifier, base agent, description, and instruction - stays constant. Only two fields move: The sources you mount and the tools you offer. <br>
+          - From modifying just those two fields, you get several reusable blueprints:
+          <ul>
+            <li>An agent grounded on your stored data.</li>
+            <li>An agent driven by a single packaged skill.</li>
+            <li>An agent integrated with a live external system.</li>
+            <li>An agent that mounts a whole library of skills.</li>
+            <li>A composite that combines all of them.</li>
+          </ul>
+        </div>
+
+        <div class="sub-heading">Secure and harden for production</div>
+        <div>
+          - In this lesson, you'll learn the security model the platform enforces, how its design keeps your data and credentials contained, and how to harden an agent for production. For an advanced
+          engineer, this is the material that lets you understand and explain the platform's security posture with confidence.
+        </div>
+
+        <div class="sub-heading">The security model</div>
+        <div>
+          - The platform's security model rests on one core idea: your personal credentials never enter the sandbox where the agent runs code. <br>
+          - Three layers enforce this containment: <br>
+          <div class="image-block">
+            <div class="expand-screenshot-image-btn border border-primary rounded">
+              <span class="btn btn-link">Show Image <img src="./imgs/chevron-expand.svg" alt="Show Image Button"></span>
+            </div>
+            <div class="screenshot-image">
+              <img src="./imgs/UseAgents/SecurityModel.jpg"
+                   width="900"
+                   class="center-block img-fluid"
+                   alt="Image for image"
+                   loading="lazy">
+            </div>
+          </div>
+        </div>
+
+        <div class="sub-heading">How the platform contains your data</div>
+        <div>
+          - A natural question when deploying enterprise applications is: "If the agent runs code, what stops it from leaking our data?" <br>
+          - The design answers that on several fronts: <br>
+          a) No ambient credentials: The sandbox holds no standing access to your project, so code running inside it cannot reach buckets, repositories, or files you didn't explicitly mount. <br>
+          b) Downscoped, per-source tokens: Each mounted bucket or skill is read with a token limited to that one source, meaning mounting one bucket gives no path to another. <br>
+          c) Closed egress by default: The network allowlist starts empty, so even if code attempts to send data out, it has nowhere to send it until you approve specific domains. <br>
+          d) Scoped tool credentials: An MCP authentication header travels only to its explicitly declared endpoint. <br>
+          e) Explicit data paths: Data leaves the sandbox only through paths you have explicitly opened, ensuring a secure posture when evaluating the risks of running agents against sensitive
+          data. <br>
+        </div>
+
+        <div class="sub-heading">Harden for production</div>
+        <div>
+          - Hardening the agent for production means actively enforcing the platform's isolated security model by locking down network access. You replace the wide-open development allowlist with an
+          explicit list of the domains the agent actually needs, applied as an update to the agent's environment. <br>
+          - Updating an agent is REST-only, so you send a <code>PATCH</code> request that resends the <code>base_environment</code> with the narrowed allowlist. <br>
+          - Here's how you structure the PATCH request to update the network allowlist:
+          <pre><code class="language-python">
+PATCH .../agents/cymbal-merch-analyst?update_mask=base_environment
+{
+  "name": "cymbal-merch-analyst",
+  "base_environment": {
+    "type": "remote",
+    "sources": [ ... ],                                  # resend the existing sources
+    "network": {"allowlist": [{"domain": "*.cymbal.example"}]}   # prev was [{"domain": "*"}]
+  }
+}
+          </code></pre>
+
+          - Note: Domain-level allowlisting is the production goal, but the current release accepts only <code>{"domain": "*"}</code> and rejects specific hosts with an <code>INVALID_ARGUMENT</code>
+          error. Learn the pattern now, but expect that response until fine-grained allowlisting ships. <br>
+          - Finally, you must design around the platform's limits, such as identifier length and the page size for listing. And you operate defensively:
+          <ul>
+            <li>Rely on the result accessor: This is the call that returns the run's output and raises an error instead of a half-formed object when creation fails.</li>
+            <li>Log the usage block: Capture this from each run as cost and latency telemetry.</li>
+            <li>Keep the parsed stream of steps: Use this as an execution log. That execution log is what answers the question "why did the agent decide this?", because it shows the exact tool results
+              the agent saw before its final answer.
+            </li>
+          </ul>
+        </div>
+
 
       </div>
 
