@@ -4100,7 +4100,8 @@ illustration_agent = RemoteA2aAgent(
       Topic: Build with the Managed Agents API on Gemini Enterprise Agent Platform. <br>
       Chapter 4: <a href="#UseAgents_Ch4">The Managed Agent Model</a> <br>
       Chapter 5: <a href="#UseAgents_Ch5">Interaction with the agent in a sandbox</a> <br>
-      Chapter 6: <a href="#UseAgents_Ch6">Run and Operate the Agent</a> <br>
+      Chapter 6: <a href="#UseAgents_Ch6">Build the Agent with the Agents API</a> <br>
+      Chapter 7: <a href="#UseAgents_Ch7">Run and operate the agent</a> <br>
 
 
       <hr>
@@ -4958,15 +4959,253 @@ client.interactions.create(agent="cymbal-merch-analyst", input="Umbrella sales d
 
 
       <hr>
-      <div id="UseAgents_Ch6" class="chapter index-column-link">Chapter 6: Run and Operate the Agent</div>
+      <div id="UseAgents_Ch6" class="chapter index-column-link">Chapter 6: Build the Agent with the Agents API</div>
       <hr>
 
 
       <div class="textual-content">
-      <div class="sub-heading">Resources</div>
-      <div>
-        - <a href="https://partner.skills.google/paths/3476/course_templates/1747/documents/633835">Link to Lecture</a>. <br>
+        <div class="sub-heading">Resources</div>
+        <div>
+          - <a href="https://partner.skills.google/paths/3476/course_templates/1747/documents/633835">Link to Lecture</a>. <br>
+        </div>
+
+        <div class="sub-heading">Overview</div>
+        <div>
+          - In this module, you'll learn how to build an agent with the Agents API on the control plane: how you define it, give it an environment and data, and extend it with tools and skills. <br>
+          - The control plane is the management layer where you define and configure agents as durable resources, before any of them run. <br>
+          - Everything here happens before the agent runs. You assemble the whole configuration first, as a durable resource, so that when you finally run an interaction the agent already has its
+          workspace, its data, and its capabilities in place. <br>
+          - By the end of this lesson, you'll be able to describe each part of an agent's definition, and the choices you make when you assemble one. <br>
+          - By the end of this module, you'll be able to: <br>
+          a) Design and deploy a durable agent configuration, managing the long-running lifecycle and creation operations. <br>
+          b) Explain how the base execution environment and mounted data sources function together to establish a working workspace for an agent. <br>
+          c) Integrate tools and skills to extend an agent.
+        </div>
+
+        <div class="sub-heading">Defining the agent: Configuration, environment, and data</div>
+        <div>
+          - In this lesson, you’ll learn how to define an agent on the control plane as a durable resource. <br>
+          - This definition includes setting up the agent's persona and rules using <code>system_instruction</code>, defining its isolated execution environment using <code>base_environment</code>,
+          and attaching necessary data from a Cloud Storage source so the agent has a workspace and files to process.
+        </div>
+
+        <div class="sub-heading">Define the agent and create it</div>
+        <div>
+          - An agent definition is a short collection of fields: <br>
+          <ul>
+            <li>
+              <code>id</code>: Names the resource. It is the one field you cannot change later, because it becomes the resource name.
+            </li>
+            <li>
+              <code>base_agent</code>: Selects the platform's foundation agent to run on.
+            </li>
+            <li>
+              <code>description</code>: An optional text description of the agent.
+            </li>
+            <li>
+              <code>system_instruction</code>: Gives the agent its persona and rules.
+            </li>
+            <li>
+              <code>tools</code>: Defines the tools the agent may use.
+            </li>
+            <li>
+              <code>base_environment</code>: Bounds its runtime.
+            </li>
+          </ul>
+
+          - To create the agent, you pass the following fields to the API:
+          <pre><code class="language-python">
+agent = client.agents.create(
+    id="cymbal-merch-analyst",
+    base_agent="antigravity-preview-05-2026",
+    system_instruction="You are the Cymbal merchandising analyst...",
+)
+# The SDK handles the operation and returns the created agent directly.
+          </code></pre>
+
+          <br>
+          <br>
+          <p class="inline-heading">Creation and the LRO Pattern</p>: <br>
+          - Creating the agent follows the long-running operation pattern, where create returns an operation handle you poll until it finishes. <br>
+          - Using the SDK: The SDK does this polling for you and returns the created agent directly, so you don't write the loop by hand. <br>
+          - Using REST: Over REST, you poll the operation yourself. You call create, and the platform hands back an operation, not the agent. You poll until it reports done, then read the agent from
+          the result. Always check for an error, because an operation can report done and still carry an error instead of an agent. <br>
+
+          <br>
+          <br>
+
+          <p class="inline-heading">The Agent Lifecycle</p>: <br>
+          - Once created, the agent is a normal cloud resource with a full lifecycle. You can read it, list the agents in a project, update its mutable fields, and delete it when you're done. The
+          definition persists until you delete it, separate from any run.
+          <div class="image-block">
+            <div class="expand-screenshot-image-btn border border-primary rounded">
+              <span class="btn btn-link">Show Image <img src="./imgs/chevron-expand.svg" alt="Show Image Button"></span>
+            </div>
+            <div class="screenshot-image">
+              <img src="./imgs/UseAgents/AgentLifecycle.png"
+                   width="800"
+                   class="center-block img-fluid"
+                   alt="Image for image"
+                   loading="lazy">
+            </div>
+          </div>
+        </div>
+
+        <div class="sub-heading">The Execution Environment</div>
+        <div>
+          - The agent needs somewhere to run, and you attach that with its <code>base_environment</code>. The agent definition establishes the environment, every interaction inherits the same sandbox
+          unless a particular run overrides it. <br>
+          - The environment configuration consists of three core components:
+          <pre><code class="language-python">
+base_environment = {
+    "type": "remote",                              # a managed, isolated sandbox
+    "sources": [],                                 # what to mount (added next)
+    "network": {"allowlist": [{"domain": "*"}]},   # open for dev; tighten for prod
+}
+          </code></pre>
+
+          1) <code>type</code>: <br>
+          - Setting the environment type to <code>remote</code> requests a managed, isolated Linux container. <br>
+          - The platform provisions it lazily, at the first interaction, rather than at create time, so defining the agent is cheap. <br>
+          - Inside that container, the agent can run code and read and write files from the start. <br>
+
+          <br>
+
+          2) <code>sources</code>: <br>
+          - The sources list says what to mount into the sandbox. Only two source types are valid: a Cloud Storage bucket, or a skill from the registry. <br>
+
+          <br>
+
+          3) <code>network</code>: <br>
+          - The network allowlist controls what network destinations the sandbox may reach. It's closed by default. <br>
+          - During development you can open it fully, and in production you tighten it to the specific domains the agent needs.
+        </div>
+
+        <div class="sub-heading">Mount your Data</div>
+        <div>
+          - To give the agent your data, you add a Cloud Storage source to the environment. <br>
+          - A source is just three fields: <code>type</code>, <code>source</code>, and <code>target</code>. <br>
+          - It names the bucket and a target path to mount it at, conventionally <code>/.agent/data</code>.
+          <pre><code class="language-python">
+{"type": "gcs", "source": "gs://my-bucket", "target": "/.agent/data"}
+                            </code></pre>
+
+          - Once mounted, your files appear in the sandbox as ordinary files. The agent reads them with its file system tool and processes them with code execution, for example by running a
+          data-analysis library over a set of sales records. <br>
+          - The detail that's easy to miss is access. The sandbox doesn't read your private bucket using your personal account level credentials. Instead, the platform reads the bucket as its
+          per-project service account (P4SA). You must grant that service account read access on the bucket. <br>
+          - Note: If you skip the service-account grant, the agent still creates successfully and the mount still appears, but the read fails at run time as a file-not-found error inside the
+          interaction. That makes it a confusing failure to debug after the fact, so grant the access when you mount the bucket.
+        </div>
+
+        <div class="sub-heading">Extend agent capabilities with tools and skills</div>
+        <div>
+          - In this lesson, you'll learn how to extend your agent's capabilities by providing it with external actions and reusable procedures. <br>
+          - You'll learn how to differentiate between tools, which are actions the agent can choose to take, and skills, which are mounted directories of files and scripts that extend the agent's
+          logic, like report templates or reusable procedures. <br>
+          - You'll also cover the three distinct kinds of tools including built-in and external systems using the Model Context Protocol (MCP) and how to package and mount skills from the Skill
+          Registry.
+        </div>
+
+        <div class="sub-heading">Give the Agent Tools</div>
+        <div>
+          - Tools are the actions the agent can choose to take while it runs in the reasoning loop. <br>
+          - There are three distinct kinds of tools, and it helps to keep them separate. You decide which tools to offer; the model decides which to use, with what arguments, and in what order. <br>
+
+          <p class="inline-heading">1) Built-in Tools</p>: <br>
+          - Built-in tools run inside the managed sandbox: <br>
+          a) Always-on: Code execution and the file system are always on, allowing the agent to run code and read files with no setup. <br>
+          b) Opt-in: Web search and reading a web page must be explicitly included in your tool list. When search tools run, their citations come back in a separate annotations block - a distinct
+          section of the response listing sources to provide clean provenance for a decision. <br>
+
+          <br>
+
+          <p class="inline-heading">2) External Systems</p>: <br>
+          - External systems connect through the Model Context Protocol (MCP), an open standard for exposing tools to a model. <br>
+          - You declare an MCP connection on the agent using the tool type mcp_server, a name, and a URL. <br>
+          - Because authentication tokens expire, you keep them out of the durable definition. Instead, you supply a fresh token at runtime via the interaction-time form of the connection. <br>
+
+          <br>
+
+          <p class="inline-heading">Local Functions</p>: <br>
+          - Local functions are functions defined directly in your own application code. <br>
+          - You pass a function to the SDK, the model asks you to run it, you execute it in your own process, and you return the result on the next turn. <br>
+          - Use this approach when the logic must stay in your code rather than inside the sandbox or a remote service. <br>
+
+          - Each tool is a small entry in the agent's tools list:
+          <pre><code class="language-python">
+tools = [
+    {"type": "code_execution"},   # always on
+    {"type": "filesystem"},       # always on
+    {"type": "google_search"},    # opt-in
+    {"type": "mcp_server", "name": "inventory", "url": "https://mcp.example/inventory"},
+]
+          </code></pre>
+        </div>
+
+        <div class="sub-heading">Give the Agent Skills</div>
+        <div>
+          - While tools represent actions, a <code>skill</code> is a folder of files and scripts that the agent reads and runs, such as a report template or a reusable procedure. <br>
+          <ul>
+            <li>
+              Structure: A skill is a directory anchored by a required file named <code>SKILL.md</code>, with optional scripts, references, and assets alongside it.
+            </li>
+            <li>
+              To publish a skill, you package the directory, encode it, and create it in the Skill Registry.
+            </li>
+            <li>
+              The registry is the one regional surface in this API. Agents and interactions live in the global location, but skills live in a specific region. Because skill creation is a long-running
+              operation, you poll it to completion just as you do for agents.
+            </li>
+          </ul>
+
+          <p class="inline-heading">Mount a Skill</p>: <br>
+          - Before you mount a skill, you first need to find it and manage its version:
+          <ul>
+            <li>
+              Finding Skills: The registry supports search functionality, allowing you to describe your requirements and receive ranked matches. Additionally, it provides a listing of all available
+              skills within the project and region.
+            </li>
+            <li>
+              Mounting Skills: To mount a skill, you add a <code>skill-registry</code> source to the agent's environment. This is done at a target location, such as <code>/.agent/skills</code>,
+              ensuring the skill is accessible to the agent.
+            </li>
+            <li>
+              Version Management: Skills are versioned, with every creation or update generating a new version. You reference these versions using a <code>skill_versions</code> path. In production,
+              you pin a specific version so a skill update can't silently change the agent's behavior. During development, you let it track the latest version.
+            </li>
+          </ul>
+
+          - Once you have configured your environment, mounted your data, selected your tools, and attached your skills, your agent definition is fully assembled on the control plane. <br>
+          - The following diagram illustrates how all of these disparate pieces are linked together into a single, durable resource before a single interaction ever runs.
+          <div class="image-block">
+            <div class="expand-screenshot-image-btn border border-primary rounded">
+              <span class="btn btn-link">Show Image <img src="./imgs/chevron-expand.svg" alt="Show Image Button"></span>
+            </div>
+            <div class="screenshot-image">
+              <img src="./imgs/UseAgents/AgentsAssemble.png"
+                   width="800"
+                   class="center-block img-fluid"
+                   alt="Image for image"
+                   loading="lazy">
+            </div>
+          </div>
+        </div>
       </div>
+
+
+      <hr>
+      <div id="UseAgents_Ch7" class="chapter index-column-link">Chapter 7: Run and operate the agent</div>
+      <hr>
+
+
+      <div class="textual-content">
+        <div class="sub-heading">Resources</div>
+        <div>
+          - <a href="https://partner.skills.google/paths/3476/course_templates/1747/documents/633838">Link to Lecture</a>. <br>
+        </div>
+
+
       </div>
 
 
