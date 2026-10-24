@@ -493,13 +493,13 @@
           - Projection command looks like this: <code>PROJECT customer_numb, first_name, last_name FROM customer GIVING names_and_numbers</code> <br>
           - The order of the <i>columns</i> in the result table is based on the order in which the column names appear in the project statement; the order in which they are defined in the source
           table has no effect on the result. <br>
-          - Rows appear in the order in which they are stored in the source table; project does not include sorting or ordering the data in any way. What this means is that rows have no inherent
+          - Rows appear in the order in which they are stored in the source table; PROJECT does not include sorting or ordering the data in any way. What this means is that rows have no inherent
           order. Relational algebra does not define or guarantee row order. <br>
           - As with all relational algebra operations, duplicate rows are removed. What this means is that if you create a projection without the primary key, duplicates will be removed. For example,
           projecting only first_name from a 500-row table might return only 50 rows because duplicate names collapse into single rows. <br>
           - It is important to keep in mind that relational algebra is first and foremost a set of theoretical operations. A DBMS may not implement an operation the same way that it is described in
           theory. For example, most DBMSs don't remove duplicate rows from result tables unless the user requests it explicitly. <br>
-          - There is one issue with project with which you need to be concerned. A DBMS will project any columns that you request. It makes no judgment as to whether the selected columns produce a
+          - There is one issue with PROJECT with which you need to be concerned. A DBMS will project any columns that you request. It makes no judgment as to whether the selected columns produce a
           meaningful result. For example, consider the following operation: <br>
           <code>PROJECT sale_total_amt, exp_month FROM sale GIVING invalid</code>. <br>
           There is no inherent meaning in linking the dollar amount of the sale with the expiry month of the card. But the DBMS will return it anyway.
@@ -507,8 +507,8 @@
 
         <div class="sub-heading">Making Horizontal Subsets: <code>Restrict</code></div>
         <div>
-          - The <code>restrict</code> operation asks a DBMS to choose rows that meet some logical criteria. It does this with the help of a logical operation known as the <i>predicate</i>. <br>
-          - Note that Restrict copies all attributes. It has no way to specify which attributes should be included in the result table. <br>
+          - The <code>RESTRICT</code> operation asks a DBMS to choose rows that meet some logical criteria. It does this with the help of a logical operation known as the <i>predicate</i>. <br>
+          - Note that RESTRICT copies all attributes. It has no way to specify which attributes should be included in the result table. <br>
           - The syntax looks like this: <br>
           <code>RESTRICT FROM source_table_name WHERE PREDICATE GIVING result_table_name</code> <br>
           - Example: <code>RESTRICT FROM customer WHERE zip_postcode = "111" GIVING one_zip</code>

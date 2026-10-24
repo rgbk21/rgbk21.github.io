@@ -4131,8 +4131,8 @@ illustration_agent = RemoteA2aAgent(
           - Prepare an agentic coding environment to build agents faster and better. <br>
           - In this lesson, you'll learn how to utilize the local Agent Development Kit (ADK) 2.0 ecosystem. You'll leverage Antigravity, Google’s agentic IDE, alongside agents-cli, the
           lifecycle toolchain. Together, these tools form a powerful local development platform that allows you to shift your focus away from wrestling with complex API syntax and toward designing
-          high-level agent logic. br
-          <p>By the end of this lesson, you'll be able to:</p>
+          high-level agent logic. <br>
+          - By the end of this lesson, you'll be able to: <br>
           a) Explain how Antigravity and the agents-cli toolchain collaborate as your local ADK development platform. <br>
           b) Describe the "vibecoding" model and your role as an architect in guiding agent generation through natural language. <br>
           c) Design a formal agent blueprint using spec-driven development (SDD) and Gherkin scenarios to define expected behavior. <br>
@@ -4141,9 +4141,67 @@ illustration_agent = RemoteA2aAgent(
 
         <div class="sub-heading">Building the expense report agent</div>
         <div>
-          - Throughout the course, you'll work with an example of an ambient agent that handles expense reports. This agent routes each transaction, screens for risk before the LLM runs, and pauses
-          for human review when needed. Building this process requires juggling multiple elements simultaneously, including your design intent, the ADK API, a growing codebase, and a test harness. br
-          <br>
+          - Throughout the course, you'll work with an example of an <i></i>ambient agent that handles expense reports. <br>
+          - Question: In the context of coding an AI Agent using Google ADK, what is an "ambient agent"? How does it differ from a standard agent? <br>
+          <div class="image-block">
+            <div class="expand-screenshot-image-btn border border-primary rounded">
+              <span class="btn btn-link">Show Section <img src="./imgs/chevron-expand.svg" alt="Show Image Button"></span>
+            </div>
+            <div class="screenshot-image">
+              <div class="sub-section">
+                - An ambient agent in the Google Agent Development Kit (ADK) is an event-driven, background AI agent designed to run autonomously without real-time human interaction. Instead of
+                waiting for a user to type a prompt into a chat UI, an ambient agent listens for system triggers such as Pub/Sub messages, Cloud Storage file uploads, database modifications, webhook
+                events, or scheduled cron jobs. <br>
+                - Key Differences: Standard Agent vs. Ambient Agent
+
+                <table class="table table-bordered table-sm">
+                  <thead>
+                  <tr>
+                    <th>Feature</th>
+                    <th>Standard (Interactive) Agent</th>
+                    <th>Ambient Agent</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                    <td>Primary Role</td>
+                    <td>Direct assistant, dynamic problem solving with user-in-the-loop</td>
+                    <td>Event-driven automation, batch processing, background monitoring, automated triage</td>
+                  </tr>
+                  <tr>
+                    <td>Invocation</td>
+                    <td>Synchronous requests (HTTP /run, WebSocket chat loop, human user prompt)</td>
+                    <td>Asynchronous triggers (Pub/Sub messages, Cloud Storage uploads, webhooks, cron schedules)</td>
+                  </tr>
+                  <tr>
+                    <td>Session Lifecycle</td>
+                    <td>Maintained over extended user turn-taking or persistent conversation IDs</td>
+                    <td>Auto-instantiated short-lived sessions per incoming event (e.g., via --auto_create_session)</td>
+                  </tr>
+                  <tr>
+                    <td>Output Delivery Destination</td>
+                    <td>Direct conversational streaming or chat UI text response</td>
+                    <td>Routing to external channels (structured logs, Slack webhooks, Cloud Pub/Sub, Jira tickets)</td>
+                  </tr>
+                  <tr>
+                    <td>User Presence</td>
+                    <td>Requires active human interaction; waits for next turn in prompt loop</td>
+                    <td>Unattended / headless; operates silently in the background</td>
+                  </tr>
+                  <tr>
+                    <td>Error Handling</td>
+                    <td>Reports errors directly to user prompt</td>
+                    <td>Returns HTTP status codes (200 OK / 500 Retry) to trigger sources</td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+
+          - This agent routes each transaction, screens for risk before the LLM runs, and pauses for human review when needed. Building this process requires juggling multiple elements
+          simultaneously, including your design intent, the ADK API, a growing codebase, and a test harness. <br>
           - For the expense agent, you describe the business rule and the routing outcome. Antigravity produces the corresponding graph structure edge conditions, the LLM agent node, and the
           <code>RequestInput</code> human-in-the-loop step. <br>
           - Prompt Example: <br>
