@@ -235,3 +235,71 @@ swapWordsAndMeaningsPrepositionsBtn.addEventListener('click', () => {
         swapWordsAndMeaningsPrepositionsBtn.blur();
     });
 });
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/// Methods handling the visibility of the words in the Adjectives section
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/** @type {HTMLButtonElement} */
+const showAllAdjectivesBtn = document.querySelector('#show-all-adjectives-button');
+/** @type {HTMLButtonElement} */
+const hideAndRandomizeAllAdjectivesBtn = document.querySelector('#hide-and-randomize-all-adjectives-button');
+/** @type {HTMLButtonElement} */
+const onlyHideAllAdjectivesBtn = document.querySelector('#only-hide-all-adjectives-button');
+/** @type {HTMLButtonElement} */
+const swapWordsAndMeaningsAdjectivesBtn = document.querySelector('#swap-word-meaning-adjectives-button');
+
+/// Show all words in the Adjectives sections if they are hidden
+showAllAdjectivesBtn?.addEventListener('click', function (e) {
+    document.querySelectorAll('#adjectives-container .answer').forEach(elmnt => elmnt.classList.remove('hidden'));
+    showAllAdjectivesBtn.blur();
+});
+
+/// Hides all the words that are present in the Adjectives section and then randomizes them.
+hideAndRandomizeAllAdjectivesBtn?.addEventListener('click', function (e) {
+    _hideAllAdjectives();
+    hideAndRandomizeAllAdjectivesBtn.blur();
+
+    // Shuffle the divs inside the single-word-container
+    // https://stackoverflow.com/a/62713103/8742428
+    const allSingleWordsContainers = document.querySelectorAll('#adjectives-container .single-word-container');
+    let shuffle = [...allSingleWordsContainers];
+    const getRandomValue = (i, N) => Math.floor(Math.random() * (N - i) + i);
+    shuffle.forEach( (elem, i, arr, j = getRandomValue(i, arr.length)) => [arr[i], arr[j]] = [arr[j], arr[i]] );
+
+    const allWordsContainer = document.querySelector('#adjectives-container .all-adjectives-container');
+    allWordsContainer.innerHTML = '';
+
+    allWordsContainer.append(...shuffle);
+});
+
+/// Only hides (does not randomize) all the words that are present in the Adjectives section.
+onlyHideAllAdjectivesBtn?.addEventListener('click', function (e) {
+    _hideAllAdjectives();
+    onlyHideAllAdjectivesBtn.blur();
+});
+
+function _hideAllAdjectives() {
+    document.querySelectorAll('#adjectives-container .answer').forEach(elmnt => elmnt.classList.add('hidden'));
+}
+
+/// Swap the word and the meaning values in the Adjectives section
+swapWordsAndMeaningsAdjectivesBtn.addEventListener('click', () => {
+    // Select all the containers holding the individual words and answers
+    const wordContainers = document.querySelectorAll('#adjectives-container .single-word-container');
+
+    // Loop through each container one by one
+    wordContainers.forEach(container => {
+        // Find the word and meaning elements within the current container
+        const wordElement = container.querySelector('.word-name');
+        const meaningElement = container.querySelector('.meaning');
+
+        // Make sure both elements exist before trying to swap
+        if (wordElement && meaningElement) {
+            // Swap the HTML content using array destructuring
+            [wordElement.innerHTML, meaningElement.innerHTML] = [meaningElement.innerHTML, wordElement.innerHTML];
+        }
+
+        _hideAllAdjectives();
+        swapWordsAndMeaningsAdjectivesBtn.blur();
+    });
+});
